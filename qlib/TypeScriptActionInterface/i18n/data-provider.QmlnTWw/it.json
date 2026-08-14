@@ -1,0 +1,1413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate an anomaly score by applying a trained anomaly detector to input data. This helps identify unusual patterns or outliers in your dataset.",
+          "message": "Genera un punteggio di anomalia applicando un rilevatore di anomalie addestrato ai dati di input. Questo aiuta a identificare modelli insoliti o valori anomali nel set di dati."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Anomaly Score",
+          "message": "Crea punteggio di anomalia"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate the anomaly score for the input data.",
+          "message": "Seleziona il modello di rilevatore di anomalie addestrato che verrà utilizzato per generare il punteggio di anomalia per i dati di input."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Rilevatore di anomalie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for scoring",
+          "message": "Il rilevatore di anomalie da utilizzare per il punteggio"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this anomaly score and its purpose.",
+          "message": "Descrizione opzionale per fornire ulteriore contesto su questo punteggio di anomalia e sul suo scopo."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Descrizione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the anomaly score",
+          "message": "Descrizione del punteggio di anomalia"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data that you want to analyze for anomalies. The data should match the format expected by the selected anomaly detector.",
+          "message": "Fornisci i dati di input che desideri analizzare per individuare anomalie. I dati devono corrispondere al formato previsto dal rilevatore di anomalie selezionato."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Dati di input"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to analyze for anomalies",
+          "message": "I dati da analizzare per individuare anomalie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this anomaly score in your BigML dashboard and for future reference.",
+          "message": "Nome opzionale per identificare questo punteggio di anomalia nella tua dashboard BigML e per riferimento futuro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the anomaly score",
+          "message": "Nome per il punteggio di anomalia"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this anomaly score with related resources for better workflow management.",
+          "message": "Progetto opzionale per organizzare questo punteggio di anomalia con le risorse correlate per una migliore gestione del flusso di lavoro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the anomaly score",
+          "message": "Progetto per organizzare il punteggio di anomalia"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your anomaly scores for easier management and searching.",
+          "message": "Tag opzionali per facilitare l'organizzazione e la categorizzazione dei punteggi di anomalia per una gestione e una ricerca più semplici."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tag"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing anomaly scores",
+          "message": "Tag per organizzare i punteggi di anomalia"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create an anomaly score for detecting outliers in data",
+          "message": "Crea un punteggio di anomalia per rilevare valori anomali nei dati"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate anomaly scores for multiple data points at once by applying an anomaly detector to a dataset. This is efficient for processing large amounts of data.",
+          "message": "Genera punteggi di anomalia per più punti dati contemporaneamente applicando un rilevatore di anomalie a un dataset. Questo è efficiente per l'elaborazione di grandi quantità di dati."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Batch Anomaly Score",
+          "message": "Crea punteggio di anomalia in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate anomaly scores for all data points in the dataset.",
+          "message": "Seleziona il modello di rilevatore di anomalie addestrato che verrà utilizzato per generare punteggi di anomalia per tutti i punti dati nel dataset."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Rilevatore di anomalie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for batch scoring",
+          "message": "Il rilevatore di anomalie da utilizzare per il punteggio in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.desc": {
+          "source": "Select the dataset containing multiple data points that you want to analyze for anomalies using the selected anomaly detector.",
+          "message": "Seleziona il dataset contenente più punti dati che desideri analizzare per individuare anomalie utilizzando il rilevatore di anomalie selezionato."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.display_name": {
+          "source": "Dataset",
+          "message": "Dataset"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.short_desc": {
+          "source": "The dataset to analyze for anomalies",
+          "message": "Il dataset da analizzare per individuare anomalie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this batch anomaly score and its purpose.",
+          "message": "Descrizione opzionale per fornire ulteriore contesto su questo punteggio di anomalia in batch e sul suo scopo."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Descrizione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the batch anomaly score",
+          "message": "Descrizione del punteggio di anomalia in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this batch anomaly score in your BigML dashboard and for future reference.",
+          "message": "Nome opzionale per identificare questo punteggio di anomalia in batch nella tua dashboard BigML e per riferimento futuro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the batch anomaly score",
+          "message": "Nome per il punteggio di anomalia in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this batch anomaly score with related resources for better workflow management.",
+          "message": "Progetto opzionale per organizzare questo punteggio di anomalia in batch con le risorse correlate per una migliore gestione del flusso di lavoro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the batch anomaly score",
+          "message": "Progetto per organizzare il punteggio di anomalia in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your batch anomaly scores for easier management and searching.",
+          "message": "Tag opzionali per facilitare l'organizzazione e la categorizzazione dei punteggi di anomalia in batch per una gestione e una ricerca più semplici."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tag"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing batch anomaly scores",
+          "message": "Tag per organizzare i punteggi di anomalia in batch"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create anomaly scores for multiple data points in batch",
+          "message": "Crea punteggi di anomalia in batch per più punti dati"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.desc": {
+          "source": "Determine which cluster centroid is closest to the provided input data using a trained cluster model. This helps classify new data points into existing clusters.",
+          "message": "Determina quale centroide del cluster è più vicino ai dati di input forniti utilizzando un modello di cluster addestrato. Questo aiuta a classificare i nuovi punti dati nei cluster esistenti."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
+          "source": "Create Centroid",
+          "message": "Crea centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.desc": {
+          "source": "Select the trained cluster model that will be used to find the closest centroid for the input data.",
+          "message": "Seleziona il modello di cluster addestrato che verrà utilizzato per trovare il centroide più vicino per i dati di input."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
+          "source": "Cluster Model",
+          "message": "Modello di cluster"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
+          "source": "The cluster model to use for centroid calculation",
+          "message": "Il modello di cluster da utilizzare per il calcolo del centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this centroid calculation and its purpose.",
+          "message": "Descrizione opzionale per fornire ulteriore contesto su questo calcolo del centroide e sul suo scopo."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Descrizione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the centroid calculation",
+          "message": "Descrizione del calcolo del centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to find the closest cluster centroid. The data should match the format used to train the cluster model.",
+          "message": "Fornisci i dati di input per i quali desideri trovare il centroide del cluster più vicino. I dati devono corrispondere al formato utilizzato per addestrare il modello di cluster."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Dati di input"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to find the closest centroid for",
+          "message": "I dati per cui trovare il centroide più vicino"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this centroid calculation in your BigML dashboard and for future reference.",
+          "message": "Nome opzionale per identificare questo calcolo del centroide nella tua dashboard BigML e per riferimento futuro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.short_desc": {
+          "source": "Name for the centroid result",
+          "message": "Nome per il risultato del centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this centroid calculation with related resources for better workflow management.",
+          "message": "Progetto opzionale per organizzare questo calcolo del centroide con le risorse correlate per una migliore gestione del flusso di lavoro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the centroid result",
+          "message": "Progetto per organizzare il risultato del centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your centroid calculations for easier management and searching.",
+          "message": "Tag opzionali per facilitare l'organizzazione e la categorizzazione dei calcoli del centroide per una gestione e una ricerca più semplici."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tag"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.short_desc": {
+          "source": "Tags for organizing centroid results",
+          "message": "Tag per organizzare i risultati del centroide"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
+          "source": "Find the closest cluster centroid for input data",
+          "message": "Trova il centroide del cluster più vicino per i dati di input"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.desc": {
+          "source": "Create predictions for new data using trained machine learning models, ensembles, or deep networks. This allows you to apply your trained models to make predictions on new data.",
+          "message": "Crea previsioni per nuovi dati utilizzando modelli di machine learning, ensemble o reti profonde addestrati. Questo ti consente di applicare i tuoi modelli addestrati per effettuare previsioni su nuovi dati."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
+          "source": "Create Prediction",
+          "message": "Crea previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.desc": {
+          "source": "Select the trained deep network that will be used to generate predictions for the input data.",
+          "message": "Seleziona la rete profonda addestrata che verrà utilizzata per generare previsioni per i dati di input."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
+          "source": "Deep Network",
+          "message": "Rete profonda"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
+          "source": "The deep network to use for prediction",
+          "message": "La rete profonda da utilizzare per la previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this prediction and its purpose.",
+          "message": "Descrizione opzionale per fornire ulteriore contesto su questa previsione e sul suo scopo."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Descrizione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the prediction",
+          "message": "Descrizione della previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.desc": {
+          "source": "Select the trained ensemble that will be used to generate predictions for the input data.",
+          "message": "Seleziona l'ensemble addestrato che verrà utilizzato per generare previsioni per i dati di input."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.display_name": {
+          "source": "Ensemble",
+          "message": "Ensemble"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.short_desc": {
+          "source": "The ensemble to use for prediction",
+          "message": "L'ensemble da utilizzare per la previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to generate predictions. The data should match the format used to train the selected model.",
+          "message": "Fornisci i dati di input per i quali desideri generare previsioni. I dati devono corrispondere al formato utilizzato per addestrare il modello selezionato."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Dati di input"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to make predictions for",
+          "message": "I dati per cui effettuare previsioni"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.desc": {
+          "source": "Select the trained model that will be used to generate predictions for the input data.",
+          "message": "Seleziona il modello addestrato che verrà utilizzato per generare previsioni per i dati di input."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.display_name": {
+          "source": "Model",
+          "message": "Modello"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.short_desc": {
+          "source": "The model to use for prediction",
+          "message": "Il modello da utilizzare per la previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this prediction in your BigML dashboard and for future reference.",
+          "message": "Nome opzionale per identificare questa previsione nella tua dashboard BigML e per riferimento futuro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.short_desc": {
+          "source": "Name for the prediction",
+          "message": "Nome per la previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this prediction with related resources for better workflow management.",
+          "message": "Progetto opzionale per organizzare questa previsione con le risorse correlate per una migliore gestione del flusso di lavoro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the prediction",
+          "message": "Progetto per organizzare la previsione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your predictions for easier management and searching.",
+          "message": "Tag opzionali per facilitare l'organizzazione e la categorizzazione delle tue previsioni per una gestione e una ricerca più semplici."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tag"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.short_desc": {
+          "source": "Tags for organizing predictions",
+          "message": "Tag per organizzare le previsioni"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
+          "source": "Generate predictions using trained models",
+          "message": "Genera previsioni utilizzando modelli addestrati"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.desc": {
+          "source": "Create topic distributions for text data using a trained topic model. This helps understand the main topics present in your text and their relative importance.",
+          "message": "Crea distribuzioni di argomenti per dati testuali utilizzando un modello di argomenti addestrato. Questo aiuta a comprendere gli argomenti principali presenti nel testo e la loro importanza relativa."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
+          "source": "Create Topic Distribution",
+          "message": "Crea distribuzione argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this topic distribution and its purpose.",
+          "message": "Descrizione opzionale per fornire ulteriore contesto su questa distribuzione di argomenti e sul suo scopo."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Descrizione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the topic distribution",
+          "message": "Descrizione della distribuzione di argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the text data for which you want to generate topic distributions. The data should match the format used to train the topic model.",
+          "message": "Fornisci i dati di testo per i quali desideri generare distribuzioni di argomenti. I dati devono corrispondere al formato utilizzato per addestrare il modello di argomenti."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Dati di input"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The text data to analyze for topics",
+          "message": "I dati di testo da analizzare per gli argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this topic distribution in your BigML dashboard and for future reference.",
+          "message": "Nome opzionale per identificare questa distribuzione di argomenti nella dashboard di BigML e per riferimento futuro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.short_desc": {
+          "source": "Name for the topic distribution",
+          "message": "Nome per la distribuzione di argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this topic distribution with related resources for better workflow management.",
+          "message": "Progetto opzionale per organizzare questa distribuzione di argomenti con risorse correlate per una migliore gestione del flusso di lavoro."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the topic distribution",
+          "message": "Progetto per organizzare la distribuzione di argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.desc": {
+          "source": "Select the trained topic model that will be used to generate topic distributions for the input text data.",
+          "message": "Seleziona il modello di argomenti addestrato che verrà utilizzato per generare distribuzioni di argomenti per i dati di testo in ingresso."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
+          "source": "Topic Model",
+          "message": "Modello di argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
+          "source": "The topic model to use for distribution analysis",
+          "message": "Il modello di argomenti da utilizzare per l'analisi della distribuzione"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your topic distributions for easier management and searching.",
+          "message": "Tag opzionali per aiutare a organizzare e categorizzare le distribuzioni di argomenti per una gestione e ricerca più semplici."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tag"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.short_desc": {
+          "source": "Tags for organizing topic distributions",
+          "message": "Tag per organizzare le distribuzioni di argomenti"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
+          "source": "Generate topic distributions for text data",
+          "message": "Genera distribuzioni di argomenti per dati di testo"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.desc": {
+          "source": "Get a paginated list of all topic models in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i modelli di argomenti nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
+          "source": "List Topic Models",
+          "message": "Elenca modelli di argomenti"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of topic models based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei modelli di argomenti in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for topic models",
+          "message": "Criteri di filtraggio per i modelli di argomenti"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of topic models to skip for pagination purposes.",
+          "message": "Specifica il numero di modelli di argomenti da saltare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of topic models to skip",
+          "message": "Numero di modelli di argomenti da saltare"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of topic models to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di modelli di argomenti da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of topic models to return",
+          "message": "Numero massimo di modelli di argomenti da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of topic models.",
+          "message": "Specifica come ordinare l'elenco dei modelli di argomenti."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for topic models",
+          "message": "Criteri di ordinamento per i modelli di argomenti"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of topic models",
+          "message": "Recupera un elenco di modelli di argomenti"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.desc": {
+          "source": "Get a paginated list of all anomaly detectors in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i rilevatori di anomalie nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
+          "source": "List Anomaly Detectors",
+          "message": "Elenca rilevatori di anomalie"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of anomaly detectors based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei rilevatori di anomalie in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for anomaly detectors",
+          "message": "Criteri di filtraggio per i rilevatori di anomalie"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of anomaly detectors to skip for pagination purposes.",
+          "message": "Specifica il numero di rilevatori di anomalie da saltare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of anomaly detectors to skip",
+          "message": "Numero di rilevatori di anomalie da saltare"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of anomaly detectors to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di rilevatori di anomalie da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of anomaly detectors to return",
+          "message": "Numero massimo di rilevatori di anomalie da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of anomaly detectors.",
+          "message": "Specifica come ordinare l'elenco dei rilevatori di anomalie."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for anomaly detectors",
+          "message": "Criteri di ordinamento per i rilevatori di anomalie"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
+          "source": "Retrieve a list of anomaly detectors",
+          "message": "Recupera un elenco di rilevatori di anomalie"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.desc": {
+          "source": "Get a paginated list of all cluster models in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i modelli di cluster nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
+          "source": "List Clusters",
+          "message": "Elenca cluster"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of cluster models based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei modelli di cluster in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for clusters",
+          "message": "Criteri di filtraggio per i cluster"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of cluster models to skip for pagination purposes.",
+          "message": "Specifica il numero di modelli di cluster da saltare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of clusters to skip",
+          "message": "Numero di cluster da saltare"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of cluster models to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di modelli di cluster da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of clusters to return",
+          "message": "Numero massimo di cluster da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of cluster models.",
+          "message": "Specifica come ordinare l'elenco dei modelli di cluster."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for clusters",
+          "message": "Criteri di ordinamento per i cluster"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
+          "source": "Retrieve a list of cluster models",
+          "message": "Recupera un elenco di modelli di cluster"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.desc": {
+          "source": "Get a paginated list of all datasets in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i dataset nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
+          "source": "List Datasets",
+          "message": "Elenca dataset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of datasets based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei dataset in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for datasets",
+          "message": "Criteri di filtraggio per i dataset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of datasets to skip for pagination purposes.",
+          "message": "Specifica il numero di dataset da saltare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of datasets to skip",
+          "message": "Numero di dataset da saltare"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of datasets to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di dataset da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of datasets to return",
+          "message": "Numero massimo di dataset da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of datasets.",
+          "message": "Specifica come ordinare l'elenco dei dataset."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for datasets",
+          "message": "Criteri di ordinamento per i dataset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
+          "source": "Retrieve a list of datasets",
+          "message": "Recupera un elenco di dataset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.desc": {
+          "source": "Get a paginated list of all deep networks in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutte le reti profonde nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
+          "source": "List Deep Networks",
+          "message": "Elenca reti profonde"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of deep networks based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco delle reti profonde in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for deep networks",
+          "message": "Criteri di filtraggio per le reti profonde"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of deep networks to skip for pagination purposes.",
+          "message": "Specifica il numero di reti profonde da saltare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deep networks to skip",
+          "message": "Numero di reti profonde da saltare"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of deep networks to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di reti profonde da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deep networks to return",
+          "message": "Numero massimo di reti profonde da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of deep networks.",
+          "message": "Specifica come ordinare l'elenco delle reti profonde."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for deep networks",
+          "message": "Criteri di ordinamento per le reti profonde"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
+          "source": "Retrieve a list of deep networks",
+          "message": "Recupera un elenco di reti profonde"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.desc": {
+          "source": "Get a paginated list of all ensemble models in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i modelli ensemble nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
+          "source": "List Ensembles",
+          "message": "Elenca ensemble"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of ensemble models based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei modelli ensemble in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for ensembles",
+          "message": "Criteri di filtraggio per gli ensemble"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of ensemble models to skip for pagination purposes.",
+          "message": "Specifica il numero di modelli ensemble da ignorare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of ensembles to skip",
+          "message": "Numero di ensemble da ignorare"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of ensemble models to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di modelli ensemble da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ensembles to return",
+          "message": "Numero massimo di ensemble da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of ensemble models.",
+          "message": "Specifica come ordinare l'elenco dei modelli ensemble."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for ensembles",
+          "message": "Criteri di ordinamento per gli ensemble"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
+          "source": "Retrieve a list of ensemble models",
+          "message": "Recupera un elenco di modelli ensemble"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.desc": {
+          "source": "Get a paginated list of all machine learning models in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i modelli di machine learning nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
+          "source": "List Models",
+          "message": "Elenca modelli"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of models based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei modelli in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for models",
+          "message": "Criteri di filtraggio per i modelli"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of models to skip for pagination purposes.",
+          "message": "Specifica il numero di modelli da ignorare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of models to skip",
+          "message": "Numero di modelli da ignorare"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of models to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di modelli da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of models to return",
+          "message": "Numero massimo di modelli da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of models.",
+          "message": "Specifica come ordinare l'elenco dei modelli."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for models",
+          "message": "Criteri di ordinamento per i modelli"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of machine learning models",
+          "message": "Recupera un elenco di modelli di machine learning"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Get a paginated list of all projects in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutti i progetti nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Elenca progetti"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of projects based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco dei progetti in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for projects",
+          "message": "Criteri di filtraggio per i progetti"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of projects to skip for pagination purposes.",
+          "message": "Specifica il numero di progetti da ignorare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of projects to skip",
+          "message": "Numero di progetti da ignorare"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of projects to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di progetti da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of projects to return",
+          "message": "Numero massimo di progetti da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of projects.",
+          "message": "Specifica come ordinare l'elenco dei progetti."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for projects",
+          "message": "Criteri di ordinamento per i progetti"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve a list of projects",
+          "message": "Recupera un elenco di progetti"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.desc": {
+          "source": "Get a paginated list of all data sources in your BigML account with filtering and sorting options.",
+          "message": "Ottieni un elenco impaginato di tutte le origini dati nel tuo account BigML con opzioni di filtraggio e ordinamento."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
+          "source": "List Sources",
+          "message": "Elenca origini dati"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of data sources based on specific criteria.",
+          "message": "Applica filtri per restringere l'elenco delle origini dati in base a criteri specifici."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for sources",
+          "message": "Criteri di filtraggio per le origini dati"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of data sources to skip for pagination purposes.",
+          "message": "Specifica il numero di origini dati da ignorare ai fini della paginazione."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of sources to skip",
+          "message": "Numero di origini dati da ignorare"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of data sources to return in a single request. Default is 20.",
+          "message": "Imposta il numero massimo di origini dati da restituire in una singola richiesta. Il valore predefinito è 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of sources to return",
+          "message": "Numero massimo di origini dati da restituire"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of data sources.",
+          "message": "Specifica come ordinare l'elenco delle origini dati."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Ordinamento"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for sources",
+          "message": "Criteri di ordinamento per le origini dati"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
+          "source": "Retrieve a list of data sources",
+          "message": "Recupera un elenco di origini dati"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **BigML** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **BigML** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to BigML",
+          "message": "Esegui una chiamata API personalizzata a BigML"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.desc": {
+          "source": "Monitor your BigML account for newly created resources such as models, datasets, clusters, and other machine learning resources. This trigger allows you to automate workflows when specific types of resources are created.",
+          "message": "Monitora il tuo account BigML per individuare le risorse appena create, come modelli, dataset, cluster e altre risorse di machine learning. Questo trigger ti consente di automatizzare i flussi di lavoro quando vengono creati tipi specifici di risorse."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
+          "source": "New Resource",
+          "message": "Nuova risorsa"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.desc": {
+          "source": "Optional filter to only trigger for resources whose names contain this text. Leave empty to monitor all resources of the selected type.",
+          "message": "Filtro opzionale per attivare il trigger solo per le risorse il cui nome contiene questo testo. Lascia vuoto per monitorare tutte le risorse del tipo selezionato."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
+          "source": "Name Filter",
+          "message": "Filtro nome"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
+          "source": "Filter resources by name pattern",
+          "message": "Filtra le risorse in base al modello di nome"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.desc": {
+          "source": "Optional filter to only trigger for resources created within a specific project. Leave empty to monitor resources across all projects.",
+          "message": "Filtro opzionale per attivare il trigger solo per le risorse create all'interno di un progetto specifico. Lascia vuoto per monitorare le risorse in tutti i progetti."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
+          "source": "Project Filter",
+          "message": "Filtro progetto"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
+          "source": "Filter resources by project",
+          "message": "Filtra le risorse per progetto"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.desc": {
+          "source": "Optional filter to only trigger for resources that have any of the specified tags. Leave empty to monitor all resources regardless of tags.",
+          "message": "Filtro opzionale per attivare il trigger solo per le risorse che possiedono uno qualsiasi dei tag specificati. Lascia vuoto per monitorare tutte le risorse indipendentemente dai tag."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
+          "source": "Tags Filter",
+          "message": "Filtro tag"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {
+          "source": "Filter resources by tags",
+          "message": "Filtra le risorse per tag"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOm1vZGVs.display_name": {
+          "source": "Model",
+          "message": "Modello"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmFub21hbHk.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Rilevatore di anomalie"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmNsdXN0ZXI.display_name": {
+          "source": "Cluster",
+          "message": "Cluster"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmRlZXBuZXQ.display_name": {
+          "source": "Deepnet",
+          "message": "Deepnet"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmVuc2VtYmxl.display_name": {
+          "source": "Ensemble",
+          "message": "Ensemble"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOnRvcGljbW9kZWw.display_name": {
+          "source": "Topic Model",
+          "message": "Modello di argomenti"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.desc": {
+          "source": "Select the specific type of BigML resource you want to monitor for new creations. The trigger will only fire when resources of this type are created.",
+          "message": "Seleziona il tipo specifico di risorsa BigML da monitorare per le nuove creazioni. Il trigger si attiverà solo quando vengono create risorse di questo tipo."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
+          "source": "Resource Type",
+          "message": "Tipo di risorsa"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
+          "source": "Type of BigML resource to monitor",
+          "message": "Tipo di risorsa BigML da monitorare"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
+          "source": "Triggers when a new BigML resource is created",
+          "message": "Si attiva quando viene creata una nuova risorsa BigML"
+        },
+        "app.QmlnTWw.desc": {
+          "source": "Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.",
+          "message": "Connetti il tuo account BigML per creare, valutare e distribuire modelli di machine learning su scala. Crea dataset, costruisci modelli predittivi, esegui il rilevamento di anomalie, l'analisi dei cluster e la previsione di serie temporali. Automatizza i tuoi flussi di lavoro di machine learning e integra l'analisi predittiva nelle tue applicazioni con la piattaforma completa di machine learning di BigML."
+        },
+        "app.QmlnTWw.display_name": {
+          "source": "BigML",
+          "message": "BigML"
+        },
+        "app.QmlnTWw.short_desc": {
+          "source": "Machine learning platform for predictive analytics",
+          "message": "Piattaforma di machine learning per l'analisi predittiva"
+        }
+      }
+    }
+  }
+}

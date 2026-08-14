@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors for newly created records in a specified Business Central object. The trigger polls for records based on their creation timestamp and can be filtered by specific field criteria. Useful for automating workflows when new data is added to your Business Central system.",
+          "message": "Sleduje nově vytvořené záznamy v zadaném objektu Business Central. Spouštěč zjišťuje záznamy na základě časového razítka jejich vytvoření a lze jej filtrovat podle konkrétních kritérií polí. Užitečné pro automatizaci workflow při přidání nových dat do systému Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nový záznam"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which records trigger the event based on field values.",
+          "message": "Volitelný filtr pro omezení záznamů, které spouští událost na základě hodnot polí."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "Volitelná kritéria filtru pro záznamy"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for new records, such as customers, items, or sales orders.",
+          "message": "Objekt (entita) Business Central ke sledování nových záznamů, jako jsou zákazníci, položky nebo prodejní objednávky."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objekt"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "Objekt Business Central ke sledování"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in Business Central.",
+          "message": "Spustí se při vytvoření nového záznamu v Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Monitors for recently updated records in a specified Business Central object. The trigger polls for records based on their modification timestamp and can be filtered by specific field criteria. Ideal for tracking changes and automating workflows when existing data is modified in your Business Central system.",
+          "message": "Sleduje nedávno aktualizované záznamy v zadaném objektu Business Central. Spouštěč zjišťuje záznamy na základě časového razítka jejich úpravy a lze jej filtrovat podle konkrétních kritérií polí. Ideální pro sledování změn a automatizaci workflow při úpravě stávajících dat v systému Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "Aktualizovaný záznam"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which updated records trigger the event based on field values.",
+          "message": "Volitelný filtr pro omezení aktualizovaných záznamů, které spouští událost na základě hodnot polí."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "Volitelná kritéria filtru pro záznamy"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for updated records, such as customers, items, or sales orders.",
+          "message": "Objekt (entita) Business Central ke sledování aktualizovaných záznamů, jako jsou zákazníci, položky nebo prodejní objednávky."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objekt"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "Objekt Business Central ke sledování"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggers when an existing record is modified in Business Central.",
+          "message": "Spustí se při úpravě stávajícího záznamu v Business Central."
+        }
+      }
+    }
+  }
+}

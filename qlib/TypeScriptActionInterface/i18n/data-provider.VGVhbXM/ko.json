@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.desc": {
+          "source": "Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.",
+          "message": "지정된 참가자, 시간, 위치 및 기타 회의 세부 정보로 Microsoft Teams에서 새 회의를 예약합니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
+          "source": "Create Meeting",
+          "message": "회의 만들기"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Optional text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "회의 안건, 준비 자료 또는 기타 관련 정보를 설명하는 선택적 텍스트입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "회의 내용"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Meeting agenda or notes",
+          "message": "모임 안건 또는 메모"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Optional channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "모임이 팀 내 특정 채널과 연결된 경우의 선택적 채널 식별자입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "채널 ID"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "연결된 채널 식별자"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "List of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "모임에 초대할 사용자의 이메일 주소 또는 사용자 ID 목록입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "참석자"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Meeting participants",
+          "message": "모임 참가자"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "모임이 종료되는 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "종료 시간"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Meeting end date and time",
+          "message": "모임 종료 일시"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.",
+          "message": "true로 설정하면 화상 회의 기능 및 참가 링크가 포함된 Teams 온라인 모임을 만듭니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "온라인 모임"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable Teams online meeting features",
+          "message": "Teams 온라인 모임 기능 사용"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "모임이 진행될 실제 위치 또는 사용자 지정 가상 위치 설명입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "위치"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Physical or virtual meeting location",
+          "message": "실제 또는 가상 모임 위치"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "모임이 시작되는 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "시작 시간"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Meeting start date and time",
+          "message": "모임 시작 일시"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "일정 초대 및 모임 목록에 표시될 모임의 제목 또는 주제입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "제목"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Meeting title",
+          "message": "모임 제목"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Optional team identifier if the meeting is associated with a specific team.",
+          "message": "모임이 특정 팀과 연결된 경우의 선택적 팀 식별자입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "연결된 팀 식별자"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "모임 시작 및 종료 시간의 표준 시간대(예: \"Pacific Standard Time\" 또는 \"UTC\")입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "표준 시간대"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Meeting time zone",
+          "message": "모임 표준 시간대"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Schedule a new Teams meeting",
+          "message": "새 Teams 모임 예약"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.desc": {
+          "source": "Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.",
+          "message": "구성원이 대화, 파일 및 통합 앱을 통해 협업할 수 있는 새 채널을 지정된 팀 내에 만듭니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
+          "source": "Create Channel",
+          "message": "채널 생성"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "채널의 목적이나 주제를 설명하는 선택적 설명입니다. 최대 1024자까지 가능합니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the channel purpose",
+          "message": "채널 목적에 대한 설명"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name for the new channel. Must be unique within the team and between 1-50 characters.",
+          "message": "새 채널의 표시 이름입니다. 팀 내에서 고유해야 하며 1~50자 사이여야 합니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "채널 이름"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the new channel",
+          "message": "새 채널의 이름"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "비공개"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.short_desc": {
+          "source": "Private channel",
+          "message": "비공개 채널"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard",
+          "message": "표준"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.short_desc": {
+          "source": "Standard channel",
+          "message": "표준 채널"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "공유됨"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.short_desc": {
+          "source": "Shared channel",
+          "message": "공유 채널"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.desc": {
+          "source": "Defines the privacy level of the channel. Options include \"standard\" (visible to all team members) or \"private\" (visible only to specific members).",
+          "message": "채널의 개인 정보 보호 수준을 정의합니다. 옵션에는 \"standard\"(모든 팀 구성원에게 표시됨) 또는 \"private\"(특정 구성원에게만 표시됨)가 있습니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
+          "source": "Membership Type",
+          "message": "멤버십 유형"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
+          "source": "Channel privacy setting",
+          "message": "채널 개인 정보 보호 설정"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier (GUID) for the team where the new channel will be created.",
+          "message": "새 채널이 생성될 팀의 고유 식별자(GUID)입니다."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Unique identifier for the team",
+          "message": "팀의 고유 식별자"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Create a new channel in a team",
+          "message": "팀에 새 채널 만들기"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.desc": {
+          "source": "Permanently cancels and removes a scheduled meeting from all participants' calendars.",
+          "message": "예약된 모임을 영구적으로 취소하고 모든 참가자의 일정에서 제거합니다."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
+          "source": "Delete Meeting",
+          "message": "모임 삭제"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier (GUID) of the meeting to be canceled.",
+          "message": "취소할 모임의 고유 식별자(GUID)입니다."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "모임 ID"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Unique meeting identifier",
+          "message": "고유 모임 식별자"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "개인"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "팀"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies where the meeting was created, such as \"private\" or \"team\".",
+          "message": "모임이 생성된 위치(예: \"private\" 또는 \"team\")를 지정합니다."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "모임 소스"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "모임의 출처"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
+          "source": "Cancel an existing meeting",
+          "message": "기존 모임 취소"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Microsoft Teams** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Microsoft Teams**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 제공되지 않는 엔드포인트에 이 작업을 사용하세요."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Microsoft Teams",
+          "message": "Microsoft Teams에 사용자 지정 API 호출 수행"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.desc": {
+          "source": "This trigger fires when a new meeting is scheduled that matches the specified criteria.",
+          "message": "지정된 기준과 일치하는 새 모임이 예약될 때 이 트리거가 실행됩니다."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "새 모임"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "개인"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "팀"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies which type of meetings to monitor, such as \"private\" or \"team\" meetings.",
+          "message": "모니터링할 모임 유형(예: \"private\" 또는 \"team\" 모임)을 지정합니다."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "모임 소스"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "모임의 출처"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
+          "source": "Trigger when a meeting is created",
+          "message": "모임이 생성될 때 트리거"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is posted in a specified channel within a team.",
+          "message": "팀 내의 지정된 채널에 새 메시지가 게시될 때 이 트리거가 실행됩니다."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
+          "source": "New Channel Message",
+          "message": "새 채널 메시지"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to monitor for new messages.",
+          "message": "새 메시지를 모니터링할 채널의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "채널 ID"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Channel to monitor for messages",
+          "message": "메시지를 모니터링할 채널"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to monitor.",
+          "message": "모니터링할 채널이 포함된 팀의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "팀 식별자"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is posted in a channel",
+          "message": "채널에 메시지가 게시될 때 트리거"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is sent in a direct chat or group chat conversation.",
+          "message": "1:1 채팅 또는 그룹 채팅 대화에서 새 메시지가 전송될 때 이 트리거가 실행됩니다."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
+          "source": "New Chat Message",
+          "message": "새 채팅 메시지"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat to monitor for new messages.",
+          "message": "새 메시지를 모니터링할 1:1 채팅 또는 그룹 채팅의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "채팅 ID"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.short_desc": {
+          "source": "Chat to monitor for messages",
+          "message": "메시지를 모니터링할 채팅"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is sent in a chat",
+          "message": "채팅에서 메시지가 전송될 때 트리거"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a direct chat or group chat conversation outside of a team channel.",
+          "message": "팀 채널 외부의 1:1 채팅 또는 그룹 채팅 대화로 새 메시지를 보냅니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
+          "source": "Send Chat Message",
+          "message": "채팅 메시지 보내기"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "텍스트"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "일반 텍스트의 경우 \"text\", 서식 있는 콘텐츠의 경우 \"html\"과 같이 메시지 콘텐츠의 형식을 지정합니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "콘텐츠 유형"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "메시지 콘텐츠 형식"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat where the message will be sent.",
+          "message": "메시지를 보낼 1:1 채팅 또는 그룹 채팅의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "채팅 ID"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.short_desc": {
+          "source": "Target chat identifier",
+          "message": "대상 채팅 식별자"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent in the chat.",
+          "message": "채팅으로 보낼 메시지의 텍스트 내용입니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "메시지"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "메시지 내용"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
+          "source": "Send a message to a chat conversation",
+          "message": "채팅 대화로 메시지 보내기"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a specific channel within a team that all channel members can view and respond to.",
+          "message": "모든 채널 멤버가 보고 응답할 수 있는 팀 내 특정 채널로 새 메시지를 보냅니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
+          "source": "Send Channel Message",
+          "message": "채널 메시지 보내기"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "텍스트"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "일반 텍스트의 경우 \"text\", 서식 있는 콘텐츠의 경우 \"html\"과 같이 메시지 콘텐츠의 형식을 지정합니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "콘텐츠 유형"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "메시지 콘텐츠 형식"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel where the message will be posted.",
+          "message": "메시지가 게시될 채널의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "채널 ID"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "대상 채널 식별자"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be posted in the channel.",
+          "message": "채널에 게시할 메시지의 텍스트 내용입니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "메시지"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "메시지 내용"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the target channel.",
+          "message": "대상 채널이 포함된 팀의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "팀 식별자"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
+          "source": "Post a message to a team channel",
+          "message": "팀 채널에 메시지 게시"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.desc": {
+          "source": "Update the details of a scheduled meeting, such as time, location, attendees, or other properties.",
+          "message": "시간, 위치, 참석자 또는 기타 속성과 같은 예정된 모임의 세부 정보를 업데이트합니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
+          "source": "Update Meeting",
+          "message": "모임 업데이트"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Updated text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "모임 안건, 준비 자료 또는 기타 관련 정보를 설명하는 업데이트된 텍스트입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "회의 내용"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Updated meeting agenda or notes",
+          "message": "업데이트된 모임 안건 또는 메모"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Updated channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "모임이 팀 내 특정 채널과 연결된 경우 업데이트된 채널 식별자입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "채널 ID"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "연결된 채널 식별자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "Updated list of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "모임에 초대할 사람들의 업데이트된 이메일 주소 또는 사용자 ID 목록입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "참석자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Updated meeting participants",
+          "message": "업데이트된 모임 참가자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "모임이 종료되는 새 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "종료 시간"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Updated meeting end time",
+          "message": "업데이트된 모임 종료 시간"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.",
+          "message": "true로 설정하면 모임에 화상 회의 및 참가 링크를 포함한 Teams 온라인 모임 기능이 활성화됩니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "온라인 모임"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable/disable Teams online meeting features",
+          "message": "Teams 온라인 모임 기능 활성화/비활성화"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The new physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "모임이 진행될 새로운 실제 위치 또는 사용자 지정 가상 위치 설명입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "위치"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Updated meeting location",
+          "message": "업데이트된 모임 위치"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier of the meeting to be updated.",
+          "message": "업데이트할 모임의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "모임 ID"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Target meeting identifier",
+          "message": "대상 모임 식별자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "모임이 시작되는 새 날짜 및 시간(ISO 8601 형식: YYYY-MM-DDTHH:MM:SS)입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "시작 시간"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Updated meeting start time",
+          "message": "업데이트된 모임 시작 시간"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The new title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "일정 초대 및 모임 목록에 표시될 새 모임 제목 또는 주제입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "제목"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Updated meeting title",
+          "message": "업데이트된 모임 제목"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Updated team identifier if the meeting is associated with a specific team.",
+          "message": "모임이 특정 팀과 연결된 경우 업데이트된 팀 식별자입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "연결된 팀 식별자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The new time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "모임 시작 및 종료 시간의 새 표준 시간대입니다(예: \"Pacific Standard Time\" 또는 \"UTC\")."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "표준 시간대"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Updated meeting time zone",
+          "message": "업데이트된 모임 표준 시간대"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Modify an existing meeting",
+          "message": "기존 모임 수정"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.desc": {
+          "source": "Update the properties or membership of an existing channel within a team.",
+          "message": "팀 내 기존 채널의 속성이나 멤버십을 업데이트합니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
+          "source": "Update Channel",
+          "message": "채널 업데이트"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to be updated.",
+          "message": "업데이트할 채널의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "채널 ID"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "대상 채널 식별자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "채널의 목적이나 주제를 설명하는 업데이트된 설명입니다. 최대 1024자까지 가능합니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New channel description",
+          "message": "새 채널 설명"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The new display name for the channel. Must be unique within the team and between 1-50 characters.",
+          "message": "채널의 새 표시 이름입니다. 팀 내에서 고유해야 하며 1~50자 사이여야 합니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "채널 이름"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "New channel name",
+          "message": "새 채널 이름"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to be updated.",
+          "message": "업데이트할 채널이 포함된 팀의 고유 식별자입니다."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "팀 ID"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "팀 식별자"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Modify an existing channel",
+          "message": "기존 채널 수정"
+        },
+        "app.VGVhbXM.desc": {
+          "source": "Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.",
+          "message": "Microsoft Teams는 조직 내에서 메시징, 파일 공유, 화상 회의 및 앱 통합을 지원하는 협업 플랫폼입니다."
+        },
+        "app.VGVhbXM.display_name": {
+          "source": "Microsoft Teams",
+          "message": "Microsoft Teams"
+        },
+        "app.VGVhbXM.short_desc": {
+          "source": "Collaborate with your team using channels, meetings, and messages",
+          "message": "채널, 모임, 메시지를 사용하여 팀과 협업하세요"
+        }
+      }
+    }
+  }
+}

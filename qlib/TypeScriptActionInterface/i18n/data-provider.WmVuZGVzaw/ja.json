@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.desc": {
+          "source": "Returns an approximate count of tickets in the account. If the count exceeds 100,000, it is updated every 24 hours.\n\n`ccd` lists tickets that the specified user is cc'd on.\n\nThe `count[refreshed_at]` property is a timestamp that indicates when the count was last updated.\n\n**Note**: When the count exceeds 100,000, `count[refreshed_at]` may occasionally be null.\nThis indicates that the count is being updated in the background, and `count[value]` is limited to 100,000 until the update is complete.\n\n#### Allowed For\n* Agents",
+          "message": "アカウント内のチケットのおおよその件数を返します。件数が100,000件を超える場合、24時間ごとに更新されます。\n\n`ccd` は指定されたユーザーがCCに含まれているチケットを一覧表示します。\n\n`count[refreshed_at]` プロパティは、件数が最後に更新された日時を示すタイムスタンプです。\n\n**注**: 件数が100,000件を超える場合、`count[refreshed_at]` はnullになることがあります。\nこれは件数がバックグラウンドで更新中であることを示しており、更新が完了するまで `count[value]` は100,000件に制限されます。\n\n#### 許可対象\n* エージェント"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.display_name": {
+          "source": "Count Tickets",
+          "message": "チケット数のカウント"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.short_desc": {
+          "source": "Count Tickets",
+          "message": "チケット数のカウント"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### 許可対象\n\n* 管理者\n* グループ管理権限を持つカスタムロールに割り当てられたエージェント（Enterpriseのみ）\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
+          "source": "Create Group",
+          "message": "グループを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
+          "source": "Create Group",
+          "message": "グループを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "You must provide a unique `name` for each organization. Normally\nthe system doesn't allow records to be created with identical names.\nHowever, a race condition can occur if you make two or more identical\nPOSTs very close to each other, causing the records to have identical\norganization names.\n\n#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "各組織に対して一意の `name` を指定する必要があります。通常、システムでは同一の名前を持つレコードを作成することはできません。\nただし、ほぼ同時に同一のPOSTを2回以上実行すると競合状態が発生し、レコードに同一の組織名が設定される可能性があります。\n\n#### 許可対象\n\n* 管理者\n* 組織管理権限を持つカスタムロールに割り当てられたエージェント（Enterpriseのみ）\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Create Organization",
+          "message": "組織の作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Create Organization",
+          "message": "組織の作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.desc": {
+          "source": "Create ticket",
+          "message": "チケットを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
+          "source": "Create Ticket",
+          "message": "チケットを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
+          "source": "Create Ticket",
+          "message": "チケットを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.desc": {
+          "source": "Create user",
+          "message": "ユーザーを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
+          "source": "Create User",
+          "message": "ユーザーを作成"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
+          "source": "Create User",
+          "message": "ユーザーを作成"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### 許可対象\n\n* 管理者\n* グループ管理権限を持つカスタムロールに割り当てられたエージェント（Enterpriseのみ）\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
+          "source": "Delete Group",
+          "message": "グループを削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
+          "source": "Delete Group",
+          "message": "グループを削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "#### 許可対象\n\n* 管理者\n* 組織管理権限を持つカスタムロールに割り当てられたエージェント（Enterpriseのみ）\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete Organization",
+          "message": "組織の削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete Organization",
+          "message": "組織の削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents with permission to delete tickets\n\nAgent delete permissions are set in Support. See\n[Deleting tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nin the Support Help Center.\n\n#### Ticket deletion rate limit\n\nYou can delete 400 tickets every 1 minute using this endpoint.\nThe rate limiting mechanism behaves as described in\n[Rate limits](-api-reference-introduction-rate-limits-) in the API introduction.\nZendesk recommends that you obey the Retry-After header values.\nTo delete many tickets, you may use [Bulk Delete Tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets).",
+          "message": "#### 許可対象\n\n* 管理者\n* チケット削除権限を持つエージェント\n\nエージェントの削除権限はSupportで設定されます。詳細はSupportヘルプセンターの\n[チケットの削除](https:-support.zendesk.com-hc-en-us-articles-203690936)\nを参照してください。\n\n#### チケット削除のレート制限\n\nこのエンドポイントを使用すると、1分間に400件のチケットを削除できます。\nレート制限メカニズムは、API入門の\n[レート制限](-api-reference-introduction-rate-limits-)\nで説明されているとおりに動作します。\nZendeskでは、Retry-Afterヘッダーの値に従うことを推奨しています。\n多数のチケットを削除するには、[チケットの一括削除](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets)を使用できます。"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
+          "source": "Delete Ticket",
+          "message": "チケットを削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
+          "source": "Delete Ticket",
+          "message": "チケットを削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.desc": {
+          "source": "#### Allowed for\n\n* End Users\n",
+          "message": "#### 許可対象\n\n* エンドユーザー\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.display_name": {
+          "source": "Delete Upload",
+          "message": "アップロードの削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.desc": {
+          "source": "URI path variable \"token\"",
+          "message": "URIパス変数「token」"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.display_name": {
+          "source": "Token",
+          "message": "トークン"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.short_desc": {
+          "source": "URI path variable \"token\"",
+          "message": "URIパス変数「token」"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.short_desc": {
+          "source": "Delete Upload",
+          "message": "アップロードの削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.desc": {
+          "source": "Deletes the user and associated records from the account.\n\n**Warning**:\n\n* Deleted users are not recoverable.\n* Both agents and administrators can soft delete users in the agent interface in Zendesk Support. Agents with permission can delete end users, while administrators can delete all users except the account owner.\n\nTo comply with GDPR, a further step is needed. See [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Allowed For\n\n* Admins and [agents in custom roles with permission](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) to manage end users or team members\n",
+          "message": "ユーザーおよび関連レコードをアカウントから削除します。\n\n**警告**:\n\n* 削除されたユーザーは復元できません。\n* エージェントと管理者の両方が、Zendesk Supportのエージェントインターフェースでユーザーを論理削除できます。権限を持つエージェントはエンドユーザーを削除でき、管理者はアカウントオーナーを除くすべてのユーザーを削除できます。\n\nGDPRに準拠するには、追加の手順が必要です。[ユーザーを完全に削除する](-api-reference-ticketing-users-users-#permanently-delete-user)を参照してください。\n\n#### 許可対象\n\n* 管理者、およびエンドユーザーまたはチームメンバーを管理する[権限を持つカスタムロールのエージェント](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd)\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
+          "source": "Delete User",
+          "message": "ユーザーを削除"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
+          "source": "Delete User",
+          "message": "ユーザーを削除"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents, with certain restrictions\n\nIf the agent has a custom agent role that restricts their access to only users in their own organization, a 403 Forbidden error is returned. See [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) in Zendesk help.\n",
+          "message": "#### ページネーション\n\n* カーソルページネーション（推奨）\n* オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* エージェント（一定の制限あり）\n\nエージェントが自組織のユーザーのみにアクセスを制限するカスタムエージェントロールを持っている場合、403 Forbiddenエラーが返されます。Zendeskヘルプの[カスタムエージェントロールの作成とエージェントの割り当て](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd)を参照してください。\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.display_name": {
+          "source": "List Organizations",
+          "message": "組織の一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.short_desc": {
+          "source": "List Organizations",
+          "message": "組織の一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### ページネーション\n\n* カーソルページネーション（推奨）\n* オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* 管理者\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
+          "source": "List Groups",
+          "message": "グループを一覧表示"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "削除されたエンティティを除外するかどうか"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.display_name": {
+          "source": "Exclude Deleted",
+          "message": "削除済みを除外"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.short_desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "削除されたエンティティを除外するかどうか"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
+          "source": "List Groups",
+          "message": "グループを一覧表示"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.desc": {
+          "source": "Returns the search results. See [Query basics](#query-basics) for the syntax of the `query` parameter.\n\nUse the ampersand character (&) to append the `sort_by` or `sort_order` parameters to the URL.\n\nFor examples, see [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Allowed For\n\n* Agents\n\n#### Pagination\n\n* Offset pagination only\n\nOffset pagination may result in duplicate results when paging. You can also use the \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results) endpoint, which \nuses cursor-based pagination and doesn't return duplicate results. See \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination) for more information.\n\n\n#### Errors JSON Format\n\nErrors are represented as JSON objects which have the following keys:\n\n| Name                  | Type                 | Comment\n| - | -| -\n| error                 | string               | The type of error. Examples: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Example Error\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n",
+          "message": "検索結果を返します。`query`パラメータの構文については[クエリの基本](#query-basics)を参照してください。\n\nURLに`sort_by`または`sort_order`パラメータを追加するには、アンパサンド文字（&）を使用します。\n\n例については、[Zendesk APIを使用した検索](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api)を参照してください。\n\n#### 許可対象\n\n* エージェント\n\n#### ページネーション\n\n* オフセットページネーションのみ\n\nオフセットページネーションでは、ページ移動時に重複した結果が返される場合があります。カーソルベースのページネーションを使用し重複結果を返さない[検索結果のエクスポート](-api-reference-ticketing-ticket-management-search-#export-search-results)エンドポイントを使用することもできます。詳細については[カーソルページネーションの使用](-api-reference-introduction-pagination-#using-cursor-pagination)を参照してください。\n\n\n#### エラーJSONフォーマット\n\nエラーは以下のキーを持つJSONオブジェクトとして表されます:\n\n| 名前 | タイプ | コメント\n| - | -| -\n| error | string | エラーのタイプ。例: \"unavailable\"、\"invalid\"\n| description | string |\n\n##### エラー例\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.display_name": {
+          "source": "List Search Results",
+          "message": "検索結果の一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.short_desc": {
+          "source": "List Search Results",
+          "message": "検索結果の一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a list of tickets with their metrics.\n\nTickets are ordered chronologically by created date, from newest to oldest.\nThe last ticket listed may not be the absolute oldest ticket in your account\ndue to ticket archiving.\n\nArchived tickets are not included in the response. See\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) in\nZendesk help.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n\n#### Allowed For\n\n* Agents\n",
+          "message": "チケットとメトリクスの一覧を返します。\n\nチケットは作成日の昇順（新しいものから古いものへ）で時系列に並べられます。\nチケットのアーカイブにより、一覧の最後のチケットがアカウント内で\n最も古いチケットであるとは限りません。\n\nアーカイブされたチケットはレスポンスに含まれません。Zendeskヘルプの\n[アーカイブ済みチケットについて](https:-support.zendesk.com-hc-en-us-articles-203657756)を\n参照してください。\n\n#### ページネーション\n\n- カーソルページネーション（推奨）\n- オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n\n#### 許可対象\n\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.display_name": {
+          "source": "List Ticket Metrics",
+          "message": "チケットメトリクスの一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.short_desc": {
+          "source": "List Ticket Metrics",
+          "message": "チケットメトリクスの一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.desc": {
+          "source": "List tickets",
+          "message": "チケットの一覧取得"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
+          "source": "List Tickets",
+          "message": "チケット一覧"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.desc": {
+          "source": "Lists tickets by external id. External ids don't have to be unique for each ticket. As a result, the request may return multiple tickets with the same external id.",
+          "message": "外部IDでチケットを一覧表示します。外部IDは各チケットに対して一意である必要はありません。そのため、リクエストによって同じ外部IDを持つ複数のチケットが返される場合があります。"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.display_name": {
+          "source": "External Id",
+          "message": "外部ID"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.short_desc": {
+          "source": "Lists tickets by external id",
+          "message": "外部IDでチケットを一覧表示"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
+          "source": "List Tickets",
+          "message": "チケット一覧"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins, Agents and Light Agents\n",
+          "message": "#### ページネーション\n\n* カーソルページネーション（推奨）\n* オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* 管理者、エージェント、およびライトエージェント\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### 許可対象\n\n* 管理者\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.display_name": {
+          "source": "Show Organization",
+          "message": "組織の表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Show Organization",
+          "message": "組織の表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.desc": {
+          "source": "Shows attachment details. You can get the value of the `attachment_id` parameter by listing the ticket's comments.\nSee [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Each comment\nin the list has an `attachments` list that specifies an `id` for each attachment.\n\n\n #### Allowed for\n\n * Agents\n",
+          "message": "添付ファイルの詳細を表示します。チケットのコメントを一覧表示することで`attachment_id`パラメータの値を取得できます。\n[コメントの一覧表示](-api-reference-ticketing-tickets-ticket_comments-#list-comments)を参照してください。一覧内の各コメントには、\n各添付ファイルの`id`を指定する`attachments`リストがあります。\n\n\n #### 許可対象\n\n * エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.display_name": {
+          "source": "Show Attachment",
+          "message": "添付ファイルの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "URIパス変数「attachment_id」"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.display_name": {
+          "source": "Attachment Id",
+          "message": "添付ファイルID"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.short_desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "URIパス変数「attachment_id」"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.short_desc": {
+          "source": "Show Attachment",
+          "message": "添付ファイルの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.desc": {
+          "source": "Shows the settings that are available for the account.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "アカウントで利用可能な設定を表示します。\n\n#### 許可対象\n\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.display_name": {
+          "source": "Show Settings",
+          "message": "設定の表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.short_desc": {
+          "source": "Show Settings",
+          "message": "設定の表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### 許可対象\n\n* 管理者\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.display_name": {
+          "source": "Show Group",
+          "message": "グループの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.short_desc": {
+          "source": "Show Group",
+          "message": "グループの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.desc": {
+          "source": "Returns a number of ticket properties though not the ticket comments. To get the comments, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Allowed For\n* Agents",
+          "message": "チケットのプロパティを返しますが、チケットのコメントは返しません。コメントを取得するには、[コメントの一覧表示](-api-reference-ticketing-tickets-ticket_comments-#list-comments)を使用してください\n\n#### 許可対象\n* エージェント"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.display_name": {
+          "source": "Show Ticket",
+          "message": "チケットの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.short_desc": {
+          "source": "Show Ticket",
+          "message": "チケットの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a specific metric, or the metrics of a specific ticket.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "特定のメトリクス、または特定チケットのメトリクスを返します。\n\n#### ページネーション\n\n- カーソルページネーション（推奨）\n- オフセットページネーション\n\n[ページネーション](-api-reference-introduction-pagination-)を参照してください。\n\n1ページあたり最大100レコードを返します。\n\n#### 許可対象\n\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.display_name": {
+          "source": "Show Ticket Metrics",
+          "message": "チケットメトリクスの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.short_desc": {
+          "source": "Show Ticket Metrics",
+          "message": "チケットメトリクスの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.desc": {
+          "source": "#### Allowed For\n\n* Agents\n",
+          "message": "#### 許可対象\n\n* エージェント\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.display_name": {
+          "source": "Show User",
+          "message": "ユーザーの表示"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.short_desc": {
+          "source": "Show User",
+          "message": "ユーザーの表示"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n",
+          "message": "#### 許可対象\n\n* 管理者\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
+          "source": "Update Group",
+          "message": "グループを更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
+          "source": "Update Group",
+          "message": "グループを更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n\nAgents with no permissions restrictions can only update \"notes\" on organizations.\n\n**Note:** Updating an organization's `domain_names` property overwrites all existing `domain_names` values. To prevent this, submit a complete list of `domain_names` for the organization in your request.\n\n#### Example Request\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n",
+          "message": "#### 許可対象\n\n* 管理者\n* エージェント\n\n権限制限のないエージェントは、組織の「notes」のみを更新できます。\n\n**注意:** 組織の`domain_names`プロパティを更新すると、既存のすべての`domain_names`値が上書きされます。これを防ぐには、リクエスト内で組織の完全な`domain_names`リストを送信してください。\n\n#### リクエスト例\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update Organization",
+          "message": "組織の更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update Organization",
+          "message": "組織の更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.desc": {
+          "source": "Update ticket",
+          "message": "チケットの更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
+          "source": "Update Ticket",
+          "message": "チケットを更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
+          "source": "Update Ticket",
+          "message": "チケットを更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.desc": {
+          "source": "Update user",
+          "message": "ユーザーの更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
+          "source": "Update User",
+          "message": "ユーザーを更新"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
+          "source": "Update User",
+          "message": "ユーザーを更新"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルに新規レコードを作成します"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルに新規レコードを作成します"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルからレコードを削除します"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルからレコードを削除します"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zendesk** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Zendesk**へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zendesk",
+          "message": "ZendeskへのカスタムAPI呼び出しの実行"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "新しい組織が作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
+          "source": "New Organization",
+          "message": "新しい組織"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "新しい組織が作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.desc": {
+          "source": "Triggers when a new custom object record is created in Zendesk",
+          "message": "Zendeskで新しいカスタムオブジェクトレコードが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
+          "source": "New Custom Object Record",
+          "message": "新規カスタムオブジェクトレコード"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.desc": {
+          "source": "Select the custom object type to monitor for new records",
+          "message": "新規レコードを監視するカスタムオブジェクトタイプを選択"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
+          "source": "Custom Object",
+          "message": "カスタムオブジェクト"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {
+          "source": "The custom object to monitor for new records",
+          "message": "新規レコードを監視するカスタムオブジェクト"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
+          "source": "Triggers when a new custom object record is created",
+          "message": "新しいカスタムオブジェクトレコードが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "新しいチケットが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
+          "source": "New Ticket",
+          "message": "新規チケット"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "新しいチケットが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.desc": {
+          "source": "Triggers when a new user is created",
+          "message": "新しいユーザーが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "新規ユーザー"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created",
+          "message": "新しいユーザーが作成されたときにトリガー"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "アプリ「Zendesk」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.WmVuZGVzaw.desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Zendesk APIと対話するためのアクションのコレクション"
+        },
+        "app.WmVuZGVzaw.display_name": {
+          "source": "Zendesk",
+          "message": "Zendesk"
+        },
+        "app.WmVuZGVzaw.short_desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Zendesk APIと対話するためのアクションのコレクション"
+        }
+      }
+    }
+  }
+}

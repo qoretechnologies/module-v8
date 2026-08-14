@@ -1,0 +1,1945 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.desc": {
+          "source": "Reply to a conversation by sending a message. The message will be appended to the conversation and sent to the recipients. You can optionally save it as a draft instead of sending immediately.",
+          "message": "透過傳送訊息回覆對話。該訊息將附加到對話中並傳送給收件者。您也可以選擇將其儲存為草稿而不立即傳送。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
+          "source": "Reply to Conversation",
+          "message": "回覆對話"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to reply to.",
+          "message": "選取或輸入您要回覆的對話 ID。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to reply to",
+          "message": "要回覆的對話"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.desc": {
+          "source": "A list of email addresses to CC on the reply.",
+          "message": "要在回覆中副本抄送 (CC) 的電子郵件地址清單。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.display_name": {
+          "source": "CC",
+          "message": "副本"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.short_desc": {
+          "source": "CC recipients",
+          "message": "副本收件者"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.desc": {
+          "source": "The HTML content of the reply message. This is the main body text that will be sent to recipients.",
+          "message": "回覆訊息的 HTML 內容。這是將傳送給收件者的正文文字。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
+          "source": "Message Body",
+          "message": "訊息內文"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
+          "source": "The content of the reply",
+          "message": "回覆的內容"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.desc": {
+          "source": "A list of email addresses to BCC on the reply.",
+          "message": "要在回覆中密件副本 (BCC) 的電子郵件地址清單。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.display_name": {
+          "source": "BCC",
+          "message": "密件副本"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.short_desc": {
+          "source": "BCC recipients",
+          "message": "密件副本收件者"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.desc": {
+          "source": "If true, the message will be saved as a draft instead of being sent immediately. Default is false.",
+          "message": "如果為 true，訊息將儲存為草稿而不會立即傳送。預設為 false。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
+          "source": "Save as Draft",
+          "message": "儲存為草稿"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
+          "source": "Save as draft instead of sending",
+          "message": "儲存為草稿而非傳送"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the reply. If not provided, the original conversation subject may be used.",
+          "message": "回覆的可選主旨行。如果未提供，可能會使用原始對話主旨。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "主題"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.short_desc": {
+          "source": "Optional subject line",
+          "message": "可選主旨行"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.desc": {
+          "source": "A list of email addresses to send the reply to. These are added to the existing conversation recipients.",
+          "message": "要將回覆傳送至的電子郵件地址清單。這些將新增至現有對話收件者中。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.short_desc": {
+          "source": "Additional recipients",
+          "message": "其他收件者"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
+          "source": "Send a reply message to a conversation",
+          "message": "傳送回覆訊息至對話"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.desc": {
+          "source": "Create a new account in Front. Accounts represent companies or organizations and can be used to group related contacts together. You can associate domains with accounts to automatically link contacts.",
+          "message": "在 Front 中建立新帳戶。帳戶代表公司或組織，可用於將相關聯絡人分組在一起。您可以將網域與帳戶建立關聯，以自動連結聯絡人。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
+          "source": "Create Account",
+          "message": "建立帳戶"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the account. The keys should match your configured custom field names.",
+          "message": "包含帳戶自訂欄位值的物件。索引鍵應與您設定的自訂欄位名稱相符。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "自訂欄位"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "自訂欄位值"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "A list of email domains (e.g., \"example.com\") associated with this account. Contacts with email addresses from these domains can be automatically linked to the account.",
+          "message": "與此帳戶關聯的電子郵件網域清單（例如「example.com」）。具有來自這些網域之電子郵件地址的聯絡人可以自動連結到該帳戶。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "網域"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "Email domains associated with the account",
+          "message": "與帳戶關聯的電子郵件網域"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description providing additional context about the account, such as the type of business or relationship.",
+          "message": "提供有關帳戶的其他背景資訊（例如業務類型或關係）的可選描述。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the account",
+          "message": "帳戶的描述"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "An optional external ID to link this account to a record in another system, such as a CRM or billing platform.",
+          "message": "將此帳戶連結到另一個系統（例如 CRM 或計費平台）中記錄的可選外部 ID。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "外部 ID"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "External system identifier",
+          "message": "外部系統識別碼"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The name of the account, typically the company or organization name. This is a required field.",
+          "message": "帳戶名稱，通常是公司或組織名稱。這是必填欄位。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The account name",
+          "message": "帳戶名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
+          "source": "Create a new account",
+          "message": "建立新帳戶"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Front. Contacts represent the people you communicate with. A contact must have at least one handle (email, phone, etc.) to be created.",
+          "message": "在 Front 中建立新聯絡人。聯絡人代表與您溝通的人員。聯絡人必須至少有一個 handle（電子郵件、電話等）才能建立。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "建立聯絡人"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the contact. The keys should match your configured custom field names.",
+          "message": "包含聯絡人自訂欄位值的物件。索引鍵應與您設定的自訂欄位名稱相符。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "自訂欄位"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "自訂欄位值"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.desc": {
+          "source": "A list of group names to add the contact to. Groups help organize contacts into categories.",
+          "message": "要將聯絡人新增至其中的群組名稱清單。群組有助於將聯絡人分類。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
+          "source": "Group Names",
+          "message": "群組名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
+          "source": "Groups to add the contact to",
+          "message": "要將聯絡人新增至的群組"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description or notes about the contact. This can include any relevant context about the person.",
+          "message": "關於聯絡人的可選描述或備註。這可以包含有關該人員的任何相關背景資訊。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact",
+          "message": "聯絡人的描述"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.desc": {
+          "source": "A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.",
+          "message": "聯絡人的 handle 清單。每個 handle 由一個 handle 值（例如電子郵件地址）和一個來源類型（電子郵件、電話、Twitter 等）組成。至少需要一個 handle。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.display_name": {
+          "source": "Handles",
+          "message": "Handles"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.short_desc": {
+          "source": "Contact handles (email, phone, etc.)",
+          "message": "聯絡人 handles（電子郵件、電話等）"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "與此聯絡人關聯的 URL 清單，例如社群媒體個人資料或公司網站。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "連結"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "關聯的 URL"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "The display name of the contact. This is optional but recommended for easier identification.",
+          "message": "聯絡人的顯示名稱。這是可選的，但建議填寫以便於識別。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The contact name",
+          "message": "聯絡人姓名"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "建立新聯絡人"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list in Front. Contact lists help you organize contacts into logical groups. The list will be created in the oldest active workspace that your token has access to.",
+          "message": "在 Front 中建立新的聯絡人清單。聯絡人清單可協助您將聯絡人組織成邏輯群組。該清單將在您的權杖有權存取的最早使用中工作區中建立。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "建立聯絡人清單"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of the contact list or the criteria for contacts in it.",
+          "message": "說明聯絡人清單用途或其中聯絡人條件的可選描述。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact list",
+          "message": "聯絡人清單的描述"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "The name of the contact list. Choose a descriptive name that clearly identifies the purpose of the list.",
+          "message": "聯絡人清單的名稱。請選擇一個能清楚識別清單用途的描述性名稱。"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The contact list name",
+          "message": "聯絡人清單名稱"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "建立新聯絡人清單"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "Add a new note to a contact in Front. Notes are internal annotations that are only visible to your team members. Use notes to document important information, context, or reminders about a contact.",
+          "message": "在 Front 中為聯絡人新增備註。備註是僅對團隊成員可見的內部註記。使用備註來記錄有關聯絡人的重要資訊、背景資訊或提醒事項。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "Add Note to Contact",
+          "message": "新增備註至聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to add a note to.",
+          "message": "選取或輸入要新增備註的聯絡人 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to add the note to",
+          "message": "要新增備註的聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.desc": {
+          "source": "Select the teammate who will be recorded as the author of this note. This is a required field.",
+          "message": "選取將記錄為此備註作者的團隊成員。此為必填欄位。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.display_name": {
+          "source": "Author",
+          "message": "作者"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.short_desc": {
+          "source": "The teammate who authored the note",
+          "message": "撰寫備註的團隊成員"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.desc": {
+          "source": "The text content of the note. This will be visible to all team members who can access the contact.",
+          "message": "備註的文字內容。所有可存取該聯絡人的團隊成員均可看到此內容。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
+          "source": "Note Body",
+          "message": "備註本文"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
+          "source": "The content of the note",
+          "message": "備註內容"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Add a note to a contact",
+          "message": "新增備註至聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.desc": {
+          "source": "Add one or more contacts to an account in Front. This creates an association between the contacts and the account, helping you organize contacts by company or organization.",
+          "message": "在 Front 中將一個或多個聯絡人新增至帳戶。這會在聯絡人與帳戶之間建立關聯，協助您按公司或組織整理聯絡人。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
+          "source": "Add Contact to Account",
+          "message": "將聯絡人新增至帳戶"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the account. Contact IDs start with \"crd_\".",
+          "message": "選取要新增至帳戶的一個或多個聯絡人。聯絡人 ID 開頭為 \"crd_\"。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "要新增的聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account where you want to add contacts.",
+          "message": "選取或輸入要新增聯絡人的帳戶 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to add contacts to",
+          "message": "要新增聯絡人的帳戶"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
+          "source": "Add contacts to an account",
+          "message": "將聯絡人新增至帳戶"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication.",
+          "message": "在 Front 中將一個或多個聯絡人新增至聯絡人清單。這有助於將聯絡人劃分至邏輯分組，以簡化管理並實現精準溝通。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Add Contacts to Contact List",
+          "message": "新增聯絡人至聯絡人清單"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the contact list.",
+          "message": "選取要新增至聯絡人清單的一個或多個聯絡人。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "要新增的聯絡人"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list where you want to add contacts.",
+          "message": "選取或輸入要新增聯絡人的聯絡人清單 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "聯絡人清單"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "要新增聯絡人的聯絡人清單"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "將聯絡人新增至聯絡人清單"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Add one or more tags to a conversation in Front. Tags help categorize and organize conversations for easier filtering and reporting.",
+          "message": "在 Front 中為對話新增一個或多個標籤。標籤有助於對話分類與整理，以便於篩選和建立報表。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Add Tag to Conversation",
+          "message": "新增標籤至對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add tags to.",
+          "message": "選取或輸入要新增標籤的對話 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to tag",
+          "message": "要新增標籤的對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to add to the conversation.",
+          "message": "選取要新增至對話的一個或多個標籤。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to add",
+          "message": "要新增的標籤"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Add tags to a conversation",
+          "message": "新增標籤至對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.desc": {
+          "source": "Add an internal comment to a conversation in Front. Comments are private messages visible only to your teammates and are never sent to external contacts. Use comments for internal notes, discussions, or context sharing.",
+          "message": "在 Front 中為對話新增內部留言。留言是僅對團隊成員可見的私密訊息，絕不會傳送給外部聯絡人。使用留言進行內部備註、討論或共用背景資訊。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
+          "source": "Add Comment to Conversation",
+          "message": "新增留言至對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add a comment to.",
+          "message": "選取或輸入要新增留言的對話 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add a comment to",
+          "message": "要新增留言的對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.desc": {
+          "source": "The text content of the internal comment. This will be visible to all teammates who can access the conversation.",
+          "message": "內部留言的文字內容。所有可存取該對話的團隊成員均可看到此內容。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
+          "source": "Comment Body",
+          "message": "留言本文"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
+          "source": "The content of the comment",
+          "message": "留言內容"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
+          "source": "Add an internal comment to a conversation",
+          "message": "新增內部留言至對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.desc": {
+          "source": "Add teammates as followers to a conversation. Followers receive notifications about conversation updates without being the assignee.",
+          "message": "將團隊成員新增為對話的關注者。關注者會收到有關對話更新的通知，而無需成為被指派者。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
+          "source": "Add Conversation Followers",
+          "message": "新增對話關注者"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add followers to.",
+          "message": "選取或輸入要新增關注者的對話 ID。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add followers to",
+          "message": "要新增關注者的對話"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.desc": {
+          "source": "Select one or more teammates to add as followers to the conversation.",
+          "message": "選取要作為關注者新增至對話的一個或多個團隊成員。"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.display_name": {
+          "source": "Teammates",
+          "message": "團隊成員"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.short_desc": {
+          "source": "The teammates to add as followers",
+          "message": "要新增為關注者的團隊成員"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
+          "source": "Add followers to a conversation",
+          "message": "新增關注者至對話"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Retrieve the full details of a specific message from Front by its ID. Returns all message data including content, author, recipients, and attachments.",
+          "message": "依 ID 從 Front 擷取特定訊息的完整詳細資訊。傳回所有訊息資料，包括內容、作者、收件者和附件。"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get Message",
+          "message": "取得訊息"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.desc": {
+          "source": "Enter the ID of the message you want to retrieve. Message IDs start with \"msg_\".",
+          "message": "輸入要擷取的訊息 ID。訊息 ID 開頭為 \"msg_\"。"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "訊息 ID"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.short_desc": {
+          "source": "The message to retrieve",
+          "message": "要擷取的訊息"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve a single message by ID",
+          "message": "依 ID 擷取單一訊息"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Retrieve the full details of a specific account from Front by its ID. Returns all account data including name, description, domains, external ID, and custom fields.",
+          "message": "依 ID 從 Front 擷取特定帳戶的完整詳細資訊。傳回所有帳戶資料，包括名稱、描述、網域、外部 ID 和自訂欄位。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "取得帳戶"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to retrieve. Account IDs start with \"acc_\".",
+          "message": "選取或輸入要擷取的帳戶 ID。帳戶 ID 開頭為 \"acc_\"。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to retrieve",
+          "message": "要擷取的帳戶"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve a single account by ID",
+          "message": "依 ID 擷取單一帳戶"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve the full details of a specific contact from Front by their ID. Returns all contact data including name, handles (email, phone, etc.), groups, links, and custom fields.",
+          "message": "依 ID 從 Front 擷取特定聯絡人的完整詳細資訊。傳回所有聯絡人資料，包括姓名、帳號代稱 (電子郵件、電話等)、群組、連結和自訂欄位。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "取得聯絡人"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to retrieve. Contact IDs start with \"crd_\".",
+          "message": "選取或輸入要擷取的聯絡人 ID。聯絡人 ID 開頭為 \"crd_\"。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to retrieve",
+          "message": "要擷取的聯絡人"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve a single contact by ID",
+          "message": "依 ID 擷取單一聯絡人"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Retrieve the full details of a specific conversation from Front by its ID. Returns all conversation data including subject, status, assignee, tags, and custom fields.",
+          "message": "依 ID 從 Front 擷取特定對話的完整詳細資訊。傳回所有對話資料，包括主旨、狀態、被指派者、標籤和自訂欄位。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Get Conversation",
+          "message": "取得對話"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to retrieve. Conversation IDs start with \"cnv_\".",
+          "message": "選取或輸入要擷取的對話 ID。對話 ID 開頭為 \"cnv_\"。"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to retrieve",
+          "message": "要擷取的對話"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Retrieve a single conversation by ID",
+          "message": "依 ID 擷取單一對話"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.desc": {
+          "source": "Delete an account from Front. This action is permanent. Contacts associated with the account will not be deleted but will no longer be linked to this account.",
+          "message": "從 Front 刪除帳戶。此操作無法復原。與該帳戶關聯的聯絡人不會被刪除，但將不再連結至此帳戶。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
+          "source": "Delete Account",
+          "message": "刪除帳戶"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to delete.",
+          "message": "選取或輸入您要刪除的帳戶 ID。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to delete",
+          "message": "要刪除的帳戶"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
+          "source": "Delete an account",
+          "message": "刪除帳戶"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Delete a contact from Front. This action is permanent and will remove all associated data. Conversations with this contact will remain but will no longer be linked to the contact.",
+          "message": "從 Front 刪除聯絡人。此操作為永久性，並將移除所有相關資料。與此聯絡人的對話將保留，但不再連結至該聯絡人。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "刪除聯絡人"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to delete.",
+          "message": "選取或輸入您要刪除的聯絡人 ID。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to delete",
+          "message": "要刪除的聯絡人"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "刪除聯絡人"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace.",
+          "message": "從 Front 刪除聯絡人清單。此操作會移除清單，但不會刪除其中的聯絡人。聯絡人仍會保留在您的工作區中。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Delete Contact List",
+          "message": "刪除聯絡人清單"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list you want to delete.",
+          "message": "選取或輸入您要刪除的聯絡人清單 ID。"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "聯絡人清單"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to delete",
+          "message": "要刪除的聯絡人清單"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Delete a contact list",
+          "message": "刪除聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.desc": {
+          "source": "Retrieve a list of all contacts that are associated with a specific account. This helps you see all the people from a particular company or organization.",
+          "message": "擷取與特定帳戶關聯的所有聯絡人清單。這有助於您查看來自特定公司或組織的所有人員。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
+          "source": "List Account Contacts",
+          "message": "列出帳戶聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account whose contacts you want to retrieve.",
+          "message": "選取或輸入您要擷取其聯絡人的帳戶 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to list contacts from",
+          "message": "要列出聯絡人的帳戶"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "要返回的聯絡人記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "要返回的最大聯絡人數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
+          "source": "List contacts associated with an account",
+          "message": "列出與帳戶關聯的聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Retrieve a list of all accounts in your Front workspace. Accounts represent companies or organizations that your contacts belong to. Use accounts to group contacts and track interactions at the company level.",
+          "message": "擷取 Front 工作區中所有帳戶的清單。帳戶代表聯絡人所屬的公司或組織。使用帳戶將聯絡人分組並在公司層級追蹤互動。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "列出帳戶"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of account records to return. Default is 50. Use pagination for larger datasets.",
+          "message": "要返回的帳戶記錄最大數量。預設值為 50。對於較大的資料集請使用分頁。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to return",
+          "message": "要返回的最大帳戶數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts",
+          "message": "取得帳戶清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.desc": {
+          "source": "Retrieve all notes that have been added to a specific contact. Notes are internal annotations visible only to your team, useful for documenting important information about contacts.",
+          "message": "擷取已新增至特定聯絡人的所有備註。備註是僅對您的團隊可見的內部註釋，適用於記錄有關聯絡人的重要資訊。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
+          "source": "List Contact Notes",
+          "message": "列出聯絡人備註"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose notes you want to retrieve.",
+          "message": "選取或輸入您要擷取其備註的聯絡人 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list notes for",
+          "message": "要列出備註的聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of note records to return. Default is 50.",
+          "message": "要返回的備註記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "要返回的筆記最大數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
+          "source": "List notes for a contact",
+          "message": "列出聯絡人的備註"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Retrieve a list of all conversations associated with a specific contact. Conversations are returned in reverse chronological order (newest first). This helps you see the full communication history with a contact.",
+          "message": "擷取與特定聯絡人關聯的所有對話清單。對話按時間倒序返回（最新的在前）。這有助於您查看與聯絡人的完整通訊歷史記錄。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "List Contact Conversations",
+          "message": "列出聯絡人對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose conversations you want to retrieve.",
+          "message": "選取或輸入您要擷取其對話的聯絡人 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list conversations for",
+          "message": "要列出對話的聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "要返回的對話記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "要返回的對話最大數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "List conversations for a contact",
+          "message": "列出聯絡人的對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your Front workspace. Contact lists are used to organize contacts into groups for easier management, such as for marketing campaigns or customer segments.",
+          "message": "擷取 Front 工作區中所有聯絡人清單的清單。聯絡人清單用於將聯絡人整理成群組以便管理，例如用於行銷活動或客戶細分。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "列出聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact list records to return. Default is 50.",
+          "message": "要返回的聯絡人清單記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contact lists to return",
+          "message": "要返回的聯絡人清單最大數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "擷取所有聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.desc": {
+          "source": "Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment.",
+          "message": "擷取屬於特定聯絡人清單的所有聯絡人。這有助於您查看特定清單或區隔中包含哪些聯絡人。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
+          "source": "List Contacts in Contact List",
+          "message": "列出聯絡人清單中的聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list whose contacts you want to see.",
+          "message": "選取或輸入您要查看其聯絡人的聯絡人清單 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to retrieve contacts from",
+          "message": "要從中擷取聯絡人的聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "要返回的聯絡人記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "要返回的最大聯絡人數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
+          "source": "List contacts in a specific contact list",
+          "message": "列出特定聯絡人清單中的聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date.",
+          "message": "擷取 Front 工作區中所有聯絡人的清單。聯絡人代表與您通訊的人員。結果可依建立或更新日期排序。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "列出聯絡人"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "要返回的聯絡人記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "要返回的最大聯絡人數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "遞增"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降序"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "排序結果的方向：desc（最新的在前）或 asc（最舊的在前）。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "排序順序"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "排序順序方向"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOmNyZWF0ZWRfYXQ.display_name": {
+          "source": "Created At",
+          "message": "建立時間"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOnVwZGF0ZWRfYXQ.display_name": {
+          "source": "Updated At",
+          "message": "更新時間"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.desc": {
+          "source": "The field to sort results by: created_at or updated_at.",
+          "message": "用於排序結果的欄位：created_at 或 updated_at。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
+          "source": "Sort By",
+          "message": "排序依據"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort by",
+          "message": "排序欄位"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "取得聯絡人清單"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.desc": {
+          "source": "Retrieve a list of all internal comments in a specific conversation. Comments are returned in reverse chronological order (newest first). This provides the full internal discussion history of a conversation.",
+          "message": "擷取特定對話中所有內部留言的清單。留言按時間倒序返回（最新的在前）。這提供了對話的完整內部討論歷史記錄。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
+          "source": "List Conversation Comments",
+          "message": "列出對話留言"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose comments you want to retrieve.",
+          "message": "選取或輸入您要擷取其留言的對話 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list comments from",
+          "message": "要從中列出留言的對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of comment records to return. Default is 50.",
+          "message": "要返回的留言記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "要傳回的留言數量上限"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
+          "source": "List comments in a conversation",
+          "message": "列出對話中的留言"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.desc": {
+          "source": "Retrieve a list of all messages in a specific conversation. Messages are returned in reverse chronological order (newest first). This provides the full message history of a conversation.",
+          "message": "擷取特定對話中所有訊息的清單。訊息按時間倒序返回（最新的在前）。這提供了對話的完整訊息歷史記錄。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
+          "source": "List Conversation Messages",
+          "message": "列出對話訊息"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose messages you want to retrieve.",
+          "message": "選取或輸入您要擷取其訊息的對話 ID。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list messages from",
+          "message": "要從中列出訊息的對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. Default is 50.",
+          "message": "要返回的訊息記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "要返回的訊息最大數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
+          "source": "List messages in a conversation",
+          "message": "列出對話中的訊息"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.desc": {
+          "source": "Retrieve a list of conversations in your Front workspace. Conversations are returned in reverse chronological order (most recently updated first). You can filter by inbox or status.",
+          "message": "擷取 Front 工作區中的對話清單。對話按時間倒序返回（最近更新的在前）。您可以按收件匣或狀態進行篩選。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
+          "source": "List Conversations",
+          "message": "列出對話"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter conversations to a specific inbox. Leave empty to retrieve conversations from all inboxes.",
+          "message": "可選地將對話篩選至特定收件匣。留空以擷取所有收件匣中的對話。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "收件匣"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "依收件匣篩選"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "要返回的對話記錄最大數量。預設值為 50。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "要返回的對話最大數量"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "開啟"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "已封存"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "垃圾郵件"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.desc": {
+          "source": "Optionally filter conversations by their status: open, archived, deleted, or spam.",
+          "message": "可選擇依對話狀態篩選：open、archived、deleted 或 spam。"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "依對話狀態篩選"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
+          "source": "Retrieve a list of conversations",
+          "message": "擷取對話清單"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Front** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Front** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填查詢參數、標頭和請求內文。回應會以包含狀態碼、回應標頭和回應內文的雜湊形式傳回。\n\n當此應用程式尚未將特定端點提供為一級動作時，請使用此動作。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Front",
+          "message": "向 Front 進行自訂 API 呼叫"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.desc": {
+          "source": "This trigger fires whenever a new internal comment is added to a specific conversation in Front. Comments are private messages visible only to teammates. You must specify which conversation to monitor for new comments.",
+          "message": "每當有新的內部留言新增至 Front 中的特定對話時，此觸發程序便會觸發。留言是僅對團隊成員可見的私人訊息。您必須指定要監控新留言的對話。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
+          "source": "New Comment",
+          "message": "新留言"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to monitor for new comments. The trigger will fire whenever a new comment is added to this conversation.",
+          "message": "選取或輸入要監控新留言的對話 ID。每當有新留言新增至此對話時，觸發程序便會觸發。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to monitor",
+          "message": "要監控的對話"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {
+          "source": "Triggers when a new comment is added to a conversation",
+          "message": "當有新留言新增至對話時觸發"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace.",
+          "message": "每當在 Front 中建立新聯絡人時，此觸發程序便會觸發。可用於在工作區新增聯絡人時自動執行工作流程。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "新增聯絡人"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "當建立新聯絡人時觸發"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "This trigger fires whenever a new note is added to a specific contact in Front. You must specify which contact to monitor for new notes.",
+          "message": "每當有新記事新增至 Front 中的特定聯絡人時，此觸發程序便會觸發。您必須指定要監控新記事的聯絡人。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "New Contact Note",
+          "message": "新增聯絡人備忘錄"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to monitor for new notes. The trigger will fire whenever a new note is added to this contact.",
+          "message": "選取或輸入要監控新記事的聯絡人 ID。每當有新記事新增至此聯絡人時，觸發程序便會觸發。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to monitor",
+          "message": "要監控的聯絡人"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Triggers when a new note is added to a contact",
+          "message": "當有新記事新增至聯絡人時觸發"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation is created in Front. You can optionally filter by inbox or status to only trigger for specific types of conversations.",
+          "message": "每當在 Front 中建立新對話時，此觸發程序便會觸發。您可以選擇依收件匣或狀態進行篩選，以便僅針對特定類型的對話進行觸發。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "新對話"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific inbox. Leave empty to trigger for all inboxes.",
+          "message": "可選擇篩選為僅針對特定收件匣中的對話觸發。留空則針對所有收件匣觸發。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "收件匣"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "依收件匣篩選"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "開啟"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "已封存"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "垃圾郵件"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Optionally filter to only trigger for conversations with a specific status: open, archived, deleted, or spam.",
+          "message": "可選擇篩選為僅針對特定狀態的對話觸發：open、archived、deleted 或 spam。"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "依對話狀態篩選"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created",
+          "message": "當建立新對話時觸發"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches.",
+          "message": "使用搜尋查詢在 Front 中搜尋對話。依最後活動時間降冪排序傳回相符的對話，以及相符項目的總數。"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "Search Conversations",
+          "message": "搜尋對話"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 25.",
+          "message": "要傳回的對話記錄最大數量。預設為 25。"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "要返回的對話最大數量"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.desc": {
+          "source": "The search query to find conversations. You can search by keywords, email addresses, or use Front search syntax for advanced queries.",
+          "message": "用於尋找對話的搜尋查詢。您可以依關鍵字、電子郵件地址搜尋，或使用 Front 搜尋語法進行進階查詢。"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "搜尋查詢"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
+          "source": "The search query",
+          "message": "搜尋查詢"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "Search for conversations",
+          "message": "搜尋對話"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.desc": {
+          "source": "Remove one or more contacts from an account in Front. This removes the association between the contacts and the account but does not delete the contacts themselves.",
+          "message": "從 Front 中的帳戶移除一或多個聯絡人。這會移除聯絡人與帳戶之間的關聯，但不會刪除聯絡人本身。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
+          "source": "Remove Contact from Account",
+          "message": "從帳戶移除聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the account.",
+          "message": "選取一或多個要從帳戶移除的聯絡人。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "要移除的聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account from which you want to remove contacts.",
+          "message": "選取或輸入要從中移除聯絡人的帳戶 ID。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to remove contacts from",
+          "message": "要從中移除聯絡人的帳戶"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
+          "source": "Remove contacts from an account",
+          "message": "從帳戶移除聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.desc": {
+          "source": "Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves.",
+          "message": "從 Front 中的聯絡人清單移除一或多個聯絡人。這會將聯絡人從清單中移除，但不會刪除聯絡人本身。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
+          "source": "Remove Contacts from Contact List",
+          "message": "從聯絡人清單移除聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the contact list.",
+          "message": "選取一或多個要從聯絡人清單移除的聯絡人。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "要移除的聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list from which you want to remove contacts.",
+          "message": "選取或輸入要從中移除聯絡人的聯絡人清單 ID。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "聯絡人清單"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to remove contacts from",
+          "message": "要從中移除聯絡人的聯絡人清單"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
+          "source": "Remove contacts from a contact list",
+          "message": "從聯絡人清單移除聯絡人"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Remove one or more tags from a conversation in Front. This removes the tag association but does not delete the tags themselves.",
+          "message": "從 Front 中的對話移除一或多個標籤。這會移除標籤關聯，但不會刪除標籤本身。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Remove Tag from Conversation",
+          "message": "從對話移除標籤"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to remove tags from.",
+          "message": "選取或輸入要從中移除標籤的對話 ID。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to remove tags from",
+          "message": "要從中移除標籤的對話"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to remove from the conversation.",
+          "message": "選取一或多個要從對話移除的標籤。"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to remove",
+          "message": "要移除的標籤"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Remove tags from a conversation",
+          "message": "從對話移除標籤"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.desc": {
+          "source": "Update the properties of an existing account in Front. You can modify the name, description, domains, external ID, or custom fields. At least one field must be provided to update.",
+          "message": "更新 Front 中現有帳戶的屬性。您可以修改名稱、描述、網域、外部 ID 或自訂欄位。必須提供至少一個欄位以進行更新。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
+          "source": "Update Account",
+          "message": "更新帳戶"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the account.",
+          "message": "更新帳戶的自訂欄位值。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "自訂欄位"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "已更新的自訂欄位值"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to update.",
+          "message": "選取或輸入要更新的帳戶 ID。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "帳戶"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to update",
+          "message": "要更新的帳戶"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "Update the list of email domains associated with this account. This will replace the existing domains.",
+          "message": "更新與此帳戶關聯的電子郵件網域清單。這將取代現有的網域。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "網域"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "The new list of domains",
+          "message": "新網域清單"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description of the account.",
+          "message": "更新帳戶的描述。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "新描述"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "Update the external system identifier for this account.",
+          "message": "更新此帳戶的外部系統識別碼。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "外部 ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "The new external ID",
+          "message": "新外部 ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "Update the name of the account.",
+          "message": "更新帳戶名稱。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The new account name",
+          "message": "新帳戶名稱"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
+          "source": "Update an existing account",
+          "message": "更新現有帳戶"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the properties of an existing contact in Front. You can modify the name, description, links, or custom fields. At least one field must be provided to update.",
+          "message": "更新 Front 中現有聯絡人的屬性。您可以修改名稱、描述、連結或自訂欄位。必須提供至少一個欄位以進行更新。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "更新聯絡人"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to update.",
+          "message": "選取或輸入要更新的聯絡人 ID。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "聯絡人"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to update",
+          "message": "要更新的聯絡人"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the contact.",
+          "message": "更新聯絡人的自訂欄位值。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "自訂欄位"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "已更新的自訂欄位值"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description or notes about the contact. This can include any relevant context about the person.",
+          "message": "更新有關聯絡人的描述或記事。這可以包含任何與該人員相關的背景資訊。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "新描述"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "與此聯絡人關聯的 URL 清單，例如社群媒體個人資料或公司網站。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "連結"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "關聯的 URL"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "Update the display name of the contact.",
+          "message": "更新聯絡人的顯示名稱。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The new contact name",
+          "message": "新聯絡人名稱"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "更新現有聯絡人"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Update the properties of an existing conversation in Front. You can change the status, move to a different inbox, or update custom fields.",
+          "message": "更新 Front 中現有對話的屬性。您可以變更狀態、移至不同的收件匣或更新自訂欄位。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Update Conversation",
+          "message": "更新對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to update.",
+          "message": "選取或輸入您要更新的對話 ID。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "要更新的對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the conversation.",
+          "message": "更新對話的自訂欄位值。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "自訂欄位"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "已更新的自訂欄位值"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Move the conversation to a different inbox.",
+          "message": "將對話移至不同的收件匣。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "收件匣"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Move to inbox",
+          "message": "移至收件匣"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "開啟"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "已封存"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "垃圾郵件"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Update the conversation status to open, archived, deleted, or spam.",
+          "message": "將對話狀態更新為 open、archived、deleted 或 spam。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status",
+          "message": "新狀態"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Update a conversation",
+          "message": "更新對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.desc": {
+          "source": "Assign a conversation to a teammate or unassign it. Assigning conversations helps route work to the right team members and track ownership.",
+          "message": "將對話指派給團隊成員或取消指派。指派對話有助於將工作轉發給適當的團隊成員並追蹤負責人。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
+          "source": "Update Conversation Assignee",
+          "message": "更新對話指派對象"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to assign.",
+          "message": "選取或輸入您要指派的對話 ID。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "要更新的對話"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.desc": {
+          "source": "Select a teammate to assign the conversation to. Leave empty to unassign the conversation.",
+          "message": "選取要指派對話的團隊成員。保留為空白可取消指派對話。"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.display_name": {
+          "source": "Assignee",
+          "message": "負責人"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.short_desc": {
+          "source": "The teammate to assign",
+          "message": "要指派的團隊成員"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
+          "source": "Assign or unassign a conversation",
+          "message": "指派或取消指派對話"
+        },
+        "app.RnJvbnQ.desc": {
+          "source": "Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.",
+          "message": "與 Front 整合以管理您團隊的共用收件匣、聯絡人、帳戶和客戶對話。Front 是一個客戶通訊平台，可將電子郵件和訊息整合至共用收件匣。此整合可讓您自動化聯絡人管理、整理帳戶並簡化團隊協作。"
+        },
+        "app.RnJvbnQ.display_name": {
+          "source": "Front",
+          "message": "Front"
+        },
+        "app.RnJvbnQ.short_desc": {
+          "source": "Connect with Front to manage shared inboxes, contacts, and customer communications",
+          "message": "連線至 Front 以管理共用收件匣、聯絡人和客戶通訊"
+        }
+      }
+    }
+  }
+}

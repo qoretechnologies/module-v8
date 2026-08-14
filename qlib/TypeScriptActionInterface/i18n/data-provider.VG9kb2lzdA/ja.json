@@ -1,0 +1,1297 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.desc": {
+          "source": "Closes a task by marking it as completed. This action moves the task to the completed tasks list and updates its status accordingly.",
+          "message": "タスクを完了としてマークして終了します。このアクションにより、タスクが完了済みタスクリストに移動し、ステータスが適切に更新されます。"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
+          "source": "Complete Task",
+          "message": "タスクを完了"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to mark as complete.",
+          "message": "完了としてマークするTodoistタスクを選択してください。"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to complete",
+          "message": "完了するタスク"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
+          "source": "Mark a Todoist task as complete",
+          "message": "Todoistタスクを完了としてマーク"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.desc": {
+          "source": "Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members.",
+          "message": "Todoistに新規プロジェクトを作成します。プロジェクトは、関連するタスクの整理やチームメンバーとの共同作業に役立ちます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
+          "source": "Create Project",
+          "message": "プロジェクトを作成"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.desc": {
+          "source": "The color used to visually identify the project in the Todoist interface.",
+          "message": "Todoistインターフェースでプロジェクトを視覚的に識別するために使用される色。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.display_name": {
+          "source": "Color",
+          "message": "色"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.short_desc": {
+          "source": "Project color identifier",
+          "message": "プロジェクトの色識別子"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description explaining the purpose and scope of the project.",
+          "message": "プロジェクトの目的と範囲を説明する詳細な説明（オプション）。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "説明"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Project description",
+          "message": "プロジェクトの説明"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.desc": {
+          "source": "When enabled, the project will appear in your favorites section for quick access.",
+          "message": "有効にすると、素早くアクセスできるようにプロジェクトがお気に入りセクションに表示されます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
+          "source": "Is Favorite",
+          "message": "お気に入り"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
+          "source": "Mark project as favorite",
+          "message": "プロジェクトをお気に入りに設定"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for your new Todoist project.",
+          "message": "新規Todoistプロジェクトのわかりやすい名前。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "プロジェクト名"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
+          "source": "The name of the project",
+          "message": "プロジェクト名"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmNhbGVuZGFy.display_name": {
+          "source": "Calendar",
+          "message": "カレンダー"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.desc": {
+          "source": "Choose how tasks in this project are displayed: as a list, board (Kanban), or calendar view.",
+          "message": "このプロジェクトのタスクの表示方法を選択します：リスト、ボード（カンバン）、またはカレンダービュー。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
+          "source": "View Style",
+          "message": "表示スタイル"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
+          "source": "How the project is displayed",
+          "message": "プロジェクトの表示方法"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
+          "source": "Create a new Todoist project",
+          "message": "新規Todoistプロジェクトを作成"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more.",
+          "message": "Todoistに新規タスクを作成します。タスクはプロジェクトやセクションへの割り当て、ラベル、優先度、期日などの設定が可能です。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "タスクを作成"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The main text describing what needs to be done. This is the primary content of the task.",
+          "message": "何を行う必要があるかを説明するメインテキスト。これはタスクの主要な内容です。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "タスクの内容"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The task description",
+          "message": "タスクの説明"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.desc": {
+          "source": "Assign the task to a specific collaborator in the selected project.",
+          "message": "選択したプロジェクト内の特定のコラボレーターにタスクを割り当てます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.display_name": {
+          "source": "Assignee ID",
+          "message": "担当者ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.short_desc": {
+          "source": "Person assigned to the task",
+          "message": "タスクに割り当てられたユーザー"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "タスクに関する任意の詳細な説明またはメモ。Markdown形式をサポートしています。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "説明"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Additional task details",
+          "message": "追加のタスク詳細"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Set a due date and optionally a time for when the task should be completed.",
+          "message": "タスクを完了すべき期日および任意で時間を設定します。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "期日"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "When the task is due",
+          "message": "タスクの期日"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Specify how long you expect the task to take. Used for time tracking and scheduling.",
+          "message": "タスクにかかると予想される所要時間を指定します。時間追跡およびスケジューリングに使用されます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "所要時間"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Estimated time to complete",
+          "message": "完了までの推定時間"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Specify the position of the task in the project or section. Lower numbers appear first.",
+          "message": "プロジェクトまたはセクション内でのタスクの位置を指定します。小さい数値ほど先頭に表示されます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "順序"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "Task position in the list",
+          "message": "リスト内のタスクの位置"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Add one or more labels to categorize and filter the task. Labels help with organization and quick filtering.",
+          "message": "タスクを分類・フィルタリングするためのラベルを1つ以上追加します。ラベルは整理や素早いフィルタリングに役立ちます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "ラベル"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Task labels",
+          "message": "タスクラベル"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Organize the task within a specific section of the project for better categorization.",
+          "message": "より適切に分類するために、プロジェクト内の特定のセクションでタスクを整理します。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "セクションID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "The section within the project",
+          "message": "プロジェクト内のセクション"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "タスクの優先度レベルを設定します。優先度の高いタスクには色付きのフラグが表示されます: 1 (緊急)、2 (高)、3 (通常)、4 (低)。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "優先度"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Task priority level",
+          "message": "タスクの優先度レベル"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select which Todoist project this task belongs to. If not specified, the task will be added to your Inbox.",
+          "message": "このタスクが属するTodoistプロジェクトを選択します。指定しない場合、タスクはインボックスに追加されます。"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project for this task",
+          "message": "このタスクのプロジェクト"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new Todoist task",
+          "message": "新しいTodoistタスクを作成"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.desc": {
+          "source": "Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions.",
+          "message": "指定されたTodoistプロジェクトに新しいコメントを作成します。コメントを使用して、更新情報の提供、メモの作成、またはプロジェクト関連のディスカッションでチームメンバーと共同作業を行うことができます。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
+          "source": "Add Comment to Project",
+          "message": "プロジェクトにコメントを追加"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the project. Supports Markdown formatting for rich text.",
+          "message": "プロジェクトに追加するメッセージまたはメモ。リッチテキストのMarkdown形式をサポートしています。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "コメント内容"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "コメントのテキスト内容"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project where you want to add the comment.",
+          "message": "コメントを追加するTodoistプロジェクトを選択します。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to comment on",
+          "message": "コメント対象のプロジェクト"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
+          "source": "Add a comment to a Todoist project",
+          "message": "Todoistプロジェクトにコメントを追加"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.desc": {
+          "source": "Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks.",
+          "message": "指定されたTodoistタスクに新しいコメントを作成します。コメントを使用して、メモや更新情報の追加、特定のタスクに関するチームメンバーとの共同作業を行うことができます。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
+          "source": "Add Comment to Task",
+          "message": "タスクにコメントを追加"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the task. Supports Markdown formatting for rich text.",
+          "message": "タスクに追加するメッセージまたはメモ。リッチテキストのMarkdown形式をサポートしています。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "コメント内容"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "コメントのテキスト内容"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task where you want to add the comment.",
+          "message": "コメントを追加するTodoistタスクを選択します。"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to comment on",
+          "message": "コメント対象のタスク"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
+          "source": "Add a comment to a Todoist task",
+          "message": "Todoistタスクにコメントを追加"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches detailed information about a specific Todoist project, including its properties, metadata, and settings.",
+          "message": "プロパティ、メタデータ、設定を含む、特定のTodoistプロジェクトに関する詳細情報を取得します。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project",
+          "message": "プロジェクトの取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project you want to get details for.",
+          "message": "詳細を取得するTodoistプロジェクトを選択します。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to retrieve",
+          "message": "取得対象のプロジェクト"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve details of a Todoist project",
+          "message": "Todoistプロジェクトの詳細を取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.desc": {
+          "source": "Retrieves a list of all collaborators who have access to a specific Todoist project. Useful for managing team assignments and permissions.",
+          "message": "特定のTodoistプロジェクトへのアクセス権を持つすべてのコラボレーターのリストを取得します。チームの割り当てや権限の管理に役立ちます。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
+          "source": "Get Project Collaborators",
+          "message": "プロジェクトコラボレーターの取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of collaborators to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返すコラボレーターの最大数。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project to retrieve the list of collaborators.",
+          "message": "コラボレーターのリストを取得するTodoistプロジェクトを選択します。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to get collaborators for",
+          "message": "コラボレーターを取得するプロジェクト"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
+          "source": "List collaborators in a project",
+          "message": "プロジェクト内のコラボレーターを一覧表示"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.desc": {
+          "source": "Fetches detailed information about a specific Todoist task, including all its properties, labels, due dates, and metadata.",
+          "message": "すべてのプロパティ、ラベル、期日、メタデータを含む、特定のTodoistタスクに関する詳細情報を取得します。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "タスクの取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to get details for.",
+          "message": "詳細を取得するTodoistタスクを選択します。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to retrieve",
+          "message": "取得するタスク"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a Todoist task",
+          "message": "Todoistタスクの詳細を取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.desc": {
+          "source": "Retrieves tasks that match a specific filter query. Todoist filters allow powerful searches using keywords, dates, priorities, labels, and more. See Todoist filter documentation for advanced query syntax.",
+          "message": "特定のフィルタークエリに一致するタスクを取得します。Todoistフィルターを使用すると、キーワード、日付、優先度、ラベルなどを用いた高度な検索が可能です。高度なクエリ構文については、Todoistフィルターのドキュメントを参照してください。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
+          "source": "Get Tasks by Filter",
+          "message": "フィルターでタスクを取得"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返すタスクの最大数。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "日付・期限なし"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "日付または期限のないすべてのタスクを表示"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "自分に割り当て済み"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "自分に割り当てられているすべてのタスクを表示"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.display_name": {
+          "source": "Today or Overdue",
+          "message": "今日または期限切れ"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.short_desc": {
+          "source": "See all tasks that are overdue or due today",
+          "message": "期限切れまたは今日が期日のすべてのタスクを表示"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "使用するフィルタークエリ。詳細は[ドキュメント](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH)を参照してください"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "フィルタークエリ"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
+          "source": "The filter expression",
+          "message": "フィルター式"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
+          "source": "Search tasks using Todoist filter queries",
+          "message": "Todoistフィルタークエリを使用してタスクを検索"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently removes a task from Todoist. This action cannot be undone. Use with caution.",
+          "message": "Todoistからタスクを完全に削除します。この操作は元に戻せません。注意して使用してください。"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "タスクを削除"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to permanently delete.",
+          "message": "完全に削除するTodoistタスクを選択します。"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to delete",
+          "message": "削除するタスク"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Permanently delete a Todoist task",
+          "message": "Todoistタスクを完全に削除"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.desc": {
+          "source": "Fetches a list of tasks with optional filtering by project, section, or label. Use this to retrieve tasks for processing or display.",
+          "message": "プロジェクト、セクション、またはラベルによる任意のフィルタリングを使用してタスクのリストを取得します。処理や表示のためにタスクを取得する際に使用します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "タスクの一覧表示"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.desc": {
+          "source": "Optionally specify a list of task IDs to retrieve only those specific tasks.",
+          "message": "必要に応じてタスクIDのリストを指定し、特定のタスクのみを取得します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "タスクID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.short_desc": {
+          "source": "Filter by specific task IDs",
+          "message": "特定のタスクIDで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.desc": {
+          "source": "Retrieve only tasks that have a specific label assigned.",
+          "message": "特定のラベルが割り当てられているタスクのみを取得します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.display_name": {
+          "source": "Label",
+          "message": "ラベル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.short_desc": {
+          "source": "Filter by label",
+          "message": "ラベルで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返すタスクの最大数。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Retrieve only tasks from a specific section within a project.",
+          "message": "プロジェクト内の特定のセクションからのみタスクを取得します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "セクションID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by section",
+          "message": "セクションで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Retrieve only tasks from a specific project.",
+          "message": "特定のプロジェクトからのみタスクを取得します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "プロジェクトで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve Todoist tasks",
+          "message": "Todoistタスクを取得"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.desc": {
+          "source": "Fetches a list of all labels in your Todoist account. Labels are used to categorize and filter tasks across projects.",
+          "message": "Todoistアカウント内のすべてのラベルのリストを取得します。ラベルはプロジェクト横断でタスクを分類・フィルタリングするために使用されます。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
+          "source": "List Labels",
+          "message": "ラベル一覧の取得"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of labels to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返されるラベルの最大数です。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
+          "source": "Retrieve all Todoist labels",
+          "message": "すべてのTodoistラベルを取得"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a list of all projects in your Todoist account, including shared and personal projects. Use this to discover available projects for task organization.",
+          "message": "共有プロジェクトおよび個人プロジェクトを含む、Todoistアカウント内のすべてのプロジェクトのリストを取得します。タスク整理に使用できるプロジェクトを確認する際に使用します。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "プロジェクトの一覧表示"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返されるプロジェクトの最大数です。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all Todoist projects",
+          "message": "すべてのTodoistプロジェクトを取得"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.desc": {
+          "source": "Fetches a list of sections. Sections are used within projects to organize tasks into logical groups or categories.",
+          "message": "セクションのリストを取得します。セクションはプロジェクト内でタスクを論理的なグループやカテゴリに整理するために使用されます。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
+          "source": "List Sections",
+          "message": "セクション一覧の取得"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "ページネーションに使用されます。次のページの結果を取得するには、前回のレスポンスのカーソルを指定してください。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "ページネーションカーソル"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of sections to return in a single request. Default is 50.",
+          "message": "1回のリクエストで返されるセクションの最大数です。デフォルトは50です。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "結果の最大件数"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally filter sections to only those within a specific project.",
+          "message": "必要に応じて、特定のプロジェクト内のセクションのみに絞り込みます。"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "プロジェクトで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
+          "source": "Retrieve sections from projects",
+          "message": "プロジェクトからセクションを取得"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.desc": {
+          "source": "Moves a task to a different section within the same project, or to a different project entirely. Useful for reorganizing tasks and workflows.",
+          "message": "タスクを同一プロジェクト内の別のセクション、または完全に別のプロジェクトに移動します。タスクやワークフローの再編成に便利です。"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
+          "source": "Move Task to Section",
+          "message": "タスクをセクションに移動"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.desc": {
+          "source": "The section where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "タスクの移動先となるセクションです。section_idまたはproject_idのいずれかを指定する必要があります。"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "セクションID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Destination section",
+          "message": "移動先セクション"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The project where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "タスクの移動先となるプロジェクトです。section_idまたはproject_idのいずれかを指定する必要があります。"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Destination project",
+          "message": "移動先プロジェクト"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to move.",
+          "message": "移動するTodoistタスクを選択します。"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.short_desc": {
+          "source": "The task to move",
+          "message": "移動するタスク"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
+          "source": "Move a task to a different section or project",
+          "message": "タスクを別のセクションまたはプロジェクトに移動"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Todoist** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証を使用して、**Todoist**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Todoist",
+          "message": "TodoistへのカスタムAPI呼び出しを実行"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Todoist account for newly completed tasks. This trigger fires whenever any task is marked as complete, with optional filtering by project, section, or custom query. Perfect for tracking productivity, logging completions, or triggering follow-up workflows based on task completion.",
+          "message": "Todoistアカウントで新しく完了したタスクを監視します。このトリガーは、タスクが完了としてマークされるたびに実行され、プロジェクト、セクション、またはカスタムクエリによる任意のフィルタリングが可能です。生産性の追跡、完了の記録、タスク完了に基づく後続ワークフローのトリガーに最適です。"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "新しい完了タスク"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow.",
+          "message": "必要に応じて、プロジェクト内の特定のセクションから完了したタスクのみを監視します。これにより、ワークフローの特定の領域での完了を追跡できます。"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "セクションID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by specific section",
+          "message": "特定のセクションで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific Todoist project. If not specified, all completed tasks across all projects will trigger the event.",
+          "message": "必要に応じて、特定のTodoistプロジェクトから完了したタスクのみを監視します。指定しない場合、すべてのプロジェクトの完了したタスクがイベントをトリガーします。"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by specific project",
+          "message": "特定のプロジェクトで絞り込み"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "日付・期限なし"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "日付または期限のないすべてのタスクを表示"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "自分に割り当て済み"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "自分に割り当てられているすべてのタスクを表示"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "使用するフィルタークエリ。詳細は[ドキュメント](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH)を参照してください"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "フィルタークエリ"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {
+          "source": "Custom filter expression",
+          "message": "カスタムフィルター式"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is completed in Todoist",
+          "message": "Todoistでタスクが完了したときにトリガー"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Modifies the properties of an existing Todoist task. You can update content, description, due dates, labels, priority, and more.",
+          "message": "既存のTodoistタスクのプロパティを変更します。コンテンツ、説明、期日、ラベル、優先度などを更新できます。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "タスクの更新"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The new main text describing what needs to be done.",
+          "message": "実行すべき内容を説明する新しいメインテキストです。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "タスクの内容"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "Updated task description",
+          "message": "更新後のタスク説明"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "New detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "タスクに関する新しい詳細な説明またはメモです。Markdown形式に対応しています。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "説明"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated task details",
+          "message": "更新後のタスク詳細"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Change the due date and optionally the time for the task.",
+          "message": "タスクの期日および必要に応じて時刻を変更します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "期日"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "Updated due date",
+          "message": "更新された期日"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Change how long you expect the task to take.",
+          "message": "タスクの所要時間の見積もりを変更します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "所要時間"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Updated estimated time",
+          "message": "更新後の所要時間の見積もり"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Change the position of the task in the project or section.",
+          "message": "プロジェクトまたはセクション内でのタスクの位置を変更します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "順序"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "New task position",
+          "message": "新しいタスクの位置"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Replace the task's labels with a new set of labels.",
+          "message": "タスクのラベルを新しいラベルのセットに置き換えます。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "ラベル"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Updated task labels",
+          "message": "更新後のタスクラベル"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Move the task to a different section within the project.",
+          "message": "タスクをプロジェクト内の別のセクションに移動します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "セクションID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Move to different section",
+          "message": "別のセクションへ移動"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "優先度レベルを変更します: 1（緊急）、2（高）、3（通常）、4（低）。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "優先度"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Updated priority level",
+          "message": "更新後の優先度レベル"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Move the task to a different Todoist project.",
+          "message": "タスクを別のTodoistプロジェクトに移動します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Move to different project",
+          "message": "別のプロジェクトへ移動"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to modify.",
+          "message": "変更するTodoistタスクを選択します。"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to update",
+          "message": "更新するタスク"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing Todoist task",
+          "message": "既存のTodoistタスクを更新"
+        },
+        "app.VG9kb2lzdA.desc": {
+          "source": "The Todoist integration enables you to seamlessly interact with the Todoist API to manage tasks, projects, labels, and comments. Automate your task management workflows, sync project data, and streamline team collaboration with comprehensive actions and triggers.",
+          "message": "Todoist連携により、Todoist APIとシームレスに対話してタスク、プロジェクト、ラベル、コメントを管理できます。包括的なアクションとトリガーを使用して、タスク管理ワークフローを自動化し、プロジェクトデータを同期し、チームコラボレーションを効率化します。"
+        },
+        "app.VG9kb2lzdA.display_name": {
+          "source": "Todoist",
+          "message": "Todoist"
+        },
+        "app.VG9kb2lzdA.short_desc": {
+          "source": "Connect to Todoist to automate task and project management workflows.",
+          "message": "Todoist に接続してタスクおよびプロジェクト管理ワークフローを自動化します。"
+        }
+      }
+    }
+  }
+}

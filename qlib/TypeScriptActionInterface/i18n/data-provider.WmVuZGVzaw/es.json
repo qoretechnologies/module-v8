@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.desc": {
+          "source": "Returns an approximate count of tickets in the account. If the count exceeds 100,000, it is updated every 24 hours.\n\n`ccd` lists tickets that the specified user is cc'd on.\n\nThe `count[refreshed_at]` property is a timestamp that indicates when the count was last updated.\n\n**Note**: When the count exceeds 100,000, `count[refreshed_at]` may occasionally be null.\nThis indicates that the count is being updated in the background, and `count[value]` is limited to 100,000 until the update is complete.\n\n#### Allowed For\n* Agents",
+          "message": "Devuelve un recuento aproximado de tickets en la cuenta. Si el recuento supera los 100 000, se actualiza cada 24 horas.\n\n`ccd` enumera los tickets en los que el usuario especificado está en copia (cc).\n\nLa propiedad `count[refreshed_at]` es una marca de tiempo que indica cuándo se actualizó el recuento por última vez.\n\n**Nota**: Cuando el recuento supera los 100 000, `count[refreshed_at]` puede ser nulo ocasionalmente.\nEsto indica que el recuento se está actualizando en segundo plano y `count[value]` se limita a 100 000 hasta que se complete la actualización.\n\n#### Permitido para\n* Agentes"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.display_name": {
+          "source": "Count Tickets",
+          "message": "Contar tickets"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.short_desc": {
+          "source": "Count Tickets",
+          "message": "Contar tickets"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes asignados a un rol personalizado con permisos para gestionar grupos (solo Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
+          "source": "Create Group",
+          "message": "Crear grupo"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
+          "source": "Create Group",
+          "message": "Crear grupo"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "You must provide a unique `name` for each organization. Normally\nthe system doesn't allow records to be created with identical names.\nHowever, a race condition can occur if you make two or more identical\nPOSTs very close to each other, causing the records to have identical\norganization names.\n\n#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "Debe proporcionar un `name` único para cada organización. Normalmente,\nel sistema no permite crear registros con nombres idénticos.\nSin embargo, puede ocurrir una condición de carrera si realiza dos o más solicitudes\nPOST idénticas muy seguidas, lo que hace que los registros tengan nombres de\norganización idénticos.\n\n#### Permitido para\n\n* Administradores\n* Agentes asignados a un rol personalizado con permisos para gestionar organizaciones (solo Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Create Organization",
+          "message": "Crear organización"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Create Organization",
+          "message": "Crear organización"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.desc": {
+          "source": "Create ticket",
+          "message": "Crear ticket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
+          "source": "Create Ticket",
+          "message": "Crear ticket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
+          "source": "Create Ticket",
+          "message": "Crear ticket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.desc": {
+          "source": "Create user",
+          "message": "Crear usuario"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
+          "source": "Create User",
+          "message": "Crear usuario"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
+          "source": "Create User",
+          "message": "Crear usuario"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes asignados a un rol personalizado con permisos para gestionar grupos (solo Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
+          "source": "Delete Group",
+          "message": "Eliminar grupo"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
+          "source": "Delete Group",
+          "message": "Eliminar grupo"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes asignados a un rol personalizado con permisos para gestionar organizaciones (solo Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete Organization",
+          "message": "Eliminar organización"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete Organization",
+          "message": "Eliminar organización"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents with permission to delete tickets\n\nAgent delete permissions are set in Support. See\n[Deleting tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nin the Support Help Center.\n\n#### Ticket deletion rate limit\n\nYou can delete 400 tickets every 1 minute using this endpoint.\nThe rate limiting mechanism behaves as described in\n[Rate limits](-api-reference-introduction-rate-limits-) in the API introduction.\nZendesk recommends that you obey the Retry-After header values.\nTo delete many tickets, you may use [Bulk Delete Tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets).",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes con permiso para eliminar tickets\n\nLos permisos de eliminación de los agentes se configuran en Support. Consulte\n[Eliminación de tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nen el Centro de ayuda de Support.\n\n#### Límite de frecuencia de eliminación de tickets\n\nPuede eliminar 400 tickets cada 1 minuto utilizando este endpoint.\nEl mecanismo de limitación de frecuencia se comporta como se describe en\n[Límites de frecuencia](-api-reference-introduction-rate-limits-) en la introducción de la API.\nZendesk recomienda que respete los valores del encabezado Retry-After.\nPara eliminar muchos tickets, puede utilizar [Eliminación masiva de tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets)."
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
+          "source": "Delete Ticket",
+          "message": "Eliminar ticket"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
+          "source": "Delete Ticket",
+          "message": "Eliminar ticket"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.desc": {
+          "source": "#### Allowed for\n\n* End Users\n",
+          "message": "#### Permitido para\n\n* Usuarios finales\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.display_name": {
+          "source": "Delete Upload",
+          "message": "Eliminar carga"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.desc": {
+          "source": "URI path variable \"token\"",
+          "message": "Variable de ruta URI \"token\""
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.display_name": {
+          "source": "Token",
+          "message": "Token"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.short_desc": {
+          "source": "URI path variable \"token\"",
+          "message": "Variable de ruta URI \"token\""
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.short_desc": {
+          "source": "Delete Upload",
+          "message": "Eliminar carga"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.desc": {
+          "source": "Deletes the user and associated records from the account.\n\n**Warning**:\n\n* Deleted users are not recoverable.\n* Both agents and administrators can soft delete users in the agent interface in Zendesk Support. Agents with permission can delete end users, while administrators can delete all users except the account owner.\n\nTo comply with GDPR, a further step is needed. See [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Allowed For\n\n* Admins and [agents in custom roles with permission](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) to manage end users or team members\n",
+          "message": "Elimina al usuario y los registros asociados de la cuenta.\n\n**Advertencia**:\n\n* Los usuarios eliminados no se pueden recuperar.\n* Tanto los agentes como los administradores pueden eliminar suavemente usuarios en la interfaz de agentes de Zendesk Support. Los agentes con permiso pueden eliminar usuarios finales, mientras que los administradores pueden eliminar a todos los usuarios excepto al propietario de la cuenta.\n\nPara cumplir con el RGPD, se requiere un paso adicional. Consulte [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Permitido para\n\n* Administradores y [agentes en roles personalizados con permiso](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) para administrar usuarios finales o miembros del equipo\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
+          "source": "Delete User",
+          "message": "Eliminar usuario"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
+          "source": "Delete User",
+          "message": "Eliminar usuario"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents, with certain restrictions\n\nIf the agent has a custom agent role that restricts their access to only users in their own organization, a 403 Forbidden error is returned. See [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) in Zendesk help.\n",
+          "message": "#### Paginación\n\n* Paginación por cursor (recomendada)\n* Paginación por desplazamiento\n\nConsulte [Pagination](-api-reference-introduction-pagination-).\n\nDevuelve un máximo de 100 registros por página.\n\n#### Permitido para\n\n* Agentes, con ciertas restricciones\n\nSi el agente tiene un rol de agente personalizado que restringe su acceso solo a usuarios de su propia organización, se devuelve un error 403 Forbidden. Consulte [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) en la ayuda de Zendesk.\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.display_name": {
+          "source": "List Organizations",
+          "message": "Listar organizaciones"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.short_desc": {
+          "source": "List Organizations",
+          "message": "Listar organizaciones"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Paginación\n\n* Paginación por cursor (recomendada)\n* Paginación por desplazamiento\n\nConsulte [Pagination](-api-reference-introduction-pagination-).\n\nDevuelve un máximo de 100 registros por página.\n\n#### Permitido para\n\n* Administradores\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
+          "source": "List Groups",
+          "message": "Listar grupos"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "Indica si se deben excluir las entidades eliminadas"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.display_name": {
+          "source": "Exclude Deleted",
+          "message": "Excluir eliminados"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.short_desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "Indica si se deben excluir las entidades eliminadas"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
+          "source": "List Groups",
+          "message": "Listar grupos"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.desc": {
+          "source": "Returns the search results. See [Query basics](#query-basics) for the syntax of the `query` parameter.\n\nUse the ampersand character (&) to append the `sort_by` or `sort_order` parameters to the URL.\n\nFor examples, see [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Allowed For\n\n* Agents\n\n#### Pagination\n\n* Offset pagination only\n\nOffset pagination may result in duplicate results when paging. You can also use the \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results) endpoint, which \nuses cursor-based pagination and doesn't return duplicate results. See \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination) for more information.\n\n\n#### Errors JSON Format\n\nErrors are represented as JSON objects which have the following keys:\n\n| Name                  | Type                 | Comment\n| - | -| -\n| error                 | string               | The type of error. Examples: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Example Error\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n",
+          "message": "Devuelve los resultados de la búsqueda. Consulte [Query basics](#query-basics) para conocer la sintaxis del parámetro `query`.\n\nUse el carácter de signo de unión (&) para añadir los parámetros `sort_by` o `sort_order` a la URL.\n\nPara ver ejemplos, consulte [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Permitido para\n\n* Agentes\n\n#### Paginación\n\n* Solo paginación por desplazamiento\n\nLa paginación por desplazamiento puede generar resultados duplicados al paginar. También puede utilizar el extremo \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results), que \nutiliza paginación basada en cursor y no devuelve resultados duplicados. Consulte \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination) para obtener más información.\n\n\n#### Formato JSON de errores\n\nLos errores se representan como objetos JSON que tienen las siguientes claves:\n\n| Nombre                | Tipo                 | Comentario\n| - | -| -\n| error                 | string               | El tipo de error. Ejemplos: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Ejemplo de error\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.display_name": {
+          "source": "List Search Results",
+          "message": "Listar resultados de búsqueda"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.short_desc": {
+          "source": "List Search Results",
+          "message": "Listar resultados de búsqueda"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a list of tickets with their metrics.\n\nTickets are ordered chronologically by created date, from newest to oldest.\nThe last ticket listed may not be the absolute oldest ticket in your account\ndue to ticket archiving.\n\nArchived tickets are not included in the response. See\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) in\nZendesk help.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Devuelve una lista de tickets con sus métricas.\n\nLos tickets se ordenan cronológicamente por fecha de creación, del más reciente al más antiguo.\nPuede que el último ticket enumerado no sea el más antiguo de su cuenta\ndebido al archivado de tickets.\n\nLos tickets archivados no se incluyen en la respuesta. Consulte\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) en\nla ayuda de Zendesk.\n\n#### Paginación\n\n- Paginación por cursor (recomendada)\n- Paginación por desplazamiento\n\nConsulte [Pagination](-api-reference-introduction-pagination-).\n\nDevuelve un máximo de 100 registros por página.\n\n\n#### Permitido para\n\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.display_name": {
+          "source": "List Ticket Metrics",
+          "message": "Listar métricas de tickets"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.short_desc": {
+          "source": "List Ticket Metrics",
+          "message": "Listar métricas de tickets"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.desc": {
+          "source": "List tickets",
+          "message": "Listar tickets"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
+          "source": "List Tickets",
+          "message": "Listar tickets"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.desc": {
+          "source": "Lists tickets by external id. External ids don't have to be unique for each ticket. As a result, the request may return multiple tickets with the same external id.",
+          "message": "Enumera los tickets por ID externo. Los ID externos no tienen que ser únicos para cada ticket. Como resultado, la solicitud puede devolver varios tickets con el mismo ID externo."
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.display_name": {
+          "source": "External Id",
+          "message": "ID externo"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.short_desc": {
+          "source": "Lists tickets by external id",
+          "message": "Enumera los tickets por ID externo"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
+          "source": "List Tickets",
+          "message": "Listar tickets"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins, Agents and Light Agents\n",
+          "message": "#### Paginación\n\n* Paginación por cursor (recomendada)\n* Paginación por desplazamiento\n\nConsulte [Pagination](-api-reference-introduction-pagination-).\n\nDevuelve un máximo de 100 registros por página.\n\n#### Permitido para\n\n* Administradores, agentes y agentes ligeros\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
+          "source": "List Users",
+          "message": "Listar usuarios"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
+          "source": "List Users",
+          "message": "Listar usuarios"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.display_name": {
+          "source": "Show Organization",
+          "message": "Mostrar organización"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Show Organization",
+          "message": "Mostrar organización"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.desc": {
+          "source": "Shows attachment details. You can get the value of the `attachment_id` parameter by listing the ticket's comments.\nSee [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Each comment\nin the list has an `attachments` list that specifies an `id` for each attachment.\n\n\n #### Allowed for\n\n * Agents\n",
+          "message": "Muestra los detalles del adjunto. Puede obtener el valor del parámetro `attachment_id` listando los comentarios del ticket.\nConsulte [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Cada comentario\nen la lista tiene una lista `attachments` que especifica un `id` para cada adjunto.\n\n\n #### Permitido para\n\n * Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.display_name": {
+          "source": "Show Attachment",
+          "message": "Mostrar adjunto"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "Variable de ruta URI \"attachment_id\""
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.display_name": {
+          "source": "Attachment Id",
+          "message": "ID de adjunto"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.short_desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "Variable de ruta URI \"attachment_id\""
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.short_desc": {
+          "source": "Show Attachment",
+          "message": "Mostrar adjunto"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.desc": {
+          "source": "Shows the settings that are available for the account.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Muestra la configuración disponible para la cuenta.\n\n#### Permitido para\n\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.display_name": {
+          "source": "Show Settings",
+          "message": "Mostrar configuración"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.short_desc": {
+          "source": "Show Settings",
+          "message": "Mostrar configuración"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.display_name": {
+          "source": "Show Group",
+          "message": "Mostrar grupo"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.short_desc": {
+          "source": "Show Group",
+          "message": "Mostrar grupo"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.desc": {
+          "source": "Returns a number of ticket properties though not the ticket comments. To get the comments, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Allowed For\n* Agents",
+          "message": "Devuelve varias propiedades del ticket aunque no los comentarios del ticket. Para obtener los comentarios, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Permitido para\n* Agentes"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.display_name": {
+          "source": "Show Ticket",
+          "message": "Mostrar ticket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.short_desc": {
+          "source": "Show Ticket",
+          "message": "Mostrar ticket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a specific metric, or the metrics of a specific ticket.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Devuelve una métrica específica o las métricas de un ticket específico.\n\n#### Paginación\n\n- Paginación por cursor (recomendada)\n- Paginación por desplazamiento\n\nConsulte [Pagination](-api-reference-introduction-pagination-).\n\nDevuelve un máximo de 100 registros por página.\n\n#### Permitido para\n\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.display_name": {
+          "source": "Show Ticket Metrics",
+          "message": "Mostrar métricas de ticket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.short_desc": {
+          "source": "Show Ticket Metrics",
+          "message": "Mostrar métricas de ticket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.desc": {
+          "source": "#### Allowed For\n\n* Agents\n",
+          "message": "#### Permitido para\n\n* Agentes\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.display_name": {
+          "source": "Show User",
+          "message": "Mostrar usuario"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.short_desc": {
+          "source": "Show User",
+          "message": "Mostrar usuario"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n",
+          "message": "#### Permitido para\n\n* Administradores\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
+          "source": "Update Group",
+          "message": "Actualizar grupo"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
+          "source": "Update Group",
+          "message": "Actualizar grupo"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n\nAgents with no permissions restrictions can only update \"notes\" on organizations.\n\n**Note:** Updating an organization's `domain_names` property overwrites all existing `domain_names` values. To prevent this, submit a complete list of `domain_names` for the organization in your request.\n\n#### Example Request\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n",
+          "message": "#### Permitido para\n\n* Administradores\n* Agentes\n\nLos agentes sin restricciones de permisos solo pueden actualizar \"notes\" en las organizaciones.\n\n**Nota:** La actualización de la propiedad `domain_names` de una organización sobrescribe todos los valores existentes de `domain_names`. Para evitar esto, envíe una lista completa de `domain_names` para la organización en su solicitud.\n\n#### Solicitud de ejemplo\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update Organization",
+          "message": "Actualizar organización"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update Organization",
+          "message": "Actualizar organización"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.desc": {
+          "source": "Update ticket",
+          "message": "Actualizar ticket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
+          "source": "Update Ticket",
+          "message": "Actualizar ticket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
+          "source": "Update Ticket",
+          "message": "Actualizar ticket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.desc": {
+          "source": "Update user",
+          "message": "Actualizar usuario"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
+          "source": "Update User",
+          "message": "Actualizar usuario"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
+          "source": "Update User",
+          "message": "Actualizar usuario"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "Crea nuevos registros en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crear registros"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "Crea nuevos registros en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "Elimina registros de la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Eliminar registros"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "Elimina registros de la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zendesk** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realiza una llamada personalizada a la API HTTP / REST a **Zendesk** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para extremos que aún no están expuestos como acciones de primer nivel en esta aplicación."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zendesk",
+          "message": "Realiza una llamada personalizada a la API a Zendesk"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "Se activa cuando se crea una nueva organización"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
+          "source": "New Organization",
+          "message": "Nueva organización"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "Se activa cuando se crea una nueva organización"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.desc": {
+          "source": "Triggers when a new custom object record is created in Zendesk",
+          "message": "Se activa cuando se crea un nuevo registro de objeto personalizado en Zendesk"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
+          "source": "New Custom Object Record",
+          "message": "Nuevo registro de objeto personalizado"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.desc": {
+          "source": "Select the custom object type to monitor for new records",
+          "message": "Seleccione el tipo de objeto personalizado a monitorizar para nuevos registros"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
+          "source": "Custom Object",
+          "message": "Objeto personalizado"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {
+          "source": "The custom object to monitor for new records",
+          "message": "El objeto personalizado a monitorizar para nuevos registros"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
+          "source": "Triggers when a new custom object record is created",
+          "message": "Se activa cuando se crea un nuevo registro de objeto personalizado"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "Se activa cuando se crea un nuevo ticket"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
+          "source": "New Ticket",
+          "message": "Nuevo ticket"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "Se activa cuando se crea un nuevo ticket"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.desc": {
+          "source": "Triggers when a new user is created",
+          "message": "Se activa cuando se crea un nuevo usuario"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "Nuevo usuario"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created",
+          "message": "Se activa cuando se crea un nuevo usuario"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "Busca registros coincidentes en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "Busca registros coincidentes en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "Busca un único registro coincidente en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Buscar un único registro"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "Busca un único registro coincidente en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "Actualiza registros existentes en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Actualizar registros"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "Actualiza registros existentes en la tabla especificada en la aplicación \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Colección de acciones para interactuar con la API de Zendesk"
+        },
+        "app.WmVuZGVzaw.display_name": {
+          "source": "Zendesk",
+          "message": "Zendesk"
+        },
+        "app.WmVuZGVzaw.short_desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Colección de acciones para interactuar con la API de Zendesk"
+        }
+      }
+    }
+  }
+}

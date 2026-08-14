@@ -1,0 +1,1337 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "레코드 생성"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.desc": {
+          "source": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "새 활동을 추가합니다. 응답의 `additional_data`에 동일한 거래, 사람 또는 조직(제공된 데이터에 따름)으로 예약된 미완료 활동이 더 있는지 여부를 나타내는 `more_activities_scheduled_in_context` 속성을 포함합니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">활동 추가<-a> 자습서를 참조하세요. <br -> <br -> ***2024년 9월 30일부터 활동 소유자에게 활성화된 캘린더 동기화가 있는 경우에만 활동 참석자가 업데이트를 받습니다***"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.display_name": {
+          "source": "Add an Activity",
+          "message": "활동 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.short_desc": {
+          "source": "Add an activity",
+          "message": "활동 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.desc": {
+          "source": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>.",
+          "message": "새 거래를 추가합니다. Pipedrive API를 통해 생성된 모든 거래에는 `origin`이(가) `API`(으)로 설정됩니다. 여기에 설명되지 않은 추가 사용자 지정 필드를 요청과 함께 제공할 수 있습니다. 이러한 사용자 지정 필드는 각 Pipedrive 계정마다 다르며 긴 해시 키로 식별할 수 있습니다. 존재하는 사용자 지정 필드를 확인하려면 dealFields를 가져와 `key` 값을 확인하세요. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">거래 추가<-a> 자습서를 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.display_name": {
+          "source": "Add a Deal",
+          "message": "거래 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.short_desc": {
+          "source": "Add a deal",
+          "message": "거래 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.desc": {
+          "source": "Adds a new organization. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the organizationFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">adding an organization<-a>.",
+          "message": "새 조직을 추가합니다. 여기에 설명되지 않은 추가 사용자 지정 필드를 요청과 함께 제공할 수 있습니다. 이러한 사용자 지정 필드는 각 Pipedrive 계정마다 다르며 키 형태의 긴 해시로 식별할 수 있습니다. 어떤 사용자 지정 필드가 존재하는지 확인하려면 organizationFields를 가져와 `key` 값을 확인하세요. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">조직 추가<-a> 튜토리얼을 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.display_name": {
+          "source": "Add an Organization",
+          "message": "조직 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Add an organization",
+          "message": "조직 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.desc": {
+          "source": "Creates a lead. A lead always has to be linked to a person or an organization or both. All leads created through the Pipedrive API will have a lead source and origin set to `API`. Here's the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">adding a lead<-a>. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields' values tutorial<-a>.",
+          "message": "리드를 생성합니다. 리드는 항상 사람이나 조직 또는 둘 다에 연결되어야 합니다. Pipedrive API를 통해 생성된 모든 리드는 리드 소스 및 출처가 `API`(으)로 설정됩니다. <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">리드 추가<-a>에 대한 튜토리얼을 확인하세요. 리드에 사용자 지정 필드가 포함된 경우 해당 필드 값은 `Deals` 엔드포인트와 동일한 형식으로 응답에 포함됩니다. 리드에 대한 사용자 지정 필드 값이 설정되지 않은 경우 응답에 표시되지 않습니다. 리드에는 별도의 사용자 지정 필드 세트가 없으며 거래에서 사용자 지정 필드 구조를 상속받습니다. <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">사용자 지정 필드 값 업데이트 튜토리얼<-a>에 제공된 예시를 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.display_name": {
+          "source": "Add a Lead",
+          "message": "리드 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.short_desc": {
+          "source": "Add a lead",
+          "message": "리드 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.desc": {
+          "source": "Adds a new note.",
+          "message": "새 메모를 추가합니다."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.display_name": {
+          "source": "Add a Note",
+          "message": "메모 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.short_desc": {
+          "source": "Add a note",
+          "message": "메모 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.desc": {
+          "source": "Adds a new person. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the personFields and look for `key` values.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "새 인물을 추가합니다. 여기에 설명되지 않은 추가 사용자 지정 필드를 요청과 함께 제공할 수 있습니다. 이러한 사용자 지정 필드는 각 Pipedrive 계정마다 다르며 키 형태의 긴 해시로 식별할 수 있습니다. 어떤 사용자 지정 필드가 존재하는지 확인하려면 personFields를 가져와 `key` 값을 확인하세요.<br>회사가 [Campaigns 제품](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)을 사용하는 경우, 이 엔드포인트는 `data.marketing_status` 필드도 수락하고 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.display_name": {
+          "source": "Add a Person",
+          "message": "인물 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.short_desc": {
+          "source": "Add a person",
+          "message": "인물 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.desc": {
+          "source": "Adds a new project. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys.",
+          "message": "새 프로젝트를 추가합니다. 여기에 설명되지 않은 추가 사용자 지정 필드를 요청과 함께 제공할 수 있습니다. 이러한 사용자 지정 필드는 각 Pipedrive 계정마다 다르며 키 형태의 긴 해시로 식별할 수 있습니다."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.display_name": {
+          "source": "Add a Project",
+          "message": "프로젝트 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.short_desc": {
+          "source": "Add a project",
+          "message": "프로젝트 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.desc": {
+          "source": "Adds a new task.",
+          "message": "새 작업을 추가합니다."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.display_name": {
+          "source": "Add a Task",
+          "message": "작업 추가"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.short_desc": {
+          "source": "Add a task",
+          "message": "작업 추가"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.desc": {
+          "source": "Returns all activities assigned to a particular user.",
+          "message": "특정 사용자에게 할당된 모든 활동을 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.display_name": {
+          "source": "Get All Activities Assigned to a Particular User",
+          "message": "특정 사용자에게 할당된 모든 활동 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.short_desc": {
+          "source": "Get all activities assigned to a particular user",
+          "message": "특정 사용자에게 할당된 모든 활동 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.desc": {
+          "source": "Returns the details of a specific activity.",
+          "message": "특정 활동의 세부 정보를 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.display_name": {
+          "source": "Get Details of an Activity",
+          "message": "활동 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.short_desc": {
+          "source": "Get details of an activity",
+          "message": "활동 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.desc": {
+          "source": "Returns the details of a specific deal. Note that this also returns some additional fields which are not present when asking for all deals – such as deal age and stay in pipeline stages. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of dealFields. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">getting details of a deal<-a>.",
+          "message": "특정 거래의 세부 정보를 반환합니다. 모든 거래를 요청할 때는 제공되지 않는 일부 추가 필드(예: 거래 기간 및 파이프라인 단계 체류 기간 등)도 반환됩니다. 또한 결과 데이터에서 사용자 지정 필드는 긴 해시로 표시됩니다. 이 해시는 dealFields의 `key` 값에 매핑될 수 있습니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">거래 세부 정보 가져오기<-a> 튜토리얼을 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.display_name": {
+          "source": "Get Details of a Deal",
+          "message": "거래 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.short_desc": {
+          "source": "Get details of a deal",
+          "message": "거래 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.desc": {
+          "source": "Returns all deals. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">getting all deals<-a>.",
+          "message": "모든 거래를 반환합니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">모든 거래 가져오기<-a> 튜토리얼을 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.display_name": {
+          "source": "Get All Deals",
+          "message": "모든 거래 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.short_desc": {
+          "source": "Get all deals",
+          "message": "모든 거래 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.desc": {
+          "source": "Returns the details of an organization. Note that this also returns some additional fields which are not present when asking for all organizations. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of organizationFields.",
+          "message": "조직의 세부 정보를 반환합니다. 모든 조직을 요청할 때는 제공되지 않는 일부 추가 필드도 반환됩니다. 또한 결과 데이터에서 사용자 지정 필드는 긴 해시로 표시됩니다. 이 해시는 organizationFields의 `key` 값에 매핑될 수 있습니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.display_name": {
+          "source": "Get Details of an Organization",
+          "message": "조직 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.short_desc": {
+          "source": "Get details of an organization",
+          "message": "조직 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.desc": {
+          "source": "Returns all organizations.",
+          "message": "모든 조직을 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.display_name": {
+          "source": "Get All Organizations",
+          "message": "모든 조직 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.short_desc": {
+          "source": "Get all organizations",
+          "message": "모든 조직 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.desc": {
+          "source": "Returns details of a specific lead. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals.",
+          "message": "특정 리드의 세부 정보를 반환합니다. 리드에 사용자 지정 필드가 포함된 경우 해당 필드 값은 `Deals` 엔드포인트와 동일한 형식으로 응답에 포함됩니다. 리드에 대한 사용자 지정 필드 값이 설정되지 않은 경우 응답에 표시되지 않습니다. 리드에는 별도의 사용자 지정 필드 세트가 없으며 거래에서 사용자 지정 필드 구조를 상속받습니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.display_name": {
+          "source": "Get One Lead",
+          "message": "리드 1개 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.short_desc": {
+          "source": "Get one lead",
+          "message": "리드 1개 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.desc": {
+          "source": "Returns multiple leads. Leads are sorted by the time they were created, from oldest to newest. Pagination can be controlled using `limit` and `start` query parameters. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals.\n",
+          "message": "여러 리드를 반환합니다. 리드는 생성된 시간순(가장 오래된 항목부터 최신 항목 순)으로 정렬됩니다. 페이지네이션은 `limit` 및 `start` 쿼리 매개변수를 사용하여 제어할 수 있습니다. 리드에 사용자 지정 필드가 포함된 경우 해당 필드 값은 `Deals` 엔드포인트와 동일한 형식으로 응답에 포함됩니다. 리드에 대한 사용자 지정 필드 값이 설정되지 않은 경우 응답에 표시되지 않습니다. 리드에는 별도의 사용자 지정 필드 세트가 없으며 거래에서 사용자 지정 필드 구조를 상속받습니다.\n"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.display_name": {
+          "source": "Get All Leads",
+          "message": "모든 리드 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.short_desc": {
+          "source": "Get all leads",
+          "message": "모든 리드 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.desc": {
+          "source": "Returns details about a specific note.",
+          "message": "특정 메모에 대한 세부 정보를 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.display_name": {
+          "source": "Get One Note",
+          "message": "메모 1개 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.short_desc": {
+          "source": "Get one note",
+          "message": "메모 1개 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.desc": {
+          "source": "Returns all notes.",
+          "message": "모든 메모를 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.display_name": {
+          "source": "Get All Notes",
+          "message": "모든 메모 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.short_desc": {
+          "source": "Get all notes",
+          "message": "모든 메모 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.desc": {
+          "source": "Returns the details of a person. Note that this also returns some additional fields which are not present when asking for all persons. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of personFields.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also return the `data.marketing_status` field.",
+          "message": "인물의 세부 정보를 반환합니다. 모든 인물을 요청할 때는 제공되지 않는 일부 추가 필드도 반환됩니다. 또한 결과 데이터에서 사용자 지정 필드는 긴 해시로 표시됩니다. 이 해시는 personFields의 `key` 값에 매핑될 수 있습니다.<br>회사가 [Campaigns 제품](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)을 사용하는 경우, 이 엔드포인트는 `data.marketing_status` 필드도 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.display_name": {
+          "source": "Get Details of a Person",
+          "message": "인물 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.short_desc": {
+          "source": "Get details of a person",
+          "message": "인물 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.desc": {
+          "source": "Returns all persons.",
+          "message": "모든 인물을 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.display_name": {
+          "source": "Get All Persons",
+          "message": "모든 인물 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.short_desc": {
+          "source": "Get all persons",
+          "message": "모든 인물 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the details of a specific project. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of project fields.",
+          "message": "특정 프로젝트의 세부 정보를 반환합니다. 또한 결과 데이터에서 사용자 지정 필드는 긴 해시로 표시됩니다. 이 해시는 프로젝트 필드의 `key` 값에 매핑될 수 있습니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Details of a Project",
+          "message": "프로젝트 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get details of a project",
+          "message": "프로젝트 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns all projects. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "모든 프로젝트를 반환합니다. 커서 기반 페이지네이션 엔드포인트입니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">페이지네이션<-a> 문서를 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "모든 프로젝트 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get all projects",
+          "message": "모든 프로젝트 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.desc": {
+          "source": "Returns all tasks. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "모든 작업을 반환합니다. 커서 기반 페이지네이션 엔드포인트입니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">페이지네이션<-a> 문서를 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.display_name": {
+          "source": "Get All Tasks",
+          "message": "모든 작업 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get all tasks",
+          "message": "모든 작업 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the details of a specific task.",
+          "message": "특정 작업의 세부 정보를 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.display_name": {
+          "source": "Get Details of a Task",
+          "message": "작업 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get details of a task",
+          "message": "작업 세부 정보 가져오기"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "레코드 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.desc": {
+          "source": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted.",
+          "message": "활동을 삭제된 것으로 표시합니다. 30일이 지나면 활동이 영구적으로 삭제됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.display_name": {
+          "source": "Delete an Activity",
+          "message": "활동 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.short_desc": {
+          "source": "Delete an activity",
+          "message": "활동 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.desc": {
+          "source": "Marks a deal as deleted. After 30 days, the deal will be permanently deleted.",
+          "message": "거래를 삭제된 것으로 표시합니다. 30일이 지나면 거래가 영구적으로 삭제됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
+          "source": "Delete a Deal",
+          "message": "거래 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
+          "source": "Delete a deal",
+          "message": "거래 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Marks an organization as deleted. After 30 days, the organization will be permanently deleted.",
+          "message": "조직을 삭제된 것으로 표시합니다. 30일이 지나면 조직이 영구적으로 삭제됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete an Organization",
+          "message": "조직 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete an organization",
+          "message": "조직 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.desc": {
+          "source": "Deletes a specific lead.",
+          "message": "특정 리드를 삭제합니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.display_name": {
+          "source": "Delete a Lead",
+          "message": "리드 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.short_desc": {
+          "source": "Delete a lead",
+          "message": "리드 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.desc": {
+          "source": "Deletes a specific note.",
+          "message": "특정 노트를 삭제합니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.display_name": {
+          "source": "Delete a Note",
+          "message": "노트 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.short_desc": {
+          "source": "Delete a note",
+          "message": "노트 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.desc": {
+          "source": "Marks a person as deleted. After 30 days, the person will be permanently deleted.",
+          "message": "사람을 삭제된 것으로 표시합니다. 30일이 지나면 사람이 영구적으로 삭제됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.display_name": {
+          "source": "Delete a Person",
+          "message": "사람 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.short_desc": {
+          "source": "Delete a person",
+          "message": "사람 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Marks a project as deleted.",
+          "message": "프로젝트를 삭제된 것으로 표시합니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "프로젝트 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "프로젝트 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "Marks a task as deleted. If the task has subtasks then those will also be deleted.",
+          "message": "작업을 삭제된 것으로 표시합니다. 작업에 하위 작업이 있는 경우 해당 하위 작업도 삭제됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "작업 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "작업 삭제"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pipedrive** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Pipedrive**에 사용자 정의 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 아직 기본 액션으로 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pipedrive",
+          "message": "Pipedrive에 사용자 정의 API 호출 수행"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "레코드 검색"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "단일 레코드 찾기"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.",
+          "message": "이 트리거는 Pipedrive의 노트에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 노트 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
+          "source": "Note Action",
+          "message": "노트 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a note",
+          "message": "노트에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on an organization in Pipedrive. Actions include creating, updating, deleting an organization or any change.",
+          "message": "이 트리거는 Pipedrive의 조직에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 조직 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
+          "source": "Organization Action",
+          "message": "조직 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on an organization",
+          "message": "조직에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.desc": {
+          "source": "This trigger activates when a selected action is performed on an activity in Pipedrive. Actions include creating, updating, deleting an activity or any change.",
+          "message": "이 트리거는 Pipedrive의 활동에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 활동 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
+          "source": "Activity Action",
+          "message": "활동 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
+          "source": "Triggers when an action is performed on an activity",
+          "message": "활동에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a deal in Pipedrive. Actions include creating, updating, deleting a deal or any change.",
+          "message": "이 트리거는 Pipedrive의 거래에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 거래 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
+          "source": "Deal Action",
+          "message": "거래 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a deal",
+          "message": "거래에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a lead in Pipedrive. Actions include creating, updating, deleting a lead or any change.",
+          "message": "이 트리거는 Pipedrive의 리드에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 리드 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
+          "source": "Lead Action",
+          "message": "리드 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a lead",
+          "message": "리드에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on a person in Pipedrive. Actions include creating, updating, deleting a person or any change.",
+          "message": "이 트리거는 Pipedrive의 사람에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 사람 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
+          "source": "Person Action",
+          "message": "사람 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on a person",
+          "message": "사람에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a user in Pipedrive. Actions include creating, updating, deleting a user or any change.",
+          "message": "이 트리거는 Pipedrive의 사용자에서 선택한 액션이 수행될 때 활성화됩니다. 액션에는 사용자 생성, 업데이트, 삭제 또는 모든 변경 사항이 포함됩니다."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
+          "source": "User Action",
+          "message": "사용자 액션"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "활동이 생성, 변경 또는 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "모두"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "기존 활동이 변경될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "변경"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "새 활동이 생성될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "기존 활동이 삭제될 때 트리거됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "삭제됨"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "흐름을 트리거하는 액션을 선택하세요. 생성, 업데이트, 삭제 또는 모든 변경 사항 중에서 선택하세요."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "작업"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "흐름을 트리거하는 액션 선택"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a user",
+          "message": "사용자에서 액션이 수행될 때 트리거됩니다"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "레코드 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "\"Pipedrive\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.desc": {
+          "source": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "활동을 업데이트합니다. 응답의 `additional_data`에 동일한 거래, 사람 또는 조직(제공된 데이터에 따라 다름)으로 예약된 완료되지 않은 활동이 더 있는지 여부를 나타내는 `more_activities_scheduled_in_context` 속성을 포함합니다. <br -> <br -> ***2024년 9월 30일부터 활동 소유자에게 활성 캘린더 동기화가 있는 경우에만 활동 참석자가 업데이트를 받습니다***"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.display_name": {
+          "source": "Update an Activity",
+          "message": "활동 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.short_desc": {
+          "source": "Update an activity",
+          "message": "활동 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.desc": {
+          "source": "Updates the properties of a deal. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">updating a deal<-a>.",
+          "message": "거래의 속성을 업데이트합니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">거래 업데이트<-a> 튜토리얼을 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.display_name": {
+          "source": "Update a Deal",
+          "message": "거래 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.short_desc": {
+          "source": "Update a deal",
+          "message": "거래 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Updates the properties of an organization.",
+          "message": "조직의 속성을 업데이트합니다."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update an Organization",
+          "message": "조직 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update an organization",
+          "message": "조직 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.desc": {
+          "source": "Updates one or more properties of a lead. Only properties included in the request will be updated. Send `null` to unset a property (applicable for example for `value`, `person_id` or `organization_id`). If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields’ values tutorial<-a>.",
+          "message": "리드의 하나 이상의 속성을 업데이트합니다. 요청에 포함된 속성만 업데이트됩니다. 속성을 설정 해제하려면 `null`을(를) 전송하십시오(예: `value`, `person_id` 또는 `organization_id`에 적용 가능). 리드에 사용자 지정 필드가 포함된 경우 필드 값은 `Deals` 엔드포인트와 동일한 형식으로 응답에 포함됩니다. 리드에 사용자 지정 필드 값이 설정되지 않은 경우 응답에 표시되지 않습니다. 리드에는 별도의 사용자 지정 필드 세트가 없으며 거래(deal)에서 사용자 지정 필드 구조를 상속받습니다. <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">사용자 지정 필드 값 업데이트 튜토리얼<-a>에 제공된 예시를 참조하세요."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.display_name": {
+          "source": "Update a Lead",
+          "message": "리드 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.short_desc": {
+          "source": "Update a lead",
+          "message": "리드 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.desc": {
+          "source": "Updates a note.",
+          "message": "노트를 업데이트합니다."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.display_name": {
+          "source": "Update a Note",
+          "message": "노트 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.short_desc": {
+          "source": "Update a note",
+          "message": "노트 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.desc": {
+          "source": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "사람의 속성을 업데이트합니다. 자세한 내용은 <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">사람 업데이트 튜토리얼<-a>을 참조하세요.<br>회사에서 [Campaigns 제품](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)을 사용하는 경우 이 엔드포인트는 `data.marketing_status` 필드도 허용하고 반환합니다."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.display_name": {
+          "source": "Update a Person",
+          "message": "사람 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.short_desc": {
+          "source": "Update a person",
+          "message": "사람 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates a project.",
+          "message": "프로젝트를 업데이트합니다."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "프로젝트 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "프로젝트 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.desc": {
+          "source": "Updates a task.",
+          "message": "작업을 업데이트합니다."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "작업 업데이트"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "작업 업데이트"
+        },
+        "app.UGlwZWRyaXZl.desc": {
+          "source": "Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.",
+          "message": "Pipedrive는 소규모 영업 팀이 복잡하거나 긴 영업 프로세스를 관리할 수 있도록 설계된 영업 관리 도구입니다."
+        },
+        "app.UGlwZWRyaXZl.display_name": {
+          "source": "Pipedrive",
+          "message": "Pipedrive"
+        },
+        "app.UGlwZWRyaXZl.short_desc": {
+          "source": "Manage your sales pipeline and customer relationships with Pipedrive.",
+          "message": "Pipedrive로 영업 파이프라인과 고객 관계를 관리하세요."
+        }
+      }
+    }
+  }
+}

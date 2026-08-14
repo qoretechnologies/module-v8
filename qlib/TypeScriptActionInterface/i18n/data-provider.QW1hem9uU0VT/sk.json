@@ -1,0 +1,609 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.desc": {
+          "source": "Get comprehensive sending statistics including delivery attempts, bounces, complaints, and rejection rates. Data is provided in time-series format with calculated percentages and summaries.",
+          "message": "Získajte komplexné štatistiky odosielania vrátane pokusov o doručenie, nedoručených správ, sťažností a miery odmietnutia. Údaje sa poskytujú vo formáte časových radov s vypočítanými percentami a súhrnmi."
+        },
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.display_name": {
+          "source": "Get Send Statistics",
+          "message": "Získať štatistiky odosielania"
+        },
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to retrieve sending statistics. Statistics are region-specific.",
+          "message": "Vyberte región AWS, z ktorého chcete získať štatistiky odosielania. Štatistiky sú špecifické pre daný región."
+        },
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to retrieve statistics from.",
+          "message": "Región AWS, z ktorého sa majú získať štatistiky."
+        },
+        "app.QW1hem9uU0VT.action.Z2V0X3NlbmRfc3RhdGlzdGljcw.short_desc": {
+          "source": "Retrieve detailed sending statistics from Amazon SES.",
+          "message": "Získať podrobné štatistiky odosielania zo služby Amazon SES."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SES** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Uskutočnite vlastné volanie HTTP / REST API do **Amazon SES** pomocou overenia nakonfigurovaného pripojenia.\n\nUveďte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QW1hem9uU0VT.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SES",
+          "message": "Uskutočniť vlastné volanie API do Amazon SES"
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.desc": {
+          "source": "Monitors for newly verified email addresses and domains in your SES account. Triggers when the verification process is completed for new sending identities.",
+          "message": "Monitoruje novo overené e-mailové adresy a domény vo vašom účte SES. Spustí sa po dokončení procesu overenia pre nové identity odosielateľa."
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.display_name": {
+          "source": "New Verified Identity",
+          "message": "Nová overená identita"
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SES service is configured to monitor for new verified identities.",
+          "message": "Vyberte región AWS, v ktorom je vaša služba SES nakonfigurovaná na monitorovanie nových overených identít."
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to monitor for new verified identities.",
+          "message": "Región AWS na monitorovanie nových overených identít."
+        },
+        "app.QW1hem9uU0VT.action.bmV3X3ZlcmlmaWVkX2lkZW50aXR5.short_desc": {
+          "source": "Triggers when a new email address or domain is verified.",
+          "message": "Spustí sa pri overení novej e-mailovej adresy alebo domény."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.desc": {
+          "source": "Send emails with support for HTML and text content, CC/BCC recipients, reply-to addresses, custom tags for tracking, and advanced delivery options. Includes comprehensive validation and error handling for reliable email delivery.",
+          "message": "Odosielajte e-maily s podporou obsahu HTML a textu, príjemcov CC/BCC, adries na odpoveď, vlastných značiek na sledovanie a pokročilých možností doručenia. Obsahuje komplexnú validáciu a spracovanie chýb pre spoľahlivé doručovanie e-mailov."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.display_name": {
+          "source": "Send Email",
+          "message": "Odoslať e-mail"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.desc": {
+          "source": "Optional configuration set name to use for this email. Configuration sets allow you to publish email sending events to other AWS services.",
+          "message": "Voliteľný názov sady konfigurácií, ktorý sa má použiť pre tento e-mail. Sady konfigurácií vám umožňujú publikovať udalosti odosielania e-mailov do iných služieb AWS."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.display_name": {
+          "source": "Configuration Set",
+          "message": "Sada konfigurácií"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y29uZmlndXJhdGlvbl9zZXQ.short_desc": {
+          "source": "SES configuration set name for tracking.",
+          "message": "Názov sady konfigurácií SES na sledovanie."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.desc": {
+          "source": "Optional carbon copy recipients who will receive a copy of the email. Multiple addresses should be separated by commas.",
+          "message": "Voliteľní príjemcovia kópie (CC), ktorí dostanú kópiu e-mailu. Viaceré adresy by mali byť oddelené čiarkami."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.display_name": {
+          "source": "CC Email Addresses",
+          "message": "E-mailové adresy CC"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2NfZW1haWxz.short_desc": {
+          "source": "Comma-separated list of CC recipient email addresses.",
+          "message": "Čiarkami oddelený zoznam e-mailových adries príjemcov CC."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.allowed-value.c3RyaW5nOklTTy04ODU5LTE.display_name": {
+          "source": "ISO-8859-1",
+          "message": "ISO-8859-1"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.allowed-value.c3RyaW5nOlVTLUFTQ0lJ.display_name": {
+          "source": "US-ASCII",
+          "message": "US-ASCII"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.allowed-value.c3RyaW5nOlVURi04.display_name": {
+          "source": "UTF-8",
+          "message": "UTF-8"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.desc": {
+          "source": "The character encoding used for the email subject and body. UTF-8 is recommended for international character support.",
+          "message": "Kódovanie znakov použité pre predmet a telo e-mailu. Na podporu medzinárodných znakov sa odporúča UTF-8."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.display_name": {
+          "source": "Character Encoding",
+          "message": "Kódovanie znakov"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Y2hhcnNldA.short_desc": {
+          "source": "Character encoding for the email content.",
+          "message": "Kódovanie znakov pre obsah e-mailu."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.desc": {
+          "source": "The plain text content of the email. Either text body or HTML body must be provided. Text version ensures compatibility with all email clients.",
+          "message": "Čistý textový obsah e-mailu. Musí byť poskytnuté buď textové telo, alebo HTML telo. Textová verzia zaisťuje kompatibilitu so všetkými e-mailovými klientmi."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.display_name": {
+          "source": "Text Body",
+          "message": "Textové telo"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV90ZXh0.short_desc": {
+          "source": "Plain text version of the email content.",
+          "message": "Verzia obsahu e-mailu v čistom texte."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.desc": {
+          "source": "The HTML content of the email with formatting, links, and styling. Either text body or HTML body must be provided.",
+          "message": "Obsah HTML e-mailu s formátovaním, odkazmi a štýlmi. Musí byť poskytnuté buď textové telo, alebo HTML telo."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.display_name": {
+          "source": "HTML Body",
+          "message": "HTML telo"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.Ym9keV9odG1s.short_desc": {
+          "source": "HTML version of the email content.",
+          "message": "HTML verzia obsahu e-mailu."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.desc": {
+          "source": "Optional blind carbon copy recipients who will receive a copy without other recipients knowing. Multiple addresses should be separated by commas.",
+          "message": "Voliteľní príjemcovia skrytej kópie (BCC), ktorí dostanú kópiu bez toho, aby o tom vedeli ostatní príjemcovia. Viaceré adresy by mali byť oddelené čiarkami."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.display_name": {
+          "source": "BCC Email Addresses",
+          "message": "E-mailové adresy BCC"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.YmNjX2VtYWlscw.short_desc": {
+          "source": "Comma-separated list of BCC recipient email addresses.",
+          "message": "Čiarkami oddelený zoznam e-mailových adries príjemcov BCC."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.desc": {
+          "source": "The sender email address that must be verified in your Amazon SES account. This address will appear in the From field of the email.",
+          "message": "E-mailová adresa odosielateľa, ktorá musí byť overená vo vašom účte Amazon SES. Táto adresa sa zobrazí v poli Od e-mailu."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.display_name": {
+          "source": "From Email Address",
+          "message": "E-mailová adresa odosielateľa"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.ZnJvbV9lbWFpbA.short_desc": {
+          "source": "The verified email address to send from.",
+          "message": "Overená e-mailová adresa, z ktorej sa má odosielať."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.desc": {
+          "source": "The subject line that will appear in the recipient's email client. Should be descriptive and engaging.",
+          "message": "Riadok predmetu, ktorý sa zobrazí v e-mailovom klientovi príjemcu. Mal by byť popísaný a pútavý."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
+          "source": "Email Subject",
+          "message": "Predmet e-mailu"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
+          "source": "The subject line of the email.",
+          "message": "Riadok predmetu e-mailu."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.desc": {
+          "source": "Optional email address where bounce notifications will be sent. Must be a verified address in your SES account.",
+          "message": "Voliteľná e-mailová adresa, na ktorú sa budú odosielať oznámenia o nedoručení. Musí to byť overená adresa vo vašom účte SES."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.display_name": {
+          "source": "Return Path",
+          "message": "Cesta návratu"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmV0dXJuX3BhdGg.short_desc": {
+          "source": "Email address for bounce notifications.",
+          "message": "E-mailová adresa pre oznámenia o nedoručení."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your Amazon SES service is set up. Different regions may have different verified identities and sending limits.",
+          "message": "Vyberte región AWS, v ktorom je nastavená vaša služba Amazon SES. Rôzne regióny môžu mať rôzne overené identity a limity odosielania."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where your SES service is configured.",
+          "message": "Región AWS, v ktorom je nakonfigurovaná vaša služba SES."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.desc": {
+          "source": "Optional email addresses that replies should be sent to instead of the from address. Multiple addresses should be separated by commas.",
+          "message": "Voliteľné e-mailové adresy, na ktoré sa majú odosielať odpovede namiesto adresy odosielateľa. Viaceré adresy by mali byť oddelené čiarkami."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.display_name": {
+          "source": "Reply-To Addresses",
+          "message": "Adresy pre odpoveď"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.cmVwbHlfdG9fYWRkcmVzc2Vz.short_desc": {
+          "source": "Comma-separated list of reply-to email addresses.",
+          "message": "Čiarkami oddelený zoznam e-mailových adries pre odpoveď."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.desc": {
+          "source": "One or more email addresses to send the message to. Multiple addresses should be separated by commas. All addresses must be valid email formats.",
+          "message": "Jedna alebo viac e-mailových adries, na ktoré sa má správa odoslať. Viaceré adresy musia byť oddelené čiarkami. Všetky adresy musia byť v platnom e-mailovom formáte."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.display_name": {
+          "source": "To Email Addresses",
+          "message": "E-mailové adresy príjemcov"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dG9fZW1haWxz.short_desc": {
+          "source": "Comma-separated list of recipient email addresses.",
+          "message": "Čiarkami oddelený zoznam e-mailových adries príjemcov."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.desc": {
+          "source": "Optional tags to categorize and track your emails. Tags can be used for reporting and analytics in your SES dashboard.",
+          "message": "Voliteľné značky na kategorizáciu a sledovanie vašich e-mailov. Značky je možné použiť na prehľady a analytiku na ovládacom paneli SES."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.display_name": {
+          "source": "Email Tags",
+          "message": "Značky e-mailu"
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.option.dGFncw.short_desc": {
+          "source": "Key-value pairs for email categorization and tracking.",
+          "message": "Páry kľúč-hodnota na kategorizáciu a sledovanie e-mailov."
+        },
+        "app.QW1hem9uU0VT.action.c2VuZF9lbWFpbA.short_desc": {
+          "source": "Send an email through Amazon SES with full customization options.",
+          "message": "Odoslať e-mail cez Amazon SES s plnými možnosťami prispôsobenia."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.desc": {
+          "source": "Initiate the verification process for an email address or domain. Amazon SES will send a verification email that must be clicked to complete the verification process.",
+          "message": "Spustiť overovací proces pre e-mailovú adresu alebo doménu. Amazon SES odosle overovací e-mail, na ktorý je potrebné kliknúť pre dokončenie overovacieho procesu."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.display_name": {
+          "source": "Verify Email Address",
+          "message": "Overiť e-mailovú adresu"
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.desc": {
+          "source": "The email address that you want to verify as a sending identity. Amazon SES will send a verification email to this address.",
+          "message": "E-mailová adresa, ktorú chcete overiť ako identitu odosielateľa. Amazon SES odosle overovací e-mail na túto adresu."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.display_name": {
+          "source": "Email Address to Verify",
+          "message": "E-mailová adresa na overenie"
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.ZW1haWxfYWRkcmVzcw.short_desc": {
+          "source": "The email address you want to verify for sending.",
+          "message": "E-mailová adresa, ktorú chcete overiť na odosielanie."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to verify the email address. The verified identity will be available in this region.",
+          "message": "Vyberte región AWS, v ktorom chcete overiť e-mailovú adresu. Overená identita bude k dispozícii v tomto regióne."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where your SES service is configured.",
+          "message": "Región AWS, v ktorom je nakonfigurovaná vaša služba SES."
+        },
+        "app.QW1hem9uU0VT.action.dmVyaWZ5X2VtYWlsX2FkZHJlc3M.short_desc": {
+          "source": "Verify an email address for sending through Amazon SES.",
+          "message": "Overiť e-mailovú adresu na odosielanie cez Amazon SES."
+        },
+        "app.QW1hem9uU0VT.desc": {
+          "source": "The Amazon SES integration provides comprehensive email sending capabilities, identity verification, and delivery monitoring. Manage your email campaigns, verify domains and email addresses, track sending statistics, and monitor bounces and complaints through Amazon's reliable email infrastructure.",
+          "message": "Integrácia s Amazon SES poskytuje komplexné možnosti odosielania e-mailov, overovania identity a monitorovania doručenia. Spravujte svoje e-mailové kampane, overujte domény a e-mailové adresy, sledujte štatistiky odosielania a monitorujte nedoručené správy a sťažnosti prostredníctvom spoľahlivej e-mailovej infraštruktúry Amazonu."
+        },
+        "app.QW1hem9uU0VT.display_name": {
+          "source": "Amazon SES",
+          "message": "Amazon SES"
+        },
+        "app.QW1hem9uU0VT.short_desc": {
+          "source": "Send emails and manage email identities with Amazon Simple Email Service.",
+          "message": "Odosielajte e-maily a spravujte e-mailové identity pomocou Amazon Simple Email Service."
+        }
+      }
+    }
+  }
+}

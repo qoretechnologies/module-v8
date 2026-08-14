@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings.",
+          "message": "Erstellt ein neues Google Form mit angegebenem Titel, Beschreibung und optionalen Fragen. Unterstützt verschiedene Fragetypen, Quiz-Funktionen und benutzerdefinierte Formulareinstellungen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Formular erstellen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.desc": {
+          "source": "The document title that appears in the browser tab. If not specified, the form title will be used.",
+          "message": "Der Dokumenttitel, der im Browser-Tab angezeigt wird. Wenn nicht angegeben, wird der Formulartitel verwendet."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
+          "source": "Document Title",
+          "message": "Dokumenttitel"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
+          "source": "Title for the document",
+          "message": "Titel für das Dokument"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description that appears below the form title to provide additional context.",
+          "message": "Eine optionale Beschreibung, die unter dem Formulartitel angezeigt wird, um zusätzlichen Kontext zu bieten."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Form description",
+          "message": "Formularbeschreibung"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure additional form settings like email collection and quiz mode.",
+          "message": "Konfigurieren Sie zusätzliche Formulareinstellungen wie E-Mail-Erfassung und Quiz-Modus."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Formulareinstellungen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Additional form settings",
+          "message": "Zusätzliche Formulareinstellungen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.desc": {
+          "source": "List of questions to add to the form. Each question can have different types and properties.",
+          "message": "Liste der Fragen, die zum Formular hinzugefügt werden sollen. Jede Frage kann unterschiedliche Typen und Eigenschaften haben."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.display_name": {
+          "source": "Questions",
+          "message": "Fragen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.short_desc": {
+          "source": "Form questions",
+          "message": "Formularfragen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The title of the Google Form. This will be displayed at the top of the form.",
+          "message": "Der Titel des Google-Formulars. Dieser wird oben im Formular angezeigt."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titel"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "Form title",
+          "message": "Formulartitel"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Google Form with customizable questions and settings.",
+          "message": "Erstellen Sie ein neues Google-Formular mit anpassbaren Fragen und Einstellungen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses.",
+          "message": "Ruft umfassende Informationen über ein Google-Formular ab, einschließlich Metadaten, Fragen und optional Antworten."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Formular abrufen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve.",
+          "message": "Die eindeutige Kennung des abzurufenden Google-Formulars."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Formular-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "Google Form ID",
+          "message": "Google-Formular-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "When enabled, returns the complete list of questions in the form with their properties.",
+          "message": "Wenn aktiviert, wird die vollständige Liste der Fragen im Formular mit ihren Eigenschaften zurückgegeben."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Fragen einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the response",
+          "message": "Formularfragen in die Antwort einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve details of a Google Form by ID.",
+          "message": "Details eines Google-Formulars nach ID abrufen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context.",
+          "message": "Ruft eine einzelne Antwort von einem angegebenen Google-Formular mithilfe der Antwort-ID ab. Schließt optional Formularfragen und Metadaten für zusätzlichen Kontext ein."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "Get Form Response",
+          "message": "Formularantwort abrufen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form that contains the response.",
+          "message": "Die eindeutige Kennung des Google-Formulars, das die Antwort enthält."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Formular-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get the response from",
+          "message": "Das Google-Formular, von dem die Antwort abgerufen werden soll"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Gibt an, ob die Formularfragen und Metadaten in die Antwort eingeschlossen werden sollen. Standard ist false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Fragen einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Formularfragen in Antwort einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the form response to retrieve.",
+          "message": "Die eindeutige Kennung der abzurufenden Formularantwort."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "Antwort-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The specific response to retrieve",
+          "message": "Die spezifische abzurufende Antwort"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Retrieve a specific response from a Google Form by its ID.",
+          "message": "Eine spezifische Antwort aus einem Google-Formular anhand ihrer ID abrufen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.desc": {
+          "source": "Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata.",
+          "message": "Ruft alle Antworten von einem angegebenen Google-Formular ab. Unterstützt Filterung nach E-Mail-Adresse des Befragten und Antwortwerten, Paginierung mit Seitentokens sowie das optionale Einschließen von Formularfragen und Metadaten."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
+          "source": "Get Form Responses",
+          "message": "Formularantworten abrufen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve responses from.",
+          "message": "Die eindeutige Kennung des Google-Formulars, von dem Antworten abgerufen werden sollen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Formular-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get responses from",
+          "message": "Das Google-Formular, von dem Antworten abgerufen werden sollen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.desc": {
+          "source": "Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.",
+          "message": "Antworten basierend auf bestimmten Fragenantworten filtern. Jeder Filter gibt eine Fragen-ID, einen Filtertyp und einen erwarteten Wert an."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
+          "source": "Filter Answers",
+          "message": "Antworten filtern"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
+          "source": "Filter responses by specific answer values",
+          "message": "Antworten nach bestimmten Antwortwerten filtern"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the detailed answer data for each response. Default is true.",
+          "message": "Gibt an, ob die detaillierten Antwortdaten für jede Antwort eingeschlossen werden sollen. Standard ist true."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Antworten einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in response",
+          "message": "Detaillierte Antworten in Antwort einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Gibt an, ob die Formularfragen und Metadaten in die Antwort eingeschlossen werden sollen. Standard ist false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Fragen einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Formularfragen in Antwort einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.desc": {
+          "source": "The maximum number of responses to return per request. Default is 50, maximum is 1000.",
+          "message": "Die maximale Anzahl der pro Anfrage zurückzugebenden Antworten. Standard ist 50, Maximum ist 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "Maximale Anzahl zurückzugebender Antworten"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token to retrieve the next page of results. Used for pagination through large response sets.",
+          "message": "Ein Token zum Abrufen der nächsten Ergebnisseite. Wird für die Paginierung durch große Antwortsätze verwendet."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Seiten-Token"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token für Paginierung"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.desc": {
+          "source": "Filter responses to only include those from respondents with emails containing this value.",
+          "message": "Antworten filtern, um nur diejenigen von Befragten einzuschließen, deren E-Mail diesen Wert enthält."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
+          "source": "Respondent Email",
+          "message": "E-Mail des Befragten"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
+          "source": "Filter by respondent email",
+          "message": "Nach E-Mail des Befragten filtern"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
+          "source": "Retrieve responses from a Google Form with filtering and pagination.",
+          "message": "Antworten aus einem Google-Formular mit Filterung und Paginierung abrufen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Forms** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP / REST-API-Aufruf an **Google Forms** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anforderungstext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App verfügbar sind."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Forms",
+          "message": "Einen benutzerdefinierten API-Aufruf an Google Forms durchführen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data.",
+          "message": "Überwacht ein Google-Formular auf neue Antworten und wird ausgelöst, wenn jemand eine neue Antwort einreicht. Schließt optional Formularfragen und Metadaten in die Ereignisdaten ein."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "Neue Formularantwort"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to monitor for new responses.",
+          "message": "Die eindeutige Kennung des Google-Formulars, das auf neue Antworten überwacht werden soll."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "Formular-ID"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to monitor",
+          "message": "Das zu überwachende Google-Formular"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the form answers in each triggered event. Default is false.",
+          "message": "Gibt an, ob die Formularantworten in jedes ausgelöste Ereignis eingeschlossen werden sollen. Standard ist false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Antworten einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in the event data",
+          "message": "Detaillierte Antworten in die Ereignisdaten einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in each triggered event. Default is false.",
+          "message": "Gibt an, ob die Formularfragen und Metadaten in jedes ausgelöste Ereignis eingeschlossen werden sollen. Standard ist false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Fragen einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the event data",
+          "message": "Formularfragen in die Ereignisdaten einschließen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Google Form.",
+          "message": "Wird ausgelöst, wenn eine neue Antwort für ein Google-Formular eingereicht wird."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.desc": {
+          "source": "Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results.",
+          "message": "Suchen Sie nach Google-Formularen in Ihrem Google Drive mit Optionen zum Filtern nach Dateiname, Angeben des Suchtyps und Paginieren von Ergebnissen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.display_name": {
+          "source": "Search Forms",
+          "message": "Formulare suchen"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms.",
+          "message": "Der Name oder Teil des Namens der Google-Formulare, nach denen gesucht werden soll. Leer lassen, um alle Formulare abzurufen."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
+          "source": "Form Name",
+          "message": "Formularname"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the form to search for",
+          "message": "Name des zu suchenden Formulars"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.desc": {
+          "source": "The maximum number of forms to return in a single request. Maximum value is 1000.",
+          "message": "Die maximale Anzahl der in einer einzelnen Anfrage zurückzugebenden Formulare. Der Höchstwert ist 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of forms to return",
+          "message": "Maximale Anzahl zurückzugebender Formulare"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Enthält"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Exakte Übereinstimmung"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Specify whether to search for forms where the name contains the search term or matches it exactly.",
+          "message": "Geben Sie an, ob nach Formularen gesucht werden soll, deren Name den Suchbegriff enthält oder genau mit ihm übereinstimmt."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Suchtyp"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Art der durchzuführenden Suche"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token returned from a previous search to continue pagination. Use the next_page_token from a previous response.",
+          "message": "Ein aus einer vorherigen Suche zurückgegebenes Token, um die Paginierung fortzusetzen. Verwenden Sie den next_page_token aus einer vorherigen Antwort."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Seiten-Token"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token für Paginierung"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.short_desc": {
+          "source": "Search for Google Forms by name with filtering options.",
+          "message": "Nach Google-Formularen nach Namen mit Filteroptionen suchen."
+        },
+        "app.R29vZ2xlRm9ybXM.desc": {
+          "source": "Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.",
+          "message": "Integrieren Sie Google Forms, um Ihre Formulare und Antworten zu erstellen, zu aktualisieren und zu verwalten. Diese Integration ermöglicht es Ihnen, Aktionen auszuführen und auf Ereignisse in Ihrem Google Forms-Konto zu reagieren, sodass Sie Formularverwaltungs- und Datenerfassungsworkflows automatisieren können."
+        },
+        "app.R29vZ2xlRm9ybXM.display_name": {
+          "source": "Google Forms",
+          "message": "Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.short_desc": {
+          "source": "Connect with Google Forms to manage your forms and responses",
+          "message": "Mit Google Forms verbinden, um Ihre Formulare und Antworten zu verwalten"
+        }
+      }
+    }
+  }
+}

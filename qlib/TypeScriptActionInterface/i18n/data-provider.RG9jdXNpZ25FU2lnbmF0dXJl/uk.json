@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.desc": {
+          "source": "This method deletes one or more brand profiles from an account, based on the brand IDs that you include in the `brandsRequest`.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Цей метод видаляє один або кілька профілів брендів з облікового запису на основі ідентифікаторів брендів, указаних у `brandsRequest`.\n\nЩоб використовувати цей метод, для облікового запису має бути ввімкнено один або обидва з таких параметрів:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Пов'язані теми\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
+          "source": "Delete Brand",
+          "message": "Видалити бренд"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
+          "source": "Deletes one or more brand profiles.",
+          "message": "Видаляє один або кілька профілів брендів."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.desc": {
+          "source": "This method returns details about all of the [brands](-docs-esign-rest-api-esign101-concepts-branding-) associated with an account,\nincluding the default brand profiles.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Цей метод повертає інформацію про всі [бренди](-docs-esign-rest-api-esign101-concepts-branding-), пов'язані з обліковим записом,\nвключно з профілями брендів за замовчуванням.\n\nЩоб використовувати цей метод, для облікового запису має бути ввімкнено один або обидва з таких параметрів:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Пов'язані теми\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
+          "source": "Get Brands",
+          "message": "Отримати бренди"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
+          "source": "Gets a list of brands.",
+          "message": "Отримує список брендів."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.desc": {
+          "source": "This method creates one or more brand profile files for an account.\n\nTo specify logos for the brand,\nuse the\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nmethod\nafter you create the brand.\n\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Цей метод створює один або кілька файлів профілю бренду для облікового запису.\n\nЩоб указати логотипи для бренду,\nскористайтеся методом\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nпісля створення бренду.\n\n\nДля використання цього методу в обліковому записі має бути ввімкнено принаймні одне або обидва з таких налаштувань:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Пов'язані теми\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
+          "source": "Create Brand",
+          "message": "Створити бренд"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
+          "source": "Creates one or more brand profiles for an account.",
+          "message": "Створює один або кілька профілів бренду для облікового запису."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.desc": {
+          "source": "Deletes one or more documents from an existing envelope that has not yet been completed.\n\nTo delete a document, use only the relevant parts of the [`envelopeDefinition`](#envelopeDefinition).\nFor example, this request body specifies that you want to delete the document whose `documentId` is \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nThe envelope status must be one of:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n",
+          "message": "Видаляє один або кілька документів з наявного конверта, який ще не завершено.\n\nЩоб видалити документ, використовуйте лише відповідні частини [`envelopeDefinition`](#envelopeDefinition).\nНаприклад, це тіло запиту вказує, що ви хочете видалити документ, чий `documentId` дорівнює \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nСтатус конверта має бути одним із:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
+          "source": "Delete Documents",
+          "message": "Видалити документи"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
+          "source": "Deletes documents from a draft envelope.",
+          "message": "Видаляє документи з чернетки конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.desc": {
+          "source": "Retrieves a single document or all documents from an envelope.\n\nTo retrieve a single document, provide the ID of the document in the `documentId` path parameter.\nAlternatively, by setting the `documentId` parameter to special keyword values,\nyou can retrieve all the documents (as a combined PDF, portfolio PDF, or ZIP archive)\nor just the certificate of completion. See the `documentId` description for how to retrieve each format.\n\n\nThe response body of this method\nis a file. If you request multiple documents,\nthe result is a ZIP archive\nthat contains all of the documents.\n\nIn all other cases, the response is a PDF\nfile or PDF portfolio.\n\n\nYou can get the file name and document ID from the response's `Content-Disposition` header:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nBy default, the response is the PDF file\nas a byte stream.\nFor example a request-response in `curl` looks like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nBy using the `Content-Transfer-Encoding`\nheader in the request, you can obtain the PDF file\nencoded in base64. The same `curl` request with\nthe base64 header would look like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(In an actual `curl` request you would use the `-output` switch to\nsave the byte stream into a file.)\n\n### Related topics\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n",
+          "message": "Отримує окремий документ або всі документи з конверта.\n\nЩоб отримати окремий документ, укажіть ID документа в параметрі шляху `documentId`.\nКрім того, встановивши для параметра `documentId` спеціальні значення ключових слів,\nви можете отримати всі документи (як об'єднаний PDF, портфоліо PDF або ZIP-архів)\nчи лише сертифікат завершення. Див. опис `documentId`, щоб дізнатися, як отримати кожен формат.\n\n\nТілом відповіді цього методу\nє файл. Якщо ви запитуєте кілька документів,\nрезультатом є ZIP-архів,\nякий містить усі документи.\n\nВ усіх інших випадках відповіддю є PDF-файл\nабо PDF-портфоліо.\n\n\nВи можете отримати назву файлу та ID документа із заголовка `Content-Disposition` у відповіді:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nЗа замовчуванням відповіддю є PDF-файл\nяк потік байтів.\nНаприклад, запит-відповідь у `curl` виглядає так:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nВикористовуючи заголовок `Content-Transfer-Encoding`\nу запиті, ви можете отримати PDF-файл,\nзакодований у base64. Той самий запит `curl` із\nзаголовком base64 виглядатиме так:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(У реальному запиті `curl` ви б використовували перемикач `-output` для\nзбереження потоку байтів у файл.)\n\n### Пов'язані теми\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "Отримати документ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
+          "source": "Retrieves a single document or all documents from an envelope.",
+          "message": "Отримує окремий документ або всі документи з конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.desc": {
+          "source": "Retrieves a list of documents associated with the specified envelope.\n\n### Related topics\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n",
+          "message": "Отримує список документів, пов'язаних із вказаним конвертом.\n\n### Пов'язані теми\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
+          "source": "Get Documents",
+          "message": "Отримати документи"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
+          "source": "Gets a list of documents in an envelope.",
+          "message": "Отримує список документів у конверті."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.desc": {
+          "source": "Adds or replaces a document in an existing draft or in-process envelope.\nAn in-process envelope is one that has been sent but not yet completed or voided.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nTo add a new document, set the `documentId` path parameter to a new document ID.\n\nTo replace a document, set the `documentId` path parameter to the document ID of the existing document.\nThe tabs of the original document will be applied to the new document.\nFor example, a request in cURL looks like this:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "Додає або замінює документ у наявній чернетці або конверті в процесі обробки.\nКонверт у процесі обробки — це той, який було надіслано, але ще не завершено чи не анульовано.\n\n\n**Примітка:** додаючи або змінюючи документи для конверта в процесі обробки,\nDocusign рекомендує\n[заблокувати конверт](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nперед внесенням будь-яких змін.\n\nЩоб додати новий документ, установіть параметр шляху `documentId` на новий ID документа.\n\nЩоб замінити документ, установіть параметр шляху `documentId` на ID наявного документа.\nВкладки оригінального документа буде застосовано до нового документа.\nНаприклад, запит у cURL виглядає так:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "Оновити документ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
+          "source": "Adds or replaces a document in an existing envelope.",
+          "message": "Додає або замінює документ у наявному конверті."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.desc": {
+          "source": "Adds one or more documents to an existing envelope.\nThe tabs of the original document will be applied to the new document.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nIf the file name of a document contains Unicode characters, you need to include a `Content-Disposition` header. Example:\n\n\n**Header:** `Content-Disposition`\n\n\n**Value:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "Додає один або кілька документів до наявного конверта.\nВкладки оригінального документа буде застосовано до нового документа.\n\n\n**Примітка:** додаючи або змінюючи документи для конверта в процесі обробки,\nDocusign рекомендує\n[заблокувати конверт](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nперед внесенням будь-яких змін.\n\nЯкщо ім'я файлу документа містить символи Юнікоду, потрібно включити заголовок `Content-Disposition`. Приклад:\n\n\n**Заголовок:** `Content-Disposition`\n\n\n**Значення:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
+          "source": "Update Documents",
+          "message": "Оновити документи"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
+          "source": "Adds one or more documents to an existing envelope.",
+          "message": "Додає один або кілька документів до наявного конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.desc": {
+          "source": "Retrieves the overall status for the specified envelope.\nTo get the status of a list of envelopes, use\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Related topics\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n",
+          "message": "Отримує загальний статус для вказаного конверта.\nЩоб отримати статус списку конвертів, скористайтеся методом\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Пов'язані теми\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
+          "source": "Get Envelope",
+          "message": "Отримати конверт"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
+          "source": "Gets the status of a single envelope.",
+          "message": "Отримує статус окремого конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.desc": {
+          "source": "This method lets you [search for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-) in your accounts. A large set of filters let you narrow the scope of your search by date, by envelope ID, or by status codes. Your request must include one or more of the following parameters:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Restrictions\n\nThe number of envelopes returned is limited to 1,000 per call. To retrieve the next or previous set of envelopes, use the `nextUri` and `previousUri` parameters returned in the original call's response.\n\nIf no `from_date` query parameter is specified, envelopes from more than two years ago will not be returned. To fetch older envelopes, set the specific date range using the `from_date` and `to_date` parameters.\n\nTo avoid unnecessary database queries, the Docusign signature platform first checks requests to ensure that the filter set supplied does not result in a zero-size response before querying the database.\n\n### Envelope statuses\n\nThis table shows the valid current envelope statuses (`status` parameter) for the different status qualifiers (`from_to_status` parameter) in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the Valid Current Statuses column, then an empty list is returned.\n\nClient applications should check that the statuses (`status` parameter) they are requesting make sense for a given `from_to_status` parameter value.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Extraneous results\n\nIn some cases, a request for a specific envelope status will\ninclude envelopes with additional statuses. For example, in\na request with a `from_date` of 2017-01-01, a `to_date` of\n2017-01-07 and the status qualifier (`from_to_status`) set\nto `delivered`, the response set might contain envelopes\nthat were created during that time period, but not delivered\nduring the time period. As a workaround, check the envelope\nstatus values in the result set as needed.\n\n\n### Related topics\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n",
+          "message": "Цей метод дає змогу [шукати конверти](-docs-esign-rest-api-esign101-concepts-envelopes-search-) у ваших облікових записах. Великий набір фільтрів дає змогу звузити область пошуку за датою, ID конверта або кодами статусів. Ваш запит має містити один або кілька таких параметрів:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Обмеження\n\nКількість повернутих конвертів обмежена 1000 за виклик. Щоб отримати наступний або попередній набір конвертів, використовуйте параметри `nextUri` та `previousUri`, повернуті у відповіді початкового виклику.\n\nЯкщо параметр запиту `from_date` не вказано, конверти, створені понад два роки тому, не повертатимуться. Щоб отримати старіші конверти, укажіть конкретний діапазон дат за допомогою параметрів `from_date` та `to_date`.\n\nЩоб уникнути непотрібних запитів до бази даних, платформа підписів Docusign спочатку перевіряє запити, щоб переконатися, що наданий набір фільтрів не повертає нульовий результат, перш ніж виконувати запит до бази даних.\n\n### Статуси конверта\n\nУ цій таблиці наведено дійсні поточні статуси конвертів (параметр `status`) для різних кваліфікаторів статусу (параметр `from_to_status`) у запиті. Якщо статус і кваліфікатори статусу в API-запиті не містять жодного зі значень, наведених у стовпці «Дійсні поточні статуси», повертається порожній список.\n\nКлієнтські програми мають перевіряти, чи мають запитувані статуси (параметр `status`) сенс для заданого значення параметра `from_to_status`.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Додаткові результати\n\nУ деяких випадках запит на певний статус конверта\nвключатиме конверти з додатковими статусами. Наприклад,\nу запиті з `from_date` від 2017-01-01, `to_date` від\n2017-01-07 і кваліфікатором статусу (`from_to_status`), установленим\nу `delivered`, набір відповідей може містити конверти,\nстворені протягом цього періоду, але не доставлені\nпротягом нього. Як альтернативне рішення за потреби перевіряйте\nзначення статусу конверта в наборі результатів.\n\n\n### Пов'язані теми\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
+          "source": "Get Envelopes",
+          "message": "Отримати конверти"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
+          "source": "Search for specific sets of envelopes by using search filters.",
+          "message": "Пошук певних наборів конвертів за допомогою фільтрів пошуку."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.desc": {
+          "source": "This method enables you to make changes to an envelope.\nYou can use it to:\n\n* [Send a draft envelope](#sending-a-draft-envelope)\n* [Void an in-process envelope](#voiding-an-in-process-envelope)\n* [Modify a draft envelope](#modifying-envelope-email-information)\n* [Purge documents and envelope metadata from the Docusign platform](#purging-documents-from-docusign)\n\nAlthough the request body for this method\nis a complete envelope definition,\nyou only need to provide\nthe properties that\nyou're updating.\n\n## Sending a draft envelope\n\nTo send a draft envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nYou can attach a workflow before sending the envelope:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Working with workflows\n\nTo unpause a workflow, the request body should include this:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Voiding an in-process envelope\n\nTo void an in-process envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Modifying envelope email information\n\nTo change the email subject and message of a draft envelope,\ninclude the following code in the request body:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Purging documents from Docusign\n\nTo place only the documents\nin the purge queue,\nleaving any\ncorresponding attachments\nand tabs in the Docusign platform,\nset the `purgeState` property\nto `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue,\nset the `purgeState` property\nto `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue\nand to redact personal information,\nset the `purgeState` property\nto `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nYou can purge documents\nonly from completed envelopes\nthat are not marked as the authoritative copy.\nThe user requesting the purge\nmust have permission to purge documents\nand\nmust be the sender or be acting on behalf of the sender.\n\nWhen the purge request is initiated\nthe items to be purged\nare placed in the purge queue\nfor deletion in 14 days.\nThe sender\nand\nall recipients with Docusign accounts\nassociated with the envelope\nget an email notification\nthe documents will be deleted in 14 days.\nThe notification contains a link\nto the documents.\nA second email notification\nis sent 7 days later.\nAt the end of the 14-day period\nthe documents are deleted from the system.\nRecipients without Docusign accounts\ndo not receive email notifications.\n\nIf your account has a Document Retention policy,\nenvelope documents\nare automatically placed\nin the purge queue,\nand notification emails are sent\nat the end of the retention period.\nSetting a Document Retention policy is the same as setting a\nschedule for purging documents.\n\n## Removing documents from the purge queue\n\nTo remove documents from the purge queue, include the following code in the request body:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Related topics\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n",
+          "message": "Цей метод дає змогу вносити зміни до конверта.\nВи можете використовувати його для:\n\n* [Надіслати чернетку конверта](#sending-a-draft-envelope)\n* [Анулювати конверт у процесі обробки](#voiding-an-in-process-envelope)\n* [Змінити чернетку конверта](#modifying-envelope-email-information)\n* [Видалити документи та метадані конверта з платформи Docusign](#purging-documents-from-docusign)\n\nХоча тіло запиту для цього методу\nє повним визначенням конверта,\nвам потрібно надати лише\nті властивості, які\nви оновлюєте.\n\n## Надсилання чернетки конверта\n\nЩоб надіслати чернетку конверта, додайте такий код до тіла запиту:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nВи можете прикріпити робочий процес перед надсиланням конверта:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Робота з робочими процесами\n\nЩоб відновити призупинений робочий процес, тіло запиту має містити таке:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Анулювання конверта в процесі обробки\n\nЩоб анулювати конверт у процесі обробки, додайте такий код до тіла запиту:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Змінення інформації електронної пошти конверта\n\nЩоб змінити тему та повідомлення електронної пошти для чернетки конверта,\nдодайте такий код до тіла запиту:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Очищення документів із Docusign\n\nЩоб помістити лише документи\nв чергу очищення,\nзалишивши всі\nвідповідні вкладення\nта вкладки на платформі Docusign,\nустановіть властивість `purgeState`\nу `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nЩоб помістити документи,\nвкладення\nта вкладки\nв чергу очищення,\nустановіть властивість `purgeState`\nу `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nЩоб помістити документи,\nвкладення\nта вкладки\nв чергу очищення\nй вилучити персональні дані,\nустановіть властивість `purgeState`\nу `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nВи можете очищати документи\nлише із завершених конвертів,\nякі не позначені як авторитетна копія.\nКористувач, який запитує очищення,\nповинен мати дозвіл на очищення документів\nі\nбути відправником або діяти від імені відправника.\n\nПісля ініціювання запиту на очищення\nелементи, які потрібно очистити,\nпоміщаються в чергу очищення\nдля видалення через 14 днів.\nВідправник\nі\nвсі одержувачі з обліковими записами Docusign,\nпов'язаними з конвертом,\nотримують сповіщення електронною поштою про те,\nщо документи буде видалено через 14 днів.\nСповіщення містить посилання\nна документи.\nДруге сповіщення електронною поштою\nнадсилається через 7 днів.\nПісля закінчення 14-денного періоду\nдокументи видаляються із системи.\nОдержувачі без облікових записів Docusign\nне отримують сповіщень електронною поштою.\n\nЯкщо у вашому обліковому записі діє політика збереження документів,\nдокументи конверта\nавтоматично поміщаються\nв чергу очищення,\nа сповіщення електронною поштою надсилаються\nпісля закінчення періоду збереження.\nВстановлення політики збереження документів еквівалентне встановленню\nрозкладу для очищення документів.\n\n## Видалення документів із черги очищення\n\nЩоб видалити документи з черги очищення, додайте такий код до тіла запиту:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Пов'язані теми\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
+          "source": "Update Envelope",
+          "message": "Оновити конверт"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
+          "source": "Send, void, or modify a draft envelope. Purge documents from a completed envelope.",
+          "message": "Надіслати, анулювати або змінити чернетку конверта. Очистити документи із завершеного конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.desc": {
+          "source": "Creates and sends an envelope or creates a draft envelope.\nEnvelopes are fundamental resources in the Docusign platform.\n\n\nWith this method you can:\n\n* Create and send an envelope\n  with [documents][], [recipients][], and [tabs][].\n* [Create and send an envelope from a template](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Create and send an envelope from\n  a combination of documents and templates](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Create a draft envelope.\n\n\nWhen you use this method\nto create and send an envelope\nin a single request,\nthe following parameters in the request body (an [`envelopeDefinition`][envelopeDefinition] object) are required:\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | Set to `sent` to send the envelope to recipients.<br>Set to `created` (or don't set at all) to save the envelope as a draft. |\n| `emailSubject` | The subject of the email used to send the envelope. |\n| `documents`    | The [documents][] to be signed. |\n| `recipients`   | The email addresses of the envelope [recipients][]. |\n\n\nWhen you create an envelope by using a\n[composite template](-docs-esign-rest-api-esign101-concepts-templates-composite-),\nyou should specify the envelope custom fields in the inline template.\nAny custom fields that you specify at the root level are ignored.\n\nIf the envelope has a workflow definition\nand the `workflowStatus` is `paused`,\nthe envelope will not be sent immediately,\neven if the envelope's `status` is `sent`.\n\n\n### Related topics\n\n[Envelope][envelopes] and [template][templates]\nobjects along with [documents][documents],\n[recipients][recipients], and [tabs][tabs]\nare the five object models at the core of the eSignature API.\nThe [eSignature concepts guide](-docs-esign-rest-api-esign101-concepts-)\ndescribes how the five object models work together.\n\nThe following how-to articles contain\npractical examples that show you how to\nto\nconfigure this method's\n[`envelopeDefinition`][envelopeDefinition] request body\nto perform common tasks.\n\nRequesting a signature\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nWorking with envelopes and templates\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nWorking with advanced recipient routing\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nWorking with documents\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nWorking with tabs\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nWorking with brands\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nWorking with permissions\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nImplementing multi-factor recipient (signer) authentication\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n",
+          "message": "Створює та надсилає конверт або створює чернетку конверта.\nКонверти є основними ресурсами на платформі Docusign.\n\n\nЗа допомогою цього методу ви можете:\n\n* Створювати та надсилати конверт\n  з [документами][documents], [одержувачами][recipients] та [вкладками][tabs].\n* [Створювати та надсилати конверт із шаблону](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Створювати та надсилати конверт із\n  комбінації документів та шаблонів](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Створювати чернетку конверта.\n\n\nКоли ви використовуєте цей метод\nдля створення та надсилання конверта\nв одному запиті,\nнаступні параметри в тілі запиту (об'єкт [`envelopeDefinition`][envelopeDefinition]) є обов'язковими:\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | Set to `sent` to send the envelope to recipients.<br>Set to `created` (or don't set at all) to save the envelope as a draft. |\n| `emailSubject` | The subject of the email used to send the envelope. |\n| `documents`    | The [documents][] to be signed. |\n| `recipients`   | The email addresses of the envelope [recipients][]. |\n\n\nСтворюючи конверт за допомогою\n[складеного шаблону](-docs-esign-rest-api-esign101-concepts-templates-composite-),\nслід указати настроювані поля конверта у вбудованому шаблоні.\nБудь-які настроювані поля, указані на кореневому рівні, ігноруються.\n\nЯкщо конверт має визначення робочого процесу\nі `workflowStatus` має значення `paused`,\nконверт не буде надіслано негайно,\nнавіть якщо `status` конверта має значення `sent`.\n\n\n### Пов'язані теми\n\nОб'єкти [Envelope][envelopes] і [template][templates]\nразом із [documents][documents],\n[recipients][recipients] та [tabs][tabs]\nє п'ятьма об'єктними моделями в основі eSignature API.\n[Посібник із концепцій eSignature](-docs-esign-rest-api-esign101-concepts-)\nописує, як ці п'ять об'єктних моделей взаємодіють між собою.\n\nНаступні практичні статті містять\nприклади, які показують, як\nналаштувати тіло запиту [`envelopeDefinition`][envelopeDefinition] цього методу\nдля виконання поширених завдань.\n\nЗапит на підпис\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nРобота з конвертами та шаблонами\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nРобота з розширеною маршрутизацією одержувачів\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nРобота з документами\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nРобота з вкладками\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nРобота з брендами\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nРобота з правами доступу\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nВпровадження багатофакторної автентифікації одержувача (підписанта)\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
+          "source": "Create Envelopes",
+          "message": "Створити конверти"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
+          "source": "Creates an envelope.",
+          "message": "Створює конверт."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.desc": {
+          "source": "Deletes one or more recipients from a draft or sent envelope. List the recipients that you want to delete in the body of the request. This method uses the `recipientId` as the key for deleting recipients.\n\nIf the envelope is `In Process`, meaning that it has been sent and has not been completed or voided, recipients that have completed their actions cannot be deleted.",
+          "message": "Видаляє одного або кількох одержувачів із чернетки або надісланого конверта. Перелічіть одержувачів, яких ви хочете видалити, у тілі запиту. Цей метод використовує `recipientId` як ключ для видалення одержувачів.\n\nЯкщо конверт має статус `In Process`, тобто його було надіслано і не завершено та не анульовано, одержувачів, які завершили свої дії, видалити не можна."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
+          "source": "Delete Recipients",
+          "message": "Видалити одержувачів"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
+          "source": "Deletes recipients from an envelope.",
+          "message": "Видаляє одержувачів із конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.desc": {
+          "source": "Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. This method can also be used to retrieve the tab values.\n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.\n\n### Related topics\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n",
+          "message": "Отримує статус усіх одержувачів в одному конверті та визначає поточного одержувача в списку маршрутизації. Цей метод також можна використовувати для отримання значень вкладок.\n\nВластивість `currentRoutingOrder` у відповіді містить значення `routingOrder` поточного одержувача, що вказує на те, що конверт надіслано одержувачу, але одержувач ще не завершив свої дії.\n\n### Пов'язані теми\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
+          "source": "Get Recipients",
+          "message": "Отримати одержувачів"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
+          "source": "Gets the status of recipients for an envelope.",
+          "message": "Отримує статус одержувачів для конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.desc": {
+          "source": "Adds one or more recipients to an envelope.\n\nFor an in-process envelope,\none that has been sent and has not been completed or voided,\nan email is sent to a new recipient\nwhen they are reached in the routing order.\nIf the new recipient's routing order\nis before or the same as the envelope's\nnext recipient,\nan email is only sent if the optional\n`resend_envelope` query string is set to **true.**\n\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Related topics\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n",
+          "message": "Додає одного або кількох одержувачів до конверта.\n\nДля конверта в процесі обробки,\nтобто того, який було надіслано і ще не завершено або не анульовано,\nелектронний лист надсилається новому одержувачу,\nколи настає його черга за порядком маршрутизації.\nЯкщо черга нового одержувача за порядком маршрутизації\nпередує або збігається з чергою наступного одержувача\nконверта,\nелектронний лист надсилається лише тоді, коли необов'язковий рядок\nзапиту `resend_envelope` має значення **true.**\n\n\n**Примітка:** Цей метод працює лише з одержувачами.\nЩоб додати вкладки одержувача,\nвикористовуйте методи з ресурсу [EnvelopeRecipientTabs][recipientTabs].\nНаприклад, це тіло запиту додасть одержувача (`astanton@example.com`),\nале **НЕ** додасть вкладку одержувача «Підписати тут».\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Пов'язані теми\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
+          "source": "Add Recipients",
+          "message": "Додати одержувачів"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
+          "source": "Adds one or more recipients to an envelope.",
+          "message": "Додає одного або кількох одержувачів до конверта."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.desc": {
+          "source": "Updates the recipients of a draft envelope or corrects recipient information for an in-process envelope.\n\nIf you send information for a recipient that does not already\nexist in a draft envelope, the recipient is added to the envelope\n(similar to the [EnvelopeRecipients: Create][EnvelopeRecipients-create] method).\n\nYou can also use this method to resend an envelope to a recipient\nby using the `resend_envelope` option.\n\n**Updating Sent Envelopes**\n\nAfter an envelope has been sent, you can edit only the following properties:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (If you provide an email address in this method, it will be treated as a new email address, even if it is exactly the same as the current address. Do not provide an email address if you do not want a correction email sent.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (For this to work, you must also change the recipient object to match the recipient type.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (You can change this ID to switch to a different signing group and its corresponding set of recipients.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nIf the recipient has signed,\nbut the envelope is still active,\nthe method will return success,\nbut the `recipientUpdateResults` property\nin the response will include an error\nthat the recipient could not be updated:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nIf the envelope is completed,\nand you try to change a recipient's address,\nthe method will fail with this error:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n",
+          "message": "Оновлює одержувачів чернетки конверта або виправляє інформацію про одержувачів для конверта в процесі обробки.\n\nЯкщо ви надсилаєте інформацію для одержувача, якого ще не\nіснує в чернетці конверта, одержувача буде додано до конверта\n(подібно до методу [EnvelopeRecipients: Create][EnvelopeRecipients-create]).\n\nВи також можете використовувати цей метод для повторного надсилання конверта одержувачу\nза допомогою параметра `resend_envelope`.\n\n**Оновлення надісланих конвертів**\n\nПісля надсилання конверта можна редагувати лише такі властивості:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (Якщо вказати адресу електронної пошти в цьому методі, вона розглядатиметься як нова адреса, навіть якщо вона збігається з поточною. Не вказуйте адресу електронної пошти, якщо не бажаєте надсилати лист із виправленням.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (Щоб це спрацювало, необхідно також змінити об'єкт одержувача відповідно до типу одержувача.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (Ви можете змінити цей ID, щоб перейти до іншої групи підписання та відповідного набору одержувачів.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nЯкщо одержувач підписав,\nале конверт усе ще активний,\nметод поверне успіх,\nале властивість `recipientUpdateResults`\nу відповіді міститиме помилку\nпро те, що одержувача не вдалося оновити:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nЯкщо конверт завершено,\nі ви спробуєте змінити адресу одержувача,\nметод завершиться з такою помилкою:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Примітка:** Цей метод працює лише з одержувачами.\nЩоб додати вкладки одержувача,\nвикористовуйте методи з ресурсу [EnvelopeRecipientTabs][recipientTabs].\nНаприклад, це тіло запиту додасть одержувача (`astanton@example.com`),\nале **НЕ** додасть вкладку одержувача «Підписати тут».\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
+          "source": "Update Recipients",
+          "message": "Оновити одержувачів"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
+          "source": "Updates recipients in a draft envelope or corrects recipient information for an in-process envelope.",
+          "message": "Оновлює одержувачів у чернетці конверта або виправляє інформацію про одержувачів для конверта в процесі обробки."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.desc": {
+          "source": "Returns a URL that enables you to\n[embed the recipient view](-docs-esign-rest-api-esign101-concepts-embedding-)\nof the\nDocuSign UI in your applications. If the recipient is a signer,\nthen the view will provide the signing ceremony.\n\nThis method is only used with envelopes in the `sent` status.\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nDue to screen space issues,\ndo not use an <code>&lt;iframe&gt;<-code> for embedded operations on mobile devices.\nFor iOS devices, Docusign recommends using a WebView.\n<-ds-inlinemessage>\n\n\n### The returned URL\n\nThe URL returned in this method's response is intended to be used\nimmediately to redirect the signer to the recipient view.\nYou can open the recipient view\nin the current browser or in a new tab.\nAfter the signer is redirected to the\nrecipient view, they must interact with the Docusign system\nperiodically or their session will time out.\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\nThe returned URL can be used only once and\nexpires after 5 minutes.\nDo not store or email the returned URL.\n<-ds-inlinemessage>\n\nIf you want to invite someone to an embedded signing session via\nemail, the email invitation's URL must be to your application.\nWhen invoked, your app should request a `recipientView` URL from\nDocusign and then redirect the signer to that URL.\n\n### How to specify the default language\n\nYou can append the `locale`\nquery parameter\nto the URL returned by this method\nto specify a language.\n\nThe language for the recipient view\nfollows this order or precedence:\n\n- The language specified by the sender for the recipient.\n- The `locale` parameter appended to the URL.\n- The account language if the signer has a Docusign account.\n- The language used in a previous signing if the signer is return signer.\n- The browser language.\n\nFor example, to set the default language\nto Canadian French, you would add this query parameter\nto the returned URL:\n\n```\n...?locale=fr_CA\n```\n\n\n## Authentication\n\nYour application is responsible for authenticating the identity\nof the recipient or signer when you use this method. Use the\nfollowing parameters to record how the recipient\nwas authenticated.\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\nAt a minimum, `authenticationMethod` and `clientUserId` are\nrequired. The information that you provide is included in the\nenvelope's certificate of completion.\n\n## Sending to a remote signer\n\nYou can request a signing session for a remote recipient\nwho has a Docusign account.\n\nAuthenticate the request using the recipient's\ncredentials, and do not specify a  `clientUserId`.\nThis differs from the typical behavior where the\nrequest is authenticated using the sender's credentials,\nand the recipient has a `clientUserId` defined.\n\n\n\n## Redirecting back to returnUrl\nAfter the signer completes or ends the signing ceremony, Docusign\nredirects the user's browser back to your app via the\n`returnUrl` that you supplied in the request.\n\nThe signer may be redirected through various Docusign\nsubdomains, depending on the region of the account sending the\nenvelope. Please consult [Allowlists for Docusign eSignature service](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service)\nin **Security for Docusign eSignature**\nwhen setting up your allowlists\n\n\n### The event status parameter\n\nDocusign appends an `event` query parameter to the `returnUrl` with the\noutcome of the signing ceremony. Your app can use this event\nparameter to determine the next step for the envelope.\nDo not fetch the envelope status by using\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-)\nor a similar method because doing so\nwill probably hit [request and polling limits](-docs-esign-rest-api-esign101-rules-and-limits-).\n\n\n| event query parameter | Meaning                                                                                  |\n| :- | :- |\n| signing_complete     | The recipient has signed the document.                                                   |\n| cancel               | The recipient decided to finish later.                                                   |\n| decline              | The recipient declined to sign the document.                                             |\n| exception            | An exception has occurred on the server during the signing session.                      |\n| fax_pending          | Recipient has a fax pending.                                                             |\n| session_timeout      | The recipient did not sign the document in time. The timeout is set to 20 minutes.       |\n| ttl_expired          | The token was not used within the timeout period or the token has already been accessed. |\n| viewing_complete     | The recipient did not need to sign but has completed the viewing ceremony.               |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nBecause a user can cancel redirection, close their\nbrowser after signing, or spoof the landing URL,\nyou should not rely on the <code>returnUrl<-code>\nalone as the single source of truth for envelope\nstatus for your integration.\n<-ds-inlinemessage>\n\n### Maintaining State\nAfter the recipient completes the recipient view (or signing\nceremony), they are redirected to your application. Your\napplication can recover state information about the transaction\nby storing information in a cookie, or by including query\nparameters in the `returnUrl` field. For example.\n`https:-myapp.example.com-docusign_return?myState=12345` When the\nuser is redirected to your app, the `event` query parameter will\nbe appended. In this example, prevent spoofing by not using a\nguessable value as the state value.\n\n\n### Related topics\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [How to request a signature using focused view](-docs-esign-rest-api-how-to-request-signature-focused-view-)",
+          "message": "Повертає URL-адресу, яка дає змогу\n[вбудувати подання одержувача](-docs-esign-rest-api-esign101-concepts-embedding-)\nінтерфейсу DocuSign у ваші програми. Якщо одержувач є підписантом,\nтоді подання надасть процедуру підписання.\n\nЦей метод використовується лише для конвертів зі статусом `sent`.\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nDue to screen space issues,\ndo not use an <code>&lt;iframe&gt;<-code> for embedded operations on mobile devices.\nFor iOS devices, Docusign recommends using a WebView.\n<-ds-inlinemessage>\n\n\n### Повернута URL-адреса\n\nURL-адреса, повернута у відповіді цього методу, призначена для\nнегайного переспрямування підписанта до подання одержувача.\nВи можете відкрити подання одержувача\nв поточному браузері або в новій вкладці.\nПісля переспрямування підписанта до\nподання одержувача він повинен періодично взаємодіяти із системою Docusign,\nінакше час його сеансу спливе.\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\nThe returned URL can be used only once and\nexpires after 5 minutes.\nDo not store or email the returned URL.\n<-ds-inlinemessage>\n\nЯкщо ви хочете запросити когось на сеанс вбудованого підписання електронною\nпоштою, URL-адреса в запрошенні має вести до вашої програми.\nПід час виклику ваша програма повинна запитати URL-адресу `recipientView` у\nDocusign, а потім переспрямувати підписанта на цю URL-адресу.\n\n### Як указати мову за замовчуванням\n\nВи можете додати параметр запиту `locale`\nдо URL-адреси, повернутої цим методом,\nщоб указати мову.\n\nМова для подання одержувача\nвизначається за таким пріоритетом:\n\n- Мова, указана відправником для одержувача.\n- Параметр `locale`, доданий до URL-адреси.\n- Мова облікового запису, якщо підписант має обліковий запис Docusign.\n- Мова, використана під час попереднього підписання, якщо підписант є повторним підписантом.\n- Мова браузера.\n\nНаприклад, щоб установити мову за замовчуванням\nна канадську французьку, слід додати цей параметр запиту\nдо повернутої URL-адреси:\n\n```\n...?locale=fr_CA\n```\n\n\n## Автентифікація\n\nВаша програма відповідає за автентифікацію особи\nодержувача або підписанта під час використання цього методу. Використовуйте\nтакі параметри, щоб зафіксувати спосіб автентифікації\nодержувача.\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\nЩонайменше обов'язковими є `authenticationMethod` та `clientUserId`.\nНадана вами інформація включається до\nсертифіката завершення конверта.\n\n## Надсилання віддаленому підписанту\n\nВи можете запитати сеанс підписання для віддаленого одержувача,\nякий має обліковий запис Docusign.\n\nАвтентифікуйте запит за допомогою облікових даних одержувача\nі не вказуйте `clientUserId`.\nЦе відрізняється від типової поведінки, коли\nзапит автентифікується за допомогою облікових даних відправника,\nа для одержувача визначено `clientUserId`.\n\n\n\n## Переспрямування назад на returnUrl\nПісля завершення або припинення підписантом процедури підписання Docusign\nпереспрямовує браузер користувача назад до вашої програми за\n`returnUrl`, вказаною вами в запиті.\n\nПідписанта може бути переспрямовано через різні піддомени Docusign\nзалежно від регіону облікового запису, що надсилає\nконверт. Будь ласка, зверніться до розділу [Allowlists for Docusign eSignature service](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service)\nу **Security for Docusign eSignature**\nпід час налаштування ваших списків дозволених адрес\n\n\n### Параметр статусу події\n\nDocusign додає параметр запиту `event` до `returnUrl` із\nрезультатом процедури підписання. Ваша програма може використовувати цей параметр\nподії для визначення наступного кроку для конверта.\nНе отримуйте статус конверта за допомогою\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-)\nабо подібного методу, оскільки це,\nймовірно, призведе до перевищення [лімітів на запити та опитування](-docs-esign-rest-api-esign101-rules-and-limits-).\n\n\n| event query parameter | Meaning                                                                                  |\n| :- | :- |\n| signing_complete     | The recipient has signed the document.                                                   |\n| cancel               | The recipient decided to finish later.                                                   |\n| decline              | The recipient declined to sign the document.                                             |\n| exception            | An exception has occurred on the server during the signing session.                      |\n| fax_pending          | Recipient has a fax pending.                                                             |\n| session_timeout      | The recipient did not sign the document in time. The timeout is set to 20 minutes.       |\n| ttl_expired          | The token was not used within the timeout period or the token has already been accessed. |\n| viewing_complete     | The recipient did not need to sign but has completed the viewing ceremony.               |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nBecause a user can cancel redirection, close their\nbrowser after signing, or spoof the landing URL,\nyou should not rely on the <code>returnUrl<-code>\nalone as the single source of truth for envelope\nstatus for your integration.\n<-ds-inlinemessage>\n\n### Збереження стану\nПісля завершення одержувачем подання одержувача (або процедури\nпідписання) його буде переспрямовано до вашої програми. Ваша\nпрограма може відновити інформацію про стан транзакції,\nзберігаючи інформацію в cookie або додаючи параметри\nзапиту до поля `returnUrl`. Наприклад.\n`https:-myapp.example.com-docusign_return?myState=12345` Коли\nкористувача буде переспрямовано до вашої програми, буде додано параметр запиту `event`.\nУ цьому прикладі запобігайте підробці, не використовуючи\nзначення стану, яке можна легко вгадати.\n\n\n### Пов'язані теми\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [How to request a signature using focused view](-docs-esign-rest-api-how-to-request-signature-focused-view-)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
+          "source": "Create Recipient View",
+          "message": "Створити подання одержувача"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {
+          "source": "Returns a URL to the recipient view UI. For signer recipients, returns the embedded signing view. Can also be used for other recipient types.",
+          "message": "Повертає URL-адресу інтерфейсу подання одержувача. Для одержувачів-підписантів повертає вбудоване подання підписання. Також може використовуватися для інших типів одержувачів."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.desc": {
+          "source": "This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow.",
+          "message": "Цей тригер спрацьовує щоразу, коли відбуваються зміни в життєвому циклі конверта DocuSign. Він відстежує різноманітні оновлення, такі як надсилання конверта одержувачам, доставка, підписання, завершення або відхилення. Він також охоплює адміністративні події, такі як повторне надсилання, виправлення, очищення, видалення, відхилення, створення або вилучення конвертів. Налаштувавши цей тригер, ви зможете бути в курсі перебігу та змін статусу конверта, що дозволить своєчасно здійснювати подальші дії, вести облік або виконувати інші автоматизовані дії у вашому робочому процесі."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.display_name": {
+          "source": "Envelope Status Updated",
+          "message": "Статус конверта оновлено"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "ID облікового запису за замовчуванням, установлений під час авторизації з'єднання"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "ID облікового запису за замовчуванням"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "ID облікового запису за замовчуванням, установлений під час авторизації з'єднання"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.",
+          "message": "Спрацьовує щоразу, коли оновлюється статус або властивості конверта DocuSign, зокрема події надсилання, доставки, підписання, завершення, відхилення, анулювання, виправлення, очищення або видалення."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Docusign eSignature** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконайте користувацький виклик HTTP / REST API до **Docusign eSignature**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цій програмі."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Docusign eSignature",
+          "message": "Виконати користувацький виклик API до Docusign eSignature"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.desc": {
+          "source": "Template updated",
+          "message": "Шаблон оновлено"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.display_name": {
+          "source": "Template Updated",
+          "message": "Шаблон оновлено"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "ID облікового запису за замовчуванням, установлений під час авторизації з'єднання"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "ID облікового запису за замовчуванням"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "ID облікового запису за замовчуванням, установлений під час авторизації з'єднання"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers whenever a new DocuSign template is created, updated or deleted, allowing you to take immediate action in response to the new template.",
+          "message": "Спрацьовує щоразу, коли створюється, оновлюється або видаляється новий шаблон DocuSign, дозволяючи вам негайно відреагувати на новий шаблон."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Колекція дій для взаємодії з Docusign eSignature API"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.display_name": {
+          "source": "Docusign eSignature",
+          "message": "Docusign eSignature"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.short_desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Колекція дій для взаємодії з Docusign eSignature API"
+        }
+      }
+    }
+  }
+}

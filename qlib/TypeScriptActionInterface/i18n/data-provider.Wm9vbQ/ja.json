@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.desc": {
+          "source": "Display information about a meeting summary.\n\n**Prerequisites**\n* Host user type must have a Pro or higher plan.\n* Enable the **Meeting Summary with AI Companion** feature in the host's account.\n* E2ee meetings do not have summary feature enabled.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティング要約に関する情報を表示します。\n\n**前提条件**\n* ホストのユーザータイプがPro以上のプランであること。\n* ホストのアカウントで**AI Companionによるミーティング要約**機能が有効化されていること。\n* E2EE（エンドツーエンド暗号化）ミーティングでは要約機能が有効化されていません。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.display_name": {
+          "source": "Get a Meeting Summary",
+          "message": "ミーティング要約を取得"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.short_desc": {
+          "source": "Get a meeting summary",
+          "message": "ミーティング要約を取得"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve a list of all the participants who attended a webinar hosted in the past. \n\n**Prerequisites:** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "過去に開催されたウェビナーに参加したすべての参加者のリストを取得します。\n\n**前提条件:**\n* ウェビナーアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.display_name": {
+          "source": "List Webinar Participants",
+          "message": "ウェビナー参加者を一覧表示"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "List webinar participants",
+          "message": "ウェビナー参加者を一覧表示"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証情報を使用して、**Zoom**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、任意のクエリパラメーター、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoom",
+          "message": "ZoomへのカスタムAPI呼び出しを実行"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.desc": {
+          "source": "[Create a meeting](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The `start_url` value's expiration time is **two hours** for all regular users.\n* For `custCreate` meeting hosts - users created with the `custCreate` parameter via the [**Create users**](-docs-api-users-#tag-users-POST-users) API - the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.\n* For security reasons, the recommended way to programmatically get the updated `start_url` value after expiry is to call the [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) API. Refer to the `start_url` value in the response.\n* **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "ユーザーの[ミーティングを作成](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings)します。ユーザーレベルのアプリの場合は、`userId`パラメーターの代わりに[`me`の値](-docs-api-rest-using-zoom-apis-#the-me-keyword)を渡してください。\n\n**前提条件:**\n* ミーティングの`start_url`値は、ホストまたは代替ホストがミーティングを開始するために使用できるURLです。一般ユーザーの場合、`start_url`値の有効期限は**2時間**です。\n* `custCreate`ミーティングホスト（[**ユーザー作成**](-docs-api-users-#tag-users-POST-users) API経由で`custCreate`パラメーターを使用して作成されたユーザー）の場合、`start_url`パラメーターの有効期限は`start_url`の生成から**90日間**です。\n* セキュリティ上の理由から、有効期限後に更新された`start_url`値をプログラムで取得するための推奨される方法は、[**ミーティング取得**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) APIを呼び出すことです。レスポンス内の`start_url`値を参照してください。\n* **1日あたり100リクエスト**。レート制限は、リクエストを行うために使用された**ミーティングホスト**の`userId`に対して適用されます。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.display_name": {
+          "source": "Create a Meeting",
+          "message": "ミーティングを作成"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.short_desc": {
+          "source": "Create a meeting",
+          "message": "ミーティングを作成"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.desc": {
+          "source": "Delete a meeting.\n\n**Prerequisites**:\n* For recurring meetings, the `occurrence_id` is required to delete a specific occurrence. If not provided, the entire recurring series will be deleted.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティングを削除します。\n\n**前提条件**:\n* 定期的なミーティングの場合、特定の開催回を削除するには`occurrence_id`が必要です。指定しない場合、定期的なシリーズ全体が削除されます。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.display_name": {
+          "source": "Delete a Meeting",
+          "message": "ミーティングを削除"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.short_desc": {
+          "source": "Delete a meeting",
+          "message": "ミーティングを削除"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration to a meeting. See [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached. \n\n **Prerequisites:** \n* The host must be a **Licensed** user type.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティングへのユーザーの登録を作成して送信します。これらのフィールドの要件を設定する方法の詳細については、[ウェビナー登録のカスタマイズ](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration)を参照してください。ミーティングあたりの登録者数の上限は4,999人であり、ミーティングの定員に達した場合はユーザーにエラーが表示されることに注意してください。\n\n**前提条件:**\n* ホストが**Licensed**ユーザータイプであること。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Meeting Registrant",
+          "message": "ミーティング登録者を追加"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a meeting registrant",
+          "message": "ミーティング登録者を追加"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.desc": {
+          "source": "List users that have registered for a meeting. A host or a user with admin permission can require [registration for a Zoom meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Prerequisites**:\n* Host user type must be **Pro** or higher plan.\n* Registration must be enabled for the meeting.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "ミーティングに登録したユーザーを一覧表示します。ホストまたは管理者権限を持つユーザーは、[Zoomミーティングへの登録](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings)を必須にすることができます。\n\n**前提条件**:\n* ホストのユーザータイプが**Pro**以上のプランであること。\n* ミーティングで登録が有効になっていること。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.display_name": {
+          "source": "List Meeting Registrants",
+          "message": "ミーティング登録者を一覧表示"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.short_desc": {
+          "source": "List meeting registrants",
+          "message": "ミーティング登録者を一覧表示"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.desc": {
+          "source": "Update meeting details.\n\n**Prerequisites**\n* The `start_time` value must be a future date. If the value is omitted or a date is in the past, the API ignores this value and does not update any recurring meetings.\n* The `recurrence` object is required only when updating the entire series of a recurring meeting with `type=8`.\n* This API has a rate limit of **100 requests per day**. You can update a meeting for a maximum of 100 times within a 24-hour period.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティングの詳細を更新します。\n\n**前提条件**\n* `start_time`の値は未来の日付である必要があります。値が省略されている場合や日付が過去の場合、APIはこの値を無視し、定期的なミーティングを更新しません。\n* `recurrence`オブジェクトは、`type=8`を含む定期的なミーティングのシリーズ全体を更新する場合にのみ必要です。\n* このAPIには**1日あたり100リクエスト**のレート制限があります。24時間の間にミーティングを更新できるのは最大100回です。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.display_name": {
+          "source": "Update a Meeting",
+          "message": "ミーティングを更新"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.short_desc": {
+          "source": "Update a meeting",
+          "message": "ミーティングを更新"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.desc": {
+          "source": "List a meeting host user's scheduled meetings. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* This API **only** supports scheduled meetings. This API does not return information about instant meetings.\n* This API only returns a user's [unexpired meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* When `type` is set to `upcoming`, `upcoming_meetings`, or `previous_meetings`, only a maximum of 6 months of meeting data will be returned. \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "ミーティングホストユーザーのスケジュールされたミーティングを一覧表示します。ユーザーレベルのアプリの場合は、`userId`パラメーターの代わりに[`me`の値](-docs-api-rest-using-zoom-apis-#the-me-keyword)を渡してください。\n\n**前提条件:**\n* このAPIはスケジュールされたミーティング**のみ**をサポートします。インスタントミーティングに関する情報は返しません。\n* このAPIはユーザーの[有効期限内のミーティング](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844)のみを返します。\n* `type`が`upcoming`、`upcoming_meetings`、または`previous_meetings`に設定されている場合、最大6か月分のミーティングデータのみが返されます。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.display_name": {
+          "source": "List Meetings",
+          "message": "ミーティングを一覧表示"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.short_desc": {
+          "source": "List meetings",
+          "message": "ミーティングを一覧表示"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.desc": {
+          "source": "Retrieve the given meeting's details.\n\n**Prerequisites**:\n* Host user must have a Zoom Meetings Basic license or higher.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "指定されたミーティングの詳細を取得します。\n\n**前提条件**:\n* ホストユーザーがZoom Meetings Basic以上のライセンスを保持している必要があります。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.display_name": {
+          "source": "Get a Meeting",
+          "message": "ミーティングの取得"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.short_desc": {
+          "source": "Get a meeting",
+          "message": "ミーティングを取得"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.desc": {
+          "source": "Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type.",
+          "message": "Zoomミーティングを監視し、選択されたイベントタイプに基づいてミーティングが作成、開始（ライブ）、または終了（過去のミーティング）したときにトリガーします。トピック、所要時間、参加URL、ミーティングタイプなどのミーティング詳細を返します。"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "新しい会議"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOmxpdmU.display_name": {
+          "source": "Triggers when a meeting is started",
+          "message": "ミーティングが開始されたときにトリガーします"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnByZXZpb3VzX21lZXRpbmdz.display_name": {
+          "source": "Triggers when a meeting is ended",
+          "message": "ミーティングが終了したときにトリガーします"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Triggers when a meeting is created",
+          "message": "ミーティングが作成されたときにトリガーします"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.desc": {
+          "source": "Specifies which type of meeting event should trigger this action. Choose \"any\" to trigger on all meeting creations, \"live\" for when meetings start, or \"previous_meetings\" for when meetings end.",
+          "message": "このアクションをトリガーするミーティングイベントのタイプを指定します。すべてのミーティング作成時にトリガーするには「any」、ミーティング開始時は「live」、ミーティング終了時は「previous_meetings」を選択します。"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
+          "source": "Meeting Event Type",
+          "message": "ミーティングイベントタイプ"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
+          "source": "Type of meeting event to monitor",
+          "message": "監視するミーティングイベントのタイプ"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
+          "source": "Triggers when a Zoom meeting is created, started, or ended.",
+          "message": "Zoomミーティングが作成、開始、または終了したときにトリガーします。"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.desc": {
+          "source": "Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.",
+          "message": "Zoomミーティングのサマリーを監視し、ミーティング終了後に新しいサマリーが生成されたときにトリガーします。ミーティング情報、ホスト詳細、サマリーのタイムスタンプを含むサマリー詳細を返します。"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
+          "source": "New Meeting Summary",
+          "message": "新規ミーティングサマリー"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {
+          "source": "Triggers when a new Zoom meeting summary is created.",
+          "message": "新しいZoomミーティングサマリーが作成されたときにトリガーします。"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.desc": {
+          "source": "Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type.",
+          "message": "Zoomウェビナーを監視し、新しいウェビナーが作成されたときにトリガーします。トピック、所要時間、参加URL、登録URL、ウェビナータイプなどのウェビナー詳細を返します。"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
+          "source": "New Webinar",
+          "message": "新規ウェビナー"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
+          "source": "Triggers when a new Zoom webinar is created.",
+          "message": "新しいZoomウェビナーが作成されたときにトリガーします。"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve information on participants from a past meeting. Note the API doesn't return results if there's only one participant in a meeting.  \n   \n \n**Prerequisites:**  \n \n* Paid account on a Pro or higher plan.\n\n  \n    \n   **Note**: Please double encode your UUID when using this API if the UUID begins with a '-'or contains '-' in it.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "過去のミーティングの参加者情報を取得します。ミーティングの参加者が1名のみの場合、APIは結果を返さないことに注意してください。  \n   \n \n**前提条件:**  \n \n* Pro以上の有料アカウントプラン。\n\n  \n    \n   **注**: UUIDが「-」で始まる場合、または「-」が含まれている場合は、このAPIを使用する際にUUIDを二重エンコードしてください。\n\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.display_name": {
+          "source": "Get Past Meeting Participants",
+          "message": "過去のミーティング参加者の取得"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "Get past meeting participants",
+          "message": "過去のミーティング参加者を取得"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.desc": {
+          "source": "Returns all of a meeting's [recordings](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4). Use the `download_url` property listed in the response to download the recording files.  To access a password-protected cloud recording, send the `download_access_token` or the user's [OAuth access token](-docs-integrations-oauth-) as a Bearer token in the Authorization header. For example: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティングのすべての[レコーディング](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4)を返します。レスポンスに含まれる `download_url` プロパティを使用して録画ファイルをダウンロードします。パスワードで保護されたクラウドレコーディングにアクセスするには、`download_access_token` またはユーザーの[OAuthアクセストークン](-docs-integrations-oauth-)をAuthorizationヘッダーのBearerトークンとして送信します。例: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.display_name": {
+          "source": "Get Meeting Recordings",
+          "message": "ミーティングレコーディングの取得"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.short_desc": {
+          "source": "Get meeting recordings",
+          "message": "ミーティングレコーディングを取得"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.desc": {
+          "source": "Delete all of a meeting's or webinar's recording files.  \n\n**Prerequisites**:\n* Cloud Recording should be enabled on the user's account.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ミーティングまたはウェビナーのすべての録画ファイルを削除します。  \n\n**前提条件**:\n* ユーザーのアカウントでクラウドレコーディングが有効になっている必要があります。  \n \n\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.display_name": {
+          "source": "Delete Meeting or Webinar Recordings",
+          "message": "ミーティングまたはウェビナーのレコーディング削除"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.short_desc": {
+          "source": "Delete meeting or webinar recordings",
+          "message": "ミーティングまたはウェビナーのレコーディングを削除"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.desc": {
+          "source": "Lists all [cloud recordings](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) for a user.  \n\nFor user-level apps, pass the [`me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.  To access a user's passcode protected cloud recording, send the user's [OAuth access token](https:-developers.zoom.us-docs-integrations-oauth-) as a bearer token in the authorization header.  \n\nExample:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Prerequisites:**  \n* Must have a Pro or a higher plan.  \n* Must enable Cloud Recording on the user's account.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "ユーザーのすべての[クラウドレコーディング](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording)を一覧表示します。  \n\nユーザーレベルのアプリの場合は、`userId` パラメータの代わりに[`me` の値](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword)を渡します。ユーザーのパスコードで保護されたクラウドレコーディングにアクセスするには、ユーザーの[OAuthアクセストークン](https:-developers.zoom.us-docs-integrations-oauth-)をauthorizationヘッダーのbearerトークンとして送信します。  \n\n例:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**前提条件:**  \n* Pro以上のプランである必要があります。  \n* ユーザーのアカウントでクラウドレコーディングを有効にする必要があります。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.display_name": {
+          "source": "List All Recordings",
+          "message": "すべてのレコーディングを一覧表示"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.short_desc": {
+          "source": "List all recordings",
+          "message": "すべてのレコーディングを一覧表示"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.desc": {
+          "source": "Get details for a scheduled Zoom webinar.\n  \n   \n \n**Prerequisites:**\n* Pro or higher plan with a Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "スケジュールされたZoomウェビナーの詳細を取得します。\n  \n   \n \n**前提条件:**\n* ウェビナーアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.display_name": {
+          "source": "Get a Webinar",
+          "message": "ウェビナーの取得"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.short_desc": {
+          "source": "Get a webinar",
+          "message": "ウェビナーを取得"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.desc": {
+          "source": "Schedule a webinar for a user who is a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Webinars allow a host to broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Rate limit:**\nUp to a maximum of **100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites:** \n* A Pro or higher plan with a [Webinar plan](https:-zoom.us-webinar) add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ウェビナーホストであるユーザーのウェビナーをスケジュールします。ユーザーレベルのアプリの場合は、`userId` パラメータの代わりに[`me` の値](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword)を渡します。\n\n ウェビナーでは、ホストが最大10,000人の参加者にZoomミーティングをブロードキャストできます。\n\n**レート制限:**\n1日あたり最大**100リクエスト**まで。レート制限はリクエストを行うために使用された**ウェビナーホスト**の `userId` に適用されます。\n\n**前提条件:** \n* [Webinarプラン](https:-zoom.us-webinar)アドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.display_name": {
+          "source": "Create a Webinar",
+          "message": "ウェビナーの作成"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.short_desc": {
+          "source": "Create a webinar",
+          "message": "ウェビナーを作成"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.desc": {
+          "source": "Delete a webinar. \n\n\n**Prerequisites:**  \n \n* Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ウェビナーを削除します。\n\n\n**前提条件:**  \n \n* ウェビナーアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.display_name": {
+          "source": "Delete a Webinar",
+          "message": "ウェビナーの削除"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.short_desc": {
+          "source": "Delete a webinar",
+          "message": "ウェビナーを削除"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "ウェビナーへのユーザーの登録を作成して送信します。[Webinarプラン](https:-zoom.us-webinar)を持つZoomユーザーは、ウェビナーの作成と管理にアクセスできます。ウェビナーでは、ホストが最大10,000人の参加者にZoomミーティングをブロードキャストできます。[登録制ウェビナー](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration)をスケジュールする場合、登録者はウェビナーに参加するためのリンクを受け取る前に簡単なフォームに記入する必要があります。\n\n**前提条件:** \n* Webinarアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Webinar Registrant",
+          "message": "ウェビナー登録者の追加"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a webinar registrant",
+          "message": "ウェビナー登録者を追加"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.desc": {
+          "source": "List all users that have registered for a given webinar. Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. The webinar functionality lets a host broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar.  \n\n\n**Prerequisites**\n* Pro or higher plan with a Webinar add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "指定されたウェビナーに登録したすべてのユーザーを一覧表示します。[Webinarプラン](https:-zoom.us-webinar)を持つZoomユーザーは、ウェビナーの作成と管理にアクセスできます。ウェビナー機能により、ホストは最大10,000人の参加者にZoomミーティングをブロードキャストできます。[登録制ウェビナー](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration)をスケジュールする場合、登録者はウェビナーに参加するためのリンクを受け取る前に簡単なフォームに記入する必要があります。  \n\n\n**前提条件**\n* Webinarアドオン付きのPro以上のプラン。  \n \n\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.display_name": {
+          "source": "List Webinar Registrants",
+          "message": "ウェビナー登録者を一覧表示"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.short_desc": {
+          "source": "List webinar registrants",
+          "message": "ウェビナー登録者を一覧表示"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.desc": {
+          "source": "Make updates to a scheduled webinar. \n\n**100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "スケジュールされたウェビナーを更新します。\n\n**1日あたり100リクエスト**。レート制限はリクエストを行うために使用された**ウェビナーホスト**の `userId` に適用されます。\n\n**前提条件** \n* ウェビナーアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.display_name": {
+          "source": "Update a Webinar",
+          "message": "ウェビナーの更新"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.short_desc": {
+          "source": "Update a webinar",
+          "message": "ウェビナーを更新"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.desc": {
+          "source": "List all the webinars scheduled by or on behalf a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars let a host broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Note** This API only returns a user's [unexpired webinars](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Prerequisites** \n* A Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "ウェビナーホストによって、またはその代理としてスケジュールされたすべてのウェビナーを一覧表示します。ユーザーレベルのアプリの場合は、`userId` パラメータの代わりに[`me` の値](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword)を渡します。\n\n [Webinarプラン](https:-zoom.us-webinar)を持つZoomユーザーは、ウェビナーの作成と管理にアクセスできます。ウェビナーにより、ホストは最大10,000人の参加者にZoomミーティングをブロードキャストできます。\n\n**注** このAPIはユーザーの[有効期限内のウェビナー](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844)のみを返します。\n\n **前提条件** \n* ウェビナーアドオン付きのPro以上のプラン。\n\n**[スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[詳細スコープ](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[レート制限ラベル](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.display_name": {
+          "source": "List Webinars",
+          "message": "ウェビナーの一覧表示"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.short_desc": {
+          "source": "List webinars",
+          "message": "ウェビナーを一覧表示"
+        },
+        "app.Wm9vbQ.desc": {
+          "source": "Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.",
+          "message": "Zoomは、ユーザーがバーチャルミーティング、ウェビナー、ビデオ会議を主催および参加できるようにするビデオ会議およびオンラインミーティングプラットフォームです。画面共有、録画、チャットなどの機能を提供し、参加者間のコラボレーションとコミュニケーションを強化します。"
+        },
+        "app.Wm9vbQ.display_name": {
+          "source": "Zoom",
+          "message": "Zoom"
+        },
+        "app.Wm9vbQ.short_desc": {
+          "source": "Video conferencing and online meeting platform",
+          "message": "ビデオ会議およびオンラインミーティングプラットフォーム"
+        }
+      }
+    }
+  }
+}

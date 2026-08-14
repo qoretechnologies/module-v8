@@ -1,0 +1,989 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.desc": {
+          "source": "Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.",
+          "message": "Видаляє всі виконані завдання із зазначеного списку завдань, допомагаючи підтримувати порядок у ваших списках."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.display_name": {
+          "source": "Clear Completed Tasks",
+          "message": "Очистити виконані завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to remove all completed tasks.",
+          "message": "Виберіть список завдань, з якого потрібно видалити всі виконані завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to clear completed tasks from",
+          "message": "Список завдань для очищення виконаних завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.short_desc": {
+          "source": "Clear all completed tasks from a task list",
+          "message": "Очистити всі виконані завдання зі списку завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.",
+          "message": "Створює нове завдання у вказаному списку завдань із додатковими параметрами, такими як примітки, термін виконання та ієрархічне розташування."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Створити завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set a due date for when this task should be completed.",
+          "message": "Установіть термін виконання завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Кінцевий термін"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "Термін виконання завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Add any additional notes, details, or description for the task.",
+          "message": "Додайте будь-які додаткові примітки, деталі або опис завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Примітки"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Додаткові примітки або опис завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to create this task as a subtask under another task.",
+          "message": "Виберіть батьківське завдання, якщо ви хочете створити це завдання як підзавдання під іншим завданням."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Батьківське завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to create a subtask)",
+          "message": "Батьківське завдання (для створення підзавдання)"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this new task should be positioned in the list.",
+          "message": "Виберіть завдання, після якого це нове завдання має бути розміщене в списку."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Попереднє завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "Завдання, після якого має бути розташоване це завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list where you want to create the new task.",
+          "message": "Виберіть список завдань, у якому потрібно створити нове завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to add the task to",
+          "message": "Список завдань, до якого потрібно додати завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the title or main description for the new task.",
+          "message": "Введіть назву або основний опис нового завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The title of the task",
+          "message": "Назва завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new task in Google Tasks",
+          "message": "Створити нове завдання в Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Creates a new task list in your Google Tasks account with the specified title.",
+          "message": "Створює новий список завдань у вашому обліковому записі Google Tasks із указаною назвою."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Create Task List",
+          "message": "Створити список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the name/title for the new task list that will be created in Google Tasks.",
+          "message": "Введіть ім'я/назву для нового списку завдань, який буде створено в Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The title of the new task list",
+          "message": "Назва нового списку завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Create a new task list in Google Tasks",
+          "message": "Створити новий список завдань у Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieves detailed information about a specific task from the selected task list.",
+          "message": "Отримує детальну інформацію про конкретне завдання з вибраного списку завдань."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Отримати завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to retrieve.",
+          "message": "Виберіть список завдань, що містить завдання, яке потрібно отримати."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Список завдань, що містить завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task whose details you want to retrieve.",
+          "message": "Виберіть конкретне завдання, деталі якого потрібно отримати."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to retrieve",
+          "message": "Завдання для отримання"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a specific task",
+          "message": "Отримати деталі конкретного завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently deletes the specified task from the selected task list.",
+          "message": "Остаточно видаляє вказане завдання з вибраного списку завдань."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "Видалити завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to delete.",
+          "message": "Виберіть список завдань, що містить завдання, яке потрібно видалити."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Список завдань, що містить завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to permanently delete.",
+          "message": "Виберіть конкретне завдання, яке потрібно остаточно видалити."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to delete",
+          "message": "Завдання для видалення"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Delete a task from Google Tasks",
+          "message": "Видалити завдання з Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Permanently deletes the specified task list and all tasks within it from your Google Tasks account.",
+          "message": "Остаточно видаляє вказаний список завдань та всі завдання в ньому з вашого облікового запису Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Delete Task List",
+          "message": "Видалити список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to permanently delete from Google Tasks.",
+          "message": "Виберіть список завдань, який потрібно остаточно видалити з Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to delete",
+          "message": "Список завдань для видалення"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Delete a task list from Google Tasks",
+          "message": "Видалити список завдань із Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.desc": {
+          "source": "Retrieves a list of all task lists in your Google Tasks account with optional pagination.",
+          "message": "Отримує список усіх списків завдань у вашому обліковому записі Google Tasks з необов'язковою пагінацією."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.display_name": {
+          "source": "List Task Lists",
+          "message": "Отримати перелік списків завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of task lists to return in the response. Default is 10.",
+          "message": "Укажіть максимальну кількість списків завдань для повернення у відповіді. За замовчуванням — 10."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Макс. результатів"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of task lists to return",
+          "message": "Максимальна кількість списків завдань для повернення"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Provide the next page token from a previous request to get the next page of results.",
+          "message": "Укажіть токен наступної сторінки з попереднього запиту, щоб отримати наступну сторінку результатів."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Токен наступної сторінки"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Токен для пагінації"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.short_desc": {
+          "source": "Get all task lists from Google Tasks",
+          "message": "Отримати всі списки завдань із Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.",
+          "message": "Отримує перелік завдань із зазначеного списку завдань з різними параметрами фільтрації, такими як терміни виконання, статус завершення тощо."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Отримати список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.desc": {
+          "source": "Only return tasks completed before this date.",
+          "message": "Повертати лише завдання, виконані до цієї дати."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.display_name": {
+          "source": "Completed Max Date",
+          "message": "Максимальна дата виконання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.short_desc": {
+          "source": "Upper bound for a task completion date",
+          "message": "Верхня межа дати завершення завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.desc": {
+          "source": "Only return tasks completed after this date.",
+          "message": "Повертати лише завдання, виконані після цієї дати."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.display_name": {
+          "source": "Completed Min Date",
+          "message": "Мінімальна дата виконання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.short_desc": {
+          "source": "Lower bound for a task completion date",
+          "message": "Нижня межа дати завершення завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.desc": {
+          "source": "Only return tasks with due dates before this date.",
+          "message": "Повертати лише завдання з терміном виконання до цієї дати."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.display_name": {
+          "source": "Due Max Date",
+          "message": "Максимальний термін виконання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.short_desc": {
+          "source": "Upper bound for a task due date",
+          "message": "Верхня межа терміну виконання завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.desc": {
+          "source": "Only return tasks with due dates after this date.",
+          "message": "Повертати лише завдання з кінцевим терміном після цієї дати."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.display_name": {
+          "source": "Due Min Date",
+          "message": "Мінімальна дата виконання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.short_desc": {
+          "source": "Lower bound for a task due date",
+          "message": "Нижня межа для дати виконання завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of tasks to return in the response.",
+          "message": "Укажіть максимальну кількість завдань, яку потрібно повернути у відповіді."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Макс. результатів"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Максимальна кількість завдань для повернення"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people.",
+          "message": "Увімкніть цей параметр, щоб включити завдання, призначені іншим людям."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.display_name": {
+          "source": "Show Assigned",
+          "message": "Показувати призначені"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.short_desc": {
+          "source": "Whether to include assigned tasks",
+          "message": "Чи включати призначені завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.desc": {
+          "source": "Enable this option to include completed tasks in the results.",
+          "message": "Увімкніть цей параметр, щоб включити завершені завдання до результатів."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.display_name": {
+          "source": "Show Completed",
+          "message": "Показувати завершені"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.short_desc": {
+          "source": "Whether to include completed tasks",
+          "message": "Чи включати завершені завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.desc": {
+          "source": "Enable this option to include deleted tasks in the results.",
+          "message": "Увімкніть цей параметр, щоб включити видалені завдання до результатів."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.display_name": {
+          "source": "Show Deleted",
+          "message": "Показати видалені"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
+          "source": "Whether to include deleted tasks",
+          "message": "Чи включати видалені завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.desc": {
+          "source": "Enable this option to include hidden tasks in the results.",
+          "message": "Увімкніть цей параметр, щоб включити приховані завдання до результатів."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.display_name": {
+          "source": "Show Hidden",
+          "message": "Показувати приховані"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.short_desc": {
+          "source": "Whether to include hidden tasks",
+          "message": "Чи включати приховані завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.desc": {
+          "source": "Provide the page token from a previous request to get the next page of results.",
+          "message": "Укажіть токен сторінки з попереднього запиту, щоб отримати наступну сторінку результатів."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Токен сторінки"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Токен для пагінації"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to retrieve tasks.",
+          "message": "Виберіть список завдань, з якого потрібно отримати завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to get tasks from",
+          "message": "Список завдань, з якого потрібно отримати завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.desc": {
+          "source": "Only return tasks that have been updated after this date.",
+          "message": "Повертати лише завдання, оновлені після цієї дати."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.display_name": {
+          "source": "Updated Min Date",
+          "message": "Мінімальна дата оновлення"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.short_desc": {
+          "source": "Lower bound for a task last modification time",
+          "message": "Нижня межа часу останньої зміни завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Get all tasks from a task list",
+          "message": "Отримати всі завдання зі списку завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Tasks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Здійснюйте довільний виклик HTTP / REST API до **Google Tasks**, використовуючи автентифікацію налаштованого підключення.\n\nУкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому додатку."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Tasks",
+          "message": "Здійснити довільний виклик API до Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.",
+          "message": "Відстежує ваші списки Google Tasks і спрацьовує, коли будь-яке завдання у вказаному списку позначається як завершене."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "Нове завершене завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Увімкніть цей параметр, щоб включити завдання, призначені іншим людям, до результатів тригера."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Включати призначені завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Чи включати завдання, призначені іншим"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly completed tasks.",
+          "message": "Виберіть список Google Tasks, який потрібно відстежувати на предмет щойно завершених завдань."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for completed tasks",
+          "message": "Список завдань для відстеження завершених завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is marked as completed",
+          "message": "Спрацьовує, коли завдання позначається як завершене"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.",
+          "message": "Відстежує ваші списки Google Tasks і спрацьовує, коли до вказаного списку додається нове завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.display_name": {
+          "source": "New Task",
+          "message": "Нове завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Увімкніть цей параметр, щоб включити завдання, призначені іншим людям, до результатів тригера."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Включати призначені завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Чи включати завдання, призначені іншим"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly created tasks.",
+          "message": "Виберіть список Google Tasks, який потрібно відстежувати на предмет щойно створених завдань."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for new tasks",
+          "message": "Список завдань для відстеження нових завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.short_desc": {
+          "source": "Triggers when a new task is created in Google Tasks",
+          "message": "Спрацьовує, коли в Google Tasks створюється нове завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.",
+          "message": "Оновлює дані наявного завдання, зокрема назву, примітки, термін виконання, статус завершення та ієрархічне розташування."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Оновити завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set or update the due date for when this task should be completed.",
+          "message": "Установіть або оновіть термін, до якого це завдання має бути завершено."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Кінцевий термін"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "Термін виконання завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Update any additional notes, details, or description for the task.",
+          "message": "Оновіть додаткові примітки, деталі або опис завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Примітки"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Додаткові примітки або опис завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOm5lZWRzQWN0aW9u.display_name": {
+          "source": "Incomplete",
+          "message": "Не завершено"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Завершено"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.desc": {
+          "source": "Set whether the task is incomplete (needs action) or completed.",
+          "message": "Укажіть, чи завдання є незавершеним (потребує дії) або завершеним."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Статус"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.short_desc": {
+          "source": "The completion status of the task",
+          "message": "Статус завершення завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to make this task a subtask under another task.",
+          "message": "Виберіть батьківське завдання, якщо ви хочете зробити це завдання підзавданням іншого завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Батьківське завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to make this a subtask)",
+          "message": "Батьківське завдання (щоб зробити це підзавданням)"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this task should be positioned in the list.",
+          "message": "Виберіть завдання, після якого це завдання має розташовуватися у списку."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Попереднє завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "Завдання, після якого має бути розташоване це завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to update.",
+          "message": "Виберіть список завдань, що містить завдання, яке потрібно оновити."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Список завдань, що містить завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to update.",
+          "message": "Виберіть конкретне завдання, яке потрібно оновити."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to update",
+          "message": "Завдання для оновлення"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the new title or main description for the task.",
+          "message": "Введіть нову назву або основний опис завдання."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The new title of the task",
+          "message": "Нова назва завдання"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing task in Google Tasks",
+          "message": "Оновити наявне завдання в Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Updates the title of an existing task list in your Google Tasks account.",
+          "message": "Оновлює назву наявного списку завдань у вашому обліковому записі Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Update Task List",
+          "message": "Оновити список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to update in Google Tasks.",
+          "message": "Виберіть список завдань, який потрібно оновити в Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Список завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to update",
+          "message": "Список завдань для оновлення"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the new title/name for the selected task list.",
+          "message": "Введіть нову назву для вибраного списку завдань."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The new title for the task list",
+          "message": "Нова назва списку завдань"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Update an existing task list in Google Tasks",
+          "message": "Оновити наявний список завдань у Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.desc": {
+          "source": "The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.",
+          "message": "Інтеграція Google Tasks надає комплексні дії та тригери для взаємодії з Google Tasks API. Керуйте списками завдань, створюйте й оновлюйте завдання, встановлюйте терміни виконання та оптимізуйте робочий процес завдяки можливостям безперешкодної автоматизації."
+        },
+        "app.R29vZ2xlVGFza3M.display_name": {
+          "source": "Google Tasks",
+          "message": "Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.short_desc": {
+          "source": "Connect to Google Tasks API to manage your task lists and tasks efficiently.",
+          "message": "Підключіться до Google Tasks API для ефективного керування списками завдань і завданнями."
+        }
+      }
+    }
+  }
+}

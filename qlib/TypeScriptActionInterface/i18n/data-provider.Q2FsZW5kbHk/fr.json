@@ -1,0 +1,1085 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.desc": {
+          "source": "Cancels a scheduled event in Calendly and notifies all participants about the cancellation.",
+          "message": "Annule un événement planifié dans Calendly et informe tous les participants de l'annulation."
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.display_name": {
+          "source": "Cancel Event",
+          "message": "Annuler l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.ZXZlbnRfaWQ.desc": {
+          "source": "Select the specific event that you want to cancel from your scheduled events.",
+          "message": "Sélectionnez l'événement spécifique que vous souhaitez annuler parmi vos événements planifiés."
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.ZXZlbnRfaWQ.display_name": {
+          "source": "Event ID",
+          "message": "ID d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.ZXZlbnRfaWQ.short_desc": {
+          "source": "The ID of the event to cancel",
+          "message": "L'ID de l'événement à annuler"
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.desc": {
+          "source": "Optional reason that will be included in the cancellation notification sent to participants.",
+          "message": "Raison facultative qui sera incluse dans la notification d'annulation envoyée aux participants."
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.display_name": {
+          "source": "Cancellation Reason",
+          "message": "Raison de l'annulation"
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.option.cmVhc29u.short_desc": {
+          "source": "Reason for canceling the event",
+          "message": "Raison de l'annulation de l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Y2FuY2VsX2V2ZW50.short_desc": {
+          "source": "Cancel a scheduled Calendly event",
+          "message": "Annuler un événement Calendly planifié"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.desc": {
+          "source": "Generates a scheduling link that can be shared with others to book meetings for a specific event type.",
+          "message": "Génère un lien de planification pouvant être partagé pour réserver des réunions pour un type d'événement spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.display_name": {
+          "source": "Create Scheduling Link",
+          "message": "Créer un lien de planification"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.desc": {
+          "source": "Select the event type that people will be able to book when using this scheduling link.",
+          "message": "Sélectionnez le type d'événement que les personnes pourront réserver lors de l'utilisation de ce lien de planification."
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.display_name": {
+          "source": "Event Type",
+          "message": "Type d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.ZXZlbnRfdHlwZQ.short_desc": {
+          "source": "The type of event to create a scheduling link for",
+          "message": "Le type d'événement pour lequel créer un lien de planification"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.desc": {
+          "source": "The maximum number of events that can be scheduled using this link before it becomes inactive.",
+          "message": "Le nombre maximum d'événements pouvant être planifiés à l'aide de ce lien avant qu'il ne devienne inactif."
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.display_name": {
+          "source": "Maximum Event Count",
+          "message": "Nombre maximum d'événements"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.option.bWF4X2V2ZW50X2NvdW50.short_desc": {
+          "source": "Maximum number of events that can be scheduled",
+          "message": "Nombre maximum d'événements pouvant être planifiés"
+        },
+        "app.Q2FsZW5kbHk.action.Y3JlYXRlX3NjaGVkdWxpbmdfbGluaw.short_desc": {
+          "source": "Create a scheduling link for an event type",
+          "message": "Créer un lien de planification pour un type d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.desc": {
+          "source": "Fetches comprehensive information about a scheduled event including participants, timing, and meeting details.",
+          "message": "Récupère des informations détaillées sur un événement planifié, y compris les participants, l'horaire et les détails de la réunion."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.display_name": {
+          "source": "Get Event",
+          "message": "Obtenir un événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.option.ZXZlbnRfaWQ.desc": {
+          "source": "Select the specific event whose details you want to retrieve.",
+          "message": "Sélectionnez l'événement spécifique dont vous souhaitez récupérer les détails."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.option.ZXZlbnRfaWQ.display_name": {
+          "source": "Event ID",
+          "message": "ID d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.option.ZXZlbnRfaWQ.short_desc": {
+          "source": "The ID of the event to retrieve",
+          "message": "L'ID de l'événement à récupérer"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50.short_desc": {
+          "source": "Retrieve details of a specific event",
+          "message": "Récupérer les détails d'un événement spécifique"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.desc": {
+          "source": "Fetches detailed information about a specific invitee for an event, including their contact information and responses.",
+          "message": "Récupère des informations détaillées sur un invité spécifique à un événement, y compris ses coordonnées et ses réponses."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.display_name": {
+          "source": "Get Event Invitee",
+          "message": "Obtenir l'invité à l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.ZXZlbnRfaWQ.desc": {
+          "source": "Select the event for which you want to retrieve invitee information.",
+          "message": "Sélectionnez l'événement pour lequel vous souhaitez récupérer les informations de l'invité."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.ZXZlbnRfaWQ.display_name": {
+          "source": "Event ID",
+          "message": "ID d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.ZXZlbnRfaWQ.short_desc": {
+          "source": "The ID of the event",
+          "message": "L'ID de l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.aW52aXRlZQ.desc": {
+          "source": "Select the specific invitee whose information you want to retrieve.",
+          "message": "Sélectionnez l'invité spécifique dont vous souhaitez récupérer les informations."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.aW52aXRlZQ.display_name": {
+          "source": "Invitee",
+          "message": "Invité"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.option.aW52aXRlZQ.short_desc": {
+          "source": "The invitee to retrieve details for",
+          "message": "L'invité dont vous souhaitez récupérer les détails"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X2ludml0ZWU.short_desc": {
+          "source": "Retrieve details of a specific event invitee",
+          "message": "Récupérer les détails d'un invité spécifique à un événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.desc": {
+          "source": "Fetches comprehensive information about an event type including duration, settings, and configuration.",
+          "message": "Récupère des informations détaillées sur un type d'événement, y compris la durée, les paramètres et la configuration."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.display_name": {
+          "source": "Get Event Type",
+          "message": "Obtenir le type d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.desc": {
+          "source": "Select the specific event type whose details you want to retrieve.",
+          "message": "Sélectionnez le type d'événement spécifique dont vous souhaitez récupérer les détails."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.display_name": {
+          "source": "Event Type ID",
+          "message": "ID du type d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.option.ZXZlbnRfdHlwZV9pZA.short_desc": {
+          "source": "The ID of the event type to retrieve",
+          "message": "L'ID du type d'événement à récupérer"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2V2ZW50X3R5cGU.short_desc": {
+          "source": "Retrieve details of a specific event type",
+          "message": "Récupérer les détails d'un type d'événement spécifique"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.desc": {
+          "source": "Fetches comprehensive information about a specific group within your Calendly organization, including member count and organization details.",
+          "message": "Récupère des informations détaillées sur un groupe spécifique au sein de votre organisation Calendly, y compris le nombre de membres et les détails de l'organisation."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.display_name": {
+          "source": "Get Group",
+          "message": "Obtenir le groupe"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "Select the specific group whose details you want to retrieve from your organization.",
+          "message": "Sélectionnez le groupe spécifique dont vous souhaitez récupérer les détails au sein de votre organisation."
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID de groupe"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to retrieve",
+          "message": "L'ID du groupe à récupérer"
+        },
+        "app.Q2FsZW5kbHk.action.Z2V0X2dyb3Vw.short_desc": {
+          "source": "Retrieve details of a specific group",
+          "message": "Récupérer les détails d'un groupe spécifique"
+        },
+        "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.desc": {
+          "source": "This trigger activates when any scheduled event in your Calendly account is canceled by either the organizer or invitee.",
+          "message": "Ce déclencheur s'active lorsqu'un événement planifié dans votre compte Calendly est annulé soit par l'organisateur, soit par l'invité."
+        },
+        "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.display_name": {
+          "source": "Event Canceled",
+          "message": "Événement annulé"
+        },
+        "app.Q2FsZW5kbHk.action.ZXZlbnRfY2FuY2VsZWQ.short_desc": {
+          "source": "Triggers when a Calendly event is canceled",
+          "message": "S'active lorsqu'un événement Calendly est annulé"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.desc": {
+          "source": "This trigger activates when an invitee cancels their scheduled meeting or appointment.",
+          "message": "Ce déclencheur s'active lorsqu'un invité annule sa réunion ou son rendez-vous planifié."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.display_name": {
+          "source": "Invitee Canceled",
+          "message": "Invité annulé"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.allowed-value.c3RyaW5nOm9yZ2FuaXphdGlvbg.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.allowed-value.c3RyaW5nOmdyb3Vw.display_name": {
+          "source": "Group",
+          "message": "Groupe"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.desc": {
+          "source": "Defines the level at which to monitor for invitee cancellations - organization-wide, specific user, or specific group.",
+          "message": "Définit le niveau de surveillance des annulations d'invités : à l'échelle de l'organisation, pour un utilisateur spécifique ou pour un groupe spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "Portée"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.option.c2NvcGU.short_desc": {
+          "source": "The scope for monitoring invitee cancellations",
+          "message": "La portée de la surveillance des annulations d'invités"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jYW5jZWxlZA.short_desc": {
+          "source": "Triggers when an invitee cancels their booking",
+          "message": "S'active lorsqu'un invité annule sa réservation"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.desc": {
+          "source": "This trigger activates when someone books a meeting and becomes an invitee for a scheduled event.",
+          "message": "Ce déclencheur s'active lorsque quelqu'un réserve une réunion et devient invité pour un événement planifié."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.display_name": {
+          "source": "Invitee Created",
+          "message": "Invité créé"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.allowed-value.c3RyaW5nOm9yZ2FuaXphdGlvbg.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.allowed-value.c3RyaW5nOmdyb3Vw.display_name": {
+          "source": "Group",
+          "message": "Groupe"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.desc": {
+          "source": "Defines the level at which to monitor for new invitees - organization-wide, specific user, or specific group.",
+          "message": "Définit le niveau de surveillance des nouveaux invités : à l'échelle de l'organisation, pour un utilisateur spécifique ou pour un groupe spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "Portée"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.option.c2NvcGU.short_desc": {
+          "source": "The scope for monitoring invitee creation",
+          "message": "La portée de la surveillance de la création d'invités"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new invitee is created",
+          "message": "S'active lorsqu'un nouvel invité est créé"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.desc": {
+          "source": "This trigger activates when an invitee fails to attend their scheduled meeting and is marked as a no-show.",
+          "message": "Ce déclencheur s'active lorsqu'un invité ne se présente pas à sa réunion planifiée et qu'il est marqué comme absent."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.display_name": {
+          "source": "Invitee No-Show Created",
+          "message": "Absence d'invité enregistrée"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.allowed-value.c3RyaW5nOm9yZ2FuaXphdGlvbg.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.allowed-value.c3RyaW5nOmdyb3Vw.display_name": {
+          "source": "Group",
+          "message": "Groupe"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.desc": {
+          "source": "Defines the level at which to monitor for no-show events - organization-wide, specific user, or specific group.",
+          "message": "Définit le niveau de surveillance des événements d'absence : à l'échelle de l'organisation, pour un utilisateur spécifique ou pour un groupe spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "Portée"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.option.c2NvcGU.short_desc": {
+          "source": "The scope for monitoring no-show events",
+          "message": "La portée de la surveillance des événements d'absence"
+        },
+        "app.Q2FsZW5kbHk.action.aW52aXRlZV9ub19zaG93X2NyZWF0ZWQ.short_desc": {
+          "source": "Triggers when an invitee is marked as a no-show",
+          "message": "S'active lorsqu'un invité est marqué comme absent"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.desc": {
+          "source": "Retrieves a list of event types that can be used for scheduling meetings.",
+          "message": "Récupère une liste de types d'événements pouvant être utilisés pour planifier des réunions."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.display_name": {
+          "source": "List Event Types",
+          "message": "Lister les types d'événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.Y291bnQ.desc": {
+          "source": "The maximum number of event types to return in the response (default is 20).",
+          "message": "Le nombre maximum de types d'événements à renvoyer dans la réponse (la valeur par défaut est 20)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.Y291bnQ.short_desc": {
+          "source": "Number of event types to return",
+          "message": "Nombre de types d'événements à renvoyer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.desc": {
+          "source": "Filter event types based on whether they are currently active and available for booking.",
+          "message": "Filtrer les types d'événements selon qu'ils sont actuellement actifs et disponibles pour la réservation."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.display_name": {
+          "source": "Active Filter",
+          "message": "Filtre d'activité"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWN0aXZl.short_desc": {
+          "source": "Filter by active status",
+          "message": "Filtrer par statut actif"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.desc": {
+          "source": "Filter event types based on whether they are managed by an administrator.",
+          "message": "Filtrer les types d'événements selon qu'ils sont gérés par un administrateur."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.display_name": {
+          "source": "Admin Managed Filter",
+          "message": "Filtre de gestion par l'administrateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.YWRtaW5fbWFuYWdlZA.short_desc": {
+          "source": "Filter by admin-managed status",
+          "message": "Filtrer par statut géré par l'administrateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "Filter event types to only include those from a specific organization.",
+          "message": "Filtrer les types d'événements pour n'inclure que ceux d'une organisation spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "Organization to filter by",
+          "message": "Organisation selon laquelle filtrer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.desc": {
+          "source": "Configure how the list of event types should be sorted.",
+          "message": "Configurer la manière dont la liste des types d'événements doit être triée."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.display_name": {
+          "source": "Sort Options",
+          "message": "Options de tri"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.c29ydA.short_desc": {
+          "source": "How to sort the event types list",
+          "message": "Comment trier la liste des types d'événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use this token to retrieve the next page of results when there are more event types than the count limit.",
+          "message": "Utilisez ce jeton pour récupérer la page de résultats suivante lorsqu'il y a plus de types d'événements que la limite maximale."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Jeton de page"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Jeton de pagination"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.desc": {
+          "source": "Filter the results to only include event types associated with a specific user.",
+          "message": "Filtrer les résultats pour n'inclure que les types d'événements associés à un utilisateur spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.display_name": {
+          "source": "User Filter",
+          "message": "Filtre par utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcg.short_desc": {
+          "source": "Filter event types by user",
+          "message": "Filtrer les types d'événements par utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.desc": {
+          "source": "Filter event types based on a specific user availability schedule.",
+          "message": "Filtrer les types d'événements en fonction d'un calendrier de disponibilité d'utilisateur spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.display_name": {
+          "source": "User Availability Schedule",
+          "message": "Calendrier de disponibilité de l'utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.option.dXNlcl9hdmFpbGFiaWxpdHlfc2NoZWR1bGU.short_desc": {
+          "source": "Filter by user availability schedule",
+          "message": "Filtrer par calendrier de disponibilité de l'utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF90eXBlcw.short_desc": {
+          "source": "List available event types",
+          "message": "Lister les types d'événements disponibles"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.desc": {
+          "source": "Retrieves a list of all invitees for a scheduled event with their status and contact information.",
+          "message": "Récupère la liste de tous les invités pour un événement planifié avec leur statut et leurs coordonnées."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.display_name": {
+          "source": "List Event Invitees",
+          "message": "Lister les invités de l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.Y291bnQ.desc": {
+          "source": "The maximum number of invitees to return in the response (default is 20).",
+          "message": "Le nombre maximum d'invités à renvoyer dans la réponse (la valeur par défaut est 20)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.Y291bnQ.short_desc": {
+          "source": "Number of invitees to return",
+          "message": "Nombre d'invités à renvoyer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.desc": {
+          "source": "Filter the results to only include invitees with this specific email address.",
+          "message": "Filtrer les résultats pour n'inclure que les invités ayant cette adresse e-mail spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "Filtre par adresse e-mail"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZW1haWw.short_desc": {
+          "source": "Filter invitees by email address",
+          "message": "Filtrer les invités par adresse e-mail"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZXZlbnRfaWQ.desc": {
+          "source": "Select the event for which you want to list all invitees.",
+          "message": "Sélectionnez l'événement pour lequel vous souhaitez lister tous les invités."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZXZlbnRfaWQ.display_name": {
+          "source": "Event ID",
+          "message": "ID d'événement"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.ZXZlbnRfaWQ.short_desc": {
+          "source": "The ID of the event",
+          "message": "L'ID de l'événement"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.desc": {
+          "source": "Configure how the list of invitees should be sorted.",
+          "message": "Configurer la manière dont la liste des invités doit être triée."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.display_name": {
+          "source": "Sort Options",
+          "message": "Options de tri"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c29ydA.short_desc": {
+          "source": "How to sort the invitees list",
+          "message": "Comment trier la liste des invités"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Actif"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Annulé"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.desc": {
+          "source": "Filter the results to only include invitees with the specified status (active or canceled).",
+          "message": "Filtrer les résultats pour n'inclure que les invités ayant le statut spécifié (actif ou annulé)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.display_name": {
+          "source": "Status Filter",
+          "message": "Filtre de statut"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.c3RhdHVz.short_desc": {
+          "source": "Filter invitees by their status",
+          "message": "Filtrer les invités par leur statut"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use this token to retrieve the next page of results when there are more invitees than the count limit.",
+          "message": "Utilisez ce jeton pour récupérer la page de résultats suivante lorsqu'il y a plus d'invités que la limite maximale."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Jeton de page"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Jeton de pagination"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudF9pbnZpdGVlcw.short_desc": {
+          "source": "List all invitees for a specific event",
+          "message": "Lister tous les invités pour un événement spécifique"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.desc": {
+          "source": "Retrieves a list of scheduled events with optional filtering and sorting capabilities.",
+          "message": "Récupère une liste d'événements planifiés avec des fonctionnalités optionnelles de filtrage et de tri."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.display_name": {
+          "source": "List Events",
+          "message": "Lister les événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Y291bnQ.desc": {
+          "source": "The maximum number of events to return in the response (default is 20).",
+          "message": "Le nombre maximum d'événements à renvoyer dans la réponse (la valeur par défaut est 20)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Y291bnQ.short_desc": {
+          "source": "Number of events to return",
+          "message": "Nombre d'événements à renvoyer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.desc": {
+          "source": "Filter the results to only include events associated with a specific group.",
+          "message": "Filtrer les résultats pour n'inclure que les événements associés à un groupe spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.display_name": {
+          "source": "Group Filter",
+          "message": "Filtre par groupe"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.Z3JvdXA.short_desc": {
+          "source": "Filter events by group",
+          "message": "Filtrer les événements par groupe"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.desc": {
+          "source": "Filter the results to only include events where the specified email address is an invitee.",
+          "message": "Filtrer les résultats pour n'inclure que les événements où l'adresse e-mail spécifiée est un invité."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.display_name": {
+          "source": "Invitee Email Filter",
+          "message": "Filtre par adresse e-mail de l'invité"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.aW52aXRlZV9lbWFpbA.short_desc": {
+          "source": "Filter events by invitee email",
+          "message": "Filtrer les événements par adresse e-mail de l'invité"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "Filter events to only include those from a specific organization.",
+          "message": "Filtrer les événements pour n'inclure que ceux d'une organisation spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "Organization to filter by",
+          "message": "Organisation selon laquelle filtrer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.desc": {
+          "source": "Filter events to only include those that start before this date and time.",
+          "message": "Filtrer les événements pour n'inclure que ceux qui commencent avant cette date et heure."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.display_name": {
+          "source": "Maximum Start Time",
+          "message": "Heure de début maximale"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWF4X3N0YXJ0X3RpbWU.short_desc": {
+          "source": "Latest start time for events",
+          "message": "Heure de début au plus tard pour les événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.desc": {
+          "source": "Filter events to only include those that start after this date and time.",
+          "message": "Filtrer les événements pour n'inclure que ceux qui commencent après cette date et heure."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.display_name": {
+          "source": "Minimum Start Time",
+          "message": "Heure de début minimale"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.bWluX3N0YXJ0X3RpbWU.short_desc": {
+          "source": "Earliest start time for events",
+          "message": "Heure de début au plus tôt pour les événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.desc": {
+          "source": "Configure how the list of events should be sorted.",
+          "message": "Configurer la manière dont la liste des événements doit être triée."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.display_name": {
+          "source": "Sort Options",
+          "message": "Options de tri"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.c29ydA.short_desc": {
+          "source": "How to sort the events list",
+          "message": "Comment trier la liste des événements"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use this token to retrieve the next page of results when there are more events than the count limit.",
+          "message": "Utilisez ce jeton pour récupérer la page de résultats suivante lorsqu'il y a plus d'événements que la limite maximale."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Jeton de page"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Jeton de pagination"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.desc": {
+          "source": "Filter the results to only include events associated with a specific user.",
+          "message": "Filtrer les résultats pour n'inclure que les événements associés à un utilisateur spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.display_name": {
+          "source": "User Filter",
+          "message": "Filtre par utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.option.dXNlcg.short_desc": {
+          "source": "Filter events by user",
+          "message": "Filtrer les événements par utilisateur"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ldmVudHM.short_desc": {
+          "source": "List scheduled events",
+          "message": "Lister les événements planifiés"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Retrieves a list of groups within an organization that can be used for organizing events and users.",
+          "message": "Récupère une liste de groupes au sein d'une organisation pouvant être utilisés pour organiser des événements et des utilisateurs."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Groups",
+          "message": "Lister les groupes"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.Y291bnQ.desc": {
+          "source": "The maximum number of groups to return in the response (default is 20).",
+          "message": "Le nombre maximum de groupes à renvoyer dans la réponse (la valeur par défaut est 20)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.Y291bnQ.short_desc": {
+          "source": "Number of groups to return",
+          "message": "Nombre de groupes à renvoyer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "The organization from which to retrieve the list of groups.",
+          "message": "L'organisation à partir de laquelle récupérer la liste des groupes."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "Organization to list groups from",
+          "message": "Organisation à partir de laquelle lister les groupes"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use this token to retrieve the next page of results when there are more groups than the count limit.",
+          "message": "Utilisez ce jeton pour récupérer la page de résultats suivante lorsqu'il y a plus de groupes que la limite maximale."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Jeton de page"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Jeton de pagination"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "List available groups",
+          "message": "Lister les groupes disponibles"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.desc": {
+          "source": "Retrieves a list of all members within a Calendly organization along with their roles and information.",
+          "message": "Récupère la liste de tous les membres au sein d'une organisation Calendly ainsi que leurs rôles et informations."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.display_name": {
+          "source": "List Organization Members",
+          "message": "Lister les membres de l'organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.Y291bnQ.desc": {
+          "source": "The maximum number of organization members to return in the response (default is 20).",
+          "message": "Le nombre maximum de membres de l'organisation à renvoyer dans la réponse (par défaut : 20)."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.Y291bnQ.short_desc": {
+          "source": "Number of members to return",
+          "message": "Nombre de membres à renvoyer"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.desc": {
+          "source": "Filter the results to only include members with this specific email address.",
+          "message": "Filtrer les résultats pour inclure uniquement les membres avec cette adresse e-mail spécifique."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "Filtre par adresse e-mail"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.ZW1haWw.short_desc": {
+          "source": "Filter members by email address",
+          "message": "Filtrer les membres par adresse e-mail"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "The organization from which to retrieve the list of members.",
+          "message": "L'organisation à partir de laquelle récupérer la liste des membres."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "Organization to list members from",
+          "message": "Organisation dont lister les membres"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use this token to retrieve the next page of results when there are more members than the count limit.",
+          "message": "Utilisez ce jeton pour récupérer la page de résultats suivante lorsqu'il y a plus de membres que la limite."
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Jeton de page"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Jeton de pagination"
+        },
+        "app.Q2FsZW5kbHk.action.bGlzdF9vcmdhbml6YXRpb25fbWVtYmVycw.short_desc": {
+          "source": "List members of an organization",
+          "message": "Lister les membres d'une organisation"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Calendly** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel d'API HTTP / REST personnalisé à **Calendly** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions principales sur cette application."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.Q2FsZW5kbHk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Calendly",
+          "message": "Effectuer un appel d'API personnalisé à Calendly"
+        },
+        "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.desc": {
+          "source": "This trigger activates when someone submits a routing form, which helps direct them to the appropriate scheduling option.",
+          "message": "Ce déclencheur s'active lorsque quelqu'un soumet un formulaire d'orientation, ce qui permet de le diriger vers l'option de planification appropriée."
+        },
+        "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.display_name": {
+          "source": "New Form Submission Created",
+          "message": "Nouvelle soumission de formulaire créée"
+        },
+        "app.Q2FsZW5kbHk.action.bmV3X2Zvcm1fc3VibWlzc2lvbl9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a routing form submission is created",
+          "message": "Déclenche lorsqu'une soumission de formulaire d'orientation est créée"
+        },
+        "app.Q2FsZW5kbHk.desc": {
+          "source": "Connect to Calendly to automate scheduling workflows, manage event types, and sync calendar data with your automation processes.",
+          "message": "Connectez-vous à Calendly pour automatiser les flux de travail de planification, gérer les types d'événements et synchroniser les données de calendrier avec vos processus d'automatisation."
+        },
+        "app.Q2FsZW5kbHk.display_name": {
+          "source": "Calendly",
+          "message": "Calendly"
+        },
+        "app.Q2FsZW5kbHk.short_desc": {
+          "source": "Schedule meetings and manage appointments with Calendly integration",
+          "message": "Planifier des réunions et gérer des rendez-vous avec l'intégration Calendly"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.desc": {
+          "source": "Returns the total number of records in a NocoDB table. You can optionally filter the count using a where clause to count only records matching specific criteria.",
+          "message": "Повертає загальну кількість записів у таблиці NocoDB. За бажанням ви можете відфільтрувати підрахунок за допомогою умови where, щоб порахувати лише записи, які відповідають певним критеріям."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
+          "source": "Count Records",
+          "message": "Порахувати записи"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Виберіть базу NocoDB (проєкт), що містить таблицю."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only count records matching specific criteria.",
+          "message": "За бажанням укажіть фільтр із використанням синтаксису where у NocoDB (наприклад, \"(Status,eq,Active)\"), щоб рахувати лише записи, які відповідають певним критеріям."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Фільтр Where"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
+          "source": "Optional filter to count specific records",
+          "message": "Необов'язковий фільтр для підрахунку певних записів"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to count records from.",
+          "message": "Виберіть таблицю NocoDB, у якій потрібно порахувати записи."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.short_desc": {
+          "source": "The table to count records from",
+          "message": "Таблиця, у якій потрібно порахувати записи"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
+          "source": "Get the count of records in a table",
+          "message": "Отримати кількість записів у таблиці"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "Створити нові записи в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Створити записи"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "Створити нові записи в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "Видалити записи з указаної таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Видалити записи"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "Видалити записи з указаної таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.desc": {
+          "source": "Links records from another table to a record via a link field. This creates a relationship between the records without affecting existing links.",
+          "message": "Зв'язує записи з іншої таблиці із записом через поле зв'язку. Це створює зв'язок між записами, не впливаючи на наявні зв'язки."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
+          "source": "Link Records",
+          "message": "Зв'язати записи"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Виберіть базу NocoDB (проєкт), що містить таблицю."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship between tables.",
+          "message": "Виберіть поле зв'язку (Link to Another Record), яке визначає зв'язок між таблицями."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "Поле зв'язку"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field to use for the relationship",
+          "message": "Поле зв'язку, яке слід використовувати для зв'язку"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to connect to the source record.",
+          "message": "Укажіть ідентифікатори записів із пов'язаної таблиці для підключення до вихідного запису."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Link",
+          "message": "Записи для зв'язування"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to link",
+          "message": "Ідентифікатори записів для зв'язування"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to link from.",
+          "message": "Укажіть ідентифікатор запису у вихідній таблиці, з якого слід створити зв'язок."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "Ідентифікатор вихідного запису"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to link from.",
+          "message": "Виберіть таблицю NocoDB, яка містить запис, з якого потрібно створити зв'язок."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "Таблиця, що містить вихідний запис"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
+          "source": "Create relationships between records",
+          "message": "Створити зв'язки між записами"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NocoDB** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати довільний виклик HTTP / REST API до **NocoDB**, використовуючи автентифікацію налаштованого підключення.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як повноцінні дії в цьому застосунку."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NocoDB",
+          "message": "Виконати користувацький виклик API до NocoDB"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a NocoDB table for new rows and triggers when new records are detected. You can optionally filter which rows trigger the event using a where clause.",
+          "message": "Відстежує таблицю NocoDB на наявність нових рядків і спрацьовує при виявленні нових записів. За бажанням ви можете відфільтрувати, які саме рядки викликають подію, за допомогою умови where."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "Новий рядок"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table you want to monitor for new rows.",
+          "message": "Виберіть базу NocoDB (проєкт), яка містить таблицю, яку потрібно відстежувати на наявність нових рядків."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table you want to monitor.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею, яку потрібно відстежувати."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only trigger for rows matching specific criteria.",
+          "message": "За бажанням укажіть фільтр із використанням синтаксису where у NocoDB (наприклад, \"(Status,eq,Active)\"), щоб тригер спрацьовував лише для рядків, які відповідають певним критеріям."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Фільтр Where"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {
+          "source": "Optional filter for new rows",
+          "message": "Необов'язковий фільтр для нових рядків"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table.",
+          "message": "Виберіть таблицю NocoDB для відстеження. Тригер спрацює при додаванні нових рядків до цієї таблиці."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "Таблиця для відстеження нових рядків"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Trigger when a new row is added to a NocoDB table",
+          "message": "Спрацьовує, коли новий рядок додається до таблиці NocoDB"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "Пошук відповідних записів в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "Пошук відповідних записів в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "Пошук одного відповідного запису в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Знайти один запис"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "Пошук одного відповідного запису в указаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.desc": {
+          "source": "Programmatically triggers a button action (such as AI generation or webhook) for specified records. Maximum of 25 records can be processed at a time.",
+          "message": "Програмно запускає дію кнопки (наприклад, генерацію ШІ або вебхук) для вказаних записів. Одночасно можна обробити щонайбільше 25 записів."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
+          "source": "Trigger Button",
+          "message": "Запустити кнопку"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Виберіть базу NocoDB (проєкт), що містить таблицю."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.desc": {
+          "source": "Select the button field whose action should be triggered for the specified records.",
+          "message": "Виберіть поле кнопки, дію якої потрібно запустити для вказаних записів."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
+          "source": "Button Field",
+          "message": "Поле кнопки"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
+          "source": "The button field to trigger",
+          "message": "Поле кнопки для запуску"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.desc": {
+          "source": "When enabled, the button action runs in preview mode and changes are not saved. Useful for testing.",
+          "message": "Якщо ввімкнено, дія кнопки виконується в режимі попереднього перегляду, а зміни не зберігаються. Корисно для тестування."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
+          "source": "Preview Mode",
+          "message": "Режим попереднього перегляду"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
+          "source": "Run in preview mode without saving changes",
+          "message": "Запустити в режимі попереднього перегляду без збереження змін"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records to trigger the button action for. Maximum 25 records per request.",
+          "message": "Укажіть ідентифікатори записів, для яких слід запустити дію кнопки. Максимум 25 записів на запит."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.display_name": {
+          "source": "Record IDs",
+          "message": "Ідентифікатори записів"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to process",
+          "message": "Ідентифікатори записів для обробки"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the button field to trigger.",
+          "message": "Оберіть таблицю NocoDB, що містить поле кнопки для запуску."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.short_desc": {
+          "source": "The table containing the button field",
+          "message": "Таблиця, що містить поле кнопки"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
+          "source": "Trigger a button action on records",
+          "message": "Запустити дію кнопки для записів"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.desc": {
+          "source": "Removes the link between records via a link field. This breaks the relationship without deleting any records.",
+          "message": "Видаляє зв'язок між записами через поле зв'язку. Це розриває зв'язок без видалення самих записів."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
+          "source": "Unlink Records",
+          "message": "Відв'язати записи"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Виберіть базу NocoDB (проєкт), що містить таблицю."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship to remove.",
+          "message": "Оберіть поле зв'язку (Link to Another Record), яке визначає зв'язок для видалення."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "Поле зв'язку"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field with the relationship",
+          "message": "Поле зв'язку зі зв'язком"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to disconnect from the source record.",
+          "message": "Вкажіть ідентифікатори записів зі зв'язаної таблиці, які потрібно від'єднати від вихідного запису."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Unlink",
+          "message": "Записи для відв'язування"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to unlink",
+          "message": "ID записів для відв'язування"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to unlink from.",
+          "message": "Вкажіть ID запису у вихідній таблиці, від якого потрібно відв'язати."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "Ідентифікатор вихідного запису"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to unlink from.",
+          "message": "Оберіть таблицю NocoDB, що містить запис, від якого потрібно відв'язати."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "Таблиця, що містить вихідний запис"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
+          "source": "Remove relationships between records",
+          "message": "Видалити зв'язки між записами"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Оновити записи"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.desc": {
+          "source": "Uploads a file to a specific attachment field in a NocoDB record. The file will be stored in NocoDB and associated with the specified record.",
+          "message": "Завантажує файл у вказане поле вкладення в записі NocoDB. Файл зберігатиметься в NocoDB та буде пов'язаний зі вказаним записом."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
+          "source": "Upload Attachment",
+          "message": "Завантажити вкладення"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.desc": {
+          "source": "Select the attachment field in the table where the file will be stored.",
+          "message": "Оберіть поле вкладення в таблиці, де зберігатиметься файл."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
+          "source": "Attachment Field",
+          "message": "Поле вкладення"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
+          "source": "The attachment field to upload to",
+          "message": "Поле вкладення для завантаження"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Виберіть базу NocoDB (проєкт), що містить таблицю."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "База"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "База NocoDB, що містить таблицю"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.desc": {
+          "source": "The file to upload to the attachment field. Supports various file types including images, documents, and more.",
+          "message": "Файл для завантаження в поле вкладення. Підтримує різні типи файлів, зокрема зображення, документи тощо."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Файл"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Файл для завантаження"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record where the file should be uploaded.",
+          "message": "Вкажіть ID запису, до якого слід завантажити файл."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The ID of the record to attach the file to",
+          "message": "ID запису для прикріплення файлу"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Виберіть робочий простір NocoDB, що містить базу з таблицею."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Робочий простір"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "Робочий простір NocoDB, що містить базу"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record to attach the file to.",
+          "message": "Оберіть таблицю NocoDB, що містить запис для прикріплення файлу."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.short_desc": {
+          "source": "The table containing the record",
+          "message": "Таблиця, що містить запис"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
+          "source": "Upload a file to an attachment field",
+          "message": "Завантажити файл у поле вкладення"
+        },
+        "app.Tm9jb0RC.desc": {
+          "source": "The NocoDB integration provides comprehensive access to your NocoDB database operations. Create, read, update, and delete records in your tables, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your NocoDB workflow automation and database management.",
+          "message": "Інтеграція з NocoDB надає повний доступ до операцій із базою даних NocoDB. Створюйте, читайте, оновлюйте та видаляйте записи у своїх таблицях, а також відстежуйте нові записи за допомогою тригерів у реальному часі. Незалежно від того, чи потрібно вам керувати даними, фільтрувати результати або відстежувати нові записи, ця інтеграція оптимізує автоматизацію робочих процесів NocoDB та керування базою даних."
+        },
+        "app.Tm9jb0RC.display_name": {
+          "source": "NocoDB",
+          "message": "NocoDB"
+        },
+        "app.Tm9jb0RC.short_desc": {
+          "source": "Connect to NocoDB to manage your database tables and records with powerful automation",
+          "message": "Підключіться до NocoDB, щоб керувати таблицями та записами бази даних за допомогою потужної автоматизації"
+        }
+      }
+    }
+  }
+}

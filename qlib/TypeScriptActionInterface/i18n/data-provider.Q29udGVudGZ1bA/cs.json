@@ -1,0 +1,2413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.desc": {
+          "source": "Creates a new asset from a URL. The asset will be processed (downloaded and stored) automatically. Optionally publishes the asset after creation.",
+          "message": "Vytvoří nový asset z URL. Asset bude automaticky zpracován (stažen a uložen). Volitelně po vytvoření asset publikuje."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
+          "source": "Create an Asset",
+          "message": "Vytvořit asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmF1ZGlvL21wZWc.display_name": {
+          "source": "MP3 Audio",
+          "message": "Zvuk MP3"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL2pzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL3BkZg.display_name": {
+          "source": "PDF Document",
+          "message": "Dokument PDF"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2dpZg.display_name": {
+          "source": "GIF Image",
+          "message": "Obrázek GIF"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2pwZWc.display_name": {
+          "source": "JPEG Image",
+          "message": "Obrázek JPEG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3BuZw.display_name": {
+          "source": "PNG Image",
+          "message": "Obrázek PNG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3N2Zyt4bWw.display_name": {
+          "source": "SVG Image",
+          "message": "Obrázek SVG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3dlYnA.display_name": {
+          "source": "WebP Image",
+          "message": "Obrázek WebP"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvY3N2.display_name": {
+          "source": "CSV",
+          "message": "CSV"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvaHRtbA.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvcGxhaW4.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnZpZGVvL21wNA.display_name": {
+          "source": "MP4 Video",
+          "message": "Video MP4"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.desc": {
+          "source": "The MIME type of the file (e.g., \"image/jpeg\", \"application/pdf\").",
+          "message": "Typ MIME souboru (např. \"image/jpeg\", \"application/pdf\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
+          "source": "The MIME type of the file",
+          "message": "Typ MIME souboru"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description for the asset.",
+          "message": "Volitelný popis assetu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The asset description",
+          "message": "Popis assetu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.desc": {
+          "source": "The publicly accessible URL from which Contentful will download the file.",
+          "message": "Veřejně přístupná adresa URL, ze které Contentful soubor stáhne."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.display_name": {
+          "source": "File URL",
+          "message": "Adresa URL souboru"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.short_desc": {
+          "source": "The URL of the file to upload",
+          "message": "Adresa URL souboru k nahrání"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.desc": {
+          "source": "The file name including extension (e.g., \"photo.jpg\").",
+          "message": "Název souboru včetně přípony (např. \"photo.jpg\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Název souboru"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "The file name for the asset",
+          "message": "Název souboru pro asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the asset will be created.",
+          "message": "Vyberte prostor Contentful, ve kterém bude asset vytvořen."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the asset will be published immediately after processing.",
+          "message": "Pokud je tato možnost povolena, asset bude publikován ihned po zpracování."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "Publikovat"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the asset after creation",
+          "message": "Zda publikovat asset po vytvoření"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the asset.",
+          "message": "Popisný název assetu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Název"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "The asset title",
+          "message": "Název assetu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
+          "source": "Creates a new asset",
+          "message": "Vytvoří nový asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Creates a new content type with the specified name, description, and field definitions. The content type will be created in draft state.",
+          "message": "Vytvoří nový typ obsahu se zadaným názvem, popisem a definicemi polí. Typ obsahu bude vytvořen ve stavu konceptu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Create a Content Type",
+          "message": "Vytvořit typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of this content type.",
+          "message": "Volitelný popis vysvětlující účel tohoto typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The content type description",
+          "message": "Popis typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.desc": {
+          "source": "A list of field definitions. Each field requires an ID, name, and type. Supported types: Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.",
+          "message": "Seznam definic polí. Každé pole vyžaduje ID, název a typ. Podporované typy: Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Pole"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.short_desc": {
+          "source": "The field definitions for the content type",
+          "message": "Definice polí pro typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the content type (e.g., \"Blog Post\", \"Product\").",
+          "message": "Popisný název pro typ obsahu (např. \"Příspěvek na blogu\", \"Produkt\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "The content type name",
+          "message": "Název typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the content type will be created.",
+          "message": "Vyberte prostor Contentful, ve kterém bude typ obsahu vytvořen."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Creates a new content type",
+          "message": "Vytvoří nový typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.desc": {
+          "source": "Creates a new entry of the specified content type in the given space and environment. Optionally publishes the entry immediately after creation.",
+          "message": "Vytvoří nový záznam zadaného typu obsahu v daném prostoru a prostředí. Volitelně záznam publikuje ihned po vytvoření."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
+          "source": "Create an Entry",
+          "message": "Vytvořit záznam"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type that defines the schema for the new entry.",
+          "message": "Vyberte typ obsahu, který definuje schéma pro nový záznam."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type for the new entry",
+          "message": "Typ obsahu pro nový záznam"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values as a key-value object. Keys should match the field IDs of the content type.",
+          "message": "Zadejte hodnoty polí jako objekt klíč-hodnota. Klíče by měly odpovídat ID polí daného typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Pole"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values for the new entry",
+          "message": "Hodnoty polí pro nový záznam"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the entry will be created.",
+          "message": "Vyberte prostor Contentful, ve kterém bude záznam vytvořen."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the entry will be published immediately after creation. Otherwise, it will be saved as a draft.",
+          "message": "Pokud je tato možnost povolena, záznam bude publikován ihned po vytvoření. V opačném případě bude uložen jako koncept."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "Publikovat"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the entry after creation",
+          "message": "Zda publikovat záznam po vytvoření"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
+          "source": "Creates a new entry",
+          "message": "Vytvoří nový záznam"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.desc": {
+          "source": "Publishes (activates) a content type, making it available for creating entries.",
+          "message": "Publikuje (aktivuje) typ obsahu a zpřístupní jej pro vytváření záznamů."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
+          "source": "Activate a Content Type",
+          "message": "Aktivovat typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to activate (publish).",
+          "message": "Vyberte typ obsahu k aktivaci (publikování)."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to activate",
+          "message": "Typ obsahu k aktivaci"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
+          "source": "Activates a content type by its ID",
+          "message": "Aktivuje typ obsahu podle jeho ID"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Adds a new field definition to an existing content type. The content type will need to be re-activated after adding the field.",
+          "message": "Přidá novou definici pole do stávajícího typu obsahu. Po přidání pole bude nutné typ obsahu znovu aktivovat."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Add a Field to a Content Type",
+          "message": "Přidat pole do typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Vyberte typ obsahu k úpravě."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to add the field to",
+          "message": "Typ obsahu, do kterého se má pole přidat"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "A unique ID for the field (e.g., \"heroImage\", \"publishDate\"). Must be unique within the content type.",
+          "message": "Unikátní ID pro pole (např. \"heroImage\", \"publishDate\"). Musí být unikátní v rámci typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field ID",
+          "message": "ID pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "Unique identifier for the new field",
+          "message": "Unikátní identifikátor pro nové pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "A human-readable name for the field (e.g., \"Hero Image\", \"Publish Date\").",
+          "message": "Čitelný název pro pole (např. \"Hero Image\", \"Publish Date\")."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "Název pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "Display name for the new field",
+          "message": "Zobrazovaný název pro nové pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk51bWJlcg.display_name": {
+          "source": "Decimal Number",
+          "message": "Desetinné číslo"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk9iamVjdA.display_name": {
+          "source": "JSON Object",
+          "message": "Objekt JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkFycmF5.display_name": {
+          "source": "Array (List)",
+          "message": "Pole (Seznam)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkJvb2xlYW4.display_name": {
+          "source": "Boolean",
+          "message": "Boolean"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkRhdGU.display_name": {
+          "source": "Date and Time",
+          "message": "Datum a čas"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkludGVnZXI.display_name": {
+          "source": "Integer",
+          "message": "Celé číslo"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxpbms.display_name": {
+          "source": "Link (Reference)",
+          "message": "Odkaz (Reference)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxvY2F0aW9u.display_name": {
+          "source": "Location",
+          "message": "Umístění"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlJpY2hUZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "Formátovaný text"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlN5bWJvbA.display_name": {
+          "source": "Short Text",
+          "message": "Krátký text"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlRleHQ.display_name": {
+          "source": "Long Text",
+          "message": "Dlouhý text"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.desc": {
+          "source": "Select the data type: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, or Location.",
+          "message": "Vyberte datový typ: Symbol (krátký text), Text (dlouhý text), Integer, Number, Date, Boolean, RichText, Link, Array, Object nebo Location."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
+          "source": "Field Type",
+          "message": "Typ pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
+          "source": "The data type for the field",
+          "message": "Datový typ pro pole"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "If enabled, the field can have different values for different locales.",
+          "message": "Pokud je tato možnost povolena, pole může mít různé hodnoty pro různé lokalizace."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "Lokalizováno"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "Zda pole podporuje lokalizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "If enabled, entries must provide a value for this field.",
+          "message": "Pokud je tato možnost povolena, položky musí pro toto pole obsahovat hodnotu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "Povinné"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "Zda je pole povinné"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Adds a new field to a specific content type",
+          "message": "Přidá nové pole do konkrétního typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.desc": {
+          "source": "Archives or unarchives an asset. The asset must be unpublished before it can be archived.",
+          "message": "Archivuje nebo zruší archivaci assetu. Před archivací musí být publikování assetu zrušeno."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
+          "source": "Archive/Unarchive an Asset",
+          "message": "Archivovat / zrušit archivaci assetu"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the asset will be archived. When disabled, the asset will be unarchived.",
+          "message": "Pokud je možnost povolena, asset bude archivován. Pokud je zakázána, archivace assetu bude zrušena."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "Archiv"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "Nastavte na true pro archivaci, na false pro zrušení archivace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset.",
+          "message": "Vyberte nebo zadejte ID assetu."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to archive or unarchive",
+          "message": "Asset, u kterého se má provést nebo zrušit archivace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
+          "source": "Archives/Unarchives an unpublished asset",
+          "message": "Archivuje / ruší archivaci nepublikovaného assetu"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.desc": {
+          "source": "Archives or unarchives an entry. The entry must be unpublished before it can be archived. Archived entries are hidden from the default entry list.",
+          "message": "Archivuje nebo zruší archivaci položky. Před archivací musí být publikování položky zrušeno. Archivované položky jsou ve výchozím seznamu položek skryté."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
+          "source": "Archive/Unarchive an Entry",
+          "message": "Archivovat / zrušit archivaci položky"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Vyberte typ obsahu pro filtrování rozbalovací nabídky položek."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Typ obsahu pro filtrování položek"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the entry will be archived. When disabled, the entry will be unarchived.",
+          "message": "Pokud je možnost povolena, položka bude archivována. Pokud je zakázána, archivace položky bude zrušena."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "Archiv"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "Nastavte na true pro archivaci, na false pro zrušení archivace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry.",
+          "message": "Vyberte nebo zadejte ID položky."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to archive or unarchive",
+          "message": "Položka, u které se má provést nebo zrušit archivace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
+          "source": "Archives/Unarchives an unpublished entry",
+          "message": "Archivuje / ruší archivaci nepublikované položky"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.desc": {
+          "source": "Retrieves a single asset by its ID, returning metadata including title, description, file URL, MIME type, and size.",
+          "message": "Načte jednotlivý asset podle jeho ID a vrátí metadata včetně názvu, popisu, URL souboru, typu MIME a velikosti."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
+          "source": "Get an Asset",
+          "message": "Získat asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to retrieve.",
+          "message": "Vyberte nebo zadejte ID assetu k načtení."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to retrieve",
+          "message": "Asset k načtení"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
+          "source": "Returns attributes of a specific asset",
+          "message": "Vrací atributy konkrétního assetu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Retrieves a content type by its ID, including its name, description, and field definitions.",
+          "message": "Načte typ obsahu podle jeho ID, včetně jeho názvu, popisu a definic polí."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Get a Content Type",
+          "message": "Získat typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to retrieve details for.",
+          "message": "Vyberte typ obsahu, pro který chcete získat podrobnosti."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to retrieve",
+          "message": "Typ obsahu k načtení"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Returns attributes of a specific content type",
+          "message": "Vrací atributy konkrétního typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.desc": {
+          "source": "Retrieves a single entry by its ID from the specified space and environment. Returns all entry fields with their values in the default locale.",
+          "message": "Načte jednotlivou položku podle jejího ID z určeného prostoru a prostředí. Vrátí všechna pole položky s jejich hodnotami ve výchozí lokalizaci."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
+          "source": "Get an Entry",
+          "message": "Získat položku"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Vyberte typ obsahu pro filtrování položek podle typu."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Typ obsahu položky"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "Vyberte nebo zadejte ID položky k načtení."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve",
+          "message": "Položka k načtení"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
+          "source": "Returns attributes of a specific entry",
+          "message": "Vrací atributy konkrétní položky"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.desc": {
+          "source": "Retrieves an entry and performs text replacements on all string fields. For each replacement pair, all occurrences of the tag are replaced with the specified value. Useful for template-based content.",
+          "message": "Načte položku a provede nahrazení textu ve všech řetězcových polích. Pro každý pár nahrazení jsou všechny výskyty tagu nahrazeny zadanou hodnotou. Užitečné pro obsah založený na šablonách."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
+          "source": "Get an Entry with Replacement",
+          "message": "Získat položku s nahrazením"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Vyberte typ obsahu pro filtrování položek podle typu."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Typ obsahu položky"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "Vyberte nebo zadejte ID položky k načtení."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve and apply replacements to",
+          "message": "Položka k načtení a použití nahrazení"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "Provide a list of replacement pairs. Each pair has a \"tag\" (placeholder to find) and a \"value\" (text to replace it with). All string fields in the entry will be processed.",
+          "message": "Zadejte seznam párů nahrazení. Každý pár obsahuje \"tag\" (zástupný symbol k vyhledání) a \"value\" (text k nahrazení). Zpracována budou všechna řetězcová pole v položce."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Replacements",
+          "message": "Nahrazení"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "List of tag/value pairs for text replacement",
+          "message": "Seznam párů tag/hodnota pro nahrazení textu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
+          "source": "Replaces text fields with new values using specific tags; returns new values as output",
+          "message": "Nahradí textová pole novými hodnotami pomocí konkrétních tagů; jako výstup vrátí nové hodnoty"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.desc": {
+          "source": "Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.",
+          "message": "Zruší publikování (deaktivuje) typ obsahu a vrátí jej do stavu konceptu. Pro deaktivovaný typ obsahu nelze vytvářet žádné nové položky."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
+          "source": "Deactivate a Content Type",
+          "message": "Deaktivovat typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to deactivate (unpublish).",
+          "message": "Vyberte typ obsahu, jehož publikování chcete zrušit (deaktivovat)."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to deactivate",
+          "message": "Typ obsahu k deaktivaci"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
+          "source": "Changes a content type status to \"draft\"",
+          "message": "Změní stav typu obsahu na \"koncept\""
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.desc": {
+          "source": "Permanently deletes an asset. If the asset is published, it will be unpublished first. This action is irreversible.",
+          "message": "Trvale smaže asset. Pokud je asset publikován, jeho publikování bude nejprve zrušeno. Tato akce je nevratná."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
+          "source": "Delete an Asset",
+          "message": "Smazat asset"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to permanently remove.",
+          "message": "Vyberte nebo zadejte ID assetu, který chcete trvale odstranit."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to delete",
+          "message": "Asset k odstranění"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
+          "source": "Permanently removes an unpublished asset",
+          "message": "Trvale odstraní nepublikovaný asset"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Permanently deletes a content type. The content type must be deactivated (unpublished) first. This action is irreversible.",
+          "message": "Trvale odstraní typ obsahu. Typ obsahu musí být nejprve deaktivován (zrušeno publikování). Tato akce je nevratná."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Delete a Content Type",
+          "message": "Smazat typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to permanently remove.",
+          "message": "Vyberte typ obsahu, který chcete trvale odstranit."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to delete",
+          "message": "Typ obsahu k odstranění"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Permanently removes a deactivated content type",
+          "message": "Trvale odstraní deaktivovaný typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.desc": {
+          "source": "Permanently deletes an entry from the space. If the entry is published, it will be unpublished first. This action is irreversible.",
+          "message": "Trvale odstraní položku z prostoru. Pokud je položka publikována, bude nejprve zrušeno její publikování. Tato akce je nevratná."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
+          "source": "Delete an Entry",
+          "message": "Smazat položku"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Vyberte typ obsahu pro filtrování položek podle typu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Typ obsahu položky"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to permanently remove.",
+          "message": "Vyberte nebo zadejte ID položky, kterou chcete trvale odstranit."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to delete",
+          "message": "Položka k odstranění"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
+          "source": "Permanently removes a specific entry",
+          "message": "Trvale odstraní konkrétní položku"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.desc": {
+          "source": "Removes a field from a content type. The field is first marked as omitted, then removed entirely. Existing entry data for this field will be lost.",
+          "message": "Odstraní pole z typu obsahu. Pole je nejprve označeno jako vynechané a poté zcela odstraněno. Stávající data položek pro toto pole budou ztracena."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
+          "source": "Delete a Field from a Content Type",
+          "message": "Smazat pole z typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Vyberte typ obsahu k úpravě."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "Typ obsahu obsahující pole"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to permanently remove from the content type.",
+          "message": "Vyberte pole, které chcete trvale odstranit z typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "Pole"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to remove",
+          "message": "Pole k odstranění"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
+          "source": "Removes a field from a specific content type",
+          "message": "Odstraní pole z konkrétního typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Contentful** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do aplikace **Contentful** pomocí autentizace nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci vystaveny jako prvotřídní akce."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Contentful",
+          "message": "Provést vlastní volání API do Contentful"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.desc": {
+          "source": "Searches for assets with optional full-text search and MIME type filtering. Returns a paginated list of assets.",
+          "message": "Vyhledává assety s volitelným celotextovým vyhledáváním a filtrováním podle typu MIME. Vrací stránkovaný seznam assetů."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
+          "source": "Search Assets",
+          "message": "Vyhledat assety"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of assets to return. Default is 100, maximum is 1000.",
+          "message": "Maximální počet assetů k vrácení. Výchozí hodnota je 100, maximum je 1000."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of assets to return",
+          "message": "Maximální počet assetů k vrácení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOm1hcmt1cA.display_name": {
+          "source": "Markup",
+          "message": "Značkování"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmF1ZGlv.display_name": {
+          "source": "Audio",
+          "message": "Zvuk"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmFyY2hpdmU.display_name": {
+          "source": "Archive",
+          "message": "Archiv"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmNvZGU.display_name": {
+          "source": "Code",
+          "message": "Kód"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmltYWdl.display_name": {
+          "source": "Image",
+          "message": "Obrázek"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBkZmRvY3VtZW50.display_name": {
+          "source": "PDF Document",
+          "message": "Dokument PDF"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnByZXNlbnRhdGlvbg.display_name": {
+          "source": "Presentation",
+          "message": "Prezentace"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnJpY2h0ZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "Formátovaný text"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnNwcmVhZHNoZWV0.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabulka"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnZpZGVv.display_name": {
+          "source": "Video",
+          "message": "Video"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.desc": {
+          "source": "Optionally filter assets by MIME type group (e.g., image, video, audio, pdfdocument).",
+          "message": "Volitelně filtrujte assety podle skupiny typů MIME (např. image, video, audio, pdfdocument)."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
+          "source": "MIME Type Group",
+          "message": "Skupina typů MIME"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
+          "source": "Filter by file type group",
+          "message": "Filtrovat podle skupiny typů souborů"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.desc": {
+          "source": "The number of assets to skip for pagination. Default is 0.",
+          "message": "Počet assetů, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Přeskočit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.short_desc": {
+          "source": "Number of assets to skip",
+          "message": "Počet assetů k přeskočení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Vyberte prostor Contentful, ve kterém se má vyhledávat."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "Prostor Contentful k prohledání"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.desc": {
+          "source": "Optional text to search across asset titles and descriptions.",
+          "message": "Volitelný text pro vyhledávání v názvech a popisech assetů."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "Celotextový vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
+          "source": "Searches for assets",
+          "message": "Vyhledává assety"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.desc": {
+          "source": "Searches for content types with optional text filtering. Returns a paginated list of content types with their field definitions.",
+          "message": "Vyhledává typy obsahu s volitelným textovým filtrováním. Vrací stránkovaný seznam typů obsahu s definicemi jejich polí."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
+          "source": "Search Content Types",
+          "message": "Vyhledat typy obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of content types to return. Default is 100.",
+          "message": "Maximální počet typů obsahu k vrácení. Výchozí hodnota je 100."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maximální počet výsledků k vrácení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.desc": {
+          "source": "The number of content types to skip for pagination. Default is 0.",
+          "message": "Počet typů obsahu, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Přeskočit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.short_desc": {
+          "source": "Number of results to skip",
+          "message": "Počet výsledků k přeskočení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Vyberte prostor Contentful, ve kterém se má vyhledávat."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "Prostor Contentful k prohledání"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across content type names and descriptions.",
+          "message": "Volitelný text pro vyhledávání v názvech a popisech typů obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
+          "source": "Text search query",
+          "message": "Textový vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
+          "source": "Searches for content types",
+          "message": "Vyhledává typy obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.desc": {
+          "source": "Searches for entries of a specific content type with optional full-text search. Returns a paginated list of entries.",
+          "message": "Vyhledává položky konkrétního typu obsahu s volitelným celotextovým vyhledáváním. Vrací stránkovaný seznam položek."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
+          "source": "Search Entries",
+          "message": "Vyhledat položky"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter results by.",
+          "message": "Vyberte typ obsahu, podle kterého se mají filtrovat výsledky."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to search",
+          "message": "Typ obsahu k prohledání"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 100, maximum is 1000.",
+          "message": "Maximální počet položek k vrácení. Výchozí hodnota je 100, maximum je 1000."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "Maximální počet položek k vrácení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.desc": {
+          "source": "The number of entries to skip for pagination. Default is 0.",
+          "message": "Počet položek, které se mají přeskočit při stránkování. Výchozí hodnota je 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Přeskočit"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "Počet položek k přeskočení"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Vyberte prostor Contentful, ve kterém se má vyhledávat."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "Prostor Contentful k prohledání"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across all text fields of the entries.",
+          "message": "Volitelný text pro vyhledávání ve všech textových polích položek."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "Celotextový vyhledávací dotaz"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
+          "source": "Searches for entries",
+          "message": "Vyhledá položky"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.desc": {
+          "source": "Publishes a draft asset, making it available through the Content Delivery API.",
+          "message": "Publikuje koncept aktiva a zpřístupní jej prostřednictvím Content Delivery API."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
+          "source": "Publish an Asset",
+          "message": "Publikovat aktivum"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to publish.",
+          "message": "Vyberte nebo zadejte ID aktiva, které chcete publikovat."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to publish",
+          "message": "Aktivum k publikování"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
+          "source": "Changes asset status to \"published\"",
+          "message": "Změní stav aktiva na \"published\""
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.desc": {
+          "source": "Publishes a draft entry, making it available through the Content Delivery API.",
+          "message": "Publikuje koncept položky a zpřístupní jej prostřednictvím Content Delivery API."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
+          "source": "Publish an Entry",
+          "message": "Publikovat položku"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Vyberte typ obsahu pro filtrování rozbalovací nabídky položek."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Typ obsahu pro filtrování položek"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to publish.",
+          "message": "Vyberte nebo zadejte ID položky, kterou chcete publikovat."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to publish",
+          "message": "Položka k publikování"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
+          "source": "Changes entry status to \"published\"",
+          "message": "Změní stav položky na \"published\""
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.desc": {
+          "source": "Creates a webhook in Contentful that triggers when selected events occur. Supports entry, asset, and content type events such as creation, updates, publishing, and deletion.",
+          "message": "Vytvoří webhook v aplikaci Contentful, který se spustí při výskytu vybraných událostí. Podporuje události položek, aktiv a typů obsahu, jako je vytvoření, aktualizace, publikování a odstranění."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
+          "source": "Watch an Event",
+          "message": "Sledovat událost"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Asset Auto-Saved",
+          "message": "Aktivum automaticky uloženo"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmFyY2hpdmU.display_name": {
+          "source": "Asset Archived",
+          "message": "Aktivum archivováno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmNyZWF0ZQ.display_name": {
+          "source": "Asset Created",
+          "message": "Aktivum vytvořeno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmRlbGV0ZQ.display_name": {
+          "source": "Asset Deleted",
+          "message": "Aktivum odstraněno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnB1Ymxpc2g.display_name": {
+          "source": "Asset Published",
+          "message": "Aktivum publikováno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnNhdmU.display_name": {
+          "source": "Asset Saved",
+          "message": "Aktivum uloženo"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Asset Unarchived",
+          "message": "Archivace aktiva zrušena"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVucHVibGlzaA.display_name": {
+          "source": "Asset Unpublished",
+          "message": "Publikování aktiva zrušeno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmNyZWF0ZQ.display_name": {
+          "source": "Content Type Created",
+          "message": "Typ obsahu vytvořen"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmRlbGV0ZQ.display_name": {
+          "source": "Content Type Deleted",
+          "message": "Typ obsahu odstraněn"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnB1Ymxpc2g.display_name": {
+          "source": "Content Type Published",
+          "message": "Typ obsahu publikován"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnNhdmU.display_name": {
+          "source": "Content Type Saved",
+          "message": "Typ obsahu uložen"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnVucHVibGlzaA.display_name": {
+          "source": "Content Type Unpublished",
+          "message": "Publikování typu obsahu zrušeno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Entry Auto-Saved",
+          "message": "Položka automaticky uložena"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmFyY2hpdmU.display_name": {
+          "source": "Entry Archived",
+          "message": "Položka archivována"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmNyZWF0ZQ.display_name": {
+          "source": "Entry Created",
+          "message": "Položka vytvořena"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmRlbGV0ZQ.display_name": {
+          "source": "Entry Deleted",
+          "message": "Položka odstraněna"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnB1Ymxpc2g.display_name": {
+          "source": "Entry Published",
+          "message": "Položka publikována"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnNhdmU.display_name": {
+          "source": "Entry Saved",
+          "message": "Položka uložena"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Entry Unarchived",
+          "message": "Archivace položky zrušena"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVucHVibGlzaA.display_name": {
+          "source": "Entry Unpublished",
+          "message": "Publikování položky zrušeno"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.desc": {
+          "source": "Select one or more event types to trigger on. Events include entry, asset, and content type lifecycle events.",
+          "message": "Vyberte jeden nebo více typů událostí, které mají spouštět akci. Události zahrnují události životního cyklu položek, aktiv a typů obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
+          "source": "Event Types",
+          "message": "Typy událostí"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {
+          "source": "The types of events to watch for",
+          "message": "Typy událostí, které se mají sledovat"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to monitor for events.",
+          "message": "Vyberte prostor Contentful, který chcete sledovat na výskyt událostí."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to monitor",
+          "message": "Prostor Contentful ke sledování"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
+          "source": "Triggers when a new event occurs",
+          "message": "Spustí se při výskytu nové události"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.desc": {
+          "source": "Unpublishes an asset, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "Zruší publikování aktiva, odebere jej z Content Delivery API a vrátí jej do stavu konceptu."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
+          "source": "Unpublish an Asset",
+          "message": "Zrušit publikování aktiva"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to unpublish.",
+          "message": "Vyberte nebo zadejte ID aktiva, jehož publikování chcete zrušit."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to unpublish",
+          "message": "Aktivum ke zrušení publikování"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
+          "source": "Puts an asset back into \"draft\" state",
+          "message": "Vrátí aktivum zpět do stavu \"draft\""
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.desc": {
+          "source": "Unpublishes an entry, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "Zruší publikování položky, odebere ji z Content Delivery API a vrátí ji do stavu konceptu."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
+          "source": "Unpublish an Entry",
+          "message": "Zrušit publikování položky"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Vyberte typ obsahu pro filtrování rozbalovací nabídky položek."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Typ obsahu pro filtrování položek"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to unpublish.",
+          "message": "Vyberte nebo zadejte ID položky, jejíže publikování chcete zrušit."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to unpublish",
+          "message": "Položka ke zrušení publikování"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
+          "source": "Puts an entry back into \"draft\" state",
+          "message": "Vrátí položku zpět do stavu \"draft\""
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.desc": {
+          "source": "Updates the title and/or description of an existing asset.",
+          "message": "Aktualizuje název a/nebo popis stávajícího aktiva."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
+          "source": "Update an Asset",
+          "message": "Aktualizovat aktivum"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to update.",
+          "message": "Vyberte nebo zadejte ID aktiva, které chcete aktualizovat."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to update",
+          "message": "Aktivum k aktualizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the asset.",
+          "message": "Aktualizovaný popis aktiva."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the asset",
+          "message": "Nový popis aktiva"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Vyberte prostor Contentful obsahující tento asset."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "The updated title for the asset.",
+          "message": "Aktualizovaný název aktiva."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Název"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "New title for the asset",
+          "message": "Nový název aktiva"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
+          "source": "Updates an asset by its ID",
+          "message": "Aktualizuje aktivum podle jeho ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the name and/or description of an existing content type.",
+          "message": "Aktualizuje název a/nebo popis stávajícího typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Content Type",
+          "message": "Aktualizovat typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to update.",
+          "message": "Vyberte typ obsahu, který chcete aktualizovat."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to update",
+          "message": "Typ obsahu k aktualizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the content type.",
+          "message": "Aktualizovaný popis typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the content type",
+          "message": "Nový popis typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "The updated name for the content type.",
+          "message": "Aktualizovaný název typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "New name for the content type",
+          "message": "Nový název typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a specific content type by its ID",
+          "message": "Aktualizuje konkrétní typ obsahu podle jeho ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.desc": {
+          "source": "Updates an existing entry with new field values. Only the specified fields are updated; other fields remain unchanged.",
+          "message": "Aktualizuje stávající záznam novými hodnotami polí. Aktualizují se pouze zadaná pole; ostatní pole zůstávají nezměněna."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
+          "source": "Update an Entry",
+          "message": "Aktualizovat záznam"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Vyberte typ obsahu pro filtrování položek podle typu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Typ obsahu položky"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to update.",
+          "message": "Vyberte nebo zadejte ID záznamu, který chcete aktualizovat."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Položka"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to update",
+          "message": "Záznam k aktualizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values to update as a key-value object. Only the specified fields will be changed.",
+          "message": "Zadejte hodnoty polí k aktualizaci jako objekt klíč-hodnota. Změněna budou pouze zadaná pole."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Pole"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values to update",
+          "message": "Hodnoty polí k aktualizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Vyberte prostor Contentful obsahující tuto položku."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
+          "source": "Updates a specific entry by its ID",
+          "message": "Aktualizuje konkrétní záznam podle jeho ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the properties of an existing field in a content type.",
+          "message": "Aktualizuje vlastnosti stávajícího pole v typu obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Field of a Content Type",
+          "message": "Aktualizovat pole typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Vyberte typ obsahu k úpravě."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Typ obsahu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "Typ obsahu obsahující pole"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Vyberte prostředí v rámci prostoru. Pokud není uvedeno, výchozí hodnota je \"master\"."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Prostředí"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "Prostředí, které se má použít (výchozí: master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to update.",
+          "message": "Vyberte pole, které chcete aktualizovat."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "Pole"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to update",
+          "message": "Pole k aktualizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "The updated display name for the field.",
+          "message": "Aktualizovaný zobrazovaný název pole."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "Název pole"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "New display name for the field",
+          "message": "Nový zobrazovaný název pole"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "Update whether the field can have different values for different locales.",
+          "message": "Aktualizovat, zda pole může mít různé hodnoty pro různé lokalizace."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "Lokalizováno"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "Zda pole podporuje lokalizaci"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Vyberte prostor Contentful obsahující typ obsahu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Prostor"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "Prostor Contentful, který se má použít"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "Update whether entries must provide a value for this field.",
+          "message": "Aktualizovat, zda záznamy musí pro toto pole poskytovat hodnotu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "Povinné"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "Zda je pole povinné"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a field inside a specific content type",
+          "message": "Aktualizuje pole uvnitř konkrétního typu obsahu"
+        },
+        "app.Q29udGVudGZ1bA.desc": {
+          "source": "Integrate with Contentful to automate content management workflows. Create, update, publish, and manage entries, assets, and content types. Monitor content changes with real-time webhook triggers. This integration provides full access to the Contentful Content Management API for comprehensive headless CMS automation.",
+          "message": "Integrujte s Contentful pro automatizaci pracovních postupů správy obsahu. Vytvářejte, aktualizujte, publikujte a spravujte záznamy, soubory a typy obsahu. Sledujte změny obsahu pomocí spouštěčů webhooků v reálném čase. Tato integrace poskytuje plný přístup k API pro správu obsahu Contentful pro komplexní automatizaci headless CMS."
+        },
+        "app.Q29udGVudGZ1bA.display_name": {
+          "source": "Contentful",
+          "message": "Contentful"
+        },
+        "app.Q29udGVudGZ1bA.short_desc": {
+          "source": "Connect to Contentful to manage your content, assets, and content models",
+          "message": "Připojte se k Contentful a spravujte svůj obsah, soubory a modely obsahu"
+        }
+      }
+    }
+  }
+}

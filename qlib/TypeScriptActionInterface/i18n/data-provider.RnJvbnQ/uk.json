@@ -1,0 +1,1945 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.desc": {
+          "source": "Reply to a conversation by sending a message. The message will be appended to the conversation and sent to the recipients. You can optionally save it as a draft instead of sending immediately.",
+          "message": "Відповісти на розмову, надіславши повідомлення. Повідомлення буде додано до розмови та надіслано одержувачам. Ви також можете зберегти його як чернетку замість негайного надсилання."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
+          "source": "Reply to Conversation",
+          "message": "Відповісти на розмову"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to reply to.",
+          "message": "Виберіть або введіть ID розмови, на яку ви хочете відповісти."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to reply to",
+          "message": "Розмова, на яку потрібно відповісти"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.desc": {
+          "source": "A list of email addresses to CC on the reply.",
+          "message": "Список адрес електронної пошти для копії (CC) у відповіді."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.display_name": {
+          "source": "CC",
+          "message": "CC"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.short_desc": {
+          "source": "CC recipients",
+          "message": "Одержувачі копії (CC)"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.desc": {
+          "source": "The HTML content of the reply message. This is the main body text that will be sent to recipients.",
+          "message": "Вміст HTML повідомлення-відповіді. Це основний текст тіла, який буде надіслано одержувачам."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
+          "source": "Message Body",
+          "message": "Тіло повідомлення"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
+          "source": "The content of the reply",
+          "message": "Вміст відповіді"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.desc": {
+          "source": "A list of email addresses to BCC on the reply.",
+          "message": "Список адрес електронної пошти для прихованої копії (BCC) у відповіді."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.display_name": {
+          "source": "BCC",
+          "message": "BCC"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.short_desc": {
+          "source": "BCC recipients",
+          "message": "Одержувачі прихованої копії (BCC)"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.desc": {
+          "source": "If true, the message will be saved as a draft instead of being sent immediately. Default is false.",
+          "message": "Якщо true, повідомлення буде збережено як чернетку замість негайного надсилання. За замовчуванням — false."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
+          "source": "Save as Draft",
+          "message": "Зберегти як чернетку"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
+          "source": "Save as draft instead of sending",
+          "message": "Зберегти як чернетку замість надсилання"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the reply. If not provided, the original conversation subject may be used.",
+          "message": "Необов'язкова тема для відповіді. Якщо не вказано, може використовуватися початкова тема розмови."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Тема"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.short_desc": {
+          "source": "Optional subject line",
+          "message": "Необов'язкова тема"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.desc": {
+          "source": "A list of email addresses to send the reply to. These are added to the existing conversation recipients.",
+          "message": "Список адрес електронної пошти для надсилання відповіді. Вони додаються до наявних одержувачів розмови."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.display_name": {
+          "source": "To",
+          "message": "Кому"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.short_desc": {
+          "source": "Additional recipients",
+          "message": "Додаткові одержувачі"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
+          "source": "Send a reply message to a conversation",
+          "message": "Надіслати повідомлення-відповідь у розмову"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.desc": {
+          "source": "Create a new account in Front. Accounts represent companies or organizations and can be used to group related contacts together. You can associate domains with accounts to automatically link contacts.",
+          "message": "Створити новий акаунт у Front. Акаунти представляють компанії або організації та можуть використовуватися для групування пов'язаних контактів. Ви можете пов'язувати домени з акаунтами для автоматичного зв'язування контактів."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
+          "source": "Create Account",
+          "message": "Створити обліковий запис"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the account. The keys should match your configured custom field names.",
+          "message": "Об'єкт, що містить значення настроюваних полів для акаунта. Ключі мають відповідати налаштованим назвам настроюваних полів."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "Значення настроюваних полів"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "A list of email domains (e.g., \"example.com\") associated with this account. Contacts with email addresses from these domains can be automatically linked to the account.",
+          "message": "Список поштових доменів (наприклад, \"example.com\"), пов'язаних із цим акаунтом. Контакти з адресами електронної пошти з цих доменів можуть автоматично пов'язуватися з акаунтом."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "Домени"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "Email domains associated with the account",
+          "message": "Поштові домени, пов'язані з акаунтом"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description providing additional context about the account, such as the type of business or relationship.",
+          "message": "Необов'язковий опис, що надає додатковий контекст про акаунт, як-от тип бізнесу або відносин."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the account",
+          "message": "Опис акаунта"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "An optional external ID to link this account to a record in another system, such as a CRM or billing platform.",
+          "message": "Необов'язковий зовнішній ID для прив'язки цього акаунта до запису в іншій системі, як-от CRM або білінгова платформа."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "Зовнішній ID"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "External system identifier",
+          "message": "Ідентифікатор зовнішньої системи"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The name of the account, typically the company or organization name. This is a required field.",
+          "message": "Назва акаунта, зазвичай назва компанії чи організації. Це обов'язкове поле."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The account name",
+          "message": "Назва акаунта"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
+          "source": "Create a new account",
+          "message": "Створити новий обліковий запис"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Front. Contacts represent the people you communicate with. A contact must have at least one handle (email, phone, etc.) to be created.",
+          "message": "Створити новий контакт у Front. Контакти представляють людей, з якими ви спілкуєтеся. Для створення контакту потрібен щонайменше один хендл (електронна пошта, телефон тощо)."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Створити контакт"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the contact. The keys should match your configured custom field names.",
+          "message": "Об'єкт, що містить значення настроюваних полів для контакту. Ключі мають відповідати налаштованим назвам настроюваних полів."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "Значення настроюваних полів"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.desc": {
+          "source": "A list of group names to add the contact to. Groups help organize contacts into categories.",
+          "message": "Список назв груп, до яких слід додати контакт. Групи допомагають упорядковувати контакти за категоріями."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
+          "source": "Group Names",
+          "message": "Назви груп"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
+          "source": "Groups to add the contact to",
+          "message": "Групи, до яких слід додати контакт"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description or notes about the contact. This can include any relevant context about the person.",
+          "message": "Необов'язковий опис або примітки про контакт. Сюди можна включити будь-який релевантний контекст про особу."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact",
+          "message": "Опис контакту"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.desc": {
+          "source": "A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.",
+          "message": "Список хендлів для контакту. Кожен хендл складається зі значення хендла (наприклад, адреси електронної пошти) та типу джерела (email, phone, twitter тощо). Потрібен щонайменше один хендл."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.display_name": {
+          "source": "Handles",
+          "message": "Хендли"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.short_desc": {
+          "source": "Contact handles (email, phone, etc.)",
+          "message": "Хендли контакту (email, телефон тощо)"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "Список URL-адрес, пов'язаних із цим контактом, як-от профілі в соціальних мережах або вебсайти компаній."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Посилання"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "Пов'язані URL-адреси"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "The display name of the contact. This is optional but recommended for easier identification.",
+          "message": "Відображуване ім'я контакту. Це необов'язково, але рекомендовано для легшої ідентифікації."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The contact name",
+          "message": "Ім'я контакту"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Створити новий контакт"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list in Front. Contact lists help you organize contacts into logical groups. The list will be created in the oldest active workspace that your token has access to.",
+          "message": "Створити новий список контактів у Front. Списки контактів допомагають організувати контакти в логічні групи. Список буде створено в найстарішому активному робочому просторі, до якого має доступ ваш токен."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "Створити список контактів"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of the contact list or the criteria for contacts in it.",
+          "message": "Необов'язковий опис, що пояснює мету списку контактів або критерії для контактів у ньому."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact list",
+          "message": "Опис списку контактів"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "The name of the contact list. Choose a descriptive name that clearly identifies the purpose of the list.",
+          "message": "Назва списку контактів. Виберіть описову назву, яка чітко визначає призначення списку."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The contact list name",
+          "message": "Назва списку контактів"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Створити новий список контактів"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "Add a new note to a contact in Front. Notes are internal annotations that are only visible to your team members. Use notes to document important information, context, or reminders about a contact.",
+          "message": "Додати нову примітку до контакту у Front. Примітки — це внутрішні анотації, видимі лише членам вашої команди. Використовуйте примітки для фіксації важливої інформації, контексту або нагадувань про контакт."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "Add Note to Contact",
+          "message": "Додати примітку до контакту"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to add a note to.",
+          "message": "Виберіть або введіть ID контакту, до якого потрібно додати примітку."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to add the note to",
+          "message": "Контакт, до якого додається примітка"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.desc": {
+          "source": "Select the teammate who will be recorded as the author of this note. This is a required field.",
+          "message": "Виберіть учасника команди, якого буде записано як автора цієї примітки. Це обов’язкове поле."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.display_name": {
+          "source": "Author",
+          "message": "Автор"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.short_desc": {
+          "source": "The teammate who authored the note",
+          "message": "Учасник команди, який створив примітку"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.desc": {
+          "source": "The text content of the note. This will be visible to all team members who can access the contact.",
+          "message": "Текстовий вміст примітки. Його бачитимуть усі учасники команди, які мають доступ до контакту."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
+          "source": "Note Body",
+          "message": "Тіло примітки"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
+          "source": "The content of the note",
+          "message": "Вміст примітки"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Add a note to a contact",
+          "message": "Додати примітку до контакту"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.desc": {
+          "source": "Add one or more contacts to an account in Front. This creates an association between the contacts and the account, helping you organize contacts by company or organization.",
+          "message": "Додайте один або кілька контактів до облікового запису в Front. Це створює зв'язок між контактами та обліковим записом, допомагаючи впорядковувати контакти за компаніями чи організаціями."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
+          "source": "Add Contact to Account",
+          "message": "Додати контакт до облікового запису"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the account. Contact IDs start with \"crd_\".",
+          "message": "Виберіть один або кілька контактів для додавання до облікового запису. ID контактів починаються з \"crd_\"."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Контакти"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "Контакти для додавання"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account where you want to add contacts.",
+          "message": "Виберіть або введіть ID облікового запису, до якого потрібно додати контакти."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to add contacts to",
+          "message": "Обліковий запис, до якого потрібно додати контакти"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
+          "source": "Add contacts to an account",
+          "message": "Додати контакти до облікового запису"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication.",
+          "message": "Додайте один або кілька контактів до списку контактів у Front. Це допомагає організувати контакти в логічні групи для зручнішого керування та цільової комунікації."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Add Contacts to Contact List",
+          "message": "Додати контакти до списку контактів"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the contact list.",
+          "message": "Виберіть один або кілька контактів для додавання до списку контактів."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Контакти"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "Контакти для додавання"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list where you want to add contacts.",
+          "message": "Виберіть або введіть ID списку контактів, до якого потрібно додати контакти."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Список контактів"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "Список контактів, до якого потрібно додати контакти"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "Додати контакти до списку контактів"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Add one or more tags to a conversation in Front. Tags help categorize and organize conversations for easier filtering and reporting.",
+          "message": "Додайте один або кілька тегів до розмови в Front. Теги допомагають категоризувати та впорядковувати розмови для спрощення фільтрації та звітності."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Add Tag to Conversation",
+          "message": "Додати тег до розмови"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add tags to.",
+          "message": "Виберіть або введіть ID розмови, до якої потрібно додати теги."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to tag",
+          "message": "Розмова, до якої потрібно додати теги"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to add to the conversation.",
+          "message": "Виберіть один або кілька тегів для додавання до розмови."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "Теги"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to add",
+          "message": "Теги для додавання"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Add tags to a conversation",
+          "message": "Додати теги до розмови"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.desc": {
+          "source": "Add an internal comment to a conversation in Front. Comments are private messages visible only to your teammates and are never sent to external contacts. Use comments for internal notes, discussions, or context sharing.",
+          "message": "Додайте внутрішній коментар до розмови в Front. Коментарі — це приватні повідомлення, які видно лише вашим учасникам команди й які ніколи не надсилаються зовнішнім контактам. Використовуйте коментарі для внутрішніх нотаток, обговорень або обміну контекстом."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
+          "source": "Add Comment to Conversation",
+          "message": "Додати коментар до розмови"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add a comment to.",
+          "message": "Виберіть або введіть ID розмови, до якої потрібно додати коментар."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add a comment to",
+          "message": "Розмова, до якої потрібно додати коментар"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.desc": {
+          "source": "The text content of the internal comment. This will be visible to all teammates who can access the conversation.",
+          "message": "Текстовий вміст внутрішнього коментаря. Його бачитимуть усі учасники команди, які мають доступ до розмови."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
+          "source": "Comment Body",
+          "message": "Тіло коментаря"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
+          "source": "The content of the comment",
+          "message": "Вміст коментаря"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
+          "source": "Add an internal comment to a conversation",
+          "message": "Додати внутрішній коментар до розмови"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.desc": {
+          "source": "Add teammates as followers to a conversation. Followers receive notifications about conversation updates without being the assignee.",
+          "message": "Додайте учасників команди як підписників до розмови. Підписники отримують сповіщення про оновлення розмови, не будучи призначеними виконавцями."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
+          "source": "Add Conversation Followers",
+          "message": "Додати підписників до розмови"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add followers to.",
+          "message": "Виберіть або введіть ID розмови, до якої потрібно додати підписників."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add followers to",
+          "message": "Розмова, до якої потрібно додати підписників"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.desc": {
+          "source": "Select one or more teammates to add as followers to the conversation.",
+          "message": "Виберіть одного або кількох учасників команди для додавання підписниками до розмови."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.display_name": {
+          "source": "Teammates",
+          "message": "Учасники команди"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.short_desc": {
+          "source": "The teammates to add as followers",
+          "message": "Учасники команди, яких потрібно додати як підписників"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
+          "source": "Add followers to a conversation",
+          "message": "Додати підписників до розмови"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Retrieve the full details of a specific message from Front by its ID. Returns all message data including content, author, recipients, and attachments.",
+          "message": "Отримати повні відомості про певне повідомлення з Front за його ID. Повертає всі дані повідомлення, включно з вмістом, автором, одержувачами та вкладеннями."
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get Message",
+          "message": "Отримати повідомлення"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.desc": {
+          "source": "Enter the ID of the message you want to retrieve. Message IDs start with \"msg_\".",
+          "message": "Введіть ID повідомлення, яке потрібно отримати. ID повідомлень починаються з \"msg_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "Ідентифікатор повідомлення"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.short_desc": {
+          "source": "The message to retrieve",
+          "message": "Повідомлення, яке потрібно отримати"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve a single message by ID",
+          "message": "Отримати одне повідомлення за ID"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Retrieve the full details of a specific account from Front by its ID. Returns all account data including name, description, domains, external ID, and custom fields.",
+          "message": "Отримати повні відомості про конкретний обліковий запис із Front за його ID. Повертає всі дані облікового запису, включно з назвою, описом, доменами, зовнішнім ID та спеціальними полями."
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "Отримати обліковий запис"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to retrieve. Account IDs start with \"acc_\".",
+          "message": "Виберіть або введіть ID облікового запису, який потрібно отримати. ID облікових записів починаються з \"acc_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to retrieve",
+          "message": "Обліковий запис, який потрібно отримати"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve a single account by ID",
+          "message": "Отримати один обліковий запис за ID"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve the full details of a specific contact from Front by their ID. Returns all contact data including name, handles (email, phone, etc.), groups, links, and custom fields.",
+          "message": "Отримати повні відомості про певний контакт із Front за його ID. Повертає всі дані контакту, включно з ім'ям, дескрипторами (електронна пошта, телефон тощо), групами, посиланнями та спеціальними полями."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Отримати контакт"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to retrieve. Contact IDs start with \"crd_\".",
+          "message": "Виберіть або введіть ID контакту, який потрібно отримати. ID контактів починаються з \"crd_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to retrieve",
+          "message": "Контакт, який потрібно отримати"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve a single contact by ID",
+          "message": "Отримати один контакт за ID"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Retrieve the full details of a specific conversation from Front by its ID. Returns all conversation data including subject, status, assignee, tags, and custom fields.",
+          "message": "Отримати повні відомості про певну розмову з Front за її ID. Повертає всі дані розмови, включно з темою, статусом, виконавцем, тегами та спеціальними полями."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Get Conversation",
+          "message": "Отримати розмову"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to retrieve. Conversation IDs start with \"cnv_\".",
+          "message": "Виберіть або введіть ID розмови, яку потрібно отримати. ID розмов починаються з \"cnv_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to retrieve",
+          "message": "Розмова, яку потрібно отримати"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Retrieve a single conversation by ID",
+          "message": "Отримати одну розмову за ID"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.desc": {
+          "source": "Delete an account from Front. This action is permanent. Contacts associated with the account will not be deleted but will no longer be linked to this account.",
+          "message": "Видалити обліковий запис із Front. Ця дія є незворотною. Контакти, пов'язані з обліковим записом, не буде видалено, але їхній зв'язок із цим обліковим записом буде розірвано."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
+          "source": "Delete Account",
+          "message": "Видалити обліковий запис"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to delete.",
+          "message": "Виберіть або введіть ID облікового запису, який потрібно видалити."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to delete",
+          "message": "Обліковий запис для видалення"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
+          "source": "Delete an account",
+          "message": "Видалити обліковий запис"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Delete a contact from Front. This action is permanent and will remove all associated data. Conversations with this contact will remain but will no longer be linked to the contact.",
+          "message": "Видалити контакт із Front. Ця дія є незворотною та призведе до вилучення всіх пов'язаних даних. Розмови з цим контактом залишаться, але більше не будуть прив'язані до нього."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Видалити контакт"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to delete.",
+          "message": "Виберіть або введіть ID контакту, який потрібно видалити."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to delete",
+          "message": "Контакт для видалення"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Видалити контакт"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace.",
+          "message": "Видалити список контактів із Front. Це видаляє сам список, але не контакти, які в ньому перебували. Контакти залишаться у вашому робочому просторі."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Delete Contact List",
+          "message": "Видалити список контактів"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list you want to delete.",
+          "message": "Виберіть або введіть ID списку контактів, який потрібно видалити."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Список контактів"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to delete",
+          "message": "Список контактів для видалення"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Видалити список контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.desc": {
+          "source": "Retrieve a list of all contacts that are associated with a specific account. This helps you see all the people from a particular company or organization.",
+          "message": "Отримати перелік усіх контактів, пов'язаних із певним обліковим записом. Це дозволяє переглянути всіх користувачів із певної компанії чи організації."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
+          "source": "List Account Contacts",
+          "message": "Список контактів облікового запису"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account whose contacts you want to retrieve.",
+          "message": "Виберіть або введіть ID облікового запису, контакти якого потрібно отримати."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to list contacts from",
+          "message": "Обліковий запис для отримання списку контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Максимальна кількість контактів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
+          "source": "List contacts associated with an account",
+          "message": "Отримати список контактів, пов'язаних з обліковим записом"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Retrieve a list of all accounts in your Front workspace. Accounts represent companies or organizations that your contacts belong to. Use accounts to group contacts and track interactions at the company level.",
+          "message": "Отримати список усіх облікових записів у вашому робочому просторі Front. Облікові записи представляють компанії або організації, до яких належать ваші контакти. Використовуйте їх для групування контактів і відстеження взаємодій на рівні компанії."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "Список акаунтів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of account records to return. Default is 50. Use pagination for larger datasets.",
+          "message": "Максимальна кількість записів облікових записів для повернення. За замовчуванням: 50. Використовуйте пагінацію для більших наборів даних."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to return",
+          "message": "Максимальна кількість акаунтів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts",
+          "message": "Отримати список акаунтів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.desc": {
+          "source": "Retrieve all notes that have been added to a specific contact. Notes are internal annotations visible only to your team, useful for documenting important information about contacts.",
+          "message": "Отримати всі нотатки, додані до певного контакту. Нотатки — це внутрішні коментарі, видимі лише вашій команді, які корисні для документування важливої інформації про контакти."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
+          "source": "List Contact Notes",
+          "message": "Список нотаток контакту"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose notes you want to retrieve.",
+          "message": "Виберіть або введіть ID контакту, нотатки якого потрібно отримати."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list notes for",
+          "message": "Контакт для отримання нотаток"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of note records to return. Default is 50.",
+          "message": "Максимальна кількість записів нотаток для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "Максимальна кількість нотаток для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
+          "source": "List notes for a contact",
+          "message": "Отримати список нотаток для контакту"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Retrieve a list of all conversations associated with a specific contact. Conversations are returned in reverse chronological order (newest first). This helps you see the full communication history with a contact.",
+          "message": "Отримати список усіх розмов, пов'язаних із певним контактом. Розмови повертаються у зворотному хронологічному порядку (спочатку новіші). Це дає змогу переглянути повну історію спілкування з контактом."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "List Contact Conversations",
+          "message": "Список розмов контакту"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose conversations you want to retrieve.",
+          "message": "Виберіть або введіть ID контакту, розмови якого потрібно отримати."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list conversations for",
+          "message": "Контакт для отримання списку розмов"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "Максимальна кількість записів розмов для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Максимальна кількість розмов для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "List conversations for a contact",
+          "message": "Отримати список розмов для контакту"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your Front workspace. Contact lists are used to organize contacts into groups for easier management, such as for marketing campaigns or customer segments.",
+          "message": "Отримати перелік усіх списків контактів у вашому робочому просторі Front. Списки контактів використовуються для групування контактів з метою спрощення керування, наприклад для маркетингових кампаній або сегментів клієнтів."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "Список списків контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact list records to return. Default is 50.",
+          "message": "Максимальна кількість записів списків контактів для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contact lists to return",
+          "message": "Максимальна кількість списків контактів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Отримати всі списки контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.desc": {
+          "source": "Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment.",
+          "message": "Отримати всі контакти, які належать до певного списку контактів. Це дає змогу побачити, які контакти включено до конкретного списку або сегмента."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
+          "source": "List Contacts in Contact List",
+          "message": "Список контактів у списку контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list whose contacts you want to see.",
+          "message": "Виберіть або введіть ID списку контактів, контакти якого потрібно переглянути."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Список контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to retrieve contacts from",
+          "message": "Список контактів для отримання контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Максимальна кількість контактів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
+          "source": "List contacts in a specific contact list",
+          "message": "Отримати список контактів у конкретному списку контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date.",
+          "message": "Отримати перелік усіх контактів у вашому робочому просторі Front. Контакти представляють людей, з якими ви спілкуєтеся. Результати можна сортувати за датою створення або оновлення."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Список контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Максимальна кількість записів контактів для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Максимальна кількість контактів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "За зростанням"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "За спаданням"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "Напрямок сортування результатів: desc (спочатку нові) або asc (спочатку старі)."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "Напрямок сортування"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOmNyZWF0ZWRfYXQ.display_name": {
+          "source": "Created At",
+          "message": "Час створення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOnVwZGF0ZWRfYXQ.display_name": {
+          "source": "Updated At",
+          "message": "Час оновлення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.desc": {
+          "source": "The field to sort results by: created_at or updated_at.",
+          "message": "Поле для сортування результатів: created_at або updated_at."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
+          "source": "Sort By",
+          "message": "Сортувати за"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort by",
+          "message": "Поле для сортування"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Отримати список контактів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.desc": {
+          "source": "Retrieve a list of all internal comments in a specific conversation. Comments are returned in reverse chronological order (newest first). This provides the full internal discussion history of a conversation.",
+          "message": "Отримати перелік усіх внутрішніх коментарів у певній розмові. Коментарі повертаються у зворотному хронологічному порядку (спочатку новіші). Це надає повну історію внутрішнього обговорення в розмові."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
+          "source": "List Conversation Comments",
+          "message": "Список коментарів розмови"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose comments you want to retrieve.",
+          "message": "Виберіть або введіть ID розмови, коментарі якої потрібно отримати."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list comments from",
+          "message": "Розмова для отримання списку коментарів"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of comment records to return. Default is 50.",
+          "message": "Максимальна кількість записів коментарів для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "Максимальна кількість коментарів для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
+          "source": "List comments in a conversation",
+          "message": "Отримати список коментарів у розмові"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.desc": {
+          "source": "Retrieve a list of all messages in a specific conversation. Messages are returned in reverse chronological order (newest first). This provides the full message history of a conversation.",
+          "message": "Отримати перелік усіх повідомлень у певній розмові. Повідомлення повертаються у зворотному хронологічному порядку (спочатку новіші). Це надає повну історію повідомлень у розмові."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
+          "source": "List Conversation Messages",
+          "message": "Список повідомлень розмови"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose messages you want to retrieve.",
+          "message": "Виберіть або введіть ID розмови, повідомлення якої потрібно отримати."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list messages from",
+          "message": "Розмова для отримання списку повідомлень"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. Default is 50.",
+          "message": "Максимальна кількість записів повідомлень для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "Максимальна кількість повідомлень для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
+          "source": "List messages in a conversation",
+          "message": "Отримати список повідомлень у розмові"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.desc": {
+          "source": "Retrieve a list of conversations in your Front workspace. Conversations are returned in reverse chronological order (most recently updated first). You can filter by inbox or status.",
+          "message": "Отримати список розмов у вашому робочому просторі Front. Розмови повертаються у зворотному хронологічному порядку (спочатку нещодавно оновлені). Ви можете фільтрувати за вхідною скринькою або статусом."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
+          "source": "List Conversations",
+          "message": "Список розмов"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter conversations to a specific inbox. Leave empty to retrieve conversations from all inboxes.",
+          "message": "Необов'язкова фільтрація розмов за певною скринькою. Залиште порожнім, щоб отримати розмови з усіх скриньок."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Вхідні"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "Фільтрувати за скринькою"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "Максимальна кількість записів розмов для повернення. За замовчуванням: 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Максимальна кількість розмов для повернення"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Відкрита"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "В архіві"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Видалено"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Спам"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.desc": {
+          "source": "Optionally filter conversations by their status: open, archived, deleted, or spam.",
+          "message": "Додатково фільтруйте розмови за їхнім статусом: open, archived, deleted або spam."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Статус"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "Фільтрувати за статусом розмови"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
+          "source": "Retrieve a list of conversations",
+          "message": "Отримати список розмов"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Front** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконайте користувацький виклик HTTP / REST API до **Front**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Front",
+          "message": "Зробити користувацький виклик API до Front"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.desc": {
+          "source": "This trigger fires whenever a new internal comment is added to a specific conversation in Front. Comments are private messages visible only to teammates. You must specify which conversation to monitor for new comments.",
+          "message": "Цей тригер спрацьовує щоразу, коли до певної розмови у Front додається новий внутрішній коментар. Коментарі — це приватні повідомлення, видимі лише колегам. Ви повинні вказати, яку розмову відстежувати для отримання нових коментарів."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
+          "source": "New Comment",
+          "message": "Новий коментар"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to monitor for new comments. The trigger will fire whenever a new comment is added to this conversation.",
+          "message": "Виберіть або введіть ID розмови, яку потрібно відстежувати для отримання нових коментарів. Тригер спрацьовуватиме щоразу, коли до цієї розмови додаватиметься новий коментар."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to monitor",
+          "message": "Розмова для відстеження"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {
+          "source": "Triggers when a new comment is added to a conversation",
+          "message": "Спрацьовує, коли до розмови додається новий коментар"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace.",
+          "message": "Цей тригер спрацьовує щоразу, коли у Front створюється новий контакт. Використовуйте це для автоматизації робочих процесів під час додавання нових контактів до вашого робочого простору."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Новий контакт"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "Спрацьовує, коли створюється новий контакт"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "This trigger fires whenever a new note is added to a specific contact in Front. You must specify which contact to monitor for new notes.",
+          "message": "Цей тригер спрацьовує щоразу, коли до певного контакту у Front додається нова примітка. Ви повинні вказати, який контакт відстежувати для отримання нових приміток."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "New Contact Note",
+          "message": "Нова примітка до контакту"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to monitor for new notes. The trigger will fire whenever a new note is added to this contact.",
+          "message": "Виберіть або введіть ID контакту, який потрібно відстежувати для отримання нових приміток. Тригер спрацьовуватиме щоразу, коли до цього контакту додаватиметься нова примітка."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to monitor",
+          "message": "Контакт для відстеження"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Triggers when a new note is added to a contact",
+          "message": "Спрацьовує, коли до контакту додається нова примітка"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation is created in Front. You can optionally filter by inbox or status to only trigger for specific types of conversations.",
+          "message": "Цей тригер спрацьовує щоразу, коли у Front створюється нова розмова. Ви можете додатково фільтрувати за папкою «Вхідні» або статусом, щоб запускати тригер лише для певних типів розмов."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "Нова розмова"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific inbox. Leave empty to trigger for all inboxes.",
+          "message": "Додатково фільтруйте, щоб запускати тригер лише для розмов у певній папці «Вхідні». Залиште порожнім, щоб запускати для всіх папок «Вхідні»."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Вхідні"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "Фільтрувати за скринькою"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Відкрита"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "В архіві"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Видалено"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Спам"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Optionally filter to only trigger for conversations with a specific status: open, archived, deleted, or spam.",
+          "message": "Додатково фільтруйте, щоб запускати тригер лише для розмов із певним статусом: open, archived, deleted або spam."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Статус"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "Фільтрувати за статусом розмови"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created",
+          "message": "Спрацьовує, коли створюється нова розмова"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches.",
+          "message": "Шукайте розмови у Front за допомогою пошукового запиту. Повертає відповідні розмови у порядку спадання за останньою активністю разом із загальною кількістю збігів."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "Search Conversations",
+          "message": "Пошук розмов"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 25.",
+          "message": "Максимальна кількість записів розмов для повернення. За замовчуванням — 25."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Максимальна кількість розмов для повернення"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.desc": {
+          "source": "The search query to find conversations. You can search by keywords, email addresses, or use Front search syntax for advanced queries.",
+          "message": "Пошуковий запит для пошуку розмов. Ви можете шукати за ключовими словами, адресами електронної пошти або використовувати синтаксис пошуку Front для розширених запитів."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Пошуковий запит"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
+          "source": "The search query",
+          "message": "Пошуковий запит"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "Search for conversations",
+          "message": "Пошук розмов"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.desc": {
+          "source": "Remove one or more contacts from an account in Front. This removes the association between the contacts and the account but does not delete the contacts themselves.",
+          "message": "Видалити один або кілька контактів з облікового запису у Front. Це видаляє зв'язок між контактами та обліковим записом, але не видаляє самі контакти."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
+          "source": "Remove Contact from Account",
+          "message": "Видалити контакт з облікового запису"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the account.",
+          "message": "Виберіть один або кілька контактів для видалення з облікового запису."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Контакти"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "Контакти для видалення"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account from which you want to remove contacts.",
+          "message": "Виберіть або введіть ID облікового запису, з якого потрібно видалити контакти."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to remove contacts from",
+          "message": "Обліковий запис для видалення контактів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
+          "source": "Remove contacts from an account",
+          "message": "Видалити контакти з облікового запису"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.desc": {
+          "source": "Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves.",
+          "message": "Видалити один або кілька контактів зі списку контактів у Front. Це видаляє контакти зі списку, але не видаляє самі контакти."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
+          "source": "Remove Contacts from Contact List",
+          "message": "Видалити контакти зі списку контактів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the contact list.",
+          "message": "Виберіть один або кілька контактів для видалення зі списку контактів."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Контакти"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "Контакти для видалення"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list from which you want to remove contacts.",
+          "message": "Виберіть або введіть ID списку контактів, з якого потрібно видалити контакти."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Список контактів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to remove contacts from",
+          "message": "Список контактів для видалення контактів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
+          "source": "Remove contacts from a contact list",
+          "message": "Видалити контакти зі списку контактів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Remove one or more tags from a conversation in Front. This removes the tag association but does not delete the tags themselves.",
+          "message": "Видалити один або кілька тегів із розмови у Front. Це видаляє зв'язок із тегом, але не видаляє самі теги."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Remove Tag from Conversation",
+          "message": "Видалити тег із розмови"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to remove tags from.",
+          "message": "Виберіть або введіть ID розмови, з якої потрібно видалити теги."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to remove tags from",
+          "message": "Розмова для видалення тегів"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to remove from the conversation.",
+          "message": "Виберіть один або кілька тегів для видалення з розмови."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "Теги"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to remove",
+          "message": "Теги для видалення"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Remove tags from a conversation",
+          "message": "Видалити теги з розмови"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.desc": {
+          "source": "Update the properties of an existing account in Front. You can modify the name, description, domains, external ID, or custom fields. At least one field must be provided to update.",
+          "message": "Оновити властивості наявного облікового запису у Front. Ви можете змінити назву, опис, домени, зовнішній ID або настроювані поля. Для оновлення потрібно вказати принаймні одне поле."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
+          "source": "Update Account",
+          "message": "Оновити обліковий запис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the account.",
+          "message": "Оновити значення настроюваних полів для облікового запису."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Оновлені значення користувацьких полів"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to update.",
+          "message": "Виберіть або введіть ID облікового запису, який потрібно оновити."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Обліковий запис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to update",
+          "message": "Обліковий запис для оновлення"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "Update the list of email domains associated with this account. This will replace the existing domains.",
+          "message": "Оновити список доменів електронної пошти, пов'язаних із цим обліковим записом. Це замінить наявні домени."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "Домени"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "The new list of domains",
+          "message": "Новий список доменів"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description of the account.",
+          "message": "Оновити опис облікового запису."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "Новий опис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "Update the external system identifier for this account.",
+          "message": "Оновити ідентифікатор зовнішньої системи для цього облікового запису."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "Зовнішній ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "The new external ID",
+          "message": "Новий зовнішній ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "Update the name of the account.",
+          "message": "Оновити назву облікового запису."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The new account name",
+          "message": "Нова назва облікового запису"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
+          "source": "Update an existing account",
+          "message": "Оновити існуючий обліковий запис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the properties of an existing contact in Front. You can modify the name, description, links, or custom fields. At least one field must be provided to update.",
+          "message": "Оновити властивості наявного контакту у Front. Ви можете змінити ім'я, опис, посилання або настроювані поля. Для оновлення потрібно вказати принаймні одне поле."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Оновити контакт"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to update.",
+          "message": "Виберіть або введіть ID контакту, який потрібно оновити."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Контакт"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to update",
+          "message": "Контакт для оновлення"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the contact.",
+          "message": "Оновити значення настроюваних полів для контакту."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Оновлені значення користувацьких полів"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description or notes about the contact. This can include any relevant context about the person.",
+          "message": "Оновити опис або примітки щодо контакту. Це може включати будь-який релевантний контекст про особу."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "Новий опис"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "Список URL-адрес, пов'язаних із цим контактом, як-от профілі в соціальних мережах або вебсайти компаній."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Посилання"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "Пов'язані URL-адреси"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "Update the display name of the contact.",
+          "message": "Оновити відображуване ім'я контакту."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The new contact name",
+          "message": "Нове ім'я контакту"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Оновити існуючий контакт"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Update the properties of an existing conversation in Front. You can change the status, move to a different inbox, or update custom fields.",
+          "message": "Оновіть властивості наявної розмови у Front. Ви можете змінити статус, перемістити до іншої вхідної скриньки або оновити настроювані поля."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Update Conversation",
+          "message": "Оновити розмову"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to update.",
+          "message": "Виберіть або введіть ID розмови, яку потрібно оновити."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "Розмова для оновлення"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the conversation.",
+          "message": "Оновити значення настроюваних полів для розмови."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Оновлені значення користувацьких полів"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Move the conversation to a different inbox.",
+          "message": "Перемістити розмову до іншої вхідної скриньки."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Вхідні"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Move to inbox",
+          "message": "Перемістити до вхідної скриньки"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Відкрита"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "В архіві"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Видалено"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Спам"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Update the conversation status to open, archived, deleted, or spam.",
+          "message": "Оновити статус розмови на open, archived, deleted або spam."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Статус"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status",
+          "message": "Новий статус"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Update a conversation",
+          "message": "Оновити розмову"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.desc": {
+          "source": "Assign a conversation to a teammate or unassign it. Assigning conversations helps route work to the right team members and track ownership.",
+          "message": "Призначити розмову учаснику команди або скасувати призначення. Призначення розмов допомагає спрямовувати роботу відповідним членам команди та відстежувати відповідальність."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
+          "source": "Update Conversation Assignee",
+          "message": "Оновити призначеного виконавця розмови"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to assign.",
+          "message": "Виберіть або введіть ID розмови, яку потрібно призначити."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Розмова"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "Розмова для оновлення"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.desc": {
+          "source": "Select a teammate to assign the conversation to. Leave empty to unassign the conversation.",
+          "message": "Виберіть учасника команди, якому слід призначити розмову. Залиште порожнім, щоб скасувати призначення розмови."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.display_name": {
+          "source": "Assignee",
+          "message": "Виконавець"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.short_desc": {
+          "source": "The teammate to assign",
+          "message": "Учасник команди для призначення"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
+          "source": "Assign or unassign a conversation",
+          "message": "Призначити або скасувати призначення розмови"
+        },
+        "app.RnJvbnQ.desc": {
+          "source": "Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.",
+          "message": "Інтегруйтеся з Front для керування спільними вхідними скриньками команди, контактами, обліковими записами та розмовами з клієнтами. Front — це платформа комунікації з клієнтами, яка об'єднує електронну пошту та обмін повідомленнями у спільній скриньці. Ця інтеграція дозволяє автоматизувати керування контактами, організовувати облікові записи та оптимізувати співпрацю в команді."
+        },
+        "app.RnJvbnQ.display_name": {
+          "source": "Front",
+          "message": "Front"
+        },
+        "app.RnJvbnQ.short_desc": {
+          "source": "Connect with Front to manage shared inboxes, contacts, and customer communications",
+          "message": "Підключіться до Front для керування спільними вхідними скриньками, контактами та комунікаціями з клієнтами"
+        }
+      }
+    }
+  }
+}

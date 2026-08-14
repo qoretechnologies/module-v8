@@ -1,0 +1,1945 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.desc": {
+          "source": "Reply to a conversation by sending a message. The message will be appended to the conversation and sent to the recipients. You can optionally save it as a draft instead of sending immediately.",
+          "message": "Auf eine Unterhaltung antworten, indem eine Nachricht gesendet wird. Die Nachricht wird an die Unterhaltung angehängt und an die Empfänger gesendet. Sie können sie optional als Entwurf speichern, anstatt sie sofort zu senden."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.display_name": {
+          "source": "Reply to Conversation",
+          "message": "Auf Unterhaltung antworten"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to reply to.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, auf die Sie antworten möchten."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to reply to",
+          "message": "Die Unterhaltung, auf die geantwortet werden soll"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.desc": {
+          "source": "A list of email addresses to CC on the reply.",
+          "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in CC gesetzt werden sollen."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.display_name": {
+          "source": "CC",
+          "message": "CC"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Y2M.short_desc": {
+          "source": "CC recipients",
+          "message": "CC-Empfänger"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.desc": {
+          "source": "The HTML content of the reply message. This is the main body text that will be sent to recipients.",
+          "message": "Der HTML-Inhalt der Antwortnachricht. Dies ist der Haupttext, der an die Empfänger gesendet wird."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.display_name": {
+          "source": "Message Body",
+          "message": "Nachrichtentext"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.Ym9keQ.short_desc": {
+          "source": "The content of the reply",
+          "message": "Der Inhalt der Antwort"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.desc": {
+          "source": "A list of email addresses to BCC on the reply.",
+          "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in BCC gesetzt werden sollen."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.display_name": {
+          "source": "BCC",
+          "message": "BCC"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.YmNj.short_desc": {
+          "source": "BCC recipients",
+          "message": "BCC-Empfänger"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.desc": {
+          "source": "If true, the message will be saved as a draft instead of being sent immediately. Default is false.",
+          "message": "Wenn true, wird die Nachricht als Entwurf gespeichert, anstatt sofort gesendet zu werden. Standardwert ist false."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.display_name": {
+          "source": "Save as Draft",
+          "message": "Als Entwurf speichern"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.aXNEcmFmdA.short_desc": {
+          "source": "Save as draft instead of sending",
+          "message": "Als Entwurf speichern statt zu senden"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the reply. If not provided, the original conversation subject may be used.",
+          "message": "Eine optionale Betreffzeile für die Antwort. Falls nicht angegeben, wird möglicherweise der ursprüngliche Betreff der Unterhaltung verwendet."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Betreff"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.c3ViamVjdA.short_desc": {
+          "source": "Optional subject line",
+          "message": "Optionale Betreffzeile"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.desc": {
+          "source": "A list of email addresses to send the reply to. These are added to the existing conversation recipients.",
+          "message": "Eine Liste von E-Mail-Adressen, an die die Antwort gesendet werden soll. Diese werden zu den bestehenden Empfängern der Unterhaltung hinzugefügt."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.display_name": {
+          "source": "To",
+          "message": "An"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.option.dG8.short_desc": {
+          "source": "Additional recipients",
+          "message": "Zusätzliche Empfänger"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX21lc3NhZ2VfcmVwbHk.short_desc": {
+          "source": "Send a reply message to a conversation",
+          "message": "Eine Antwortnachricht an eine Unterhaltung senden"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.desc": {
+          "source": "Create a new account in Front. Accounts represent companies or organizations and can be used to group related contacts together. You can associate domains with accounts to automatically link contacts.",
+          "message": "Erstellen Sie ein neues Konto in Front. Konten repräsentieren Unternehmen oder Organisationen und können verwendet werden, um zugehörige Kontakte zu gruppieren. Sie können Domänen mit Konten verknüpfen, um Kontakte automatisch zu verbinden."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.display_name": {
+          "source": "Create Account",
+          "message": "Konto erstellen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the account. The keys should match your configured custom field names.",
+          "message": "Ein Objekt, das benutzerdefinierte Feldwerte für das Konto enthält. Die Schlüssel sollten Ihren konfigurierten benutzerdefinierten Feldnamen entsprechen."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "A list of email domains (e.g., \"example.com\") associated with this account. Contacts with email addresses from these domains can be automatically linked to the account.",
+          "message": "Eine Liste von E-Mail-Domänen (z. B. \"example.com\"), die diesem Konto zugeordnet sind. Kontakte mit E-Mail-Adressen aus diesen Domänen können automatisch mit dem Konto verknüpft werden."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "Domänen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "Email domains associated with the account",
+          "message": "Dem Konto zugeordnete E-Mail-Domänen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description providing additional context about the account, such as the type of business or relationship.",
+          "message": "Eine optionale Beschreibung, die zusätzlichen Kontext zum Konto bietet, wie z. B. die Art des Geschäfts oder die Beziehung."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the account",
+          "message": "Eine Beschreibung des Kontos"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "An optional external ID to link this account to a record in another system, such as a CRM or billing platform.",
+          "message": "Eine optionale externe ID, um dieses Konto mit einem Datensatz in einem anderen System zu verknüpfen, wie z. B. einem CRM oder einer Abrechnungsplattform."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "Externe ID"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "External system identifier",
+          "message": "Kennung des externen Systems"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The name of the account, typically the company or organization name. This is a required field.",
+          "message": "Der Name des Kontos, typischerweise der Firmen- oder Organisationsname. Dies ist ein Pflichtfeld."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The account name",
+          "message": "Der Kontoname"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
+          "source": "Create a new account",
+          "message": "Neues Konto erstellen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Front. Contacts represent the people you communicate with. A contact must have at least one handle (email, phone, etc.) to be created.",
+          "message": "Erstellen Sie einen neuen Kontakt in Front. Kontakte repräsentieren die Personen, mit denen Sie kommunizieren. Ein Kontakt muss mindestens ein Handle (E-Mail, Telefon usw.) haben, um erstellt zu werden."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Kontakt erstellen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "An object containing custom field values for the contact. The keys should match your configured custom field names.",
+          "message": "Ein Objekt, das benutzerdefinierte Feldwerte für den Kontakt enthält. Die Schlüssel sollten Ihren konfigurierten benutzerdefinierten Feldnamen entsprechen."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.desc": {
+          "source": "A list of group names to add the contact to. Groups help organize contacts into categories.",
+          "message": "Eine Liste von Gruppennamen, zu denen der Kontakt hinzugefügt werden soll. Gruppen helfen dabei, Kontakte in Kategorien zu organisieren."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.display_name": {
+          "source": "Group Names",
+          "message": "Gruppennamen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.Z3JvdXBOYW1lcw.short_desc": {
+          "source": "Groups to add the contact to",
+          "message": "Gruppen, zu denen der Kontakt hinzugefügt werden soll"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description or notes about the contact. This can include any relevant context about the person.",
+          "message": "Eine optionale Beschreibung oder Notizen zum Kontakt. Dies kann jeglichen relevanten Kontext zur Person enthalten."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact",
+          "message": "Eine Beschreibung des Kontakts"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.desc": {
+          "source": "A list of handles for the contact. Each handle consists of a handle value (e.g., email address) and a source type (email, phone, twitter, etc.). At least one handle is required.",
+          "message": "Eine Liste von Handles für den Kontakt. Jedes Handle besteht aus einem Handle-Wert (z. B. E-Mail-Adresse) und einem Quelltyp (E-Mail, Telefon, Twitter usw.). Mindestens ein Handle ist erforderlich."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.display_name": {
+          "source": "Handles",
+          "message": "Handles"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.aGFuZGxlcw.short_desc": {
+          "source": "Contact handles (email, phone, etc.)",
+          "message": "Kontakt-Handles (E-Mail, Telefon usw.)"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "Eine Liste von URLs, die diesem Kontakt zugeordnet sind, wie z. B. Social-Media-Profile oder Unternehmenswebsites."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Links"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "Zugeordnete URLs"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "The display name of the contact. This is optional but recommended for easier identification.",
+          "message": "Der Anzeigename des Kontakts. Dies ist optional, wird aber für eine einfachere Identifizierung empfohlen."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The contact name",
+          "message": "Der Kontaktname"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Neuen Kontakt erstellen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list in Front. Contact lists help you organize contacts into logical groups. The list will be created in the oldest active workspace that your token has access to.",
+          "message": "Erstellen Sie eine neue Kontaktliste in Front. Kontaktlisten helfen Ihnen dabei, Kontakte in logische Gruppen zu organisieren. Die Liste wird im ältesten aktiven Arbeitsbereich erstellt, auf den Ihr Token Zugriff hat."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "Kontaktliste erstellen"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of the contact list or the criteria for contacts in it.",
+          "message": "Eine optionale Beschreibung, die den Zweck der Kontaktliste oder die Kriterien für die darin enthaltenen Kontakte erläutert."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "A description of the contact list",
+          "message": "Eine Beschreibung der Kontaktliste"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "The name of the contact list. Choose a descriptive name that clearly identifies the purpose of the list.",
+          "message": "Der Name der Kontaktliste. Wählen Sie einen aussagekräftigen Namen, der den Zweck der Liste klar identifiziert."
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The contact list name",
+          "message": "Der Name der Kontaktliste"
+        },
+        "app.RnJvbnQ.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Neue Kontaktliste erstellen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "Add a new note to a contact in Front. Notes are internal annotations that are only visible to your team members. Use notes to document important information, context, or reminders about a contact.",
+          "message": "Fügen Sie einem Kontakt in Front eine neue Notiz hinzu. Notizen sind interne Anmerkungen, die nur für Ihre Teammitglieder sichtbar sind. Verwenden Sie Notizen, um wichtige Informationen, Kontext oder Erinnerungen zu einem Kontakt zu dokumentieren."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "Add Note to Contact",
+          "message": "Notiz zu Kontakt hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to add a note to.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, dem Sie eine Notiz hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to add the note to",
+          "message": "Der Kontakt, dem die Notiz hinzugefügt werden soll"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.desc": {
+          "source": "Select the teammate who will be recorded as the author of this note. This is a required field.",
+          "message": "Wählen Sie das Teammitglied aus, das als Autor dieser Notiz erfasst wird. Dies ist ein Pflichtfeld."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.display_name": {
+          "source": "Author",
+          "message": "Autor"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.YXV0aG9ySWQ.short_desc": {
+          "source": "The teammate who authored the note",
+          "message": "Das Teammitglied, das die Notiz verfasst hat"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.desc": {
+          "source": "The text content of the note. This will be visible to all team members who can access the contact.",
+          "message": "Der Textinhalt der Notiz. Dieser ist für alle Teammitglieder sichtbar, die Zugriff auf den Kontakt haben."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.display_name": {
+          "source": "Note Body",
+          "message": "Notiztext"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Ym9keQ.short_desc": {
+          "source": "The content of the note",
+          "message": "Der Inhalt der Notiz"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Add a note to a contact",
+          "message": "Eine Notiz zu einem Kontakt hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.desc": {
+          "source": "Add one or more contacts to an account in Front. This creates an association between the contacts and the account, helping you organize contacts by company or organization.",
+          "message": "Fügen Sie einem Konto in Front einen oder mehrere Kontakte hinzu. Dadurch wird eine Verknüpfung zwischen den Kontakten und dem Konto hergestellt, was Ihnen hilft, Kontakte nach Unternehmen oder Organisation zu organisieren."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
+          "source": "Add Contact to Account",
+          "message": "Kontakt zu Konto hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the account. Contact IDs start with \"crd_\".",
+          "message": "Wählen Sie einen oder mehrere Kontakte aus, die dem Konto hinzugefügt werden sollen. Kontakt-IDs beginnen mit \"crd_\"."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Kontakte"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "Die hinzuzufügenden Kontakte"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account where you want to add contacts.",
+          "message": "Wählen Sie die ID des Kontos aus oder geben Sie sie ein, dem Sie Kontakte hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to add contacts to",
+          "message": "Das Konto, dem Kontakte hinzugefügt werden sollen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
+          "source": "Add contacts to an account",
+          "message": "Kontakte zu einem Konto hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Add one or more contacts to a contact list in Front. This helps you organize contacts into logical groups for easier management and targeted communication.",
+          "message": "Fügen Sie einer Kontaktliste in Front einen oder mehrere Kontakte hinzu. Dies hilft Ihnen, Kontakte in logische Gruppen zu unterteilen, um die Verwaltung und gezielte Kommunikation zu erleichtern."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Add Contacts to Contact List",
+          "message": "Kontakte zu Kontaktliste hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to add to the contact list.",
+          "message": "Wählen Sie einen oder mehrere Kontakte aus, die der Kontaktliste hinzugefügt werden sollen."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Kontakte"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to add",
+          "message": "Die hinzuzufügenden Kontakte"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list where you want to add contacts.",
+          "message": "Wählen Sie die ID der Kontaktliste aus oder geben Sie sie ein, der Sie Kontakte hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Kontaktliste"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "Die Kontaktliste, der Kontakte hinzugefügt werden sollen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnRhY3RzX3RvX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "Kontakte zu einer Kontaktliste hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Add one or more tags to a conversation in Front. Tags help categorize and organize conversations for easier filtering and reporting.",
+          "message": "Fügen Sie einer Konversation in Front einen oder mehrere Tags hinzu. Tags helfen beim Kategorisieren und Organisieren von Konversationen für einfacheres Filtern und Berichten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Add Tag to Conversation",
+          "message": "Tag zu Konversation hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add tags to.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, der Sie Tags hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to tag",
+          "message": "Die zu taggende Konversation"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to add to the conversation.",
+          "message": "Wählen Sie einen oder mehrere Tags aus, die der Konversation hinzugefügt werden sollen."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to add",
+          "message": "Die hinzuzufügenden Tags"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Add tags to a conversation",
+          "message": "Tags zu einer Konversation hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.desc": {
+          "source": "Add an internal comment to a conversation in Front. Comments are private messages visible only to your teammates and are never sent to external contacts. Use comments for internal notes, discussions, or context sharing.",
+          "message": "Fügen Sie einer Konversation in Front einen internen Kommentar hinzu. Kommentare sind private Nachrichten, die nur für Ihre Teammitglieder sichtbar sind und niemals an externe Kontakte gesendet werden. Verwenden Sie Kommentare für interne Notizen, Diskussionen oder das Teilen von Kontext."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.display_name": {
+          "source": "Add Comment to Conversation",
+          "message": "Kommentar zu Konversation hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add a comment to.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, der Sie einen Kommentar hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add a comment to",
+          "message": "Die Konversation, der ein Kommentar hinzugefügt werden soll"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.desc": {
+          "source": "The text content of the internal comment. This will be visible to all teammates who can access the conversation.",
+          "message": "Der Textinhalt des internen Kommentars. Dieser ist für alle Teammitglieder sichtbar, die Zugriff auf die Konversation haben."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.display_name": {
+          "source": "Comment Body",
+          "message": "Kommentartext"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.option.Ym9keQ.short_desc": {
+          "source": "The content of the comment",
+          "message": "Der Inhalt des Kommentars"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9jb21tZW50.short_desc": {
+          "source": "Add an internal comment to a conversation",
+          "message": "Internen Kommentar zu einer Konversation hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.desc": {
+          "source": "Add teammates as followers to a conversation. Followers receive notifications about conversation updates without being the assignee.",
+          "message": "Fügen Sie Teammitglieder als Follower zu einer Konversation hinzu. Follower erhalten Benachrichtigungen über Konversationsaktualisierungen, ohne der Zugewiesene zu sein."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.display_name": {
+          "source": "Add Conversation Followers",
+          "message": "Konversations-Follower hinzufügen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add followers to.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, der Sie Follower hinzufügen möchten."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add followers to",
+          "message": "Die Konversation, der Follower hinzugefügt werden sollen"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.desc": {
+          "source": "Select one or more teammates to add as followers to the conversation.",
+          "message": "Wählen Sie ein oder mehrere Teammitglieder aus, die als Follower zur Konversation hinzugefügt werden sollen."
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.display_name": {
+          "source": "Teammates",
+          "message": "Teammitglieder"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.option.dGVhbW1hdGVJZHM.short_desc": {
+          "source": "The teammates to add as followers",
+          "message": "Die als Follower hinzuzufügenden Teammitglieder"
+        },
+        "app.RnJvbnQ.action.YWRkX2NvbnZlcnNhdGlvbl9mb2xsb3dlcnM.short_desc": {
+          "source": "Add followers to a conversation",
+          "message": "Follower zu einer Konversation hinzufügen"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Retrieve the full details of a specific message from Front by its ID. Returns all message data including content, author, recipients, and attachments.",
+          "message": "Rufen Sie die vollständigen Details einer bestimmten Nachricht aus Front anhand ihrer ID ab. Gibt alle Nachrichtendaten einschließlich Inhalt, Autor, Empfänger und Anhänge zurück."
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get Message",
+          "message": "Nachricht abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.desc": {
+          "source": "Enter the ID of the message you want to retrieve. Message IDs start with \"msg_\".",
+          "message": "Geben Sie die ID der Nachricht ein, die Sie abrufen möchten. Nachrichten-IDs beginnen mit \"msg_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.display_name": {
+          "source": "Message ID",
+          "message": "Nachrichten-ID"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZUlk.short_desc": {
+          "source": "The message to retrieve",
+          "message": "Die abzurufende Nachricht"
+        },
+        "app.RnJvbnQ.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve a single message by ID",
+          "message": "Eine einzelne Nachricht anhand der ID abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Retrieve the full details of a specific account from Front by its ID. Returns all account data including name, description, domains, external ID, and custom fields.",
+          "message": "Rufen Sie die vollständigen Details eines bestimmten Kontos aus Front anhand seiner ID ab. Gibt alle Kontodaten einschließlich Name, Beschreibung, Domänen, externer ID und benutzerdefinierter Felder zurück."
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "Konto abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to retrieve. Account IDs start with \"acc_\".",
+          "message": "Wählen Sie die ID des Kontos aus oder geben Sie sie ein, das Sie abrufen möchten. Konto-IDs beginnen mit \"acc_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to retrieve",
+          "message": "Das abzurufende Konto"
+        },
+        "app.RnJvbnQ.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve a single account by ID",
+          "message": "Ein einzelnes Konto anhand der ID abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve the full details of a specific contact from Front by their ID. Returns all contact data including name, handles (email, phone, etc.), groups, links, and custom fields.",
+          "message": "Rufen Sie die vollständigen Details eines bestimmten Kontakts aus Front anhand seiner ID ab. Gibt alle Kontaktdaten einschließlich Name, Handles (E-Mail, Telefon usw.), Gruppen, Links und benutzerdefinierter Felder zurück."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Kontakt abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to retrieve. Contact IDs start with \"crd_\".",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie abrufen möchten. Kontakt-IDs beginnen mit \"crd_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to retrieve",
+          "message": "Der abzurufende Kontakt"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve a single contact by ID",
+          "message": "Einen einzelnen Kontakt anhand der ID abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Retrieve the full details of a specific conversation from Front by its ID. Returns all conversation data including subject, status, assignee, tags, and custom fields.",
+          "message": "Rufen Sie die vollständigen Details einer bestimmten Konversation aus Front anhand ihrer ID ab. Gibt alle Konversationsdaten einschließlich Betreff, Status, Zugewiesenem, Tags und benutzerdefinierter Felder zurück."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Get Conversation",
+          "message": "Konversation abrufen"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to retrieve. Conversation IDs start with \"cnv_\".",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie abrufen möchten. Konversations-IDs beginnen mit \"cnv_\"."
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to retrieve",
+          "message": "Die abzurufende Konversation"
+        },
+        "app.RnJvbnQ.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Retrieve a single conversation by ID",
+          "message": "Eine einzelne Konversation anhand der ID abrufen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.desc": {
+          "source": "Delete an account from Front. This action is permanent. Contacts associated with the account will not be deleted but will no longer be linked to this account.",
+          "message": "Löschen Sie ein Konto aus Front. Diese Aktion ist dauerhaft. Dem Konto zugeordnete Kontakte werden nicht gelöscht, sind jedoch nicht mehr mit diesem Konto verknüpft."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.display_name": {
+          "source": "Delete Account",
+          "message": "Konto löschen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to delete.",
+          "message": "Wählen Sie die ID des Accounts aus oder geben Sie sie ein, den Sie löschen möchten."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to delete",
+          "message": "Der zu löschende Account"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2FjY291bnQ.short_desc": {
+          "source": "Delete an account",
+          "message": "Einen Account löschen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Delete a contact from Front. This action is permanent and will remove all associated data. Conversations with this contact will remain but will no longer be linked to the contact.",
+          "message": "Löschen Sie einen Kontakt aus Front. Diese Aktion ist dauerhaft und entfernt alle zugehörigen Daten. Unterhaltungen mit diesem Kontakt bleiben bestehen, werden aber nicht mehr mit dem Kontakt verknüpft."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Kontakt löschen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to delete.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie löschen möchten."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to delete",
+          "message": "Der zu löschende Kontakt"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Einen Kontakt löschen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Delete a contact list from Front. This removes the list but does not delete the contacts that were in it. The contacts will remain in your workspace.",
+          "message": "Löschen Sie eine Kontaktliste aus Front. Dadurch wird die Liste entfernt, jedoch nicht die darin enthaltenen Kontakte. Die Kontakte verbleiben in Ihrem Workspace."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Delete Contact List",
+          "message": "Kontaktliste löschen"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list you want to delete.",
+          "message": "Wählen Sie die ID der Kontaktliste aus oder geben Sie sie ein, die Sie löschen möchten."
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Kontaktliste"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to delete",
+          "message": "Die zu löschende Kontaktliste"
+        },
+        "app.RnJvbnQ.action.ZGVsZXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Eine Kontaktliste löschen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.desc": {
+          "source": "Retrieve a list of all contacts that are associated with a specific account. This helps you see all the people from a particular company or organization.",
+          "message": "Rufen Sie eine Liste aller Kontakte ab, die einem bestimmten Account zugeordnet sind. Dies hilft Ihnen, alle Personen eines bestimmten Unternehmens oder einer Organisation zu sehen."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.display_name": {
+          "source": "List Account Contacts",
+          "message": "Account-Kontakte auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account whose contacts you want to retrieve.",
+          "message": "Wählen Sie die ID des Accounts aus oder geben Sie sie ein, dessen Kontakte Sie abrufen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to list contacts from",
+          "message": "Der Account, dessen Kontakte aufgelistet werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maximale Anzahl zurückzugebender Kontakte"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50X2NvbnRhY3Rz.short_desc": {
+          "source": "List contacts associated with an account",
+          "message": "Einem Account zugeordnete Kontakte auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Retrieve a list of all accounts in your Front workspace. Accounts represent companies or organizations that your contacts belong to. Use accounts to group contacts and track interactions at the company level.",
+          "message": "Rufen Sie eine Liste aller Accounts in Ihrem Front-Workspace ab. Accounts repräsentieren Unternehmen oder Organisationen, denen Ihre Kontakte angehören. Verwenden Sie Accounts, um Kontakte zu gruppieren und Interaktionen auf Unternehmensebene zu verfolgen."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "Konten auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of account records to return. Default is 50. Use pagination for larger datasets.",
+          "message": "Die maximale Anzahl an zurückzugebenden Account-Datensätzen. Standard ist 50. Verwenden Sie die Paginierung für größere Datensätze."
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to return",
+          "message": "Maximale Anzahl zurückzugebender Konten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts",
+          "message": "Eine Liste von Konten abrufen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.desc": {
+          "source": "Retrieve all notes that have been added to a specific contact. Notes are internal annotations visible only to your team, useful for documenting important information about contacts.",
+          "message": "Rufen Sie alle Notizen ab, die einem bestimmten Kontakt hinzugefügt wurden. Notizen sind interne Anmerkungen, die nur für Ihr Team sichtbar sind, und eignen sich zur Dokumentation wichtiger Informationen über Kontakte."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.display_name": {
+          "source": "List Contact Notes",
+          "message": "Kontaktnotizen auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose notes you want to retrieve.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, dessen Notizen Sie abrufen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list notes for",
+          "message": "Der Kontakt, dessen Notizen aufgelistet werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of note records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Notizdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "Maximale Anzahl zurückzugebender Notizen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X25vdGVz.short_desc": {
+          "source": "List notes for a contact",
+          "message": "Notizen für einen Kontakt auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Retrieve a list of all conversations associated with a specific contact. Conversations are returned in reverse chronological order (newest first). This helps you see the full communication history with a contact.",
+          "message": "Rufen Sie eine Liste aller Unterhaltungen ab, die einem bestimmten Kontakt zugeordnet sind. Unterhaltungen werden in umgekehrter chronologischer Reihenfolge (neueste zuerst) zurückgegeben. Dies hilft Ihnen, den vollständigen Kommunikationsverlauf mit einem Kontakt zu sehen."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "List Contact Conversations",
+          "message": "Kontaktunterhaltungen auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact whose conversations you want to retrieve.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, dessen Unterhaltungen Sie abrufen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to list conversations for",
+          "message": "Der Kontakt, dessen Unterhaltungen aufgelistet werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Maximale Anzahl an zurückzugebenden Unterhaltungen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "List conversations for a contact",
+          "message": "Unterhaltungen für einen Kontakt auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your Front workspace. Contact lists are used to organize contacts into groups for easier management, such as for marketing campaigns or customer segments.",
+          "message": "Rufen Sie eine Liste aller Kontaktlisten in Ihrem Front-Workspace ab. Kontaktlisten werden verwendet, um Kontakte zur einfacheren Verwaltung in Gruppen zu organisieren, beispielsweise für Marketingkampagnen oder Kundensegmente."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "Kontaktlisten auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact list records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Kontaktlistendatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contact lists to return",
+          "message": "Maximale Anzahl an zurückzugebenden Kontaktlisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Alle Kontaktlisten abrufen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.desc": {
+          "source": "Retrieve all contacts that belong to a specific contact list. This helps you see which contacts are included in a particular list or segment.",
+          "message": "Rufen Sie alle Kontakte ab, die zu einer bestimmten Kontaktliste gehören. Dies hilft Ihnen zu sehen, welche Kontakte in einer bestimmten Liste oder einem bestimmten Segment enthalten sind."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.display_name": {
+          "source": "List Contacts in Contact List",
+          "message": "Kontakte in Kontaktliste auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list whose contacts you want to see.",
+          "message": "Wählen Sie die ID der Kontaktliste aus oder geben Sie sie ein, deren Kontakte Sie anzeigen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Kontaktliste"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to retrieve contacts from",
+          "message": "Die Kontaktliste, aus der Kontakte abgerufen werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maximale Anzahl zurückzugebender Kontakte"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0c19pbl9jb250YWN0X2xpc3Q.short_desc": {
+          "source": "List contacts in a specific contact list",
+          "message": "Kontakte in einer bestimmten Kontaktliste auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a list of all contacts in your Front workspace. Contacts represent the people you communicate with. Results can be sorted by creation or update date.",
+          "message": "Rufen Sie eine Liste aller Kontakte in Ihrem Front-Workspace ab. Kontakte repräsentieren die Personen, mit denen Sie kommunizieren. Ergebnisse können nach Erstellungs- oder Aktualisierungsdatum sortiert werden."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Kontakte auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of contact records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Kontaktdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maximale Anzahl zurückzugebender Kontakte"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: desc (neueste zuerst) oder asc (älteste zuerst)."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Sortierreihenfolge"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "Sortierrichtung"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOmNyZWF0ZWRfYXQ.display_name": {
+          "source": "Created At",
+          "message": "Erstellt am"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.allowed-value.c3RyaW5nOnVwZGF0ZWRfYXQ.display_name": {
+          "source": "Updated At",
+          "message": "Aktualisiert am"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.desc": {
+          "source": "The field to sort results by: created_at or updated_at.",
+          "message": "Das Feld, nach dem die Ergebnisse sortiert werden sollen: created_at oder updated_at."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.display_name": {
+          "source": "Sort By",
+          "message": "Sortieren nach"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort by",
+          "message": "Feld zum Sortieren"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Eine Liste von Kontakten abrufen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.desc": {
+          "source": "Retrieve a list of all internal comments in a specific conversation. Comments are returned in reverse chronological order (newest first). This provides the full internal discussion history of a conversation.",
+          "message": "Rufen Sie eine Liste aller internen Kommentare in einer bestimmten Unterhaltung ab. Kommentare werden in umgekehrter chronologischer Reihenfolge (neueste zuerst) zurückgegeben. Dies bietet den vollständigen internen Diskussionsverlauf einer Unterhaltung."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.display_name": {
+          "source": "List Conversation Comments",
+          "message": "Unterhaltungskommentare auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose comments you want to retrieve.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, deren Kommentare Sie abrufen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list comments from",
+          "message": "Die Unterhaltung, aus der Kommentare aufgelistet werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of comment records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Kommentardatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "Maximale Anzahl der zurückzugebenden Kommentare"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fY29tbWVudHM.short_desc": {
+          "source": "List comments in a conversation",
+          "message": "Kommentare in einer Unterhaltung auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.desc": {
+          "source": "Retrieve a list of all messages in a specific conversation. Messages are returned in reverse chronological order (newest first). This provides the full message history of a conversation.",
+          "message": "Rufen Sie eine Liste aller Nachrichten in einer bestimmten Unterhaltung ab. Nachrichten werden in umgekehrter chronologischer Reihenfolge (neueste zuerst) zurückgegeben. Dies bietet den vollständigen Nachrichtenverlauf einer Unterhaltung."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.display_name": {
+          "source": "List Conversation Messages",
+          "message": "Unterhaltungsnachrichten auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose messages you want to retrieve.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, deren Nachrichten Sie abrufen möchten."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list messages from",
+          "message": "Die Unterhaltung, aus der Nachrichten aufgelistet werden sollen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Nachrichtendatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "Maximale Anzahl an zurückzugebenden Nachrichten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25fbWVzc2FnZXM.short_desc": {
+          "source": "List messages in a conversation",
+          "message": "Nachrichten in einer Unterhaltung auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.desc": {
+          "source": "Retrieve a list of conversations in your Front workspace. Conversations are returned in reverse chronological order (most recently updated first). You can filter by inbox or status.",
+          "message": "Rufen Sie eine Liste von Unterhaltungen in Ihrem Front-Workspace ab. Unterhaltungen werden in umgekehrter chronologischer Reihenfolge (zuletzt aktualisierte zuerst) zurückgegeben. Sie können nach Posteingang oder Status filtern."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
+          "source": "List Conversations",
+          "message": "Unterhaltungen auflisten"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter conversations to a specific inbox. Leave empty to retrieve conversations from all inboxes.",
+          "message": "Filtern Sie Unterhaltungen optional nach einem bestimmten Posteingang. Leer lassen, um Unterhaltungen aus allen Posteingängen abzurufen."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Posteingang"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "Nach Posteingang filtern"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Maximale Anzahl an zurückzugebenden Unterhaltungen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "Archiviert"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Gelöscht"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.desc": {
+          "source": "Optionally filter conversations by their status: open, archived, deleted, or spam.",
+          "message": "Filtern Sie Unterhaltungen optional nach ihrem Status: open, archived, deleted oder spam."
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "Nach Unterhaltungsstatus filtern"
+        },
+        "app.RnJvbnQ.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
+          "source": "Retrieve a list of conversations",
+          "message": "Eine Liste von Unterhaltungen abrufen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Front** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Front** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App verfügbar sind."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.RnJvbnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Front",
+          "message": "Einen benutzerdefinierten API-Aufruf an Front durchführen"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.desc": {
+          "source": "This trigger fires whenever a new internal comment is added to a specific conversation in Front. Comments are private messages visible only to teammates. You must specify which conversation to monitor for new comments.",
+          "message": "Dieser Auslöser wird ausgelöst, wenn einer bestimmten Unterhaltung in Front ein neuer interner Kommentar hinzugefügt wird. Kommentare sind private Nachrichten, die nur für Teammitglieder sichtbar sind. Sie müssen angeben, welche Unterhaltung auf neue Kommentare überwacht werden soll."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.display_name": {
+          "source": "New Comment",
+          "message": "Neuer Kommentar"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to monitor for new comments. The trigger will fire whenever a new comment is added to this conversation.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, die Sie auf neue Kommentare überwachen möchten. Der Auslöser wird ausgelöst, wenn dieser Unterhaltung ein neuer Kommentar hinzugefügt wird."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to monitor",
+          "message": "Die zu überwachende Unterhaltung"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbW1lbnQ.short_desc": {
+          "source": "Triggers when a new comment is added to a conversation",
+          "message": "Wird ausgelöst, wenn einer Unterhaltung ein neuer Kommentar hinzugefügt wird"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger fires whenever a new contact is created in Front. Use this to automate workflows when new contacts are added to your workspace.",
+          "message": "Dieser Auslöser wird ausgelöst, wenn ein neuer Kontakt in Front erstellt wird. Verwenden Sie dies, um Arbeitsabläufe zu automatisieren, wenn neue Kontakte zu Ihrem Arbeitsbereich hinzugefügt werden."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Neuer Kontakt"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "Wird ausgelöst, wenn ein neuer Kontakt erstellt wird"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "This trigger fires whenever a new note is added to a specific contact in Front. You must specify which contact to monitor for new notes.",
+          "message": "Dieser Auslöser wird ausgelöst, wenn einem bestimmten Kontakt in Front eine neue Notiz hinzugefügt wird. Sie müssen angeben, welcher Kontakt auf neue Notizen überwacht werden soll."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "New Contact Note",
+          "message": "Neue Kontaktnotiz"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to monitor for new notes. The trigger will fire whenever a new note is added to this contact.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie auf neue Notizen überwachen möchten. Der Auslöser wird ausgelöst, wenn diesem Kontakt eine neue Notiz hinzugefügt wird."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to monitor",
+          "message": "Der zu überwachende Kontakt"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Triggers when a new note is added to a contact",
+          "message": "Wird ausgelöst, wenn einem Kontakt eine neue Notiz hinzugefügt wird"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation is created in Front. You can optionally filter by inbox or status to only trigger for specific types of conversations.",
+          "message": "Dieser Auslöser wird ausgelöst, wenn eine neue Unterhaltung in Front erstellt wird. Sie können optional nach Posteingang oder Status filtern, um nur bei bestimmten Typen von Unterhaltungen auszulösen."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "Neue Unterhaltung"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific inbox. Leave empty to trigger for all inboxes.",
+          "message": "Optionale Filterung, um nur bei Unterhaltungen in einem bestimmten Posteingang auszulösen. Leer lassen, um bei allen Posteingängen auszulösen."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Posteingang"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Filter by inbox",
+          "message": "Nach Posteingang filtern"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "Archiviert"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Gelöscht"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Optionally filter to only trigger for conversations with a specific status: open, archived, deleted, or spam.",
+          "message": "Optionale Filterung, um nur bei Unterhaltungen mit einem bestimmten Status auszulösen: open, archived, deleted oder spam."
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "Nach Unterhaltungsstatus filtern"
+        },
+        "app.RnJvbnQ.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created",
+          "message": "Wird ausgelöst, wenn eine neue Unterhaltung erstellt wird"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.desc": {
+          "source": "Search for conversations in Front using a search query. Returns matching conversations in descending order by last activity along with a count of total matches.",
+          "message": "Suchen Sie mithilfe einer Suchanfrage nach Unterhaltungen in Front. Gibt übereinstimmende Unterhaltungen in absteigender Reihenfolge nach der letzten Aktivität zusammen mit einer Anzahl aller Treffer zurück."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.display_name": {
+          "source": "Search Conversations",
+          "message": "Unterhaltungen suchen"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 25.",
+          "message": "Die maximale Anzahl der zurückzugebenden Unterhaltungsdatensätze. Standard ist 25."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Maximale Anzahl an zurückzugebenden Unterhaltungen"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.desc": {
+          "source": "The search query to find conversations. You can search by keywords, email addresses, or use Front search syntax for advanced queries.",
+          "message": "Die Suchanfrage zum Finden von Unterhaltungen. Sie können nach Schlüsselwörtern oder E-Mail-Adressen suchen oder die Front-Suchsyntax für erweiterte Abfragen verwenden."
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Suchanfrage"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.option.cXVlcnk.short_desc": {
+          "source": "The search query",
+          "message": "Die Suchanfrage"
+        },
+        "app.RnJvbnQ.action.c2VhcmNoX2NvbnZlcnNhdGlvbnM.short_desc": {
+          "source": "Search for conversations",
+          "message": "Nach Unterhaltungen suchen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.desc": {
+          "source": "Remove one or more contacts from an account in Front. This removes the association between the contacts and the account but does not delete the contacts themselves.",
+          "message": "Entfernen Sie einen oder mehrere Kontakte aus einem Konto in Front. Dies hebt die Verknüpfung zwischen den Kontakten und dem Konto auf, löscht die Kontakte selbst jedoch nicht."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.display_name": {
+          "source": "Remove Contact from Account",
+          "message": "Kontakt aus Konto entfernen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the account.",
+          "message": "Wählen Sie einen oder mehrere Kontakte aus, die aus dem Konto entfernt werden sollen."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Kontakte"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "Die zu entfernenden Kontakte"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account from which you want to remove contacts.",
+          "message": "Wählen Sie die ID des Kontos aus oder geben Sie sie ein, aus dem Sie Kontakte entfernen möchten."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to remove contacts from",
+          "message": "Das Konto, aus dem Kontakte entfernt werden sollen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9hY2NvdW50.short_desc": {
+          "source": "Remove contacts from an account",
+          "message": "Kontakte aus einem Konto entfernen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.desc": {
+          "source": "Remove one or more contacts from a contact list in Front. This removes the contacts from the list but does not delete the contacts themselves.",
+          "message": "Entfernen Sie einen oder mehrere Kontakte aus einer Kontaktliste in Front. Dies entfernt die Kontakte aus der Liste, löscht die Kontakte selbst jedoch nicht."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.display_name": {
+          "source": "Remove Contacts from Contact List",
+          "message": "Kontakte aus Kontaktliste entfernen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.desc": {
+          "source": "Select one or more contacts to remove from the contact list.",
+          "message": "Wählen Sie einen oder mehrere Kontakte aus, die aus der Kontaktliste entfernt werden sollen."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contacts",
+          "message": "Kontakte"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove",
+          "message": "Die zu entfernenden Kontakte"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.desc": {
+          "source": "Select or enter the ID of the contact list from which you want to remove contacts.",
+          "message": "Wählen Sie die ID der Kontaktliste aus oder geben Sie sie ein, aus der Sie Kontakte entfernen möchten."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.display_name": {
+          "source": "Contact List",
+          "message": "Kontaktliste"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.option.Y29udGFjdExpc3RJZA.short_desc": {
+          "source": "The contact list to remove contacts from",
+          "message": "Die Kontaktliste, aus der Kontakte entfernt werden sollen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY29udGFjdF9saXN0.short_desc": {
+          "source": "Remove contacts from a contact list",
+          "message": "Kontakte aus einer Kontaktliste entfernen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.desc": {
+          "source": "Remove one or more tags from a conversation in Front. This removes the tag association but does not delete the tags themselves.",
+          "message": "Entfernen Sie ein oder mehrere Tags aus einer Unterhaltung in Front. Dies entfernt die Tag-Verknüpfung, löscht die Tags selbst jedoch nicht."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.display_name": {
+          "source": "Remove Tag from Conversation",
+          "message": "Tag aus Unterhaltung entfernen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to remove tags from.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, aus der Sie Tags entfernen möchten."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to remove tags from",
+          "message": "Die Unterhaltung, aus der Tags entfernt werden sollen"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.desc": {
+          "source": "Select one or more tags to remove from the conversation.",
+          "message": "Wählen Sie ein oder mehrere Tags aus, die aus der Unterhaltung entfernt werden sollen."
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.option.dGFnSWRz.short_desc": {
+          "source": "The tags to remove",
+          "message": "Die zu entfernenden Tags"
+        },
+        "app.RnJvbnQ.action.cmVtb3ZlX2NvbnZlcnNhdGlvbl90YWc.short_desc": {
+          "source": "Remove tags from a conversation",
+          "message": "Tags aus einer Unterhaltung entfernen"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.desc": {
+          "source": "Update the properties of an existing account in Front. You can modify the name, description, domains, external ID, or custom fields. At least one field must be provided to update.",
+          "message": "Aktualisieren Sie die Eigenschaften eines bestehenden Kontos in Front. Sie können den Namen, die Beschreibung, die Domains, die externe ID oder benutzerdefinierte Felder ändern. Es muss mindestens ein Feld zum Aktualisieren angegeben werden."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.display_name": {
+          "source": "Update Account",
+          "message": "Konto aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the account.",
+          "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für das Konto."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Aktualisierte Werte benutzerdefinierter Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.desc": {
+          "source": "Select or enter the ID of the account you want to update.",
+          "message": "Wählen Sie die ID des Kontos aus oder geben Sie sie ein, das Sie aktualisieren möchten."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.display_name": {
+          "source": "Account",
+          "message": "Konto"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The account to update",
+          "message": "Das zu aktualisierende Konto"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.desc": {
+          "source": "Update the list of email domains associated with this account. This will replace the existing domains.",
+          "message": "Aktualisieren Sie die Liste der E-Mail-Domains, die diesem Konto zugeordnet sind. Dies ersetzt die bestehenden Domains."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.display_name": {
+          "source": "Domains",
+          "message": "Domänen"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZG9tYWlucw.short_desc": {
+          "source": "The new list of domains",
+          "message": "Die neue Liste der Domains"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description of the account.",
+          "message": "Aktualisieren Sie die Beschreibung des Kontos."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "Die neue Beschreibung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.desc": {
+          "source": "Update the external system identifier for this account.",
+          "message": "Aktualisieren Sie die externe Systemkennung für dieses Konto."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External ID",
+          "message": "Externe ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.ZXh0ZXJuYWxJZA.short_desc": {
+          "source": "The new external ID",
+          "message": "Die neue externe ID"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "Update the name of the account.",
+          "message": "Aktualisieren Sie den Namen des Kontos."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The new account name",
+          "message": "Der neue Kontoname"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2FjY291bnQ.short_desc": {
+          "source": "Update an existing account",
+          "message": "Ein bestehendes Konto aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the properties of an existing contact in Front. You can modify the name, description, links, or custom fields. At least one field must be provided to update.",
+          "message": "Aktualisieren Sie die Eigenschaften eines bestehenden Kontakts in Front. Sie können den Namen, die Beschreibung, Links oder benutzerdefinierte Felder ändern. Es muss mindestens ein Feld zum Aktualisieren angegeben werden."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Kontakt aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.desc": {
+          "source": "Select or enter the ID of the contact you want to update.",
+          "message": "Wählen Sie die ID des Kontakts aus oder geben Sie sie ein, den Sie aktualisieren möchten."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdElk.short_desc": {
+          "source": "The contact to update",
+          "message": "Der zu aktualisierende Kontakt"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the contact.",
+          "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für den Kontakt."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Aktualisierte Werte benutzerdefinierter Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Update the description or notes about the contact. This can include any relevant context about the person.",
+          "message": "Aktualisieren Sie die Beschreibung oder Notizen zum Kontakt. Dies kann jeden relevanten Kontext zur Person enthalten."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The new description",
+          "message": "Die neue Beschreibung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.desc": {
+          "source": "A list of URLs associated with this contact, such as social media profiles or company websites.",
+          "message": "Eine Liste von URLs, die diesem Kontakt zugeordnet sind, wie z. B. Social-Media-Profile oder Unternehmenswebsites."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Links"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bGlua3M.short_desc": {
+          "source": "Associated URLs",
+          "message": "Zugeordnete URLs"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.desc": {
+          "source": "Update the display name of the contact.",
+          "message": "Aktualisieren Sie den Anzeigenamen des Kontakts."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.option.bmFtZQ.short_desc": {
+          "source": "The new contact name",
+          "message": "Der neue Kontaktname"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Einen bestehenden Kontakt aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Update the properties of an existing conversation in Front. You can change the status, move to a different inbox, or update custom fields.",
+          "message": "Aktualisieren Sie die Eigenschaften einer bestehenden Konversation in Front. Sie können den Status ändern, in einen anderen Posteingang verschieben oder benutzerdefinierte Felder aktualisieren."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Update Conversation",
+          "message": "Konversation aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to update.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie aktualisieren möchten."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "Die zu aktualisierende Konversation"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "Update custom field values for the conversation.",
+          "message": "Aktualisieren Sie benutzerdefinierte Feldwerte für die Konversation."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Updated custom field values",
+          "message": "Aktualisierte Werte benutzerdefinierter Felder"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.desc": {
+          "source": "Move the conversation to a different inbox.",
+          "message": "Verschieben Sie die Konversation in einen anderen Posteingang."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.display_name": {
+          "source": "Inbox",
+          "message": "Posteingang"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.aW5ib3hJZA.short_desc": {
+          "source": "Move to inbox",
+          "message": "In Posteingang verschieben"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFyY2hpdmVk.display_name": {
+          "source": "Archived",
+          "message": "Archiviert"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbGV0ZWQ.display_name": {
+          "source": "Deleted",
+          "message": "Gelöscht"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Update the conversation status to open, archived, deleted, or spam.",
+          "message": "Aktualisieren Sie den Konversationsstatus auf offen, archiviert, gelöscht oder Spam."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status",
+          "message": "Der neue Status"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Update a conversation",
+          "message": "Eine Konversation aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.desc": {
+          "source": "Assign a conversation to a teammate or unassign it. Assigning conversations helps route work to the right team members and track ownership.",
+          "message": "Weisen Sie eine Konversation einem Teammitglied zu oder heben Sie die Zuweisung auf. Die Zuweisung von Konversationen hilft dabei, Aufgaben an die richtigen Teammitglieder weiterzuleiten und die Zuständigkeit zu verfolgen."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.display_name": {
+          "source": "Update Conversation Assignee",
+          "message": "Konversationsbearbeiter aktualisieren"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to assign.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie zuweisen möchten."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "Die zu aktualisierende Konversation"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.desc": {
+          "source": "Select a teammate to assign the conversation to. Leave empty to unassign the conversation.",
+          "message": "Wählen Sie ein Teammitglied aus, dem die Konversation zugewiesen werden soll. Lassen Sie das Feld leer, um die Zuweisung der Konversation aufzuheben."
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.display_name": {
+          "source": "Assignee",
+          "message": "Zugewiesener Benutzer"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.option.YXNzaWduZWVJZA.short_desc": {
+          "source": "The teammate to assign",
+          "message": "Das zuzuweisende Teammitglied"
+        },
+        "app.RnJvbnQ.action.dXBkYXRlX2NvbnZlcnNhdGlvbl9hc3NpZ25lZQ.short_desc": {
+          "source": "Assign or unassign a conversation",
+          "message": "Eine Konversation zuweisen oder Zuweisung aufheben"
+        },
+        "app.RnJvbnQ.desc": {
+          "source": "Integrate with Front to manage your team shared inboxes, contacts, accounts, and customer conversations. Front is a customer communication platform that brings email and messaging into a shared inbox. This integration enables you to automate contact management, organize accounts, and streamline team collaboration.",
+          "message": "Integrieren Sie Front, um die gemeinsamen Posteingänge, Kontakte, Konten und Kundenkonversationen Ihres Teams zu verwalten. Front ist eine Kundenkommunikationsplattform, die E-Mails und Nachrichten in einem gemeinsamen Posteingang zusammenführt. Diese Integration ermöglicht Ihnen die Automatisierung der Kontaktverwaltung, die Organisation von Konten und die Optimierung der Teamzusammenarbeit."
+        },
+        "app.RnJvbnQ.display_name": {
+          "source": "Front",
+          "message": "Front"
+        },
+        "app.RnJvbnQ.short_desc": {
+          "source": "Connect with Front to manage shared inboxes, contacts, and customer communications",
+          "message": "Mit Front verbinden, um gemeinsame Posteingänge, Kontakte und Kundenkommunikation zu verwalten"
+        }
+      }
+    }
+  }
+}

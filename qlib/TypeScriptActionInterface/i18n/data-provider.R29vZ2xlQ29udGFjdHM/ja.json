@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Creates a new contact in Google Contacts with comprehensive information including names, contact details, addresses, organizations, relationships, and custom fields. Returns the created contact's basic information.",
+          "message": "名前、連絡先詳細、住所、組織、関係、カスタムフィールドを含む包括的な情報を使用して、Google コンタクトに新しい連絡先を作成します。作成された連絡先の基本情報を返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "コンタクトを作成"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company or organization where the contact works. This field is optional.",
+          "message": "連絡先が勤務している会社または組織の名前。このフィールドはオプションです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "会社"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "Contact's company or organization",
+          "message": "連絡先の会社または組織"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "A hash of custom key-value pairs for storing additional contact information.",
+          "message": "追加の連絡先情報を格納するためのカスタムキー/値ペアのハッシュ。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "カスタムフィールド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom user-defined fields",
+          "message": "ユーザー定義のカスタムフィールド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.desc": {
+          "source": "A list of additional phone numbers with their respective types. Each entry contains a number and type.",
+          "message": "それぞれのタイプが含まれる追加の電話番号のリスト。各エントリーには番号とタイプが含まれます。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.display_name": {
+          "source": "Additional Phone Numbers",
+          "message": "追加の電話番号"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.short_desc": {
+          "source": "Additional phone numbers for the contact",
+          "message": "連絡先の追加の電話番号"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.desc": {
+          "source": "Complete address information for the contact including street, city, state, and country.",
+          "message": "町名・番地、市区町村、都道府県、国を含む連絡先の完全な住所情報。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "住所"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.short_desc": {
+          "source": "Contact's address information",
+          "message": "連絡先の住所情報"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.desc": {
+          "source": "The contact's date of birth. Provide as a date value.",
+          "message": "連絡先の生年月日。日付値として提供します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.display_name": {
+          "source": "Birthday",
+          "message": "誕生日"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.short_desc": {
+          "source": "Contact's birthday",
+          "message": "連絡先の誕生日"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The contact's primary email address. This field is optional but commonly used.",
+          "message": "連絡先のプライマリメールアドレス。このフィールドはオプションですが一般的に使用されます。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "メールアドレス"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Primary email address",
+          "message": "プライマリ メール アドレス"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "自宅"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "勤務先"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.desc": {
+          "source": "The type of email address: \"home\", \"work\", or \"other\". Default is \"other\".",
+          "message": "メールアドレスのタイプ: 「home」、「work」、または「other」。デフォルトは「other」です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.display_name": {
+          "source": "Email Type",
+          "message": "メールのタイプ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.short_desc": {
+          "source": "Type of email address",
+          "message": "メールアドレスのタイプ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The given name (first name) of the contact. This field is required.",
+          "message": "連絡先の名（ファーストネーム）。このフィールドは必須です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "Contact's first name",
+          "message": "連絡先の名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.desc": {
+          "source": "The contact's job title or position. This field is optional.",
+          "message": "連絡先の職務属性または役職。このフィールドはオプションです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.display_name": {
+          "source": "Job Title",
+          "message": "役職"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.short_desc": {
+          "source": "Contact's job title",
+          "message": "連絡先の役職"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The family name (last name) of the contact. This field is required.",
+          "message": "連絡先の姓（ラストネーム）。このフィールドは必須です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "Contact's last name",
+          "message": "連絡先の姓"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The middle name of the contact. This field is optional.",
+          "message": "連絡先の中間の名前（ミドルネーム）。このフィールドはオプションです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "ミドルネーム"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "Contact's middle name",
+          "message": "連絡先のミドルネーム"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.desc": {
+          "source": "Free-form text notes or biography information about the contact.",
+          "message": "連絡先に関する自由形式のテキストメモまたは経歴情報。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "メモ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.short_desc": {
+          "source": "Additional notes about the contact",
+          "message": "連絡先に関する追加のメモ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.desc": {
+          "source": "Honorific prefix such as \"Mr.\", \"Ms.\", \"Dr.\", etc. This field is optional.",
+          "message": "「Mr.」、「Ms.」、「Dr.」などの敬称（前置）。このフィールドはオプションです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.display_name": {
+          "source": "Name Prefix",
+          "message": "名前の敬称（前置）"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.short_desc": {
+          "source": "Honorific prefix (e.g., Mr., Dr.)",
+          "message": "敬称（前置、例: Mr.、Dr.）"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.desc": {
+          "source": "Honorific suffix such as \"Jr.\", \"Sr.\", \"III\", etc. This field is optional.",
+          "message": "「Jr.」、「Sr.」、「III」などの敬称（後置）。このフィールドはオプションです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.display_name": {
+          "source": "Name Suffix",
+          "message": "名前のサフィックス"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.short_desc": {
+          "source": "Honorific suffix (e.g., Jr., Sr.)",
+          "message": "敬称（末尾、例: Jr.、Sr.）"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The contact's primary phone number. This field is optional.",
+          "message": "連絡先の主電話番号です。このフィールドは任意です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Primary phone number",
+          "message": "主電話番号"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1haW4.display_name": {
+          "source": "Main",
+          "message": "メイン"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "携帯電話"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "自宅"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWVGYXg.display_name": {
+          "source": "Home Fax",
+          "message": "自宅 FAX"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "ポケットベル"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "勤務先"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcmtGYXg.display_name": {
+          "source": "Work Fax",
+          "message": "勤務先 FAX"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.desc": {
+          "source": "The type of phone number: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\", or \"other\". Default is \"other\".",
+          "message": "電話番号の種類: \"home\"、\"work\"、\"mobile\"、\"main\"、\"homeFax\"、\"workFax\"、\"pager\"、または \"other\"。デフォルトは \"other\" です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.display_name": {
+          "source": "Phone Type",
+          "message": "電話番号の種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.short_desc": {
+          "source": "Type of phone number",
+          "message": "電話番号の種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.desc": {
+          "source": "The name of a person related to this contact (e.g., spouse, manager, etc.).",
+          "message": "この連絡先に関連する人物の名前（例: 配偶者、マネージャーなど）。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.display_name": {
+          "source": "Related Person",
+          "message": "関連する人物"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.short_desc": {
+          "source": "Name of a related person",
+          "message": "関連する人物の名前"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1hbmFnZXI.display_name": {
+          "source": "Manager",
+          "message": "マネージャー"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1vdGhlcg.display_name": {
+          "source": "Mother",
+          "message": "母"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmFzc2lzdGFudA.display_name": {
+          "source": "Assistant",
+          "message": "アシスタント"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmJyb3RoZXI.display_name": {
+          "source": "Brother",
+          "message": "兄弟"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmNoaWxk.display_name": {
+          "source": "Child",
+          "message": "子供"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmRvbWVzdGljUGFydG5lcg.display_name": {
+          "source": "Domestic Partner",
+          "message": "パートナー（同居）"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZhdGhlcg.display_name": {
+          "source": "Father",
+          "message": "父"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZyaWVuZA.display_name": {
+          "source": "Friend",
+          "message": "友人"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "Parent",
+          "message": "親"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcnRuZXI.display_name": {
+          "source": "Partner",
+          "message": "パートナー"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlZmVycmVkQnk.display_name": {
+          "source": "Referred By",
+          "message": "紹介者"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlbGF0aXZl.display_name": {
+          "source": "Relative",
+          "message": "親戚"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNpc3Rlcg.display_name": {
+          "source": "Sister",
+          "message": "姉妹"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNwb3VzZQ.display_name": {
+          "source": "Spouse",
+          "message": "配偶者"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.desc": {
+          "source": "The type of relationship: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\", or \"other\". Default is \"other\".",
+          "message": "間柄の種類: \"spouse\"、\"child\"、\"mother\"、\"father\"、\"parent\"、\"brother\"、\"sister\"、\"friend\"、\"relative\"、\"domesticPartner\"、\"manager\"、\"assistant\"、\"referredBy\"、\"partner\"、または \"other\"。デフォルトは \"other\" です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.display_name": {
+          "source": "Relationship Type",
+          "message": "間柄の種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.short_desc": {
+          "source": "Type of relationship",
+          "message": "間柄の種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.desc": {
+          "source": "A website URL associated with the contact.",
+          "message": "連絡先に関連付けられたウェブサイトの URL。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.display_name": {
+          "source": "Website URL",
+          "message": "ウェブサイトの URL"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.short_desc": {
+          "source": "Contact's website or URL",
+          "message": "連絡先のウェブサイトまたは URL"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact in Google Contacts.",
+          "message": "Google コンタクトに新しい連絡先を作成します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Creates a new user-defined contact group in Google Contacts. The group can then be used to organize contacts. Returns the created group's information including its resource name.",
+          "message": "Google コンタクトにユーザー定義の新しい連絡先グループを作成します。作成したグループは連絡先の整理に使用できます。リソース名を含む作成されたグループの情報を返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Contact Group",
+          "message": "連絡先グループの作成"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The display name for the new contact group. This name will be visible in Google Contacts and must be provided.",
+          "message": "新しい連絡先グループの表示名。この名前は Google コンタクトに表示され、指定する必要があります。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Group Name",
+          "message": "グループ名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new contact group",
+          "message": "新しい連絡先グループの名前"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new contact group in Google Contacts.",
+          "message": "Google コンタクトに新しい連絡先グループを作成します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.desc": {
+          "source": "Adds a contact to an existing contact group in Google Contacts. Both the contact and group must already exist. Returns confirmation with details about both the contact and group.",
+          "message": "Google コンタクト内の既存の連絡先グループに連絡先を追加します。連絡先とグループの両方がすでに存在している必要があります。連絡先とグループの両方の詳細を含む確認情報を返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.display_name": {
+          "source": "Add Contact to Group",
+          "message": "グループに連絡先を追加"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.desc": {
+          "source": "The resource name of the contact to add to the group (e.g., \"people/12345\").",
+          "message": "グループに追加する連絡先のリソース名（例: \"people/12345\"）。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.display_name": {
+          "source": "Contact Resource Name",
+          "message": "連絡先のリソース名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.short_desc": {
+          "source": "The contact to add to the group",
+          "message": "グループに追加する連絡先"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact group where the contact will be added (e.g., \"contactGroups/12345\").",
+          "message": "連絡先が追加される連絡先グループのリソース名（例: \"contactGroups/12345\"）。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Group Resource Name",
+          "message": "グループのリソース名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The contact group to add to",
+          "message": "追加先の連絡先グループ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.short_desc": {
+          "source": "Add an existing contact to a contact group.",
+          "message": "既存の連絡先を連絡先グループに追加します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Fetches comprehensive contact information from Google Contacts including names, email addresses, phone numbers, organizations, addresses, birthdays, and other personal details. Returns all available fields for the specified contact.",
+          "message": "名前、メールアドレス、電話番号、組織、住所、生年月日、その他の個人情報を含む、Google コンタクトから包括的な連絡先情報を取得します。指定された連絡先の利用可能なすべてのフィールドを返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "連絡先の取得"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact to retrieve (e.g., \"people/12345\"). This uniquely identifies the contact in Google Contacts.",
+          "message": "取得する連絡先のリソース名（例: \"people/12345\"）。これは Google コンタクト内で連絡先を一意に識別します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Contact Resource Name",
+          "message": "連絡先のリソース名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The unique identifier for the contact",
+          "message": "連絡先の一意の識別子"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific Google contact.",
+          "message": "特定の Google 連絡先に関する詳細情報を取得します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Fetches all contact groups from Google Contacts with support for filtering by group type, searching by name, and selecting specific fields. Returns both system and user-created groups with metadata including member counts.",
+          "message": "グループの種類によるフィルタリング、名前による検索、特定のフィールドの選択をサポートして、Google コンタクトからすべての連絡先グループを取得します。メンバー数を含むメタデータとともに、システム グループとユーザー作成グループの両方を返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Contact Groups",
+          "message": "連絡先グループ一覧の取得"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All Groups",
+          "message": "すべてのグループ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnN5c3RlbQ.display_name": {
+          "source": "System Groups Only",
+          "message": "システム グループのみ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User Created Groups Only",
+          "message": "ユーザー作成グループのみ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.desc": {
+          "source": "Filter groups by type: \"all\" for both system and user groups, \"user\" for user-created groups only, or \"system\" for system groups only. Default is \"all\".",
+          "message": "種類でグループをフィルタリングします。システムとユーザー両方のグループの場合は \"all\"、ユーザー作成グループのみの場合は \"user\"、システム グループのみの場合は \"system\" です。デフォルトは \"all\" です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.display_name": {
+          "source": "Group Type",
+          "message": "グループの種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.short_desc": {
+          "source": "Type of groups to retrieve",
+          "message": "取得するグループの種類"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.desc": {
+          "source": "Optional search term to filter groups by name. The search is case-insensitive and matches partial names.",
+          "message": "名前でグループをフィルタリングするためのオプションの検索語句。検索は大文字と小文字を区別せず、部分一致します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.display_name": {
+          "source": "Search Name",
+          "message": "検索名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.short_desc": {
+          "source": "Filter groups by name",
+          "message": "名前でグループをフィルタリング"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of contact groups from Google Contacts.",
+          "message": "Google Contacts から連絡先グループのリストを取得します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Contacts** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して **Google Contacts** にカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (接続の API ベース URL に対する相対パス)、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Contacts",
+          "message": "Google Contacts へのカスタム API 呼び出しを行う"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.",
+          "message": "このトリガーは、新しい連絡先が Google Contacts に追加されるたびに起動します。名前、メールアドレス、電話番号など、新しく作成された連絡先に関する詳細情報を提供します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact Created",
+          "message": "新しい連絡先が作成されました"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Trigger when a new contact is created in Google Contacts.",
+          "message": "Google Contacts で新しい連絡先が作成されたときにトリガーします。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search through Google Contacts using email addresses, full names, or phone numbers. Supports both exact matching and partial matching (contains) search types. Returns basic contact information for matching contacts.",
+          "message": "メールアドレス、氏名、または電話番号を使用して Google Contacts を検索します。完全一致と部分一致 (contains) の両方の検索タイプに対応しています。一致する連絡先の基本情報を返します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search Contacts",
+          "message": "連絡先を検索"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.desc": {
+          "source": "Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., \"contactGroups/12345\").",
+          "message": "結果をフィルタリングするためのオプションの連絡先グループ。このグループ内の連絡先のみが返されます。グループのリソース名 (例: \"contactGroups/12345\") を指定します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.display_name": {
+          "source": "Contact Group",
+          "message": "連絡先グループ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.short_desc": {
+          "source": "Filter by contact group",
+          "message": "連絡先グループでフィルタリング"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email Address",
+          "message": "メールアドレス"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmZ1bGxfbmFtZQ.display_name": {
+          "source": "Full Name",
+          "message": "氏名"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOnBob25lX251bWJlcg.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.desc": {
+          "source": "The contact field to search in: \"email\" for email addresses, \"full_name\" for names, or \"phone_number\" for phone numbers.",
+          "message": "検索する連絡先フィールド: メールアドレスの場合は \"email\"、名前の場合は \"full_name\"、電話番号の場合は \"phone_number\"。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.display_name": {
+          "source": "Search Field",
+          "message": "検索フィールド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.short_desc": {
+          "source": "Field to search in",
+          "message": "検索対象のフィールド"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "次を含む"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全一致"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Search matching type: \"contains\" for partial matches or \"exact\" for exact matches. Default is \"contains\".",
+          "message": "検索の一致タイプ: 部分一致の場合は \"contains\"、完全一致の場合は \"exact\"。デフォルトは \"contains\" です。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "検索タイプ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "実行する検索のタイプ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.desc": {
+          "source": "The search term or value to look for in the specified field. Search is case-insensitive.",
+          "message": "指定されたフィールドで検索する検索語または値。検索では大文字と小文字は区別されません。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.display_name": {
+          "source": "Search Value",
+          "message": "検索値"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.short_desc": {
+          "source": "Value to search for",
+          "message": "検索する値"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search for contacts in Google Contacts by various criteria.",
+          "message": "さまざまな条件で Google Contacts 内の連絡先を検索します。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.desc": {
+          "source": "Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.",
+          "message": "Google Contacts に接続して、アプリケーションから直接連絡先を管理します。連絡先の作成、更新、削除をシームレスに行うことができます。"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.display_name": {
+          "source": "Google Contacts",
+          "message": "Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.short_desc": {
+          "source": "Manage your Google Contacts",
+          "message": "Google Contacts を管理"
+        }
+      }
+    }
+  }
+}

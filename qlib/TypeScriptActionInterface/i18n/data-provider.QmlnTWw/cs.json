@@ -1,0 +1,1413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate an anomaly score by applying a trained anomaly detector to input data. This helps identify unusual patterns or outliers in your dataset.",
+          "message": "Generuje skóre anomálie aplikací trénovaného detektoru anomálií na vstupní data. Pomáhá identifikovat neobvyklé vzorce nebo odlehlé hodnoty ve vaší datové sadě."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Anomaly Score",
+          "message": "Vytvořit skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate the anomaly score for the input data.",
+          "message": "Vyberte trénovaný model detektoru anomálií, který bude použit k vygenerování skóre anomálie pro vstupní data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Detektor anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for scoring",
+          "message": "Detektor anomálií určený k výpočtu skóre"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this anomaly score and its purpose.",
+          "message": "Volitelný popis poskytující další kontext o tomto skóre anomálie a jeho účelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the anomaly score",
+          "message": "Popis skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data that you want to analyze for anomalies. The data should match the format expected by the selected anomaly detector.",
+          "message": "Zadejte vstupní data, která chcete analyzovat na přítomnost anomálií. Data by měla odpovídat formátu očekávanému vybraným detektorem anomálií."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Vstupní data"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to analyze for anomalies",
+          "message": "Data k analýze na přítomnost anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this anomaly score in your BigML dashboard and for future reference.",
+          "message": "Volitelný název pro identifikaci tohoto skóre anomálie na vaší nástěnce BigML a pro budoucí použití."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the anomaly score",
+          "message": "Název pro skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this anomaly score with related resources for better workflow management.",
+          "message": "Volitelný projekt pro organizaci tohoto skóre anomálie se souvisejícími prostředky pro lepší správu pracovního postupu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the anomaly score",
+          "message": "Projekt pro organizaci skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your anomaly scores for easier management and searching.",
+          "message": "Volitelné štítky, které pomohou organizovat a kategorizovat vaše skóre anomálií pro snazší správu a vyhledávání."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Štítky"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing anomaly scores",
+          "message": "Štítky pro organizaci skóre anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create an anomaly score for detecting outliers in data",
+          "message": "Vytvořit skóre anomálie pro detekci odlehlých hodnot v datech"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate anomaly scores for multiple data points at once by applying an anomaly detector to a dataset. This is efficient for processing large amounts of data.",
+          "message": "Generujte skóre anomálií pro více datových bodů najednou aplikováním detektoru anomálií na datovou sadu. To je efektivní pro zpracování velkého množství dat."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Batch Anomaly Score",
+          "message": "Vytvořit dávkové skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate anomaly scores for all data points in the dataset.",
+          "message": "Vyberte trénovaný model detektoru anomálií, který se použije k generování skóre anomálií pro všechny datové body v datové sadě."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Detektor anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for batch scoring",
+          "message": "Detektor anomálií k použití pro dávkové skórování"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.desc": {
+          "source": "Select the dataset containing multiple data points that you want to analyze for anomalies using the selected anomaly detector.",
+          "message": "Vyberte datovou sadu obsahující více datových bodů, které chcete analyzovat na přítomnost anomálií pomocí vybraného detektoru anomálií."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.display_name": {
+          "source": "Dataset",
+          "message": "Datová sada"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.short_desc": {
+          "source": "The dataset to analyze for anomalies",
+          "message": "Datová sada k analýze na přítomnost anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this batch anomaly score and its purpose.",
+          "message": "Volitelný popis, který poskytuje další kontext o tomto dávkovém skóre anomálie a jeho účelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the batch anomaly score",
+          "message": "Popis dávkového skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this batch anomaly score in your BigML dashboard and for future reference.",
+          "message": "Volitelný název pro identifikaci tohoto dávkového skóre anomálie na vaší nástěnce BigML a pro budoucí použití."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the batch anomaly score",
+          "message": "Název pro dávkové skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this batch anomaly score with related resources for better workflow management.",
+          "message": "Volitelný projekt pro organizaci tohoto dávkového skóre anomálie se souvisejícími prostředky pro lepší správu pracovního postupu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the batch anomaly score",
+          "message": "Projekt pro organizaci dávkového skóre anomálie"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your batch anomaly scores for easier management and searching.",
+          "message": "Volitelné štítky, které pomohou organizovat a kategorizovat vaše dávková skóre anomálií pro snazší správu a vyhledávání."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Štítky"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing batch anomaly scores",
+          "message": "Štítky pro organizaci dávkových skóre anomálií"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create anomaly scores for multiple data points in batch",
+          "message": "Vytvořit skóre anomálií pro více datových bodů v dávce"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.desc": {
+          "source": "Determine which cluster centroid is closest to the provided input data using a trained cluster model. This helps classify new data points into existing clusters.",
+          "message": "Určete, který centroid shluku je nejblíže poskytnutým vstupním datům, pomocí trénovaného modelu shlukování. To pomáhá klasifikovat nové datové body do stávajících shluků."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
+          "source": "Create Centroid",
+          "message": "Vytvořit centroid"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.desc": {
+          "source": "Select the trained cluster model that will be used to find the closest centroid for the input data.",
+          "message": "Vyberte trénovaný model shlukování, který bude použit k nalezení nejbližšího centroidu pro vstupní data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
+          "source": "Cluster Model",
+          "message": "Model shlukování"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
+          "source": "The cluster model to use for centroid calculation",
+          "message": "Model shlukování k použití pro výpočet centroidu"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this centroid calculation and its purpose.",
+          "message": "Volitelný popis, který poskytuje další kontext o tomto výpočtu centroidu a jeho účelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the centroid calculation",
+          "message": "Popis výpočtu centroidu"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to find the closest cluster centroid. The data should match the format used to train the cluster model.",
+          "message": "Zadejte vstupní data, pro která chcete najít nejbližší centroid shluku. Data by měla odpovídat formátu použitému k trénování modelu shlukování."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Vstupní data"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to find the closest centroid for",
+          "message": "Data pro nalezení nejbližšího centroidu"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this centroid calculation in your BigML dashboard and for future reference.",
+          "message": "Volitelný název pro identifikaci tohoto výpočtu centroidu na vaší nástěnce BigML a pro budoucí použití."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.short_desc": {
+          "source": "Name for the centroid result",
+          "message": "Název pro výsledek centroidu"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this centroid calculation with related resources for better workflow management.",
+          "message": "Volitelný projekt pro organizaci tohoto výpočtu centroidu se souvisejícími prostředky pro lepší správu pracovního postupu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the centroid result",
+          "message": "Projekt pro organizaci výsledku centroidu"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your centroid calculations for easier management and searching.",
+          "message": "Volitelné štítky, které pomohou organizovat a kategorizovat vaše výpočty centroidů pro snazší správu a vyhledávání."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Štítky"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.short_desc": {
+          "source": "Tags for organizing centroid results",
+          "message": "Štítky pro organizaci výsledků centroidů"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
+          "source": "Find the closest cluster centroid for input data",
+          "message": "Najít nejbližší centroid shluku pro vstupní data"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.desc": {
+          "source": "Create predictions for new data using trained machine learning models, ensembles, or deep networks. This allows you to apply your trained models to make predictions on new data.",
+          "message": "Vytvářejte predikce pro nová data pomocí trénovaných modelů strojového učení, ensemble modelů nebo hlubokých sítí. To vám umožní použít vaše trénované modely k vytváření predikcí na nových datech."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
+          "source": "Create Prediction",
+          "message": "Vytvořit predikci"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.desc": {
+          "source": "Select the trained deep network that will be used to generate predictions for the input data.",
+          "message": "Vyberte trénovanou hlubokou síť, která bude použita k generování predikcí pro vstupní data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
+          "source": "Deep Network",
+          "message": "Hluboká síť"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
+          "source": "The deep network to use for prediction",
+          "message": "Hluboká síť k použití pro predikci"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this prediction and its purpose.",
+          "message": "Volitelný popis, který poskytuje další kontext o této predikci a jejím účelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the prediction",
+          "message": "Popis predikce"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.desc": {
+          "source": "Select the trained ensemble that will be used to generate predictions for the input data.",
+          "message": "Vyberte trénovaný ensemble, který bude použit k generování predikcí pro vstupní data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.display_name": {
+          "source": "Ensemble",
+          "message": "Ensemble"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.short_desc": {
+          "source": "The ensemble to use for prediction",
+          "message": "Ensemble k použití pro predikci"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to generate predictions. The data should match the format used to train the selected model.",
+          "message": "Zadejte vstupní data, pro která chcete generovat predikce. Data by měla odpovídat formátu použitému k trénování vybraného modelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Vstupní data"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to make predictions for",
+          "message": "Data pro vytváření predikcí"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.desc": {
+          "source": "Select the trained model that will be used to generate predictions for the input data.",
+          "message": "Vyberte trénovaný model, který bude použit k generování predikcí pro vstupní data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.display_name": {
+          "source": "Model",
+          "message": "Model"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.short_desc": {
+          "source": "The model to use for prediction",
+          "message": "Model k použití pro predikci"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this prediction in your BigML dashboard and for future reference.",
+          "message": "Volitelný název pro identifikaci této predikce na vaší nástěnce BigML a pro budoucí použití."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.short_desc": {
+          "source": "Name for the prediction",
+          "message": "Název pro predikci"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this prediction with related resources for better workflow management.",
+          "message": "Volitelný projekt pro organizaci této predikce se souvisejícími prostředky pro lepší správu pracovního postupu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the prediction",
+          "message": "Projekt pro organizaci predikce"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your predictions for easier management and searching.",
+          "message": "Volitelné štítky, které pomohou organizovat a kategorizovat vaše predikce pro snazší správu a vyhledávání."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Štítky"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.short_desc": {
+          "source": "Tags for organizing predictions",
+          "message": "Štítky pro organizaci predikcí"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
+          "source": "Generate predictions using trained models",
+          "message": "Generovat predikce pomocí trénovaných modelů"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.desc": {
+          "source": "Create topic distributions for text data using a trained topic model. This helps understand the main topics present in your text and their relative importance.",
+          "message": "Vytvářejte distribuce témat pro textová data pomocí trénovaného tematického modelu. To pomáhá pochopit hlavní témata obsažená ve vašem textu a jejich relativní význam."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
+          "source": "Create Topic Distribution",
+          "message": "Vytvořit distribuci témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this topic distribution and its purpose.",
+          "message": "Volitelný popis poskytující další kontext o této distribuci témat a jejím účelu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the topic distribution",
+          "message": "Popis distribuce témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the text data for which you want to generate topic distributions. The data should match the format used to train the topic model.",
+          "message": "Zadejte textová data, pro která chcete vygenerovat distribuce témat. Data by měla odpovídat formátu použitému k trénování modelu témat."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "Vstupní data"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The text data to analyze for topics",
+          "message": "Textová data k analýze témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this topic distribution in your BigML dashboard and for future reference.",
+          "message": "Volitelný název k identifikaci této distribuce témat na ovládacím panelu BigML a pro budoucí použití."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Název"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.short_desc": {
+          "source": "Name for the topic distribution",
+          "message": "Název pro distribuci témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this topic distribution with related resources for better workflow management.",
+          "message": "Volitelný projekt pro organizaci této distribuce témat se souvisejícími prostředky pro lepší správu pracovního postupu."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the topic distribution",
+          "message": "Projekt pro organizaci distribuce témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.desc": {
+          "source": "Select the trained topic model that will be used to generate topic distributions for the input text data.",
+          "message": "Vyberte natrénovaný model témat, který se použije k vygenerování distribucí témat pro vstupní textová data."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
+          "source": "Topic Model",
+          "message": "Model témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
+          "source": "The topic model to use for distribution analysis",
+          "message": "Model témat k použití pro analýzu distribuce"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your topic distributions for easier management and searching.",
+          "message": "Volitelné tagy, které pomáhají organizovat a kategorizovat vaše distribuce témat pro snazší správu a vyhledávání."
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Štítky"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.short_desc": {
+          "source": "Tags for organizing topic distributions",
+          "message": "Tagy pro organizaci distribucí témat"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
+          "source": "Generate topic distributions for text data",
+          "message": "Vygenerovat distribuce témat pro textová data"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.desc": {
+          "source": "Get a paginated list of all topic models in your BigML account with filtering and sorting options.",
+          "message": "Získat stránkovaný seznam všech modelů témat ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
+          "source": "List Topic Models",
+          "message": "Seznam modelů témat"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of topic models based on specific criteria.",
+          "message": "Použít filtry pro zúžení seznamu modelů témat na základě specifických kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for topic models",
+          "message": "Kritéria filtrování pro modely témat"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of topic models to skip for pagination purposes.",
+          "message": "Určete počet modelů témat, které se mají přeskočit pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of topic models to skip",
+          "message": "Počet modelů témat k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of topic models to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet modelů témat k vrácení v jedné žádosti. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of topic models to return",
+          "message": "Maximální počet modelů témat k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of topic models.",
+          "message": "Určete způsob řazení seznamu modelů témat."
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for topic models",
+          "message": "Kritéria řazení pro modely témat"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of topic models",
+          "message": "Načíst seznam modelů témat"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.desc": {
+          "source": "Get a paginated list of all anomaly detectors in your BigML account with filtering and sorting options.",
+          "message": "Získat stránkovaný seznam všech detektorů anomálií ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
+          "source": "List Anomaly Detectors",
+          "message": "Seznam detektorů anomálií"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of anomaly detectors based on specific criteria.",
+          "message": "Použít filtry pro zúžení seznamu detektorů anomálií na základě specifických kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for anomaly detectors",
+          "message": "Kritéria filtrování pro detektory anomálií"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of anomaly detectors to skip for pagination purposes.",
+          "message": "Určete počet detektorů anomálií, které se mají přeskočit pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of anomaly detectors to skip",
+          "message": "Počet detektorů anomálií k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of anomaly detectors to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet detektorů anomálií k vrácení v jedné žádosti. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of anomaly detectors to return",
+          "message": "Maximální počet detektorů anomálií k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of anomaly detectors.",
+          "message": "Určete způsob řazení seznamu detektorů anomálií."
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for anomaly detectors",
+          "message": "Kritéria řazení pro detektory anomálií"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
+          "source": "Retrieve a list of anomaly detectors",
+          "message": "Načíst seznam detektorů anomálií"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.desc": {
+          "source": "Get a paginated list of all cluster models in your BigML account with filtering and sorting options.",
+          "message": "Získat stránkovaný seznam všech shlukových modelů ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
+          "source": "List Clusters",
+          "message": "Seznam shluků"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of cluster models based on specific criteria.",
+          "message": "Použít filtry pro zúžení seznamu shlukových modelů na základě specifických kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for clusters",
+          "message": "Kritéria filtrování pro shluky"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of cluster models to skip for pagination purposes.",
+          "message": "Určete počet shlukových modelů, které se mají přeskočit pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of clusters to skip",
+          "message": "Počet shluků k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of cluster models to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet shlukových modelů k vrácení v jedné žádosti. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of clusters to return",
+          "message": "Maximální počet shluků k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of cluster models.",
+          "message": "Určete způsob řazení seznamu shlukových modelů."
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for clusters",
+          "message": "Kritéria řazení pro shluky"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
+          "source": "Retrieve a list of cluster models",
+          "message": "Načíst seznam shlukových modelů"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.desc": {
+          "source": "Get a paginated list of all datasets in your BigML account with filtering and sorting options.",
+          "message": "Získat stránkovaný seznam všech datových sad ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
+          "source": "List Datasets",
+          "message": "Seznam datových sad"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of datasets based on specific criteria.",
+          "message": "Použít filtry pro zúžení seznamu datových sad na základě specifických kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for datasets",
+          "message": "Kritéria filtrování pro datové sady"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of datasets to skip for pagination purposes.",
+          "message": "Určete počet datových sad, které se mají přeskočit pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of datasets to skip",
+          "message": "Počet datových sad k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of datasets to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet datových sad k vrácení v jedné žádosti. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of datasets to return",
+          "message": "Maximální počet datových sad k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of datasets.",
+          "message": "Určete způsob řazení seznamu datových sad."
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for datasets",
+          "message": "Kritéria řazení pro datové sady"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
+          "source": "Retrieve a list of datasets",
+          "message": "Načíst seznam datových sad"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.desc": {
+          "source": "Get a paginated list of all deep networks in your BigML account with filtering and sorting options.",
+          "message": "Získat stránkovaný seznam všech hlubokých sítí ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
+          "source": "List Deep Networks",
+          "message": "Seznam hlubokých sítí"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of deep networks based on specific criteria.",
+          "message": "Použít filtry pro zúžení seznamu hlubokých sítí na základě specifických kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for deep networks",
+          "message": "Kritéria filtrování pro hluboké sítě"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of deep networks to skip for pagination purposes.",
+          "message": "Určete počet hlubokých sítí, které se mají přeskočit pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deep networks to skip",
+          "message": "Počet hlubokých sítí k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of deep networks to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet hlubokých sítí, které mají být vráceny v jediném požadavku. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deep networks to return",
+          "message": "Maximální počet hlubokých sítí k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of deep networks.",
+          "message": "Určete, jak se má seznam hlubokých sítí seřadit."
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for deep networks",
+          "message": "Kritéria řazení pro hluboké sítě"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
+          "source": "Retrieve a list of deep networks",
+          "message": "Získat seznam hlubokých sítí"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.desc": {
+          "source": "Get a paginated list of all ensemble models in your BigML account with filtering and sorting options.",
+          "message": "Získejte stránkovaný seznam všech ensemble modelů ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
+          "source": "List Ensembles",
+          "message": "Seznam ensembles"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of ensemble models based on specific criteria.",
+          "message": "Použijte filtry k zúžení seznamu ensemble modelů na základě konkrétních kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for ensembles",
+          "message": "Kritéria filtrování pro ensembles"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of ensemble models to skip for pagination purposes.",
+          "message": "Určete počet ensemble modelů, které mají být přeskočeny pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of ensembles to skip",
+          "message": "Počet ensembles k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of ensemble models to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet ensemble modelů, které mají být vráceny v jediném požadavku. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ensembles to return",
+          "message": "Maximální počet ensembles k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of ensemble models.",
+          "message": "Určete, jak se má seznam ensemble modelů seřadit."
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for ensembles",
+          "message": "Kritéria řazení pro ensembles"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
+          "source": "Retrieve a list of ensemble models",
+          "message": "Získat seznam ensemble modelů"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.desc": {
+          "source": "Get a paginated list of all machine learning models in your BigML account with filtering and sorting options.",
+          "message": "Získejte stránkovaný seznam všech modelů strojového učení ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
+          "source": "List Models",
+          "message": "Seznam modelů"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of models based on specific criteria.",
+          "message": "Použijte filtry k zúžení seznamu modelů na základě konkrétních kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for models",
+          "message": "Kritéria filtrování pro modely"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of models to skip for pagination purposes.",
+          "message": "Určete počet modelů, které mají být přeskočeny pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of models to skip",
+          "message": "Počet modelů k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of models to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet modelů, které mají být vráceny v jediném požadavku. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of models to return",
+          "message": "Maximální počet modelů k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of models.",
+          "message": "Určete, jak se má seznam modelů seřadit."
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for models",
+          "message": "Kritéria řazení pro modely"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of machine learning models",
+          "message": "Získat seznam modelů strojového učení"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Get a paginated list of all projects in your BigML account with filtering and sorting options.",
+          "message": "Získejte stránkovaný seznam všech projektů ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Seznam projektů"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of projects based on specific criteria.",
+          "message": "Použijte filtry k zúžení seznamu projektů na základě konkrétních kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for projects",
+          "message": "Kritéria filtrování pro projekty"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of projects to skip for pagination purposes.",
+          "message": "Určete počet projektů, které mají být přeskočeny pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of projects to skip",
+          "message": "Počet projektů k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of projects to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet projektů, které mají být vráceny v jediném požadavku. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of projects to return",
+          "message": "Maximální počet vrácených projektů"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of projects.",
+          "message": "Určete, jak se má seznam projektů seřadit."
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for projects",
+          "message": "Kritéria řazení pro projekty"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve a list of projects",
+          "message": "Získat seznam projektů"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.desc": {
+          "source": "Get a paginated list of all data sources in your BigML account with filtering and sorting options.",
+          "message": "Získejte stránkovaný seznam všech datových zdrojů ve vašem účtu BigML s možnostmi filtrování a řazení."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
+          "source": "List Sources",
+          "message": "Seznam zdrojů"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of data sources based on specific criteria.",
+          "message": "Použijte filtry k zúžení seznamu datových zdrojů na základě konkrétních kritérií."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for sources",
+          "message": "Kritéria filtrování pro zdroje"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of data sources to skip for pagination purposes.",
+          "message": "Určete počet datových zdrojů, které mají být přeskočeny pro účely stránkování."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of sources to skip",
+          "message": "Počet zdrojů k přeskočení"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of data sources to return in a single request. Default is 20.",
+          "message": "Nastavte maximální počet datových zdrojů, které mají být vráceny v jediném požadavku. Výchozí hodnota je 20."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of sources to return",
+          "message": "Maximální počet zdrojů k vrácení"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of data sources.",
+          "message": "Určete, jak se má seznam datových zdrojů seřadit."
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Řazení"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for sources",
+          "message": "Kritéria řazení pro zdroje"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
+          "source": "Retrieve a list of data sources",
+          "message": "Získat seznam datových zdrojů"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **BigML** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do **BigML** pomocí autentizace nakonfigurovaného připojení.\n\nUveďte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, hlavičky a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, hlavičky odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou vystaveny jako primární akce v této aplikaci."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to BigML",
+          "message": "Provést vlastní volání API do BigML"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.desc": {
+          "source": "Monitor your BigML account for newly created resources such as models, datasets, clusters, and other machine learning resources. This trigger allows you to automate workflows when specific types of resources are created.",
+          "message": "Sledujte svůj účet BigML pro nově vytvořené prostředky, jako jsou modely, datové sady, clustery a další prostředky strojového učení. Tento spouštěč vám umožňuje automatizovat pracovní postupy při vytvoření konkrétních typů prostředků."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
+          "source": "New Resource",
+          "message": "Nový prostředek"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.desc": {
+          "source": "Optional filter to only trigger for resources whose names contain this text. Leave empty to monitor all resources of the selected type.",
+          "message": "Volitelný filtr pro spuštění pouze pro prostředky, jejichž názvy obsahují tento text. Ponechte prázdné pro sledování všech prostředků vybraného typu."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
+          "source": "Name Filter",
+          "message": "Filtr podle názvu"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
+          "source": "Filter resources by name pattern",
+          "message": "Filtrovat prostředky podle vzoru názvu"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.desc": {
+          "source": "Optional filter to only trigger for resources created within a specific project. Leave empty to monitor resources across all projects.",
+          "message": "Volitelný filtr pro spuštění pouze pro prostředky vytvořené v rámci konkrétního projektu. Ponechte prázdné pro sledování prostředků napříč všemi projekty."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
+          "source": "Project Filter",
+          "message": "Filtr podle projektu"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
+          "source": "Filter resources by project",
+          "message": "Filtrovat prostředky podle projektu"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.desc": {
+          "source": "Optional filter to only trigger for resources that have any of the specified tags. Leave empty to monitor all resources regardless of tags.",
+          "message": "Volitelný filtr pro spuštění pouze pro prostředky, které mají kterýkoli ze zadaných tagů. Ponechte prázdné pro sledování všech prostředků bez ohledu na tagy."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
+          "source": "Tags Filter",
+          "message": "Filtr podle tagů"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {
+          "source": "Filter resources by tags",
+          "message": "Filtrovat prostředky podle tagů"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOm1vZGVs.display_name": {
+          "source": "Model",
+          "message": "Model"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmFub21hbHk.display_name": {
+          "source": "Anomaly Detector",
+          "message": "Detektor anomálií"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmNsdXN0ZXI.display_name": {
+          "source": "Cluster",
+          "message": "Cluster"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmRlZXBuZXQ.display_name": {
+          "source": "Deepnet",
+          "message": "Deepnet"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmVuc2VtYmxl.display_name": {
+          "source": "Ensemble",
+          "message": "Ensemble"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOnRvcGljbW9kZWw.display_name": {
+          "source": "Topic Model",
+          "message": "Model témat"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.desc": {
+          "source": "Select the specific type of BigML resource you want to monitor for new creations. The trigger will only fire when resources of this type are created.",
+          "message": "Vyberte konkrétní typ prostředku BigML, který chcete sledovat na nové vytvoření. Spouštěč se aktivuje pouze při vytvoření prostředků tohoto typu."
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
+          "source": "Resource Type",
+          "message": "Typ prostředku"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
+          "source": "Type of BigML resource to monitor",
+          "message": "Typ prostředku BigML ke sledování"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
+          "source": "Triggers when a new BigML resource is created",
+          "message": "Spustí se při vytvoření nového prostředku BigML"
+        },
+        "app.QmlnTWw.desc": {
+          "source": "Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.",
+          "message": "Připojte svůj účet BigML a vytvářejte, vyhodnocujte a nasazujte modely strojového učení ve velkém měřítku. Vytvářejte datové sady, budujte predikční modely, provádějte detekci anomálií, shlukovou analýzu a předpovídání časových řad. Automatizujte své pracovní postupy strojového učení a integrujte prediktivní analytiku do svých aplikací pomocí ucelené platformy pro strojové učení BigML."
+        },
+        "app.QmlnTWw.display_name": {
+          "source": "BigML",
+          "message": "BigML"
+        },
+        "app.QmlnTWw.short_desc": {
+          "source": "Machine learning platform for predictive analytics",
+          "message": "Platforma pro strojové učení a prediktivní analytiku"
+        }
+      }
+    }
+  }
+}

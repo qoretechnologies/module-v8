@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups.",
+          "message": "在 Active Directory 中使用指定的屬性、類型和安全性設定建立新群組。同時支援安全性群組和 Microsoft 365 群組。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Group",
+          "message": "建立群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.desc": {
+          "source": "Group membership is automatically managed based on user or device attributes",
+          "message": "根據使用者或裝置屬性自動管理群組成員資格"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.display_name": {
+          "source": "Dynamic Group",
+          "message": "動態群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.desc": {
+          "source": "Creates a Microsoft 365 group with modern collaboration features",
+          "message": "建立具備新式協作功能的 Microsoft 365 群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.display_name": {
+          "source": "Microsoft 365 Group (Unified)",
+          "message": "Microsoft 365 群組 (Unified)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.desc": {
+          "source": "Optional array specifying special characteristics of the group, such as Unified (Microsoft 365) or DynamicMembership.",
+          "message": "指定群組特殊特性的選用陣列，例如 Unified (Microsoft 365) 或 DynamicMembership。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.display_name": {
+          "source": "Group Types",
+          "message": "群組類型"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.short_desc": {
+          "source": "Type characteristics of the group",
+          "message": "群組的類型特性"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose and scope of the group.",
+          "message": "說明群組用途和範圍的選用說明。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Group description",
+          "message": "群組說明"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name of the group as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "群組在 Active Directory 和所有 Microsoft 服務中顯示的名稱。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "顯示名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the group",
+          "message": "群組名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.desc": {
+          "source": "Whether the group can be assigned to Azure AD roles. This setting cannot be changed after group creation.",
+          "message": "群組是否可以指派給 Azure AD 角色。建立群組後即無法變更此設定。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.display_name": {
+          "source": "Assignable to Role",
+          "message": "可指派至角色"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.short_desc": {
+          "source": "Allow role assignment",
+          "message": "允許角色指派"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "用於群組電子郵件地址的郵件暱稱。必須僅包含字母、數字、句號、連字號和底線。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "郵件暱稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the group",
+          "message": "群組的電子郵件別名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.desc": {
+          "source": "Whether the group should be mail-enabled, allowing it to receive and send emails.",
+          "message": "群組是否應啟用郵件，允許其收發電子郵件。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.display_name": {
+          "source": "Mail Enabled",
+          "message": "已啟用郵件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.short_desc": {
+          "source": "Enable email functionality",
+          "message": "啟用電子郵件功能"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.desc": {
+          "source": "Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control.",
+          "message": "群組是否應啟用安全性，允許為其指派權限並用於存取控制。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.display_name": {
+          "source": "Security Enabled",
+          "message": "已啟用安全性"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.short_desc": {
+          "source": "Enable security functionality",
+          "message": "啟用安全性功能"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "群組為可見，但非成員無法查看成員資格"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "隱藏成員資格"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "組織內的任何人皆可查看群組及其內容"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "公開"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "僅有群組成員可以查看群組及其內容"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "私人"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "Controls who can see the group and its content. Options include Public, Private, or HiddenMembership.",
+          "message": "控制誰可以查看群組及其內容。選項包括 Public、Private 或 HiddenMembership。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "可見度"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Group visibility setting",
+          "message": "群組能見度設定"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new group in Active Directory",
+          "message": "在 Active Directory 中建立新群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.desc": {
+          "source": "Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data.",
+          "message": "在 Active Directory 中建立具備完整個人資料資訊、安全性設定和組織詳細資料的新使用者帳戶。支援設定密碼、聯絡資訊和位置資料。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.display_name": {
+          "source": "Create User",
+          "message": "建立使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The country where the user is located for contact and organizational purposes.",
+          "message": "用於聯絡和組織目的的使用者所在國家/地區。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "國家/地區"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Country of residence",
+          "message": "居住國家/地區"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The city where the user is located for contact and organizational purposes.",
+          "message": "用於聯絡和組織目的的使用者所在城市。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "城市"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "City of residence",
+          "message": "居住城市"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services.",
+          "message": "使用者帳戶是否應已啟用並能夠登入。停用時，使用者無法存取任何服務。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "帳戶已啟用"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable the user account",
+          "message": "啟用使用者帳戶"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The given name (first name) of the user for profile completion and directory organization.",
+          "message": "使用者的名字 (First name)，用於完善個人資料和目錄組織。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "名字"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "User's first name",
+          "message": "使用者的名字"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The department or organizational unit the user belongs to within the company structure.",
+          "message": "使用者在公司結構中所屬的部門或組織單位。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "部門"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "User's department",
+          "message": "使用者的部門"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "使用者的完整顯示名稱，將顯示於 Active Directory 及所有 Microsoft 服務中。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "顯示名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Full name of the user",
+          "message": "使用者的全名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.desc": {
+          "source": "When enabled, the user will be required to change their password on their first sign-in to the account.",
+          "message": "啟用時，使用者在首次登入帳戶時必須變更密碼。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.display_name": {
+          "source": "Force Password Change",
+          "message": "強制變更密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.short_desc": {
+          "source": "Require password change on first login",
+          "message": "首次登入時需要變更密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.desc": {
+          "source": "When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in.",
+          "message": "啟用時，使用者在首次登入時必須透過多因素驗證變更密碼。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.display_name": {
+          "source": "Force Password Change with MFA",
+          "message": "透過 MFA 強制變更密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.short_desc": {
+          "source": "Require password change with multi-factor authentication",
+          "message": "需要透過多因素驗證變更密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The job title or position of the user within the organization for directory and contact information.",
+          "message": "使用者在組織內的職務頭銜或職位，用於目錄及聯絡資訊。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "職稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "User's job title",
+          "message": "使用者的職務頭銜"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The mobile phone number for the user, used for contact information and potential multi-factor authentication.",
+          "message": "使用者的行動電話號碼，用於聯絡資訊及潛在的多因素驗證。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "行動電話"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "User's mobile phone number",
+          "message": "使用者的行動電話號碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The primary email address for the user. If not specified, it may be automatically generated based on the user principal name.",
+          "message": "使用者的主要電子郵件地址。如果未指定，可能會根據使用者主體名稱自動產生。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "電子郵件地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Primary email address",
+          "message": "主要電子郵件地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "將用作使用者電子郵件地址一部分的郵件別名。必須僅包含字母、數字、句點、連字號和底線。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "郵件暱稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the user",
+          "message": "使用者的電子郵件別名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The state or province where the user is located for contact and organizational purposes.",
+          "message": "使用者所在的州或省，用於聯絡及組織用途。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "州/省"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "State or province",
+          "message": "州或省"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The street address component of the user's physical location for contact and organizational purposes.",
+          "message": "使用者實際位置的街道地址部分，用於聯絡及組織用途。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "街道地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Physical street address",
+          "message": "實際街道地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The surname (last name) of the user for profile completion and directory organization.",
+          "message": "使用者的姓氏 (Last name)，用於完善個人資料和目錄組織。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "姓氏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "User's last name",
+          "message": "使用者的姓氏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The postal code or ZIP code for the user's location.",
+          "message": "使用者位置的郵遞區號。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "郵遞區號"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "ZIP or postal code",
+          "message": "郵遞區號"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.desc": {
+          "source": "The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long.",
+          "message": "使用者帳戶的初始密碼。必須符合您組織的密碼複雜性要求，且長度至少為 8 個字元。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.display_name": {
+          "source": "Password",
+          "message": "密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.short_desc": {
+          "source": "Initial password for the user",
+          "message": "使用者的初始密碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "墨西哥"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "澳洲"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "巴西"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "加拿大"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "德國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "法國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "英國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "印度"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "日本"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "美國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The two-letter country code (ISO 3166-1 alpha-2) that represents the user's usage location. Required for license assignment in some regions.",
+          "message": "代表使用者使用地位置的兩個字母國家/地區代碼 (ISO 3166-1 alpha-2)。在某些地區指派授權時為必填。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "使用地位置"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Country code for license assignment",
+          "message": "授權指派的國家/地區代碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.desc": {
+          "source": "The user principal name (UPN) that serves as the primary login identifier. Must be in email format (user@domain.com).",
+          "message": "作為主要登入識別碼的使用者主體名稱 (UPN)。必須為電子郵件格式 (user@domain.com)。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.display_name": {
+          "source": "User Principal Name",
+          "message": "使用者主體名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.short_desc": {
+          "source": "Primary login identifier",
+          "message": "主要登入識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.short_desc": {
+          "source": "Create a new user in Active Directory",
+          "message": "在 Active Directory 中建立新使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.desc": {
+          "source": "Add a user as a member of an existing group in Active Directory. This grants the user any permissions and access rights associated with the group.",
+          "message": "將使用者新增為 Active Directory 中現有群組的成員。這會授予使用者與該群組相關聯的任何權限和存取權限。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.display_name": {
+          "source": "Add User to Group",
+          "message": "新增使用者至群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to add the user to. Select from existing groups in your directory.",
+          "message": "要將使用者新增至其中的群組唯一識別碼。從您的目錄中現有的群組中選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Target group",
+          "message": "目標群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be added to the group. Select from existing users in your directory.",
+          "message": "要新增至群組之使用者的唯一識別碼。從您的目錄中現有的使用者中選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to add to the group",
+          "message": "要新增至群組的使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.short_desc": {
+          "source": "Add a user to an Active Directory group",
+          "message": "將使用者新增至 Active Directory 群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.desc": {
+          "source": "Fetch detailed information about a specific group from Active Directory, including properties, settings, and configuration details.",
+          "message": "從 Active Directory 擷取特定群組的詳細資訊，包括屬性、設定和設定詳細資料。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.display_name": {
+          "source": "Get Group",
+          "message": "取得群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to retrieve information for. Select from existing groups in your directory.",
+          "message": "要擷取其資訊之群組的唯一識別碼。從您的目錄中現有的群組中選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to retrieve",
+          "message": "要擷取的群組識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.short_desc": {
+          "source": "Retrieve group information from Active Directory",
+          "message": "從 Active Directory 擷取群組資訊"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.desc": {
+          "source": "Fetch detailed information about a specific user from Active Directory, including profile data, contact information, and account status.",
+          "message": "從 Active Directory 擷取特定使用者的詳細資訊，包括個人資料、聯絡資訊和帳戶狀態。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "取得使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to retrieve information for. Select from existing users in your directory.",
+          "message": "要擷取其資訊之使用者帳戶的唯一識別碼。從您的目錄中現有的使用者中選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to retrieve",
+          "message": "要取得的使用者識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve user information from Active Directory",
+          "message": "從 Active Directory 取得使用者資訊"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.desc": {
+          "source": "Permanently remove a group from Active Directory. This action cannot be undone and will remove all group memberships and associated permissions.",
+          "message": "從 Active Directory 永久刪除群組。此動作無法復原，並將移除所有群組成員資格及相關權限。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.display_name": {
+          "source": "Delete Group",
+          "message": "刪除群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be deleted. Select from existing groups in your directory.",
+          "message": "要刪除之群組的唯一識別碼。請從目錄中的現有群組選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to delete",
+          "message": "要刪除的群組識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.short_desc": {
+          "source": "Delete a group from Active Directory",
+          "message": "從 Active Directory 刪除群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.desc": {
+          "source": "Permanently remove a user account from Active Directory. This action cannot be undone and will remove all associated data and access permissions.",
+          "message": "從 Active Directory 永久刪除使用者帳戶。此動作無法復原，並將移除所有相關資料與存取權限。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.display_name": {
+          "source": "Delete User",
+          "message": "刪除使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be deleted. Select from existing users in your directory.",
+          "message": "要刪除之使用者帳戶的唯一識別碼。請從目錄中的現有使用者選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to delete",
+          "message": "要刪除的使用者識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.short_desc": {
+          "source": "Delete a user from Active Directory",
+          "message": "從 Active Directory 刪除使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.desc": {
+          "source": "Disable a user account to prevent sign-in while preserving the account and its data. The user will be unable to access any services until the account is re-enabled.",
+          "message": "停用使用者帳戶以阻止登入，同時保留帳戶及其資料。在重新啟用帳戶之前，使用者將無法存取任何服務。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.display_name": {
+          "source": "Disable User",
+          "message": "停用使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be disabled. Select from existing users in your directory.",
+          "message": "要停用之使用者帳戶的唯一識別碼。請從目錄中的現有使用者選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to disable",
+          "message": "要停用的使用者識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.short_desc": {
+          "source": "Disable a user account in Active Directory",
+          "message": "在 Active Directory 中停用使用者帳戶"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.desc": {
+          "source": "Get a paginated list of users from Active Directory with optional filtering and group membership criteria. Useful for reporting and bulk operations.",
+          "message": "從 Active Directory 取得分頁的使用者清單，支援選填的篩選與群組成員資格條件。適用於報表製作與大量操作。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "列出使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned.",
+          "message": "用於篩選特定群組成員使用者的選填群組識別碼。指定後，僅會傳回屬於此群組的使用者。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Filter users by group membership",
+          "message": "依群組成員資格篩選使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the user list based on specific attributes and conditions.",
+          "message": "用於根據特定屬性和條件縮小使用者清單範圍的選填篩選條件。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.short_desc": {
+          "source": "Additional filter conditions",
+          "message": "額外的篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "單一請求中傳回的最大使用者數量。預設為 20，對於較大的結果集可使用分頁。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "要返回的最大使用者數量"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "用於取得下一頁結果的分頁權杖。從之前的列表操作中取得。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "下一頁權標"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "分頁權標"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users from Active Directory",
+          "message": "從 Active Directory 取得使用者清單"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Get a paginated list of groups from Active Directory with optional filtering criteria. Useful for reporting and group management operations.",
+          "message": "從 Active Directory 取得分頁的群組清單，支援選填的篩選條件。適用於報表製作與群組管理操作。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Groups",
+          "message": "列出群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the group list based on specific attributes and conditions.",
+          "message": "用於根據特定屬性和條件縮小群組清單範圍的選填篩選條件。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for groups",
+          "message": "群組的篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "單一請求中傳回的最大群組數量。預設為 20，對於較大的結果集可使用分頁。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of groups to return",
+          "message": "要傳回的最大群組數量"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "用於取得下一頁結果的分頁權杖。從之前的列表操作中取得。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "下一頁權標"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "分頁權標"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of groups from Active Directory",
+          "message": "從 Active Directory 取得群組清單"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Active Directory** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證，對 **Active Directory** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭與請求內文。回應將以包含狀態碼、回應標頭與回應內文的雜湊傳回。\n\n當端點尚未在此應用程式中顯示為一等動作時，可使用此動作。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Active Directory",
+          "message": "對 Active Directory 發起自訂 API 呼叫"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.desc": {
+          "source": "Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions.",
+          "message": "監控 Active Directory 中新建立的群組。此觸發條件可透過群組類型、可見性或命名模式等特定條件進行篩選，以偵測相關的群組新增。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.display_name": {
+          "source": "New Group",
+          "message": "新群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which groups should trigger the event. Configure field, operator, and value to match specific group attributes.",
+          "message": "用於指定哪些群組應觸發事件的選填篩選條件。設定欄位、運算子與值以比對特定的群組屬性。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for group monitoring",
+          "message": "群組監控的篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.short_desc": {
+          "source": "Triggers when a new group is created in Active Directory",
+          "message": "當在 Active Directory 中建立新群組時觸發"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.desc": {
+          "source": "Monitor Active Directory for newly created users. This trigger can be filtered by specific criteria such as user attributes, group membership, or organizational units to detect relevant user additions.",
+          "message": "監控 Active Directory 中新建立的使用者。此觸發條件可透過使用者屬性、群組成員資格或組織單位等特定條件進行篩選，以偵測相關的使用者新增。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "新使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group.",
+          "message": "用於監控新使用者新增的選填群組識別碼。指定後，觸發條件將僅針對新增至該特定群組的使用者引發。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Monitor users added to a specific group",
+          "message": "監控新增至特定群組的使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which users should trigger the event. Configure field, operator, and value to match specific user attributes.",
+          "message": "用於指定哪些使用者應觸發事件的選填篩選條件。設定欄位、運算子與值以比對特定的使用者屬性。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for user monitoring",
+          "message": "使用者監控的篩選條件"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created in Active Directory",
+          "message": "當在 Active Directory 中建立新使用者時觸發"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.desc": {
+          "source": "Remove a user from membership in an existing group in Active Directory. This revokes any permissions and access rights the user had through this group.",
+          "message": "從 Active Directory 中現有群組的成員資格中移除使用者。這將撤銷使用者透過此群組擁有的任何權限與存取權。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.display_name": {
+          "source": "Remove User from Group",
+          "message": "從群組移除使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to remove the user from. Select from existing groups in your directory.",
+          "message": "要將使用者從中移除之群組的唯一識別碼。請從目錄中的現有群組選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Source group",
+          "message": "來源群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be removed from the group. Select from existing users in your directory.",
+          "message": "要從群組中移除之使用者的唯一識別碼。請從目錄中的現有使用者選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to remove from the group",
+          "message": "要從群組移除的使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.short_desc": {
+          "source": "Remove a user from an Active Directory group",
+          "message": "從 Active Directory 群組移除使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.desc": {
+          "source": "Modify properties of an existing group in Active Directory, including display name, description, visibility, and other configurable settings.",
+          "message": "修改 Active Directory 中現有群組的屬性，包括顯示名稱、說明、可見性與其他可設定的設定。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.display_name": {
+          "source": "Update Group",
+          "message": "更新群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.desc": {
+          "source": "Allow people external to the organization to send messages to the group",
+          "message": "允許組織外部的人員向群組傳送訊息"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.display_name": {
+          "source": "Allow External Senders",
+          "message": "允許外部傳送者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.short_desc": {
+          "source": "Allow external email senders",
+          "message": "允許外部電子郵件傳送者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.desc": {
+          "source": "Automatically subscribe new members to receive email notifications",
+          "message": "自動訂閱新成員以接收電子郵件通知"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.display_name": {
+          "source": "Auto-Subscribe New Members",
+          "message": "自動訂閱新成員"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.short_desc": {
+          "source": "Automatically subscribe new members",
+          "message": "自動訂閱新成員"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be updated. Select from existing groups in your directory.",
+          "message": "要更新之群組的唯一識別碼。請從目錄中的現有群組選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to update",
+          "message": "要更新的群組識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description explaining the purpose and scope of the group.",
+          "message": "說明群組目的與範圍的更新說明。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated group description",
+          "message": "更新後的群組描述"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated display name of the group as it will appear in Active Directory.",
+          "message": "群組在 Active Directory 中顯示的更新後顯示名稱。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "顯示名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated group name",
+          "message": "更新後的群組名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.desc": {
+          "source": "Hide this group from address lists",
+          "message": "從地址清單中隱藏此群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.display_name": {
+          "source": "Hide from Address Lists",
+          "message": "從地址清單隱藏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.short_desc": {
+          "source": "Hide group from address lists",
+          "message": "從地址清單隱藏群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.desc": {
+          "source": "Hide this group from Outlook clients",
+          "message": "從 Outlook 用戶端隱藏此群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.display_name": {
+          "source": "Hide from Outlook Clients",
+          "message": "從 Outlook 用戶端隱藏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.short_desc": {
+          "source": "Hide group from Outlook clients",
+          "message": "從 Outlook 用戶端隱藏群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the group. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "群組的更新後郵件暱稱。必須僅包含字母、數字、句點、連字號與底線。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "郵件暱稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "更新後的電子郵件別名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "德文 (德國)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "英文 (英國)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "英文 (美國)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "西班牙文 (西班牙)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "法文 (法國)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "義大利文 (義大利)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "日文 (日本)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "葡萄牙文 (巴西)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnpoLUNO.display_name": {
+          "source": "Chinese (Simplified)",
+          "message": "簡體中文"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.desc": {
+          "source": "The preferred language for the group's communications and interface.",
+          "message": "群組通訊與介面的偏好語言。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.display_name": {
+          "source": "Preferred Language",
+          "message": "偏好語言"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.short_desc": {
+          "source": "Group's preferred language",
+          "message": "群組偏好語言"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "群組為可見，但非成員無法查看成員資格"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "隱藏成員資格"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "組織內的任何人皆可查看群組及其內容"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "公開"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "僅有群組成員可以查看群組及其內容"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "私人"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "The updated visibility setting controlling who can see the group and its content.",
+          "message": "控制誰能檢視群組及其內容的更新後可見性設定。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "可見度"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Updated visibility setting",
+          "message": "更新後的可見性設定"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.short_desc": {
+          "source": "Update an existing group in Active Directory",
+          "message": "更新 Active Directory 中的現有群組"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.desc": {
+          "source": "Modify properties of an existing user account in Active Directory. Update profile information, contact details, organizational data, and account settings.",
+          "message": "修改 Active Directory 中現有使用者帳戶的屬性。更新個人資料資訊、聯絡資訊、組織資料及帳戶設定。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.display_name": {
+          "source": "Update User",
+          "message": "更新使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The updated country where the user is located.",
+          "message": "使用者所在位置的更新後國家/地區。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "國家/地區"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Updated country",
+          "message": "更新後的國家/地區"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The updated city where the user is located.",
+          "message": "使用者所在位置的更新後城市。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "城市"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "Updated city",
+          "message": "更新後的城市"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services.",
+          "message": "是否啟用或停用使用者帳戶。已停用的帳戶無法登入任何服務。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "帳戶已啟用"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable or disable the account",
+          "message": "啟用或停用帳戶"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The updated given name (first name) of the user.",
+          "message": "使用者的更新後名字。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "名字"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "Updated first name",
+          "message": "已更新的名字"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The updated department or organizational unit the user belongs to.",
+          "message": "使用者所屬的更新後部門或組織單位。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "部門"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "Updated department",
+          "message": "更新後的部門"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "使用者在 Active Directory 及整個 Microsoft 服務中顯示的更新後完整顯示名稱。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "顯示名稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated full name",
+          "message": "更新後的全名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The updated job title or position of the user within the organization.",
+          "message": "使用者在組織內的更新後職稱或職位。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "職稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "Updated job title",
+          "message": "更新後的職稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The updated mobile phone number for the user.",
+          "message": "使用者的更新後行動電話號碼。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "行動電話"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "Updated mobile phone number",
+          "message": "更新後的行動電話號碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The updated primary email address for the user.",
+          "message": "使用者的更新後主要電子郵件地址。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "電子郵件地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Updated email address",
+          "message": "更新後的電子郵件地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "使用者的更新後郵件暱稱。必須僅包含字母、數字、句點、連字號與底線。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "郵件暱稱"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "更新後的電子郵件別名"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The updated state or province where the user is located.",
+          "message": "使用者所在位置的更新後州/省/市。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "州/省"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "Updated state or province",
+          "message": "更新後的州/省/市"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The updated street address component of the user's physical location.",
+          "message": "使用者實際位置的更新後街道地址部分。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "街道地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Updated street address",
+          "message": "更新後的街道地址"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The updated surname (last name) of the user.",
+          "message": "使用者的更新後姓氏。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "姓氏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "Updated last name",
+          "message": "已更新的姓氏"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The updated postal code or ZIP code for the user's location.",
+          "message": "使用者位置的更新後郵遞區號。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "郵遞區號"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "Updated postal code",
+          "message": "更新後的郵遞區號"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "墨西哥"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "澳洲"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "巴西"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "加拿大"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "德國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "法國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "英國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "印度"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "日本"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "美國"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The updated two-letter country code representing the user's usage location for license assignment purposes.",
+          "message": "代表使用者授權指派用途之使用位置的更新後兩個字母國家/地區代碼。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "使用地位置"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Updated usage location",
+          "message": "更新後的使用位置"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be updated. Select from existing users in your directory.",
+          "message": "要更新之使用者帳戶的唯一識別碼。從目錄中的現有使用者中選擇。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "使用者 ID"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to update",
+          "message": "要更新之使用者的識別碼"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.short_desc": {
+          "source": "Update an existing user in Active Directory",
+          "message": "更新 Active Directory 中的現有使用者"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.desc": {
+          "source": "The Active Directory integration provides comprehensive actions and triggers to interact with Microsoft Graph API for user and group management. Automate user provisioning, group membership management, and organizational administration tasks with enterprise-grade security and compliance.",
+          "message": "Active Directory 整合提供全面的動作與觸發程序，可與 Microsoft Graph API 互動以進行使用者與群組管理。以企業級安全性與合規性自動執行使用者佈署、群組成員資格管理及組織管理任務。"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.display_name": {
+          "source": "Active Directory",
+          "message": "Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.short_desc": {
+          "source": "Seamlessly connect to Microsoft Active Directory to manage users, groups, and organizational resources.",
+          "message": "無縫連接至 Microsoft Active Directory 以管理使用者、群組與組織資源。"
+        }
+      }
+    }
+  }
+}

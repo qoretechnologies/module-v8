@@ -1,0 +1,1837 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.desc": {
+          "source": "Create a new company record in Mautic with the specified details.",
+          "message": "Erstellen Sie einen neuen Unternehmensdatensatz in Mautic mit den angegebenen Details."
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
+          "source": "Create Company",
+          "message": "Unternehmen erstellen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.desc": {
+          "source": "The name of the company (required)",
+          "message": "Der Name des Unternehmens (erforderlich)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
+          "source": "Company Name",
+          "message": "Unternehmensname"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
+          "source": "The name of the company",
+          "message": "Der Name des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.desc": {
+          "source": "The street address of the company",
+          "message": "Die Straßenadresse des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
+          "source": "Address Line 1",
+          "message": "Adresszeile 1"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
+          "source": "The first line of the company address",
+          "message": "Die erste Zeile der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.desc": {
+          "source": "Additional address information (suite, floor, etc.)",
+          "message": "Zusätzliche Adressinformationen (Suite, Etage usw.)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
+          "source": "Address Line 2",
+          "message": "Adresszeile 2"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
+          "source": "The second line of the company address",
+          "message": "Die zweite Zeile der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.desc": {
+          "source": "The city of the company address",
+          "message": "Die Stadt der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.display_name": {
+          "source": "City",
+          "message": "Stadt"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.short_desc": {
+          "source": "The city where the company is located",
+          "message": "Die Stadt, in der sich das Unternehmen befindet"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.desc": {
+          "source": "The country where the company is located",
+          "message": "Das Land, in dem sich das Unternehmen befindet"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.display_name": {
+          "source": "Country",
+          "message": "Land"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.short_desc": {
+          "source": "The country of the company",
+          "message": "Das Land des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.desc": {
+          "source": "Additional notes or description about the company",
+          "message": "Zusätzliche Notizen oder Beschreibung über das Unternehmen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.short_desc": {
+          "source": "A description of the company",
+          "message": "Eine Beschreibung des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.desc": {
+          "source": "The primary email address for the company",
+          "message": "Die primäre E-Mail-Adresse des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
+          "source": "Company Email",
+          "message": "Unternehmens-E-Mail"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
+          "source": "The email address of the company",
+          "message": "Die E-Mail-Adresse des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.desc": {
+          "source": "The industry or sector the company operates in",
+          "message": "Die Branche oder der Sektor, in dem das Unternehmen tätig ist"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.display_name": {
+          "source": "Industry",
+          "message": "Branche"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.short_desc": {
+          "source": "The industry of the company",
+          "message": "Die Branche des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.desc": {
+          "source": "The primary phone number for the company",
+          "message": "Die primäre Telefonnummer des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
+          "source": "Company Phone",
+          "message": "Telefonnummer des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
+          "source": "The phone number of the company",
+          "message": "Die Telefonnummer des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.desc": {
+          "source": "The state, province, or region of the company address",
+          "message": "Das Bundesland, die Provinz oder die Region der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
+          "source": "State/Region",
+          "message": "Bundesland/Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
+          "source": "The state or region of the company",
+          "message": "Das Bundesland oder die Region des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.desc": {
+          "source": "The company website URL",
+          "message": "Die Website-URL des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.short_desc": {
+          "source": "The website URL of the company",
+          "message": "Die Website-URL des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.desc": {
+          "source": "The postal or ZIP code of the company address",
+          "message": "Die Postleitzahl der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
+          "source": "Postal Code",
+          "message": "Postleitzahl"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
+          "source": "The postal/ZIP code of the company",
+          "message": "Die Postleitzahl des Unternehmens"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key",
+          "message": "Ein Objekt, das benutzerdefinierte Feldaliase und deren Werte enthält. Verwenden Sie den Feldalias als Schlüssel"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Create a new company",
+          "message": "Neues Unternehmen erstellen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Mautic with the specified information.",
+          "message": "Erstellen Sie einen neuen Kontakt in Mautic mit den angegebenen Informationen."
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Kontakt erstellen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.desc": {
+          "source": "The country of the contact",
+          "message": "Das Land des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Land"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.short_desc": {
+          "source": "The country",
+          "message": "Das Land"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company the contact works for",
+          "message": "Der Name des Unternehmens, für das der Kontakt arbeitet"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "The contact's company name",
+          "message": "Der Unternehmensname des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.desc": {
+          "source": "The city of the contact address",
+          "message": "Die Stadt der Kontaktadresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Stadt"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y2l0eQ.short_desc": {
+          "source": "The city",
+          "message": "Die Stadt"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "Ein Objekt, das benutzerdefinierte Feldaliase und deren Werte enthält. Verwenden Sie den Feldalias als Schlüssel "
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.desc": {
+          "source": "The street address of the contact",
+          "message": "Die Straßenadresse des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
+          "source": "Address Line 1",
+          "message": "Adresszeile 1"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
+          "source": "The first line of the address",
+          "message": "Die erste Zeile der Adresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.desc": {
+          "source": "Additional address information",
+          "message": "Zusätzliche Adressinformationen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
+          "source": "Address Line 2",
+          "message": "Adresszeile 2"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
+          "source": "The second line of the address",
+          "message": "Die zweite Zeile der Adresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The primary email address for the contact (required)",
+          "message": "Die primäre E-Mail-Adresse für den Kontakt (erforderlich)"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "E-Mail-Adresse"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "Die E-Mail-Adresse des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.desc": {
+          "source": "The first name of the contact",
+          "message": "Der Vorname des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
+          "source": "The contact's first name",
+          "message": "Der Vorname des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.desc": {
+          "source": "The last name of the contact",
+          "message": "Der Nachname des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
+          "source": "The contact's last name",
+          "message": "Der Nachname des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.desc": {
+          "source": "The mobile phone number for the contact",
+          "message": "Die Mobilfunknummer des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.display_name": {
+          "source": "Mobile",
+          "message": "Mobil"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.bW9iaWxl.short_desc": {
+          "source": "The contact's mobile number",
+          "message": "Die Mobilfunknummer des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.desc": {
+          "source": "The state, province, or region",
+          "message": "Das Bundesland, die Provinz oder die Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
+          "source": "State/Region",
+          "message": "Bundesland/Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
+          "source": "The state or region",
+          "message": "Das Bundesland oder die Region"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.desc": {
+          "source": "The job title or position of the contact",
+          "message": "Die Berufsbezeichnung oder Position des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Position"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.short_desc": {
+          "source": "The contact's job title",
+          "message": "Die Berufsbezeichnung des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The phone number for the contact",
+          "message": "Die Telefonnummer des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Die Telefonnummer des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.desc": {
+          "source": "The personal or professional website URL",
+          "message": "Die persönliche oder berufliche Website-URL"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The contact's website",
+          "message": "Die Website des Kontakts"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.desc": {
+          "source": "A list of tags to apply to the contact for organization and segmentation",
+          "message": "Eine Liste von Tags, die dem Kontakt zur Organisation und Segmentierung zugewiesen werden sollen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.dGFncw.short_desc": {
+          "source": "Tags to apply to the contact",
+          "message": "Tags, die dem Kontakt zugewiesen werden sollen"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.desc": {
+          "source": "The postal or ZIP code",
+          "message": "Die Postleitzahl"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Postleitzahl"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
+          "source": "The postal/ZIP code",
+          "message": "Die Postleitzahl"
+        },
+        "app.TWF1dGlj.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Neuen Kontakt erstellen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.desc": {
+          "source": "Create an association between a contact and a company in Mautic.",
+          "message": "Erstellen Sie eine Verknüpfung zwischen einem Kontakt und einem Unternehmen in Mautic."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.display_name": {
+          "source": "Add Contact to Company",
+          "message": "Kontakt zu Unternehmen hinzufügen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to associate the contact with",
+          "message": "Wählen Sie das Unternehmen aus, dem Sie den Kontakt zuordnen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to add the contact to",
+          "message": "Das Unternehmen, dem der Kontakt hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to associate with the company",
+          "message": "Wählen Sie den Kontakt aus, den Sie dem Unternehmen zuordnen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the company",
+          "message": "Der Kontakt, der dem Unternehmen hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY29tcGFueQ.short_desc": {
+          "source": "Associate a contact with a company",
+          "message": "Einen Kontakt einem Unternehmen zuordnen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.desc": {
+          "source": "Add a specific contact to a campaign in Mautic. This allows you to manually include contacts in campaign workflows.",
+          "message": "Einen bestimmten Kontakt zu einer Kampagne in Mautic hinzufügen. Dadurch können Sie Kontakte manuell in Kampagnen-Workflows aufnehmen."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.display_name": {
+          "source": "Add Contact to Campaign",
+          "message": "Kontakt zu Kampagne hinzufügen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add to the campaign",
+          "message": "Wählen Sie den Kontakt aus, den Sie zur Kampagne hinzufügen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the campaign",
+          "message": "Der Kontakt, der zur Kampagne hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.desc": {
+          "source": "Select the campaign that you want to add the contact to",
+          "message": "Wählen Sie die Kampagne aus, zu der Sie den Kontakt hinzufügen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.display_name": {
+          "source": "Campaign",
+          "message": "Kampagne"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.option.Y2FtcGFpZ24.short_desc": {
+          "source": "The campaign to add the contact to",
+          "message": "Die Kampagne, zu der der Kontakt hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fY2FtcGFpZ24.short_desc": {
+          "source": "Manually add a contact to a campaign",
+          "message": "Einen Kontakt manuell zu einer Kampagne hinzufügen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.desc": {
+          "source": "Manually add a specific contact to a segment in Mautic.",
+          "message": "Einen bestimmten Kontakt manuell zu einem Segment in Mautic hinzufügen."
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.display_name": {
+          "source": "Add Contact to Segment",
+          "message": "Kontakt zu Segment hinzufügen"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add to the segment",
+          "message": "Wählen Sie den Kontakt aus, den Sie zum Segment hinzufügen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add to the segment",
+          "message": "Der Kontakt, der zum Segment hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.desc": {
+          "source": "Select the segment that you want to add the contact to",
+          "message": "Wählen Sie das Segment aus, zu dem Sie den Kontakt hinzufügen möchten"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.display_name": {
+          "source": "Segment",
+          "message": "Segment"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.option.c2VnbWVudA.short_desc": {
+          "source": "The segment to add the contact to",
+          "message": "Das Segment, zu dem der Kontakt hinzugefügt werden soll"
+        },
+        "app.TWF1dGlj.action.YWRkX2NvbnRhY3RfdG9fc2VnbWVudA.short_desc": {
+          "source": "Add a contact to a segment",
+          "message": "Einen Kontakt zu einem Segment hinzufügen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.desc": {
+          "source": "Retrieve a paginated list of companies from Mautic with optional search and filtering.",
+          "message": "Eine paginierte Liste von Unternehmen aus Mautic mit optionaler Suche und Filterung abrufen."
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.display_name": {
+          "source": "Get Many Companies",
+          "message": "Mehrere Unternehmen abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmNvbXBhbnluYW1l.display_name": {
+          "source": "Company Name",
+          "message": "Unternehmensname"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmRhdGVfYWRkZWQ.display_name": {
+          "source": "Date Added",
+          "message": "Hinzugefügt am"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.desc": {
+          "source": "The field to use for sorting the results",
+          "message": "Das Feld, das zum Sortieren der Ergebnisse verwendet werden soll"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Sortieren nach"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeQ.short_desc": {
+          "source": "Field to sort results by",
+          "message": "Feld, nach dem die Ergebnisse sortiert werden sollen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.desc": {
+          "source": "The direction to sort results: ascending or descending",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: aufsteigend oder absteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.display_name": {
+          "source": "Order Direction",
+          "message": "Sortierrichtung"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.b3JkZXJCeURpcg.short_desc": {
+          "source": "Sort direction (asc or desc)",
+          "message": "Sortierrichtung (asc oder desc)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of companies to return (default: 30)",
+          "message": "Die maximale Anzahl der zurückzugebenden Unternehmen (Standard: 30)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of companies to return",
+          "message": "Maximale Anzahl zurückzugebender Unternehmen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.desc": {
+          "source": "Search for companies by name or other fields",
+          "message": "Nach Unternehmen anhand des Namens oder anderer Felder suchen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Suche"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter companies",
+          "message": "Suchbegriff zum Filtern von Unternehmen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.desc": {
+          "source": "The starting row for pagination (default: 0)",
+          "message": "Die Startzeile für die Paginierung (Standard: 0)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.display_name": {
+          "source": "Start",
+          "message": "Start"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.option.c3RhcnQ.short_desc": {
+          "source": "Starting row for pagination",
+          "message": "Startzeile für die Paginierung"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29tcGFuaWVz.short_desc": {
+          "source": "Retrieve a list of companies",
+          "message": "Eine Liste von Unternehmen abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.desc": {
+          "source": "Retrieve a paginated list of contacts from Mautic with optional search and filtering.",
+          "message": "Eine paginierte Liste von Kontakten aus Mautic mit optionaler Suche und Filterung abrufen."
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.display_name": {
+          "source": "Get Many Contacts",
+          "message": "Mehrere Kontakte abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmRhdGVfYWRkZWQ.display_name": {
+          "source": "Date Added",
+          "message": "Hinzugefügt am"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmZpcnN0bmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "ID",
+          "message": "ID"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmxhc3RfYWN0aXZl.display_name": {
+          "source": "Last Active",
+          "message": "Zuletzt aktiv"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.allowed-value.c3RyaW5nOmxhc3RuYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.desc": {
+          "source": "The field to use for sorting the results",
+          "message": "Das Feld, das zum Sortieren der Ergebnisse verwendet werden soll"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Sortieren nach"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeQ.short_desc": {
+          "source": "Field to sort results by",
+          "message": "Feld, nach dem die Ergebnisse sortiert werden sollen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.desc": {
+          "source": "The direction to sort results: ascending or descending",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: aufsteigend oder absteigend"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.display_name": {
+          "source": "Order Direction",
+          "message": "Sortierrichtung"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.b3JkZXJCeURpcg.short_desc": {
+          "source": "Sort direction (asc or desc)",
+          "message": "Sortierrichtung (asc oder desc)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of contacts to return (default: 30)",
+          "message": "Die maximale Anzahl der zurückzugebenden Kontakte (Standard: 30)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maximale Anzahl zurückzugebender Kontakte"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.desc": {
+          "source": "Search for contacts by name, email, or other fields",
+          "message": "Nach Kontakten anhand von Name, E-Mail oder anderen Feldern suchen"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Suche"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter contacts",
+          "message": "Suchbegriff zum Filtern von Kontakten"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.desc": {
+          "source": "The starting row for pagination (default: 0)",
+          "message": "Die Startzeile für die Paginierung (Standard: 0)"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.display_name": {
+          "source": "Start",
+          "message": "Start"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.option.c3RhcnQ.short_desc": {
+          "source": "Starting row for pagination",
+          "message": "Startzeile für die Paginierung"
+        },
+        "app.TWF1dGlj.action.Z2V0X21hbnlfY29udGFjdHM.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Eine Liste von Kontakten abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.desc": {
+          "source": "Retrieve detailed information about a specific company in Mautic.",
+          "message": "Detaillierte Informationen über ein bestimmtes Unternehmen in Mautic abrufen."
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.display_name": {
+          "source": "Get Company",
+          "message": "Firma abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to get details for",
+          "message": "Wählen Sie das Unternehmen aus, dessen Details Sie abrufen möchten"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to retrieve",
+          "message": "Das abzurufende Unternehmen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbXBhbnk.short_desc": {
+          "source": "Retrieve company details",
+          "message": "Unternehmensdetails abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve detailed information about a specific contact in Mautic including fields, tags, and DNC status.",
+          "message": "Detaillierte Informationen über einen bestimmten Kontakt in Mautic abrufen, einschließlich Feldern, Tags und DNC-Status."
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Kontakt abrufen"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to get details for",
+          "message": "Wählen Sie den Kontakt aus, dessen Details Sie abrufen möchten"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to retrieve",
+          "message": "Der abzurufende Kontakt"
+        },
+        "app.TWF1dGlj.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve contact details",
+          "message": "Kontaktdetails abrufen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.desc": {
+          "source": "Permanently delete a company record from Mautic.",
+          "message": "Einen Unternehmensdatensatz dauerhaft aus Mautic löschen."
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
+          "source": "Delete Company",
+          "message": "Firma löschen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to delete",
+          "message": "Wählen Sie das Unternehmen aus, das Sie löschen möchten"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to delete",
+          "message": "Das zu löschende Unternehmen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
+          "source": "Delete a company",
+          "message": "Ein Unternehmen löschen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently delete a contact from Mautic.",
+          "message": "Einen Kontakt dauerhaft aus Mautic löschen."
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Kontakt löschen"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to delete",
+          "message": "Wählen Sie den Kontakt aus, den Sie löschen möchten"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to delete",
+          "message": "Der zu löschende Kontakt"
+        },
+        "app.TWF1dGlj.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Einen Kontakt löschen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.desc": {
+          "source": "Modify the points score of a contact in Mautic. You can add points to reward engagement or subtract points to de-qualify leads.",
+          "message": "Den Punktestand eines Kontakts in Mautic ändern. Sie können Punkte hinzufügen, um Engagement zu belohnen, oder Punkte abziehen, um Leads zu dequalifizieren."
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.display_name": {
+          "source": "Edit Contact Points",
+          "message": "Kontaktpunkte bearbeiten"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.desc": {
+          "source": "Select the contact whose points you want to modify",
+          "message": "Wählen Sie den Kontakt aus, dessen Punkte Sie ändern möchten"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to modify points for",
+          "message": "Der Kontakt, dessen Punkte geändert werden sollen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOmFkZA.display_name": {
+          "source": "Add Points",
+          "message": "Punkte hinzufügen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOnN1YnRyYWN0.display_name": {
+          "source": "Subtract Points",
+          "message": "Punkte abziehen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.desc": {
+          "source": "Choose whether to add points (increase score) or subtract points (decrease score)",
+          "message": "Wählen Sie, ob Punkte hinzugefügt (Punktzahl erhöhen) oder abgezogen (Punktzahl verringern) werden sollen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.display_name": {
+          "source": "Operation",
+          "message": "Operation"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.b3BlcmF0aW9u.short_desc": {
+          "source": "Whether to add or subtract points",
+          "message": "Gibt an, ob Punkte hinzugefügt oder abgezogen werden sollen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.desc": {
+          "source": "The number of points to add or subtract from the contact score",
+          "message": "Die Anzahl der Punkte, die zum Punktestand des Kontakts hinzugefügt oder davon abgezogen werden sollen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.display_name": {
+          "source": "Points",
+          "message": "Punkte"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.option.cG9pbnRz.short_desc": {
+          "source": "The number of points to add or subtract",
+          "message": "Die Anzahl der hinzuzufügenden oder abzuziehenden Punkte"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9jb250YWN0X3BvaW50cw.short_desc": {
+          "source": "Add or subtract points from a contact's score",
+          "message": "Punkte zum Punktestand eines Kontakts hinzufügen oder davon abziehen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.desc": {
+          "source": "Manage the Do Not Contact (DNC) status for a contact on a specific channel (email, SMS, etc.).",
+          "message": "Den „Nicht kontaktieren“ (DNC)-Status für einen Kontakt auf einem bestimmten Kanal (E-Mail, SMS usw.) verwalten."
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.display_name": {
+          "source": "Edit Do Not Contact List",
+          "message": "„Nicht kontaktieren“-Liste bearbeiten"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.desc": {
+          "source": "Additional notes or comments about the DNC entry",
+          "message": "Zusätzliche Notizen oder Kommentare zum DNC-Eintrag"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.display_name": {
+          "source": "Comments",
+          "message": "Kommentare"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29tbWVudHM.short_desc": {
+          "source": "Additional comments",
+          "message": "Zusätzliche Kommentare"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact whose DNC status you want to modify",
+          "message": "Wählen Sie den Kontakt aus, dessen DNC-Status Sie ändern möchten"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to modify DNC status for",
+          "message": "Der Kontakt, für den der DNC-Status geändert werden soll"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.allowed-value.c3RyaW5nOnNtcw.display_name": {
+          "source": "SMS",
+          "message": "SMS"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel for the DNC entry (email, sms, etc.)",
+          "message": "Wählen Sie den Kanal für den DNC-Eintrag aus (E-Mail, SMS usw.)"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Kanal"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.Y2hhbm5lbA.short_desc": {
+          "source": "The communication channel",
+          "message": "Der Kommunikationskanal"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOmFkZA.display_name": {
+          "source": "Add to DNC List",
+          "message": "Zur DNC-Liste hinzufügen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.allowed-value.c3RyaW5nOnJlbW92ZQ.display_name": {
+          "source": "Remove from DNC List",
+          "message": "Aus DNC-Liste entfernen"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.desc": {
+          "source": "Choose whether to add the contact to the DNC list (stop communications) or remove them (allow communications)",
+          "message": "Wählen Sie aus, ob der Kontakt zur DNC-Liste hinzugefügt (Kommunikation stoppen) oder daraus entfernt werden soll (Kommunikation erlauben)"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.display_name": {
+          "source": "Operation",
+          "message": "Operation"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.b3BlcmF0aW9u.short_desc": {
+          "source": "Whether to add or remove from DNC list",
+          "message": "Ob zur DNC-Liste hinzugefügt oder daraus entfernt werden soll"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjE.display_name": {
+          "source": "Unsubscribed",
+          "message": "Abgemeldet"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjI.display_name": {
+          "source": "Bounced",
+          "message": "Unzustellbar"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.allowed-value.aW50OjM.display_name": {
+          "source": "Manual",
+          "message": "Manuell"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.desc": {
+          "source": "The reason for adding the contact to the do not contact list",
+          "message": "Der Grund für das Hinzufügen des Kontakts zur Nicht-kontaktieren-Liste"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.display_name": {
+          "source": "Reason",
+          "message": "Grund"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.option.cmVhc29u.short_desc": {
+          "source": "The reason for adding to DNC",
+          "message": "Der Grund für das Hinzufügen zur DNC"
+        },
+        "app.TWF1dGlj.action.ZWRpdF9kb19ub3RfY29udGFjdA.short_desc": {
+          "source": "Add or remove a contact from the do not contact list",
+          "message": "Einen Kontakt zur Nicht-kontaktieren-Liste hinzufügen oder daraus entfernen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Mautic** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Mautic** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.TWF1dGlj.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Mautic",
+          "message": "Einen benutzerdefinierten API-Aufruf an Mautic ausführen"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.desc": {
+          "source": "Send a Mautic email template to a specific contact.",
+          "message": "Eine Mautic-E-Mail-Vorlage an einen bestimmten Kontakt senden."
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.display_name": {
+          "source": "Send Email to Contact",
+          "message": "E-Mail an Kontakt senden"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to send the email to",
+          "message": "Wählen Sie den Kontakt aus, an den Sie die E-Mail senden möchten"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to send the email to",
+          "message": "Der Kontakt, an den die E-Mail gesendet werden soll"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.desc": {
+          "source": "Select the Mautic email template that you want to send",
+          "message": "Wählen Sie die Mautic-E-Mail-Vorlage aus, die Sie senden möchten"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.display_name": {
+          "source": "Email Template",
+          "message": "E-Mail-Vorlage"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.option.ZW1haWw.short_desc": {
+          "source": "The email template to send",
+          "message": "Die zu sendende E-Mail-Vorlage"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19jb250YWN0.short_desc": {
+          "source": "Send an email to a specific contact",
+          "message": "Eine E-Mail an einen bestimmten Kontakt senden"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.desc": {
+          "source": "Send a Mautic segment email to all contacts in the associated segment. The email must be of type \"list\" (segment email).",
+          "message": "Eine Mautic-Segment-E-Mail an alle Kontakte im zugehörigen Segment senden. Die E-Mail muss vom Typ „list“ (Segment-E-Mail) sein."
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.display_name": {
+          "source": "Send Email to Segment",
+          "message": "E-Mail an Segment senden"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.desc": {
+          "source": "Select the segment email that you want to send. This must be a \"list\" type email associated with a segment.",
+          "message": "Wählen Sie die Segment-E-Mail aus, die Sie senden möchten. Dies muss eine E-Mail vom Typ „list“ sein, die einem Segment zugeordnet ist."
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.display_name": {
+          "source": "Segment Email",
+          "message": "Segment-E-Mail"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.option.ZW1haWw.short_desc": {
+          "source": "The segment email to send",
+          "message": "Die zu sendende Segment-E-Mail"
+        },
+        "app.TWF1dGlj.action.c2VuZF9lbWFpbF90b19zZWdtZW50.short_desc": {
+          "source": "Send an email to all contacts in a segment",
+          "message": "Eine E-Mail an alle Kontakte in einem Segment senden"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.desc": {
+          "source": "Remove a specific contact from a campaign in Mautic. This stops the contact from receiving further campaign actions.",
+          "message": "Einen bestimmten Kontakt aus einer Kampagne in Mautic entfernen. Dadurch erhält der Kontakt keine weiteren Kampagnenaktionen mehr."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.display_name": {
+          "source": "Remove Contact from Campaign",
+          "message": "Kontakt aus Kampagne entfernen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the campaign",
+          "message": "Wählen Sie den Kontakt aus, den Sie aus der Kampagne entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the campaign",
+          "message": "Der aus der Kampagne zu entfernende Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.desc": {
+          "source": "Select the campaign that you want to remove the contact from",
+          "message": "Wählen Sie die Kampagne aus, aus der Sie den Kontakt entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.display_name": {
+          "source": "Campaign",
+          "message": "Kampagne"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.option.Y2FtcGFpZ24.short_desc": {
+          "source": "The campaign to remove the contact from",
+          "message": "Die Kampagne, aus der der Kontakt entfernt werden soll"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jYW1wYWlnbg.short_desc": {
+          "source": "Remove a contact from a campaign",
+          "message": "Einen Kontakt aus einer Kampagne entfernen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.desc": {
+          "source": "Remove the association between a contact and a company in Mautic.",
+          "message": "Die Verknüpfung zwischen einem Kontakt und einem Unternehmen in Mautic entfernen."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.display_name": {
+          "source": "Remove Contact from Company",
+          "message": "Kontakt aus Unternehmen entfernen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to remove the contact from",
+          "message": "Wählen Sie das Unternehmen aus, aus dem Sie den Kontakt entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to remove the contact from",
+          "message": "Das Unternehmen, aus dem der Kontakt entfernt werden soll"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the company",
+          "message": "Wählen Sie den Kontakt aus, den Sie aus dem Unternehmen entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the company",
+          "message": "Der aus dem Unternehmen zu entfernende Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9jb21wYW55.short_desc": {
+          "source": "Remove a contact from a company",
+          "message": "Einen Kontakt aus einem Unternehmen entfernen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.desc": {
+          "source": "Remove a specific contact from a segment in Mautic.",
+          "message": "Einen bestimmten Kontakt aus einem Segment in Mautic entfernen."
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.display_name": {
+          "source": "Remove Contact from Segment",
+          "message": "Kontakt aus Segment entfernen"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove from the segment",
+          "message": "Wählen Sie den Kontakt aus, den Sie aus dem Segment entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove from the segment",
+          "message": "Der aus dem Segment zu entfernende Kontakt"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.desc": {
+          "source": "Select the segment that you want to remove the contact from",
+          "message": "Wählen Sie das Segment aus, aus dem Sie den Kontakt entfernen möchten"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.display_name": {
+          "source": "Segment",
+          "message": "Segment"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.option.c2VnbWVudA.short_desc": {
+          "source": "The segment to remove the contact from",
+          "message": "Das Segment, aus dem der Kontakt entfernt werden soll"
+        },
+        "app.TWF1dGlj.action.cmVtb3ZlX2NvbnRhY3RfZnJvbV9zZWdtZW50.short_desc": {
+          "source": "Remove a contact from a segment",
+          "message": "Einen Kontakt aus einem Segment entfernen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.desc": {
+          "source": "Update the information of an existing company in Mautic.",
+          "message": "Die Informationen eines bestehenden Unternehmens in Mautic aktualisieren."
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.display_name": {
+          "source": "Update Company",
+          "message": "Unternehmen aktualisieren"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.desc": {
+          "source": "Select the company that you want to update",
+          "message": "Wählen Sie das Unternehmen aus, das Sie aktualisieren möchten"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueQ.short_desc": {
+          "source": "The company to update",
+          "message": "Das zu aktualisierende Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.desc": {
+          "source": "The new name for the company",
+          "message": "Der neue Name für das Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.display_name": {
+          "source": "Company Name",
+          "message": "Unternehmensname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueW5hbWU.short_desc": {
+          "source": "The updated name of the company",
+          "message": "Der aktualisierte Name des Unternehmens"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.desc": {
+          "source": "The new street address of the company",
+          "message": "Die neue Straßenadresse des Unternehmens"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.display_name": {
+          "source": "Address Line 1",
+          "message": "Adresszeile 1"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3Mx.short_desc": {
+          "source": "The updated first line of the address",
+          "message": "Die aktualisierte erste Adresszeile"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.desc": {
+          "source": "New additional address information",
+          "message": "Neue zusätzliche Adressinformationen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.display_name": {
+          "source": "Address Line 2",
+          "message": "Adresszeile 2"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWFkZHJlc3My.short_desc": {
+          "source": "The updated second line of the address",
+          "message": "Die aktualisierte zweite Adresszeile"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.desc": {
+          "source": "The new city of the company address",
+          "message": "Die neue Stadt der Unternehmensadresse"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.display_name": {
+          "source": "City",
+          "message": "Stadt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNpdHk.short_desc": {
+          "source": "The updated city",
+          "message": "Die aktualisierte Stadt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.desc": {
+          "source": "The new country of the company",
+          "message": "Das neue Land des Unternehmens"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.display_name": {
+          "source": "Country",
+          "message": "Land"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWNvdW50cnk.short_desc": {
+          "source": "The updated country",
+          "message": "Das aktualisierte Land"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.desc": {
+          "source": "New notes or description about the company",
+          "message": "Neue Notizen oder Beschreibung über das Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWRlc2NyaXB0aW9u.short_desc": {
+          "source": "The updated description",
+          "message": "Die aktualisierte Beschreibung"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.desc": {
+          "source": "The new primary email address for the company",
+          "message": "Die neue primäre E-Mail-Adresse für das Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.display_name": {
+          "source": "Company Email",
+          "message": "Unternehmens-E-Mail"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWVtYWls.short_desc": {
+          "source": "The updated email address",
+          "message": "Die aktualisierte E-Mail-Adresse"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.desc": {
+          "source": "The new industry or sector",
+          "message": "Die neue Branche oder der neue Sektor"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.display_name": {
+          "source": "Industry",
+          "message": "Branche"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueWluZHVzdHJ5.short_desc": {
+          "source": "The updated industry",
+          "message": "Die aktualisierte Branche"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.desc": {
+          "source": "The new primary phone number for the company",
+          "message": "Die neue primäre Telefonnummer für das Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.display_name": {
+          "source": "Company Phone",
+          "message": "Telefonnummer des Unternehmens"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXBob25l.short_desc": {
+          "source": "The updated phone number",
+          "message": "Die aktualisierte Telefonnummer"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.desc": {
+          "source": "The new state, province, or region",
+          "message": "Das neue Bundesland, die neue Provinz oder Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.display_name": {
+          "source": "State/Region",
+          "message": "Bundesland/Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXN0YXRl.short_desc": {
+          "source": "The updated state or region",
+          "message": "Das aktualisierte Bundesland oder die aktualisierte Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.desc": {
+          "source": "The new company website URL",
+          "message": "Die neue Website-URL des Unternehmens"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXdlYnNpdGU.short_desc": {
+          "source": "The updated website URL",
+          "message": "Die aktualisierte Website-URL"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.desc": {
+          "source": "The new postal or ZIP code",
+          "message": "Die neue Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.display_name": {
+          "source": "Postal Code",
+          "message": "Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueXppcGNvZGU.short_desc": {
+          "source": "The updated postal/ZIP code",
+          "message": "Die aktualisierte Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "Ein Objekt, das benutzerdefinierte Feldaliase und deren Werte enthält. Verwenden Sie den Feldalias als Schlüssel "
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Update an existing company",
+          "message": "Ein bestehendes Unternehmen aktualisieren"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the information of an existing contact in Mautic.",
+          "message": "Die Informationen eines bestehenden Kontakts in Mautic aktualisieren."
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Kontakt aktualisieren"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.desc": {
+          "source": "The new country",
+          "message": "Das neue Land"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Land"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y291bnRyeQ.short_desc": {
+          "source": "The updated country",
+          "message": "Das aktualisierte Land"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The new company name",
+          "message": "Der neue Firmenname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "The updated company name",
+          "message": "Der aktualisierte Firmenname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to update",
+          "message": "Wählen Sie den Kontakt aus, den Sie aktualisieren möchten"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Kontakt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to update",
+          "message": "Der zu aktualisierende Kontakt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.desc": {
+          "source": "The new city",
+          "message": "Die neue Stadt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Stadt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y2l0eQ.short_desc": {
+          "source": "The updated city",
+          "message": "Die aktualisierte Stadt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "An object containing custom field aliases and their values. Use the field alias as the key ",
+          "message": "Ein Objekt, das benutzerdefinierte Feldaliase und deren Werte enthält. Verwenden Sie den Feldalias als Schlüssel "
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Benutzerdefinierte Felder"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom field values",
+          "message": "Benutzerdefinierte Feldwerte"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.desc": {
+          "source": "The new street address",
+          "message": "Die neue Straßenadresse"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.display_name": {
+          "source": "Address Line 1",
+          "message": "Adresszeile 1"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczE.short_desc": {
+          "source": "The updated first line of the address",
+          "message": "Die aktualisierte erste Adresszeile"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.desc": {
+          "source": "New additional address information",
+          "message": "Neue zusätzliche Adressinformationen"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.display_name": {
+          "source": "Address Line 2",
+          "message": "Adresszeile 2"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.YWRkcmVzczI.short_desc": {
+          "source": "The updated second line of the address",
+          "message": "Die aktualisierte zweite Adresszeile"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "Die neue E-Mail-Adresse für den Kontakt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "E-Mail-Adresse"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The updated email address",
+          "message": "Die aktualisierte E-Mail-Adresse"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.desc": {
+          "source": "The new first name of the contact",
+          "message": "Der neue Vorname des Kontakts"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RuYW1l.short_desc": {
+          "source": "The updated first name",
+          "message": "Der aktualisierte Vorname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.desc": {
+          "source": "The new last name of the contact",
+          "message": "Der neue Nachname des Kontakts"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdG5hbWU.short_desc": {
+          "source": "The updated last name",
+          "message": "Der aktualisierte Nachname"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.desc": {
+          "source": "The new mobile phone number",
+          "message": "Die neue Mobilfunknummer"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.display_name": {
+          "source": "Mobile",
+          "message": "Mobil"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.bW9iaWxl.short_desc": {
+          "source": "The updated mobile number",
+          "message": "Die aktualisierte Mobilfunknummer"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.desc": {
+          "source": "The new state, province, or region",
+          "message": "Das neue Bundesland, die neue Provinz oder Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.display_name": {
+          "source": "State/Region",
+          "message": "Bundesland/Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.c3RhdGU.short_desc": {
+          "source": "The updated state or region",
+          "message": "Das aktualisierte Bundesland oder die aktualisierte Region"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.desc": {
+          "source": "The new job title or position",
+          "message": "Die neue Berufsbezeichnung oder Position"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Position"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cG9zaXRpb24.short_desc": {
+          "source": "The updated job title",
+          "message": "Die aktualisierte Berufsbezeichnung"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The new phone number for the contact",
+          "message": "Die neue Telefonnummer für den Kontakt"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The updated phone number",
+          "message": "Die aktualisierte Telefonnummer"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.desc": {
+          "source": "The new website URL",
+          "message": "Die neue Website-URL"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The updated website",
+          "message": "Die aktualisierte Website"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.desc": {
+          "source": "Tags to apply to the contact. Prefix with \"-\" to remove a tag (e.g., \"-oldtag\")",
+          "message": "Auf den Kontakt anzuwendende Tags. Stellen Sie ein „-“ voran, um ein Tag zu entfernen (z. B. „-oldtag“)"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.dGFncw.short_desc": {
+          "source": "Tags to apply or remove",
+          "message": "Anzuwendende oder zu entfernende Tags"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.desc": {
+          "source": "The new postal or ZIP code",
+          "message": "Die neue Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.option.emlwY29kZQ.short_desc": {
+          "source": "The updated postal/ZIP code",
+          "message": "Die aktualisierte Postleitzahl"
+        },
+        "app.TWF1dGlj.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Einen bestehenden Kontakt aktualisieren"
+        },
+        "app.TWF1dGlj.desc": {
+          "source": "Connect your Mautic instance to automate marketing campaigns, manage contacts and companies, segment audiences, and send targeted emails. Build powerful marketing workflows with full control over your data.",
+          "message": "Verbinden Sie Ihre Mautic-Instanz, um Marketingkampagnen zu automatisieren, Kontakte und Unternehmen zu verwalten, Zielgruppen zu segmentieren und zielgerichtete E-Mails zu senden. Erstellen Sie leistungsstarke Marketing-Workflows mit voller Kontrolle über Ihre Daten."
+        },
+        "app.TWF1dGlj.display_name": {
+          "source": "Mautic",
+          "message": "Mautic"
+        },
+        "app.TWF1dGlj.short_desc": {
+          "source": "Open-source marketing automation platform",
+          "message": "Open-Source-Marketing-Automatisierungsplattform"
+        }
+      }
+    }
+  }
+}

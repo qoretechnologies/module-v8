@@ -1,0 +1,977 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.desc": {
+          "source": "Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics.",
+          "message": "Získa všetky e-mailové kampane z vášho účtu Mailchimp s ich podrobnosťami vrátane stavu, nastavení a metrík výkonnosti."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
+          "source": "Get Campaigns",
+          "message": "Získať kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
+          "source": "Retrieve a list of email campaigns",
+          "message": "Získať zoznam e-mailových kampaní"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific customer from your connected e-commerce store.",
+          "message": "Získa podrobné informácie o konkrétnom zákazníkovi z vášho prepojeného internetového obchodu."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
+          "source": "Get Store Customer",
+          "message": "Získať zákazníka obchodu"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
+          "source": "Retrieve a specific store customer",
+          "message": "Získať konkrétneho zákazníka obchodu"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.desc": {
+          "source": "Fetches all members (subscribers) from a specific audience with their contact information and subscription details.",
+          "message": "Získa všetkých členov (odberateľov) z konkrétneho publika spolu s ich kontaktnými informáciami a podrobnosťami o odbere."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
+          "source": "Get Audience Members",
+          "message": "Získať členov publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
+          "source": "Retrieve members from an audience",
+          "message": "Získať členov z publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data.",
+          "message": "Získa podrobné informácie o konkrétnom členovi (odberateľovi) z publika vrátane jeho profilu a údajov o aktivite."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Get Audience Member",
+          "message": "Získať člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Retrieve a specific audience member",
+          "message": "Získať konkrétneho člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.desc": {
+          "source": "Searches through your email campaigns using various criteria to find specific campaigns quickly.",
+          "message": "Vyhľadáva v e-mailových kampaniach pomocou rôznych kritérií na rýchle nájdenie konkrétnych kampaní."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
+          "source": "Search Campaigns",
+          "message": "Vyhľadať kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "Čiarkami oddelený zoznam polí na vylúčenie. Parametre podobjektov uvádzajte pomocou bodkovej notácie."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "Vylúčiť polia"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "Čiarkami oddelený zoznam polí na vylúčenie"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "Čiarkami oddelený zoznam polí, ktoré sa majú vrátiť. Parametre podobjektov uvádzajte pomocou bodkovej notácie."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Polia"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "Čiarkami oddelený zoznam polí, ktoré sa majú vrátiť"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.desc": {
+          "source": "The search query used to filter results.",
+          "message": "Vyhľadávací dopyt použitý na filtrovanie výsledkov."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Dopyt"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.short_desc": {
+          "source": "The search query used to filter results",
+          "message": "Vyhľadávací dopyt použitý na filtrovanie výsledkov"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
+          "source": "Search for campaigns",
+          "message": "Vyhľadať kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.desc": {
+          "source": "Searches through audience members using various criteria such as email, name, or tags to find specific subscribers.",
+          "message": "Vyhľadáva medzi členmi publika pomocou rôznych kritérií, ako je e-mail, meno alebo štítky, na nájdenie konkrétnych odberateľov."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
+          "source": "Search Audience Members",
+          "message": "Vyhľadať členov publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
+          "source": "Search for audience members",
+          "message": "Vyhľadať členov publika"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.desc": {
+          "source": "Fetches detailed performance metrics and analytics for a specific email campaign.",
+          "message": "Získa podrobné metriky výkonnosti a analytiku pre konkrétnu e-mailovú kampaň."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
+          "source": "Get Campaign Report",
+          "message": "Získať report kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
+          "source": "Retrieve a specific campaign report",
+          "message": "Získať konkrétny report kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.desc": {
+          "source": "Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom.",
+          "message": "Získa podrobné informácie o kliknutiach v konkrétnej kampani vrátane toho, na ktoré odkazy sa kliklo a kým."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
+          "source": "Get Campaign Click Details",
+          "message": "Získať podrobnosti o kliknutiach v kampani"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
+          "source": "Retrieve click details for a campaign",
+          "message": "Získať podrobnosti o kliknutiach pre kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.desc": {
+          "source": "Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics.",
+          "message": "Získa reporty výkonnosti pre vaše e-mailové kampane vrátane miery otvorení, miery preklikov a metrík zapojenia."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
+          "source": "Get Campaign Reports",
+          "message": "Získať reporty kampaní"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.desc": {
+          "source": "The number of records to return. Default value is 10. Maximum value is 1000",
+          "message": "Počet záznamov, ktoré sa majú vrátiť. Predvolená hodnota je 10. Maximálna hodnota je 1000"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Počet"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.short_desc": {
+          "source": "The number of records to return",
+          "message": "Počet záznamov, ktoré sa majú vrátiť"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.desc": {
+          "source": "Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "Obmedziť odpoveď na kampane odoslané pred nastaveným časom. Používa formát času ISO 8601: 2015-10-21T15:41:36+00:00."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.display_name": {
+          "source": "Before Send Time",
+          "message": "Čas pred odoslaním"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.short_desc": {
+          "source": "Restrict the response to campaigns sent before the set time",
+          "message": "Obmedziť odpoveď na kampane odoslané pred nastaveným časom"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "Čiarkami oddelený zoznam polí na vylúčenie. Parametre podobjektov uvádzajte pomocou bodkovej notácie."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "Vylúčiť polia"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "Čiarkami oddelený zoznam polí na vylúčenie"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "Čiarkami oddelený zoznam polí, ktoré sa majú vrátiť. Parametre podobjektov uvádzajte pomocou bodkovej notácie."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Polia"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "Čiarkami oddelený zoznam polí, ktoré sa majú vrátiť"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.desc": {
+          "source": "Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.",
+          "message": "Používa sa na [stránkovanie](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), toto je počet záznamov z kolekcie, ktoré sa majú preskočiť. Predvolená hodnota je 0."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Used for [pagination](https://mailchimp",
+          "message": "Používa sa na [stránkovanie](https://mailchimp"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.desc": {
+          "source": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "Obmedziť odpoveď na kampane odoslané po nastavenom čase. Používa formát času ISO 8601: 2015-10-21T15:41:36+00:00."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.display_name": {
+          "source": "Since Send Time",
+          "message": "Čas od odoslania"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.short_desc": {
+          "source": "Restrict the response to campaigns sent after the set time",
+          "message": "Obmedziť odpoveď na kampane odoslané po nastavenom čase"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.desc": {
+          "source": "The campaign type.",
+          "message": "Typ kampane."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Typ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.short_desc": {
+          "source": "The campaign type",
+          "message": "Typ kampane"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
+          "source": "Retrieve campaign performance reports",
+          "message": "Získať reporty výkonnosti kampaní"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Removes a subscriber from an audience while preserving their data for compliance purposes.",
+          "message": "Odstráni odberateľa z publika pri zachovaní jeho údajov na účely dodržiavania predpisov."
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Remove Audience Member",
+          "message": "Odstrániť člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Remove a member from an audience",
+          "message": "Odstrániť člena z publika"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.desc": {
+          "source": "Permanently removes a note from an audience member's profile.",
+          "message": "Natrvalo odstráni poznámku z profilu člena publika."
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
+          "source": "Delete Member Note",
+          "message": "Odstrániť poznámku člena"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
+          "source": "Delete an audience member note",
+          "message": "Odstrániť poznámku člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.desc": {
+          "source": "This trigger fires whenever a subscriber opens an email from your campaigns or automation workflows.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď odberateľ otvorí e-mail z vašich kampaní alebo automatizačných postupov."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
+          "source": "Email Opened",
+          "message": "E-mail otvorený"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmF1dG9tYXRpb24.display_name": {
+          "source": "Automation",
+          "message": "Automatizácia"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmNhbXBhaWdu.display_name": {
+          "source": "Campaign",
+          "message": "Kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.desc": {
+          "source": "Specify whether to track regular campaigns, automations.",
+          "message": "Určte, či sa majú sledovať bežné kampane alebo automatizácie."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
+          "source": "Campaign Type",
+          "message": "Typ kampane"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
+          "source": "Type of campaign to monitor",
+          "message": "Typ kampane na monitorovanie"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience (mailing list) to track for email opens.",
+          "message": "Vyberte publikum (zoznam adries) Mailchimp, v ktorom chcete sledovať otvorenia e-mailov."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Publikum"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Vyberte publikum na monitorovanie"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.desc": {
+          "source": "Optionally specify one or more email addresses to only trigger for these specific subscribers.",
+          "message": "Voliteľne zadajte jednu alebo viac e-mailových adries, aby sa spúšťač aktivoval iba pre týchto konkrétnych odberateľov."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
+          "source": "Trigger on Subscriber",
+          "message": "Spúšťať podľa odberateľa"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
+          "source": "Trigger for specific subscribers only",
+          "message": "Spustiť iba pre konkrétnych odberateľov"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
+          "source": "Triggers when a subscriber opens an email",
+          "message": "Spustí sa, keď odberateľ otvorí e-mail"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Mailchimp** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Mailchimp** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Mailchimp",
+          "message": "Vykonať vlastné volanie API do Mailchimp"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.desc": {
+          "source": "This trigger fires whenever a new contact subscribes to your Mailchimp audience.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa nový kontakt prihlási na odber do vášho publika Mailchimp."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
+          "source": "New Subscriber",
+          "message": "Nový odberateľ"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for new subscribers.",
+          "message": "Vyberte publikum Mailchimp, v ktorom chcete sledovať nových odberateľov."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Publikum"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Vyberte publikum na monitorovanie"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
+          "source": "Triggers when a new subscriber joins",
+          "message": "Spustí sa, keď sa pripojí nový odberateľ"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.desc": {
+          "source": "This trigger fires whenever a contact unsubscribes from your Mailchimp audience.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa kontakt odhlási z odberu vášho publika Mailchimp."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
+          "source": "New Unsubscriber",
+          "message": "Nový odhlásený odberateľ"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for unsubscribes.",
+          "message": "Vyberte publikum Mailchimp, v ktorom chcete sledovať odhlásenia z odberu."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Publikum"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Vyberte publikum na monitorovanie"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {
+          "source": "Triggers when someone unsubscribes",
+          "message": "Spustí sa, keď sa niekto odhlási z odberu"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Mailchimp\""
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.desc": {
+          "source": "Searches for subscriber tags by name to help organize and segment your audience members.",
+          "message": "Vyhľadáva štítky odberateľov podľa názvu na uľahčenie organizácie a segmentácie členov vášho publika."
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
+          "source": "Search Tags by Name",
+          "message": "Vyhľadať štítky podľa názvu"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
+          "source": "Search for tags by name",
+          "message": "Vyhľadať štítky podľa názvu"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.desc": {
+          "source": "Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery.",
+          "message": "Odošle predtým vytvorenú e-mailovú kampaň jej cieľovému publiku okamžite alebo ju naplánuje na neskoršie doručenie."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
+          "source": "Send Campaign",
+          "message": "Odoslať kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
+          "source": "Send an email campaign",
+          "message": "Odoslať e-mailovú kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.desc": {
+          "source": "Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options.",
+          "message": "Vytvorí novú e-mailovú kampaň v Mailchimpe so zadanými nastaveniami, obsahom a možnosťami zacielenia na publikum."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
+          "source": "Create Campaign",
+          "message": "Vytvoriť kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
+          "source": "Create a new email campaign",
+          "message": "Vytvoriť novú e-mailovú kampaň"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.desc": {
+          "source": "Records custom events for audience members to track their behavior and interactions with your brand.",
+          "message": "Zaznamenáva vlastné udalosti pre členov publika na sledovanie ich správania a interakcií s vašou značkou."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
+          "source": "Add Member Events",
+          "message": "Pridať udalosti člena"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
+          "source": "Add events to audience members",
+          "message": "Pridať udalosti členom publika"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.desc": {
+          "source": "Adds one or more tags to audience members for better segmentation and organization.",
+          "message": "Pridá členom publika jednu alebo viac značiek pre lepšiu segmentáciu a organizáciu."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
+          "source": "Add Member Tags",
+          "message": "Pridať značky členovi"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
+          "source": "Add tags to audience members",
+          "message": "Pridať značky členom publika"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.desc": {
+          "source": "Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options.",
+          "message": "Vytvorí v službe Mailchimp nové publikum (zoznam adries) so zadanými nastaveniami a možnosťami konfigurácie."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
+          "source": "Create Audience",
+          "message": "Vytvoriť publikum"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
+          "source": "Create a new audience",
+          "message": "Vytvoriť nové publikum"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.desc": {
+          "source": "Adds a new subscriber to a specific audience with their contact information and subscription preferences.",
+          "message": "Pridá nového odberateľa do konkrétneho publika s jeho kontaktnými údajmi a preferenciami odberu."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
+          "source": "Add Audience Member",
+          "message": "Pridať člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
+          "source": "Add a new member to an audience",
+          "message": "Pridať nového člena do publika"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.desc": {
+          "source": "Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone.",
+          "message": "Natrvalo odstráni člena publika a všetky s ním spojené údaje zo služby Mailchimp. Túto akciu nemožno vrátiť späť."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
+          "source": "Permanently Delete Member",
+          "message": "Natrvalo vymazať člena"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
+          "source": "Permanently delete an audience member",
+          "message": "Natrvalo vymazať člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.desc": {
+          "source": "Adds a note to a specific audience member for internal tracking and customer relationship management.",
+          "message": "Pridá poznámku ku konkrétnemu členovi publika pre interné sledovanie a správu vzťahov so zákazníkmi."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
+          "source": "Add Member Note",
+          "message": "Pridať poznámku k členovi"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
+          "source": "Add a note to an audience member",
+          "message": "Pridať poznámku k členovi publika"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.desc": {
+          "source": "Updates an existing note attached to an audience member with new information or corrections.",
+          "message": "Aktualizuje existujúcu poznámku priradenú k členovi publika o nové informácie alebo opravy."
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
+          "source": "Update Member Note",
+          "message": "Aktualizovať poznámku k členovi"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
+          "source": "Update an audience member note",
+          "message": "Aktualizovať poznámku k členovi publika"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Updates the information and subscription preferences of an existing member in an audience.",
+          "message": "Aktualizuje informácie a preferencie odberu existujúceho člena v publiku."
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Update Audience Member",
+          "message": "Aktualizovať člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Update an audience member",
+          "message": "Aktualizovať člena publika"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "Vložiť alebo aktualizovať záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Upsertovať záznamy"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "Vložiť alebo aktualizovať záznamy v danej tabuľke v aplikácii „Mailchimp“"
+        },
+        "app.TWFpbGNoaW1w.desc": {
+          "source": "Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.",
+          "message": "Pripojte sa k službe Mailchimp a vytvárajte a spravujte e-mailové kampane, sledujte aktivitu odberateľov a automatizujte marketingové pracovné postupy."
+        },
+        "app.TWFpbGNoaW1w.display_name": {
+          "source": "Mailchimp",
+          "message": "Mailchimp"
+        },
+        "app.TWFpbGNoaW1w.short_desc": {
+          "source": "Email marketing, automation, and analytics platform",
+          "message": "Platforma pre e-mailový marketing, automatizáciu a analýzu"
+        }
+      }
+    }
+  }
+}

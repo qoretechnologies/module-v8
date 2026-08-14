@@ -1,0 +1,2809 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.desc": {
+          "source": "Creates a new post on a Facebook page with support for text, links, photos, scheduling, and visibility settings. Can create both immediate and scheduled posts.",
+          "message": "Crée une nouvelle publication sur une page Facebook avec prise en charge du texte, des liens, des photos, de la programmation et des paramètres de visibilité. Peut créer des publications immédiates et programmées."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.display_name": {
+          "source": "Create Page Post",
+          "message": "Créer une publication de page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOmhpZGRlbg.desc": {
+          "source": "Post will be hidden from news feed",
+          "message": "La publication sera masquée dans le fil d'actualités"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOmhpZGRlbg.display_name": {
+          "source": "Hidden",
+          "message": "Masqué"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOnZpc2libGU.desc": {
+          "source": "Post will be visible in news feed",
+          "message": "La publication sera visible dans le fil d'actualités"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "Visible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.desc": {
+          "source": "Controls whether the post appears in the news feed.",
+          "message": "Contrôle si la publication apparaît dans le fil d'actualités."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.display_name": {
+          "source": "Feed Story Visibility",
+          "message": "Visibilité dans le fil d'actualités"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.short_desc": {
+          "source": "Visibility in news feed",
+          "message": "Visibilité dans le fil d'actualités"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.desc": {
+          "source": "A URL to be shared in the post. Facebook will automatically generate a preview.",
+          "message": "Une URL à partager dans la publication. Facebook générera automatiquement un aperçu."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.display_name": {
+          "source": "Link",
+          "message": "Lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.short_desc": {
+          "source": "URL to share in the post",
+          "message": "URL à partager dans la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.desc": {
+          "source": "The main text content for the post. Optional if link or photos are provided.",
+          "message": "Le contenu textuel principal de la publication. Facultatif si un lien ou des photos sont fournis."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the post",
+          "message": "Le contenu textuel de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.desc": {
+          "source": "ISO timestamp for when the post should be published. Requires published to be false.",
+          "message": "Horodatage ISO indiquant quand la publication doit être publiée. Nécessite que published soit défini sur false."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.display_name": {
+          "source": "Scheduled Publish Time",
+          "message": "Heure de publication programmée"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.short_desc": {
+          "source": "When to publish the post",
+          "message": "Quand publier la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page where the post will be created.",
+          "message": "L'identifiant unique de la page Facebook où la publication sera créée."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to post to",
+          "message": "La page Facebook sur laquelle publier"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.desc": {
+          "source": "A list of image URLs to be attached to the post. Images will be uploaded to Facebook.",
+          "message": "Une liste d'URL d'images à joindre à la publication. Les images seront téléversées sur Facebook."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.display_name": {
+          "source": "Photo URLs",
+          "message": "URL des photos"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.short_desc": {
+          "source": "List of photo URLs to attach",
+          "message": "Liste des URL de photos à joindre"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.desc": {
+          "source": "If true, the post will be published immediately. If false, it will be saved as a draft or scheduled.",
+          "message": "Si true, la publication sera publiée immédiatement. Si false, elle sera enregistrée comme brouillon ou programmée."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.display_name": {
+          "source": "Published",
+          "message": "Publié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.short_desc": {
+          "source": "Whether to publish the post immediately",
+          "message": "Indique si la publication doit être publiée immédiatement"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOm5vcm1hbA.desc": {
+          "source": "Post will appear normally on timeline",
+          "message": "La publication apparaîtra normalement sur le journal"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOm5vcm1hbA.display_name": {
+          "source": "Normal",
+          "message": "Normal"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOmhpZGRlbg.desc": {
+          "source": "Post will be hidden from timeline",
+          "message": "La publication sera masquée du journal"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOmhpZGRlbg.display_name": {
+          "source": "Hidden",
+          "message": "Masqué"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.desc": {
+          "source": "Controls whether the post appears on the page timeline.",
+          "message": "Détermine si la publication apparaît sur le journal de la page."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.display_name": {
+          "source": "Timeline Visibility",
+          "message": "Visibilité sur le journal"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.short_desc": {
+          "source": "Visibility on timeline",
+          "message": "Visibilité sur le journal"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.short_desc": {
+          "source": "Create a new post on a Facebook page",
+          "message": "Créer une nouvelle publication sur une page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.desc": {
+          "source": "Retrieves detailed information about a Facebook page, including basic information, contact details, location, statistics, and other page properties.",
+          "message": "Récupère des informations détaillées sur une page Facebook, notamment les informations de base, les coordonnées, l'emplacement, les statistiques et d'autres propriétés de la page."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.display_name": {
+          "source": "Get Page",
+          "message": "Obtenir la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lbWJlcnM.display_name": {
+          "source": "members",
+          "message": "members"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2luZ19mZWF0dXJlX3N0YXR1cw.display_name": {
+          "source": "messaging_feature_status",
+          "message": "messaging_feature_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfZGVmYXVsdF9pY2VicmVha2Vycw.display_name": {
+          "source": "messenger_ads_default_icebreakers",
+          "message": "messenger_ads_default_icebreakers"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfZGVmYXVsdF9xdWlja19yZXBsaWVz.display_name": {
+          "source": "messenger_ads_default_quick_replies",
+          "message": "messenger_ads_default_quick_replies"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfcXVpY2tfcmVwbGllc190eXBl.display_name": {
+          "source": "messenger_ads_quick_replies_type",
+          "message": "messenger_ads_quick_replies_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lcmNoYW50X2lk.display_name": {
+          "source": "merchant_id",
+          "message": "merchant_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lcmNoYW50X3Jldmlld19zdGF0dXM.display_name": {
+          "source": "merchant_review_status",
+          "message": "merchant_review_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1pbmlfc2hvcF9zdG9yZWZyb250.display_name": {
+          "source": "mini_shop_storefront",
+          "message": "mini_shop_storefront"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1pc3Npb24.display_name": {
+          "source": "mission",
+          "message": "mission"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1wZw.display_name": {
+          "source": "mpg",
+          "message": "mpg"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWVfd2l0aF9sb2NhdGlvbl9kZXNjcmlwdG9y.display_name": {
+          "source": "name_with_location_descriptor",
+          "message": "name_with_location_descriptor"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5ld19saWtlX2NvdW50.display_name": {
+          "source": "new_like_count",
+          "message": "new_like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5ldHdvcms.display_name": {
+          "source": "network",
+          "message": "network"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm92ZXJhbGxfc3Rhcl9yYXRpbmc.display_name": {
+          "source": "overall_star_rating",
+          "message": "overall_star_rating"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm93bmVyX2J1c2luZXNz.display_name": {
+          "source": "owner_business",
+          "message": "owner_business"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm9mZmVyX2VsaWdpYmxl.display_name": {
+          "source": "offer_eligible",
+          "message": "offer_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGlyZQ.display_name": {
+          "source": "attire",
+          "message": "attire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF2YWlsYWJsZV9wcm9tb19vZmZlcl9pZHM.display_name": {
+          "source": "available_promo_offer_ids",
+          "message": "available_promo_offer_ids"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF3YXJkcw.display_name": {
+          "source": "awards",
+          "message": "awards"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFib3V0.display_name": {
+          "source": "about",
+          "message": "about"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjY2Vzc190b2tlbg.display_name": {
+          "source": "access_token",
+          "message": "access_token"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkX2NhbXBhaWdu.display_name": {
+          "source": "ad_campaign",
+          "message": "ad_campaign"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFmZmlsaWF0aW9u.display_name": {
+          "source": "affiliation",
+          "message": "affiliation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcF9pZA.display_name": {
+          "source": "app_id",
+          "message": "app_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFydGlzdHNfd2VfbGlrZQ.display_name": {
+          "source": "artists_we_like",
+          "message": "artists_we_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJ1aWx0.display_name": {
+          "source": "built",
+          "message": "built"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJ1c2luZXNz.display_name": {
+          "source": "business",
+          "message": "business"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhbmRfaW50ZXJlc3Rz.display_name": {
+          "source": "band_interests",
+          "message": "band_interests"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhbmRfbWVtYmVycw.display_name": {
+          "source": "band_members",
+          "message": "band_members"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJlc3RfcGFnZQ.display_name": {
+          "source": "best_page",
+          "message": "best_page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJpbw.display_name": {
+          "source": "bio",
+          "message": "bio"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJpcnRoZGF5.display_name": {
+          "source": "birthday",
+          "message": "birthday"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJvb2tpbmdfYWdlbnQ.display_name": {
+          "source": "booking_agent",
+          "message": "booking_agent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJyZWFraW5nX25ld3NfdXNhZ2U.display_name": {
+          "source": "breaking_news_usage",
+          "message": "breaking_news_usage"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmN1bGluYXJ5X3RlYW0.display_name": {
+          "source": "culinary_team",
+          "message": "culinary_team"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmN1cnJlbnRfbG9jYXRpb24.display_name": {
+          "source": "current_location",
+          "message": "current_location"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jaGVja2lu.display_name": {
+          "source": "can_checkin",
+          "message": "can_checkin"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9wb3N0.display_name": {
+          "source": "can_post",
+          "message": "can_post"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhdGVnb3J5.display_name": {
+          "source": "category",
+          "message": "category"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhdGVnb3J5X2xpc3Q.display_name": {
+          "source": "category_list",
+          "message": "category_list"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoZWNraW5z.display_name": {
+          "source": "checkins",
+          "message": "checkins"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbXBhbnlfb3ZlcnZpZXc.display_name": {
+          "source": "company_overview",
+          "message": "company_overview"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbm5lY3RlZF9pbnN0YWdyYW1fYWNjb3VudA.display_name": {
+          "source": "connected_instagram_account",
+          "message": "connected_instagram_account"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbm5lY3RlZF9wYWdlX2JhY2tlZF9pbnN0YWdyYW1fYWNjb3VudA.display_name": {
+          "source": "connected_page_backed_instagram_account",
+          "message": "connected_page_backed_instagram_account"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbnRhY3RfYWRkcmVzcw.display_name": {
+          "source": "contact_address",
+          "message": "contact_address"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvcHlyaWdodF93aGl0ZWxpc3RlZF9pZ19wYXJ0bmVycw.display_name": {
+          "source": "copyright_whitelisted_ig_partners",
+          "message": "copyright_whitelisted_ig_partners"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvcHlyaWdodF9hdHRyaWJ1dGlvbl9pbnNpZ2h0cw.display_name": {
+          "source": "copyright_attribution_insights",
+          "message": "copyright_attribution_insights"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvdW50cnlfcGFnZV9saWtlcw.display_name": {
+          "source": "country_page_likes",
+          "message": "country_page_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvdmVy.display_name": {
+          "source": "cover",
+          "message": "cover"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlbGl2ZXJ5X2FuZF9waWNrdXBfb3B0aW9uX2luZm8.display_name": {
+          "source": "delivery_and_pickup_option_info",
+          "message": "delivery_and_pickup_option_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9uX2h0bWw.display_name": {
+          "source": "description_html",
+          "message": "description_html"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpZmZlcmVudGx5X29wZW5fb2ZmZXJpbmdz.display_name": {
+          "source": "differently_open_offerings",
+          "message": "differently_open_offerings"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpc3BsYXlfc3VidGV4dA.display_name": {
+          "source": "display_subtext",
+          "message": "display_subtext"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpc3BsYXllZF9tZXNzYWdlX3Jlc3BvbnNlX3RpbWU.display_name": {
+          "source": "displayed_message_response_time",
+          "message": "Temps de réponse des messages affiché"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpcmVjdGVkX2J5.display_name": {
+          "source": "directed_by",
+          "message": "Réalisé par"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRvZXNfdmlld2VyX2hhdmVfcGFnZV9wZXJtaXNzaW9uX2xpbmtfaWc.display_name": {
+          "source": "does_viewer_have_page_permission_link_ig",
+          "message": "L'utilisateur a-t-il l'autorisation de lier la page à IG"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmVtYWlscw.display_name": {
+          "source": "emails",
+          "message": "E-mails"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmVuZ2FnZW1lbnQ.display_name": {
+          "source": "engagement",
+          "message": "Engagement"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZhbl9jb3VudA.display_name": {
+          "source": "fan_count",
+          "message": "Nombre de fans"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlYXR1cmVkX3ZpZGVv.display_name": {
+          "source": "featured_video",
+          "message": "Vidéo à la une"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlYXR1cmVz.display_name": {
+          "source": "features",
+          "message": "Fonctionnalités"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvb2Rfc3R5bGVz.display_name": {
+          "source": "food_styles",
+          "message": "Styles de cuisine"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvbGxvd2Vyc19jb3VudA.display_name": {
+          "source": "followers_count",
+          "message": "Nombre d'abonnés"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvdW5kZWQ.display_name": {
+          "source": "founded",
+          "message": "Fondée"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbmVyYWxfaW5mbw.display_name": {
+          "source": "general_info",
+          "message": "Informations générales"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbmVyYWxfbWFuYWdlcg.display_name": {
+          "source": "general_manager",
+          "message": "Directeur général"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbnJl.display_name": {
+          "source": "genre",
+          "message": "Genre"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdsb2JhbF9icmFuZF9wYWdlX25hbWU.display_name": {
+          "source": "global_brand_page_name",
+          "message": "Nom de page de marque globale"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdsb2JhbF9icmFuZF9yb290X2lk.display_name": {
+          "source": "global_brand_root_id",
+          "message": "ID racine de marque globale"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc190cmFuc2l0aW9uZWRfdG9fbmV3X3BhZ2VfZXhwZXJpZW5jZQ.display_name": {
+          "source": "has_transitioned_to_new_page_experience",
+          "message": "Est passé à la nouvelle expérience de pages"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc193aGF0c2FwcF9idXNpbmVzc19udW1iZXI.display_name": {
+          "source": "has_whatsapp_business_number",
+          "message": "A un numéro WhatsApp Business"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc193aGF0c2FwcF9udW1iZXI.display_name": {
+          "source": "has_whatsapp_number",
+          "message": "A un numéro WhatsApp"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc19hZGRlZF9hcHA.display_name": {
+          "source": "has_added_app",
+          "message": "A ajouté l'application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc19sZWFkX2FjY2Vzcw.display_name": {
+          "source": "has_lead_access",
+          "message": "A l'accès aux prospects"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhvbWV0b3du.display_name": {
+          "source": "hometown",
+          "message": "Ville d'origine"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhvdXJz.display_name": {
+          "source": "hours",
+          "message": "Horaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmltcHJlc3N1bQ.display_name": {
+          "source": "impressum",
+          "message": "Mentions légales"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmluZmx1ZW5jZXM.display_name": {
+          "source": "influences",
+          "message": "Influences"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9idXNpbmVzc19hY2NvdW50.display_name": {
+          "source": "instagram_business_account",
+          "message": "Compte professionnel Instagram"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX21lc3Nlbmdlcl9ib3RfZ2V0X3N0YXJ0ZWRfZW5hYmxlZA.display_name": {
+          "source": "is_messenger_bot_get_started_enabled",
+          "message": "Le bouton Démarrer du bot Messenger est activé"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX21lc3Nlbmdlcl9wbGF0Zm9ybV9ib3Q.display_name": {
+          "source": "is_messenger_platform_bot",
+          "message": "Est un bot de la plateforme Messenger"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX293bmVk.display_name": {
+          "source": "is_owned",
+          "message": "Est possédé"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2Fsd2F5c19vcGVu.display_name": {
+          "source": "is_always_open",
+          "message": "Est toujours ouvert"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NhbGxpbmdfZWxpZ2libGU.display_name": {
+          "source": "is_calling_eligible",
+          "message": "Éligible aux appels"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NoYWlu.display_name": {
+          "source": "is_chain",
+          "message": "Est une chaîne"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NvbW11bml0eV9wYWdl.display_name": {
+          "source": "is_community_page",
+          "message": "Est une page de communauté"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9icmFuZGVkX2NvbnRlbnQ.display_name": {
+          "source": "is_eligible_for_branded_content",
+          "message": "Éligible au contenu de marque"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9kaXNhYmxlX2Nvbm5lY3RfaWdfYnRuX2Zvcl9ub25fcGFnZV9hZG1pbl9hbV93ZWI.display_name": {
+          "source": "is_eligible_for_disable_connect_ig_btn_for_non_page_admin_am_web",
+          "message": "Éligible à la désactivation du bouton de connexion IG pour les non-administrateurs de page sur le web"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "Est publié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3Blcm1hbmVudGx5X2Nsb3NlZA.display_name": {
+          "source": "is_permanently_closed",
+          "message": "Est définitivement fermé"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3VuY2xhaW1lZA.display_name": {
+          "source": "is_unclaimed",
+          "message": "Est non revendiqué"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ZlcmlmaWVk.display_name": {
+          "source": "is_verified",
+          "message": "Est vérifié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3dlYmhvb2tzX3N1YnNjcmliZWQ.display_name": {
+          "source": "is_webhooks_subscribed",
+          "message": "Abonné aux webhooks"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmtleXdvcmRz.display_name": {
+          "source": "keywords",
+          "message": "Mots-clés"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGFuY2VfdGltZQ.display_name": {
+          "source": "leadgen_tos_acceptance_time",
+          "message": "Heure d'acceptation des conditions de génération de prospects"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGVk.display_name": {
+          "source": "leadgen_tos_accepted",
+          "message": "Conditions de génération de prospects acceptées"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGluZ191c2Vy.display_name": {
+          "source": "leadgen_tos_accepting_user",
+          "message": "Utilisateur acceptant les conditions de génération de prospects"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "Lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxvY2F0aW9u.display_name": {
+          "source": "location",
+          "message": "Emplacement"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnB1YmxpY190cmFuc2l0.display_name": {
+          "source": "public_transit",
+          "message": "Transports en commun"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhZ2VfdG9rZW4.display_name": {
+          "source": "page_token",
+          "message": "Jeton de page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9wYWdl.display_name": {
+          "source": "parent_page",
+          "message": "Page parente"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmtpbmc.display_name": {
+          "source": "parking",
+          "message": "Parking"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBheW1lbnRfb3B0aW9ucw.display_name": {
+          "source": "payment_options",
+          "message": "Options de paiement"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcnNvbmFsX2luZm8.display_name": {
+          "source": "personal_info",
+          "message": "Informations personnelles"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcnNvbmFsX2ludGVyZXN0cw.display_name": {
+          "source": "personal_interests",
+          "message": "Centres d'intérêt personnels"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBoYXJtYV9zYWZldHlfaW5mbw.display_name": {
+          "source": "pharma_safety_info",
+          "message": "Informations de sécurité pharmaceutique"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "phone",
+          "message": "Téléphone"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY2t1cF9vcHRpb25z.display_name": {
+          "source": "pickup_options",
+          "message": "Options de retrait"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNlX3R5cGU.display_name": {
+          "source": "place_type",
+          "message": "Type de lieu"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsb3Rfb3V0bGluZQ.display_name": {
+          "source": "plot_outline",
+          "message": "Synopsis"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByZWZlcnJlZF9hdWRpZW5jZQ.display_name": {
+          "source": "preferred_audience",
+          "message": "Audience préférée"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByZXNzX2NvbnRhY3Q.display_name": {
+          "source": "press_contact",
+          "message": "Contact presse"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaWNlX3Jhbmdl.display_name": {
+          "source": "price_range",
+          "message": "Gamme de prix"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3lfaW5mb191cmw.display_name": {
+          "source": "privacy_info_url",
+          "message": "URL des informations de confidentialité"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9lbGlnaWJsZQ.display_name": {
+          "source": "promotion_eligible",
+          "message": "Éligible à la promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9pbmVsaWdpYmxlX3JlYXNvbg.display_name": {
+          "source": "promotion_ineligible_reason",
+          "message": "promotion_ineligible_reason"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb2R1Y2VkX2J5.display_name": {
+          "source": "produced_by",
+          "message": "produced_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb2R1Y3Rz.display_name": {
+          "source": "products",
+          "message": "products"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJhdGluZ19jb3VudA.display_name": {
+          "source": "rating_count",
+          "message": "rating_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlY29yZF9sYWJlbA.display_name": {
+          "source": "record_label",
+          "message": "record_label"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlY2lwaWVudA.display_name": {
+          "source": "recipient",
+          "message": "recipient"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlbGVhc2VfZGF0ZQ.display_name": {
+          "source": "release_date",
+          "message": "release_date"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlc3RhdXJhbnRfc2VydmljZXM.display_name": {
+          "source": "restaurant_services",
+          "message": "restaurant_services"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlc3RhdXJhbnRfc3BlY2lhbHRpZXM.display_name": {
+          "source": "restaurant_specialties",
+          "message": "restaurant_specialties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXJ0X2luZm8.display_name": {
+          "source": "start_info",
+          "message": "start_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXJyaW5n.display_name": {
+          "source": "starring",
+          "message": "starring"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX251bWJlcg.display_name": {
+          "source": "store_number",
+          "message": "store_number"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX2NvZGU.display_name": {
+          "source": "store_code",
+          "message": "store_code"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX2xvY2F0aW9uX2Rlc2NyaXB0b3I.display_name": {
+          "source": "store_location_descriptor",
+          "message": "store_location_descriptor"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0dWRpbw.display_name": {
+          "source": "studio",
+          "message": "studio"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1cHBvcnRzX2RvbmF0ZV9idXR0b25faW5fbGl2ZV92aWRlbw.display_name": {
+          "source": "supports_donate_button_in_live_video",
+          "message": "supports_donate_button_in_live_video"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxl.display_name": {
+          "source": "schedule",
+          "message": "schedule"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjcmVlbnBsYXlfYnk.display_name": {
+          "source": "screenplay_by",
+          "message": "screenplay_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNlYXNvbg.display_name": {
+          "source": "season",
+          "message": "season"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNpbmdsZV9saW5lX2FkZHJlc3M.display_name": {
+          "source": "single_line_address",
+          "message": "single_line_address"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhbGtpbmdfYWJvdXRfY291bnQ.display_name": {
+          "source": "talking_about_count",
+          "message": "talking_about_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnRlbXBvcmFyeV9zdGF0dXM.display_name": {
+          "source": "temporary_status",
+          "message": "temporary_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVuc2Vlbl9tZXNzYWdlX2NvdW50.display_name": {
+          "source": "unseen_message_count",
+          "message": "unseen_message_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVucmVhZF9tZXNzYWdlX2NvdW50.display_name": {
+          "source": "unread_message_count",
+          "message": "unread_message_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVucmVhZF9ub3RpZl9jb3VudA.display_name": {
+          "source": "unread_notif_count",
+          "message": "unread_notif_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfYWNjZXNzX2V4cGlyZV90aW1l.display_name": {
+          "source": "user_access_expire_time",
+          "message": "user_access_expire_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJuYW1l.display_name": {
+          "source": "username",
+          "message": "username"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnZlcmlmaWNhdGlvbl9zdGF0dXM.display_name": {
+          "source": "verification_status",
+          "message": "verification_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnZvaXBfaW5mbw.display_name": {
+          "source": "voip_info",
+          "message": "voip_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndlYnNpdGU.display_name": {
+          "source": "website",
+          "message": "website"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndlcmVfaGVyZV9jb3VudA.display_name": {
+          "source": "were_here_count",
+          "message": "were_here_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndoYXRzYXBwX251bWJlcg.display_name": {
+          "source": "whatsapp_number",
+          "message": "whatsapp_number"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndyaXR0ZW5fYnk.display_name": {
+          "source": "written_by",
+          "message": "written_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for the page, such as name, category, about section, and contact information.",
+          "message": "Les champs spécifiques à récupérer pour la page, tels que le nom, la catégorie, la section À propos et les informations de contact."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.short_desc": {
+          "source": "Page fields to retrieve",
+          "message": "Champs de la page à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page to retrieve details for.",
+          "message": "L'identifiant unique de la page Facebook pour laquelle récupérer les détails."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to retrieve",
+          "message": "La page Facebook à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.short_desc": {
+          "source": "Get details of a Facebook page",
+          "message": "Obtenir les détails d'une page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.desc": {
+          "source": "Retrieves detailed information about a specific Facebook page post, including content, metadata, engagement counts, and other post properties.",
+          "message": "Récupère des informations détaillées sur une publication spécifique d'une page Facebook, notamment le contenu, les métadonnées, les statistiques d'engagement et d'autres propriétés de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.display_name": {
+          "source": "Get Page Post",
+          "message": "Obtenir la publication de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "Est publié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "Lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for the post, such as message, created time, and engagement metrics.",
+          "message": "Les champs spécifiques à récupérer pour la publication, tels que le message, la date de création et les métriques d'engagement."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "Champs de la publication à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve details for.",
+          "message": "L'identifiant unique de la publication Facebook dont récupérer les détails."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to retrieve",
+          "message": "La publication à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "L'identifiant unique de la page Facebook propriétaire de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "L'ID de la page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.short_desc": {
+          "source": "Get details of a Facebook page post",
+          "message": "Obtenir les détails d'une publication de page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.desc": {
+          "source": "Retrieves detailed insights and analytics data for a specific Facebook page post, including impressions, clicks, engagement metrics, and time-series data.",
+          "message": "Récupère des statistiques détaillées et des données analytiques pour une publication spécifique d'une page Facebook, y compris les impressions, les clics, les métriques d'engagement et les données de séries chronologiques."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.display_name": {
+          "source": "Get Page Post Insights",
+          "message": "Obtenir les statistiques de publication de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9lbmdhZ2VtZW50.desc": {
+          "source": "The number of unique fans who engaged with your post",
+          "message": "Le nombre de fans uniques qui ont interagi avec votre publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9lbmdhZ2VtZW50.display_name": {
+          "source": "Fan Engagement",
+          "message": "Engagement des fans"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9yZWFjaA.desc": {
+          "source": "The number of unique fans who saw your post",
+          "message": "Le nombre de fans uniques qui ont vu votre publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9yZWFjaA.display_name": {
+          "source": "Fan Reach",
+          "message": "Portée auprès des fans"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmxpbmtfY2xpY2tz.desc": {
+          "source": "The number of clicks on links in your post",
+          "message": "Le nombre de clics sur les liens de votre publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmxpbmtfY2xpY2tz.display_name": {
+          "source": "Link Clicks",
+          "message": "Clics sur un lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBhZ2VfcG9zdF9lbmdhZ2VtZW50cw.desc": {
+          "source": "The number of times people engaged with your post (likes, comments, shares, etc.)",
+          "message": "Le nombre de fois où des personnes ont interagi avec votre publication (mentions J'aime, commentaires, partages, etc.)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBhZ2VfcG9zdF9lbmdhZ2VtZW50cw.display_name": {
+          "source": "Page Post Engagements",
+          "message": "Engagements avec la publication de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tz.desc": {
+          "source": "The number of clicks on your post",
+          "message": "Le nombre de clics sur votre publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tz.display_name": {
+          "source": "Post Clicks",
+          "message": "Clics sur la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX2J5X3R5cGU.desc": {
+          "source": "The number of clicks on your post, broken down by type (link, photo, video, etc.)",
+          "message": "Le nombre de clics sur votre publication, ventilés par type (lien, photo, vidéo, etc.)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX2J5X3R5cGU.display_name": {
+          "source": "Post Clicks by Type",
+          "message": "Clics sur la publication par type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX3VuaXF1ZQ.desc": {
+          "source": "The number of unique people who clicked on your post",
+          "message": "Le nombre de personnes uniques ayant cliqué sur votre publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX3VuaXF1ZQ.display_name": {
+          "source": "Unique Post Clicks",
+          "message": "Clics uniques sur la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbWVkaWFfdmlldw.desc": {
+          "source": "The number of times your post (photo, video, or other media) was displayed, including repeat views. Replacement for post_impressions. Use parameters to filter by paid, organic, or follower views.",
+          "message": "Le nombre de fois où votre publication (photo, vidéo ou autre média) a été affichée, y compris les vues répétées. Remplace post_impressions. Utilisez des paramètres pour filtrer par vues payantes, organiques ou d'abonnés."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbWVkaWFfdmlldw.display_name": {
+          "source": "Post Media Views",
+          "message": "Vues des médias de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2s.desc": {
+          "source": "The number of times people hid your post or reported it as spam",
+          "message": "Le nombre de fois où des personnes ont masqué votre publication ou l'ont signalée comme spam"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2s.display_name": {
+          "source": "Post Negative Feedback",
+          "message": "Commentaires négatifs sur la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2tfdW5pcXVl.desc": {
+          "source": "The number of unique people who hid your post or reported it as spam",
+          "message": "Le nombre de personnes uniques ayant masqué votre publication ou l'ayant signalée comme spam"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2tfdW5pcXVl.display_name": {
+          "source": "Unique Negative Feedback",
+          "message": "Commentaires négatifs uniques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfcmVhY3Rpb25zX2J5X3R5cGVfdG90YWw.desc": {
+          "source": "The number of reactions on your post, broken down by type (like, love, wow, haha, sorry, anger)",
+          "message": "Le nombre de réactions sur votre publication, ventilées par type (like, love, wow, haha, sorry, anger)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfcmVhY3Rpb25zX2J5X3R5cGVfdG90YWw.display_name": {
+          "source": "Post Reactions by Type",
+          "message": "Réactions à la publication par type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdfdGltZQ.desc": {
+          "source": "Total time spent viewing your video post",
+          "message": "Temps total passé à visionner votre publication vidéo"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdfdGltZQ.display_name": {
+          "source": "Video View Time",
+          "message": "Temps de visionnage de la vidéo"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdz.desc": {
+          "source": "The number of times your video post was viewed for 3+ seconds",
+          "message": "Nombre de fois où votre publication vidéo a été visionnée pendant 3 secondes ou plus"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdz.display_name": {
+          "source": "Video Views",
+          "message": "Vues de la vidéo"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdzX3VuaXF1ZQ.desc": {
+          "source": "The number of unique people who viewed your video for 3+ seconds",
+          "message": "Nombre de personnes uniques ayant visionné votre vidéo pendant 3 secondes ou plus"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdzX3VuaXF1ZQ.display_name": {
+          "source": "Unique Video Views",
+          "message": "Vues uniques de la vidéo"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvXzEwc192aWV3cw.desc": {
+          "source": "The number of times your video post was viewed for at least 10 seconds",
+          "message": "Nombre de fois où votre publication vidéo a été visionnée pendant au moins 10 secondes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvXzEwc192aWV3cw.display_name": {
+          "source": "10-Second Video Views",
+          "message": "Vues de 10 secondes de la vidéo"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.desc": {
+          "source": "The specific insight metrics to retrieve for the post, such as impressions, clicks, and engagement.",
+          "message": "Les métriques statistiques spécifiques à récupérer pour la publication, telles que les impressions, les clics et l'engagement."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Métriques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.short_desc": {
+          "source": "List of metrics to retrieve",
+          "message": "Liste des métriques à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve insights for.",
+          "message": "L'identifiant unique de la publication Facebook pour laquelle récupérer les statistiques."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to get insights for",
+          "message": "La publication pour laquelle obtenir des statistiques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "L'identifiant unique de la page Facebook propriétaire de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "L'ID de la page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheQ.desc": {
+          "source": "Daily breakdown of metrics",
+          "message": "Ventilation quotidienne des métriques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheQ.display_name": {
+          "source": "Day",
+          "message": "Jour"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheXNfMjg.desc": {
+          "source": "28-day breakdown of metrics",
+          "message": "Ventilation des métriques sur 28 jours"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheXNfMjg.display_name": {
+          "source": "28 Days",
+          "message": "28 jours"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmxpZmV0aW1l.desc": {
+          "source": "Lifetime total metrics",
+          "message": "Métriques totales depuis la création"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmxpZmV0aW1l.display_name": {
+          "source": "Lifetime",
+          "message": "Depuis la création"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOndlZWs.desc": {
+          "source": "Weekly breakdown of metrics",
+          "message": "Ventilation hebdomadaire des métriques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOndlZWs.display_name": {
+          "source": "Week",
+          "message": "Semaine"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.desc": {
+          "source": "The time period for which to retrieve insights data. Lifetime returns total metrics.",
+          "message": "La période pour laquelle récupérer les données statistiques. Lifetime renvoie les métriques totales."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.display_name": {
+          "source": "Period",
+          "message": "Période"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.short_desc": {
+          "source": "Time period for insights",
+          "message": "Période pour les statistiques"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.short_desc": {
+          "source": "Get analytics data for a Facebook page post",
+          "message": "Obtenir les données d'analyse d'une publication de page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.desc": {
+          "source": "Retrieves comments on a specific Facebook page post with support for filtering, ordering, pagination, and optional reply inclusion.",
+          "message": "Récupère les commentaires sur une publication de page Facebook spécifique avec prise en charge du filtrage, du tri, de la pagination et de l'inclusion facultative des réponses."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.display_name": {
+          "source": "Get Post Comments",
+          "message": "Obtenir les commentaires de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdA.display_name": {
+          "source": "object",
+          "message": "object"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGFjaG1lbnQ.display_name": {
+          "source": "attachment",
+          "message": "attachment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jb21tZW50.display_name": {
+          "source": "can_comment",
+          "message": "can_comment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9oaWRl.display_name": {
+          "source": "can_hide",
+          "message": "can_hide"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9saWtl.display_name": {
+          "source": "can_like",
+          "message": "can_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZW1vdmU.display_name": {
+          "source": "can_remove",
+          "message": "can_remove"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRfY291bnQ.display_name": {
+          "source": "comment_count",
+          "message": "comment_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ByaXZhdGU.display_name": {
+          "source": "is_private",
+          "message": "is_private"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpa2VfY291bnQ.display_name": {
+          "source": "like_count",
+          "message": "like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpdmVfYnJvYWRjYXN0X3RpbWVzdGFtcA.display_name": {
+          "source": "live_broadcast_timestamp",
+          "message": "live_broadcast_timestamp"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "parent",
+          "message": "parent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhdGVfcmVwbHlfY29udmVyc2F0aW9u.display_name": {
+          "source": "private_reply_conversation",
+          "message": "private_reply_conversation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfbGlrZXM.display_name": {
+          "source": "user_likes",
+          "message": "user_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for each comment, such as message, author, and engagement metrics.",
+          "message": "Les champs spécifiques à récupérer pour chaque commentaire, tels que le message, l'auteur et les métriques d'engagement."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.short_desc": {
+          "source": "Comment fields to retrieve",
+          "message": "Champs de commentaire à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnN0cmVhbQ.desc": {
+          "source": "All comments including replies in chronological order",
+          "message": "Tous les commentaires, y compris les réponses, dans l'ordre chronologique"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnN0cmVhbQ.display_name": {
+          "source": "Stream",
+          "message": "Flux"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnRvcGxldmVs.desc": {
+          "source": "Only top-level comments (no replies)",
+          "message": "Uniquement les commentaires de premier niveau (sans réponses)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnRvcGxldmVs.display_name": {
+          "source": "Top Level",
+          "message": "Premier niveau"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.desc": {
+          "source": "Whether to return only top-level comments or all comments including replies in a stream format.",
+          "message": "Indique s'il faut renvoyer uniquement les commentaires de premier niveau ou tous les commentaires, y compris les réponses, sous forme de flux."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtre"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.short_desc": {
+          "source": "Comment filter type",
+          "message": "Type de filtre de commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.desc": {
+          "source": "If true, includes replies to each top-level comment in the results.",
+          "message": "Si la valeur est vraie, inclut les réponses à chaque commentaire de premier niveau dans les résultats."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
+          "source": "Include Replies",
+          "message": "Inclure les réponses"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
+          "source": "Whether to include replies to comments",
+          "message": "Indique s'il faut inclure les réponses aux commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOmNocm9ub2xvZ2ljYWw.desc": {
+          "source": "Order comments by time posted (oldest first)",
+          "message": "Trier les commentaires par date de publication (les plus anciens d'abord)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOmNocm9ub2xvZ2ljYWw.display_name": {
+          "source": "Chronological",
+          "message": "Chronologique"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOnJldmVyc2VfY2hyb25vbG9naWNhbA.desc": {
+          "source": "Order comments by time posted (newest first)",
+          "message": "Trier les commentaires par date de publication (les plus récents d'abord)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOnJldmVyc2VfY2hyb25vbG9naWNhbA.display_name": {
+          "source": "Reverse Chronological",
+          "message": "Chronologique inverse"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.desc": {
+          "source": "The order in which to return comments - chronological (oldest first) or reverse chronological (newest first).",
+          "message": "L'ordre dans lequel renvoyer les commentaires : chronologique (les plus anciens d'abord) ou chronologique inverse (les plus récents d'abord)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Ordre"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.short_desc": {
+          "source": "Order of comments",
+          "message": "Ordre des commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of comments to return. Cannot exceed 100.",
+          "message": "Le nombre maximal de commentaires à renvoyer. Ne peut pas dépasser 100."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "Nombre maximal de commentaires à renvoyer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve comments for.",
+          "message": "L'identifiant unique de la publication Facebook pour laquelle récupérer les commentaires."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to get comments for",
+          "message": "La publication pour laquelle obtenir les commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "L'identifiant unique de la page Facebook propriétaire de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "L'ID de la page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.short_desc": {
+          "source": "Get comments on a Facebook page post",
+          "message": "Obtenir les commentaires sur une publication de page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.desc": {
+          "source": "Likes or unlikes a specific comment on a Facebook page post. Can toggle the like status and returns updated engagement metrics.",
+          "message": "Aime ou retire la mention J'aime d'un commentaire spécifique sur une publication de page Facebook. Peut basculer l'état du « J'aime » et renvoie les métriques d'engagement mises à jour."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.display_name": {
+          "source": "Like Comment",
+          "message": "Aimer le commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.desc": {
+          "source": "The unique identifier of the comment to like or unlike.",
+          "message": "L'identifiant unique du commentaire à aimer ou dont il faut retirer la mention J'aime."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.display_name": {
+          "source": "Comment ID",
+          "message": "ID du commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.short_desc": {
+          "source": "The comment to like/unlike",
+          "message": "Le commentaire à aimer/ne plus aimer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOmxpa2U.desc": {
+          "source": "Like the comment",
+          "message": "Aimer le commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOmxpa2U.display_name": {
+          "source": "Like",
+          "message": "Aimer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOnVubGlrZQ.desc": {
+          "source": "Remove like from the comment",
+          "message": "Retirer la mention J'aime du commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOnVubGlrZQ.display_name": {
+          "source": "Unlike",
+          "message": "Ne plus aimer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.desc": {
+          "source": "The action to perform - either like the comment or remove the like (unlike).",
+          "message": "L'action à exécuter : aimer le commentaire ou retirer la mention J'aime (ne plus aimer)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.short_desc": {
+          "source": "Whether to like or unlike",
+          "message": "Indique s'il faut aimer ou ne plus aimer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post that contains the comment.",
+          "message": "L'identifiant unique de la publication Facebook contenant le commentaire."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.short_desc": {
+          "source": "The post containing the comment",
+          "message": "La publication contenant le commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "L'identifiant unique de la page Facebook propriétaire de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "L'ID de la page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.short_desc": {
+          "source": "Like or unlike a comment on a Facebook post",
+          "message": "Aimer ou ne plus aimer un commentaire sur une publication Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Facebook Pages** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectue un appel d'API HTTP / REST personnalisé à **Facebook Pages** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'un hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Facebook Pages",
+          "message": "Effectuer un appel d'API personnalisé vers Facebook Pages"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.desc": {
+          "source": "Monitors a Facebook page for new posts and triggers when a post is created. Supports filtering by visibility and customizable fields to retrieve specific post data.",
+          "message": "Surveille une page Facebook à la recherche de nouvelles publications et se déclenche lorsqu'une publication est créée. Prend en charge le filtrage par visibilité et des champs personnalisables pour récupérer des données de publication spécifiques."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.display_name": {
+          "source": "New Post",
+          "message": "Nouvelle publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "Est publié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "Lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.desc": {
+          "source": "List of post fields to include in the trigger data. Default includes id, message, created_time, permalink_url, full_picture, is_published, and is_hidden.",
+          "message": "Liste des champs de publication à inclure dans les données du déclencheur. Par défaut, inclut id, message, created_time, permalink_url, full_picture, is_published et is_hidden."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "Champs de la publication à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "When enabled, the trigger will also fire for posts that are hidden from the page timeline. Default is false.",
+          "message": "Lorsqu'il est activé, le déclencheur se déclenche également pour les publications masquées du journal de la page. Par défaut, false."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden Posts",
+          "message": "Inclure les publications masquées"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden posts",
+          "message": "Indique s'il faut inclure les publications masquées"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.desc": {
+          "source": "The ID of the Facebook page to monitor for new posts.",
+          "message": "L'ID de la page Facebook à surveiller pour les nouvelles publications."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to monitor",
+          "message": "La page Facebook à surveiller"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.short_desc": {
+          "source": "Triggers when a new post is created on a Facebook page.",
+          "message": "Se déclenche lorsqu'une nouvelle publication est créée sur une page Facebook."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.desc": {
+          "source": "Monitors a specific Facebook post for new comments and triggers when a comment is added. Supports filtering by visibility, including replies, and customizable fields to retrieve specific comment data.",
+          "message": "Surveille une publication Facebook spécifique à la recherche de nouveaux commentaires et se déclenche lorsqu'un commentaire est ajouté. Prend en charge le filtrage par visibilité, l'inclusion des réponses et des champs personnalisables pour récupérer des données de commentaire spécifiques."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.display_name": {
+          "source": "New Post Comment",
+          "message": "Nouveau commentaire sur une publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdA.display_name": {
+          "source": "object",
+          "message": "object"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGFjaG1lbnQ.display_name": {
+          "source": "attachment",
+          "message": "attachment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jb21tZW50.display_name": {
+          "source": "can_comment",
+          "message": "can_comment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9oaWRl.display_name": {
+          "source": "can_hide",
+          "message": "can_hide"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9saWtl.display_name": {
+          "source": "can_like",
+          "message": "can_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZW1vdmU.display_name": {
+          "source": "can_remove",
+          "message": "can_remove"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRfY291bnQ.display_name": {
+          "source": "comment_count",
+          "message": "comment_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ByaXZhdGU.display_name": {
+          "source": "is_private",
+          "message": "is_private"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpa2VfY291bnQ.display_name": {
+          "source": "like_count",
+          "message": "like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpdmVfYnJvYWRjYXN0X3RpbWVzdGFtcA.display_name": {
+          "source": "live_broadcast_timestamp",
+          "message": "live_broadcast_timestamp"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "parent",
+          "message": "parent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhdGVfcmVwbHlfY29udmVyc2F0aW9u.display_name": {
+          "source": "private_reply_conversation",
+          "message": "private_reply_conversation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfbGlrZXM.display_name": {
+          "source": "user_likes",
+          "message": "user_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.desc": {
+          "source": "List of comment fields to include in the trigger data. Default includes id, message, created_time, from, like_count, comment_count, and permalink_url.",
+          "message": "Liste des champs de commentaire à inclure dans les données du déclencheur. Par défaut, inclut id, message, created_time, from, like_count, comment_count et permalink_url."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.short_desc": {
+          "source": "Comment fields to retrieve",
+          "message": "Champs de commentaire à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "When enabled, the trigger will also fire for comments that are hidden. Default is false.",
+          "message": "Lorsqu'il est activé, le déclencheur se déclenche également pour les commentaires masqués. Par défaut, false."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden Comments",
+          "message": "Inclure les commentaires masqués"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden comments",
+          "message": "Indique s'il faut inclure les commentaires masqués"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.desc": {
+          "source": "When enabled, the trigger will include replies to comments in addition to top-level comments. Default is true.",
+          "message": "Lorsqu'il est activé, le déclencheur inclut les réponses aux commentaires en plus des commentaires de premier niveau. Par défaut, true."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
+          "source": "Include Replies",
+          "message": "Inclure les réponses"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
+          "source": "Whether to include comment replies",
+          "message": "Indique s'il faut inclure les réponses aux commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.desc": {
+          "source": "The ID of the specific Facebook post to monitor for new comments.",
+          "message": "L'ID de la publication Facebook spécifique à surveiller pour les nouveaux commentaires."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to monitor for comments",
+          "message": "La publication à surveiller pour les commentaires"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.desc": {
+          "source": "The ID of the Facebook page that contains the post to monitor for comments.",
+          "message": "L'ID de la page Facebook contenant la publication à surveiller pour les commentaires."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page containing the post",
+          "message": "La page Facebook contenant la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.short_desc": {
+          "source": "Triggers when a new comment is added to a Facebook post.",
+          "message": "Se déclenche lorsqu'un nouveau commentaire est ajouté à une publication Facebook."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.desc": {
+          "source": "Searches for posts on a Facebook page with support for text filtering, date ranges, visibility options, and field selection. Returns a list of matching posts.",
+          "message": "Recherche des publications sur une page Facebook avec prise en charge du filtrage de texte, des plages de dates, des options de visibilité et de la sélection des champs. Renvoie une liste des publications correspondantes."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.display_name": {
+          "source": "Search Page Posts",
+          "message": "Rechercher des publications de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "Est publié"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "Lien"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for each post in the search results.",
+          "message": "Les champs spécifiques à récupérer pour chaque publication dans les résultats de recherche."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "Champs de la publication à récupérer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "If true, includes posts that are hidden from the timeline in the search results.",
+          "message": "Si true, inclut les publications masquées du journal dans les résultats de recherche."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden",
+          "message": "Inclure les éléments masqués"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden posts",
+          "message": "Indique s'il faut inclure les publications masquées"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of posts to return in the search results. Cannot exceed 100.",
+          "message": "Le nombre maximal de publications à renvoyer dans les résultats de recherche. Ne peut pas dépasser 100."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of posts to return",
+          "message": "Nombre maximal de publications à renvoyer"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.desc": {
+          "source": "Text string to search for within post messages and stories. Case-insensitive search.",
+          "message": "Chaîne de texte à rechercher dans les messages et stories des publications. Recherche insensible à la casse."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.display_name": {
+          "source": "Search Text",
+          "message": "Texte de recherche"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.short_desc": {
+          "source": "Text to search for in posts",
+          "message": "Texte à rechercher dans les publications"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.desc": {
+          "source": "ISO timestamp or date string for the earliest post creation date to include in results.",
+          "message": "Horodatage ISO ou chaîne de date pour la date de création de publication la plus ancienne à inclure dans les résultats."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.display_name": {
+          "source": "Since",
+          "message": "Depuis"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.short_desc": {
+          "source": "Start date for search",
+          "message": "Date de début de la recherche"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page to search for posts.",
+          "message": "L'identifiant unique de la page Facebook où rechercher des publications."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to search",
+          "message": "La page Facebook dans laquelle rechercher"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.desc": {
+          "source": "ISO timestamp or date string for the latest post creation date to include in results.",
+          "message": "Horodatage ISO ou chaîne de date pour la date de création de publication la plus récente à inclure dans les résultats."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.display_name": {
+          "source": "Until",
+          "message": "Jusqu'à"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.short_desc": {
+          "source": "End date for search",
+          "message": "Date de fin de la recherche"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.short_desc": {
+          "source": "Search and filter posts on a Facebook page",
+          "message": "Rechercher et filtrer des publications sur une page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.desc": {
+          "source": "Creates a reply to a specific comment on a Facebook page post. Supports text replies and optional attachment URLs.",
+          "message": "Crée une réponse à un commentaire spécifique sur une publication de page Facebook. Prend en charge les réponses textuelles et les URL de pièce jointe facultatives."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
+          "source": "Reply to Comment",
+          "message": "Répondre au commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.desc": {
+          "source": "The unique identifier of the comment to reply to.",
+          "message": "L'identifiant unique du commentaire auquel répondre."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.display_name": {
+          "source": "Comment ID",
+          "message": "ID du commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.short_desc": {
+          "source": "The comment to reply to",
+          "message": "Le commentaire auquel répondre"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.desc": {
+          "source": "Optional URL to attach to the reply, such as an image or link.",
+          "message": "URL facultative à joindre à la réponse, telle qu'une image ou un lien."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.display_name": {
+          "source": "Attachment URL",
+          "message": "URL de la pièce jointe"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.short_desc": {
+          "source": "Optional attachment URL",
+          "message": "URL de pièce jointe facultative"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the reply to the comment.",
+          "message": "Le contenu textuel de la réponse au commentaire."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The reply message",
+          "message": "Le message de réponse"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post that contains the comment being replied to.",
+          "message": "L'identifiant unique de la publication Facebook contenant le commentaire auquel vous répondez."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "ID de la publication"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post containing the comment",
+          "message": "La publication contenant le commentaire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "L'identifiant unique de la page Facebook propriétaire de la publication."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ID de la page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "L'ID de la page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
+          "source": "Reply to a comment on a Facebook page post",
+          "message": "Répondre à un commentaire sur une publication de page Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.desc": {
+          "source": "Connect your Facebook account to manage your pages, posts, and comments directly from Qore. You can create, read, update, and delete posts on your Facebook pages, as well as manage comments and reactions.",
+          "message": "Connectez votre compte Facebook pour gérer vos pages, publications et commentaires directement depuis Qore. Vous pouvez créer, lire, mettre à jour et supprimer des publications sur vos pages Facebook, ainsi que gérer les commentaires et les réactions."
+        },
+        "app.RmFjZWJvb2tQYWdlcw.display_name": {
+          "source": "Facebook Pages",
+          "message": "Pages Facebook"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.short_desc": {
+          "source": "Manage your Facebook pages and posts",
+          "message": "Gérer vos pages et publications Facebook"
+        }
+      }
+    }
+  }
+}

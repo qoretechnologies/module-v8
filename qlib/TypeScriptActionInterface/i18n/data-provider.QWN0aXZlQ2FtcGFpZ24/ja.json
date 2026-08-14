@@ -1,0 +1,2265 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.desc": {
+          "source": "This trigger fires when a contact subscribes or is added to a specific list in ActiveCampaign",
+          "message": "このトリガーは、コンタクトが ActiveCampaign の特定リストに登録または追加されたときに実行されます"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.display_name": {
+          "source": "Contact Added to List",
+          "message": "リストに追加されたコンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.desc": {
+          "source": "Select the specific list that you want to monitor for new contact additions",
+          "message": "新しいコンタクトの追加を監視する特定のリストを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new contacts",
+          "message": "新しいコンタクトを監視するリスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.short_desc": {
+          "source": "Triggers when a contact is added to a list",
+          "message": "コンタクトがリストに追加されたときにトリガーします"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ \"ActiveCampaign\" の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ \"ActiveCampaign\" の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.desc": {
+          "source": "Create a new account (company/organization) in ActiveCampaign",
+          "message": "ActiveCampaign に新しいアカウント（会社/組織）を作成します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.display_name": {
+          "source": "Create Account",
+          "message": "アカウントを作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.desc": {
+          "source": "Optional website URL or domain for the account",
+          "message": "アカウントのオプションの Web サイト URL またはドメイン"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.display_name": {
+          "source": "Account URL",
+          "message": "アカウント URL"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.short_desc": {
+          "source": "The website URL of the account",
+          "message": "アカウントの Web サイト URL"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.desc": {
+          "source": "Set values for any custom fields configured for accounts",
+          "message": "アカウント用に設定されたカスタムフィールドの値を設定します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
+          "source": "Custom Fields",
+          "message": "カスタムフィールド"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
+          "source": "Custom field values for the account",
+          "message": "アカウントのカスタムフィールド値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this account",
+          "message": "このアカウントの管理を担当するユーザーを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
+          "source": "Account Owner",
+          "message": "アカウント所有者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
+          "source": "The user who will own this account",
+          "message": "このアカウントを所有するユーザー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The name of the company or organization account",
+          "message": "会社または組織のアカウント名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Account Name",
+          "message": "アカウント名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The name of the account",
+          "message": "アカウントの名前"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
+          "source": "Create a new account",
+          "message": "新しいアカウントを作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in ActiveCampaign with basic information and custom field values",
+          "message": "基本情報とカスタムフィールドの値を使用して ActiveCampaign に新しいコンタクトを作成します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "コンタクトを作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The primary email address for the contact (required)",
+          "message": "コンタクトのプライマリメールアドレス（必須）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "メールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "コンタクトのメールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.desc": {
+          "source": "Set values for any custom fields configured for contacts",
+          "message": "コンタクト用に設定されたカスタムフィールドの値を設定します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
+          "source": "Custom Field Values",
+          "message": "カスタムフィールド値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
+          "source": "Values for custom fields",
+          "message": "カスタムフィールドの値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name of the contact",
+          "message": "コンタクトの名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The contact's first name",
+          "message": "コンタクトの名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.desc": {
+          "source": "The last name of the contact",
+          "message": "コンタクトの姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
+          "source": "The contact's last name",
+          "message": "コンタクトの姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The phone number for the contact",
+          "message": "コンタクトの電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The contact's phone number",
+          "message": "コンタクトの電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "新しいコンタクトを作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.desc": {
+          "source": "Create a new sales deal in ActiveCampaign with all relevant details",
+          "message": "すべての関連詳細を含む新しい営業案件を ActiveCampaign に作成します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.display_name": {
+          "source": "Create Deal",
+          "message": "案件を作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.desc": {
+          "source": "Select the main contact person for this deal",
+          "message": "この案件の主担当コンタクトを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.short_desc": {
+          "source": "The primary contact for this deal",
+          "message": "この案件のプライマリコンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmF1ZA.display_name": {
+          "source": "AUD",
+          "message": "AUD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNhZA.display_name": {
+          "source": "CAD",
+          "message": "CAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNueQ.display_name": {
+          "source": "CNY",
+          "message": "CNY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmV1cg.display_name": {
+          "source": "EUR",
+          "message": "EUR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmdicA.display_name": {
+          "source": "GBP",
+          "message": "GBP"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmlucg.display_name": {
+          "source": "INR",
+          "message": "INR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmpweQ.display_name": {
+          "source": "JPY",
+          "message": "JPY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOnVzZA.display_name": {
+          "source": "USD",
+          "message": "USD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.desc": {
+          "source": "Select the currency that the deal value is denominated in",
+          "message": "案件の金額の通貨単位を選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "通貨"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.short_desc": {
+          "source": "The currency for the deal value",
+          "message": "案件の金額の通貨"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.desc": {
+          "source": "Select the account/company that this deal is associated with",
+          "message": "この案件に関連付けられているアカウント/会社を選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "アカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.short_desc": {
+          "source": "The account associated with this deal",
+          "message": "この案件に関連付けられているアカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.desc": {
+          "source": "Select the pipeline group that this deal belongs to",
+          "message": "この案件が所属するパイプライングループを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.display_name": {
+          "source": "Pipeline Group",
+          "message": "パイプライングループ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
+          "source": "The pipeline group for the deal",
+          "message": "案件のパイプライングループ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description or additional details about the deal",
+          "message": "案件に関する説明または詳細情報（任意）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Deal Description",
+          "message": "案件の説明"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Additional description or notes",
+          "message": "追加の説明またはメモ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this deal",
+          "message": "この案件の管理を担当するユーザーを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.display_name": {
+          "source": "Deal Owner",
+          "message": "案件の所有者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.short_desc": {
+          "source": "The user responsible for this deal",
+          "message": "この案件を担当するユーザー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.desc": {
+          "source": "Select the pipeline stage that represents the current status of the deal",
+          "message": "案件の現在のステータスを表すパイプラインステージを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.display_name": {
+          "source": "Deal Stage",
+          "message": "案件のステージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
+          "source": "The current stage of the deal",
+          "message": "案件の現在のステージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Won",
+          "message": "受注"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Lost",
+          "message": "失注"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.desc": {
+          "source": "Select whether the deal is open, won, or lost",
+          "message": "案件がオープン、受注、または失注のいずれであるかを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.display_name": {
+          "source": "Deal Status",
+          "message": "案件のステータス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
+          "source": "The current status of the deal",
+          "message": "案件の現在のステータス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.desc": {
+          "source": "A percentage value representing how close the deal is to completion",
+          "message": "案件の完了にどれだけ近いかを表すパーセンテージ値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
+          "source": "Completion Percentage",
+          "message": "完了パーセンテージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
+          "source": "The percentage completion of the deal",
+          "message": "案件の完了パーセンテージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the deal",
+          "message": "案件のわかりやすいタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.display_name": {
+          "source": "Deal Title",
+          "message": "案件のタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.short_desc": {
+          "source": "The title of the deal",
+          "message": "案件のタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.desc": {
+          "source": "The total value or amount of the deal",
+          "message": "案件の総額または金額"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.display_name": {
+          "source": "Deal Value",
+          "message": "案件の金額"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.short_desc": {
+          "source": "The monetary value of the deal",
+          "message": "案件の金銭的価値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.short_desc": {
+          "source": "Create a new deal",
+          "message": "新規案件を作成"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "Add a new note to a specific contact in ActiveCampaign",
+          "message": "ActiveCampaign の特定のコンタクトに新しいノートを追加します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "Add Contact Note",
+          "message": "コンタクトのノートを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add the note to",
+          "message": "ノートを追加するコンタクトを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add the note to",
+          "message": "ノートを追加するコンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.desc": {
+          "source": "The text content of the note that will be added to the contact",
+          "message": "コンタクトに追加されるノートのテキスト内容"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "ノート"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.short_desc": {
+          "source": "The note content to add",
+          "message": "追加するノートの内容"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Add a note to a contact",
+          "message": "コンタクトにノートを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.desc": {
+          "source": "Create an association between a contact and an account in ActiveCampaign",
+          "message": "ActiveCampaign でコンタクトとアカウントを関連付けます"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
+          "source": "Add Contact to Account",
+          "message": "コンタクトをアカウントに追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to associate with the account",
+          "message": "アカウントに関連付けるコンタクトを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to associate with the account",
+          "message": "アカウントに関連付けるコンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.desc": {
+          "source": "Select the account that you want to associate the contact with",
+          "message": "コンタクトに関連付けるアカウントを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "アカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.short_desc": {
+          "source": "The account to associate the contact with",
+          "message": "コンタクトに関連付けるアカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.desc": {
+          "source": "Optional job title or role of the contact within the account",
+          "message": "アカウント内でのコンタクトの役職または役割（任意）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "役職"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.short_desc": {
+          "source": "The contact's job title at this account",
+          "message": "このアカウントでのコンタクトの役職"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
+          "source": "Associate a contact with an account",
+          "message": "コンタクトをアカウントに関連付け"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.desc": {
+          "source": "Add a new note to a specific deal in ActiveCampaign",
+          "message": "ActiveCampaign の特定の案件に新しいノートを追加します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.display_name": {
+          "source": "Add Deal Note",
+          "message": "案件のノートを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.desc": {
+          "source": "Select the deal that you want to add the note to",
+          "message": "ノートを追加する案件を選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.display_name": {
+          "source": "Deal",
+          "message": "案件"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.short_desc": {
+          "source": "The deal to add the note to",
+          "message": "ノートを追加する案件"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.desc": {
+          "source": "The text content of the note that will be added to the deal",
+          "message": "案件に追加されるノートのテキスト内容"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "ノート"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.short_desc": {
+          "source": "The note content to add",
+          "message": "追加するノートの内容"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.short_desc": {
+          "source": "Add a note to a deal",
+          "message": "案件にノートを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.desc": {
+          "source": "Apply a tag to a specific contact in ActiveCampaign for organization and segmentation",
+          "message": "整理およびセグメンテーションのために ActiveCampaign の特定のコンタクトにタグを適用します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.display_name": {
+          "source": "Add Tag to Contact",
+          "message": "コンタクトにタグを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add the tag to",
+          "message": "タグを追加するコンタクトを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add the tag to",
+          "message": "タグを追加するコンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.desc": {
+          "source": "Select the tag that you want to apply to the contact",
+          "message": "コンタクトに適用するタグを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "タグ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.short_desc": {
+          "source": "The tag to add to the contact",
+          "message": "コンタクトに追加するタグ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.short_desc": {
+          "source": "Add a tag to a contact",
+          "message": "コンタクトにタグを追加"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Retrieve detailed information about a specific account in ActiveCampaign",
+          "message": "ActiveCampaign の特定のアカウントに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "アカウントの取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.desc": {
+          "source": "Select the account that you want to get detailed information for",
+          "message": "詳細情報を取得するアカウントを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.display_name": {
+          "source": "Account ID",
+          "message": "アカウント ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.short_desc": {
+          "source": "The ID of the account to retrieve",
+          "message": "取得するアカウントの ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve account details",
+          "message": "アカウントの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Retrieve detailed information about a specific campaign in ActiveCampaign",
+          "message": "ActiveCampaign の特定のキャンペーンに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "キャンペーンの取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.desc": {
+          "source": "Select the campaign that you want to get detailed information for",
+          "message": "詳細情報を取得するキャンペーンを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.short_desc": {
+          "source": "The ID of the campaign to retrieve",
+          "message": "取得するキャンペーンのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Retrieve campaign details",
+          "message": "キャンペーンの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve detailed information about a specific contact in ActiveCampaign including custom fields, automations, and related data",
+          "message": "カスタムフィールド、自動化、関連データを含む、ActiveCampaign内の特定の連絡先に関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "連絡先の取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.desc": {
+          "source": "Select the contact that you want to get detailed information for",
+          "message": "詳細情報を取得する連絡先を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.display_name": {
+          "source": "Contact ID",
+          "message": "連絡先ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.short_desc": {
+          "source": "The ID of the contact to retrieve",
+          "message": "取得する連絡先のID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve contact details",
+          "message": "連絡先の詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.desc": {
+          "source": "Retrieve detailed information about a specific deal in ActiveCampaign",
+          "message": "ActiveCampaign内の特定の取引に関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.display_name": {
+          "source": "Get Deal",
+          "message": "取引の取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.desc": {
+          "source": "Select the deal that you want to get detailed information for",
+          "message": "詳細情報を取得する取引を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.display_name": {
+          "source": "Deal ID",
+          "message": "取引ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.short_desc": {
+          "source": "The ID of the deal to retrieve",
+          "message": "取得する取引のID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.short_desc": {
+          "source": "Retrieve deal details",
+          "message": "取引の詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.desc": {
+          "source": "Retrieve detailed information about a specific form in ActiveCampaign including styling and field configuration",
+          "message": "スタイルやフィールド設定を含む、ActiveCampaign内の特定のフォームに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "フォームの取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.desc": {
+          "source": "Select the form that you want to get detailed information for",
+          "message": "詳細情報を取得するフォームを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.display_name": {
+          "source": "Form ID",
+          "message": "フォームID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.short_desc": {
+          "source": "The ID of the form to retrieve",
+          "message": "取得するフォームのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve form details",
+          "message": "フォームの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.desc": {
+          "source": "Retrieve detailed information about a specific list in ActiveCampaign including settings and configuration",
+          "message": "設定や構成を含む、ActiveCampaign内の特定のリストに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.display_name": {
+          "source": "Get List",
+          "message": "リストを取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.desc": {
+          "source": "Select the list that you want to get detailed information for",
+          "message": "詳細情報を取得するリストを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.display_name": {
+          "source": "List ID",
+          "message": "リストID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.short_desc": {
+          "source": "The ID of the list to retrieve",
+          "message": "取得するリストのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.short_desc": {
+          "source": "Retrieve list details",
+          "message": "リストの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieve detailed information about a specific deal task in ActiveCampaign",
+          "message": "ActiveCampaign内の特定の取引タスクに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "タスクの取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.desc": {
+          "source": "Select the task that you want to get detailed information for",
+          "message": "詳細情報を取得するタスクを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.short_desc": {
+          "source": "The ID of the task to retrieve",
+          "message": "取得するタスクのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve task details",
+          "message": "タスクの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.desc": {
+          "source": "Retrieve detailed information about a specific user in ActiveCampaign",
+          "message": "ActiveCampaign内の特定のユーザーに関する詳細情報を取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "ユーザーの取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.desc": {
+          "source": "Select the user that you want to get detailed information for",
+          "message": "詳細情報を取得するユーザーを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.display_name": {
+          "source": "User ID",
+          "message": "ユーザーID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.short_desc": {
+          "source": "The ID of the user to retrieve",
+          "message": "取得するユーザーのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve user details",
+          "message": "ユーザーの詳細を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.desc": {
+          "source": "This trigger fires when a note is added to a deal for contacts in a specific list",
+          "message": "このトリガーは、特定のリスト内の連絡先の取引にノートが追加されたときに実行されます"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.display_name": {
+          "source": "Deal Note Added",
+          "message": "取引ノートが追加されました"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when notes are added to deals",
+          "message": "取引にノートが追加されたときに監視する特定のリストを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for deal note additions",
+          "message": "取引ノートの追加を監視するリスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.short_desc": {
+          "source": "Triggers when a note is added to a deal",
+          "message": "取引にノートが追加されたときにトリガー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ActiveCampaign\"",
+          "message": "アプリ「ActiveCampaign」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ActiveCampaign\"",
+          "message": "アプリ「ActiveCampaign」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.desc": {
+          "source": "Retrieve a paginated list of tags in ActiveCampaign with optional search functionality",
+          "message": "ActiveCampaign内のタグのページ分割されたリストを検索機能付き（オプション）で取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "タグのリスト取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.desc": {
+          "source": "The number of tags to skip for pagination",
+          "message": "ページネーションのためにスキップするタグの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tags to skip",
+          "message": "スキップするタグの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of tags to return per page (default: 20)",
+          "message": "1ページあたりに返すタグの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tags to return",
+          "message": "返されるタグの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.desc": {
+          "source": "Search for tags by name or description",
+          "message": "名前または説明でタグを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter tags",
+          "message": "タグをフィルタリングするための検索キーワード"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve a list of tags",
+          "message": "タグのリストを取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieve a paginated list of deal tasks in ActiveCampaign with filtering options",
+          "message": "ActiveCampaign内の取引タスクのページ分割されたリストをフィルタリングオプション付きで取得します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "タスクの一覧表示"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.desc": {
+          "source": "Filter tasks by the user they are assigned to",
+          "message": "割り当てられているユーザーでタスクをフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "担当者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.short_desc": {
+          "source": "Filter by task assignee",
+          "message": "タスク担当者でフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.desc": {
+          "source": "The number of tasks to skip for pagination",
+          "message": "ページネーションのためにスキップするタスクの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tasks to skip",
+          "message": "スキップするタスクの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return per page (default: 20)",
+          "message": "1ページあたりに返すタスクの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "返されるタスクの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.desc": {
+          "source": "Filter tasks by their title",
+          "message": "タイトルでタスクをフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.short_desc": {
+          "source": "Filter by task title",
+          "message": "タスクのタイトルでフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.desc": {
+          "source": "Filter tasks by the user who created them",
+          "message": "タスクを作成したユーザーで絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.display_name": {
+          "source": "User ID",
+          "message": "ユーザーID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.short_desc": {
+          "source": "Filter by task creator",
+          "message": "タスク作成者で絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve a list of tasks",
+          "message": "タスクの一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a paginated list of users in ActiveCampaign",
+          "message": "ActiveCampaignのユーザーのページ分けされた一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.desc": {
+          "source": "The number of users to skip for pagination",
+          "message": "ページネーションでスキップするユーザー数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of users to skip",
+          "message": "スキップするユーザー数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to return per page (default: 20)",
+          "message": "1ページあたりに返すユーザーの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "返すユーザーの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users",
+          "message": "ユーザーの一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Retrieve a paginated list of accounts in ActiveCampaign with optional search and filtering",
+          "message": "オプションの検索と絞り込みを使用してActiveCampaignのアカウントのページ分けされた一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "アカウント一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.desc": {
+          "source": "Whether to include the number of deals associated with each account in the response",
+          "message": "レスポンスに各アカウントに関連付けられた取引の数を含めるかどうか"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.display_name": {
+          "source": "Count Deals",
+          "message": "取引数をカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.short_desc": {
+          "source": "Include deal count for each account",
+          "message": "各アカウントの取引数を含める"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.desc": {
+          "source": "The number of accounts to skip for pagination",
+          "message": "ページネーションでスキップするアカウント数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of accounts to skip",
+          "message": "スキップするアカウント数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of accounts to return per page (default: 20)",
+          "message": "1ページあたりに返すアカウントの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to return",
+          "message": "返すアカウントの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.desc": {
+          "source": "Search for accounts by name or other searchable fields",
+          "message": "名前またはその他の検索可能フィールドでアカウントを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter accounts",
+          "message": "アカウントを絞り込むための検索語"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts",
+          "message": "アカウントの一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Retrieve a paginated list of campaigns in ActiveCampaign",
+          "message": "ActiveCampaignのキャンペーンのページ分けされた一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "キャンペーン一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.desc": {
+          "source": "The number of campaigns to skip for pagination",
+          "message": "ページネーションでスキップするキャンペーン数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of campaigns to skip",
+          "message": "スキップするキャンペーン数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of campaigns to return per page (default: 20)",
+          "message": "1ページあたりに返すキャンペーンの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "返すキャンペーンの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "Retrieve a list of campaigns",
+          "message": "キャンペーンの一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a paginated list of contacts in ActiveCampaign with extensive filtering and sorting options",
+          "message": "詳細な絞り込みおよび並べ替えオプションを使用してActiveCampaignの連絡先のページ分けされた一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "連絡先一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.desc": {
+          "source": "Filter contacts by exact email address match",
+          "message": "メールアドレスの完全一致で連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.short_desc": {
+          "source": "Exact email address to search for",
+          "message": "検索する完全一致メールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.desc": {
+          "source": "Filter contacts by partial email address match",
+          "message": "メールアドレスの部分一致で連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.display_name": {
+          "source": "Email Like",
+          "message": "類似メールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.short_desc": {
+          "source": "Partial email address to search for",
+          "message": "検索する部分一致メールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.desc": {
+          "source": "Filter contacts who subscribed through a specific form",
+          "message": "特定のフォームから登録した連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.display_name": {
+          "source": "Form ID",
+          "message": "フォームID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.short_desc": {
+          "source": "Filter by form subscription",
+          "message": "フォーム登録で絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of contacts to skip for pagination",
+          "message": "ページネーションでスキップする連絡先数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of contacts to skip",
+          "message": "スキップする連絡先数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of contacts to return per page (default: 20)",
+          "message": "1ページあたりに返す連絡先の最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "返す連絡先の最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.desc": {
+          "source": "Filter contacts who are members of a specific list",
+          "message": "特定のリストのメンバーである連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.display_name": {
+          "source": "List ID",
+          "message": "リストID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.short_desc": {
+          "source": "Filter by list membership",
+          "message": "リストメンバーシップで絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.desc": {
+          "source": "Configure how to sort the contact results",
+          "message": "連絡先結果の並べ替え方法を設定"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
+          "source": "Sort Options",
+          "message": "並び替えオプション"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "並べ替え設定"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.desc": {
+          "source": "Search for contacts by name, email, or other searchable fields",
+          "message": "名前、メールアドレス、またはその他の検索可能フィールドで連絡先を検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.short_desc": {
+          "source": "General search term",
+          "message": "一般的な検索語"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50Oi0x.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Unconfirmed",
+          "message": "未確認"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Unsubscribed",
+          "message": "配信解除済み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjM.display_name": {
+          "source": "Bounced",
+          "message": "バウンス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.desc": {
+          "source": "Filter contacts by their subscription status",
+          "message": "購読ステータスで連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.short_desc": {
+          "source": "Contact status filter",
+          "message": "連絡先ステータスフィルター"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.desc": {
+          "source": "Filter contacts by phone number",
+          "message": "電話番号で連絡先を絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.short_desc": {
+          "source": "Phone number to search for",
+          "message": "検索する電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "連絡先の一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.desc": {
+          "source": "Retrieve a paginated list of deal stages (pipeline stages) in ActiveCampaign",
+          "message": "ActiveCampaignの取引ステージ（パイプラインステージ）のページ分けされた一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.display_name": {
+          "source": "List Deal Stages",
+          "message": "取引ステージ一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.desc": {
+          "source": "The number of deal stages to skip for pagination",
+          "message": "ページネーションでスキップする取引ステージ数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of stages to skip",
+          "message": "スキップするステージ数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of deal stages to return per page (default: 20)",
+          "message": "1ページあたりに返す取引ステージの最大数（デフォルト: 20）"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of stages to return",
+          "message": "返すステージの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.desc": {
+          "source": "Filter deal stages by their title",
+          "message": "タイトルで取引ステージを絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.short_desc": {
+          "source": "Filter by stage title",
+          "message": "ステージタイトルで絞り込み"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.short_desc": {
+          "source": "Retrieve a list of deal stages",
+          "message": "商談ステージの一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.desc": {
+          "source": "Retrieve a paginated list of deals in ActiveCampaign with optional search functionality",
+          "message": "ActiveCampaign内の商談のページ化された一覧をオプションの検索機能付きで取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.display_name": {
+          "source": "List Deals",
+          "message": "商談一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.desc": {
+          "source": "The number of deals to skip for pagination",
+          "message": "ページネーションでスキップする商談の数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deals to skip",
+          "message": "スキップする商談の数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of deals to return per page (default: 20)",
+          "message": "ページあたりに返される商談の最大数 (デフォルト: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deals to return",
+          "message": "返される商談の最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.desc": {
+          "source": "Configure how to search for deals by different fields",
+          "message": "さまざまなフィールドで商談を検索する方法を設定"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.display_name": {
+          "source": "Search Options",
+          "message": "検索オプション"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.short_desc": {
+          "source": "Search configuration for deals",
+          "message": "商談の検索設定"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.short_desc": {
+          "source": "Retrieve a list of deals",
+          "message": "商談一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Retrieve a paginated list of forms in ActiveCampaign",
+          "message": "ActiveCampaign内のフォームのページ化された一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "フォーム一覧"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.desc": {
+          "source": "The number of forms to skip for pagination",
+          "message": "ページネーションでスキップするフォームの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of forms to skip",
+          "message": "スキップするフォームの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of forms to return per page (default: 20)",
+          "message": "ページあたりに返されるフォームの最大数 (デフォルト: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of forms to return",
+          "message": "返されるフォームの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms",
+          "message": "フォーム一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.desc": {
+          "source": "Retrieve a paginated list of contact lists in ActiveCampaign with optional name filtering",
+          "message": "ActiveCampaign内の連絡先リストのページ化された一覧をオプションの名前フィルタリング付きで取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.display_name": {
+          "source": "List Lists",
+          "message": "リストを一覧表示"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of lists to skip for pagination",
+          "message": "ページネーションでスキップするリストの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of lists to skip",
+          "message": "スキップするリストの数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of lists to return per page (default: 20)",
+          "message": "ページあたりに返されるリストの最大数 (デフォルト: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "返されるリストの最大数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.desc": {
+          "source": "Filter lists by their name",
+          "message": "名前でリストをフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter by list name",
+          "message": "リスト名でフィルタリング"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.short_desc": {
+          "source": "Retrieve a list of lists",
+          "message": "リスト一覧を取得"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **ActiveCampaign** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**ActiveCampaign**にカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to ActiveCampaign",
+          "message": "ActiveCampaignへのカスタムAPI呼び出しを行う"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.desc": {
+          "source": "This trigger fires when an email from a campaign bounces, indicating delivery failure",
+          "message": "このトリガーは、キャンペーンからのメールがバウンスし、配信失敗を示したときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.display_name": {
+          "source": "New Campaign Bounce",
+          "message": "新規キャンペーンバウンス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.short_desc": {
+          "source": "Triggers when a campaign email bounces",
+          "message": "キャンペーンメールがバウンスしたときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.desc": {
+          "source": "This trigger fires when a recipient clicks on a link within a campaign email",
+          "message": "このトリガーは、受信者がキャンペーンメール内のリンクをクリックしたときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.display_name": {
+          "source": "New Campaign Link Click",
+          "message": "新規キャンペーンリンククリック"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.short_desc": {
+          "source": "Triggers when a link in a campaign is clicked",
+          "message": "キャンペーン内のリンクがクリックされたときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.desc": {
+          "source": "This trigger fires when a recipient replies to a campaign email",
+          "message": "このトリガーは、受信者がキャンペーンメールに返信したときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.display_name": {
+          "source": "New Campaign Reply",
+          "message": "新規キャンペーン返信"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.short_desc": {
+          "source": "Triggers when someone replies to a campaign",
+          "message": "誰かがキャンペーンに返信したときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger fires when a new contact subscribes or is created in ActiveCampaign",
+          "message": "このトリガーは、ActiveCampaignで新しい連絡先が登録または作成されたときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "新規連絡先"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "新しい連絡先が作成されたときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "This trigger fires when a note is added to a contact in a specific list",
+          "message": "このトリガーは、特定リストの連絡先にノートが追加されたときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "New Contact Note",
+          "message": "新規連絡先ノート"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when notes are added to contacts",
+          "message": "連絡先にノートが追加されたときに監視する特定のリストを選択"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new contact notes",
+          "message": "新しい連絡先ノートを監視するリスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Triggers when a note is added to a contact",
+          "message": "連絡先にノートが追加されたときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.desc": {
+          "source": "This trigger fires when a new deal is created for contacts in a specific list",
+          "message": "このトリガーは、特定リストの連絡先に新しい商談が作成されたときに発生します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.display_name": {
+          "source": "New Deal",
+          "message": "新規商談"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when new deals are created",
+          "message": "新しい商談が作成されたときに監視する特定のリストを選択"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new deals",
+          "message": "新しい商談を監視するリスト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.short_desc": {
+          "source": "Triggers when a new deal is created",
+          "message": "新しい商談が作成されたときに発生"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブルで一致するレコードを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブルで一致するレコードを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブルで一致する単一のレコードを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブルで一致する単一のレコードを検索"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.desc": {
+          "source": "Remove a specific tag from a contact in ActiveCampaign",
+          "message": "ActiveCampaign内の連絡先から特定のタグを削除"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.display_name": {
+          "source": "Remove Tag from Contact",
+          "message": "連絡先からタグを削除"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove the tag from",
+          "message": "タグを削除する連絡先を選択"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove the tag from",
+          "message": "タグを削除する連絡先"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.desc": {
+          "source": "Select the tag that you want to remove from the contact",
+          "message": "連絡先から削除するタグを選択"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "タグ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.short_desc": {
+          "source": "The tag to remove from the contact",
+          "message": "連絡先から削除するタグ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.short_desc": {
+          "source": "Remove a tag from a contact",
+          "message": "連絡先からタグを削除"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブル内の既存のレコードを更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ActiveCampaign\"",
+          "message": "アプリ\"ActiveCampaign\"の指定されたテーブル内の既存のレコードを更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.desc": {
+          "source": "Update the information of an existing account in ActiveCampaign",
+          "message": "ActiveCampaign内の既存のアカウント情報を更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.display_name": {
+          "source": "Update Account",
+          "message": "アカウントを更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.desc": {
+          "source": "The new website URL or domain for the account",
+          "message": "アカウントの新しいWebサイトURLまたはドメイン"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.display_name": {
+          "source": "Account URL",
+          "message": "アカウント URL"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.short_desc": {
+          "source": "The updated website URL of the account",
+          "message": "アカウントの更新されたWebサイトURL"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.desc": {
+          "source": "Update values for any custom fields configured for accounts",
+          "message": "アカウント用に設定されたカスタムフィールドの値を更新します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
+          "source": "Custom Fields",
+          "message": "カスタムフィールド"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
+          "source": "Updated custom field values for the account",
+          "message": "アカウントの更新されたカスタムフィールドの値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.desc": {
+          "source": "Select the account that you want to update",
+          "message": "更新するアカウントを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.display_name": {
+          "source": "Account ID",
+          "message": "アカウント ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.short_desc": {
+          "source": "The ID of the account to update",
+          "message": "更新するアカウントのID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this account",
+          "message": "このアカウントの管理を担当するユーザーを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
+          "source": "Account Owner",
+          "message": "アカウント所有者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
+          "source": "The updated owner of the account",
+          "message": "アカウントの更新された所有者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The new name for the company or organization account",
+          "message": "会社または組織アカウントの新しい名前"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Account Name",
+          "message": "アカウント名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The updated name of the account",
+          "message": "アカウントの更新された名前"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.short_desc": {
+          "source": "Update an existing account",
+          "message": "既存のアカウントを更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the information of an existing contact in ActiveCampaign including basic information and custom field values",
+          "message": "ActiveCampaign 内の既存連絡先の基本情報やカスタムフィールド値を含む情報を更新します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "連絡先を更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "連絡先の新しいメールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "メールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The updated email address",
+          "message": "更新されたメールアドレス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.desc": {
+          "source": "Update values for any custom fields configured for contacts",
+          "message": "連絡先用に設定されたカスタムフィールドの値を更新します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
+          "source": "Custom Field Values",
+          "message": "カスタムフィールド値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
+          "source": "Updated values for custom fields",
+          "message": "カスタムフィールドの更新後の値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.desc": {
+          "source": "The new first name of the contact",
+          "message": "連絡先の新しい名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The updated first name",
+          "message": "更新された名"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.desc": {
+          "source": "Select the contact that you want to update",
+          "message": "更新する連絡先を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.display_name": {
+          "source": "Contact ID",
+          "message": "連絡先ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.short_desc": {
+          "source": "The ID of the contact to update",
+          "message": "更新する連絡先のID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.desc": {
+          "source": "The new last name of the contact",
+          "message": "連絡先の新しい姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
+          "source": "The updated last name",
+          "message": "更新された姓"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The new phone number for the contact",
+          "message": "連絡先の新しい電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The updated phone number",
+          "message": "更新された電話番号"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "既存の連絡先を更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.desc": {
+          "source": "Update the information of an existing sales deal in ActiveCampaign",
+          "message": "ActiveCampaign 内の既存営業案件の情報を更新します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.display_name": {
+          "source": "Update Deal",
+          "message": "案件を更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.desc": {
+          "source": "Select the new main contact person for this deal",
+          "message": "この案件の新しい主要連絡先を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "コンタクト"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.short_desc": {
+          "source": "The updated primary contact for this deal",
+          "message": "この案件の更新された主要連絡先"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmF1ZA.display_name": {
+          "source": "AUD",
+          "message": "AUD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNhZA.display_name": {
+          "source": "CAD",
+          "message": "CAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNueQ.display_name": {
+          "source": "CNY",
+          "message": "CNY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmV1cg.display_name": {
+          "source": "EUR",
+          "message": "EUR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmdicA.display_name": {
+          "source": "GBP",
+          "message": "GBP"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmlucg.display_name": {
+          "source": "INR",
+          "message": "INR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmpweQ.display_name": {
+          "source": "JPY",
+          "message": "JPY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOnVzZA.display_name": {
+          "source": "USD",
+          "message": "USD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.desc": {
+          "source": "Select the new currency that the deal value is denominated in",
+          "message": "案件の金額の新しい通貨単位を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "通貨"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.short_desc": {
+          "source": "The updated currency for the deal value",
+          "message": "案件金額の更新された通貨"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.desc": {
+          "source": "Select the new account/company that this deal is associated with",
+          "message": "この案件に関連付ける新しいアカウント/会社を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "アカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.short_desc": {
+          "source": "The updated account associated with this deal",
+          "message": "この案件に関連付けられている更新されたアカウント"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.desc": {
+          "source": "Select the new pipeline group that this deal belongs to",
+          "message": "この案件が所属する新しいパイプライングループを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.display_name": {
+          "source": "Pipeline Group",
+          "message": "パイプライングループ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
+          "source": "The updated pipeline group for the deal",
+          "message": "案件の更新されたパイプライングループ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "New description or additional details about the deal",
+          "message": "案件の新しい説明または詳細情報"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Deal Description",
+          "message": "案件の説明"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated description or notes",
+          "message": "更新された説明またはメモ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.desc": {
+          "source": "Select the deal that you want to update",
+          "message": "更新する案件を選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.display_name": {
+          "source": "Deal ID",
+          "message": "取引ID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.short_desc": {
+          "source": "The ID of the deal to update",
+          "message": "更新する案件のID"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.desc": {
+          "source": "Select the new user who will be responsible for managing this deal",
+          "message": "この案件の管理を担当する新しいユーザーを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.display_name": {
+          "source": "Deal Owner",
+          "message": "案件の所有者"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.short_desc": {
+          "source": "The updated user responsible for this deal",
+          "message": "この案件を担当する更新されたユーザー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.desc": {
+          "source": "Select the new pipeline stage that represents the current status of the deal",
+          "message": "案件の現在のステータスを表す新しいパイプラインステージを選択してください"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.display_name": {
+          "source": "Deal Stage",
+          "message": "案件のステージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
+          "source": "The updated stage of the deal",
+          "message": "案件の更新されたステージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Won",
+          "message": "受注"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Lost",
+          "message": "失注"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.desc": {
+          "source": "Select whether the deal is open, won, or lost",
+          "message": "案件がオープン、受注、または失注のいずれであるかを選択します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.display_name": {
+          "source": "Deal Status",
+          "message": "案件のステータス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
+          "source": "The updated status of the deal",
+          "message": "案件の更新されたステータス"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.desc": {
+          "source": "The new percentage value representing how close the deal is to completion",
+          "message": "案件の完了までの近さを表す新しいパーセンテージ値"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
+          "source": "Completion Percentage",
+          "message": "完了パーセンテージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
+          "source": "The updated percentage completion of the deal",
+          "message": "案件の更新された進捗パーセンテージ"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.desc": {
+          "source": "The new descriptive title for the deal",
+          "message": "案件の新しいタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.display_name": {
+          "source": "Deal Title",
+          "message": "案件のタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.short_desc": {
+          "source": "The updated title of the deal",
+          "message": "案件の更新されたタイトル"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.desc": {
+          "source": "The new total value or amount of the deal",
+          "message": "案件の新しい合計金額または額"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.display_name": {
+          "source": "Deal Value",
+          "message": "案件の金額"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.short_desc": {
+          "source": "The updated monetary value of the deal",
+          "message": "案件の更新された金額"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.short_desc": {
+          "source": "Update an existing deal",
+          "message": "既存の案件を更新"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.desc": {
+          "source": "This trigger fires when any contact information is updated in ActiveCampaign",
+          "message": "このトリガーは、ActiveCampaign 内で連絡先情報が更新されたときに発火します"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.display_name": {
+          "source": "Contact Updated",
+          "message": "連絡先が更新されました"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.short_desc": {
+          "source": "Triggers when a contact is updated",
+          "message": "連絡先が更新されたときにトリガー"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.desc": {
+          "source": "Connect your ActiveCampaign account to automate email marketing campaigns, manage contacts, and track customer interactions. Create and send targeted email campaigns, manage contact lists, set up automation workflows, and analyze campaign performance all from within Qore.",
+          "message": "ActiveCampaign アカウントを接続して、Eメールマーケティングキャンペーンの自動化、連絡先の管理、顧客とのやり取りの追跡を行います。ターゲットを絞ったメールキャンペーンの作成と送信、連絡先リストの管理、自動化ワークフローの設定、キャンペーンのパフォーマンス分析をすべて Qore 内から実行できます。"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.display_name": {
+          "source": "ActiveCampaign",
+          "message": "ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.short_desc": {
+          "source": "Email marketing automation and CRM platform",
+          "message": "Eメールマーケティング自動化およびCRMプラットフォーム"
+        }
+      }
+    }
+  }
+}

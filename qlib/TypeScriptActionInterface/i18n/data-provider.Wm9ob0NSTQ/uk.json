@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Створити нові записи в указаній таблиці в додатку \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Створити записи"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Створити нові записи в указаній таблиці в додатку \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
+          "message": "Створює новий запис у зазначеному модулі Zoho CRM із наданими значеннями полів. Повертає ID запису разом із мітками часу створення та змінення. Поля Created_By та Modified_By містять інформацію про користувача, який створив запис. Підтримує всі стандартні та настроювані модулі, крім Documents та Projects."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Створити запис"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.",
+          "message": "Виберіть цільовий модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts, Products, Vendors або настроювані модулі), у якому потрібно створити новий запис. Використовуйте Modules API, щоб отримати список доступних модулів та їхні назви API."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module where the record will be created",
+          "message": "Модуль Zoho CRM, у якому буде створено запис"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).",
+          "message": "Укажіть значення полів для нового запису у вигляді пар \"ключ-значення\", де ключі — це імена полів в API. Доступні поля та їхні типи динамічно завантажуються на основі вибраного модуля. Обов'язкові поля мають бути заповнені, а значення полів повинні відповідати очікуваним типам даних (text, number, date, picklist, lookup тощо)."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Record Properties",
+          "message": "Властивості запису"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values for the new record",
+          "message": "Значення полів для нового запису"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in a Zoho CRM module",
+          "message": "Створити новий запис у модулі Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.desc": {
+          "source": "Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.",
+          "message": "Додає один або кілька тегів до вказаних записів у модулі Zoho CRM. Теги — це мітки, які допомагають категоризувати й упорядковувати записи для зручнішого керування, фільтрації та пошуку. Можна додати до 10 тегів на один запис, а в модулі може бути щонайбільше 100 тегів. Повертає кількість успішно позначених записів і заблокованих записів, до яких не вдалося додати теги."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
+          "source": "Add Tags to Records",
+          "message": "Додати теги до записів"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.desc": {
+          "source": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.",
+          "message": "Якщо встановлено значення true, замінює всі наявні теги у вказаних записах новими тегами. Якщо false (за замовчуванням), додає нові теги, зберігаючи наявні. Використовуйте цю опцію обережно, оскільки значення true призведе до видалення всіх поточних тегів."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
+          "source": "Overwrite Existing Tags",
+          "message": "Перезаписати наявні теги"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
+          "source": "Replace all existing tags on the records",
+          "message": "Замінити всі наявні теги в записах"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або настроювані модулі), що містить записи, які потрібно позначити тегами. Теги прив'язані до модуля і мають існувати в ньому перед додаванням до записів."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the records",
+          "message": "Модуль Zoho CRM, що містить записи"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.desc": {
+          "source": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.",
+          "message": "Список унікальних ID записів, до яких потрібно додати теги. Можна вказати щонайбільше 500 ID записів на один виклик API. Використовуйте Get Records API або API пошуку для отримання дійсних ID записів."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.display_name": {
+          "source": "Record IDs",
+          "message": "Ідентифікатори записів"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.short_desc": {
+          "source": "IDs of the records to tag",
+          "message": "ID записів для додавання тегів"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.desc": {
+          "source": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.",
+          "message": "Укажіть теги, які потрібно додати до записів. Кожен тег має містити ID та ім'я. ID тегу має пріоритет над іменем, якщо вказано обидва. Також можна за бажанням указати color_code (шістнадцяткове значення). Використовуйте дію List Tags, щоб отримати доступні теги та їхні ID."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
+          "source": "Tags to Add",
+          "message": "Теги для додавання"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
+          "source": "List of tags to add to the records",
+          "message": "Список тегів для додавання до записів"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
+          "source": "Add tags to one or more records in a module",
+          "message": "Додати теги до одного або кількох записів у модулі"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.",
+          "message": "Отримує детальну інформацію про конкретний запис із зазначеного модуля Zoho CRM за його унікальним ID запису. Повертає всі значення полів запису, зокрема стандартні поля (Created_Time, Modified_Time, Created_By, Modified_By) і настроювані поля. Дані підформ, поля пошуку з множинним вибором і поля пошуку кількох користувачів також включено у відповідь."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Отримати запис"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або настроювані модулі), що містить запис, який потрібно отримати. Модуль має підтримувати операції API, а користувач повинен мати дозволи на читання."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Модуль Zoho CRM, що містить запис"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.",
+          "message": "Введіть або виберіть унікальний ID запису, який потрібно отримати. ID записів можна отримати з Get Records API, результатів пошуку або сповіщень вебхуків. Запис повинен існувати у вказаному модулі."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to retrieve",
+          "message": "Унікальний ідентифікатор запису для отримання"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a single record from a Zoho CRM module",
+          "message": "Отримати один запис із модуля Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Видалити записи з указаної таблиці в додатку \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Видалити записи"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Видалити записи з указаної таблиці в додатку \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.",
+          "message": "Остаточно видаляє конкретний запис із зазначеного модуля Zoho CRM за його унікальним ID запису. Якщо для модуля увімкнено функцію кошика (Recycle Bin), видалений запис буде переміщено до кошика й його можна буде відновити. В іншому разі видалення є незворотним. Користувач повинен мати дозволи на видалення для цього модуля."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Видалити запис"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або настроювані модулі), що містить запис, який потрібно видалити. Модуль має підтримувати операції API, а користувач повинен мати дозволи на видалення."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Модуль Zoho CRM, що містить запис"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.",
+          "message": "Введіть або виберіть унікальний ідентифікатор (ID) запису, який потрібно видалити. Ідентифікатори записів можна отримати за допомогою Get Records API. Видалення запису, який уже було видалено, призведе до помилки."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to delete",
+          "message": "Унікальний ідентифікатор запису для видалення"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from a Zoho CRM module",
+          "message": "Видалити запис із модуля Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.desc": {
+          "source": "Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.",
+          "message": "Отримує всі теги, створені для певного модуля Zoho CRM. Теги — це мітки, які використовуються для категоризації та впорядкування записів у модулі для полегшення пошуку та фільтрації. Кожен тег містить свою назву, ID, колірний код і метадані про час створення та змінення. Ви можете додати щонайбільше 100 тегів на модуль і 10 тегів на запис."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "Список тегів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals або власні модулі), теги якого потрібно отримати. Кожен модуль має власний набір тегів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve tags from",
+          "message": "Модуль Zoho CRM, з якого потрібно отримати теги"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.desc": {
+          "source": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.",
+          "message": "Якщо встановлено значення true, повертатимуться лише теги, створені поточним користувачем. Якщо встановлено false або значення не вказано, повертатимуться всі теги в модулі незалежно від того, хто їх створив."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
+          "source": "My Tags Only",
+          "message": "Лише мої теги"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
+          "source": "Retrieve only tags created by you",
+          "message": "Отримати лише теги, створені вами"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve tags available in a Zoho CRM module",
+          "message": "Отримати теги, доступні в модулі Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.",
+          "message": "Отримує список користувачів у вашій організації Zoho CRM із підтримкою пагінації та фільтрації за типом користувача. Повертає вичерпну інформацію про користувача, зокрема ім'я, електронну пошту, роль, профіль, часовий пояс, параметри локалі, налаштування персоналізації та статус облікового запису. Використовуйте параметр type для фільтрації користувачів на основі їхнього профілю та статусу."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Список користувачів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.",
+          "message": "Вкажіть, яку сторінку результатів отримати, починаючи з 1 для першої сторінки. Використовуйте цей параметр разом із per_page для навігації кількома сторінками даних користувачів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "Номер сторінки"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
+          "source": "The page number for pagination",
+          "message": "Номер сторінки для пагінації"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.",
+          "message": "Вкажіть, скільки користувачів повертати в одному запиті до API. Допустимі значення від 1 до 200. Значення за замовчуванням — 20. Використовуйте цей параметр разом із параметром page для пагінації великих наборів результатів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Users Per Page",
+          "message": "Користувачів на сторінку"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of users to return per page",
+          "message": "Кількість користувачів, які повертаються на сторінку"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Not Confirmed Users",
+          "message": "Непідтверджені користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have not confirmed their accounts.",
+          "message": "Отримує користувачів, які не підтвердили свої облікові записи."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.display_name": {
+          "source": "Active Confirmed Admins",
+          "message": "Активні підтверджені адміністратори"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.short_desc": {
+          "source": "Retrieves active and confirmed administrators.",
+          "message": "Отримує активних і підтверджених адміністраторів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Active Confirmed Users",
+          "message": "Активні підтверджені користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who are both active and confirmed.",
+          "message": "Отримує користувачів, які є одночасно активними та підтвердженими."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.display_name": {
+          "source": "Active Users",
+          "message": "Активні користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.short_desc": {
+          "source": "Retrieves only active users.",
+          "message": "Отримує лише активних користувачів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.display_name": {
+          "source": "Admin Users",
+          "message": "Користувачі-адміністратори"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.short_desc": {
+          "source": "Retrieves users with Administrator privileges.",
+          "message": "Отримує користувачів із правами адміністратора."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.display_name": {
+          "source": "All Users",
+          "message": "Усі користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.short_desc": {
+          "source": "Retrieves all users (both active and inactive).",
+          "message": "Отримує всіх користувачів (як активних, так і неактивних)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.display_name": {
+          "source": "Current User",
+          "message": "Поточний користувач"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.short_desc": {
+          "source": "Retrieves the currently logged-in CRM user.",
+          "message": "Отримує поточного авторизованого користувача CRM."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Confirmed Users",
+          "message": "Підтверджені користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have confirmed their accounts.",
+          "message": "Отримує користувачів, які підтвердили свої облікові записи."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.display_name": {
+          "source": "Deactive Users",
+          "message": "Деактивовані користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.short_desc": {
+          "source": "Retrieves users who have been deactivated.",
+          "message": "Отримує користувачів, яких було деактивовано."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.display_name": {
+          "source": "Deleted Users",
+          "message": "Видалені користувачі"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.short_desc": {
+          "source": "Retrieves users who have been deleted.",
+          "message": "Отримує користувачів, яких було видалено."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.desc": {
+          "source": "Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).",
+          "message": "Необов'язковий фільтр для отримання певних категорій користувачів. Варіанти: AllUsers (як активні, так і неактивні), ActiveUsers (лише активні користувачі), DeactiveUsers (деактивовані користувачі), ConfirmedUsers (користувачі, які підтвердили свої облікові записи), NotConfirmedUsers (непідтверджені користувачі), DeletedUsers (видалені користувачі), ActiveConfirmedUsers (активні та підтверджені), AdminUsers (користувачі з правами адміністратора), ActiveConfirmedAdmins (активні підтверджені адміністратори) та CurrentUser (поточний автентифікований користувач CRM)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
+          "source": "User Type Filter",
+          "message": "Фільтр типу користувачів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
+          "source": "Filter users by type or status",
+          "message": "Фільтрувати користувачів за типом або статусом"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve users from your Zoho CRM organization",
+          "message": "Отримати користувачів із вашої організації Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.desc": {
+          "source": "Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.",
+          "message": "Отримує вичерпні метадані про всі поля в певному модулі Zoho CRM, включно з типами полів, мітками, іменами API, типами даних, правилами валідації, значеннями списків вибору, конфігураціями підстановки та дозволами. Ця інформація необхідна для розуміння структури модуля, створення динамічних форм або валідації даних перед створенням чи оновленням записів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
+          "source": "List Module Fields",
+          "message": "Список полів модуля"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.",
+          "message": "Виберіть модуль Zoho CRM, метадані полів якого потрібно отримати. API повертає детальну інформацію про всі поля, включно зі стандартними полями (системними) та користувацькими полями (визначеними користувачем) у модулі."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve fields from",
+          "message": "Модуль Zoho CRM, з якого потрібно отримати поля"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
+          "source": "Retrieve field metadata for a Zoho CRM module",
+          "message": "Отримати метадані полів для модуля Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.desc": {
+          "source": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.",
+          "message": "Отримує метадані для всіх модулів у вашій організації Zoho CRM, включно зі стандартними модулями (Leads, Contacts, Deals, Accounts тощо) та користувацькими модулями. Повертає вичерпні відомості, зокрема дозволи для модулів, імена API, відображувані мітки та такі можливості, як створення, редагування, видалення модуля або підтримка таких функцій, як глобальний пошук і швидке створення."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
+          "source": "List Modules",
+          "message": "Список модулів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN5c3RlbV9oaWRkZW4.display_name": {
+          "source": "System Hidden",
+          "message": "Приховані системою"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9mb3JfZGVsZXRpb24.display_name": {
+          "source": "Scheduled for Deletion",
+          "message": "Заплановані до видалення"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnVzZXJfaGlkZGVu.display_name": {
+          "source": "User Hidden",
+          "message": "Приховані користувачем"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "Видимий"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.desc": {
+          "source": "Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.",
+          "message": "Необов'язковий фільтр для отримання лише модулів із певними статусами. Варіанти: visible (активні модулі, що відображаються в інтерфейсі), user_hidden (модулі, приховані користувачами), system_hidden (модулі, приховані системою) та scheduled_for_deletion (модулі, позначені для видалення). Якщо не вказано, повертаються всі модулі."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
+          "source": "Module Status Filter",
+          "message": "Фільтр статусу модуля"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
+          "source": "Filter modules by their status",
+          "message": "Фільтрувати модулі за їхнім статусом"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
+          "source": "Retrieve all available modules in Zoho CRM",
+          "message": "Отримати всі доступні модулі в Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.",
+          "message": "Отримує список записів із вказаного модуля Zoho CRM із підтримкою вибору полів, пагінації, сортування та фільтрації. Ви можете вказати, які поля повертати (максимум 50 імен API полів), сортувати записи за полем у порядку зростання чи спадання та переходити між сторінками за допомогою токенів. Повертає як дані записів, так і токени пагінації для отримання наступних сторінок."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "Отримати список записів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.",
+          "message": "Виберіть імена API полів, які потрібно отримати для кожного запису. Можна вказати максимум 50 імен API полів. Використовуйте Fields Metadata API для отримання списку доступних полів. За замовчуванням повертається лише поле ID. Додайте такі поля, як Last_Name, Email, Created_Time, або власні назви полів за потреби."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields to Return",
+          "message": "Поля для повернення"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specify which fields to include in the response",
+          "message": "Вкажіть, які поля слід включити у відповідь"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.desc": {
+          "source": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.",
+          "message": "Необов'язковий список конкретних ID записів для отримання. Якщо вказано, повертатимуться лише записи з цими ID. Це корисно для вибірки конкретного набору записів замість пагінації по всіх записах."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.display_name": {
+          "source": "Record IDs",
+          "message": "Ідентифікатори записів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.short_desc": {
+          "source": "Filter by specific record IDs",
+          "message": "Фільтрувати за певними ID записів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або власні модулі), з якого потрібно отримати записи. Модуль повинен підтримувати операції API, а користувач повинен мати права на читання."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve records from",
+          "message": "Модуль Zoho CRM, з якого потрібно отримати записи"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.",
+          "message": "Вкажіть, як слід сортувати записи у відповіді. Ви можете сортувати за такими полями, як id, Created_Time або Modified_Time, у порядку зростання (спочатку старіші) або спадання (спочатку новіші)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort Configuration",
+          "message": "Конфігурація сортування"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "Налаштуйте сортування повернених записів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.",
+          "message": "Використовуйте значення next_page_token із попередньої відповіді, щоб отримати наступну сторінку записів. Залиште це поле порожнім для першої сторінки. Параметр page_token прив’язаний до параметрів, використаних у запиті, тому не змінюйте інші параметри під час використання токена."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Токен сторінки"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Токен для отримання наступної сторінки результатів"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.",
+          "message": "Укажіть, скільки записів повертати в одному запиті до API. Допустимі значення: від 1 до 200. Значення за замовчуванням: 20. Використовуйте цей параметр разом із page_token для пагінації великих наборів результатів."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
+          "source": "Records Per Page",
+          "message": "Кількість записів на сторінку"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of records to return per page",
+          "message": "Кількість записів, що повертаються на сторінці"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve multiple records from a Zoho CRM module",
+          "message": "Отримати кілька записів із модуля Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати спеціальний виклик HTTP / REST API до **Zoho CRM**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoho CRM",
+          "message": "Зробити спеціальний виклик API до Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.",
+          "message": "Відстежує вказаний модуль Zoho CRM на появу щойно створених записів і спрацьовує при виявленні нового запису. Тригер опитує записи, відсортовані за Created Time у порядку спадання. Ви можете додатково фільтрувати записи за телефоном, електронною поштою, ключовими словами або певними значеннями полів, щоб тригер спрацьовував лише для записів, які відповідають вашим критеріям."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Новий запис"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.desc": {
+          "source": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Необов'язкова адреса електронної пошти для пошуку в записах. Якщо вказано, лише записи, що містять цю електронну адресу, викликатимуть подію. Для пошуку відповідних записів використовується API пошуку Zoho CRM."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "Фільтр електронної пошти"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
+          "source": "Filter records by email address",
+          "message": "Фільтрувати записи за адресою електронної пошти"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.desc": {
+          "source": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison.",
+          "message": "Необов'язковий список пар «поле-значення» для створення критеріїв пошуку. Якщо вказано, лише записи, де ВСІ вказані поля відповідають своїм значенням, викликатимуть подію. Використовує оператор «equals» для порівняння кожного поля."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
+          "source": "Field Filters",
+          "message": "Фільтри полів"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
+          "source": "Filter records by specific field values",
+          "message": "Фільтрувати записи за значеннями конкретних полів"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або користувацькі модулі), в якому ви хочете відстежувати щойно створені записи. Використовуйте назву модуля в API, яку повертає Modules Metadata API."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to monitor for new records",
+          "message": "Модуль Zoho CRM для відстеження нових записів"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.desc": {
+          "source": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Необов'язковий номер телефону для пошуку в записах. Якщо вказано, лише записи, що містять цей номер телефону, викликатимуть подію. Для пошуку відповідних записів використовується API пошуку Zoho CRM."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
+          "source": "Phone Filter",
+          "message": "Фільтр за номером телефону"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
+          "source": "Filter records by phone number",
+          "message": "Фільтрувати записи за номером телефону"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.desc": {
+          "source": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.",
+          "message": "Необов'язкове ключове слово для пошуку в усіх доступних для пошуку полях записів. Якщо вказано, лише записи, що містять це ключове слово, викликатимуть подію. Для комплексного текстового пошуку використовується API пошуку Zoho CRM."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
+          "source": "Keyword Search",
+          "message": "Пошук за ключовим словом"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
+          "source": "Filter records by keyword",
+          "message": "Фільтрувати записи за ключовим словом"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in a Zoho CRM module",
+          "message": "Спрацьовує при створенні нового запису в модулі Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Пошук відповідних записів у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Пошук відповідних записів у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Пошук одного відповідного запису у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Знайти один запис"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Пошук одного відповідного запису у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Оновити наявні записи у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Оновити записи"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Оновити наявні записи у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
+          "message": "Оновлює наявний запис у вказаному модулі Zoho CRM наданими значеннями полів. Повертає ID запису разом із оновленими часовими мітками модифікації. Буде оновлено лише вказані вами поля; інші поля залишаться без змін. Запис має існувати, а користувач повинен мати права на оновлення для цього модуля."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Оновити запис"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.",
+          "message": "Виберіть модуль Zoho CRM (наприклад, Leads, Contacts, Deals, Accounts або користувацькі модулі), який містить запис, що ви хочете оновити. Модуль повинен підтримувати операції API, а користувач повинен мати відповідні дозволи."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Модуль"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Модуль Zoho CRM, що містить запис"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.",
+          "message": "Укажіть значення полів, які ви хочете оновити, у вигляді пар «ключ-значення», де ключами є API-назви полів. Додавайте лише ті поля, які потрібно змінити; невказані поля збережуть свої поточні значення. Значення полів мають відповідати їхнім очікуваним типам даних і правилам валідації."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "Оновлені властивості"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values to update on the record",
+          "message": "Значення полів для оновлення в записі"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.",
+          "message": "Введіть або виберіть унікальний ID запису, який потрібно оновити. Ідентифікатори записів можна отримати за допомогою Get Records API або зі сповіщень вебхуків. Запис повинен існувати у вказаному модулі."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to update",
+          "message": "Унікальний ідентифікатор запису для оновлення"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Update an existing record in a Zoho CRM module",
+          "message": "Оновити наявний запис у модулі Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Вставити або оновити (upsert) записи у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Оновити або додати записи"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Вставити або оновити (upsert) записи у вказаній таблиці в додатку «ZohoCRM»"
+        },
+        "app.Wm9ob0NSTQ.desc": {
+          "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
+          "message": "Інтеграція з Zoho CRM надає комплексні дії та тригери для взаємодії з Zoho CRM API у всіх семи глобальних центрах обробки даних (US, AU, EU, IN, CN, JP, CA). Ефективно керуйте модулями, записами, користувачами та ролями, автоматизуючи робочі процеси CRM із підтримкою користувацьких модулів, масових операцій і тригерів у реальному часі."
+        },
+        "app.Wm9ob0NSTQ.display_name": {
+          "source": "Zoho CRM",
+          "message": "Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.short_desc": {
+          "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
+          "message": "Підключайтеся до Zoho CRM для автоматизації управління взаємовідносинами з клієнтами в усіх глобальних дата-центрах."
+        }
+      }
+    }
+  }
+}

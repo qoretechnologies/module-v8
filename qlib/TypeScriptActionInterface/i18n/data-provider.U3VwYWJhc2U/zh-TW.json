@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中建立新記錄"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中建立新記錄"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.desc": {
+          "source": "Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types.",
+          "message": "在 Supabase Storage 中建立新的儲存值區以組織和儲存檔案。設定存取權限、檔案大小限制和允許的 MIME 類型。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
+          "source": "Create Storage Bucket",
+          "message": "建立儲存值區"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.desc": {
+          "source": "Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types.",
+          "message": "透過提供 MIME 類型清單（例如 image/png、application/pdf）來指定可以上傳至此值區的檔案類型。留空則允許所有檔案類型。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
+          "source": "Allowed MIME Types",
+          "message": "允許的 MIME 類型"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
+          "source": "List of allowed file MIME types",
+          "message": "允許的檔案 MIME 類型清單"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.desc": {
+          "source": "Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit.",
+          "message": "設定可上傳至此值區的最大檔案大小（以位元組為單位）。留空表示無限制。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
+          "source": "File Size Limit",
+          "message": "檔案大小限制"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
+          "source": "Maximum file size in bytes",
+          "message": "最大檔案大小（以位元組為單位）"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.desc": {
+          "source": "Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project.",
+          "message": "為儲存值區指定唯一的名稱。名稱必須符合 URL 安全格式，且在您的 Supabase 專案中不得重複。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
+          "source": "Bucket Name",
+          "message": "Bucket 名稱"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
+          "source": "The name for the new bucket",
+          "message": "新值區的名稱"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.desc": {
+          "source": "When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access.",
+          "message": "啟用時，此值區中的檔案可公開存取且無需驗證。停用時（預設），存取檔案需要驗證。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
+          "source": "Public Access",
+          "message": "公開存取"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
+          "source": "Allow public access to bucket contents",
+          "message": "允許公開存取值區內容"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
+          "source": "Create a new storage bucket in Supabase",
+          "message": "在 Supabase 中建立新的儲存值區"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data.",
+          "message": "在指定的 Supabase 資料表中建立新記錄。此動作會動態呈現資料表結構綱要，讓您為每個欄位提供值。傳回包含所有資料的新建立資料列。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "建立列"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "選取用於插入新資料列的目標 Supabase 資料表。可用的欄位將根據選取的資料表結構綱要動態載入。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "將插入列的資料表"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "提供資料表各欄位的值。結構會根據所選資料表的 Schema 動態生成，顯示所有可用欄位及其資料類型和限制條件。"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "資料列值"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "要插入新列的資料"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Supabase table",
+          "message": "將新資料列插入 Supabase 資料表"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.desc": {
+          "source": "Fetches detailed information about a specific Supabase storage bucket including its configuration, creation date, access permissions, and file restrictions.",
+          "message": "擷取特定 Supabase 儲存值區的詳細資訊，包括其設定、建立日期、存取權限和檔案限制。"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
+          "source": "Get Storage Bucket",
+          "message": "取得儲存值區"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.desc": {
+          "source": "Select the storage bucket whose details you want to fetch from your Supabase project.",
+          "message": "選取要從 Supabase 專案中擷取詳細資訊的儲存值區。"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.display_name": {
+          "source": "Bucket ID",
+          "message": "值區 ID"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.short_desc": {
+          "source": "The ID of the bucket to retrieve",
+          "message": "要擷取的值區 ID"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
+          "source": "Retrieve details of a specific storage bucket",
+          "message": "擷取特定儲存值區的詳細資訊"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.desc": {
+          "source": "Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables.",
+          "message": "擷取特定資料表的完整中繼資料，包括資料欄定義、資料類型、必填欄位和描述。此動作有助於您瞭解資料庫資料表的結構。"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
+          "source": "Get Table",
+          "message": "取得資料表"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project.",
+          "message": "選取要擷取結構綱要資訊的 Supabase 資料表。該資料表必須存在於您的 Supabase 專案中。"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
+          "source": "The name of the table to retrieve",
+          "message": "要擷取的資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
+          "source": "Retrieve detailed schema information about a specific Supabase table",
+          "message": "擷取特定 Supabase 資料表的詳細結構綱要資訊"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "從應用程式「Supabase」的指定資料表中刪除記錄"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "從應用程式「Supabase」的指定資料表中刪除記錄"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.desc": {
+          "source": "Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible.",
+          "message": "從 Supabase 資料表中刪除符合指定篩選條件的列。傳回已刪除列的計數及其資料。此操作無法復原，請謹慎使用。"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
+          "source": "Delete Rows",
+          "message": "刪除列"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.desc": {
+          "source": "Define the filter criteria to identify which rows should be deleted. Only rows matching this condition will be removed from the table.",
+          "message": "定義篩選條件以識別應刪除的列。只有符合此條件的列才會從資料表中移除。"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.short_desc": {
+          "source": "Condition to identify rows to delete",
+          "message": "用於識別要刪除列的條件"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to delete rows. Ensure you have proper permissions for delete operations on this table.",
+          "message": "選取要從中刪除列的 Supabase 資料表。請確認您擁有此資料表的刪除操作適當權限。"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to delete rows from",
+          "message": "要從中刪除列的資料表"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
+          "source": "Delete rows from a Supabase table based on a filter",
+          "message": "根據篩選條件從 Supabase 資料表中刪除列"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results.",
+          "message": "從您的 Supabase 資料庫檢索所有資料表及其基本中繼資料，包括欄資訊和說明。可選擇在結果中包含系統資料表。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "列出資料表"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.desc": {
+          "source": "When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries.",
+          "message": "啟用時，回應將包含系統資料表（以底線開頭的資料表）。系統資料表包含 Supabase 內部資料，通常在一般查詢中會隱藏。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
+          "source": "Include System Tables",
+          "message": "包含系統資料表"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
+          "source": "Include internal Supabase system tables in the results",
+          "message": "在結果中包含 Supabase 內部系統資料表"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get a list of all tables in your Supabase database",
+          "message": "取得 Supabase 資料庫中所有資料表的清單"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.",
+          "message": "檢索 Supabase 專案中所有儲存貯體的清單及其設定，包括存取權限、檔案大小限制和允許的 MIME 類型。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Storage Buckets",
+          "message": "列出儲存貯體"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "Get all storage buckets in your Supabase project",
+          "message": "取得 Supabase 專案中的所有儲存貯體"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information.",
+          "message": "從 Supabase 資料表中擷取列，支援篩選、排序、分頁和排序順序。傳回符合您查詢條件的記錄清單以及總數資訊。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "列出資料列"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter condition to retrieve only rows that match specific criteria. Supports various comparison operators for flexible querying.",
+          "message": "套用篩選條件以僅檢索符合特定條件的列。支援各種比較運算子以進行靈活的查詢。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on a condition",
+          "message": "根據條件篩選列"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets.",
+          "message": "在開始傳回結果之前跳過指定數量的列。與 limit 結合使用可對大型資料集進行分頁。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of rows to skip",
+          "message": "要略過的列數"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a column and sort direction (ascending or descending).",
+          "message": "透過指定欄和排序方向（遞增或遞減）來定義如何對檢索到的列進行排序。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "排序依據"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
+          "source": "Sort the results by a specific column",
+          "message": "依特定欄對結果進行排序"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve in a single query. Useful for pagination and performance optimization. Defaults to 20 if not specified.",
+          "message": "指定單一查詢中檢索的最大列數。適用於分頁和效能最佳化。若未指定，預設為 20。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "要傳回的最大列數"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "選取要從中檢索列的 Supabase 資料表。用於篩選和排序的可用欄將根據此選擇載入。"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to query",
+          "message": "要查詢的資料表"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Supabase table",
+          "message": "查詢並檢索 Supabase 資料表中的列"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Supabase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Supabase** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭和請求主體。回應將以雜湊形式傳回，包含狀態碼、回應標頭和回應主體。\n\n對於此應用程式尚未作為第一級動作公開的端點，請使用此動作。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Supabase",
+          "message": "對 Supabase 進行自訂 API 呼叫"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.desc": {
+          "source": "Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria.",
+          "message": "監控 Supabase 資料表中的新列，並在插入新記錄時觸發。支援選填的篩選條件，以便僅針對符合特定條件的列觸發。"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
+          "source": "New Table Row",
+          "message": "新增資料表列"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "套用篩選條件以僅針對符合特定條件的新列觸發。留空則針對所有新列觸發。"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.short_desc": {
+          "source": "Optional condition to filter new rows",
+          "message": "用於篩選新列的選填條件"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "選取您要監控的 Supabase 資料表。每當新列插入此資料表時，觸發器就會啟動。"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "要監視新資料列的資料表"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Supabase table",
+          "message": "當新列新增至 Supabase 資料表時觸發"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中搜尋相符的記錄"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中搜尋相符的記錄"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中搜尋單一相符的記錄"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "在應用程式「Supabase」的指定資料表中搜尋單一相符的記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "更新應用程式「Supabase」指定資料表中的現有記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "更新應用程式「Supabase」指定資料表中的現有記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "更新或插入應用程式「Supabase」指定資料表中的記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "更新或插入記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "更新或插入應用程式「Supabase」指定資料表中的記錄"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.desc": {
+          "source": "Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted.",
+          "message": "在 Supabase 資料表上執行 Upsert 操作（插入或更新）。如果存在符合指定唯一條件約束的列，則會進行更新；否則，將插入新列。"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
+          "source": "Upsert Row",
+          "message": "更新或插入列"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.desc": {
+          "source": "When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values.",
+          "message": "啟用時，如果存在衝突的列，將略過該操作而不發出提示。停用時（預設），衝突的列將使用新值進行更新。"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
+          "source": "Ignore Duplicates",
+          "message": "忽略重複項"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
+          "source": "Skip the operation if a duplicate exists",
+          "message": "如果存在重複項則略過操作"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.desc": {
+          "source": "Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key.",
+          "message": "指定應該用於偵測衝突的欄或以逗號分隔的欄清單。若未指定，將使用資料表的主鍵。"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
+          "source": "On Conflict",
+          "message": "發生衝突時"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
+          "source": "The column(s) used to detect conflicts",
+          "message": "用於偵測衝突的欄"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table. The available fields will be dynamically loaded based on the table schema.",
+          "message": "選取目標 Supabase 資料表。可用的欄位將根據資料表結構綱要動態載入。"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "資料表名稱"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table for the upsert operation",
+          "message": "用於 Upsert 操作的資料表"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created.",
+          "message": "提供資料表欄的值。如果存在符合唯一條件約束的列，這些值將對其進行更新；否則，將建立新列。"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "資料列值"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to upsert",
+          "message": "要 Upsert 的資料"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
+          "source": "Insert a new row or update an existing one",
+          "message": "插入新列或更新現有列"
+        },
+        "app.U3VwYWJhc2U.desc": {
+          "source": "The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.",
+          "message": "Supabase 整合提供了對您 Supabase 後端服務的完整存取權。透過完整的 CRUD 操作管理資料庫資料表、透過觸發器監控即時變更，並透過儲存貯體處理檔案儲存。無論您需要查詢資料、插入記錄、篩選結果還是追蹤新項目，此整合都能簡化您的 Supabase 工作流程自動化與後端管理。"
+        },
+        "app.U3VwYWJhc2U.display_name": {
+          "source": "Supabase",
+          "message": "Supabase"
+        },
+        "app.U3VwYWJhc2U.short_desc": {
+          "source": "Connect to Supabase to manage your database tables, storage buckets, and real-time data",
+          "message": "連線至 Supabase 以管理您的資料庫資料表、儲存貯體和即時資料"
+        }
+      }
+    }
+  }
+}

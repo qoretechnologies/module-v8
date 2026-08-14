@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QmFzZXJvdw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "Vytvárať nové záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "Vytvárať nové záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.",
+          "message": "Vytvorí nový záznam v určenej tabuľke Baserow. Akcia dynamicky zobrazuje schému tabuľky, čo vám umožňuje zadať hodnoty pre každý stĺpec. Voliteľne môžete zadať ID riadka, pred ktorý sa má nový riadok vložiť. Vracia novovytvorený riadok so všetkými jeho údajmi."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "Vytvoriť riadok"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.desc": {
+          "source": "Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.",
+          "message": "Voliteľne zadajte ID riadka, pred ktorý sa má nový riadok vložiť v poradí tabuľky. Nechajte prázdne na pridanie riadka na koniec."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.display_name": {
+          "source": "Before Row ID",
+          "message": "Pred ID riadka"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.short_desc": {
+          "source": "Insert the new row before this row",
+          "message": "Vložiť nový riadok pred tento riadok"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "Zadajte hodnoty pre stĺpce tabuľky. Štruktúra sa dynamicky generuje na základe vybranej schémy tabuľky a zobrazuje všetky dostupné stĺpce s ich dátovými typmi a obmedzeniami."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "Údaje riadka"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "Údaje na vloženie do nového riadka"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "Vyberte cieľovú tabuľku Baserow na vloženie nového riadka. Dostupné polia sa dynamicky načítajú na základe vybranej schémy tabuľky."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "Tabuľka, do ktorej sa riadok vloží"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Baserow table",
+          "message": "Vložiť nový riadok do tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.desc": {
+          "source": "Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.",
+          "message": "Získa komplexné metadáta pre všetky polia v konkrétnej tabuľke Baserow vrátane typov polí, poradia, popisov, predvolených hodnôt a vlastností. Táto akcia vám pomôže pochopiť štruktúru a konfiguráciu vašich databázových tabuliek."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.display_name": {
+          "source": "Get Table Fields",
+          "message": "Získať polia tabuľky"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table whose field definitions you want to fetch. All fields and their configurations will be returned.",
+          "message": "Vyberte tabuľku Baserow, ktorej definície polí chcete získať. Vrátia sa všetky polia a ich konfigurácie."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve fields from",
+          "message": "Tabuľka, z ktorej sa majú získať polia"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.short_desc": {
+          "source": "Retrieve all field definitions from a Baserow table",
+          "message": "Získať všetky definície polí z tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.desc": {
+          "source": "Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.",
+          "message": "Získa podrobné údaje pre jediný riadok v tabuľke Baserow podľa jeho ID. Vracia všetky hodnoty stĺpcov pre určený riadok s dynamicky načítanými typmi polí."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.display_name": {
+          "source": "Get Table Row",
+          "message": "Získať riadok tabuľky"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to retrieve from the table by its ID. All data for this row will be returned.",
+          "message": "Vyberte konkrétny riadok, ktorý chcete získať z tabuľky podľa jeho ID. Vrátia sa všetky údaje pre tento riadok."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Riadok"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to retrieve",
+          "message": "Riadok na získanie"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve a row. The available rows will be loaded based on this selection.",
+          "message": "Vyberte tabuľku Baserow, z ktorej chcete získať riadok. Dostupné riadky sa načítajú na základe tohto výberu."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve the row from",
+          "message": "Tabuľka, z ktorej sa má získať riadok"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Retrieve a specific row from a Baserow table",
+          "message": "Získať konkrétny riadok z tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.",
+          "message": "Odstráni jeden riadok z tabuľky Baserow podľa jeho ID. Používajte opatrné, pretože táto operácia je nevratná a trvalo odstráni zadaný riadok."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "Odstrániť riadok"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to delete from the table by its ID. This row will be permanently removed.",
+          "message": "Vyberte konkrétny riadok na odstránenie z tabuľky podľa jeho ID. Tento riadok bude trvalo odstránený."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Riadok"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to delete",
+          "message": "Riadok na odstránenie"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to delete a row. Ensure you have proper permissions for delete operations on this table.",
+          "message": "Vyberte tabuľku Baserow, z ktorej chcete odstrániť riadok. Uistite sa, že máte príslušné oprávnenia na operácie odstraňovania v tejto tabuľke."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to delete the row from",
+          "message": "Tabuľka, z ktorej sa má odstrániť riadok"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Baserow table",
+          "message": "Odstrániť konkrétny riadok z tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.",
+          "message": "Získa zoznam všetkých tabuliek z vašej databázy Baserow s ich základnými metadátami vrátane ID tabuliek, názvov, poradia a pridružených ID databáz."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "Zoznam tabuliek"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get all tables in your Baserow database",
+          "message": "Získať všetky tabuľky vo vašej databáze Baserow"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.",
+          "message": "Načíta riadky z tabuľky Baserow s podporou filtrovania, zoradenia, stránkovania a vyhľadávania. Vráti zoznam záznamov zodpovedajúcich vašim kritériám vyhľadávania spolu s celkovým počtom a informáciami o stránkovaní."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "Zoznam riadkov"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply multiple filter conditions to retrieve only rows that match specific criteria. Supports various comparison operators and logical combinations.",
+          "message": "Aplikujte viaceré podmienky filtra na získanie iba tých riadkov, ktoré zodpovedajú konkrétnym kritériám. Podporuje rôzne porovnávacie operátory a logické kombinácie."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on conditions",
+          "message": "Filtrovať riadky na základe podmienok"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a field and sort direction (ascending or descending).",
+          "message": "Definujte spôsob zoradenia získaných riadkov určením poľa a smeru zoradenia (vzostupne alebo zostupne)."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Poradie"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.short_desc": {
+          "source": "Sort the results by a specific field",
+          "message": "Zoradiť výsledky podľa konkrétneho poľa"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to filter rows across all text fields in the table. Only rows containing this term will be returned.",
+          "message": "Zadajte vyhľadávací výraz na filtrovanie riadkov vo všetkých textových poliach v tabuľke. Vrátia sa iba riadky obsahujúce tento výraz."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Hľadať"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter rows",
+          "message": "Vyhľadávací výraz na filtrovanie riadkov"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve per page. Defaults to 100 rows if not specified.",
+          "message": "Zadajte maximálny počet riadkov na získanie na stránku. Ak nie je zadané, predvolená hodnota je 100 riadkov."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.display_name": {
+          "source": "Size",
+          "message": "Veľkosť"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.short_desc": {
+          "source": "Number of rows per page",
+          "message": "Počet riadkov na stránku"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve. Used in combination with size for pagination through large datasets. Defaults to page 1.",
+          "message": "Určite, ktorú stránku výsledkov chcete získať. Používa sa v kombinácii s veľkosťou na stránkovanie veľkých množín údajov. Predvolená hodnota je stránka 1."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Stránka"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Číslo stránky pre stránkovanie"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "Vyberte tabuľku Baserow, z ktorej chcete získať riadky. Dostupné stĺpce na filtrovanie a zoradenie sa načítajú na základe tohto výberu."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.short_desc": {
+          "source": "The table to query",
+          "message": "Tabuľka na dotazovanie"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Baserow table",
+          "message": "Dotazovať a získať riadky z tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Baserow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Baserow** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Baserow",
+          "message": "Vykonať vlastné volanie API do Baserow"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.",
+          "message": "Sleduje tabuľku Baserow z hľadiska nových riadkov a spúšťa sa pri vložení nových záznamov. Podporuje voliteľné filtrovanie a vyhľadávanie na spustenie len pre riadky zodpovedajúce konkrétnym kritériám."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "Nový riadok"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.desc": {
+          "source": "Apply filter conditions to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "Aplikujte podmienky filtra na spustenie iba pre nové riadky zodpovedajúce konkrétnym kritériám. Ponechajte prázdne na spustenie pre všetky nové riadky."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.short_desc": {
+          "source": "Optional conditions to filter new rows",
+          "message": "Voliteľné podmienky na filtrovanie nových riadkov"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to trigger only for new rows that contain this term in any text field. Leave empty to trigger for all new rows.",
+          "message": "Zadajte vyhľadávací výraz na spustenie iba pre nové riadky, ktoré obsahujú tento výraz v ľubovoľnom textovom poli. Ponechajte prázdne na spustenie pre všetky nové riadky."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Hľadať"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.short_desc": {
+          "source": "Optional search term to filter new rows",
+          "message": "Voliteľný vyhľadávací výraz na filtrovanie nových riadkov"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the Baserow table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "Vyberte tabuľku Baserow, ktorú chcete sledovať. Spúšťač sa aktivuje vždy, keď sa do tejto tabuľky vložia nové riadky."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "Tabuľka na sledovanie nových riadkov"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new row is added to a Baserow table",
+          "message": "Spustí sa pri pridaní nového riadka do tabuľky Baserow"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.desc": {
+          "source": "Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.",
+          "message": "Aktualizuje hodnoty existujúceho riadka v tabuľke Baserow. Akcia dynamicky zobrazuje schému tabuľky, čo vám umožňuje upravovať hodnoty jednotlivých stĺpcov. Vráti aktualizovaný riadok so všetkými jeho aktuálnymi údajmi."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.display_name": {
+          "source": "Update Row",
+          "message": "Aktualizovať riadok"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.",
+          "message": "Zadajte nové hodnoty pre stĺpce tabuľky, ktoré chcete aktualizovať. Štruktúra sa dynamicky generuje na základe schémy vybranej tabuľky."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "Údaje riadka"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the row",
+          "message": "Nové údaje pre riadok"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to update by its ID. The current values of this row will be modified.",
+          "message": "Vyberte konkrétny riadok na aktualizáciu podľa jeho ID. Aktuálne hodnoty tohto riadka budú upravené."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Riadok"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to update",
+          "message": "Riadok na aktualizáciu"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table containing the row you want to update. The available fields will be dynamically loaded based on the table schema.",
+          "message": "Vyberte tabuľku Baserow obsahujúcu riadok, ktorý chcete aktualizovať. Dostupné polia sa dynamicky načítajú na základe schémy tabuľky."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table containing the row to update",
+          "message": "Tabuľka obsahujúca riadok na aktualizáciu"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.short_desc": {
+          "source": "Update an existing row in a Baserow table",
+          "message": "Aktualizovať existujúci riadok v tabuľke Baserow"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.",
+          "message": "Odosle súbor do úložiska súborov aplikácie Baserow. Vráti metadáta odoslaného súboru vrátane adresy URL, veľkosti, typu MIME a vygenerovaných miniatúr pre obrázky. Na odoslaný súbor sa potom možno odkazovať v poliach súborov v rámci vašich tabuliek."
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Odoslať súbor"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload to Baserow storage. The file will be stored and available for use in file fields.",
+          "message": "Vyberte alebo zadajte súbor na odoslanie do úložiska Baserow. Súbor bude uložený a k dispozícii na použitie v poliach súborov."
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Súbor"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Súbor na nahranie"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Baserow storage",
+          "message": "Odoslať súbor do úložiska Baserow"
+        },
+        "app.QmFzZXJvdw.desc": {
+          "source": "The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.",
+          "message": "Integrácia Baserow poskytuje komplexný prístup k operáciám vo vašej databáze Baserow. Vytvárajte, čítajte, aktualizujte a odstraňujte riadky vo svojich tabuľkách, odosielajte súbory a sledujte nové položky pomocou spúšťačov v reálnom čase. Či už potrebujete spravovať údaje, filtrovať výsledky alebo sledovať nové záznamy, táto integrácia zjednodušuje automatizáciu pracovných postupov a správu databázy v službe Baserow."
+        },
+        "app.QmFzZXJvdw.display_name": {
+          "source": "Baserow",
+          "message": "Baserow"
+        },
+        "app.QmFzZXJvdw.short_desc": {
+          "source": "Connect to Baserow to manage your database tables, rows, and files with powerful automation",
+          "message": "Pripojte sa k službe Baserow a spravujte svoje databázové tabuľky, riadky a súbory pomocou výkonnej automatizácie"
+        }
+      }
+    }
+  }
+}

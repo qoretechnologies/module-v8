@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
+          "message": "Odebrat zprávu z chatu. Robot může mazat své vlastní zprávy i zprávy od ostatních uživatelů, pokud má oprávnění správce."
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "Smazat zprávu"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be deleted is located",
+          "message": "Vyberte chat, ve kterém se nachází zpráva k odstranění"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be deleted",
+          "message": "Chat, ve kterém má být zpráva odstraněna"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be deleted from the chat",
+          "message": "Jedinečný identifikátor zprávy, která má být z chatu odstraněna"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID zprávy"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to delete",
+          "message": "ID zprávy ke smazání"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a specific message from a chat",
+          "message": "Odstranit konkrétní zprávu z chatu"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.desc": {
+          "source": "Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.",
+          "message": "Upravit textový obsah zprávy, kterou dříve odeslal robot. Funguje pouze s textovými zprávami odeslanými robotem."
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.display_name": {
+          "source": "Edit Message",
+          "message": "Upravit zprávu"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be edited is located",
+          "message": "Vyberte chat, ve kterém se nachází zpráva k úpravě"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat containing the message to edit",
+          "message": "Chat obsahující zprávu k úpravě"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "Pokud je povoleno, u odkazů ve zprávě se nebudou zobrazovat automatické náhledy"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.display_name": {
+          "source": "Disable Web Page Preview",
+          "message": "Zakázat náhled webové stránky"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "Zakázat automatické náhledy odkazů"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be edited",
+          "message": "Jedinečný identifikátor zprávy, která má být upravena"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID zprávy"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to edit",
+          "message": "ID zprávy k úpravě"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the text (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "Vyberte režim formátování textu (prostý text, Markdown, Markdown V2 nebo HTML)"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.display_name": {
+          "source": "Text Format",
+          "message": "Formát textu"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the new message text",
+          "message": "Jak formátovat text nové zprávy"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The updated text that will replace the current message content",
+          "message": "Aktualizovaný text, který nahradí stávající obsah zprávy"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "Nový text"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The new text content for the message",
+          "message": "Nový textový obsah zprávy"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.short_desc": {
+          "source": "Edit the text of a previously sent message",
+          "message": "Upravit text dříve odeslané zprávy"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.desc": {
+          "source": "Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions",
+          "message": "Získat seznam chatů, skupin a kanálů, kde bot nedávno obdržel zprávy nebo interakce"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.display_name": {
+          "source": "List Recent Chats",
+          "message": "Zobrazit nedávné chaty"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of recent chats to retrieve (default: 10)",
+          "message": "Maximální počet nedávných chatů k načtení (výchozí: 10)"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of chats to return",
+          "message": "Maximální počet vrácených chatů"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.short_desc": {
+          "source": "Get a list of recent chats the bot has interacted with",
+          "message": "Získat seznam nedávných chatů, se kterými bot komunikoval"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Telegram** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do služby **Telegram** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci zatím nejsou k dispozici jako předem připravené akce."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Telegram",
+          "message": "Provést vlastní volání API do služby Telegram"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors a chat for new incoming messages and triggers automation workflows when messages are received from users or other bots",
+          "message": "Sleduje chat na nové příchozí zprávy a spouští automatizované pracovní postupy po přijetí zpráv od uživatelů nebo jiných botů"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nová zpráva"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the specific chat, group, or channel where you want to detect new incoming messages",
+          "message": "Vyberte konkrétní chat, skupinu nebo kanál, kde chcete zjišťovat nové příchozí zprávy"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat to Monitor",
+          "message": "Chat ke sledování"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat to monitor for new messages",
+          "message": "Chat ke sledování nových zpráv"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in a specific chat",
+          "message": "Spustí se při přijetí nové zprávy v konkrétním chatu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",
+          "message": "Odeslat textovou zprávu s volitelným formátováním do libovolného chatu, skupiny nebo kanálu přístupného vašemu botovi"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message",
+          "message": "Odeslat zprávu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the message",
+          "message": "Vyberte chat, skupinu nebo kanál, kam chcete zprávu odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the message to",
+          "message": "Chat, do kterého se má zpráva odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "Pokud je povoleno, u odkazů ve zprávě se nebudou zobrazovat automatické náhledy"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.display_name": {
+          "source": "Disable Link Preview",
+          "message": "Zakázat náhled odkazu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "Zakázat automatické náhledy odkazů"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the message without notification sound",
+          "message": "Pokud je povoleno, uživatelé obdrží zprávu bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Odeslat tiše"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the message without notification sound",
+          "message": "Odeslat zprávu bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.desc": {
+          "source": "Choose the formatting mode for the message (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "Vyberte režim formátování zprávy (prostý text, Markdown, Markdown V2 nebo HTML)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.display_name": {
+          "source": "Text Format",
+          "message": "Formát textu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.short_desc": {
+          "source": "How to format the message text",
+          "message": "Jak formátovat text zprávy"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.desc": {
+          "source": "The message content to send. Can include formatting depending on the selected format mode",
+          "message": "Obsah zprávy k odeslání. Může obsahovat formátování v závislosti na zvoleném režimu formátu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.display_name": {
+          "source": "Message Text",
+          "message": "Text zprávy"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "Textový obsah zprávy"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a text message to a chat",
+          "message": "Odeslat textovou zprávu do chatu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.desc": {
+          "source": "Upload and send an image file to any chat, group, or channel with optional caption and formatting",
+          "message": "Nahrát a odeslat soubor obrázku do libovolného chatu, skupiny nebo kanálu s volitelným popiskem a formátováním"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.display_name": {
+          "source": "Send Photo",
+          "message": "Odeslat fotografii"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.desc": {
+          "source": "Text description or caption to accompany the photo",
+          "message": "Textový popis nebo popisek doprovázející fotografii"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.display_name": {
+          "source": "Photo Caption",
+          "message": "Popisek fotografie"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the photo",
+          "message": "Volitelný popisek fotografie"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the photo caption",
+          "message": "Vyberte režim formátování popisku fotografie"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "Formát popisku"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "Jak formátovat text popisku"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the photo",
+          "message": "Vyberte chat, skupinu nebo kanál, kam chcete fotografii odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the photo to",
+          "message": "Chat, do kterého se má fotografie odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the photo without notification sound",
+          "message": "Pokud je povoleno, uživatelé obdrží fotografii bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Odeslat tiše"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the photo without notification sound",
+          "message": "Odeslat fotografii bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.desc": {
+          "source": "Upload the image file (JPG, PNG, GIF, etc.) to send to the chat",
+          "message": "Nahrajte soubor obrázku (JPG, PNG, GIF atd.) k odeslání do chatu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.display_name": {
+          "source": "Photo File",
+          "message": "Soubor fotografie"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.short_desc": {
+          "source": "The image file to send",
+          "message": "Soubor obrázku k odeslání"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the photo cannot be forwarded or saved by users",
+          "message": "Pokud je povoleno, uživatelé nebudou moci fotografii přeposlat ani uložit"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Chránit obsah"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Chránit obsah před přeposíláním a ukládáním"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.short_desc": {
+          "source": "Send a photo with optional caption to a chat",
+          "message": "Odeslat fotografii s volitelným popiskem do chatu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.desc": {
+          "source": "Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge",
+          "message": "Vytvářejte interaktivní ankety nebo kvízy s více možnostmi odpovědí, ideální pro získávání zpětné vazby nebo testování znalostí"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.display_name": {
+          "source": "Send Poll",
+          "message": "Odeslat anketu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.desc": {
+          "source": "Select which answer option is correct (zero-based index, only for quiz polls)",
+          "message": "Vyberte, která možnost odpovědi je správná (index počínající nulou, pouze pro kvízové ankety)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.display_name": {
+          "source": "Correct Answer",
+          "message": "Správná odpověď"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.short_desc": {
+          "source": "The correct answer for quiz polls",
+          "message": "Správná odpověď pro kvízové ankety"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the poll",
+          "message": "Vyberte chat, skupinu nebo kanál, kam chcete anketu odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the poll to",
+          "message": "Chat, do kterého se má anketa odeslat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "Unix timestamp for when the poll should automatically close",
+          "message": "Časové razítko Unix, kdy se má anketa automaticky uzavřít"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "Datum uzavření"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "Specific date/time to close the poll",
+          "message": "Konkrétní datum a čas pro uzavření ankety"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.desc": {
+          "source": "The answer choices that users can select from. Must have between 2 and 10 options",
+          "message": "Možnosti odpovědí, ze kterých mohou uživatelé vybírat. Musí obsahovat 2 až 10 možností"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.display_name": {
+          "source": "Answer Options",
+          "message": "Možnosti odpovědí"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.short_desc": {
+          "source": "List of possible answers (2-10 options)",
+          "message": "Seznam možných odpovědí (2–10 možností)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.desc": {
+          "source": "If enabled, users can select more than one answer option (only for regular polls)",
+          "message": "Pokud je povoleno, uživatelé mohou vybrat více než jednu možnost odpovědi (pouze pro běžné ankety)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.display_name": {
+          "source": "Multiple Answers",
+          "message": "Více odpovědí"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.short_desc": {
+          "source": "Allow users to select multiple options",
+          "message": "Povolit uživatelům vybrat více možností"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the poll without notification sound",
+          "message": "Pokud je povoleno, uživatelé obdrží anketu bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Odeslat tiše"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the poll without notification sound",
+          "message": "Odeslat anketu bez zvuku oznámení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.desc": {
+          "source": "Optional explanation that appears when users answer the quiz",
+          "message": "Volitelné vysvětlení, které se zobrazí, když uživatelé odpoví na kvíz"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.display_name": {
+          "source": "Explanation",
+          "message": "Vysvětlení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.short_desc": {
+          "source": "Explanation text for the correct answer",
+          "message": "Text vysvětlení pro správnou odpověď"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the explanation text",
+          "message": "Vyberte režim formátování pro text vysvětlení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.display_name": {
+          "source": "Explanation Format",
+          "message": "Formát vysvětlení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the explanation text",
+          "message": "Jak formátovat text vysvětlení"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.desc": {
+          "source": "If enabled, the poll will be sent already closed (for demonstration purposes)",
+          "message": "Pokud je povoleno, anketa bude odeslána již uzavřená (pro demonstrační účely)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.display_name": {
+          "source": "Send Closed Poll",
+          "message": "Odeslat uzavřenou anketu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.short_desc": {
+          "source": "Send the poll in a closed state",
+          "message": "Odeslat anketu v uzavřeném stavu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.desc": {
+          "source": "If enabled, user votes will be anonymous. If disabled, votes will be visible to other users",
+          "message": "Pokud je povoleno, hlasy uživatelů budou anonymní. Pokud je zakázáno, hlasy budou viditelné pro ostatní uživatele"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.display_name": {
+          "source": "Anonymous Poll",
+          "message": "Anonymní anketa"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.short_desc": {
+          "source": "Should the poll be anonymous?",
+          "message": "Má být anketa anonymní?"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.desc": {
+          "source": "Duration in seconds that the poll will accept votes (5-600 seconds)",
+          "message": "Doba v sekundách, po kterou bude anketa přijímat hlasy (5–600 sekund)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.display_name": {
+          "source": "Open Period",
+          "message": "Doba otevření"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.short_desc": {
+          "source": "How long the poll stays open (in seconds)",
+          "message": "Jak dlouho zůstane anketa otevřená (v sekundách)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnF1aXo.display_name": {
+          "source": "Quiz",
+          "message": "Kvíz"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnJlZ3VsYXI.display_name": {
+          "source": "Regular Poll",
+          "message": "Běžná anketa"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.desc": {
+          "source": "Choose between a regular poll or a quiz where you can specify correct answers",
+          "message": "Vyberte si mezi běžnou anketou a kvízem, kde můžete určit správné odpovědi"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.display_name": {
+          "source": "Poll Type",
+          "message": "Typ ankety"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.short_desc": {
+          "source": "Regular poll or quiz with correct answers",
+          "message": "Běžná anketa nebo kvíz se správnými odpověďmi"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the poll cannot be forwarded by users",
+          "message": "Pokud je povoleno, uživatelé nemohou anketu přeposlat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Chránit obsah"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Chránit obsah před přeposíláním a ukládáním"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.desc": {
+          "source": "The question that users will answer in the poll",
+          "message": "Otázka, na kterou budou uživatelé v anketě odpovídat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.display_name": {
+          "source": "Poll Question",
+          "message": "Otázka ankety"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.short_desc": {
+          "source": "The main question for the poll",
+          "message": "Hlavní otázka pro anketu"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.short_desc": {
+          "source": "Create and send a poll or quiz to a chat",
+          "message": "Vytvořit a odeslat anketu nebo kvíz do chatu"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.desc": {
+          "source": "Pin an important message to the top of a group or channel chat for all members to see",
+          "message": "Připnout důležitou zprávu na začátek chatu skupiny nebo kanálu, aby ji viděli všichni členové"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.display_name": {
+          "source": "Pin Message",
+          "message": "Připnout zprávu"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to pin the message",
+          "message": "Vyberte skupinu nebo kanál, kde chcete zprávu připnout"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be pinned",
+          "message": "Chat, ve kterém má být zpráva připnuta"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, the message will be pinned without sending a notification to group members",
+          "message": "Pokud je povoleno, zpráva bude připnuta bez odeslání oznámení členům skupiny"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Pin Silently",
+          "message": "Připnout potichu"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Pin the message without notification",
+          "message": "Připnout zprávu bez oznámení"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be pinned",
+          "message": "Jedinečný identifikátor zprávy, která má být připnuta"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID zprávy"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to pin",
+          "message": "ID zprávy k připnutí"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.short_desc": {
+          "source": "Pin a message in a group or channel",
+          "message": "Připnout zprávu ve skupině nebo kanálu"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.desc": {
+          "source": "Remove a pinned message from a group or channel, or unpin all currently pinned messages",
+          "message": "Odebrat připnutou zprávu ze skupiny nebo kanálu, případně odepnout všechny aktuálně připnuté zprávy"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.display_name": {
+          "source": "Unpin Message",
+          "message": "Odpnout zprávu"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to unpin messages",
+          "message": "Vyberte skupinu nebo kanál, kde chcete odepnout zprávy"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be unpinned",
+          "message": "Chat, ze kterého má být zpráva odepnuta"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the specific message to unpin. Leave empty to unpin all pinned messages",
+          "message": "Jedinečný identifikátor konkrétní zprávy k odepnutí. Ponechte prázdné pro odepnutí všech připnutých zpráv"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID zprávy"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to unpin (leave empty to unpin all)",
+          "message": "ID zprávy k odepnutí (ponechte prázdné pro odepnutí všech)"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.short_desc": {
+          "source": "Unpin a specific message or all pinned messages",
+          "message": "Odepnout konkrétní zprávu nebo všechny připnuté zprávy"
+        },
+        "app.VGVsZWdyYW0.desc": {
+          "source": "Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.",
+          "message": "Připojte bota Telegram pomocí jeho tokenu bota pro odesílání zpráv a zpracování příchozích aktualizací. Ověření probíhá výhradně pomocí tokenu bota vydaného @BotFather; není vyžadováno žádné přihlášení uživatele."
+        },
+        "app.VGVsZWdyYW0.display_name": {
+          "source": "Telegram",
+          "message": "Telegram"
+        },
+        "app.VGVsZWdyYW0.short_desc": {
+          "source": "Connect and interact with Telegram via a bot",
+          "message": "Připojit se a komunikovat s Telegramem prostřednictvím bota"
+        }
+      }
+    }
+  }
+}

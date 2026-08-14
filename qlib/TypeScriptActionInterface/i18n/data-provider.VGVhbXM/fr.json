@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.desc": {
+          "source": "Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.",
+          "message": "Planifiez une nouvelle réunion dans Microsoft Teams avec les participants, l'heure, l'emplacement et d'autres détails de réunion spécifiés."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
+          "source": "Create Meeting",
+          "message": "Créer une réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Optional text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "Texte facultatif décrivant l'ordre du jour de la réunion, les documents de préparation ou d'autres informations pertinentes."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "Contenu de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Meeting agenda or notes",
+          "message": "Ordre du jour ou notes de réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Optional channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "Identifiant de canal facultatif si la réunion est associée à un canal spécifique au sein d'une équipe."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID du canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "Identifiant du canal associé"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "List of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "Liste des adresses e-mail ou des identifiants d'utilisateur des personnes à inviter à la réunion."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "Participants"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Meeting participants",
+          "message": "Participants à la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Date et heure de fin de la réunion au format ISO 8601 (YYYY-MM-DDTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "Heure de fin"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Meeting end date and time",
+          "message": "Date et heure de fin de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.",
+          "message": "Lorsque la valeur est true, crée une réunion en ligne Teams avec des fonctionnalités de visioconférence et un lien de participation."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "Réunion en ligne"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable Teams online meeting features",
+          "message": "Activer les fonctionnalités de réunion en ligne Teams"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "Emplacement physique où la réunion aura lieu, ou description personnalisée d'un emplacement virtuel."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Emplacement"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Physical or virtual meeting location",
+          "message": "Emplacement physique ou virtuel de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Date et heure de début de la réunion au format ISO 8601 (YYYY-MM-DDTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "Heure de début"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Meeting start date and time",
+          "message": "Date et heure de début de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "Titre ou objet de la réunion qui apparaîtra dans les invitations du calendrier et la liste des réunions."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Sujet"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Meeting title",
+          "message": "Titre de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Optional team identifier if the meeting is associated with a specific team.",
+          "message": "Identifiant d'équipe facultatif si la réunion est associée à une équipe spécifique."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "Identifiant de l'équipe associée"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "Fuseau horaire pour les heures de début et de fin de la réunion, tel que \"Pacific Standard Time\" ou \"UTC\"."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "Fuseau horaire"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Meeting time zone",
+          "message": "Fuseau horaire de la réunion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Schedule a new Teams meeting",
+          "message": "Planifier une nouvelle réunion Teams"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.desc": {
+          "source": "Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.",
+          "message": "Créez un nouveau canal au sein d'une équipe spécifiée où les membres peuvent collaborer par le biais de conversations, de fichiers et d'applications intégrées."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
+          "source": "Create Channel",
+          "message": "Créer un canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "Description facultative expliquant l'objectif ou le sujet du canal. Limitée à 1024 caractères."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the channel purpose",
+          "message": "Description de l'objectif du canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name for the new channel. Must be unique within the team and between 1-50 characters.",
+          "message": "Nom d'affichage du nouveau canal. Doit être unique au sein de l'équipe et comporter entre 1 et 50 caractères."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Nom du canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the new channel",
+          "message": "Nom du nouveau canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Privé"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.short_desc": {
+          "source": "Private channel",
+          "message": "Canal privé"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard",
+          "message": "Standard"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.short_desc": {
+          "source": "Standard channel",
+          "message": "Canal standard"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "Partagé"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.short_desc": {
+          "source": "Shared channel",
+          "message": "Canal partagé"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.desc": {
+          "source": "Defines the privacy level of the channel. Options include \"standard\" (visible to all team members) or \"private\" (visible only to specific members).",
+          "message": "Définit le niveau de confidentialité du canal. Les options incluent \"standard\" (visible par tous les membres de l'équipe) ou \"private\" (visible uniquement par des membres spécifiques)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
+          "source": "Membership Type",
+          "message": "Type d'adhésion"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
+          "source": "Channel privacy setting",
+          "message": "Paramètre de confidentialité du canal"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier (GUID) for the team where the new channel will be created.",
+          "message": "Identifiant unique (GUID) de l'équipe dans laquelle le nouveau canal sera créé."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Unique identifier for the team",
+          "message": "Identifiant unique de l'équipe"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Create a new channel in a team",
+          "message": "Créer un nouveau canal dans une équipe"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.desc": {
+          "source": "Permanently cancels and removes a scheduled meeting from all participants' calendars.",
+          "message": "Annule et supprime définitivement une réunion planifiée des calendriers de tous les participants."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
+          "source": "Delete Meeting",
+          "message": "Supprimer la réunion"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier (GUID) of the meeting to be canceled.",
+          "message": "Identifiant unique (GUID) de la réunion à annuler."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "ID de la réunion"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Unique meeting identifier",
+          "message": "Identifiant unique de la réunion"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "Personnel"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies where the meeting was created, such as \"private\" or \"team\".",
+          "message": "Spécifie l'emplacement où la réunion a été créée, tel que \"private\" ou \"team\"."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "Source de la réunion"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "Origine de la réunion"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
+          "source": "Cancel an existing meeting",
+          "message": "Annuler une réunion existante"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Microsoft Teams** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Passez un appel d'API HTTP / REST personnalisé à **Microsoft Teams** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de table de hachage contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Microsoft Teams",
+          "message": "Passer un appel d'API personnalisé à Microsoft Teams"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.desc": {
+          "source": "This trigger fires when a new meeting is scheduled that matches the specified criteria.",
+          "message": "Ce déclencheur s'active lorsqu'une nouvelle réunion correspondant aux critères spécifiés est planifiée."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "Nouvelle réunion"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "Personnel"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies which type of meetings to monitor, such as \"private\" or \"team\" meetings.",
+          "message": "Spécifie le type de réunions à surveiller, telles que les réunions \"private\" ou \"team\"."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "Source de la réunion"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "Origine de la réunion"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
+          "source": "Trigger when a meeting is created",
+          "message": "Déclencher lorsqu'une réunion est créée"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is posted in a specified channel within a team.",
+          "message": "Ce déclencheur s'active lorsqu'un nouveau message est publié dans un canal spécifié au sein d'une équipe."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
+          "source": "New Channel Message",
+          "message": "Nouveau message de canal"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to monitor for new messages.",
+          "message": "Identifiant unique du canal à surveiller pour les nouveaux messages."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID du canal"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Channel to monitor for messages",
+          "message": "Canal à surveiller pour les messages"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to monitor.",
+          "message": "Identifiant unique de l'équipe contenant le canal à surveiller."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Identifiant de l'équipe"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is posted in a channel",
+          "message": "Déclencher lorsqu'un message est publié dans un canal"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is sent in a direct chat or group chat conversation.",
+          "message": "Ce déclencheur s'active lorsqu'un nouveau message est envoyé dans une conversation de chat direct ou de groupe."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
+          "source": "New Chat Message",
+          "message": "Nouveau message de chat"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat to monitor for new messages.",
+          "message": "L'identifiant unique du chat direct ou de groupe à surveiller pour les nouveaux messages."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "ID du chat"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.short_desc": {
+          "source": "Chat to monitor for messages",
+          "message": "Chat à surveiller pour les messages"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is sent in a chat",
+          "message": "Déclencher lorsqu'un message est envoyé dans un chat"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a direct chat or group chat conversation outside of a team channel.",
+          "message": "Envoyer un nouveau message à une conversation de chat direct ou de groupe en dehors d'un canal d'équipe."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
+          "source": "Send Chat Message",
+          "message": "Envoyer un message de chat"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "Texte"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "Spécifie le format du contenu du message, tel que \"text\" pour du texte brut ou \"html\" pour du contenu formaté."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "Format du contenu du message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat where the message will be sent.",
+          "message": "L'identifiant unique du chat direct ou de groupe où le message sera envoyé."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "ID du chat"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.short_desc": {
+          "source": "Target chat identifier",
+          "message": "Identifiant du chat cible"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent in the chat.",
+          "message": "Le contenu textuel du message à envoyer dans le chat."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "Contenu du message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
+          "source": "Send a message to a chat conversation",
+          "message": "Envoyer un message à une conversation de chat"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a specific channel within a team that all channel members can view and respond to.",
+          "message": "Envoyer un nouveau message à un canal spécifique au sein d'une équipe, que tous les membres du canal peuvent consulter et auquel ils peuvent répondre."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
+          "source": "Send Channel Message",
+          "message": "Envoyer un message de canal"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "Texte"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "Spécifie le format du contenu du message, tel que \"text\" pour du texte brut ou \"html\" pour du contenu formaté."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "Format du contenu du message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel where the message will be posted.",
+          "message": "L'identifiant unique du canal où le message sera publié."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID du canal"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "Identifiant du canal cible"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be posted in the channel.",
+          "message": "Le contenu textuel du message à publier dans le canal."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "Contenu du message"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the target channel.",
+          "message": "L'identifiant unique de l'équipe contenant le canal cible."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Identifiant de l'équipe"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
+          "source": "Post a message to a team channel",
+          "message": "Publier un message dans un canal d'équipe"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.desc": {
+          "source": "Update the details of a scheduled meeting, such as time, location, attendees, or other properties.",
+          "message": "Mettre à jour les détails d'une réunion planifiée, tels que l'heure, le lieu, les participants ou d'autres propriétés."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
+          "source": "Update Meeting",
+          "message": "Mettre à jour la réunion"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Updated text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "Texte mis à jour décrivant l'ordre du jour de la réunion, les documents de préparation ou d'autres informations pertinentes."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "Contenu de la réunion"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Updated meeting agenda or notes",
+          "message": "Ordre du jour ou notes de réunion mis à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Updated channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "Identifiant de canal mis à jour si la réunion est associée à un canal spécifique au sein d'une équipe."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID du canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "Identifiant du canal associé"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "Updated list of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "Liste mise à jour des adresses e-mail ou des identifiants d'utilisateur des personnes à inviter à la réunion."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "Participants"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Updated meeting participants",
+          "message": "Participants à la réunion mis à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "La nouvelle date et heure de fin de la réunion au format ISO 8601 (AAAA-MM-JJTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "Heure de fin"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Updated meeting end time",
+          "message": "Heure de fin de réunion mise à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.",
+          "message": "Lorsqu'il est défini sur true, garantit que la réunion dispose des fonctionnalités de réunion en ligne Teams avec visioconférence et lien de participation."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "Réunion en ligne"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable/disable Teams online meeting features",
+          "message": "Activer/désactiver les fonctionnalités de réunion en ligne Teams"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The new physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "Le nouvel emplacement physique où la réunion aura lieu, ou une description personnalisée d'emplacement virtuel."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Emplacement"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Updated meeting location",
+          "message": "Lieu de réunion mis à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier of the meeting to be updated.",
+          "message": "L'identifiant unique de la réunion à mettre à jour."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "ID de la réunion"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Target meeting identifier",
+          "message": "Identifiant de la réunion cible"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "La nouvelle date et heure de début de la réunion au format ISO 8601 (AAAA-MM-JJTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "Heure de début"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Updated meeting start time",
+          "message": "Heure de début de réunion mise à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The new title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "Le nouveau titre ou objet de la réunion qui apparaîtra dans les invitations de calendrier et la liste des réunions."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Sujet"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Updated meeting title",
+          "message": "Titre de réunion mis à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Updated team identifier if the meeting is associated with a specific team.",
+          "message": "Identifiant d'équipe mis à jour si la réunion est associée à une équipe spécifique."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "Identifiant de l'équipe associée"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The new time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "Le nouveau fuseau horaire pour les heures de début et de fin de la réunion, tel que \"Pacific Standard Time\" ou \"UTC\"."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "Fuseau horaire"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Updated meeting time zone",
+          "message": "Fuseau horaire de réunion mis à jour"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Modify an existing meeting",
+          "message": "Modifier une réunion existante"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.desc": {
+          "source": "Update the properties or membership of an existing channel within a team.",
+          "message": "Mettre à jour les propriétés ou les membres d'un canal existant au sein d'une équipe."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
+          "source": "Update Channel",
+          "message": "Mettre à jour le canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to be updated.",
+          "message": "L'identifiant unique du canal à mettre à jour."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID du canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "Identifiant du canal cible"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "Description mise à jour expliquant l'objectif ou le sujet du canal. Limité à 1024 caractères."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New channel description",
+          "message": "Nouvelle description de canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The new display name for the channel. Must be unique within the team and between 1-50 characters.",
+          "message": "Le nouveau nom d'affichage du canal. Doit être unique au sein de l'équipe et comporter entre 1 et 50 caractères."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Nom du canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "New channel name",
+          "message": "Nouveau nom de canal"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to be updated.",
+          "message": "L'identifiant unique de l'équipe contenant le canal à mettre à jour."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Identifiant de l'équipe"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Modify an existing channel",
+          "message": "Modifier un canal existant"
+        },
+        "app.VGVhbXM.desc": {
+          "source": "Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.",
+          "message": "Microsoft Teams est une plateforme de collaboration qui permet la messagerie, le partage de fichiers, les réunions vidéo et l'intégration d'applications au sein de votre organisation."
+        },
+        "app.VGVhbXM.display_name": {
+          "source": "Microsoft Teams",
+          "message": "Microsoft Teams"
+        },
+        "app.VGVhbXM.short_desc": {
+          "source": "Collaborate with your team using channels, meetings, and messages",
+          "message": "Collaborez avec votre équipe à l'aide de canaux, de réunions et de messages"
+        }
+      }
+    }
+  }
+}

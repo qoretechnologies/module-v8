@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.desc": {
+          "source": "This method deletes one or more brand profiles from an account, based on the brand IDs that you include in the `brandsRequest`.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Tato metoda smaže jeden nebo více profilů značky z účtu na základě ID značek, která uvedete v `brandsRequest`.\n\nAby bylo možné tuto metodu použít, musí být pro účet povoleno alespoň jedno z následujících nastavení:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Související témata\n\n- [Jak vytvořit značku](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
+          "source": "Delete Brand",
+          "message": "Smazat značku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
+          "source": "Deletes one or more brand profiles.",
+          "message": "Smaže jeden nebo více profilů značky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.desc": {
+          "source": "This method returns details about all of the [brands](-docs-esign-rest-api-esign101-concepts-branding-) associated with an account,\nincluding the default brand profiles.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Tato metoda vrací podrobnosti o všech [značkách](-docs-esign-rest-api-esign101-concepts-branding-) přidružených k účtu,\nvčetně výchozích profilů značek.\n\nAby bylo možné tuto metodu použít, musí být pro účet povoleno alespoň jedno z následujících nastavení:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Související témata\n\n- [Jak vytvořit značku](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
+          "source": "Get Brands",
+          "message": "Získat značky"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
+          "source": "Gets a list of brands.",
+          "message": "Získá seznam značek."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.desc": {
+          "source": "This method creates one or more brand profile files for an account.\n\nTo specify logos for the brand,\nuse the\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nmethod\nafter you create the brand.\n\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "Tato metoda vytvoří jeden nebo více souborů profilu značky pro účet.\n\nChcete-li pro značku zadat loga,\npoužijte metodu\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\npo vytvoření značky.\n\n\nAby bylo možné tuto metodu použít, musí být pro účet povoleno alespoň jedno z následujících nastavení:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Související témata\n\n- [Jak vytvořit značku](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
+          "source": "Create Brand",
+          "message": "Vytvořit značku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
+          "source": "Creates one or more brand profiles for an account.",
+          "message": "Vytvoří jeden nebo více profilů značky pro účet."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.desc": {
+          "source": "Deletes one or more documents from an existing envelope that has not yet been completed.\n\nTo delete a document, use only the relevant parts of the [`envelopeDefinition`](#envelopeDefinition).\nFor example, this request body specifies that you want to delete the document whose `documentId` is \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nThe envelope status must be one of:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n",
+          "message": "Smaže jeden nebo více dokumentů z existující obálky, která ještě nebyla dokončena.\n\nChcete-li dokument smazat, použijte pouze příslušné části objektu [`envelopeDefinition`](#envelopeDefinition).\nTělo tohoto požadavku například určuje, že chcete smazat dokument, jehož `documentId` je \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nStav obálky musí být jeden z následujících:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
+          "source": "Delete Documents",
+          "message": "Smazat dokumenty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
+          "source": "Deletes documents from a draft envelope.",
+          "message": "Smaže dokumenty z konceptu obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.desc": {
+          "source": "Retrieves a single document or all documents from an envelope.\n\nTo retrieve a single document, provide the ID of the document in the `documentId` path parameter.\nAlternatively, by setting the `documentId` parameter to special keyword values,\nyou can retrieve all the documents (as a combined PDF, portfolio PDF, or ZIP archive)\nor just the certificate of completion. See the `documentId` description for how to retrieve each format.\n\n\nThe response body of this method\nis a file. If you request multiple documents,\nthe result is a ZIP archive\nthat contains all of the documents.\n\nIn all other cases, the response is a PDF\nfile or PDF portfolio.\n\n\nYou can get the file name and document ID from the response's `Content-Disposition` header:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nBy default, the response is the PDF file\nas a byte stream.\nFor example a request-response in `curl` looks like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nBy using the `Content-Transfer-Encoding`\nheader in the request, you can obtain the PDF file\nencoded in base64. The same `curl` request with\nthe base64 header would look like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(In an actual `curl` request you would use the `-output` switch to\nsave the byte stream into a file.)\n\n### Related topics\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n",
+          "message": "Získá jeden dokument nebo všechny dokumenty z obálky.\n\nChcete-li získat jeden dokument, zadejte ID dokumentu v parametru cesty `documentId`.\nPřípadně nastavením parametru `documentId` na speciální klíčová slova\nmůžete získat všechny dokumenty (jako sloučené PDF, portfolio PDF nebo archiv ZIP)\nnebo pouze certifikát o dokončení. Informace o způsobu získání jednotlivých formátů naleznete v popisu `documentId`.\n\n\nTělo odpovědi této metody\nje soubor. Pokud požadujete více dokumentů,\nvýsledkem je archiv ZIP,\nkterý obsahuje všechny dokumenty.\n\nVe všech ostatních případech je odpovědí soubor PDF\nnebo portfolio PDF.\n\n\nNázev souboru a ID dokumentu můžete získat ze záhlaví `Content-Disposition` v odpovědi:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nVe výchozím nastavení je odpovědí soubor PDF\njako bajtový proud.\nNapříklad požadavek a odpověď v `curl` vypadá takto:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nPoužitím záhlaví `Content-Transfer-Encoding`\nv požadavku můžete získat soubor PDF\nzakódovaný v base64. Stejný požadavek v `curl` se\nzáhlavím base64 by vypadal takto:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(Ve skutečném požadavku `curl` byste použili přepínač `-output` k\nuložení bajtového proudu do souboru.)\n\n### Související témata\n\n- [Jak stáhnout dokumenty obálky](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "Získat dokument"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
+          "source": "Retrieves a single document or all documents from an envelope.",
+          "message": "Získá jeden dokument nebo všechny dokumenty z obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.desc": {
+          "source": "Retrieves a list of documents associated with the specified envelope.\n\n### Related topics\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n",
+          "message": "Získá seznam dokumentů přidružených k zadané obálce.\n\n### Související témata\n\n- [Jak vypsat dokumenty obálky](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
+          "source": "Get Documents",
+          "message": "Získat dokumenty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
+          "source": "Gets a list of documents in an envelope.",
+          "message": "Získá seznam dokumentů v obálce."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.desc": {
+          "source": "Adds or replaces a document in an existing draft or in-process envelope.\nAn in-process envelope is one that has been sent but not yet completed or voided.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nTo add a new document, set the `documentId` path parameter to a new document ID.\n\nTo replace a document, set the `documentId` path parameter to the document ID of the existing document.\nThe tabs of the original document will be applied to the new document.\nFor example, a request in cURL looks like this:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "Přidá nebo nahradí dokument v existujícím konceptu nebo rozpracované obálce.\nRozpracovaná obálka je taková, která byla odeslána, ale ještě nebyla dokončena ani zrušena.\n\n\n**Poznámka:** Při přidávání nebo úpravě dokumentů u rozpracované obálky\nDocusign doporučuje\n[uzamknout obálku](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\npřed provedením jakýchkoli změn.\n\nChcete-li přidat nový dokument, nastavte parametr cesty `documentId` na nové ID dokumentu.\n\nChcete-li dokument nahradit, nastavte parametr cesty `documentId` na ID existujícího dokumentu.\nZáložky původního dokumentu budou použity na nový dokument.\nNapříklad požadavek v cURL vypadá takto:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "Aktualizovat dokument"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
+          "source": "Adds or replaces a document in an existing envelope.",
+          "message": "Přidá nebo nahradí dokument v existující obálce."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.desc": {
+          "source": "Adds one or more documents to an existing envelope.\nThe tabs of the original document will be applied to the new document.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nIf the file name of a document contains Unicode characters, you need to include a `Content-Disposition` header. Example:\n\n\n**Header:** `Content-Disposition`\n\n\n**Value:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "Přidá jeden nebo více dokumentů do existující obálky.\nZáložky původního dokumentu budou použity na nový dokument.\n\n\n**Poznámka:** Při přidávání nebo úpravě dokumentů u rozpracované obálky\nDocusign doporučuje\n[uzamknout obálku](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\npřed provedením jakýchkoli změn.\n\nPokud název souboru dokumentu obsahuje znaky Unicode, je nutné zahrnout záhlaví `Content-Disposition`. Příklad:\n\n\n**Záhlaví:** `Content-Disposition`\n\n\n**Hodnota:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
+          "source": "Update Documents",
+          "message": "Aktualizovat dokumenty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
+          "source": "Adds one or more documents to an existing envelope.",
+          "message": "Přidá jeden nebo více dokumentů do existující obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.desc": {
+          "source": "Retrieves the overall status for the specified envelope.\nTo get the status of a list of envelopes, use\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Related topics\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n",
+          "message": "Získá celkový stav zadané obálky.\nChcete-li získat stav seznamu obálek, použijte\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Související témata\n\n- [Jak získat informace o obálce](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
+          "source": "Get Envelope",
+          "message": "Získat obálku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
+          "source": "Gets the status of a single envelope.",
+          "message": "Získá stav jedné obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.desc": {
+          "source": "This method lets you [search for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-) in your accounts. A large set of filters let you narrow the scope of your search by date, by envelope ID, or by status codes. Your request must include one or more of the following parameters:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Restrictions\n\nThe number of envelopes returned is limited to 1,000 per call. To retrieve the next or previous set of envelopes, use the `nextUri` and `previousUri` parameters returned in the original call's response.\n\nIf no `from_date` query parameter is specified, envelopes from more than two years ago will not be returned. To fetch older envelopes, set the specific date range using the `from_date` and `to_date` parameters.\n\nTo avoid unnecessary database queries, the Docusign signature platform first checks requests to ensure that the filter set supplied does not result in a zero-size response before querying the database.\n\n### Envelope statuses\n\nThis table shows the valid current envelope statuses (`status` parameter) for the different status qualifiers (`from_to_status` parameter) in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the Valid Current Statuses column, then an empty list is returned.\n\nClient applications should check that the statuses (`status` parameter) they are requesting make sense for a given `from_to_status` parameter value.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Extraneous results\n\nIn some cases, a request for a specific envelope status will\ninclude envelopes with additional statuses. For example, in\na request with a `from_date` of 2017-01-01, a `to_date` of\n2017-01-07 and the status qualifier (`from_to_status`) set\nto `delivered`, the response set might contain envelopes\nthat were created during that time period, but not delivered\nduring the time period. As a workaround, check the envelope\nstatus values in the result set as needed.\n\n\n### Related topics\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n",
+          "message": "Tato metoda umožňuje [vyhledávat obálky](-docs-esign-rest-api-esign101-concepts-envelopes-search-) ve vašich účtech. Široká škála filtrů vám umožňuje zúžit rozsah vyhledávání podle data, ID obálky nebo kódů stavu. Váš požadavek musí obsahovat jeden nebo více z následujících parametrů:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Omezení\n\nPočet vrácených obálek je omezen na 1 000 na volání. Chcete-li načíst další nebo předchozí sadu obálek, použijte parametry `nextUri` a `previousUri` vrácené v odpovědi původního volání.\n\nPokud není zadán parametr dotazu `from_date`, nebudou vráceny obálky starší než dva roky. Chcete-li načíst starší obálky, nastavte konkrétní rozsah dat pomocí parametrů `from_date` a `to_date`.\n\nAby se předešlo zbytečným dotazům do databáze, podpisová platforma Docusign nejprve zkontroluje požadavky, aby zajistila, že zadaná sada filtrů nevede k odpovědi s nulovou velikostí, ještě před odesláním dotazu do databáze.\n\n### Stavy obálek\n\nTato tabulka zobrazuje platné aktuální stavy obálek (parametr `status`) pro různé kvalifikátory stavu (parametr `from_to_status`) v požadavku. Pokud stav a kvalifikátory stavu v požadavku API neobsahují žádnou z hodnot uvedených ve sloupci Platné aktuální stavy, vrátí se prázdný seznam.\n\nKlientské aplikace by měly ověřit, zda požadované stavy (parametr `status`) dávají pro danou hodnotu parametru `from_to_status` smysl.\n\n| Kvalifikátor stavu<br>(`from_to_status`) | Efektivní kvalifikátor stavu | Platné aktuální stavy                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Nadbytečné výsledky\n\nV některých případech požadavek na konkrétní stav obálky\nzahrne obálky s dalšími stavy. Například v\npožadavku s hodnotou `from_date` rovnou 2017-01-01, `to_date` rovnou\n2017-01-07 a kvalifikátorem stavu (`from_to_status`) nastaveným\nna `delivered` může sada odpovědí obsahovat obálky,\nkteré byly vytvořeny v tomto časovém období, ale nebyly v něm\ndoručeny. Jako řešení podle potřeby zkontrolujte hodnoty\nstavu obálky v sadě výsledků.\n\n\n### Související témata\n\n- [Vyhledávání obálek](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [Jak vypsat změny stavu obálky](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
+          "source": "Get Envelopes",
+          "message": "Získat obálky"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
+          "source": "Search for specific sets of envelopes by using search filters.",
+          "message": "Vyhledávejte konkrétní sady obálek pomocí vyhledávacích filtrů."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.desc": {
+          "source": "This method enables you to make changes to an envelope.\nYou can use it to:\n\n* [Send a draft envelope](#sending-a-draft-envelope)\n* [Void an in-process envelope](#voiding-an-in-process-envelope)\n* [Modify a draft envelope](#modifying-envelope-email-information)\n* [Purge documents and envelope metadata from the Docusign platform](#purging-documents-from-docusign)\n\nAlthough the request body for this method\nis a complete envelope definition,\nyou only need to provide\nthe properties that\nyou're updating.\n\n## Sending a draft envelope\n\nTo send a draft envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nYou can attach a workflow before sending the envelope:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Working with workflows\n\nTo unpause a workflow, the request body should include this:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Voiding an in-process envelope\n\nTo void an in-process envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Modifying envelope email information\n\nTo change the email subject and message of a draft envelope,\ninclude the following code in the request body:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Purging documents from Docusign\n\nTo place only the documents\nin the purge queue,\nleaving any\ncorresponding attachments\nand tabs in the Docusign platform,\nset the `purgeState` property\nto `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue,\nset the `purgeState` property\nto `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue\nand to redact personal information,\nset the `purgeState` property\nto `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nYou can purge documents\nonly from completed envelopes\nthat are not marked as the authoritative copy.\nThe user requesting the purge\nmust have permission to purge documents\nand\nmust be the sender or be acting on behalf of the sender.\n\nWhen the purge request is initiated\nthe items to be purged\nare placed in the purge queue\nfor deletion in 14 days.\nThe sender\nand\nall recipients with Docusign accounts\nassociated with the envelope\nget an email notification\nthe documents will be deleted in 14 days.\nThe notification contains a link\nto the documents.\nA second email notification\nis sent 7 days later.\nAt the end of the 14-day period\nthe documents are deleted from the system.\nRecipients without Docusign accounts\ndo not receive email notifications.\n\nIf your account has a Document Retention policy,\nenvelope documents\nare automatically placed\nin the purge queue,\nand notification emails are sent\nat the end of the retention period.\nSetting a Document Retention policy is the same as setting a\nschedule for purging documents.\n\n## Removing documents from the purge queue\n\nTo remove documents from the purge queue, include the following code in the request body:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Related topics\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n",
+          "message": "Tato metoda umožňuje provádět změny v obálce.\nMůžete ji použít k:\n\n* [Odeslání konceptu obálky](#sending-a-draft-envelope)\n* [Zrušení rozpracované obálky](#voiding-an-in-process-envelope)\n* [Úpravě konceptu obálky](#modifying-envelope-email-information)\n* [Vyčištění dokumentů a metadat obálky z platformy Docusign](#purging-documents-from-docusign)\n\nPřestože tělo požadavku pro tuto metodu\nje kompletní definice obálky,\nstačí zadat pouze\nvlastnosti, které\naktualizujete.\n\n## Odeslání konceptu obálky\n\nChcete-li odeslat koncept obálky, vložte do těla požadavku následující kód:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nPřed odesláním obálky můžete připojit workflow:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Práce s workflow\n\nChcete-li obnovit pozastavené workflow, tělo požadavku by mělo obsahovat toto:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Zrušení rozpracované obálky\n\nChcete-li zrušit rozpracovanou obálku, vložte do těla požadavku následující kód:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Úprava e-mailových informací obálky\n\nChcete-li změnit předmět a zprávu e-mailu konceptu obálky,\nvložte do těla požadavku následující kód:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Vyčištění dokumentů z platformy Docusign\n\nChcete-li do fronty k vyčištění umístit pouze dokumenty\na ponechat veškeré odpovídající\npřílohy a záložky v platformě Docusign,\nnastavte vlastnost `purgeState`\nna `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nChcete-li do fronty k vyčištění umístit dokumenty,\npřílohy a záložky,\nnastavte vlastnost `purgeState`\nna `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nChcete-li do fronty k vyčištění umístit dokumenty,\npřílohy a záložky\na začernit osobní údaje,\nnastavte vlastnost `purgeState`\nna `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nDokumenty můžete vyčistit\npouze z dokončených obálek,\nkteré nejsou označeny jako autoritativní kopie.\nUživatel žádající o vyčištění\nmusí mít oprávnění k čištění dokumentů\na\nmusí být odesílatelem nebo jednat jménem odesílatele.\n\nPři zahájení požadavku na vyčištění\njsou položky k vyčištění\numístěny do fronty k vyčištění\nk odstranění za 14 dní.\nOdesílatel\na\nvšichni příjemci s účty Docusign\npřidruženými k obálce\nobdrží e-mailové oznámení,\nže dokumenty budou za 14 dní smazány.\nOznámení obsahuje odkaz\nna dokumenty.\nDruhé e-mailové oznámení\nje odesláno o 7 dní později.\nNa konci 14denního období\njsou dokumenty ze systému smazány.\nPříjemci bez účtů Docusign\ne-mailová oznámení neobdrží.\n\nPokud má váš účet zásadu uchovávání dokumentů (Document Retention),\ndokumenty obálky\njsou automaticky umístěny\ndo fronty k vyčištění\na na konci doby uchovávání jsou odeslány oznamovací e-maily.\nNastavení zásady uchovávání dokumentů je totéž jako nastavení\nplánu pro čištění dokumentů.\n\n## Odebrání dokumentů z fronty k vyčištění\n\nChcete-li odebrat dokumenty z fronty k vyčištění, vložte do těla požadavku následující kód:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Související témata\n\n- [Zrušení obálky](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Vyčištění dokumentů (eSignature koncepty)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Vyčištění dokumentů v obálce (blogový příspěvek)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [Jak obnovit pozastavené podpisové workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
+          "source": "Update Envelope",
+          "message": "Aktualizovat obálku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
+          "source": "Send, void, or modify a draft envelope. Purge documents from a completed envelope.",
+          "message": "Odeslat, zrušit nebo upravit koncept obálky. Vyčistit dokumenty z dokončené obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.desc": {
+          "source": "Creates and sends an envelope or creates a draft envelope.\nEnvelopes are fundamental resources in the Docusign platform.\n\n\nWith this method you can:\n\n* Create and send an envelope\n  with [documents][], [recipients][], and [tabs][].\n* [Create and send an envelope from a template](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Create and send an envelope from\n  a combination of documents and templates](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Create a draft envelope.\n\n\nWhen you use this method\nto create and send an envelope\nin a single request,\nthe following parameters in the request body (an [`envelopeDefinition`][envelopeDefinition] object) are required:\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | Set to `sent` to send the envelope to recipients.<br>Set to `created` (or don't set at all) to save the envelope as a draft. |\n| `emailSubject` | The subject of the email used to send the envelope. |\n| `documents`    | The [documents][] to be signed. |\n| `recipients`   | The email addresses of the envelope [recipients][]. |\n\n\nWhen you create an envelope by using a\n[composite template](-docs-esign-rest-api-esign101-concepts-templates-composite-),\nyou should specify the envelope custom fields in the inline template.\nAny custom fields that you specify at the root level are ignored.\n\nIf the envelope has a workflow definition\nand the `workflowStatus` is `paused`,\nthe envelope will not be sent immediately,\neven if the envelope's `status` is `sent`.\n\n\n### Related topics\n\n[Envelope][envelopes] and [template][templates]\nobjects along with [documents][documents],\n[recipients][recipients], and [tabs][tabs]\nare the five object models at the core of the eSignature API.\nThe [eSignature concepts guide](-docs-esign-rest-api-esign101-concepts-)\ndescribes how the five object models work together.\n\nThe following how-to articles contain\npractical examples that show you how to\nto\nconfigure this method's\n[`envelopeDefinition`][envelopeDefinition] request body\nto perform common tasks.\n\nRequesting a signature\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nWorking with envelopes and templates\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nWorking with advanced recipient routing\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nWorking with documents\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nWorking with tabs\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nWorking with brands\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nWorking with permissions\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nImplementing multi-factor recipient (signer) authentication\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n",
+          "message": "Vytvoří a odešle obálku nebo vytvoří koncept obálky.\nObálky jsou základními prostředky v platformě Docusign.\n\n\nPomocí této metody můžete:\n\n* Vytvořit a odeslat obálku\n  s [dokumenty][documents], [příjemci][recipients] a [záložkami][tabs].\n* [Vytvořit a odeslat obálku ze šablony](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Vytvořit a odeslat obálku z\n  kombinace dokumentů a šablon](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Vytvořit koncept obálky.\n\n\nPokud tuto metodu použijete\nk vytvoření a odeslání obálky\nv jediném požadavku,\njsou vyžadovány následující parametry v těle požadavku (objekt [`envelopeDefinition`][envelopeDefinition]):\n\n| Parametr      | Popis |\n| :-      | :- |\n| `status`       | Nastavte na `sent` pro odeslání obálky příjemcům.<br>Nastavte na `created` (nebo nenastavujte vůbec) pro uložení obálky jako konceptu. |\n| `emailSubject` | Předmět e-mailu použitého k odeslání obálky. |\n| `documents`    | [Dokumenty][documents] k podpisu. |\n| `recipients`   | E-mailové adresy [příjemců][recipients] obálky. |\n\n\nPři vytváření obálky pomocí\n[složené šablony](-docs-esign-rest-api-esign101-concepts-templates-composite-)\nbyste měli zadat vlastní pole obálky ve vložené šabloně.\nVeškerá vlastní pole zadaná na kořenové úrovni jsou ignorována.\n\nPokud má obálka definici workflow\na parametr `workflowStatus` je `paused`,\nobálka nebude odeslána okamžitě,\na to ani v případě, že hodnota `status` obálky je `sent`.\n\n\n### Související témata\n\nObjekty [Obálka][envelopes] a [šablona][templates]\nspolu s [dokumenty][documents],\n[příjemci][recipients] a [záložkami][tabs]\ntvoří pět základních objektových modelů rozhraní eSignature API.\n[Průvodce koncepty eSignature](-docs-esign-rest-api-esign101-concepts-)\npopisuje, jak těchto pět objektových modelů vzájemně spolupracuje.\n\nNásledující návodné články obsahují\npraktické příklady konfigurace\ntěla požadavku [`envelopeDefinition`][envelopeDefinition] této metody\npro běžné úlohy.\n\nŽádost o podpis\n\n- [Jak požádat o podpis e-mailem](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [Jak požádat o podpis prostřednictvím aplikace](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [Jak požádat o podpis e-mailem pomocí šablony](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [Jak požádat o podpis pomocí složené šablony](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [Jak požádat o podpis doručením přes SMS nebo WhatsApp](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [Jak odeslat žádost o platbu](-docs-esign-rest-api-how-to-request-a-payment-)\n- [Jak odeslat obálku osobnímu podepisujícímu](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [Jak požádat o podpis prostřednictvím aplikace (vložené podepisování) s účtem CFR Part 11](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nPráce s obálkami a šablonami\n\n- [Jak získat informace o obálce](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [Jak vypsat příjemce obálky](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [Jak vypsat změny stavu obálky](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [Jak vytvořit šablonu](-docs-esign-rest-api-how-to-create-template-)\n- [Jak odeslat obálku prostřednictvím aplikace](-docs-esign-rest-api-how-to-embedded-sending-)\n- [Jak hromadně odesílat obálky](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nPráce s pokročilým směrováním příjemců\n\n- [Jak pozastavit podpisové workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [Jak obnovit podpisové workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [Jak používat podmíněné příjemce](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [Jak naplánovat obálku](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [Jak odeslat obálku se zpožděným směrováním](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nPráce s dokumenty\n\n- [Jak vypsat dokumenty obálky](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [Jak stáhnout dokumenty obálky](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [Jak připojit dokumenty binárním přenosem](-docs-esign-rest-api-how-to-send-binary-)\n- [Jak vytvořit podepsatelný HTML dokument](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [Jak převést soubor PDF na podepsatelný HTML dokument](-docs-esign-rest-api-how-to-converting-pdf-)\n- [Jak nastavit viditelnost dokumentu pro příjemce obálky](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nPráce se záložkami\n\n- [Jak získat hodnoty záložek obálky](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [Jak získat hodnoty vlastních záložek obálky](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [Jak nastavit hodnoty záložek obálky](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [Jak nastavit hodnoty záložek v šabloně](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nPráce se značkami\n\n- [Jak vytvořit značku](-docs-esign-rest-api-how-to-create-brand-)\n- [Jak použít značku na obálku](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [Jak použít značku a šablonu na obálku](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nPráce s oprávněními\n\n- [Jak vytvořit profil oprávnění](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [Jak aktualizovat jednotlivá nastavení oprávnění](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [Jak nastavit profil oprávnění](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [Jak smazat profil oprávnění](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nImplementace vícefaktorového ověření příjemce (podepisujícího)\n\n- [Jak vyžadovat ověření totožnosti (IDV) pro příjemce](-docs-esign-rest-api-how-to-id-verification-)\n- [Jak vyžadovat znalostní autentizaci (KBA) pro příjemce](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [Jak vyžadovat telefonické ověření pro příjemce](-docs-esign-rest-api-how-to-phone-auth-)\n- [Jak vyžadovat ověření přístupovým kódem pro příjemce](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
+          "source": "Create Envelopes",
+          "message": "Vytvořit obálky"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
+          "source": "Creates an envelope.",
+          "message": "Vytvoří obálku."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.desc": {
+          "source": "Deletes one or more recipients from a draft or sent envelope. List the recipients that you want to delete in the body of the request. This method uses the `recipientId` as the key for deleting recipients.\n\nIf the envelope is `In Process`, meaning that it has been sent and has not been completed or voided, recipients that have completed their actions cannot be deleted.",
+          "message": "Smaže jednoho nebo více příjemců z konceptu nebo odeslané obálky. Příjemce, které chcete smazat, uveďte v těle požadavku. Tato metoda používá parametr `recipientId` jako klíč pro mazání příjemců.\n\nPokud je obálka `In Process`, což znamená, že byla odeslána a nebyla dokončena ani zrušena, příjemce, kteří dokončili své akce, nelze smazat."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
+          "source": "Delete Recipients",
+          "message": "Smazat příjemce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
+          "source": "Deletes recipients from an envelope.",
+          "message": "Smaže příjemce z obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.desc": {
+          "source": "Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. This method can also be used to retrieve the tab values.\n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.\n\n### Related topics\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n",
+          "message": "Získá stav všech příjemců v jedné obálce a identifikuje aktuálního příjemce v seznamu směrování. Tuto metodu lze také použít k získání hodnot záložek.\n\nVlastnost `currentRoutingOrder` v odpovědi obsahuje hodnotu `routingOrder` aktuálního příjemce označující, že obálka byla příjemci odeslána, ale příjemce dosud své akce nedokončil.\n\n### Související témata\n\n- [Jak vypsat příjemce obálky](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
+          "source": "Get Recipients",
+          "message": "Získat příjemce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
+          "source": "Gets the status of recipients for an envelope.",
+          "message": "Získá stav příjemců obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.desc": {
+          "source": "Adds one or more recipients to an envelope.\n\nFor an in-process envelope,\none that has been sent and has not been completed or voided,\nan email is sent to a new recipient\nwhen they are reached in the routing order.\nIf the new recipient's routing order\nis before or the same as the envelope's\nnext recipient,\nan email is only sent if the optional\n`resend_envelope` query string is set to **true.**\n\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Related topics\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n",
+          "message": "Přidá jednoho nebo více příjemců do obálky.\n\nU rozpracované obálky,\ntedy takové, která byla odeslána a nebyla dokončena ani zrušena,\nje novému příjemci odeslán e-mail,\njakmile na něj přijde řada v pořadí směrování.\nPokud je pořadí směrování nového příjemce\npřed nebo stejné jako u dalšího příjemce\nobálky,\ne-mail se odešle pouze v případě, že je volitelný\nparametr dotazu `resend_envelope` nastaven na **true.**\n\n\n**Poznámka:** Tato metoda pracuje pouze s příjemci.\nChcete-li přidat záložky příjemce,\npoužijte metody ze zdroje [EnvelopeRecipientTabs][recipientTabs].\nToto tělo požadavku například přidá příjemce (`astanton@example.com`),\nale **NE** záložku příjemce Podepsat zde.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Související témata\n\n- [Jak hromadně odesílat obálky](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
+          "source": "Add Recipients",
+          "message": "Přidat příjemce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
+          "source": "Adds one or more recipients to an envelope.",
+          "message": "Přidá jednoho nebo více příjemců do obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.desc": {
+          "source": "Updates the recipients of a draft envelope or corrects recipient information for an in-process envelope.\n\nIf you send information for a recipient that does not already\nexist in a draft envelope, the recipient is added to the envelope\n(similar to the [EnvelopeRecipients: Create][EnvelopeRecipients-create] method).\n\nYou can also use this method to resend an envelope to a recipient\nby using the `resend_envelope` option.\n\n**Updating Sent Envelopes**\n\nAfter an envelope has been sent, you can edit only the following properties:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (If you provide an email address in this method, it will be treated as a new email address, even if it is exactly the same as the current address. Do not provide an email address if you do not want a correction email sent.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (For this to work, you must also change the recipient object to match the recipient type.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (You can change this ID to switch to a different signing group and its corresponding set of recipients.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nIf the recipient has signed,\nbut the envelope is still active,\nthe method will return success,\nbut the `recipientUpdateResults` property\nin the response will include an error\nthat the recipient could not be updated:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nIf the envelope is completed,\nand you try to change a recipient's address,\nthe method will fail with this error:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n",
+          "message": "Aktualizuje příjemce konceptu obálky nebo opraví informace o příjemci u rozpracované obálky.\n\nPokud odešlete informace pro příjemce, který v konceptu obálky dosud\nneexistuje, příjemce bude do obálky přidán\n(podobně jako u metody [EnvelopeRecipients: Create][EnvelopeRecipients-create]).\n\nTuto metodu můžete také použít k opětovnému odeslání obálky příjemci\npomocí volby `resend_envelope`.\n\n**Aktualizace odeslaných obálek**\n\nPo odeslání obálky můžete upravovat pouze následující vlastnosti:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (Pokud v této metodě zadáte e-mailovou adresu, bude považována za novou e-mailovou adresu, i když je zcela shodná se stávající adresou. Nezadávejte e-mailovou adresu, pokud nechcete, aby byl odeslán opravný e-mail.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (Aby to fungovalo, musíte také změnit objekt příjemce tak, aby odpovídal typu příjemce.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (Toto ID můžete změnit a přepnout tak na jinou podpisovou skupinu a její odpovídající sadu příjemců.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nPokud příjemce podepsal,\nale obálka je stále aktivní,\nmetoda vrátí úspěch,\nale vlastnost `recipientUpdateResults`\nv odpovědi bude obsahovat chybu,\nže příjemce nebylo možné aktualizovat:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nPokud je obálka dokončena\na pokusíte se změnit adresu příjemce,\nmetoda selže s touto chybou:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Poznámka:** Tato metoda pracuje pouze s příjemci.\nChcete-li přidat záložky příjemce,\npoužijte metody ze zdroje [EnvelopeRecipientTabs][recipientTabs].\nToto tělo požadavku například přidá příjemce (`astanton@example.com`),\nale **NE** záložku příjemce Podepsat zde.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
+          "source": "Update Recipients",
+          "message": "Aktualizovat příjemce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
+          "source": "Updates recipients in a draft envelope or corrects recipient information for an in-process envelope.",
+          "message": "Aktualizuje příjemce v konceptu obálky nebo opraví informace o příjemci u rozpracované obálky."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.desc": {
+          "source": "Returns a URL that enables you to\n[embed the recipient view](-docs-esign-rest-api-esign101-concepts-embedding-)\nof the\nDocuSign UI in your applications. If the recipient is a signer,\nthen the view will provide the signing ceremony.\n\nThis method is only used with envelopes in the `sent` status.\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nDue to screen space issues,\ndo not use an <code>&lt;iframe&gt;<-code> for embedded operations on mobile devices.\nFor iOS devices, Docusign recommends using a WebView.\n<-ds-inlinemessage>\n\n\n### The returned URL\n\nThe URL returned in this method's response is intended to be used\nimmediately to redirect the signer to the recipient view.\nYou can open the recipient view\nin the current browser or in a new tab.\nAfter the signer is redirected to the\nrecipient view, they must interact with the Docusign system\nperiodically or their session will time out.\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\nThe returned URL can be used only once and\nexpires after 5 minutes.\nDo not store or email the returned URL.\n<-ds-inlinemessage>\n\nIf you want to invite someone to an embedded signing session via\nemail, the email invitation's URL must be to your application.\nWhen invoked, your app should request a `recipientView` URL from\nDocusign and then redirect the signer to that URL.\n\n### How to specify the default language\n\nYou can append the `locale`\nquery parameter\nto the URL returned by this method\nto specify a language.\n\nThe language for the recipient view\nfollows this order or precedence:\n\n- The language specified by the sender for the recipient.\n- The `locale` parameter appended to the URL.\n- The account language if the signer has a Docusign account.\n- The language used in a previous signing if the signer is return signer.\n- The browser language.\n\nFor example, to set the default language\nto Canadian French, you would add this query parameter\nto the returned URL:\n\n```\n...?locale=fr_CA\n```\n\n\n## Authentication\n\nYour application is responsible for authenticating the identity\nof the recipient or signer when you use this method. Use the\nfollowing parameters to record how the recipient\nwas authenticated.\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\nAt a minimum, `authenticationMethod` and `clientUserId` are\nrequired. The information that you provide is included in the\nenvelope's certificate of completion.\n\n## Sending to a remote signer\n\nYou can request a signing session for a remote recipient\nwho has a Docusign account.\n\nAuthenticate the request using the recipient's\ncredentials, and do not specify a  `clientUserId`.\nThis differs from the typical behavior where the\nrequest is authenticated using the sender's credentials,\nand the recipient has a `clientUserId` defined.\n\n\n\n## Redirecting back to returnUrl\nAfter the signer completes or ends the signing ceremony, Docusign\nredirects the user's browser back to your app via the\n`returnUrl` that you supplied in the request.\n\nThe signer may be redirected through various Docusign\nsubdomains, depending on the region of the account sending the\nenvelope. Please consult [Allowlists for Docusign eSignature service](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service)\nin **Security for Docusign eSignature**\nwhen setting up your allowlists\n\n\n### The event status parameter\n\nDocusign appends an `event` query parameter to the `returnUrl` with the\noutcome of the signing ceremony. Your app can use this event\nparameter to determine the next step for the envelope.\nDo not fetch the envelope status by using\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-)\nor a similar method because doing so\nwill probably hit [request and polling limits](-docs-esign-rest-api-esign101-rules-and-limits-).\n\n\n| event query parameter | Meaning                                                                                  |\n| :- | :- |\n| signing_complete     | The recipient has signed the document.                                                   |\n| cancel               | The recipient decided to finish later.                                                   |\n| decline              | The recipient declined to sign the document.                                             |\n| exception            | An exception has occurred on the server during the signing session.                      |\n| fax_pending          | Recipient has a fax pending.                                                             |\n| session_timeout      | The recipient did not sign the document in time. The timeout is set to 20 minutes.       |\n| ttl_expired          | The token was not used within the timeout period or the token has already been accessed. |\n| viewing_complete     | The recipient did not need to sign but has completed the viewing ceremony.               |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nBecause a user can cancel redirection, close their\nbrowser after signing, or spoof the landing URL,\nyou should not rely on the <code>returnUrl<-code>\nalone as the single source of truth for envelope\nstatus for your integration.\n<-ds-inlinemessage>\n\n### Maintaining State\nAfter the recipient completes the recipient view (or signing\nceremony), they are redirected to your application. Your\napplication can recover state information about the transaction\nby storing information in a cookie, or by including query\nparameters in the `returnUrl` field. For example.\n`https:-myapp.example.com-docusign_return?myState=12345` When the\nuser is redirected to your app, the `event` query parameter will\nbe appended. In this example, prevent spoofing by not using a\nguessable value as the state value.\n\n\n### Related topics\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [How to request a signature using focused view](-docs-esign-rest-api-how-to-request-signature-focused-view-)",
+          "message": "Vrátí adresu URL, která vám umožní\n[vložit zobrazení příjemce](-docs-esign-rest-api-esign101-concepts-embedding-)\nuživatelského rozhraní DocuSign do vašich aplikací. Pokud je příjemcem podepisující,\npak zobrazení nabídne proces podepisování.\n\nTato metoda se používá pouze u obálek ve stavu `sent`.\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nDue to screen space issues,\ndo not use an <code>&lt;iframe&gt;<-code> for embedded operations on mobile devices.\nFor iOS devices, Docusign recommends using a WebView.\n<-ds-inlinemessage>\n\n\n### Vrácená adresa URL\n\nAdresa URL vrácená v odpovědi této metody je určena k okamžitému použití\nk přesměrování podepisujícího do zobrazení příjemce.\nZobrazení příjemce můžete otevřít\nv aktuálním prohlížeči nebo na nové kartě.\nPoté, co je podepisující přesměrován do\nzobrazení příjemce, musí se systémem Docusign pravidelně\ninteragovat, jinak vyprší časový limit relace.\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\nThe returned URL can be used only once and\nexpires after 5 minutes.\nDo not store or email the returned URL.\n<-ds-inlinemessage>\n\nPokud chcete někoho pozvat k vložené podpisové relaci prostřednictvím\ne-mailu, adresa URL v e-mailové pozvánce musí směřovat do vaší aplikace.\nPo vyvolání by si vaše aplikace měla vyžádat adresu URL `recipientView` od\nslužby Docusign a poté na tuto adresu URL podepisujícího přesměrovat.\n\n### Jak určit výchozí jazyk\n\nK adrese URL vrácené touto metodou můžete připojit parametr dotazu\n`locale`\na určit tak jazyk.\n\nJazyk zobrazení příjemce\nse řídí tímto pořadím priority:\n\n- Jazyk určený odesílatelem pro příjemce.\n- Parametr `locale` připojený k adrese URL.\n- Jazyk účtu, pokud má podepisující účet Docusign.\n- Jazyk použitý při předchozím podepisování, pokud se jedná o vracejícího se podepisujícího.\n- Jazyk prohlížeče.\n\nChcete-li například nastavit výchozí jazyk\nna kanadskou francouzštinu, přidali byste k vrácené adrese URL tento parametr dotazu:\n\n```\n...?locale=fr_CA\n```\n\n\n## Ověření\n\nVaše aplikace odpovídá za ověření totožnosti\npříjemce nebo podepisujícího při použití této metody. K zaznamenání způsobu ověření příjemce\npoužijte následující parametry.\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\nMinimálně jsou vyžadovány parametry `authenticationMethod` a `clientUserId`.\nInformace, které poskytnete, jsou zahrnuty v\ncertifikátu o dokončení obálky.\n\n## Odeslání vzdálenému podepisujícímu\n\nMůžete požádat o podpisovou relaci pro vzdáleného příjemce,\nkterý má účet Docusign.\n\nOvěřte požadavek pomocí přihlašovacích údajů příjemce\na nezadávejte `clientUserId`.\nTím se liší od typického chování, kdy je\npožadavek ověřen pomocí přihlašovacích údajů odesílatele\na příjemce má definován parametr `clientUserId`.\n\n\n\n## Přesměrování zpět na returnUrl\nJakmile podepisující dokončí nebo ukončí podpisový proces, Docusign\npřesměruje prohlížeč uživatele zpět do vaší aplikace prostřednictvím\n`returnUrl`, kterou jste zadali v požadavku.\n\nPodepisující může být přesměrován přes různé subdomény Docusign\nv závislosti na regionu účtu odesílajícího\nobálku. Při nastavování seznamů povolených položek nahlédněte do [Allowlists for Docusign eSignature service](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service)\nv části **Security for Docusign eSignature**.\n\n\n### Parametr stavu události\n\nDocusign připojí parametr dotazu `event` k `returnUrl` s\nvýsledkem procesu podepisování. Vaše aplikace může tento parametr události\npoužít k určení dalšího kroku pro obálku.\nNezískávejte stav obálky pomocí\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-)\nnebo podobné metody, protože by tím pravděpodobně došlo k překročení [limitů pro požadavky a dotazování](-docs-esign-rest-api-esign101-rules-and-limits-).\n\n\n| parametr dotazu event | Význam                                                                                   |\n| :- | :- |\n| signing_complete     | Příjemce dokument podepsal.                                                              |\n| cancel               | Příjemce se rozhodl proces dokončit později.                                             |\n| decline              | Příjemce odmítl dokument podepsat.                                                       |\n| exception            | Během podpisové relace došlo na serveru k výjimce.                                       |\n| fax_pending          | Příjemce má nevyřízený fax.                                                              |\n| session_timeout      | Příjemce nepodepsal dokument včas. Časový limit je nastaven na 20 minut.                 |\n| ttl_expired          | Token nebyl použit v rámci časového limitu nebo k němu již bylo přistoupeno.            |\n| viewing_complete     | Příjemce nemusel podepisovat, ale dokončil proces prohlížení.                             |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nBecause a user can cancel redirection, close their\nbrowser after signing, or spoof the landing URL,\nyou should not rely on the <code>returnUrl<-code>\nalone as the single source of truth for envelope\nstatus for your integration.\n<-ds-inlinemessage>\n\n### Udržování stavu\nPoté, co příjemce dokončí zobrazení příjemce (nebo proces\npodepisování), je přesměrován do vaší aplikace. Vaše\naplikace může obnovit informace o stavu transakce\nuložením informací do cookie nebo zahrnutím parametrů dotazu\ndo pole `returnUrl`. Například\n`https:-myapp.example.com-docusign_return?myState=12345` Když je\nuživatel přesměrován do vaší aplikace, bude připojen parametr dotazu `event`.\nV tomto příkladu zabraňte podvržení tím, že jako hodnotu stavu nepoužijete\nsnadno odhadnutelnou hodnotu.\n\n\n### Související témata\n\n- [Jak požádat o podpis e-mailem](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [Jak požádat o podpis prostřednictvím aplikace](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [Jak požádat o podpis pomocí složené šablony](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [Jak odeslat obálku prostřednictvím aplikace](-docs-esign-rest-api-how-to-embedded-sending-)\n- [Jak nastavit hodnoty záložek obálky](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [Jak nastavit hodnoty záložek v šabloně](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [Jak požádat o podpis pomocí zaostřeného zobrazení](-docs-esign-rest-api-how-to-request-signature-focused-view-)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
+          "source": "Create Recipient View",
+          "message": "Vytvořit zobrazení příjemce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {
+          "source": "Returns a URL to the recipient view UI. For signer recipients, returns the embedded signing view. Can also be used for other recipient types.",
+          "message": "Vrátí adresu URL pro uživatelské rozhraní zobrazení příjemce. Pro podepisující příjemce vrátí vložené zobrazení pro podepisování. Lze použít i pro jiné typy příjemců."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.desc": {
+          "source": "This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow.",
+          "message": "Tento trigger se aktivuje při každé změně v životním cyklu obálky DocuSign. Sleduje celou řadu aktualizací, například když je obálka odeslána příjemcům, doručena, podepsána, dokončena nebo odmítnuta. Zahrnuje také administrativní události, jako je opětovné odeslání, oprava, vyčištění, smazání, vyřazení, nově vytvoření nebo odebrání obálky. Nastavením tohoto triggeru můžete zůstat informováni o průběhu a změnách stavu obálky, což vám umožní včasné následné kroky, vedení záznamů nebo další automatizované akce ve vašem workflow."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.display_name": {
+          "source": "Envelope Status Updated",
+          "message": "Stav obálky aktualizován"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "Výchozí ID účtu nastavené při autorizaci připojení"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "Výchozí ID účtu"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "Výchozí ID účtu nastavené při autorizaci připojení"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.",
+          "message": "Spustí se při každé aktualizaci stavu nebo vlastností obálky DocuSign, včetně událostí, jako je odeslání, doručení, podepsání, dokončení, odmítnutí, zrušení, oprava, vyčištění nebo smazání."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Docusign eSignature** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do **Docusign eSignature** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci ještě nejsou k dispozici jako samostatné akce."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Docusign eSignature",
+          "message": "Provést vlastní volání API do Docusign eSignature"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.desc": {
+          "source": "Template updated",
+          "message": "Šablona aktualizována"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.display_name": {
+          "source": "Template Updated",
+          "message": "Šablona aktualizována"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "Výchozí ID účtu nastavené při autorizaci připojení"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "Výchozí ID účtu"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "Výchozí ID účtu nastavené při autorizaci připojení"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers whenever a new DocuSign template is created, updated or deleted, allowing you to take immediate action in response to the new template.",
+          "message": "Spustí se při každém vytvoření, aktualizaci nebo smazání nové šablony DocuSign, což vám umožní okamžitě reagovat na novou šablonu."
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Kolekce akcí pro práci s Docusign eSignature API"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.display_name": {
+          "source": "Docusign eSignature",
+          "message": "Docusign eSignature"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.short_desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Kolekce akcí pro práci s Docusign eSignature API"
+        }
+      }
+    }
+  }
+}

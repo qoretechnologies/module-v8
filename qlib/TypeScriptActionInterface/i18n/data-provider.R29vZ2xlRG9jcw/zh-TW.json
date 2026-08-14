@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.desc": {
+          "source": "Creates a new Google Docs document from provided text content. Supports HTML parsing for rich formatting and can optionally export the document to various formats.",
+          "message": "從提供的文字內容建立新的 Google Docs 文件。支援 HTML 解析以取得豐富格式，並可選擇將文件匯出為多種格式。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.display_name": {
+          "source": "Create Document from Text",
+          "message": "從文字建立文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.desc": {
+          "source": "The text content to be inserted into the new document. Can be plain text or HTML.",
+          "message": "要插入新文件中的文字內容。可以是純文字或 HTML。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.display_name": {
+          "source": "Document Content",
+          "message": "文件內容"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.short_desc": {
+          "source": "Text content for the document",
+          "message": "文件的文字內容"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "要賦予新建立文件的名稱。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.display_name": {
+          "source": "Document Name",
+          "message": "文件名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.short_desc": {
+          "source": "Name for the new document",
+          "message": "新文件的名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML 文件 (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF 文件 (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "純文字 (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "豐富文字格式 (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "用於將建立的文件匯出的選擇性格式（PDF、DOCX 等）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "匯出格式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "文件匯出的格式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "要在其中建立新文件的 Google Drive 資料夾 ID。若未指定，將建立於根資料夾中。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "資料夾 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "建立文件的資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.desc": {
+          "source": "Whether to parse the document content as HTML to preserve formatting like bold, italic, and other styling.",
+          "message": "是否將文件內容解析為 HTML 以保留粗體、斜體及其他樣式等格式。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.display_name": {
+          "source": "Parse HTML",
+          "message": "解析 HTML"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.short_desc": {
+          "source": "Parse content as HTML",
+          "message": "將內容解析為 HTML"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.short_desc": {
+          "source": "Create a new Google Docs document from text content.",
+          "message": "從文字內容建立新的 Google Docs 文件。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.desc": {
+          "source": "Creates a new Google Docs document by copying a template and replacing placeholders with specified values. Supports text replacements, image insertions, automatic sharing with template collaborators, and exporting to various formats.",
+          "message": "透過複製範本並將預留位置替換為指定值來建立新的 Google Docs 文件。支援文字替換、圖片插入、與範本協作者自動分享，以及匯出為多種格式。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.display_name": {
+          "source": "Create Document from Template",
+          "message": "從範本建立文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "要在其中建立新文件的 Google Drive 資料夾 ID。若未指定，將建立於根資料夾中。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.display_name": {
+          "source": "Destination Folder",
+          "message": "目的資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "建立文件的資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML 文件 (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF 文件 (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "純文字 (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "豐富文字格式 (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "用於將建立的文件匯出的選擇性格式（PDF、DOCX 等）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "匯出格式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "文件匯出的格式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.desc": {
+          "source": "List of placeholder image replacements to make in the template.",
+          "message": "要在範本中執行的預留位置圖片替換清單。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.display_name": {
+          "source": "Image Replacements",
+          "message": "圖片替換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.short_desc": {
+          "source": "Placeholder image replacements",
+          "message": "預留位置圖片替換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "要賦予新建立文件的名稱。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.display_name": {
+          "source": "New Document Name",
+          "message": "新文件名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.short_desc": {
+          "source": "Name for the new document",
+          "message": "新文件的名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.desc": {
+          "source": "Whether to automatically share the new document with all collaborators of the original template.",
+          "message": "是否自動與原始範本的所有協作者分享新文件。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.display_name": {
+          "source": "Share with Template Collaborators",
+          "message": "與範本協作者分享"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.short_desc": {
+          "source": "Share with template collaborators",
+          "message": "與範本協作者分享"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.desc": {
+          "source": "Whether to remove placeholder text that was not replaced with actual values.",
+          "message": "是否移除未替換為實際值的預留位置文字。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.display_name": {
+          "source": "Remove Unused Fields",
+          "message": "移除未使用的欄位"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.short_desc": {
+          "source": "Remove unreplaced placeholders",
+          "message": "移除未替換的預留位置"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "List of placeholder text replacements to make in the template.",
+          "message": "要在範本中執行的預留位置文字替換清單。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Text Replacements",
+          "message": "文字替換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "Placeholder text replacements",
+          "message": "預留位置文字替換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.desc": {
+          "source": "The Google Docs document ID to use as a template for creating the new document.",
+          "message": "用作建立新文件範本的 Google Docs 文件 ID。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.display_name": {
+          "source": "Template ID",
+          "message": "範本 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.short_desc": {
+          "source": "Template document to copy",
+          "message": "要複製的範本文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.short_desc": {
+          "source": "Create a new Google Docs document from an existing template with placeholder replacements.",
+          "message": "從現有範本建立新的 Google Docs 文件，並進行預留位置替換。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.desc": {
+          "source": "Appends text to a Google Docs document with options for positioning (beginning, end, or specific index), text formatting, and line breaks. Supports bold, italic, underline, font size, and font family styling.",
+          "message": "將文字附加至 Google Docs 文件，並提供位置設定（開頭、結尾或特定索引）、文字格式及換行選項。支援粗體、斜體、底線、字型大小和字型樣式設定。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.display_name": {
+          "source": "Append Text to Document",
+          "message": "附加文字至文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.desc": {
+          "source": "Whether to add a line break before or after the inserted text for better formatting.",
+          "message": "是否在插入的文字前後新增換行符號以改善格式。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.display_name": {
+          "source": "Add Line Break",
+          "message": "新增換行"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.short_desc": {
+          "source": "Add line break with text",
+          "message": "隨文字新增換行"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to append text to.",
+          "message": "要附加文字的 Google Docs 文件之唯一識別碼。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "文件 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The Google Docs document to modify",
+          "message": "要修改的 Google Docs 文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.desc": {
+          "source": "The specific character index position where text should be inserted (required when insert_position is \"index\").",
+          "message": "應插入文字的特定字元索引位置（當 insert_position 為 \"index\" 時為必填）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.display_name": {
+          "source": "Index",
+          "message": "索引"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.short_desc": {
+          "source": "Specific position index",
+          "message": "特定位置索引"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmJlZ2lubmluZw.display_name": {
+          "source": "Beginning of Document",
+          "message": "文件開頭"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmVuZA.display_name": {
+          "source": "End of Document",
+          "message": "文件結尾"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmluZGV4.display_name": {
+          "source": "Specific Index",
+          "message": "特定索引"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.desc": {
+          "source": "Specifies where in the document to insert the text: at the end, beginning, or at a specific index position.",
+          "message": "指定要在文件中何處插入文字：在結尾、開頭或特定的索引位置。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.display_name": {
+          "source": "Insert Position",
+          "message": "插入位置"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.short_desc": {
+          "source": "Where to insert the text",
+          "message": "要插入文字的位置"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.desc": {
+          "source": "The text content to be added to the document.",
+          "message": "要新增至文件的文字內容。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.display_name": {
+          "source": "Text",
+          "message": "文字"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.short_desc": {
+          "source": "Text content to append",
+          "message": "要附加的文字內容"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.desc": {
+          "source": "Formatting options to apply to the inserted text.",
+          "message": "套用至所插入文字的格式設定選項。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.display_name": {
+          "source": "Text Style",
+          "message": "文字樣式"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.short_desc": {
+          "source": "Formatting options for text",
+          "message": "文字的格式設定選項"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.short_desc": {
+          "source": "Add text to an existing Google Docs document at a specified position.",
+          "message": "在指定的位置將文字新增至現有的 Google Docs 文件。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.desc": {
+          "source": "Retrieves comprehensive information about a Google Docs document including metadata, permissions, content, and sharing settings. Also provides the document content as plain text.",
+          "message": "檢索 Google Docs 文件的完整資訊，包含中繼資料、權限、內容和共用設定。此外亦提供純文字格式的文件內容。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.display_name": {
+          "source": "Get Document by ID",
+          "message": "依 ID 取得文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to retrieve information for.",
+          "message": "要檢索其資訊之 Google Docs 文件的唯一識別碼。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "文件 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Google Docs document ID",
+          "message": "Google Docs 文件 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.short_desc": {
+          "source": "Retrieve detailed information about a Google Docs document.",
+          "message": "檢索 Google Docs 文件的詳細資訊。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Docs** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Google Docs** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對此應用程式上尚未公開為一級動作的端點使用此動作。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Docs",
+          "message": "對 Google Docs 發送自訂 API 呼叫"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors for new Google Docs documents created in Google Drive. Can be filtered by folder, filename patterns, and optionally includes document content in the trigger payload.",
+          "message": "監控在 Google Drive 中建立的新 Google Docs 文件。可依資料夾、檔案名稱模式進行篩選，並可選擇在觸發程序載荷中包含文件內容。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "新文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID to monitor for new documents. If not specified, monitors all accessible folders.",
+          "message": "要監控新文件的 Google Drive 資料夾 ID。若未指定，則監控所有可存取的資料夾。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "資料夾 ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Specific folder to monitor",
+          "message": "要監控的特定資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.desc": {
+          "source": "Optional filename filter to only trigger for documents with names that match this pattern.",
+          "message": "可選的檔案名稱篩選器，僅針對名稱符合此模式的文件進行觸發。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename Filter",
+          "message": "檔案名稱篩選器"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Filter by document name",
+          "message": "依文件名稱篩選"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.desc": {
+          "source": "Whether to include the actual document content in the trigger payload. This may increase processing time and payload size.",
+          "message": "是否在觸發程序載荷中包含實際的文件內容。這可能會增加處理時間與載荷大小。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.display_name": {
+          "source": "Include Content",
+          "message": "包含內容"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.short_desc": {
+          "source": "Include document content in trigger",
+          "message": "在觸發程序中包含文件內容"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "包含"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全符合"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Determines how the filename filter is applied - either contains the text or matches exactly.",
+          "message": "決定如何套用檔案名稱篩選器 - 包含文字或完全相符。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "搜尋類型"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "How to match the filename",
+          "message": "如何比對檔案名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new Google Docs document is created.",
+          "message": "建立新的 Google Docs 文件時觸發。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.desc": {
+          "source": "Search for Google Docs documents in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "使用各種條件（包括檔案名稱、資料夾位置和自訂查詢）在 Google Drive 中搜尋 Google Docs 文件。支援依不同欄位與方向排序，並支援分頁。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.display_name": {
+          "source": "Search Documents",
+          "message": "搜尋文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "自訂 Google Drive 搜尋查詢，以在基本選項之外新增額外的篩選條件。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "自訂查詢"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "額外的搜尋條件"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "限制搜尋的 Google Drive 資料夾 ID。若未指定，則搜尋所有可存取的資料夾。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "要在其中搜尋的資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Docs document to search for.",
+          "message": "要搜尋的 Google Docs 文件名稱或部分名稱。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "檔案名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the document to search for",
+          "message": "要搜尋的文件名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "要套用至搜尋結果的排序條件清單。每個項目指定一個欄位和方向。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "排序依據"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "結果的排序條件"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "包含"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全符合"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "如何比對檔案名稱 - 包含文字或完全相符。預設為包含。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "搜尋類型"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "檔案名稱比對類型"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of documents to return in a single request. Default is 100.",
+          "message": "單一請求中要傳回的最大文件數量。預設值為 100。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "要傳回的最大結果數量"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.short_desc": {
+          "source": "Search for Google Docs documents with advanced filtering and sorting options.",
+          "message": "使用進階篩選與排序選項搜尋 Google Docs 文件。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.desc": {
+          "source": "Uploads a document file (Word, PDF, etc.) to Google Drive and converts it to Google Docs format for editing and collaboration.",
+          "message": "將文件檔案（Word、PDF 等）上傳至 Google Drive，並轉換為 Google Docs 格式以進行編輯與協作。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.display_name": {
+          "source": "Upload Document",
+          "message": "上傳文件"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID where the uploaded document should be stored. If not specified, it will be uploaded to the root folder.",
+          "message": "儲存已上傳文件的 Google Drive 資料夾 ID。若未指定，將上傳至根資料夾。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.short_desc": {
+          "source": "Destination folder for upload",
+          "message": "上傳的目的地資料夾"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.desc": {
+          "source": "The document file to upload and convert to Google Docs format.",
+          "message": "要上傳並轉換為 Google Docs 格式的文件檔案。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "檔案"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.short_desc": {
+          "source": "Document file to upload",
+          "message": "要上傳的文件檔案"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded file. If not provided, the original filename will be used.",
+          "message": "上傳檔案的可選自訂名稱。若未提供，將使用原始檔案名稱。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "檔案名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for uploaded file",
+          "message": "上傳檔案的自訂名稱"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.short_desc": {
+          "source": "Upload a file and convert it to Google Docs format.",
+          "message": "上傳檔案並將其轉換為 Google Docs 格式。"
+        },
+        "app.R29vZ2xlRG9jcw.desc": {
+          "source": "Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.",
+          "message": "與 Google Docs 整合以建立、更新和管理您的文件。此整合允許您在 Google Docs 帳戶中執行動作並回應事件，使您能夠自動化文件管理和協作工作流程。"
+        },
+        "app.R29vZ2xlRG9jcw.display_name": {
+          "source": "Google Docs",
+          "message": "Google Docs"
+        },
+        "app.R29vZ2xlRG9jcw.short_desc": {
+          "source": "Connect with Google Docs to manage your documents",
+          "message": "連接 Google Docs 以管理您的文件"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
+          "message": "從聊天中移除訊息。如果機器人擁有管理員權限，它可以刪除自己的訊息以及其他使用者的訊息。"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "刪除訊息"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be deleted is located",
+          "message": "選取要刪除的訊息所在的聊天"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be deleted",
+          "message": "要刪除訊息的聊天"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be deleted from the chat",
+          "message": "要從聊天中刪除之訊息的專屬識別碼"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to delete",
+          "message": "要刪除的訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a specific message from a chat",
+          "message": "從聊天中刪除特定訊息"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.desc": {
+          "source": "Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.",
+          "message": "修改先前由機器人傳送之訊息的文字內容。僅適用於機器人傳送的文字訊息。"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.display_name": {
+          "source": "Edit Message",
+          "message": "編輯訊息"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be edited is located",
+          "message": "選取要編輯的訊息所在的聊天"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat containing the message to edit",
+          "message": "包含要編輯之訊息的聊天"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "若啟用，訊息中的連結將不會顯示自動預覽"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.display_name": {
+          "source": "Disable Web Page Preview",
+          "message": "停用網頁預覽"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "停用自動連結預覽"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be edited",
+          "message": "應編輯之訊息的唯一識別碼"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to edit",
+          "message": "要編輯之訊息的 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the text (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "選擇文字的格式化模式（純文字、Markdown、Markdown V2 或 HTML）"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.display_name": {
+          "source": "Text Format",
+          "message": "文字格式"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the new message text",
+          "message": "如何格式化新訊息文字"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The updated text that will replace the current message content",
+          "message": "將取代目前訊息內容的更新文字"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "新文字"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The new text content for the message",
+          "message": "訊息的新文字內容"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.short_desc": {
+          "source": "Edit the text of a previously sent message",
+          "message": "編輯先前發送訊息的文字"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.desc": {
+          "source": "Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions",
+          "message": "擷取機器人最近接收到訊息或互動的聊天室、群組和頻道清單"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.display_name": {
+          "source": "List Recent Chats",
+          "message": "列出最近的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of recent chats to retrieve (default: 10)",
+          "message": "要擷取的最近聊天室最大數量（預設值：10）"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of chats to return",
+          "message": "要傳回的聊天室最大數量"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.short_desc": {
+          "source": "Get a list of recent chats the bot has interacted with",
+          "message": "取得機器人最近互動過的聊天室清單"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Telegram** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Telegram** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中作為一級動作公開時，請使用此動作。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Telegram",
+          "message": "向 Telegram 發起自訂 API 呼叫"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors a chat for new incoming messages and triggers automation workflows when messages are received from users or other bots",
+          "message": "監控聊天室是否有新的傳入訊息，並在收到來自使用者或其他機器人的訊息時觸發自動化工作流程"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "新訊息"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the specific chat, group, or channel where you want to detect new incoming messages",
+          "message": "選取您要偵測新傳入訊息的特定聊天室、群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat to Monitor",
+          "message": "要監控的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat to monitor for new messages",
+          "message": "要監控新訊息的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in a specific chat",
+          "message": "在特定聊天室中收到新訊息時觸發"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",
+          "message": "向您的機器人可存取的任何聊天室、群組或頻道發送帶有選填格式的文字訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message",
+          "message": "傳送訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the message",
+          "message": "選取您要發送訊息的聊天室、群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the message to",
+          "message": "要發送訊息的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "若啟用，訊息中的連結將不會顯示自動預覽"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.display_name": {
+          "source": "Disable Link Preview",
+          "message": "停用連結預覽"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "停用自動連結預覽"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the message without notification sound",
+          "message": "若啟用，使用者將在無通知音效的情況下收到訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "以靜音方式發送"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the message without notification sound",
+          "message": "發送無通知音效的訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.desc": {
+          "source": "Choose the formatting mode for the message (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "選擇訊息的格式化模式（純文字、Markdown、Markdown V2 或 HTML）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.display_name": {
+          "source": "Text Format",
+          "message": "文字格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.short_desc": {
+          "source": "How to format the message text",
+          "message": "如何格式化訊息文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.desc": {
+          "source": "The message content to send. Can include formatting depending on the selected format mode",
+          "message": "要發送的訊息內容。可根據所選格式模式包含格式設定"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.display_name": {
+          "source": "Message Text",
+          "message": "訊息文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "訊息的文字內容"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a text message to a chat",
+          "message": "向聊天室發送文字訊息"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.desc": {
+          "source": "Upload and send an image file to any chat, group, or channel with optional caption and formatting",
+          "message": "上傳並發送圖片檔案至任何聊天室、群組或頻道，並可附帶選填說明文字與格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.display_name": {
+          "source": "Send Photo",
+          "message": "發送相片"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.desc": {
+          "source": "Text description or caption to accompany the photo",
+          "message": "隨相片附帶的文字說明或圖說"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.display_name": {
+          "source": "Photo Caption",
+          "message": "相片說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the photo",
+          "message": "相片的選填說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the photo caption",
+          "message": "選擇相片說明文字的格式化模式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "說明文字格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "如何格式化說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the photo",
+          "message": "選取您要發送相片的聊天室、群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the photo to",
+          "message": "要發送相片的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the photo without notification sound",
+          "message": "若啟用，使用者將在無通知音效的情況下收到相片"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "以靜音方式發送"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the photo without notification sound",
+          "message": "發送無通知音效的相片"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.desc": {
+          "source": "Upload the image file (JPG, PNG, GIF, etc.) to send to the chat",
+          "message": "上傳要發送到聊天室的圖片檔案（JPG、PNG、GIF 等）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.display_name": {
+          "source": "Photo File",
+          "message": "相片檔案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.short_desc": {
+          "source": "The image file to send",
+          "message": "要發送的圖片檔案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the photo cannot be forwarded or saved by users",
+          "message": "若啟用，使用者將無法轉發或儲存此相片"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "保護內容"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "防止內容被轉發與儲存"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.short_desc": {
+          "source": "Send a photo with optional caption to a chat",
+          "message": "向聊天室發送相片及選填說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.desc": {
+          "source": "Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge",
+          "message": "建立具多個答案選項的互動式投票或測驗，非常適合收集反饋或測試知識"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.display_name": {
+          "source": "Send Poll",
+          "message": "發送投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.desc": {
+          "source": "Select which answer option is correct (zero-based index, only for quiz polls)",
+          "message": "選取正確的答案選項（從 0 開始的索引，僅適用於測驗投票）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.display_name": {
+          "source": "Correct Answer",
+          "message": "正確答案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.short_desc": {
+          "source": "The correct answer for quiz polls",
+          "message": "測驗投票的正確答案"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the poll",
+          "message": "選取您要發送投票的聊天室、群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the poll to",
+          "message": "要發送投票的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "Unix timestamp for when the poll should automatically close",
+          "message": "投票自動結束時間的 Unix 時間戳記"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "關閉日期"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "Specific date/time to close the poll",
+          "message": "結束投票的特定日期/時間"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.desc": {
+          "source": "The answer choices that users can select from. Must have between 2 and 10 options",
+          "message": "使用者可選擇的答案選項。必須介於 2 到 10 個選項之間"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.display_name": {
+          "source": "Answer Options",
+          "message": "答案選項"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.short_desc": {
+          "source": "List of possible answers (2-10 options)",
+          "message": "可能答案的清單（2-10 個選項）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.desc": {
+          "source": "If enabled, users can select more than one answer option (only for regular polls)",
+          "message": "若啟用，使用者可選擇多個答案選項（僅適用於一般投票）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.display_name": {
+          "source": "Multiple Answers",
+          "message": "複選"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.short_desc": {
+          "source": "Allow users to select multiple options",
+          "message": "允許使用者選擇多個選項"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the poll without notification sound",
+          "message": "若啟用，使用者將在沒有通知音效的情況下收到投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "以靜音方式發送"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the poll without notification sound",
+          "message": "在無通知音效的情況下發送投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.desc": {
+          "source": "Optional explanation that appears when users answer the quiz",
+          "message": "使用者回答測驗時顯示的選填說明"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.display_name": {
+          "source": "Explanation",
+          "message": "說明"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.short_desc": {
+          "source": "Explanation text for the correct answer",
+          "message": "正確答案的說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the explanation text",
+          "message": "選擇說明文字的格式化模式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.display_name": {
+          "source": "Explanation Format",
+          "message": "說明格式"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the explanation text",
+          "message": "如何格式化說明文字"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.desc": {
+          "source": "If enabled, the poll will be sent already closed (for demonstration purposes)",
+          "message": "若啟用，投票發送時將處於已結束狀態（供示範用途）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.display_name": {
+          "source": "Send Closed Poll",
+          "message": "發送已結束的投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.short_desc": {
+          "source": "Send the poll in a closed state",
+          "message": "以結束狀態發送投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.desc": {
+          "source": "If enabled, user votes will be anonymous. If disabled, votes will be visible to other users",
+          "message": "若啟用，使用者投票將為匿名。若停用，其他使用者可看見投票結果"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.display_name": {
+          "source": "Anonymous Poll",
+          "message": "匿名投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.short_desc": {
+          "source": "Should the poll be anonymous?",
+          "message": "投票是否應設為匿名？"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.desc": {
+          "source": "Duration in seconds that the poll will accept votes (5-600 seconds)",
+          "message": "投票接受投票的持續時間（以秒為單位，5-600 秒）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.display_name": {
+          "source": "Open Period",
+          "message": "開放時間"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.short_desc": {
+          "source": "How long the poll stays open (in seconds)",
+          "message": "投票保持開放的時間（秒）"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnF1aXo.display_name": {
+          "source": "Quiz",
+          "message": "測驗"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnJlZ3VsYXI.display_name": {
+          "source": "Regular Poll",
+          "message": "標準投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.desc": {
+          "source": "Choose between a regular poll or a quiz where you can specify correct answers",
+          "message": "在標準投票或可指定正確答案的測驗之間進行選擇"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.display_name": {
+          "source": "Poll Type",
+          "message": "投票類型"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.short_desc": {
+          "source": "Regular poll or quiz with correct answers",
+          "message": "標準投票或帶有正確答案的測驗"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the poll cannot be forwarded by users",
+          "message": "若啟用，使用者將無法轉發此投票"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "保護內容"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "防止內容被轉發與儲存"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.desc": {
+          "source": "The question that users will answer in the poll",
+          "message": "使用者在投票中回答的問題"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.display_name": {
+          "source": "Poll Question",
+          "message": "投票問題"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.short_desc": {
+          "source": "The main question for the poll",
+          "message": "投票的主要問題"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.short_desc": {
+          "source": "Create and send a poll or quiz to a chat",
+          "message": "建立並發送投票或測驗至聊天室"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.desc": {
+          "source": "Pin an important message to the top of a group or channel chat for all members to see",
+          "message": "將重要訊息置頂在群組或頻道聊天頂部供所有成員查看"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.display_name": {
+          "source": "Pin Message",
+          "message": "釘選訊息"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to pin the message",
+          "message": "選取您想要置頂訊息的群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be pinned",
+          "message": "要置頂訊息的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, the message will be pinned without sending a notification to group members",
+          "message": "若啟用，置頂訊息時將不會向群組成員發送通知"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Pin Silently",
+          "message": "靜音置頂"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Pin the message without notification",
+          "message": "在不發送通知的情況下置頂訊息"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be pinned",
+          "message": "要置頂訊息的唯一識別碼"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to pin",
+          "message": "要置頂的訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.short_desc": {
+          "source": "Pin a message in a group or channel",
+          "message": "在群組或頻道中置頂訊息"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.desc": {
+          "source": "Remove a pinned message from a group or channel, or unpin all currently pinned messages",
+          "message": "從群組或頻道中移除置頂訊息，或取消置頂目前所有已置頂的訊息"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.display_name": {
+          "source": "Unpin Message",
+          "message": "取消釘選訊息"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to unpin messages",
+          "message": "選取您想要取消置頂訊息的群組或頻道"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "即時通訊"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be unpinned",
+          "message": "要取消置頂訊息的聊天室"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the specific message to unpin. Leave empty to unpin all pinned messages",
+          "message": "要取消置頂的特定訊息唯一識別碼。保留為空可取消置頂所有置頂訊息"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "訊息 ID"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to unpin (leave empty to unpin all)",
+          "message": "要取消置頂的訊息 ID（保留為空可取消置頂全部）"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.short_desc": {
+          "source": "Unpin a specific message or all pinned messages",
+          "message": "取消置頂特定訊息或所有置頂訊息"
+        },
+        "app.VGVsZWdyYW0.desc": {
+          "source": "Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.",
+          "message": "使用 Telegram Bot 的 Bot Token 連線以發送訊息並處理接收到的更新。驗證僅透過 @BotFather 發行的 Bot Token 完成；無需使用者登入。"
+        },
+        "app.VGVsZWdyYW0.display_name": {
+          "source": "Telegram",
+          "message": "Telegram"
+        },
+        "app.VGVsZWdyYW0.short_desc": {
+          "source": "Connect and interact with Telegram via a bot",
+          "message": "透過機器人連線並與 Telegram 互動"
+        }
+      }
+    }
+  }
+}

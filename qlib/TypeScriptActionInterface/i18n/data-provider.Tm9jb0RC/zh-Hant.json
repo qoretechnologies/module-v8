@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.desc": {
+          "source": "Returns the total number of records in a NocoDB table. You can optionally filter the count using a where clause to count only records matching specific criteria.",
+          "message": "傳回 NocoDB 表格中的記錄總數。您可以選擇性地使用 where 子句篩選計數，僅計算符合特定條件的記錄。"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
+          "source": "Count Records",
+          "message": "計算記錄數"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "選擇包含該表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "選擇包含具有該表格之 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only count records matching specific criteria.",
+          "message": "可選擇使用 NocoDB where 語法指定篩選條件（例如 \"(Status,eq,Active)\"），以僅計算符合特定條件的記錄。"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Where 篩選條件"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
+          "source": "Optional filter to count specific records",
+          "message": "用於計算特定記錄的選用篩選條件"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to count records from.",
+          "message": "選擇要計算記錄數的 NocoDB 表格。"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.short_desc": {
+          "source": "The table to count records from",
+          "message": "要計算記錄數的表格"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
+          "source": "Get the count of records in a table",
+          "message": "取得表格中的記錄數"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格建立新記錄"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格建立新記錄"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "從應用程式「NocoDB」中的指定表格刪除記錄"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "從應用程式「NocoDB」中的指定表格刪除記錄"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.desc": {
+          "source": "Links records from another table to a record via a link field. This creates a relationship between the records without affecting existing links.",
+          "message": "透過連結欄位將另一個表格的記錄連結至某記錄。這會在記錄之間建立關聯，而不會影響現有的連結。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
+          "source": "Link Records",
+          "message": "連結記錄"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "選擇包含該表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship between tables.",
+          "message": "選擇定義表格間關聯的連結欄位（Link to Another Record）。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "連結欄位"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field to use for the relationship",
+          "message": "用於建立關聯的連結欄位"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to connect to the source record.",
+          "message": "提供要連線至來源記錄的已連結表格記錄識別碼。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Link",
+          "message": "要連結的記錄"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to link",
+          "message": "要連結的記錄識別碼"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to link from.",
+          "message": "指定要建立連結的來源表格中記錄的識別碼。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "來源記錄識別碼"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "選擇包含具有該表格之 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to link from.",
+          "message": "選擇包含您要建立連結之來源記錄的 NocoDB 表格。"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "包含來源記錄的表格"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
+          "source": "Create relationships between records",
+          "message": "在記錄之間建立關聯"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NocoDB** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **NocoDB** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用查詢參數、標頭與請求主體。回應將以包含狀態碼、回應標頭與回應主體的雜湊形式傳回。\n\n針對此應用程式上尚未公開為一級動作的端點，請使用此動作。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NocoDB",
+          "message": "對 NocoDB 進行自訂 API 呼叫"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a NocoDB table for new rows and triggers when new records are detected. You can optionally filter which rows trigger the event using a where clause.",
+          "message": "監視 NocoDB 表格的新資料列，並在偵測到新記錄時觸發。您可以選擇性地使用 where 子句篩選哪些資料列會觸發事件。"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "新增列"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table you want to monitor for new rows.",
+          "message": "選擇包含您要監視新資料列之表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table you want to monitor.",
+          "message": "選擇包含具有您要監視之表格的 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only trigger for rows matching specific criteria.",
+          "message": "可選擇使用 NocoDB where 語法指定篩選條件（例如 \"(Status,eq,Active)\"），以僅針對符合特定條件的資料列觸發。"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Where 篩選條件"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {
+          "source": "Optional filter for new rows",
+          "message": "新資料列的選用篩選條件"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table.",
+          "message": "選擇要監視的 NocoDB 表格。當新資料列新增至此表格時，觸發程式將會觸發。"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "要監控新列的資料表"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Trigger when a new row is added to a NocoDB table",
+          "message": "當新資料列新增至 NocoDB 表格時觸發"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格搜尋相符的記錄"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格搜尋相符的記錄"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格搜尋單筆相符的記錄"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "在應用程式「NocoDB」中的指定表格搜尋單筆相符的記錄"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.desc": {
+          "source": "Programmatically triggers a button action (such as AI generation or webhook) for specified records. Maximum of 25 records can be processed at a time.",
+          "message": "以程式化方式為指定的記錄觸發按鈕動作（例如 AI 生成或 Webhook）。一次最多可處理 25 筆記錄。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
+          "source": "Trigger Button",
+          "message": "觸發按鈕"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "選擇包含該表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.desc": {
+          "source": "Select the button field whose action should be triggered for the specified records.",
+          "message": "選擇要為指定記錄觸發其動作的按鈕欄位。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
+          "source": "Button Field",
+          "message": "按鈕欄位"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
+          "source": "The button field to trigger",
+          "message": "要觸發的按鈕欄位"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.desc": {
+          "source": "When enabled, the button action runs in preview mode and changes are not saved. Useful for testing.",
+          "message": "啟用時，按鈕動作將以預覽模式執行且不會儲存變更。這對於測試很有用。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
+          "source": "Preview Mode",
+          "message": "預覽模式"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
+          "source": "Run in preview mode without saving changes",
+          "message": "在預覽模式下執行而不儲存變更"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records to trigger the button action for. Maximum 25 records per request.",
+          "message": "提供要觸發按鈕動作的記錄識別碼。每次請求最多 25 筆記錄。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.display_name": {
+          "source": "Record IDs",
+          "message": "記錄識別碼"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to process",
+          "message": "要處理的記錄 ID"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "選擇包含具有該表格之 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the button field to trigger.",
+          "message": "選取包含要觸發的按鈕欄位的 NocoDB 資料表。"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.short_desc": {
+          "source": "The table containing the button field",
+          "message": "包含按鈕欄位的資料表"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
+          "source": "Trigger a button action on records",
+          "message": "在記錄上觸發按鈕操作"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.desc": {
+          "source": "Removes the link between records via a link field. This breaks the relationship without deleting any records.",
+          "message": "透過連結欄位移除記錄之間的連結。這會解除關聯性而不會刪除任何記錄。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
+          "source": "Unlink Records",
+          "message": "取消連結記錄"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "選擇包含該表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship to remove.",
+          "message": "選取定義要移除之關聯性的連結欄位 (連結至另一筆記錄)。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "連結欄位"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field with the relationship",
+          "message": "具有關聯性的連結欄位"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to disconnect from the source record.",
+          "message": "提供要與來源記錄解除連線的已連結資料表記錄 ID。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Unlink",
+          "message": "要取消連結的記錄"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to unlink",
+          "message": "要取消連結的記錄 ID"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to unlink from.",
+          "message": "指定來源資料表中要解除連結的記錄 ID。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "來源記錄識別碼"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "選擇包含具有該表格之 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to unlink from.",
+          "message": "選取包含您要取消連結之記錄的 NocoDB 資料表。"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "包含來源記錄的表格"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
+          "source": "Remove relationships between records",
+          "message": "移除記錄之間的關聯性"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "更新應用程式「NocoDB」中指定資料表的現有記錄"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "更新應用程式「NocoDB」中指定資料表的現有記錄"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.desc": {
+          "source": "Uploads a file to a specific attachment field in a NocoDB record. The file will be stored in NocoDB and associated with the specified record.",
+          "message": "將檔案上傳至 NocoDB 記錄中的特定附件欄位。該檔案將儲存在 NocoDB 中並與指定記錄關聯。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
+          "source": "Upload Attachment",
+          "message": "上傳附件"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.desc": {
+          "source": "Select the attachment field in the table where the file will be stored.",
+          "message": "選取資料表中將儲存檔案的附件欄位。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
+          "source": "Attachment Field",
+          "message": "附件欄位"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
+          "source": "The attachment field to upload to",
+          "message": "要上傳至的附件欄位"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "選擇包含該表格的 NocoDB Base（專案）。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "包含該表格的 NocoDB Base"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.desc": {
+          "source": "The file to upload to the attachment field. Supports various file types including images, documents, and more.",
+          "message": "要上傳至附件欄位的檔案。支援包括圖片、文件等多種檔案類型。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "檔案"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "要上傳的檔案"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record where the file should be uploaded.",
+          "message": "指定應將檔案上傳至的記錄 ID。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The ID of the record to attach the file to",
+          "message": "要附加檔案的記錄 ID"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "選擇包含具有該表格之 Base 的 NocoDB 工作區。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "工作區"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "包含該 Base 的 NocoDB 工作區"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record to attach the file to.",
+          "message": "選取包含要附加檔案之記錄的 NocoDB 資料表。"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.short_desc": {
+          "source": "The table containing the record",
+          "message": "包含記錄的資料表"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
+          "source": "Upload a file to an attachment field",
+          "message": "將檔案上傳至附件欄位"
+        },
+        "app.Tm9jb0RC.desc": {
+          "source": "The NocoDB integration provides comprehensive access to your NocoDB database operations. Create, read, update, and delete records in your tables, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your NocoDB workflow automation and database management.",
+          "message": "NocoDB 整合提供對您 NocoDB 資料庫操作的全面存取。在資料表中建立、讀取、更新和刪除記錄，並透過即時觸發器監控新項目。無論您需要管理資料、篩選結果還是追蹤新記錄，此整合都能簡化您的 NocoDB 工作流程自動化和資料庫管理。"
+        },
+        "app.Tm9jb0RC.display_name": {
+          "source": "NocoDB",
+          "message": "NocoDB"
+        },
+        "app.Tm9jb0RC.short_desc": {
+          "source": "Connect to NocoDB to manage your database tables and records with powerful automation",
+          "message": "連線至 NocoDB，以強大的自動化功能管理您的資料庫資料表與記錄"
+        }
+      }
+    }
+  }
+}

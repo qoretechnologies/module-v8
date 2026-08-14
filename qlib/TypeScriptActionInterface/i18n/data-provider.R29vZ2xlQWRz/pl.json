@@ -1,0 +1,3121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Creates a new ad group in a specified campaign with the given name, type, status, and CPC bid.",
+          "message": "Tworzy nową grupę reklam w określonej kampanii o podanej nazwie, typie, statusie i stawce CPC."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Create Ad Group",
+          "message": "Utwórz grupę reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the new ad group will be created.",
+          "message": "Wybierz kampanię, w której zostanie utworzona nowa grupa reklam."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to create the ad group in",
+          "message": "Kampania, w której zostanie utworzona grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The maximum CPC bid amount in your account currency (e.g., 1.50 for $1.50).",
+          "message": "Maksymalna kwota stawki CPC w walucie Twojego konta (np. 1,50 dla $1.50)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "Stawka CPC"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "Maximum cost-per-click bid amount",
+          "message": "Maksymalna kwota stawki za kliknięcie"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the ad group.",
+          "message": "Opisowa nazwa grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "Nazwa grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new ad group",
+          "message": "Nazwa dla nowej grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad group without immediately serving ads.",
+          "message": "Ustaw wartość PAUSED, aby utworzyć grupę reklam bez natychmiastowego wyświetlania reklam."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "Początkowy status"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad group as enabled or paused",
+          "message": "Czy uruchomić grupę reklam jako włączoną, czy wstrzymaną"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOkRJU1BMQVlfU1RBTkRBUkQ.display_name": {
+          "source": "Display Standard",
+          "message": "Standardowa w sieci reklamowej"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOlNFQVJDSF9TVEFOREFSRA.display_name": {
+          "source": "Search Standard",
+          "message": "Standardowa w sieci wyszukiwania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.desc": {
+          "source": "The type of ad group to create.",
+          "message": "Typ grupy reklam do utworzenia."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.display_name": {
+          "source": "Ad Group Type",
+          "message": "Typ grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.short_desc": {
+          "source": "Type of ad group",
+          "message": "Typ grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Create a new ad group within a campaign",
+          "message": "Utwórz nową grupę reklam w ramach kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.desc": {
+          "source": "Creates a new campaign budget with a specified daily amount.",
+          "message": "Tworzy nowy budżet kampanii z określoną kwotą dzienną."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.display_name": {
+          "source": "Create Budget",
+          "message": "Utwórz budżet"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "Dzienna kwota budżetu w walucie konta (np. 50,00 dla $50/dzień)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "Kwota dzienna"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "Dzienna kwota budżetu w walucie konta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOkFDQ0VMRVJBVEVE.display_name": {
+          "source": "Accelerated",
+          "message": "Przyspieszone"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOlNUQU5EQVJE.display_name": {
+          "source": "Standard",
+          "message": "Standardowe"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.desc": {
+          "source": "STANDARD spreads the budget evenly. ACCELERATED spends it as fast as possible (deprecated for most campaign types).",
+          "message": "Metoda STANDARD równomiernie rozkłada budżet. Metoda ACCELERATED wydaje go jak najszybciej (wycofana dla większości typów kampanii)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.display_name": {
+          "source": "Delivery Method",
+          "message": "Metoda wyświetlania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.short_desc": {
+          "source": "How the budget is spent throughout the day",
+          "message": "Sposób wydatkowania budżetu w ciągu dnia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign budget.",
+          "message": "Opisowa nazwa budżetu kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "Nazwa budżetu"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "Name for the budget",
+          "message": "Nazwa budżetu"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.short_desc": {
+          "source": "Create a new campaign budget",
+          "message": "Utwórz nowy budżet kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Creates a new portfolio bidding strategy that can be shared across multiple campaigns.",
+          "message": "Tworzy nową strategię ustalania stawek w portfelu, którą można udostępniać w wielu kampaniach."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Create Bidding Strategy",
+          "message": "Utwórz strategię ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the portfolio bidding strategy.",
+          "message": "Opisowa nazwa strategii ustalania stawek w portfelu."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "Nazwa strategii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "Name for the bidding strategy",
+          "message": "Nazwa strategii ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The target CPA in your account currency. Required when strategy type is TARGET_CPA.",
+          "message": "Docelowy CPA w walucie konta. Wymagane, gdy typem strategii jest TARGET_CPA."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "Docelowy CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Target cost-per-acquisition amount",
+          "message": "Docelowy koszt pozyskania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The target ROAS as a ratio (e.g., 3.0 for 300% ROAS). Required when strategy type is TARGET_ROAS.",
+          "message": "Docelowy ROAS jako współczynnik (np. 3,0 dla 300% ROAS). Wymagane, gdy typem strategii jest TARGET_ROAS."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "Docelowy ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Target return on ad spend",
+          "message": "Docelowy zwrot z nakładów na reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "Maksymalizuj liczbę konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "Maksymalizuj wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9DUEE.display_name": {
+          "source": "Target CPA",
+          "message": "Docelowy CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9ST0FT.display_name": {
+          "source": "Target ROAS",
+          "message": "Docelowy ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.desc": {
+          "source": "The bidding optimization goal (e.g., Target CPA, Target ROAS, Maximize Conversions).",
+          "message": "Cel optymalizacji stawek (np. Target CPA, Target ROAS, Maximize Conversions)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.display_name": {
+          "source": "Strategy Type",
+          "message": "Typ strategii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.short_desc": {
+          "source": "Type of bidding strategy",
+          "message": "Typ strategii ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Create a portfolio bidding strategy",
+          "message": "Utwórz strategię ustalania stawek w portfelu"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Creates a new CRM-based user list for customer match targeting.",
+          "message": "Tworzy nową listę użytkowników opartą na danych CRM na potrzeby kierowania na listę klientów."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Create Customer List",
+          "message": "Utwórz listę klientów"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "A description of the customer list and its intended use.",
+          "message": "Opis listy klientów i jej przeznaczenia."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the customer list",
+          "message": "Opis listy klientów"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.desc": {
+          "source": "The number of days a user remains on the list. Set to 10000 for no expiration.",
+          "message": "Liczba dni, przez które użytkownik pozostaje na liście. Ustaw 10000, aby wyłączyć wygasanie."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.display_name": {
+          "source": "Membership Life Span",
+          "message": "Okres członkostwa"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.short_desc": {
+          "source": "Days until a member is automatically removed",
+          "message": "Liczba dni do automatycznego usunięcia członka"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the customer match list.",
+          "message": "Opisowa nazwa listy dopasowywania klientów."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "List Name",
+          "message": "Nazwa listy"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Name for the customer list",
+          "message": "Nazwa listy klientów"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Create a new customer match audience list",
+          "message": "Utwórz nową listę odbiorców z dopasowywania klientów"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.desc": {
+          "source": "Creates a new campaign in Google Ads with the specified channel type, budget, bidding strategy, and targeting settings. A campaign budget is created automatically.",
+          "message": "Tworzy nową kampanię w Google Ads z określonym typem kanału, budżetem, strategią ustalania stawek i ustawieniami kierowania. Budżet kampanii jest tworzony automatycznie."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Create Campaign",
+          "message": "Utwórz kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOkRJU1BMQVk.display_name": {
+          "source": "Display",
+          "message": "Sieć reklamowa"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlBFUkZPUk1BTkNFX01BWA.display_name": {
+          "source": "Performance Max",
+          "message": "Performance Max"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNFQVJDSA.display_name": {
+          "source": "Search",
+          "message": "Szukaj"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNIT1BQSU5H.display_name": {
+          "source": "Shopping",
+          "message": "Zakupy"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlZJREVP.display_name": {
+          "source": "Video",
+          "message": "Wideo"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.desc": {
+          "source": "The type of advertising channel for this campaign (e.g., Search, Display, Shopping, Video).",
+          "message": "Typ kanału reklamowego dla tej kampanii (np. Search, Display, Shopping, Video)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.display_name": {
+          "source": "Channel Type",
+          "message": "Typ kanału"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.short_desc": {
+          "source": "Advertising channel type",
+          "message": "Typ kanału reklamowego"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BTlVBTF9DUEM.display_name": {
+          "source": "Manual CPC",
+          "message": "Ręczny CPC"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NMSUNLUw.display_name": {
+          "source": "Maximize Clicks",
+          "message": "Maksymalizuj liczbę kliknięć"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "Maksymalizuj liczbę konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "Maksymalizuj wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOlRBUkdFVF9JTVBSRVNTSU9OX1NIQVJF.display_name": {
+          "source": "Target Impression Share",
+          "message": "Docelowy udział w wyświetleniach"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.desc": {
+          "source": "The bidding strategy to use for this campaign.",
+          "message": "Strategia ustalania stawek do użycia w tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "Strategia ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.short_desc": {
+          "source": "Campaign bidding strategy",
+          "message": "Strategia ustalania stawek w kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "Dzienna kwota budżetu w walucie konta (np. 50,00 dla $50/dzień)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.display_name": {
+          "source": "Daily Budget",
+          "message": "Budżet dzienny"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "Dzienna kwota budżetu w walucie konta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign.",
+          "message": "Opisowa nazwa kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "Nazwa kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "Name for the new campaign",
+          "message": "Nazwa nowej kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the campaign without immediately serving ads.",
+          "message": "Ustaw wartość PAUSED, aby utworzyć kampanię bez natychmiastowego wyświetlania reklam."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "Początkowy status"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the campaign as enabled or paused",
+          "message": "Czy uruchomić kampanię jako włączoną, czy wstrzymaną"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.desc": {
+          "source": "Whether to show ads on Google Search results pages.",
+          "message": "Czy wyświetlać reklamy na stronach wyników wyszukiwania Google."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.display_name": {
+          "source": "Target Google Search",
+          "message": "Kieruj na Wyszukiwarkę Google"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.short_desc": {
+          "source": "Show ads on Google Search",
+          "message": "Wyświetlaj reklamy w Wyszukiwarce Google"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.desc": {
+          "source": "Whether to show ads on Google search partner websites.",
+          "message": "Czy wyświetlać reklamy na stronach partnerów wyszukiwania Google."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.display_name": {
+          "source": "Target Search Network",
+          "message": "Kieruj na sieć wyszukiwania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.short_desc": {
+          "source": "Show ads on search partner sites",
+          "message": "Wyświetlaj reklamy w witrynach partnerów wyszukiwania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Create a new advertising campaign",
+          "message": "Utwórz nową kampanię reklamową"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.desc": {
+          "source": "Creates a responsive search ad (RSA) in a specified ad group with multiple headlines, descriptions, and final URLs. Google Ads will automatically test combinations to find the best-performing ad.",
+          "message": "Tworzy elastyczną reklamę w sieci wyszukiwania (RSA) w określonej grupie reklam z wieloma nagłówkami, opisami i końcowymi adresami URL. Usługa Google Ads automatycznie przetestuje kombinacje, aby znaleźć najlepiej działającą reklamę."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.display_name": {
+          "source": "Create Responsive Search Ad",
+          "message": "Utwórz elastyczną reklamę w sieci wyszukiwania"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the new ad will be created.",
+          "message": "Wybierz grupę reklam, w której zostanie utworzona nowa reklama."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to create the ad in",
+          "message": "Grupa reklam, w której ma zostać utworzona reklama"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.desc": {
+          "source": "List of descriptions for the responsive search ad. Provide at least 2 and up to 4 descriptions (max 90 characters each).",
+          "message": "Lista opisów elastycznej reklamy w sieci wyszukiwania. Podaj od 2 do 4 opisów (maksymalnie 90 znaków każdy)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.display_name": {
+          "source": "Descriptions",
+          "message": "Opisy"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.short_desc": {
+          "source": "Ad descriptions (2-4 required)",
+          "message": "Opisy reklam (wymagane od 2 do 4)"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.desc": {
+          "source": "The URLs that users will be directed to after clicking the ad.",
+          "message": "Adresy URL, na które użytkownicy zostaną przekierowani po kliknięciu reklamy."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.display_name": {
+          "source": "Final URLs",
+          "message": "Końcowe adresy URL"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.short_desc": {
+          "source": "Landing page URLs",
+          "message": "Adresy URL stron docelowych"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.desc": {
+          "source": "List of headlines for the responsive search ad. Provide at least 3 and up to 15 headlines (max 30 characters each).",
+          "message": "Lista nagłówków elastycznej reklamy w sieci wyszukiwania. Podaj od 3 do 15 nagłówków (maksymalnie 30 znaków każdy)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.display_name": {
+          "source": "Headlines",
+          "message": "Nagłówki"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.short_desc": {
+          "source": "Ad headlines (3-15 required)",
+          "message": "Nagłówki reklam (wymagane od 3 do 15)"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad without immediately serving it.",
+          "message": "Ustaw wartość PAUSED, aby utworzyć reklamę bez jej natychmiastowego wyświetlania."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "Początkowy status"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad as enabled or paused",
+          "message": "Czy uruchomić reklamę jako włączoną, czy wstrzymaną"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.desc": {
+          "source": "The first part of the display URL path shown in the ad (max 15 characters).",
+          "message": "Pierwsza część ścieżki wyświetlanego adresu URL widoczna w reklamie (maks. 15 znaków)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.display_name": {
+          "source": "Display Path 1",
+          "message": "Wyświetlana ścieżka 1"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.short_desc": {
+          "source": "First part of the display URL path",
+          "message": "Pierwsza część ścieżki wyświetlanego adresu URL"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.desc": {
+          "source": "The second part of the display URL path shown in the ad (max 15 characters).",
+          "message": "Druga część ścieżki wyświetlanego adresu URL widoczna w reklamie (maks. 15 znaków)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.display_name": {
+          "source": "Display Path 2",
+          "message": "Wyświetlana ścieżka 2"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.short_desc": {
+          "source": "Second part of the display URL path",
+          "message": "Druga część ścieżki wyświetlanego adresu URL"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.short_desc": {
+          "source": "Create a new responsive search ad",
+          "message": "Utwórz nową elastyczną reklamę w sieci wyszukiwania"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.desc": {
+          "source": "Adds campaign-level negative keywords to prevent ads from showing for certain search terms.",
+          "message": "Dodaje wykluczające słowa kluczowe na poziomie kampanii, aby zapobiec wyświetlaniu reklam dla określonych haseł wyszukiwania."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.display_name": {
+          "source": "Add Negative Keywords",
+          "message": "Dodaj wykluczające słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the negative keywords will be added.",
+          "message": "Wybierz kampanię, do której zostaną dodane wykluczające słowa kluczowe."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to add negative keywords to",
+          "message": "Kampania, do której mają zostać dodane wykluczające słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of negative keyword entries to add, each with text and match type.",
+          "message": "Lista wykluczających słów kluczowych do dodania, z których każde zawiera tekst i typ dopasowania."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Negative Keywords",
+          "message": "Wykluczające słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Negative keywords to add",
+          "message": "Wykluczające słowa kluczowe do dodania"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.short_desc": {
+          "source": "Add negative keywords to a campaign",
+          "message": "Dodaj wykluczające słowa kluczowe do kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Adds contacts to a customer match list using hashed user data. Email addresses and phone numbers are automatically normalized and SHA-256 hashed before upload.",
+          "message": "Dodaje kontakty do listy klientów z użyciem zhaszowanych danych użytkowników. Adresy e-mail i numery telefonów są automatycznie normalizowane i haszowane algorytmem SHA-256 przed przesłaniem."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Add Contacts to Customer List",
+          "message": "Dodaj kontakty do listy klientów"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to add to the customer list.",
+          "message": "Lista kontaktów zawierających dane e-mail, numer telefonu lub adres do dodania do listy klientów."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "Kontakty"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to add",
+          "message": "Lista kontaktów do dodania"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list where contacts will be added.",
+          "message": "Wybierz listę klientów, do której zostaną dodane kontakty."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "Lista klientów"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to add contacts to",
+          "message": "Lista klientów, do której mają zostać dodane kontakty"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Upload contacts to a customer match list",
+          "message": "Prześlij kontakty do listy klientów"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.desc": {
+          "source": "Adds one or more keywords to a specified ad group with the given match type and optional CPC bid.",
+          "message": "Dodaje jedno lub więcej słów kluczowych do określonej grupy reklam z podanym typem dopasowania i opcjonalną stawką CPC."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.display_name": {
+          "source": "Add Keywords",
+          "message": "Dodaj słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the keywords will be added.",
+          "message": "Wybierz grupę reklam, do której zostaną dodane słowa kluczowe."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to add keywords to",
+          "message": "Grupa reklam, do której mają zostać dodane słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of keyword entries to add, each with text and match type.",
+          "message": "Lista słów kluczowych do dodania, każde z tekstem i typem dopasowania."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Keywords",
+          "message": "Słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Keywords to add",
+          "message": "Słowa kluczowe do dodania"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.short_desc": {
+          "source": "Add keywords to an ad group",
+          "message": "Dodaj słowa kluczowe do grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.desc": {
+          "source": "Returns details about the authenticated Google Ads customer account, including accessible customer IDs.",
+          "message": "Zwraca szczegóły dotyczące uwierzytelnionego konta klienta Google Ads, w tym dostępne identyfikatory klientów."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.display_name": {
+          "source": "Get Customer Info",
+          "message": "Pobierz informacje o kliencie"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.short_desc": {
+          "source": "Get information about the current Google Ads customer account",
+          "message": "Pobierz informacje o bieżącym koncie klienta Google Ads"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Retrieves detailed information about a specific campaign by its ID, including status, budget, bidding strategy, and performance metrics.",
+          "message": "Pobiera szczegółowe informacje o określonej kampanii na podstawie jej identyfikatora, w tym stan, budżet, strategię ustalania stawek i dane o skuteczności."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "Pobierz kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to retrieve details for.",
+          "message": "Wybierz lub wprowadź identyfikator kampanii, dla której chcesz pobrać szczegóły."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to retrieve",
+          "message": "Kampania do pobrania"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Get details of a specific campaign",
+          "message": "Pobierz szczegóły określonej kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.desc": {
+          "source": "Retrieves ad groups from the Google Ads account, optionally filtered by campaign.",
+          "message": "Pobiera grupy reklam z konta Google Ads, opcjonalnie filtrowane według kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.display_name": {
+          "source": "List Ad Groups",
+          "message": "Lista grup reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ad groups belonging to this campaign.",
+          "message": "Zwracaj tylko grupy reklam należące do tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ad groups to return. Default is 100.",
+          "message": "Maksymalna liczba grup reklam do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ad groups to return",
+          "message": "Maksymalna liczba grup reklam do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "Wszystkie"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ad groups with the specified status.",
+          "message": "Zwracaj tylko grupy reklam o określonym stanie."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "Filtr statusu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ad groups by status",
+          "message": "Filtruj grupy reklam według stanu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.short_desc": {
+          "source": "List ad groups with performance metrics",
+          "message": "Wyświetl listę grup reklam wraz z danymi o skuteczności"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.desc": {
+          "source": "Retrieves ads from the Google Ads account, optionally filtered by campaign, ad group, or status.",
+          "message": "Pobiera reklamy z konta Google Ads, opcjonalnie filtrowane według kampanii, grupy reklam lub stanu."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.display_name": {
+          "source": "List Ads",
+          "message": "Lista reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ads belonging to this campaign.",
+          "message": "Zwracaj tylko reklamy należące do tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return ads belonging to this ad group.",
+          "message": "Zwracaj tylko reklamy należące do tej grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "Filtruj według grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ads to return. Default is 100.",
+          "message": "Maksymalna liczba reklam do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ads to return",
+          "message": "Maksymalna liczba reklam do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "Wszystkie"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ads with the specified status. If not set, all non-removed ads are returned.",
+          "message": "Zwracaj tylko reklamy o określonym stanie. Jeśli nie ustawiono, zwracane są wszystkie nieusunięte reklamy."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "Filtr statusu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ads by status",
+          "message": "Filtruj reklamy według stanu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.short_desc": {
+          "source": "List ads with performance metrics",
+          "message": "Wyświetl listę reklam wraz z danymi o skuteczności"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.desc": {
+          "source": "Retrieves all portfolio bidding strategies in the Google Ads account.",
+          "message": "Pobiera wszystkie portfelowe strategie ustalania stawek na koncie Google Ads."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.display_name": {
+          "source": "List Bidding Strategies",
+          "message": "Lista strategii ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of bidding strategies to return. Default is 100.",
+          "message": "Maksymalna liczba strategii ustalania stawek do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of strategies to return",
+          "message": "Maksymalna liczba strategii do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.short_desc": {
+          "source": "List portfolio bidding strategies",
+          "message": "Wyświetl listę portfelowych strategii ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.desc": {
+          "source": "Retrieves all campaign budgets in the Google Ads account.",
+          "message": "Pobiera wszystkie budżety kampanii na koncie Google Ads."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.display_name": {
+          "source": "List Budgets",
+          "message": "Lista budżetów"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of budgets to return. Default is 100.",
+          "message": "Maksymalna liczba budżetów do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of budgets to return",
+          "message": "Maksymalna liczba budżetów do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.short_desc": {
+          "source": "List campaign budgets",
+          "message": "Wyświetl listę budżetów kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Retrieves campaigns from the Google Ads account with optional status filtering and performance metrics for a specified date range.",
+          "message": "Pobiera kampanie z konta Google Ads z opcjonalnym filtrowaniem według stanu i danymi o skuteczności dla określonego zakresu dat."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "Lista kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "Cały okres"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "Ostatnie 14 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "Ostatnie 30 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "Ostatnie 7 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "Ubiegły miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "Ten miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics alongside campaign data.",
+          "message": "Predefiniowany zakres dat do pobierania danych o skuteczności wraz z danymi kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "Zakres dat"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "Zakres dat dla danych o skuteczności"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of campaigns to return. Default is 100.",
+          "message": "Maksymalna liczba kampanii do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "Maksymalna liczba kampanii do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "Wszystkie"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return campaigns with the specified status. If not set, all non-removed campaigns are returned.",
+          "message": "Zwracaj tylko kampanie o określonym stanie. Jeśli nie ustawiono, zwracane są wszystkie nieusunięte kampanie."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "Filtr statusu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter campaigns by status",
+          "message": "Filtruj kampanie według stanu"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "List campaigns with performance metrics",
+          "message": "Wyświetl listę kampanii wraz z danymi o skuteczności"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.desc": {
+          "source": "Retrieves all conversion actions configured in the Google Ads account.",
+          "message": "Pobiera wszystkie działania powodujące konwersję skonfigurowane na koncie Google Ads."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.display_name": {
+          "source": "List Conversion Actions",
+          "message": "Lista działań powodujących konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversion actions to return. Default is 100.",
+          "message": "Maksymalna liczba działań powodujących konwersję do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversion actions to return",
+          "message": "Maksymalna liczba działań powodujących konwersję do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.short_desc": {
+          "source": "List all conversion action definitions",
+          "message": "Wyświetl listę wszystkich definicji działań powodujących konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.desc": {
+          "source": "Retrieves all user lists (customer match lists) in the Google Ads account.",
+          "message": "Pobiera wszystkie listy użytkowników (listy dopasowywania klientów) na koncie Google Ads."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.display_name": {
+          "source": "List Customer Lists",
+          "message": "Lista list klientów"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer lists to return. Default is 100.",
+          "message": "Maksymalna liczba list klientów do zwrócenia. Domyślnie wynosi 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "Maksymalna liczba list do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.short_desc": {
+          "source": "List audience/customer match lists",
+          "message": "Wyświetl listę odbiorców / list dopasowywania klientów"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.desc": {
+          "source": "Retrieves keywords from the Google Ads account with optional filtering by campaign or ad group, including performance metrics.",
+          "message": "Pobiera słowa kluczowe z konta Google Ads z opcjonalnym filtrowaniem według kampanii lub grupy reklam, w tym dane o skuteczności."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.display_name": {
+          "source": "List Keywords",
+          "message": "Wyświetl słowa kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return keywords belonging to this campaign.",
+          "message": "Zwracaj tylko słowa kluczowe należące do tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return keywords belonging to this ad group.",
+          "message": "Zwracaj tylko słowa kluczowe należące do tej grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "Filtruj według grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "Cały okres"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "Ostatnie 14 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "Ostatnie 30 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "Ostatnie 7 dni"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "Ten miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics.",
+          "message": "Predefiniowany zakres dat do pobierania danych wydajnościowych."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "Zakres dat"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "Zakres dat dla danych o skuteczności"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of keywords to return. Default is 100.",
+          "message": "Maksymalna liczba zwracanych słów kluczowych. Domyślnie 100."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of keywords to return",
+          "message": "Maksymalna liczba słów kluczowych do zwrócenia"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.short_desc": {
+          "source": "List keywords with performance metrics",
+          "message": "Pobierz listę słów kluczowych z danymi wydajnościowymi"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Ads** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Google Ads** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec podstawowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżywaj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Ads",
+          "message": "Wykonaj niestandardowe wywołanie API do Google Ads"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.desc": {
+          "source": "Monitors Google Ads lead form extensions for new submissions. Polls the lead form submission data and triggers for each new lead.",
+          "message": "Monitoruje rozszerzenia formularzy kontaktowych Google Ads pod kątem nowych zgłoszeń. Odpytuje dane zgłoszeń z formularza kontaktowego i uruchamia wyzwalacz dla każdego nowego leada."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.display_name": {
+          "source": "New Lead Form Submission",
+          "message": "Nowe zgłoszenie formularza kontaktowego"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only trigger for lead form submissions from this campaign. Leave empty to monitor all campaigns.",
+          "message": "Uruchamiaj wyzwalacz tylko dla zgłoszeń formularza kontaktowego z tej kampanii. Pozostaw puste, aby monitorować wszystkie kampanie."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.short_desc": {
+          "source": "Triggers when a new lead is submitted through a Google Ads lead form extension",
+          "message": "Uruchamia wyzwalacz, gdy nowy lead zostanie przesłany za pośrednictwem rozszerzenia formularza kontaktowego Google Ads"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.desc": {
+          "source": "Removes (soft deletes) an ad from an ad group.",
+          "message": "Usuwa (miękkie usunięcie) reklamę z grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.display_name": {
+          "source": "Remove Ad",
+          "message": "Usuń reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to remove.",
+          "message": "Wybierz grupę reklam zawierającą reklamę do usunięcia."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "Grupa reklam zawierająca reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to remove.",
+          "message": "Identyfikator (ID) reklamy do usunięcia."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "Reklama"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.short_desc": {
+          "source": "The ad to remove",
+          "message": "Reklama do usunięcia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.short_desc": {
+          "source": "Remove an ad",
+          "message": "Usuń reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.desc": {
+          "source": "Removes (soft deletes) an ad group. It will be marked as REMOVED and its ads will stop serving.",
+          "message": "Usuwa (miękkie usunięcie) grupę reklam. Zostanie ona oznaczona jako REMOVED, a jej reklamy przestaną się wyświetlać."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.display_name": {
+          "source": "Remove Ad Group",
+          "message": "Usuń grupę reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to remove.",
+          "message": "Wybierz lub wprowadź identyfikator (ID) grupy reklam do usunięcia."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to remove",
+          "message": "Grupa reklam do usunięcia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.short_desc": {
+          "source": "Remove an ad group",
+          "message": "Usuń grupę reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.desc": {
+          "source": "Removes (soft deletes) a campaign from the Google Ads account. The campaign will be marked as REMOVED and will no longer serve ads.",
+          "message": "Usuwa (miękkie usunięcie) kampanię z konta Google Ads. Kampania zostanie oznaczona jako REMOVED i nie będzie już wyświetlać reklam."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.display_name": {
+          "source": "Remove Campaign",
+          "message": "Usuń kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to remove.",
+          "message": "Wybierz lub wprowadź identyfikator (ID) kampanii do usunięcia."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to remove",
+          "message": "Kampania do usunięcia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.short_desc": {
+          "source": "Remove a campaign",
+          "message": "Usuń kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.desc": {
+          "source": "Removes contacts from a customer match list using their identifying information.",
+          "message": "Usuwa kontakty z listy dopasowywania klientów na podstawie ich danych identyfikacyjnych."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.display_name": {
+          "source": "Remove Contacts from Customer List",
+          "message": "Usuń kontakty z listy klientów"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to remove from the customer list.",
+          "message": "Lista kontaktów zawierających dane e-mail, telefon lub adres do usunięcia z listy klientów."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "Kontakty"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to remove",
+          "message": "Lista kontaktów do usunięcia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list to remove contacts from.",
+          "message": "Wybierz listę dopasowywania klientów, z której mają zostać usunięte kontakty."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "Lista klientów"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to remove contacts from",
+          "message": "Lista klientów, z której mają zostać usunięte kontakty"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.short_desc": {
+          "source": "Remove contacts from a customer match list",
+          "message": "Usuń kontakty z listy dopasowywania klientów"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.desc": {
+          "source": "Removes a keyword from the specified ad group.",
+          "message": "Usuwa słowo kluczowe z określonej grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.display_name": {
+          "source": "Remove Keyword",
+          "message": "Usuń słowo kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "Identyfikator kryterium (criterion ID) słowa kluczowego w grupie reklam."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "ID kryterium słowa kluczowego"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to remove",
+          "message": "Identyfikator kryterium słowa kluczowego do usunięcia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to remove.",
+          "message": "Wybierz grupę reklam zawierającą słowo kluczowe do usunięcia."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "Grupa reklam zawierająca słowo kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.short_desc": {
+          "source": "Remove a keyword from an ad group",
+          "message": "Usuń słowo kluczowe z grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across ad groups with configurable metrics and date range.",
+          "message": "Uruchamia raport wydajności w grupach reklam ze skonfigurowanymi metrykami i zakresem dat."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.display_name": {
+          "source": "Run Ad Group Report",
+          "message": "Uruchom raport grup reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include ad groups from this campaign.",
+          "message": "Uwzględniaj tylko grupy reklam z tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "Niestandardowy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "Ostatnie 14 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "Ostatnie 30 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "Ostatnie 7 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "Ubiegły miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "Ten miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "Zakres dat dla raportu."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "Zakres dat"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "Predefiniowany zakres dat dla raportu"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "Niestandardowa data końcowa. Używana, gdy Zakres dat to CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Data końcowa"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "Niestandardowa data końcowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "Maksymalna liczba wierszy do zwrócenia. Domyślnie 100."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "Maksymalna liczba wierszy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "Niestandardowa data początkowa. Używana, gdy Zakres dat to CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Data rozpoczęcia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "Niestandardowa data początkowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.short_desc": {
+          "source": "Generate an ad group performance report",
+          "message": "Generuj raport wydajności grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.desc": {
+          "source": "Execute a raw Google Ads Query Language (GAQL) query for advanced reporting. GAQL supports SELECT, FROM, WHERE, ORDER BY, and LIMIT clauses.",
+          "message": "Wykonaj bezpośrednie zapytanie w języku Google Ads Query Language (GAQL) na potrzeby zaawansowanego raportowania. GAQL obsługuje klauzule SELECT, FROM, WHERE, ORDER BY i LIMIT."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.display_name": {
+          "source": "Run Custom Report",
+          "message": "Uruchom raport niestandardowy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.desc": {
+          "source": "A Google Ads Query Language query. Example: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS",
+          "message": "Zapytanie w języku Google Ads Query Language. Przykład: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.display_name": {
+          "source": "GAQL Query",
+          "message": "Zapytanie GAQL"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.short_desc": {
+          "source": "The GAQL query to execute",
+          "message": "Zapytanie GAQL do wykonania"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.short_desc": {
+          "source": "Run a custom GAQL query",
+          "message": "Uruchom niestandardowe zapytanie GAQL"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across campaigns with configurable metrics, date range, and filters.",
+          "message": "Uruchamia raport skuteczności kampanii z konfigurowalnymi metrykami, zakresem dat i filtrami."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.display_name": {
+          "source": "Run Campaign Report",
+          "message": "Uruchom raport kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "Niestandardowy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "Ostatnie 14 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "Ostatnie 30 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "Ostatnie 7 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "Ubiegły miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "Ten miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report. Use predefined ranges like LAST_7_DAYS, LAST_30_DAYS, etc.",
+          "message": "Zakres dat dla raportu. Użyj zdefiniowanych wstępnie zakresów, takich jak LAST_7_DAYS, LAST_30_DAYS itp."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "Zakres dat"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "Predefiniowany zakres dat dla raportu"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "Niestandardowa data końcowa w formacie YYYY-MM-DD. Używana, gdy Zakres dat jest ustawiony na CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Data końcowa"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "Niestandardowa data końcowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "Maksymalna liczba wierszy do zwrócenia. Domyślnie 100."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "Maksymalna liczba wierszy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "Niestandardowa data początkowa w formacie YYYY-MM-DD. Używana, gdy Zakres dat jest ustawiony na CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Data rozpoczęcia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "Niestandardowa data początkowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "Wszystkie"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only include campaigns with the specified status.",
+          "message": "Uwzględniaj tylko kampanie o określonym statusie."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "Filtr statusu"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter by campaign status",
+          "message": "Filtruj według statusu kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.short_desc": {
+          "source": "Generate a campaign performance report",
+          "message": "Generuj raport skuteczności kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.desc": {
+          "source": "Runs a performance report across keywords with metrics like clicks, impressions, CPC, and conversions.",
+          "message": "Uruchamia raport skuteczności słów kluczowych z metrykami takimi jak kliknięcia, wyświetlenia, CPC i konwersje."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.display_name": {
+          "source": "Run Keyword Report",
+          "message": "Uruchom raport słów kluczowych"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include keywords from this campaign.",
+          "message": "Uwzględniaj tylko słowa kluczowe z tej kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "Filtruj według kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only include keywords from this ad group.",
+          "message": "Uwzględniaj tylko słowa kluczowe z tej grupy reklam."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "Filtruj według grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "Niestandardowy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "Ostatnie 14 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "Ostatnie 30 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "Ostatnie 7 dni"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "Ubiegły miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "Ten miesiąc"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "Zakres dat dla raportu."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "Zakres dat"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "Predefiniowany zakres dat dla raportu"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "Niestandardowa data końcowa. Używana, gdy Zakres dat to CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Data końcowa"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "Niestandardowa data końcowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "Maksymalna liczba wierszy do zwrócenia. Domyślnie 100."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "Maksymalna liczba wierszy"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "Niestandardowa data początkowa. Używana, gdy Zakres dat to CUSTOM."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Data rozpoczęcia"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "Niestandardowa data początkowa (RRRR-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.short_desc": {
+          "source": "Generate a keyword performance report",
+          "message": "Generuj raport skuteczności słów kluczowych"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Updates ad group properties such as name, status, and CPC bid.",
+          "message": "Aktualizuje właściwości grupy reklam, takie jak nazwa, status i stawka CPC."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Update Ad Group",
+          "message": "Zaktualizuj grupę reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "Zaktualizowana maksymalna stawka CPC w walucie Twojego konta."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "Stawka CPC"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "Nowa maksymalna stawka CPC"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to update.",
+          "message": "Wybierz lub wprowadź identyfikator grupy reklam do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to update",
+          "message": "Grupa reklam do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The updated name for the ad group. Leave empty to keep the current name.",
+          "message": "Zaktualizowana nazwa grupy reklam. Pozostaw puste, aby zachować obecną nazwę."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "Nazwa grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "New name for the ad group",
+          "message": "Nowa nazwa grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "Usunięte"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set the ad group status to ENABLED, PAUSED, or REMOVED.",
+          "message": "Ustaw status grupy reklam na ENABLED, PAUSED lub REMOVED."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad group",
+          "message": "Nowy status grupy reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Update an existing ad group",
+          "message": "Zaktualizuj istniejącą grupę reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.desc": {
+          "source": "Updates the status of an ad within an ad group.",
+          "message": "Aktualizuje status reklamy w grupie reklam."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.display_name": {
+          "source": "Update Ad Status",
+          "message": "Zaktualizuj status reklamy"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to update.",
+          "message": "Wybierz grupę reklam zawierającą reklamę do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "Grupa reklam zawierająca reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to update.",
+          "message": "Identyfikator reklamy do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "Reklama"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.short_desc": {
+          "source": "The ad to update",
+          "message": "Reklama do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "Usunięte"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.desc": {
+          "source": "Set the ad status to ENABLED, PAUSED, or REMOVED.",
+          "message": "Ustaw status reklamy na ENABLED, PAUSED lub REMOVED."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad",
+          "message": "Nowy status reklamy"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.short_desc": {
+          "source": "Enable, pause, or remove an ad",
+          "message": "Włącz, wstrzymaj lub usuń reklamę"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.desc": {
+          "source": "Updates the daily amount or name of an existing campaign budget.",
+          "message": "Aktualizuje dzienną kwotę lub nazwę istniejącego budżetu kampanii."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.display_name": {
+          "source": "Update Budget",
+          "message": "Zaktualizuj budżet"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.desc": {
+          "source": "Select or enter the ID of the budget to update.",
+          "message": "Wybierz lub wprowadź identyfikator budżetu do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.display_name": {
+          "source": "Budget",
+          "message": "Budżet"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.short_desc": {
+          "source": "The budget to update",
+          "message": "Budżet do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The updated daily budget amount in your account currency.",
+          "message": "Zaktualizowana kwota budżetu dziennego w walucie Twojego konta."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "Kwota dzienna"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "New daily budget amount",
+          "message": "Nowa kwota budżetu dziennego"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "The updated name for the budget. Leave empty to keep the current name.",
+          "message": "Zaktualizowana nazwa budżetu. Pozostaw puste, aby zachować obecną nazwę."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "Nazwa budżetu"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "New name for the budget",
+          "message": "Nowa nazwa budżetu"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.short_desc": {
+          "source": "Update an existing campaign budget",
+          "message": "Zaktualizuj istniejący budżet kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Updates an existing portfolio bidding strategy.",
+          "message": "Aktualizuje istniejącą strategię ustalania stawek w portfelu."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Update Bidding Strategy",
+          "message": "Zaktualizuj strategię ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "The updated name. Leave empty to keep the current name.",
+          "message": "Zaktualizowana nazwa. Pozostaw puste, aby zachować obecną nazwę."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "Nazwa strategii"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "New name for the bidding strategy",
+          "message": "Nowa nazwa strategii ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.desc": {
+          "source": "Select or enter the ID of the bidding strategy to update.",
+          "message": "Wybierz lub wprowadź identyfikator strategii ustalania stawek do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "Strategia ustalania stawek"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.short_desc": {
+          "source": "The bidding strategy to update",
+          "message": "Strategia ustalania stawek do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The updated target CPA in your account currency.",
+          "message": "Zaktualizowany docelowy CPA w walucie Twojego konta."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "Docelowy CPA"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Updated target CPA amount",
+          "message": "Zaktualizowana kwota docelowego CPA"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The updated target ROAS as a ratio.",
+          "message": "Zaktualizowany docelowy ROAS jako współczynnik."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "Docelowy ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Updated target ROAS",
+          "message": "Zaktualizowany docelowy ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Update a portfolio bidding strategy",
+          "message": "Zaktualizuj strategię ustalania stawek w portfelu"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.desc": {
+          "source": "Updates campaign properties such as name, status (enable/pause), and bidding strategy.",
+          "message": "Aktualizuje właściwości kampanii, takie jak nazwa, status (włącz/wstrzymaj) i strategia ustalania stawek."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Update Campaign",
+          "message": "Zaktualizuj kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to update.",
+          "message": "Wybierz lub wprowadź identyfikator kampanii do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "Kampania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to update",
+          "message": "Kampania do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "The updated name for the campaign. Leave empty to keep the current name.",
+          "message": "Zaktualizowana nazwa kampanii. Pozostaw puste, aby zachować obecną nazwę."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "Nazwa kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "New name for the campaign",
+          "message": "Nowa nazwa kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "Usunięte"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set the campaign status to ENABLED, PAUSED, or REMOVED.",
+          "message": "Ustaw status kampanii na ENABLED, PAUSED lub REMOVED."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "New status for the campaign",
+          "message": "Nowy status kampanii"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Update an existing campaign",
+          "message": "Zaktualizuj istniejącą kampanię"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.desc": {
+          "source": "Updates an existing keyword in an ad group, allowing you to change its status or CPC bid.",
+          "message": "Aktualizuje istniejące słowo kluczowe w grupie reklam, umożliwiając zmianę jego statusu lub stawki CPC."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.display_name": {
+          "source": "Update Keyword",
+          "message": "Zaktualizuj słowo kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "Zaktualizowana maksymalna stawka CPC w walucie Twojego konta."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "Stawka CPC"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "Nowa maksymalna stawka CPC"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "Identyfikator kryterium (criterion ID) słowa kluczowego w grupie reklam."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "ID kryterium słowa kluczowego"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to update",
+          "message": "ID kryterium słowa kluczowego do zaktualizowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to update.",
+          "message": "Wybierz grupę reklam zawierającą słowo kluczowe do zaktualizowania."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "Grupa reklam"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "Grupa reklam zawierająca słowo kluczowe"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "Włączona"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "Wstrzymana"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "Usunięte"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.desc": {
+          "source": "Set the keyword status to ENABLED, PAUSED, or REMOVED.",
+          "message": "Ustaw status słowa kluczowego na ENABLED, PAUSED lub REMOVED."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.short_desc": {
+          "source": "New status for the keyword",
+          "message": "Nowy status słowa kluczowego"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.short_desc": {
+          "source": "Update a keyword status or bid",
+          "message": "Zaktualizuj status słowa kluczowego lub stawkę"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.desc": {
+          "source": "Uploads a conversion associated with a phone call from a Google Ads call extension.",
+          "message": "Przesyła konwersję powiązaną z połączeniem telefonicznym z rozszerzenia połączeń Google Ads."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.display_name": {
+          "source": "Upload Call Conversion",
+          "message": "Prześlij konwersję z połączenia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "Wartość pieniężna konwersji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "Wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "Wartość pieniężna konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "Wybierz działanie powodujące konwersję, do którego należy przypisać tę konwersję."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "Działanie powodujące konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "Działanie powodujące konwersję do zarejestrowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "Data i godzina konwersji w formacie: yyyy-mm-dd HH:mm:ss+|-HH:mm."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "Data/Godzina konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "Kiedy nastąpiła konwersja"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time when the call started in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "Data i godzina rozpoczęcia połączenia w formacie: yyyy-mm-dd HH:mm:ss+|-HH:mm."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.display_name": {
+          "source": "Call Start Date/Time",
+          "message": "Data/Godzina rozpoczęcia połączenia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the call started",
+          "message": "Kiedy rozpoczęło się połączenie"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.desc": {
+          "source": "The phone number of the caller in E.164 format (e.g., +18005550100).",
+          "message": "Numer telefonu dzwoniącego w formacie E.164 (np. +18005550100)."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.display_name": {
+          "source": "Caller ID",
+          "message": "ID dzwoniącego"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.short_desc": {
+          "source": "Phone number of the caller",
+          "message": "Numer telefonu dzwoniącego"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "Kod waluty dla wartości konwersji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "Kod waluty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "Kod waluty ISO 4217"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.short_desc": {
+          "source": "Upload an offline call conversion",
+          "message": "Prześlij konwersję z połączenia offline"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads an offline conversion associated with a Google Click ID (GCLID). This closes the loop between ad clicks and offline sales/actions.",
+          "message": "Przesyła konwersję offline powiązaną z identyfikatorem Google Click ID (GCLID). Zamyka to pętlę między kliknięciami reklam a sprzedażą/działaniami offline."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Click Conversion",
+          "message": "Prześlij konwersję z kliknięcia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion in your account currency.",
+          "message": "Wartość pieniężna konwersji w walucie konta."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "Wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "Wartość pieniężna konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "Wybierz działanie powodujące konwersję, do którego należy przypisać tę konwersję."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "Działanie powodujące konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "Działanie powodujące konwersję do zarejestrowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm (e.g., 2026-03-01 12:00:00+00:00).",
+          "message": "Data i godzina konwersji w formacie: yyyy-mm-dd HH:mm:ss+|-HH:mm (np. 2026-03-01 12:00:00+00:00)."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "Data/Godzina konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "Kiedy nastąpiła konwersja"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value (e.g., USD, EUR, GBP).",
+          "message": "Kod waluty dla wartości konwersji (np. USD, EUR, GBP)."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "Kod waluty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "Kod waluty ISO 4217"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.desc": {
+          "source": "The Google Click ID (GCLID) associated with the conversion. Found in the URL after a user clicks an ad.",
+          "message": "Identyfikator Google Click ID (GCLID) powiązany z konwersją. Znajduje się w adresie URL po kliknięciu reklamy przez użytkownika."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.short_desc": {
+          "source": "Google Click ID",
+          "message": "Google Click ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for the order or transaction. Used for deduplication.",
+          "message": "Unikalny identyfikator zamówienia lub transakcji. Używany do deduplikacji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "ID zamówienia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "Unikalny ID zamówienia/transakcji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an offline click conversion",
+          "message": "Prześlij konwersję z kliknięcia offline"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.desc": {
+          "source": "Adjusts the value of a previously uploaded conversion or retracts it entirely.",
+          "message": "Koryguje wartość wcześniej przesłanej konwersji lub całkowicie ją wycofuje."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.display_name": {
+          "source": "Upload Conversion Adjustment",
+          "message": "Prześlij korektę konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action of the conversion to adjust.",
+          "message": "Wybierz działanie powodujące konwersję dla konwersji, która ma zostać skorygowana."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "Działanie powodujące konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to adjust",
+          "message": "Działanie powodujące konwersję do skorygowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the adjusted value.",
+          "message": "Kod waluty dla skorygowanej wartości."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "Kod waluty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "Kod waluty ISO 4217"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.desc": {
+          "source": "The new conversion value. Required for RESTATE adjustments.",
+          "message": "Nowa wartość konwersji. Wymagane dla korekt typu RESTATE."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.display_name": {
+          "source": "Adjusted Value",
+          "message": "Skorygowana wartość"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.short_desc": {
+          "source": "New conversion value",
+          "message": "Nowa wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFU1RBVEVNRU5U.display_name": {
+          "source": "Restatement",
+          "message": "Korekta wartości"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFVFJBQ1RJT04.display_name": {
+          "source": "Retraction",
+          "message": "Cofnięcie"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.desc": {
+          "source": "RESTATE to change the conversion value, RETRACTION to remove the conversion entirely.",
+          "message": "RESTATE, aby zmienić wartość konwersji, RETRACTION, aby całkowicie usunąć konwersję."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.display_name": {
+          "source": "Adjustment Type",
+          "message": "Typ korekty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.short_desc": {
+          "source": "Type of adjustment",
+          "message": "Typ korekty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the adjustment in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "Data i godzina korekty w formacie: yyyy-mm-dd HH:mm:ss+|-HH:mm."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.display_name": {
+          "source": "Adjustment Date/Time",
+          "message": "Data/Godzina korekty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the adjustment occurred",
+          "message": "Kiedy nastąpiła korekta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.desc": {
+          "source": "The GCLID associated with the original conversion. Required if Order ID was not set.",
+          "message": "GCLID powiązany z oryginalną konwersją. Wymagany, jeśli nie ustawiono ID zamówienia."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.short_desc": {
+          "source": "GCLID of the conversion to adjust",
+          "message": "GCLID konwersji do skorygowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.desc": {
+          "source": "The order ID that was provided when the conversion was originally uploaded.",
+          "message": "ID zamówienia podany podczas pierwotnego przesyłania konwersji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "ID zamówienia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Order ID of the conversion to adjust",
+          "message": "ID zamówienia konwersji do skorygowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.short_desc": {
+          "source": "Adjust or retract a previously uploaded conversion",
+          "message": "Skoryguj lub wycofaj wcześniej przesłaną konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads a conversion using hashed first-party user data (email, phone) instead of a GCLID. User data is automatically SHA-256 hashed before upload for privacy.",
+          "message": "Przesyła konwersję przy użyciu zhaszowanych danych użytkownika własnego (e-mail, telefon) zamiast GCLID. Dane użytkownika są automatycznie haszowane algorytmem SHA-256 przed przesłaniem w celu ochrony prywatności."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Enhanced Conversion",
+          "message": "Prześlij konwersję rozszerzoną"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "Wartość pieniężna konwersji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "Wartość konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "Wartość pieniężna konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "Wybierz działanie powodujące konwersję, do którego należy przypisać tę konwersję."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "Działanie powodujące konwersję"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "Działanie powodujące konwersję do zarejestrowania"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "Data i godzina konwersji w formacie: yyyy-mm-dd HH:mm:ss+|-HH:mm."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "Data/Godzina konwersji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "Kiedy nastąpiła konwersja"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "Kod waluty dla wartości konwersji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "Kod waluty"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "Kod waluty ISO 4217"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "Wybierz konto klienta Google Ads (ID klienta) dla tej akcji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "Konto klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "Konto klienta Google Ads do użycia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.desc": {
+          "source": "The customer email address. Will be normalized and SHA-256 hashed before upload.",
+          "message": "Adres e-mail klienta. Zostanie znormalizowany i zhaszowany algorytmem SHA-256 przed przesłaniem."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.short_desc": {
+          "source": "Customer email address",
+          "message": "Adres e-mail klienta"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for deduplication.",
+          "message": "Unikalny identyfikator do deduplikacji."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "ID zamówienia"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "Unikalny ID zamówienia/transakcji"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The customer phone number in E.164 format (e.g., +18005550100). Will be SHA-256 hashed before upload.",
+          "message": "Numer telefonu klienta w formacie E.164 (np. +18005550100). Zostanie zahaszowany algorytmem SHA-256 przed przesłaniem."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Numer telefonu"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Customer phone number in E.164 format",
+          "message": "Numer telefonu klienta w formacie E.164"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an enhanced conversion with user data",
+          "message": "Prześlij ulepszoną konwersję z danymi użytkownika"
+        },
+        "app.R29vZ2xlQWRz.desc": {
+          "source": "Integrate with Google Ads to manage your advertising campaigns, track conversions, sync customer lists, and automate reporting. This integration covers campaign management, ad group and ad CRUD, keyword management, budget and bidding strategies, offline conversion uploads, customer match audiences, and lead form triggers.",
+          "message": "Zintegruj z Google Ads, aby zarządzać kampaniami reklamowymi, śledzić konwersje, synchronizować listy klientów i automatyzować raportowanie. Ta integracja obejmuje zarządzanie kampaniami, operacje CRUD na grupach reklam i reklamach, zarządzanie słowami kluczowymi, strategie ustalania stawek i budżetów, przesyłanie konwersji offline, grupy odbiorców z dopasowywania klientów oraz wyzwalacze formularzy kontaktowych."
+        },
+        "app.R29vZ2xlQWRz.display_name": {
+          "source": "Google Ads",
+          "message": "Google Ads"
+        },
+        "app.R29vZ2xlQWRz.short_desc": {
+          "source": "Connect with Google Ads to manage campaigns, conversions, and audiences",
+          "message": "Połącz się z Google Ads, aby zarządzać kampaniami, konwersjami i odbiorcami"
+        }
+      }
+    }
+  }
+}

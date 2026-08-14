@@ -1,0 +1,597 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.desc": {
+          "source": "This method deletes one or more brand profiles from an account, based on the brand IDs that you include in the `brandsRequest`.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "このメソッドは、`brandsRequest` に含まれるブランド ID に基づいて、アカウントから 1 つ以上のブランドプロファイルを削除します。\n\nアカウントでこのメソッドを使用するには、次の設定のいずれかまたは両方を有効にする必要があります:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 関連トピック\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.display_name": {
+          "source": "Delete Brand",
+          "message": "ブランドを削除"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0RlbGV0ZUJyYW5kcw.short_desc": {
+          "source": "Deletes one or more brand profiles.",
+          "message": "1 つ以上のブランドプロファイルを削除します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.desc": {
+          "source": "This method returns details about all of the [brands](-docs-esign-rest-api-esign101-concepts-branding-) associated with an account,\nincluding the default brand profiles.\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "このメソッドは、アカウントに関連付けられているすべての[ブランド](-docs-esign-rest-api-esign101-concepts-branding-)（デフォルトのブランドプロファイルを含む）の詳細を返します。\n\nこのメソッドを使用するには、アカウントに対して次の設定のいずれかまたは両方を有効にする必要があります:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 関連トピック\n\n- [ブランドを作成する方法](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.display_name": {
+          "source": "Get Brands",
+          "message": "ブランドの取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX0dldEJyYW5kcw.short_desc": {
+          "source": "Gets a list of brands.",
+          "message": "ブランドの一覧を取得します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.desc": {
+          "source": "This method creates one or more brand profile files for an account.\n\nTo specify logos for the brand,\nuse the\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nmethod\nafter you create the brand.\n\n\nEither or both of the following settings must be enabled for the account to use this method:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### Related topics\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n",
+          "message": "このメソッドは、アカウントの1つ以上のブランドプロファイルファイルを作成します。\n\nブランドのロゴを指定するには、ブランドを作成した後に\n[AccountBrands: updateLogo](-docs-esign-rest-api-reference-accounts-accountbrands-updatelogo-)\nメソッドを使用してください。\n\n\nこのメソッドを使用するには、アカウントに対して次の設定のいずれかまたは両方を有効にする必要があります:\n\n- `canSelfBrandSign`\n- `canSelfBrandSend`\n\n### 関連トピック\n\n- [ブランドを作成する方法](-docs-esign-rest-api-how-to-create-brand-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.display_name": {
+          "source": "Create Brand",
+          "message": "ブランドの作成"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.QnJhbmRzX1Bvc3RCcmFuZHM.short_desc": {
+          "source": "Creates one or more brand profiles for an account.",
+          "message": "アカウントの1つ以上のブランドプロファイルを作成します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.desc": {
+          "source": "Deletes one or more documents from an existing envelope that has not yet been completed.\n\nTo delete a document, use only the relevant parts of the [`envelopeDefinition`](#envelopeDefinition).\nFor example, this request body specifies that you want to delete the document whose `documentId` is \"1\".\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nThe envelope status must be one of:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n",
+          "message": "まだ完了していない既存のエンベロープから1つ以上のドキュメントを削除します。\n\nドキュメントを削除するには、[`envelopeDefinition`](#envelopeDefinition)の関連部分のみを使用してください。\nたとえば、このリクエストボディは`documentId`が\"1\"であるドキュメントを削除することを指定します。\n\n\n```text\n\n  \"documents\": [\n    \n      \"documentId\": \"1\"\n    \n  ]\n\n```\n\nエンベロープステータスは次のいずれかである必要があります:\n\n- `created`\n- `sent`\n- `delivered`\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.display_name": {
+          "source": "Delete Documents",
+          "message": "ドキュメントの削除"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0RlbGV0ZURvY3VtZW50cw.short_desc": {
+          "source": "Deletes documents from a draft envelope.",
+          "message": "下書きエンベロープからドキュメントを削除します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.desc": {
+          "source": "Retrieves a single document or all documents from an envelope.\n\nTo retrieve a single document, provide the ID of the document in the `documentId` path parameter.\nAlternatively, by setting the `documentId` parameter to special keyword values,\nyou can retrieve all the documents (as a combined PDF, portfolio PDF, or ZIP archive)\nor just the certificate of completion. See the `documentId` description for how to retrieve each format.\n\n\nThe response body of this method\nis a file. If you request multiple documents,\nthe result is a ZIP archive\nthat contains all of the documents.\n\nIn all other cases, the response is a PDF\nfile or PDF portfolio.\n\n\nYou can get the file name and document ID from the response's `Content-Disposition` header:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nBy default, the response is the PDF file\nas a byte stream.\nFor example a request-response in `curl` looks like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nBy using the `Content-Transfer-Encoding`\nheader in the request, you can obtain the PDF file\nencoded in base64. The same `curl` request with\nthe base64 header would look like this:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(In an actual `curl` request you would use the `-output` switch to\nsave the byte stream into a file.)\n\n### Related topics\n\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n",
+          "message": "エンベロープから単一のドキュメントまたはすべてのドキュメントを取得します。\n\n単一のドキュメントを取得するには、`documentId` パスパラメータでドキュメントのIDを指定します。\nまたは、`documentId` パラメータに特殊なキーワード値を設定することで、すべてのドキュメント（結合PDF、ポートフォリオPDF、またはZIPアーカイブとして）または完了証明書のみを取得できます。各形式を取得する方法については、`documentId` の説明を参照してください。\n\n\nこのメソッドのリクエストボディはファイルです。複数のドキュメントをリクエストした場合、結果はすべてのドキュメントを含むZIPアーカイブになります。\n\nそれ以外のすべてのケースでは、レスポンスはPDFファイルまたはPDFポートフォリオになります。\n\n\nレスポンスの `Content-Disposition` ヘッダーからファイル名とドキュメントIDを取得できます:\n\n```\nContent-Disposition: file; filename=\"NDA.pdf\"; documentid=\"1\n```\n\nデフォルトでは、レスポンスはバイトストリームとしてのPDFファイルです。\nたとえば、`curl` でのリクエスト/レスポンスは次のようになります:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg'\n\n\nHTTP-1.1 200 OK\nContent-Length: 167539\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nDate: Tue, 23 Aug 2022 01:13:15 GMT\n\n%PDF-1.4\n%˚¸˝˛\n6 0 obj\n<<-Length 14>>stream\n. . .\n```\n\nリクエストで `Content-Transfer-Encoding` ヘッダーを使用すると、base64エンコードされたPDFファイルを取得できます。base64ヘッダーを含む同じ `curl` リクエストは次のようになります:\n\n```\n$ curl -request GET 'https:-demo.docusign.net-restapi-v2-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1-' \\\n       -header 'Authorization: Bearer eyJ...bqg' \\\n       -header 'Content-Transfer-Encoding: base64'\n\n\nHTTP-1.1 200 OK\nContent-Length: 223384\nContent-Type: application-pdf\n. . .\nContent-Disposition: file; filename=\"Lorem_Ipsum.pdf\"; documentid=\"1\"\nContent-Transfer-Encoding: base64\nDate: Tue, 23 Aug 2022 01:12:30 GMT\n\nJVBERi0xLjQKJfv8-f4KNiAwIG9iago8PC9MZW. . .==\n```\n\n\n(実際の `curl` リクエストでは、`-output` スイッチを使用してバイトストリームをファイルに保存します。)\n\n### 関連トピック\n\n- [エンベロープドキュメントをダウンロードする方法](-docs-esign-rest-api-how-to-download-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "ドキュメントを取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50.short_desc": {
+          "source": "Retrieves a single document or all documents from an envelope.",
+          "message": "エンベロープから単一のドキュメントまたはすべてのドキュメントを取得します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.desc": {
+          "source": "Retrieves a list of documents associated with the specified envelope.\n\n### Related topics\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n",
+          "message": "指定されたエンベロープに関連付けられたドキュメントの一覧を取得します。\n\n### 関連トピック\n\n- [エンベロープドキュメントの一覧を取得する方法](-docs-esign-rest-api-how-to-list-envelope-documents-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.display_name": {
+          "source": "Get Documents",
+          "message": "ドキュメントの取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX0dldERvY3VtZW50cw.short_desc": {
+          "source": "Gets a list of documents in an envelope.",
+          "message": "エンベロープ内のドキュメントの一覧を取得します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.desc": {
+          "source": "Adds or replaces a document in an existing draft or in-process envelope.\nAn in-process envelope is one that has been sent but not yet completed or voided.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nTo add a new document, set the `documentId` path parameter to a new document ID.\n\nTo replace a document, set the `documentId` path parameter to the document ID of the existing document.\nThe tabs of the original document will be applied to the new document.\nFor example, a request in cURL looks like this:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "既存の下書きまたは処理中のエンベロープにドキュメントを追加または置換します。\n処理中のエンベロープとは、送信済みで、まだ完了も無効化もされていないエンベロープです。\n\n\n**注意:** 処理中のエンベロープのドキュメントを追加または変更する場合、Docusignでは変更を加える前に[エンベロープをロックする](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)ことを推奨しています。\n\n新しいドキュメントを追加するには、`documentId` パスパラメータを新しいドキュメントIDに設定します。\n\nドキュメントを置換するには、`documentId` パスパラメータを既存ドキュメントのドキュメントIDに設定します。\n元のドキュメントのタブが新しいドキュメントに適用されます。\nたとえば、cURLでのリクエストは次のようになります:\n\n```\n$ curl -location -request PUT 'https:-demo.docusign.net-restapi-v2.1-accounts-0cdb3ff3-xxxx-xxxx-xxxx-e43af011006d-envelopes-ea4cc25b-xxxx-xxxx-xxxx-a67a0a2a4f6c-documents-1' \\\n    -header 'Authorization: Bearer eyJ...bqg' \\\n    -header 'Content-Disposition: filename=\"newDocument\"' \\\n    -header 'Content-Type: application-pdf' \\\n    -data-binary '@-location-of-document.pdf'\n```\n\n\n<ds-inlinemessage kind=\"warning\">\nHTMLドキュメントファイルに <code>src<-code> 属性がパスまたはURLに設定された <code>&lt;img&gt;<-code> 要素が含まれている場合、それらの画像は表示されません。HTMLファイル内の画像は、次のようにBase64形式でエンコードされている必要があります:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "ドキュメントの更新"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50.short_desc": {
+          "source": "Adds or replaces a document in an existing envelope.",
+          "message": "既存のエンベロープにドキュメントを追加または置換します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.desc": {
+          "source": "Adds one or more documents to an existing envelope.\nThe tabs of the original document will be applied to the new document.\n\n\n**Note:** When adding or modifying documents for an in-process envelope,\nDocusign recommends\n[locking the envelope](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)\nprior to making any changes.\n\nIf the file name of a document contains Unicode characters, you need to include a `Content-Disposition` header. Example:\n\n\n**Header:** `Content-Disposition`\n\n\n**Value:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nIf HTML document files contain <code>&lt;img&gt;<-code> elements with the <code>src<-code> attribute set to a path or URL, those images will not be displayed. Images in HTML files must be encoded in Base64 format, like this:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>",
+          "message": "既存のエンベロープに1つ以上のドキュメントを追加します。\n元のドキュメントのタブが新しいドキュメントに適用されます。\n\n\n**注意:** 処理中のエンベロープのドキュメントを追加または変更する場合、Docusignでは変更を加える前に[エンベロープをロックする](-docs-esign-rest-api-reference-envelopes-envelopelocks-create-)ことを推奨しています。\n\nドキュメントのファイル名にUnicode文字が含まれている場合は、`Content-Disposition` ヘッダーを含める必要があります。例:\n\n\n**ヘッダー:** `Content-Disposition`\n\n\n**値:** `file; filename=\\\"name\\\";fileExtension=ext;documentId=1`\n\n\n<ds-inlinemessage kind=\"warning\">\nHTMLドキュメントファイルに <code>src<-code> 属性がパスまたはURLに設定された <code>&lt;img&gt;<-code> 要素が含まれている場合、それらの画像は表示されません。HTMLファイル内の画像は、次のようにBase64形式でエンコードされている必要があります:<br->\n<code>&lt;img src=\"data:image-gif;base64,R0lGODlh...IQAAOw==\" alt=\"Base64 encoded image\" width=\"150\" height=\"150\"-&gt;<-code>\n<-ds-inlinemessage>"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.display_name": {
+          "source": "Update Documents",
+          "message": "ドキュメントの更新"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RG9jdW1lbnRzX1B1dERvY3VtZW50cw.short_desc": {
+          "source": "Adds one or more documents to an existing envelope.",
+          "message": "既存のエンベロープに1つ以上のドキュメントを追加します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.desc": {
+          "source": "Retrieves the overall status for the specified envelope.\nTo get the status of a list of envelopes, use\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-).\n\n### Related topics\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n",
+          "message": "指定されたエンベロープの全体的なステータスを取得します。\nエンベロープ一覧のステータスを取得するには、\n[Envelope: listStatusChanges ](-docs-esign-rest-api-reference-envelopes-envelopes-liststatuschanges-)\nを使用してください。\n\n### 関連トピック\n\n- [エンベロープ情報を取得する方法](-docs-esign-rest-api-how-to-get-envelope-information-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.display_name": {
+          "source": "Get Envelope",
+          "message": "エンベロープの取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Bl.short_desc": {
+          "source": "Gets the status of a single envelope.",
+          "message": "単一のエンベロープのステータスを取得します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.desc": {
+          "source": "This method lets you [search for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-) in your accounts. A large set of filters let you narrow the scope of your search by date, by envelope ID, or by status codes. Your request must include one or more of the following parameters:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### Restrictions\n\nThe number of envelopes returned is limited to 1,000 per call. To retrieve the next or previous set of envelopes, use the `nextUri` and `previousUri` parameters returned in the original call's response.\n\nIf no `from_date` query parameter is specified, envelopes from more than two years ago will not be returned. To fetch older envelopes, set the specific date range using the `from_date` and `to_date` parameters.\n\nTo avoid unnecessary database queries, the Docusign signature platform first checks requests to ensure that the filter set supplied does not result in a zero-size response before querying the database.\n\n### Envelope statuses\n\nThis table shows the valid current envelope statuses (`status` parameter) for the different status qualifiers (`from_to_status` parameter) in the request. If the status and status qualifiers in the API request do not contain any of the values shown in the Valid Current Statuses column, then an empty list is returned.\n\nClient applications should check that the statuses (`status` parameter) they are requesting make sense for a given `from_to_status` parameter value.\n\n| Status Qualifier<br>(`from_to_status`) | Effective Status Qualifier | Valid Current Statuses                                                      |\n| :- | :- | :- |\n| any (changed)                          | StatusChanged              | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created                                | Created                    | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent                                   | Sent                       | any, sent, delivered, signed, completed, declined, voided, deleted          |\n| delivered                              | StatusChanged              | any, delivered, signed, completed, declined, voided, deleted                |\n| signed                                 | StatusChanged              | any, signed, completed, declined, voided, deleted                           |\n| completed                              | Completed                  | any, completed, declined, voided, deleted                                   |\n| declined                               | StatusChanged              | any, declined, voided, deleted                                              |\n| timedout<br>always return zero results | StatusChanged              | any, voided, deleted                                                        |\n| voided                                 | Voided                     | any, voided, deleted                                                        |\n| deleted                                | StatusChanged              | any, deleted                                                                |\n\n### Extraneous results\n\nIn some cases, a request for a specific envelope status will\ninclude envelopes with additional statuses. For example, in\na request with a `from_date` of 2017-01-01, a `to_date` of\n2017-01-07 and the status qualifier (`from_to_status`) set\nto `delivered`, the response set might contain envelopes\nthat were created during that time period, but not delivered\nduring the time period. As a workaround, check the envelope\nstatus values in the result set as needed.\n\n\n### Related topics\n\n- [Searching for envelopes](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n",
+          "message": "このメソッドを使用すると、アカウント内の[エンベロープを検索](-docs-esign-rest-api-esign101-concepts-envelopes-search-)できます。多数のフィルターにより、日付、エンベロープID、またはステータスコードによって検索範囲を絞り込むことができます。リクエストには、次のパラメータの1つ以上を含める必要があります:\n\n* `from_date`\n* `envelope_ids`\n* `transaction_ids`\n\n### 制限事項\n\n返されるエンベロープの数は1回の呼び出しにつき1,000件に制限されています。次または前のエンベロープセットを取得するには、最初の呼び出しのレスポンスで返された `nextUri` および `previousUri` パラメータを使用してください。\n\n`from_date` クエリパラメータが指定されていない場合、2年以上前のエンベロープは返されません。より古いエンベロープを取得するには、`from_date` および `to_date` パラメータを使用して特定の日付範囲を設定してください。\n\n不要なデータベースクエリを回避するため、Docusign署名プラットフォームはデータベースに照会する前に、指定されたフィルターセットの結果がサイズ0のレスポンスにならないことを確認するためにリクエストを最初にチェックします。\n\n### エンベロープステータス\n\nこの表は、リクエスト内の異なるステータス修飾子（`from_to_status` パラメータ）に対する有効な現在のエンベロープステータス（`status` パラメータ）を示しています。APIリクエスト内のステータスおよびステータス修飾子に、「有効な現在のステータス」列に示されている値が一切含まれていない場合、空のリストが返されます。\n\nクライアントアプリケーションは、リクエストしているステータス（`status` パラメータ）が指定された `from_to_status` パラメータ値に対して意味をなすものであるか確認する必要があります。\n\n| ステータス修飾子<br>(`from_to_status`) | 有効なステータス修飾子 | 有効な現在のステータス |\n| :- | :- | :- |\n| any (changed) | StatusChanged | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| created | Created | any, created, sent, delivered, signed, completed, declined, voided, deleted |\n| sent | Sent | any, sent, delivered, signed, completed, declined, voided, deleted |\n| delivered | StatusChanged | any, delivered, signed, completed, declined, voided, deleted |\n| signed | StatusChanged | any, signed, completed, declined, voided, deleted |\n| completed | Completed | any, completed, declined, voided, deleted |\n| declined | StatusChanged | any, declined, voided, deleted |\n| timedout<br>always return zero results | StatusChanged | any, voided, deleted |\n| voided | Voided | any, voided, deleted |\n| deleted | StatusChanged | any, deleted |\n\n### 余分な結果\n\n場合によっては、特定エンベロープステータスのリクエストに、追加ステータスを持つエンベロープが含まれることがあります。たとえば、`from_date` が 2017-01-01、`to_date` が 2017-01-07、ステータス修飾子（`from_to_status`）が `delivered` に設定されたリクエストでは、レスポンスセットにその期間中に作成されたものの、その期間中に配信されなかったエンベロープが含まれる可能性があります。回避策として、必要に応じて結果セットのエンベロープステータス値を確認してください。\n\n\n### 関連トピック\n\n- [エンベロープの検索](-docs-esign-rest-api-esign101-concepts-envelopes-search-)\n- [エンベロープステータスの変更一覧を取得する方法](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.display_name": {
+          "source": "Get Envelopes",
+          "message": "エンベロープの取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX0dldEVudmVsb3Blcw.short_desc": {
+          "source": "Search for specific sets of envelopes by using search filters.",
+          "message": "検索フィルターを使用して特定の一連のエンベロープを検索します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.desc": {
+          "source": "This method enables you to make changes to an envelope.\nYou can use it to:\n\n* [Send a draft envelope](#sending-a-draft-envelope)\n* [Void an in-process envelope](#voiding-an-in-process-envelope)\n* [Modify a draft envelope](#modifying-envelope-email-information)\n* [Purge documents and envelope metadata from the Docusign platform](#purging-documents-from-docusign)\n\nAlthough the request body for this method\nis a complete envelope definition,\nyou only need to provide\nthe properties that\nyou're updating.\n\n## Sending a draft envelope\n\nTo send a draft envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nYou can attach a workflow before sending the envelope:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## Working with workflows\n\nTo unpause a workflow, the request body should include this:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## Voiding an in-process envelope\n\nTo void an in-process envelope, include the following code in the request body:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## Modifying envelope email information\n\nTo change the email subject and message of a draft envelope,\ninclude the following code in the request body:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Purging documents from Docusign\n\nTo place only the documents\nin the purge queue,\nleaving any\ncorresponding attachments\nand tabs in the Docusign platform,\nset the `purgeState` property\nto `documents_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue,\nset the `purgeState` property\nto `documents_and_metadata_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nTo place documents,\nattachments,\nand tabs\nin the purge queue\nand to redact personal information,\nset the `purgeState` property\nto `documents_and_metadata_and_redact_queued`.\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\nYou can purge documents\nonly from completed envelopes\nthat are not marked as the authoritative copy.\nThe user requesting the purge\nmust have permission to purge documents\nand\nmust be the sender or be acting on behalf of the sender.\n\nWhen the purge request is initiated\nthe items to be purged\nare placed in the purge queue\nfor deletion in 14 days.\nThe sender\nand\nall recipients with Docusign accounts\nassociated with the envelope\nget an email notification\nthe documents will be deleted in 14 days.\nThe notification contains a link\nto the documents.\nA second email notification\nis sent 7 days later.\nAt the end of the 14-day period\nthe documents are deleted from the system.\nRecipients without Docusign accounts\ndo not receive email notifications.\n\nIf your account has a Document Retention policy,\nenvelope documents\nare automatically placed\nin the purge queue,\nand notification emails are sent\nat the end of the retention period.\nSetting a Document Retention policy is the same as setting a\nschedule for purging documents.\n\n## Removing documents from the purge queue\n\nTo remove documents from the purge queue, include the following code in the request body:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### Related topics\n\n- [Void an envelope](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([Common API Tasks](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [Purging documents (eSignature Concepts)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [Purging documents in an envelope (blog post)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n",
+          "message": "このメソッドを使用すると、エンベロープに変更を加えることができます。\n次の目的で使用できます:\n\n* [下書きエンベロープの送信](#sending-a-draft-envelope)\n* [処理中のエンベロープの無効化](#voiding-an-in-process-envelope)\n* [下書きエンベロープの変更](#modifying-envelope-email-information)\n* [Docusignプラットフォームからのドキュメントおよびエンベロープメタデータのパージ](#purging-documents-from-docusign)\n\nこのメソッドのリクエストボディは完全なエンベロープ定義ですが、\n更新するプロパティのみを\n提供する必要があります。\n\n## 下書きエンベロープの送信\n\n下書きエンベロープを送信するには、リクエストボディに次のコードを含めます:\n\n```json\n\n  \"status\": \"sent\"\n\n```\n\nエンベロープを送信する前にワークフローを添付できます:\n\n```json\n\n  \"status\": \"sent\",\n  \"workflow\": \n    \"workflowSteps\": [\n      \n        \"action\": \"pause_before\",\n        \"description\": \"pause_before routing order 2\",\n        \"itemId\": 2,\n        \"triggerOnItem\": \"routing_order\"\n      \n    ]\n  \n\n```\n\n## ワークフローの操作\n\nワークフローの一時停止を解除するには、リクエストボディに次を含める必要があります:\n\n```json\n\n  \"workflow\": \n    \"workflowStatus\": \"in_progress\"\n  \n\n```\n\n## 処理中のエンベロープの無効化\n\n処理中のエンベロープを無効化するには、リクエストボディに次のコードを含めます:\n\n```json\n\n  \"status\": \"voided\",\n  \"voidedReason\": \"The reason for voiding the envelope\"\n\n```\n\n## エンベロープのメール情報の変更\n\n下書きエンベロープのメール件名とメッセージを変更するには、\nリクエストボディに次のコードを含めます:\n\n```json\n\n  \"emailSubject\": \"new email subject\",\n  \"emailBlurb\": \"new email message\"\n\n```\n\n## Docusignからのドキュメントのパージ\n\n対応する添付ファイルとタブをDocusignプラットフォームに残したまま、\nドキュメントのみをパージキューに配置するには、\n`purgeState` プロパティを `documents_queued` に設定します。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_queued\"\n\n```\n\nドキュメント、添付ファイル、およびタブを\nパージキューに配置するには、\n`purgeState` プロパティを `documents_and_metadata_queued` に設定します。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_queued\"\n\n```\n\nドキュメント、添付ファイル、およびタブをパージキューに配置し、\n個人情報を墨消し（非表示）にするには、\n`purgeState` プロパティを `documents_and_metadata_and_redact_queued` に設定します。\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_and_metadata_and_redact_queued\"\n\n```\n\n正本（Authoritative Copy）としてマークされていない、\n完了したエンベロープからのみドキュメントをパージできます。\nパージをリクエストするユーザーは、ドキュメントをパージする権限を持ち、\n差出人であるか差出人に代わって行動している必要があります。\n\nパージリクエストが開始されると、\nパージ対象の項目は14日後に削除されるよう\nパージキューに配置されます。\n差出人およびエンベロープに関連付けられた\nDocusignアカウントを持つすべての受信者に、\n14日後にドキュメントが削除される旨のメール通知が送信されます。\n通知にはドキュメントへのリンクが含まれます。\n2回目のメール通知は7日後に送信されます。\n14日間の期間が終わると、\nドキュメントはシステムから削除されます。\nDocusignアカウントを持たない受信者は\nメール通知を受信しません。\n\nアカウントにドキュメント保持ポリシーがある場合、\nエンベロープドキュメントは保持期間の終了時に\n自動的にパージキューに配置され、\n通知メールが送信されます。\nドキュメント保持ポリシーの設定は、\nドキュメントパージのスケジュール設定と同じです。\n\n## パージキューからのドキュメントの削除\n\nパージキューからドキュメントを削除するには、リクエストボディに次のコードを含めます:\n\n```json\n\n  \"envelopeId\": \"222e6847-xxxx-xxxx-xxxx-72a3c9c16fca\",\n  \"purgeState\": \"documents_dequeued\"\n\n```\n\n### 関連トピック\n\n- [エンベロープの無効化](https:-www.docusign.com-blog-dsdev-common-api-tasks-void-an-envelope) ([よくあるAPIタスク](https:-www.docusign.com-blog-tags-common-api-tasks))\n- [ドキュメントのパージ (eSignatureの概念)](-docs-esign-rest-api-esign101-concepts-documents-purging-)\n- [エンベロープ内のドキュメントのパージ (ブログ記事)](https:-www.docusign.com-blog-developers-purging-documents-envelope)\n- [署名ワークフローの一時停止を解除する方法](-docs-esign-rest-api-how-to-unpause-workflow-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.display_name": {
+          "source": "Update Envelope",
+          "message": "エンベロープの更新"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1B1dEVudmVsb3Bl.short_desc": {
+          "source": "Send, void, or modify a draft envelope. Purge documents from a completed envelope.",
+          "message": "下書きエンベロープの送信、無効化、または変更を行います。完了したエンベロープからドキュメントをパージします。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.desc": {
+          "source": "Creates and sends an envelope or creates a draft envelope.\nEnvelopes are fundamental resources in the Docusign platform.\n\n\nWith this method you can:\n\n* Create and send an envelope\n  with [documents][], [recipients][], and [tabs][].\n* [Create and send an envelope from a template](-docs-esign-rest-api-esign101-concepts-templates-).\n* [Create and send an envelope from\n  a combination of documents and templates](-docs-esign-rest-api-esign101-concepts-templates-composite-).\n* Create a draft envelope.\n\n\nWhen you use this method\nto create and send an envelope\nin a single request,\nthe following parameters in the request body (an [`envelopeDefinition`][envelopeDefinition] object) are required:\n\n| Parameter      | Description |\n| :-      | :- |\n| `status`       | Set to `sent` to send the envelope to recipients.<br>Set to `created` (or don't set at all) to save the envelope as a draft. |\n| `emailSubject` | The subject of the email used to send the envelope. |\n| `documents`    | The [documents][] to be signed. |\n| `recipients`   | The email addresses of the envelope [recipients][]. |\n\n\nWhen you create an envelope by using a\n[composite template](-docs-esign-rest-api-esign101-concepts-templates-composite-),\nyou should specify the envelope custom fields in the inline template.\nAny custom fields that you specify at the root level are ignored.\n\nIf the envelope has a workflow definition\nand the `workflowStatus` is `paused`,\nthe envelope will not be sent immediately,\neven if the envelope's `status` is `sent`.\n\n\n### Related topics\n\n[Envelope][envelopes] and [template][templates]\nobjects along with [documents][documents],\n[recipients][recipients], and [tabs][tabs]\nare the five object models at the core of the eSignature API.\nThe [eSignature concepts guide](-docs-esign-rest-api-esign101-concepts-)\ndescribes how the five object models work together.\n\nThe following how-to articles contain\npractical examples that show you how to\nto\nconfigure this method's\n[`envelopeDefinition`][envelopeDefinition] request body\nto perform common tasks.\n\nRequesting a signature\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature by email using a template](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to request a signature by SMS or WhatsApp delivery](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [How to send a request for payment](-docs-esign-rest-api-how-to-request-a-payment-)\n- [How to send an envelope to an In Person Signer](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [How to request a signature through your app (embedded signing) with a CFR Part 11 account](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nWorking with envelopes and templates\n\n- [How to get envelope information](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [How to list envelope status changes](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [How to create a template](-docs-esign-rest-api-how-to-create-template-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\nWorking with advanced recipient routing\n\n- [How to pause a signature workflow](-docs-esign-rest-api-how-to-pause-workflow-)\n- [How to unpause a signature workflow](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [How to use conditional recipients](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [How to schedule an envelope](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [How to send an envelope with delayed routing](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nWorking with documents\n\n- [How to list envelope documents](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [How to download envelope documents](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [How to attach documents via binary transfer](-docs-esign-rest-api-how-to-send-binary-)\n- [How to create a signable HTML document](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [How to convert a PDF file into a signable HTML document](-docs-esign-rest-api-how-to-converting-pdf-)\n- [How to set document visibility for envelope recipients](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nWorking with tabs\n\n- [How to get envelope tab values](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [How to get envelope custom tab values](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nWorking with brands\n\n- [How to create a brand](-docs-esign-rest-api-how-to-create-brand-)\n- [How to apply a brand to an envelope](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [How to apply a brand and template to an envelope](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\nWorking with permissions\n\n- [How to create a permission profile](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [How to update individual permission settings](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [How to set a permission profile](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [How to delete a permission profile](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\nImplementing multi-factor recipient (signer) authentication\n\n- [How to require ID verification (IDV) for a recipient](-docs-esign-rest-api-how-to-id-verification-)\n- [How to require knowledge-based authentication (KBA) for a recipient](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [How to require phone authentication for a recipient](-docs-esign-rest-api-how-to-phone-auth-)\n- [How to require access code authentication for a recipient](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n",
+          "message": "エンベロープを作成して送信するか、下書きエンベロープを作成します。\nエンベロープはDocusignプラットフォームの基本リソースです。\n\n\nこのメソッドでは以下が可能です:\n\n* [ドキュメント][documents]、[受信者][recipients]、および[タブ][tabs]を含むエンベロープの作成と送信。\n* [テンプレートからのエンベロープの作成と送信](-docs-esign-rest-api-esign101-concepts-templates-)。\n* [ドキュメントとテンプレートの組み合わせからのエンベロープの作成と送信](-docs-esign-rest-api-esign101-concepts-templates-composite-)。\n* 下書きエンベロープの作成。\n\n\n単一のリクエストでこのメソッドを使用してエンベロープを作成および送信する場合、\nリクエストボディ（[`envelopeDefinition`][envelopeDefinition] オブジェクト）内の次のパラメータが必須です:\n\n| パラメータ | 説明 |\n| :- | :- |\n| `status` | エンベロープを受信者に送信するには `sent` に設定します。<br>エンベロープを下書きとして保存するには `created` に設定します（または一切設定しない）。 |\n| `emailSubject` | エンベロープの送信に使用されるメールの件名。 |\n| `documents` | 署名される [ドキュメント][documents]。 |\n| `recipients` | エンベロープ [受信者][recipients] のメールアドレス。 |\n\n\n[複合テンプレート](-docs-esign-rest-api-esign101-concepts-templates-composite-) を使用してエンベロープを作成する場合、\nインラインテンプレートでエンベロープカスタムフィールドを指定する必要があります。\nルートレベルで指定したカスタムフィールドは無視されます。\n\nエンベロープにワークフロー定義があり、`workflowStatus` が `paused` である場合、\nエンベロープの `status` が `sent` であっても、\nエンベロープはすぐには送信されません。\n\n\n### 関連トピック\n\n[エンベロープ][envelopes] および [テンプレート][templates]\nオブジェクトは、[ドキュメント][documents]、\n[受信者][recipients]、および [タブ][tabs] と並び、\neSignature APIの中核となる5つのオブジェクトモデルです。\n[eSignatureの概念ガイド](-docs-esign-rest-api-esign101-concepts-)\nでは、5つのオブジェクトモデルがどのように連携するかを説明しています。\n\n以下のハウツー記事には、\n一般的なタスクを実行するためにこのメソッドの\n[`envelopeDefinition`][envelopeDefinition] リクエストボディを\n設定する方法を示す実用的な例が含まれています。\n\n署名の依頼\n\n- [メールで署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [アプリを介して署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [テンプレートを使用してメールで署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-template-remote-)\n- [複合テンプレートを使用して署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [SMSまたはWhatsApp配信で署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-sms-whatsapp-)\n- [支払いリクエストを送信する方法](-docs-esign-rest-api-how-to-request-a-payment-)\n- [対面署名者にエンベロープを送信する方法](-docs-esign-rest-api-how-to-send-envelope-to-in-person-signer-)\n- [CFR Part 11アカウントでアプリを介して署名を依頼する方法（埋め込み署名）](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-cfrpart11-)\n\nエンベロープとテンプレートの操作\n\n- [エンベロープ情報を取得する方法](-docs-esign-rest-api-how-to-get-envelope-information-)\n- [エンベロープの受信者一覧を取得する方法](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n- [エンベロープステータスの変更一覧を取得する方法](-docs-esign-rest-api-how-to-list-envelope-status-changes-)\n- [テンプレートを作成する方法](-docs-esign-rest-api-how-to-create-template-)\n- [アプリ経由でエンベロープを送信する方法](-docs-esign-rest-api-how-to-embedded-sending-)\n- [エンベロープを一括送信する方法](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n高度な受信者ルーティングの操作\n\n- [署名ワークフローを一時停止する方法](-docs-esign-rest-api-how-to-pause-workflow-)\n- [署名ワークフローの一時停止を解除する方法](-docs-esign-rest-api-how-to-unpause-workflow-)\n- [条件付き受信者を使用する方法](-docs-esign-rest-api-how-to-use-conditional-recipients-)\n- [エンベロープをスケジュールする方法](-docs-esign-rest-api-how-to-schedule-an-envelope-)\n- [遅延ルーティングでエンベロープを送信する方法](-docs-esign-rest-api-how-to-send-envelope-with-delayed-routing-)\n\nドキュメントの操作\n\n- [エンベロープドキュメントの一覧を取得する方法](-docs-esign-rest-api-how-to-list-envelope-documents-)\n- [エンベロープドキュメントをダウンロードする方法](-docs-esign-rest-api-how-to-download-envelope-documents-)\n- [バイナリ転送経由でドキュメントを添付する方法](-docs-esign-rest-api-how-to-send-binary-)\n- [署名可能なHTMLドキュメントを作成する方法](-docs-esign-rest-api-how-to-creating-signable-html-)\n- [PDFファイルを署名可能なHTMLドキュメントに変換する方法](-docs-esign-rest-api-how-to-converting-pdf-)\n- [エンベロープ受信者のドキュメント表示権限を設定する方法](-docs-esign-rest-api-how-to-set-document-visibility-)\n\nタブの操作\n\n- [エンベロープタブの値を取得する方法](-docs-esign-rest-api-how-to-get-envelope-tab-values-)\n- [エンベロープカスタムタブの値を取得する方法](-docs-esign-rest-api-how-to-get-envelope-custom-tab-values-)\n- [エンベロープタブの値を設定する方法](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [テンプレート内のタブ値を設定する方法](-docs-esign-rest-api-how-to-set-template-tab-values-)\n\nブランドの操作\n\n- [ブランドを作成する方法](-docs-esign-rest-api-how-to-create-brand-)\n- [エンベロープにブランドを適用する方法](-docs-esign-rest-api-how-to-apply-brand-to-envelope-)\n- [エンベロープにブランドとテンプレートを適用する方法](-docs-esign-rest-api-how-to-apply-brand-and-template-to-envelope-)\n\n権限の操作\n\n- [権限プロファイルを作成する方法](-docs-esign-rest-api-how-to-permission-profile-creating-)\n- [個々の権限設定を更新する方法](-docs-esign-rest-api-how-to-permission-profile-updating-)\n- [権限プロファイルを構成する方法](-docs-esign-rest-api-how-to-permission-profile-setting-)\n- [権限プロファイルを削除する方法](-docs-esign-rest-api-how-to-permission-profile-deleting-)\n\n多要素受信者（署名者）認証の実装\n\n- [受信者に身元確認（IDV）を要求する方法](-docs-esign-rest-api-how-to-id-verification-)\n- [受信者に知識ベース認証（KBA）を要求する方法](-docs-esign-rest-api-how-to-knowledge-based-authentication-)\n- [受信者に電話認証を要求する方法](-docs-esign-rest-api-how-to-phone-auth-)\n- [受信者にアクセスコード認証を要求する方法](-docs-esign-rest-api-how-to-require-access-code-recipient-)\n\n<!- this should mirror -docs-esign-rest-api-how-to- ->\n\n\n\n[addingdocs]:           -docs-esign-rest-api-esign101-concepts-envelopes-\n[attachments]:          -docs-esign-rest-api-esign101-concepts-documents-attachments-\n[authcopies]:           -docs-esign-rest-api-esign101-concepts-documents-authoritative-copies-\n[conoverview]:          -docs-esign-rest-api-esign101-concepts-overview-\n[deleting]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n[documents]:            -docs-esign-rest-api-esign101-concepts-documents-\n[envelopeDefinition]:   -docs-esign-rest-api-reference-envelopes-envelopes-create-#schema_envelopedefinition\n[envelopes]:            -docs-esign-rest-api-esign101-concepts-envelopes-\n[locking]:              -docs-esign-rest-api-esign101-concepts-envelopes-lock-\n[payments]:             -docs-esign-rest-api-esign101-concepts-tabs-payment-\n[purging]:              -docs-esign-rest-api-esign101-concepts-documents-purging-\n[recipients]:           -docs-esign-rest-api-esign101-concepts-recipients-\n[recipstatus]:          -docs-esign-rest-api-esign101-concepts-recipients-#recipient-status\n[reciptypes]:           -docs-esign-rest-api-esign101-concepts-recipients-#recipient-types\n[supdocs]:              -docs-esign-rest-api-esign101-concepts-documents-supplemental-\n[tabanchor]:            -docs-esign-rest-api-esign101-concepts-tabs-auto-place-\n[tabcustom]:            -docs-esign-rest-api-esign101-concepts-tabs-custom-tabs-\n[tabs]:                 -docs-esign-rest-api-esign101-concepts-tabs-\n[tabtypes]:             -docs-esign-rest-api-esign101-concepts-tabs-\n[templates]:            -docs-esign-rest-api-esign101-concepts-templates-\n[tracking]:             -docs-esign-rest-api-esign101-concepts-envelopes-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.display_name": {
+          "source": "Create Envelopes",
+          "message": "エンベロープの作成"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.RW52ZWxvcGVzX1Bvc3RFbnZlbG9wZXM.short_desc": {
+          "source": "Creates an envelope.",
+          "message": "エンベロープを作成します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.desc": {
+          "source": "Deletes one or more recipients from a draft or sent envelope. List the recipients that you want to delete in the body of the request. This method uses the `recipientId` as the key for deleting recipients.\n\nIf the envelope is `In Process`, meaning that it has been sent and has not been completed or voided, recipients that have completed their actions cannot be deleted.",
+          "message": "下書きまたは送信済みエンベロープから1人以上の受信者を削除します。削除する受信者をリクエストボディにリストします。このメソッドは、受信者を削除するためのキーとして `recipientId` を使用します。\n\nエンベロープが `In Process` である場合（送信済みで完了または無効化されていない状態）、アクションを完了した受信者は削除できません。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.display_name": {
+          "source": "Delete Recipients",
+          "message": "受信者の削除"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19EZWxldGVSZWNpcGllbnRz.short_desc": {
+          "source": "Deletes recipients from an envelope.",
+          "message": "エンベロープから受信者を削除します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.desc": {
+          "source": "Retrieves the status of all recipients in a single envelope and identifies the current recipient in the routing list. This method can also be used to retrieve the tab values.\n\nThe `currentRoutingOrder` property of the response contains the `routingOrder` value of the current recipient indicating that the envelope has been sent to the recipient, but the recipient has not completed their actions.\n\n### Related topics\n\n- [How to list envelope recipients](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n",
+          "message": "単一のエンベロープ内のすべての受信者のステータスを取得し、ルーティングリスト内の現在の受信者を特定します。このメソッドはタブ値の取得にも使用できます。\n\nレスポンスの `currentRoutingOrder` プロパティには現在の受信者の `routingOrder` 値が含まれ、エンベロープが受領者に送信されたものの受領者がアクションを完了していないことを示します。\n\n### 関連トピック\n\n- [エンベロープの受信者一覧を取得する方法](-docs-esign-rest-api-how-to-get-envelope-recipients-)\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.display_name": {
+          "source": "Get Recipients",
+          "message": "受信者の取得"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19HZXRSZWNpcGllbnRz.short_desc": {
+          "source": "Gets the status of recipients for an envelope.",
+          "message": "エンベロープの受信者のステータスを取得します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.desc": {
+          "source": "Adds one or more recipients to an envelope.\n\nFor an in-process envelope,\none that has been sent and has not been completed or voided,\nan email is sent to a new recipient\nwhen they are reached in the routing order.\nIf the new recipient's routing order\nis before or the same as the envelope's\nnext recipient,\nan email is only sent if the optional\n`resend_envelope` query string is set to **true.**\n\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### Related topics\n\n- [How to bulk send envelopes](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n",
+          "message": "エンベロープに1人以上の受信者を追加します。\n\n処理中のエンベロープ（送信済みで完了または無効化されていないもの）の場合、ルーティング順序で新しい受信者に到達した時点でメールが送信されます。\n新しい受信者のルーティング順序がエンベロープの次の受信者より前または同じ場合、オプションの `resend_envelope` クエリ文字列が **true** に設定されている場合のみメールが送信されます。\n\n\n**注意:** このメソッドは受信者のみに作用します。\n受信者タブを追加するには、[EnvelopeRecipientTabs][recipientTabs] リソースのメソッドを使用してください。\nたとえば、このリクエストボディは受信者（`astanton@example.com`）を追加しますが、「ここにサイン」受信者タブは追加**しません**。\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n      \"tabs\":            - These tabs will NOT be added\n        \"signHereTabs\": [ - with this method. See note above.\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n\n### 関連トピック\n\n- [エンベロープを一括送信する方法](-docs-esign-rest-api-how-to-bulk-send-envelopes-)\n\n\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.display_name": {
+          "source": "Add Recipients",
+          "message": "受信者の追加"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19Qb3N0UmVjaXBpZW50cw.short_desc": {
+          "source": "Adds one or more recipients to an envelope.",
+          "message": "エンベロープに1人以上の受信者を追加します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.desc": {
+          "source": "Updates the recipients of a draft envelope or corrects recipient information for an in-process envelope.\n\nIf you send information for a recipient that does not already\nexist in a draft envelope, the recipient is added to the envelope\n(similar to the [EnvelopeRecipients: Create][EnvelopeRecipients-create] method).\n\nYou can also use this method to resend an envelope to a recipient\nby using the `resend_envelope` option.\n\n**Updating Sent Envelopes**\n\nAfter an envelope has been sent, you can edit only the following properties:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email` (If you provide an email address in this method, it will be treated as a new email address, even if it is exactly the same as the current address. Do not provide an email address if you do not want a correction email sent.)\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType` (For this to work, you must also change the recipient object to match the recipient type.)\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId` (You can change this ID to switch to a different signing group and its corresponding set of recipients.)\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\nIf the recipient has signed,\nbut the envelope is still active,\nthe method will return success,\nbut the `recipientUpdateResults` property\nin the response will include an error\nthat the recipient could not be updated:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nIf the envelope is completed,\nand you try to change a recipient's address,\nthe method will fail with this error:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**Note:** This method works on recipients only.\nTo add recipient tabs,\nuse methods from the [EnvelopeRecipientTabs][recipientTabs] resource.\nFor example, this request body will add a recipient (`astanton@example.com`)\nbut **NOT** the Sign Here recipient tab.\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n",
+          "message": "下書きエンベロープの受信者を更新するか、処理中のエンベロープの受信者情報を修正します。\n\n下書きエンベロープにまだ存在しない受信者の情報を送信した場合、受領者はエンベロープに追加されます（[EnvelopeRecipients: Create][EnvelopeRecipients-create] メソッドと同様）。\n\nまた、このメソッドを使用して `resend_envelope` オプションを利用して受信者にエンベロープを再送信することもできます。\n\n**送信済みエンベロープの更新**\n\nエンベロープが送信された後は、次のプロパティのみを編集できます:\n\n- `accessCode`\n- `agentCanEditName`\n- `agentCanEditEmail`\n- `customFields`\n- `deliveryMethod`\n- `documentVisibility`\n- `email`（このメソッドでメールアドレスを指定した場合、現在の電子メールアドレスと完全に同一であっても、新しいメールアドレスとして扱われます。修正メールを送信したくない場合はメールアドレスを指定しないでください。）\n- `emailNotification`\n- `idCheckConfigurationName`\n- `identityVerification`\n- `name`\n- `note`\n- `phoneAuthentication`\n- `recipientType`（これが機能するには、受信者タイプに合わせて受信者オブジェクトも変更する必要があります。）\n- `requireIdLookup`\n- `routingOrder`\n- `signingGroupId`（このIDを変更して別の署名グループおよび対応する受信者セットに切り替えることができます。）\n- `smsAuthentication`\n- `suppressEmails`\n- `userName`\n\n受信者が署名済みであってもエンベロープがまだアクティブである場合、メソッドは成功を返しますが、レスポンスの `recipientUpdateResults` プロパティには受信者を更新できなかった旨のエラーが含まれます:\n\n```\n\n  \"recipientUpdateResults\": [\n    \n      \"recipientId\": \"999\",\n      \"errorDetails\": \n        \"errorCode\": \"RECIPIENT_UPDATE_FAILED\",\n        \"message\": \"The recipient could not be updated.  Recipient not in state that allows correction.\"\n      \n    \n  ]\n\n```\n\nエンベロープが完了している状態のときに受信者のアドレスを変更しようとすると、メソッドは次のエラーで失敗します:\n\n```\n\n  \"errorCode\": \"ENVELOPE_INVALID_STATUS\",\n  \"message\": \"Invalid envelope status. Envelope status is not one of: Created, Sent, Delivered, Correct.\"\n\n```\n\n**注意:** このメソッドは受信者のみに作用します。\n受信者タブを追加するには、[EnvelopeRecipientTabs][recipientTabs] リソースのメソッドを使用してください。\nたとえば、このリクエストボディは受信者（`astanton@example.com`）を追加しますが、「ここにサイン」受信者タブは追加**しません**。\n\n```json\n\n  \"signers\": [\n    \n      \"email\": \"astanton@example.com\",\n      \"name\": \"Anne Stanton\",\n      \"recipientId\": \"1\",\n- THIS WILL NOT WORK\n      \"tabs\": \n        \"signHereTabs\": [\n          \n            \"anchorString\": \"below\",\n            \"tooltip\": \"please sign here3\"\n          ,\n          . . .\n        ]\n      \n    \n  ]\n\n```\n\n\n[EnvelopeRecipients-create]: -docs-esign-rest-api-reference-envelopes-enveloperecipients-create-\n[recipientTabs]: -docs-esign-rest-api-reference-envelopes-enveloperecipienttabs-\n\n"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.display_name": {
+          "source": "Update Recipients",
+          "message": "受信者の更新"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.UmVjaXBpZW50c19QdXRSZWNpcGllbnRz.short_desc": {
+          "source": "Updates recipients in a draft envelope or corrects recipient information for an in-process envelope.",
+          "message": "下書きエンベロープの受信者を更新するか、処理中のエンベロープの受信者情報を修正します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.desc": {
+          "source": "Returns a URL that enables you to\n[embed the recipient view](-docs-esign-rest-api-esign101-concepts-embedding-)\nof the\nDocuSign UI in your applications. If the recipient is a signer,\nthen the view will provide the signing ceremony.\n\nThis method is only used with envelopes in the `sent` status.\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nDue to screen space issues,\ndo not use an <code>&lt;iframe&gt;<-code> for embedded operations on mobile devices.\nFor iOS devices, Docusign recommends using a WebView.\n<-ds-inlinemessage>\n\n\n### The returned URL\n\nThe URL returned in this method's response is intended to be used\nimmediately to redirect the signer to the recipient view.\nYou can open the recipient view\nin the current browser or in a new tab.\nAfter the signer is redirected to the\nrecipient view, they must interact with the Docusign system\nperiodically or their session will time out.\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\nThe returned URL can be used only once and\nexpires after 5 minutes.\nDo not store or email the returned URL.\n<-ds-inlinemessage>\n\nIf you want to invite someone to an embedded signing session via\nemail, the email invitation's URL must be to your application.\nWhen invoked, your app should request a `recipientView` URL from\nDocusign and then redirect the signer to that URL.\n\n### How to specify the default language\n\nYou can append the `locale`\nquery parameter\nto the URL returned by this method\nto specify a language.\n\nThe language for the recipient view\nfollows this order or precedence:\n\n- The language specified by the sender for the recipient.\n- The `locale` parameter appended to the URL.\n- The account language if the signer has a Docusign account.\n- The language used in a previous signing if the signer is return signer.\n- The browser language.\n\nFor example, to set the default language\nto Canadian French, you would add this query parameter\nto the returned URL:\n\n```\n...?locale=fr_CA\n```\n\n\n## Authentication\n\nYour application is responsible for authenticating the identity\nof the recipient or signer when you use this method. Use the\nfollowing parameters to record how the recipient\nwas authenticated.\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\nAt a minimum, `authenticationMethod` and `clientUserId` are\nrequired. The information that you provide is included in the\nenvelope's certificate of completion.\n\n## Sending to a remote signer\n\nYou can request a signing session for a remote recipient\nwho has a Docusign account.\n\nAuthenticate the request using the recipient's\ncredentials, and do not specify a  `clientUserId`.\nThis differs from the typical behavior where the\nrequest is authenticated using the sender's credentials,\nand the recipient has a `clientUserId` defined.\n\n\n\n## Redirecting back to returnUrl\nAfter the signer completes or ends the signing ceremony, Docusign\nredirects the user's browser back to your app via the\n`returnUrl` that you supplied in the request.\n\nThe signer may be redirected through various Docusign\nsubdomains, depending on the region of the account sending the\nenvelope. Please consult [Allowlists for Docusign eSignature service](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service)\nin **Security for Docusign eSignature**\nwhen setting up your allowlists\n\n\n### The event status parameter\n\nDocusign appends an `event` query parameter to the `returnUrl` with the\noutcome of the signing ceremony. Your app can use this event\nparameter to determine the next step for the envelope.\nDo not fetch the envelope status by using\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-)\nor a similar method because doing so\nwill probably hit [request and polling limits](-docs-esign-rest-api-esign101-rules-and-limits-).\n\n\n| event query parameter | Meaning                                                                                  |\n| :- | :- |\n| signing_complete     | The recipient has signed the document.                                                   |\n| cancel               | The recipient decided to finish later.                                                   |\n| decline              | The recipient declined to sign the document.                                             |\n| exception            | An exception has occurred on the server during the signing session.                      |\n| fax_pending          | Recipient has a fax pending.                                                             |\n| session_timeout      | The recipient did not sign the document in time. The timeout is set to 20 minutes.       |\n| ttl_expired          | The token was not used within the timeout period or the token has already been accessed. |\n| viewing_complete     | The recipient did not need to sign but has completed the viewing ceremony.               |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nBecause a user can cancel redirection, close their\nbrowser after signing, or spoof the landing URL,\nyou should not rely on the <code>returnUrl<-code>\nalone as the single source of truth for envelope\nstatus for your integration.\n<-ds-inlinemessage>\n\n### Maintaining State\nAfter the recipient completes the recipient view (or signing\nceremony), they are redirected to your application. Your\napplication can recover state information about the transaction\nby storing information in a cookie, or by including query\nparameters in the `returnUrl` field. For example.\n`https:-myapp.example.com-docusign_return?myState=12345` When the\nuser is redirected to your app, the `event` query parameter will\nbe appended. In this example, prevent spoofing by not using a\nguessable value as the state value.\n\n\n### Related topics\n\n- [How to request a signature by email](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [How to request a signature through your app](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [How to request a signature using a composite template](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [How to send an envelope via your app](-docs-esign-rest-api-how-to-embedded-sending-)\n- [How to set envelope tab values](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [How to set tab values in a template](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [How to request a signature using focused view](-docs-esign-rest-api-how-to-request-signature-focused-view-)",
+          "message": "アプリケーションにDocuSign UIの[受信者ビューを埋め込む](-docs-esign-rest-api-esign101-concepts-embedding-)ことができるURLを返します。受信者が署名者である場合、ビューは署名手順を提供します。\n\nこのメソッドは、`sent` ステータスのエンベロープでのみ使用されます。\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\n画面スペースの問題により、モバイルデバイスでの埋め込み操作には <code>&lt;iframe&gt;<-code> を使用しないでください。\niOSデバイスの場合、DocusignではWebViewの使用を推奨しています。\n<-ds-inlinemessage>\n\n\n### 返されるURL\n\nこのメソッドのレスポンスで返されるURLは、署名者を受信者ビューにリダイレクトするためにすぐに使用されることを意図しています。\n現在のブラウザまたは新しいタブで受信者ビューを開くことができます。\n署名者が受信者ビューにリダイレクトされた後、定期的にDocusignシステムとやり取りしないとセッションがタイムアウトになります。\n\n<ds-inlinemessage kind=\"warning\" markdown=\"1\">\n返されたURLは1回のみ使用でき、5分後に期限切れになります。\n返されたURLを保存したり電子メールで送信したりしないでください。\n<-ds-inlinemessage>\n\nメールで埋め込み署名セッションに誰かを招待したい場合、メール招待のURLはアプリケーションを指す必要があります。\n呼び出された際、アプリはDocusignから `recipientView` URLをリクエストし、署名者をそのURLにリダイレクトする必要があります。\n\n### デフォルト言語を指定する方法\n\nこのメソッドによって返されるURLに `locale` クエリパラメータを追加して、言語を指定できます。\n\n受信者ビューの言語は、次の優先順位に従います:\n\n- 差出人によって受信者に対して指定された言語。\n- URLに追加された `locale` パラメータ。\n- 署名者がDocusignアカウントを持っている場合はそのアカウント言語。\n- 署名者が再訪問の署名者である場合は以前の署名で使用された言語。\n- ブラウザの言語。\n\nたとえば、デフォルト言語をカナダフランス語に設定するには、返されたURLに次のクエリパラメータを追加します:\n\n```\n...?locale=fr_CA\n```\n\n\n## 認証\n\nこのメソッドを使用する場合、受信者または署名者の本人確認を行う責任はアプリケーションにあります。受信者がどのように認証されたかを記録するには、次のパラメータを使用します。\n\n- `assertionId`\n- `authenticationInstant`\n- `authenticationMethod`\n- `clientUserId`\n- `securityDomain`\n\n最低限、`authenticationMethod` および `clientUserId` が必須です。提供された情報は、エンベロープの完了証明書に含まれます。\n\n## リモート署名者への送信\n\nDocusignアカウントを持つリモート受信者に対して署名セッションをリクエストできます。\n\n受信者の資格情報を使用してリクエストを認証し、`clientUserId` を指定しないでください。\nこれは、差出人の資格情報を使用してリクエストが認証され、受信者に `clientUserId` が定義されている一般的な動作とは異なります。\n\n\n\n## returnUrl へのリダイレクト\n署名者が署名手順を完了または終了した後、Docusignはリクエストで提供された `returnUrl` を介してユーザーのブラウザをアプリにリダイレクトします。\n\nエンベロープを送信するアカウントのリージョンによっては、署名者がさまざまなDocusignサブドメインを経由してリダイレクトされる場合があります。許可リストを設定する際は、**Docusign eSignatureのセキュリティ**にある [Docusign eSignatureサービスの許可リスト](https:-www.docusign.com-trust-security-esignature#allowlists-for-docusign-esignature-service) を参照してください。\n\n\n### イベントステータスパラメータ\n\nDocusignは、署名手順の結果を示す `event` クエリパラメータを `returnUrl` に追加します。アプリはこのイベントパラメータを使用して、エンベロープの次のステップを決定できます。\n[Envelopes: get](-docs-esign-rest-api-reference-envelopes-envelopes-get-) や類似のメソッドを使用してエンベロープステータスを取得しないでください。それを行うと [リクエストおよびポーリング制限](-docs-esign-rest-api-esign101-rules-and-limits-) に達する可能性があります。\n\n\n| イベントクエリパラメータ | 意味 |\n| :- | :- |\n| signing_complete | 受信者がドキュメントに署名しました。 |\n| cancel | 受信者は後で完了することを選択しました。 |\n| decline | 受信者はドキュメントへの署名を拒否しました。 |\n| exception | 署名セッション中にサーバーで例外が発生しました。 |\n| fax_pending | 受信者にFAXが保留されています。 |\n| session_timeout | 受信者が時間内にドキュメントに署名しませんでした。タイムアウトは20分に設定されています。 |\n| ttl_expired | トークンがタイムアウト期間内に使用されなかったか、トークンが既にアクセスされています。 |\n| viewing_complete | 受信者は署名する必要はありませんでしたが、閲覧手順を完了しました。 |\n\n\n\n<ds-inlinemessage kind=\"information\" markdown=\"1\">\nユーザーはリダイレクトをキャンセルしたり、署名後にブラウザを閉じたり、ランディングURLを偽装したりできるため、統合におけるエンベロープステータスの唯一の信頼できる情報源として <code>returnUrl<-code> のみに依存しないでください。\n<-ds-inlinemessage>\n\n### 状態の維持\n受信者が受信者ビュー（または署名手順）を完了すると、アプリケーションにリダイレクトされます。アプリケーションは、クッキーに情報を保存するか、`returnUrl` フィールドにクエリパラメータを含めることで、トランザクションに関する状態情報を復元できます。たとえば、`https:-myapp.example.com-docusign_return?myState=12345` です。ユーザーがアプリにリダイレクトされると、`event` クエリパラメータが追加されます。この例では、推測可能な値を状態値として使用しないことでなりすましを防止します。\n\n\n### 関連トピック\n\n- [メールで署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-email-remote-)\n- [アプリを介して署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-in-app-embedded-)\n- [複合テンプレートを使用して署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-composite-template-embedded-)\n- [アプリ経由でエンベロープを送信する方法](-docs-esign-rest-api-how-to-embedded-sending-)\n- [エンベロープタブの値を設定する方法](-docs-esign-rest-api-how-to-set-envelope-tab-values-)\n- [テンプレート内のタブ値を設定する方法](-docs-esign-rest-api-how-to-set-template-tab-values-)\n- [フォーカスビューを使用して署名を依頼する方法](-docs-esign-rest-api-how-to-request-signature-focused-view-)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.display_name": {
+          "source": "Create Recipient View",
+          "message": "受信者ビューの作成"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.Vmlld3NfUG9zdEVudmVsb3BlUmVjaXBpZW50Vmlldw.short_desc": {
+          "source": "Returns a URL to the recipient view UI. For signer recipients, returns the embedded signing view. Can also be used for other recipient types.",
+          "message": "受信者ビューUIへのURLを返します。署名者の受信者の場合、埋め込み署名ビューを返します。他の受信者タイプにも使用できます。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.desc": {
+          "source": "This trigger activates whenever there’s a change in a DocuSign envelope’s lifecycle. It listens for a variety of updates, such as when an envelope is sent to recipients, delivered, signed, completed, or declined. It also includes administrative events like envelopes being resent, corrected, purged, deleted, discarded, newly created, or removed. By setting up this trigger, you can stay informed of envelope progress and status changes, enabling timely follow-ups, record-keeping, or other automated actions in your workflow.",
+          "message": "このトリガーは、DocuSignエンベロープのライフサイクルに変更が生じるたびにアクティブになります。エンベロープが受信者に送信された、配信された、署名された、完了した、辞退されたなど、さまざまな更新を監視します。また、エンベロープの再送信、修正、パージ、削除、破棄、新規作成、除去などの管理イベントも含まれます。このトリガーを設定することで、エンベロープの進行状況やステータスの変更を常に把握でき、タイムリーなフォローアップ、記録の保存、またはワークフロー内のその他の自動アクションが可能になります。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.display_name": {
+          "source": "Envelope Status Updated",
+          "message": "エンベロープステータスの更新時"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "接続が承認されたときに設定されるデフォルトのアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "デフォルトアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "接続が承認されたときに設定されるデフォルトのアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.ZW52ZWxvcGVfc3RhdHVzX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers whenever a DocuSign envelope's status or properties are updated, including events like it being sent, delivered, signed, completed, declined, voided, corrected, purged, or deleted.",
+          "message": "DocuSignエンベロープのステータスまたはプロパティが更新されたとき（送信、配信、署名、完了、辞退、無効化、修正、パージ、削除などのイベントを含む）にトリガーされます。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Docusign eSignature** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "**Docusign eSignature**に対して、設定された接続の認証を使用してカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Docusign eSignature",
+          "message": "Docusign eSignatureへのカスタムAPI呼び出しの実行"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.desc": {
+          "source": "Template updated",
+          "message": "テンプレートの更新時"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.display_name": {
+          "source": "Template Updated",
+          "message": "テンプレートの更新時"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "接続が承認されたときに設定されるデフォルトのアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.display_name": {
+          "source": "Default Account ID",
+          "message": "デフォルトアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.option.YWNjb3VudElk.short_desc": {
+          "source": "The default account ID set when the connection is authorized",
+          "message": "接続が承認されたときに設定されるデフォルトのアカウントID"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.action.dGVtcGxhdGVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers whenever a new DocuSign template is created, updated or deleted, allowing you to take immediate action in response to the new template.",
+          "message": "新しいDocuSignテンプレートが作成、更新、または削除されるたびにトリガーされ、新しいテンプレートに迅速に対応できるようになります。"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Docusign eSignature APIと対話するためのアクションのコレクション"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.display_name": {
+          "source": "Docusign eSignature",
+          "message": "Docusign eSignature"
+        },
+        "app.RG9jdXNpZ25FU2lnbmF0dXJl.short_desc": {
+          "source": "Collection of actions to interact with the Docusign eSignature API",
+          "message": "Docusign eSignature APIと対話するためのアクションのコレクション"
+        }
+      }
+    }
+  }
+}

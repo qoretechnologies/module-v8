@@ -1,0 +1,1973 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.SHVic3BvdA.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a new HubSpot form definition with the specified field groups, configuration, display options, and legal consent settings.",
+          "message": "指定されたフィールドグループ、設定、表示オプション、および法的同意設定を使用して、新しい HubSpot フォーム定義を作成します。"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "フォームを作成"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Ym9keQ.desc": {
+          "source": "REST request body argument",
+          "message": "REST リクエスト本文引数"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.option.Ym9keQ.short_desc": {
+          "source": "REST request body argument",
+          "message": "REST リクエスト本文引数"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new HubSpot marketing form definition.",
+          "message": "新しい HubSpot マーケティングフォーム定義を作成します。"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.desc": {
+          "source": "Creates a new list in HubSpot CRM with the specified configuration and properties.",
+          "message": "指定された設定とプロパティを使用して HubSpot CRM に新しいリストを作成します。"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.display_name": {
+          "source": "Create List",
+          "message": "リストを作成"
+        },
+        "app.SHVic3BvdA.action.Y3JlYXRlX2xpc3Q.short_desc": {
+          "source": "Create a new HubSpot list",
+          "message": "新しい HubSpot リストを作成"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNfZnJvbV9zb3VyY2VfbGlzdA.desc": {
+          "source": "Adds all members from a source HubSpot list to a target list, effectively copying the membership.",
+          "message": "ソース HubSpot リストのすべてのメンバーをターゲットリストに追加し、メンバーシップを事実上コピーします。"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNfZnJvbV9zb3VyY2VfbGlzdA.display_name": {
+          "source": "Add Records from Another List",
+          "message": "別のリストからレコードを追加"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNfZnJvbV9zb3VyY2VfbGlzdA.short_desc": {
+          "source": "Copy all members from one list to another",
+          "message": "あるリストのすべてのメンバーを別のリストにコピー"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.desc": {
+          "source": "Adds specified records as members to an existing HubSpot list.",
+          "message": "指定されたレコードを既存の HubSpot リストにメンバーとして追加します。"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.display_name": {
+          "source": "Add List Records",
+          "message": "リストレコードを追加"
+        },
+        "app.SHVic3BvdA.action.YWRkX21lbWJlcnNoaXBz.short_desc": {
+          "source": "Add records to a HubSpot list",
+          "message": "HubSpot リストにレコードを追加"
+        },
+        "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.desc": {
+          "source": "Archives a HubSpot form definition. New submissions will no longer be accepted; the definition is permanently deleted three months after archival.",
+          "message": "HubSpot フォーム定義をアーカイブします。新しい送信は受け付けられなくなります。定義はアーカイブから3か月後に完全に削除されます。"
+        },
+        "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.display_name": {
+          "source": "Archive Form",
+          "message": "フォームをアーカイブ"
+        },
+        "app.SHVic3BvdA.action.YXJjaGl2ZV9mb3Jt.short_desc": {
+          "source": "Archive a HubSpot form definition.",
+          "message": "HubSpot フォーム定義をアーカイブします。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.desc": {
+          "source": "Read an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`objectId` によって識別されるオブジェクトを読み取ります。`objectId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.display_name": {
+          "source": "Retrieve Custom Object",
+          "message": "カスタムオブジェクトを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfZ2V0QnlJZA.short_desc": {
+          "source": "Retrieve a specific custom object",
+          "message": "特定のカスタムオブジェクトを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.desc": {
+          "source": "Read a page of objects. Control what is returned via the `properties` query param.",
+          "message": "オブジェクトのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.display_name": {
+          "source": "List Custom Objects",
+          "message": "カスタムオブジェクトを一覧表示"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLW9iamVjdFR5cGVfZ2V0UGFnZQ.short_desc": {
+          "source": "Retrieve a list of selected custom objects",
+          "message": "選択したカスタムオブジェクトの一覧を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllc19nZXRQYWdl.desc": {
+          "source": "Retrieve all companies, using query parameters to control the information that gets returned.",
+          "message": "クエリパラメータを使用して返される情報を制御しながら、すべての会社を取得します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllc19nZXRQYWdl.display_name": {
+          "source": "Retrieve Companies",
+          "message": "会社を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllc19nZXRQYWdl.short_desc": {
+          "source": "Retrieve companies",
+          "message": "会社を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfZ2V0QnlJZA.desc": {
+          "source": "Retrieve a company by its ID (`companyId`) or by a unique property (`idProperty`). You can specify what is returned using the `properties` query parameter.",
+          "message": "ID (`companyId`) または一意のプロパティ (`idProperty`) で会社を取得します。`properties` クエリパラメータを使用して返される内容を指定できます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfZ2V0QnlJZA.display_name": {
+          "source": "Retrieve a Company",
+          "message": "会社を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfZ2V0QnlJZA.short_desc": {
+          "source": "Retrieve a company",
+          "message": "会社を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.desc": {
+          "source": "Read a page of contacts. Control what is returned via the `properties` query param.",
+          "message": "コンタクトのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.display_name": {
+          "source": "List Contacts",
+          "message": "連絡先一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3Rz.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "連絡先の一覧を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.desc": {
+          "source": "Read an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`contactId` によって識別されるオブジェクトを読み取ります。`contactId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
+          "source": "Retrieve Contact",
+          "message": "コンタクトを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
+          "source": "Retrieve a specific contact",
+          "message": "特定のコンタクトを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.desc": {
+          "source": "Read an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`dealId` によって識別されるオブジェクトを読み取ります。`dealId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.display_name": {
+          "source": "Retrieve Deal",
+          "message": "取引を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9nZXRCeUlk.short_desc": {
+          "source": "Retrieve a specific deal",
+          "message": "特定の取引を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.desc": {
+          "source": "Read a page of deals. Control what is returned via the `properties` query param.",
+          "message": "取引のページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.display_name": {
+          "source": "List Deals",
+          "message": "商談一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWRlYWxzX2dldFBhZ2U.short_desc": {
+          "source": "Retrieve a list of deals",
+          "message": "商談一覧を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.desc": {
+          "source": "Read an Object identified by `leadsId`. `leadsId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`leadsId` によって識別されるオブジェクトを読み取ります。`leadsId` はデフォルトで内部オブジェクト ID を参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.display_name": {
+          "source": "Retrieve Lead",
+          "message": "リードを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfZ2V0QnlJZA.short_desc": {
+          "source": "Retrieve a specific lead",
+          "message": "特定のリードを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.desc": {
+          "source": "Read a page of leads. Control what is returned via the `properties` query param.",
+          "message": "リードのページを読み取ります。`properties` クエリパラメータを介して返される内容を制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.display_name": {
+          "source": "List Leads",
+          "message": "リードを一覧表示"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLWxlYWRzX2dldFBhZ2U.short_desc": {
+          "source": "Retrieve a list of leads",
+          "message": "リードの一覧を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.desc": {
+          "source": "Read an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`productId` で識別されるオブジェクトを読み取ります。`productId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.display_name": {
+          "source": "Retrieve Product",
+          "message": "商品を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9nZXRCeUlk.short_desc": {
+          "source": "Retrieve a specific product",
+          "message": "指定した商品を取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.desc": {
+          "source": "Read a page of products. Control what is returned via the `properties` query param.",
+          "message": "商品のページを読み取ります。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.display_name": {
+          "source": "List Products",
+          "message": "商品一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXByb2R1Y3RzX2dldFBhZ2U.short_desc": {
+          "source": "Retrieve a list of products",
+          "message": "商品の一覧を取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.desc": {
+          "source": "Read an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`ticketId` で識別されるオブジェクトを読み取ります。`ticketId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.display_name": {
+          "source": "Retrieve Ticket",
+          "message": "チケットを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfZ2V0QnlJZA.short_desc": {
+          "source": "Retrieve a specific ticket",
+          "message": "指定したチケットを取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.desc": {
+          "source": "Read a page of tickets. Control what is returned via the `properties` query param.",
+          "message": "チケットのページを読み取ります。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.display_name": {
+          "source": "List Tickets",
+          "message": "チケット一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXRpY2tldHNfZ2V0UGFnZQ.short_desc": {
+          "source": "Retrieve a list of tickets",
+          "message": "チケットの一覧を取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.desc": {
+          "source": "Read a page of users. Control what is returned via the `properties` query param.",
+          "message": "ユーザーのページを読み取ります。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJz.short_desc": {
+          "source": "Retrieve a list of users",
+          "message": "ユーザーの一覧を取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.desc": {
+          "source": "Read an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param.  Control what is returned via the `properties` query param.",
+          "message": "`userId` で識別されるオブジェクトを読み取ります。`userId` はデフォルトで内部オブジェクトIDを指しますが、`idProperty` クエリパラメータで指定された一意のプロパティ値を指定することもできます。返される内容は `properties` クエリパラメータで制御します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.display_name": {
+          "source": "Retrieve User",
+          "message": "ユーザーを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0LWNybS12My1vYmplY3RzLXVzZXJzLXVzZXJJZA.short_desc": {
+          "source": "Retrieve a specific user",
+          "message": "指定したユーザーを取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm0.desc": {
+          "source": "Returns the complete form definition for the supplied form ID, including all field groups, configuration, display options, and legal consent settings.",
+          "message": "指定されたフォームIDの完全なフォーム定義（すべてのフィールドグループ、設定、表示オプション、法的同意設定を含む）を返します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "フォームの取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve a single HubSpot form definition by ID.",
+          "message": "IDによって単一のHubSpotフォーム定義を取得します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.desc": {
+          "source": "Fetches submissions made to a specified HubSpot form, with cursor-based pagination, an optional client-side \"since\" filter, and a `maxResults` cap. Uses the legacy forms-v1 endpoint — submissions are ordered most-recent first.",
+          "message": "指定されたHubSpotフォームへの送信データを、カーソルベースのページネーション、オプションのクライアント側 \"since\" フィルター、および `maxResults` の上限付きで取得します。レガシーのforms-v1エンドポイントを使用します — 送信は新しい順に並べられます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.display_name": {
+          "source": "Get Form Submissions",
+          "message": "フォーム送信の取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.YWZ0ZXI.desc": {
+          "source": "Cursor returned by a previous call as `paging.next.after`. Used to resume pagination from a specific point.",
+          "message": "前回の呼び出しで `paging.next.after` として返されたカーソル。特定のポイントからページネーションを再開するために使用されます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.YWZ0ZXI.display_name": {
+          "source": "After",
+          "message": "After"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination cursor returned by a previous call",
+          "message": "前回の呼び出しによって返されたページネーションカーソル"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.Zm9ybUlk.desc": {
+          "source": "The unique identifier (GUID) of the HubSpot form whose submissions to read.",
+          "message": "送信データを読み取るHubSpotフォームの一意の識別子（GUID）。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.Zm9ybUlk.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.Zm9ybUlk.short_desc": {
+          "source": "The HubSpot form to read submissions for",
+          "message": "送信データを読み取るHubSpotフォーム"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.desc": {
+          "source": "Number of submissions to retrieve per request. HubSpot enforces a maximum of 50; the action paginates automatically until `Max Results` is reached or no more pages remain.",
+          "message": "1リクエストあたりに取得する送信数。HubSpotでは最大50件に制限されています。アクションは `Max Results` に達するか、ページがなくなるまで自動的にページネーションを行います。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bGltaXQ.short_desc": {
+          "source": "Records per request (1–50, default 20)",
+          "message": "1リクエストあたりのレコード数（1〜50、デフォルト: 20）"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Stop paginating once this many submissions have been collected (default 200). Useful for keeping calls bounded against busy forms.",
+          "message": "この件数の送信データが収集されたらページネーションを停止します（デフォルト: 200）。トラフィックの多いフォームに対する呼び出し数を制限するのに役立ちます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "最大結果数"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Cap on the total number of submissions returned",
+          "message": "返される送信データの総数の上限"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.c2luY2U.desc": {
+          "source": "Optional ISO 8601 timestamp. The action stops paginating when it crosses a submission older than this value. Applied client-side because the legacy endpoint does not support a server-side filter.",
+          "message": "オプションのISO 8601タイムスタンプ。アクションは、この値よりも古い送信データに到達した時点でページネーションを停止します。レガシーエンドポイントがサーバー側フィルターをサポートしていないため、クライアント側で適用されます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.c2luY2U.display_name": {
+          "source": "Since",
+          "message": "開始日時"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.option.c2luY2U.short_desc": {
+          "source": "Only return submissions on or after this timestamp",
+          "message": "このタイムスタンプ以降の送信データのみを返す"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1fc3VibWlzc2lvbnM.short_desc": {
+          "source": "Retrieve submissions made to a HubSpot form.",
+          "message": "HubSpotフォームへの送信データを取得します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.desc": {
+          "source": "Returns a list of marketing form definitions in your HubSpot account, optionally filtered by form type (native HubSpot, captured, pop-up flow, or blog comment) and archive status.",
+          "message": "HubSpotアカウント内のマーケティングフォーム定義のリストを返します。オプションでフォームタイプ（ネイティブHubSpot、キャプチャ、ポップアップフロー、またはブログコメント）およびアーカイブステータスでフィルタリングできます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.display_name": {
+          "source": "List Forms",
+          "message": "フォーム一覧"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2Zvcm1z.short_desc": {
+          "source": "Retrieve a paginated list of HubSpot marketing forms.",
+          "message": "HubSpotマーケティングフォームのページ分割されたリストを取得します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3Q.desc": {
+          "source": "Fetches detailed information about a specific HubSpot list using its unique identifier.",
+          "message": "一意の識別子を使用して、特定のHubSpotリストに関する詳細情報を取得します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3Q.display_name": {
+          "source": "Get List",
+          "message": "リストを取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3Q.short_desc": {
+          "source": "Retrieve a HubSpot list by ID",
+          "message": "IDによってHubSpotリストを取得します"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.desc": {
+          "source": "Fetches records from a specified HubSpot list, including support for pagination using before/after cursors and filtering by specific properties. Returns the actual record data along with pagination metadata.",
+          "message": "指定されたHubSpotリストからレコードを取得します。before/afterカーソルを使用したページネーションや特定のプロパティによるフィルタリングをサポートしています。実際のレコードデータとページネーションメタデータを返します。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.display_name": {
+          "source": "Get List Records",
+          "message": "リストレコードの取得"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YWZ0ZXI.desc": {
+          "source": "Cursor value to retrieve records after this point. Used for forward pagination.",
+          "message": "このポイント以降のレコードを取得するためのカーソル値。前方ページネーションに使用されます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YWZ0ZXI.display_name": {
+          "source": "After",
+          "message": "After"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination cursor for next page",
+          "message": "次のページのページネーションカーソル"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YmVmb3Jl.desc": {
+          "source": "Cursor value to retrieve records before this point. Used for backward pagination.",
+          "message": "このポイントより前のレコードを取得するためのカーソル値。後方ページネーションに使用されます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YmVmb3Jl.display_name": {
+          "source": "Before",
+          "message": "Before"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.YmVmb3Jl.short_desc": {
+          "source": "Pagination cursor for previous page",
+          "message": "前のページのページネーションカーソル"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return in a single request. Default is 100.",
+          "message": "1回のリクエストで返されるレコードの最大数。デフォルトは100です。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "返答するレコードの最大数"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGlzdElk.desc": {
+          "source": "The unique identifier of the HubSpot list to fetch records from.",
+          "message": "レコードを取得するHubSpotリストの一意の識別子。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "リストID"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.bGlzdElk.short_desc": {
+          "source": "The HubSpot list to retrieve records from",
+          "message": "レコードを取得するHubSpotリスト"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.cHJvcGVydGllcw.desc": {
+          "source": "Specific properties to include in the response for each record. If not specified, default properties will be returned.",
+          "message": "各レコードのレスポンスに含める特定のプロパティ。指定しない場合はデフォルトのプロパティが返されます。"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "プロパティ"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.option.cHJvcGVydGllcw.short_desc": {
+          "source": "List of properties to include",
+          "message": "含めるプロパティのリスト"
+        },
+        "app.SHVic3BvdA.action.Z2V0X2xpc3RfcmVjb3Jkcw.short_desc": {
+          "source": "Retrieve records from a HubSpot list with pagination and property filtering.",
+          "message": "ページネーションとプロパティフィルタリングを使用してHubSpotリストからレコードを取得します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Hubspot\"",
+          "message": "アプリ \"Hubspot\" の指定されたテーブルからレコードを削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Hubspot\"",
+          "message": "アプリ \"Hubspot\" の指定されたテーブルからレコードを削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.desc": {
+          "source": "Move an Object identified by `objectId` to the recycling bin.",
+          "message": "`objectId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.display_name": {
+          "source": "Delete Custom Object",
+          "message": "カスタムオブジェクトを削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLW9iamVjdFR5cGUtb2JqZWN0SWRfYXJjaGl2ZQ.short_desc": {
+          "source": "Soft delete a selected custom object",
+          "message": "選択したカスタムオブジェクトを論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfYXJjaGl2ZQ.desc": {
+          "source": "Delete a company by ID. Deleted companies can be restored within 90 days of deletion. Learn more about [restoring records](https:-knowledge.hubspot.com-records-restore-deleted-records).",
+          "message": "IDによって会社を削除します。削除された会社は削除後90日以内であれば復元できます。[レコードの復元](https:-knowledge.hubspot.com-records-restore-deleted-records)の詳細をご覧ください。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfYXJjaGl2ZQ.display_name": {
+          "source": "Archive a Company",
+          "message": "会社をアーカイブ"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbXBhbmllcy1jb21wYW55SWRfYXJjaGl2ZQ.short_desc": {
+          "source": "Archive a company",
+          "message": "会社をアーカイブします"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.desc": {
+          "source": "Move an Object identified by `contactId` to the recycling bin.",
+          "message": "`contactId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.display_name": {
+          "source": "Delete Contact",
+          "message": "連絡先を削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWNvbnRhY3RzLWNvbnRhY3RJZA.short_desc": {
+          "source": "Soft delete a selected contact",
+          "message": "選択したコンタクトを論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.desc": {
+          "source": "Move an Object identified by `dealId` to the recycling bin.",
+          "message": "`dealId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.display_name": {
+          "source": "Delete a Deal",
+          "message": "取引を削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWRlYWxzLWRlYWxJZF9hcmNoaXZl.short_desc": {
+          "source": "Soft delete a selected deal",
+          "message": "選択した取引を論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.desc": {
+          "source": "Move an Object identified by `leadsId` to the recycling bin.",
+          "message": "`leadsId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.display_name": {
+          "source": "Delete Lead",
+          "message": "リードを削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLWxlYWRzLWxlYWRzSWRfYXJjaGl2ZQ.short_desc": {
+          "source": "Soft delete a selected lead",
+          "message": "選択したリードを論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.desc": {
+          "source": "Move an Object identified by `productId` to the recycling bin.",
+          "message": "`productId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.display_name": {
+          "source": "Delete Product",
+          "message": "製品を削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXByb2R1Y3RzLXByb2R1Y3RJZF9hcmNoaXZl.short_desc": {
+          "source": "Soft delete a selected product",
+          "message": "選択した製品を論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.desc": {
+          "source": "Move an Object identified by `ticketId` to the recycling bin.",
+          "message": "`ticketId` で識別されるオブジェクトをごみ箱に移動します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.display_name": {
+          "source": "Delete Ticket",
+          "message": "チケットを削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlLWNybS12My1vYmplY3RzLXRpY2tldHMtdGlja2V0SWRfYXJjaGl2ZQ.short_desc": {
+          "source": "Soft delete a selected ticket",
+          "message": "選択したチケットを論理削除します"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.desc": {
+          "source": "Permanently removes a specified list from HubSpot CRM by its ID.",
+          "message": "指定されたリストをIDによってHubSpot CRMから完全に削除します。"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.display_name": {
+          "source": "Delete List",
+          "message": "リストを削除"
+        },
+        "app.SHVic3BvdA.action.ZGVsZXRlX2xpc3Q.short_desc": {
+          "source": "Delete a HubSpot list",
+          "message": "HubSpotリストを削除"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.desc": {
+          "source": "Automatically trigger workflows when a support ticket is created or updated in HubSpot, ideal for managing customer support operations and streamlining issue resolution.",
+          "message": "HubSpotでサポートチケットが作成または更新されたときにワークフローを自動的にトリガーします。カスタマーサポート業務の管理や問題解決の効率化に最適です。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.display_name": {
+          "source": "Ticket Created or Updated",
+          "message": "チケットの作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF90aWNrZXRfY3JlYXRlZF9vcl91cGRhdGVkX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a support ticket is created or updated in HubSpot.",
+          "message": "HubSpotでサポートチケットが作成または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "This trigger fires upon the creation or update of a user within HubSpot, helping you keep track of user accounts and maintain updated access control for your team.",
+          "message": "このトリガーは、HubSpot内でユーザーが作成または更新されたときに起動し、ユーザーアカウントの把握やチームの最新のアクセス制御の維持に役立ちます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "User Created or Updated",
+          "message": "ユーザーの作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF91c2VyX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a user is added or updated in HubSpot.",
+          "message": "HubSpotでユーザーが追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "This trigger activates whenever a company record is created or modified in HubSpot, enabling you to automate workflows based on company data changes.",
+          "message": "このトリガーは、HubSpotで会社レコードが作成または変更されるたびにアクティブ化され、会社データの変更に基づいたワークフローの自動化を可能にします。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Company Created or Updated",
+          "message": "会社の作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb21wYW55X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a company is added or updated in HubSpot.",
+          "message": "HubSpotで会社が追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "Activate workflows whenever a new contact is created or an existing contact is updated within HubSpot. Ideal for managing customer information efficiently.",
+          "message": "HubSpot内で新しいコンタクトが作成されるか、既存のコンタクトが更新されるたびにワークフローをアクティブ化します。顧客情報を効率的に管理するのに最適です。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Contact Created or Updated",
+          "message": "コンタクトの作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jb250YWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a contact is added or updated in HubSpot.",
+          "message": "HubSpotでコンタクトが追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "Use this trigger to capture changes to custom objects in HubSpot, ensuring that updates to custom data structures are processed immediately for automation or integration.",
+          "message": "このトリガーを使用してHubSpotのカスタムオブジェクトへの変更をキャプチャし、カスタムデータ構造への更新が自動化または統合のために即座に処理されるようにします。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Custom Object Created or Updated",
+          "message": "カスタムオブジェクトの作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.b2JqZWN0.desc": {
+          "source": "Select the custom object you want to monitor for new or updated records.",
+          "message": "新規または更新されたレコードを監視するカスタムオブジェクトを選択します。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "オブジェクト"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.b2JqZWN0.short_desc": {
+          "source": "The custom object to monitor for changes.",
+          "message": "変更を監視するカスタムオブジェクト。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9jdXN0b21fb2JqZWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a custom object is added or updated in HubSpot.",
+          "message": "HubSpotでカスタムオブジェクトが追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "This trigger fires when a deal is created or modified in HubSpot, allowing you to track sales opportunities and integrate with your sales pipeline automation workflows.",
+          "message": "このトリガーは、HubSpotで取引が作成または変更されたときに起動し、営業案件を追跡して営業パイプラインの自動化ワークフローと統合できるようにします。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Deal Created or Updated",
+          "message": "取引の作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9kZWFsX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a deal is created or updated in HubSpot.",
+          "message": "HubSpotで取引が作成または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.desc": {
+          "source": "Polls the configured HubSpot form for new submissions and emits an event for each one. Useful for kicking off automation as soon as a lead fills in a form. Submissions are identified by `conversionId`; if HubSpot omits it the trigger synthesizes a stable key from the timestamp.",
+          "message": "設定されたHubSpotフォームをポーリングして新しい送信を確認し、送信ごとにイベントを発行します。リードがフォームに入力するとすぐに自動化を開始するのに役立ちます。送信は `conversionId` で識別されます。HubSpotがこれを省略した場合、トリガーはタイムスタンプから安定したキーを合成します。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.display_name": {
+          "source": "Form Submitted",
+          "message": "フォームの送信"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.option.Zm9ybUlk.desc": {
+          "source": "The unique identifier (GUID) of the HubSpot form to poll. Only one form per trigger instance.",
+          "message": "ポーリングするHubSpotフォームの一意識別子（GUID）。トリガーインスタンスごとに1つのフォームのみ。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.option.Zm9ybUlk.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.option.Zm9ybUlk.short_desc": {
+          "source": "The HubSpot form to watch for new submissions",
+          "message": "新しい送信を監視するHubSpotフォーム"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9mb3JtX3N1Ym1pdHRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a new submission is received for a HubSpot form.",
+          "message": "HubSpotフォームで新しい送信を受信したときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "Monitor new leads and updates to existing leads in HubSpot with this trigger, enabling efficient lead management and follow-up processes.",
+          "message": "このトリガーを使用してHubSpotの新しいリードや既存のリードの更新を監視し、効率的なリード管理とフォローアッププロセスを実現します。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Lead Created or Updated",
+          "message": "リードの作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9sZWFkX2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a lead is added or updated in HubSpot.",
+          "message": "HubSpotでリードが追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.desc": {
+          "source": "This trigger alerts you to any new or updated products within your HubSpot account, ensuring that your product data remains synchronized with your workflows and external systems.",
+          "message": "このトリガーは、HubSpotアカウント内の新規または更新された製品を通知し、製品データがワークフローや外部システムと常に同期されるようにします。"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.display_name": {
+          "source": "Product Created or Updated",
+          "message": "製品の作成または更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Triggers when a new object is created",
+          "message": "新しいオブジェクトが作成されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Object Created",
+          "message": "オブジェクト作成"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Triggers when an existing object is updated",
+          "message": "既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Object Updated",
+          "message": "オブジェクト更新"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select the criteria for the trigger to activate.\n\n- Created: Triggers when a new object is created\n- Updated: Triggers when an existing object is updated",
+          "message": "トリガーがアクティブ化する条件を選択します。\n\n- Created: 新しいオブジェクトが作成されたときにトリガーされます\n- Updated: 既存のオブジェクトが更新されたときにトリガーされます"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "アクティベーション条件"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Criteria for trigger to activate (created or updated)",
+          "message": "トリガーをアクティブ化する条件（作成または更新）"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.desc": {
+          "source": "Select additional properties to add to the returned object data",
+          "message": "返されるオブジェクトデータに追加する追加プロパティを選択します"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.display_name": {
+          "source": "Additional Properties",
+          "message": "追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.option.YWRkaXRpb25hbFByb3BlcnRpZXM.short_desc": {
+          "source": "Additional properties to add to returned data",
+          "message": "返されるデータに追加する追加プロパティ"
+        },
+        "app.SHVic3BvdA.action.aHVic3BvdF9wcm9kdWN0X2NyZWF0ZWRfb3JfdXBkYXRlZF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a product is added or updated in HubSpot.",
+          "message": "HubSpotで製品が追加または更新されたときにトリガーされます。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **HubSpot** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**HubSpot** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.SHVic3BvdA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to HubSpot",
+          "message": "HubSpotへのカスタムAPI呼び出しを実行"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の一致するレコードを検索します"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の一致するレコードを検索します"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の一致する単一レコードを検索します"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の一致する単一レコードを検索します"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.desc": {
+          "source": "Search and retrieve HubSpot lists based on specified criteria and filters.",
+          "message": "指定された条件やフィルターに基づいてHubSpotリストを検索して取得します。"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.display_name": {
+          "source": "Search Lists",
+          "message": "リストを検索"
+        },
+        "app.SHVic3BvdA.action.c2VhcmNoX2xpc3Rz.short_desc": {
+          "source": "Search for HubSpot lists",
+          "message": "HubSpotリストを検索"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.desc": {
+          "source": "Submits values to a HubSpot form using the authenticated secure-submit endpoint. The `portalId` is resolved automatically from the connection. File-upload fields are not yet supported.",
+          "message": "認証済みのセキュア送信エンドポイントを使用してHubSpotフォームに値を送信します。`portalId` は接続から自動的に解決されます。ファイルアップロードフィールドはまだサポートされていません。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.display_name": {
+          "source": "Submit Form",
+          "message": "フォームを送信"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.desc": {
+          "source": "Optional submission context, including the HubSpot user-tracking cookie (`hutk`), IP address, page URI/name/ID, Salesforce campaign ID, and GoToWebinar key.",
+          "message": "HubSpotユーザートラッキングCookie（`hutk`）、IPアドレス、ページURI/名前/ID、SalesforceキャンペーンID、GoToWebinarキーを含む、任意の送信コンテキスト。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.display_name": {
+          "source": "Submission Context",
+          "message": "送信コンテキスト"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Y29udGV4dA.short_desc": {
+          "source": "Optional submission context (tracking metadata)",
+          "message": "任意の送信コンテキスト（トラッキングメタデータ）"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Zm9ybUlk.desc": {
+          "source": "The unique identifier (GUID) of the HubSpot form to receive this submission.",
+          "message": "この送信を受け取るHubSpotフォームの一意識別子（GUID）。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Zm9ybUlk.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.Zm9ybUlk.short_desc": {
+          "source": "The HubSpot form to submit to",
+          "message": "送信先のHubSpotフォーム"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.desc": {
+          "source": "List of form fields to submit. Each entry must include the internal `name` (matching the field on the form definition) and the `value` to submit. `objectTypeId` is optional and defaults to the contact object (`0-1`).",
+          "message": "送信するフォームフィールドのリスト。各エントリには、内部 `name`（フォーム定義上のフィールドと一致）と送信する `value` を含める必要があります。`objectTypeId` はオプションで、デフォルトはコンタクトオブジェクト（`0-1`）です。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.ZmllbGRz.short_desc": {
+          "source": "List of name/value pairs to submit",
+          "message": "送信する名前/値のペアのリスト"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.desc": {
+          "source": "Optional GDPR consent payload passed through to HubSpot. Refer to HubSpot documentation for the exact `consent` or `legitimateInterest` shape required by your form.",
+          "message": "HubSpot に渡されるオプションの GDPR 同意ペイロード。フォームに必要な正確な `consent` または `legitimateInterest` の形式については、HubSpot のドキュメントを参照してください。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.display_name": {
+          "source": "Legal Consent Options",
+          "message": "法的同意オプション"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.bGVnYWxDb25zZW50T3B0aW9ucw.short_desc": {
+          "source": "Optional GDPR / legitimate-interest consent payload",
+          "message": "オプションの GDPR / 正当な利益の同意ペイロード"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.desc": {
+          "source": "When true, HubSpot will accept the submission even if some field values fail validation. Use with care.",
+          "message": "true の場合、一部のフィールド値で検証に失敗しても HubSpot は送信を受け入れます。注意して使用してください。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.display_name": {
+          "source": "Skip Validation",
+          "message": "検証をスキップ"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c2tpcFZhbGlkYXRpb24.short_desc": {
+          "source": "Skip field-level validation on the HubSpot side",
+          "message": "HubSpot 側でのフィールドレベルの検証をスキップ"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.desc": {
+          "source": "Optional ISO 8601 timestamp to record as the submission time. Defaults to the time HubSpot receives the request.",
+          "message": "送信時刻として記録するオプションの ISO 8601 タイムスタンプ。デフォルトは HubSpot がリクエストを受信した時刻です。"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.display_name": {
+          "source": "Submitted At",
+          "message": "送信日時"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.option.c3VibWl0dGVkQXQ.short_desc": {
+          "source": "Override the submission timestamp",
+          "message": "送信タイムスタンプを上書き"
+        },
+        "app.SHVic3BvdA.action.c3VibWl0X2Zvcm0.short_desc": {
+          "source": "Submit data to a HubSpot form on behalf of the connected portal.",
+          "message": "接続されたポータルに代わって HubSpot フォームにデータを送信します。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLWJhdGNoLXVwc2VydF91cHNlcnQ.desc": {
+          "source": "Post-crm-v3-objects-tickets-batch-upsert upsert",
+          "message": "Post-crm-v3-objects-tickets-batch-upsert upsert"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLWJhdGNoLXVwc2VydF91cHNlcnQ.display_name": {
+          "source": "Create or Update Tickets",
+          "message": "チケットの作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLWJhdGNoLXVwc2VydF91cHNlcnQ.short_desc": {
+          "source": "Create or update a batch of tickets by unique property values",
+          "message": "一意のプロパティ値によってチケットを一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.desc": {
+          "source": "Search for tickets based on specific criteria",
+          "message": "特定の条件に基づいてチケットを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.display_name": {
+          "source": "Search Tickets",
+          "message": "チケットの検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
+          "source": "Search for tickets based on specific criteria",
+          "message": "特定の条件に基づいてチケットを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.desc": {
+          "source": "Create a ticket with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard tickets is provided.",
+          "message": "指定されたプロパティでチケットを作成し、ID を含むオブジェクトのコピーを返します。標準チケットの作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.display_name": {
+          "source": "Create Ticket",
+          "message": "チケットを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy10aWNrZXRzX2NyZWF0ZQ.short_desc": {
+          "source": "Create a new ticket",
+          "message": "新しいチケットを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.desc": {
+          "source": "Post-crm-v3-objects-users-batch-upsert",
+          "message": "Post-crm-v3-objects-users-batch-upsert"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.display_name": {
+          "source": "Create or Update Users",
+          "message": "ユーザーの作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1iYXRjaC11cHNlcnQ.short_desc": {
+          "source": "Create or update a batch of users by unique property values",
+          "message": "一意のプロパティ値によってユーザーを一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.desc": {
+          "source": "Search for users based on specific criteria",
+          "message": "特定の条件に基づいてユーザーを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.display_name": {
+          "source": "Search Users",
+          "message": "ユーザーの検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy11c2Vycy1zZWFyY2g.short_desc": {
+          "source": "Search for users based on specific criteria",
+          "message": "特定の条件に基づいてユーザーを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtYmF0Y2gtdXBzZXJ0X3Vwc2VydA.desc": {
+          "source": "Create or update companies identified by a unique property value as specified by the `idProperty` query parameter. `idProperty` query param refers to a property whose values are unique for the object.",
+          "message": "`idProperty` クエリパラメータで指定された一意のプロパティ値によって識別される会社を作成または更新します。`idProperty` クエリパラメータは、オブジェクトに対して値が一意であるプロパティを参照します。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtYmF0Y2gtdXBzZXJ0X3Vwc2VydA.display_name": {
+          "source": "Create or Update Companies",
+          "message": "会社の作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtYmF0Y2gtdXBzZXJ0X3Vwc2VydA.short_desc": {
+          "source": "Create or update multiple companies",
+          "message": "複数の会社を作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtc2VhcmNoX2RvU2VhcmNo.desc": {
+          "source": "Search for companies by filtering on properties, searching through associations, and sorting results. Learn more about [CRM search](https:-developers.hubspot.com-docs-guides-api-crm-search#make-a-search-request).",
+          "message": "プロパティのフィルタリング、関連付けの検索、および結果の並べ替えによって会社を検索します。詳細については [CRM search](https:-developers.hubspot.com-docs-guides-api-crm-search#make-a-search-request) を参照してください。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtc2VhcmNoX2RvU2VhcmNo.display_name": {
+          "source": "Search for Companies",
+          "message": "会社の検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXMtc2VhcmNoX2RvU2VhcmNo.short_desc": {
+          "source": "Search for companies",
+          "message": "会社を検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXNfY3JlYXRl.desc": {
+          "source": "Create a single company. Include a `properties` object to define [property values](https:-developers.hubspot.com-docs-guides-api-crm-properties) for the company, along with an `associations` array to define [associations](https:-developers.hubspot.com-docs-guides-api-crm-associations-associations-v4) with other CRM records.",
+          "message": "単一の会社を作成します。会社の [プロパティ値](https:-developers.hubspot.com-docs-guides-api-crm-properties) を定義する `properties` オブジェクトと、他の CRM レコードとの [関連付け](https:-developers.hubspot.com-docs-guides-api-crm-associations-associations-v4) を定義する `associations` 配列を含めます。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXNfY3JlYXRl.display_name": {
+          "source": "Create a Company",
+          "message": "会社を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb21wYW5pZXNfY3JlYXRl.short_desc": {
+          "source": "Create a company",
+          "message": "会社を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.desc": {
+          "source": "Create a contact with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard contacts is provided.",
+          "message": "指定されたプロパティでコンタクトを作成し、ID を含むオブジェクトのコピーを返します。標準コンタクトの作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.display_name": {
+          "source": "Create Contact",
+          "message": "コンタクトを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cw.short_desc": {
+          "source": "Create a new contact",
+          "message": "新しいコンタクトを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.desc": {
+          "source": "Search for contacts based on specific criteria",
+          "message": "特定の条件に基づいてコンタクトを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.display_name": {
+          "source": "Search Contacts",
+          "message": "連絡先を検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1jb250YWN0cy1zZWFyY2g.short_desc": {
+          "source": "Search for contacts based on specific criteria",
+          "message": "特定の条件に基づいてコンタクトを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.desc": {
+          "source": "Create a deal with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard deals is provided.",
+          "message": "指定されたプロパティで取引を作成し、ID を含むオブジェクトのコピーを返します。標準取引の作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.display_name": {
+          "source": "Create Deal",
+          "message": "案件を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFsc19jcmVhdGU.short_desc": {
+          "source": "Create a new deal",
+          "message": "新規案件を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1iYXRjaC11cHNlcnRfdXBzZXJ0.desc": {
+          "source": "Post-crm-v3-objects-deals-batch-upsert upsert",
+          "message": "Post-crm-v3-objects-deals-batch-upsert upsert"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1iYXRjaC11cHNlcnRfdXBzZXJ0.display_name": {
+          "source": "Create or Update Deals",
+          "message": "取引の作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
+          "source": "Create or update a batch of deals by unique property values",
+          "message": "一意のプロパティ値によって取引を一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.desc": {
+          "source": "Search for deals based on specific criteria",
+          "message": "特定の条件に基づいて取引を検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.display_name": {
+          "source": "Search Deals",
+          "message": "取引の検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1kZWFscy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
+          "source": "Search for deals based on specific criteria",
+          "message": "特定の条件に基づいて取引を検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.desc": {
+          "source": "Create a lead with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard leads is provided.",
+          "message": "指定されたプロパティでリードを作成し、ID を含むオブジェクトのコピーを返します。標準リードの作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.display_name": {
+          "source": "Create Lead",
+          "message": "リードを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkc19jcmVhdGU.short_desc": {
+          "source": "Create a new lead",
+          "message": "新しいリードを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1iYXRjaC11cHNlcnRfdXBzZXJ0.desc": {
+          "source": "Create or update records identified by `leadsId` or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object.",
+          "message": "`leadsId` または必要に応じて `idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるレコードを作成または更新します。`leadsId` はデフォルトで内部オブジェクト ID を参照し、`idProperty` クエリパラメータはオブジェクトに対して値が一意であるプロパティを参照します。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1iYXRjaC11cHNlcnRfdXBzZXJ0.display_name": {
+          "source": "Create or Update Leads",
+          "message": "リードの作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
+          "source": "Create or update a batch of leads by unique property values",
+          "message": "一意のプロパティ値によってリードを一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.desc": {
+          "source": "Search for leads based on specific criteria",
+          "message": "特定の条件に基づいてリードを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.display_name": {
+          "source": "Search Leads",
+          "message": "リードを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1sZWFkcy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
+          "source": "Search for leads based on specific criteria",
+          "message": "特定の条件に基づいてリードを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLWJhdGNoLXVwc2VydA.desc": {
+          "source": "Post-crm-v3-objects-object type-batch-upsert",
+          "message": "Post-crm-v3-objects-object type-batch-upsert"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLWJhdGNoLXVwc2VydA.display_name": {
+          "source": "Create or Update Custom Objects",
+          "message": "カスタムオブジェクトの作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLWJhdGNoLXVwc2VydA.short_desc": {
+          "source": "Create or update a batch of objects by unique property values",
+          "message": "一意のプロパティ値によってオブジェクトを一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.desc": {
+          "source": "Search for custom objects based on specific criteria",
+          "message": "特定の条件に基づいてカスタムオブジェクトを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.display_name": {
+          "source": "Search Custom Objects",
+          "message": "カスタムオブジェクトの検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlLXNlYXJjaF9kb1NlYXJjaA.short_desc": {
+          "source": "Search for custom objects based on specific criteria",
+          "message": "特定の条件に基づいてカスタムオブジェクトを検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.desc": {
+          "source": "Create a CRM object with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard objects is provided.",
+          "message": "指定されたプロパティで CRM オブジェクトを作成し、ID を含むオブジェクトのコピーを返します。標準オブジェクトの作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.display_name": {
+          "source": "Create Custom Object",
+          "message": "カスタムオブジェクトを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1vYmplY3RUeXBlX2NyZWF0ZQ.short_desc": {
+          "source": "Create a new custom object of a selected type",
+          "message": "選択したタイプの新しいカスタムオブジェクトを作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.desc": {
+          "source": "Create a product with the given properties and return a copy of the object, including the ID. Documentation and examples for creating standard products is provided.",
+          "message": "指定されたプロパティで商品を作成し、ID を含むオブジェクトのコピーを返します。標準商品の作成に関するドキュメントと例が提供されています。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.display_name": {
+          "source": "Create Product",
+          "message": "商品を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0c19jcmVhdGU.short_desc": {
+          "source": "Create a new product",
+          "message": "新しい商品を作成"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1iYXRjaC11cHNlcnRfdXBzZXJ0.desc": {
+          "source": "Create or update records identified by a unique property value as specified by the `idProperty` query param. `idProperty` query param refers to a property whose values are unique for the object.",
+          "message": "`idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるレコードを作成または更新します。`idProperty` クエリパラメータは、オブジェクトに対して値が一意であるプロパティを参照します。"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1iYXRjaC11cHNlcnRfdXBzZXJ0.display_name": {
+          "source": "Create or Update Products",
+          "message": "商品の作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1iYXRjaC11cHNlcnRfdXBzZXJ0.short_desc": {
+          "source": "Create or update a batch of products by unique property values",
+          "message": "一意のプロパティ値によって商品を一括作成または更新"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.desc": {
+          "source": "Search for products based on specific criteria",
+          "message": "特定の条件に基づいて商品を検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.display_name": {
+          "source": "Search Products",
+          "message": "商品の検索"
+        },
+        "app.SHVic3BvdA.action.cG9zdC1jcm0tdjMtb2JqZWN0cy1wcm9kdWN0cy1zZWFyY2hfZG9TZWFyY2g.short_desc": {
+          "source": "Search for products based on specific criteria",
+          "message": "特定の条件に基づいて商品を検索"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29tcGFuaWVzLWNvbXBhbnlJZF91cGRhdGU.desc": {
+          "source": "Update a company by ID (`companyId`) or unique property value (`idProperty`). Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.",
+          "message": "ID（`companyId`）または一意のプロパティ値（`idProperty`）によって会社を更新します。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29tcGFuaWVzLWNvbXBhbnlJZF91cGRhdGU.display_name": {
+          "source": "Update a Company",
+          "message": "会社を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29tcGFuaWVzLWNvbXBhbnlJZF91cGRhdGU.short_desc": {
+          "source": "Update a company",
+          "message": "会社を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.desc": {
+          "source": "Perform a partial update of an Object identified by `contactId`. `contactId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+          "message": "`contactId` で識別されるオブジェクトの部分更新を実行します。`contactId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.display_name": {
+          "source": "Update Contact",
+          "message": "連絡先を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtY29udGFjdHMtY29udGFjdElk.short_desc": {
+          "source": "Update an existing contact",
+          "message": "既存の連絡先を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.desc": {
+          "source": "Perform a partial update of an Object identified by `dealId`. `dealId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+          "message": "`dealId` で識別されるオブジェクトの部分更新を実行します。`dealId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.display_name": {
+          "source": "Update Deal",
+          "message": "案件を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtZGVhbHMtZGVhbElkX3VwZGF0ZQ.short_desc": {
+          "source": "Update an existing deal",
+          "message": "既存の案件を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.desc": {
+          "source": "Perform a partial update of an Object identified by `objectId`. `objectId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+          "message": "`objectId` で識別されるオブジェクトの部分更新を実行します。`objectId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.display_name": {
+          "source": "Update Custom Object",
+          "message": "カスタムオブジェクトを更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtb2JqZWN0VHlwZS1vYmplY3RJZF91cGRhdGU.short_desc": {
+          "source": "Update an existing custom object",
+          "message": "既存のカスタムオブジェクトを更新します"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.desc": {
+          "source": "Perform a partial update of an Object identified by `leadsId`or optionally a unique property value as specified by the `idProperty` query param. `leadsId` refers to the internal object ID by default, and the `idProperty` query param refers to a property whose values are unique for the object. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.",
+          "message": "`leadsId`、またはオプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値によって識別されるオブジェクトの部分更新を実行します。`leadsId` はデフォルトで内部オブジェクトIDを参照し、`idProperty` クエリパラメータはオブジェクトに対して一意の値を持つプロパティを参照します。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.display_name": {
+          "source": "Update Lead",
+          "message": "リードを更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtbGVhZHMtbGVhZHNJZF91cGRhdGU.short_desc": {
+          "source": "Update an existing lead",
+          "message": "既存のリードを更新します"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.desc": {
+          "source": "Perform a partial update of an Object identified by `productId`. `productId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will result in an error. Properties values can be cleared by passing an empty string.",
+          "message": "`productId` で識別されるオブジェクトの部分更新を実行します。`productId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティはエラーになります。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.display_name": {
+          "source": "Update Product",
+          "message": "製品を更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtcHJvZHVjdHMtcHJvZHVjdElkX3VwZGF0ZQ.short_desc": {
+          "source": "Update an existing product",
+          "message": "既存の製品を更新します"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.desc": {
+          "source": "Perform a partial update of an Object identified by `ticketId`. `ticketId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+          "message": "`ticketId` で識別されるオブジェクトの部分更新を実行します。`ticketId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.display_name": {
+          "source": "Update Ticket",
+          "message": "チケットを更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdGlja2V0cy10aWNrZXRJZF91cGRhdGU.short_desc": {
+          "source": "Update an existing ticket",
+          "message": "既存のチケットを更新します"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.desc": {
+          "source": "Perform a partial update of an Object identified by `userId`. `userId` refers to the internal object ID by default, or optionally any unique property value as specified by the `idProperty` query param. Provided property values will be overwritten. Read-only and non-existent properties will be ignored. Properties values can be cleared by passing an empty string.",
+          "message": "`userId` で識別されるオブジェクトの部分更新を実行します。`userId` はデフォルトで内部オブジェクトIDを参照しますが、オプションとして `idProperty` クエリパラメータで指定された一意のプロパティ値を参照することもできます。指定されたプロパティ値は上書きされます。読み取り専用および存在しないプロパティは無視されます。空の文字列を渡すことでプロパティ値をクリアできます。"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.display_name": {
+          "source": "Update User",
+          "message": "ユーザーを更新"
+        },
+        "app.SHVic3BvdA.action.cGF0Y2gtY3JtLXYzLW9iamVjdHMtdXNlcnMtdXNlcklk.short_desc": {
+          "source": "Update an existing user",
+          "message": "既存のユーザーを更新します"
+        },
+        "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.desc": {
+          "source": "Removes specified records from an existing HubSpot list membership.",
+          "message": "既存のHubSpotリストメンバーシップから指定されたレコードを削除します。"
+        },
+        "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.display_name": {
+          "source": "Remove List Records",
+          "message": "リストレコードを削除"
+        },
+        "app.SHVic3BvdA.action.cmVtb3ZlX21lbWJlcnNfZnJvbV9saXN0.short_desc": {
+          "source": "Remove records from a HubSpot list",
+          "message": "HubSpotリストからレコードを削除します"
+        },
+        "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.desc": {
+          "source": "Replaces all fields of a HubSpot form definition with the supplied payload. Any properties not included will be reset to their defaults.",
+          "message": "HubSpotフォーム定義のすべてのフィールドを指定されたペイロードで置換します。含まれていないプロパティはすべてデフォルトにリセットされます。"
+        },
+        "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.display_name": {
+          "source": "Replace Form",
+          "message": "フォームを置換"
+        },
+        "app.SHVic3BvdA.action.cmVwbGFjZV9mb3Jt.short_desc": {
+          "source": "Replace the full form definition.",
+          "message": "フォーム定義全体を置換します。"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.desc": {
+          "source": "Updates one or more components of a HubSpot form definition without affecting the rest of the configuration.",
+          "message": "その他の構成に影響を与えることなく、HubSpotフォーム定義の1つ以上のコンポーネントを更新します。"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.display_name": {
+          "source": "Update Form",
+          "message": "フォームを更新"
+        },
+        "app.SHVic3BvdA.action.dXBkYXRlX2Zvcm0.short_desc": {
+          "source": "Partially update a HubSpot form definition.",
+          "message": "HubSpotフォーム定義を部分更新します。"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内のレコードをアップサートします"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "レコードのアップサート"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.SHVic3BvdA.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Hubspot\"",
+          "message": "アプリ「Hubspot」の指定されたテーブル内のレコードをアップサートします"
+        },
+        "app.SHVic3BvdA.desc": {
+          "source": "The HubSpot integration provides a comprehensive collection of actions and triggers to interact with the HubSpot API. Whether you need to manage companies, contacts, deals, or custom objects, this integration simplifies your workflow automation and CRM management.",
+          "message": "HubSpot統合は、HubSpot APIと連携するための包括的なアクションとトリガーのコレクションを提供します。企業、コンタクト、取引、またはカスタムオブジェクトの管理が必要な場合でも、この統合によりワークフローの自動化とCRM管理が簡素化されます。"
+        },
+        "app.SHVic3BvdA.display_name": {
+          "source": "HubSpot",
+          "message": "HubSpot"
+        },
+        "app.SHVic3BvdA.short_desc": {
+          "source": "Seamlessly connect to the HubSpot API to automate and streamline your CRM processes.",
+          "message": "HubSpot APIにシームレスに接続して、CRMプロセスを自動化および効率化します。"
+        }
+      }
+    }
+  }
+}

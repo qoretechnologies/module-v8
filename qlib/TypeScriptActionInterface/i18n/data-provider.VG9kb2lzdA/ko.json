@@ -1,0 +1,1297 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.desc": {
+          "source": "Closes a task by marking it as completed. This action moves the task to the completed tasks list and updates its status accordingly.",
+          "message": "작업을 완료로 표시하여 완료 처리합니다. 이 동작은 작업을 완료된 작업 목록으로 이동하고 그에 따라 상태를 업데이트합니다."
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
+          "source": "Complete Task",
+          "message": "작업 완료"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to mark as complete.",
+          "message": "완료로 표시할 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to complete",
+          "message": "완료할 작업"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
+          "source": "Mark a Todoist task as complete",
+          "message": "Todoist 작업을 완료로 표시"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.desc": {
+          "source": "Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members.",
+          "message": "Todoist에 새 프로젝트를 생성합니다. 프로젝트를 사용하면 관련 작업을 정리하고 팀원과 협업할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
+          "source": "Create Project",
+          "message": "프로젝트 생성"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.desc": {
+          "source": "The color used to visually identify the project in the Todoist interface.",
+          "message": "Todoist 인터페이스에서 프로젝트를 시각적으로 식별하는 데 사용되는 색상입니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.display_name": {
+          "source": "Color",
+          "message": "색상"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.short_desc": {
+          "source": "Project color identifier",
+          "message": "프로젝트 색상 식별자"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description explaining the purpose and scope of the project.",
+          "message": "프로젝트의 목적과 범위를 설명하는 선택적 상세 설명입니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Project description",
+          "message": "프로젝트 설명"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.desc": {
+          "source": "When enabled, the project will appear in your favorites section for quick access.",
+          "message": "활성화하면 빠른 액세스를 위해 즐겨찾기 섹션에 프로젝트가 표시됩니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
+          "source": "Is Favorite",
+          "message": "즐겨찾기 여부"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
+          "source": "Mark project as favorite",
+          "message": "프로젝트를 즐겨찾기로 표시"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for your new Todoist project.",
+          "message": "새 Todoist 프로젝트의 설명이 포함된 이름입니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "프로젝트 이름"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
+          "source": "The name of the project",
+          "message": "프로젝트 이름"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "Board",
+          "message": "보드"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmNhbGVuZGFy.display_name": {
+          "source": "Calendar",
+          "message": "캘린더"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "List",
+          "message": "목록"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.desc": {
+          "source": "Choose how tasks in this project are displayed: as a list, board (Kanban), or calendar view.",
+          "message": "이 프로젝트의 작업이 표시되는 방식을 선택합니다: 목록, 보드(칸반) 또는 캘린더 보기."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
+          "source": "View Style",
+          "message": "보기 스타일"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
+          "source": "How the project is displayed",
+          "message": "프로젝트 표시 방식"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
+          "source": "Create a new Todoist project",
+          "message": "새 Todoist 프로젝트 생성"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more.",
+          "message": "Todoist에 새 작업을 생성합니다. 작업은 프로젝트, 섹션에 할당하거나 라벨, 우선순위, 마감일 등을 지정할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "작업 생성"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The main text describing what needs to be done. This is the primary content of the task.",
+          "message": "수행해야 할 작업을 설명하는 본문 텍스트입니다. 작업의 기본 내용입니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "태스크 콘텐츠"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The task description",
+          "message": "작업 설명"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.desc": {
+          "source": "Assign the task to a specific collaborator in the selected project.",
+          "message": "선택한 프로젝트의 특정 협업자에게 작업을 할당합니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.display_name": {
+          "source": "Assignee ID",
+          "message": "담당자 ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.short_desc": {
+          "source": "Person assigned to the task",
+          "message": "작업에 할당된 사람"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "작업에 대한 선택적 상세 설명 또는 메모입니다. Markdown 서식을 지원합니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Additional task details",
+          "message": "추가 태스크 세부정보"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Set a due date and optionally a time for when the task should be completed.",
+          "message": "작업을 완료해야 하는 마감 날짜 및 선택적으로 시간을 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "마감일"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "When the task is due",
+          "message": "작업 마감 일시"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Specify how long you expect the task to take. Used for time tracking and scheduling.",
+          "message": "작업에 소요될 것으로 예상되는 시간을 지정합니다. 시간 추적 및 일정 관리에 사용됩니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "소요 시간"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Estimated time to complete",
+          "message": "예상 완료 시간"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Specify the position of the task in the project or section. Lower numbers appear first.",
+          "message": "프로젝트 또는 섹션 내 작업의 위치를 지정합니다. 숫자가 작을수록 먼저 표시됩니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "정렬"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "Task position in the list",
+          "message": "목록 내 작업 위치"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Add one or more labels to categorize and filter the task. Labels help with organization and quick filtering.",
+          "message": "작업을 분류하고 필터링할 하나 이상의 라벨을 추가합니다. 라벨은 정리 및 빠른 필터링에 유용합니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "라벨"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Task labels",
+          "message": "작업 라벨"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Organize the task within a specific section of the project for better categorization.",
+          "message": "더 나은 분류를 위해 프로젝트의 특정 섹션 내에 작업을 구성합니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "섹션 ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "The section within the project",
+          "message": "프로젝트 내의 섹션"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "작업의 우선순위 수준을 설정합니다. 높은 우선순위 작업은 색상으로 구분된 깃발로 표시됩니다: 1(매우 급함), 2(높음), 3(보통), 4(낮음)."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "우선순위"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Task priority level",
+          "message": "작업 우선순위 수준"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select which Todoist project this task belongs to. If not specified, the task will be added to your Inbox.",
+          "message": "이 작업이 속할 Todoist 프로젝트를 선택합니다. 지정하지 않으면 작업이 관리함에 추가됩니다."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project for this task",
+          "message": "이 작업의 프로젝트"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new Todoist task",
+          "message": "새 Todoist 작업 생성"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.desc": {
+          "source": "Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions.",
+          "message": "지정된 Todoist 프로젝트에 새 댓글을 작성합니다. 댓글을 사용하여 업데이트나 메모를 제공하거나 프로젝트 관련 논의에 대해 팀원과 협업할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
+          "source": "Add Comment to Project",
+          "message": "프로젝트에 댓글 추가"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the project. Supports Markdown formatting for rich text.",
+          "message": "프로젝트에 추가할 메시지 또는 메모입니다. 서식 있는 텍스트를 위한 Markdown 형식을 지원합니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "댓글 내용"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "댓글의 텍스트 내용"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project where you want to add the comment.",
+          "message": "댓글을 추가할 Todoist 프로젝트를 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to comment on",
+          "message": "댓글을 작성할 프로젝트"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
+          "source": "Add a comment to a Todoist project",
+          "message": "Todoist 프로젝트에 댓글 추가"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.desc": {
+          "source": "Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks.",
+          "message": "지정된 Todoist 작업에 새 댓글을 작성합니다. 댓글을 사용하여 특정 작업에 대한 메모나 업데이트를 추가하거나 팀원과 협업할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
+          "source": "Add Comment to Task",
+          "message": "작업에 댓글 추가"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the task. Supports Markdown formatting for rich text.",
+          "message": "작업에 추가할 메시지 또는 메모입니다. 서식 있는 텍스트를 위한 Markdown 형식을 지원합니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "댓글 내용"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "댓글의 텍스트 내용"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task where you want to add the comment.",
+          "message": "댓글을 추가할 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to comment on",
+          "message": "댓글을 작성할 작업"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
+          "source": "Add a comment to a Todoist task",
+          "message": "Todoist 작업에 댓글 추가"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches detailed information about a specific Todoist project, including its properties, metadata, and settings.",
+          "message": "속성, 메타데이터 및 설정을 포함하여 특정 Todoist 프로젝트에 대한 상세 정보를 가져옵니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project",
+          "message": "프로젝트 가져오기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project you want to get details for.",
+          "message": "상세 정보를 가져올 Todoist 프로젝트를 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to retrieve",
+          "message": "가져올 프로젝트"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve details of a Todoist project",
+          "message": "Todoist 프로젝트 상세 정보 조회"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.desc": {
+          "source": "Retrieves a list of all collaborators who have access to a specific Todoist project. Useful for managing team assignments and permissions.",
+          "message": "특정 Todoist 프로젝트에 접근 권한이 있는 모든 협업자 목록을 조회합니다. 팀 할당 및 권한을 관리하는 데 유용합니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
+          "source": "Get Project Collaborators",
+          "message": "프로젝트 협업자 가져오기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of collaborators to return in a single request. Default is 50.",
+          "message": "단일 요청에서 반환할 최대 협업자 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project to retrieve the list of collaborators.",
+          "message": "협업자 목록을 조회할 Todoist 프로젝트를 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to get collaborators for",
+          "message": "협업자를 조회할 프로젝트"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
+          "source": "List collaborators in a project",
+          "message": "프로젝트 내 협업자 목록 조회"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.desc": {
+          "source": "Fetches detailed information about a specific Todoist task, including all its properties, labels, due dates, and metadata.",
+          "message": "모든 속성, 라벨, 마감일 및 메타데이터를 포함하여 특정 Todoist 작업에 대한 상세 정보를 가져옵니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "작업 가져오기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to get details for.",
+          "message": "상세 정보를 가져올 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to retrieve",
+          "message": "검색할 작업"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a Todoist task",
+          "message": "Todoist 작업 상세 정보 조회"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.desc": {
+          "source": "Retrieves tasks that match a specific filter query. Todoist filters allow powerful searches using keywords, dates, priorities, labels, and more. See Todoist filter documentation for advanced query syntax.",
+          "message": "특정 필터 쿼리와 일치하는 작업을 조회합니다. Todoist 필터를 사용하면 키워드, 날짜, 우선순위, 라벨 등을 사용하여 강력한 검색을 수행할 수 있습니다. 고급 쿼리 구문은 Todoist 필터 문서를 참조하세요."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
+          "source": "Get Tasks by Filter",
+          "message": "필터로 작업 가져오기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "단일 요청에서 반환할 최대 작업 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "날짜 및 마감 기한 없음"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "날짜나 마감 기한이 없는 모든 작업 보기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "나에게 할당됨"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "나에게 할당된 모든 작업 보기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.display_name": {
+          "source": "Today or Overdue",
+          "message": "오늘 또는 기한 초과"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.short_desc": {
+          "source": "See all tasks that are overdue or due today",
+          "message": "기한이 초과되었거나 오늘 마감인 모든 작업 보기"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "사용할 필터 쿼리입니다. 자세한 내용은 [문서](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH)를 참조하세요."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "필터 쿼리"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
+          "source": "The filter expression",
+          "message": "필터 표현식"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
+          "source": "Search tasks using Todoist filter queries",
+          "message": "Todoist 필터 쿼리를 사용하여 작업 검색"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently removes a task from Todoist. This action cannot be undone. Use with caution.",
+          "message": "Todoist에서 작업을 영구적으로 삭제합니다. 이 작업은 실행 취소할 수 없습니다. 주의해서 사용하세요."
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "작업 삭제"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to permanently delete.",
+          "message": "영구적으로 삭제할 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to delete",
+          "message": "삭제할 작업"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Permanently delete a Todoist task",
+          "message": "Todoist 작업 영구 삭제"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.desc": {
+          "source": "Fetches a list of tasks with optional filtering by project, section, or label. Use this to retrieve tasks for processing or display.",
+          "message": "프로젝트, 섹션 또는 라벨별 선택적 필터링을 통해 작업 목록을 가져옵니다. 처리 또는 표시를 위해 작업을 조회할 때 사용합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "작업 목록 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.desc": {
+          "source": "Optionally specify a list of task IDs to retrieve only those specific tasks.",
+          "message": "선택적으로 해당 특정 작업만 조회할 작업 ID 목록을 지정합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.short_desc": {
+          "source": "Filter by specific task IDs",
+          "message": "특정 작업 ID로 필터링"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.desc": {
+          "source": "Retrieve only tasks that have a specific label assigned.",
+          "message": "특정 라벨이 지정된 작업만 조회합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.display_name": {
+          "source": "Label",
+          "message": "라벨"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.short_desc": {
+          "source": "Filter by label",
+          "message": "라벨별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "단일 요청에서 반환할 최대 작업 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Retrieve only tasks from a specific section within a project.",
+          "message": "프로젝트 내 특정 섹션의 작업만 조회합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "섹션 ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by section",
+          "message": "섹션별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Retrieve only tasks from a specific project.",
+          "message": "특정 프로젝트의 작업만 조회합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "프로젝트별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve Todoist tasks",
+          "message": "Todoist 작업 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.desc": {
+          "source": "Fetches a list of all labels in your Todoist account. Labels are used to categorize and filter tasks across projects.",
+          "message": "Todoist 계정의 모든 라벨 목록을 가져옵니다. 라벨은 여러 프로젝트에 걸쳐 작업을 분류하고 필터링하는 데 사용됩니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
+          "source": "List Labels",
+          "message": "라벨 목록 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of labels to return in a single request. Default is 50.",
+          "message": "단일 요청으로 반환할 최대 라벨 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
+          "source": "Retrieve all Todoist labels",
+          "message": "모든 Todoist 라벨 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a list of all projects in your Todoist account, including shared and personal projects. Use this to discover available projects for task organization.",
+          "message": "공유 및 개인 프로젝트를 포함하여 Todoist 계정의 모든 프로젝트 목록을 가져옵니다. 작업 구성을 위해 사용 가능한 프로젝트를 확인하는 데 사용합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "프로젝트 목록 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 50.",
+          "message": "단일 요청으로 반환할 최대 프로젝트 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all Todoist projects",
+          "message": "모든 Todoist 프로젝트 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.desc": {
+          "source": "Fetches a list of sections. Sections are used within projects to organize tasks into logical groups or categories.",
+          "message": "섹션 목록을 가져옵니다. 섹션은 프로젝트 내에서 작업을 논리적 그룹이나 카테고리로 정리하는 데 사용됩니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
+          "source": "List Sections",
+          "message": "섹션 목록 조회"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "페이지네이션에 사용됩니다. 다음 결과 페이지를 가져오려면 이전 응답의 커서를 제공하세요."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "페이지네이션 커서"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of sections to return in a single request. Default is 50.",
+          "message": "단일 요청으로 반환할 최대 섹션 수입니다. 기본값은 50입니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "최대 결과 수"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally filter sections to only those within a specific project.",
+          "message": "선택 사항으로 특정 프로젝트 내의 섹션만 필터링합니다."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "프로젝트별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
+          "source": "Retrieve sections from projects",
+          "message": "프로젝트에서 섹션 조회"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.desc": {
+          "source": "Moves a task to a different section within the same project, or to a different project entirely. Useful for reorganizing tasks and workflows.",
+          "message": "작업을 동일한 프로젝트 내의 다른 섹션으로 이동하거나 완전히 다른 프로젝트로 이동합니다. 작업 및 워크플로를 재구성하는 데 유용합니다."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
+          "source": "Move Task to Section",
+          "message": "작업을 섹션으로 이동"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.desc": {
+          "source": "The section where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "작업을 이동할 대상 섹션입니다. section_id 또는 project_id 중 하나를 지정해야 합니다."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "섹션 ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Destination section",
+          "message": "대상 섹션"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The project where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "작업을 이동할 대상 프로젝트입니다. section_id 또는 project_id 중 하나를 지정해야 합니다."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Destination project",
+          "message": "대상 프로젝트"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to move.",
+          "message": "이동할 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.short_desc": {
+          "source": "The task to move",
+          "message": "이동할 작업"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
+          "source": "Move a task to a different section or project",
+          "message": "작업을 다른 섹션 또는 프로젝트로 이동"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Todoist** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Todoist**에 커스텀 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL에 대한 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 기본 액션으로 아직 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Todoist",
+          "message": "Todoist에 커스텀 API 호출 수행"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Todoist account for newly completed tasks. This trigger fires whenever any task is marked as complete, with optional filtering by project, section, or custom query. Perfect for tracking productivity, logging completions, or triggering follow-up workflows based on task completion.",
+          "message": "새로 완료된 작업이 있는지 Todoist 계정을 모니터링합니다. 이 트리거는 작업이 완료로 표시될 때마다 실행되며, 프로젝트, 섹션 또는 커스텀 쿼리로 선택적 필터링이 가능합니다. 생산성 추적, 완료 기록 또는 작업 완료 기반의 후속 워크플로 트리거에 적합합니다."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "새로 완료된 할 일"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow.",
+          "message": "선택 사항으로 프로젝트 내 특정 섹션의 완료된 작업만 모니터링합니다. 이를 통해 워크플로의 특정 영역에서 완료된 작업을 추적할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "섹션 ID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by specific section",
+          "message": "특정 섹션별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific Todoist project. If not specified, all completed tasks across all projects will trigger the event.",
+          "message": "선택 사항으로 특정 Todoist 프로젝트의 완료된 작업만 모니터링합니다. 지정하지 않으면 모든 프로젝트의 모든 완료된 작업이 이벤트를 트리거합니다."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by specific project",
+          "message": "특정 프로젝트별 필터링"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "날짜 및 마감 기한 없음"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "날짜나 마감 기한이 없는 모든 작업 보기"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "나에게 할당됨"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "나에게 할당된 모든 작업 보기"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "사용할 필터 쿼리입니다. 자세한 내용은 [문서](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH)를 참조하세요."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "필터 쿼리"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {
+          "source": "Custom filter expression",
+          "message": "커스텀 필터 표현식"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is completed in Todoist",
+          "message": "Todoist에서 작업이 완료될 때 트리거됨"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Modifies the properties of an existing Todoist task. You can update content, description, due dates, labels, priority, and more.",
+          "message": "기존 Todoist 작업의 속성을 수정합니다. 내용, 설명, 마감일, 라벨, 우선순위 등을 업데이트할 수 있습니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "작업 업데이트"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The new main text describing what needs to be done.",
+          "message": "수행해야 할 작업을 설명하는 새로운 본문 텍스트입니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "태스크 콘텐츠"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "Updated task description",
+          "message": "업데이트된 작업 설명"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "New detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "작업에 대한 새로운 상세 설명 또는 메모입니다. Markdown 서식을 지원합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated task details",
+          "message": "업데이트된 작업 세부 정보"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Change the due date and optionally the time for the task.",
+          "message": "작업의 마감일 및 선택적으로 시간을 변경합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "마감일"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "Updated due date",
+          "message": "업데이트된 마감일"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Change how long you expect the task to take.",
+          "message": "작업 예상 소요 시간을 변경합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "소요 시간"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Updated estimated time",
+          "message": "업데이트된 예상 소요 시간"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Change the position of the task in the project or section.",
+          "message": "프로젝트 또는 섹션 내 작업 위치를 변경합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "정렬"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "New task position",
+          "message": "새 작업 위치"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Replace the task's labels with a new set of labels.",
+          "message": "작업의 라벨을 새 라벨 세트로 대체합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "라벨"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Updated task labels",
+          "message": "업데이트된 작업 라벨"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Move the task to a different section within the project.",
+          "message": "프로젝트 내의 다른 섹션으로 작업을 이동합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "섹션 ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Move to different section",
+          "message": "다른 섹션으로 이동"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "우선순위 레벨을 변경합니다: 1(매우 급함), 2(높음), 3(보통), 4(낮음)."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "우선순위"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Updated priority level",
+          "message": "업데이트된 우선순위 레벨"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Move the task to a different Todoist project.",
+          "message": "작업을 다른 Todoist 프로젝트로 이동합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Move to different project",
+          "message": "다른 프로젝트로 이동"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to modify.",
+          "message": "수정할 Todoist 작업을 선택합니다."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to update",
+          "message": "업데이트할 작업"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing Todoist task",
+          "message": "기존 Todoist 작업 업데이트"
+        },
+        "app.VG9kb2lzdA.desc": {
+          "source": "The Todoist integration enables you to seamlessly interact with the Todoist API to manage tasks, projects, labels, and comments. Automate your task management workflows, sync project data, and streamline team collaboration with comprehensive actions and triggers.",
+          "message": "Todoist 연동을 통해 Todoist API와 원활하게 상호작용하여 작업, 프로젝트, 라벨 및 댓글을 관리할 수 있습니다. 포괄적인 액션과 트리거로 작업 관리 워크플로를 자동화하고 프로젝트 데이터를 동기화하며 팀 협업을 간소화하세요."
+        },
+        "app.VG9kb2lzdA.display_name": {
+          "source": "Todoist",
+          "message": "Todoist"
+        },
+        "app.VG9kb2lzdA.short_desc": {
+          "source": "Connect to Todoist to automate task and project management workflows.",
+          "message": "Todoist에 연결하여 작업 및 프로젝트 관리 워크플로를 자동화합니다."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.desc": {
+          "source": "Creates a new lead or opportunity record in Odoo CRM with comprehensive contact, sales, and marketing information. Supports grouping related fields for better organization.",
+          "message": "連絡先、営業、マーケティングの包括的な情報を含む新しいリードまたは商談レコードをOdoo CRMに作成します。整理しやすいように関連フィールドのグループ化をサポートしています。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.display_name": {
+          "source": "Create Lead",
+          "message": "リードを作成"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.desc": {
+          "source": "A color index (0-11) used for visual identification in the user interface. This helps with quick visual organization of leads.",
+          "message": "ユーザーインターフェースで視覚的に識別するために使用されるカラーインデックス (0-11)。リードを視覚的にすばやく整理するのに役立ちます。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.display_name": {
+          "source": "Color Index",
+          "message": "カラーインデックス"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
+          "source": "Color index for UI display (0-11)",
+          "message": "UI表示用のカラーインデックス (0-11)"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "The ID of the company record that owns this lead. Typically this is the current user's company.",
+          "message": "このリードを所有する会社レコードのID。通常は現在のユーザーの会社です。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "会社"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "ID of the company (usually current user company)",
+          "message": "会社のID（通常は現在のユーザーの会社）"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Complete contact information including email addresses, phone numbers, job position, and website details.",
+          "message": "メールアドレス、電話番号、役職、Webサイトの詳細を含む完全な連絡先情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "連絡先情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the lead",
+          "message": "リードの連絡先詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.desc": {
+          "source": "The full name of the primary contact person associated with this lead.",
+          "message": "このリードに関連付けられた主担当者の氏名。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
+          "source": "Contact Name",
+          "message": "連絡先名"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
+          "source": "Name of the contact person",
+          "message": "担当者の氏名"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.desc": {
+          "source": "Indicates whether this lead is currently active and should appear in standard views and reports.",
+          "message": "このリードが現在アクティブで、標準ビューやレポートに表示されるべきかどうかを示します。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.short_desc": {
+          "source": "Whether the lead is active",
+          "message": "リードがアクティブかどうか"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.desc": {
+          "source": "Information about the next planned activity or follow-up action for this lead.",
+          "message": "このリードの次回予定されている活動またはフォローアップアクションに関する情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
+          "source": "Activity Information",
+          "message": "活動情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
+          "source": "Next activity planning information",
+          "message": "次回アクティビティの計画情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Complete address information including street address, city, state, country, and postal code.",
+          "message": "番地、市区町村、都道府県、国、郵便番号を含む完全な住所情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "住所情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the lead",
+          "message": "リードの住所詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Internal notes and comments about this lead. This information is for internal use and not visible to the customer.",
+          "message": "このリードに関する内部メモおよびコメント。この情報は社内用であり、顧客には表示されません。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Notes",
+          "message": "メモ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Internal notes about the lead",
+          "message": "リードに関する内部メモ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.desc": {
+          "source": "The number of email bounces recorded for this lead's email address.",
+          "message": "このリードのメールアドレスに対して記録されたメールバウンス数。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
+          "source": "Bounce",
+          "message": "バウンス"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
+          "source": "Email bounce count",
+          "message": "メールバウンス数"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.desc": {
+          "source": "The ID of the reason why this lead was marked as lost, if applicable.",
+          "message": "該当する場合、このリードが失注としてマークされた理由のID。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
+          "source": "Lost Reason",
+          "message": "失注理由"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
+          "source": "ID of lost reason if lead was lost",
+          "message": "リードが失注した場合の失注理由ID"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.desc": {
+          "source": "The preferred language code for communications with this lead (e.g., en_US for English, fr_FR for French).",
+          "message": "このリードとの連絡に使用する優先言語コード（例: 英語の場合は en_US、フランス語の場合は fr_FR）。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.short_desc": {
+          "source": "Language code (e.g., en_US, fr_FR)",
+          "message": "言語コード（例: en_US、fr_FR）"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.desc": {
+          "source": "Marketing campaign and lead source tracking information to understand how this lead was generated and acquired.",
+          "message": "このリードがどのように生成・獲得されたかを把握するための、マーケティングキャンペーンおよびリードソースの追跡情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
+          "source": "Marketing Information",
+          "message": "マーケティング情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
+          "source": "Marketing and source tracking information",
+          "message": "マーケティングおよびソース追跡情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.desc": {
+          "source": "The main title or name that identifies this lead or opportunity. This is a required field that will be displayed in lead lists and reports.",
+          "message": "このリードまたは案件を識別するメインのタイトルまたは名前。これは必須フィールドであり、リード一覧やレポートに表示されます。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.display_name": {
+          "source": "Opportunity",
+          "message": "案件"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.short_desc": {
+          "source": "The name/title of the lead or opportunity",
+          "message": "リードまたは案件の名前/タイトル"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.desc": {
+          "source": "Sales management information including assigned salesperson, team, stage, priority, and expected closing details.",
+          "message": "担当営業、チーム、ステージ、優先度、成約見込みの詳細を含む営業管理情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
+          "source": "Sales Information",
+          "message": "営業情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
+          "source": "Sales-related details for the lead",
+          "message": "リードの営業関連の詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.desc": {
+          "source": "The ID of an existing customer or partner record if this lead is associated with an existing contact.",
+          "message": "このリードが既存の連絡先に関連付けられている場合の、既存の顧客または取引先レコードのID。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of existing customer/partner record",
+          "message": "既存の顧客/取引先レコードのID"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.desc": {
+          "source": "The name of the company or organization that this lead represents.",
+          "message": "このリードが表す会社または組織の名前。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
+          "source": "Company Name",
+          "message": "会社名"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
+          "source": "Name of the customer company",
+          "message": "顧客企業名"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "A list of tag IDs to categorize and organize this lead. Tags help with filtering and grouping leads.",
+          "message": "このリードを分類および整理するためのタグIDのリスト。タグはリードのフィルタリングやグループ化に役立ちます。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "List of tag IDs to associate with the lead",
+          "message": "リードに関連付けるタグIDのリスト"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "案件"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "リード"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.desc": {
+          "source": "Specifies whether this record should be treated as a lead (early stage) or opportunity (qualified prospect).",
+          "message": "このレコードをリード（初期段階）として扱うか、案件（見込み顧客）として扱うかを指定します。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "タイプ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.short_desc": {
+          "source": "Whether this is a lead or opportunity",
+          "message": "リードか案件か"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.short_desc": {
+          "source": "Create a new lead or opportunity in Odoo CRM",
+          "message": "Odoo CRMで新しいリードまたは案件を作成"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.desc": {
+          "source": "Creates a new partner record in Odoo with comprehensive contact information, address details, business information, and relationship data. Partners can be individuals or companies and serve as customers, vendors, or both.",
+          "message": "包括的な連絡先情報、住所詳細、取引情報、関係データを含む新しい取引先レコードをOdooに作成します。取引先は個人または会社であり、顧客、仕入先、またはその両方として機能します。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.display_name": {
+          "source": "Create Partner",
+          "message": "取引先の作成"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.desc": {
+          "source": "Internal notes or comments about the partner.",
+          "message": "取引先に関する内部メモまたはコメント。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.display_name": {
+          "source": "Internal Notes",
+          "message": "内部メモ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.short_desc": {
+          "source": "Internal notes about the partner",
+          "message": "取引先に関する内部メモ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Contact information including email, phone, website, job function and title.",
+          "message": "メール、電話、Webサイト、職掌、役職を含む連絡先情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "連絡先情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the partner",
+          "message": "取引先の連絡先詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.desc": {
+          "source": "Categories or tags to classify and organize partners.",
+          "message": "取引先を分類および整理するためのカテゴリまたはタグ。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.display_name": {
+          "source": "Categories",
+          "message": "カテゴリ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.short_desc": {
+          "source": "Partner categories or tags",
+          "message": "取引先のカテゴリまたはタグ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.desc": {
+          "source": "Set to false to archive the partner without deleting it.",
+          "message": "取引先を削除せずにアーカイブするにはfalseに設定します。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.short_desc": {
+          "source": "Whether the partner is active",
+          "message": "取引先がアクティブかどうか"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Complete address information including street, city, state, country, and postal code.",
+          "message": "番地、市区町村、都道府県、国、郵便番号を含む完全な住所情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "住所情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the partner",
+          "message": "取引先の住所詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.desc": {
+          "source": "Business information including VAT number, reference code, and industry classification.",
+          "message": "VAT番号、参照コード、業種分類を含む取引情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.display_name": {
+          "source": "Business Information",
+          "message": "取引情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.short_desc": {
+          "source": "Business-related details",
+          "message": "取引関連の詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.desc": {
+          "source": "Profile image for the partner (base64 encoded).",
+          "message": "パートナーのプロフィール画像（Base64エンコード）。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.display_name": {
+          "source": "Profile Image",
+          "message": "プロフィール画像"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.short_desc": {
+          "source": "Partner profile image",
+          "message": "パートナーのプロフィール画像"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.desc": {
+          "source": "Set to true if this partner represents a company/organization, false for individual contacts.",
+          "message": "このパートナーが企業/組織を表す場合はtrue、個人の連絡先の場合はfalseを設定します。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.display_name": {
+          "source": "Is Company",
+          "message": "会社"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.short_desc": {
+          "source": "Whether this partner is a company",
+          "message": "このパートナーが企業かどうか"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.desc": {
+          "source": "Preferred language for communication with this partner.",
+          "message": "このパートナーとのコミュニケーションで使用する希望言語。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.short_desc": {
+          "source": "Preferred language",
+          "message": "希望言語"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.desc": {
+          "source": "The name of the partner (individual or company name).",
+          "message": "パートナーの名前（個人名または会社名）。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.short_desc": {
+          "source": "Partner name",
+          "message": "パートナー名"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.desc": {
+          "source": "Information about relationships to other partners and user assignments.",
+          "message": "他のパートナーとの関係およびユーザー割り当てに関する情報。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.display_name": {
+          "source": "Relationship Information",
+          "message": "関係情報"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.short_desc": {
+          "source": "Relationship and assignment details",
+          "message": "関係および割り当ての詳細"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9TeWRuZXk.display_name": {
+          "source": "Australia/Sydney",
+          "message": "Australia/Sydney"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkFzaWEvU2hhbmdoYWk.display_name": {
+          "source": "Asia/Shanghai",
+          "message": "Asia/Shanghai"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkFzaWEvVG9reW8.display_name": {
+          "source": "Asia/Tokyo",
+          "message": "Asia/Tokyo"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9CZXJsaW4.display_name": {
+          "source": "Europe/Berlin",
+          "message": "Europe/Berlin"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9Mb25kb24.display_name": {
+          "source": "Europe/London",
+          "message": "Europe/London"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9QYXJpcw.display_name": {
+          "source": "Europe/Paris",
+          "message": "Europe/Paris"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL01vdW50YWlu.display_name": {
+          "source": "US/Mountain",
+          "message": "US/Mountain"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL0NlbnRyYWw.display_name": {
+          "source": "US/Central",
+          "message": "US/Central"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL0Vhc3Rlcm4.display_name": {
+          "source": "US/Eastern",
+          "message": "US/Eastern"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL1BhY2lmaWM.display_name": {
+          "source": "US/Pacific",
+          "message": "US/Pacific"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVUQw.display_name": {
+          "source": "UTC",
+          "message": "UTC"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.desc": {
+          "source": "Timezone where the partner is located.",
+          "message": "パートナーが所在するタイムゾーン。"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.display_name": {
+          "source": "Timezone",
+          "message": "タイムゾーン"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.short_desc": {
+          "source": "Partner timezone",
+          "message": "パートナーのタイムゾーン"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.short_desc": {
+          "source": "Create a new partner (contact or company) in Odoo",
+          "message": "Odooで新しいパートナー（連絡先または会社）を作成します"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.desc": {
+          "source": "Fetches detailed information about a specific lead from Odoo CRM. Allows you to specify which fields to retrieve, with common fields like ID, name, email, contact name, and partner name selected by default.",
+          "message": "Odoo CRMから特定のリードの詳細情報を取得します。取得するフィールドを指定でき、ID、名前、メールアドレス、連絡先名、パートナー名などの一般的なフィールドがデフォルトで選択されます。"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.display_name": {
+          "source": "Get Lead",
+          "message": "リードを取得"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from the lead record. Common fields are pre-selected.",
+          "message": "リードレコードから取得するフィールド名のリスト。一般的なフィールドが事前に選択されています。"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "取得するフィールド"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record in Odoo CRM.",
+          "message": "Odoo CRMにおけるリードレコードの一意の識別子。"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "リードID"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to retrieve",
+          "message": "取得するリードのID"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.short_desc": {
+          "source": "Retrieve a specific lead by ID with customizable fields.",
+          "message": "カスタマイズ可能なフィールドを指定して、IDで特定のリードを取得します。"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.desc": {
+          "source": "Fetches detailed information about a specific partner from Odoo. Allows selecting which fields to retrieve for customized data requirements.",
+          "message": "Odooから特定のパートナーの詳細情報を取得します。カスタマイズされたデータ要件に合わせて取得するフィールドを選択できます。"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.display_name": {
+          "source": "Get Partner",
+          "message": "パートナーを取得"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.desc": {
+          "source": "List of specific partner fields to retrieve. If not specified, returns basic partner information including ID, name, email, phone, and company status.",
+          "message": "取得する特定のパートナーフィールドのリスト。指定しない場合、ID、名前、メールアドレス、電話番号、企業ステータスなどの基本的なパートナー情報を返します。"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.display_name": {
+          "source": "Fields to Retrieve",
+          "message": "取得するフィールド"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.short_desc": {
+          "source": "Partner fields to include in response",
+          "message": "レスポンスに含めるパートナーフィールド"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.desc": {
+          "source": "The unique identifier of the partner record to fetch from Odoo.",
+          "message": "Odooから取得するパートナーレコードの一意の識別子。"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner ID",
+          "message": "パートナーID"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of the partner to retrieve",
+          "message": "取得するパートナーのID"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.short_desc": {
+          "source": "Retrieve a single partner record from Odoo",
+          "message": "Odooから単一のパートナーレコードを取得します"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.desc": {
+          "source": "Permanently deletes a lead record from Odoo CRM. This action cannot be undone. Consider archiving the lead instead by setting it as inactive.",
+          "message": "Odoo CRMからリードレコードを完全に削除します。この操作は取り消せません。代わりに非アクティブに設定してリードをアーカイブすることを検討してください。"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.display_name": {
+          "source": "Delete Lead",
+          "message": "リードを削除"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record to permanently delete from Odoo CRM.",
+          "message": "Odoo CRMから完全に削除するリードレコードの一意の識別子。"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "リードID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to delete",
+          "message": "削除するリードのID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.short_desc": {
+          "source": "Delete a lead from Odoo CRM.",
+          "message": "Odoo CRMからリードを削除します。"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.desc": {
+          "source": "Permanently deletes a partner record from Odoo. This action cannot be undone. Consider archiving (setting active to false) instead if you need to preserve the record.",
+          "message": "Odooからパートナーレコードを完全に削除します。この操作は取り消せません。レコードを保持する必要がある場合は、代わりにアーカイブ（activeをfalseに設定）することを検討してください。"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.display_name": {
+          "source": "Delete Partner",
+          "message": "パートナーを削除"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.desc": {
+          "source": "The unique identifier of the partner record to delete from Odoo.",
+          "message": "Odooから削除するパートナーレコードの一意の識別子。"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner ID",
+          "message": "パートナーID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of the partner to delete",
+          "message": "削除するパートナーのID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.short_desc": {
+          "source": "Delete a partner record from Odoo",
+          "message": "Odooからパートナーレコードを削除します"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.desc": {
+          "source": "Retrieves a list of companies from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns company information including display name, email, phone, and website.",
+          "message": "フィールド値によるフィルタリング、特定フィールドによるソート、ページネーションに対応し、Odooから会社の一覧を取得します。表示名、メールアドレス、電話番号、Webサイトなどの会社情報を返します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.display_name": {
+          "source": "List Companies",
+          "message": "会社一覧を取得"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each company record. Common fields are pre-selected.",
+          "message": "各会社レコードから取得するフィールド名のリスト。一般的なフィールドが事前に選択されています。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "取得するフィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "クエリに適用するフィルター条件のリスト。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "フィルター条件"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of company records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップする会社レコードの数。ページネーションに使用されます。デフォルトは0です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of companies to skip",
+          "message": "スキップする会社の数"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of company records to return. Default is 10.",
+          "message": "返却する会社レコードの最大数。デフォルトは10です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of companies to return",
+          "message": "返却する会社の最大数"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "結果をソートするフィールドと方向を指定します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "ソート"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "並べ替え設定"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
+          "source": "List companies with filtering, sorting, and pagination options.",
+          "message": "フィルタリング、ソート、ページネーションのオプションを指定して会社を一覧表示します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.desc": {
+          "source": "Retrieves a list of leads from Odoo CRM with support for filtering by field values, sorting by specific fields, and pagination. Returns lead information including ID, name, email, contact name, and partner name.",
+          "message": "フィールド値によるフィルタリング、特定フィールドによるソート、ページネーションに対応し、Odoo CRMからリードの一覧を取得します。ID、名前、メールアドレス、連絡先名、パートナー名などのリード情報を返します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.display_name": {
+          "source": "List Leads",
+          "message": "リードを一覧表示"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each lead record. Common fields are pre-selected.",
+          "message": "各リードレコードから取得するフィールド名のリスト。一般的なフィールドが事前に選択されています。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "取得するフィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "クエリに適用するフィルター条件のリスト。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "フィルター条件"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.desc": {
+          "source": "The number of lead records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするリードレコードの数。ページネーションに使用されます。デフォルトは0です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of leads to skip",
+          "message": "スキップするリードの数"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of lead records to return. Default is 10.",
+          "message": "返却するリードレコードの最大数。デフォルトは10です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of leads to return",
+          "message": "返却するリードの最大数"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "結果をソートするフィールドと方向を指定します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "ソート"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "並べ替え設定"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
+          "source": "List leads with filtering, sorting, and pagination options.",
+          "message": "フィルタリング、ソート、ページネーションのオプションを指定してリードを一覧表示します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.desc": {
+          "source": "Retrieves a list of partners from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns partner information including ID, display name, and email.",
+          "message": "フィールド値によるフィルタリング、特定フィールドによるソート、ページネーションに対応し、Odooからパートナーの一覧を取得します。ID、表示名、メールアドレスなどのパートナー情報を返します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.display_name": {
+          "source": "List Partners",
+          "message": "パートナーを一覧表示"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each partner record. Common fields are pre-selected.",
+          "message": "各パートナーレコードから取得するフィールド名のリスト。一般的なフィールドが事前に選択されています。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "取得するフィールド"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "クエリに適用するフィルター条件のリスト。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "フィルター条件"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.desc": {
+          "source": "The number of partner records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするパートナーレコードの数。ページネーションに使用されます。デフォルトは 0 です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of partners to skip",
+          "message": "スキップするパートナー数"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of partner records to return. Default is 10.",
+          "message": "返却するパートナーレコードの最大数。デフォルトは 10 です。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of partners to return",
+          "message": "返却するパートナーの最大数"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "結果をソートするフィールドと方向を指定します。"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "ソート"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "並べ替え設定"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
+          "source": "List partners with filtering, sorting, and pagination options.",
+          "message": "フィルタリング、ソート、ページネーションのオプションを指定してパートナーを一覧表示します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Odoo CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Odoo CRM** へのカスタム HTTP / REST API コールを実行します。\n\nHTTP メソッド、URI パス（接続の API ベース URL に対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Odoo CRM",
+          "message": "Odoo CRM へのカスタム API コールを実行"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.desc": {
+          "source": "Monitors Odoo for newly created leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.",
+          "message": "Odoo で新しく作成されたリードまたは商談を監視します。会社、チーム、ユーザー、ステージ、リードタイプ、およびタグによるフィルタリングをサポートし、条件に一致する特定のリードに対してのみトリガーします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.display_name": {
+          "source": "New Lead",
+          "message": "新しいリード"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.",
+          "message": "指定した会社に属するリードに対してのみトリガーします。すべての会社を監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "会社"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Filter by company",
+          "message": "会社でフィルタリング"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "案件"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmJvdGg.display_name": {
+          "source": "Both",
+          "message": "両方"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "リード"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.desc": {
+          "source": "Choose whether to monitor leads, opportunities, or both types of records.",
+          "message": "リード、商談、またはその両方のレコードタイプを監視するかどうかを選択します。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.display_name": {
+          "source": "Lead Type",
+          "message": "リードタイプ"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.short_desc": {
+          "source": "Type of records to monitor",
+          "message": "監視するレコードのタイプ"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.desc": {
+          "source": "Only trigger for leads in the specified stage. Leave empty to monitor all stages.",
+          "message": "指定したステージのリードに対してのみトリガーします。すべてのステージを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.display_name": {
+          "source": "Stage",
+          "message": "ステージ"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.short_desc": {
+          "source": "Filter by lead stage",
+          "message": "リードステージでフィルタリング"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.",
+          "message": "指定したタグのいずれかを持つリードに対してのみトリガーします。タグに関係なくすべてのリードを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "Filter by tags",
+          "message": "タグで絞り込み"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.",
+          "message": "指定した営業チームに割り当てられたリードに対してのみトリガーします。すべてのチームを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.display_name": {
+          "source": "Sales Team",
+          "message": "営業チーム"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.short_desc": {
+          "source": "Filter by sales team",
+          "message": "営業チームでフィルタリング"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.",
+          "message": "指定した営業担当者に割り当てられたリードに対してのみトリガーします。すべてのユーザーを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.display_name": {
+          "source": "Salesperson",
+          "message": "営業担当者"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.short_desc": {
+          "source": "Filter by assigned salesperson",
+          "message": "割り当てられた営業担当者でフィルタリング"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.short_desc": {
+          "source": "Triggers when a new lead is created in Odoo",
+          "message": "Odoo で新しいリードが作成されたときにトリガー"
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.desc": {
+          "source": "Monitors Odoo for newly created partner records in the res.partner model. This trigger fires whenever a new partner entity is added to your Odoo system, providing partner configuration details including address, contact information, and organizational information.",
+          "message": "res.partner モデルで新しく作成されたパートナーレコードがないか Odoo を監視します。このトリガーは、新しいパートナーエンティティが Odoo システムに追加されるたびに起動し、住所、連絡先情報、組織情報などのパートナー設定の詳細を提供します。"
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.display_name": {
+          "source": "New Partner",
+          "message": "新規パートナー"
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.short_desc": {
+          "source": "Triggers when a new partner is created in Odoo",
+          "message": "Odoo で新しいパートナーが作成されたときにトリガー"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.desc": {
+          "source": "Updates an existing lead in Odoo CRM with new information. Supports updating contact information, address details, sales information, marketing data, and activity details. All fields are optional except the lead ID.",
+          "message": "Odoo CRM の既存のリードを新しい情報で更新します。連絡先情報、住所の詳細、販売情報、マーケティングデータ、アクティビティの詳細の更新をサポートします。リード ID 以外のすべてのフィールドはオプションです。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.display_name": {
+          "source": "Update Lead",
+          "message": "リードを更新"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.desc": {
+          "source": "A color code to visually distinguish this lead in the interface.",
+          "message": "インターフェースでこのリードを視覚的に区別するためのカラーコード。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.display_name": {
+          "source": "Color",
+          "message": "色"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
+          "source": "Color code for the lead",
+          "message": "リードのカラーコード"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "The company that owns this lead record.",
+          "message": "このリードレコードを所有する会社。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "会社"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Company that owns this lead",
+          "message": "このリードを所有する会社"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Email addresses, phone number, job function, and website information.",
+          "message": "メールアドレス、電話番号、職務、および Web サイト情報。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "連絡先情報"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the lead",
+          "message": "リードの連絡先詳細"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.desc": {
+          "source": "The name of the primary contact person for this lead.",
+          "message": "このリードの主担当者の氏名。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
+          "source": "Contact Name",
+          "message": "連絡先名"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
+          "source": "Name of the contact person",
+          "message": "担当者の氏名"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.desc": {
+          "source": "Set to false to archive the lead without deleting it.",
+          "message": "リードを削除せずにアーカイブするには false に設定します。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.short_desc": {
+          "source": "Whether the lead is active",
+          "message": "リードがアクティブかどうか"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.desc": {
+          "source": "Information about the next planned activity for this lead.",
+          "message": "このリードの次の予定アクティビティに関する情報。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
+          "source": "Activity Information",
+          "message": "活動情報"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
+          "source": "Next activity details",
+          "message": "次のアクティビティの詳細"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Street address, city, postal code, country, and state information.",
+          "message": "町名・番地、市区町村、郵便番号、国、および都道府県情報。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "住所情報"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the lead",
+          "message": "リードの住所詳細"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Additional notes or description about the lead.",
+          "message": "リードに関する追加のメモまたは説明。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "説明"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Lead description or notes",
+          "message": "リードの説明またはメモ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.desc": {
+          "source": "The number of times emails to this contact have bounced.",
+          "message": "この連絡先へのメールがバウンスした回数。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
+          "source": "Email Bounce Count",
+          "message": "メールバウンス数"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
+          "source": "Number of email bounces",
+          "message": "メールバウンス回数"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.desc": {
+          "source": "The reason why this lead was marked as lost.",
+          "message": "このリードが失注としてマークされた理由。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
+          "source": "Lost Reason",
+          "message": "失注理由"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
+          "source": "Reason for losing the lead",
+          "message": "リード失注の理由"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.desc": {
+          "source": "The preferred language for communicating with this contact.",
+          "message": "この連絡先とのやり取りに使用する優先言語。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.short_desc": {
+          "source": "Preferred language",
+          "message": "希望言語"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record to update in Odoo CRM.",
+          "message": "Odoo CRM で更新するリードレコードの一意の識別子。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "リードID"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to update",
+          "message": "更新するリードの ID"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.desc": {
+          "source": "Information about the marketing campaign, medium, source, and referral that generated this lead.",
+          "message": "このリードを生成したマーケティングキャンペーン、メディア、ソース、紹介に関する情報。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
+          "source": "Marketing Information",
+          "message": "マーケティング情報"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
+          "source": "Marketing campaign and source details",
+          "message": "マーケティングキャンペーンとソースの詳細"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.desc": {
+          "source": "The title or subject of the lead.",
+          "message": "リードのタイトルまたは件名。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.short_desc": {
+          "source": "Lead title or subject",
+          "message": "リードのタイトルまたは件名"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.desc": {
+          "source": "Salesperson assignment, team, stage, priority, probability, and deadline information.",
+          "message": "営業担当者の割り当て、チーム、ステージ、優先度、確度、および期限の情報。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
+          "source": "Sales Information",
+          "message": "営業情報"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
+          "source": "Sales-related details for the lead",
+          "message": "リードの営業関連の詳細"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.desc": {
+          "source": "Link this lead to an existing partner/customer record.",
+          "message": "このリードを既存のパートナー/顧客レコードにリンクします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner",
+          "message": "パートナー"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "Associated partner record",
+          "message": "関連付けられたパートナーレコード"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.desc": {
+          "source": "The name of the partner or company associated with this lead.",
+          "message": "このリードに関連付けられているパートナーまたは会社の名前。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
+          "source": "Partner Name",
+          "message": "パートナー名"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
+          "source": "Name of the partner/company",
+          "message": "パートナー/会社の名前"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "List of tags to help categorize and organize this lead.",
+          "message": "このリードの分類と整理に役立つタグのリスト。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "Tags to categorize the lead",
+          "message": "リードを分類するタグ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "案件"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "リード"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.desc": {
+          "source": "Whether this record is a lead or has been converted to an opportunity.",
+          "message": "このレコードがリードであるか、商談に変換されたかどうか。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "タイプ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.short_desc": {
+          "source": "Lead or opportunity",
+          "message": "リードまたは商談"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.short_desc": {
+          "source": "Update an existing lead with new information.",
+          "message": "既存のリードを新しい情報で更新します。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.desc": {
+          "source": "Monitors Odoo for updates to existing leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.",
+          "message": "Odoo で既存のリードまたは商談への更新を監視します。会社、チーム、ユーザー、ステージ、リードタイプ、およびタグによるフィルタリングをサポートし、条件に一致する特定のリードに対してのみトリガーします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.display_name": {
+          "source": "Updated Lead",
+          "message": "更新されたリード"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.desc": {
+          "source": "Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.",
+          "message": "指定した会社に属するリードに対してのみトリガーします。すべての会社を監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "会社"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Filter by company",
+          "message": "会社でフィルタリング"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "案件"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmJvdGg.display_name": {
+          "source": "Both",
+          "message": "両方"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "リード"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.desc": {
+          "source": "Choose whether to monitor leads, opportunities, or both types of records.",
+          "message": "リード、商談、またはその両方のレコードタイプを監視するかどうかを選択します。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.display_name": {
+          "source": "Lead Type",
+          "message": "リードタイプ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.short_desc": {
+          "source": "Type of records to monitor",
+          "message": "監視するレコードのタイプ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.desc": {
+          "source": "Only trigger for leads in the specified stage. Leave empty to monitor all stages.",
+          "message": "指定したステージのリードに対してのみトリガーします。すべてのステージを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.display_name": {
+          "source": "Stage",
+          "message": "ステージ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.short_desc": {
+          "source": "Filter by lead stage",
+          "message": "リードステージでフィルタリング"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.desc": {
+          "source": "Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.",
+          "message": "指定したタグのいずれかを持つリードに対してのみトリガーします。タグに関係なくすべてのリードを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.short_desc": {
+          "source": "Filter by tags",
+          "message": "タグで絞り込み"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.",
+          "message": "指定した営業チームに割り当てられたリードに対してのみトリガーします。すべてのチームを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.display_name": {
+          "source": "Sales Team",
+          "message": "営業チーム"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.short_desc": {
+          "source": "Filter by sales team",
+          "message": "営業チームでフィルタリング"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.",
+          "message": "指定した営業担当者に割り当てられたリードに対してのみトリガーします。すべてのユーザーを監視する場合は空のままにします。"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.display_name": {
+          "source": "Salesperson",
+          "message": "営業担当者"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.short_desc": {
+          "source": "Filter by assigned salesperson",
+          "message": "割り当てられた営業担当者でフィルタリング"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.short_desc": {
+          "source": "Triggers when an existing lead is updated in Odoo",
+          "message": "Odooで既存のリードが更新されたときにトリガーします"
+        },
+        "app.T2Rvbw.desc": {
+          "source": "Odoo is a suite of open-source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.",
+          "message": "Odooは、CRM、Eコマース、会計、在庫管理、POS、プロジェクト管理など、企業のあらゆるニーズをカバーするオープンソースのビジネスアプリスイートです。"
+        },
+        "app.T2Rvbw.display_name": {
+          "source": "Odoo CRM",
+          "message": "Odoo CRM"
+        },
+        "app.T2Rvbw.short_desc": {
+          "source": "Connect to your Odoo CRM instance",
+          "message": "Odoo CRMインスタンスに接続します"
+        }
+      }
+    }
+  }
+}

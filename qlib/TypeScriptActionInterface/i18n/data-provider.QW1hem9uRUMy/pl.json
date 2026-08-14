@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.desc": {
+          "source": "Retrieves comprehensive information about one or more EC2 instances including their state, configuration, networking details, and tags.",
+          "message": "Pobiera kompleksowe informacje o jednej lub wielu instancjach EC2, w tym ich stan, konfigurację, szczegóły sieciowe i tagi."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
+          "source": "Describe Instances",
+          "message": "Opisz instancje"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "Optional list of specific EC2 instance IDs to describe. If not provided, information about all instances in the region will be returned.",
+          "message": "Opcjonalna lista identyfikatorów konkretnych instancji EC2 do opisania. Jeśli nie zostanie podana, zostaną zwrócone informacje o wszystkich instancjach w regionie."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "Identyfikatory instancji"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "Specific instance IDs to describe (optional)",
+          "message": "Konkretne identyfikatory instancji do opisania (opcjonalnie)"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "The maximum number of instances to return in a single request. Defaults to 100.",
+          "message": "Maksymalna liczba instancji do zwrócenia w jednym żądaniu. Domyślnie 100."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of instances to return",
+          "message": "Maksymalna liczba instancji do zwrócenia"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Token used for pagination to retrieve the next set of results when there are more instances than the max results limit.",
+          "message": "Token używany do stronicowania w celu pobrania kolejnego zestawu wyników, gdy instancji jest więcej niż limit maksymalnej liczby wyników."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to retrieve instance information.",
+          "message": "Region AWS, z którego chcesz pobrać informacje o instancjach."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to query",
+          "message": "Region AWS do odpytania"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
+          "source": "Get detailed information about EC2 instances",
+          "message": "Pobierz szczegółowe informacje o instancjach EC2"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.desc": {
+          "source": "Retrieves information about available AWS regions including their endpoints and opt-in status.",
+          "message": "Pobiera informacje o dostępnych regionach AWS, w tym o ich punktach końcowych i statusie opt-in."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
+          "source": "Describe Regions",
+          "message": "Opisz regiony"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.desc": {
+          "source": "When enabled, includes all AWS regions including those that require you to opt-in before you can use them.",
+          "message": "Gdy włączone, obejmuje wszystkie regiony AWS, w tym te, które wymagają włączenia (opt-in) przed użyciem."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
+          "source": "All Regions",
+          "message": "Wszystkie regiony"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
+          "source": "Include all regions including opt-in regions",
+          "message": "Uwzględnij wszystkie regiony, w tym regiony wymagające opt-in"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
+          "source": "Get information about available AWS regions",
+          "message": "Pobierz informacje o dostępnych regionach AWS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon EC2** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Amazon EC2** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji w przypadku punktów końcowych, które nie są jeszcze udostępnione jako dedykowane akcje w tej aplikacji."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon EC2",
+          "message": "Wykonaj niestandardowe wywołanie API do Amazon EC2"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.desc": {
+          "source": "This trigger monitors for newly created EC2 instances or instances that have transitioned to specific states like pending or running. It provides comprehensive instance information including networking details, tags, and configuration.",
+          "message": "Ten wyzwalacz monitoruje nowo utworzone instancje EC2 lub instancje, które przeszły do określonych stanów, takich jak pending lub running. Zapewnia kompleksowe informacje o instancji, w tym szczegóły sieciowe, tagi i konfigurację."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
+          "source": "New Instance",
+          "message": "Nowa instancja"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Oczekujące"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnJ1bm5pbmc.display_name": {
+          "source": "Running",
+          "message": "Uruchomiona"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnN0b3BwZWQ.display_name": {
+          "source": "Stopped",
+          "message": "Zatrzymana"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnN0b3BwaW5n.display_name": {
+          "source": "Stopping",
+          "message": "Zatrzymywanie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnNodXR0aW5nLWRvd24.display_name": {
+          "source": "Shutting Down",
+          "message": "Zamykanie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnRlcm1pbmF0ZWQ.display_name": {
+          "source": "Terminated",
+          "message": "Zakończona"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.desc": {
+          "source": "List of EC2 instance states to monitor. The trigger will fire when instances are in any of these states. Common states include pending, running, stopping, stopped, shutting-down, and terminated.",
+          "message": "Lista stanów instancji EC2 do monitorowania. Wyzwalacz zostanie uruchomiony, gdy instancje znajdą się w którymkolwiek z tych stanów. Typowe stany to pending, running, stopping, stopped, shutting-down oraz terminated."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
+          "source": "Instance States",
+          "message": "Stany instancji"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
+          "source": "Instance states to monitor",
+          "message": "Stany instancji do monitorowania"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for new EC2 instances. Defaults to us-east-1 if not specified.",
+          "message": "Region AWS, w którym chcesz monitorować nowe instancje EC2. Domyślnie us-east-1, jeśli nie określono."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new instances",
+          "message": "Region AWS do monitorowania nowych instancji"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
+          "source": "Triggers when a new EC2 instance is created or reaches a specified state",
+          "message": "Uruchamia się, gdy zostanie utworzona nowa instancja EC2 lub osiągnie ona określony stan"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.desc": {
+          "source": "This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.",
+          "message": "Ten wyzwalacz monitoruje nowe zaplanowane zdarzenia w instancjach EC2, takie jak ponowne uruchomienia systemu, okna konserwacyjne lub wycofanie instancji. Pomaga być na bieżąco z nadchodzącymi działaniami inicjowanymi przez AWS w Twojej infrastrukturze."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
+          "source": "New Scheduled Event",
+          "message": "Nowe zaplanowane zdarzenie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOmluc3RhbmNlLXJldGlyZW1lbnQ.display_name": {
+          "source": "Instance Retirement",
+          "message": "Wycofanie instancji"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOmluc3RhbmNlLXN0b3A.display_name": {
+          "source": "Instance Stop",
+          "message": "Zatrzymanie instancji"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOnN5c3RlbS1tYWludGVuYW5jZQ.display_name": {
+          "source": "System Maintenance",
+          "message": "Konserwacja systemu"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOnN5c3RlbS1yZWJvb3Q.display_name": {
+          "source": "System Reboot",
+          "message": "Ponowne uruchomienie systemu"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.desc": {
+          "source": "List of scheduled event types to monitor, such as system-reboot, system-maintenance, instance-retirement, or instance-stop.",
+          "message": "Lista typów zaplanowanych zdarzeń do monitorowania, takich jak system-reboot, system-maintenance, instance-retirement lub instance-stop."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
+          "source": "Event Types",
+          "message": "Typy zdarzeń"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {
+          "source": "Types of scheduled events to monitor",
+          "message": "Typy zaplanowanych zdarzeń do monitorowania"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "Optional list of specific EC2 instance IDs to monitor. If left empty, all instances in the region will be monitored for scheduled events.",
+          "message": "Opcjonalna lista konkretnych identyfikatorów instancji EC2 do monitorowania. Jeśli pozostawiona pusta, wszystkie instancje w regionie będą monitorowane pod kątem zaplanowanych zdarzeń."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "Identyfikatory instancji"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "Specific instances to monitor (optional)",
+          "message": "Konkretne instancje do monitorowania (opcjonalnie)"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for scheduled events on EC2 instances.",
+          "message": "Region AWS, w którym chcesz monitorować zaplanowane zdarzenia dla instancji EC2."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for scheduled events",
+          "message": "Region AWS do monitorowania zaplanowanych zdarzeń"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
+          "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
+          "message": "Uruchamia się, gdy na instancjach EC2 zostanie wykryte nowe zaplanowane zdarzenie konserwacyjne"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.desc": {
+          "source": "Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.",
+          "message": "Uruchamia jedną lub więcej instancji Amazon EC2, które obecnie znajdują się w stanie zatrzymanym. Instancje przejdą ze stanu stopped do pending, a następnie do stanu running."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
+          "source": "Start Instance",
+          "message": "Uruchom instancję"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to start. These instances must be in a stopped state.",
+          "message": "Jeden lub więcej identyfikatorów instancji EC2, które chcesz uruchomić. Te instancje muszą znajdować się w stanie zatrzymanym."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "Identyfikatory instancji"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to start",
+          "message": "Lista identyfikatorów instancji do uruchomienia"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Region AWS, w którym znajdują się instancje EC2."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Region AWS zawierający instancje"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
+          "source": "Start one or more stopped EC2 instances",
+          "message": "Uruchom jedną lub więcej zatrzymanych instancji EC2"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.desc": {
+          "source": "Stops one or more Amazon EC2 instances. The instances will transition from running to stopping and then to stopped state. You can optionally force stop instances.",
+          "message": "Zatrzymuje jedną lub więcej instancji Amazon EC2. Instancje przejdą ze stanu running do stopping, a następnie do stanu stopped. Opcjonalnie możesz wymusić zatrzymanie instancji."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
+          "source": "Stop Instance",
+          "message": "Zatrzymaj instancję"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.desc": {
+          "source": "When enabled, forces the instances to stop immediately. This is equivalent to pulling the power plug on a physical computer.",
+          "message": "Gdy włączone, wymusza natychmiastowe zatrzymanie instancji. Jest to odpowiednik odłączenia zasilania w fizycznym komputerze."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
+          "source": "Force Stop",
+          "message": "Wymuś zatrzymanie"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
+          "source": "Force stop the instances",
+          "message": "Wymuś zatrzymanie instancji"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to stop. These instances should be in a running state.",
+          "message": "Jeden lub więcej identyfikatorów instancji EC2, które chcesz zatrzymać. Te instancje powinny znajdować się w stanie uruchomionym."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "Identyfikatory instancji"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to stop",
+          "message": "Lista identyfikatorów instancji do zatrzymania"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Region AWS, w którym znajdują się instancje EC2."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Region AWS zawierający instancje"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
+          "source": "Stop one or more running EC2 instances",
+          "message": "Zatrzymaj jedną lub więcej uruchomionych instancji EC2"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.desc": {
+          "source": "Performs a reboot of one or more Amazon EC2 instances. This is equivalent to performing a restart from within the operating system.",
+          "message": "Wykonuje ponowne uruchomienie jednej lub więcej instancji Amazon EC2. Jest to odpowiednik wykonania restartu z poziomu systemu operacyjnego."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
+          "source": "Reboot Instance",
+          "message": "Uruchom ponownie instancję"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to reboot. These instances should be in a running state.",
+          "message": "Jeden lub więcej identyfikatorów instancji EC2, które chcesz uruchomić ponownie. Te instancje powinny znajdować się w stanie uruchomionym."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "Identyfikatory instancji"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to reboot",
+          "message": "Lista identyfikatorów instancji do ponownego uruchomienia"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Region AWS, w którym znajdują się instancje EC2."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Region"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Region AWS zawierający instancje"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
+          "source": "Reboot one or more running EC2 instances",
+          "message": "Uruchom ponownie jedną lub więcej uruchomionych instancji EC2"
+        },
+        "app.QW1hem9uRUMy.desc": {
+          "source": "The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.",
+          "message": "Integracja Amazon EC2 zapewnia kompleksowe akcje i wyzwalacze do interakcji z usługami Amazon Elastic Compute Cloud. Zarządzaj instancjami, wolumenami, grupami bezpieczeństwa, migawkami i innymi zasobami EC2, aby zautomatyzować procesy i monitoring infrastruktury chmurowej."
+        },
+        "app.QW1hem9uRUMy.display_name": {
+          "source": "Amazon EC2",
+          "message": "Amazon EC2"
+        },
+        "app.QW1hem9uRUMy.short_desc": {
+          "source": "Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.",
+          "message": "Połącz się z Amazon EC2, aby zarządzać i automatyzować operacje w infrastrukturze chmurowej."
+        }
+      }
+    }
+  }
+}

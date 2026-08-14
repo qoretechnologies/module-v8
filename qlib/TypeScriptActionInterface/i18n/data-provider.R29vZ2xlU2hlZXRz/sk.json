@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.desc": {
+          "source": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization",
+          "message": "Vytvoriť kópiu pracovného hárka zo zdrojovej tabuľky do cieľovej tabuľky s voliteľným prispôsobením"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
+          "source": "Copy Worksheet",
+          "message": "Kopírovať pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be copied to",
+          "message": "Tabuľka Google Sheets, do ktorej sa pracovný hárok skopíruje"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Destination Spreadsheet",
+          "message": "Cieľová tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the destination Google Sheets spreadsheet",
+          "message": "Vyberte cieľovú tabuľku Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet",
+          "message": "Index začínajúci od nuly, kam sa má vložiť nový pracovný hárok. Ak nie je zadaný, pracovný hárok sa pridá na koniec tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Insert Position",
+          "message": "Pozícia vloženia"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Optional position to insert the new worksheet",
+          "message": "Voliteľná pozícia na vloženie nového pracovného hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.desc": {
+          "source": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix",
+          "message": "Zadajte vlastný názov pre skopírovaný pracovný hárok. Ak nie je zadaný, použije sa pôvodný názov s predponou „Kópia – “"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
+          "source": "New Worksheet Name",
+          "message": "Nový názov pracovného hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
+          "source": "Optional new name for the copied worksheet",
+          "message": "Voliteľný nový názov pre skopírovaný pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.desc": {
+          "source": "The specific worksheet within the source spreadsheet that will be copied",
+          "message": "Konkrétny pracovný hárok v zdrojovej tabuľke, ktorý sa skopíruje"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
+          "source": "Source Worksheet",
+          "message": "Zdrojový pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
+          "source": "Select the worksheet to copy",
+          "message": "Vyberte pracovný hárok na skopírovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "The Google Sheets spreadsheet containing the worksheet you want to copy",
+          "message": "Tabuľka Google Sheets obsahujúca pracovný hárok, ktorý chcete skopírovať"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Zdrojová tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "Select the source Google Sheets spreadsheet",
+          "message": "Vyberte zdrojovú tabuľku Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
+          "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
+          "message": "Skopírovať pracovný hárok z jednej tabuľky Google Sheets do druhej"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
+          "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
+          "message": "Odstrániť všetky údaje z vybratých riadkov v tabuľke Google Sheets pri zachovaní formátovania"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
+          "source": "Clear Spreadsheet Row(s)",
+          "message": "Vymazať riadok/riadky tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific sheet within the spreadsheet where rows will be cleared",
+          "message": "Konkrétny hárok v tabuľke, v ktorom sa vymažú riadky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the sheet within the spreadsheet",
+          "message": "Vyberte hárok v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet containing the rows to be cleared",
+          "message": "Tabuľka Google Sheets obsahujúca riadky, ktoré sa majú vymazať"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Vyberte tabuľku Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.desc": {
+          "source": "List of row indices to clear (1-based, as seen in the spreadsheet)",
+          "message": "Zoznam indexov riadkov na vymazanie (číslované od 1, ako sa zobrazujú v tabuľke)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
+          "source": "Rows to Clear",
+          "message": "Riadky na vymazanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
+          "source": "The row numbers to clear (1-based)",
+          "message": "Čísla riadkov na vymazanie (číslované od 1)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
+          "source": "Clear content from specific rows in a Google Sheets spreadsheet",
+          "message": "Vymazať obsah z konkrétnych riadkov v tabuľke Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „GoogleSheets“"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „GoogleSheets“"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
+          "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
+          "message": "Vytvorí novú tabuľku Google Sheets. Môžete ju vytvoriť úplne od začiatku s vlastnými hlavičkami alebo skopírovať existujúcu tabuľku. Ak sú zadané hlavičky, naformátujú sa tučným písmom s orámovaním a riadok hlavičky sa ukotví."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
+          "source": "Create Spreadsheet",
+          "message": "Vytvoriť tabuľku"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.desc": {
+          "source": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.",
+          "message": "Voliteľné. Zoznam hlavičiek stĺpcov, ktoré sa pridajú do prvého riadku novej tabuľky. Hlavičky budú naformátované tučným písmom s orámovaním a riadok hlavičky bude ukotvený. Táto možnosť sa ignoruje, ak je zadaná zdrojová tabuľka."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Hlavičky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers for the new spreadsheet",
+          "message": "Hlavičky stĺpcov pre novú tabuľku"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.",
+          "message": "Voliteľné. Ak je zadané, nová tabuľka sa vytvorí ako kópia tejto existujúcej tabuľky. Možnosť hlavičiek sa v tomto prípade ignoruje."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Zdrojová tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "ID of an existing spreadsheet to copy",
+          "message": "ID existujúcej tabuľky na skopírovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.desc": {
+          "source": "The name that will be given to the newly created Google Sheets spreadsheet.",
+          "message": "Názov, ktorý bude priradený novovytvorenej tabuľke Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
+          "source": "Spreadsheet Title",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
+          "source": "The title for the new spreadsheet",
+          "message": "Názov novej tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
+          "message": "Vytvoriť novú tabuľku Google Sheets s voliteľnými hlavičkami alebo skopírovaním existujúcej."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
+          "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
+          "message": "Vloží nový stĺpec na zadanú pozíciu v tabuľke Google Sheets a pridá formátovanú hlavičku na vrch stĺpca."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
+          "source": "Create Spreadsheet Column",
+          "message": "Vytvoriť stĺpec tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.desc": {
+          "source": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.",
+          "message": "Index začínajúci od nuly pre pozíciu, kam sa má vložiť nový stĺpec. Napríklad 0 znamená, že stĺpec bude vložený na začiatok hárka, 1 znamená za prvý stĺpec atď."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
+          "source": "Column Index",
+          "message": "Index stĺpca"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
+          "source": "The position where the column will be inserted",
+          "message": "Pozícia, kam sa stĺpec vloží"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.desc": {
+          "source": "The header text that will appear at the top of the new column.",
+          "message": "Text hlavičky, ktorý sa zobrazí v hornej časti nového stĺpca."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
+          "source": "Column Title",
+          "message": "Názov stĺpca"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
+          "source": "The title for the new column",
+          "message": "Názov pre nový stĺpec"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet within the spreadsheet where the column will be added.",
+          "message": "ID konkrétneho hárka v tabuľke, kam sa stĺpec pridá."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The sheet within the spreadsheet",
+          "message": "Hárok v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet where the column will be created.",
+          "message": "ID tabuľky Google Sheets, v ktorej sa stĺpec vytvorí."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet",
+          "message": "Tabuľka Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
+          "source": "Insert a new column into a Google Sheets spreadsheet.",
+          "message": "Vložiť nový stĺpec do tabuľky Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.desc": {
+          "source": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.",
+          "message": "Vytvorí nový pracovný hárok (kartu) v zadanej tabuľke Google Sheets s vlastným názvom a voliteľnými hlavičkami stĺpcov. Voliteľne môže prepísať existujúci pracovný hárok s rovnakým názvom."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
+          "source": "Create Worksheet",
+          "message": "Vytvoriť pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.desc": {
+          "source": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold.",
+          "message": "Zoznam hlavičiek stĺpcov, ktoré sa pridajú do prvého riadku nového pracovného hárka a naformátujú sa tučným písmom."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Hlavičky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers to add to the first row",
+          "message": "Hlavičky stĺpcov na pridanie do prvého riadku"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.",
+          "message": "Pozícia (index začínajúci od nuly), kam sa má nový pracovný hárok vložiť v tabuľke. Ak nie je zadaná, pracovný hárok sa pridá na koniec."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Sheet Position",
+          "message": "Pozícia hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Position where the new worksheet should be placed",
+          "message": "Pozícia, kam sa má nový pracovný hárok umiestniť"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.desc": {
+          "source": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.",
+          "message": "Ak má hodnotu true a pracovný hárok s rovnakým názvom už existuje, existujúci pracovný hárok sa odstráni a nahradí. Ak má hodnotu false a existuje duplicita, akcia zlyhá."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
+          "source": "Overwrite Existing",
+          "message": "Prepísať existujúci"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
+          "source": "Whether to replace an existing worksheet with the same title",
+          "message": "Určuje, či sa má nahradiť existujúci pracovný hárok s rovnakým názvom"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet in which to create the new worksheet.",
+          "message": "ID tabuľky Google Sheets, v ktorej sa má vytvoriť nový pracovný hárok."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be created",
+          "message": "Tabuľka Google Sheets, v ktorej sa vytvorí pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.desc": {
+          "source": "The name that will appear on the tab of the new worksheet.",
+          "message": "Názov, ktorý sa zobrazí na karte nového pracovného hárka."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
+          "source": "Worksheet Title",
+          "message": "Názov pracovného hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
+          "source": "Title for the new worksheet",
+          "message": "Názov pre nový pracovný hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
+          "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
+          "message": "Vytvoriť nový pracovný hárok v tabuľke Google Sheets s voliteľnými hlavičkami."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
+          "message": "Pripojí nové riadky k existujúcej tabuľke Google Sheets s údajmi namapovanými na hlavičky tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Add Rows to Spreadsheet",
+          "message": "Pridať riadky do tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.desc": {
+          "source": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.",
+          "message": "Ak je vybraté, nové riadky sa vložia na začiatok tabuľky. Ak nie je vybraté, riadky sa pripoja na koniec tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
+          "source": "Insert at Start",
+          "message": "Vložiť na začiatok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
+          "source": "Insert rows at the start of the table",
+          "message": "Vložiť riadky na začiatok tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific worksheet within the spreadsheet where the rows will be added",
+          "message": "Konkrétny hárok v tabuľke, do ktorého sa pridajú riadky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the worksheet within the spreadsheet",
+          "message": "Vyberte hárok v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where you want to add rows",
+          "message": "Tabuľka Google Sheets, do ktorej chcete pridať riadky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Vyberte tabuľku Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Add one or more rows to the end of a Google Sheets table",
+          "message": "Pridať jeden alebo viacero riadkov na koniec tabuľky Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.",
+          "message": "Úplne odstráni riadok zo zadaného hárka Google Sheets bez zanechania prázdneho miesta. Indexovanie riadkov začína od 1, čo zodpovedá tomu, čo vidíte v používateľskom rozhraní tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "Odstrániť riadok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.",
+          "message": "ID hárka (karty) v tabuľke, ktorý obsahuje riadok na odstránenie."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The worksheet containing the row to delete",
+          "message": "Hárok obsahujúci riadok na odstránenie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.",
+          "message": "ID tabuľky Google Sheets, ktorá obsahuje hárok s riadkom na odstránenie."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet containing the row to delete",
+          "message": "Tabuľka Google Sheets obsahujúca riadok na odstránenie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.desc": {
+          "source": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.",
+          "message": "Pozícia riadka na odstránenie, začínajúca od 1 (nie 0). Zodpovedá to číslam riadkov, ktoré vidíte v rozhraní Google Sheets. Ak chcete napríklad odstrániť úplne prvý riadok, použite 1."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
+          "source": "Row Index",
+          "message": "Index riadka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
+          "source": "The index of the row to delete (starting from 1)",
+          "message": "Index riadka na odstránenie (začínajúci od 1)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Google Sheets worksheet.",
+          "message": "Odstrániť konkrétny riadok z hárka Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.",
+          "message": "Použite rôzne možnosti formátovania, ako sú farby, štýly textu a zarovnanie, na zadané riadky v tabuľke Google Sheets. Formátujte viacero riadkov naraz s konzistentným štýlom."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Format Spreadsheet Rows",
+          "message": "Formátovať riadky tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.desc": {
+          "source": "Whether to make the text in the specified rows bold.",
+          "message": "Či nastaviť text v zadaných riadkoch ako tučný."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.display_name": {
+          "source": "Bold",
+          "message": "Tučné"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.short_desc": {
+          "source": "Make text bold",
+          "message": "Nastaviť text ako tučný"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.desc": {
+          "source": "The background color to apply to the cells in the specified rows. Uses RGB color format.",
+          "message": "Farba pozadia, ktorá sa má použiť na bunky v zadaných riadkoch. Používa formát farieb RGB."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
+          "source": "Background Color",
+          "message": "Farba pozadia"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
+          "source": "Background color for the cells",
+          "message": "Farba pozadia pre bunky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.desc": {
+          "source": "Font size in points",
+          "message": "Veľkosť písma v bodoch"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
+          "source": "Font Size",
+          "message": "Veľkosť písma"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
+          "source": "Text font size in points",
+          "message": "Veľkosť písma textu v bodoch"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkNFTlRFUg.display_name": {
+          "source": "Center",
+          "message": "Stred"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkxFRlQ.display_name": {
+          "source": "Left",
+          "message": "Vľavo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOlJJR0hU.display_name": {
+          "source": "Right",
+          "message": "Vpravo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.desc": {
+          "source": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).",
+          "message": "Vodorovné zarovnanie použité na obsah v zadaných riadkoch (Vľavo, Na stred alebo Vpravo)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
+          "source": "Horizontal Alignment",
+          "message": "Vodorovné zarovnanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
+          "source": "Horizontal alignment of content",
+          "message": "Vodorovné zarovnanie obsahu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.desc": {
+          "source": "Whether to make the text in the specified rows italic.",
+          "message": "Či nastaviť text v zadaných riadkoch ako kurzívu."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.display_name": {
+          "source": "Italic",
+          "message": "Kurzíva"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.short_desc": {
+          "source": "Make text italic",
+          "message": "Nastaviť text ako kurzívu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.",
+          "message": "ID konkrétneho hárka (karty) obsahujúceho riadky na formátovanie. Každý hárok má v rámci tabuľky jedinečné ID."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hárok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific worksheet within the spreadsheet",
+          "message": "ID konkrétneho hárka v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.",
+          "message": "ID tabuľky Google Sheets obsahujúcej riadky na formátovanie. Dá sa nájsť v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet to format",
+          "message": "ID tabuľky Google Sheets na formátovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.desc": {
+          "source": "Whether to apply strikethrough formatting to the text in the specified rows.",
+          "message": "Či použiť prečiarknutie textu v zadaných riadkoch."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.display_name": {
+          "source": "Strikethrough",
+          "message": "Prečiarknuté"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.short_desc": {
+          "source": "Apply strikethrough to text",
+          "message": "Použiť prečiarknutie na text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.desc": {
+          "source": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.",
+          "message": "Zoznam čísel riadkov na formátovanie (indexovanie od 1). Napríklad [1, 2, 5] naformátuje prvý, druhý a piaty riadok."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.display_name": {
+          "source": "Rows",
+          "message": "Riadky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.short_desc": {
+          "source": "List of row numbers to format",
+          "message": "Zoznam čísel riadkov na formátovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Či zalamovať text v bunkách"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
+          "source": "Wrap Text",
+          "message": "Zalomiť text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Či zalamovať text v bunkách"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.desc": {
+          "source": "The color to apply to the text in the cells of the specified rows. Uses RGB color format.",
+          "message": "Farba textu v bunkách zadaných riadkov. Používa formát farieb RGB."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
+          "source": "Text Color",
+          "message": "Farba textu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
+          "source": "Color for the text in the cells",
+          "message": "Farba textu v bunkách"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.desc": {
+          "source": "Whether to underline the text in the specified rows.",
+          "message": "Či podčiarknuť text v zadaných riadkoch."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.display_name": {
+          "source": "Underline",
+          "message": "Podčiarknuté"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.short_desc": {
+          "source": "Underline the text",
+          "message": "Podčiarknuť text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOk1JRERMRQ.display_name": {
+          "source": "Middle",
+          "message": "Na stred"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOkJPVFRPTQ.display_name": {
+          "source": "Bottom",
+          "message": "Dole"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOlRPUA.display_name": {
+          "source": "Top",
+          "message": "Hore"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.desc": {
+          "source": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).",
+          "message": "Zvislé zarovnanie použité na obsah v zadaných riadkoch (Hore, Na stred alebo Dole)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
+          "source": "Vertical Alignment",
+          "message": "Zvislé zarovnanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
+          "source": "Vertical alignment of content",
+          "message": "Zvislé zarovnanie obsahu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Apply formatting to specific rows in a Google Sheets spreadsheet.",
+          "message": "Použiť formátovanie na konkrétne riadky v tabuľke Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
+          "message": "Vyhľadáva riadky v tabuľke Google Sheets, ktoré zodpovedajú konkrétnej hodnote v určenom stĺpci. Podporuje vyhľadávanie podľa hlavičky alebo písmena stĺpca, stránkovanie a rôzne formáty odpovede."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
+          "source": "Find Spreadsheet Rows",
+          "message": "Nájsť riadky tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "The number of matching rows to skip before returning results. Used for pagination. Default is 0.",
+          "message": "Počet zodpovedajúcich riadkov, ktoré sa majú pred vrátením výsledkov preskočiť. Používa sa na stránkovanie. Predvolená hodnota je 0."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of matching rows to skip",
+          "message": "Počet zodpovedajúcich riadkov na preskočenie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.desc": {
+          "source": "The maximum number of matching rows to include in the results. Default is 10.",
+          "message": "Maximálny počet zodpovedajúcich riadkov, ktoré sa majú zahrnúť do výsledkov. Predvolená hodnota je 10."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of matching rows to return",
+          "message": "Maximálny počet zodpovedajúcich riadkov na vrátenie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
+          "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
+          "message": "Obmedzuje celkový počet prehľadávaných riadkov z dôvodu optimalizácie výkonu pri veľkých hárkoch. Predvolená hodnota je 5000."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
+          "source": "Maximum Rows to Search",
+          "message": "Maximálny počet riadkov na vyhľadávanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
+          "source": "Maximum number of rows to search through",
+          "message": "Maximálny počet riadkov, ktoré sa majú prehľadať"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Defines the search criteria to use when looking for matching rows.",
+          "message": "Definuje kritériá vyhľadávania, ktoré sa použijú pri hľadaní zodpovedajúcich riadkov."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search Criteria",
+          "message": "Kritériá vyhľadávania"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Criteria for finding matching rows",
+          "message": "Kritériá na vyhľadanie zodpovedajúcich riadkov"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.desc": {
+          "source": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.",
+          "message": "Keď je táto možnosť povolená, vyhľadáva sa od konca hárka smerom nahor namiesto zhora nadol. Užitočné na nájdenie najnovších záznamov v hárkoch, kde sa nové údaje pridávajú na koniec."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
+          "source": "Search From Last Row",
+          "message": "Hľadať od posledného riadka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
+          "source": "Start searching from the bottom of the sheet",
+          "message": "Začať vyhľadávanie od konca hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.",
+          "message": "ID konkrétneho hárka v tabuľke, v ktorom sa má vyhľadávať. Každý hárok má jedinečné ID, ktoré je možné vybrať z dostupných hárkov."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.short_desc": {
+          "source": "ID of the specific sheet within the spreadsheet",
+          "message": "ID konkrétneho hárka v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.",
+          "message": "Jedinečný identifikátor tabuľky Google Sheets, v ktorej sa má vyhľadávať. Nájdete ho v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "ID of the Google Sheets spreadsheet",
+          "message": "ID tabuľky Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.desc": {
+          "source": "Return values mapped to column letters (A, B, C, etc.)",
+          "message": "Vrátiť hodnoty namapované na písmená stĺpcov (A, B, C atď.)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.display_name": {
+          "source": "Column letter mapped values",
+          "message": "Hodnoty namapované na písmená stĺpcov"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.desc": {
+          "source": "Return values mapped to column headers",
+          "message": "Vrátiť hodnoty namapované na hlavičky stĺpcov"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.display_name": {
+          "source": "Header mapped values",
+          "message": "Hodnoty namapované na hlavičky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.desc": {
+          "source": "Return only raw row values as arrays (most efficient)",
+          "message": "Vrátiť iba nespracované hodnoty riadkov ako polia (najúčinnejšie)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.display_name": {
+          "source": "Raw values only",
+          "message": "Iba nespracované hodnoty"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.",
+          "message": "Určuje formát nájdených riadkov v odpovedi. Možnosti zahŕňajú nespracované hodnoty, hodnoty namapované na hlavičky stĺpcov alebo hodnoty namapované na písmená stĺpcov."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Format",
+          "message": "Formát odpovede"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Format of the returned rows",
+          "message": "Formát vrátených riadkov"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
+          "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
+          "message": "Vyhľadať riadky v tabuľke Google Sheets, ktoré zodpovedajú konkrétnym kritériám."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do **Google Sheets** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej URL adrese API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako vstavané akcie v tejto aplikácii."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Sheets",
+          "message": "Vykonať vlastné volanie API do Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.desc": {
+          "source": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.",
+          "message": "Monitoruje Disk Google a zisťuje novovytvorené tabuľky Google Spreadsheets. Spúšťač poskytuje metaúdaje o novovytvorenej tabuľke vrátane jej ID, názvu, URL adresy, času vytvorenia a informácií o vlastníkovi."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
+          "source": "New Spreadsheet",
+          "message": "Nová tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Triggers when a new Google Spreadsheet is created.",
+          "message": "Spustí sa po vytvorení novej tabuľky Google Spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.desc": {
+          "source": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.",
+          "message": "Monitoruje konkrétny hárok v tabuľke Google Spreadsheet a spustí sa pri pridaní nových riadkov. Spúšťač poskytuje údaje riadka s hlavičkami stĺpcov ako názvami polí."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
+          "source": "New Spreadsheet Row",
+          "message": "Nový riadok tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.",
+          "message": "Jedinečný identifikátor konkrétneho hárka v tabuľke, v ktorom chcete monitorovať nové riadky. ID hárka nájdete v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific sheet to monitor",
+          "message": "ID konkrétneho hárka na monitorovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.",
+          "message": "Jedinečný identifikátor tabuľky Google Spreadsheet, ktorá obsahuje hárok, v ktorom chcete monitorovať nové riadky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "ID tabuľky Google Spreadsheet na monitorovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Google Sheet.",
+          "message": "Spustí sa po pridaní nového riadka do tabuľky Google Sheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.desc": {
+          "source": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.",
+          "message": "Monitoruje tabuľku Google Spreadsheet a spustí sa pri pridaní nových hárkov. Spúšťač poskytuje metaúdaje o novovytvorenom hárku vrátane jeho ID, názvu, pozície indexu a rozmerov."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
+          "source": "New Spreadsheet Sheet",
+          "message": "Nový hárok v tabuľke"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.",
+          "message": "Jedinečný identifikátor tabuľky Google Spreadsheet, v ktorej chcete monitorovať nové hárky. ID tabuľky nájdete v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "ID tabuľky Google Spreadsheet na monitorovanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
+          "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
+          "message": "Spustí sa po pridaní nového hárka do tabuľky Google Spreadsheet."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
+          "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "Vyhľadávať tabuľky Google Sheets na Disku Google pomocou rôznych kritérií vrátane názvu súboru, umiestnenia priečinka a vlastných dopytov. Podporuje zoradenie podľa rôznych polí a smerov so stránkovaním."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
+          "source": "Search Spreadsheets",
+          "message": "Vyhľadať tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "Vlastný vyhľadávací dotaz pre Disk Google na pridanie ďalších kritérií filtrovania nad rámec základných možností."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "Vlastný dotaz"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "Dodatočné kritériá vyhľadávania"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "ID priečinka na Disku Google, na ktorý sa má vyhľadávanie obmedziť. Ak nie je zadané, vyhľadáva vo všetkých prístupných priečinkoch."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "Priečinok"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "Priečinok na vyhľadávanie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Sheets spreadsheet to search for.",
+          "message": "Celý alebo čiastočný názov tabuľky Google Sheets, ktorú chcete vyhľadať."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Názov súboru"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the spreadsheet to search for",
+          "message": "Názov tabuľky, ktorú chcete vyhľadať"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "Zoznam kritérií zoradenia, ktoré sa majú použiť na výsledky vyhľadávania. Každá položka určuje pole a smer."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "Kritériá zoradenia výsledkov"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Obsahuje"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Presná zhoda"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "Spôsob zhody názvu súboru – buď obsahuje text, alebo presná zhoda. Predvolená hodnota je obsahuje."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Typ vyhľadávania"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "Typ zhody názvu súboru"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of spreadsheets to return in a single request. Default is 100.",
+          "message": "Maximálny počet tabuliek, ktoré sa majú vrátiť v jednej požiadavke. Predvolená hodnota je 100."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maximálny počet výsledkov na vrátenie"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
+          "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
+          "message": "Vyhľadávať tabuľky Google Sheets s pokročilými možnosťami filtrovania a zoradenia."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
+          "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
+          "message": "Vyhľadáva pracovné hárky (karty) v tabuľke Google Spreadsheet podľa ich názvov. Vráti podrobné informácie o zodpovedajúcich hárkoch vrátane rozmerov, pozície a viditeľnosti. Možno použiť na nájdenie konkrétnych hárkov alebo zoznam všetkých hárkov v tabuľke."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
+          "source": "Search Worksheets",
+          "message": "Vyhľadať pracovné hárky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.desc": {
+          "source": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.",
+          "message": "Ak je táto možnosť povolená, vrátia sa iba pracovné hárky s presne zodpovedajúcimi názvami. Ak je zakázaná (predvolené), vo výsledkoch budú zahrnuté pracovné hárky s názvami obsahujúcimi hľadaný text."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
+          "source": "Exact Match",
+          "message": "Presná zhoda"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
+          "source": "Whether to match the title exactly",
+          "message": "Či sa má vyžadovať presná zhoda názvu"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.",
+          "message": "Jedinečný identifikátor tabuľky Google Spreadsheet, v ktorej chcete vyhľadávať pracovné hárky. Nájdete ho v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to search within",
+          "message": "ID tabuľky Google Spreadsheet, v ktorej sa má vyhľadávať"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.desc": {
+          "source": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.",
+          "message": "Vyhľadať pracovné hárky s názvami obsahujúcimi tento text. Nechajte prázdne, ak chcete zobraziť zoznam všetkých pracovných hárkov v tabuľke. Pri vyhľadávaní sa predvolene nerozlišujú malé a veľké písmená."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
+          "source": "Sheet Title",
+          "message": "Názov hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
+          "source": "Title text to search for (case-insensitive)",
+          "message": "Text názvu na vyhľadanie (nerozlišujú sa malé a veľké písmená)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
+          "source": "Find worksheets within a Google Spreadsheet by title.",
+          "message": "Nájsť pracovné hárky v tabuľke Google Spreadsheet podľa názvu."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",
+          "message": "Aktualizuje konkrétne riadky v tabuľke Google Sheets podľa ich indexov riadkov. Táto akcia vám umožňuje upraviť viacero riadkov v rámci jednej operácie pri zachovaní štruktúry tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Update Spreadsheet Rows",
+          "message": "Aktualizovať riadky tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated.",
+          "message": "Jedinečný identifikátor konkrétneho hárka v tabuľke, kde sa aktualizujú riadky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID hárka"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the sheet within the spreadsheet.",
+          "message": "ID hárka v tabuľke."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.",
+          "message": "Jedinečný identifikátor tabuľky Google Sheets, v ktorej chcete aktualizovať riadky. Nájdete ho v URL adrese tabuľky."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID tabuľky"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet.",
+          "message": "ID tabuľky Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Update existing rows in a Google Sheets spreadsheet.",
+          "message": "Aktualizovať existujúce riadky v tabuľke Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.desc": {
+          "source": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.",
+          "message": "Integrujte sa s Google Sheets a vytvárajte, aktualizujte a spravujte svoje tabuľky. Táto integrácia vám umožňuje vykonávať akcie a reagovať na udalosti vo vašom účte Google Sheets, vďaka čomu môžete automatizovať správu údajov a procesy reportovania."
+        },
+        "app.R29vZ2xlU2hlZXRz.display_name": {
+          "source": "Google Sheets",
+          "message": "Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.short_desc": {
+          "source": "Connect with Google Sheets to manage your spreadsheets",
+          "message": "Pripojte sa ku Google Sheets a spravujte svoje tabuľky"
+        }
+      }
+    }
+  }
+}

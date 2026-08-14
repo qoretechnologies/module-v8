@@ -1,0 +1,1253 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.desc": {
+          "source": "Create a new item with custom field data in a specified Webflow collection. You can set the item as archived or draft and specify a CMS locale.",
+          "message": "Créer un nouvel élément avec des données de champs personnalisés dans une collection Webflow spécifiée. Vous pouvez définir l'élément comme archivé ou brouillon et spécifier des paramètres régionaux CMS."
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
+          "source": "Create Item",
+          "message": "Créer un article"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Spécifiez l'ID de paramètres régionaux du CMS si vous travaillez avec un site multilingue"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID de paramètres régionaux du CMS"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "L'ID de paramètres régionaux pour l'élément"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection where you want to create the new item",
+          "message": "Sélectionnez la collection Webflow dans laquelle vous souhaitez créer le nouvel élément"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to create the item in",
+          "message": "La collection dans laquelle créer l'élément"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.desc": {
+          "source": "Set to true if you want the item to be archived upon creation",
+          "message": "Définissez sur true si vous souhaitez que l'élément soit archivé lors de sa création"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
+          "source": "Is Archived",
+          "message": "Est archivé"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
+          "source": "Whether the item should be archived",
+          "message": "Indique si l'élément doit être archivé"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.desc": {
+          "source": "Set to true if you want the item to be saved as a draft (default: true)",
+          "message": "Définissez sur true si vous souhaitez que l'élément soit enregistré comme brouillon (par défaut : true)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
+          "source": "Is Draft",
+          "message": "Est un brouillon"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
+          "source": "Whether the item should be a draft",
+          "message": "Indique si l'élément doit être un brouillon"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
+          "source": "Create a new item in a Webflow collection",
+          "message": "Créer un nouvel élément dans une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.desc": {
+          "source": "Get detailed information about a specific order from Webflow, including customer details, purchased items, and payment information.",
+          "message": "Obtenir des informations détaillées sur une commande spécifique depuis Webflow, y compris les détails du client, les articles achetés et les informations de paiement."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
+          "source": "Get Order",
+          "message": "Obtenir la commande"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.desc": {
+          "source": "Select the specific order you want to retrieve information about",
+          "message": "Sélectionnez la commande spécifique dont vous souhaitez récupérer les informations"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Ordre"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.short_desc": {
+          "source": "The order to retrieve",
+          "message": "La commande à récupérer"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site that contains the order",
+          "message": "Sélectionnez le site Webflow qui contient la commande"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Le site Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
+          "source": "Retrieve a specific order from Webflow",
+          "message": "Récupérer une commande spécifique depuis Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Get detailed information about a specific Webflow collection including its fields, settings, and metadata.",
+          "message": "Obtenir des informations détaillées sur une collection Webflow spécifique, y compris ses champs, ses paramètres et ses métadonnées."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "Obtenir la collection"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the specific Webflow collection you want to get information about",
+          "message": "Sélectionnez la collection Webflow spécifique dont vous souhaitez obtenir des informations"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to retrieve",
+          "message": "La collection à récupérer"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Retrieve information about a Webflow collection",
+          "message": "Récupérer les informations sur une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.desc": {
+          "source": "Get detailed information about a specific item from a Webflow collection, including all its field data.",
+          "message": "Obtenir des informations détaillées sur un élément spécifique d'une collection Webflow, y compris toutes ses données de champ."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
+          "source": "Get Item",
+          "message": "Obtenir l'article"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Spécifiez l'ID de paramètres régionaux du CMS si vous travaillez avec un site multilingue"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID de paramètres régionaux du CMS"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "L'ID de paramètres régionaux pour l'élément"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to retrieve",
+          "message": "Sélectionnez la collection Webflow qui contient l'élément que vous souhaitez récupérer"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "La collection contenant l'élément"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to retrieve from the collection",
+          "message": "Sélectionnez l'élément spécifique que vous souhaitez récupérer dans la collection"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Élément"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to retrieve",
+          "message": "L'élément à récupérer"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
+          "source": "Retrieve a specific item from a Webflow collection",
+          "message": "Récupérer un élément spécifique depuis une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.desc": {
+          "source": "Get detailed information about a specific Webflow site including its settings, domains, and locale configuration.",
+          "message": "Obtenir des informations détaillées sur un site Webflow spécifique, y compris ses paramètres, ses domaines et sa configuration de locale."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
+          "source": "Get Site",
+          "message": "Obtenir le site"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.desc": {
+          "source": "Select the specific Webflow site you want to get information about",
+          "message": "Sélectionnez le site Webflow spécifique sur lequel vous souhaitez obtenir des informations"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.short_desc": {
+          "source": "The site to retrieve",
+          "message": "Le site à récupérer"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
+          "source": "Retrieve information about a Webflow site",
+          "message": "Récupérer des informations sur un site Webflow"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.desc": {
+          "source": "Permanently delete a specified item from a Webflow collection. This action cannot be undone.",
+          "message": "Supprimer définitivement un élément spécifié d'une collection Webflow. Cette action est irréversible."
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
+          "source": "Delete Item",
+          "message": "Supprimer l'élément"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to delete",
+          "message": "Sélectionnez la collection Webflow contenant l'élément que vous souhaitez supprimer"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "La collection contenant l'élément"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to delete from the collection",
+          "message": "Sélectionnez l'élément spécifique que vous souhaitez supprimer de la collection"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Élément"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to delete",
+          "message": "L'élément à supprimer"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
+          "source": "Delete an item from a Webflow collection",
+          "message": "Supprimer un élément d'une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieve a list of all collections from a specified Webflow site with their basic information.",
+          "message": "Récupérer la liste de toutes les collections d'un site Webflow spécifié avec leurs informations de base."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Lister les collections"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list collections from",
+          "message": "Sélectionnez le site Webflow dont vous souhaitez lister les collections"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Le site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections from a Webflow site",
+          "message": "Lister toutes les collections d'un site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.desc": {
+          "source": "Retrieve a list of all custom domains configured for a specified Webflow site.",
+          "message": "Récupérer la liste de tous les domaines personnalisés configurés pour un site Webflow spécifié."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
+          "source": "List Custom Domains",
+          "message": "Lister les domaines personnalisés"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list custom domains from",
+          "message": "Sélectionnez le site Webflow dont vous souhaitez lister les domaines personnalisés"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Le site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
+          "source": "List custom domains for a Webflow site",
+          "message": "Lister les domaines personnalisés pour un site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.desc": {
+          "source": "Retrieve a paginated list of items from a specified Webflow collection with filtering and sorting options.",
+          "message": "Récupérer une liste paginée d'éléments d'une collection Webflow spécifiée avec des options de filtrage et de tri."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
+          "source": "List Items",
+          "message": "Lister les articles"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID to filter items by locale",
+          "message": "Spécifiez l'ID de locale CMS pour filtrer les éléments par locale"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID de paramètres régionaux du CMS"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for filtering items",
+          "message": "L'ID de locale pour filtrer les éléments"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection you want to list items from",
+          "message": "Sélectionnez la collection Webflow dont vous souhaitez lister les éléments"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to list items from",
+          "message": "La collection dont lister les éléments"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.desc": {
+          "source": "The number of items to skip for pagination (default: 0)",
+          "message": "Le nombre d'éléments à ignorer pour la pagination (par défaut : 0)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Décalage"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of items to skip",
+          "message": "Nombre d'articles à ignorer"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.desc": {
+          "source": "Filter items by their last published date range",
+          "message": "Filtrer les éléments par plage de dates de dernière publication"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
+          "source": "Last Published",
+          "message": "Dernière publication"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
+          "source": "Filter by publication date range",
+          "message": "Filtrer par plage de dates de publication"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of items to return per page (default: 20)",
+          "message": "Le nombre maximal d'éléments à renvoyer par page (par défaut : 20)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of items to return",
+          "message": "Nombre maximal d'éléments à renvoyer"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.desc": {
+          "source": "Filter items by their name field",
+          "message": "Filtrer les éléments par leur champ de nom"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.short_desc": {
+          "source": "Filter by item name",
+          "message": "Filtrer par nom d'élément"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Croissant"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Décroissant"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.desc": {
+          "source": "Choose whether to sort in ascending or descending order",
+          "message": "Choisissez de trier par ordre croissant ou décroissant"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Ordre de tri"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort direction",
+          "message": "Sens du tri"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOmxhc3RQdWJsaXNoZWQ.display_name": {
+          "source": "Last Published",
+          "message": "Dernière publication"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOnNsdWc.display_name": {
+          "source": "Slug",
+          "message": "Slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.desc": {
+          "source": "Choose the field to sort the items by",
+          "message": "Choisissez le champ selon lequel trier les éléments"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
+          "source": "Sort By",
+          "message": "Trier par"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort items by",
+          "message": "Champ selon lequel trier les éléments"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.desc": {
+          "source": "Filter items by their slug field",
+          "message": "Filtrer les éléments par leur champ slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.display_name": {
+          "source": "Slug",
+          "message": "Slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.short_desc": {
+          "source": "Filter by item slug",
+          "message": "Filtrer par slug d'élément"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
+          "source": "List items from a Webflow collection",
+          "message": "Lister les éléments d'une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.desc": {
+          "source": "Retrieve a paginated list of orders from a specified Webflow site with filtering options.",
+          "message": "Récupérer une liste paginée de commandes d'un site Webflow spécifié avec des options de filtrage."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
+          "source": "List Orders",
+          "message": "Lister les commandes"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.desc": {
+          "source": "The number of orders to skip for pagination",
+          "message": "Le nombre de commandes à ignorer pour la pagination"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Décalage"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of orders to skip",
+          "message": "Nombre de commandes à ignorer"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of orders to return per page (default: 20)",
+          "message": "Le nombre maximal de commandes à renvoyer par page (par défaut : 20)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of orders to return",
+          "message": "Nombre maximal de commandes à renvoyer"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list orders from",
+          "message": "Sélectionnez le site Webflow dont vous souhaitez lister les commandes"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Le site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmRpc3B1dGUtbG9zdA.display_name": {
+          "source": "Dispute Lost",
+          "message": "Litige perdu"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmRpc3B1dGVk.display_name": {
+          "source": "Disputed",
+          "message": "En litige"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmZ1bGZpbGxlZA.display_name": {
+          "source": "Fulfilled",
+          "message": "Traité"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "En attente"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlZnVuZGVk.display_name": {
+          "source": "Refunded",
+          "message": "Remboursé"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnVuZnVsZmlsbGVk.display_name": {
+          "source": "Unfulfilled",
+          "message": "Non traité"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.desc": {
+          "source": "Filter orders by their current status",
+          "message": "Filtrer les commandes par leur statut actuel"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Statut"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.short_desc": {
+          "source": "Filter by order status",
+          "message": "Filtrer par statut de commande"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
+          "source": "List orders from a Webflow site",
+          "message": "Lister les commandes d'un site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.desc": {
+          "source": "Retrieve a list of all Webflow sites accessible with the current authentication token.",
+          "message": "Récupérer la liste de tous les sites Webflow accessibles avec le jeton d'authentification actuel."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
+          "source": "List Sites",
+          "message": "Lister les sites"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
+          "source": "List all Webflow sites",
+          "message": "Lister tous les sites Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Webflow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuer un appel d'API HTTP / REST personnalisé vers **Webflow** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Webflow",
+          "message": "Effectuer un appel d'API personnalisé vers Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.desc": {
+          "source": "Change the status of a Webflow order to fulfilled, unfulfilled, or refunded with additional options.",
+          "message": "Modifier le statut d'une commande Webflow vers traitée, non traitée ou remboursée avec des options supplémentaires."
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
+          "source": "Mark Order Status",
+          "message": "Définir le statut de la commande"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.desc": {
+          "source": "Select the specific order you want to update the status for",
+          "message": "Sélectionnez la commande spécifique dont vous souhaitez mettre à jour le statut"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Ordre"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.short_desc": {
+          "source": "The order to update",
+          "message": "La commande à mettre à jour"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site that contains the order",
+          "message": "Sélectionnez le site Webflow qui contient la commande"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Le site Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOmZ1bGZpbGxlZA.display_name": {
+          "source": "Fulfilled",
+          "message": "Traité"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlZnVuZGVk.display_name": {
+          "source": "Refunded",
+          "message": "Remboursé"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOnVuZnVsZmlsbGVk.display_name": {
+          "source": "Unfulfilled",
+          "message": "Non traité"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.desc": {
+          "source": "Choose the new status to set for the order",
+          "message": "Choisissez le nouveau statut à définir pour la commande"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Statut"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the order",
+          "message": "Le nouveau statut pour la commande"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
+          "source": "Update the status of a Webflow order",
+          "message": "Mettre à jour le statut d'une commande Webflow"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.desc": {
+          "source": "This trigger fires whenever a new order is placed on the specified Webflow site. It provides comprehensive order information including customer details, purchased items, payment information, and shipping details.",
+          "message": "Ce déclencheur s'active chaque fois qu'une nouvelle commande est passée sur le site Webflow spécifié. Il fournit des informations complètes sur la commande, notamment les détails du client, les articles achetés, les informations de paiement et les détails d'expédition."
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
+          "source": "New Order",
+          "message": "Nouvelle commande"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for new order events",
+          "message": "Sélectionnez le site Webflow sur lequel vous souhaitez surveiller les nouveaux événements de commande"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Le site Webflow à surveiller"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
+          "source": "Triggered when a new order is placed",
+          "message": "Déclenché lorsqu'une nouvelle commande est passée"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.desc": {
+          "source": "This trigger fires whenever a new item is created in any collection within the specified Webflow site. It provides detailed information about the newly created item including its field data.",
+          "message": "Ce déclencheur s'active chaque fois qu'un nouvel élément est créé dans une collection du site Webflow spécifié. Il fournit des informations détaillées sur l'élément nouvellement créé, y compris les données de ses champs."
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
+          "source": "New Item",
+          "message": "Nouvel élément"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for new item creation events",
+          "message": "Sélectionnez le site Webflow sur lequel vous souhaitez surveiller les événements de création de nouveaux éléments"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Le site Webflow à surveiller"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
+          "source": "Triggered when a new item is created in a collection",
+          "message": "Déclenché lorsqu'un nouvel élément est créé dans une collection"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.desc": {
+          "source": "Publish one or more items from a Webflow collection to make them live on the website.",
+          "message": "Publiez un ou plusieurs éléments d'une collection Webflow pour les mettre en ligne sur le site web."
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
+          "source": "Publish Item",
+          "message": "Publier l'élément"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the items you want to publish",
+          "message": "Sélectionnez la collection Webflow qui contient les éléments que vous souhaitez publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the items",
+          "message": "La collection contenant les éléments"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.desc": {
+          "source": "Select one or more items from the collection to publish",
+          "message": "Sélectionnez un ou plusieurs éléments de la collection à publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.display_name": {
+          "source": "Items",
+          "message": "Éléments"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.short_desc": {
+          "source": "The items to publish",
+          "message": "Les éléments à publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
+          "source": "Publish items from a Webflow collection",
+          "message": "Publier des éléments d'une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.desc": {
+          "source": "Publish a Webflow site to make all changes live. You can specify custom domains and whether to publish to the Webflow subdomain.",
+          "message": "Publiez un site Webflow pour mettre en ligne toutes les modifications. Vous pouvez spécifier des domaines personnalisés et choisir de publier ou non sur le sous-domaine Webflow."
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
+          "source": "Publish Site",
+          "message": "Publier le site"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.desc": {
+          "source": "Specify custom domains to publish the site to (optional)",
+          "message": "Spécifiez les domaines personnalisés sur lesquels publier le site (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
+          "source": "Custom Domains",
+          "message": "Domaines personnalisés"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
+          "source": "Custom domains to publish to",
+          "message": "Domaines personnalisés sur lesquels publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site you want to publish",
+          "message": "Sélectionnez le site Webflow que vous souhaitez publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.short_desc": {
+          "source": "The site to publish",
+          "message": "Le site à publier"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.desc": {
+          "source": "Whether to publish the site to its Webflow subdomain",
+          "message": "Indique s'il faut publier le site sur son sous-domaine Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
+          "source": "Publish to Webflow Subdomain",
+          "message": "Publier sur le sous-domaine Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
+          "source": "Whether to publish to Webflow subdomain",
+          "message": "Indique s'il faut publier sur le sous-domaine Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
+          "source": "Publish a Webflow site",
+          "message": "Publier un site Webflow"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.desc": {
+          "source": "Update the field data and settings of an existing item in a Webflow collection.",
+          "message": "Mettez à jour les données de champ et les paramètres d'un élément existant dans une collection Webflow."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
+          "source": "Update Item",
+          "message": "Mettre à jour l'élément"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Spécifiez l'ID de paramètres régionaux du CMS si vous travaillez avec un site multilingue"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID de paramètres régionaux du CMS"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "L'ID de paramètres régionaux pour l'élément"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to update",
+          "message": "Sélectionnez la collection Webflow qui contient l'élément que vous souhaitez mettre à jour"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Collection"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "La collection contenant l'élément"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.desc": {
+          "source": "Set to true to archive the item, false to unarchive it",
+          "message": "Définissez sur true pour archiver l'élément, false pour le désarchiver"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
+          "source": "Is Archived",
+          "message": "Est archivé"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
+          "source": "Whether the item should be archived",
+          "message": "Indique si l'élément doit être archivé"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.desc": {
+          "source": "Set to true to save the item as a draft, false to make it live",
+          "message": "Définissez sur true pour enregistrer l'élément en tant que brouillon, false pour le mettre en ligne"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
+          "source": "Is Draft",
+          "message": "Est un brouillon"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
+          "source": "Whether the item should be a draft",
+          "message": "Indique si l'élément doit être un brouillon"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to update",
+          "message": "Sélectionnez l'élément spécifique que vous souhaitez mettre à jour"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Élément"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to update",
+          "message": "L'élément à mettre à jour"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Sélectionnez le site Webflow à partir duquel filtrer les collections (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Le site Webflow (facultatif)"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
+          "source": "Update an existing item in a Webflow collection",
+          "message": "Mettre à jour un élément existant dans une collection Webflow"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.desc": {
+          "source": "This trigger fires whenever an existing item is modified in any collection within the specified Webflow site. It provides information about the updated item including its current field data.",
+          "message": "Ce déclencheur s'active chaque fois qu'un élément existant est modifié dans une collection du site Webflow spécifié. Il fournit des informations sur l'élément mis à jour, y compris ses données de champ actuelles."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
+          "source": "Updated Item",
+          "message": "Élément mis à jour"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for item update events",
+          "message": "Sélectionnez le site Webflow sur lequel vous souhaitez surveiller les événements de mise à jour d'éléments"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Le site Webflow à surveiller"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
+          "source": "Triggered when an item is updated in a collection",
+          "message": "Déclenché lorsqu'un élément est mis à jour dans une collection"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.desc": {
+          "source": "This trigger fires whenever an existing order is modified on the specified Webflow site. This includes status changes, fulfillment updates, refunds, and other order modifications.",
+          "message": "Ce déclencheur s'active chaque fois qu'une commande existante est modifiée sur le site Webflow spécifié. Cela inclut les changements de statut, les mises à jour de traitement, les remboursements et d'autres modifications de commande."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
+          "source": "Updated Order",
+          "message": "Commande mise à jour"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for order update events",
+          "message": "Sélectionnez le site Webflow sur lequel vous souhaitez surveiller les événements de mise à jour de commandes"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Site"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Le site Webflow à surveiller"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {
+          "source": "Triggered when an order status is updated",
+          "message": "Déclenché lorsque le statut d'une commande est mis à jour"
+        },
+        "app.V2ViZmxvdw.desc": {
+          "source": "Webflow is a powerful web design tool that combines the flexibility of a CMS with the ease of use of a visual editor. It allows users to create responsive websites without writing code, making it accessible for designers and developers alike. With Webflow, you can design, build, and launch websites all in one platform, streamlining the web development process.",
+          "message": "Webflow est un outil puissant de conception web qui combine la flexibilité d'un CMS avec la facilité d'utilisation d'un éditeur visuel. Il permet aux utilisateurs de créer des sites web réactifs sans écrire de code, le rendant accessible aussi bien aux concepteurs qu'aux développeurs. Avec Webflow, vous pouvez concevoir, créer et lancer des sites web sur une seule plateforme, simplifiant ainsi le processus de développement web."
+        },
+        "app.V2ViZmxvdw.display_name": {
+          "source": "Webflow",
+          "message": "Webflow"
+        },
+        "app.V2ViZmxvdw.short_desc": {
+          "source": "Webflow is a web design tool, CMS, and hosting platform that allows users to build responsive websites visually.",
+          "message": "Webflow est un outil de conception web, un CMS et une plateforme d'hébergement qui permet aux utilisateurs de créer visuellement des sites web réactifs."
+        }
+      }
+    }
+  }
+}

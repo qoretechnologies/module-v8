@@ -1,0 +1,2413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.desc": {
+          "source": "Creates a new asset from a URL. The asset will be processed (downloaded and stored) automatically. Optionally publishes the asset after creation.",
+          "message": "從 URL 建立新資產。該資產將自動處理（下載並儲存）。可在建立後選擇發布資產。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
+          "source": "Create an Asset",
+          "message": "建立資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmF1ZGlvL21wZWc.display_name": {
+          "source": "MP3 Audio",
+          "message": "MP3 音訊"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL2pzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL3BkZg.display_name": {
+          "source": "PDF Document",
+          "message": "PDF 文件"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2dpZg.display_name": {
+          "source": "GIF Image",
+          "message": "GIF 影像"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2pwZWc.display_name": {
+          "source": "JPEG Image",
+          "message": "JPEG 影像"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3BuZw.display_name": {
+          "source": "PNG Image",
+          "message": "PNG 影像"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3N2Zyt4bWw.display_name": {
+          "source": "SVG Image",
+          "message": "SVG 影像"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3dlYnA.display_name": {
+          "source": "WebP Image",
+          "message": "WebP 影像"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvY3N2.display_name": {
+          "source": "CSV",
+          "message": "CSV"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvaHRtbA.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvcGxhaW4.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnZpZGVvL21wNA.display_name": {
+          "source": "MP4 Video",
+          "message": "MP4 影片"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.desc": {
+          "source": "The MIME type of the file (e.g., \"image/jpeg\", \"application/pdf\").",
+          "message": "檔案的 MIME 類型（例如 \"image/jpeg\"、\"application/pdf\"）。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
+          "source": "The MIME type of the file",
+          "message": "檔案的 MIME 類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description for the asset.",
+          "message": "資產的選填說明。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "描述"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The asset description",
+          "message": "資產描述"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.desc": {
+          "source": "The publicly accessible URL from which Contentful will download the file.",
+          "message": "Contentful 將從中下載檔案的公開可存取 URL。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.display_name": {
+          "source": "File URL",
+          "message": "檔案 URL"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.short_desc": {
+          "source": "The URL of the file to upload",
+          "message": "要上傳的檔案 URL"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.desc": {
+          "source": "The file name including extension (e.g., \"photo.jpg\").",
+          "message": "包含副檔名的檔案名稱（例如「photo.jpg」）。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "檔案名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "The file name for the asset",
+          "message": "資產的檔案名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the asset will be created.",
+          "message": "選擇將在其中建立資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the asset will be published immediately after processing.",
+          "message": "如果啟用，資產將會在處理後立即發佈。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "發佈"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the asset after creation",
+          "message": "是否在建立後發佈資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the asset.",
+          "message": "資產的描述性標題。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "The asset title",
+          "message": "資產標題"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
+          "source": "Creates a new asset",
+          "message": "建立新資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Creates a new content type with the specified name, description, and field definitions. The content type will be created in draft state.",
+          "message": "使用指定的名稱、描述和欄位定義建立新內容類型。內容類型將在草稿狀態下建立。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Create a Content Type",
+          "message": "建立內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of this content type.",
+          "message": "說明此內容類型用途的選填描述。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "描述"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The content type description",
+          "message": "內容類型描述"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.desc": {
+          "source": "A list of field definitions. Each field requires an ID, name, and type. Supported types: Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.",
+          "message": "欄位定義的清單。每個欄位都需要 ID、名稱和類型。支援的類型：Symbol、Text、Integer、Number、Date、Boolean、RichText、Link、Array、Object、Location。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.short_desc": {
+          "source": "The field definitions for the content type",
+          "message": "內容類型的欄位定義"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the content type (e.g., \"Blog Post\", \"Product\").",
+          "message": "內容類型的描述性名稱（例如「Blog Post」、「Product」）。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "The content type name",
+          "message": "內容類型名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the content type will be created.",
+          "message": "選擇將在其中建立內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Creates a new content type",
+          "message": "建立新內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.desc": {
+          "source": "Creates a new entry of the specified content type in the given space and environment. Optionally publishes the entry immediately after creation.",
+          "message": "在指定的空間和環境中建立指定內容類型的新條目。可選在建立後立即發佈該條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
+          "source": "Create an Entry",
+          "message": "建立條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type that defines the schema for the new entry.",
+          "message": "選擇為新條目定義結構描述的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type for the new entry",
+          "message": "新條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values as a key-value object. Keys should match the field IDs of the content type.",
+          "message": "將欄位值當作鍵值物件提供。鍵應與內容類型的欄位 ID 匹配。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values for the new entry",
+          "message": "新條目的欄位值"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the entry will be created.",
+          "message": "選擇將在其中建立條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the entry will be published immediately after creation. Otherwise, it will be saved as a draft.",
+          "message": "如果啟用，條目將會在建立後立即發佈。否則，它將會儲存為草稿。"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "發佈"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the entry after creation",
+          "message": "是否在建立後發佈條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
+          "source": "Creates a new entry",
+          "message": "建立新條目"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.desc": {
+          "source": "Publishes (activates) a content type, making it available for creating entries.",
+          "message": "發佈（啟用）內容類型，使其可用於建立條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
+          "source": "Activate a Content Type",
+          "message": "啟用內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to activate (publish).",
+          "message": "選擇要啟用（發佈）的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to activate",
+          "message": "要啟用的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
+          "source": "Activates a content type by its ID",
+          "message": "透過 ID 啟用內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Adds a new field definition to an existing content type. The content type will need to be re-activated after adding the field.",
+          "message": "新增欄位定義至現有內容類型。新增欄位後，需要重新啟用該內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Add a Field to a Content Type",
+          "message": "新增欄位至內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "選擇要修改的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to add the field to",
+          "message": "要新增欄位的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "A unique ID for the field (e.g., \"heroImage\", \"publishDate\"). Must be unique within the content type.",
+          "message": "欄位的唯一 ID（例如「heroImage」、「publishDate」）。在內容類型中必須唯一。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field ID",
+          "message": "欄位 ID"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "Unique identifier for the new field",
+          "message": "新欄位的唯一識別碼"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "A human-readable name for the field (e.g., \"Hero Image\", \"Publish Date\").",
+          "message": "欄位的人類可讀名稱（例如「Hero Image」、「Publish Date」）。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "欄位名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "Display name for the new field",
+          "message": "新欄位的顯示名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk51bWJlcg.display_name": {
+          "source": "Decimal Number",
+          "message": "十進位數字"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk9iamVjdA.display_name": {
+          "source": "JSON Object",
+          "message": "JSON 物件"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkFycmF5.display_name": {
+          "source": "Array (List)",
+          "message": "陣列 (清單)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkJvb2xlYW4.display_name": {
+          "source": "Boolean",
+          "message": "Boolean"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkRhdGU.display_name": {
+          "source": "Date and Time",
+          "message": "日期與時間"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkludGVnZXI.display_name": {
+          "source": "Integer",
+          "message": "整數"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxpbms.display_name": {
+          "source": "Link (Reference)",
+          "message": "連結 (參照)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxvY2F0aW9u.display_name": {
+          "source": "Location",
+          "message": "位置"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlJpY2hUZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "富文字"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlN5bWJvbA.display_name": {
+          "source": "Short Text",
+          "message": "短文字"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlRleHQ.display_name": {
+          "source": "Long Text",
+          "message": "長文字"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.desc": {
+          "source": "Select the data type: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, or Location.",
+          "message": "選擇資料類型：Symbol（短文字）、Text（長文字）、Integer、Number、Date、Boolean、RichText、Link、Array、Object 或 Location。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
+          "source": "Field Type",
+          "message": "欄位類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
+          "source": "The data type for the field",
+          "message": "該欄位的資料類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "If enabled, the field can have different values for different locales.",
+          "message": "若啟用，此欄位在不同地區設定下可擁有不同的值。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "本地化"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "該欄位是否支援本地化"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "If enabled, entries must provide a value for this field.",
+          "message": "若啟用，條目必須填寫此欄位的值。"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "必填"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "該欄位是否為必填"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Adds a new field to a specific content type",
+          "message": "為特定內容類型新增欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.desc": {
+          "source": "Archives or unarchives an asset. The asset must be unpublished before it can be archived.",
+          "message": "歸檔或取消歸檔資產。資產必須先取消發佈才能進行歸檔。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
+          "source": "Archive/Unarchive an Asset",
+          "message": "歸檔/取消歸檔資產"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the asset will be archived. When disabled, the asset will be unarchived.",
+          "message": "啟用時將歸檔該資產；停用時將取消歸檔該資產。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "封存"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "設定為 true 以歸檔，設定為 false 以取消歸檔"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset.",
+          "message": "選擇或輸入資產的 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to archive or unarchive",
+          "message": "要歸檔或取消歸檔的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
+          "source": "Archives/Unarchives an unpublished asset",
+          "message": "歸檔/取消歸檔未發佈的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.desc": {
+          "source": "Archives or unarchives an entry. The entry must be unpublished before it can be archived. Archived entries are hidden from the default entry list.",
+          "message": "歸檔或取消歸檔條目。條目必須先取消發佈才能進行歸檔。已歸檔的條目將自預設條目清單中隱藏。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
+          "source": "Archive/Unarchive an Entry",
+          "message": "歸檔/取消歸檔條目"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "選擇內容類型以篩選條目下拉式功能表。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "用於篩選條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the entry will be archived. When disabled, the entry will be unarchived.",
+          "message": "啟用時將歸檔該條目；停用時將取消歸檔該條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "封存"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "設定為 true 以歸檔，設定為 false 以取消歸檔"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry.",
+          "message": "選擇或輸入條目的 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to archive or unarchive",
+          "message": "要歸檔或取消歸檔的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
+          "source": "Archives/Unarchives an unpublished entry",
+          "message": "歸檔/取消歸檔未發佈的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.desc": {
+          "source": "Retrieves a single asset by its ID, returning metadata including title, description, file URL, MIME type, and size.",
+          "message": "依據 ID 擷取單一資產，並傳回包含標題、說明、檔案 URL、MIME 類型與大小等中繼資料。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
+          "source": "Get an Asset",
+          "message": "取得資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to retrieve.",
+          "message": "選擇或輸入要擷取的資產 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to retrieve",
+          "message": "要擷取的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
+          "source": "Returns attributes of a specific asset",
+          "message": "傳回特定資產的屬性"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Retrieves a content type by its ID, including its name, description, and field definitions.",
+          "message": "依據 ID 擷取內容類型，包括其名稱、說明與欄位定義。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Get a Content Type",
+          "message": "取得內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to retrieve details for.",
+          "message": "選擇要擷取詳細資訊的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to retrieve",
+          "message": "要擷取的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Returns attributes of a specific content type",
+          "message": "傳回特定內容類型的屬性"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.desc": {
+          "source": "Retrieves a single entry by its ID from the specified space and environment. Returns all entry fields with their values in the default locale.",
+          "message": "從指定的空間與環境依據 ID 擷取單一條目。傳回預設地區設定中包含其值的所有條目欄位。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
+          "source": "Get an Entry",
+          "message": "取得條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "選擇內容類型以按類型篩選條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "選擇或輸入要擷取的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve",
+          "message": "要擷取的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
+          "source": "Returns attributes of a specific entry",
+          "message": "傳回特定條目的屬性"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.desc": {
+          "source": "Retrieves an entry and performs text replacements on all string fields. For each replacement pair, all occurrences of the tag are replaced with the specified value. Useful for template-based content.",
+          "message": "擷取條目並對所有字串欄位進行文字替換。對於每個替換配對，標籤的所有出現位置都會替換為指定的數值。適用於基於範本的內容。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
+          "source": "Get an Entry with Replacement",
+          "message": "取得條目並替換"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "選擇內容類型以按類型篩選條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "選擇或輸入要擷取的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve and apply replacements to",
+          "message": "要擷取並套用替換項目的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "Provide a list of replacement pairs. Each pair has a \"tag\" (placeholder to find) and a \"value\" (text to replace it with). All string fields in the entry will be processed.",
+          "message": "提供替換配對清單。每個配對包含一個「tag」（要尋找的預留位置）與一個「value」（要替換的文字）。條目中的所有字串欄位都會被處理。"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Replacements",
+          "message": "替換項目"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "List of tag/value pairs for text replacement",
+          "message": "用於文字替換的 tag/value 配對清單"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
+          "source": "Replaces text fields with new values using specific tags; returns new values as output",
+          "message": "使用特定標籤將文字欄位替換為新值；傳回新值作為輸出"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.desc": {
+          "source": "Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.",
+          "message": "取消發佈（停用）內容類型，將其還原為草稿狀態。無法為已停用的內容類型建立新條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
+          "source": "Deactivate a Content Type",
+          "message": "停用內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to deactivate (unpublish).",
+          "message": "選擇要停用（取消發佈）的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to deactivate",
+          "message": "要停用的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
+          "source": "Changes a content type status to \"draft\"",
+          "message": "將內容類型狀態變更為「草稿」"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.desc": {
+          "source": "Permanently deletes an asset. If the asset is published, it will be unpublished first. This action is irreversible.",
+          "message": "永久刪除資產。如果該資產已發佈，將會先取消發佈。此動作無法復原。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
+          "source": "Delete an Asset",
+          "message": "刪除資產"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to permanently remove.",
+          "message": "選擇或輸入要永久刪除的資產 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to delete",
+          "message": "要刪除的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
+          "source": "Permanently removes an unpublished asset",
+          "message": "永久刪除未發佈的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Permanently deletes a content type. The content type must be deactivated (unpublished) first. This action is irreversible.",
+          "message": "永久刪除內容類型。內容類型必須先停用（取消發佈）。此動作無法復原。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Delete a Content Type",
+          "message": "刪除內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to permanently remove.",
+          "message": "選擇要永久刪除的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to delete",
+          "message": "要刪除的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Permanently removes a deactivated content type",
+          "message": "永久刪除已停用的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.desc": {
+          "source": "Permanently deletes an entry from the space. If the entry is published, it will be unpublished first. This action is irreversible.",
+          "message": "從空間中永久刪除條目。若該條目已發佈，將會先取消發佈。此動作無法復原。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
+          "source": "Delete an Entry",
+          "message": "刪除條目"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "選擇內容類型以按類型篩選條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to permanently remove.",
+          "message": "選擇或輸入要永久刪除的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to delete",
+          "message": "要刪除的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
+          "source": "Permanently removes a specific entry",
+          "message": "永久刪除特定條目"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.desc": {
+          "source": "Removes a field from a content type. The field is first marked as omitted, then removed entirely. Existing entry data for this field will be lost.",
+          "message": "從內容類型中刪除欄位。該欄位會先被標記為省略，然後完全刪除。此欄位現有的條目資料將會遺失。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
+          "source": "Delete a Field from a Content Type",
+          "message": "從內容類型刪除欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "選擇要修改的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "包含該欄位的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to permanently remove from the content type.",
+          "message": "選擇要從內容類型中永久刪除的欄位。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to remove",
+          "message": "要刪除的欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
+          "source": "Removes a field from a specific content type",
+          "message": "從特定內容類型刪除欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Contentful** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定的連線驗證向 **Contentful** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填的查詢參數、標頭和請求主體。傳回的回應為包含狀態碼、回應標頭和回應主體的雜湊。\n\n對尚未在此應用程式中公開為一等動作的端點使用此動作。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Contentful",
+          "message": "對 Contentful 發起自訂 API 呼叫"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.desc": {
+          "source": "Searches for assets with optional full-text search and MIME type filtering. Returns a paginated list of assets.",
+          "message": "搜尋資產，提供選填的全文檢索和 MIME 類型篩選。傳回分頁的資產清單。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
+          "source": "Search Assets",
+          "message": "搜尋資產"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of assets to return. Default is 100, maximum is 1000.",
+          "message": "要傳回的資產最大數量。預設為 100，最大值為 1000。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of assets to return",
+          "message": "要傳回的資產最大數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOm1hcmt1cA.display_name": {
+          "source": "Markup",
+          "message": "標記"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmF1ZGlv.display_name": {
+          "source": "Audio",
+          "message": "音訊"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmFyY2hpdmU.display_name": {
+          "source": "Archive",
+          "message": "封存"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmNvZGU.display_name": {
+          "source": "Code",
+          "message": "程式碼"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmltYWdl.display_name": {
+          "source": "Image",
+          "message": "圖片"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBkZmRvY3VtZW50.display_name": {
+          "source": "PDF Document",
+          "message": "PDF 文件"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnByZXNlbnRhdGlvbg.display_name": {
+          "source": "Presentation",
+          "message": "簡報"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnJpY2h0ZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "富文字"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnNwcmVhZHNoZWV0.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnZpZGVv.display_name": {
+          "source": "Video",
+          "message": "影片"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.desc": {
+          "source": "Optionally filter assets by MIME type group (e.g., image, video, audio, pdfdocument).",
+          "message": "可選依 MIME 類型群組篩選資產（例如 image、video、audio、pdfdocument）。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
+          "source": "MIME Type Group",
+          "message": "MIME 類型群組"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
+          "source": "Filter by file type group",
+          "message": "依檔案類型群組篩選"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.desc": {
+          "source": "The number of assets to skip for pagination. Default is 0.",
+          "message": "分頁時要跳過的資產數量。預設為 0。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "跳過數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.short_desc": {
+          "source": "Number of assets to skip",
+          "message": "要跳過的資產數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "選擇要進行搜尋的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "要搜尋的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.desc": {
+          "source": "Optional text to search across asset titles and descriptions.",
+          "message": "要在資產標題和描述中搜尋的選填文字。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "搜尋查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "全文檢索查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
+          "source": "Searches for assets",
+          "message": "搜尋資產"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.desc": {
+          "source": "Searches for content types with optional text filtering. Returns a paginated list of content types with their field definitions.",
+          "message": "搜尋內容類型，提供選填的文字篩選。傳回包含欄位定義的分頁內容類型清單。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
+          "source": "Search Content Types",
+          "message": "搜尋內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of content types to return. Default is 100.",
+          "message": "要傳回的內容類型最大數量。預設為 100。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "要傳回的結果最大數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.desc": {
+          "source": "The number of content types to skip for pagination. Default is 0.",
+          "message": "分頁時要跳過的內容類型數量。預設為 0。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "跳過數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.short_desc": {
+          "source": "Number of results to skip",
+          "message": "要跳過的結果數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "選擇要進行搜尋的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "要搜尋的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across content type names and descriptions.",
+          "message": "要在內容類型名稱和描述中搜尋的選填文字。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "搜尋查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
+          "source": "Text search query",
+          "message": "文字搜尋查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
+          "source": "Searches for content types",
+          "message": "搜尋內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.desc": {
+          "source": "Searches for entries of a specific content type with optional full-text search. Returns a paginated list of entries.",
+          "message": "搜尋特定內容類型的條目，提供選填的全文檢索。傳回分頁的條目清單。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
+          "source": "Search Entries",
+          "message": "搜尋條目"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter results by.",
+          "message": "選擇要用來篩選結果的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to search",
+          "message": "要搜尋的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 100, maximum is 1000.",
+          "message": "要傳回的條目最大數量。預設為 100，最大值為 1000。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "要傳回的條目最大數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.desc": {
+          "source": "The number of entries to skip for pagination. Default is 0.",
+          "message": "分頁時要跳過的條目數量。預設為 0。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "跳過數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "要跳過的條目數量"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "選擇要進行搜尋的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "要搜尋的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across all text fields of the entries.",
+          "message": "要在條目的所有文字欄位中搜尋的選填文字。"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "搜尋查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "全文檢索查詢"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
+          "source": "Searches for entries",
+          "message": "搜尋條目"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.desc": {
+          "source": "Publishes a draft asset, making it available through the Content Delivery API.",
+          "message": "發布草稿資產，使其可透過 Content Delivery API 取得。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
+          "source": "Publish an Asset",
+          "message": "發布資產"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to publish.",
+          "message": "選擇或輸入要發布的資產 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to publish",
+          "message": "要發布的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
+          "source": "Changes asset status to \"published\"",
+          "message": "將資產狀態變更為「已發布」"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.desc": {
+          "source": "Publishes a draft entry, making it available through the Content Delivery API.",
+          "message": "發布草稿條目，使其可透過 Content Delivery API 取得。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
+          "source": "Publish an Entry",
+          "message": "發布條目"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "選擇內容類型以篩選條目下拉式功能表。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "用於篩選條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to publish.",
+          "message": "選擇或輸入要發布的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to publish",
+          "message": "要發布的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
+          "source": "Changes entry status to \"published\"",
+          "message": "將條目狀態變更為「已發布」"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.desc": {
+          "source": "Creates a webhook in Contentful that triggers when selected events occur. Supports entry, asset, and content type events such as creation, updates, publishing, and deletion.",
+          "message": "在 Contentful 中建立 Webhook，當選取的事件發生時觸發。支援條目、資產和內容類型的事件，例如建立、更新、發布和刪除。"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
+          "source": "Watch an Event",
+          "message": "監視事件"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Asset Auto-Saved",
+          "message": "資產已自動儲存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmFyY2hpdmU.display_name": {
+          "source": "Asset Archived",
+          "message": "資產已封存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmNyZWF0ZQ.display_name": {
+          "source": "Asset Created",
+          "message": "資產已建立"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmRlbGV0ZQ.display_name": {
+          "source": "Asset Deleted",
+          "message": "資產已刪除"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnB1Ymxpc2g.display_name": {
+          "source": "Asset Published",
+          "message": "資產已發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnNhdmU.display_name": {
+          "source": "Asset Saved",
+          "message": "資產已儲存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Asset Unarchived",
+          "message": "資產已取消封存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVucHVibGlzaA.display_name": {
+          "source": "Asset Unpublished",
+          "message": "資產已取消發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmNyZWF0ZQ.display_name": {
+          "source": "Content Type Created",
+          "message": "內容類型已建立"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmRlbGV0ZQ.display_name": {
+          "source": "Content Type Deleted",
+          "message": "內容類型已刪除"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnB1Ymxpc2g.display_name": {
+          "source": "Content Type Published",
+          "message": "內容類型已發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnNhdmU.display_name": {
+          "source": "Content Type Saved",
+          "message": "內容類型已儲存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnVucHVibGlzaA.display_name": {
+          "source": "Content Type Unpublished",
+          "message": "內容類型已取消發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Entry Auto-Saved",
+          "message": "條目已自動儲存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmFyY2hpdmU.display_name": {
+          "source": "Entry Archived",
+          "message": "條目已封存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmNyZWF0ZQ.display_name": {
+          "source": "Entry Created",
+          "message": "條目已建立"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmRlbGV0ZQ.display_name": {
+          "source": "Entry Deleted",
+          "message": "條目已刪除"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnB1Ymxpc2g.display_name": {
+          "source": "Entry Published",
+          "message": "條目已發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnNhdmU.display_name": {
+          "source": "Entry Saved",
+          "message": "條目已儲存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Entry Unarchived",
+          "message": "條目已取消封存"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVucHVibGlzaA.display_name": {
+          "source": "Entry Unpublished",
+          "message": "條目已取消發布"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.desc": {
+          "source": "Select one or more event types to trigger on. Events include entry, asset, and content type lifecycle events.",
+          "message": "選擇一或多個要觸發的事件類型。事件包括條目、資產和內容類型的生命週期事件。"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
+          "source": "Event Types",
+          "message": "事件類型"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {
+          "source": "The types of events to watch for",
+          "message": "要監視的事件類型"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to monitor for events.",
+          "message": "選擇要監控事件的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to monitor",
+          "message": "要監控的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
+          "source": "Triggers when a new event occurs",
+          "message": "當新事件發生時觸發"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.desc": {
+          "source": "Unpublishes an asset, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "取消發布資產，將其從 Content Delivery API 中移除並還原為草稿狀態。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
+          "source": "Unpublish an Asset",
+          "message": "取消發布資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to unpublish.",
+          "message": "選擇或輸入要取消發布的資產 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to unpublish",
+          "message": "要取消發布的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
+          "source": "Puts an asset back into \"draft\" state",
+          "message": "將資產放回「草稿」狀態"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.desc": {
+          "source": "Unpublishes an entry, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "取消發布條目，將其從 Content Delivery API 中移除並還原為草稿狀態。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
+          "source": "Unpublish an Entry",
+          "message": "取消發布條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "選擇內容類型以篩選條目下拉式功能表。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "用於篩選條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to unpublish.",
+          "message": "選擇或輸入要取消發布的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to unpublish",
+          "message": "要取消發布的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
+          "source": "Puts an entry back into \"draft\" state",
+          "message": "將條目放回「草稿」狀態"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.desc": {
+          "source": "Updates the title and/or description of an existing asset.",
+          "message": "更新現有資產的標題和/或描述。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
+          "source": "Update an Asset",
+          "message": "更新資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to update.",
+          "message": "選擇或輸入要更新的資產 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to update",
+          "message": "要更新的資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the asset.",
+          "message": "資產的更新描述。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "描述"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the asset",
+          "message": "資產的新描述"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "選擇包含該資產的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "The updated title for the asset.",
+          "message": "資產的更新標題。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "New title for the asset",
+          "message": "資產的新標題"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
+          "source": "Updates an asset by its ID",
+          "message": "透過 ID 更新資產"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the name and/or description of an existing content type.",
+          "message": "更新現有內容類型的名稱和/或描述。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Content Type",
+          "message": "更新內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to update.",
+          "message": "選擇要更新的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to update",
+          "message": "要更新的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the content type.",
+          "message": "內容類型的更新描述。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "描述"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the content type",
+          "message": "內容類型的新描述"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "The updated name for the content type.",
+          "message": "內容類型更新後的名稱。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "New name for the content type",
+          "message": "內容類型的新名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a specific content type by its ID",
+          "message": "透過其 ID 更新特定的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.desc": {
+          "source": "Updates an existing entry with new field values. Only the specified fields are updated; other fields remain unchanged.",
+          "message": "使用新欄位值更新現有條目。僅會更新指定的欄位；其他欄位將保持不變。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
+          "source": "Update an Entry",
+          "message": "更新條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "選擇內容類型以按類型篩選條目。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "條目的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to update.",
+          "message": "選擇或輸入要更新的條目 ID。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to update",
+          "message": "要更新的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values to update as a key-value object. Only the specified fields will be changed.",
+          "message": "以鍵值物件形式提供要更新的欄位值。僅會變更指定的欄位。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values to update",
+          "message": "要更新的欄位值"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "選擇包含該條目的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
+          "source": "Updates a specific entry by its ID",
+          "message": "透過其 ID 更新特定的條目"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the properties of an existing field in a content type.",
+          "message": "更新內容類型中現有欄位的屬性。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Field of a Content Type",
+          "message": "更新內容類型的欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "選擇要修改的內容類型。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "內容型別"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "包含該欄位的內容類型"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "選擇空間內的環境。如果未指定，預設為「master」。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "環境"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "要使用的環境（預設：master）"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to update.",
+          "message": "選擇要更新的欄位。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to update",
+          "message": "要更新的欄位"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "The updated display name for the field.",
+          "message": "欄位更新後的顯示名稱。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "欄位名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "New display name for the field",
+          "message": "欄位的新顯示名稱"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "Update whether the field can have different values for different locales.",
+          "message": "更新該欄位是否可以針對不同地區設定擁有不同值。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "本地化"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "該欄位是否支援本地化"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "選擇包含該內容類型的 Contentful 空間。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "要使用的 Contentful 空間"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "Update whether entries must provide a value for this field.",
+          "message": "更新條目是否必須提供此欄位的值。"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "必填"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "該欄位是否為必填"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a field inside a specific content type",
+          "message": "更新特定內容類型中的欄位"
+        },
+        "app.Q29udGVudGZ1bA.desc": {
+          "source": "Integrate with Contentful to automate content management workflows. Create, update, publish, and manage entries, assets, and content types. Monitor content changes with real-time webhook triggers. This integration provides full access to the Contentful Content Management API for comprehensive headless CMS automation.",
+          "message": "與 Contentful 整合以實現內容管理工作流程自動化。建立、更新、發布和管理條目、資產及內容類型。使用即時 Webhook 觸發器監控內容變更。此整合提供對 Contentful 內容管理 API 的完整存取權限，以實現全方位的 Headless CMS 自動化。"
+        },
+        "app.Q29udGVudGZ1bA.display_name": {
+          "source": "Contentful",
+          "message": "Contentful"
+        },
+        "app.Q29udGVudGZ1bA.short_desc": {
+          "source": "Connect to Contentful to manage your content, assets, and content models",
+          "message": "連接至 Contentful 以管理您的內容、資產與內容模型"
+        }
+      }
+    }
+  }
+}

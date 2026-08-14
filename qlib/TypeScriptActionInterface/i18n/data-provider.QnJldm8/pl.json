@@ -1,0 +1,1681 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.desc": {
+          "source": "Create a new company record with custom attributes and optional associations to existing contacts and deals.",
+          "message": "Utwórz nowy rekord firmy z niestandardowymi atrybutami i opcjonalnymi powiązaniami z istniejącymi kontaktami i transakcjami."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
+          "source": "Create Company",
+          "message": "Utwórz firmę"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the company including industry, size, website, and any custom fields defined in your account.",
+          "message": "Niestandardowe atrybuty firmy, w tym branża, wielkość, strona internetowa i wszelkie niestandardowe pola zdefiniowane na Twoim koncie."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Company Attributes",
+          "message": "Atrybuty firmy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom company data",
+          "message": "Niestandardowe dane firmy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this company.",
+          "message": "Tablica identyfikatorów kontaktów do powiązania z tą firmą."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Powiązane kontakty"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Link contacts to company",
+          "message": "Połącz kontakty z firmą"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.desc": {
+          "source": "Array of deal IDs to associate with this company.",
+          "message": "Tablica identyfikatorów transakcji do powiązania z tą firmą."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
+          "source": "Associated Deals",
+          "message": "Powiązane transakcje"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
+          "source": "Link deals to company",
+          "message": "Połącz transakcje z firmą"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.desc": {
+          "source": "Business name of the company. Required field.",
+          "message": "Nazwa handlowa firmy. Pole wymagane."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
+          "source": "Company Name",
+          "message": "Nazwa firmy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
+          "source": "Name of the company",
+          "message": "Nazwa firmy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Create a new company",
+          "message": "Utwórz nową firmę"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Brevo. Contacts can be created with email address, phone number (with country code), or external ID. Custom attributes and list assignments can be included.",
+          "message": "Utwórz nowy kontakt w Brevo. Kontakty można tworzyć za pomocą adresu e-mail, numeru telefonu (z kodem kraju) lub zewnętrznego identyfikatora. Można dołączyć niestandardowe atrybuty i przypisania do list."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Utwórz kontakt"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the contact including name, company, phone number, and any custom fields defined in your account.",
+          "message": "Niestandardowe atrybuty kontaktu, w tym imię i nazwisko, firma, numer telefonu i wszelkie niestandardowe pola zdefiniowane na Twoim koncie."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Contact Attributes",
+          "message": "Atrybuty kontaktu"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom contact attributes",
+          "message": "Niestandardowe atrybuty kontaktu"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "Primary email address for the contact. Required for creating a contact.",
+          "message": "Główny adres e-mail kontaktu. Wymagany do utworzenia kontaktu."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Adres e-mail"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Contact email address",
+          "message": "Adres e-mail kontaktu"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.desc": {
+          "source": "Set to true to blacklist the contact from receiving email campaigns.",
+          "message": "Ustaw wartość true, aby dodać kontakt do czarnej listy kampanii e-mailowych."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
+          "source": "Email Blacklisted",
+          "message": "E-mail na czarnej liście"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
+          "source": "Blacklist contact from emails",
+          "message": "Dodaj kontakt do czarnej listy e-mail"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.desc": {
+          "source": "Custom external identifier for the contact from your system.",
+          "message": "Niestandardowy zewnętrzny identyfikator kontaktu z Twojego systemu."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.display_name": {
+          "source": "External ID",
+          "message": "Zewnętrzny ID"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.short_desc": {
+          "source": "External identifier",
+          "message": "Zewnętrzny identyfikator"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to automatically add the contact to upon creation.",
+          "message": "Tablica identyfikatorów list, do których kontakt zostanie automatycznie dodany po utworzeniu."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "List IDs",
+          "message": "Identyfikatory list"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add contact to",
+          "message": "Listy, do których ma zostać dodany kontakt"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.desc": {
+          "source": "Set to true to blacklist the contact from receiving SMS campaigns.",
+          "message": "Ustaw wartość true, aby dodać kontakt do czarnej listy kampanii SMS."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
+          "source": "SMS Blacklisted",
+          "message": "SMS na czarnej liście"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
+          "source": "Blacklist contact from SMS",
+          "message": "Dodaj kontakt do czarnej listy SMS"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Utwórz nowy kontakt"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.desc": {
+          "source": "Create a new deal in your sales pipeline with custom attributes and optional associations to existing contacts and companies.",
+          "message": "Utwórz nową transakcję w lejku sprzedaży z niestandardowymi atrybutami i opcjonalnymi powiązaniami z istniejącymi kontaktami i firmami."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.display_name": {
+          "source": "Create Deal",
+          "message": "Utwórz szansę sprzedaży"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the deal including value, stage, close date, and any custom fields defined in your account.",
+          "message": "Niestandardowe atrybuty transakcji, w tym wartość, etap, data zamknięcia i wszelkie niestandardowe pola zdefiniowane na Twoim koncie."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Deal Attributes",
+          "message": "Atrybuty transakcji"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom deal data",
+          "message": "Niestandardowe dane transakcji"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.desc": {
+          "source": "Array of company IDs to associate with this deal.",
+          "message": "Tablica identyfikatorów firm do powiązania z tą transakcją."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
+          "source": "Associated Companies",
+          "message": "Powiązane firmy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
+          "source": "Link companies to deal",
+          "message": "Połącz firmy z transakcją"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this deal.",
+          "message": "Tablica identyfikatorów kontaktów do powiązania z tą transakcją."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Powiązane kontakty"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Link contacts to deal",
+          "message": "Połącz kontakty z transakcją"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.desc": {
+          "source": "Descriptive name for the deal opportunity. Required field.",
+          "message": "Opisowa nazwa szansy sprzedaży. Pole wymagane."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.display_name": {
+          "source": "Deal Name",
+          "message": "Nazwa transakcji"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.short_desc": {
+          "source": "Name of the deal",
+          "message": "Nazwa transakcji"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.short_desc": {
+          "source": "Create a new deal",
+          "message": "Utwórz nową transakcję"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.desc": {
+          "source": "Create a new contact list in a specified folder. Lists are used to organize and segment your contacts for targeted campaigns.",
+          "message": "Utwórz nową listę kontaktów w określonym folderze. Listy służą do organizowania i segmentowania kontaktów do ukierunkowanych kampanii."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.display_name": {
+          "source": "Create List",
+          "message": "Utwórz listę"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.desc": {
+          "source": "Folder where the list will be created. Required for list organization.",
+          "message": "Folder, w którym zostanie utworzona lista. Wymagany do organizacji list."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
+          "source": "Folder",
+          "message": "Folder"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
+          "source": "Folder to create list in",
+          "message": "Folder do utworzenia listy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "Display name for the contact list.",
+          "message": "Nazwa wyświetlana listy kontaktów."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "List Name",
+          "message": "Nazwa listy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Name for the new list",
+          "message": "Nazwa nowej listy"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Utwórz nową listę kontaktów"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.desc": {
+          "source": "Add existing contacts to a contact list by email addresses or contact IDs. Contacts must already exist in your account.",
+          "message": "Dodaj istniejące kontakty do listy kontaktów za pomocą adresów e-mail lub identyfikatorów kontaktów. Kontakty muszą już istnieć na Twoim koncie."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
+          "source": "Add Contacts to List",
+          "message": "Dodaj kontakty do listy"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.desc": {
+          "source": "Array of email addresses of contacts to add to the list.",
+          "message": "Tablica adresów e-mail kontaktów do dodania do listy."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.display_name": {
+          "source": "Email Addresses",
+          "message": "Adresy e-mail"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.short_desc": {
+          "source": "Contact emails to add",
+          "message": "Adresy e-mail kontaktów do dodania"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.desc": {
+          "source": "Array of contact IDs to add to the list.",
+          "message": "Tablica identyfikatorów kontaktów do dodania do listy."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.display_name": {
+          "source": "Contact IDs",
+          "message": "Identyfikatory kontaktów"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.short_desc": {
+          "source": "Contact IDs to add",
+          "message": "Identyfikatory kontaktów do dodania"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the list to add contacts to.",
+          "message": "Unikalny identyfikator listy, do której mają zostać dodane kontakty."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID listy"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "Target list",
+          "message": "Lista docelowa"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
+          "source": "Add contacts to a list",
+          "message": "Dodaj kontakty do listy"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.desc": {
+          "source": "Get detailed information about a specific company including custom attributes and associated contacts and deals.",
+          "message": "Pobierz szczegółowe informacje o określonej firmie, w tym niestandardowe atrybuty oraz powiązane kontakty i transakcje."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.display_name": {
+          "source": "Get Company",
+          "message": "Pobierz firmę"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to retrieve details for.",
+          "message": "Unikalny identyfikator firmy, dla której mają zostać pobrane szczegóły."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID firmy"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to retrieve",
+          "message": "Firma do pobrania"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.short_desc": {
+          "source": "Retrieve company details",
+          "message": "Pobierz szczegóły firmy"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Get detailed information about a specific contact. You can identify contacts using email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Pobierz szczegółowe informacje o określonym kontakcie. Możesz zidentyfikować kontakty za pomocą adresu e-mail, identyfikatora kontaktu, numeru telefonu, zewnętrznego ID, identyfikatora WhatsApp lub numeru telefonu stacjonarnego."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Pobierz kontakt"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact. Can be email address, contact ID, phone number (SMS), external ID, WhatsApp ID, or landline number.",
+          "message": "Unikalny identyfikator kontaktu. Może to być adres e-mail, identyfikator kontaktu, numer telefonu (SMS), zewnętrzny ID, identyfikator WhatsApp lub numer telefonu stacjonarnego."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Identyfikator kontaktu"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact identifier (email, ID, phone, etc.)",
+          "message": "Identyfikator kontaktu (e-mail, ID, telefon itp.)"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve a contact by identifier",
+          "message": "Pobierz kontakt według identyfikatora"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.desc": {
+          "source": "Get detailed information about a specific deal including custom attributes and associated contacts and companies.",
+          "message": "Pobierz szczegółowe informacje o określonej szansie sprzedaży, w tym niestandardowe atrybuty oraz powiązane kontakty i firmy."
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.display_name": {
+          "source": "Get Deal",
+          "message": "Pobierz transakcję"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to retrieve details for.",
+          "message": "Unikalny identyfikator szansy sprzedaży, dla której mają zostać pobrane szczegóły."
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID transakcji"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to retrieve",
+          "message": "Szansa sprzedaży do pobrania"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.short_desc": {
+          "source": "Retrieve deal details",
+          "message": "Pobierz szczegóły transakcji"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.desc": {
+          "source": "Get detailed information about a specific contact list including subscriber counts, campaign statistics, and folder information.",
+          "message": "Pobierz szczegółowe informacje o określonej liście kontaktów, w tym liczbę subskrybentów, statystyki kampanii i informacje o folderze."
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.display_name": {
+          "source": "Get List",
+          "message": "Pobierz listę"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to retrieve details for.",
+          "message": "Unikalny identyfikator listy kontaktów, dla której mają zostać pobrane szczegóły."
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID listy"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to retrieve",
+          "message": "Lista do pobrania"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.short_desc": {
+          "source": "Retrieve list details",
+          "message": "Pobierz szczegóły listy"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.desc": {
+          "source": "Permanently delete a company from your Brevo account. This action cannot be undone. All associations with contacts and deals will be removed.",
+          "message": "Trwale usuń firmę z konta Brevo. Tej operacji nie można cofnąć. Wszystkie powiązania z kontaktami i szansami sprzedaży zostaną usunięte."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
+          "source": "Delete Company",
+          "message": "Usuń firmę"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to delete permanently from your account.",
+          "message": "Unikalny identyfikator firmy do trwałego usunięcia z konta."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID firmy"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to delete",
+          "message": "Firma do usunięcia"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
+          "source": "Permanently delete a company",
+          "message": "Trwale usuń firmę"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently delete a contact from your Brevo account. This action cannot be undone. The contact will be removed from all lists and campaigns.",
+          "message": "Trwale usuń kontakt z konta Brevo. Tej operacji nie można cofnąć. Kontakt zostanie usunięty ze wszystkich list i kampanii."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Usuń kontakt"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact to delete permanently. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Unikalny identyfikator kontaktu do trwałego usunięcia. Może to być adres e-mail, identyfikator kontaktu, numer telefonu, zewnętrzny ID, identyfikator WhatsApp lub numer telefonu stacjonarnego."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Identyfikator kontaktu"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact to delete",
+          "message": "Kontakt do usunięcia"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Permanently delete a contact",
+          "message": "Trwale usuń kontakt"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.desc": {
+          "source": "Permanently delete a deal from your sales pipeline. This action cannot be undone. All associations with contacts and companies will be removed.",
+          "message": "Trwale usuń szansę sprzedaży z lejka sprzedaży. Tej operacji nie można cofnąć. Wszystkie powiązania z kontaktami i firmami zostaną usunięte."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.display_name": {
+          "source": "Delete Deal",
+          "message": "Usuń szansę sprzedaży"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to delete permanently from your pipeline.",
+          "message": "Unikalny identyfikator szansy sprzedaży do trwałego usunięcia z lejka."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID transakcji"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to delete",
+          "message": "Szansa sprzedaży do usunięcia"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.short_desc": {
+          "source": "Permanently delete a deal",
+          "message": "Trwale usuń szansę sprzedaży"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.desc": {
+          "source": "Permanently delete a contact list. This action cannot be undone. Contacts in the list will remain in your account.",
+          "message": "Trwale usuń listę kontaktów. Tej operacji nie można cofnąć. Kontakty znajdujące się na liście pozostaną na Twoim koncie."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.display_name": {
+          "source": "Delete List",
+          "message": "Usuń listę"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to delete permanently.",
+          "message": "Unikalny identyfikator listy kontaktów do trwałego usunięcia."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID listy"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to delete",
+          "message": "Lista do usunięcia"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Usuń listę kontaktów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.desc": {
+          "source": "Retrieve a list of all companies with pagination, sorting, and filtering options. Filter by associated contacts, deals, or custom attributes.",
+          "message": "Pobierz listę wszystkich firm z opcjami stronicowania, sortowania i filtrowania. Filtruj według powiązanych kontaktów, szans sprzedaży lub niestandardowych atrybutów."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.display_name": {
+          "source": "List Companies",
+          "message": "Lista firm"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.desc": {
+          "source": "Filter companies based on specific attribute values.",
+          "message": "Filtruj firmy na podstawie określonych wartości atrybutów."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
+          "source": "Attribute Filter",
+          "message": "Filtr atrybutów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter by company attributes",
+          "message": "Filtruj według atrybutów firmy"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.desc": {
+          "source": "Maximum number of companies to return per page. Default is 10.",
+          "message": "Maksymalna liczba firm do zwrócenia na stronę. Domyślnie 10."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Limit wyników"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
+          "source": "Number of companies per page",
+          "message": "Liczba firm na stronę"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Filter companies that are associated with a specific contact.",
+          "message": "Filtruj firmy powiązane z określonym kontaktem."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Filtruj według kontaktu"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Companies linked to contact",
+          "message": "Firmy powiązane z kontaktem"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.desc": {
+          "source": "Filter companies that are associated with a specific deal.",
+          "message": "Filtruj firmy powiązane z określoną szansą sprzedaży."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.display_name": {
+          "source": "Filter by Deal",
+          "message": "Filtruj według szansy sprzedaży"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.short_desc": {
+          "source": "Companies linked to deal",
+          "message": "Firmy powiązane z szansą sprzedaży"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Descending",
+          "message": "Malejąco"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Ascending",
+          "message": "Rosnąco"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.desc": {
+          "source": "Order to sort companies.",
+          "message": "Kolejność sortowania firm."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
+          "source": "Company sort order",
+          "message": "Kolejność sortowania firm"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.desc": {
+          "source": "Company attribute to sort results by.",
+          "message": "Atrybut firmy, według którego mają zostać posortowane wyniki."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.display_name": {
+          "source": "Sort By Field",
+          "message": "Sortuj według pola"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort by",
+          "message": "Pole, według którego sortować"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.desc": {
+          "source": "Page number to retrieve (starts from 1).",
+          "message": "Numer strony do pobrania (zaczyna się od 1)."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "Numer strony"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Numer strony do stronicowania"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.short_desc": {
+          "source": "Get all companies with filtering",
+          "message": "Pobierz wszystkie firmy z filtrowaniem"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a list of all contacts in your account with pagination, sorting, and filtering options. Filter by lists, attributes, or other criteria.",
+          "message": "Pobierz listę wszystkich kontaktów na swoim koncie z opcjami stronicowania, sortowania i filtrowania. Filtruj według list, atrybutów lub innych kryteriów."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Lista kontaktów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.desc": {
+          "source": "Filter contacts based on specific attribute values using equals operator.",
+          "message": "Filtruj kontakty na podstawie określonych wartości atrybutów za pomocą operatora równe."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.display_name": {
+          "source": "Attribute Filter",
+          "message": "Filtr atrybutów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter by contact attributes",
+          "message": "Filtruj według atrybutów kontaktów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Number of contacts to skip for pagination. Use with limit for pagination.",
+          "message": "Liczba kontaktów do pominięcia przy stronicowaniu. Używaj z limitem do stronicowania."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Przesunięcie strony"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of contacts to skip",
+          "message": "Liczba kontaktów do pominięcia"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "Maximum number of contacts to return per page. Default is 10, maximum is 100.",
+          "message": "Maksymalna liczba kontaktów do zwrócenia na stronę. Domyślnie 10, maksymalnie 100."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Limit wyników"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Number of contacts per page",
+          "message": "Liczba kontaktów na stronę"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to filter contacts. Only contacts belonging to these lists will be returned.",
+          "message": "Tablica identyfikatorów list do filtrowania kontaktów. Zostaną zwrócone tylko kontakty należące do tych list."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.display_name": {
+          "source": "Filter by Lists",
+          "message": "Filtruj według list"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.short_desc": {
+          "source": "Filter contacts by list membership",
+          "message": "Filtruj kontakty według przynależności do list"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Najstarsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Najnowsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.desc": {
+          "source": "Order to sort contacts by creation date.",
+          "message": "Kolejność sortowania kontaktów według daty utworzenia."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
+          "source": "Contact sort order",
+          "message": "Kolejność sortowania kontaktów"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Get all contacts with filtering",
+          "message": "Pobierz wszystkie kontakty z filtrowaniem"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.desc": {
+          "source": "Retrieve a list of all deals in your pipeline with pagination, sorting, and filtering options. Filter by associated contacts, companies, or deal name.",
+          "message": "Pobierz listę wszystkich szans sprzedaży w swoim lejku z opcjami stronicowania, sortowania i filtrowania. Filtruj według powiązanych kontaktów, firm lub nazwy szansy sprzedaży."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.display_name": {
+          "source": "List Deals",
+          "message": "Lista transakcji"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.desc": {
+          "source": "Filter deals by name containing specified text.",
+          "message": "Filtruj szanse sprzedaży według nazwy zawierającej określony tekst."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.display_name": {
+          "source": "Deal Name Filter",
+          "message": "Filtr nazwy szansy sprzedaży"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.short_desc": {
+          "source": "Filter by deal name",
+          "message": "Filtruj według nazwy szansy sprzedaży"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.desc": {
+          "source": "Number of deals to skip for pagination.",
+          "message": "Liczba szans sprzedaży do pominięcia przy stronicowaniu."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Przesunięcie strony"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deals to skip",
+          "message": "Liczba transakcji do pominięcia"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.desc": {
+          "source": "Maximum number of deals to return per page. Default is 10.",
+          "message": "Maksymalna liczba szans sprzedaży do zwrócenia na stronę. Domyślnie 10."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Limit wyników"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
+          "source": "Number of deals per page",
+          "message": "Liczba szans sprzedaży na stronę"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.desc": {
+          "source": "Filter deals that are associated with a specific company.",
+          "message": "Filtruj szanse sprzedaży powiązane z określoną firmą."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
+          "source": "Filter by Company",
+          "message": "Filtruj według firmy"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
+          "source": "Deals linked to company",
+          "message": "Szanse sprzedaży powiązane z firmą"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Filter deals that are associated with a specific contact.",
+          "message": "Filtruj szanse sprzedaży powiązane z określonym kontaktem."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Filtruj według kontaktu"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Deals linked to contact",
+          "message": "Szanse sprzedaży powiązane z kontaktem"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Old First",
+          "message": "Najpierw najstarsze"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "New First",
+          "message": "Najpierw najnowsze"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.desc": {
+          "source": "Order to sort deals by creation date.",
+          "message": "Kolejność sortowania szans sprzedaży według daty utworzenia."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.short_desc": {
+          "source": "Deal sort order",
+          "message": "Kolejność sortowania szans sprzedaży"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.short_desc": {
+          "source": "Get all deals with filtering",
+          "message": "Pobierz wszystkie szanse sprzedaży z filtrowaniem"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.desc": {
+          "source": "Retrieve all folders used to organize contact lists with subscriber counts and creation information.",
+          "message": "Pobierz wszystkie foldery używane do organizowania list kontaktów wraz z liczbą subskrybentów i informacjami o utworzeniu."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.display_name": {
+          "source": "List Folders",
+          "message": "Wyświetl listę folderów"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.desc": {
+          "source": "Number of folders to skip for pagination.",
+          "message": "Liczba folderów do pominięcia przy stronicowaniu."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Przesunięcie strony"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of folders to skip",
+          "message": "Liczba folderów do pominięcia"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.desc": {
+          "source": "Maximum number of folders to return per page. Default is 10.",
+          "message": "Maksymalna liczba folderów do zwrócenia na stronę. Domyślnie 10."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Limit wyników"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.short_desc": {
+          "source": "Number of folders per page",
+          "message": "Liczba folderów na stronę"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Najstarsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Najnowsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.desc": {
+          "source": "Order to sort folders by creation date.",
+          "message": "Kolejność sortowania folderów według daty utworzenia."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.short_desc": {
+          "source": "Folder sort order",
+          "message": "Kolejność sortowania folderów"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.short_desc": {
+          "source": "Get all list folders",
+          "message": "Pobierz wszystkie foldery list"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.desc": {
+          "source": "Retrieve all contact lists in your account with pagination and sorting options. Includes subscriber counts and creation dates.",
+          "message": "Pobierz wszystkie listy kontaktów na swoim koncie z opcjami stronicowania i sortowania. Zawiera liczbę subskrybentów i daty utworzenia."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.display_name": {
+          "source": "List All Lists",
+          "message": "Wyświetl wszystkie listy"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.desc": {
+          "source": "Number of lists to skip for pagination.",
+          "message": "Liczba list do pominięcia przy stronicowaniu."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Przesunięcie strony"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of lists to skip",
+          "message": "Liczba list do pominięcia"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.desc": {
+          "source": "Maximum number of lists to return per page. Default is 10.",
+          "message": "Maksymalna liczba list do zwrócenia na stronę. Domyślnie 10."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Limit wyników"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Number of lists per page",
+          "message": "Liczba list na stronę"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Najstarsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Najnowsze pierwsze"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.desc": {
+          "source": "Order to sort lists by creation date.",
+          "message": "Kolejność sortowania list według daty utworzenia."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.short_desc": {
+          "source": "List sort order",
+          "message": "Kolejność sortowania list"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.short_desc": {
+          "source": "Get all contact lists",
+          "message": "Pobierz wszystkie listy kontaktów"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Brevo** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Brevo** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną wobec bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hasz zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako natywne akcje w tej aplikacji."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Brevo",
+          "message": "Wykonaj niestandardowe wywołanie API do Brevo"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.desc": {
+          "source": "Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.",
+          "message": "Monitoruje Twoje konto Brevo pod kątem nowo utworzonych firm. Opcjonalnie filtruj według firm powiązanych z określonymi kontaktami lub szansami sprzedaży."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.display_name": {
+          "source": "New Company",
+          "message": "Nowa firma"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Optional filter to only trigger when companies are created that are linked to the specified contact.",
+          "message": "Opcjonalny filtr wyzwalający tylko wtedy, gdy tworzone są firmy powiązane z określonym kontaktem."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Filtruj według kontaktu"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Only trigger for companies linked to contact",
+          "message": "Wyzwalaj tylko dla firm powiązanych z kontaktem"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.desc": {
+          "source": "Optional filter to only trigger when companies are created that are linked to the specified deal.",
+          "message": "Opcjonalny filtr wyzwalający tylko wtedy, gdy tworzone są firmy powiązane z określoną szansą sprzedaży."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.display_name": {
+          "source": "Filter by Deal",
+          "message": "Filtruj według szansy sprzedaży"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.short_desc": {
+          "source": "Only trigger for companies linked to deal",
+          "message": "Wyzwalaj tylko dla firm powiązanych z szansą sprzedaży"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.short_desc": {
+          "source": "Triggers when a new company is created",
+          "message": "Uruchamia się po utworzeniu nowej firmy"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.",
+          "message": "Monitoruje Twoje konto Brevo pod kątem nowo utworzonych kontaktów. Opcjonalnie filtruj według określonych list, aby wyzwalać tylko po dodaniu kontaktów do konkretnych list."
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Nowy kontakt"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Optional filter to only trigger when contacts are created in the specified lists. If empty, triggers for all new contacts.",
+          "message": "Opcjonalny filtr wyzwalający tylko wtedy, gdy kontakty zostaną utworzone na określonych listach. Jeśli jest pusty, wyzwala dla wszystkich nowych kontaktów."
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "Filter by Lists",
+          "message": "Filtruj według list"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Only trigger for specific lists",
+          "message": "Wyzwalaj tylko dla określonych list"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "Uruchamia się, gdy nowy kontakt zostanie utworzony"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.desc": {
+          "source": "Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.",
+          "message": "Monitoruje Twoje konto Brevo pod kątem nowo utworzonych szans sprzedaży w lejku sprzedaży. Opcjonalnie filtruj według szans sprzedaży powiązanych z określonymi kontaktami lub firmami."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.display_name": {
+          "source": "New Deal",
+          "message": "Nowa transakcja"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.desc": {
+          "source": "Optional filter to only trigger when deals are created that are linked to the specified companies.",
+          "message": "Opcjonalny filtr wyzwalający tylko wtedy, gdy tworzone są szanse sprzedaży powiązane z określonymi firmami."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
+          "source": "Filter by Companies",
+          "message": "Filtruj według firm"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
+          "source": "Only trigger for deals linked to companies",
+          "message": "Wyzwalaj tylko dla szans sprzedaży powiązanych z firmami"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Optional filter to only trigger when deals are created that are linked to the specified contacts.",
+          "message": "Opcjonalny filtr wyzwalający tylko wtedy, gdy tworzone są szanse sprzedaży powiązane z określonymi kontaktami."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contacts",
+          "message": "Filtruj według kontaktów"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Only trigger for deals linked to contacts",
+          "message": "Wyzwalaj tylko dla szans sprzedaży powiązanych z kontaktami"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.short_desc": {
+          "source": "Triggers when a new deal is created",
+          "message": "Uruchamia się, gdy nowa transakcja zostanie utworzona"
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.desc": {
+          "source": "Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.",
+          "message": "Monitoruje Twoje konto Brevo pod kątem nowo utworzonych list kontaktów. Wyzwala za każdym razem, gdy nowa lista zostanie utworzona w dowolnym folderze."
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.display_name": {
+          "source": "New List",
+          "message": "Nowa lista"
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.short_desc": {
+          "source": "Triggers when a new contact list is created",
+          "message": "Uruchamia się po utworzeniu nowej listy kontaktów"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.desc": {
+          "source": "Remove contacts from a contact list by email addresses, contact IDs, or remove all contacts from the list.",
+          "message": "Usuń kontakty z listy kontaktów według adresów e-mail, identyfikatorów kontaktów lub usuń wszystkie kontakty z listy."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
+          "source": "Remove Contacts from List",
+          "message": "Usuń kontakty z listy"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.desc": {
+          "source": "Set to true to remove all contacts from the list.",
+          "message": "Ustaw wartość true, aby usunąć wszystkie kontakty z listy."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.display_name": {
+          "source": "Remove All",
+          "message": "Usuń wszystko"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.short_desc": {
+          "source": "Remove all contacts",
+          "message": "Usuń wszystkie kontakty"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.desc": {
+          "source": "Array of email addresses of contacts to remove from the list.",
+          "message": "Tablica adresów e-mail kontaktów do usunięcia z listy."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.display_name": {
+          "source": "Email Addresses",
+          "message": "Adresy e-mail"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.short_desc": {
+          "source": "Contact emails to remove",
+          "message": "Adresy e-mail kontaktów do usunięcia"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.desc": {
+          "source": "Array of contact IDs to remove from the list.",
+          "message": "Tablica identyfikatorów kontaktów do usunięcia z listy."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.display_name": {
+          "source": "Contact IDs",
+          "message": "Identyfikatory kontaktów"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.short_desc": {
+          "source": "Contact IDs to remove",
+          "message": "Identyfikatory kontaktów do usunięcia"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the list to remove contacts from.",
+          "message": "Unikalny identyfikator listy, z której mają zostać usunięte kontakty."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID listy"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.short_desc": {
+          "source": "Source list",
+          "message": "Lista źródłowa"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
+          "source": "Remove contacts from a list",
+          "message": "Usuń kontakty z listy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.desc": {
+          "source": "Update company details including name, custom attributes, and associations with contacts and deals.",
+          "message": "Zaktualizuj szczegóły firmy, w tym nazwę, atrybuty niestandardowe i powiązania z kontaktami oraz transakcjami."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.display_name": {
+          "source": "Update Company",
+          "message": "Zaktualizuj firmę"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to update.",
+          "message": "Unikalny identyfikator firmy do zaktualizowania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to update",
+          "message": "Firma do zaktualizowania"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the company including industry, size, website, and any custom fields.",
+          "message": "Zaktualizuj atrybuty niestandardowe firmy, w tym branżę, wielkość, witrynę internetową i wszelkie pola niestandardowe."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Company Attributes",
+          "message": "Atrybuty firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update company data",
+          "message": "Zaktualizuj dane firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this company. Replaces existing associations.",
+          "message": "Tablica identyfikatorów kontaktów do powiązania z tą firmą. Zastępuje istniejące powiązania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Powiązane kontakty"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Update contact associations",
+          "message": "Zaktualizuj powiązania kontaktów"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.desc": {
+          "source": "Array of deal IDs to associate with this company. Replaces existing associations.",
+          "message": "Tablica identyfikatorów transakcji do powiązania z tą firmą. Zastępuje istniejące powiązania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
+          "source": "Associated Deals",
+          "message": "Powiązane transakcje"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
+          "source": "Update deal associations",
+          "message": "Zaktualizuj powiązania transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.desc": {
+          "source": "New business name for the company.",
+          "message": "Nowa nazwa handlowa firmy."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
+          "source": "Company Name",
+          "message": "Nazwa firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
+          "source": "Updated company name",
+          "message": "Zaktualizowana nazwa firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Update company information",
+          "message": "Zaktualizuj informacje o firmie"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update contact information including attributes, email preferences, list memberships, and custom data. Contact can be identified by email, ID, or other identifiers.",
+          "message": "Zaktualizuj informacje o kontakcie, w tym atrybuty, preferencje dotyczące wiadomości e-mail, przynależność do list i dane niestandardowe. Kontakt można zidentyfikować za pomocą adresu e-mail, identyfikatora lub innych identyfikatorów."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Zaktualizuj kontakt"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the contact including name, company, phone number, and any custom fields.",
+          "message": "Zaktualizuj atrybuty niestandardowe kontaktu, w tym imię i nazwisko, firmę, numer telefonu i wszelkie pola niestandardowe."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Contact Attributes",
+          "message": "Atrybuty kontaktu"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update contact attributes",
+          "message": "Zaktualizuj atrybuty kontaktu"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "New email address for the contact.",
+          "message": "Nowy adres e-mail kontaktu."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "New Email Address",
+          "message": "Nowy adres e-mail"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Update email address",
+          "message": "Zaktualizuj adres e-mail"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.desc": {
+          "source": "Set email blacklist status for the contact.",
+          "message": "Ustaw status czarnej listy e-mail dla kontaktu."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
+          "source": "Email Blacklisted",
+          "message": "E-mail na czarnej liście"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
+          "source": "Email blacklist status",
+          "message": "Status czarnej listy e-mail"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.desc": {
+          "source": "Custom external identifier for the contact from your system.",
+          "message": "Niestandardowy zewnętrzny identyfikator kontaktu z Twojego systemu."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.display_name": {
+          "source": "External ID",
+          "message": "Zewnętrzny ID"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.short_desc": {
+          "source": "External identifier",
+          "message": "Zewnętrzny identyfikator"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact to update. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Unikalny identyfikator kontaktu do zaktualizowania. Może to być adres e-mail, identyfikator kontaktu, numer telefonu, zewnętrzny identyfikator, identyfikator WhatsApp lub numer telefonu stacjonarnego."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Identyfikator kontaktu"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact to update",
+          "message": "Kontakt do zaktualizowania"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to add the contact to.",
+          "message": "Tablica identyfikatorów list, do których ma zostać dodany kontakt."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "Add to Lists",
+          "message": "Dodaj do list"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add contact to",
+          "message": "Listy, do których ma zostać dodany kontakt"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.desc": {
+          "source": "Set SMS blacklist status for the contact.",
+          "message": "Ustaw status czarnej listy SMS dla kontaktu."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
+          "source": "SMS Blacklisted",
+          "message": "SMS na czarnej liście"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
+          "source": "SMS blacklist status",
+          "message": "Status czarnej listy SMS"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.desc": {
+          "source": "Array of list IDs to remove the contact from.",
+          "message": "Tablica identyfikatorów list, z których ma zostać usunięty kontakt."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.display_name": {
+          "source": "Remove from Lists",
+          "message": "Usuń z list"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.short_desc": {
+          "source": "Lists to remove contact from",
+          "message": "Listy, z których ma zostać usunięty kontakt"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Zaktualizuj istniejący kontakt"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.desc": {
+          "source": "Update deal details including name, custom attributes, and associations with contacts and companies.",
+          "message": "Zaktualizuj szczegóły transakcji, w tym nazwę, atrybuty niestandardowe i powiązania z kontaktami oraz firmami."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.display_name": {
+          "source": "Update Deal",
+          "message": "Zaktualizuj transakcję"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the deal including value, stage, close date, and any custom fields.",
+          "message": "Zaktualizuj atrybuty niestandardowe transakcji, w tym wartość, etap, datę zamknięcia i wszelkie pola niestandardowe."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Deal Attributes",
+          "message": "Atrybuty transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update deal data",
+          "message": "Zaktualizuj dane transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to update.",
+          "message": "Unikalny identyfikator transakcji do zaktualizowania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to update",
+          "message": "Transakcja do zaktualizowania"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.desc": {
+          "source": "Array of company IDs to associate with this deal. Replaces existing associations.",
+          "message": "Tablica identyfikatorów firm do powiązania z tą transakcją. Zastępuje istniejące powiązania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
+          "source": "Associated Companies",
+          "message": "Powiązane firmy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
+          "source": "Update company associations",
+          "message": "Zaktualizuj powiązania firm"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this deal. Replaces existing associations.",
+          "message": "Tablica identyfikatorów kontaktów do powiązania z tą transakcją. Zastępuje istniejące powiązania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Powiązane kontakty"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Update contact associations",
+          "message": "Zaktualizuj powiązania kontaktów"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.desc": {
+          "source": "New descriptive name for the deal.",
+          "message": "Nowa opisowa nazwa transakcji."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.display_name": {
+          "source": "Deal Name",
+          "message": "Nazwa transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.short_desc": {
+          "source": "Updated deal name",
+          "message": "Zaktualizowana nazwa transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.short_desc": {
+          "source": "Update deal information",
+          "message": "Zaktualizuj informacje o transakcji"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.desc": {
+          "source": "Update the name or folder of an existing contact list.",
+          "message": "Zaktualizuj nazwę lub folder istniejącej listy kontaktów."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.display_name": {
+          "source": "Update List",
+          "message": "Zaktualizuj listę"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.desc": {
+          "source": "New folder ID to move the list to.",
+          "message": "Identyfikator nowego folderu, do którego ma zostać przeniesiona lista."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
+          "source": "New Folder",
+          "message": "Nowy folder"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
+          "source": "Move to different folder",
+          "message": "Przenieś do innego folderu"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to update.",
+          "message": "Unikalny identyfikator listy kontaktów do zaktualizowania."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID listy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to update",
+          "message": "Lista do zaktualizowania"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "New display name for the contact list.",
+          "message": "Nowa nazwa wyświetlana listy kontaktów."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "New Name",
+          "message": "Nowa nazwa"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Updated list name",
+          "message": "Zaktualizowana nazwa listy"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.short_desc": {
+          "source": "Update list details",
+          "message": "Zaktualizuj szczegóły listy"
+        },
+        "app.QnJldm8.desc": {
+          "source": "Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.",
+          "message": "Brevo (dawniej Sendinblue) to platforma do automatyzacji marketingu, która umożliwia firmom komunikację z klientami za pośrednictwem poczty e-mail, SMS-ów, czatu i nie tylko. Oferuje narzędzia do zarządzania kampaniami, segmentacji kontaktów, wiadomości e-mail transakcyjnych i zarządzania relacjami z klientami (CRM). Brevo pomaga firmom budować silniejsze relacje z odbiorcami, zapewniając skalowalne rozwiązania w zakresie komunikacji i automatyzacji."
+        },
+        "app.QnJldm8.display_name": {
+          "source": "Brevo",
+          "message": "Brevo"
+        },
+        "app.QnJldm8.short_desc": {
+          "source": "Brevo is a marketing platform for email, SMS, and automation campaigns.",
+          "message": "Brevo to platforma marketingowa do kampanii e-mail, SMS i automatyzacji."
+        }
+      }
+    }
+  }
+}

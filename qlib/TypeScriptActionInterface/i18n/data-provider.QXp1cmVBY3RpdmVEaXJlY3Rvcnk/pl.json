@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups.",
+          "message": "Utwórz nową grupę w Active Directory z określonymi właściwościami, typem i ustawieniami zabezpieczeń. Obsługuje zarówno grupy zabezpieczeń, jak i grupy Microsoft 365."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Group",
+          "message": "Utwórz grupę"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.desc": {
+          "source": "Group membership is automatically managed based on user or device attributes",
+          "message": "Członkostwo w grupie jest automatycznie zarządzane na podstawie atrybutów użytkowników lub urządzeń"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.display_name": {
+          "source": "Dynamic Group",
+          "message": "Grupa dynamiczna"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.desc": {
+          "source": "Creates a Microsoft 365 group with modern collaboration features",
+          "message": "Tworzy grupę Microsoft 365 z nowoczesnymi funkcjami współpracy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.display_name": {
+          "source": "Microsoft 365 Group (Unified)",
+          "message": "Grupa Microsoft 365 (Unified)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.desc": {
+          "source": "Optional array specifying special characteristics of the group, such as Unified (Microsoft 365) or DynamicMembership.",
+          "message": "Opcjonalna tablica określająca szczególne cechy grupy, takie jak Unified (Microsoft 365) lub DynamicMembership."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.display_name": {
+          "source": "Group Types",
+          "message": "Typy grup"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.short_desc": {
+          "source": "Type characteristics of the group",
+          "message": "Charakterystyka typu grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose and scope of the group.",
+          "message": "Opcjonalny opis wyjaśniający cel i zakres grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Group description",
+          "message": "Opis grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name of the group as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Nazwa wyświetlana grupy, jaka pojawi się w Active Directory i pozostałych usługach Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Nazwa wyświetlana"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the group",
+          "message": "Nazwa grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.desc": {
+          "source": "Whether the group can be assigned to Azure AD roles. This setting cannot be changed after group creation.",
+          "message": "Określa, czy grupę można przypisać do ról usługi Azure AD. Tego ustawienia nie można zmienić po utworzeniu grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.display_name": {
+          "source": "Assignable to Role",
+          "message": "Możliwość przypisania do roli"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.short_desc": {
+          "source": "Allow role assignment",
+          "message": "Zezwalaj na przypisywanie ról"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Pseudonim pocztowy używany w adresie e-mail grupy. Musi zawierać tylko litery, cyfry, kropki, dywizy i znaki podkreślenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "Pseudonim pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the group",
+          "message": "Alias e-mail grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.desc": {
+          "source": "Whether the group should be mail-enabled, allowing it to receive and send emails.",
+          "message": "Określa, czy grupa powinna mieć włączoną obsługę poczty, umożliwiając jej odbieranie i wysyłanie wiadomości e-mail."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.display_name": {
+          "source": "Mail Enabled",
+          "message": "Obsługa poczty włączona"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.short_desc": {
+          "source": "Enable email functionality",
+          "message": "Włącz obsługę poczty e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.desc": {
+          "source": "Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control.",
+          "message": "Określa, czy grupa powinna mieć włączoną obsługę zabezpieczeń, co pozwala na przypisywanie jej uprawnień i używanie do kontroli dostępu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.display_name": {
+          "source": "Security Enabled",
+          "message": "Zabezpieczenia włączone"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.short_desc": {
+          "source": "Enable security functionality",
+          "message": "Włącz funkcje zabezpieczeń"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "Grupa jest widoczna, ale lista członków jest ukryta dla osób niebędących członkami"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "Ukryte członkostwo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "Każdy w organizacji może zobaczyć grupę i jej zawartość"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Publiczny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "Tylko członkowie grupy mogą zobaczyć grupę i jej zawartość"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Prywatny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "Controls who can see the group and its content. Options include Public, Private, or HiddenMembership.",
+          "message": "Kontroluje, kto może widzieć grupę i jej zawartość. Opcje obejmują Public, Private lub HiddenMembership."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "Widoczność"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Group visibility setting",
+          "message": "Ustawienie widoczności grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new group in Active Directory",
+          "message": "Utwórz nową grupę w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.desc": {
+          "source": "Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data.",
+          "message": "Utwórz nowe konto użytkownika w Active Directory z pełnymi informacjami profilowymi, ustawieniami zabezpieczeń i danymi organizacyjnymi. Obsługuje ustawianie haseł, informacji kontaktowych i danych o lokalizacji."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.display_name": {
+          "source": "Create User",
+          "message": "Utwórz użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The country where the user is located for contact and organizational purposes.",
+          "message": "Kraj, w którym znajduje się użytkownik, do celów kontaktowych i organizacyjnych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Kraj"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Country of residence",
+          "message": "Kraj zamieszkania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The city where the user is located for contact and organizational purposes.",
+          "message": "Miasto, w którym znajduje się użytkownik, do celów kontaktowych i organizacyjnych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Miasto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "City of residence",
+          "message": "Miasto zamieszkania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services.",
+          "message": "Określa, czy konto użytkownika powinno być włączone i umożliwiać logowanie. Gdy jest wyłączone, użytkownik nie ma dostępu do żadnych usług."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "Konto włączone"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable the user account",
+          "message": "Włącz konto użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The given name (first name) of the user for profile completion and directory organization.",
+          "message": "Imię użytkownika służące do uzupełnienia profilu i organizacji katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "Imię"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "User's first name",
+          "message": "Imię użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The department or organizational unit the user belongs to within the company structure.",
+          "message": "Dział lub jednostka organizacyjna, do której należy użytkownik w strukturze firmy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Dział"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "User's department",
+          "message": "Dział użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Pełna nazwa wyświetlana użytkownika w postaci, w jakiej będzie pojawiać się w usłudze Active Directory i usługach Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Nazwa wyświetlana"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Full name of the user",
+          "message": "Pełna nazwa użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.desc": {
+          "source": "When enabled, the user will be required to change their password on their first sign-in to the account.",
+          "message": "Gdy ta opcja jest włączona, użytkownik będzie musiał zmienić hasło przy pierwszym logowaniu do konta."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.display_name": {
+          "source": "Force Password Change",
+          "message": "Wymuś zmianę hasła"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.short_desc": {
+          "source": "Require password change on first login",
+          "message": "Wymagaj zmiany hasła przy pierwszym logowaniu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.desc": {
+          "source": "When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in.",
+          "message": "Gdy ta opcja jest włączona, użytkownik będzie musiał zmienić hasło przy użyciu uwierzytelniania wieloskładnikowego podczas pierwszego logowania."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.display_name": {
+          "source": "Force Password Change with MFA",
+          "message": "Wymuś zmianę hasła z użyciem MFA"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.short_desc": {
+          "source": "Require password change with multi-factor authentication",
+          "message": "Wymagaj zmiany hasła przy użyciu uwierzytelniania wieloskładnikowego"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The job title or position of the user within the organization for directory and contact information.",
+          "message": "Stanowisko lub pozycja użytkownika w organizacji na potrzeby katalogu i informacji kontaktowych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Stanowisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "User's job title",
+          "message": "Stanowisko użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The mobile phone number for the user, used for contact information and potential multi-factor authentication.",
+          "message": "Numer telefonu komórkowego użytkownika, używany w celach kontaktowych oraz potencjalnie do uwierzytelniania wieloskładnikowego."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "Telefon komórkowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "User's mobile phone number",
+          "message": "Numer telefonu komórkowego użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The primary email address for the user. If not specified, it may be automatically generated based on the user principal name.",
+          "message": "Główny adres e-mail użytkownika. Jeśli nie zostanie podany, może zostać wygenerowany automatycznie na podstawie głównej nazwy użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "Adres e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Primary email address",
+          "message": "Główny adres e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Pseudonim e-mail, który będzie używany jako część adresu e-mail użytkownika. Musi zawierać wyłącznie litery, cyfry, kropki, łączniki i znaki podkreślenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "Pseudonim pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the user",
+          "message": "Alias e-mail użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The state or province where the user is located for contact and organizational purposes.",
+          "message": "Stan lub województwo/prowincja, w którym znajduje się użytkownik, w celach kontaktowych i organizacyjnych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "Stan/prowincja"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "State or province",
+          "message": "Stan lub województwo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The street address component of the user's physical location for contact and organizational purposes.",
+          "message": "Część adresu fizycznego użytkownika obejmująca ulicę i numer w celach kontaktowych i organizacyjnych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "Ulica i numer"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Physical street address",
+          "message": "Fizyczny adres (ulica i numer)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The surname (last name) of the user for profile completion and directory organization.",
+          "message": "Nazwisko użytkownika służące do uzupełnienia profilu i organizacji katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "Nazwisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "User's last name",
+          "message": "Nazwisko użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The postal code or ZIP code for the user's location.",
+          "message": "Kod pocztowy dla lokalizacji użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Kod pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "ZIP or postal code",
+          "message": "Kod pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.desc": {
+          "source": "The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long.",
+          "message": "Początkowe hasło do konta użytkownika. Musi spełniać wymagania organizacji dotyczące złożoności haseł i mieć co najmniej 8 znaków."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.display_name": {
+          "source": "Password",
+          "message": "Hasło"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.short_desc": {
+          "source": "Initial password for the user",
+          "message": "Hasło początkowe użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "Meksyk"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "Australia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "Brazylia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "Kanada"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "Niemcy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "Francja"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "Wielka Brytania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "Indie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "Japonia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "Stany Zjednoczone"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The two-letter country code (ISO 3166-1 alpha-2) that represents the user's usage location. Required for license assignment in some regions.",
+          "message": "Dwuliterowy kod kraju (ISO 3166-1 alpha-2) reprezentujący lokalizację użytkowania użytkownika. Wymagany do przypisania licencji w niektórych regionach."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "Lokalizacja użytkowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Country code for license assignment",
+          "message": "Kod kraju do przypisania licencji"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.desc": {
+          "source": "The user principal name (UPN) that serves as the primary login identifier. Must be in email format (user@domain.com).",
+          "message": "Główna nazwa użytkownika (UPN) pełniąca funkcję głównego identyfikatora logowania. Musi być w formacie adresu e-mail (user@domain.com)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.display_name": {
+          "source": "User Principal Name",
+          "message": "Główna nazwa użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.short_desc": {
+          "source": "Primary login identifier",
+          "message": "Główny identyfikator logowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.short_desc": {
+          "source": "Create a new user in Active Directory",
+          "message": "Utwórz nowego użytkownika w usłudze Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.desc": {
+          "source": "Add a user as a member of an existing group in Active Directory. This grants the user any permissions and access rights associated with the group.",
+          "message": "Dodaj użytkownika jako członka istniejącej grupy w usłudze Active Directory. Nadaje to użytkownikowi wszelkie uprawnienia i prawa dostępu powiązane z tą grupą."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.display_name": {
+          "source": "Add User to Group",
+          "message": "Dodaj użytkownika do grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to add the user to. Select from existing groups in your directory.",
+          "message": "Unikalny identyfikator grupy, do której ma zostać dodany użytkownik. Wybierz spośród istniejących grup w swoim katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Target group",
+          "message": "Grupa docelowa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be added to the group. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator użytkownika, który ma zostać dodany do grupy. Wybierz spośród istniejących użytkowników w swoim katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to add to the group",
+          "message": "Użytkownik do dodania do grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.short_desc": {
+          "source": "Add a user to an Active Directory group",
+          "message": "Dodaj użytkownika do grupy usługi Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.desc": {
+          "source": "Fetch detailed information about a specific group from Active Directory, including properties, settings, and configuration details.",
+          "message": "Pobierz szczegółowe informacje o określonej grupie z usługi Active Directory, w tym właściwości, ustawienia i szczegóły konfiguracji."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.display_name": {
+          "source": "Get Group",
+          "message": "Pobierz grupę"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to retrieve information for. Select from existing groups in your directory.",
+          "message": "Unikalny identyfikator grupy, dla której mają zostać pobrane informacje. Wybierz spośród istniejących grup w swoim katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to retrieve",
+          "message": "Identyfikator pobieranej grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.short_desc": {
+          "source": "Retrieve group information from Active Directory",
+          "message": "Pobierz informacje o grupie z usługi Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.desc": {
+          "source": "Fetch detailed information about a specific user from Active Directory, including profile data, contact information, and account status.",
+          "message": "Pobierz szczegółowe informacje o określonym użytkowniku z usługi Active Directory, w tym dane profilowe, informacje kontaktowe i stan konta."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Pobierz użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to retrieve information for. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator konta użytkownika, dla którego mają zostać pobrane informacje. Wybierz spośród istniejących użytkowników w swoim katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to retrieve",
+          "message": "Identyfikator użytkownika do pobrania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve user information from Active Directory",
+          "message": "Pobierz informacje o użytkowniku z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.desc": {
+          "source": "Permanently remove a group from Active Directory. This action cannot be undone and will remove all group memberships and associated permissions.",
+          "message": "Trwale usuń grupę z Active Directory. Tej operacji nie można cofnąć. Spowoduje ona usunięcie wszystkich przynależności do grupy i powiązanych uprawnień."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.display_name": {
+          "source": "Delete Group",
+          "message": "Usuń grupę"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be deleted. Select from existing groups in your directory.",
+          "message": "Unikalny identyfikator grupy do usunięcia. Wybierz z istniejących grup w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to delete",
+          "message": "Identyfikator grupy do usunięcia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.short_desc": {
+          "source": "Delete a group from Active Directory",
+          "message": "Usuń grupę z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.desc": {
+          "source": "Permanently remove a user account from Active Directory. This action cannot be undone and will remove all associated data and access permissions.",
+          "message": "Trwale usuń konto użytkownika z Active Directory. Tej operacji nie można cofnąć. Spowoduje ona usunięcie wszystkich powiązanych danych i uprawnień dostępu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.display_name": {
+          "source": "Delete User",
+          "message": "Usuń użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be deleted. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator konta użytkownika do usunięcia. Wybierz z istniejących użytkowników w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to delete",
+          "message": "Identyfikator użytkownika do usunięcia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.short_desc": {
+          "source": "Delete a user from Active Directory",
+          "message": "Usuń użytkownika z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.desc": {
+          "source": "Disable a user account to prevent sign-in while preserving the account and its data. The user will be unable to access any services until the account is re-enabled.",
+          "message": "Wyłącz konto użytkownika, aby uniemożliwić logowanie przy jednoczesnym zachowaniu konta i jego danych. Użytkownik nie będzie miał dostępu do żadnych usług, dopóki konto nie zostanie ponownie włączone."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.display_name": {
+          "source": "Disable User",
+          "message": "Wyłącz użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be disabled. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator konta użytkownika do wyłączenia. Wybierz z istniejących użytkowników w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to disable",
+          "message": "Identyfikator użytkownika do wyłączenia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.short_desc": {
+          "source": "Disable a user account in Active Directory",
+          "message": "Wyłącz konto użytkownika w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.desc": {
+          "source": "Get a paginated list of users from Active Directory with optional filtering and group membership criteria. Useful for reporting and bulk operations.",
+          "message": "Pobierz stronicowaną listę użytkowników z Active Directory z opcjonalnym filtrowaniem i kryteriami przynależności do grup. Przydatne do raportowania i operacji masowych."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Lista użytkowników"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned.",
+          "message": "Opcjonalny identyfikator grupy do filtrowania użytkowników będących członkami określonej grupy. Po określeniu zwróceni zostaną tylko użytkownicy należący do tej grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Filter users by group membership",
+          "message": "Filtruj użytkowników według przynależności do grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the user list based on specific attributes and conditions.",
+          "message": "Opcjonalne kryteria filtrowania pozwalające zwęzić listę użytkowników na podstawie określonych atrybutów i warunków."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kryteria filtrowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.short_desc": {
+          "source": "Additional filter conditions",
+          "message": "Dodatkowe warunki filtrowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "Maksymalna liczba użytkowników do zwrócenia w jednym żądaniu. Domyślnie jest to 20, z możliwością stronicowania dla większych zestawów wyników."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maksymalna liczba użytkowników do zwrócenia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "Token stronicowania do pobrania następnej strony wyników. Uzyskany z poprzednich operacji pobierania listy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users from Active Directory",
+          "message": "Pobierz listę użytkowników z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Get a paginated list of groups from Active Directory with optional filtering criteria. Useful for reporting and group management operations.",
+          "message": "Pobierz stronicowaną listę grup z Active Directory z opcjonalnymi kryteriami filtrowania. Przydatne do raportowania i operacji zarządzania grupami."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Groups",
+          "message": "Wyświetl grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the group list based on specific attributes and conditions.",
+          "message": "Opcjonalne kryteria filtrowania pozwalające zwęzić listę grup na podstawie określonych atrybutów i warunków."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kryteria filtrowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for groups",
+          "message": "Warunki filtrowania dla grup"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "Maksymalna liczba grup do zwrócenia w jednym żądaniu. Domyślnie jest to 20, z możliwością stronicowania dla większych zestawów wyników."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of groups to return",
+          "message": "Maksymalna liczba grup do zwrócenia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "Token stronicowania do pobrania następnej strony wyników. Uzyskany z poprzednich operacji pobierania listy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of groups from Active Directory",
+          "message": "Pobierz listę grup z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Active Directory** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Active Directory** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod stanu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżywaj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako dedykowane akcje w tej aplikacji."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Active Directory",
+          "message": "Wykonaj niestandardowe wywołanie API do Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.desc": {
+          "source": "Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions.",
+          "message": "Monitoruj Active Directory pod kątem nowo utworzonych grup. Ten wyzwalacz można filtrować według określonych kryteriów, takich jak typ grupy, widoczność lub wzorce nazewnictwa, aby wykrywać istotne dodania grup."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.display_name": {
+          "source": "New Group",
+          "message": "Nowa grupa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which groups should trigger the event. Configure field, operator, and value to match specific group attributes.",
+          "message": "Opcjonalne kryteria filtrowania określające, które grupy powinny wyzwalać zdarzenie. Skonfiguruj pole, operator i wartość, aby dopasować je do określonych atrybutów grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kryteria filtrowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for group monitoring",
+          "message": "Warunki filtrowania dla monitorowania grup"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.short_desc": {
+          "source": "Triggers when a new group is created in Active Directory",
+          "message": "Uruchamia wyzwalacz po utworzeniu nowej grupy w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.desc": {
+          "source": "Monitor Active Directory for newly created users. This trigger can be filtered by specific criteria such as user attributes, group membership, or organizational units to detect relevant user additions.",
+          "message": "Monitoruj Active Directory pod kątem nowo utworzonych użytkowników. Ten wyzwalacz można filtrować według określonych kryteriów, takich jak atrybuty użytkownika, przynależność do grupy lub jednostki organizacyjne, aby wykrywać istotne dodania użytkowników."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "Nowy użytkownik"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group.",
+          "message": "Opcjonalny identyfikator grupy do monitorowania dodawania nowych użytkowników. Po określeniu wyzwalacz będzie uruchamiany tylko dla użytkowników dodanych do tej konkretnej grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Monitor users added to a specific group",
+          "message": "Monitoruj użytkowników dodanych do określonej grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which users should trigger the event. Configure field, operator, and value to match specific user attributes.",
+          "message": "Opcjonalne kryteria filtrowania określające, którzy użytkownicy powinni wyzwalać zdarzenie. Skonfiguruj pole, operator i wartość, aby dopasować je do określonych atrybutów użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kryteria filtrowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for user monitoring",
+          "message": "Warunki filtrowania dla monitorowania użytkowników"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created in Active Directory",
+          "message": "Uruchamia wyzwalacz po utworzeniu nowego użytkownika w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.desc": {
+          "source": "Remove a user from membership in an existing group in Active Directory. This revokes any permissions and access rights the user had through this group.",
+          "message": "Usuń użytkownika z członkostwa w istniejącej grupie w Active Directory. Spowoduje to odebranie wszelkich uprawnień i praw dostępu, które użytkownik posiadał za pośrednictwem tej grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.display_name": {
+          "source": "Remove User from Group",
+          "message": "Usuń użytkownika z grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to remove the user from. Select from existing groups in your directory.",
+          "message": "Unikalny identyfikator grupy, z której ma zostać usunięty użytkownik. Wybierz z istniejących grup w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Source group",
+          "message": "Grupa źródłowa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be removed from the group. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator użytkownika, który ma zostać usunięty z grupy. Wybierz z istniejących użytkowników w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to remove from the group",
+          "message": "Użytkownik do usunięcia z grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.short_desc": {
+          "source": "Remove a user from an Active Directory group",
+          "message": "Usuń użytkownika z grupy Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.desc": {
+          "source": "Modify properties of an existing group in Active Directory, including display name, description, visibility, and other configurable settings.",
+          "message": "Modyfikuj właściwości istniejącej grupy w Active Directory, w tym nazwę wyświetlaną, opis, widoczność i inne konfigurowalne ustawienia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.display_name": {
+          "source": "Update Group",
+          "message": "Zaktualizuj grupę"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.desc": {
+          "source": "Allow people external to the organization to send messages to the group",
+          "message": "Zezwalaj osobom spoza organizacji na wysyłanie wiadomości do grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.display_name": {
+          "source": "Allow External Senders",
+          "message": "Zezwalaj na nadawców zewnętrznych"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.short_desc": {
+          "source": "Allow external email senders",
+          "message": "Zezwalaj na zewnętrznych nadawców wiadomości e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.desc": {
+          "source": "Automatically subscribe new members to receive email notifications",
+          "message": "Automatycznie subskrybuj nowych członków, aby otrzymywali powiadomienia e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.display_name": {
+          "source": "Auto-Subscribe New Members",
+          "message": "Automatycznie subskrybuj nowych członków"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.short_desc": {
+          "source": "Automatically subscribe new members",
+          "message": "Automatycznie subskrybuj nowych członków"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be updated. Select from existing groups in your directory.",
+          "message": "Unikalny identyfikator grupy do zaktualizowania. Wybierz z istniejących grup w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to update",
+          "message": "Identyfikator grupy do zaktualizowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description explaining the purpose and scope of the group.",
+          "message": "Zaktualizowany opis wyjaśniający cel i zakres grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated group description",
+          "message": "Zaktualizowany opis grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated display name of the group as it will appear in Active Directory.",
+          "message": "Zaktualizowana nazwa wyświetlana grupy, taka jak będzie pojawiać się w Active Directory."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Nazwa wyświetlana"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated group name",
+          "message": "Zaktualizowana nazwa grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.desc": {
+          "source": "Hide this group from address lists",
+          "message": "Ukryj tę grupę na listach adresowych"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.display_name": {
+          "source": "Hide from Address Lists",
+          "message": "Ukryj na listach adresowych"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.short_desc": {
+          "source": "Hide group from address lists",
+          "message": "Ukryj grupę na listach adresowych"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.desc": {
+          "source": "Hide this group from Outlook clients",
+          "message": "Ukryj tę grupę przed klientami programu Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.display_name": {
+          "source": "Hide from Outlook Clients",
+          "message": "Ukryj przed klientami programu Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.short_desc": {
+          "source": "Hide group from Outlook clients",
+          "message": "Ukryj grupę przed klientami programu Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the group. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Zaktualizowany alias pocztowy dla grupy. Musi zawierać wyłącznie litery, cyfry, kropki, łączniki i znaki podkreślenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "Pseudonim pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "Zaktualizowany alias e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "Niemiecki (Niemcy)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "Angielski (Wielka Brytania)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "Angielski (Stany Zjednoczone)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "Hiszpański (Hiszpania)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "Francuski (Francja)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "Włoski (Włochy)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "Japoński (Japonia)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "Portugalski (Brazylia)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnpoLUNO.display_name": {
+          "source": "Chinese (Simplified)",
+          "message": "Chiński (uproszczony)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.desc": {
+          "source": "The preferred language for the group's communications and interface.",
+          "message": "Preferowany język komunikacji i interfejsu grupy."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.display_name": {
+          "source": "Preferred Language",
+          "message": "Preferowany język"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.short_desc": {
+          "source": "Group's preferred language",
+          "message": "Preferowany język grupy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "Grupa jest widoczna, ale lista członków jest ukryta dla osób niebędących członkami"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "Ukryte członkostwo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "Każdy w organizacji może zobaczyć grupę i jej zawartość"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Publiczny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "Tylko członkowie grupy mogą zobaczyć grupę i jej zawartość"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Prywatny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "The updated visibility setting controlling who can see the group and its content.",
+          "message": "Zaktualizowane ustawienie widoczności określające, kto może widzieć grupę i jej zawartość."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "Widoczność"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Updated visibility setting",
+          "message": "Zaktualizowane ustawienie widoczności"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.short_desc": {
+          "source": "Update an existing group in Active Directory",
+          "message": "Zaktualizuj istniejącą grupę w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.desc": {
+          "source": "Modify properties of an existing user account in Active Directory. Update profile information, contact details, organizational data, and account settings.",
+          "message": "Modyfikuj właściwości istniejącego konta użytkownika w Active Directory. Aktualizuj informacje o profilu, dane kontaktowe, dane organizacyjne i ustawienia konta."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.display_name": {
+          "source": "Update User",
+          "message": "Zaktualizuj użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The updated country where the user is located.",
+          "message": "Zaktualizowany kraj, w którym znajduje się użytkownik."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Kraj"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Updated country",
+          "message": "Zaktualizowany kraj"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The updated city where the user is located.",
+          "message": "Zaktualizowane miasto, w którym znajduje się użytkownik."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Miasto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "Updated city",
+          "message": "Zaktualizowane miasto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services.",
+          "message": "Określa, czy konto użytkownika powinno być włączone, czy wyłączone. Wyłączone konta nie mogą logować się do żadnych usług."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "Konto włączone"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable or disable the account",
+          "message": "Włącz lub wyłącz konto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The updated given name (first name) of the user.",
+          "message": "Zaktualizowane imię użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "Imię"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "Updated first name",
+          "message": "Zaktualizowane imię"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The updated department or organizational unit the user belongs to.",
+          "message": "Zaktualizowany dział lub jednostka organizacyjna, do której należy użytkownik."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Dział"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "Updated department",
+          "message": "Zaktualizowany dział"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Zaktualizowana pełna nazwa wyświetlana użytkownika, taka jak będzie pojawiać się w Active Directory oraz w usługach firmy Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Nazwa wyświetlana"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated full name",
+          "message": "Zaktualizowane imię i nazwisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The updated job title or position of the user within the organization.",
+          "message": "Zaktualizowane stanowisko lub funkcja użytkownika w organizacji."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Stanowisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "Updated job title",
+          "message": "Zaktualizowane stanowisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The updated mobile phone number for the user.",
+          "message": "Zaktualizowany numer telefonu komórkowego użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "Telefon komórkowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "Updated mobile phone number",
+          "message": "Zaktualizowany numer telefonu komórkowego"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The updated primary email address for the user.",
+          "message": "Zaktualizowany podstawowy adres e-mail użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "Adres e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Updated email address",
+          "message": "Zaktualizowany adres e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Zaktualizowany alias pocztowy użytkownika. Musi zawierać wyłącznie litery, cyfry, kropki, łączniki i znaki podkreślenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "Pseudonim pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "Zaktualizowany alias e-mail"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The updated state or province where the user is located.",
+          "message": "Zaktualizowany stan lub województwo, w którym znajduje się użytkownik."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "Stan/prowincja"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "Updated state or province",
+          "message": "Zaktualizowany stan lub województwo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The updated street address component of the user's physical location.",
+          "message": "Zaktualizowana część adresu obejmująca ulicę dla fizycznej lokalizacji użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "Ulica i numer"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Updated street address",
+          "message": "Zaktualizowany adres ulica"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The updated surname (last name) of the user.",
+          "message": "Zaktualizowane nazwisko użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "Nazwisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "Updated last name",
+          "message": "Zaktualizowane nazwisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The updated postal code or ZIP code for the user's location.",
+          "message": "Zaktualizowany kod pocztowy dla lokalizacji użytkownika."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Kod pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "Updated postal code",
+          "message": "Zaktualizowany kod pocztowy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "Meksyk"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "Australia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "Brazylia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "Kanada"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "Niemcy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "Francja"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "Wielka Brytania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "Indie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "Japonia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "Stany Zjednoczone"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The updated two-letter country code representing the user's usage location for license assignment purposes.",
+          "message": "Zaktualizowany dwuliterowy kod kraju reprezentujący lokalizację użytkowania do celów przypisywania licencji."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "Lokalizacja użytkowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Updated usage location",
+          "message": "Zaktualizowana lokalizacja użytkowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be updated. Select from existing users in your directory.",
+          "message": "Unikalny identyfikator konta użytkownika do zaktualizowania. Wybierz spośród istniejących użytkowników w katalogu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID użytkownika"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to update",
+          "message": "Identyfikator użytkownika do zaktualizowania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.short_desc": {
+          "source": "Update an existing user in Active Directory",
+          "message": "Zaktualizuj istniejącego użytkownika w Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.desc": {
+          "source": "The Active Directory integration provides comprehensive actions and triggers to interact with Microsoft Graph API for user and group management. Automate user provisioning, group membership management, and organizational administration tasks with enterprise-grade security and compliance.",
+          "message": "Integracja z Active Directory zapewnia kompleksowe akcje i wyzwalacze do interakcji z API Microsoft Graph w celu zarządzania użytkownikami i grupami. Automatyzuj udostępnianie kont użytkowników, zarządzanie członkostwem w grupach oraz zadania administracji organizacyjnej z zachowaniem bezpieczeństwa i zgodności klasy korporacyjnej."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.display_name": {
+          "source": "Active Directory",
+          "message": "Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.short_desc": {
+          "source": "Seamlessly connect to Microsoft Active Directory to manage users, groups, and organizational resources.",
+          "message": "Płynnie łącz się z Microsoft Active Directory, aby zarządzać użytkownikami, grupami i zasobami organizacyjnymi."
+        }
+      }
+    }
+  }
+}

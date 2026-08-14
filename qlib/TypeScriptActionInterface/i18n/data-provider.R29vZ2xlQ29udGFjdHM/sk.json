@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Creates a new contact in Google Contacts with comprehensive information including names, contact details, addresses, organizations, relationships, and custom fields. Returns the created contact's basic information.",
+          "message": "Vytvorí nový kontakt v službe Google Kontakty s komplexnými informáciami vrátane mien, kontaktných údajov, adries, organizácií, vzťahov a vlastných polí. Vracia základné informácie o vytvorenom kontakte."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Vytvoriť kontakt"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company or organization where the contact works. This field is optional.",
+          "message": "Názov spoločnosti alebo organizácie, kde kontakt pracuje. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Spoločnosť"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "Contact's company or organization",
+          "message": "Spoločnosť alebo organizácia kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "A hash of custom key-value pairs for storing additional contact information.",
+          "message": "Haš vlastných párov kľúč-hodnota na ukladanie dodatočných informácií o kontakte."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Vlastné polia"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom user-defined fields",
+          "message": "Vlastné používateľom definované polia"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.desc": {
+          "source": "A list of additional phone numbers with their respective types. Each entry contains a number and type.",
+          "message": "Zoznam dodatočných telefónnych čísiel s ich príslušnými typmi. Každý záznam obsahuje číslo a typ."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.display_name": {
+          "source": "Additional Phone Numbers",
+          "message": "Dodatočné telefónne čísla"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.short_desc": {
+          "source": "Additional phone numbers for the contact",
+          "message": "Dodatočné telefónne čísla pre kontakt"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.desc": {
+          "source": "Complete address information for the contact including street, city, state, and country.",
+          "message": "Úplné informácie o adrese kontaktu vrátane ulice, mesta, štátu a krajiny."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "Adresa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.short_desc": {
+          "source": "Contact's address information",
+          "message": "Informácie o adrese kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.desc": {
+          "source": "The contact's date of birth. Provide as a date value.",
+          "message": "Dátum narodenia kontaktu. Uveďte ako hodnotu dátumu."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.display_name": {
+          "source": "Birthday",
+          "message": "Dátum narodenia"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.short_desc": {
+          "source": "Contact's birthday",
+          "message": "Dátum narodenia kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The contact's primary email address. This field is optional but commonly used.",
+          "message": "Hlavná e-mailová adresa kontaktu. Toto pole je voliteľné, ale bežne používané."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "E-mailová adresa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Primary email address",
+          "message": "Hlavná e-mailová adresa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Iné"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Doma"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Práca"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.desc": {
+          "source": "The type of email address: \"home\", \"work\", or \"other\". Default is \"other\".",
+          "message": "Typ e-mailovej adresy: \"home\", \"work\" alebo \"other\". Predvolená hodnota je \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.display_name": {
+          "source": "Email Type",
+          "message": "Typ e-mailu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.short_desc": {
+          "source": "Type of email address",
+          "message": "Typ e-mailovej adresy"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The given name (first name) of the contact. This field is required.",
+          "message": "Meno (krstné meno) kontaktu. Toto pole je povinné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Meno"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "Contact's first name",
+          "message": "Krstné meno kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.desc": {
+          "source": "The contact's job title or position. This field is optional.",
+          "message": "Pracovná pozícia alebo funkcia kontaktu. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.display_name": {
+          "source": "Job Title",
+          "message": "Pracovná pozícia"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.short_desc": {
+          "source": "Contact's job title",
+          "message": "Pracovná pozícia kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The family name (last name) of the contact. This field is required.",
+          "message": "Priezvisko kontaktu. Toto pole je povinné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Priezvisko"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "Contact's last name",
+          "message": "Priezvisko kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The middle name of the contact. This field is optional.",
+          "message": "Stredné meno kontaktu. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "Stredné meno"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "Contact's middle name",
+          "message": "Stredné meno kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.desc": {
+          "source": "Free-form text notes or biography information about the contact.",
+          "message": "Voľné textové poznámky alebo biografické informácie o kontakte."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Poznámky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.short_desc": {
+          "source": "Additional notes about the contact",
+          "message": "Dodatočné poznámky o kontakte"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.desc": {
+          "source": "Honorific prefix such as \"Mr.\", \"Ms.\", \"Dr.\", etc. This field is optional.",
+          "message": "Titul pred menom, napríklad \"Mr.\", \"Ms.\", \"Dr.\" atď. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.display_name": {
+          "source": "Name Prefix",
+          "message": "Titul pred menom"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.short_desc": {
+          "source": "Honorific prefix (e.g., Mr., Dr.)",
+          "message": "Titul pred menom (napr. Mr., Dr.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.desc": {
+          "source": "Honorific suffix such as \"Jr.\", \"Sr.\", \"III\", etc. This field is optional.",
+          "message": "Titul za menom, napríklad \"Jr.\", \"Sr.\", \"III\" atď. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.display_name": {
+          "source": "Name Suffix",
+          "message": "Sufix mena"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.short_desc": {
+          "source": "Honorific suffix (e.g., Jr., Sr.)",
+          "message": "Titul za menom (napr. ml., st.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The contact's primary phone number. This field is optional.",
+          "message": "Hlavné telefónne číslo kontaktu. Toto pole je voliteľné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Telefónne číslo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Primary phone number",
+          "message": "Hlavné telefónne číslo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1haW4.display_name": {
+          "source": "Main",
+          "message": "Hlavné"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "Mobil"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Iné"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Doma"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWVGYXg.display_name": {
+          "source": "Home Fax",
+          "message": "Domáci fax"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "Pager"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Práca"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcmtGYXg.display_name": {
+          "source": "Work Fax",
+          "message": "Pracovný fax"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.desc": {
+          "source": "The type of phone number: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\", or \"other\". Default is \"other\".",
+          "message": "Typ telefónneho čísla: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\" alebo \"other\". Predvolené je \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.display_name": {
+          "source": "Phone Type",
+          "message": "Typ telefónneho čísla"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.short_desc": {
+          "source": "Type of phone number",
+          "message": "Typ telefónneho čísla"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.desc": {
+          "source": "The name of a person related to this contact (e.g., spouse, manager, etc.).",
+          "message": "Meno osoby príbuznej alebo prepojenej s týmto kontaktom (napr. manžel/manželka, manažér atď.)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.display_name": {
+          "source": "Related Person",
+          "message": "Súvisiaca osoba"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.short_desc": {
+          "source": "Name of a related person",
+          "message": "Meno súvisiacej osoby"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1hbmFnZXI.display_name": {
+          "source": "Manager",
+          "message": "Manažér"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1vdGhlcg.display_name": {
+          "source": "Mother",
+          "message": "Matka"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Iné"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmFzc2lzdGFudA.display_name": {
+          "source": "Assistant",
+          "message": "Asistent"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmJyb3RoZXI.display_name": {
+          "source": "Brother",
+          "message": "Brat"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmNoaWxk.display_name": {
+          "source": "Child",
+          "message": "Dieťa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmRvbWVzdGljUGFydG5lcg.display_name": {
+          "source": "Domestic Partner",
+          "message": "Partner v domácnosti"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZhdGhlcg.display_name": {
+          "source": "Father",
+          "message": "Otec"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZyaWVuZA.display_name": {
+          "source": "Friend",
+          "message": "Priateľ"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "Parent",
+          "message": "Rodič"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcnRuZXI.display_name": {
+          "source": "Partner",
+          "message": "Partner"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlZmVycmVkQnk.display_name": {
+          "source": "Referred By",
+          "message": "Odporučil(a)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlbGF0aXZl.display_name": {
+          "source": "Relative",
+          "message": "Príbuzný"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNpc3Rlcg.display_name": {
+          "source": "Sister",
+          "message": "Sestra"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNwb3VzZQ.display_name": {
+          "source": "Spouse",
+          "message": "Manžel/manželka"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.desc": {
+          "source": "The type of relationship: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\", or \"other\". Default is \"other\".",
+          "message": "Typ vzťahu: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\" alebo \"other\". Predvolené je \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.display_name": {
+          "source": "Relationship Type",
+          "message": "Typ vzťahu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.short_desc": {
+          "source": "Type of relationship",
+          "message": "Typ vzťahu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.desc": {
+          "source": "A website URL associated with the contact.",
+          "message": "URL adresa webovej stránky spojená s kontaktom."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.display_name": {
+          "source": "Website URL",
+          "message": "URL webovej stránky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.short_desc": {
+          "source": "Contact's website or URL",
+          "message": "Webová stránka alebo URL kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact in Google Contacts.",
+          "message": "Vytvoriť nový kontakt v Kontakty Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Creates a new user-defined contact group in Google Contacts. The group can then be used to organize contacts. Returns the created group's information including its resource name.",
+          "message": "Vytvorí novú používateľom definovanú skupinu kontaktov v Kontakty Google. Skupinu je potom možné použiť na organizáciu kontaktov. Vracia informácie o vytvorenej skupine vrátane jej názvu zdroja."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Contact Group",
+          "message": "Vytvoriť skupinu kontaktov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The display name for the new contact group. This name will be visible in Google Contacts and must be provided.",
+          "message": "Zobrazovaný názov pre novú skupinu kontaktov. Tento názov bude viditeľný v Kontakty Google a musí byť poskytnutý."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Group Name",
+          "message": "Názov skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new contact group",
+          "message": "Názov pre novú skupinu kontaktov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new contact group in Google Contacts.",
+          "message": "Vytvoriť novú skupinu kontaktov v Kontakty Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.desc": {
+          "source": "Adds a contact to an existing contact group in Google Contacts. Both the contact and group must already exist. Returns confirmation with details about both the contact and group.",
+          "message": "Pridá kontakt do existujúcej skupiny kontaktov v Kontakty Google. Kontakt aj skupina už musia existovať. Vracia potvrdenie s detailmi o kontakte aj skupine."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.display_name": {
+          "source": "Add Contact to Group",
+          "message": "Pridať kontakt do skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.desc": {
+          "source": "The resource name of the contact to add to the group (e.g., \"people/12345\").",
+          "message": "Názov zdroja kontaktu, ktorý sa má pridať do skupiny (napr. \"people/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Názov zdroja kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.short_desc": {
+          "source": "The contact to add to the group",
+          "message": "Kontakt na pridanie do skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact group where the contact will be added (e.g., \"contactGroups/12345\").",
+          "message": "Názov zdroja skupiny kontaktov, do ktorej sa má kontakt pridať (napr. \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Group Resource Name",
+          "message": "Názov zdroja skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The contact group to add to",
+          "message": "Skupina kontaktov, do ktorej sa má pridať"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.short_desc": {
+          "source": "Add an existing contact to a contact group.",
+          "message": "Pridať existujúci kontakt do skupiny kontaktov."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Fetches comprehensive contact information from Google Contacts including names, email addresses, phone numbers, organizations, addresses, birthdays, and other personal details. Returns all available fields for the specified contact.",
+          "message": "Získa podrobné informácie o kontakte z Kontakty Google vrátane mien, e-mailových adries, telefónnych čísiel, organizácií, adries, dátumov narodenia a ďalších osobných údajov. Vracia všetky dostupné polia pre zadaný kontakt."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Získať kontakt"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact to retrieve (e.g., \"people/12345\"). This uniquely identifies the contact in Google Contacts.",
+          "message": "Názov zdroja kontaktu na získanie (napr. \"people/12345\"). Tento údaj jednoznačne identifikuje kontakt v Kontakty Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Názov zdroja kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The unique identifier for the contact",
+          "message": "Jedinečný identifikátor kontaktu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific Google contact.",
+          "message": "Získať podrobné informácie o konkrétnom kontakte Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Fetches all contact groups from Google Contacts with support for filtering by group type, searching by name, and selecting specific fields. Returns both system and user-created groups with metadata including member counts.",
+          "message": "Získa všetky skupiny kontaktov z Kontakty Google s podporou filtrovania podľa typu skupiny, vyhľadávania podľa názvu a výberu konkrétnych polí. Vracia systémové aj používateľom vytvorené skupiny s metadátami vrátane počtu členov."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Contact Groups",
+          "message": "Zoznam skupín kontaktov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All Groups",
+          "message": "Všetky skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnN5c3RlbQ.display_name": {
+          "source": "System Groups Only",
+          "message": "Iba systémové skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User Created Groups Only",
+          "message": "Iba používateľom vytvorené skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.desc": {
+          "source": "Filter groups by type: \"all\" for both system and user groups, \"user\" for user-created groups only, or \"system\" for system groups only. Default is \"all\".",
+          "message": "Filtrovať skupiny podľa typu: \"all\" pre systémové aj používateľské skupiny, \"user\" iba pre používateľom vytvorené skupiny alebo \"system\" iba pre systémové skupiny. Predvolené je \"all\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.display_name": {
+          "source": "Group Type",
+          "message": "Typ skupiny"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.short_desc": {
+          "source": "Type of groups to retrieve",
+          "message": "Typ skupín na získanie"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.desc": {
+          "source": "Optional search term to filter groups by name. The search is case-insensitive and matches partial names.",
+          "message": "Voliteľný vyhľadávací výraz na filtrovanie skupín podľa názvu. Vyhľadávanie nerozlišuje malé a veľké písmená a zhoduje sa aj s čiastočnými názvami."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.display_name": {
+          "source": "Search Name",
+          "message": "Vyhľadať názov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.short_desc": {
+          "source": "Filter groups by name",
+          "message": "Filtrovať skupiny podľa názvu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of contact groups from Google Contacts.",
+          "message": "Získať zoznam skupín kontaktov zo služby Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Contacts** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do služby **Google Contacts** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú k dispozícii ako primárne akcie v tejto aplikácii."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Contacts",
+          "message": "Vykonať vlastné volanie API do služby Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa do služby Google Contacts pridá nový kontakt. Poskytuje podrobné informácie o novo vytvorenom kontakte vrátane mien, e-mailových adries, telefónnych čísel a ďalších údajov."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact Created",
+          "message": "Vytvorený nový kontakt"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Trigger when a new contact is created in Google Contacts.",
+          "message": "Spustiť, keď sa v službe Google Contacts vytvorí nový kontakt."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search through Google Contacts using email addresses, full names, or phone numbers. Supports both exact matching and partial matching (contains) search types. Returns basic contact information for matching contacts.",
+          "message": "Vyhľadávajte v službe Google Contacts pomocou e-mailových adries, celých mien alebo telefónnych čísel. Podporuje presnú zhodu aj čiastočnú zhodu (obsahuje). Vráti základné informácie o zodpovedajúcich kontaktoch."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search Contacts",
+          "message": "Vyhľadať kontakty"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.desc": {
+          "source": "Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., \"contactGroups/12345\").",
+          "message": "Voliteľná skupina kontaktov na filtrovanie výsledkov. Vrátia sa iba kontakty v tejto skupine. Zadajte názov prostriedku skupiny (napr. \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.display_name": {
+          "source": "Contact Group",
+          "message": "Skupina kontaktov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.short_desc": {
+          "source": "Filter by contact group",
+          "message": "Filtrovať podľa skupiny kontaktov"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email Address",
+          "message": "E-mailová adresa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmZ1bGxfbmFtZQ.display_name": {
+          "source": "Full Name",
+          "message": "Celé meno"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOnBob25lX251bWJlcg.display_name": {
+          "source": "Phone Number",
+          "message": "Telefónne číslo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.desc": {
+          "source": "The contact field to search in: \"email\" for email addresses, \"full_name\" for names, or \"phone_number\" for phone numbers.",
+          "message": "Pole kontaktu, v ktorom sa má vyhľadávať: \"email\" pre e-mailové adresy, \"full_name\" pre mená alebo \"phone_number\" pre telefónne čísla."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.display_name": {
+          "source": "Search Field",
+          "message": "Pole vyhľadávania"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.short_desc": {
+          "source": "Field to search in",
+          "message": "Pole, v ktorom sa má vyhľadávať"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Obsahuje"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Presná zhoda"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Search matching type: \"contains\" for partial matches or \"exact\" for exact matches. Default is \"contains\".",
+          "message": "Typ zhody vyhľadávania: \"contains\" pre čiastočné zhody alebo \"exact\" pre presné zhody. Predvolená hodnota je \"contains\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Typ vyhľadávania"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Typ vyhľadávania, ktorý sa má vykonať"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.desc": {
+          "source": "The search term or value to look for in the specified field. Search is case-insensitive.",
+          "message": "Hľadaný výraz alebo hodnota, ktorá sa má vyhľadať v špecifikovanom poli. Vyhľadávanie nerozlišuje malé a veľké písmená."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.display_name": {
+          "source": "Search Value",
+          "message": "Hodnota vyhľadávania"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.short_desc": {
+          "source": "Value to search for",
+          "message": "Hodnota na vyhľadanie"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search for contacts in Google Contacts by various criteria.",
+          "message": "Vyhľadávanie kontaktov v službe Google Contacts podľa rôznych kritérií."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.desc": {
+          "source": "Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.",
+          "message": "Pripojte sa k službe Google Contacts a spravujte svoje kontakty priamo zo svojej aplikácie. Vytvárajte, aktualizujte a odstraňujte kontakty bez problémov."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.display_name": {
+          "source": "Google Contacts",
+          "message": "Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.short_desc": {
+          "source": "Manage your Google Contacts",
+          "message": "Spravujte svoje kontakty Google Contacts"
+        }
+      }
+    }
+  }
+}

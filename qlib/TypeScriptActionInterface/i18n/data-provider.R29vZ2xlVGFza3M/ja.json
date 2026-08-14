@@ -1,0 +1,989 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.desc": {
+          "source": "Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.",
+          "message": "指定したタスクリストから完了したすべてのタスクを削除し、リストを整理された状態に保ちます。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.display_name": {
+          "source": "Clear Completed Tasks",
+          "message": "完了したタスクの消去"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to remove all completed tasks.",
+          "message": "完了したすべてのタスクを削除するタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to clear completed tasks from",
+          "message": "完了したタスクを消去するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.short_desc": {
+          "source": "Clear all completed tasks from a task list",
+          "message": "タスクリストから完了したすべてのタスクを消去します"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.",
+          "message": "メモ、期限、階層的な配置などのオプション詳細を指定して、指定したタスクリストに新しいタスクを作成します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "タスクを作成"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set a due date for when this task should be completed.",
+          "message": "このタスクの完了期限を設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "期日"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "タスクの期限"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Add any additional notes, details, or description for the task.",
+          "message": "タスクに関する追加のメモ、詳細、または説明を追加します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "メモ"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "タスクの追加メモまたは説明"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to create this task as a subtask under another task.",
+          "message": "このタスクを別のタスクのサブタスクとして作成する場合は、親タスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "親タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to create a subtask)",
+          "message": "親タスク（サブタスクを作成する場合）"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this new task should be positioned in the list.",
+          "message": "この新しいタスクをリスト内で配置する位置の前にあるタスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "前のタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "このタスクの前に配置するタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list where you want to create the new task.",
+          "message": "新しいタスクを作成するタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to add the task to",
+          "message": "タスクを追加するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the title or main description for the new task.",
+          "message": "新しいタスクのタイトルまたは主な説明を入力します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The title of the task",
+          "message": "タスクのタイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new task in Google Tasks",
+          "message": "Google Tasksに新しいタスクを作成します"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Creates a new task list in your Google Tasks account with the specified title.",
+          "message": "指定したタイトルでGoogle Tasksアカウントに新しいタスクリストを作成します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Create Task List",
+          "message": "タスクリストの作成"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the name/title for the new task list that will be created in Google Tasks.",
+          "message": "Google Tasksに作成する新しいタスクリストの名前/タイトルを入力します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The title of the new task list",
+          "message": "新しいタスクリストのタイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Create a new task list in Google Tasks",
+          "message": "Google Tasksに新しいタスクリストを作成します"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieves detailed information about a specific task from the selected task list.",
+          "message": "選択したタスクリストから特定のタスクの詳細情報を取得します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "タスクの取得"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to retrieve.",
+          "message": "取得するタスクが含まれているタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "タスクが含まれているタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task whose details you want to retrieve.",
+          "message": "詳細を取得する特定のタスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to retrieve",
+          "message": "取得するタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a specific task",
+          "message": "特定のタスクの詳細を取得します"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently deletes the specified task from the selected task list.",
+          "message": "選択したタスクリストから指定したタスクを永久に削除します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "タスクを削除"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to delete.",
+          "message": "削除するタスクが含まれているタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "タスクが含まれているタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to permanently delete.",
+          "message": "永久に削除する特定のタスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to delete",
+          "message": "削除するタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Delete a task from Google Tasks",
+          "message": "Google Tasksからタスクを削除します"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Permanently deletes the specified task list and all tasks within it from your Google Tasks account.",
+          "message": "指定したタスクリストとその中のすべてのタスクをGoogle Tasksアカウントから永久に削除します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Delete Task List",
+          "message": "タスクリストの削除"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to permanently delete from Google Tasks.",
+          "message": "Google Tasksから永久に削除するタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to delete",
+          "message": "削除するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Delete a task list from Google Tasks",
+          "message": "Google Tasksからタスクリストを削除します"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.desc": {
+          "source": "Retrieves a list of all task lists in your Google Tasks account with optional pagination.",
+          "message": "Google Tasksアカウント内のすべてのタスクリストのリストをオプションのページネーション付きで取得します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.display_name": {
+          "source": "List Task Lists",
+          "message": "タスクリストの一覧表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of task lists to return in the response. Default is 10.",
+          "message": "レスポンスで返されるタスクリストの最大数を指定します。デフォルトは10です。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "最大結果数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of task lists to return",
+          "message": "取得するタスクリストの最大数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Provide the next page token from a previous request to get the next page of results.",
+          "message": "結果の次のページを取得するには、前回のリクエストからの次ページトークンを指定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "次ページトークン"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "ページネーション用トークン"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.short_desc": {
+          "source": "Get all task lists from Google Tasks",
+          "message": "Google Tasksからすべてのタスクリストを取得します"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.",
+          "message": "期限や完了ステータスなどのさまざまなフィルタリングオプションを使用して、指定したタスクリストからタスクの一覧を取得します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "タスクの一覧表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.desc": {
+          "source": "Only return tasks completed before this date.",
+          "message": "この日付より前に完了したタスクのみを返します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.display_name": {
+          "source": "Completed Max Date",
+          "message": "完了日の上限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.short_desc": {
+          "source": "Upper bound for a task completion date",
+          "message": "タスク完了日の上限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.desc": {
+          "source": "Only return tasks completed after this date.",
+          "message": "この日付以降に完了したタスクのみを返します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.display_name": {
+          "source": "Completed Min Date",
+          "message": "完了日の下限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.short_desc": {
+          "source": "Lower bound for a task completion date",
+          "message": "タスク完了日の下限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.desc": {
+          "source": "Only return tasks with due dates before this date.",
+          "message": "この日付より前の期限を持つタスクのみを返します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.display_name": {
+          "source": "Due Max Date",
+          "message": "期限日の上限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.short_desc": {
+          "source": "Upper bound for a task due date",
+          "message": "タスクの期限日の上限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.desc": {
+          "source": "Only return tasks with due dates after this date.",
+          "message": "この日付より後の期限日を持つタスクのみを返します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.display_name": {
+          "source": "Due Min Date",
+          "message": "最小期限日"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.short_desc": {
+          "source": "Lower bound for a task due date",
+          "message": "タスクの期限日の下限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of tasks to return in the response.",
+          "message": "レスポンスで返すタスクの最大数を指定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "最大結果数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "返されるタスクの最大数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people.",
+          "message": "他のユーザーに割り当てられたタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.display_name": {
+          "source": "Show Assigned",
+          "message": "割り当て済みを表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.short_desc": {
+          "source": "Whether to include assigned tasks",
+          "message": "割り当てられたタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.desc": {
+          "source": "Enable this option to include completed tasks in the results.",
+          "message": "結果に完了したタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.display_name": {
+          "source": "Show Completed",
+          "message": "完了済みを表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.short_desc": {
+          "source": "Whether to include completed tasks",
+          "message": "完了したタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.desc": {
+          "source": "Enable this option to include deleted tasks in the results.",
+          "message": "結果に削除されたタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.display_name": {
+          "source": "Show Deleted",
+          "message": "削除された項目を表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
+          "source": "Whether to include deleted tasks",
+          "message": "削除されたタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.desc": {
+          "source": "Enable this option to include hidden tasks in the results.",
+          "message": "結果に非表示のタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.display_name": {
+          "source": "Show Hidden",
+          "message": "非表示を表示"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.short_desc": {
+          "source": "Whether to include hidden tasks",
+          "message": "非表示のタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.desc": {
+          "source": "Provide the page token from a previous request to get the next page of results.",
+          "message": "次のページの結果を取得するには、前のリクエストのページトークンを指定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "ページトークン"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "ページネーション用トークン"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to retrieve tasks.",
+          "message": "タスクを取得するタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to get tasks from",
+          "message": "タスクを取得するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.desc": {
+          "source": "Only return tasks that have been updated after this date.",
+          "message": "この日付より後に更新されたタスクのみを返します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.display_name": {
+          "source": "Updated Min Date",
+          "message": "最小更新日時"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.short_desc": {
+          "source": "Lower bound for a task last modification time",
+          "message": "タスクの最終更新日時の下限"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Get all tasks from a task list",
+          "message": "タスクリストからすべてのタスクを取得"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Tasks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Google Tasks** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Tasks",
+          "message": "Google Tasks へのカスタム API 呼び出しを行う"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.",
+          "message": "Google Tasks リストを監視し、指定されたリスト内のタスクが完了としてマークされたときにトリガーします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "新しい完了タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "トリガー結果に他のユーザーに割り当てられたタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "割り当てられたタスクを含める"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "他のユーザーに割り当てられたタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly completed tasks.",
+          "message": "新たに完了したタスクを監視する Google Tasks リストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for completed tasks",
+          "message": "完了したタスクを監視するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is marked as completed",
+          "message": "タスクが完了としてマークされたときにトリガー"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.",
+          "message": "Google Tasks リストを監視し、指定されたタスクリストに新しいタスクが追加されたときにトリガーします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.display_name": {
+          "source": "New Task",
+          "message": "新しいタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "トリガー結果に他のユーザーに割り当てられたタスクを含めるには、このオプションを有効にします。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "割り当てられたタスクを含める"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "他のユーザーに割り当てられたタスクを含めるかどうか"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly created tasks.",
+          "message": "新たに作成されたタスクを監視する Google Tasks リストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for new tasks",
+          "message": "新しいタスクを監視するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.short_desc": {
+          "source": "Triggers when a new task is created in Google Tasks",
+          "message": "Google Tasks で新しいタスクが作成されたときにトリガー"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.",
+          "message": "タイトル、メモ、期限日、完了ステータス、および階層上の位置を含む既存のタスクの詳細を更新します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "タスクの更新"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set or update the due date for when this task should be completed.",
+          "message": "このタスクを完了すべき期限日を設定または更新します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "期日"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "タスクの期限"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Update any additional notes, details, or description for the task.",
+          "message": "タスクの追加のメモ、詳細、または説明を更新します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "メモ"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "タスクの追加メモまたは説明"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOm5lZWRzQWN0aW9u.display_name": {
+          "source": "Incomplete",
+          "message": "未完了"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.desc": {
+          "source": "Set whether the task is incomplete (needs action) or completed.",
+          "message": "タスクが未完了（要対応）か完了かを設定します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.short_desc": {
+          "source": "The completion status of the task",
+          "message": "タスクの完了ステータス"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to make this task a subtask under another task.",
+          "message": "このタスクを別のタスクのサブタスクにする場合は、親タスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "親タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to make this a subtask)",
+          "message": "親タスク（これをサブタスクにする場合）"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this task should be positioned in the list.",
+          "message": "リスト内でこのタスクを配置する直前のタスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "前のタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "このタスクの前に配置するタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to update.",
+          "message": "更新するタスクが含まれているタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "タスクが含まれているタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to update.",
+          "message": "更新する特定のタスクを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "タスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to update",
+          "message": "更新するタスク"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the new title or main description for the task.",
+          "message": "タスクの新しいタイトルまたはメインの説明を入力します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The new title of the task",
+          "message": "タスクの新しいタイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing task in Google Tasks",
+          "message": "Google Tasks の既存のタスクを更新"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Updates the title of an existing task list in your Google Tasks account.",
+          "message": "Google Tasks アカウント内の既存のタスクリストのタイトルを更新します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Update Task List",
+          "message": "タスクリストを更新"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to update in Google Tasks.",
+          "message": "Google Tasks で更新するタスクリストを選択します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "タスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to update",
+          "message": "更新するタスクリスト"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the new title/name for the selected task list.",
+          "message": "選択したタスクリストの新しいタイトル/名前を入力します。"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The new title for the task list",
+          "message": "タスクリストの新しいタイトル"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Update an existing task list in Google Tasks",
+          "message": "Google Tasks の既存のタスクリストを更新"
+        },
+        "app.R29vZ2xlVGFza3M.desc": {
+          "source": "The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.",
+          "message": "Google Tasks インテグレーションは、Google Tasks API と連携するための包括的なアクションとトリガーを提供します。シームレスな自動化機能により、タスクリストの管理、タスクの作成および更新、期限日の設定、生産性ワークフローの整理が可能です。"
+        },
+        "app.R29vZ2xlVGFza3M.display_name": {
+          "source": "Google Tasks",
+          "message": "Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.short_desc": {
+          "source": "Connect to Google Tasks API to manage your task lists and tasks efficiently.",
+          "message": "Google Tasks API に接続して、タスクリストとタスクを効率的に管理します。"
+        }
+      }
+    }
+  }
+}

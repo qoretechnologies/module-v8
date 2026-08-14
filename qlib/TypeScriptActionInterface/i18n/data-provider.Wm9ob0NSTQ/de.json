@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Neue Datensätze in der angegebenen Tabelle in App \"ZohoCRM\" erstellen"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Datensätze erstellen"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Neue Datensätze in der angegebenen Tabelle in App \"ZohoCRM\" erstellen"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
+          "message": "Erstellt einen neuen Datensatz im angegebenen Zoho CRM-Modul mit den bereitgestellten Feldwerten. Gibt die Datensatz-ID zusammen mit Zeitstempeln für Erstellung und Änderung zurück. Die Felder Created_By und Modified_By enthalten die Benutzerinformationen des Erstellers. Unterstützt alle Standard- und benutzerdefinierten Module außer Documents und Projects."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Datensatz erstellen"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.",
+          "message": "Wählen Sie das Zoho CRM-Zielmodul aus (wie Leads, Contacts, Deals, Accounts, Products, Vendors oder benutzerdefinierte Module), in dem Sie den neuen Datensatz erstellen möchten. Verwenden Sie die Modules-API, um die Liste der verfügbaren Module und deren API-Namen abzurufen."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module where the record will be created",
+          "message": "Das Zoho CRM-Modul, in dem der Datensatz erstellt wird"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).",
+          "message": "Geben Sie die Feldwerte für den neuen Datensatz als Schlüssel-Wert-Paare an, wobei Schlüssel die API-Namen der Felder sind. Verfügbare Felder und deren Typen werden dynamisch basierend auf dem ausgewählten Modul geladen. Pflichtfelder müssen angegeben werden und Feldwerte müssen ihren erwarteten Datentypen entsprechen (Text, Zahl, Datum, Auswahlliste, Lookup usw.)."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Record Properties",
+          "message": "Datensatzeigenschaften"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values for the new record",
+          "message": "Feldwerte für den neuen Datensatz"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in a Zoho CRM module",
+          "message": "Einen neuen Datensatz in einem Zoho CRM-Modul erstellen"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.desc": {
+          "source": "Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.",
+          "message": "Fügt angegebenen Datensätzen in einem Zoho CRM-Modul ein oder mehrere Tags hinzu. Tags sind Bezeichnungen, die dabei helfen, Datensätze für eine einfachere Verwaltung, Filterung und Suche zu kategorisieren und zu organisieren. Sie können bis zu 10 Tags pro Datensatz hinzufügen, und pro Modul können maximal 100 Tags existieren. Gibt die Anzahl der erfolgreich getaggten Datensätze und der gesperrten Datensätze zurück, die nicht getaggt werden konnten."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
+          "source": "Add Tags to Records",
+          "message": "Tags zu Datensätzen hinzufügen"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.desc": {
+          "source": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.",
+          "message": "Wenn auf true gesetzt, werden alle vorhandenen Tags auf den angegebenen Datensätzen durch die neuen Tags ersetzt. Wenn auf false gesetzt (Standard), werden die neuen Tags hinzugefügt, während bestehende Tags beibehalten werden. Verwenden Sie diese Option mit Vorsicht, da das Setzen auf true alle aktuellen Tags entfernt."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
+          "source": "Overwrite Existing Tags",
+          "message": "Bestehende Tags überschreiben"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
+          "source": "Replace all existing tags on the records",
+          "message": "Alle bestehenden Tags auf den Datensätzen ersetzen"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.",
+          "message": "Wählen Sie das Zoho CRM-Modul aus (wie Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module), das die Datensätze enthält, die Sie taggen möchten. Tags sind modulspezifisch und müssen im Modul existieren, bevor sie Datensätzen hinzugefügt werden können."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the records",
+          "message": "Das Zoho CRM-Modul, das die Datensätze enthält"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.desc": {
+          "source": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.",
+          "message": "Liste eindeutiger Datensatz-IDs, denen Sie Tags hinzufügen möchten. Sie können maximal 500 Datensatz-IDs pro API-Aufruf angeben. Verwenden Sie die Get Records-API oder die Such-API, um gültige Datensatz-IDs abzurufen."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.display_name": {
+          "source": "Record IDs",
+          "message": "Datensatz-IDs"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.short_desc": {
+          "source": "IDs of the records to tag",
+          "message": "IDs der zu taggenden Datensätze"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.desc": {
+          "source": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.",
+          "message": "Geben Sie die Tags an, die Sie den Datensätzen hinzufügen möchten. Jedes Tag sollte eine ID und einen Namen enthalten. Die Tag-ID hat Vorrang vor dem Namen, wenn beides angegeben ist. Sie können optional einen color_code (Hex-Wert) angeben. Verwenden Sie die Aktion List Tags, um verfügbare Tags und deren IDs abzurufen."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
+          "source": "Tags to Add",
+          "message": "Hinzuzufügende Tags"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
+          "source": "List of tags to add to the records",
+          "message": "Liste der Tags, die den Datensätzen hinzugefügt werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
+          "source": "Add tags to one or more records in a module",
+          "message": "Tags zu einem oder mehreren Datensätzen in einem Modul hinzufügen"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Datensatz aus dem angegebenen Zoho CRM-Modul anhand seiner eindeutigen Datensatz-ID ab. Gibt alle Feldwerte für den Datensatz einschließlich Standardfeldern (Created_Time, Modified_Time, Created_By, Modified_By) und benutzerdefinierten Feldern zurück. Subform-Daten, Multi-Select-Lookup-Felder und Multi-User-Lookup-Felder sind ebenfalls in der Antwort enthalten."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Datensatz abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.",
+          "message": "Wählen Sie das Zoho CRM-Modul aus (wie Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module), das den Datensatz enthält, den Sie abrufen möchten. Das Modul muss API-Operationen unterstützen und der Benutzer muss Leseberechtigungen besitzen."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Das Zoho CRM-Modul, das den Datensatz enthält"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.",
+          "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein oder wählen Sie sie aus, den Sie abrufen möchten. Datensatz-IDs können über die Get Records-API, Suchergebnisse oder Webhook-Benachrichtigungen abgerufen werden. Der Datensatz muss im angegebenen Modul existieren."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "Datensatz-ID"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to retrieve",
+          "message": "Die eindeutige Kennung des abzurufenden Datensatzes"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a single record from a Zoho CRM module",
+          "message": "Einen einzelnen Datensatz aus einem Zoho CRM-Modul abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Datensätze aus der angegebenen Tabelle in App \"ZohoCRM\" löschen"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Datensätze löschen"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Datensätze aus der angegebenen Tabelle in App \"ZohoCRM\" löschen"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.",
+          "message": "Löscht einen bestimmten Datensatz aus dem angegebenen Zoho CRM-Modul anhand seiner eindeutigen Datensatz-ID dauerhaft. Wenn für das Modul die Papierkorbfunktion aktiviert ist, wird der gelöschte Datensatz in den Papierkorb verschoben und kann wiederhergestellt werden. Andernfalls ist die Löschung dauerhaft. Der Benutzer muss über Löschberechtigungen für das Modul verfügen."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Datensatz löschen"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.",
+          "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, das den Datensatz enthält, den Sie löschen möchten. Das Modul muss API-Operationen unterstützen und der Benutzer muss über Löschberechtigungen verfügen."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Das Zoho CRM-Modul, das den Datensatz enthält"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.",
+          "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein oder wählen Sie sie aus, den Sie löschen möchten. Datensatz-IDs können über die Get Records-API abgerufen werden. Das Löschen eines bereits gelöschten Datensatzes führt zu einem Fehler."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "Datensatz-ID"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to delete",
+          "message": "Die eindeutige Kennung des zu löschenden Datensatzes"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from a Zoho CRM module",
+          "message": "Einen Datensatz aus einem Zoho CRM-Modul löschen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.desc": {
+          "source": "Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.",
+          "message": "Ruft alle Tags ab, die für ein bestimmtes Zoho CRM-Modul erstellt wurden. Tags sind Beschriftungen, die zur Kategorisierung und Organisation von Datensätzen innerhalb eines Moduls verwendet werden, um die Suche und Filterung zu erleichtern. Jedes Tag enthält seinen Namen, seine ID, seinen Farbcode und Metadaten darüber, wann es erstellt und geändert wurde. Sie können maximal 100 Tags pro Modul und 10 Tags pro Datensatz hinzufügen."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "Tags auflisten"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.",
+          "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals oder benutzerdefinierte Module) aus, dessen Tags Sie abrufen möchten. Jedes Modul verwaltet seine eigenen Tags."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve tags from",
+          "message": "Das Zoho CRM-Modul, aus dem Tags abgerufen werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.desc": {
+          "source": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.",
+          "message": "Wenn auf true gesetzt, werden nur Tags zurückgegeben, die vom aktuellen Benutzer erstellt wurden. Wenn auf false gesetzt oder nicht angegeben, werden alle Tags im Modul zurückgegeben, unabhängig davon, wer sie erstellt hat."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
+          "source": "My Tags Only",
+          "message": "Nur meine Tags"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
+          "source": "Retrieve only tags created by you",
+          "message": "Nur von Ihnen erstellte Tags abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve tags available in a Zoho CRM module",
+          "message": "In einem Zoho CRM-Modul verfügbare Tags abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.",
+          "message": "Ruft eine Liste von Benutzern in Ihrer Zoho CRM-Organisation ab, mit Unterstützung für Paginierung und Filterung nach Benutzertyp. Gibt umfassende Benutzerinformationen zurück, einschließlich Name, E-Mail, Rolle, Profil, Zeitzone, Gebietsschema-Einstellungen, Anpassungseinstellungen und Kontostatus. Verwenden Sie den type-Parameter, um Benutzer nach ihrem Profil und Status zu filtern."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Benutzer auflisten"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.",
+          "message": "Geben Sie an, welche Ergebnisseite abgerufen werden soll, beginnend mit 1 für die erste Seite. Verwenden Sie diesen Parameter zusammen mit per_page, um durch mehrere Seiten von Benutzerdaten zu navigieren."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "Seitennummer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
+          "source": "The page number for pagination",
+          "message": "Die Seitennummer für die Paginierung"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.",
+          "message": "Geben Sie an, wie viele Benutzer in einer einzelnen API-Anforderung zurückgegeben werden sollen. Gültige Werte sind 1 bis 200. Der Standardwert ist 20. Verwenden Sie diesen Parameter zusammen mit dem page-Parameter für die Paginierung durch große Ergebnismengen."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Users Per Page",
+          "message": "Benutzer pro Seite"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of users to return per page",
+          "message": "Anzahl der pro Seite zurückzugebenden Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Not Confirmed Users",
+          "message": "Nicht bestätigte Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have not confirmed their accounts.",
+          "message": "Ruft Benutzer ab, die ihre Konten nicht bestätigt haben."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.display_name": {
+          "source": "Active Confirmed Admins",
+          "message": "Aktive bestätigte Administratoren"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.short_desc": {
+          "source": "Retrieves active and confirmed administrators.",
+          "message": "Ruft aktive und bestätigte Administratoren ab."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Active Confirmed Users",
+          "message": "Aktive bestätigte Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who are both active and confirmed.",
+          "message": "Ruft Benutzer ab, die sowohl aktiv als auch bestätigt sind."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.display_name": {
+          "source": "Active Users",
+          "message": "Aktive Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.short_desc": {
+          "source": "Retrieves only active users.",
+          "message": "Ruft nur aktive Benutzer ab."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.display_name": {
+          "source": "Admin Users",
+          "message": "Admin-Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.short_desc": {
+          "source": "Retrieves users with Administrator privileges.",
+          "message": "Ruft Benutzer mit Administratorrechten ab."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.display_name": {
+          "source": "All Users",
+          "message": "Alle Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.short_desc": {
+          "source": "Retrieves all users (both active and inactive).",
+          "message": "Ruft alle Benutzer ab (sowohl aktive als auch inaktive)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.display_name": {
+          "source": "Current User",
+          "message": "Aktueller Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.short_desc": {
+          "source": "Retrieves the currently logged-in CRM user.",
+          "message": "Ruft den aktuell angemeldeten CRM-Benutzer ab."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Confirmed Users",
+          "message": "Bestätigte Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have confirmed their accounts.",
+          "message": "Ruft Benutzer ab, die ihre Konten bestätigt haben."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.display_name": {
+          "source": "Deactive Users",
+          "message": "Deaktivierte Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.short_desc": {
+          "source": "Retrieves users who have been deactivated.",
+          "message": "Ruft Benutzer ab, die deaktiviert wurden."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.display_name": {
+          "source": "Deleted Users",
+          "message": "Gelöschte Benutzer"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.short_desc": {
+          "source": "Retrieves users who have been deleted.",
+          "message": "Ruft Benutzer ab, die gelöscht wurden."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.desc": {
+          "source": "Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).",
+          "message": "Optionaler Filter zum Abrufen bestimmter Benutzerkategorien. Zu den Optionen gehören: AllUsers (sowohl aktive als auch inaktive), ActiveUsers (nur aktive Benutzer), DeactiveUsers (deaktivierte Benutzer), ConfirmedUsers (Benutzer, die ihre Konten bestätigt haben), NotConfirmedUsers (unbestätigte Benutzer), DeletedUsers (gelöschte Benutzer), ActiveConfirmedUsers (aktiv und bestätigt), AdminUsers (Benutzer mit Administratorrechten), ActiveConfirmedAdmins (aktive bestätigte Administratoren) und CurrentUser (der aktuell authentifizierte CRM-Benutzer)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
+          "source": "User Type Filter",
+          "message": "Benutzertyp-Filter"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
+          "source": "Filter users by type or status",
+          "message": "Benutzer nach Typ oder Status filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve users from your Zoho CRM organization",
+          "message": "Benutzer aus Ihrer Zoho CRM-Organisation abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.desc": {
+          "source": "Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.",
+          "message": "Ruft umfassende Metadaten zu allen Feldern in einem bestimmten Zoho CRM-Modul ab, einschließlich Feldtypen, Beschriftungen, API-Namen, Datentypen, Validierungsregeln, Auswahllistenwerten, Lookup-Konfigurationen und Berechtigungen. Diese Informationen sind wichtig, um die Modulstruktur zu verstehen, dynamische Formulare zu erstellen oder Daten vor dem Erstellen oder Aktualisieren von Datensätzen zu validieren."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
+          "source": "List Module Fields",
+          "message": "Modulfelder auflisten"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.",
+          "message": "Wählen Sie das Zoho CRM-Modul aus, dessen Feldmetadaten Sie abrufen möchten. Die API gibt detaillierte Informationen zu allen Feldern zurück, einschließlich Standardfeldern (systemdefiniert) und benutzerdefinierten Feldern (benutzerdefiniert) im Modul."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve fields from",
+          "message": "Das Zoho CRM-Modul, aus dem Felder abgerufen werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
+          "source": "Retrieve field metadata for a Zoho CRM module",
+          "message": "Feldmetadaten für ein Zoho CRM-Modul abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.desc": {
+          "source": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.",
+          "message": "Ruft Metadaten für alle Module in Ihrer Zoho CRM-Organisation ab, einschließlich Standardmodulen (Leads, Contacts, Deals, Accounts usw.) und benutzerdefinierten Modulen. Gibt umfassende Details zurück, einschließlich Modulberechtigungen, API-Namen, Anzeigenamen und Funktionen wie z. B. ob das Modul erstellt, bearbeitet, gelöscht werden kann oder Funktionen wie die globale Suche und Schnellerstellung unterstützt."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
+          "source": "List Modules",
+          "message": "Module auflisten"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN5c3RlbV9oaWRkZW4.display_name": {
+          "source": "System Hidden",
+          "message": "Vom System ausgeblendet"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9mb3JfZGVsZXRpb24.display_name": {
+          "source": "Scheduled for Deletion",
+          "message": "Für Löschung vorgemerkt"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnVzZXJfaGlkZGVu.display_name": {
+          "source": "User Hidden",
+          "message": "Vom Benutzer ausgeblendet"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "Sichtbar"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.desc": {
+          "source": "Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.",
+          "message": "Optionaler Filter zum Abrufen nur von Modulen mit bestimmten Status. Zu den Optionen gehören: visible (aktive, in der Benutzeroberfläche angezeigte Module), user_hidden (von Benutzern ausgeblendete Module), system_hidden (vom System ausgeblendete Module) und scheduled_for_deletion (zur Löschung vorgemerkte Module). Wenn nicht angegeben, werden alle Module zurückgegeben."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
+          "source": "Module Status Filter",
+          "message": "Modulstatus-Filter"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
+          "source": "Filter modules by their status",
+          "message": "Module nach ihrem Status filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
+          "source": "Retrieve all available modules in Zoho CRM",
+          "message": "Alle verfügbaren Module in Zoho CRM abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.",
+          "message": "Ruft eine Liste von Datensätzen aus dem angegebenen Zoho CRM-Modul ab, mit Unterstützung für Feldauswahl, Paginierung, Sortierung und Filterung. Sie können angeben, welche Felder zurückgegeben werden sollen (maximal 50 Feld-API-Namen), Datensätze nach einem Feld in aufsteigender oder absteigender Reihenfolge sortieren und mithilfe von Token durch Seiten navigieren. Gibt sowohl die Datensatzdaten als auch Paginierungstoken zum Abrufen nachfolgender Seiten zurück."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "Datensätze auflisten"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.",
+          "message": "Wählen Sie die Feld-API-Namen aus, die Sie für jeden Datensatz abrufen möchten. Sie können maximal 50 Feld-API-Namen angeben. Verwenden Sie die Fields Metadata-API, um die Liste der verfügbaren Felder abzurufen. Standardmäßig wird nur das ID-Feld zurückgegeben. Fügen Sie nach Bedarf Felder wie Last_Name, Email, Created_Time oder benutzerdefinierte Feldnamen hinzu."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields to Return",
+          "message": "Zurückzugebende Felder"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specify which fields to include in the response",
+          "message": "Angeben, welche Felder in die Antwort aufgenommen werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.desc": {
+          "source": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.",
+          "message": "Optionale Liste bestimmter Datensatz-IDs, die abgerufen werden sollen. Wenn angegeben, werden nur Datensätze mit diesen IDs zurückgegeben. Dies ist nützlich, um eine bestimmte Menge von Datensätzen abzurufen, anstatt alle Datensätze zu paginieren."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.display_name": {
+          "source": "Record IDs",
+          "message": "Datensatz-IDs"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.short_desc": {
+          "source": "Filter by specific record IDs",
+          "message": "Nach bestimmten Datensatz-IDs filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.",
+          "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, aus dem Sie Datensätze abrufen möchten. Das Modul muss API-Operationen unterstützen und der Benutzer muss über Leseberechtigungen verfügen."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve records from",
+          "message": "Das Zoho CRM-Modul, aus dem Datensätze abgerufen werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.",
+          "message": "Geben Sie an, wie Datensätze in der Antwort sortiert werden sollen. Sie können nach Feldern wie id, Created_Time oder Modified_Time in aufsteigender (älteste zuerst) oder absteigender (neueste zuerst) Reihenfolge sortieren."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort Configuration",
+          "message": "Sortierkonfiguration"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "Konfigurieren, wie die zurückgegebenen Datensätze sortiert werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.",
+          "message": "Verwenden Sie den Wert next_page_token aus einer vorherigen Antwort, um die nächste Seite von Datensätzen abzurufen. Für die erste Seite leer lassen. Das page_token ist an die in der Anfrage verwendeten Parameter gebunden; ändern Sie daher keine anderen Parameter, wenn Sie ein Token verwenden."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Seiten-Token"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token zum Abrufen der nächsten Ergebnisseite"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.",
+          "message": "Geben Sie an, wie viele Datensätze in einer einzelnen API-Anfrage zurückgegeben werden sollen. Gültige Werte sind 1 bis 200. Der Standardwert ist 20. Verwenden Sie diesen Parameter zusammen mit page_token zur Paginierung durch große Ergebnismengen."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
+          "source": "Records Per Page",
+          "message": "Datensätze pro Seite"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of records to return per page",
+          "message": "Anzahl der pro Seite zurückzugebenden Datensätze"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve multiple records from a Zoho CRM module",
+          "message": "Mehrere Datensätze aus einem Zoho CRM-Modul abrufen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Zoho CRM** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwortheader und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoho CRM",
+          "message": "Einen benutzerdefinierten API-Aufruf an Zoho CRM durchführen"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.",
+          "message": "Überwacht ein angegebenes Zoho CRM-Modul auf neu erstellte Datensätze und wird ausgelöst, wenn ein neuer Datensatz erkannt wird. Der Trigger ruft Datensätze ab, die nach Erstellungszeitpunkt absteigend sortiert sind. Sie können Datensätze optional nach Telefonnummer, E-Mail, Schlüsselwörtern oder bestimmten Feldwerten filtern, um nur bei Datensätzen auszulösen, die Ihren Kriterien entsprechen."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Neuer Datensatz"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.desc": {
+          "source": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Optionale E-Mail-Adresse, nach der in Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die diese E-Mail-Adresse enthalten. Dies verwendet die Zoho CRM-Such-API, um übereinstimmende Datensätze zu finden."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "E-Mail-Filter"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
+          "source": "Filter records by email address",
+          "message": "Datensätze nach E-Mail-Adresse filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.desc": {
+          "source": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison.",
+          "message": "Optionale Liste von Feld-Wert-Paaren zum Erstellen von Suchkriterien. Wenn angegeben, lösen nur Datensätze das Ereignis aus, bei denen ALLE angegebenen Felder mit ihren entsprechenden Werten übereinstimmen. Verwendet den Operator „equals“ für jeden Feldvergleich."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
+          "source": "Field Filters",
+          "message": "Feldfilter"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
+          "source": "Filter records by specific field values",
+          "message": "Datensätze nach bestimmten Feldwerten filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.",
+          "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, in dem Sie nach neu erstellten Datensätzen suchen möchten. Verwenden Sie den Modul-API-Namen, wie er von der Modules Metadata API zurückgegeben wird."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to monitor for new records",
+          "message": "Das Zoho CRM-Modul, das auf neue Datensätze überwacht werden soll"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.desc": {
+          "source": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Optionale Telefonnummer, nach der in Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die diese Telefonnummer enthalten. Dies verwendet die Zoho CRM-Such-API, um übereinstimmende Datensätze zu finden."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
+          "source": "Phone Filter",
+          "message": "Telefonnummernfilter"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
+          "source": "Filter records by phone number",
+          "message": "Datensätze nach Telefonnummer filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.desc": {
+          "source": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.",
+          "message": "Optionales Schlüsselwort, nach dem in allen durchsuchbaren Feldern von Datensätzen gesucht werden soll. Wenn angegeben, lösen nur Datensätze das Ereignis aus, die dieses Schlüsselwort enthalten. Dies verwendet die Zoho CRM-Such-API, um eine umfassende Textsuche durchzuführen."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
+          "source": "Keyword Search",
+          "message": "Schlüsselwortsuche"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
+          "source": "Filter records by keyword",
+          "message": "Datensätze nach Schlüsselwort filtern"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in a Zoho CRM module",
+          "message": "Wird ausgelöst, wenn ein neuer Datensatz in einem Zoho CRM-Modul erstellt wird"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Nach passenden Datensätzen in der angegebenen Tabelle in der App „ZohoCRM“ suchen"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Datensätze suchen"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Nach passenden Datensätzen in der angegebenen Tabelle in der App „ZohoCRM“ suchen"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Nach einem einzelnen passenden Datensatz in der angegebenen Tabelle in der App „ZohoCRM“ suchen"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Einzeldatensatz suchen"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Nach einem einzelnen passenden Datensatz in der angegebenen Tabelle in der App „ZohoCRM“ suchen"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Bestehende Datensätze in der angegebenen Tabelle in der App „ZohoCRM“ aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Datensätze aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Bestehende Datensätze in der angegebenen Tabelle in der App „ZohoCRM“ aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
+          "message": "Aktualisiert einen bestehenden Datensatz im angegebenen Zoho CRM-Modul mit den angegebenen Feldwerten. Gibt die Datensatz-ID zusammen mit aktualisierten Zeitstempeln für die Änderung zurück. Es werden nur die von Ihnen angegebenen Felder aktualisiert; andere Felder bleiben unverändert. Der Datensatz muss existieren und der Benutzer muss über Aktualisierungsberechtigungen für das Modul verfügen."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Datensatz aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.",
+          "message": "Wählen Sie das Zoho CRM-Modul (z. B. Leads, Contacts, Deals, Accounts oder benutzerdefinierte Module) aus, das den Datensatz enthält, den Sie aktualisieren möchten. Das Modul muss API-Operationen unterstützen und der Benutzer muss über entsprechende Berechtigungen verfügen."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modul"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Das Zoho CRM-Modul, das den Datensatz enthält"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.",
+          "message": "Geben Sie die Feldwerte, die Sie aktualisieren möchten, als Schlüssel-Wert-Paare an, wobei die Schlüssel die Feld-API-Namen sind. Fügen Sie nur die Felder ein, die Sie ändern möchten; nicht angegebene Felder behalten ihre aktuellen Werte bei. Feldwerte müssen ihren erwarteten Datentypen und Validierungsregeln entsprechen."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "Aktualisierte Eigenschaften"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values to update on the record",
+          "message": "Feldwerte, die für den Datensatz aktualisiert werden sollen"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.",
+          "message": "Geben Sie die eindeutige Datensatz-ID des Datensatzes ein, den Sie aktualisieren möchten, oder wählen Sie diese aus. Datensatz-IDs können über die Get Records API oder aus Webhook-Benachrichtigungen abgerufen werden. Der Datensatz muss im angegebenen Modul vorhanden sein."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "Datensatz-ID"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to update",
+          "message": "Die eindeutige Kennung des zu aktualisierenden Datensatzes"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Update an existing record in a Zoho CRM module",
+          "message": "Einen bestehenden Datensatz in einem Zoho CRM-Modul aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Datensätze in der angegebenen Tabelle in der App „ZohoCRM“ per Upsert einfügen oder aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Datensätze einfügen/aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Datensätze in der angegebenen Tabelle in der App „ZohoCRM“ per Upsert einfügen oder aktualisieren"
+        },
+        "app.Wm9ob0NSTQ.desc": {
+          "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
+          "message": "Die Zoho CRM-Integration bietet umfassende Aktionen und Trigger zur Interaktion mit der Zoho CRM-API über alle sieben globalen Rechenzentren hinweg (US, AU, EU, IN, CN, JP, CA). Verwalten Sie Module, Datensätze, Benutzer und Rollen effizient, während Sie Ihre CRM-Workflows mit Unterstützung für benutzerdefinierte Module, Massenoperationen und Echtzeit-Trigger automatisieren."
+        },
+        "app.Wm9ob0NSTQ.display_name": {
+          "source": "Zoho CRM",
+          "message": "Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.short_desc": {
+          "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
+          "message": "Stellen Sie eine Verbindung zu Zoho CRM her, um das Customer-Relationship-Management über alle globalen Rechenzentren hinweg zu automatisieren."
+        }
+      }
+    }
+  }
+}

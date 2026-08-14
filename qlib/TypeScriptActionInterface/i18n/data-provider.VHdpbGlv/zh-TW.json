@@ -1,0 +1,2121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.",
+          "message": "使用 Twilio 建立並傳送新的 SMS 或 MMS 訊息。您可以傳送文字訊息、包含媒體附件、排程訊息以及設定傳送選項。此動作同時支援標準簡訊服務與簡訊服務 (Messaging Services)。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create a Message",
+          "message": "建立訊息"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.desc": {
+          "source": "The text of the message you want to send, limited to 1600 characters. For SMS messages longer than 160 characters, the message will be sent as multiple segments.",
+          "message": "您要傳送的訊息文字，上限為 1600 個字元。對於超過 160 個字元的 SMS 訊息，訊息將會分段傳送。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "訊息的文字內容"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "A Twilio phone number in E.164 format, a Messaging Service SID, or a short code. This number must be enabled for the type of message you wish to send.",
+          "message": "E.164 格式的 Twilio 電話號碼、Messaging Service SID 或簡碼。此號碼必須已啟用您希望傳送的訊息類型。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "The sender phone number or messaging service SID",
+          "message": "寄件者電話號碼或 Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.desc": {
+          "source": "The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.",
+          "message": "傳送訊息可接受的最高總價 (USD)。如果費用超過此值，訊息將無法傳送。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
+          "source": "Max Price",
+          "message": "最高價格"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
+          "source": "Maximum acceptable price for the message",
+          "message": "訊息可接受的最高價格"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.desc": {
+          "source": "A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.",
+          "message": "要隨訊息傳送之公開存取媒體檔案的 URL 清單。適用於 MMS 訊息。最多可包含 10 個媒體檔案。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.display_name": {
+          "source": "Media URLs",
+          "message": "媒體 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.short_desc": {
+          "source": "URLs of media to include in the message",
+          "message": "要包含在訊息中的媒體 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.desc": {
+          "source": "The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.",
+          "message": "用於該訊息的 Messaging Service SID。設定後可省略 from 參數，Twilio 將從 Messaging Service 集區中選取適當的電話號碼。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
+          "source": "Messaging Service SID",
+          "message": "Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
+          "source": "The SID of the Messaging Service to use",
+          "message": "要使用的 Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.allowed-value.c3RyaW5nOmZpeGVk.display_name": {
+          "source": "Fixed",
+          "message": "固定"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.desc": {
+          "source": "Set to \"fixed\" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.",
+          "message": "設為 \"fixed\" 以排程訊息在特定時間傳送。需要設定 Send At 參數。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
+          "source": "Schedule Type",
+          "message": "排程類型"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
+          "source": "The type of message scheduling",
+          "message": "訊息排程的類型"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.desc": {
+          "source": "The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to \"fixed\".",
+          "message": "排程訊息應傳送的時間，採 ISO 8601 格式。當 Schedule Type 設為 \"fixed\" 時，此參數為必填。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
+          "source": "Send At",
+          "message": "傳送時間"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
+          "source": "When to send the scheduled message",
+          "message": "傳送排程訊息的時間"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.",
+          "message": "每次訊息狀態變更時 Twilio 將會 POST 的 URL。這可讓您追蹤訊息的傳送狀態。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "狀態回呼 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive message status updates",
+          "message": "接收訊息狀態更新的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.desc": {
+          "source": "The phone number to send the message to in E.164 format (e.g., +15551234567). For WhatsApp messages, use the format whatsapp:+15551234567.",
+          "message": "接收訊息的電話號碼，採用 E.164 格式（例如：+15551234567）。若為 WhatsApp 訊息，請使用 whatsapp:+15551234567 格式。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "The destination phone number",
+          "message": "目的電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.desc": {
+          "source": "The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).",
+          "message": "訊息可留在佇列中的秒數。超過此時間後若訊息仍未送達，則會失敗。最大值為 14400 秒（4 小時）。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
+          "source": "Validity Period",
+          "message": "有效期限"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
+          "source": "How long the message is valid for delivery",
+          "message": "訊息傳送的有效時長"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a new SMS or MMS message",
+          "message": "發送新的 SMS 或 MMS 訊息"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.desc": {
+          "source": "Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.",
+          "message": "使用 Twilio 發起外撥電話。您可以透過 URL 或直接提供 TwiML 指令、設定通話錄音、答錄機偵測，以及設定狀態回呼以追蹤通話進度。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
+          "source": "Create a Call",
+          "message": "建立通話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number or client identifier to use as the caller ID. If calling a phone number, this must also be a phone number.",
+          "message": "用作來電顯示的 Twilio 電話號碼或用戶端識別碼。若撥打給電話號碼，此處也必須是電話號碼。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.short_desc": {
+          "source": "The caller ID to display",
+          "message": "要顯示的來電顯示"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "偵測訊息結束"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "啟用"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection. \"Enable\" returns AnsweredBy immediately, \"DetectMessageEnd\" waits for the beep to leave a message.",
+          "message": "啟用答錄機偵測。\"Enable\" 會立即傳回 AnsweredBy，\"DetectMessageEnd\" 則會等待嗶聲以留下訊息。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "機器偵測"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "啟用答錄機偵測"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.desc": {
+          "source": "The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.",
+          "message": "逾時前嘗試答錄機偵測的秒數。預設值為 30 秒。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
+          "source": "Machine Detection Timeout",
+          "message": "機器偵測逾時"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
+          "source": "Seconds to wait for detection",
+          "message": "等待偵測的秒數"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.",
+          "message": "請求 URL 時使用的 HTTP 方法。可為 GET 或 POST。預設為 POST。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
+          "source": "HTTP method for fetching TwiML",
+          "message": "擷取 TwiML 的 HTTP 方法"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: \"W1234#\".",
+          "message": "連線後要撥打的按鍵字串。有效字元：0-9、A-D、#、*、w（暫停 0.5 秒）、W（暫停 1 秒）。例如：\"W1234#\"。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "傳送按鍵號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "連線後要傳送的 DTMF 音調"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.",
+          "message": "通話狀態變更時 Twilio 將發送 POST 請求的 URL。您可以使用狀態回呼事件指定觸發回呼的事件。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "狀態回呼 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "接收通話狀態更新的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmFuc3dlcmVk.display_name": {
+          "source": "Answered",
+          "message": "已接聽"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "已完成"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmluaXRpYXRlZA.display_name": {
+          "source": "Initiated",
+          "message": "已發起"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "響鈴中"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.desc": {
+          "source": "The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.",
+          "message": "將觸發向狀態回呼 URL 發送 POST 的通話進度事件。選項包含：initiated、ringing、answered 及 completed。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
+          "source": "Status Callback Events",
+          "message": "狀態回呼事件"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
+          "source": "Events that trigger status callbacks",
+          "message": "觸發狀態回呼的事件"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.desc": {
+          "source": "The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.",
+          "message": "向狀態回呼 URL 發送 POST 時使用的 HTTP 方法。可為 GET 或 POST。預設為 POST。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
+          "source": "Status Callback Method",
+          "message": "狀態回呼方法"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
+          "source": "HTTP method for status callbacks",
+          "message": "狀態回呼的 HTTP 方法"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes.",
+          "message": "設定為 true 以錄製整個通話。錄音將在通話結束後提供。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.display_name": {
+          "source": "Record",
+          "message": "錄音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "是否錄製通話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOm1vbm8.display_name": {
+          "source": "Mono",
+          "message": "單聲道"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOmR1YWw.display_name": {
+          "source": "Dual",
+          "message": "雙聲道"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.desc": {
+          "source": "The number of channels in the final recording. \"mono\" records both legs in a single channel, \"dual\" records each leg separately.",
+          "message": "最終錄音中的聲道數。\"mono\" 將雙方通話錄製在單一聲道，\"dual\" 則分別錄製各方通話。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
+          "source": "Recording Channels",
+          "message": "錄音聲道"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
+          "source": "Number of channels in the recording",
+          "message": "錄音中的聲道數"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.",
+          "message": "錄音可用時 Twilio 將發送 POST 請求的 URL。這讓您可以立即處理或儲存錄音。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Recording Status Callback",
+          "message": "錄音狀態回呼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to notify when recording is available",
+          "message": "錄音可用時通知的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.desc": {
+          "source": "The phone number, SIP address, or client identifier to call. Phone numbers must be in E.164 format (e.g., +15551234567).",
+          "message": "要撥打的電話號碼、SIP 位址或用戶端識別碼。電話號碼必須採用 E.164 格式（例如：+15551234567）。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "要撥打的電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.desc": {
+          "source": "The maximum duration of the call in seconds. The call will be automatically ended after this time.",
+          "message": "通話的最長持續秒數。超過此時間後通話將自動結束。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
+          "source": "Time Limit",
+          "message": "時間限制"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
+          "source": "Maximum call duration in seconds",
+          "message": "最大通話時長（秒）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "通話接聽前等待的逾時秒數。預設值為 60 秒，最大值為 600 秒。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "逾時"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "等待接聽的秒數"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.desc": {
+          "source": "TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.",
+          "message": "通話連線時要執行的 TwiML 指令。如果同時提供了 TwiML 和 URL，則以 TwiML 為優先。最多 4000 個字元。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.display_name": {
+          "source": "TwiML",
+          "message": "TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.short_desc": {
+          "source": "TwiML instructions for the call",
+          "message": "通話的 TwiML 指令"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.desc": {
+          "source": "The URL that Twilio will fetch TwiML instructions from when the call connects. This URL should return valid TwiML to control the call flow.",
+          "message": "通話連線時 Twilio 將從中擷取 TwiML 指令的 URL。此 URL 應傳回有效的 TwiML 以控制通話流程。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.display_name": {
+          "source": "TwiML URL",
+          "message": "TwiML URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.short_desc": {
+          "source": "URL that returns TwiML instructions",
+          "message": "傳回 TwiML 指令的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
+          "source": "Initiate an outbound phone call",
+          "message": "發起外撥電話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.desc": {
+          "source": "Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.",
+          "message": "發起帶有自動文字轉語音訊息的外撥電話。此簡化動作會根據您的輸入自動產生 TwiML，讓您無需手動編寫 TwiML 程式碼即可快速建立帶有語音訊息的通話。您可以自訂聲音、語言、錄製通話，並可選擇轉錄錄音。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
+          "source": "Create Call with Text-to-Speech",
+          "message": "建立文字轉語音通話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to use as the caller ID. This must be a phone number you own in your Twilio account.",
+          "message": "用作來電顯示的 Twilio 電話號碼。這必須是您在 Twilio 帳戶中擁有的電話號碼。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.short_desc": {
+          "source": "Your Twilio phone number",
+          "message": "您的 Twilio 電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5iLU5P.display_name": {
+          "source": "Norwegian (Norway)",
+          "message": "挪威語（挪威）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5sLU5M.display_name": {
+          "source": "Dutch (Netherlands)",
+          "message": "荷蘭語（荷蘭）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmFyYg.display_name": {
+          "source": "Arabic (Gulf)",
+          "message": "阿拉伯語（海灣）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmNtbi1DTg.display_name": {
+          "source": "Chinese (Mandarin)",
+          "message": "中文（普通話）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRhLURL.display_name": {
+          "source": "Danish (Denmark)",
+          "message": "丹麥語（丹麥）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "德文 (德國)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUFV.display_name": {
+          "source": "English (Australia)",
+          "message": "英語（澳洲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUNB.display_name": {
+          "source": "English (Canada)",
+          "message": "英語（加拿大）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "英文 (英國)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUlO.display_name": {
+          "source": "English (India)",
+          "message": "英語（印度）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "英文 (美國)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLU1Y.display_name": {
+          "source": "Spanish (Mexico)",
+          "message": "西班牙語（墨西哥）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "西班牙文 (西班牙)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLVVT.display_name": {
+          "source": "Spanish (United States)",
+          "message": "西班牙語（美國）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUNB.display_name": {
+          "source": "French (Canada)",
+          "message": "法語（加拿大）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "法文 (法國)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmhpLUlO.display_name": {
+          "source": "Hindi (India)",
+          "message": "印地語（印度）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "義大利文 (義大利)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "日文 (日本)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmtvLUtS.display_name": {
+          "source": "Korean (South Korea)",
+          "message": "韓語（南韓）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "葡萄牙文 (巴西)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LVBU.display_name": {
+          "source": "Portuguese (Portugal)",
+          "message": "葡萄牙語（葡萄牙）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnBsLVBM.display_name": {
+          "source": "Polish (Poland)",
+          "message": "波蘭語（波蘭）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnN2LVNF.display_name": {
+          "source": "Swedish (Sweden)",
+          "message": "瑞典語（瑞典）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnRyLVRS.display_name": {
+          "source": "Turkish (Turkey)",
+          "message": "土耳其語（土耳其）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).",
+          "message": "文字轉語音的語言與地區設定。這應與您的訊息文字語言相符。若未指定，預設為 en-US（英語，美國）。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "語言"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language for text-to-speech",
+          "message": "文字轉語音的語言"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "偵測訊息結束"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "啟用"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection to determine if a human or machine answered the call. \"Enable\" returns the result immediately, \"DetectMessageEnd\" waits for the voicemail beep before playing your message.",
+          "message": "啟用答錄機偵測以判斷是真人還是機器接聽通話。「Enable」會立即返回結果，「DetectMessageEnd」會等待語音信箱嗶聲後再播放您的訊息。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "機器偵測"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "啟用答錄機偵測"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.desc": {
+          "source": "The text message that will be spoken when the call is answered. This will be converted to speech using Twilio's text-to-speech engine.",
+          "message": "接聽通話時將朗讀的文字訊息。這將使用 Twilio 的文字轉語音引擎轉換為語音。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "訊息"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text message to speak",
+          "message": "要朗讀的文字訊息"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: \"w123#\" waits 0.5 seconds then dials 123#.",
+          "message": "通話接通後要撥打的一組按鍵字串。適用於自動導覽電話語音選單。有效字元：0-9、#、*、w（等待 0.5 秒）。例如：「w123#」會等待 0.5 秒，然後撥打 123#。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "傳送按鍵號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "連線後要傳送的 DTMF 音調"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.",
+          "message": "通話狀態變更時 Twilio 將發送 POST 請求的 URL。用於追蹤通話進度與完成情況。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "狀態回呼 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "接收通話狀態更新的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.",
+          "message": "設為 true 可錄製整個通話。錄音將在通話結束後提供，並可使用「列出錄音」動作進行檢索。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
+          "source": "Record Call",
+          "message": "錄製通話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "是否錄製通話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.desc": {
+          "source": "The phone number to call in E.164 format (e.g., +15551234567). You can also call SIP addresses or Twilio client identifiers.",
+          "message": "要撥打的電話號碼，格式為 E.164（例如：+15551234567）。您也可以撥打 SIP 位址或 Twilio 客戶端識別碼。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "要撥打的電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "通話接聽前等待的逾時秒數。預設值為 60 秒，最大值為 600 秒。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "逾時"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "等待接聽的秒數"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.desc": {
+          "source": "Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.",
+          "message": "設為 true 可自動轉錄通話錄音。這需要啟用「錄製通話」選項。轉錄內容將在處理完成後提供。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
+          "source": "Transcribe Recording",
+          "message": "轉錄錄音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
+          "source": "Whether to transcribe the recording",
+          "message": "是否轉錄錄音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.desc": {
+          "source": "The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.",
+          "message": "轉錄完成時 Twilio 將發送 POST 請求的 URL。這讓您能夠在轉錄內容可用時立即進行處理或儲存。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
+          "source": "Transcription Callback URL",
+          "message": "轉錄回呼 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
+          "source": "URL to receive transcription results",
+          "message": "接收轉錄結果的 URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5jbW4tQ04tU3RhbmRhcmQtQQ.display_name": {
+          "source": "Chinese (Mandarin) - Google Standard (Female)",
+          "message": "中文（普通話）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5kZS1ERS1TdGFuZGFyZC1B.display_name": {
+          "source": "German - Google Standard (Female)",
+          "message": "德語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1B.display_name": {
+          "source": "English (UK) - Google Standard (Female)",
+          "message": "英語（英國）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1C.display_name": {
+          "source": "English (UK) - Google Standard (Male)",
+          "message": "英語（英國）- Google Standard（男聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUE.display_name": {
+          "source": "English (US) - Google Neural (Female)",
+          "message": "英語（美國）- Google Neural（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUQ.display_name": {
+          "source": "English (US) - Google Neural (Male)",
+          "message": "英語（美國）- Google Neural（男聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1B.display_name": {
+          "source": "English (US) - Google Standard (Female)",
+          "message": "英語（美國）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1C.display_name": {
+          "source": "English (US) - Google Standard (Male)",
+          "message": "英語（美國）- Google Standard（男聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lcy1FUy1TdGFuZGFyZC1B.display_name": {
+          "source": "Spanish (Spain) - Google Standard (Female)",
+          "message": "西班牙語（西班牙）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1DQS1TdGFuZGFyZC1B.display_name": {
+          "source": "French (Canada) - Google Standard (Female)",
+          "message": "法語（加拿大）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1GUi1TdGFuZGFyZC1B.display_name": {
+          "source": "French (France) - Google Standard (Female)",
+          "message": "法語（法國）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5oaS1JTi1TdGFuZGFyZC1B.display_name": {
+          "source": "Hindi - Google Standard (Female)",
+          "message": "印地語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5pdC1JVC1TdGFuZGFyZC1B.display_name": {
+          "source": "Italian - Google Standard (Female)",
+          "message": "義大利語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5qYS1KUC1TdGFuZGFyZC1B.display_name": {
+          "source": "Japanese - Google Standard (Female)",
+          "message": "日語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5rby1LUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Korean - Google Standard (Female)",
+          "message": "韓語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5ubC1OTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Dutch - Google Standard (Female)",
+          "message": "荷蘭語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wbC1QTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Polish - Google Standard (Female)",
+          "message": "波蘭語 - Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wdC1CUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Portuguese (Brazil) - Google Standard (Female)",
+          "message": "葡萄牙語（巴西）- Google Standard（女聲）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdGhpZXUtTmV1cmFs.display_name": {
+          "source": "French (France) - Polly Mathieu (Male, Neural)",
+          "message": "法語（法國）- Polly Mathieu（男聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdHRoZXctTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Matthew (Male, Neural)",
+          "message": "英語（美國）- Polly Matthew（男聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk9sYS1OZXVyYWw.display_name": {
+          "source": "Polish - Polly Ola (Female, Neural)",
+          "message": "波蘭語 - Polly Ola（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFkcmlhbm8tTmV1cmFs.display_name": {
+          "source": "Italian - Polly Adriano (Male, Neural)",
+          "message": "義大利語 - Polly Adriano（男聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFteS1OZXVyYWw.display_name": {
+          "source": "English (UK) - Polly Amy (Female, Neural)",
+          "message": "英語（英國）- Polly Amy（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJpYW5jYS1OZXVyYWw.display_name": {
+          "source": "Italian - Polly Bianca (Female, Neural)",
+          "message": "義大利語 - Polly Bianca（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJyaWFuLU5ldXJhbA.display_name": {
+          "source": "English (UK) - Polly Brian (Male, Neural)",
+          "message": "英語（英國）- Polly Brian（男聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNhbWlsYS1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Camila (Female, Neural)",
+          "message": "葡萄牙語（巴西）- Polly Camila（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNlbGluZS1OZXVyYWw.display_name": {
+          "source": "French (France) - Polly Celine (Female, Neural)",
+          "message": "法語（法國）- Polly Celine（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkRhbmllbC1OZXVyYWw.display_name": {
+          "source": "German - Polly Daniel (Male, Neural)",
+          "message": "德語 - Polly Daniel（男聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkhhbGEtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Hala (Female, Neural)",
+          "message": "阿拉伯語 - Polly Hala（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvYW5uYS1OZXVyYWw.display_name": {
+          "source": "English (US) - Polly Joanna (Female, Neural)",
+          "message": "英語（美國）- Polly Joanna（女聲，Neural）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvZXktTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Joey (Male, Neural)",
+          "message": "英文 (美國) - Polly Joey (男聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthamFsLU5ldXJhbA.display_name": {
+          "source": "Hindi - Polly Kajal (Female, Neural)",
+          "message": "印地文 - Polly Kajal (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthenVoYS1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Kazuha (Female, Neural)",
+          "message": "日文 - Polly Kazuha (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1Y2lhLU5ldXJhbA.display_name": {
+          "source": "Spanish (Spain) - Polly Lucia (Female, Neural)",
+          "message": "西班牙文 (西班牙) - Polly Lucia (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1cGUtTmV1cmFs.display_name": {
+          "source": "Spanish (US) - Polly Lupe (Female, Neural)",
+          "message": "西班牙文 (美國) - Polly Lupe (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkxhdXJhLU5ldXJhbA.display_name": {
+          "source": "Dutch - Polly Laura (Female, Neural)",
+          "message": "荷蘭文 - Polly Laura (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlBlZHJvLU5ldXJhbA.display_name": {
+          "source": "Spanish (US) - Polly Pedro (Male, Neural)",
+          "message": "西班牙文 (美國) - Polly Pedro (男聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlNlb3llb24tTmV1cmFs.display_name": {
+          "source": "Korean - Polly Seoyeon (Female, Neural)",
+          "message": "韓文 - Polly Seoyeon (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRoaWFnby1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Thiago (Male, Neural)",
+          "message": "葡萄牙文 (巴西) - Polly Thiago (男聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRvbW9rby1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Tomoko (Female, Neural)",
+          "message": "日文 - Polly Tomoko (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlZpY2tpLU5ldXJhbA.display_name": {
+          "source": "German - Polly Vicki (Female, Neural)",
+          "message": "德文 - Polly Vicki (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpheWQtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Zayd (Male, Neural)",
+          "message": "阿拉伯文 - Polly Zayd (男聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpoaXl1LU5ldXJhbA.display_name": {
+          "source": "Chinese (Mandarin) - Polly Zhiyu (Female, Neural)",
+          "message": "中文 (國語) - Polly Zhiyu (女聲，Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.desc": {
+          "source": "The voice to use for text-to-speech. Choose from various voices with different languages, genders, and quality levels (Standard, Neural, Generative). If not specified, uses your account's default voice.",
+          "message": "用於文字轉語音的語音。可從具有不同語言、性別和品質等級 (Standard、Neural、Generative) 的各種語音中進行選擇。如果未指定，則使用您帳戶的預設語音。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.display_name": {
+          "source": "Voice",
+          "message": "語音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.short_desc": {
+          "source": "The voice to use for text-to-speech",
+          "message": "用於文字轉語音的語音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
+          "source": "Make a call with automated voice message",
+          "message": "使用自動語音訊息撥打電話"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.",
+          "message": "建立並啟動 Studio Flow 的新執行。這將觸發 Flow 以指定的聯絡人資訊和可在 Flow 內存取的選用參數執行。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Create an Execution",
+          "message": "建立執行"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow to execute. Flow SIDs start with \"FW\".",
+          "message": "要執行的 Studio Flow 的 SID。Flow SID 以「FW」開頭。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flow 的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to send messages or make calls from during the execution. Available as flow.channel.address. Can also be a Messaging Service SID.",
+          "message": "執行期間用於發送訊息或撥打電話的 Twilio 電話號碼。可作為 flow.channel.address 使用。也可以是 Messaging Service SID。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.short_desc": {
+          "source": "The Twilio phone number",
+          "message": "Twilio 電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.desc": {
+          "source": "JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow.",
+          "message": "將新增至 Flow 上下文並可作為變數存取的 JSON 資料。例如：具有 name 屬性的 JSON 物件在 Flow 中將可作為 flow.data.name 使用。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.display_name": {
+          "source": "Parameters",
+          "message": "參數"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.short_desc": {
+          "source": "JSON data for the flow context",
+          "message": "Flow 上下文的 JSON 資料"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.desc": {
+          "source": "The contact phone number to start the Flow execution with. Available in the flow as contact.channel.address.",
+          "message": "用於啟動 Flow 執行的聯絡人電話號碼。在 Flow 中可作為 contact.channel.address 使用。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.short_desc": {
+          "source": "The contact phone number",
+          "message": "聯絡人電話號碼"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Start a Studio Flow execution",
+          "message": "啟動 Studio Flow 執行"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.",
+          "message": "使用唯一 SID (字串識別碼) 擷取特定訊息的詳細資訊。這會傳回有關該訊息的所有可用資訊，包含狀態、內容、計費和時間戳記。"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get a Message",
+          "message": "取得訊息"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "要擷取的訊息唯一字串識別碼 (SID)。訊息 SID 以「SM」或「MM」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "訊息 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "訊息的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve details of a specific message",
+          "message": "擷取特定訊息的詳細資訊"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.desc": {
+          "source": "Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.",
+          "message": "使用唯一 SID 擷取特定通話的詳細資訊。這會傳回有關該通話的所有可用資訊，包含狀態、通話時間、計費和時間戳記。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
+          "source": "Get a Call",
+          "message": "取得通話"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to retrieve. Call SIDs start with \"CA\".",
+          "message": "要擷取的通話唯一字串識別碼 (SID)。通話 SID 以「CA」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call",
+          "message": "通話的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
+          "source": "Retrieve details of a specific call",
+          "message": "擷取特定通話的詳細資訊"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.desc": {
+          "source": "Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.",
+          "message": "擷取特定 Studio Flow 執行的詳細資訊，包含其目前狀態、上下文資料和狀態。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
+          "source": "Get an Execution",
+          "message": "取得執行"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with \"FN\".",
+          "message": "要擷取的執行唯一字串識別碼 (SID)。執行 SID 以「FN」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "執行 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "執行的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "包含該執行的 Studio Flow SID。Flow SID 以「FW」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flow 的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
+          "source": "Retrieve details of a specific execution",
+          "message": "擷取特定執行的詳細資訊"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.desc": {
+          "source": "Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.",
+          "message": "擷取特定通話錄音的詳細資訊，包含長度、狀態、計費、媒體 URL 和加密詳細資訊。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
+          "source": "Get a Recording",
+          "message": "取得錄音"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with \"RE\".",
+          "message": "要擷取的錄音唯一字串識別碼 (SID)。錄音 SID 以「RE」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "錄音 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "錄音的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
+          "source": "Retrieve details of a specific recording",
+          "message": "擷取特定錄音的詳細資訊"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.",
+          "message": "擷取特定逐字稿的詳細資訊，包含來自錄音的完整轉錄文字。這會傳回包含實際轉錄內容的 transcriptionText 欄位。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "Get a Transcription",
+          "message": "取得逐字稿"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording that contains the transcription. Recording SIDs start with \"RE\".",
+          "message": "包含該逐字稿的錄音 SID。錄音 SID 以「RE」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "錄音 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "錄音的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.desc": {
+          "source": "The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with \"TR\".",
+          "message": "要擷取的逐字稿唯一字串識別碼 (SID)。逐字稿 SID 以「TR」開頭。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.display_name": {
+          "source": "Transcription SID",
+          "message": "逐字稿 SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.short_desc": {
+          "source": "The unique identifier of the transcription",
+          "message": "逐字稿的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Retrieve a specific transcription with text",
+          "message": "擷取包含文字的特定逐字稿"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.",
+          "message": "從您的 Twilio 帳戶永久刪除訊息記錄。此操作無法復原。請注意，刪除訊息記錄並不會從 Twilio 記錄檔中隱蔽訊息內容。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete a Message",
+          "message": "刪除訊息"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to delete. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "要刪除的訊息唯一字串識別碼 (SID)。訊息 SID 以「SM」或「MM」開頭。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "訊息 SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message to delete",
+          "message": "要刪除的訊息唯一識別碼"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from your account",
+          "message": "從您的帳戶中刪除訊息"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.desc": {
+          "source": "Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.",
+          "message": "從您的 Twilio 帳戶永久刪除通話記錄。此操作無法復原。請注意，刪除通話記錄不會從 Twilio 記錄中遮蔽通話資料。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
+          "source": "Delete a Call",
+          "message": "刪除通話"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to delete. Call SIDs start with \"CA\".",
+          "message": "要刪除的通話唯一字串識別碼 (SID)。通話 SID 以「CA」開頭。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話 SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call to delete",
+          "message": "要刪除的通話唯一識別碼"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
+          "source": "Delete a call record from your account",
+          "message": "從您的帳戶刪除通話記錄"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Permanently delete an execution record from your Twilio account. This action cannot be undone.",
+          "message": "從您的 Twilio 帳戶永久刪除執行記錄。此操作無法復原。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Delete an Execution",
+          "message": "刪除執行"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to delete. Execution SIDs start with \"FN\".",
+          "message": "要刪除的執行唯一字串識別碼 (SID)。執行 SID 以「FN」開頭。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "執行 SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution to delete",
+          "message": "要刪除的執行唯一識別碼"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "包含該執行的 Studio Flow SID。Flow SID 以「FW」開頭。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flow 的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Delete an execution record",
+          "message": "刪除執行記錄"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.desc": {
+          "source": "Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.",
+          "message": "擷取特定通話錄音的逐字稿清單。逐字稿會將錄音中的音訊轉換為文字。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
+          "source": "List Transcriptions",
+          "message": "列出逐字稿"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of transcription records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的逐字稿記錄上限數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of transcriptions to return",
+          "message": "要傳回的逐字稿數量上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.desc": {
+          "source": "The number of transcription records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁傳回的逐字稿記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of transcriptions per page",
+          "message": "每頁逐字稿數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording whose transcriptions you want to list. Recording SIDs start with \"RE\".",
+          "message": "您要列出其逐字稿的錄音 SID。錄音 SID 以「RE」開頭。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "錄音 SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "錄音的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
+          "source": "Retrieve transcriptions for a recording",
+          "message": "擷取錄音的逐字稿"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.desc": {
+          "source": "Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "從您的 Twilio 帳戶擷取通話清單。您可以依參與者電話號碼、狀態、日期範圍和其他條件篩選通話。結果會以時間倒序傳回。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
+          "source": "List Calls",
+          "message": "列出通話"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.desc": {
+          "source": "Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間或之後結束的通話。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
+          "source": "End Time After",
+          "message": "結束時間晚於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
+          "source": "Filter by minimum end time",
+          "message": "依最早結束時間篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.desc": {
+          "source": "Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間或之前結束的通話。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
+          "source": "End Time Before",
+          "message": "結束時間早於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
+          "source": "Filter by maximum end time",
+          "message": "依最晚結束時間篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.desc": {
+          "source": "Only return calls from this phone number, SIP address, or client identifier.",
+          "message": "僅傳回來自此電話號碼、SIP 位址或用戶端識別碼的通話。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by caller phone number",
+          "message": "依發話者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of call records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的通話記錄上限數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of calls to return",
+          "message": "要傳回的通話數量上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.desc": {
+          "source": "Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間或之後開始的通話。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
+          "source": "Start Time After",
+          "message": "開始時間晚於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
+          "source": "Filter by minimum start time",
+          "message": "依最早開始時間篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.desc": {
+          "source": "Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間或之前開始的通話。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
+          "source": "Start Time Before",
+          "message": "開始時間早於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
+          "source": "Filter by maximum start time",
+          "message": "依最晚開始時間篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOm5vLWFuc3dlcg.display_name": {
+          "source": "No Answer",
+          "message": "無人接聽"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmJ1c3k.display_name": {
+          "source": "Busy",
+          "message": "忙線"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "已取消"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "已完成"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmZhaWxlZA.display_name": {
+          "source": "Failed",
+          "message": "失敗"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmluLXByb2dyZXNz.display_name": {
+          "source": "In Progress",
+          "message": "進行中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnF1ZXVlZA.display_name": {
+          "source": "Queued",
+          "message": "已排入佇列"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "響鈴中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.desc": {
+          "source": "Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.",
+          "message": "僅傳回具備此狀態的通話。選項包括：queued、ringing、in-progress、canceled、completed、failed、busy 或 no-answer。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.short_desc": {
+          "source": "Filter by call status",
+          "message": "依通話狀態篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.desc": {
+          "source": "The number of call records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁傳回的通話記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of calls per page",
+          "message": "每頁通話數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.desc": {
+          "source": "Only return calls made to this phone number, SIP address, or client identifier.",
+          "message": "僅傳回撥打至此電話號碼、SIP 位址或用戶端識別碼的通話。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "依收件者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
+          "source": "Retrieve a list of calls",
+          "message": "擷取通話清單"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.desc": {
+          "source": "Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.",
+          "message": "擷取特定 Studio Flow 的執行清單。您可以依日期範圍篩選執行，以尋找特定的執行個體。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
+          "source": "List Executions",
+          "message": "列出執行"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.desc": {
+          "source": "Only return executions created on or after this date and time, in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間或之後建立的執行，格式為 ISO 8601。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
+          "source": "Date Created From",
+          "message": "建立日期晚於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "依最早建立日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.desc": {
+          "source": "Only return executions created before this date and time, in ISO 8601 format.",
+          "message": "僅傳回在此日期和時間之前建立的執行，格式為 ISO 8601。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
+          "source": "Date Created To",
+          "message": "建立日期早於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "依最晚建立日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow whose executions you want to list. Flow SIDs start with \"FW\".",
+          "message": "您要列出其執行的 Studio Flow SID。Flow SID 以「FW」開頭。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flow 的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of execution records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的執行記錄上限數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of executions to return",
+          "message": "要傳回的執行數量上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.desc": {
+          "source": "The number of execution records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁傳回的執行記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of executions per page",
+          "message": "每頁執行數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
+          "source": "Retrieve executions for a Studio Flow",
+          "message": "擷取 Studio Flow 的執行"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.desc": {
+          "source": "Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.",
+          "message": "擷取附加至特定訊息的所有媒體檔案清單。這在存取 MMS 附件或透過 WhatsApp 或其他管道傳送的媒體時非常實用。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
+          "source": "List Message Media",
+          "message": "列出訊息媒體"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.desc": {
+          "source": "The maximum number of media records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的媒體記錄最大數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of media items to return",
+          "message": "要傳回的媒體項目最大數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message whose media you want to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "要擷取其媒體之訊息的唯一字串識別碼 (SID)。訊息 SID 以「SM」或「MM」開頭。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "訊息 SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "訊息的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.desc": {
+          "source": "The number of media records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁要傳回的媒體記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of media items per page",
+          "message": "每頁媒體項目數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
+          "source": "Retrieve media attached to a message",
+          "message": "擷取附加至訊息的媒體"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "從您的 Twilio 帳戶擷取訊息清單。您可以按收件者、寄件者、日期範圍及其他條件篩選訊息。結果按時間倒序傳回。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "列出訊息"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.desc": {
+          "source": "Only return messages sent on or after this date. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期或之後傳送的訊息。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
+          "source": "Date Sent After",
+          "message": "傳送日期晚於或等於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
+          "source": "Filter by minimum send date",
+          "message": "按最早傳送日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.desc": {
+          "source": "Only return messages sent on or before this date. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期或之前傳送的訊息。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
+          "source": "Date Sent Before",
+          "message": "傳送日期早於或等於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum send date",
+          "message": "按最晚傳送日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.desc": {
+          "source": "Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.",
+          "message": "僅傳回從此電話號碼或英數字元寄件者 ID 傳送的訊息。電話號碼格式應為 E.164。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "按寄件者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的訊息記錄最大數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "要返回的訊息最大數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.desc": {
+          "source": "The number of message records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁要傳回的訊息記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of messages per page",
+          "message": "每頁訊息數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.desc": {
+          "source": "Only return messages sent to this phone number. The phone number should be in E.164 format.",
+          "message": "僅傳回傳送至此電話號碼的訊息。電話號碼格式應為 E.164。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "依收件者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Retrieve a list of messages",
+          "message": "擷取訊息清單"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.desc": {
+          "source": "Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.",
+          "message": "從您的 Twilio 帳戶擷取通話錄音清單。您可以按通話 SID、會議 SID、日期範圍篩選錄音，並包含已軟刪除的錄音。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
+          "source": "List Recordings",
+          "message": "列出錄音"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only return recordings associated with this specific conference. The Conference SID should start with \"CF\".",
+          "message": "僅傳回與此特定會議關聯的錄音。會議 SID 應以「CF」開頭。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "會議 SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "按會議 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.desc": {
+          "source": "Only return recordings associated with this specific call. The Call SID should start with \"CA\".",
+          "message": "僅傳回與此特定通話關聯的錄音。通話 SID 應以「CA」開頭。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話 SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "按通話 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.desc": {
+          "source": "Only return recordings created on or after this date. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期或之後建立的錄音。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
+          "source": "Date Created After",
+          "message": "建立日期晚於或等於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "依最早建立日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.desc": {
+          "source": "Only return recordings created on or before this date. Provide the date in ISO 8601 format.",
+          "message": "僅傳回在此日期或之前建立的錄音。請以 ISO 8601 格式提供日期。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
+          "source": "Date Created Before",
+          "message": "建立日期早於或等於"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "依最晚建立日期篩選"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.desc": {
+          "source": "Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.",
+          "message": "是否包含已軟刪除的錄音。錄音中繼資料在刪除後會保留 40 天。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
+          "source": "Include Soft Deleted",
+          "message": "包含軟刪除項目"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
+          "source": "Include soft-deleted recordings",
+          "message": "包含已軟刪除的錄音"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of recording records to return. The default is 50 and the maximum is 1000.",
+          "message": "要傳回的錄音記錄最大數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of recordings to return",
+          "message": "要傳回的錄音最大數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.desc": {
+          "source": "The number of recording records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "每頁要傳回的錄音記錄數量。預設值為 50，最大值為 1000。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of recordings per page",
+          "message": "每頁錄音數量"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
+          "source": "Retrieve a list of call recordings",
+          "message": "擷取通話錄音清單"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Twilio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Twilio** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基本 URL)、選填的查詢參數、標頭及請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊傳回。\n\n當端點尚未在此應用程式中以第一級動作公開時，請使用此動作。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Twilio",
+          "message": "向 Twilio 發出自訂 API 呼叫"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.",
+          "message": "監控您的 Twilio 帳戶以尋找新的傳入或傳出訊息。您可以按收件者或寄件者電話號碼篩選訊息。每當偵測到符合篩選條件的新訊息時，就會觸發此觸發器。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "新訊息"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders.",
+          "message": "僅針對從此電話號碼或英數字元寄件者 ID 傳送的訊息觸發。電話號碼格式應為 E.164 (例如 +15551234567)。保留空白將針對所有寄件者觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "寄件者"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "按寄件者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.desc": {
+          "source": "Only trigger for messages sent to this phone number. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all recipients.",
+          "message": "僅針對傳送至此電話號碼的訊息觸發。電話號碼格式應為 E.164 (例如 +15551234567)。保留空白將針對所有收件者觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "收件者"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "依收件者電話號碼篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new SMS or MMS message is received",
+          "message": "接收到新的 SMS 或 MMS 訊息時觸發"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.desc": {
+          "source": "Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.",
+          "message": "監控您的 Twilio 帳戶以尋找新的通話錄音。您可以按特定通話 SID 或會議 SID 篩選錄音。每當偵測到符合篩選條件的新錄音時，就會觸發此觸發器。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
+          "source": "New Recording",
+          "message": "新錄音"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "僅針對與此特定會議關聯的錄音觸發。會議 SID 應以「CF」開頭。保留空白將針對所有會議觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "會議 SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "按會議 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "僅針對與此特定通話關聯的錄音觸發。通話 SID 應以「CA」開頭。保留空白將針對所有通話觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話 SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "按通話 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
+          "source": "Triggers when a new call recording is created",
+          "message": "建立新的通話錄音時觸發"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.",
+          "message": "透過檢查最新錄音來監控您的 Twilio 帳戶以尋找新的轉錄文字。您可以按特定通話 SID 或會議 SID 篩選。每當偵測到符合篩選條件之錄音的新轉錄文字時，就會觸發此觸發器。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "New Transcription",
+          "message": "新轉錄"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "僅針對來自與此特定會議關聯之錄音的轉錄文字觸發。會議 SID 應以「CF」開頭。保留空白將針對所有會議觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "會議 SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "按會議 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "僅針對來自與此特定通話關聯之錄音的轉錄文字觸發。通話 SID 應以「CA」開頭。保留空白將針對所有通話觸發。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話 SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "按通話 SID 篩選"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Triggers when a new recording transcription is created",
+          "message": "建立新的錄音轉錄文字時觸發"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Update the status of a Studio Flow execution. This is typically used to end an active execution early.",
+          "message": "更新 Studio Flow 執行的狀態。通常用於提早結束進行中的執行。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Update an Execution",
+          "message": "更新執行"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to update. Execution SIDs start with \"FN\".",
+          "message": "要更新之執行的唯一字串識別碼 (SID)。執行 SID 以「FN」開頭。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "執行 SID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "執行的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "包含該執行的 Studio Flow SID。Flow SID 以「FW」開頭。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flow 的唯一識別碼"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "使用中"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmVuZGVk.display_name": {
+          "source": "Ended",
+          "message": "已結束"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.desc": {
+          "source": "The status to set for the execution. Set to \"ended\" to terminate an active execution.",
+          "message": "要為執行設定的狀態。設定為「ended」以終止進行中的執行。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the execution",
+          "message": "執行的新狀態"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Update the status of an execution",
+          "message": "更新執行的狀態"
+        },
+        "app.VHdpbGlv.desc": {
+          "source": "Integrate with Twilio to send SMS messages, make voice calls, and manage your communications infrastructure. This integration allows you to automate messaging workflows, handle incoming calls and messages, and build powerful communication features into your applications.",
+          "message": "與 Twilio 整合以發送簡訊、撥打語音電話並管理您的通訊基礎設施。此整合可讓您將訊息工作流程自動化、處理來電與傳入訊息，並將強大的通訊功能建置到您的應用程式中。"
+        },
+        "app.VHdpbGlv.display_name": {
+          "source": "Twilio",
+          "message": "Twilio"
+        },
+        "app.VHdpbGlv.short_desc": {
+          "source": "Connect with Twilio to send SMS, make calls, and manage communications",
+          "message": "連接 Twilio 以發送簡訊、撥打電話並管理通訊"
+        }
+      }
+    }
+  }
+}

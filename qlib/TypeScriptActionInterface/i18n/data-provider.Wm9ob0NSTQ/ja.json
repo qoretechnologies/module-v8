@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
+          "message": "指定されたZoho CRMモジュールに入力されたフィールド値で新しいレコードを作成します。作成および変更のタイムスタンプとともにレコードIDを返します。Created_ByおよびModified_Byフィールドにはレコードを作成したユーザー情報が含まれます。DocumentsとProjectsを除くすべての標準およびカスタムモジュールをサポートします。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "レコードを作成"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.",
+          "message": "新しいレコードを作成する対象のZoho CRMモジュール（Leads、Contacts、Deals、Accounts、Products、Vendors、カスタムモジュールなど）を選択します。利用可能なモジュールとそのAPI名の一覧を取得するにはModules APIを使用します。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module where the record will be created",
+          "message": "レコードが作成されるZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).",
+          "message": "新しいレコードのフィールド値を、キーをフィールドAPI名とするキーと値のペアとして指定します。利用可能なフィールドとその型は、選択したモジュールに基づいて動的に読み込まれます。必須フィールドを含める必要があり、フィールド値は期待されるデータ型（text、number、date、picklist、lookupなど）と一致している必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Record Properties",
+          "message": "レコードのプロパティ"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values for the new record",
+          "message": "新しいレコードのフィールド値"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in a Zoho CRM module",
+          "message": "Zoho CRMモジュールに新しいレコードを作成します"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.desc": {
+          "source": "Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.",
+          "message": "Zoho CRMモジュールの指定されたレコードに1つ以上のタグを追加します。タグは管理、フィルタリング、検索を容易にするためにレコードを分類および整理するラベルです。レコードあたり最大10個のタグを追加でき、モジュールごとに最大100個のタグが存在できます。正常にタグ付けされたレコードと、タグ付けできなかったロックされたレコードの件数を返します。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
+          "source": "Add Tags to Records",
+          "message": "レコードにタグを追加"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.desc": {
+          "source": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.",
+          "message": "trueに設定すると、指定されたレコードの既存のタグをすべて新しいタグで置き換えます。false（デフォルト）に設定すると、既存のタグを保持したまま新しいタグを追加します。trueに設定すると現在のタグがすべて削除されるため、このオプションは慎重に使用してください。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
+          "source": "Overwrite Existing Tags",
+          "message": "既存のタグを上書き"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
+          "source": "Replace all existing tags on the records",
+          "message": "レコード上のすべての既存のタグを置換"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.",
+          "message": "タグ付けするレコードが含まれるZoho CRMモジュール（Leads、Contacts、Deals、Accounts、カスタムモジュールなど）を選択します。タグはモジュール固有であり、レコードに追加する前にモジュール内に存在している必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the records",
+          "message": "レコードを含むZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.desc": {
+          "source": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.",
+          "message": "タグを追加する一意のレコードIDのリスト。1回のAPI呼び出しにつき最大500個のレコードIDを指定できます。有効なレコードIDを取得するには、Get Records APIまたは検索APIを使用してください。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.display_name": {
+          "source": "Record IDs",
+          "message": "レコードID"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.short_desc": {
+          "source": "IDs of the records to tag",
+          "message": "タグ付けするレコードのID"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.desc": {
+          "source": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.",
+          "message": "レコードに追加するタグを指定します。各タグにはIDと名前を含める必要があります。両方が指定された場合、タグIDが名前よりも優先されます。オプションでcolor_code（16進数値）を含めることができます。利用可能なタグとそのIDを取得するには、List Tagsアクションを使用してください。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
+          "source": "Tags to Add",
+          "message": "追加するタグ"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
+          "source": "List of tags to add to the records",
+          "message": "レコードに追加するタグのリスト"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
+          "source": "Add tags to one or more records in a module",
+          "message": "モジュール内の1つ以上のレコードにタグを追加します"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.",
+          "message": "一意のレコードIDを使用して、指定されたZoho CRMモジュールから特定のレコードの詳細情報を取得します。標準フィールド（Created_Time、Modified_Time、Created_By、Modified_By）およびカスタムフィールドを含む、レコードのすべてのフィールド値を返します。サブフォームデータ、複数選択ルックアップフィールド、複数ユーザールックアップフィールドもレスポンスに含まれます。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "レコードを取得"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.",
+          "message": "取得するレコードが含まれるZoho CRMモジュール（Leads、Contacts、Deals、Accounts、カスタムモジュールなど）を選択します。モジュールがAPI操作をサポートしており、ユーザーに読み取り権限が必要です。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "レコードを含むZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.",
+          "message": "取得するレコードの一意のレコードIDを入力または選択します。レコードIDはGet Records API、検索結果、またはWebhook通知から取得できます。レコードは指定されたモジュールに存在する必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "レコードID"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to retrieve",
+          "message": "取得するレコードの一意の識別子"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a single record from a Zoho CRM module",
+          "message": "Zoho CRMモジュールから単一のレコードを取得します"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」の指定されたテーブルからレコードを削除します"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」の指定されたテーブルからレコードを削除します"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.",
+          "message": "一意のレコードIDを使用して、指定されたZoho CRMモジュールから特定のレコードを完全に削除します。モジュールでごみ箱機能が有効になっている場合、削除されたレコードはごみ箱に移動され、復元できます。それ以外の場合、削除は完全に行われます。ユーザーはそのモジュールに対する削除権限を持っている必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "レコードを削除"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.",
+          "message": "削除するレコードが含まれるZoho CRMモジュール（見込み客、連絡先、商談、取引先、カスタムモジュールなど）を選択します。モジュールはAPI操作をサポートしている必要があり、ユーザーは削除権限を持っている必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "レコードを含むZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.",
+          "message": "削除するレコードの一意のレコードIDを入力または選択します。レコードIDはGet Records APIを使用して取得できます。すでに削除されているレコードを削除しようとするとエラーが発生します。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "レコードID"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to delete",
+          "message": "削除するレコードの一意の識別子"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from a Zoho CRM module",
+          "message": "Zoho CRMモジュールからレコードを削除"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.desc": {
+          "source": "Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.",
+          "message": "特定のZoho CRMモジュール用に作成されたすべてのタグを取得します。タグは、検索やフィルタリングを容易にするためにモジュール内のレコードを分類および整理するために使用されるラベルです。各タグには、名前、ID、カラーコード、および作成日時と変更日時に関するメタデータが含まれます。モジュールごとに最大100個のタグ、レコードごとに最大10個のタグを追加できます。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "タグのリスト取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.",
+          "message": "タグを取得するZoho CRMモジュール（見込み客、連絡先、商談、カスタムモジュールなど）を選択します。各モジュールは独自のタグセットを保持します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve tags from",
+          "message": "タグを取得するZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.desc": {
+          "source": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.",
+          "message": "trueに設定すると、現在のユーザーが作成したタグのみが返されます。falseに設定するか指定しない場合、作成者に関係なくモジュール内のすべてのタグが返されます。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
+          "source": "My Tags Only",
+          "message": "自分のタグのみ"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
+          "source": "Retrieve only tags created by you",
+          "message": "自分が作成したタグのみを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve tags available in a Zoho CRM module",
+          "message": "Zoho CRMモジュールで使用可能なタグを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.",
+          "message": "ページネーションとユーザータイプによるフィルタリングをサポートし、Zoho CRM組織内のユーザーのリストを取得します。名前、メール、役割、プロフィール、タイムゾーン、ロケール設定、カスタマイズ設定、アカウントステータスなどの包括的なユーザー情報を返します。プロフィールやステータスに基づいてユーザーをフィルタリングするには、typeパラメータを使用します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.",
+          "message": "取得する結果のページを指定します（最初のページは1から始まります）。ユーザーデータの複数ページをナビゲートするには、このパラメータをper_pageとともに使用します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "ページ番号"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
+          "source": "The page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.",
+          "message": "1回のAPIリクエストで返すユーザー数を指定します。有効な値は1〜200です。デフォルト値は20です。大規模な結果セットをページネーションするには、このパラメータをpageパラメータとともに使用します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Users Per Page",
+          "message": "1ページあたりのユーザー数"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of users to return per page",
+          "message": "1ページあたりに返すユーザー数"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Not Confirmed Users",
+          "message": "未確認のユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have not confirmed their accounts.",
+          "message": "アカウントを確認していないユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.display_name": {
+          "source": "Active Confirmed Admins",
+          "message": "アクティブで確認済みの管理者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.short_desc": {
+          "source": "Retrieves active and confirmed administrators.",
+          "message": "アクティブで確認済みの管理者を取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Active Confirmed Users",
+          "message": "アクティブで確認済みのユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who are both active and confirmed.",
+          "message": "アクティブかつ確認済みのユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.display_name": {
+          "source": "Active Users",
+          "message": "アクティブなユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.short_desc": {
+          "source": "Retrieves only active users.",
+          "message": "アクティブなユーザーのみを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.display_name": {
+          "source": "Admin Users",
+          "message": "管理者ユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.short_desc": {
+          "source": "Retrieves users with Administrator privileges.",
+          "message": "管理者権限を持つユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.display_name": {
+          "source": "All Users",
+          "message": "すべてのユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.short_desc": {
+          "source": "Retrieves all users (both active and inactive).",
+          "message": "すべてのユーザー（アクティブおよび非アクティブの両方）を取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.display_name": {
+          "source": "Current User",
+          "message": "現在のユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.short_desc": {
+          "source": "Retrieves the currently logged-in CRM user.",
+          "message": "現在ログインしているCRMユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Confirmed Users",
+          "message": "確認済みのユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have confirmed their accounts.",
+          "message": "アカウントを確認したユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.display_name": {
+          "source": "Deactive Users",
+          "message": "無効化されたユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.short_desc": {
+          "source": "Retrieves users who have been deactivated.",
+          "message": "無効化されたユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.display_name": {
+          "source": "Deleted Users",
+          "message": "削除されたユーザー"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.short_desc": {
+          "source": "Retrieves users who have been deleted.",
+          "message": "削除されたユーザーを取得します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.desc": {
+          "source": "Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).",
+          "message": "特定のカテゴリのユーザーを取得するためのオプションのフィルター。オプションには以下が含まれます: AllUsers（アクティブおよび非アクティブの両方）、ActiveUsers（アクティブなユーザーのみ）、DeactiveUsers（無効化されたユーザー）、ConfirmedUsers（アカウントを確認したユーザー）、NotConfirmedUsers（未確認のユーザー）、DeletedUsers（削除されたユーザー）、ActiveConfirmedUsers（アクティブで確認済み）、AdminUsers（管理者権限を持つユーザー）、ActiveConfirmedAdmins（アクティブで確認済みの管理者）、CurrentUser（現在認証されているCRMユーザー）。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
+          "source": "User Type Filter",
+          "message": "ユーザータイプフィルター"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
+          "source": "Filter users by type or status",
+          "message": "タイプまたはステータスでユーザーをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve users from your Zoho CRM organization",
+          "message": "Zoho CRM組織からユーザーを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.desc": {
+          "source": "Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.",
+          "message": "フィールドタイプ、ラベル、API名、データ型、検証ルール、選択リストの値、ルックアップ設定、権限など、特定のZoho CRMモジュール内のすべてのフィールドに関する包括的なメタデータを取得します。この情報は、モジュール構造の理解、動的フォームの構築、またはレコードの作成・更新前のデータ検証に不可欠です。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
+          "source": "List Module Fields",
+          "message": "モジュールフィールドを一覧表示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.",
+          "message": "フィールドのメタデータを取得するZoho CRMモジュールを選択します。APIは、モジュール内の標準フィールド（システム定義）およびカスタムフィールド（ユーザー定義）を含むすべてのフィールドに関する詳細情報を返します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve fields from",
+          "message": "フィールドを取得するZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
+          "source": "Retrieve field metadata for a Zoho CRM module",
+          "message": "Zoho CRMモジュールのフィールドメタデータを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.desc": {
+          "source": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.",
+          "message": "標準モジュール（見込み客、連絡先、商談、取引先など）およびカスタムモジュールの両方を含む、Zoho CRM組織内のすべてのモジュールのメタデータを取得します。モジュール権限、API名、表示ラベル、およびモジュールが作成可能、編集可能、削除可能か、グローバル検索やクイック作成などの機能をサポートしているかなどの機能を含む包括的な詳細情報を返します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
+          "source": "List Modules",
+          "message": "モジュールを一覧表示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN5c3RlbV9oaWRkZW4.display_name": {
+          "source": "System Hidden",
+          "message": "システム非表示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9mb3JfZGVsZXRpb24.display_name": {
+          "source": "Scheduled for Deletion",
+          "message": "削除予定"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnVzZXJfaGlkZGVu.display_name": {
+          "source": "User Hidden",
+          "message": "ユーザー非表示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "表示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.desc": {
+          "source": "Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.",
+          "message": "特定のステータスのモジュールのみを取得するためのオプションのフィルター。オプションには以下が含まれます: visible（UIに表示されるアクティブなモジュール）、user_hidden（ユーザーによって非表示にされたモジュール）、system_hidden（システムによって非表示にされたモジュール）、scheduled_for_deletion（削除対象としてマークされたモジュール）。指定しない場合、すべてのモジュールが返されます。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
+          "source": "Module Status Filter",
+          "message": "モジュールステータスフィルター"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
+          "source": "Filter modules by their status",
+          "message": "ステータスでモジュールをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
+          "source": "Retrieve all available modules in Zoho CRM",
+          "message": "Zoho CRMで使用可能なすべてのモジュールを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.",
+          "message": "フィールドの選択、ページネーション、並べ替え、フィルタリングをサポートし、指定されたZoho CRMモジュールからレコードのリストを取得します。返すフィールドの指定（最大50個のフィールドAPI名）、フィールドによる昇順または降順の並べ替え、トークンを使用したページの移動が可能です。レコードデータと後続のページを取得するためのページネーション用のトークンの両方を返します。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "レコード一覧"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.",
+          "message": "各レコードで取得するフィールドAPI名を選択します。最大50個のフィールドAPI名を含めることができます。利用可能なフィールドのリストを取得するには、Fields Metadata APIを使用します。デフォルトでは、IDフィールドのみが返されます。必要に応じて、Last_Name、Email、Created_Time、またはカスタムフィールド名などのフィールドを追加してください。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields to Return",
+          "message": "返すフィールド"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specify which fields to include in the response",
+          "message": "レスポンスに含めるフィールドを指定"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.desc": {
+          "source": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.",
+          "message": "取得する特定のレコードIDのオプションリスト。指定した場合、これらのIDを持つレコードのみが返されます。これは、すべてのレコードをページ分割するのではなく、特定のレコードセットを取得する場合に役立ちます。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.display_name": {
+          "source": "Record IDs",
+          "message": "レコードID"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.short_desc": {
+          "source": "Filter by specific record IDs",
+          "message": "特定のレコードIDでフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.",
+          "message": "レコードを取得するZoho CRMモジュール（見込み客、連絡先、商談、取引先、カスタムモジュールなど）を選択します。モジュールはAPI操作をサポートしている必要があり、ユーザーは読み取り権限を持っている必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve records from",
+          "message": "レコードを取得するZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.",
+          "message": "レスポンス内のレコードの並び替え方法を指定します。id、Created_Time、Modified_Timeなどのフィールドを基準に、昇順（古い順）または降順（新しい順）で並び替えることができます。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort Configuration",
+          "message": "並び替え設定"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "返されるレコードのソート方法を設定します"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.",
+          "message": "前のレスポンスに含まれるnext_page_token値を使用して、次のページのレコードを取得します。最初のページの場合は空のままにしてください。page_tokenはリクエストで使用されたパラメーターに関連付けられているため、トークン使用時は他のパラメーターを変更しないでください。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "ページトークン"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "結果の次のページを取得するためのトークン"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.",
+          "message": "1回のアクションで返すレコード数を指定します。有効な値は1〜200です。デフォルト値は20です。大量の結果セットをページネーションして取得する際は、このパラメーターをpage_tokenと一緒に使用してください。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
+          "source": "Records Per Page",
+          "message": "1ページあたりのレコード数"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of records to return per page",
+          "message": "1ページあたりに返すレコード数"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve multiple records from a Zoho CRM module",
+          "message": "Zoho CRMモジュールから複数のレコードを取得"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証情報を使用して、**Zoho CRM**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、任意のクエリパラメーター、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoho CRM",
+          "message": "Zoho CRMへのカスタムAPI呼び出しを実行"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.",
+          "message": "指定されたZoho CRMモジュールで新規作成されたレコードを監視し、新しいレコードが検出されたときにトリガーされます。トリガーは作成日時の降順でソートされたレコードをポーリングします。電話番号、メールアドレス、キーワード、または特定のフィールド値でレコードをフィルタリングし、条件に一致するレコードのみでトリガーすることも可能です。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新規レコード"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.desc": {
+          "source": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "レコード内で検索する任意のメールアドレス。指定した場合、このメールアドレスを含むレコードのみがイベントをトリガーします。これにはZoho CRM検索APIを使用して一致するレコードを検索します。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "メールアドレスフィルタ"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
+          "source": "Filter records by email address",
+          "message": "メールアドレスでレコードをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.desc": {
+          "source": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison.",
+          "message": "検索条件を作成するためのフィールドと値のペアの任意のリスト。指定した場合、指定されたすべてのフィールドが対応する値と一致するレコードのみがイベントをトリガーします。各フィールドの比較には「equals（一致）」演算子が使用されます。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
+          "source": "Field Filters",
+          "message": "フィールドフィルター"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
+          "source": "Filter records by specific field values",
+          "message": "特定のフィールド値でレコードをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.",
+          "message": "新規作成レコードを監視するZoho CRMモジュール（Leads、Contacts、Deals、Accounts、またはカスタムモジュールなど）を選択します。Modules Metadata APIによって返されるモジュールAPI名を使用してください。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to monitor for new records",
+          "message": "新しいレコードを監視するZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.desc": {
+          "source": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "レコード内で検索する任意の電話番号。指定した場合、この電話番号を含むレコードのみがイベントをトリガーします。これにはZoho CRM検索APIを使用して一致するレコードを検索します。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
+          "source": "Phone Filter",
+          "message": "電話番号フィルター"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
+          "source": "Filter records by phone number",
+          "message": "電話番号でレコードをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.desc": {
+          "source": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.",
+          "message": "レコード内のすべての検索可能フィールドを対象に検索する任意のキーワード。指定した場合、このキーワードを含むレコードのみがイベントをトリガーします。これにはZoho CRM検索APIを使用して包括的なテキスト検索を実行します。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
+          "source": "Keyword Search",
+          "message": "キーワード検索"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
+          "source": "Filter records by keyword",
+          "message": "キーワードでレコードをフィルタリング"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in a Zoho CRM module",
+          "message": "Zoho CRMモジュールで新しいレコードが作成されたときにトリガー"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルの既存のレコードを更新します"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルの既存のレコードを更新します"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
+          "message": "指定されたZoho CRMモジュールの既存レコードを指定されたフィールド値で更新します。レコードIDと更新日時タイムスタンプを返します。指定したフィールドのみが更新され、その他のフィールドは変更されません。レコードが存在し、ユーザーがそのモジュールに対する更新権限を持っている必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "レコードを更新"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.",
+          "message": "更新するレコードが含まれているZoho CRMモジュール（Leads、Contacts、Deals、Accounts、またはカスタムモジュールなど）を選択します。モジュールがAPI操作をサポートしており、ユーザーが適切な権限を持っている必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "モジュール"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "レコードを含むZoho CRMモジュール"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.",
+          "message": "更新するフィールド値を、フィールドAPI名をキーとするキー・値のペアとして指定します。変更するフィールドのみを含めてください。指定されていないフィールドは現在の値を保持します。フィールド値は予期されるデータ型および検証ルールに一致している必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "更新されたプロパティ"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values to update on the record",
+          "message": "レコード上で更新するフィールド値"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.",
+          "message": "更新するレコードの一意のレコードIDを入力または選択します。レコードIDはGet Records APIを使用するか、Webhook通知から取得できます。レコードは指定されたモジュールに存在している必要があります。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "レコードID"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to update",
+          "message": "更新するレコードの一意の識別子"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Update an existing record in a Zoho CRM module",
+          "message": "Zoho CRMモジュール内の既存レコードを更新"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルのレコードをアップサートします"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "レコードのアップサート"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "アプリ「ZohoCRM」内の指定されたテーブルのレコードをアップサートします"
+        },
+        "app.Wm9ob0NSTQ.desc": {
+          "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
+          "message": "Zoho CRM連携は、全7つのグローバルデータセンター（US、AU、EU、IN、CN、JP、CA）にわたってZoho CRM APIとやり取りするための包括的なアクションとトリガーを提供します。カスタムモジュール、一括操作、リアルタイムトリガーのサポートにより、CRMワークフローを自動化しながらモジュール、レコード、ユーザー、ロールを効率的に管理できます。"
+        },
+        "app.Wm9ob0NSTQ.display_name": {
+          "source": "Zoho CRM",
+          "message": "Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.short_desc": {
+          "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
+          "message": "Zoho CRMに接続し、すべてのグローバルデータセンターにわたる顧客関係管理を自動化します。"
+        }
+      }
+    }
+  }
+}

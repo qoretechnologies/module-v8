@@ -1,0 +1,1005 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Create a new item in a Craft collection with a title and optional custom properties. This allows you to programmatically add entries to your structured collections.",
+          "message": "Створити новий елемент у колекції Craft із заголовком і необов'язковими настроюваними властивостями. Це дозволяє програмно додавати записи до ваших структурованих колекцій."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Create Collection Item",
+          "message": "Створити елемент колекції"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection where you want to create the new item. The collection must exist before you can add items to it.",
+          "message": "Виберіть колекцію Craft, у якій ви хочете створити новий елемент. Колекція повинна існувати перед тим, як ви зможете додавати до неї елементи."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Колекція"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to add the item to",
+          "message": "Колекція, до якої потрібно додати елемент"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Add custom properties to the collection item. The available properties are dynamically determined based on the schema of the selected collection.",
+          "message": "Додати настроювані властивості до елемента колекції. Доступні властивості визначаються динамічно на основі схеми вибраної колекції."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Властивості"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Custom properties for the item",
+          "message": "Настроювані властивості для елемента"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a title for the new collection item. This is the main identifier for the item within the collection.",
+          "message": "Укажіть заголовок для нового елемента колекції. Це основний ідентифікатор елемента в колекції."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "Title of the new collection item",
+          "message": "Заголовок нового елемента колекції"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Add a new item to a collection",
+          "message": "Додати новий елемент до колекції"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note).",
+          "message": "Створити нове завдання в Craft із вмістом markdown, необов'язковою інформацією про завдання (стан, розклад, крайній термін) і розташуванням (вхідні або щоденна нотатка)."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Створити завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.desc": {
+          "source": "Where to create the task: in the task inbox or a specific daily note",
+          "message": "Де створити завдання: у вхідних завданнях або конкретній щоденній нотатці"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Розташування"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.short_desc": {
+          "source": "Where to create the task",
+          "message": "Де створити завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "The task content in markdown format. This will be the task's text.",
+          "message": "Вміст завдання у форматі markdown. Це буде текст завдання."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "Вміст завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the task",
+          "message": "Вміст markdown для завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.desc": {
+          "source": "Optional task metadata including state, schedule date, and deadline date",
+          "message": "Необов'язкові метадані завдання, включаючи стан, дату розкладу та дату крайнього терміну"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
+          "source": "Task Information",
+          "message": "Інформація про завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
+          "source": "Additional task details",
+          "message": "Додаткові деталі завдання"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Add a new task",
+          "message": "Додати нове завдання"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.desc": {
+          "source": "Fetch all blocks from a Craft daily note for a specific date. You can retrieve blocks from today, yesterday, tomorrow, or any custom date, with control over the depth and metadata of the returned content.",
+          "message": "Отримати всі блоки зі щоденної нотатки Craft за певну дату. Ви можете отримати блоки за сьогодні, вчора, завтра або будь-яку іншу дату з контролем глибини та метаданих повернутого вмісту."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
+          "source": "Get Daily Note Blocks",
+          "message": "Отримати блоки щоденної нотатки"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.desc": {
+          "source": "Select a specific date to retrieve the daily note blocks. If not provided, you can use the \"Day\" option to select relative dates like today, yesterday, or tomorrow.",
+          "message": "Виберіть конкретну дату для отримання блоків щоденної нотатки. Якщо її не вказано, ви можете використовувати опцію \"День\", щоб вибрати відносні дати, такі як сьогодні, вчора або завтра."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.display_name": {
+          "source": "Date",
+          "message": "Дата"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.short_desc": {
+          "source": "Specific date for the daily note",
+          "message": "Конкретна дата для щоденної нотатки"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvZGF5.display_name": {
+          "source": "Today",
+          "message": "Сьогодні"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvbW9ycm93.display_name": {
+          "source": "Tomorrow",
+          "message": "Завтра"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnllc3RlcmRheQ.display_name": {
+          "source": "Yesterday",
+          "message": "Вчора"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.desc": {
+          "source": "Choose a relative day option such as today, yesterday, or tomorrow to retrieve the corresponding daily note blocks.",
+          "message": "Виберіть опцію відносного дня, наприклад сьогодні, вчора або завтра, щоб отримати відповідні блоки щоденної нотатки."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.display_name": {
+          "source": "Day",
+          "message": "День"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.short_desc": {
+          "source": "Relative day selector",
+          "message": "Селектор відносного дня"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response.",
+          "message": "Увімкніть цю опцію, щоб включити до відповіді додаткові метадані для кожного блоку, такі як дата створення, дата останньої зміни та інформація про автора."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "Отримати метадані"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "Включити метадані до відповіді"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved.",
+          "message": "Укажіть максимальну глибину отримання вкладених блоків. Використовуйте -1 для необмеженої глибини або вкажіть додатне число, щоб обмежити глибину отримання структури вкладених блоків."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Максимальна глибина"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "Максимальна глибина для вкладених блоків"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
+          "source": "Retrieve blocks from a daily note",
+          "message": "Отримати блоки з щоденної нотатки"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.desc": {
+          "source": "Delete one or more blocks from a Craft document by providing their block IDs. This action permanently removes the specified blocks.",
+          "message": "Видаліть один або кілька блоків із документа Craft, вказавши їхні ID блоків. Ця дія назавжди видаляє вказані блоки."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
+          "source": "Delete Blocks",
+          "message": "Видалити блоки"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.desc": {
+          "source": "Provide a list of block IDs that you want to remove from the document. You can delete multiple blocks in a single operation.",
+          "message": "Укажіть список ID блоків, які ви хочете вилучити з документа. Ви можете видалити кілька блоків за одну операцію."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.display_name": {
+          "source": "Block IDs",
+          "message": "ID блоків"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.short_desc": {
+          "source": "IDs of blocks to delete",
+          "message": "ID блоків для видалення"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
+          "source": "Remove blocks from a document",
+          "message": "Вилучити блоки з документа"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.desc": {
+          "source": "Delete one or more items from a Craft collection by providing their IDs. This action permanently removes the specified items from the collection.",
+          "message": "Видаліть один або кілька елементів із колекції Craft, вказавши їхні ID. Ця дія назавжди видаляє вказані елементи з колекції."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
+          "source": "Delete Collection Items",
+          "message": "Видалити елементи колекції"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the items you want to delete.",
+          "message": "Виберіть колекцію Craft, яка містить елементи, що ви хочете видалити."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Колекція"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the items",
+          "message": "Колекція, що містить елементи"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.desc": {
+          "source": "Provide a list of item IDs that you want to remove from the collection. You can select multiple items to delete in a single operation.",
+          "message": "Укажіть список ID елементів, які ви хочете вилучити з колекції. Ви можете вибрати кілька елементів для видалення за одну операцію."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.display_name": {
+          "source": "Item IDs",
+          "message": "ID елементів"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.short_desc": {
+          "source": "IDs of items to delete",
+          "message": "ID елементів для видалення"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
+          "source": "Remove items from a collection",
+          "message": "Вилучити елементи з колекції"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.desc": {
+          "source": "Delete one or more tasks from your Craft workspace by providing their task IDs. This action permanently removes the specified tasks.",
+          "message": "Видаліть одне або кілька завдань із вашого робочого простору Craft, вказавши їхні ID завдань. Ця дія назавжди видаляє вказані завдання."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
+          "source": "Delete Tasks",
+          "message": "Видалити завдання"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.desc": {
+          "source": "Provide a list of task IDs that you want to remove. You can delete multiple tasks in a single operation.",
+          "message": "Укажіть список ID завдань, які ви хочете вилучити. Ви можете видалити кілька завдань за одну операцію."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "ID завдань"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.short_desc": {
+          "source": "IDs of tasks to delete",
+          "message": "ID завдань для видалення"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
+          "source": "Remove tasks",
+          "message": "Вилучити завдання"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.desc": {
+          "source": "Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page.",
+          "message": "Вставте новий блок із вмістом markdown у документ Craft. Ви можете вказати, чи вставляти блок на початку чи в кінці цільової сторінки."
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
+          "source": "Insert Block",
+          "message": "Вставити блок"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.desc": {
+          "source": "\n          The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:\n\n\n\n          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.\n\n          - <caption> for caption text style. Can be used to wrap a paragraph.\n\n          - <highlight color=''> for highlights - color is optional. Can only be used inline.\n          ",
+          "message": "\n          Вміст Markdown для вставки. Відокремлюйте кожен абзац та заголовок двома символами нового рядка. Відокремлюйте кожен елемент списку одним символом нового рядка. Перший елемент у будь-якому списку не може бути порожнім. Специфічні для Craft токени — це теги HTML.:\n\n\n\n          - <callout> для виносних блоків. Може використовуватися для обгортання кількох абзаців/зображень тощо.\n\n          - <caption> для стилю тексту підпису. Може використовуватися для обгортання абзацу.\n\n          - <highlight color=''> для виділення коліром — колір необов'язковий. Може використовуватися лише вбудовано.\n          "
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
+          "source": "Markdown Content",
+          "message": "Вміст у форматі Markdown"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the block",
+          "message": "Вміст markdown для блоку"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.desc": {
+          "source": "Specify the position where the block should be inserted within the document.",
+          "message": "Укажіть позицію, куди слід вставити блок у документі."
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Позиція"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.short_desc": {
+          "source": "Where to insert the block",
+          "message": "Де вставити блок"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
+          "source": "Add a new block to a document",
+          "message": "Додати новий блок до документа"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.desc": {
+          "source": "Get a list of tasks from your Craft workspace filtered by scope. You can retrieve active tasks, upcoming tasks, inbox tasks, or tasks from your logbook.",
+          "message": "Отримайте список завдань із вашого робочого простору Craft, відфільтрованих за областю. Ви можете отримати активні завдання, майбутні завдання, завдання зі скриньки «Вхідні» або завдання з журналу."
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Отримати список завдань"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Активний"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmluYm94.display_name": {
+          "source": "Inbox",
+          "message": "Вхідні"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmxvZ2Jvb2s.display_name": {
+          "source": "Logbook",
+          "message": "Журнал"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Upcoming",
+          "message": "Майбутні"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.desc": {
+          "source": "Filter tasks by scope: - 'active': Active tasks from inbox and other documents (tasks due before now that are not completed/cancelled) - 'upcoming': Upcoming tasks from inbox and other documents (tasks scheduled after now) - 'inbox': Only tasks in the task inbox - 'logbook': Only tasks in the task logbook (completed and cancelled tasks)",
+          "message": "Фільтрувати завдання за областю: - 'active': Активні завдання із вхідних та інших документів (завдання з терміном виконання до теперішнього часу, які не завершено/скасовано) - 'upcoming': Майбутні завдання із вхідних та інших документів (завдання, заплановані після теперішнього часу) - 'inbox': Лише завдання зі скриньки вхідних завдань - 'logbook': Лише завдання з журналу завдань (завершені та скасовані завдання)"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "Область дії"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.short_desc": {
+          "source": "Filter tasks by scope",
+          "message": "Фільтрувати завдання за областю"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve tasks based on scope",
+          "message": "Отримати завдання на основі області"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.desc": {
+          "source": "Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata.",
+          "message": "Отримайте всі блоки з конкретного документа або сторінки Craft. Це дозволяє отримати доступ до структурованого вмісту ваших документів, включаючи вкладені блоки, із контролем глибини та метаданих."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
+          "source": "List Blocks",
+          "message": "Список блоків"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.desc": {
+          "source": "Whether to retrieve the markdown string representation of the blocks.",
+          "message": "Чи отримувати представлення блоків у вигляді рядка markdown."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
+          "source": "Get Markdown String",
+          "message": "Отримати рядок Markdown"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
+          "source": "Retrieve the markdown string representation of blocks",
+          "message": "Отримати представлення блоків у вигляді рядка markdown"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks.",
+          "message": "Чи отримувати метадані (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) для блоків."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "Отримати метадані"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "Включити метадані до відповіді"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.desc": {
+          "source": "The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks.",
+          "message": "ID блоку сторінки для отримання. Обов'язково для багатодокументних операцій. Приймає ID для документів, сторінок і блоків."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
+          "source": "Document/Page ID",
+          "message": "ID документа/сторінки"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
+          "source": "The document or page to retrieve blocks from",
+          "message": "Документ або сторінка, з якої потрібно отримати блоки"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level.",
+          "message": "Укажіть максимальну глибину отримання вкладених блоків. Використовуйте -1 для необмеженої глибини або вкажіть додатне число, щоб обмежити рівень вкладеності."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Максимальна глибина"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "Максимальна глибина для вкладених блоків"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
+          "source": "Retrieve blocks from a document",
+          "message": "Отримати блоки з документа"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.desc": {
+          "source": "Get a list of all items in a specific Craft collection, including their IDs, titles, properties, and content blocks. You can control the depth of nested content retrieval.",
+          "message": "Отримайте список усіх елементів у конкретній колекції Craft, включаючи їхні ID, заголовки, властивості та блоки вмісту. Ви можете контролювати глибину отримання вкладеного вмісту."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
+          "source": "List Collection Items",
+          "message": "Список елементів колекції"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection whose items you want to list. All items in the collection will be returned.",
+          "message": "Виберіть колекцію Craft, елементи якої ви хочете відобразити у списку. Буде повернено всі елементи в колекції."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Колекція"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to retrieve items from",
+          "message": "Колекція, з якої потрібно отримати елементи"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "Максимальна глибина вкладеного вмісту, яку слід отримати для кожного елемента колекції. Значення за замовчуванням — -1 (усі нащадки). При глибині 0 отримуються лише властивості елемента без вкладеного вмісту."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Максимальна глибина"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content",
+          "message": "Максимальна глибина для вкладеного вмісту"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
+          "source": "Retrieve all items in a collection",
+          "message": "Отримати всі елементи в колекції"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Get a list of all collections in your Craft workspace. You can optionally filter collections by specific documents using include or exclude modes.",
+          "message": "Отримайте список усіх колекцій у вашому робочому простору Craft. Ви можете необов'язково фільтрувати колекції за конкретними документами, використовуючи режими include або exclude."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Список колекцій"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmV4Y2x1ZGU.display_name": {
+          "source": "Exclude",
+          "message": "Виключити"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmluY2x1ZGU.display_name": {
+          "source": "Include",
+          "message": "Включення"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.desc": {
+          "source": "Choose whether to include or exclude collections based on the provided document IDs. Select \"Include\" to only show collections from the specified documents, or \"Exclude\" to hide collections from those documents.",
+          "message": "Виберіть, чи включати або виключати колекції на основі наданих ID документів. Виберіть «Include», щоб показувати лише колекції із вказаних документів, або «Exclude», щоб приховати колекції з цих документів."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
+          "source": "Document Filter Mode",
+          "message": "Режим фільтрації документів"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
+          "source": "How to filter by documents",
+          "message": "Як фільтрувати за документами"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.desc": {
+          "source": "The document IDs to filter. If not provided, collections in all documents will be listed.",
+          "message": "Ідентифікатори документів для фільтрації. Якщо не вказано, буде наведено перелік колекцій у всіх документах."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.display_name": {
+          "source": "Document IDs",
+          "message": "Ідентифікатори документів"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.short_desc": {
+          "source": "Filter collections by documents",
+          "message": "Фільтрувати колекції за документами"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "Retrieve all collections",
+          "message": "Отримати всі колекції"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library.",
+          "message": "Отримати список усіх документів у вашому робочому просторі Craft. Це включає ідентифікатори документів, назви та їхній статус видалення, забезпечуючи повний огляд вашої бібліотеки документів."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "Отримати список документів"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "Retrieve all documents",
+          "message": "Отримати всі документи"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Craft** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробіть власний виклик HTTP / REST API до **Craft**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовано як окремі дії в цьому додатку."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Craft",
+          "message": "Зробити власний виклик API до Craft"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "This trigger activates when a new item is created in the specified Craft collection, allowing you to automate workflows based on new collection entries.",
+          "message": "Цей тригер спрацьовує, коли новий елемент створюється у вказаній колекції Craft, дозволяючи автоматизувати робочі процеси на основі нових записів у колекції."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "New Collection Item",
+          "message": "Новий елемент колекції"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire.",
+          "message": "Виберіть колекцію Craft, за якою потрібно відстежувати нові елементи. Коли до цієї колекції додається новий елемент, тригер спрацює."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Колекція"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to monitor for new items",
+          "message": "Колекція для відстеження нових елементів"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "Максимальна глибина вкладеного вмісту, яку слід отримати для кожного елемента колекції. Значення за замовчуванням — -1 (усі нащадки). При глибині 0 отримуються лише властивості елемента без вкладеного вмісту."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Максимальна глибина"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content retrieval",
+          "message": "Максимальна глибина для отримання вкладеного вмісту"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Triggers when a new item is added to a collection",
+          "message": "Спрацьовує, коли новий елемент додається до колекції"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Update the title and properties of an existing item in a Craft collection. You can modify any custom properties that are part of the collection schema.",
+          "message": "Оновіть назву та властивості існуючого елемента в колекції Craft. Ви можете змінювати будь-які користувацькі властивості, що входять до схеми колекції."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Update Collection Item",
+          "message": "Оновити елемент колекції"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the item you want to update.",
+          "message": "Виберіть колекцію Craft, яка містить елемент, що ви хочете оновити."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Колекція"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the item",
+          "message": "Колекція, що містить елемент"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.desc": {
+          "source": "Select the specific collection item you want to modify. The available items are dynamically populated based on the selected collection.",
+          "message": "Виберіть конкретний елемент колекції, який ви хочете змінити. Доступні елементи динамічно заповнюються на основі вибраної колекції."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.display_name": {
+          "source": "Item",
+          "message": "Елемент"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.short_desc": {
+          "source": "The item to update",
+          "message": "Елемент для оновлення"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Update the custom properties of the collection item. Only the properties you specify will be updated; others will remain unchanged.",
+          "message": "Оновіть користувацькі властивості елемента колекції. Буде оновлено лише вказані вами властивості, інші залишаться без змін."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Властивості"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Updated properties for the item",
+          "message": "Оновлені властивості елемента"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a new title for the collection item. Leave empty to keep the existing title unchanged.",
+          "message": "Укажіть нову назву для елемента колекції. Залиште порожнім, щоб залишити існуючу назву без змін."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Заголовок"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "New title for the item",
+          "message": "Нова назва елемента"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Modify an existing collection item",
+          "message": "Змінити існуючий елемент колекції"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Update an existing task in Craft by changing its markdown content, state, schedule date, or deadline date.",
+          "message": "Оновіть існуюче завдання в Craft, змінивши його вміст markdown, стан, заплановану дату або кінцевий термін."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Оновити завдання"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.desc": {
+          "source": "Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline.",
+          "message": "Оновлена дата виконання завдання. Приймає ISO-формат YYYY-MM-DD або відносні дати: 'today', 'tomorrow', 'yesterday'. Залиште порожнім, щоб залишити існуючий кінцевий термін."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
+          "source": "Deadline Date",
+          "message": "Кінцевий термін"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
+          "source": "Updated deadline date",
+          "message": "Оновлений кінцевий термін"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.desc": {
+          "source": "Select the task you want to modify. Only active tasks are available for selection.",
+          "message": "Виберіть завдання, яке ви хочете змінити. Для вибору доступні лише активні завдання."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.display_name": {
+          "source": "Task",
+          "message": "Завдання"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.short_desc": {
+          "source": "The task to update",
+          "message": "Завдання для оновлення"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "Provide new markdown-formatted content for the task. Leave empty to keep the existing content.",
+          "message": "Укажіть новий вміст у форматі markdown для завдання. Залиште порожнім, щоб залишити існуючий вміст."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "Вміст завдання"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "Updated markdown content",
+          "message": "Оновлений вміст markdown"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.desc": {
+          "source": "Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule.",
+          "message": "Оновлена запланована дата виконання. Приймає ISO-формат YYYY-MM-DD або відносні дати: 'today', 'tomorrow', 'yesterday'. Залиште порожнім, щоб залишити існуючий розклад."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
+          "source": "Schedule Date",
+          "message": "Запланована дата"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
+          "source": "Updated schedule date",
+          "message": "Оновлена запланована дата"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Скасовано"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmRvbmU.display_name": {
+          "source": "Done",
+          "message": "Виконано"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOnRvZG8.display_name": {
+          "source": "To Do",
+          "message": "Зробити"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.desc": {
+          "source": "Change the state of the task to To Do, Done, or Canceled. Leave empty to keep the current state.",
+          "message": "Змініть стан завдання на To Do, Done або Canceled. Залиште порожнім, щоб зберегти поточний стан."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.display_name": {
+          "source": "State",
+          "message": "Штат/область"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.short_desc": {
+          "source": "Updated task state",
+          "message": "Оновлений стан завдання"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Modify an existing task",
+          "message": "Змінити існуюче завдання"
+        },
+        "app.Q3JhZnQ.desc": {
+          "source": "The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.\n\n## API Configuration Requirements\n\n### For Tasks and Daily Notes Actions\n\nTo use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.\n\n### For All Other Actions\n\nTo use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.",
+          "message": "Інтеграція з Craft надає всебічні дії та тригери для взаємодії з Craft API. Керуйте своїми документами, колекціями, завданнями та блоками за допомогою потужних можливостей автоматизації для процесів ведення нотаток та управління документами.\n\n## Вимоги до налаштування API\n\n### Для дій із завданнями та щоденними нотатками\n\nЩоб використовувати дії **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks** та **Get Daily Note Blocks**, необхідно створити API **Daily notes & Tasks** на вкладці **Imagine** у Craft.\n\n### Для всіх інших дій\n\nЩоб використовувати дії **Documents**, **Collections** та **Blocks**, вам потрібно підключити **Selected Documents** у налаштуваннях Craft API."
+        },
+        "app.Q3JhZnQ.display_name": {
+          "source": "Craft",
+          "message": "Craft"
+        },
+        "app.Q3JhZnQ.short_desc": {
+          "source": "Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.",
+          "message": "Підключіться до Craft для безперешкодного управління документами, колекціями, завданнями та блоками."
+        }
+      }
+    }
+  }
+}

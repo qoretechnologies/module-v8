@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.desc": {
+          "source": "Use this action to clear the content of a specified column within a record, resetting its value to empty.",
+          "message": "使用此動作清除記錄內指定欄位的內容，將其值重設為空白。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
+          "source": "Clear Column Value",
+          "message": "清除欄位值"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column you want to clear.",
+          "message": "您要清除之欄位的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "欄位 ID"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to clear.",
+          "message": "要清除的欄位 ID。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to modify.",
+          "message": "包含您要修改之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record.",
+          "message": "包含該記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to modify.",
+          "message": "您要修改之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to modify.",
+          "message": "要修改的記錄 ID。"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
+          "source": "Remove data from a column in a record.",
+          "message": "移除記錄中欄位的資料。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "在應用程式「Monday」中的指定資料表建立新記錄"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "在應用程式「Monday」中的指定資料表建立新記錄"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.",
+          "message": "此動作可讓您在指定看板中建立新記錄 (項目)，並允許您在建立時定義初始欄位值。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "建立記錄"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board where you want to create a new record.",
+          "message": "您要建立新記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board where the record will be created.",
+          "message": "將要建立該記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group where you want to create a new record.",
+          "message": "您要建立新記錄的群組唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group where the record will be created.",
+          "message": "將要建立該記錄的群組 ID。"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Add a new record to a board.",
+          "message": "將新記錄新增至看板。"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.desc": {
+          "source": "This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.",
+          "message": "此動作可讓您執行由整合或自動化設定所定義的自訂操作，為各種工作提供彈性。"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
+          "source": "Custom Action",
+          "message": "自訂動作"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.desc": {
+          "source": "The name of the custom action to execute",
+          "message": "要執行的自訂動作名稱"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
+          "source": "Action Name",
+          "message": "動作名稱"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
+          "source": "The name of the custom action to execute",
+          "message": "要執行的自訂動作名稱"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.desc": {
+          "source": "The payload for your custom action",
+          "message": "自訂動作的有效負載"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Payload"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.short_desc": {
+          "source": "Payload for your custom action",
+          "message": "自訂動作的有效負載"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
+          "source": "Perform a user-defined operation.",
+          "message": "執行使用者定義的操作。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.desc": {
+          "source": "This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.",
+          "message": "此動作可讓您封存 Monday.com 看板上的特定記錄 (項目)，將已完成或非現用的項目從檢視中移除而無需永久刪除，以利保持工作區整潔。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
+          "source": "Archive Record",
+          "message": "封存記錄"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to archive.",
+          "message": "包含您要封存之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to archive.",
+          "message": "包含要封存之記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to archive.",
+          "message": "要封存之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to archive.",
+          "message": "要封存之記錄的 ID。"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
+          "source": "Move a record to the archive.",
+          "message": "將記錄移至封存。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.desc": {
+          "source": "This action fetches the details of a specified record, including all column values and associated metadata.",
+          "message": "此動作會擷取指定記錄的詳細資料，包括所有欄位值和相關中繼資料。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "取得記錄"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to get.",
+          "message": "包含要取得之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to get.",
+          "message": "包含要取得之記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to get.",
+          "message": "要取得之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to get.",
+          "message": "要取得之記錄的 ID。"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve details of a specific record.",
+          "message": "擷取特定記錄的詳細資料。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "從應用程式 \"Monday\" 中的指定資料表刪除記錄"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "從應用程式 \"Monday\" 中的指定資料表刪除記錄"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Use this action to permanently delete a specific record from a board, removing all associated data.",
+          "message": "使用此動作從看板永久刪除特定記錄，並移除所有相關資料。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "刪除記錄"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to delete.",
+          "message": "包含要刪除之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to delete.",
+          "message": "包含要刪除之記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to delete.",
+          "message": "要刪除之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete.",
+          "message": "要刪除之記錄的 ID。"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Permanently remove a record.",
+          "message": "永久移除記錄。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.desc": {
+          "source": "Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.",
+          "message": "使用此動作將記錄從其目前群組或看板移至另一個指定的群組或看板，同時保留其資料和歷史記錄。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
+          "source": "Move Record",
+          "message": "移動記錄"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to move.",
+          "message": "包含要移動之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to move.",
+          "message": "包含要移動之記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to move the record to.",
+          "message": "要將記錄移至的群組唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
+          "source": "Destination Group ID",
+          "message": "目標群組 ID"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to move the record to.",
+          "message": "要將記錄移至的群組 ID。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to move.",
+          "message": "要移動之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to move.",
+          "message": "要移動之記錄的 ID。"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
+          "source": "Transfer a record to another group or board.",
+          "message": "將記錄傳輸至另一個群組或看板。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Monday.com** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Monday.com** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對於此應用程式中尚未公開為一級動作的端點，請使用此動作。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Monday.com",
+          "message": "向 Monday.com 發出自訂 API 呼叫"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "建立新記錄時觸發。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新增記錄"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "應檢查是否有新記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "要檢查是否有新記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "要檢查是否有新記錄的群組唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "要檢查是否有新記錄的群組 ID。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggered when a new item is created.",
+          "message": "建立新項目時觸發。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "建立新記錄時觸發。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
+          "source": "New Record Moved To Group",
+          "message": "新記錄已移至群組"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "應檢查是否有新記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "要檢查是否有新記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "要檢查是否有新記錄的群組唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "要檢查是否有新記錄的群組 ID。"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
+          "source": "Triggered when an item was moved to a group.",
+          "message": "項目移至群組時觸發。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "在應用程式 \"Monday\" 中的指定資料表中搜尋相符的記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "在應用程式 \"Monday\" 中的指定資料表中搜尋相符的記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "在應用程式 \"Monday\" 中的指定資料表中搜尋單一相符記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "在應用程式 \"Monday\" 中的指定資料表中搜尋單一相符記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.desc": {
+          "source": "This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.",
+          "message": "此動作可讓您搜尋符合所定義條件 (例如特定欄位值或狀態) 的記錄，並傳回相符記錄的清單。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.desc": {
+          "source": "The unique identifier of the column to search in.",
+          "message": "要搜尋的欄位唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.display_name": {
+          "source": "Column ID",
+          "message": "欄位 ID"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.short_desc": {
+          "source": "The ID of the column to search in.",
+          "message": "要搜尋的欄位 ID。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "用於分頁的游標。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.short_desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "用於分頁的游標。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the records you want to search for.",
+          "message": "包含要搜尋之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to search for records in.",
+          "message": "要在其中搜尋記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return.",
+          "message": "要傳回的記錄數上限。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return.",
+          "message": "要傳回的記錄數上限。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.desc": {
+          "source": "The search query to use to find records.",
+          "message": "用於尋找記錄的搜尋查詢。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.display_name": {
+          "source": "Query",
+          "message": "查詢"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.short_desc": {
+          "source": "The search query to use.",
+          "message": "要使用的搜尋查詢。"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
+          "source": "Find records matching specific criteria.",
+          "message": "尋找符合特定條件的記錄。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "更新記錄欄位值時觸發。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
+          "source": "Record Column Value Updated",
+          "message": "記錄欄位值已更新"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column that should be checked for new value.",
+          "message": "應檢查是否有新值的欄位唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "欄位 ID"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to check for new value.",
+          "message": "要檢查是否有新值的欄位 ID。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for record field updates.",
+          "message": "應檢查是否有記錄欄位更新的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for record field updates.",
+          "message": "要檢查是否有記錄欄位更新的看板 ID。"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "更新記錄欄位值時觸發。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "更新應用程式 \"Monday\" 中指定資料表中的現有記錄"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "更新應用程式 \"Monday\" 中指定資料表中的現有記錄"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Use this action to update one or more column values of a specific record, allowing you to change its data as needed.",
+          "message": "使用此動作更新特定記錄的一個或多個欄位值，以根據需要變更其資料。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "更新記錄"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to update.",
+          "message": "包含要更新之記錄的看板唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to update.",
+          "message": "包含要更新之記錄的看板 ID。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to update.",
+          "message": "要更新之記錄的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to update.",
+          "message": "要更新之記錄的 ID。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Modify the values of a record's columns.",
+          "message": "修改記錄欄位的值。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Triggered when an item on the board is updated.",
+          "message": "更新看板上的項目時觸發。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "已更新記錄"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for updated records.",
+          "message": "應檢查是否有已更新記錄之看板的唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "看板 ID"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for updated records.",
+          "message": "要檢查是否有已更新記錄的看板識別碼。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "要檢查是否有新記錄的群組唯一識別碼。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "群組 ID"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "要檢查是否有新記錄的群組 ID。"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggered when an item is updated.",
+          "message": "在項目更新時觸發。"
+        },
+        "app.TW9uZGF5.desc": {
+          "source": "The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.",
+          "message": "Monday.com 整合提供對您工作作業系統的全方位存取。建立並管理看板、項目、群組和欄位。追蹤工作進度、更新項目狀態、管理欄位值並監控看板變更。透過建立項目、更新記錄、在群組之間移動項目，以及在看板或項目被修改時接收通知，以實現工作流程自動化。非常適合整個組織的專案管理、任務追蹤、團隊協作和工作流程自動化。"
+        },
+        "app.TW9uZGF5.display_name": {
+          "source": "Monday.com",
+          "message": "Monday.com"
+        },
+        "app.TW9uZGF5.short_desc": {
+          "source": "Connect to Monday.com to automate work management with boards, items, columns, and updates.",
+          "message": "連線至 Monday.com，透過看板、項目、欄位與更新來自動化工作管理。"
+        }
+      }
+    }
+  }
+}

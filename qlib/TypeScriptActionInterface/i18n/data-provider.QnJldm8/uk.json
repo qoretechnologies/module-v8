@@ -1,0 +1,1681 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.desc": {
+          "source": "Create a new company record with custom attributes and optional associations to existing contacts and deals.",
+          "message": "Створіть новий запис компанії з налаштовуваними атрибутами та необов'язковими зв'язками з існуючими контактами й угодами."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.display_name": {
+          "source": "Create Company",
+          "message": "Створити компанію"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the company including industry, size, website, and any custom fields defined in your account.",
+          "message": "Налаштовувані атрибути компанії, включаючи галузь, розмір, вебсайт та будь-які користувацькі поля, визначені у вашому обліковому записі."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Company Attributes",
+          "message": "Атрибути компанії"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom company data",
+          "message": "Налаштовувані дані компанії"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this company.",
+          "message": "Масив ID контактів для пов'язування з цією компанією."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Пов'язані контакти"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Link contacts to company",
+          "message": "Пов'язати контакти з компанією"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.desc": {
+          "source": "Array of deal IDs to associate with this company.",
+          "message": "Масив ID угод для пов'язування з цією компанією."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
+          "source": "Associated Deals",
+          "message": "Пов'язані угоди"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
+          "source": "Link deals to company",
+          "message": "Пов'язати угоди з компанією"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.desc": {
+          "source": "Business name of the company. Required field.",
+          "message": "Назва компанії. Обов'язкове поле."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
+          "source": "Company Name",
+          "message": "Назва компанії"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
+          "source": "Name of the company",
+          "message": "Назва компанії"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Create a new company",
+          "message": "Створити нову компанію"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in Brevo. Contacts can be created with email address, phone number (with country code), or external ID. Custom attributes and list assignments can be included.",
+          "message": "Створіть новий контакт у Brevo. Контакти можна створювати за адресою електронної пошти, номером телефону (з кодом країни) або зовнішнім ID. Можна включати налаштовувані атрибути та призначення до списків."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Створити контакт"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the contact including name, company, phone number, and any custom fields defined in your account.",
+          "message": "Налаштовувані атрибути контакту, включаючи ім'я, компанію, номер телефону та будь-які користувацькі поля, визначені у вашому обліковому записі."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Contact Attributes",
+          "message": "Атрибути контакту"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom contact attributes",
+          "message": "Налаштовувані атрибути контакту"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "Primary email address for the contact. Required for creating a contact.",
+          "message": "Основна адреса електронної пошти контакту. Обов'язкова для створення контакту."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Адреса електронної пошти"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Contact email address",
+          "message": "Адреса електронної пошти контакту"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.desc": {
+          "source": "Set to true to blacklist the contact from receiving email campaigns.",
+          "message": "Встановіть значення true, щоб додати контакт до чорного списку для отримання кампаній електронної пошти."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
+          "source": "Email Blacklisted",
+          "message": "Email у чорному списку"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
+          "source": "Blacklist contact from emails",
+          "message": "Додати контакт до чорного списку email"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.desc": {
+          "source": "Custom external identifier for the contact from your system.",
+          "message": "Користувацький зовнішній ідентифікатор контакту з вашої системи."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.display_name": {
+          "source": "External ID",
+          "message": "Зовнішній ID"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.ZXh0SWQ.short_desc": {
+          "source": "External identifier",
+          "message": "Зовнішній ідентифікатор"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to automatically add the contact to upon creation.",
+          "message": "Масив ID списків для автоматичного додавання контакту під час створення."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "List IDs",
+          "message": "ID списків"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add contact to",
+          "message": "Списки для додавання контакту"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.desc": {
+          "source": "Set to true to blacklist the contact from receiving SMS campaigns.",
+          "message": "Встановіть значення true, щоб додати контакт до чорного списку для отримання SMS-кампаній."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
+          "source": "SMS Blacklisted",
+          "message": "SMS у чорному списку"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
+          "source": "Blacklist contact from SMS",
+          "message": "Додати контакт до чорного списку SMS"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Створити новий контакт"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.desc": {
+          "source": "Create a new deal in your sales pipeline with custom attributes and optional associations to existing contacts and companies.",
+          "message": "Створіть нову угоду у вашій воронці продажів із налаштовуваними атрибутами та необов'язковими зв'язками з існуючими контактами й компаніями."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.display_name": {
+          "source": "Create Deal",
+          "message": "Створити угоду"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.desc": {
+          "source": "Custom attributes for the deal including value, stage, close date, and any custom fields defined in your account.",
+          "message": "Налаштовувані атрибути угоди, включаючи суму, етап, дату закриття та будь-які користувацькі поля, визначені у вашому обліковому записі."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Deal Attributes",
+          "message": "Атрибути угоди"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Custom deal data",
+          "message": "Налаштовувані дані угоди"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.desc": {
+          "source": "Array of company IDs to associate with this deal.",
+          "message": "Масив ID компаній для пов'язування з цією угодою."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
+          "source": "Associated Companies",
+          "message": "Пов'язані компанії"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
+          "source": "Link companies to deal",
+          "message": "Пов'язати компанії з угодою"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this deal.",
+          "message": "Масив ID контактів для пов'язування з цією угодою."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Пов'язані контакти"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Link contacts to deal",
+          "message": "Пов'язати контакти з угодою"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.desc": {
+          "source": "Descriptive name for the deal opportunity. Required field.",
+          "message": "Описова назва угоди. Обов'язкове поле."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.display_name": {
+          "source": "Deal Name",
+          "message": "Назва угоди"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.option.bmFtZQ.short_desc": {
+          "source": "Name of the deal",
+          "message": "Назва угоди"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2RlYWw.short_desc": {
+          "source": "Create a new deal",
+          "message": "Створити нову угоду"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.desc": {
+          "source": "Create a new contact list in a specified folder. Lists are used to organize and segment your contacts for targeted campaigns.",
+          "message": "Створіть новий список контактів у вказаній папці. Списки використовуються для організації та сегментації ваших контактів для цільових кампаній."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.display_name": {
+          "source": "Create List",
+          "message": "Створити список"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.desc": {
+          "source": "Folder where the list will be created. Required for list organization.",
+          "message": "Папка, у якій буде створено список. Обов'язково для організації списків."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
+          "source": "Folder",
+          "message": "Папка"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
+          "source": "Folder to create list in",
+          "message": "Папка для створення списку"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "Display name for the contact list.",
+          "message": "Відображувана назва списку контактів."
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "List Name",
+          "message": "Назва списку"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Name for the new list",
+          "message": "Назва нового списку"
+        },
+        "app.QnJldm8.action.Y3JlYXRlX2xpc3Q.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Створити новий список контактів"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.desc": {
+          "source": "Add existing contacts to a contact list by email addresses or contact IDs. Contacts must already exist in your account.",
+          "message": "Додайте існуючі контакти до списку контактів за адресами електронної пошти або ID контактів. Контакти вже повинні існувати у вашому обліковому записі."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
+          "source": "Add Contacts to List",
+          "message": "Додати контакти до списку"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.desc": {
+          "source": "Array of email addresses of contacts to add to the list.",
+          "message": "Масив електронних адрес контактів для додавання до списку."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.display_name": {
+          "source": "Email Addresses",
+          "message": "Адреси електронної пошти"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.ZW1haWxz.short_desc": {
+          "source": "Contact emails to add",
+          "message": "Електронні адреси контактів для додавання"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.desc": {
+          "source": "Array of contact IDs to add to the list.",
+          "message": "Масив ID контактів для додавання до списку."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.display_name": {
+          "source": "Contact IDs",
+          "message": "ID контактів"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.aWRz.short_desc": {
+          "source": "Contact IDs to add",
+          "message": "ID контактів для додавання"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the list to add contacts to.",
+          "message": "Унікальний ідентифікатор списку, до якого потрібно додати контакти."
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID списку"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "Target list",
+          "message": "Цільовий список"
+        },
+        "app.QnJldm8.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
+          "source": "Add contacts to a list",
+          "message": "Додати контакти до списку"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.desc": {
+          "source": "Get detailed information about a specific company including custom attributes and associated contacts and deals.",
+          "message": "Отримайте детальну інформацію про конкретну компанію, включаючи налаштовувані атрибути та пов'язані контакти й угоди."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.display_name": {
+          "source": "Get Company",
+          "message": "Отримати компанію"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to retrieve details for.",
+          "message": "Унікальний ідентифікатор компанії, для якої потрібно отримати детальні дані."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID компанії"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to retrieve",
+          "message": "Компанія для отримання"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbXBhbnk.short_desc": {
+          "source": "Retrieve company details",
+          "message": "Отримати дані компанії"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Get detailed information about a specific contact. You can identify contacts using email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Отримати детальну інформацію про конкретний контакт. Ви можете ідентифікувати контакти за адресою електронної пошти, ID контакту, номером телефону, зовнішнім ID, WhatsApp ID або номером стаціонарного телефону."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Отримати контакт"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact. Can be email address, contact ID, phone number (SMS), external ID, WhatsApp ID, or landline number.",
+          "message": "Унікальний ідентифікатор контакту. Може бути адресою електронної пошти, ID контакту, номером телефону (SMS), зовнішнім ID, WhatsApp ID або номером стаціонарного телефону."
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Ідентифікатор контакту"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact identifier (email, ID, phone, etc.)",
+          "message": "Ідентифікатор контакту (email, ID, телефон тощо)"
+        },
+        "app.QnJldm8.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve a contact by identifier",
+          "message": "Отримати контакт за ідентифікатором"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.desc": {
+          "source": "Get detailed information about a specific deal including custom attributes and associated contacts and companies.",
+          "message": "Отримати детальну інформацію про конкретну угоду, включаючи настроювані атрибути та пов'язані контакти й компанії."
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.display_name": {
+          "source": "Get Deal",
+          "message": "Отримати угоду"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to retrieve details for.",
+          "message": "Унікальний ідентифікатор угоди, для якої потрібно отримати дані."
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID угоди"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to retrieve",
+          "message": "Угода для отримання"
+        },
+        "app.QnJldm8.action.Z2V0X2RlYWw.short_desc": {
+          "source": "Retrieve deal details",
+          "message": "Отримати деталі угоди"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.desc": {
+          "source": "Get detailed information about a specific contact list including subscriber counts, campaign statistics, and folder information.",
+          "message": "Отримати детальну інформацію про конкретний список контактів, включаючи кількість підписників, статистику кампаній та інформацію про папку."
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.display_name": {
+          "source": "Get List",
+          "message": "Отримати список"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to retrieve details for.",
+          "message": "Унікальний ідентифікатор списку контактів, для якого потрібно отримати дані."
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID списку"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to retrieve",
+          "message": "Список для отримання"
+        },
+        "app.QnJldm8.action.Z2V0X2xpc3Q.short_desc": {
+          "source": "Retrieve list details",
+          "message": "Отримати деталі списку"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.desc": {
+          "source": "Permanently delete a company from your Brevo account. This action cannot be undone. All associations with contacts and deals will be removed.",
+          "message": "Остаточно видалити компанію з вашого облікового запису Brevo. Цю дію неможливо скасувати. Усі зв'язки з контактами та угодами буде видалено."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.display_name": {
+          "source": "Delete Company",
+          "message": "Видалити компанію"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to delete permanently from your account.",
+          "message": "Унікальний ідентифікатор компанії для остаточного видалення з вашого облікового запису."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID компанії"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to delete",
+          "message": "Компанія для видалення"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbXBhbnk.short_desc": {
+          "source": "Permanently delete a company",
+          "message": "Остаточно видалити компанію"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently delete a contact from your Brevo account. This action cannot be undone. The contact will be removed from all lists and campaigns.",
+          "message": "Остаточно видалити контакт із вашого облікового запису Brevo. Цю дію неможливо скасувати. Контакт буде видалено з усіх списків та кампаній."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Видалити контакт"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact to delete permanently. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Унікальний ідентифікатор контакту для остаточного видалення. Може бути адресою електронної пошти, ID контакту, номером телефону, зовнішнім ID, WhatsApp ID або номером стаціонарного телефону."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Ідентифікатор контакту"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact to delete",
+          "message": "Контакт для видалення"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Permanently delete a contact",
+          "message": "Остаточно видалити контакт"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.desc": {
+          "source": "Permanently delete a deal from your sales pipeline. This action cannot be undone. All associations with contacts and companies will be removed.",
+          "message": "Остаточно видалити угоду з вашої воронки продажів. Цю дію неможливо скасувати. Усі зв'язки з контактами та компаніями буде видалено."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.display_name": {
+          "source": "Delete Deal",
+          "message": "Видалити угоду"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to delete permanently from your pipeline.",
+          "message": "Унікальний ідентифікатор угоди для остаточного видалення з вашої воронки."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID угоди"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to delete",
+          "message": "Угода для видалення"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2RlYWw.short_desc": {
+          "source": "Permanently delete a deal",
+          "message": "Остаточно видалити угоду"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.desc": {
+          "source": "Permanently delete a contact list. This action cannot be undone. Contacts in the list will remain in your account.",
+          "message": "Остаточно видалити список контактів. Цю дію неможливо скасувати. Контакти зі списку залишаться у вашому обліковому записі."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.display_name": {
+          "source": "Delete List",
+          "message": "Видалити список"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to delete permanently.",
+          "message": "Унікальний ідентифікатор списку контактів для остаточного видалення."
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID списку"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to delete",
+          "message": "Список для видалення"
+        },
+        "app.QnJldm8.action.ZGVsZXRlX2xpc3Q.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Видалити список контактів"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.desc": {
+          "source": "Retrieve a list of all companies with pagination, sorting, and filtering options. Filter by associated contacts, deals, or custom attributes.",
+          "message": "Отримати список усіх компаній із можливістю розбивки на сторінки, сортування та фільтрації. Фільтруйте за пов'язаними контактами, угодами або настроюваними атрибутами."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.display_name": {
+          "source": "List Companies",
+          "message": "Список компаній"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.desc": {
+          "source": "Filter companies based on specific attribute values.",
+          "message": "Фільтрувати компанії за певними значеннями атрибутів."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
+          "source": "Attribute Filter",
+          "message": "Фільтр за атрибутами"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter by company attributes",
+          "message": "Фільтрувати за атрибутами компанії"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.desc": {
+          "source": "Maximum number of companies to return per page. Default is 10.",
+          "message": "Максимальна кількість компаній на сторінці. Значення за замовчуванням — 10."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Обмеження результатів"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
+          "source": "Number of companies per page",
+          "message": "Кількість компаній на сторінці"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Filter companies that are associated with a specific contact.",
+          "message": "Фільтрувати компанії, пов'язані з певним контактом."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Фільтрувати за контактом"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Companies linked to contact",
+          "message": "Компанії, пов'язані з контактом"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.desc": {
+          "source": "Filter companies that are associated with a specific deal.",
+          "message": "Фільтрувати компанії, пов'язані з певною угодою."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.display_name": {
+          "source": "Filter by Deal",
+          "message": "Фільтрувати за угодою"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.bGlua2VkRGVhbHNJZA.short_desc": {
+          "source": "Companies linked to deal",
+          "message": "Компанії, пов'язані з угодою"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Descending",
+          "message": "За спаданням"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Ascending",
+          "message": "За зростанням"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.desc": {
+          "source": "Order to sort companies.",
+          "message": "Порядок сортування компаній."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
+          "source": "Company sort order",
+          "message": "Порядок сортування компаній"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.desc": {
+          "source": "Company attribute to sort results by.",
+          "message": "Атрибут компанії для сортування результатів."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.display_name": {
+          "source": "Sort By Field",
+          "message": "Поле для сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort by",
+          "message": "Поле для сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.desc": {
+          "source": "Page number to retrieve (starts from 1).",
+          "message": "Номер сторінки для отримання (починається з 1)."
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "Номер сторінки"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Номер сторінки для пагінації"
+        },
+        "app.QnJldm8.action.bGlzdF9jb21wYW5pZXM.short_desc": {
+          "source": "Get all companies with filtering",
+          "message": "Отримати всі компанії з фільтрацією"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a list of all contacts in your account with pagination, sorting, and filtering options. Filter by lists, attributes, or other criteria.",
+          "message": "Отримати список усіх контактів у вашому обліковому записі з можливістю розбивки на сторінки, сортування та фільтрації. Фільтруйте за списками, атрибутами або іншими критеріями."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Список контактів"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.desc": {
+          "source": "Filter contacts based on specific attribute values using equals operator.",
+          "message": "Фільтрувати контакти за певними значеннями атрибутів за допомогою оператора точної відповідності."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.display_name": {
+          "source": "Attribute Filter",
+          "message": "Фільтр за атрибутами"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter by contact attributes",
+          "message": "Фільтрувати за атрибутами контакту"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Number of contacts to skip for pagination. Use with limit for pagination.",
+          "message": "Кількість контактів, яку слід пропустити для розбивки на сторінки. Використовуйте разом із limit для пагінації."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Зміщення сторінки"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of contacts to skip",
+          "message": "Кількість контактів для пропуску"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "Maximum number of contacts to return per page. Default is 10, maximum is 100.",
+          "message": "Максимальна кількість контактів на сторінці. Значення за замовчуванням — 10, максимальне — 100."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Обмеження результатів"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Number of contacts per page",
+          "message": "Кількість контактів на сторінці"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to filter contacts. Only contacts belonging to these lists will be returned.",
+          "message": "Масив ID списків для фільтрації контактів. Буде повернено лише контакти, що належать до цих списків."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.display_name": {
+          "source": "Filter by Lists",
+          "message": "Фільтрувати за списками"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.bGlzdElkcw.short_desc": {
+          "source": "Filter contacts by list membership",
+          "message": "Фільтрувати контакти за членством у списку"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Спочатку старіші"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Спочатку новіші"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.desc": {
+          "source": "Order to sort contacts by creation date.",
+          "message": "Порядок сортування контактів за датою створення."
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
+          "source": "Contact sort order",
+          "message": "Порядок сортування контактів"
+        },
+        "app.QnJldm8.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Get all contacts with filtering",
+          "message": "Отримати всі контакти з фільтрацією"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.desc": {
+          "source": "Retrieve a list of all deals in your pipeline with pagination, sorting, and filtering options. Filter by associated contacts, companies, or deal name.",
+          "message": "Отримати список усіх угод у вашій воронці продажів із параметрами розбивки на сторінки, сортування та фільтрації. Фільтруйте за пов'язаними контактами, компаніями або назвою угоди."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.display_name": {
+          "source": "List Deals",
+          "message": "Список угод"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.desc": {
+          "source": "Filter deals by name containing specified text.",
+          "message": "Фільтрувати угоди за назвою, що містить вказаний текст."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.display_name": {
+          "source": "Deal Name Filter",
+          "message": "Фільтр назви угоди"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.ZGVhbE5hbWU.short_desc": {
+          "source": "Filter by deal name",
+          "message": "Фільтрувати за назвою угоди"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.desc": {
+          "source": "Number of deals to skip for pagination.",
+          "message": "Кількість угод, яку слід пропустити для розбивки на сторінки."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Зміщення сторінки"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deals to skip",
+          "message": "Кількість угод для пропуску"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.desc": {
+          "source": "Maximum number of deals to return per page. Default is 10.",
+          "message": "Максимальна кількість угод, що повертаються на сторінку. За замовчуванням: 10."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Обмеження результатів"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
+          "source": "Number of deals per page",
+          "message": "Кількість угод на сторінку"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.desc": {
+          "source": "Filter deals that are associated with a specific company.",
+          "message": "Фільтрувати угоди, пов'язані з певною компанією."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
+          "source": "Filter by Company",
+          "message": "Фільтрувати за компанією"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
+          "source": "Deals linked to company",
+          "message": "Угоди, пов'язані з компанією"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Filter deals that are associated with a specific contact.",
+          "message": "Фільтрувати угоди, пов'язані з певним контактом."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Фільтрувати за контактом"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Deals linked to contact",
+          "message": "Угоди, пов'язані з контактом"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Old First",
+          "message": "Спочатку старі"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "New First",
+          "message": "Спочатку нові"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.desc": {
+          "source": "Order to sort deals by creation date.",
+          "message": "Порядок сортування угод за датою створення."
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.option.c29ydA.short_desc": {
+          "source": "Deal sort order",
+          "message": "Порядок сортування угод"
+        },
+        "app.QnJldm8.action.bGlzdF9kZWFscw.short_desc": {
+          "source": "Get all deals with filtering",
+          "message": "Отримати всі угоди з фільтрацією"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.desc": {
+          "source": "Retrieve all folders used to organize contact lists with subscriber counts and creation information.",
+          "message": "Отримати всі папки, що використовуються для організації списків контактів, із кількістю підписників та інформацією про створення."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.display_name": {
+          "source": "List Folders",
+          "message": "Отримати список папок"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.desc": {
+          "source": "Number of folders to skip for pagination.",
+          "message": "Кількість папок, яку слід пропустити для розбивки на сторінки."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Зміщення сторінки"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of folders to skip",
+          "message": "Кількість папок для пропуску"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.desc": {
+          "source": "Maximum number of folders to return per page. Default is 10.",
+          "message": "Максимальна кількість папок, що повертаються на сторінку. За замовчуванням: 10."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Обмеження результатів"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.bGltaXQ.short_desc": {
+          "source": "Number of folders per page",
+          "message": "Кількість папок на сторінку"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Спочатку старіші"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Спочатку новіші"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.desc": {
+          "source": "Order to sort folders by creation date.",
+          "message": "Порядок сортування папок за датою створення."
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.option.c29ydA.short_desc": {
+          "source": "Folder sort order",
+          "message": "Порядок сортування папок"
+        },
+        "app.QnJldm8.action.bGlzdF9mb2xkZXJz.short_desc": {
+          "source": "Get all list folders",
+          "message": "Отримати всі папки списків"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.desc": {
+          "source": "Retrieve all contact lists in your account with pagination and sorting options. Includes subscriber counts and creation dates.",
+          "message": "Отримати всі списки контактів у вашому обліковому записі з параметрами розбивки на сторінки та сортування. Включає кількість підписників і дати створення."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.display_name": {
+          "source": "List All Lists",
+          "message": "Отримати всі списки"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.desc": {
+          "source": "Number of lists to skip for pagination.",
+          "message": "Кількість списків, яку слід пропустити для розбивки на сторінки."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Page Offset",
+          "message": "Зміщення сторінки"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of lists to skip",
+          "message": "Кількість списків для пропуску"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.desc": {
+          "source": "Maximum number of lists to return per page. Default is 10.",
+          "message": "Максимальна кількість списків, що повертаються на сторінку. За замовчуванням: 10."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Results Limit",
+          "message": "Обмеження результатів"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Number of lists per page",
+          "message": "Кількість списків на сторінку"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Oldest first",
+          "message": "Спочатку старіші"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Newest first",
+          "message": "Спочатку новіші"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.desc": {
+          "source": "Order to sort lists by creation date.",
+          "message": "Порядок сортування списків за датою створення."
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.option.c29ydA.short_desc": {
+          "source": "List sort order",
+          "message": "Порядок сортування списків"
+        },
+        "app.QnJldm8.action.bGlzdF9saXN0cw.short_desc": {
+          "source": "Get all contact lists",
+          "message": "Отримати всі списки контактів"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Brevo** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати спеціальний виклик HTTP / REST API до **Brevo**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код статусу, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.QnJldm8.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Brevo",
+          "message": "Виконати спеціальний виклик API до Brevo"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.desc": {
+          "source": "Monitors your Brevo account for newly created companies. Optionally filter by companies linked to specific contacts or deals.",
+          "message": "Відстежує ваш обліковий запис Brevo на предмет новостворених компаній. Додатково фільтрує за компаніями, пов'язаними з певними контактами або угодами."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.display_name": {
+          "source": "New Company",
+          "message": "Нова компанія"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Optional filter to only trigger when companies are created that are linked to the specified contact.",
+          "message": "Необов'язковий фільтр для запуску лише тоді, коли створюються компанії, пов'язані з указаним контактом."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contact",
+          "message": "Фільтрувати за контактом"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Only trigger for companies linked to contact",
+          "message": "Запускати лише для компаній, пов'язаних із контактом"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.desc": {
+          "source": "Optional filter to only trigger when companies are created that are linked to the specified deal.",
+          "message": "Необов'язковий фільтр для запуску лише тоді, коли створюються компанії, пов'язані з указаною угодою."
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.display_name": {
+          "source": "Filter by Deal",
+          "message": "Фільтрувати за угодою"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.option.bGlua2VkRGVhbHNJZA.short_desc": {
+          "source": "Only trigger for companies linked to deal",
+          "message": "Запускати лише для компаній, пов'язаних з угодою"
+        },
+        "app.QnJldm8.action.bmV3X2NvbXBhbnk.short_desc": {
+          "source": "Triggers when a new company is created",
+          "message": "Спрацьовує при створенні нової компанії"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "Monitors your Brevo account for newly created contacts. Optionally filter by specific lists to only trigger when contacts are added to particular lists.",
+          "message": "Відстежує ваш обліковий запис Brevo на предмет новостворених контактів. Додатково фільтрує за конкретними списками, щоб запускатися лише тоді, коли контакти додаються до певних списків."
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Новий контакт"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Optional filter to only trigger when contacts are created in the specified lists. If empty, triggers for all new contacts.",
+          "message": "Необов'язковий фільтр для запуску лише тоді, коли контакти створюються у вказаних списках. Якщо порожньо, спрацьовує для всіх нових контактів."
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "Filter by Lists",
+          "message": "Фільтрувати за списками"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Only trigger for specific lists",
+          "message": "Запускати лише для певних списків"
+        },
+        "app.QnJldm8.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "Спрацьовує, коли створюється новий контакт"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.desc": {
+          "source": "Monitors your Brevo account for newly created deals in the sales pipeline. Optionally filter by deals linked to specific contacts or companies.",
+          "message": "Відстежує ваш обліковий запис Brevo на предмет новостворених угод у воронці продажів. Додатково фільтрує за угодами, пов'язаними з певними контактами або компаніями."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.display_name": {
+          "source": "New Deal",
+          "message": "Нова угода"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.desc": {
+          "source": "Optional filter to only trigger when deals are created that are linked to the specified companies.",
+          "message": "Необов'язковий фільтр для запуску лише тоді, коли створюються угоди, пов'язані з указаними компаніями."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.display_name": {
+          "source": "Filter by Companies",
+          "message": "Фільтрувати за компаніями"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWQ.short_desc": {
+          "source": "Only trigger for deals linked to companies",
+          "message": "Запускати лише для угод, пов'язаних із компаніями"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.desc": {
+          "source": "Optional filter to only trigger when deals are created that are linked to the specified contacts.",
+          "message": "Необов'язковий фільтр для запуску лише тоді, коли створюються угоди, пов'язані з указаними контактами."
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.display_name": {
+          "source": "Filter by Contacts",
+          "message": "Фільтрувати за контактами"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.option.bGlua2VkQ29udGFjdHNJZA.short_desc": {
+          "source": "Only trigger for deals linked to contacts",
+          "message": "Запускати лише для угод, пов'язаних із контактами"
+        },
+        "app.QnJldm8.action.bmV3X2RlYWw.short_desc": {
+          "source": "Triggers when a new deal is created",
+          "message": "Спрацьовує, коли створюється нова угода"
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.desc": {
+          "source": "Monitors your Brevo account for newly created contact lists. Triggers whenever a new list is created in any folder.",
+          "message": "Відстежує ваш обліковий запис Brevo на предмет новостворених списків контактів. Спрацьовує щоразу, коли створюється новий список у будь-якій папці."
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.display_name": {
+          "source": "New List",
+          "message": "Новий список"
+        },
+        "app.QnJldm8.action.bmV3X2xpc3Q.short_desc": {
+          "source": "Triggers when a new contact list is created",
+          "message": "Спрацьовує при створенні нового списку контактів"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.desc": {
+          "source": "Remove contacts from a contact list by email addresses, contact IDs, or remove all contacts from the list.",
+          "message": "Видалити контакти зі списку контактів за адресами електронної пошти, ідентифікаторами контактів або видалити всі контакти зі списку."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
+          "source": "Remove Contacts from List",
+          "message": "Видалити контакти зі списку"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.desc": {
+          "source": "Set to true to remove all contacts from the list.",
+          "message": "Встановіть значення true, щоб видалити всі контакти зі списку."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.display_name": {
+          "source": "Remove All",
+          "message": "Видалити все"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.YWxs.short_desc": {
+          "source": "Remove all contacts",
+          "message": "Видалити всі контакти"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.desc": {
+          "source": "Array of email addresses of contacts to remove from the list.",
+          "message": "Масив адрес електронної пошти контактів, які потрібно видалити зі списку."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.display_name": {
+          "source": "Email Addresses",
+          "message": "Адреси електронної пошти"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.ZW1haWxz.short_desc": {
+          "source": "Contact emails to remove",
+          "message": "Електронні адреси контактів для видалення"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.desc": {
+          "source": "Array of contact IDs to remove from the list.",
+          "message": "Масив ідентифікаторів контактів, які потрібно видалити зі списку."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.display_name": {
+          "source": "Contact IDs",
+          "message": "ID контактів"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.aWRz.short_desc": {
+          "source": "Contact IDs to remove",
+          "message": "Ідентифікатори контактів для видалення"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the list to remove contacts from.",
+          "message": "Унікальний ідентифікатор списку, з якого потрібно видалити контакти."
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID списку"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.short_desc": {
+          "source": "Source list",
+          "message": "Вихідний список"
+        },
+        "app.QnJldm8.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
+          "source": "Remove contacts from a list",
+          "message": "Видалити контакти зі списку"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.desc": {
+          "source": "Update company details including name, custom attributes, and associations with contacts and deals.",
+          "message": "Оновити відомості про компанію, зокрема назву, настроювані атрибути та зв'язки з контактами й угодами."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.display_name": {
+          "source": "Update Company",
+          "message": "Оновити компанію"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.desc": {
+          "source": "Unique identifier of the company to update.",
+          "message": "Унікальний ідентифікатор компанії, яку потрібно оновити."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.display_name": {
+          "source": "Company ID",
+          "message": "ID компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.Y29tcGFueUlk.short_desc": {
+          "source": "Company to update",
+          "message": "Компанія для оновлення"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the company including industry, size, website, and any custom fields.",
+          "message": "Оновити настроювані атрибути компанії, зокрема галузь, розмір, вебсайт та будь-які додаткові поля."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Company Attributes",
+          "message": "Атрибути компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update company data",
+          "message": "Оновити дані компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this company. Replaces existing associations.",
+          "message": "Масив ідентифікаторів контактів для зв'язку з цією компанією. Замінює наявні зв'язки."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Пов'язані контакти"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Update contact associations",
+          "message": "Оновити зв'язки з контактами"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.desc": {
+          "source": "Array of deal IDs to associate with this company. Replaces existing associations.",
+          "message": "Масив ідентифікаторів угод для зв'язку з цією компанією. Замінює наявні зв'язки."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.display_name": {
+          "source": "Associated Deals",
+          "message": "Пов'язані угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bGlua2VkRGVhbHM.short_desc": {
+          "source": "Update deal associations",
+          "message": "Оновити зв'язки з угодами"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.desc": {
+          "source": "New business name for the company.",
+          "message": "Нова комерційна назва компанії."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.display_name": {
+          "source": "Company Name",
+          "message": "Назва компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.option.bmFtZQ.short_desc": {
+          "source": "Updated company name",
+          "message": "Оновлена назва компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbXBhbnk.short_desc": {
+          "source": "Update company information",
+          "message": "Оновити інформацію про компанію"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update contact information including attributes, email preferences, list memberships, and custom data. Contact can be identified by email, ID, or other identifiers.",
+          "message": "Оновити інформацію про контакт, зокрема атрибути, налаштування електронної пошти, членство в списках і настроювані дані. Контакт можна ідентифікувати за адресою електронної пошти, ID або іншими ідентифікаторами."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Оновити контакт"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the contact including name, company, phone number, and any custom fields.",
+          "message": "Оновити настроювані атрибути контакту, зокрема ім'я, компанію, номер телефону та будь-які додаткові поля."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Contact Attributes",
+          "message": "Атрибути контакту"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update contact attributes",
+          "message": "Оновити атрибути контакту"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "New email address for the contact.",
+          "message": "Нова адреса електронної пошти контакту."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "New Email Address",
+          "message": "Нова адреса електронної пошти"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Update email address",
+          "message": "Оновити адресу електронної пошти"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.desc": {
+          "source": "Set email blacklist status for the contact.",
+          "message": "Встановити статус чорного списку електронної пошти для контакту."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.display_name": {
+          "source": "Email Blacklisted",
+          "message": "Email у чорному списку"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWxCbGFja2xpc3RlZA.short_desc": {
+          "source": "Email blacklist status",
+          "message": "Статус чорного списку електронної пошти"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.desc": {
+          "source": "Custom external identifier for the contact from your system.",
+          "message": "Користувацький зовнішній ідентифікатор контакту з вашої системи."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.display_name": {
+          "source": "External ID",
+          "message": "Зовнішній ID"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.ZXh0SWQ.short_desc": {
+          "source": "External identifier",
+          "message": "Зовнішній ідентифікатор"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.desc": {
+          "source": "Unique identifier for the contact to update. Can be email address, contact ID, phone number, external ID, WhatsApp ID, or landline number.",
+          "message": "Унікальний ідентифікатор контакту, який потрібно оновити. Може бути адресою електронної пошти, ID контакту, номером телефону, зовнішнім ID, WhatsApp ID або номером міського телефону."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.display_name": {
+          "source": "Contact Identifier",
+          "message": "Ідентифікатор контакту"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.aWRlbnRpZmllcg.short_desc": {
+          "source": "Contact to update",
+          "message": "Контакт для оновлення"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.desc": {
+          "source": "Array of list IDs to add the contact to.",
+          "message": "Масив ідентифікаторів списків, до яких потрібно додати контакт."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.display_name": {
+          "source": "Add to Lists",
+          "message": "Додати до списків"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add contact to",
+          "message": "Списки для додавання контакту"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.desc": {
+          "source": "Set SMS blacklist status for the contact.",
+          "message": "Встановити статус чорного списку SMS для контакту."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.display_name": {
+          "source": "SMS Blacklisted",
+          "message": "SMS у чорному списку"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.c21zQmxhY2tsaXN0ZWQ.short_desc": {
+          "source": "SMS blacklist status",
+          "message": "Статус чорного списку SMS"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.desc": {
+          "source": "Array of list IDs to remove the contact from.",
+          "message": "Масив ідентифікаторів списків, з яких потрібно видалити контакт."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.display_name": {
+          "source": "Remove from Lists",
+          "message": "Видалити зі списків"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.option.dW5saW5rTGlzdElkcw.short_desc": {
+          "source": "Lists to remove contact from",
+          "message": "Списки, з яких потрібно видалити контакт"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Оновити існуючий контакт"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.desc": {
+          "source": "Update deal details including name, custom attributes, and associations with contacts and companies.",
+          "message": "Оновити відомості про угоду, зокрема назву, настроювані атрибути та зв'язки з контактами й компаніями."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.display_name": {
+          "source": "Update Deal",
+          "message": "Оновити угоду"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.desc": {
+          "source": "Update custom attributes for the deal including value, stage, close date, and any custom fields.",
+          "message": "Оновити настроювані атрибути угоди, зокрема суму, етап, дату закриття та будь-які додаткові поля."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.display_name": {
+          "source": "Deal Attributes",
+          "message": "Атрибути угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.YXR0cmlidXRlcw.short_desc": {
+          "source": "Update deal data",
+          "message": "Оновити дані угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.desc": {
+          "source": "Unique identifier of the deal to update.",
+          "message": "Унікальний ідентифікатор угоди, яку потрібно оновити."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.display_name": {
+          "source": "Deal ID",
+          "message": "ID угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.ZGVhbElk.short_desc": {
+          "source": "Deal to update",
+          "message": "Угода для оновлення"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.desc": {
+          "source": "Array of company IDs to associate with this deal. Replaces existing associations.",
+          "message": "Масив ідентифікаторів компаній для зв'язку з цією угодою. Замінює наявні зв'язки."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.display_name": {
+          "source": "Associated Companies",
+          "message": "Пов'язані компанії"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29tcGFuaWVzSWRz.short_desc": {
+          "source": "Update company associations",
+          "message": "Оновити зв'язки з компаніями"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.desc": {
+          "source": "Array of contact IDs to associate with this deal. Replaces existing associations.",
+          "message": "Масив ідентифікаторів контактів для зв'язку з цією угодою. Замінює наявні зв'язки."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.display_name": {
+          "source": "Associated Contacts",
+          "message": "Пов'язані контакти"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bGlua2VkQ29udGFjdHNJZHM.short_desc": {
+          "source": "Update contact associations",
+          "message": "Оновити зв'язки з контактами"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.desc": {
+          "source": "New descriptive name for the deal.",
+          "message": "Нова описова назва угоди."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.display_name": {
+          "source": "Deal Name",
+          "message": "Назва угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.option.bmFtZQ.short_desc": {
+          "source": "Updated deal name",
+          "message": "Оновлена назва угоди"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2RlYWw.short_desc": {
+          "source": "Update deal information",
+          "message": "Оновити інформацію про угоду"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.desc": {
+          "source": "Update the name or folder of an existing contact list.",
+          "message": "Оновити назву або папку наявного списку контактів."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.display_name": {
+          "source": "Update List",
+          "message": "Оновити список"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.desc": {
+          "source": "New folder ID to move the list to.",
+          "message": "Новий ідентифікатор папки, до якої слід перемістити список."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.display_name": {
+          "source": "New Folder",
+          "message": "Нова папка"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.Zm9sZGVySWQ.short_desc": {
+          "source": "Move to different folder",
+          "message": "Перемістити до іншої папки"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "Unique identifier of the contact list to update.",
+          "message": "Унікальний ідентифікатор списку контактів, який потрібно оновити."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID списку"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "List to update",
+          "message": "Список для оновлення"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "New display name for the contact list.",
+          "message": "Нова відображувана назва для списку контактів."
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "New Name",
+          "message": "Нова назва"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Updated list name",
+          "message": "Оновлена назва списку"
+        },
+        "app.QnJldm8.action.dXBkYXRlX2xpc3Q.short_desc": {
+          "source": "Update list details",
+          "message": "Оновити відомості про список"
+        },
+        "app.QnJldm8.desc": {
+          "source": "Brevo (formerly Sendinblue) is a marketing automation platform that enables businesses to communicate with customers through email, SMS, chat, and more. It offers tools for campaign management, contact segmentation, transactional emails, and customer relationship management. Brevo helps businesses build stronger relationships with their audience by providing scalable communication and automation solutions.",
+          "message": "Brevo (раніше Sendinblue) — це платформа автоматизації маркетингу, яка дає змогу компаніям спілкуватися з клієнтами за допомогою електронної пошти, SMS, чату тощо. Вона пропонує інструменти для керування кампаніями, сегментації контактів, транзакційних електронних листів і керування взаємовідносинами з клієнтами. Brevo допомагає бізнесу будувати міцніші відносини зі своєю аудиторією, надаючи масштабовані рішення для комунікації та автоматизації."
+        },
+        "app.QnJldm8.display_name": {
+          "source": "Brevo",
+          "message": "Brevo"
+        },
+        "app.QnJldm8.short_desc": {
+          "source": "Brevo is a marketing platform for email, SMS, and automation campaigns.",
+          "message": "Brevo — це маркетингова платформа для кампаній електронної пошти, SMS та автоматизації."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.desc": {
+          "source": "Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.",
+          "message": "特定のイベントに関する完全な詳細（完全なスタックトレース、ブレッドクラム（エラーに至るイベントの軌跡）、ユーザーコンテキスト、デバイス情報、タグ、SDKの詳細、キャプチャされたすべてのメタデータなど）を取得します。デバッグや、エラーが発生した際の正確な状況を把握するために不可欠です。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
+          "source": "Get Event Details",
+          "message": "イベント詳細を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.desc": {
+          "source": "Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings.",
+          "message": "取得するイベントID（16進文字列）を入力します。イベントIDは課題の詳細またはイベント一覧で確認できます。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.display_name": {
+          "source": "Event ID",
+          "message": "イベントID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.short_desc": {
+          "source": "The unique identifier of the event",
+          "message": "イベントの一意の識別子"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.desc": {
+          "source": "Select the project that the event belongs to.",
+          "message": "イベントが属するプロジェクトを選択します。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the event",
+          "message": "イベントを含むプロジェクト"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
+          "source": "Retrieve detailed information about a specific event",
+          "message": "特定のイベントの詳細情報を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.desc": {
+          "source": "Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.",
+          "message": "特定の課題に関する包括的な詳細（ステータス、メタデータ、担当割り当て、統計情報（イベント数、影響を受けたユーザー数、頻度）、参加者、アクティビティ履歴、リンクされた連携、最新のイベント詳細など）を取得します。問題の完全なコンテキストと履歴を把握するために不可欠です。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
+          "source": "Get Issue Details",
+          "message": "課題の詳細を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations.",
+          "message": "取得する課題IDを入力します。課題IDはSentryのUIまたは一覧取得操作で確認できる数値です。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "課題ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue",
+          "message": "課題の一意の識別子"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
+          "source": "Retrieve detailed information about a specific issue",
+          "message": "特定の課題の詳細情報を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.",
+          "message": "特定Sentryプロジェクトに関する包括的な詳細（設定オプション、チームの割り当て、連携機能、シンボルソース、プロジェクト統計など）を取得します。プロジェクトの設定や機能を確認するために使用します。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project Details",
+          "message": "プロジェクトの詳細を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.desc": {
+          "source": "Select or enter the slug identifier of the project you want to retrieve details for.",
+          "message": "詳細を取得するプロジェクトのスラッグ識別子を選択または入力します。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve",
+          "message": "取得対象のプロジェクト"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific project",
+          "message": "特定のプロジェクトの詳細情報を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.desc": {
+          "source": "Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.",
+          "message": "特定のチームに関する包括的な詳細（メンバー、割り当てられたプロジェクト、アクセス権限、ロール設定、外部連携（Slackチャンネルなど）、組織レベルのロールなど）を取得します。チーム構造やプロジェクトの所有権を把握するために使用します。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
+          "source": "Get Team Details",
+          "message": "チームの詳細を取得"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.desc": {
+          "source": "Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for.",
+          "message": "詳細を取得するチームのチームスラッグ（URL対応の識別子）を入力します。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "チームID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.short_desc": {
+          "source": "The team slug to retrieve",
+          "message": "取得対象のチームスラッグ"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
+          "source": "Retrieve detailed information about a specific team",
+          "message": "特定のチームの詳細情報を取得"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.desc": {
+          "source": "Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.",
+          "message": "Sentry組織内のすべてのチームのページネーションされた一覧を取得します。チームはプロジェクトで共同作業を行う開発者のグループを表します。メンバー数、アクセス権限、ロール割り当て、リンクされたプロジェクト、外部チーム連携などのチーム詳細を返します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
+          "source": "List Teams",
+          "message": "チーム一覧"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of teams.",
+          "message": "前回のレスポンスのカーソルを使用して、チームのページ間を移動します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "追加の結果を取得するためのページネーションカーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
+          "source": "Retrieve all teams in your organization",
+          "message": "組織内のすべてのチームを取得"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.desc": {
+          "source": "Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.",
+          "message": "組織内のすべてのプロジェクトからページネーションされた課題一覧を取得します。これにより、すべてのアプリケーションとサービス全体の問題を組織規模で可視化できます。クエリフィルターを使用して、プロジェクト、プラットフォーム、ステータス、またはその他の条件で結果を絞り込みます。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
+          "source": "List Organization Issues",
+          "message": "組織の課題一覧"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to retrieve additional pages of organization-wide issues.",
+          "message": "前回のレスポンスのカーソルを使用して、組織全体の課題の追加ページを取得します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "追加の結果を取得するためのページネーションカーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs across all projects.",
+          "message": "有効にすると、すべてのプロジェクトにわたって短いIDを使用した課題の検索が可能になります。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "ショートID検索"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "ショートIDで課題を検索するかどうか"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24時間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics and metrics across the organization.",
+          "message": "組織全体の課題統計およびメトリクスを計算する期間。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "課題統計の期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.",
+          "message": "Sentryのクエリ構文を使用して、すべてのプロジェクトの課題をフィルター処理します。プロジェクト、プラットフォーム、環境、ステータス、タグ、またはその他の課題プロパティでフィルターします。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "クエリフィルター"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "課題をフィルター処理する検索クエリ"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
+          "source": "Retrieve issues across the entire organization",
+          "message": "組織全体の課題を取得"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.desc": {
+          "source": "Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.",
+          "message": "特定のプロジェクトからイベント（個々のエラーまたはトランザクションの発生）のページネーションされた一覧を取得します。イベントはSentryに送信される生データであり、課題にグループ化されます。full パラメータを使用すると、コンテキスト、ブレッドクラム、メタデータを含む完全なイベントペイロードを取得できます。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
+          "source": "List Project Events",
+          "message": "プロジェクトのイベント一覧"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of events.",
+          "message": "前回のレスポンスのカーソルを使用して、イベントのページ間を移動します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "追加の結果を取得するためのページネーションカーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.desc": {
+          "source": "When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.",
+          "message": "有効にすると、すべてのコンテキスト、ブレッドクラム、スタックトレース、メタデータを含む完全なイベントペイロードを返します。無効にすると、サマリー情報のみを返します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
+          "source": "Full Details",
+          "message": "詳細情報"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
+          "source": "Whether to return complete event data",
+          "message": "完全なイベントデータを返すかどうか"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose events you want to list.",
+          "message": "イベントを一覧表示するプロジェクトを選択します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve events from",
+          "message": "イベントの取得元となるプロジェクト"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
+          "source": "Retrieve events from a specific project",
+          "message": "特定のプロジェクトからイベントを取得"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.desc": {
+          "source": "Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.",
+          "message": "特定のプロジェクトから課題（グループ化されたエラーまたは問題）のページネーションされた一覧を取得します。課題はアプリケーションに影響を与える個々のバグを表し、フィンガープリントによって複数のイベント発生がグループ化されます。クエリでフィルターして特定の種類の課題を検索し、統計期間を使用して関連するメトリクスを確認します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
+          "source": "List Project Issues",
+          "message": "プロジェクトの課題一覧"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of issues.",
+          "message": "前回のレスポンスのカーソルを使用して、課題のページ間を移動します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "追加の結果を取得するためのページネーションカーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.",
+          "message": "有効にすると、完全な課題IDではなくショートID（例: PROJECT-123）を使用して課題を検索できるようになります。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "ショートID検索"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "ショートIDで課題を検索するかどうか"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24時間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7日間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics such as event count, frequency, and user impact.",
+          "message": "イベント数、頻度、ユーザーへの影響などの課題統計を計算するための期間。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "課題統計の期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose issues you want to list.",
+          "message": "課題を一覧表示したいプロジェクトを選択します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve issues from",
+          "message": "課題を取得するプロジェクト"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: \"is:unresolved assigned:me\"",
+          "message": "Sentryのクエリ構文を使用して、ステータス、担当者、タグ、プラットフォーム、期間などのプロパティで課題を絞り込みます。例: \"is:unresolved assigned:me\""
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "クエリフィルター"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "課題をフィルター処理する検索クエリ"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
+          "source": "Retrieve issues from a specific project",
+          "message": "特定のプロジェクトから課題を取得"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.",
+          "message": "Sentry組織内のすべてのプロジェクトのページ分割されたリストを取得します。各プロジェクトは監視対象の個々のアプリケーションまたはサービスを表します。名前、プラットフォーム、作成日、チームメンバーシップ、構成などのプロジェクト詳細を返します。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "プロジェクトの一覧表示"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning.",
+          "message": "以前のレスポンスのカーソルを使用して、結果の次または前のページを取得します。先頭から開始するには空のままにします。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "追加の結果を取得するためのページネーションカーソル"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all projects in your organization",
+          "message": "組織内のすべてのプロジェクトを取得"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Sentry** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Sentry** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Sentry",
+          "message": "SentryへのカスタムAPI呼び出しを実行"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.desc": {
+          "source": "Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.",
+          "message": "Sentry組織内のすべてのプロジェクトを監視し、いずれかのプロジェクトで新しい課題が検出されたときにトリガーされます。これにより、すべてのアプリケーションやサービスにわたる問題を組織全体で把握できます。クエリフィルターを使用して、特定の課題タイプや特徴に絞り込みます。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
+          "source": "New Organization Issue",
+          "message": "新しい組織の課題"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14日間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24時間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30日間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7日間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.",
+          "message": "すべてのプロジェクトにわたる課題統計を収集するための期間。頻度やユーザー影響などのメトリクスの期間ウィンドウを決定します。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "課題統計の期間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.",
+          "message": "Sentryのクエリ構文を使用して、すべてのプロジェクトでこのイベントをトリガーする課題を絞り込みます。プラットフォーム、環境、リリース、カスタムタグなどのプロパティで絞り込みます。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "クエリフィルター"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "課題を絞り込むためのオプションの検索クエリ"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
+          "source": "Triggers when a new issue is detected across the entire organization",
+          "message": "組織全体で新しい課題が検出されたときにトリガー"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.desc": {
+          "source": "Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.",
+          "message": "特定のSentryプロジェクトを監視し、新しい課題（グループ化されたエラーまたは問題）が検出されたときにトリガーされます。課題はアプリケーション内の単一のバグまたは問題を表し、イベントはフィンガープリントによってグループ化されます。オプションのクエリフィルターや期間を使用して、特定の種類の課題に絞り込みます。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
+          "source": "New Project Issue",
+          "message": "新しいプロジェクトの課題"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14日間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24時間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30日間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7日間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.",
+          "message": "課題統計を収集するための期間。選択した期間内のイベント数やユーザー影響などのメトリクスに影響します。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "課題統計の期間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.desc": {
+          "source": "Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.",
+          "message": "監視したいSentryプロジェクトを選択します。プロジェクトは組織内の個々のアプリケーションまたはサービスを表します。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to monitor for new issues",
+          "message": "新しい課題を監視するプロジェクト"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.",
+          "message": "Sentryのクエリ構文を使用して、このイベントをトリガーする課題を絞り込みます。たとえば、ブラウザ、デバイス、タグ、またはエラーが未処理かどうかで絞り込みます。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "クエリフィルター"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "課題を絞り込むためのオプションの検索クエリ"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
+          "source": "Triggers when a new issue is detected in a specific project",
+          "message": "特定のプロジェクトで新しい課題が検出されたときにトリガー"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.desc": {
+          "source": "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.",
+          "message": "課題のステータス（解決済み、未解決、無視）、担当者、ブックマーク状態、サブスクリプション状態、または公開設定を変更します。これを使用して課題のトリアージ、チームメンバーへの割り当て、バグの解決、または課題を無視としてマークします。ステータスの変更はアラートをトリガーし、課題のグループ化に影響を与える可能性があります。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
+          "source": "Update Issue",
+          "message": "課題の更新"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.desc": {
+          "source": "Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., \"team:backend\") or user ID.",
+          "message": "所有権と責任を明確にするために、課題を特定のユーザーまたはチームに割り当てます。チームスラッグ（例: \"team:backend\"）またはユーザーIDを入力します。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "担当者"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "User or team to assign the issue to",
+          "message": "課題を割り当てるユーザーまたはチーム"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.desc": {
+          "source": "Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.",
+          "message": "課題を既読（レビュー済み）または未読としてマークします。これにより、チームによってどの課題がトリアージされたかを追跡するのに役立ちます。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
+          "source": "Has Seen",
+          "message": "既読"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
+          "source": "Mark whether the issue has been viewed",
+          "message": "課題が閲覧されたかどうかをマーク"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.desc": {
+          "source": "Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.",
+          "message": "簡単にアクセスして絞り込めるように課題をブックマークします。ブックマークされた課題は個人の課題リストに表示されます。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
+          "source": "Is Bookmarked",
+          "message": "ブックマーク済み"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
+          "source": "Bookmark status for the issue",
+          "message": "課題のブックマークステータス"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.desc": {
+          "source": "Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.",
+          "message": "共有リンクを介して課題が公開されるかどうかを制御します。公開された課題は、Sentryへのアクセス権がないユーザーでもリンクを持つ全員が閲覧できます。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
+          "source": "Is Public",
+          "message": "公開"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
+          "source": "Whether the issue should be publicly accessible",
+          "message": "課題を一般公開するかどうか"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.desc": {
+          "source": "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.",
+          "message": "この課題に関する通知を購読または購読解除します。購読すると、課題の変更やエスカレーション時にアラートを受け取ります。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
+          "source": "Is Subscribed",
+          "message": "購読済み"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
+          "source": "Subscription status for notifications",
+          "message": "通知の購読ステータス"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations.",
+          "message": "更新したい課題IDを入力します。課題IDはSentry UIまたは一覧/検索操作から確認できます。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "課題ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue to update",
+          "message": "更新する課題の一意の識別子"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOmlnbm9yZWQ.display_name": {
+          "source": "Ignored",
+          "message": "無視"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVk.display_name": {
+          "source": "Resolved",
+          "message": "解決済み"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVkSW5OZXh0UmVsZWFzZQ.display_name": {
+          "source": "Resolved in Next Release",
+          "message": "次のリリースで解決"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnVucmVzb2x2ZWQ.display_name": {
+          "source": "Unresolved",
+          "message": "未解決"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.desc": {
+          "source": "Change the issue status to control its lifecycle. \"Resolved\" marks it as fixed, \"Unresolved\" reopens it, \"Ignored\" archives it temporarily, and \"Resolved in Next Release\" indicates it will be fixed in an upcoming deployment.",
+          "message": "課題のステータスを変更してライフサイクルを制御します。「Resolved」は修正済み、「Unresolved」は再オープン、「Ignored」は一時的にアーカイブ、「Resolved in Next Release」は今後のデプロイで修正されることを示します。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the issue",
+          "message": "課題の新しいステータス"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.desc": {
+          "source": "Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization.",
+          "message": "コンテキスト用にプロジェクトをオプションで指定します。課題はIDのみで更新できますが、プロジェクトを指定すると整理に役立ちます。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the issue (optional)",
+          "message": "課題が含まれるプロジェクト（オプション）"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
+          "source": "Update the status or properties of an issue",
+          "message": "課題のステータスまたはプロパティを更新"
+        },
+        "app.U2VudHJ5.desc": {
+          "source": "The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.",
+          "message": "Sentry統合により、アプリケーションの包括的なエラー監視とパフォーマンス追跡が可能になります。プロジェクト、課題、イベント、チームにアクセスして、問題を迅速に特定、トリアージ、解決します。リアルタイムのアラートと、スタックトレース、ブレッドクラム、ユーザー影響メトリクスなどの詳細なデバッグコンテキストにより、Sentryはチームがコード品質を維持し、シームレスなユーザーエクスペリエンスを提供するのを支援します。"
+        },
+        "app.U2VudHJ5.display_name": {
+          "source": "Sentry",
+          "message": "Sentry"
+        },
+        "app.U2VudHJ5.short_desc": {
+          "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
+          "message": "開発者ファーストのデバッグプラットフォームで、エラーの監視と修正、パフォーマンス問題の追跡、アプリケーションの健全性の維持を行います。"
+        }
+      }
+    }
+  }
+}

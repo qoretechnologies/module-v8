@@ -1,0 +1,1005 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Create a new item in a Craft collection with a title and optional custom properties. This allows you to programmatically add entries to your structured collections.",
+          "message": "在 Craft 集合中建立包含標題和選填自訂屬性的新項目。這可讓您以程式設計方式將條目新增至結構化集合中。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Create Collection Item",
+          "message": "建立集合項目"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection where you want to create the new item. The collection must exist before you can add items to it.",
+          "message": "選擇您要建立新項目的 Craft 集合。在新增項目之前，集合必須已存在。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "集合"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to add the item to",
+          "message": "要將項目新增至其中的集合"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Add custom properties to the collection item. The available properties are dynamically determined based on the schema of the selected collection.",
+          "message": "為集合項目新增自訂屬性。可用的屬性是根據所選集合的結構動態決定的。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "屬性"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Custom properties for the item",
+          "message": "項目的自訂屬性"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a title for the new collection item. This is the main identifier for the item within the collection.",
+          "message": "為新集合項目提供標題。這是集合內項目的主要識別碼。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "Title of the new collection item",
+          "message": "新集合項目的標題"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Add a new item to a collection",
+          "message": "將新項目新增至集合"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note).",
+          "message": "在 Craft 中建立一個包含 Markdown 內容、選填任務資訊（狀態、排程、截止日期）和位置（收件匣或每日筆記）的新任務。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "建立任務"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.desc": {
+          "source": "Where to create the task: in the task inbox or a specific daily note",
+          "message": "在何處建立任務：在任務收件匣或特定的每日筆記中"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "位置"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.short_desc": {
+          "source": "Where to create the task",
+          "message": "在何處建立任務"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "The task content in markdown format. This will be the task's text.",
+          "message": "Markdown 格式的任務內容。這將是任務的文字。"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "任務內容"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the task",
+          "message": "任務的 Markdown 內容"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.desc": {
+          "source": "Optional task metadata including state, schedule date, and deadline date",
+          "message": "選填的任務元資料，包括狀態、排程日期和截止日期"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
+          "source": "Task Information",
+          "message": "任務資訊"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
+          "source": "Additional task details",
+          "message": "其他任務詳細資料"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Add a new task",
+          "message": "新增任務"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.desc": {
+          "source": "Fetch all blocks from a Craft daily note for a specific date. You can retrieve blocks from today, yesterday, tomorrow, or any custom date, with control over the depth and metadata of the returned content.",
+          "message": "從特定日期的 Craft 每日筆記中擷取所有區塊。您可以擷取今天、昨天、明天或任何自訂日期的區塊，並控制傳回內容的深度和元資料。"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
+          "source": "Get Daily Note Blocks",
+          "message": "取得每日筆記區塊"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.desc": {
+          "source": "Select a specific date to retrieve the daily note blocks. If not provided, you can use the \"Day\" option to select relative dates like today, yesterday, or tomorrow.",
+          "message": "選擇特定的日期以擷取每日筆記區塊。如果未提供，您可以使用「天」選項選擇相對日期，例如今天、昨天或明天。"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.display_name": {
+          "source": "Date",
+          "message": "日期"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.short_desc": {
+          "source": "Specific date for the daily note",
+          "message": "每日筆記的特定日期"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvZGF5.display_name": {
+          "source": "Today",
+          "message": "今天"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvbW9ycm93.display_name": {
+          "source": "Tomorrow",
+          "message": "明天"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnllc3RlcmRheQ.display_name": {
+          "source": "Yesterday",
+          "message": "昨天"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.desc": {
+          "source": "Choose a relative day option such as today, yesterday, or tomorrow to retrieve the corresponding daily note blocks.",
+          "message": "選擇相對天數選項（例如今天、昨天或明天），以擷取相應的每日筆記區塊。"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.display_name": {
+          "source": "Day",
+          "message": "天"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.short_desc": {
+          "source": "Relative day selector",
+          "message": "相對日期選擇器"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response.",
+          "message": "啟用此選項以在回應中包含每個區塊的附加元資料，例如建立日期、上次修改日期和作者資訊。"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "擷取元資料"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "在回應中包含元資料"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved.",
+          "message": "指定擷取巢狀區塊的最大深度。使用 -1 代表不限深度，或提供正數以限制要擷取多深的巢狀區塊結構。"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "最大深度"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "巢狀區塊的最大深度"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
+          "source": "Retrieve blocks from a daily note",
+          "message": "從每日筆記中擷取區塊"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.desc": {
+          "source": "Delete one or more blocks from a Craft document by providing their block IDs. This action permanently removes the specified blocks.",
+          "message": "透過提供區塊 ID，從 Craft 文件中刪除一或多個區塊。此動作會永久移除指定的區塊。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
+          "source": "Delete Blocks",
+          "message": "刪除區塊"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.desc": {
+          "source": "Provide a list of block IDs that you want to remove from the document. You can delete multiple blocks in a single operation.",
+          "message": "提供您想要從文件中移除的區塊 ID 列表。您可以在單次操作中刪除多個區塊。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.display_name": {
+          "source": "Block IDs",
+          "message": "區塊 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.short_desc": {
+          "source": "IDs of blocks to delete",
+          "message": "要刪除的區塊 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
+          "source": "Remove blocks from a document",
+          "message": "從文件中移除區塊"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.desc": {
+          "source": "Delete one or more items from a Craft collection by providing their IDs. This action permanently removes the specified items from the collection.",
+          "message": "透過提供 ID，從 Craft 集合中刪除一或多個項目。此動作會永久從集合中移除指定的項目。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
+          "source": "Delete Collection Items",
+          "message": "刪除集合項目"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the items you want to delete.",
+          "message": "選擇包含您想要刪除項目的 Craft 集合。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "集合"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the items",
+          "message": "包含項目的集合"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.desc": {
+          "source": "Provide a list of item IDs that you want to remove from the collection. You can select multiple items to delete in a single operation.",
+          "message": "提供您想要從集合中移除的項目 ID 列表。您可以在單次操作中選擇多個要刪除的項目。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.display_name": {
+          "source": "Item IDs",
+          "message": "項目 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.short_desc": {
+          "source": "IDs of items to delete",
+          "message": "要刪除的項目 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
+          "source": "Remove items from a collection",
+          "message": "從集合中移除項目"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.desc": {
+          "source": "Delete one or more tasks from your Craft workspace by providing their task IDs. This action permanently removes the specified tasks.",
+          "message": "透過提供工作 ID，從您的 Craft 工作區中刪除一或多個工作。此動作會永久移除指定的工作。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
+          "source": "Delete Tasks",
+          "message": "刪除工作"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.desc": {
+          "source": "Provide a list of task IDs that you want to remove. You can delete multiple tasks in a single operation.",
+          "message": "提供您想要移除的工作 ID 列表。您可以在單次操作中刪除多個工作。"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "任務 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.short_desc": {
+          "source": "IDs of tasks to delete",
+          "message": "要刪除的工作 ID"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
+          "source": "Remove tasks",
+          "message": "移除工作"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.desc": {
+          "source": "Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page.",
+          "message": "將帶有 Markdown 內容的新區塊插入至 Craft 文件中。您可以指定要將區塊插入目標頁面的開頭還是結尾。"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
+          "source": "Insert Block",
+          "message": "插入區塊"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.desc": {
+          "source": "\n          The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:\n\n\n\n          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.\n\n          - <caption> for caption text style. Can be used to wrap a paragraph.\n\n          - <highlight color=''> for highlights - color is optional. Can only be used inline.\n          ",
+          "message": "\n          要插入的 Markdown 內容。每個段落和標題之間請用兩個換行符號隔開。每個清單項目之間請用一個換行符號隔開。任何清單中的第一個項目不可為空。Craft 特定的 Token 為 HTML 標籤：\n\n\n\n          - <callout> 用於圖文框/標註。可用於包裹多個段落/圖片等。\n\n          - <caption> 用於圖頭/圖註文字樣式。可用於包裹一個段落。\n\n          - <highlight color=''> 用於螢光筆標示 - 顏色為選填。只能行內使用。\n          "
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
+          "source": "Markdown Content",
+          "message": "Markdown 內容"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the block",
+          "message": "區塊的 Markdown 內容"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.desc": {
+          "source": "Specify the position where the block should be inserted within the document.",
+          "message": "指定要在文件中插入區塊的位置。"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "位置"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.short_desc": {
+          "source": "Where to insert the block",
+          "message": "插入區塊的位置"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
+          "source": "Add a new block to a document",
+          "message": "將新區塊新增至文件"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.desc": {
+          "source": "Get a list of tasks from your Craft workspace filtered by scope. You can retrieve active tasks, upcoming tasks, inbox tasks, or tasks from your logbook.",
+          "message": "取得按範圍篩選的 Craft 工作區工作列表。您可以擷取進行中的工作、即將到來的工作、收件匣工作，或日誌中的工作。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "列出任務"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "使用中"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmluYm94.display_name": {
+          "source": "Inbox",
+          "message": "收件匣"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmxvZ2Jvb2s.display_name": {
+          "source": "Logbook",
+          "message": "日誌"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Upcoming",
+          "message": "即將到來"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.desc": {
+          "source": "Filter tasks by scope: - 'active': Active tasks from inbox and other documents (tasks due before now that are not completed/cancelled) - 'upcoming': Upcoming tasks from inbox and other documents (tasks scheduled after now) - 'inbox': Only tasks in the task inbox - 'logbook': Only tasks in the task logbook (completed and cancelled tasks)",
+          "message": "按範圍篩選工作：- 'active'：來自收件匣和其他文件的進行中工作（截止時間在現在之前且未完成/取消的工作）- 'upcoming'：來自收件匣和其他文件的即將到來工作（排定時間在現在之後的工作）- 'inbox'：僅包含工作收件匣中的工作 - 'logbook'：僅包含工作日誌中的工作（已完成與已取消的工作）"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "範圍"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.short_desc": {
+          "source": "Filter tasks by scope",
+          "message": "按範圍篩選工作"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve tasks based on scope",
+          "message": "根據範圍擷取工作"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.desc": {
+          "source": "Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata.",
+          "message": "從指定的 Craft 文件或頁面擷取所有區塊。這可讓您存取文件的結構化內容（包括巢狀區塊），並能控制深度與元資料。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
+          "source": "List Blocks",
+          "message": "列出區塊"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.desc": {
+          "source": "Whether to retrieve the markdown string representation of the blocks.",
+          "message": "是否擷取區塊的 Markdown 字串表示法。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
+          "source": "Get Markdown String",
+          "message": "取得 Markdown 字串"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
+          "source": "Retrieve the markdown string representation of blocks",
+          "message": "擷取區塊的 Markdown 字串表示法"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks.",
+          "message": "是否擷取區塊的元資料 (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt)。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "擷取元資料"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "在回應中包含元資料"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.desc": {
+          "source": "The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks.",
+          "message": "要擷取的頁面區塊 ID。多文件操作時為必填。接受文件、頁面和區塊的 ID。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
+          "source": "Document/Page ID",
+          "message": "文件/頁面 ID"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
+          "source": "The document or page to retrieve blocks from",
+          "message": "要從中擷取區塊的文件或頁面"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level.",
+          "message": "指定擷取巢狀區塊的最大深度。使用 -1 代表不限深度，或提供正數以限制巢狀層級。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "最大深度"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "巢狀區塊的最大深度"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
+          "source": "Retrieve blocks from a document",
+          "message": "從文件中擷取區塊"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.desc": {
+          "source": "Get a list of all items in a specific Craft collection, including their IDs, titles, properties, and content blocks. You can control the depth of nested content retrieval.",
+          "message": "取得特定 Craft 集合中所有項目的列表，包含其 ID、標題、屬性和內容區塊。您可以控制巢狀內容擷取的深度。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
+          "source": "List Collection Items",
+          "message": "列出集合項目"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection whose items you want to list. All items in the collection will be returned.",
+          "message": "選擇您想要列出項目的 Craft 集合。將會傳回該集合中的所有項目。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "集合"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to retrieve items from",
+          "message": "要從中擷取項目的集合"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "每個集合項目要擷取的巢狀內容最大深度。預設為 -1（所有後代）。深度為 0 時，僅擷取項目屬性而不包含巢狀內容。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "最大深度"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content",
+          "message": "巢狀內容的最大深度"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
+          "source": "Retrieve all items in a collection",
+          "message": "擷取集合中的所有項目"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Get a list of all collections in your Craft workspace. You can optionally filter collections by specific documents using include or exclude modes.",
+          "message": "取得您 Craft 工作區中所有集合的列表。您可以選擇使用 include 或 exclude 模式，按特定文件篩選集合。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "列出集合"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmV4Y2x1ZGU.display_name": {
+          "source": "Exclude",
+          "message": "排除"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmluY2x1ZGU.display_name": {
+          "source": "Include",
+          "message": "Include"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.desc": {
+          "source": "Choose whether to include or exclude collections based on the provided document IDs. Select \"Include\" to only show collections from the specified documents, or \"Exclude\" to hide collections from those documents.",
+          "message": "選擇要根據提供的文件 ID 包含或排除集合。選擇「Include」以僅顯示指定文件中的集合，或選擇「Exclude」以隱藏這些文件中的集合。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
+          "source": "Document Filter Mode",
+          "message": "文件篩選模式"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
+          "source": "How to filter by documents",
+          "message": "如何按文件篩選"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.desc": {
+          "source": "The document IDs to filter. If not provided, collections in all documents will be listed.",
+          "message": "要篩選的文件 ID。若未提供，將列出所有文件中的集合。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.display_name": {
+          "source": "Document IDs",
+          "message": "文件 ID"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.short_desc": {
+          "source": "Filter collections by documents",
+          "message": "按文件篩選集合"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "Retrieve all collections",
+          "message": "取得所有集合"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library.",
+          "message": "取得您的 Craft 工作區中所有文件的清單。這包含文件 ID、標題及其刪除狀態，提供您文件庫的完整總覽。"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "列出文件"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "Retrieve all documents",
+          "message": "取得所有文件"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Craft** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Craft** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑 (相對於連線的 API 基礎 URL)、選填的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中作為一等動作公開時，請使用此動作。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Craft",
+          "message": "對 Craft 發出自訂 API 呼叫"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "This trigger activates when a new item is created in the specified Craft collection, allowing you to automate workflows based on new collection entries.",
+          "message": "當在指定的 Craft 集合中建立新項目時，此觸發條件會啟動，讓您能夠根據新集合條目自動化工作流程。"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "New Collection Item",
+          "message": "新增集合項目"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire.",
+          "message": "選擇您要監控新項目的 Craft 集合。當此集合新增項目時，將會觸發此條件。"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "集合"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to monitor for new items",
+          "message": "要監控新項目的集合"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "每個集合項目要擷取的巢狀內容最大深度。預設為 -1（所有後代）。深度為 0 時，僅擷取項目屬性而不包含巢狀內容。"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "最大深度"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content retrieval",
+          "message": "巢狀內容檢索的最大深度"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Triggers when a new item is added to a collection",
+          "message": "當向集合新增項目時觸發"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Update the title and properties of an existing item in a Craft collection. You can modify any custom properties that are part of the collection schema.",
+          "message": "更新 Craft 集合中現有項目的標題和屬性。您可以修改屬於集合結構描述一部分的任何自訂屬性。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Update Collection Item",
+          "message": "更新集合項目"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the item you want to update.",
+          "message": "選擇包含您要更新之項目的 Craft 集合。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "集合"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the item",
+          "message": "包含該項目的集合"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.desc": {
+          "source": "Select the specific collection item you want to modify. The available items are dynamically populated based on the selected collection.",
+          "message": "選擇您要修改的特定集合項目。可用的項目會根據所選的集合動態填入。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.display_name": {
+          "source": "Item",
+          "message": "項目"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.short_desc": {
+          "source": "The item to update",
+          "message": "要更新的項目"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Update the custom properties of the collection item. Only the properties you specify will be updated; others will remain unchanged.",
+          "message": "更新集合項目的自訂屬性。僅會更新您指定的屬性；其他屬性將保持不變。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "屬性"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Updated properties for the item",
+          "message": "項目更新後的屬性"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a new title for the collection item. Leave empty to keep the existing title unchanged.",
+          "message": "為集合項目提供新標題。留空以保持原有標題不變。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "New title for the item",
+          "message": "項目的新標題"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Modify an existing collection item",
+          "message": "修改現有集合項目"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Update an existing task in Craft by changing its markdown content, state, schedule date, or deadline date.",
+          "message": "透過變更 Markdown 內容、狀態、排定日期或截止日期來更新 Craft 中的現有任務。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "更新工作"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.desc": {
+          "source": "Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline.",
+          "message": "更新後的任務截止日期。接受 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'。留空以保持原有截止日期。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
+          "source": "Deadline Date",
+          "message": "截止日期"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
+          "source": "Updated deadline date",
+          "message": "更新後的截止日期"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.desc": {
+          "source": "Select the task you want to modify. Only active tasks are available for selection.",
+          "message": "選擇您要修改的任務。只有活動中的任務可供選擇。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.display_name": {
+          "source": "Task",
+          "message": "任務"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.short_desc": {
+          "source": "The task to update",
+          "message": "要更新的任務"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "Provide new markdown-formatted content for the task. Leave empty to keep the existing content.",
+          "message": "為任務提供新的 Markdown 格式內容。留空以保持原有內容。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "任務內容"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "Updated markdown content",
+          "message": "更新後的 Markdown 內容"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.desc": {
+          "source": "Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule.",
+          "message": "更新後的預計執行日期。接受 ISO 格式 YYYY-MM-DD 或相對日期：'today'、'tomorrow'、'yesterday'。留空以保持原有排程。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
+          "source": "Schedule Date",
+          "message": "排定日期"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
+          "source": "Updated schedule date",
+          "message": "更新後的排定日期"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "已取消"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmRvbmU.display_name": {
+          "source": "Done",
+          "message": "已完成"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOnRvZG8.display_name": {
+          "source": "To Do",
+          "message": "待辦"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.desc": {
+          "source": "Change the state of the task to To Do, Done, or Canceled. Leave empty to keep the current state.",
+          "message": "將任務狀態變更為「待辦」、「已完成」或「已取消」。留空以保持當前狀態。"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.display_name": {
+          "source": "State",
+          "message": "州/省"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.short_desc": {
+          "source": "Updated task state",
+          "message": "更新後的任務狀態"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Modify an existing task",
+          "message": "修改現有任務"
+        },
+        "app.Q3JhZnQ.desc": {
+          "source": "The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.\n\n## API Configuration Requirements\n\n### For Tasks and Daily Notes Actions\n\nTo use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.\n\n### For All Other Actions\n\nTo use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.",
+          "message": "Craft 整合提供全面的動作與觸發條件，以與 Craft API 進行互動。透過強大的自動化功能管理您的文件、集合、任務和區塊，優化您的筆記與文件管理工作流程。\n\n## API 設定需求\n\n### 針對 Tasks 與 Daily Notes 動作\n\n若要使用 **List Tasks**、**Create Task**、**Update Task**、**Delete Tasks** 以及 **Get Daily Note Blocks** 動作，您必須在 Craft 的 **Imagine** 分頁中建立 **Daily notes & Tasks** API。\n\n### 針對所有其他動作\n\n若要使用 **Documents**、**Collections** 與 **Blocks** 動作，您需要在 Craft API 設定中連接 **Selected Documents**。"
+        },
+        "app.Q3JhZnQ.display_name": {
+          "source": "Craft",
+          "message": "Craft"
+        },
+        "app.Q3JhZnQ.short_desc": {
+          "source": "Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.",
+          "message": "連接至 Craft 以無縫管理文件、集合、任務和區塊。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.",
+          "message": "Vytvorte a odošlite novú SMS alebo MMS správu pomocou Twilio. Môžete odosielať textové správy, pridávať mediálne prílohy, plánovať správy a konfigurovať možnosti doručenia. Táto akcia podporuje štandardné odosielanie správ aj služby odosielania správ (messaging services)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create a Message",
+          "message": "Vytvoriť správu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.desc": {
+          "source": "The text of the message you want to send, limited to 1600 characters. For SMS messages longer than 160 characters, the message will be sent as multiple segments.",
+          "message": "Text správy, ktorú chcete odoslať, obmedzený na 1600 znakov. Pre SMS správy dlhšie ako 160 znakov bude správa odoslaná ako viacero segmentov."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "Textový obsah správy"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "A Twilio phone number in E.164 format, a Messaging Service SID, or a short code. This number must be enabled for the type of message you wish to send.",
+          "message": "Telefónne číslo Twilio vo formáte E.164, Messaging Service SID alebo krátky kód. Toto číslo musí byť povolené pre typ správy, ktorú chcete odoslať."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "The sender phone number or messaging service SID",
+          "message": "Telefónne číslo odosielateľa alebo Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.desc": {
+          "source": "The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.",
+          "message": "Maximálna celková cena v USD prijateľná pre odoslanie správy. Ak cena prekročí túto hodnotu, odoslanie správy zlyhá."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
+          "source": "Max Price",
+          "message": "Maximálna cena"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
+          "source": "Maximum acceptable price for the message",
+          "message": "Maximálna prijateľná cena za správu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.desc": {
+          "source": "A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.",
+          "message": "Zoznam verejne dostupných URL adries mediálnych súborov na odoslanie so správou. Podporované pre MMS správy. Môžete zahrnúť až 10 mediálnych súborov."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.display_name": {
+          "source": "Media URLs",
+          "message": "URL médií"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.short_desc": {
+          "source": "URLs of media to include in the message",
+          "message": "URL médií, ktoré sa majú zahrnúť do správy"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.desc": {
+          "source": "The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.",
+          "message": "SID služby Messaging Service, ktorá sa má použiť pre správu. Po nastavení je možné vynechať parameter \"Od\" a Twilio vyberie vhodné telefónne číslo z fondu služby Messaging Service."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
+          "source": "Messaging Service SID",
+          "message": "Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
+          "source": "The SID of the Messaging Service to use",
+          "message": "SID služby Messaging Service, ktorá sa má použiť"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.allowed-value.c3RyaW5nOmZpeGVk.display_name": {
+          "source": "Fixed",
+          "message": "Pevný"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.desc": {
+          "source": "Set to \"fixed\" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.",
+          "message": "Nastavte na \"fixed\", ak chcete naplánovať odoslanie správy na konkrétny čas. Vyžaduje nastavenie parametra Send At."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
+          "source": "Schedule Type",
+          "message": "Typ plánovania"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
+          "source": "The type of message scheduling",
+          "message": "Typ plánovania správ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.desc": {
+          "source": "The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to \"fixed\".",
+          "message": "Čas, kedy sa má naplánovaná správa odoslať, vo formáte ISO 8601. Tento parameter je povinný, ak je Schedule Type nastavený na \"fixed\"."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
+          "source": "Send At",
+          "message": "Odoslať o"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
+          "source": "When to send the scheduled message",
+          "message": "Kedy odoslať naplánovanú správu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.",
+          "message": "URL adresa, na ktorú Twilio odošle požiadavku POST pri každej zmene stavu správy. To vám umožní sledovať stav doručenia vašich správ."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL spätného volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive message status updates",
+          "message": "URL na prijímanie aktualizácií stavu správy"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.desc": {
+          "source": "The phone number to send the message to in E.164 format (e.g., +15551234567). For WhatsApp messages, use the format whatsapp:+15551234567.",
+          "message": "Telefónne číslo, na ktoré sa má odoslať správa, vo formáte E.164 (napr. +15551234567). V prípade správ WhatsApp použite formát whatsapp:+15551234567."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "The destination phone number",
+          "message": "Cieľové telefónne číslo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.desc": {
+          "source": "The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).",
+          "message": "Počet sekúnd, počas ktorých môže správa zostať v fronte. Ak sa správa po tomto čase nedoručí, zlyhá. Maximum je 14400 sekúnd (4 hodiny)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
+          "source": "Validity Period",
+          "message": "Doba platnosti"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
+          "source": "How long the message is valid for delivery",
+          "message": "Ako dlho je správa platná na doručenie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a new SMS or MMS message",
+          "message": "Odoslať novú správu SMS alebo MMS"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.desc": {
+          "source": "Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.",
+          "message": "Iniciujte odchádzajúci telefónny hovor pomocou Twilio. Môžete poskytnúť inštrukcie TwiML cez URL alebo priamo, nakonfigurovať nahrávanie hovoru, detekciu odkazovača a nastaviť spätné volania stavu na sledovanie priebehu hovoru."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
+          "source": "Create a Call",
+          "message": "Vytvoriť hovor"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number or client identifier to use as the caller ID. If calling a phone number, this must also be a phone number.",
+          "message": "Telefónne číslo Twilio alebo identifikátor klienta, ktorý sa použije ako ID volajúceho. Ak voláte na telefónne číslo, musí to byť tiež telefónne číslo."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.short_desc": {
+          "source": "The caller ID to display",
+          "message": "ID volajúceho na zobrazenie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "Zistiť koniec správy"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "Povoliť"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection. \"Enable\" returns AnsweredBy immediately, \"DetectMessageEnd\" waits for the beep to leave a message.",
+          "message": "Povoľte detekciu odkazovača. Hodnota „Enable“ vráti AnsweredBy okamžite, „DetectMessageEnd“ čaká na pípnutie pre zanechanie správy."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "Detekcia odkazovača"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "Povoliť detekciu odkazovača"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.desc": {
+          "source": "The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.",
+          "message": "Počet sekúnd na pokus o detekciu odkazovača pred vypršaním časového limitu. Predvolená hodnota je 30 sekúnd."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
+          "source": "Machine Detection Timeout",
+          "message": "Časový limit detekcie odkazovača"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
+          "source": "Seconds to wait for detection",
+          "message": "Sekundy čakania na detekciu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.",
+          "message": "Metóda HTTP, ktorá sa má použiť pri vyžiadaní URL. Môže byť GET alebo POST. Predvolená hodnota je POST."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
+          "source": "HTTP method for fetching TwiML",
+          "message": "Metóda HTTP na načítanie TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: \"W1234#\".",
+          "message": "Reťazec klávesov na vytočenie po spojení. Platné znaky: 0-9, A-D, #, *, w (pauza 0,5 s), W (pauza 1 s). Napríklad: „W1234#“."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "Odoslať číslice"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "Tóny DTMF na odoslanie po spojení"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.",
+          "message": "URL, na ktorú Twilio odošle požiadavku POST pri zmene stavu hovoru. Udalosti, ktoré spúšťajú spätné volania, môžete určiť pomocou položky Udalosti spätného volania stavu."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL spätného volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "URL na prijímanie aktualizácií stavu hovoru"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmFuc3dlcmVk.display_name": {
+          "source": "Answered",
+          "message": "Prijatý"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Dokončené"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmluaXRpYXRlZA.display_name": {
+          "source": "Initiated",
+          "message": "Iniciovaný"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "Zvonenie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.desc": {
+          "source": "The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.",
+          "message": "Udalosti priebehu hovoru, ktoré spustia požiadavku POST na URL spätného volania stavu. Možnosti zahŕňajú: initiated, ringing, answered a completed."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
+          "source": "Status Callback Events",
+          "message": "Udalosti spätného volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
+          "source": "Events that trigger status callbacks",
+          "message": "Udalosti, ktoré spúšťajú spätné volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.desc": {
+          "source": "The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.",
+          "message": "Metóda HTTP, ktorá sa má použiť pri odosielaní požiadavky POST na URL spätného volania stavu. Môže byť GET alebo POST. Predvolená hodnota je POST."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
+          "source": "Status Callback Method",
+          "message": "Metóda spätného volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
+          "source": "HTTP method for status callbacks",
+          "message": "Metóda HTTP pre spätné volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes.",
+          "message": "Nastavte na true pre nahrávanie celého hovoru. Nahrávka bude k dispozícii po dokončení hovoru."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.display_name": {
+          "source": "Record",
+          "message": "Nahrávať"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "Či sa má hovor nahrávať"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOm1vbm8.display_name": {
+          "source": "Mono",
+          "message": "Mono"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOmR1YWw.display_name": {
+          "source": "Dual",
+          "message": "Duálne"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.desc": {
+          "source": "The number of channels in the final recording. \"mono\" records both legs in a single channel, \"dual\" records each leg separately.",
+          "message": "Počet kanálov vo výslednej nahrávke. Hodnota „mono“ nahráva obe strany v jednom kanáli, „dual“ nahráva každú stranu samostatne."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
+          "source": "Recording Channels",
+          "message": "Kanály nahrávania"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
+          "source": "Number of channels in the recording",
+          "message": "Počet kanálov v nahrávke"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.",
+          "message": "URL, na ktorú Twilio odošle požiadavku POST, keď bude nahrávka k dispozícii. Umožňuje vám okamžite spracovať alebo uložiť nahrávky."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Recording Status Callback",
+          "message": "Spätné volanie stavu nahrávania"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to notify when recording is available",
+          "message": "URL na upozornenie, keď je nahrávka k dispozícii"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.desc": {
+          "source": "The phone number, SIP address, or client identifier to call. Phone numbers must be in E.164 format (e.g., +15551234567).",
+          "message": "Telefónne číslo, adresa SIP alebo identifikátor klienta na volanie. Telefónne čísla musia byť vo formáte E.164 (napr. +15551234567)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "Telefónne číslo na volanie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.desc": {
+          "source": "The maximum duration of the call in seconds. The call will be automatically ended after this time.",
+          "message": "Maximálne trvanie hovoru v sekundách. Po tomto čase sa hovor automaticky ukončí."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
+          "source": "Time Limit",
+          "message": "Časový limit"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
+          "source": "Maximum call duration in seconds",
+          "message": "Maximálne trvanie hovoru v sekundách"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "Počet sekúnd čakania na prijatie hovoru pred vypršaním časového limitu. Predvolená hodnota je 60 sekúnd, maximum je 600 sekúnd."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "Časový limit"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "Sekundy čakania na prijatie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.desc": {
+          "source": "TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.",
+          "message": "Inštrukcie TwiML na vykonanie po spojení hovoru. Ak sú zadané TwiML aj URL, prednosť má TwiML. Maximálne 4000 znakov."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.display_name": {
+          "source": "TwiML",
+          "message": "TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.short_desc": {
+          "source": "TwiML instructions for the call",
+          "message": "Inštrukcie TwiML pre hovor"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.desc": {
+          "source": "The URL that Twilio will fetch TwiML instructions from when the call connects. This URL should return valid TwiML to control the call flow.",
+          "message": "URL, z ktorej Twilio načíta inštrukcie TwiML po spojení hovoru. Táto URL by mala vracať platný TwiML na riadenie priebehu hovoru."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.display_name": {
+          "source": "TwiML URL",
+          "message": "URL TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.short_desc": {
+          "source": "URL that returns TwiML instructions",
+          "message": "URL, ktorá vracia inštrukcie TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
+          "source": "Initiate an outbound phone call",
+          "message": "Iniciovať odchádzajúci telefónny hovor"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.desc": {
+          "source": "Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.",
+          "message": "Iniciujte odchádzajúci telefónny hovor s automatickou správou prevodu textu na reč. Táto zjednodušená akcia automaticky generuje TwiML na základe vašich vstupov, čo vám umožňuje rýchlo vytvárať hovory s hlasovými správami bez nutnosti manuálneho písania kódu TwiML. Môžete prispôsobiť hlas, jazyk, nahrať hovor a voliteľne prepísať nahrávky."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
+          "source": "Create Call with Text-to-Speech",
+          "message": "Vytvoriť hovor s prevodom textu na reč"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to use as the caller ID. This must be a phone number you own in your Twilio account.",
+          "message": "Telefónne číslo Twilio, ktoré sa použije ako ID volajúceho. Musí to byť telefónne číslo, ktoré vlastníte vo svojom účte Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.short_desc": {
+          "source": "Your Twilio phone number",
+          "message": "Vaše telefónne číslo Twilio"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5iLU5P.display_name": {
+          "source": "Norwegian (Norway)",
+          "message": "Nórčina (Nórsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5sLU5M.display_name": {
+          "source": "Dutch (Netherlands)",
+          "message": "Holandčina (Holandsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmFyYg.display_name": {
+          "source": "Arabic (Gulf)",
+          "message": "Arabčina (Perzský záliv)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmNtbi1DTg.display_name": {
+          "source": "Chinese (Mandarin)",
+          "message": "Čínština (mandarínska)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRhLURL.display_name": {
+          "source": "Danish (Denmark)",
+          "message": "Dánčina (Dánsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "Nemčina (Nemecko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUFV.display_name": {
+          "source": "English (Australia)",
+          "message": "Angličtina (Austrália)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUNB.display_name": {
+          "source": "English (Canada)",
+          "message": "Angličtina (Kanada)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "Angličtina (Spojené kráľovstvo)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUlO.display_name": {
+          "source": "English (India)",
+          "message": "Angličtina (India)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "Angličtina (Spojené štáty)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLU1Y.display_name": {
+          "source": "Spanish (Mexico)",
+          "message": "Španielčina (Mexiko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "Španielčina (Španielsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLVVT.display_name": {
+          "source": "Spanish (United States)",
+          "message": "Španielčina (Spojené štáty)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUNB.display_name": {
+          "source": "French (Canada)",
+          "message": "Francúzština (Kanada)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "Francúzština (Francúzsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmhpLUlO.display_name": {
+          "source": "Hindi (India)",
+          "message": "Hindčina (India)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "Taliančina (Taliansko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "Japončina (Japonsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmtvLUtS.display_name": {
+          "source": "Korean (South Korea)",
+          "message": "Kórejčina (Južná Kórea)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "Portugalčina (Brazília)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LVBU.display_name": {
+          "source": "Portuguese (Portugal)",
+          "message": "Portugalčina (Portugalsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnBsLVBM.display_name": {
+          "source": "Polish (Poland)",
+          "message": "Poľština (Poľsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnN2LVNF.display_name": {
+          "source": "Swedish (Sweden)",
+          "message": "Švédčina (Švédsko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnRyLVRS.display_name": {
+          "source": "Turkish (Turkey)",
+          "message": "Turečtina (Turecko)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).",
+          "message": "Jazyk a miestne nastavenie pre prevod textu na reč. Malo by sa zhodovať s jazykom textu vašej správy. Ak nie je zadané, predvolená hodnota je en-US (Angličtina, Spojené štáty)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "Jazyk"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language for text-to-speech",
+          "message": "Jazyk pre prevod textu na reč"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "Zistiť koniec správy"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "Povoliť"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection to determine if a human or machine answered the call. \"Enable\" returns the result immediately, \"DetectMessageEnd\" waits for the voicemail beep before playing your message.",
+          "message": "Povoľte detekciu odkazovača na zistenie, či hovor prijal človek alebo záznamník. \"Enable\" vráti výsledok okamžite, \"DetectMessageEnd\" počká na pípnutie odkazovača pred prehraním vašej správy."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "Detekcia odkazovača"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "Povoliť detekciu odkazovača"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.desc": {
+          "source": "The text message that will be spoken when the call is answered. This will be converted to speech using Twilio's text-to-speech engine.",
+          "message": "Textová správa, ktorá sa vysloví po prijatí hovoru. Bude prevedená na reč pomocou nástroja prevodu textu na reč od Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Správa"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text message to speak",
+          "message": "Textová správa na vyslovenie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: \"w123#\" waits 0.5 seconds then dials 123#.",
+          "message": "Reťazec klávesov na vytočenie po spojení hovoru. Užitočné na automatickú navigáciu v telefónnych ponukách. Platné znaky: 0-9, #, *, w (čakať 0,5 sekundy). Napríklad: \"w123#\" počká 0,5 sekundy a potom vytočí 123#."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "Odoslať číslice"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "Tóny DTMF na odoslanie po spojení"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.",
+          "message": "URL, na ktorú Twilio odošle požiadavku POST pri zmene stavu hovoru. Použite toto na sledovanie priebehu a dokončenia hovoru."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL spätného volania stavu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "URL na prijímanie aktualizácií stavu hovoru"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.",
+          "message": "Nastavte na true, ak chcete nahrať celý hovor. Nahrávka bude k dispozícii po dokončení hovoru a možno ju získať pomocou akcie List Recordings."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
+          "source": "Record Call",
+          "message": "Nahrať hovor"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "Či sa má hovor nahrávať"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.desc": {
+          "source": "The phone number to call in E.164 format (e.g., +15551234567). You can also call SIP addresses or Twilio client identifiers.",
+          "message": "Telefónne číslo na volanie vo formáte E.164 (napr. +15551234567). Môžete volať aj na SIP adresy alebo identifikátory klientov Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "Telefónne číslo na volanie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "Počet sekúnd čakania na prijatie hovoru pred vypršaním časového limitu. Predvolená hodnota je 60 sekúnd, maximum je 600 sekúnd."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "Časový limit"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "Sekundy čakania na prijatie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.desc": {
+          "source": "Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.",
+          "message": "Nastavte na true na automatický prepis nahrávky hovoru. Vyžaduje to povolenie možnosti Record Call. Prepis bude k dispozícii po spracovaní."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
+          "source": "Transcribe Recording",
+          "message": "Prepísať nahrávku"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
+          "source": "Whether to transcribe the recording",
+          "message": "Či sa má prepísať nahrávka"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.desc": {
+          "source": "The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.",
+          "message": "URL, na ktorú Twilio odošle požiadavku POST po dokončení prepisu. To vám umožňuje spracovať alebo uložiť prepisy ihneď po ich sprístupnení."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
+          "source": "Transcription Callback URL",
+          "message": "URL spätného volania pre prepis"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
+          "source": "URL to receive transcription results",
+          "message": "URL na prijímanie výsledkov prepisu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5jbW4tQ04tU3RhbmRhcmQtQQ.display_name": {
+          "source": "Chinese (Mandarin) - Google Standard (Female)",
+          "message": "Čínština (mandarínska) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5kZS1ERS1TdGFuZGFyZC1B.display_name": {
+          "source": "German - Google Standard (Female)",
+          "message": "Nemčina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1B.display_name": {
+          "source": "English (UK) - Google Standard (Female)",
+          "message": "Angličtina (UK) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1C.display_name": {
+          "source": "English (UK) - Google Standard (Male)",
+          "message": "Angličtina (UK) - Google Standard (mužský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUE.display_name": {
+          "source": "English (US) - Google Neural (Female)",
+          "message": "Angličtina (US) - Google Neural (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUQ.display_name": {
+          "source": "English (US) - Google Neural (Male)",
+          "message": "Angličtina (US) - Google Neural (mužský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1B.display_name": {
+          "source": "English (US) - Google Standard (Female)",
+          "message": "Angličtina (US) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1C.display_name": {
+          "source": "English (US) - Google Standard (Male)",
+          "message": "Angličtina (US) - Google Standard (mužský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lcy1FUy1TdGFuZGFyZC1B.display_name": {
+          "source": "Spanish (Spain) - Google Standard (Female)",
+          "message": "Španielčina (Španielsko) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1DQS1TdGFuZGFyZC1B.display_name": {
+          "source": "French (Canada) - Google Standard (Female)",
+          "message": "Francúzština (Kanada) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1GUi1TdGFuZGFyZC1B.display_name": {
+          "source": "French (France) - Google Standard (Female)",
+          "message": "Francúzština (Francúzsko) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5oaS1JTi1TdGFuZGFyZC1B.display_name": {
+          "source": "Hindi - Google Standard (Female)",
+          "message": "Hindčina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5pdC1JVC1TdGFuZGFyZC1B.display_name": {
+          "source": "Italian - Google Standard (Female)",
+          "message": "Taliančina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5qYS1KUC1TdGFuZGFyZC1B.display_name": {
+          "source": "Japanese - Google Standard (Female)",
+          "message": "Japončina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5rby1LUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Korean - Google Standard (Female)",
+          "message": "Kórejčina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5ubC1OTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Dutch - Google Standard (Female)",
+          "message": "Holandčina - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wbC1QTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Polish - Google Standard (Female)",
+          "message": "Poľština - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wdC1CUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Portuguese (Brazil) - Google Standard (Female)",
+          "message": "Portugalčina (Brazília) - Google Standard (ženský)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdGhpZXUtTmV1cmFs.display_name": {
+          "source": "French (France) - Polly Mathieu (Male, Neural)",
+          "message": "Francúzština (Francúzsko) - Polly Mathieu (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdHRoZXctTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Matthew (Male, Neural)",
+          "message": "Angličtina (US) - Polly Matthew (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk9sYS1OZXVyYWw.display_name": {
+          "source": "Polish - Polly Ola (Female, Neural)",
+          "message": "Poľština - Polly Ola (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFkcmlhbm8tTmV1cmFs.display_name": {
+          "source": "Italian - Polly Adriano (Male, Neural)",
+          "message": "Taliančina - Polly Adriano (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFteS1OZXVyYWw.display_name": {
+          "source": "English (UK) - Polly Amy (Female, Neural)",
+          "message": "Angličtina (UK) - Polly Amy (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJpYW5jYS1OZXVyYWw.display_name": {
+          "source": "Italian - Polly Bianca (Female, Neural)",
+          "message": "Taliančina - Polly Bianca (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJyaWFuLU5ldXJhbA.display_name": {
+          "source": "English (UK) - Polly Brian (Male, Neural)",
+          "message": "Angličtina (UK) - Polly Brian (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNhbWlsYS1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Camila (Female, Neural)",
+          "message": "Portugalčina (Brazília) - Polly Camila (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNlbGluZS1OZXVyYWw.display_name": {
+          "source": "French (France) - Polly Celine (Female, Neural)",
+          "message": "Francúzština (Francúzsko) - Polly Celine (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkRhbmllbC1OZXVyYWw.display_name": {
+          "source": "German - Polly Daniel (Male, Neural)",
+          "message": "Nemčina - Polly Daniel (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkhhbGEtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Hala (Female, Neural)",
+          "message": "Arabčina - Polly Hala (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvYW5uYS1OZXVyYWw.display_name": {
+          "source": "English (US) - Polly Joanna (Female, Neural)",
+          "message": "Angličtina (US) - Polly Joanna (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvZXktTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Joey (Male, Neural)",
+          "message": "Angličtina (US) - Polly Joey (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthamFsLU5ldXJhbA.display_name": {
+          "source": "Hindi - Polly Kajal (Female, Neural)",
+          "message": "Hindčina – Polly Kajal (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthenVoYS1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Kazuha (Female, Neural)",
+          "message": "Japončina – Polly Kazuha (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1Y2lhLU5ldXJhbA.display_name": {
+          "source": "Spanish (Spain) - Polly Lucia (Female, Neural)",
+          "message": "Španielčina (Španielsko) – Polly Lucia (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1cGUtTmV1cmFs.display_name": {
+          "source": "Spanish (US) - Polly Lupe (Female, Neural)",
+          "message": "Španielčina (USA) – Polly Lupe (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkxhdXJhLU5ldXJhbA.display_name": {
+          "source": "Dutch - Polly Laura (Female, Neural)",
+          "message": "Holandčina – Polly Laura (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlBlZHJvLU5ldXJhbA.display_name": {
+          "source": "Spanish (US) - Polly Pedro (Male, Neural)",
+          "message": "Španielčina (USA) – Polly Pedro (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlNlb3llb24tTmV1cmFs.display_name": {
+          "source": "Korean - Polly Seoyeon (Female, Neural)",
+          "message": "Kórejčina – Polly Seoyeon (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRoaWFnby1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Thiago (Male, Neural)",
+          "message": "Portugalčina (Brazília) – Polly Thiago (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRvbW9rby1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Tomoko (Female, Neural)",
+          "message": "Japončina – Polly Tomoko (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlZpY2tpLU5ldXJhbA.display_name": {
+          "source": "German - Polly Vicki (Female, Neural)",
+          "message": "Nemčina – Polly Vicki (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpheWQtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Zayd (Male, Neural)",
+          "message": "Arabčina – Polly Zayd (mužský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpoaXl1LU5ldXJhbA.display_name": {
+          "source": "Chinese (Mandarin) - Polly Zhiyu (Female, Neural)",
+          "message": "Čínština (mandarínska) – Polly Zhiyu (ženský, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.desc": {
+          "source": "The voice to use for text-to-speech. Choose from various voices with different languages, genders, and quality levels (Standard, Neural, Generative). If not specified, uses your account's default voice.",
+          "message": "Hlas, ktorý sa má použiť na prevod textu na reč. Vyberte si z rôznych hlasov s rôznymi jazykmi, rodmi a úrovňami kvality (Standard, Neural, Generative). Ak nie je zadaný, použije sa predvolený hlas vášho účtu."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.display_name": {
+          "source": "Voice",
+          "message": "Hlas"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.short_desc": {
+          "source": "The voice to use for text-to-speech",
+          "message": "Hlas, ktorý sa má použiť na prevod textu na reč"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
+          "source": "Make a call with automated voice message",
+          "message": "Uskutočniť hovor s automatizovanou hlasovou správou"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.",
+          "message": "Vytvorte a spustite nové vykonanie Studio Flow. Tým sa spustí tok so zadanými kontaktnými informáciami a voliteľnými parametrami, ku ktorým je možné pristupovať v rámci toku."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Create an Execution",
+          "message": "Vytvoriť vykonanie"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow to execute. Flow SIDs start with \"FW\".",
+          "message": "SID toku Studio Flow, ktorý sa má vykonať. Hodnoty Flow SID začínajú na \"FW\"."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Jedinečný identifikátor toku Studio Flow"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to send messages or make calls from during the execution. Available as flow.channel.address. Can also be a Messaging Service SID.",
+          "message": "Telefónne číslo Twilio, z ktorého sa majú počas vykonávania odosielať správy alebo uskutočňovať hovory. Dostupné ako flow.channel.address. Môže to byť aj Messaging Service SID."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.short_desc": {
+          "source": "The Twilio phone number",
+          "message": "Telefónne číslo Twilio"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.desc": {
+          "source": "JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow.",
+          "message": "Dáta JSON, ktoré sa pridajú do kontextu toku a budú prístupné ako premenné. Napríklad: objekt JSON s vlastnosťou name bude v toku dostupný ako flow.data.name."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.display_name": {
+          "source": "Parameters",
+          "message": "Parametre"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.short_desc": {
+          "source": "JSON data for the flow context",
+          "message": "Dáta JSON pre kontext toku"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.desc": {
+          "source": "The contact phone number to start the Flow execution with. Available in the flow as contact.channel.address.",
+          "message": "Telefónne číslo kontaktu, s ktorým sa má spustiť vykonanie toku. V toku je dostupné ako contact.channel.address."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.short_desc": {
+          "source": "The contact phone number",
+          "message": "Telefónne číslo kontaktu"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Start a Studio Flow execution",
+          "message": "Spustiť vykonanie Studio Flow"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.",
+          "message": "Získajte podrobné informácie o konkrétnej správe pomocou jej jedinečného SID (String Identifier). Týmto sa vrátia všetky dostupné informácie o správe vrátane stavu, obsahu, ceny a časových pečiatok."
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get a Message",
+          "message": "Získať správu"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) správy, ktorá sa má načítať. Hodnoty Message SID začínajú na \"SM\" alebo \"MM\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "Message SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "Jedinečný identifikátor správy"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve details of a specific message",
+          "message": "Načítať podrobnosti o konkrétnej správe"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.desc": {
+          "source": "Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.",
+          "message": "Získajte podrobné informácie o konkrétnom hovore pomocou jeho jedinečného SID. Týmto sa vrátia všetky dostupné informácie o hovore vrátane stavu, trvania, ceny a časových pečiatok."
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
+          "source": "Get a Call",
+          "message": "Získať hovor"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to retrieve. Call SIDs start with \"CA\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) hovoru, ktorý sa má načítať. Hodnoty Call SID začínajú na \"CA\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "Call SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call",
+          "message": "Jedinečný identifikátor hovoru"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
+          "source": "Retrieve details of a specific call",
+          "message": "Načítať podrobnosti o konkrétnom hovore"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.desc": {
+          "source": "Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.",
+          "message": "Získajte podrobné informácie o konkrétnom vykonaní Studio Flow vrátane jeho aktuálneho stavu, kontextových dát a stavu."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
+          "source": "Get an Execution",
+          "message": "Získať vykonanie"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with \"FN\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) vykonania, ktoré sa má načítať. Hodnoty Execution SID začínajú na \"FN\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "Execution SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "Jedinečný identifikátor vykonania"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "SID toku Studio Flow, ktorý obsahuje vykonanie. Hodnoty Flow SID začínajú na \"FW\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Jedinečný identifikátor toku Studio Flow"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
+          "source": "Retrieve details of a specific execution",
+          "message": "Načítať podrobnosti o konkrétnom vykonaní"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.desc": {
+          "source": "Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.",
+          "message": "Získajte podrobné informácie o konkrétnom zázname hovoru vrátane trvania, stavu, ceny, URL médií a podrobností o šifrovaní."
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
+          "source": "Get a Recording",
+          "message": "Získať záznam"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with \"RE\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) záznamu, ktorý sa má načítať. Hodnoty Recording SID začínajú na \"RE\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "Recording SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "Jedinečný identifikátor záznamu"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
+          "source": "Retrieve details of a specific recording",
+          "message": "Načítať podrobnosti o konkrétnom zázname"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.",
+          "message": "Získajte podrobné informácie o konkrétnom prepise vrátane celého prepísaného textu zo záznamu. Týmto sa vráti pole transcriptionText obsahujúce samotný obsah prepisu."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "Get a Transcription",
+          "message": "Získať prepis"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording that contains the transcription. Recording SIDs start with \"RE\".",
+          "message": "SID záznamu, ktorý obsahuje prepis. Hodnoty Recording SID začínajú na \"RE\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "Recording SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "Jedinečný identifikátor záznamu"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.desc": {
+          "source": "The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with \"TR\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) prepisu, ktorý sa má načítať. Hodnoty Transcription SID začínajú na \"TR\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.display_name": {
+          "source": "Transcription SID",
+          "message": "Transcription SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.short_desc": {
+          "source": "The unique identifier of the transcription",
+          "message": "Jedinečný identifikátor prepisu"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Retrieve a specific transcription with text",
+          "message": "Načítať konkrétny prepis s textom"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.",
+          "message": "Natrvalo odstráňte záznam správy zo svojho účtu Twilio. Túto akciu nemožno vrátiť späť. Upozorňujeme, že odstránenie záznamu správy neodstráni obsah správy z denníkov Twilio."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete a Message",
+          "message": "Odstrániť správu"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to delete. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) správy, ktorá sa má odstrániť. Hodnoty Message SID začínajú na \"SM\" alebo \"MM\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "Message SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message to delete",
+          "message": "Jedinečný identifikátor správy, ktorá sa má odstrániť"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from your account",
+          "message": "Odstrániť správu z vášho účtu"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.desc": {
+          "source": "Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.",
+          "message": "Natrvalo odstrániť záznam hovoru z vášho účtu Twilio. Túto akciu nie je možné vrátiť späť. Upozorňujeme, že odstránenie záznamu hovoru neodstráni údaje o hovore zo systémových protokolov Twilio."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
+          "source": "Delete a Call",
+          "message": "Odstrániť hovor"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to delete. Call SIDs start with \"CA\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) hovoru, ktorý sa má odstrániť. Identifikátory Call SID začínajú na „CA“."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "Call SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call to delete",
+          "message": "Jedinečný identifikátor hovoru, ktorý sa má odstrániť"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
+          "source": "Delete a call record from your account",
+          "message": "Odstrániť záznam hovoru z vášho účtu"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Permanently delete an execution record from your Twilio account. This action cannot be undone.",
+          "message": "Natrvalo odstrániť záznam o vykonaní z vášho účtu Twilio. Túto akciu nie je možné vrátiť späť."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Delete an Execution",
+          "message": "Odstrániť vykonanie"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to delete. Execution SIDs start with \"FN\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) vykonania, ktoré sa má odstrániť. Identifikátory Execution SID začínajú na „FN“."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "Execution SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution to delete",
+          "message": "Jedinečný identifikátor vykonania, ktoré sa má odstrániť"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "SID toku Studio Flow, ktorý obsahuje vykonanie. Hodnoty Flow SID začínajú na \"FW\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Jedinečný identifikátor toku Studio Flow"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Delete an execution record",
+          "message": "Odstrániť záznam o vykonaní"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.desc": {
+          "source": "Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.",
+          "message": "Získať zoznam prepisov pre konkrétny záznam hovoru. Prepisy prevádzajú zvuk zo záznamov na text."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
+          "source": "List Transcriptions",
+          "message": "Zoznam prepisov"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of transcription records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet vrátených záznamov prepisov. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of transcriptions to return",
+          "message": "Maximálny počet prepisov na vrátenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.desc": {
+          "source": "The number of transcription records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov prepisov vrátených na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of transcriptions per page",
+          "message": "Počet prepisov na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording whose transcriptions you want to list. Recording SIDs start with \"RE\".",
+          "message": "SID záznamu, ktorého prepisy chcete zobraziť. Identifikátory Recording SID začínajú na „RE“."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "Recording SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "Jedinečný identifikátor záznamu"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
+          "source": "Retrieve transcriptions for a recording",
+          "message": "Získať prepisy pre záznam"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.desc": {
+          "source": "Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Získať zoznam hovorov z vášho účtu Twilio. Hovory môžete filtrovať podľa telefónnych čísel účastníkov, stavu, časového rozsahu a ďalších kritérií. Výsledky sa vracajú v opačnom chronologickom poradí."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
+          "source": "List Calls",
+          "message": "Zoznam hovorov"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.desc": {
+          "source": "Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba hovory, ktoré sa skončili v tento dátum a čas alebo neskôr. Zadajte dátum vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
+          "source": "End Time After",
+          "message": "Čas ukončenia po"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
+          "source": "Filter by minimum end time",
+          "message": "Filtrovať podľa minimálneho času ukončenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.desc": {
+          "source": "Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba hovory, ktoré sa skončili v tento dátum a čas alebo skôr. Zadajte dátum vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
+          "source": "End Time Before",
+          "message": "Čas ukončenia pred"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
+          "source": "Filter by maximum end time",
+          "message": "Filtrovať podľa maximálneho času ukončenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.desc": {
+          "source": "Only return calls from this phone number, SIP address, or client identifier.",
+          "message": "Vrátiť iba hovory z tohto telefónneho čísla, adresy SIP alebo identifikátora klienta."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by caller phone number",
+          "message": "Filtrovať podľa telefónneho čísla volajúceho"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of call records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet vrátených záznamov hovorov. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of calls to return",
+          "message": "Maximálny počet hovorov na vrátenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.desc": {
+          "source": "Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba hovory, ktoré sa začali v tento dátum a čas alebo neskôr. Zadajte dátum vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
+          "source": "Start Time After",
+          "message": "Čas začiatku po"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
+          "source": "Filter by minimum start time",
+          "message": "Filtrovať podľa minimálneho času začiatku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.desc": {
+          "source": "Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba hovory, ktoré sa začali v tento dátum a čas alebo skôr. Zadajte dátum vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
+          "source": "Start Time Before",
+          "message": "Čas začiatku pred"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
+          "source": "Filter by maximum start time",
+          "message": "Filtrovať podľa maximálneho času začiatku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOm5vLWFuc3dlcg.display_name": {
+          "source": "No Answer",
+          "message": "Nezodpovedané"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmJ1c3k.display_name": {
+          "source": "Busy",
+          "message": "Obsadené"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Zrušené"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Dokončené"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmZhaWxlZA.display_name": {
+          "source": "Failed",
+          "message": "Zlyhané"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmluLXByb2dyZXNz.display_name": {
+          "source": "In Progress",
+          "message": "Prebieha"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnF1ZXVlZA.display_name": {
+          "source": "Queued",
+          "message": "V poradí"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "Zvonenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.desc": {
+          "source": "Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.",
+          "message": "Vrátiť iba hovory s týmto stavom. Možnosti zahŕňajú: queued, ringing, in-progress, canceled, completed, failed, busy alebo no-answer."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.short_desc": {
+          "source": "Filter by call status",
+          "message": "Filtrovať podľa stavu hovoru"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.desc": {
+          "source": "The number of call records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov hovorov vrátených na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of calls per page",
+          "message": "Počet hovorov na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.desc": {
+          "source": "Only return calls made to this phone number, SIP address, or client identifier.",
+          "message": "Vrátiť iba hovory uskutočnené na toto telefónne číslo, adresu SIP alebo identifikátor klienta."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrovať podľa telefónneho čísla príjemcu"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
+          "source": "Retrieve a list of calls",
+          "message": "Získať zoznam hovorov"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.desc": {
+          "source": "Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.",
+          "message": "Získať zoznam vykonaní pre konkrétny Studio Flow. Vykonania môžete filtrovať podľa časového rozsahu a nájsť tak konkrétne inštancie vykonania."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
+          "source": "List Executions",
+          "message": "Zoznam vykonaní"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.desc": {
+          "source": "Only return executions created on or after this date and time, in ISO 8601 format.",
+          "message": "Vrátiť iba vykonania vytvorené v tento dátum a čas alebo neskôr, vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
+          "source": "Date Created From",
+          "message": "Dátum vytvorenia od"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "Filtrovať podľa minimálneho dátumu vytvorenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.desc": {
+          "source": "Only return executions created before this date and time, in ISO 8601 format.",
+          "message": "Vrátiť iba vykonania vytvorené pred týmto dátumom a časom, vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
+          "source": "Date Created To",
+          "message": "Dátum vytvorenia do"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "Filtrovať podľa maximálneho dátumu vytvorenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow whose executions you want to list. Flow SIDs start with \"FW\".",
+          "message": "SID pre Studio Flow, ktorého vykonania chcete zobraziť. Identifikátory Flow SID začínajú na „FW“."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Jedinečný identifikátor toku Studio Flow"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of execution records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet vrátených záznamov o vykonaní. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of executions to return",
+          "message": "Maximálny počet vykonaní na vrátenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.desc": {
+          "source": "The number of execution records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov o vykonaní vrátených na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of executions per page",
+          "message": "Počet vykonaní na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
+          "source": "Retrieve executions for a Studio Flow",
+          "message": "Získať vykonania pre Studio Flow"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.desc": {
+          "source": "Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.",
+          "message": "Získať zoznam všetkých mediálnych súborov priložených ku konkrétnej správe. Je to užitočné na prístup k prílohám MMS alebo médiám odoslaným cez WhatsApp či iné kanály."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
+          "source": "List Message Media",
+          "message": "Zoznam médií správy"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.desc": {
+          "source": "The maximum number of media records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet záznamov médií, ktoré sa majú vrátiť. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of media items to return",
+          "message": "Maximálny počet položiek médií na vrátenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message whose media you want to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) správy, ktorej médiá chcete načítať. SID správ sa začínajú na \"SM\" alebo \"MM\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "Message SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "Jedinečný identifikátor správy"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.desc": {
+          "source": "The number of media records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov médií, ktoré sa majú vrátiť na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of media items per page",
+          "message": "Počet položiek médií na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
+          "source": "Retrieve media attached to a message",
+          "message": "Načítať médiá priložené k správe"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Načítajte zoznam správ z vášho účtu Twilio. Správy môžete filtrovať podľa príjemcu, odosielateľa, časového rozsahu a ďalších kritérií. Výsledky sa vracajú v opačnom chronologickom poradí."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "Zoznam správ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.desc": {
+          "source": "Only return messages sent on or after this date. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba správy odoslané v tento dátum alebo po ňom. Dátum zadajte vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
+          "source": "Date Sent After",
+          "message": "Dátum odoslania od"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
+          "source": "Filter by minimum send date",
+          "message": "Filtrovať podľa minimálneho dátumu odoslania"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.desc": {
+          "source": "Only return messages sent on or before this date. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba správy odoslané v tento dátum alebo pred ním. Dátum zadajte vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
+          "source": "Date Sent Before",
+          "message": "Dátum odoslania do"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum send date",
+          "message": "Filtrovať podľa maximálneho dátumu odoslania"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.desc": {
+          "source": "Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.",
+          "message": "Vrátiť iba správy odoslané z tohto telefónneho čísla alebo alfanumerického ID odosielateľa. Telefónne číslo by malo byť vo formáte E.164."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "Filtrovať podľa telefónneho čísla odosielateľa"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet záznamov správ, ktoré sa majú vrátiť. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "Maximálny počet správ, ktoré sa majú vrátiť"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.desc": {
+          "source": "The number of message records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov správ, ktoré sa majú vrátiť na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of messages per page",
+          "message": "Počet správ na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.desc": {
+          "source": "Only return messages sent to this phone number. The phone number should be in E.164 format.",
+          "message": "Vrátiť iba správy odoslané na toto telefónne číslo. Telefónne číslo by malo byť vo formáte E.164."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrovať podľa telefónneho čísla príjemcu"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Retrieve a list of messages",
+          "message": "Načítať zoznam správ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.desc": {
+          "source": "Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.",
+          "message": "Načítajte zoznam nahrávok hovorov z vášho účtu Twilio. Nahrávky môžete filtrovať podľa SID hovoru, SID konferencie, časového rozsahu a zahrnúť aj dočasne odstránené nahrávky."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
+          "source": "List Recordings",
+          "message": "Zoznam nahrávok"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only return recordings associated with this specific conference. The Conference SID should start with \"CF\".",
+          "message": "Vrátiť iba nahrávky priradené k tejto konkrétnej konferencii. SID konferencie by malo začínať na \"CF\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID konferencie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrovať podľa SID konferencie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.desc": {
+          "source": "Only return recordings associated with this specific call. The Call SID should start with \"CA\".",
+          "message": "Vrátiť iba nahrávky priradené k tomuto konkrétnemu hovoru. SID hovoru by malo začínať na \"CA\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "Call SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrovať podľa SID hovoru"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.desc": {
+          "source": "Only return recordings created on or after this date. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba nahrávky vytvorené v tento dátum alebo po ňom. Dátum zadajte vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
+          "source": "Date Created After",
+          "message": "Dátum vytvorenia od"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "Filtrovať podľa minimálneho dátumu vytvorenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.desc": {
+          "source": "Only return recordings created on or before this date. Provide the date in ISO 8601 format.",
+          "message": "Vrátiť iba nahrávky vytvorené v tento dátum alebo pred ním. Dátum zadajte vo formáte ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
+          "source": "Date Created Before",
+          "message": "Dátum vytvorenia do"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "Filtrovať podľa maximálneho dátumu vytvorenia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.desc": {
+          "source": "Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.",
+          "message": "Či sa majú zahrnúť dočasne odstránené nahrávky. Metadáta nahrávky sa uchovávajú 40 dní po odstránení."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
+          "source": "Include Soft Deleted",
+          "message": "Zahrnúť dočasne odstránené"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
+          "source": "Include soft-deleted recordings",
+          "message": "Zahrnúť dočasne odstránené nahrávky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of recording records to return. The default is 50 and the maximum is 1000.",
+          "message": "Maximálny počet záznamov nahrávok, ktoré sa majú vrátiť. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of recordings to return",
+          "message": "Maximálny počet nahrávok na vrátenie"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.desc": {
+          "source": "The number of recording records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "Počet záznamov nahrávok, ktoré sa majú vrátiť na stránku. Predvolená hodnota je 50 a maximum je 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of recordings per page",
+          "message": "Počet nahrávok na stránku"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
+          "source": "Retrieve a list of call recordings",
+          "message": "Načítať zoznam nahrávok hovorov"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Twilio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do služby **Twilio** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú v tejto aplikácii sprístupnené ako prvotriedne akcie."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Twilio",
+          "message": "Vykonať vlastné volanie API do Twilio"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.",
+          "message": "Monitoruje váš účet Twilio na prítomnosť nových prichádzajúcich alebo odchádzajúcich správ. Správy môžete filtrovať podľa telefónneho čísla príjemcu alebo odosielateľa. Trigger sa spustí vždy, keď sa zistí nová správa zodpovedajúca vašim filtrom."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nová správa"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders.",
+          "message": "Spustiť iba pre správy odoslané z tohto telefónneho čísla alebo alfanumerického ID odosielateľa. Telefónne číslo by malo byť vo formáte E.164 (napr. +15551234567). Ak chcete spúšťať pre všetkých odosielateľov, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "Od"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "Filtrovať podľa telefónneho čísla odosielateľa"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.desc": {
+          "source": "Only trigger for messages sent to this phone number. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all recipients.",
+          "message": "Spustiť iba pre správy odoslané na toto telefónne číslo. Telefónne číslo by malo byť vo formáte E.164 (napr. +15551234567). Ak chcete spúšťať pre všetkých príjemcov, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "Komu"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrovať podľa telefónneho čísla príjemcu"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new SMS or MMS message is received",
+          "message": "Spustí sa pri prijatí novej správy SMS alebo MMS"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.desc": {
+          "source": "Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.",
+          "message": "Monitoruje váš účet Twilio na prítomnosť nových nahrávok hovorov. Nahrávky môžete filtrovať podľa konkrétneho SID hovoru alebo SID konferencie. Trigger sa spustí vždy, keď sa zistí nová nahrávka zodpovedajúca vašim filtrom."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
+          "source": "New Recording",
+          "message": "Nová nahrávka"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "Spustiť iba pre nahrávky priradené k tejto konkrétnej konferencii. SID konferencie by malo začínať na \"CF\". Ak chcete spúšťať pre všetky konferencie, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID konferencie"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrovať podľa SID konferencie"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "Spustiť iba pre nahrávky priradené k tomuto konkrétnemu hovoru. SID hovoru by malo začínať na \"CA\". Ak chcete spúšťať pre všetky hovory, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "Call SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrovať podľa SID hovoru"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
+          "source": "Triggers when a new call recording is created",
+          "message": "Spustí sa pri vytvorení novej nahrávky hovoru"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.",
+          "message": "Monitoruje váš účet Twilio na prítomnosť nových prepisov kontrolou najnovších nahrávok. Môžete filtrovať podľa konkrétneho SID hovoru alebo SID konferencie. Trigger sa spustí vždy, keď sa zistí nový prepis nahrávok zodpovedajúcich vašim filtrom."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "New Transcription",
+          "message": "Nový prepis"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "Spustiť iba pre prepisy z nahrávok priradených k tejto konkrétnej konferencii. SID konferencie by malo začínať na \"CF\". Ak chcete spúšťať pre všetky konferencie, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID konferencie"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrovať podľa SID konferencie"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "Spustiť iba pre prepisy z nahrávok priradených k tomuto konkrétnemu hovoru. SID hovoru by malo začínať na \"CA\". Ak chcete spúšťať pre všetky hovory, ponechajte prázdne."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "Call SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrovať podľa SID hovoru"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Triggers when a new recording transcription is created",
+          "message": "Spustí sa pri vytvorení nového prepisu nahrávky"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Update the status of a Studio Flow execution. This is typically used to end an active execution early.",
+          "message": "Aktualizujte stav vykonávania Studio Flow. Zvyčajne sa používa na predčasné ukončenie aktívneho vykonávania."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Update an Execution",
+          "message": "Aktualizovať vykonávanie"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to update. Execution SIDs start with \"FN\".",
+          "message": "Jedinečný reťazcový identifikátor (SID) vykonávania, ktoré sa má aktualizovať. SID vykonávania sa začínajú na \"FN\"."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "Execution SID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "Jedinečný identifikátor vykonania"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "SID toku Studio Flow, ktorý obsahuje vykonanie. Hodnoty Flow SID začínajú na \"FW\"."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "Flow SID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Jedinečný identifikátor toku Studio Flow"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktívne"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmVuZGVk.display_name": {
+          "source": "Ended",
+          "message": "Ukončené"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.desc": {
+          "source": "The status to set for the execution. Set to \"ended\" to terminate an active execution.",
+          "message": "Stav, ktorý sa má nastaviť pre vykonávanie. Nastavte na \"ended\" pre ukončenie aktívneho vykonávania."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the execution",
+          "message": "Nový stav vykonávania"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Update the status of an execution",
+          "message": "Aktualizovať stav vykonávania"
+        },
+        "app.VHdpbGlv.desc": {
+          "source": "Integrate with Twilio to send SMS messages, make voice calls, and manage your communications infrastructure. This integration allows you to automate messaging workflows, handle incoming calls and messages, and build powerful communication features into your applications.",
+          "message": "Integrujte so službou Twilio na odosielanie SMS správ, uskutočňovanie hlasových hovorov a správu vašej komunikačnej infraštruktúry. Táto integrácia vám umožňuje automatizovať pracovné postupy odosielania správ, spracovávať prichádzajúce hovory a správy a vytvárať výkonné komunikačné funkcie vo vašich aplikáciách."
+        },
+        "app.VHdpbGlv.display_name": {
+          "source": "Twilio",
+          "message": "Twilio"
+        },
+        "app.VHdpbGlv.short_desc": {
+          "source": "Connect with Twilio to send SMS, make calls, and manage communications",
+          "message": "Pripojte sa k službe Twilio a odosielajte SMS správy, uskutočňujte hovory a spravujte komunikáciu"
+        }
+      }
+    }
+  }
+}

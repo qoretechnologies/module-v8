@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中建立新記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中建立新記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
+          "message": "使用提供的欄位值在指定的 Zoho CRM 模組中建立新記錄。傳回記錄 ID 以及建立與修改的時間戳記。Created_By 與 Modified_By 欄位包含建立該記錄的使用者資訊。支援除 Documents 與 Projects 外的所有標準和自訂模組。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "建立記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.",
+          "message": "選取要建立新記錄的目標 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts、Products、Vendors 或自訂模組）。使用 Modules API 取得可用模組清單及其 API 名稱。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module where the record will be created",
+          "message": "將要在其中建立記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).",
+          "message": "以鍵值組形式提供新記錄的欄位值，其中鍵為欄位 API 名稱。可用欄位及其類型會根據所選模組動態載入。必須包含必填欄位，且欄位值必須符合其預期的資料類型（text、number、date、picklist、lookup 等）。"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Record Properties",
+          "message": "記錄屬性"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values for the new record",
+          "message": "新記錄的欄位值"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in a Zoho CRM module",
+          "message": "在 Zoho CRM 模組中建立新記錄"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.desc": {
+          "source": "Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.",
+          "message": "將一個或多個標籤新增至 Zoho CRM 模組中的指定記錄。標籤是有助於對記錄進行分類和整理的標籤，便於管理、篩選和搜尋。每筆記錄最多可新增 10 個標籤，每個模組最多可存在 100 個標籤。傳回成功加上標籤的記錄數量以及無法加上標籤的已鎖定記錄數量。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
+          "source": "Add Tags to Records",
+          "message": "新增標籤至記錄"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.desc": {
+          "source": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.",
+          "message": "設定為 true 時，將以新標籤取代指定記錄上的所有現有標籤。設定為 false（預設值）時，將新增新標籤並保留現有標籤。請謹慎使用此選項，因為設定為 true 會移除所有目前的標籤。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
+          "source": "Overwrite Existing Tags",
+          "message": "覆寫現有標籤"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
+          "source": "Replace all existing tags on the records",
+          "message": "取代記錄上的所有現有標籤"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.",
+          "message": "選取包含要新增標籤記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。標籤為模組專屬，必須已存在於模組中才能新增至記錄。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the records",
+          "message": "包含記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.desc": {
+          "source": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.",
+          "message": "要新增標籤的不重複記錄 ID 清單。每次 API 呼叫最多可指定 500 個記錄 ID。請使用 Get Records API 或搜尋 API 擷取有效的記錄 ID。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.display_name": {
+          "source": "Record IDs",
+          "message": "記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.short_desc": {
+          "source": "IDs of the records to tag",
+          "message": "要加上標籤的記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.desc": {
+          "source": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.",
+          "message": "指定要新增至記錄的標籤。每個標籤應包含 ID 和名稱。若兩者皆提供，標籤 ID 優先於名稱。您可以選擇性地包含 color_code（十六進位值）。使用 List Tags 動作來擷取可用的標籤及其 ID。"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
+          "source": "Tags to Add",
+          "message": "要新增的標籤"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
+          "source": "List of tags to add to the records",
+          "message": "要新增至記錄的標籤清單"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
+          "source": "Add tags to one or more records in a module",
+          "message": "新增標籤至模組中的一筆或多筆記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.",
+          "message": "使用不重複的記錄 ID 從指定的 Zoho CRM 模組擷取特定記錄的詳細資訊。傳回記錄的所有欄位值，包含標準欄位（Created_Time、Modified_Time、Created_By、Modified_By）與自訂欄位。子表單資料、多選查閱欄位和多使用者查閱欄位也會包含在回應中。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "取得記錄"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.",
+          "message": "選取包含要擷取記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。該模組必須支援 API 操作，且使用者必須具有讀取權限。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "包含記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.",
+          "message": "輸入或選取要擷取記錄的不重複記錄 ID。記錄 ID 可從 Get Records API、搜尋結果或 Webhook 通知取得。該記錄必須存在於指定的模組中。"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to retrieve",
+          "message": "要擷取的記錄不重複識別碼"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a single record from a Zoho CRM module",
+          "message": "從 Zoho CRM 模組擷取單筆記錄"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "從應用程式「ZohoCRM」的指定資料表中刪除記錄"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "從應用程式「ZohoCRM」的指定資料表中刪除記錄"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.",
+          "message": "使用不重複記錄 ID 從指定的 Zoho CRM 模組中永久刪除特定記錄。如果該模組啟用了資源回收筒功能，已刪除的記錄將移至資源回收筒且可被還原。否則，刪除操作將是永久性的。使用者必須具有該模組的刪除權限。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "刪除記錄"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.",
+          "message": "選取包含要刪除記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。該模組必須支援 API 操作，且使用者必須具有刪除權限。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "包含記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.",
+          "message": "輸入或選取您要刪除之記錄的專屬記錄 ID。記錄 ID 可使用「Get Records」API 擷取。刪除已刪除的記錄將會導致錯誤。"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to delete",
+          "message": "要刪除之記錄的專屬識別碼"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from a Zoho CRM module",
+          "message": "從 Zoho CRM 模組中刪除記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.desc": {
+          "source": "Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.",
+          "message": "擷取為特定 Zoho CRM 模組建立的所有標籤。標籤是用於分類和組織模組內記錄的標籤，以利於搜尋和篩選。每個標籤都包含其名稱、ID、顏色代碼以及建立和修改時間的相關中繼資料。每個模組最多可新增 100 個標籤，每筆記錄最多可新增 10 個標籤。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "列出標籤"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.",
+          "message": "選取您要擷取其標籤的 Zoho CRM 模組（例如 Leads、Contacts、Deals 或自訂模組）。每個模組都有各自獨立的一組標籤。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve tags from",
+          "message": "要從中擷取標籤的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.desc": {
+          "source": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.",
+          "message": "設為 true 時，僅傳回目前使用者建立的標籤。設為 false 或未指定時，無論由誰建立，都將傳回該模組中的所有標籤。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
+          "source": "My Tags Only",
+          "message": "僅我的標籤"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
+          "source": "Retrieve only tags created by you",
+          "message": "僅擷取由您建立的標籤"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve tags available in a Zoho CRM module",
+          "message": "擷取 Zoho CRM 模組中的可用標籤"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.",
+          "message": "擷取您 Zoho CRM 組織中的使用者清單，支援分頁以及依使用者類型篩選。傳回完整的使用者資訊，包括姓名、電子郵件、角色、設定檔、時區、語言地區設定、自訂偏好設定和帳戶狀態。使用 type 參數可根據使用者的設定檔和狀態來篩選使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "列出使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.",
+          "message": "指定要擷取的結果頁面，第一頁從 1 開始。將此參數與 per_page 搭配使用，以瀏覽多頁使用者資料。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "頁碼"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
+          "source": "The page number for pagination",
+          "message": "分頁的頁碼"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.",
+          "message": "指定單一 API 請求中要傳回的使用者數量。有效值為 1 到 200。預設值為 20。請將此參數與 page 參數搭配使用，以便在大型結果集中進行分頁瀏覽。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Users Per Page",
+          "message": "每頁使用者數"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of users to return per page",
+          "message": "每頁傳回的使用者數量"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Not Confirmed Users",
+          "message": "未確認的使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have not confirmed their accounts.",
+          "message": "擷取尚未確認其帳戶的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.display_name": {
+          "source": "Active Confirmed Admins",
+          "message": "有效且已確認的管理員"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.short_desc": {
+          "source": "Retrieves active and confirmed administrators.",
+          "message": "擷取有效且已確認的管理員。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Active Confirmed Users",
+          "message": "有效且已確認的使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who are both active and confirmed.",
+          "message": "擷取有效且已確認的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.display_name": {
+          "source": "Active Users",
+          "message": "有效使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.short_desc": {
+          "source": "Retrieves only active users.",
+          "message": "僅擷取有效使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.display_name": {
+          "source": "Admin Users",
+          "message": "管理員使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.short_desc": {
+          "source": "Retrieves users with Administrator privileges.",
+          "message": "擷取具備管理員權限的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.display_name": {
+          "source": "All Users",
+          "message": "所有使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.short_desc": {
+          "source": "Retrieves all users (both active and inactive).",
+          "message": "擷取所有使用者（包括有效和無效）。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.display_name": {
+          "source": "Current User",
+          "message": "目前使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.short_desc": {
+          "source": "Retrieves the currently logged-in CRM user.",
+          "message": "擷取目前登入的 CRM 使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Confirmed Users",
+          "message": "已確認的使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have confirmed their accounts.",
+          "message": "擷取已確認其帳戶的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.display_name": {
+          "source": "Deactive Users",
+          "message": "已停用的使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.short_desc": {
+          "source": "Retrieves users who have been deactivated.",
+          "message": "擷取已被停用的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.display_name": {
+          "source": "Deleted Users",
+          "message": "已刪除的使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.short_desc": {
+          "source": "Retrieves users who have been deleted.",
+          "message": "擷取已刪除的使用者。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.desc": {
+          "source": "Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).",
+          "message": "選用篩選條件，用於擷取特定類別的使用者。選項包括：AllUsers（有效和無效使用者）、ActiveUsers（僅有效使用者）、DeactiveUsers（已停用的使用者）、ConfirmedUsers（已確認帳戶的使用者）、NotConfirmedUsers（未確認的使用者）、DeletedUsers（已刪除的使用者）、ActiveConfirmedUsers（有效且已確認）、AdminUsers（具備管理員權限的使用者）、ActiveConfirmedAdmins（有效且已確認的管理員），以及 CurrentUser（目前經過驗證的 CRM 使用者）。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
+          "source": "User Type Filter",
+          "message": "使用者類型篩選條件"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
+          "source": "Filter users by type or status",
+          "message": "依類型或狀態篩選使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve users from your Zoho CRM organization",
+          "message": "從您的 Zoho CRM 組織擷取使用者"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.desc": {
+          "source": "Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.",
+          "message": "擷取特定 Zoho CRM 模組中所有欄位的完整中繼資料，包括欄位類型、標籤、API 名稱、資料類型、驗證規則、挑選清單值、查閱設定和權限。這項資訊對於了解模組結構、建構動態表單或在建立/更新記錄前驗證資料至關重要。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
+          "source": "List Module Fields",
+          "message": "列出模組欄位"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.",
+          "message": "選取您要擷取其欄位中繼資料的 Zoho CRM 模組。API 會傳回模組中所有欄位的詳細資訊，包括標準欄位（系統定義）與自訂欄位（使用者定義）。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve fields from",
+          "message": "要從中擷取欄位的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
+          "source": "Retrieve field metadata for a Zoho CRM module",
+          "message": "擷取 Zoho CRM 模組的欄位中繼資料"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.desc": {
+          "source": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.",
+          "message": "擷取您 Zoho CRM 組織中所有模組的中繼資料，包括標準模組（Leads、Contacts、Deals、Accounts 等）和自訂模組。傳回詳細資訊，包括模組權限、API 名稱、顯示標籤，以及模組是否可建立、可編輯、可刪除，或是否支援全域搜尋和快速建立等功能。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
+          "source": "List Modules",
+          "message": "列出模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN5c3RlbV9oaWRkZW4.display_name": {
+          "source": "System Hidden",
+          "message": "系統隱藏"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9mb3JfZGVsZXRpb24.display_name": {
+          "source": "Scheduled for Deletion",
+          "message": "已排程刪除"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnVzZXJfaGlkZGVu.display_name": {
+          "source": "User Hidden",
+          "message": "使用者隱藏"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "顯示"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.desc": {
+          "source": "Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.",
+          "message": "選用篩選條件，僅擷取具有特定狀態的模組。選項包括：visible（在 UI 中顯示的有效模組）、user_hidden（由使用者隱藏的模組）、system_hidden（由系統隱藏的模組）以及 scheduled_for_deletion（標記為待刪除的模組）。未指定時，將傳回所有模組。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
+          "source": "Module Status Filter",
+          "message": "模組狀態篩選條件"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
+          "source": "Filter modules by their status",
+          "message": "依狀態篩選模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
+          "source": "Retrieve all available modules in Zoho CRM",
+          "message": "擷取 Zoho CRM 中的所有可用模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.",
+          "message": "從指定的 Zoho CRM 模組中擷取記錄清單，支援欄位選取、分頁、排序和篩選。您可以指定要傳回的欄位（最多 50 個欄位 API 名稱）、依某個欄位按遞增或遞減順序對記錄進行排序，並使用權杖瀏覽各個頁面。傳回記錄資料以及用於擷取後續頁面的分頁權杖。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "列出記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.",
+          "message": "選取您要為每筆記錄擷取的欄位 API 名稱。您最多可包含 50 個欄位 API 名稱。使用「Fields Metadata」API 可取得可用欄位清單。預設僅傳回 ID 欄位。您可以視需要新增例如 Last_Name、Email、Created_Time 或自訂欄位名稱等欄位。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields to Return",
+          "message": "要傳回的欄位"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specify which fields to include in the response",
+          "message": "指定回應中要包含的欄位"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.desc": {
+          "source": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.",
+          "message": "要擷取的特定記錄 ID 選用清單。提供時，將僅傳回具有這些 ID 的記錄。這在擷取一組特定記錄而不是逐頁瀏覽所有記錄時非常有用。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.display_name": {
+          "source": "Record IDs",
+          "message": "記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.short_desc": {
+          "source": "Filter by specific record IDs",
+          "message": "依特定記錄 ID 篩選"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.",
+          "message": "選取您要從中擷取記錄的 Zoho CRM 模組（例如 Leads、Contacts、Deals、Accounts 或自訂模組）。該模組必須支援 API 操作，且使用者必須具有讀取權限。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve records from",
+          "message": "要從中擷取記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.",
+          "message": "指定回應中記錄的排序方式。您可以依據 id、Created_Time 或 Modified_Time 等欄位按遞增（舊的優先）或遞減（新的優先）順序進行排序。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort Configuration",
+          "message": "排序設定"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "設定如何對返回的記錄進行排序"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.",
+          "message": "使用前一個回應中的 next_page_token 值來擷取下一頁記錄。第一頁請保留為空。page_token 會與請求中使用的參數綁定，因此在使用權杖時請勿變更其他參數。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "頁面 Token"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "用於擷取下一頁結果的權牌"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.",
+          "message": "指定單一 API 請求要傳回的記錄筆數。有效值為 1 到 200。預設值為 20。請將此參數與 page_token 搭配使用，以對大量結果集進行分頁。"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
+          "source": "Records Per Page",
+          "message": "每頁記錄數"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of records to return per page",
+          "message": "每頁傳回的記錄筆數"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve multiple records from a Zoho CRM module",
+          "message": "從 Zoho CRM 模組擷取多筆記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證，向 **Zoho CRM** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用的查詢參數、標頭以及請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊形式傳回。\n\n此動作適用於尚未在此應用程式中作為一級動作公開的端點。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoho CRM",
+          "message": "向 Zoho CRM 發送自訂 API 呼叫"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.",
+          "message": "監控指定的 Zoho CRM 模組以尋找新建立的記錄，並在偵測到新記錄時觸發。此觸發程序會按「建立時間」降冪輪詢記錄。您可以選擇依電話、電子郵件、關鍵字或特定欄位值篩選記錄，以便僅針對符合您準則的記錄進行觸發。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新增記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.desc": {
+          "source": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "在記錄中搜尋的選用電子郵件地址。指定後，僅包含此電子郵件地址的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來尋找相符的記錄。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "電子郵件篩選"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
+          "source": "Filter records by email address",
+          "message": "依電子郵件地址篩選記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.desc": {
+          "source": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison.",
+          "message": "用於建立搜尋準則的選用欄位-值配對清單。指定後，僅所有指定欄位均符合其對應值的記錄才會觸發事件。每個欄位比較皆使用「等於」運算子。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
+          "source": "Field Filters",
+          "message": "欄位篩選條件"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
+          "source": "Filter records by specific field values",
+          "message": "依特定欄位值篩選記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.",
+          "message": "選取您要監控新建立記錄的 Zoho CRM 模組（例如商機、聯絡人、交易、客戶或自訂模組）。請使用「模組中繼資料 API」傳回的模組 API 名稱。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to monitor for new records",
+          "message": "要監控新記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.desc": {
+          "source": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "在記錄中搜尋的選用電話號碼。指定後，僅包含此電話號碼的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來尋找相符的記錄。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
+          "source": "Phone Filter",
+          "message": "電話篩選條件"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
+          "source": "Filter records by phone number",
+          "message": "依電話號碼篩選記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.desc": {
+          "source": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.",
+          "message": "在記錄的所有可搜尋欄位中搜尋的選用關鍵字。指定後，僅包含此關鍵字的記錄才會觸發事件。這會使用 Zoho CRM 搜尋 API 來執行全面的文字搜尋。"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
+          "source": "Keyword Search",
+          "message": "關鍵字搜尋"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
+          "source": "Filter records by keyword",
+          "message": "依關鍵字篩選記錄"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in a Zoho CRM module",
+          "message": "在 Zoho CRM 模組中建立新記錄時觸發"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中搜尋相符的記錄"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中搜尋相符的記錄"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "在應用程式「ZohoCRM」的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "更新應用程式「ZohoCRM」指定資料表中的現有記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "更新應用程式「ZohoCRM」指定資料表中的現有記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
+          "message": "使用提供的欄位值更新指定 Zoho CRM 模組中的現有記錄。傳回記錄 ID 以及更新的修改時間戳記。僅會更新您指定的欄位；其他欄位將保持不變。該記錄必須存在，且使用者必須具有該模組的更新權限。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "更新記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.",
+          "message": "選取包含您要更新之記錄的 Zoho CRM 模組（例如商機、聯絡人、交易、客戶或自訂模組）。該模組必須支援 API 操作，且使用者必須具有適當的權限。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "模組"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "包含記錄的 Zoho CRM 模組"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.",
+          "message": "以鍵值配對形式提供您要更新的欄位值，其中鍵為欄位 API 名稱。僅包含您要變更的欄位；未指定的欄位將保留其目前的值。欄位值必須符合其預期的資料類型和驗證規則。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "更新的屬性"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values to update on the record",
+          "message": "要在記錄上更新的欄位值"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.",
+          "message": "輸入或選取您要更新之記錄的唯一記錄 ID。記錄 ID 可使用「取得記錄 API」或從 Webhook 通知中擷取。該記錄必須存在於指定的模組中。"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to update",
+          "message": "要更新之記錄的唯一識別碼"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Update an existing record in a Zoho CRM module",
+          "message": "更新 Zoho CRM 模組中的現有記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "更新或插入（Upsert）應用程式「ZohoCRM」指定資料表中的記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "更新或插入記錄"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "更新或插入（Upsert）應用程式「ZohoCRM」指定資料表中的記錄"
+        },
+        "app.Wm9ob0NSTQ.desc": {
+          "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
+          "message": "Zoho CRM 整合提供全方位的動作與觸發程序，可在全球所有七個資料中心（美國、澳洲、歐盟、印度、中國、日本、加拿大）與 Zoho CRM API 進行互動。有效管理模組、記錄、使用者與角色，同時藉由支援自訂模組、批次操作和即時觸發程序來自動化您的 CRM 工作流程。"
+        },
+        "app.Wm9ob0NSTQ.display_name": {
+          "source": "Zoho CRM",
+          "message": "Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.short_desc": {
+          "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
+          "message": "連線至 Zoho CRM，以在全球所有資料中心自動化客戶關係管理。"
+        }
+      }
+    }
+  }
+}

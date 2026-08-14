@@ -1,0 +1,753 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.desc": {
+          "source": "Fetches comprehensive details about a single campaign member (patron) including pledge amounts, payment history, membership status, and relationship timeline.",
+          "message": "プレッジ額、支払い履歴、メンバーシップのステータス、関係タイムラインなど、単一のキャンペーンメンバー（パトロン）に関する包括的な詳細情報を取得します。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
+          "source": "Get Member",
+          "message": "メンバーを取得"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Optionally select a campaign to filter the member selection. This helps narrow down the member list when searching.",
+          "message": "任意でキャンペーンを選択してメンバーの選択を絞り込みます。検索時にメンバーリストを絞り込むのに役立ちます。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to filter members from",
+          "message": "メンバーを絞り込むキャンペーン"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.desc": {
+          "source": "Select or enter the ID of the member (patron) whose details you want to retrieve. This is a required field.",
+          "message": "詳細情報を取得するメンバー（パトロン）のIDを選択または入力してください。これは必須フィールドです。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.display_name": {
+          "source": "Member ID",
+          "message": "メンバー ID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.short_desc": {
+          "source": "The ID of the member to retrieve",
+          "message": "取得するメンバーの ID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
+          "source": "Retrieve detailed information about a specific member",
+          "message": "特定のメンバーに関する詳細情報を取得"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Fetches comprehensive details about a single campaign including summary, creation details, social media integration, RSS feed settings, and patron statistics.",
+          "message": "概要、作成詳細、ソーシャルメディア連携、RSSフィード設定、パトロン統計など、単一のキャンペーンに関する包括的な詳細情報を取得します。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "キャンペーンの取得"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to get detailed information about. This is a required field.",
+          "message": "詳細情報を取得するキャンペーンを選択してください。これは必須フィールドです。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve",
+          "message": "取得するキャンペーンのID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Retrieve detailed information about a specific campaign",
+          "message": "特定のキャンペーンに関する詳細情報を取得"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.desc": {
+          "source": "Fetches comprehensive details about a single post including content, publish information, access settings, and engagement metrics.",
+          "message": "コンテンツ、公開情報、アクセス設定、エンゲージメント指標など、単一の投稿に関する包括的な詳細情報を取得します。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
+          "source": "Get Post",
+          "message": "投稿を取得"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Optionally select a campaign to filter the post selection. This helps narrow down the post list when searching.",
+          "message": "任意でキャンペーンを選択して投稿の選択を絞り込みます。検索時に投稿リストを絞り込むのに役立ちます。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to filter posts from",
+          "message": "投稿を絞り込むキャンペーン"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.desc": {
+          "source": "Select or enter the ID of the post whose details you want to retrieve. This is a required field.",
+          "message": "詳細情報を取得する投稿のIDを選択または入力してください。これは必須フィールドです。"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.short_desc": {
+          "source": "The ID of the post to retrieve",
+          "message": "取得する投稿のID"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific post",
+          "message": "特定の投稿に関する詳細情報を取得"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.desc": {
+          "source": "Fetches a paginated list of members (patrons) for a specified campaign. Returns detailed member information including pledge amounts, payment status, and membership details.",
+          "message": "指定されたキャンペーンのメンバー（パトロン）のページネーション付きリストを取得します。プレッジ額、支払いステータス、メンバーシップの詳細など、詳細なメンバー情報を返します。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
+          "source": "List Campaign Members",
+          "message": "キャンペーンメンバーの一覧表示"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of members to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "1 回のリクエストで取得するメンバーの最大数を指定します。指定しない場合のデフォルトは 20 です。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "カウント"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of members to return",
+          "message": "返されるメンバーの最大数"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign whose members you want to retrieve. This is a required field.",
+          "message": "メンバーを取得するキャンペーンを選択します。これは必須項目です。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve members from",
+          "message": "メンバーを取得するキャンペーンの ID"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of members. Leave empty for the first page.",
+          "message": "前のリクエストから返されたカーソルを使用して、メンバーの次のページを取得します。最初のページの場合は空のままにします。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "次の結果セットを取得するためのページネーションカーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
+          "source": "Retrieve members of a specific campaign",
+          "message": "特定のキャンペーンのメンバーを取得"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Fetches a paginated list of campaigns associated with the authenticated Patreon account. Returns comprehensive campaign information including patron counts, settings, and metadata.",
+          "message": "認証された Patreon アカウントに関連付けられているキャンペーンのページ分割されたリストを取得します。パトロン数、設定、メタデータを含む包括的なキャンペーン情報を返します。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "キャンペーン一覧"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of campaigns to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "1 回のリクエストで取得するキャンペーンの最大数を指定します。指定しない場合のデフォルトは 20 です。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "カウント"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "返すキャンペーンの最大数"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of campaigns. Leave empty for the first page.",
+          "message": "前のリクエストから返されたカーソルを使用して、キャンペーンの次のページを取得します。最初のページの場合は空のままにします。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "次の結果セットを取得するためのページネーションカーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "Retrieve a list of campaigns for the authenticated creator",
+          "message": "認証されたクリエイターのキャンペーンのリストを取得"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.desc": {
+          "source": "Fetches a paginated list of posts from a specified campaign, sorted by publish date. Returns post content, metadata, and engagement information.",
+          "message": "公開日で並べ替えられた、指定したキャンペーンの投稿のページ分割されたリストを取得します。投稿内容、メタデータ、エンゲージメント情報を返します。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
+          "source": "List Posts",
+          "message": "投稿の一覧表示"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of posts to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "1 回のリクエストで取得する投稿の最大数を指定します。指定しない場合のデフォルトは 20 です。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "カウント"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of posts to return",
+          "message": "返す投稿の最大数"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign whose posts you want to retrieve. This is a required field.",
+          "message": "投稿を取得するキャンペーンを選択します。これは必須項目です。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve posts from",
+          "message": "投稿を取得するキャンペーンの ID"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of posts. Leave empty for the first page.",
+          "message": "前のリクエストから返されたカーソルを使用して、投稿の次のページを取得します。最初のページの場合は空のままにします。"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "カーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "次の結果セットを取得するためのページネーションカーソル"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
+          "source": "Retrieve posts from a specific campaign",
+          "message": "特定のキャンペーンから投稿を取得"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Patreon** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Patreon** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、任意のクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに使用します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Patreon",
+          "message": "Patreon へのカスタム API 呼び出しの実行"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.desc": {
+          "source": "Monitors member events for a specific campaign using Patreon webhooks. This trigger fires when a member is created, their information is updated (including payment charging events), or their membership is deleted.",
+          "message": "Patreon の Webhook を使用して特定のキャンペーンのメンバーイベントを監視します。このトリガーは、メンバーが作成されたとき、メンバー情報が更新されたとき（課金イベントを含む）、またはメンバーシップが削除されたときに起動します。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
+          "source": "Member Event",
+          "message": "メンバーイベント"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for member-related events. This is a required field.",
+          "message": "メンバー関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for member events",
+          "message": "メンバーイベントを監視するキャンペーン"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6Y3JlYXRl.desc": {
+          "source": "Triggered when a new member is created. Note that you may get more than one of these per patron if they delete and renew their membership. Member creation only occurs if there was no prior payment between patron and creator.",
+          "message": "新しいメンバーが作成されたときにトリガーされます。パトロンがメンバーシップを削除して更新した場合、パトロンごとにこれが複数回発生することがある点に注意してください。メンバーの作成は、パトロンとクリエイターの間に以前の支払いがなかった場合にのみ発生します。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6Y3JlYXRl.display_name": {
+          "source": "Member Created",
+          "message": "メンバーの作成"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6ZGVsZXRl.desc": {
+          "source": "Triggered when a membership is deleted. Note that you may get more than one of these per patron if they delete and renew their membership. Deletion only occurs if no prior payment happened, otherwise pledge deletion is an update to member status.",
+          "message": "メンバーシップが削除されたときにトリガーされます。パトロンがメンバーシップを削除して更新した場合、パトロンごとにこれが複数回発生することがある点に注意してください。削除は事前の支払いが発生していない場合にのみ発生し、それ以外の場合、プレッジの削除はメンバーステータスの更新となります。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6ZGVsZXRl.display_name": {
+          "source": "Member Deleted",
+          "message": "メンバーの削除"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6dXBkYXRl.desc": {
+          "source": "Triggered when the membership information is changed. Includes updates on payment charging events.",
+          "message": "メンバーシップ情報が変更されたときにトリガーされます。課金イベントに関する更新が含まれます。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6dXBkYXRl.display_name": {
+          "source": "Member Updated",
+          "message": "メンバーの更新"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of member event should trigger this workflow. Member creation occurs only if there was no prior payment between patron and creator. Updates include payment charging events. Deletion only occurs if no prior payment happened.",
+          "message": "このワークフローをトリガーするメンバーイベントの種類を選択します。メンバーの作成は、パトロンとクリエイターの間に事前の支払いがなかった場合にのみ発生します。更新には課金イベントが含まれます。削除は事前の支払いが発生していない場合にのみ発生します。"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "トリガーイベント"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific member event to monitor",
+          "message": "監視する特定のメンバーイベント"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a member is created, updated, or deleted",
+          "message": "メンバーが作成、更新、または削除されたときにトリガー"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.desc": {
+          "source": "Monitors post events for a specific campaign using Patreon webhooks. This trigger fires when a post is published, updated, or deleted on the campaign, allowing you to automate content distribution and notifications.",
+          "message": "Patreon の Webhook を使用して特定のキャンペーンの投稿イベントを監視します。このトリガーは、キャンペーンで投稿が公開、更新、または削除されたときに起動し、コンテンツの配信と通知を自動化できます。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
+          "source": "Post Event",
+          "message": "投稿イベント"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for post-related events. This is a required field.",
+          "message": "投稿関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for post events",
+          "message": "投稿イベントを監視するキャンペーン"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOmRlbGV0ZQ.desc": {
+          "source": "Triggered when a post is deleted on a campaign.",
+          "message": "キャンペーンで投稿が削除されたときにトリガーされます。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOmRlbGV0ZQ.display_name": {
+          "source": "Post Deleted",
+          "message": "投稿の削除"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnB1Ymxpc2g.desc": {
+          "source": "Triggered when a post is published on a campaign.",
+          "message": "キャンペーンで投稿が公開されたときにトリガーされます。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnB1Ymxpc2g.display_name": {
+          "source": "Post Published",
+          "message": "投稿の公開"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnVwZGF0ZQ.desc": {
+          "source": "Triggered when a post is updated on a campaign.",
+          "message": "キャンペーンで投稿が更新されたときにトリガーされます。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnVwZGF0ZQ.display_name": {
+          "source": "Post Updated",
+          "message": "投稿の更新"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of post event should trigger this workflow. Choose from post publication, post updates, or post deletion events.",
+          "message": "このワークフローをトリガーする投稿イベントの種類を選択します。投稿の公開、投稿の更新、または投稿の削除イベントから選択します。"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "トリガーイベント"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific post event to monitor",
+          "message": "監視する特定の投稿イベント"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a post is published, updated, or deleted",
+          "message": "投稿が公開、更新、または削除されたときにトリガー"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.desc": {
+          "source": "Monitors pledge events for a specific campaign using Patreon webhooks. This trigger fires when a member creates, updates, or deletes their pledge, allowing you to automate workflows based on patron pledge activity.",
+          "message": "Patreon の Webhook を使用して特定のキャンペーンのプレッジイベントを監視します。このトリガーは、メンバーがプレッジを作成、更新、または削除したときに起動し、パトロンのプレッジアクティビティに基づいてワークフローを自動化できます。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
+          "source": "Pledge Event",
+          "message": "プレッジイベント"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for pledge-related events. This is a required field.",
+          "message": "プレッジ関連のイベントを監視するキャンペーンを選択します。これは必須項目です。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "キャンペーンID"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for pledge events",
+          "message": "プレッジイベントを監視するキャンペーン"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new pledge is created for a member. This includes when a member is created through pledging, and when a follower becomes a patron.",
+          "message": "メンバーに対して新しいプレッジが作成されたときにトリガーされます。これには、プレッジによってメンバーが作成された場合や、フォロワーがパトロンになった場合が含まれます。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmNyZWF0ZQ.display_name": {
+          "source": "Pledge Created",
+          "message": "プレッジの作成"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmRlbGV0ZQ.desc": {
+          "source": "Triggered when a member deletes their pledge.",
+          "message": "メンバーがプレッジを削除したときにトリガーされます。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmRlbGV0ZQ.display_name": {
+          "source": "Pledge Deleted",
+          "message": "プレッジの削除"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOnVwZGF0ZQ.desc": {
+          "source": "Triggered when a member updates (upgrade, downgrade) their pledge.",
+          "message": "メンバーがプレッジを更新（アップグレード、ダウングレード）したときにトリガーされます。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOnVwZGF0ZQ.display_name": {
+          "source": "Pledge Updated",
+          "message": "プレッジの更新"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of pledge event should trigger this workflow. Choose from pledge creation (when a member first pledges or a follower becomes a patron), pledge updates (upgrades or downgrades), or pledge deletion.",
+          "message": "このワークフローをトリガーするプレッジイベントの種類を選択します。プレッジ作成（メンバーが最初にプレッジしたとき、またはフォロワーがパトロンになったとき）、プレッジ更新（アップグレードまたはダウングレード）、またはプレッジ削除から選択します。"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "トリガーイベント"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific pledge event to monitor",
+          "message": "監視する特定のプレッジイベント"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a pledge is created, updated, or deleted",
+          "message": "プレッジが作成、更新、または削除されたときにトリガー"
+        },
+        "app.UGF0cmVvbg.desc": {
+          "source": "The Patreon integration enables creators to automate their patron management workflows. Access patron data, manage memberships, track campaigns, and engage with your community through comprehensive API actions and real-time triggers for patron activities.",
+          "message": "Patreon 統合により、クリエイターはパトロン管理ワークフローを自動化できます。包括的な API アクションとパトロンアクティビティのリアルタイムトリガーを通じて、パトロンデータへのアクセス、メンバーシップの管理、キャンペーンの追跡、コミュニティとのエンゲージメントを行うことができます。"
+        },
+        "app.UGF0cmVvbg.display_name": {
+          "source": "Patreon",
+          "message": "Patreon"
+        },
+        "app.UGF0cmVvbg.short_desc": {
+          "source": "Connect to Patreon to manage your creator content, memberships, and patron relationships.",
+          "message": "Patreon に接続して、クリエイターコンテンツ、メンバーシップ、パトロン関係を管理します。"
+        }
+      }
+    }
+  }
+}

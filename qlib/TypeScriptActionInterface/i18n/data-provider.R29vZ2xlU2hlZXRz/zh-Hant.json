@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.desc": {
+          "source": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization",
+          "message": "從來源試算表複製工作表至目的地試算表，並可進行自訂設定"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
+          "source": "Copy Worksheet",
+          "message": "複製工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be copied to",
+          "message": "要將工作表複製到的 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Destination Spreadsheet",
+          "message": "目的地試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the destination Google Sheets spreadsheet",
+          "message": "選取目的地 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet",
+          "message": "要插入新工作表之以零為基準的索引。若未指定，工作表將新增至試算表結尾"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Insert Position",
+          "message": "插入位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Optional position to insert the new worksheet",
+          "message": "插入新工作表的位置（選填）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.desc": {
+          "source": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix",
+          "message": "指定複製工作表的自訂名稱。若未提供，將使用原有名稱並加上「Copy of」前綴"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
+          "source": "New Worksheet Name",
+          "message": "新工作表名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
+          "source": "Optional new name for the copied worksheet",
+          "message": "複製工作表的新名稱（選填）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.desc": {
+          "source": "The specific worksheet within the source spreadsheet that will be copied",
+          "message": "來源試算表中要被複製的特定工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
+          "source": "Source Worksheet",
+          "message": "來源工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
+          "source": "Select the worksheet to copy",
+          "message": "選取要複製的工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "The Google Sheets spreadsheet containing the worksheet you want to copy",
+          "message": "包含您要複製之工作表的 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "來源試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "Select the source Google Sheets spreadsheet",
+          "message": "選取來源 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
+          "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
+          "message": "將工作表從一個 Google Sheets 試算表複製到另一個試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
+          "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
+          "message": "清除 Google Sheets 試算表中選定資料列的所有資料，同時保留格式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
+          "source": "Clear Spreadsheet Row(s)",
+          "message": "清除試算表資料列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific sheet within the spreadsheet where rows will be cleared",
+          "message": "試算表中要清除資料列的特定工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the sheet within the spreadsheet",
+          "message": "選取試算表中的工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet containing the rows to be cleared",
+          "message": "包含要清除之資料列的 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "選取 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.desc": {
+          "source": "List of row indices to clear (1-based, as seen in the spreadsheet)",
+          "message": "要清除的資料列索引清單（以 1 為基準，如試算表中所示）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
+          "source": "Rows to Clear",
+          "message": "要清除的資料列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
+          "source": "The row numbers to clear (1-based)",
+          "message": "要清除的列號（以 1 為基準）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
+          "source": "Clear content from specific rows in a Google Sheets spreadsheet",
+          "message": "清除 Google Sheets 試算表中特定資料列的內容"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中建立新記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中建立新記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
+          "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
+          "message": "建立新的 Google Sheets 試算表。您可以從頭建立並自訂標題，也可以複製現有試算表。提供標題時，標題將設為粗體並帶有邊框，且標題列將被凍結。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
+          "source": "Create Spreadsheet",
+          "message": "建立試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.desc": {
+          "source": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.",
+          "message": "選填。要新增至新試算表第一列的欄標題清單。標題將設為粗體並帶有邊框，且標題列將被凍結。如果提供了來源試算表，則會忽略此選項。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "標頭"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers for the new spreadsheet",
+          "message": "新試算表的欄標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.",
+          "message": "選填。若提供此項目，新試算表將建立為此現有試算表的副本。如果提供此項目，將忽略標題選項。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "來源試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "ID of an existing spreadsheet to copy",
+          "message": "要複製的現有試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.desc": {
+          "source": "The name that will be given to the newly created Google Sheets spreadsheet.",
+          "message": "將指定給新建立之 Google Sheets 試算表的名稱。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
+          "source": "Spreadsheet Title",
+          "message": "試算表標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
+          "source": "The title for the new spreadsheet",
+          "message": "新試算表的標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
+          "message": "建立新的 Google Sheets 試算表，可選擇加入標題或透過複製現有試算表建立。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
+          "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
+          "message": "在 Google Sheets 試算表中的指定位置插入新欄，並在該欄頂端新增格式化標題。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
+          "source": "Create Spreadsheet Column",
+          "message": "建立試算表欄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.desc": {
+          "source": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.",
+          "message": "要插入新欄之位置以零為基準的索引。例如：0 表示該欄將插入到工作表的開頭，1 表示插入到第一欄之後，依此類推。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
+          "source": "Column Index",
+          "message": "欄索引"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
+          "source": "The position where the column will be inserted",
+          "message": "要插入欄的位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.desc": {
+          "source": "The header text that will appear at the top of the new column.",
+          "message": "將顯示在新欄頂端的標題文字。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
+          "source": "Column Title",
+          "message": "欄標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
+          "source": "The title for the new column",
+          "message": "新欄的標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet within the spreadsheet where the column will be added.",
+          "message": "試算表中要新增欄之特定工作表的 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The sheet within the spreadsheet",
+          "message": "試算表中的工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet where the column will be created.",
+          "message": "要建立欄的 Google Sheets 試算表 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet",
+          "message": "Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
+          "source": "Insert a new column into a Google Sheets spreadsheet.",
+          "message": "在 Google Sheets 試算表中插入新欄。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.desc": {
+          "source": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.",
+          "message": "在指定的 Google Sheets 試算表中建立具有自訂標題和選填欄標題的新工作表（分頁）。可選擇覆寫同名的現有工作表。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
+          "source": "Create Worksheet",
+          "message": "建立工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.desc": {
+          "source": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold.",
+          "message": "將新增至新工作表第一列並設為粗體的欄標題清單。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "標頭"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers to add to the first row",
+          "message": "要新增至第一列的欄標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.",
+          "message": "新工作表應插入試算表中的位置（以零為基準的索引）。若未指定，工作表將新增至結尾。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Sheet Position",
+          "message": "工作表位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Position where the new worksheet should be placed",
+          "message": "新工作表應放置的位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.desc": {
+          "source": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.",
+          "message": "若為 true 且已存在同名工作表，現有工作表將被刪除並取代。若為 false 且存在重複項目，此操作將失敗。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
+          "source": "Overwrite Existing",
+          "message": "覆寫現有項目"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
+          "source": "Whether to replace an existing worksheet with the same title",
+          "message": "是否取代具有相同標題的現有工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet in which to create the new worksheet.",
+          "message": "要在其中建立新工作表的 Google Sheets 試算表 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be created",
+          "message": "將在其中建立工作表的 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.desc": {
+          "source": "The name that will appear on the tab of the new worksheet.",
+          "message": "將顯示在新工作表分頁上的名稱。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
+          "source": "Worksheet Title",
+          "message": "工作表標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
+          "source": "Title for the new worksheet",
+          "message": "新工作表的標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
+          "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
+          "message": "在 Google Sheets 試算表中建立新工作表，並可自選標題。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
+          "message": "將新列附加到現有的 Google 試算表表格中，並將資料對應至表格標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Add Rows to Spreadsheet",
+          "message": "新增列至試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.desc": {
+          "source": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.",
+          "message": "若選取，新列將插入表格開頭。若未選取，列將附加至表格末尾。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
+          "source": "Insert at Start",
+          "message": "插入至開頭"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
+          "source": "Insert rows at the start of the table",
+          "message": "在表格開頭插入列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific worksheet within the spreadsheet where the rows will be added",
+          "message": "試算表中要新增列的特定工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the worksheet within the spreadsheet",
+          "message": "選取試算表中的工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where you want to add rows",
+          "message": "要新增列的 Google 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "選取 Google Sheets 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Add one or more rows to the end of a Google Sheets table",
+          "message": "新增一或多列至 Google 試算表表格的末尾"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "從應用程式「GoogleSheets」中的給定表格刪除記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "從應用程式「GoogleSheets」中的給定表格刪除記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.",
+          "message": "從指定的 Google 試算表工作表中徹底刪除列，且不留下空白區域。列索引從 1 開始，與試算表 UI 中看到的一致。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "刪除列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.",
+          "message": "包含要刪除列的試算表內工作表（分頁）ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The worksheet containing the row to delete",
+          "message": "包含要刪除列的工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.",
+          "message": "包含具有要刪除列之工作表的 Google 試算表 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet containing the row to delete",
+          "message": "包含要刪除列的 Google 試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.desc": {
+          "source": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.",
+          "message": "要刪除的列位置，從 1 開始（非 0）。這與 Google 試算表 UI 中看到的列編號相符。例如，要刪除第一列，請使用 1。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
+          "source": "Row Index",
+          "message": "列索引"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
+          "source": "The index of the row to delete (starting from 1)",
+          "message": "要刪除的列索引（從 1 開始）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Google Sheets worksheet.",
+          "message": "從 Google 試算表工作表中刪除指定列。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.",
+          "message": "對 Google 試算表中的指定列套用各種格式選項，例如顏色、文字樣式及對齊方式。以一致的樣式一次格式化多列。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Format Spreadsheet Rows",
+          "message": "格式化試算表列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.desc": {
+          "source": "Whether to make the text in the specified rows bold.",
+          "message": "是否將指定列中的文字設為粗體。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.display_name": {
+          "source": "Bold",
+          "message": "粗體"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.short_desc": {
+          "source": "Make text bold",
+          "message": "將文字設為粗體"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.desc": {
+          "source": "The background color to apply to the cells in the specified rows. Uses RGB color format.",
+          "message": "要套用至指定列儲存格的背景顏色。使用 RGB 顏色格式。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
+          "source": "Background Color",
+          "message": "背景顏色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
+          "source": "Background color for the cells",
+          "message": "儲存格背景顏色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.desc": {
+          "source": "Font size in points",
+          "message": "字型大小（點）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
+          "source": "Font Size",
+          "message": "字型大小"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
+          "source": "Text font size in points",
+          "message": "文字字型大小（以點為單位）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkNFTlRFUg.display_name": {
+          "source": "Center",
+          "message": "中央"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkxFRlQ.display_name": {
+          "source": "Left",
+          "message": "靠左對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOlJJR0hU.display_name": {
+          "source": "Right",
+          "message": "靠右對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.desc": {
+          "source": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).",
+          "message": "要套用至指定列內容的水平對齊方式（靠左對齊、置中對齊或靠右對齊）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
+          "source": "Horizontal Alignment",
+          "message": "水平對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
+          "source": "Horizontal alignment of content",
+          "message": "內容水平對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.desc": {
+          "source": "Whether to make the text in the specified rows italic.",
+          "message": "是否將指定列中的文字設為斜體。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.display_name": {
+          "source": "Italic",
+          "message": "斜體"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.short_desc": {
+          "source": "Make text italic",
+          "message": "將文字設為斜體"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.",
+          "message": "包含要格式化列的特定工作表（分頁）ID。每個工作表在試算表中都有專屬的 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific worksheet within the spreadsheet",
+          "message": "試算表中特定工作表的 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.",
+          "message": "包含要格式化列的 Google 試算表 ID。可以在試算表 URL 中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet to format",
+          "message": "要格式化的 Google 試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.desc": {
+          "source": "Whether to apply strikethrough formatting to the text in the specified rows.",
+          "message": "是否對指定列中的文字套用刪除線格式。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.display_name": {
+          "source": "Strikethrough",
+          "message": "刪除線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.short_desc": {
+          "source": "Apply strikethrough to text",
+          "message": "對文字套用刪除線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.desc": {
+          "source": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.",
+          "message": "要格式化的列編號清單（索引從 1 開始）。例如，[1, 2, 5] 將格式化第一、第二和第五列。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.display_name": {
+          "source": "Rows",
+          "message": "列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.short_desc": {
+          "source": "List of row numbers to format",
+          "message": "要格式化的列編號清單"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "是否自動換行儲存格中的文字"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
+          "source": "Wrap Text",
+          "message": "自動換行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "是否自動換行儲存格中的文字"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.desc": {
+          "source": "The color to apply to the text in the cells of the specified rows. Uses RGB color format.",
+          "message": "要套用至指定列儲存格文字的顏色。使用 RGB 顏色格式。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
+          "source": "Text Color",
+          "message": "文字顏色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
+          "source": "Color for the text in the cells",
+          "message": "儲存格文字顏色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.desc": {
+          "source": "Whether to underline the text in the specified rows.",
+          "message": "是否為指定列中的文字加上底線。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.display_name": {
+          "source": "Underline",
+          "message": "底線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.short_desc": {
+          "source": "Underline the text",
+          "message": "為文字加上底線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOk1JRERMRQ.display_name": {
+          "source": "Middle",
+          "message": "垂直置中"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOkJPVFRPTQ.display_name": {
+          "source": "Bottom",
+          "message": "靠下對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOlRPUA.display_name": {
+          "source": "Top",
+          "message": "靠上對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.desc": {
+          "source": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).",
+          "message": "要套用至指定列內容的垂直對齊方式（靠上對齊、垂直置中或靠下對齊）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
+          "source": "Vertical Alignment",
+          "message": "垂直對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
+          "source": "Vertical alignment of content",
+          "message": "內容垂直對齊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Apply formatting to specific rows in a Google Sheets spreadsheet.",
+          "message": "對 Google 試算表中的特定列套用格式設定。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
+          "message": "在 Google 試算表中搜尋指定欄位符合特定值的列。支援依欄標題或欄字母搜尋、分頁以及不同的回應格式。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
+          "source": "Find Spreadsheet Rows",
+          "message": "尋找試算表列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "The number of matching rows to skip before returning results. Used for pagination. Default is 0.",
+          "message": "傳回結果前要跳過的相符列數。用於分頁。預設值為 0。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of matching rows to skip",
+          "message": "要跳過的相符列數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.desc": {
+          "source": "The maximum number of matching rows to include in the results. Default is 10.",
+          "message": "結果中包含的相符列數上限。預設值為 10。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of matching rows to return",
+          "message": "傳回的相符列數上限"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
+          "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
+          "message": "限制搜尋的資料列總數，以控制大型工作表的效能。預設值為 5000。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
+          "source": "Maximum Rows to Search",
+          "message": "搜尋的最大資料列數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
+          "source": "Maximum number of rows to search through",
+          "message": "要搜尋的最大資料列數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Defines the search criteria to use when looking for matching rows.",
+          "message": "定義尋找相符資料列時要使用的搜尋準則。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search Criteria",
+          "message": "搜尋準則"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Criteria for finding matching rows",
+          "message": "尋找相符資料列的準則"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.desc": {
+          "source": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.",
+          "message": "啟用時，會從工作表底部向上搜尋，而非從頂部向下搜尋。適用於新資料附加在底部的工作表中尋找最新項目。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
+          "source": "Search From Last Row",
+          "message": "從最後一列開始搜尋"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
+          "source": "Start searching from the bottom of the sheet",
+          "message": "從工作表底部開始搜尋"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.",
+          "message": "試算表中要搜尋的特定工作表識別碼。每個工作表都有一個可從可用工作表中選取的唯一識別碼。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "工作表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.short_desc": {
+          "source": "ID of the specific sheet within the spreadsheet",
+          "message": "試算表內特定工作表的 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.",
+          "message": "要搜尋的 Google 試算表唯一識別碼。這可以在試算表的網址中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "ID of the Google Sheets spreadsheet",
+          "message": "Google 試算表的 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.desc": {
+          "source": "Return values mapped to column letters (A, B, C, etc.)",
+          "message": "傳回對應至欄字母（A、B、C 等）的值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.display_name": {
+          "source": "Column letter mapped values",
+          "message": "對應欄字母的值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.desc": {
+          "source": "Return values mapped to column headers",
+          "message": "傳回對應至欄標題的值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.display_name": {
+          "source": "Header mapped values",
+          "message": "對應標題的值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.desc": {
+          "source": "Return only raw row values as arrays (most efficient)",
+          "message": "僅以陣列形式傳回原始列值（效率最高）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.display_name": {
+          "source": "Raw values only",
+          "message": "僅原始值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.",
+          "message": "決定回應中相符資料列的格式化方式。選項包括原始值、對應至欄標題的值或對應至欄字母的值。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Format",
+          "message": "回應格式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Format of the returned rows",
+          "message": "傳回資料列的格式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
+          "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
+          "message": "在 Google 試算表中搜尋符合特定準則的資料列。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Google Sheets** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選填查詢參數、標頭以及請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n將此動作運用於尚未在此應用程式中作為一級動作公開的端點。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Sheets",
+          "message": "對 Google Sheets 發出自訂 API 呼叫"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.desc": {
+          "source": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.",
+          "message": "監控 Google 雲端硬碟中新建立的 Google 試算表。觸發程序會提供新建立試算表的相關中繼資料，包括其識別碼、名稱、URL、建立時間和擁有者資訊。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
+          "source": "New Spreadsheet",
+          "message": "新增試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Triggers when a new Google Spreadsheet is created.",
+          "message": "在建立新的 Google 試算表時觸發。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.desc": {
+          "source": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.",
+          "message": "監控 Google 試算表中的特定工作表，並在新增資料列時觸發。觸發程序會提供以欄標題作為欄位名稱的資料列資料。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
+          "source": "New Spreadsheet Row",
+          "message": "新增試算表資料列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.",
+          "message": "您要監控新增資料列的試算表中特定工作表的唯一識別碼。工作表 ID 可以在試算表網址中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "工作表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific sheet to monitor",
+          "message": "要監控的特定工作表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.",
+          "message": "包含您要監控新增資料列之工作表的 Google 試算表唯一識別碼。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "要監控的 Google 試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Google Sheet.",
+          "message": "在 Google 工作表中新增資料列時觸發。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.desc": {
+          "source": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.",
+          "message": "監控 Google 試算表並在新增工作表時觸發。觸發程序會提供新建立工作表的中繼資料，包括其識別碼、標題、索引位置和維度。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
+          "source": "New Spreadsheet Sheet",
+          "message": "新增工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.",
+          "message": "您要監控新增工作表的 Google 試算表唯一識別碼。試算表 ID 可以在試算表網址中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "要監控的 Google 試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
+          "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
+          "message": "在 Google 試算表中新增工作表時觸發。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中搜尋相符的記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中搜尋相符的記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "在應用程式「GoogleSheets」的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
+          "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "使用包括檔案名稱、資料夾位置和自訂查詢在內的各種準則，在 Google 雲端硬碟中搜尋 Google 試算表。支援依不同欄位和方向排序並進行分頁。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
+          "source": "Search Spreadsheets",
+          "message": "搜尋試算表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "自訂 Google 雲端硬碟搜尋查詢，以新增基本選項之外的其他篩選條件。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "自訂查詢"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "其他搜尋條件"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "要限制搜尋範圍的 Google 雲端硬碟資料夾 ID。若未指定，將搜尋所有可存取的資料夾。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "資料夾"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "要搜尋的資料夾"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Sheets spreadsheet to search for.",
+          "message": "要搜尋的 Google 試算表名稱或部分名稱。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "檔案名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the spreadsheet to search for",
+          "message": "要搜尋的試算表名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "要套用至搜尋結果的排序條件清單。每個項目指定一個欄位和方向。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "排序依據"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "結果的排序條件"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "包含"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全符合"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "如何比對檔案名稱 - 包含文字或完全相符。預設為包含。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "搜尋類型"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "檔案名稱比對類型"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of spreadsheets to return in a single request. Default is 100.",
+          "message": "單一請求中傳回的最大試算表數量。預設值為 100。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "要傳回的結果最大數量"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
+          "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
+          "message": "使用進階篩選和排序選項搜尋 Google 試算表。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
+          "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
+          "message": "依標題搜尋 Google 試算表中的工作表（分頁）。傳回相符工作表的詳細資訊，包括維度、位置和可見度。可用於尋找特定工作表或列出試算表中的所有工作表。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
+          "source": "Search Worksheets",
+          "message": "搜尋工作表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.desc": {
+          "source": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.",
+          "message": "若啟用，則僅傳回標題完全相符的工作表。若停用（預設），則結果將包含標題包含搜尋文字的工作表。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
+          "source": "Exact Match",
+          "message": "完全符合"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
+          "source": "Whether to match the title exactly",
+          "message": "是否完全相符標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.",
+          "message": "您要在其中搜尋工作表的 Google 試算表唯一識別碼。這可以在試算表網址中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to search within",
+          "message": "要在其中搜尋的 Google 試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.desc": {
+          "source": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.",
+          "message": "搜尋標題包含此文字的工作表。保留空白可列出試算表中的所有工作表。搜尋預設不區分大小寫。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
+          "source": "Sheet Title",
+          "message": "工作表標題"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
+          "source": "Title text to search for (case-insensitive)",
+          "message": "要搜尋的標題文字（不區分大小寫）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
+          "source": "Find worksheets within a Google Spreadsheet by title.",
+          "message": "依標題尋找 Google 試算表中的工作表。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "更新應用程式「GoogleSheets」中指定資料表的現有記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "更新應用程式「GoogleSheets」中指定資料表的現有記錄"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",
+          "message": "依資料列索引更新 Google 試算表中的特定資料列。此動作可讓您在單一操作中修改多個資料列，同時保留試算表結構。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Update Spreadsheet Rows",
+          "message": "更新試算表資料列"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated.",
+          "message": "試算表中將更新資料列之特定工作表的唯一識別碼。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "工作表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the sheet within the spreadsheet.",
+          "message": "試算表內工作表的 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.",
+          "message": "您要更新資料列的 Google Sheets 試算表的唯一識別碼。這可以在試算表 URL 中找到。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "試算表 ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet.",
+          "message": "Google Sheets 試算表的 ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Update existing rows in a Google Sheets spreadsheet.",
+          "message": "更新 Google Sheets 試算表中的現有資料列。"
+        },
+        "app.R29vZ2xlU2hlZXRz.desc": {
+          "source": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.",
+          "message": "與 Google Sheets 整合以建立、更新和管理您的試算表。此整合可讓您在 Google Sheets 帳戶中執行操作並回應事件，進而自動化資料管理與報表工作流程。"
+        },
+        "app.R29vZ2xlU2hlZXRz.display_name": {
+          "source": "Google Sheets",
+          "message": "Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.short_desc": {
+          "source": "Connect with Google Sheets to manage your spreadsheets",
+          "message": "連線至 Google Sheets 以管理您的試算表"
+        }
+      }
+    }
+  }
+}

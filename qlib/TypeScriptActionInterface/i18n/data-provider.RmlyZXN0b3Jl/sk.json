@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.desc": {
+          "source": "Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object.",
+          "message": "Vytvorí nový dokument v zadanej kolekcii Firestore. Môžete nechať Firestore automaticky vygenerovať ID dokumentu alebo zadať vlastné. Údaje dokumentu je možné zadať cez štruktúrované polia alebo ako vlastný objekt hash."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
+          "source": "Create Document",
+          "message": "Vytvoriť dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii, v ktorej sa dokument vytvorí. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Voliteľné dodatočné polia na zlúčenie so štruktúrovanými údajmi. Použite toto na pridanie polí, ktoré nie sú súčasťou preddefinovanej schémy, alebo na zahrnutie dynamických polí."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Dodatočné údaje"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to include in the document",
+          "message": "Dodatočné polia na zahrnutie do dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes.",
+          "message": "Voliteľný vlastný identifikátor pre dokument. Ak nie je zadaný, Firestore automaticky vygeneruje jedinečné ID. ID dokumentov musia byť platné reťazce UTF-8 a nesmú obsahovať lomky."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ID dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Custom document ID (optional)",
+          "message": "Vlastné ID dokumentu (voliteľné)"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type.",
+          "message": "Štruktúrované údaje na uloženie do dokumentu. Budú dynamicky typované na základe schémy kolekcie, ak je k dispozícii. Každé pole sa uloží s príslušným dátovým typom Firestore."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Údaje dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The data to store in the document",
+          "message": "Údaje na uloženie do dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Create a new document in a Firestore collection",
+          "message": "Vytvoriť nový dokument v kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time.",
+          "message": "Vytvorí zálohu vašej databázy Firestore alebo konkrétnych kolekcií exportovaním údajov do Google Cloud Storage. Je to užitočné na obnovu po havárii, migráciu údajov alebo vytváranie snímok databázy v konkrétnom čase."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Backup to Google Cloud Storage",
+          "message": "Zálohovať do Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections.",
+          "message": "Voliteľný zoznam ID kolekcií na zálohovanie. Ak nie je zadaný, zálohuje sa celá databáza. Použite toto na vytvorenie selektívnych záloh konkrétnych kolekcií."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "ID kolekcií"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to backup (optional)",
+          "message": "Konkrétne kolekcie na zálohovanie (voliteľné)"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions.",
+          "message": "Predpona URI služby Google Cloud Storage, kde sa zapíšu záložné súbory. Formát: gs://bucket-name/path/to/backup. Bucket už musí existovať a musíte mať oprávnenia na zápis."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
+          "source": "Output URI Prefix",
+          "message": "Predpona výstupného URI"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
+          "source": "GCS bucket URI where backup will be stored",
+          "message": "URI bucketu GCS, kde bude uložená záloha"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database to backup",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore na zálohovanie"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Export Firestore data to Google Cloud Storage",
+          "message": "Exportovať údaje Firestore do Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection.",
+          "message": "Získa metaúdaje a informácie o konkrétnej kolekcii Firestore. To zahŕňa kontrolu, či kolekcia existuje, či obsahuje dokumenty a voliteľné získanie vzorových dokumentov z kolekcie."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "Získať kolekciu"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.desc": {
+          "source": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path.",
+          "message": "Identifikátor kolekcie, o ktorej chcete získať informácie. Ide o názov kolekcie bez akejkoľvek nadradenej cesty."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.display_name": {
+          "source": "Collection ID",
+          "message": "ID kolekcie"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.short_desc": {
+          "source": "The ID of the collection",
+          "message": "ID kolekcie"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.desc": {
+          "source": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection.",
+          "message": "Ak má hodnotu true, v odpovedi zahrnie vzorové dokumenty z kolekcie. To vám pomôže pochopiť štruktúru a obsah kolekcie."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
+          "source": "Include Sample Documents",
+          "message": "Zahrnúť vzorové dokumenty"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
+          "source": "Whether to include sample documents",
+          "message": "Či zahrnúť vzorové dokumenty"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.desc": {
+          "source": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5.",
+          "message": "Maximálny počet vzorových dokumentov na načítanie, keď má include_sample_documents hodnotu true. Predvolená hodnota je 5."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
+          "source": "Sample Limit",
+          "message": "Limit vzoriek"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
+          "source": "Number of sample documents to include",
+          "message": "Počet vzorových dokumentov na zahrnutie"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id",
+          "message": "Voliteľná cesta k nadradenému dokumentu, ak ide o podkolekciu. Ak nie je zadaná, predpokladá sa, že ide o kolekciu na koreňovej úrovni. Formát: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Cesta k nadradenému dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Cesta k nadradenému dokumentu (voliteľné)"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Get information about a Firestore collection",
+          "message": "Získať informácie o kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.desc": {
+          "source": "Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist.",
+          "message": "Načíta jeden dokument podľa jeho ID z kolekcie Firestore. Vráti kompletné údaje dokumentu vrátane metaúdajov, ako je čas vytvorenia a čas poslednej aktualizácie. Táto akcia zlyhá, ak dokument neexistuje."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "Získať dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii obsahujúcej dokument. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created.",
+          "message": "Jedinečný identifikátor dokumentu, ktorý chcete získať. Ide o ID dokumentu, ktoré bolo buď automaticky vygenerované, alebo zadané pri vytvorení dokumentu."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ID dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to retrieve",
+          "message": "ID dokumentu na získanie"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
+          "source": "Retrieve a specific document from a Firestore collection",
+          "message": "Získať konkrétny dokument z kolekcie Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.desc": {
+          "source": "Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted.",
+          "message": "Natrvalo odstráni dokument z kolekcie Firestore. Túto operáciu nemožno vrátiť späť. Dokument musí existovať, inak operácia zlyhá. Žiadne podkolekcie pod týmto dokumentom sa automaticky NEODSTRÁNIA."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
+          "source": "Delete Document",
+          "message": "Odstrániť dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii obsahujúcej dokument. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to delete. The document must exist or the operation will fail.",
+          "message": "Jedinečný identifikátor dokumentu, ktorý chcete odstrániť. Dokument musí existovať, inak operácia zlyhá."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ID dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to delete",
+          "message": "ID dokumentu na odstránenie"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
+          "source": "Delete a document from a Firestore collection",
+          "message": "Odstrániť dokument z kolekcie Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections.",
+          "message": "Načíta všetky identifikátory kolekcií na koreňovej úrovni databázy Firestore alebo v rámci konkrétneho dokumentu. To je užitočné na zistenie štruktúry vašej databázy Firestore a navigáciu vo vnorených kolekciách."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Zoznam kolekcií"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id",
+          "message": "Voliteľná cesta k dokumentu, ktorého podkolekcie chcete zobraziť. Ak nie je zadaná, zobrazí kolekcie na koreňovej úrovni. Formát: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Cesta k nadradenému dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Cesta k nadradenému dokumentu (voliteľné)"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections in a Firestore database or document",
+          "message": "Zoznam všetkých kolekcií v databáze alebo dokumente Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document.",
+          "message": "Načíta všetky dokumenty zo zadanej kolekcie Firestore. Môžete obmedziť počet výsledkov a zadať kritériá zoradenia. Táto akcia vráti kompletné dáta dokumentu spolu s metadátami pre každý dokument."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "Zoznam dokumentov"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii, ktorej dokumenty chcete zobraziť. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.desc": {
+          "source": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date).",
+          "message": "Voliteľný názov poľa, ktoré sa má použiť na zoradenie dokumentov. Pole musí v dokumentoch existovať a musí byť porovnateľného typu (reťazec, číslo, dátum)."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
+          "source": "Field to order documents by",
+          "message": "Pole na zoradenie dokumentov"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkFTQ0VORElORw.display_name": {
+          "source": "Ascending",
+          "message": "Vzostupne"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkRFU0NFTkRJTkc.display_name": {
+          "source": "Descending",
+          "message": "Zostupne"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.desc": {
+          "source": "The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest.",
+          "message": "Smer zoradenia dokumentov, keď je zadané pole order_by. Zvoľte vzostupne pre poradie od najnižšej po najvyššiu hodnotu alebo zostupne pre poradie od najvyššej po najnižšiu hodnotu."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
+          "source": "Order Direction",
+          "message": "Smer zoradenia"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
+          "source": "Sort direction for ordering",
+          "message": "Smer zoradenia"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance.",
+          "message": "Maximálny počet dokumentov na načítanie. Predvolená hodnota je 100. Použite to na riadenie veľkosti množiny výsledkov a zlepšenie výkonu."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Maximálny počet dokumentov na vrátenie"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "List all documents in a Firestore collection",
+          "message": "Zoznam všetkých dokumentov v kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases.",
+          "message": "Načíta zoznam všetkých projektov Google Cloud, ktoré sú prístupné s vašimi prihlasovacími údajmi. Projekty môžete filtrovať podľa názvu a pomocou stránkovania prechádzať veľkými množinami výsledkov. To je užitočné na zistenie, ktoré projekty obsahujú databázy Firestore."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Zoznam projektov"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.desc": {
+          "source": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names.",
+          "message": "Voliteľný filter na vyhľadávanie projektov obsahujúcich tento názov. Vyhľadávanie nerozlišuje veľké a malé písmená a vyhľadáva čiastočné názvy."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "Názov projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter projects by name",
+          "message": "Filtrovať projekty podľa názvu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size.",
+          "message": "Stránkovací token získaný z predchádzajúcej požiadavky. Použite ho na načítanie ďalšej strany projektov, ak je k dispozícii viac výsledkov ako veľkosť strany."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token na získanie ďalšej stránky výsledkov"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets.",
+          "message": "Maximálny počet projektov, ktoré sa majú vrátiť v jednej požiadavke. Predvolená hodnota je 100. Použite s tokenmi stránkovania na načítanie veľkých množín výsledkov."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of projects to return per page",
+          "message": "Počet projektov vrátených na stranu"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "List all Google Cloud projects accessible with the current credentials",
+          "message": "Zoznam všetkých projektov Google Cloud prístupných s aktuálnymi prihlasovacími údajmi"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Firestore** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré v tejto aplikácii zatiaľ nie sú sprístupnené ako prvotriedne akcie."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firestore",
+          "message": "Vykonať vlastné volanie API do Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents.",
+          "message": "Monitoruje kolekciu Firestore a zisťuje novovytvorené dokumenty. Dokumenty sú zoradené podľa vami zadaných kritérií a trigger sa aktivuje, keď sa na začiatku zoradeného zoznamu objavia nové dokumenty. Môžete voliteľne filtrovať dokumenty a prispôsobiť zoradenie na sledovanie konkrétnych typov dokumentov."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "Nový dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii, ktorú chcete monitorovať. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.desc": {
+          "source": "Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic.",
+          "message": "Definujte jeden alebo viac filtrov na zúženie dokumentov, ktoré spustia udalosť. Viacero filtrov sa kombinuje s logikou AND."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Filtre"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.short_desc": {
+          "source": "Optional filters to apply to documents",
+          "message": "Voliteľné filtre, ktoré sa majú použiť na dokumenty"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.desc": {
+          "source": "Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first).",
+          "message": "Definujte kritériá zoradenia dokumentov. Trigger sa aktivuje pre dokumenty, ktoré sa zobrazia na začiatku zoradeného zoznamu. Ak nie sú zadané, dokumenty sa zoraďujú podľa času vytvorenia v zostupnom poradí (od najnovších)."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {
+          "source": "Specify how to order documents",
+          "message": "Zadajte spôsob zoradenia dokumentov"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new document is created in a Firestore collection",
+          "message": "Spustí sa pri vytvorení nového dokumentu v kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.desc": {
+          "source": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.",
+          "message": "Vykonáva pokročilé dotazy na kolekciu Firestore s podporou viacerých filtrov, zoradenia a limitov. To vám umožňuje vyhľadávať konkrétne dokumenty na základe hodnôt polí a načítať ich v určitom poradí."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
+          "source": "Query Documents",
+          "message": "Vyhľadať dokumenty dotazom"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii, na ktorú sa chcete dotazovať. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.desc": {
+          "source": "Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match.",
+          "message": "Voliteľný zoznam filtrov, ktoré sa majú použiť na dotaz. Viacero filtrov sa kombinuje s logikou AND. Každý filter určuje pole, operátor porovnania a hodnotu na zhodu."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Filtre"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.short_desc": {
+          "source": "Filter criteria for documents",
+          "message": "Kritériá filtrovania dokumentov"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.desc": {
+          "source": "Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed.",
+          "message": "Voliteľný zoznam kritérií zoradenia, ktoré sa majú použiť na výsledky dotazu. Dokumenty sa zoradia podľa zadaných polí v poradí, v akom sú uvedené."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
+          "source": "Ordering criteria for results",
+          "message": "Kritériá zoradenia výsledkov"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size.",
+          "message": "Maximálny počet dokumentov na načítanie. Predvolená hodnota je 100. Použite to na riadenie výkonu dotazu a veľkosti množiny výsledkov."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Maximálny počet dokumentov na vrátenie"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
+          "source": "Query documents in a Firestore collection with filters and ordering",
+          "message": "Vyhľadať dokumenty v kolekcii Firestore pomocou filtrov a zoradenia"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.",
+          "message": "Obnoví dáta Firestore z predchádzajúcej zálohy uloženej v Google Cloud Storage. Táto operácia môže obnoviť celú databázu alebo konkrétne kolekcie. Upozornenie: Týmto sa prepíšu existujúce dokumenty s rovnakými ID."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Restore from Google Cloud Storage",
+          "message": "Obnoviť z Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections.",
+          "message": "Voliteľný zoznam ID kolekcií na obnovenie zo zálohy. Ak nie je zadaný, obnovia sa všetky kolekcie v zálohe. Použite to na selektívne obnovenie konkrétnych kolekcií."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "ID kolekcií"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to restore (optional)",
+          "message": "Konkrétne kolekcie na obnovenie (voliteľné)"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup",
+          "message": "Predpona URI Google Cloud Storage, kde sa nachádzajú súbory zálohy. Mala by sa zhodovať s output_uri_prefix použitou pri vytváraní zálohy. Formát: gs://bucket-name/path/to/backup"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
+          "source": "Input URI Prefix",
+          "message": "Predpona vstupného URI"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
+          "source": "GCS bucket URI where backup is stored",
+          "message": "URI bucketu GCS, kde je záloha uložená"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project where the data will be restored",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud, do ktorého sa obnovia dáta"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Import Firestore data from Google Cloud Storage",
+          "message": "Importovať dáta Firestore z Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.desc": {
+          "source": "Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields.",
+          "message": "Aktualizuje existujúci dokument vo Firestore novými dátami. Môžete zvoliť zlúčenie nových dát s existujúcimi poľami alebo nahradenie celého dokumentu. V predvolenom nastavení aktualizácia zlúči nové polia a zachová nezadané polia."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "Aktualizovať dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Úplná cesta ku kolekcii obsahujúcej dokument. Pre vnorené kolekcie použite formát: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Cesta ku kolekcii"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Cesta ku kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Voliteľné dodatočné polia na zlúčenie so štruktúrovanými dátami. Použite to na aktualizáciu polí, ktoré nie sú súčasťou preddefinovanej schémy, alebo na zahrnutie dynamických polí."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Dodatočné údaje"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to update",
+          "message": "Dodatočné polia na aktualizáciu"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to update. The document must exist or the operation will fail.",
+          "message": "Jedinečný identifikátor dokumentu, ktorý chcete aktualizovať. Dokument musí existovať, inak operácia zlyhá."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ID dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to update",
+          "message": "ID dokumentu na aktualizáciu"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document.",
+          "message": "Dáta na aktualizáciu v dokumente. Keď je zlúčenie povolené, aktualizujú sa iba zadané polia. Keď je zlúčenie zakázané, tieto dáta nahradia celý dokument."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Údaje dokumentu"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the document",
+          "message": "Nové dáta pre dokument"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.desc": {
+          "source": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data.",
+          "message": "Ak má hodnotu true (predvolené), aktualizujú sa iba zadané polia a ostatné polia zostanú nezmenené. Ak má hodnotu false, celý dokument sa nahradí novými dátami."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.display_name": {
+          "source": "Merge",
+          "message": "Zlúčiť"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.short_desc": {
+          "source": "Whether to merge with existing data",
+          "message": "Či sa má zlúčiť s existujúcimi dátami"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Jedinečný identifikátor pre váš projekt Google Cloud obsahujúci databázu Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID projektu Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Update an existing document in a Firestore collection",
+          "message": "Aktualizovať existujúci dokument v kolekcii Firestore"
+        },
+        "app.RmlyZXN0b3Jl.desc": {
+          "source": "The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.",
+          "message": "Integrácia Firestore vám umožňuje komunikovať s Google Cloud Firestore, flexibilnou a škálovateľnou cloudovou databázou NoSQL. Vytvárajte, čítajte, aktualizujte a maže dokumenty, spravujte kolekcie a spúšťajte dotazy na bezproblémovú automatizáciu operácií s vašou dokumentovou databázou."
+        },
+        "app.RmlyZXN0b3Jl.display_name": {
+          "source": "Firestore",
+          "message": "Firestore"
+        },
+        "app.RmlyZXN0b3Jl.short_desc": {
+          "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
+          "message": "Pripojte sa k databáze Google Cloud Firestore a spravujte svoju dokumentovú databázu NoSQL."
+        }
+      }
+    }
+  }
+}

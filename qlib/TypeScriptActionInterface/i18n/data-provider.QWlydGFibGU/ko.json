@@ -1,0 +1,2633 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.QWlydGFibGU.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Create a new record in a specified Airtable table with the provided field values",
+          "message": "제공된 필드 값으로 지정된 Airtable 테이블에 새 레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base where you want to create the new record",
+          "message": "새 레코드를 생성할 Airtable 베이스를 선택하세요"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base where the record will be created",
+          "message": "레코드가 생성될 베이스 내의 특정 테이블을 선택하세요"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in Airtable",
+          "message": "Airtable에 새 레코드 생성"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Get a single record by its ID from a specified Airtable table",
+          "message": "지정된 Airtable 테이블에서 ID로 단일 레코드 가져오기"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "레코드 가져오기"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table with the record you want to retrieve",
+          "message": "가져올 레코드가 있는 테이블이 포함된 Airtable 베이스를 선택하세요"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Select or enter the ID of the specific record you want to retrieve",
+          "message": "가져오려는 특정 레코드의 ID를 선택하거나 입력하세요"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "레코드 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to retrieve",
+          "message": "가져올 레코드의 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base that contains the record",
+          "message": "레코드가 포함된 베이스 내의 특정 테이블을 선택하세요"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a specific record from Airtable",
+          "message": "Airtable에서 특정 레코드 가져오기"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "레코드 삭제"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently delete a specific record from an Airtable table",
+          "message": "Airtable 테이블에서 특정 레코드를 영구적으로 삭제"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "레코드 삭제"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table with the record to delete",
+          "message": "삭제할 레코드가 있는 테이블이 포함된 Airtable 베이스를 선택하세요"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Select or enter the ID of the specific record you want to delete",
+          "message": "삭제하려는 특정 레코드의 ID를 선택하거나 입력하세요"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "레코드 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete",
+          "message": "삭제할 레코드의 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base that contains the record to delete",
+          "message": "삭제할 레코드가 포함된 베이스 내의 특정 테이블을 선택하세요"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from Airtable",
+          "message": "Airtable에서 레코드 삭제"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieve a list of all tables within a specified Airtable base",
+          "message": "지정된 Airtable 베이스 내의 모든 테이블 목록 가져오기"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "테이블 목록 조회"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base for which you want to list all available tables",
+          "message": "사용 가능한 모든 테이블 목록을 조회할 Airtable 베이스를 선택하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "List tables in an Airtable base",
+          "message": "Airtable 베이스의 테이블 목록 조회"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.desc": {
+          "source": "Retrieve a list of all Airtable bases that are accessible with the current authentication",
+          "message": "현재 인증으로 액세스할 수 있는 모든 Airtable 베이스 목록 가져오기"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.display_name": {
+          "source": "List Bases",
+          "message": "베이스 목록 조회"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.desc": {
+          "source": "Use the offset from a previous response to retrieve the next page of bases",
+          "message": "이전 응답의 오프셋을 사용하여 다음 베이스 페이지를 가져옵니다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Pagination offset",
+          "message": "페이지네이션 오프셋"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.short_desc": {
+          "source": "List all accessible Airtable bases",
+          "message": "액세스 가능한 모든 Airtable 베이스 목록 조회"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "List and filter records from a specified Airtable table with support for sorting, filtering, pagination, and field selection",
+          "message": "정렬, 필터링, 페이지네이션 및 필드 선택을 지원하여 지정된 Airtable 테이블의 레코드를 조회하고 필터링합니다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "레코드 목록 조회"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.allowed-value.c3RyaW5nOnN0cmluZw.display_name": {
+          "source": "String",
+          "message": "String"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.desc": {
+          "source": "Choose how cell values should be formatted in the response",
+          "message": "응답에서 셀 값을 형식화할 방법을 선택하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.display_name": {
+          "source": "Cell Format",
+          "message": "셀 서식"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.short_desc": {
+          "source": "Format for cell values",
+          "message": "셀 값 서식"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to query",
+          "message": "조회하려는 테이블이 포함된 Airtable 베이스를 선택하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select which fields to include in the response. If not specified, all fields will be returned",
+          "message": "응답에 포함할 필드를 선택하세요. 지정하지 않으면 모든 필드가 반환됩니다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "필드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve",
+          "message": "가져올 특정 필드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.desc": {
+          "source": "Configure filtering criteria to limit which records are returned",
+          "message": "반환되는 레코드를 제한하기 위한 필터링 기준을 설정하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter configuration",
+          "message": "필터 설정"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.desc": {
+          "source": "Use the offset from a previous response to retrieve the next page of records",
+          "message": "이전 응답의 오프셋을 사용하여 다음 레코드 페이지를 가져옵니다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.short_desc": {
+          "source": "Record offset for pagination",
+          "message": "페이지네이션용 레코드 오프셋"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "반환된 레코드의 정렬 방법을 설정하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Sort configuration",
+          "message": "정렬 설정"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.desc": {
+          "source": "Specify how many records to retrieve per page (maximum 100)",
+          "message": "페이지당 가져올 레코드 수를 지정하세요 (최대 100개)"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "페이지 크기"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of records per page",
+          "message": "페이지당 레코드 수"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.desc": {
+          "source": "When enabled, field data will be returned using field IDs instead of field names",
+          "message": "활성화하면 필드 이름 대신 필드 ID를 사용하여 필드 데이터가 반환됩니다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.display_name": {
+          "source": "Return Fields by Field ID",
+          "message": "필드 ID로 필드 반환"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.short_desc": {
+          "source": "Return field IDs instead of names",
+          "message": "이름 대신 필드 ID 반환"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base from which to retrieve records",
+          "message": "레코드를 가져올 베이스 내의 특정 테이블을 선택하세요"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to query",
+          "message": "조회할 테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL01hZGVpcmE.display_name": {
+          "source": "Atlantic/Madeira",
+          "message": "Atlantic/Madeira"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0F6b3Jlcw.display_name": {
+          "source": "Atlantic/Azores",
+          "message": "Atlantic/Azores"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0Jlcm11ZGE.display_name": {
+          "source": "Atlantic/Bermuda",
+          "message": "Atlantic/Bermuda"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0NhbmFyeQ.display_name": {
+          "source": "Atlantic/Canary",
+          "message": "Atlantic/Canary"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0NhcGVfVmVyZGU.display_name": {
+          "source": "Atlantic/Cape Verde",
+          "message": "Atlantic/Cape Verde"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0Zhcm9l.display_name": {
+          "source": "Atlantic/Faroe",
+          "message": "Atlantic/Faroe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1JleWtqYXZpaw.display_name": {
+          "source": "Atlantic/Reykjavik",
+          "message": "Atlantic/Reykjavik"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1N0X0hlbGVuYQ.display_name": {
+          "source": "Atlantic/St Helena",
+          "message": "Atlantic/St Helena"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1N0YW5sZXk.display_name": {
+          "source": "Atlantic/Stanley",
+          "message": "Atlantic/Stanley"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1NvdXRoX0dlb3JnaWE.display_name": {
+          "source": "Atlantic/South Georgia",
+          "message": "Atlantic/South Georgia"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9BZGVsYWlkZQ.display_name": {
+          "source": "Australia/Adelaide",
+          "message": "Australia/Adelaide"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Ccm9rZW5fSGlsbA.display_name": {
+          "source": "Australia/Broken Hill",
+          "message": "Australia/Broken Hill"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9CcmlzYmFuZQ.display_name": {
+          "source": "Australia/Brisbane",
+          "message": "Australia/Brisbane"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9DdXJyaWU.display_name": {
+          "source": "Australia/Currie",
+          "message": "Australia/Currie"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9EYXJ3aW4.display_name": {
+          "source": "Australia/Darwin",
+          "message": "Australia/Darwin"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9FdWNsYQ.display_name": {
+          "source": "Australia/Eucla",
+          "message": "Australia/Eucla"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Ib2JhcnQ.display_name": {
+          "source": "Australia/Hobart",
+          "message": "Australia/Hobart"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9MaW5kZW1hbg.display_name": {
+          "source": "Australia/Lindeman",
+          "message": "Australia/Lindeman"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Mb3JkX0hvd2U.display_name": {
+          "source": "Australia/Lord Howe",
+          "message": "Australia/Lord Howe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9NZWxib3VybmU.display_name": {
+          "source": "Australia/Melbourne",
+          "message": "Australia/Melbourne"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9QZXJ0aA.display_name": {
+          "source": "Australia/Perth",
+          "message": "Australia/Perth"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9TeWRuZXk.display_name": {
+          "source": "Australia/Sydney",
+          "message": "오스트레일리아/시드니"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BY2NyYQ.display_name": {
+          "source": "Africa/Accra",
+          "message": "아프리카/아크라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BYmlkamFu.display_name": {
+          "source": "Africa/Abidjan",
+          "message": "아프리카/아비장"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BZGRpc19BYmFiYQ.display_name": {
+          "source": "Africa/Addis Ababa",
+          "message": "아프리카/아디스아바바"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BbGdpZXJz.display_name": {
+          "source": "Africa/Algiers",
+          "message": "아프리카/알제"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Bc21hcmE.display_name": {
+          "source": "Africa/Asmara",
+          "message": "아프리카/아스마라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW1ha28.display_name": {
+          "source": "Africa/Bamako",
+          "message": "아프리카/바마코"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW5ndWk.display_name": {
+          "source": "Africa/Bangui",
+          "message": "아프리카/방기"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW5qdWw.display_name": {
+          "source": "Africa/Banjul",
+          "message": "아프리카/반줄"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CaXNzYXU.display_name": {
+          "source": "Africa/Bissau",
+          "message": "아프리카/비사우"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CbGFudHlyZQ.display_name": {
+          "source": "Africa/Blantyre",
+          "message": "아프리카/블랜타이어"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CcmF6emF2aWxsZQ.display_name": {
+          "source": "Africa/Brazzaville",
+          "message": "아프리카/브라자빌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CdWp1bWJ1cmE.display_name": {
+          "source": "Africa/Bujumbura",
+          "message": "아프리카/부줌부라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DYWlybw.display_name": {
+          "source": "Africa/Cairo",
+          "message": "아프리카/카이로"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DYXNhYmxhbmNh.display_name": {
+          "source": "Africa/Casablanca",
+          "message": "아프리카/카사블랑카"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DZXV0YQ.display_name": {
+          "source": "Africa/Ceuta",
+          "message": "아프리카/세우타"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Db25ha3J5.display_name": {
+          "source": "Africa/Conakry",
+          "message": "아프리카/코나크리"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9EYWthcg.display_name": {
+          "source": "Africa/Dakar",
+          "message": "아프리카/다카르"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9EYXJfZXNfU2FsYWFt.display_name": {
+          "source": "Africa/Dar es Salaam",
+          "message": "아프리카/다르에스살람"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Eamlib3V0aQ.display_name": {
+          "source": "Africa/Djibouti",
+          "message": "아프리카/지부티"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Eb3VhbGE.display_name": {
+          "source": "Africa/Douala",
+          "message": "아프리카/두알라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9FbF9BYWl1bg.display_name": {
+          "source": "Africa/El Aaiun",
+          "message": "아프리카/엘아이운"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9GcmVldG93bg.display_name": {
+          "source": "Africa/Freetown",
+          "message": "아프리카/프리타운"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9HYWJvcm9uZQ.display_name": {
+          "source": "Africa/Gaborone",
+          "message": "아프리카/가보로네"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9IYXJhcmU.display_name": {
+          "source": "Africa/Harare",
+          "message": "아프리카/하라레"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Kb2hhbm5lc2J1cmc.display_name": {
+          "source": "Africa/Johannesburg",
+          "message": "아프리카/요하네스버그"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9KdWJh.display_name": {
+          "source": "Africa/Juba",
+          "message": "아프리카/주바"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LYW1wYWxh.display_name": {
+          "source": "Africa/Kampala",
+          "message": "아프리카/캄팔라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaGFydG91bQ.display_name": {
+          "source": "Africa/Khartoum",
+          "message": "아프리카/카르툼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaW5zaGFzYQ.display_name": {
+          "source": "Africa/Kinshasa",
+          "message": "아프리카/킨샤사"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaWdhbGk.display_name": {
+          "source": "Africa/Kigali",
+          "message": "아프리카/키갈리"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MYWdvcw.display_name": {
+          "source": "Africa/Lagos",
+          "message": "아프리카/라고스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MaWJyZXZpbGxl.display_name": {
+          "source": "Africa/Libreville",
+          "message": "아프리카/리브르빌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Mb21l.display_name": {
+          "source": "Africa/Lome",
+          "message": "아프리카/로메"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdWFuZGE.display_name": {
+          "source": "Africa/Luanda",
+          "message": "아프리카/루안다"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdWJ1bWJhc2hp.display_name": {
+          "source": "Africa/Lubumbashi",
+          "message": "아프리카/루붐바시"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdXNha2E.display_name": {
+          "source": "Africa/Lusaka",
+          "message": "아프리카/루사카"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYWxhYm8.display_name": {
+          "source": "Africa/Malabo",
+          "message": "아프리카/말라보"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYXB1dG8.display_name": {
+          "source": "Africa/Maputo",
+          "message": "아프리카/마푸투"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYXNlcnU.display_name": {
+          "source": "Africa/Maseru",
+          "message": "아프리카/마세루"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYmFiYW5l.display_name": {
+          "source": "Africa/Mbabane",
+          "message": "아프리카/음바바네"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Nb25yb3ZpYQ.display_name": {
+          "source": "Africa/Monrovia",
+          "message": "아프리카/몬로비아"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Nb2dhZGlzaHU.display_name": {
+          "source": "Africa/Mogadishu",
+          "message": "아프리카/모가디슈"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OYWlyb2Jp.display_name": {
+          "source": "Africa/Nairobi",
+          "message": "아프리카/나이로비"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OZGphbWVuYQ.display_name": {
+          "source": "Africa/Ndjamena",
+          "message": "아프리카/엔자메나"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OaWFtZXk.display_name": {
+          "source": "Africa/Niamey",
+          "message": "아프리카/니아메"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Ob3Vha2Nob3R0.display_name": {
+          "source": "Africa/Nouakchott",
+          "message": "아프리카/누악쇼트"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9PdWFnYWRvdWdvdQ.display_name": {
+          "source": "Africa/Ouagadougou",
+          "message": "아프리카/와가두구"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Qb3J0by1Ob3Zv.display_name": {
+          "source": "Africa/Porto-Novo",
+          "message": "아프리카/포르토노보"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9TYW9fVG9tZQ.display_name": {
+          "source": "Africa/Sao Tome",
+          "message": "아프리카/상투메"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Ucmlwb2xp.display_name": {
+          "source": "Africa/Tripoli",
+          "message": "아프리카/트리폴리"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9UdW5pcw.display_name": {
+          "source": "Africa/Tunis",
+          "message": "아프리카/튀니스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9XaW5kaG9law.display_name": {
+          "source": "Africa/Windhoek",
+          "message": "아프리카/빈트후크"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ29zdGFfUmljYQ.display_name": {
+          "source": "America/Costa Rica",
+          "message": "아메리카/코스타리카"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2F5ZW5uZQ.display_name": {
+          "source": "America/Cayenne",
+          "message": "아메리카/카옌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2F5bWFu.display_name": {
+          "source": "America/Cayman",
+          "message": "아메리카/케이맨"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FtYnJpZGdlX0JheQ.display_name": {
+          "source": "America/Cambridge Bay",
+          "message": "아메리카/케임브리지 베이"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FtcG9fR3JhbmRl.display_name": {
+          "source": "America/Campo Grande",
+          "message": "아메리카/캄푸그란데"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FuY3Vu.display_name": {
+          "source": "America/Cancun",
+          "message": "아메리카/칸쿤"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FyYWNhcw.display_name": {
+          "source": "America/Caracas",
+          "message": "아메리카/카라카스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2hpY2Fnbw.display_name": {
+          "source": "America/Chicago",
+          "message": "아메리카/시카고"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2hpaHVhaHVh.display_name": {
+          "source": "America/Chihuahua",
+          "message": "아메리카/치와와"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3Jlc3Rvbg.display_name": {
+          "source": "America/Creston",
+          "message": "아메리카/크레스턴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3VpYWJh.display_name": {
+          "source": "America/Cuiaba",
+          "message": "아메리카/쿠이아바"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3VyYWNhbw.display_name": {
+          "source": "America/Curacao",
+          "message": "America/Curacao"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW50aWd1YQ.display_name": {
+          "source": "America/Antigua",
+          "message": "America/Antigua"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW5jaG9yYWdl.display_name": {
+          "source": "America/Anchorage",
+          "message": "America/Anchorage"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW5ndWlsbGE.display_name": {
+          "source": "America/Anguilla",
+          "message": "America/Anguilla"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQWRhaw.display_name": {
+          "source": "America/Adak",
+          "message": "America/Adak"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJ1YmE.display_name": {
+          "source": "America/Aruba",
+          "message": "America/Aruba"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJhZ3VhaW5h.display_name": {
+          "source": "America/Araguaina",
+          "message": "America/Araguaina"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL01lbmRvemE.display_name": {
+          "source": "America/Argentina/Mendoza",
+          "message": "America/Argentina/Mendoza"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcw.display_name": {
+          "source": "America/Argentina/Buenos Aires",
+          "message": "America/Argentina/Buenos Aires"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0NhdGFtYXJjYQ.display_name": {
+          "source": "America/Argentina/Catamarca",
+          "message": "America/Argentina/Catamarca"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0NvcmRvYmE.display_name": {
+          "source": "America/Argentina/Cordoba",
+          "message": "America/Argentina/Cordoba"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0p1anV5.display_name": {
+          "source": "America/Argentina/Jujuy",
+          "message": "America/Argentina/Jujuy"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0xhX1Jpb2ph.display_name": {
+          "source": "America/Argentina/La Rioja",
+          "message": "America/Argentina/La Rioja"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Jpb19HYWxsZWdvcw.display_name": {
+          "source": "America/Argentina/Rio Gallegos",
+          "message": "America/Argentina/Rio Gallegos"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1NhbHRh.display_name": {
+          "source": "America/Argentina/Salta",
+          "message": "America/Argentina/Salta"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Nhbl9KdWFu.display_name": {
+          "source": "America/Argentina/San Juan",
+          "message": "America/Argentina/San Juan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Nhbl9MdWlz.display_name": {
+          "source": "America/Argentina/San Luis",
+          "message": "America/Argentina/San Luis"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1R1Y3VtYW4.display_name": {
+          "source": "America/Argentina/Tucuman",
+          "message": "America/Argentina/Tucuman"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1VzaHVhaWE.display_name": {
+          "source": "America/Argentina/Ushuaia",
+          "message": "America/Argentina/Ushuaia"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXN1bmNpb24.display_name": {
+          "source": "America/Asuncion",
+          "message": "America/Asuncion"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXRpa29rYW4.display_name": {
+          "source": "America/Atikokan",
+          "message": "America/Atikokan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9hX1Zpc3Rh.display_name": {
+          "source": "America/Boa Vista",
+          "message": "America/Boa Vista"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9nb3Rh.display_name": {
+          "source": "America/Bogota",
+          "message": "America/Bogota"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9pc2U.display_name": {
+          "source": "America/Boise",
+          "message": "America/Boise"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFoaWE.display_name": {
+          "source": "America/Bahia",
+          "message": "America/Bahia"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFoaWFfQmFuZGVyYXM.display_name": {
+          "source": "America/Bahia Banderas",
+          "message": "America/Bahia Banderas"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFyYmFkb3M.display_name": {
+          "source": "America/Barbados",
+          "message": "America/Barbados"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmVsZW0.display_name": {
+          "source": "America/Belem",
+          "message": "America/Belem"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmVsaXpl.display_name": {
+          "source": "America/Belize",
+          "message": "America/Belize"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmxhbmMtU2FibG9u.display_name": {
+          "source": "America/Blanc-Sablon",
+          "message": "America/Blanc-Sablon"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR29kdGhhYg.display_name": {
+          "source": "America/Godthab",
+          "message": "America/Godthab"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR29vc2VfQmF5.display_name": {
+          "source": "America/Goose Bay",
+          "message": "America/Goose Bay"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR2xhY2VfQmF5.display_name": {
+          "source": "America/Glace Bay",
+          "message": "America/Glace Bay"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3JhbmRfVHVyaw.display_name": {
+          "source": "America/Grand Turk",
+          "message": "America/Grand Turk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3JlbmFkYQ.display_name": {
+          "source": "America/Grenada",
+          "message": "America/Grenada"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3V5YW5h.display_name": {
+          "source": "America/Guyana",
+          "message": "America/Guyana"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VhZGVsb3VwZQ.display_name": {
+          "source": "America/Guadeloupe",
+          "message": "America/Guadeloupe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VhdGVtYWxh.display_name": {
+          "source": "America/Guatemala",
+          "message": "America/Guatemala"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VheWFxdWls.display_name": {
+          "source": "America/Guayaquil",
+          "message": "America/Guayaquil"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRG9taW5pY2E.display_name": {
+          "source": "America/Dominica",
+          "message": "America/Dominica"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGF3c29u.display_name": {
+          "source": "America/Dawson",
+          "message": "America/Dawson"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGF3c29uX0NyZWVr.display_name": {
+          "source": "America/Dawson Creek",
+          "message": "America/Dawson Creek"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGFubWFya3NoYXZu.display_name": {
+          "source": "America/Danmarkshavn",
+          "message": "America/Danmarkshavn"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGV0cm9pdA.display_name": {
+          "source": "America/Detroit",
+          "message": "America/Detroit"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGVudmVy.display_name": {
+          "source": "America/Denver",
+          "message": "America/Denver"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWRtb250b24.display_name": {
+          "source": "America/Edmonton",
+          "message": "America/Edmonton"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWlydW5lcGU.display_name": {
+          "source": "America/Eirunepe",
+          "message": "America/Eirunepe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWxfU2FsdmFkb3I.display_name": {
+          "source": "America/El Salvador",
+          "message": "America/El Salvador"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRm9ydF9OZWxzb24.display_name": {
+          "source": "America/Fort Nelson",
+          "message": "America/Fort Nelson"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRm9ydGFsZXph.display_name": {
+          "source": "America/Fortaleza",
+          "message": "America/Fortaleza"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS2VudHVja3kvTG91aXN2aWxsZQ.display_name": {
+          "source": "America/Kentucky/Louisville",
+          "message": "America/Kentucky/Louisville"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS2VudHVja3kvTW9udGljZWxsbw.display_name": {
+          "source": "America/Kentucky/Monticello",
+          "message": "America/Kentucky/Monticello"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS3JhbGVuZGlqaw.display_name": {
+          "source": "America/Kralendijk",
+          "message": "America/Kralendijk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGF2YW5h.display_name": {
+          "source": "America/Havana",
+          "message": "America/Havana"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGFsaWZheA.display_name": {
+          "source": "America/Halifax",
+          "message": "America/Halifax"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGVybW9zaWxsbw.display_name": {
+          "source": "America/Hermosillo",
+          "message": "America/Hermosillo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW51dmlr.display_name": {
+          "source": "America/Inuvik",
+          "message": "America/Inuvik"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9JbmRpYW5hcG9saXM.display_name": {
+          "source": "America/Indiana/Indianapolis",
+          "message": "America/Indiana/Indianapolis"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9Lbm94.display_name": {
+          "source": "America/Indiana/Knox",
+          "message": "America/Indiana/Knox"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9NYXJlbmdv.display_name": {
+          "source": "America/Indiana/Marengo",
+          "message": "America/Indiana/Marengo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9QZXRlcnNidXJn.display_name": {
+          "source": "America/Indiana/Petersburg",
+          "message": "America/Indiana/Petersburg"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9UZWxsX0NpdHk.display_name": {
+          "source": "America/Indiana/Tell City",
+          "message": "America/Indiana/Tell City"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9WZXZheQ.display_name": {
+          "source": "America/Indiana/Vevay",
+          "message": "America/Indiana/Vevay"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9WaW5jZW5uZXM.display_name": {
+          "source": "America/Indiana/Vincennes",
+          "message": "America/Indiana/Vincennes"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9XaW5hbWFj.display_name": {
+          "source": "America/Indiana/Winamac",
+          "message": "America/Indiana/Winamac"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSXFhbHVpdA.display_name": {
+          "source": "America/Iqaluit",
+          "message": "America/Iqaluit"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSmFtYWljYQ.display_name": {
+          "source": "America/Jamaica",
+          "message": "America/Jamaica"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSnVuZWF1.display_name": {
+          "source": "America/Juneau",
+          "message": "America/Juneau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvT2ppbmFnYQ.display_name": {
+          "source": "America/Ojinaga",
+          "message": "America/Ojinaga"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTG93ZXJfUHJpbmNlcw.display_name": {
+          "source": "America/Lower Princes",
+          "message": "America/Lower Princes"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTG9zX0FuZ2VsZXM.display_name": {
+          "source": "America/Los Angeles",
+          "message": "America/Los Angeles"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTGFfUGF6.display_name": {
+          "source": "America/La Paz",
+          "message": "America/La Paz"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTGltYQ.display_name": {
+          "source": "America/Lima",
+          "message": "America/Lima"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9uY3Rvbg.display_name": {
+          "source": "America/Moncton",
+          "message": "America/Moncton"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udGV2aWRlbw.display_name": {
+          "source": "America/Montevideo",
+          "message": "America/Montevideo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udGVycmV5.display_name": {
+          "source": "America/Monterrey",
+          "message": "America/Monterrey"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udHNlcnJhdA.display_name": {
+          "source": "America/Montserrat",
+          "message": "America/Montserrat"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWF0YW1vcm9z.display_name": {
+          "source": "America/Matamoros",
+          "message": "America/Matamoros"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWF6YXRsYW4.display_name": {
+          "source": "America/Mazatlan",
+          "message": "America/Mazatlan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFjZWlv.display_name": {
+          "source": "America/Maceio",
+          "message": "America/Maceio"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFuYWd1YQ.display_name": {
+          "source": "America/Managua",
+          "message": "America/Managua"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFuYXVz.display_name": {
+          "source": "America/Manaus",
+          "message": "America/Manaus"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFyaWdvdA.display_name": {
+          "source": "America/Marigot",
+          "message": "America/Marigot"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFydGluaXF1ZQ.display_name": {
+          "source": "America/Martinique",
+          "message": "America/Martinique"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWV0bGFrYXRsYQ.display_name": {
+          "source": "America/Metlakatla",
+          "message": "America/Metlakatla"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWV4aWNvX0NpdHk.display_name": {
+          "source": "America/Mexico City",
+          "message": "America/Mexico City"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWVub21pbmVl.display_name": {
+          "source": "America/Menominee",
+          "message": "America/Menominee"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWVyaWRh.display_name": {
+          "source": "America/Merida",
+          "message": "America/Merida"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWlxdWVsb24.display_name": {
+          "source": "America/Miquelon",
+          "message": "America/Miquelon"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9tZQ.display_name": {
+          "source": "America/Nome",
+          "message": "America/Nome"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9yb25oYQ.display_name": {
+          "source": "America/Noronha",
+          "message": "America/Noronha"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL05ld19TYWxlbQ.display_name": {
+          "source": "America/North Dakota/New Salem",
+          "message": "America/North Dakota/New Salem"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL0JldWxhaA.display_name": {
+          "source": "America/North Dakota/Beulah",
+          "message": "America/North Dakota/Beulah"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL0NlbnRlcg.display_name": {
+          "source": "America/North Dakota/Center",
+          "message": "America/North Dakota/Center"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmFzc2F1.display_name": {
+          "source": "America/Nassau",
+          "message": "America/Nassau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmV3X1lvcms.display_name": {
+          "source": "America/New York",
+          "message": "America/New York"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmlwaWdvbg.display_name": {
+          "source": "America/Nipigon",
+          "message": "America/Nipigon"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTnV1aw.display_name": {
+          "source": "America/Nuuk",
+          "message": "America/Nuuk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudG9fRG9taW5nbw.display_name": {
+          "source": "America/Santo Domingo",
+          "message": "America/Santo Domingo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudGFyZW0.display_name": {
+          "source": "America/Santarem",
+          "message": "America/Santarem"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudGlhZ28.display_name": {
+          "source": "America/Santiago",
+          "message": "America/Santiago"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FvX1BhdWxv.display_name": {
+          "source": "America/Sao Paulo",
+          "message": "America/Sao Paulo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2NvcmVzYnlzdW5k.display_name": {
+          "source": "America/Scoresbysund",
+          "message": "America/Scoresbysund"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2l0a2E.display_name": {
+          "source": "America/Sitka",
+          "message": "America/Sitka"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfQmFydGhlbGVteQ.display_name": {
+          "source": "America/St Barthelemy",
+          "message": "America/St Barthelemy"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfS2l0dHM.display_name": {
+          "source": "America/St Kitts",
+          "message": "America/St Kitts"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfSm9obnM.display_name": {
+          "source": "America/St Johns",
+          "message": "America/St Johns"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfTHVjaWE.display_name": {
+          "source": "America/St Lucia",
+          "message": "America/St Lucia"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfVGhvbWFz.display_name": {
+          "source": "America/St Thomas",
+          "message": "America/St Thomas"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfVmluY2VudA.display_name": {
+          "source": "America/St Vincent",
+          "message": "America/St Vincent"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3dpZnRfQ3VycmVudA.display_name": {
+          "source": "America/Swift Current",
+          "message": "America/Swift Current"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydC1hdS1QcmluY2U.display_name": {
+          "source": "America/Port-au-Prince",
+          "message": "America/Port-au-Prince"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydF9vZl9TcGFpbg.display_name": {
+          "source": "America/Port of Spain",
+          "message": "America/Port of Spain"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydG9fVmVsaG8.display_name": {
+          "source": "America/Porto Velho",
+          "message": "America/Porto Velho"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFuYW1h.display_name": {
+          "source": "America/Panama",
+          "message": "America/Panama"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFuZ25pcnR1bmc.display_name": {
+          "source": "America/Pangnirtung",
+          "message": "America/Pangnirtung"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFyYW1hcmlibw.display_name": {
+          "source": "America/Paramaribo",
+          "message": "America/Paramaribo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGhvZW5peA.display_name": {
+          "source": "America/Phoenix",
+          "message": "America/Phoenix"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUHVlcnRvX1JpY28.display_name": {
+          "source": "America/Puerto Rico",
+          "message": "America/Puerto Rico"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUHVudGFfQXJlbmFz.display_name": {
+          "source": "America/Punta Arenas",
+          "message": "America/Punta Arenas"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmFpbnlfUml2ZXI.display_name": {
+          "source": "America/Rainy River",
+          "message": "America/Rainy River"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmFua2luX0lubGV0.display_name": {
+          "source": "America/Rankin Inlet",
+          "message": "America/Rankin Inlet"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVjaWZl.display_name": {
+          "source": "America/Recife",
+          "message": "America/Recife"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVnaW5h.display_name": {
+          "source": "America/Regina",
+          "message": "America/Regina"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVzb2x1dGU.display_name": {
+          "source": "America/Resolute",
+          "message": "America/Resolute"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmlvX0JyYW5jbw.display_name": {
+          "source": "America/Rio Branco",
+          "message": "America/Rio Branco"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvV2hpdGVob3JzZQ.display_name": {
+          "source": "America/Whitehorse",
+          "message": "America/Whitehorse"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvV2lubmlwZWc.display_name": {
+          "source": "America/Winnipeg",
+          "message": "America/Winnipeg"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVG9yb250bw.display_name": {
+          "source": "America/Toronto",
+          "message": "America/Toronto"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVG9ydG9sYQ.display_name": {
+          "source": "America/Tortola",
+          "message": "America/Tortola"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGVndWNpZ2FscGE.display_name": {
+          "source": "America/Tegucigalpa",
+          "message": "America/Tegucigalpa"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGh1bGU.display_name": {
+          "source": "America/Thule",
+          "message": "America/Thule"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGh1bmRlcl9CYXk.display_name": {
+          "source": "America/Thunder Bay",
+          "message": "America/Thunder Bay"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGlqdWFuYQ.display_name": {
+          "source": "America/Tijuana",
+          "message": "America/Tijuana"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVmFuY291dmVy.display_name": {
+          "source": "America/Vancouver",
+          "message": "America/Vancouver"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvWWFrdXRhdA.display_name": {
+          "source": "America/Yakutat",
+          "message": "America/Yakutat"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvWWVsbG93a25pZmU.display_name": {
+          "source": "America/Yellowknife",
+          "message": "America/Yellowknife"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvQ2FzZXk.display_name": {
+          "source": "Antarctica/Casey",
+          "message": "Antarctica/Casey"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvRGF2aXM.display_name": {
+          "source": "Antarctica/Davis",
+          "message": "Antarctica/Davis"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvRHVtb250RFVydmlsbGU.display_name": {
+          "source": "Antarctica/DumontDUrville",
+          "message": "Antarctica/DumontDUrville"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWF3c29u.display_name": {
+          "source": "Antarctica/Mawson",
+          "message": "Antarctica/Mawson"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWFjcXVhcmll.display_name": {
+          "source": "Antarctica/Macquarie",
+          "message": "Antarctica/Macquarie"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWNNdXJkbw.display_name": {
+          "source": "Antarctica/McMurdo",
+          "message": "Antarctica/McMurdo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvU3lvd2E.display_name": {
+          "source": "Antarctica/Syowa",
+          "message": "Antarctica/Syowa"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvUGFsbWVy.display_name": {
+          "source": "Antarctica/Palmer",
+          "message": "Antarctica/Palmer"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvUm90aGVyYQ.display_name": {
+          "source": "Antarctica/Rothera",
+          "message": "Antarctica/Rothera"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvVHJvbGw.display_name": {
+          "source": "Antarctica/Troll",
+          "message": "Antarctica/Troll"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvVm9zdG9r.display_name": {
+          "source": "Antarctica/Vostok",
+          "message": "Antarctica/Vostok"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFyY3RpYy9Mb25neWVhcmJ5ZW4.display_name": {
+          "source": "Arctic/Longyearbyen",
+          "message": "Arctic/Longyearbyen"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ29sb21ibw.display_name": {
+          "source": "Asia/Colombo",
+          "message": "Asia/Colombo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ2hpdGE.display_name": {
+          "source": "Asia/Chita",
+          "message": "Asia/Chita"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ2hvaWJhbHNhbg.display_name": {
+          "source": "Asia/Choibalsan",
+          "message": "Asia/Choibalsan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQW1tYW4.display_name": {
+          "source": "Asia/Amman",
+          "message": "Asia/Amman"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQW5hZHly.display_name": {
+          "source": "Asia/Anadyr",
+          "message": "Asia/Anadyr"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQWRlbg.display_name": {
+          "source": "Asia/Aden",
+          "message": "Asia/Aden"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQWxtYXR5.display_name": {
+          "source": "Asia/Almaty",
+          "message": "Asia/Almaty"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXF0YXU.display_name": {
+          "source": "Asia/Aqtau",
+          "message": "Asia/Aqtau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXF0b2Jl.display_name": {
+          "source": "Asia/Aqtobe",
+          "message": "Asia/Aqtobe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXNoZ2FiYXQ.display_name": {
+          "source": "Asia/Ashgabat",
+          "message": "Asia/Ashgabat"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXR5cmF1.display_name": {
+          "source": "Asia/Atyrau",
+          "message": "Asia/Atyrau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFnaGRhZA.display_name": {
+          "source": "Asia/Baghdad",
+          "message": "Asia/Baghdad"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFocmFpbg.display_name": {
+          "source": "Asia/Bahrain",
+          "message": "Asia/Bahrain"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFrdQ.display_name": {
+          "source": "Asia/Baku",
+          "message": "Asia/Baku"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFuZ2tvaw.display_name": {
+          "source": "Asia/Bangkok",
+          "message": "Asia/Bangkok"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFybmF1bA.display_name": {
+          "source": "Asia/Barnaul",
+          "message": "Asia/Barnaul"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmVpcnV0.display_name": {
+          "source": "Asia/Beirut",
+          "message": "Asia/Beirut"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmlzaGtlaw.display_name": {
+          "source": "Asia/Bishkek",
+          "message": "Asia/Bishkek"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQnJ1bmVp.display_name": {
+          "source": "Asia/Brunei",
+          "message": "Asia/Brunei"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvR2F6YQ.display_name": {
+          "source": "Asia/Gaza",
+          "message": "Asia/Gaza"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGFtYXNjdXM.display_name": {
+          "source": "Asia/Damascus",
+          "message": "Asia/Damascus"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGhha2E.display_name": {
+          "source": "Asia/Dhaka",
+          "message": "Asia/Dhaka"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGlsaQ.display_name": {
+          "source": "Asia/Dili",
+          "message": "Asia/Dili"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRHViYWk.display_name": {
+          "source": "Asia/Dubai",
+          "message": "Asia/Dubai"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRHVzaGFuYmU.display_name": {
+          "source": "Asia/Dushanbe",
+          "message": "Asia/Dushanbe"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRmFtYWd1c3Rh.display_name": {
+          "source": "Asia/Famagusta",
+          "message": "Asia/Famagusta"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS29sa2F0YQ.display_name": {
+          "source": "Asia/Kolkata",
+          "message": "Asia/Kolkata"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2F0aG1hbmR1.display_name": {
+          "source": "Asia/Kathmandu",
+          "message": "Asia/Kathmandu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FidWw.display_name": {
+          "source": "Asia/Kabul",
+          "message": "Asia/Kabul"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FtY2hhdGth.display_name": {
+          "source": "Asia/Kamchatka",
+          "message": "Asia/Kamchatka"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FyYWNoaQ.display_name": {
+          "source": "Asia/Karachi",
+          "message": "Asia/Karachi"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2hhbmR5Z2E.display_name": {
+          "source": "Asia/Khandyga",
+          "message": "Asia/Khandyga"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3Jhc25veWFyc2s.display_name": {
+          "source": "Asia/Krasnoyarsk",
+          "message": "Asia/Krasnoyarsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3V3YWl0.display_name": {
+          "source": "Asia/Kuwait",
+          "message": "Asia/Kuwait"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3VhbGFfTHVtcHVy.display_name": {
+          "source": "Asia/Kuala Lumpur",
+          "message": "Asia/Kuala Lumpur"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3VjaGluZw.display_name": {
+          "source": "Asia/Kuching",
+          "message": "Asia/Kuching"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG92ZA.display_name": {
+          "source": "Asia/Hovd",
+          "message": "Asia/Hovd"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG9fQ2hpX01pbmg.display_name": {
+          "source": "Asia/Ho Chi Minh",
+          "message": "Asia/Ho Chi Minh"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG9uZ19Lb25n.display_name": {
+          "source": "Asia/Hong Kong",
+          "message": "Asia/Hong Kong"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSGVicm9u.display_name": {
+          "source": "Asia/Hebron",
+          "message": "Asia/Hebron"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSXJrdXRzaw.display_name": {
+          "source": "Asia/Irkutsk",
+          "message": "Asia/Irkutsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSXN0YW5idWw.display_name": {
+          "source": "Asia/Istanbul",
+          "message": "Asia/Istanbul"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmF5YXB1cmE.display_name": {
+          "source": "Asia/Jayapura",
+          "message": "Asia/Jayapura"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmFrYXJ0YQ.display_name": {
+          "source": "Asia/Jakarta",
+          "message": "Asia/Jakarta"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmVydXNhbGVt.display_name": {
+          "source": "Asia/Jerusalem",
+          "message": "Asia/Jerusalem"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvT21zaw.display_name": {
+          "source": "Asia/Omsk",
+          "message": "Asia/Omsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvT3JhbA.display_name": {
+          "source": "Asia/Oral",
+          "message": "Asia/Oral"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFjYXU.display_name": {
+          "source": "Asia/Macau",
+          "message": "Asia/Macau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFnYWRhbg.display_name": {
+          "source": "Asia/Magadan",
+          "message": "Asia/Magadan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFrYXNzYXI.display_name": {
+          "source": "Asia/Makassar",
+          "message": "Asia/Makassar"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFuaWxh.display_name": {
+          "source": "Asia/Manila",
+          "message": "Asia/Manila"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTXVzY2F0.display_name": {
+          "source": "Asia/Muscat",
+          "message": "Asia/Muscat"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTm92b2t1em5ldHNr.display_name": {
+          "source": "Asia/Novokuznetsk",
+          "message": "Asia/Novokuznetsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTm92b3NpYmlyc2s.display_name": {
+          "source": "Asia/Novosibirsk",
+          "message": "Asia/Novosibirsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTmljb3NpYQ.display_name": {
+          "source": "Asia/Nicosia",
+          "message": "Asia/Nicosia"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2FraGFsaW4.display_name": {
+          "source": "Asia/Sakhalin",
+          "message": "Asia/Sakhalin"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2FtYXJrYW5k.display_name": {
+          "source": "Asia/Samarkand",
+          "message": "Asia/Samarkand"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2VvdWw.display_name": {
+          "source": "Asia/Seoul",
+          "message": "Asia/Seoul"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2hhbmdoYWk.display_name": {
+          "source": "Asia/Shanghai",
+          "message": "Asia/Shanghai"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2luZ2Fwb3Jl.display_name": {
+          "source": "Asia/Singapore",
+          "message": "Asia/Singapore"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU3JlZG5la29seW1zaw.display_name": {
+          "source": "Asia/Srednekolymsk",
+          "message": "Asia/Srednekolymsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUG9udGlhbmFr.display_name": {
+          "source": "Asia/Pontianak",
+          "message": "Asia/Pontianak"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUGhub21fUGVuaA.display_name": {
+          "source": "Asia/Phnom Penh",
+          "message": "Asia/Phnom Penh"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUHlvbmd5YW5n.display_name": {
+          "source": "Asia/Pyongyang",
+          "message": "Asia/Pyongyang"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUW9zdGFuYXk.display_name": {
+          "source": "Asia/Qostanay",
+          "message": "Asia/Qostanay"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUWF0YXI.display_name": {
+          "source": "Asia/Qatar",
+          "message": "Asia/Qatar"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUXl6eWxvcmRh.display_name": {
+          "source": "Asia/Qyzylorda",
+          "message": "Asia/Qyzylorda"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUmFuZ29vbg.display_name": {
+          "source": "Asia/Rangoon",
+          "message": "Asia/Rangoon"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUml5YWRo.display_name": {
+          "source": "Asia/Riyadh",
+          "message": "Asia/Riyadh"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVG9reW8.display_name": {
+          "source": "Asia/Tokyo",
+          "message": "Asia/Tokyo"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVG9tc2s.display_name": {
+          "source": "Asia/Tomsk",
+          "message": "Asia/Tomsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGFpcGVp.display_name": {
+          "source": "Asia/Taipei",
+          "message": "Asia/Taipei"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGFzaGtlbnQ.display_name": {
+          "source": "Asia/Tashkent",
+          "message": "Asia/Tashkent"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGJpbGlzaQ.display_name": {
+          "source": "Asia/Tbilisi",
+          "message": "Asia/Tbilisi"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGVocmFu.display_name": {
+          "source": "Asia/Tehran",
+          "message": "Asia/Tehran"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGhpbXBodQ.display_name": {
+          "source": "Asia/Thimphu",
+          "message": "Asia/Thimphu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVWxhYW5iYWF0YXI.display_name": {
+          "source": "Asia/Ulaanbaatar",
+          "message": "Asia/Ulaanbaatar"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVXJ1bXFp.display_name": {
+          "source": "Asia/Urumqi",
+          "message": "Asia/Urumqi"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVXN0LU5lcmE.display_name": {
+          "source": "Asia/Ust-Nera",
+          "message": "Asia/Ust-Nera"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVmllbnRpYW5l.display_name": {
+          "source": "Asia/Vientiane",
+          "message": "Asia/Vientiane"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVmxhZGl2b3N0b2s.display_name": {
+          "source": "Asia/Vladivostok",
+          "message": "Asia/Vladivostok"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWFrdXRzaw.display_name": {
+          "source": "Asia/Yakutsk",
+          "message": "Asia/Yakutsk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWFuZ29u.display_name": {
+          "source": "Asia/Yangon",
+          "message": "Asia/Yangon"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWVrYXRlcmluYnVyZw.display_name": {
+          "source": "Asia/Yekaterinburg",
+          "message": "Asia/Yekaterinburg"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWVyZXZhbg.display_name": {
+          "source": "Asia/Yerevan",
+          "message": "Asia/Yerevan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BbXN0ZXJkYW0.display_name": {
+          "source": "Europe/Amsterdam",
+          "message": "Europe/Amsterdam"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BbmRvcnJh.display_name": {
+          "source": "Europe/Andorra",
+          "message": "Europe/Andorra"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Bc3RyYWtoYW4.display_name": {
+          "source": "Europe/Astrakhan",
+          "message": "Europe/Astrakhan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BdGhlbnM.display_name": {
+          "source": "Europe/Athens",
+          "message": "Europe/Athens"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CZWxncmFkZQ.display_name": {
+          "source": "Europe/Belgrade",
+          "message": "Europe/Belgrade"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CZXJsaW4.display_name": {
+          "source": "Europe/Berlin",
+          "message": "Europe/Berlin"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CcmF0aXNsYXZh.display_name": {
+          "source": "Europe/Bratislava",
+          "message": "Europe/Bratislava"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CcnVzc2Vscw.display_name": {
+          "source": "Europe/Brussels",
+          "message": "Europe/Brussels"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdWNoYXJlc3Q.display_name": {
+          "source": "Europe/Bucharest",
+          "message": "Europe/Bucharest"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdWRhcGVzdA.display_name": {
+          "source": "Europe/Budapest",
+          "message": "Europe/Budapest"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdXNpbmdlbg.display_name": {
+          "source": "Europe/Busingen",
+          "message": "Europe/Busingen"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9DaGlzaW5hdQ.display_name": {
+          "source": "Europe/Chisinau",
+          "message": "Europe/Chisinau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Db3BlbmhhZ2Vu.display_name": {
+          "source": "Europe/Copenhagen",
+          "message": "Europe/Copenhagen"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9EdWJsaW4.display_name": {
+          "source": "Europe/Dublin",
+          "message": "Europe/Dublin"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9HaWJyYWx0YXI.display_name": {
+          "source": "Europe/Gibraltar",
+          "message": "Europe/Gibraltar"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9HdWVybnNleQ.display_name": {
+          "source": "Europe/Guernsey",
+          "message": "Europe/Guernsey"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9IZWxzaW5raQ.display_name": {
+          "source": "Europe/Helsinki",
+          "message": "Europe/Helsinki"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Jc2xlX29mX01hbg.display_name": {
+          "source": "Europe/Isle of Man",
+          "message": "Europe/Isle of Man"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Jc3RhbmJ1bA.display_name": {
+          "source": "Europe/Istanbul",
+          "message": "Europe/Istanbul"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9KZXJzZXk.display_name": {
+          "source": "Europe/Jersey",
+          "message": "Europe/Jersey"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LYWxpbmluZ3JhZA.display_name": {
+          "source": "Europe/Kaliningrad",
+          "message": "Europe/Kaliningrad"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LaWV2.display_name": {
+          "source": "Europe/Kiev",
+          "message": "Europe/Kiev"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LaXJvdg.display_name": {
+          "source": "Europe/Kirov",
+          "message": "유럽/키로프"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9MaXNib24.display_name": {
+          "source": "Europe/Lisbon",
+          "message": "유럽/리스본"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9ManVibGphbmE.display_name": {
+          "source": "Europe/Ljubljana",
+          "message": "유럽/류블랴나"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Mb25kb24.display_name": {
+          "source": "Europe/London",
+          "message": "유럽/런던"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9MdXhlbWJvdXJn.display_name": {
+          "source": "Europe/Luxembourg",
+          "message": "유럽/룩셈부르크"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYWRyaWQ.display_name": {
+          "source": "Europe/Madrid",
+          "message": "유럽/마드리드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYWx0YQ.display_name": {
+          "source": "Europe/Malta",
+          "message": "유럽/몰타"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYXJpZWhhbW4.display_name": {
+          "source": "Europe/Mariehamn",
+          "message": "유럽/마리이함"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NaW5zaw.display_name": {
+          "source": "Europe/Minsk",
+          "message": "유럽/민스크"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Nb25hY28.display_name": {
+          "source": "Europe/Monaco",
+          "message": "유럽/모나코"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Nb3Njb3c.display_name": {
+          "source": "Europe/Moscow",
+          "message": "유럽/모스크바"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9OaWNvc2lh.display_name": {
+          "source": "Europe/Nicosia",
+          "message": "유럽/니코시아"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Pc2xv.display_name": {
+          "source": "Europe/Oslo",
+          "message": "유럽/오슬로"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9QYXJpcw.display_name": {
+          "source": "Europe/Paris",
+          "message": "유럽/파리"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Qb2Rnb3JpY2E.display_name": {
+          "source": "Europe/Podgorica",
+          "message": "유럽/포드고리차"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9QcmFndWU.display_name": {
+          "source": "Europe/Prague",
+          "message": "유럽/프라하"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9SaWdh.display_name": {
+          "source": "Europe/Riga",
+          "message": "유럽/리가"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Sb21l.display_name": {
+          "source": "Europe/Rome",
+          "message": "유럽/로마"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYW1hcmE.display_name": {
+          "source": "Europe/Samara",
+          "message": "유럽/사마라"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYW5fTWFyaW5v.display_name": {
+          "source": "Europe/San Marino",
+          "message": "유럽/산마리노"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYXJhamV2bw.display_name": {
+          "source": "Europe/Sarajevo",
+          "message": "유럽/사라예보"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYXJhdG92.display_name": {
+          "source": "Europe/Saratov",
+          "message": "유럽/사라토프"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Ta29wamU.display_name": {
+          "source": "Europe/Skopje",
+          "message": "유럽/스코페"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TaW1mZXJvcG9s.display_name": {
+          "source": "Europe/Simferopol",
+          "message": "유럽/심페로폴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Tb2ZpYQ.display_name": {
+          "source": "Europe/Sofia",
+          "message": "유럽/소피아"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TdG9ja2hvbG0.display_name": {
+          "source": "Europe/Stockholm",
+          "message": "유럽/스톡홀름"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9UYWxsaW5u.display_name": {
+          "source": "Europe/Tallinn",
+          "message": "유럽/탈린"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9UaXJhbmU.display_name": {
+          "source": "Europe/Tirane",
+          "message": "유럽/티라나"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9VbHlhbm92c2s.display_name": {
+          "source": "Europe/Ulyanovsk",
+          "message": "유럽/울리야놉스크"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Vemhnb3JvZA.display_name": {
+          "source": "Europe/Uzhgorod",
+          "message": "유럽/우주호로드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WYWR1eg.display_name": {
+          "source": "Europe/Vaduz",
+          "message": "유럽/파두츠"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WYXRpY2Fu.display_name": {
+          "source": "Europe/Vatican",
+          "message": "유럽/바티칸"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WaWVubmE.display_name": {
+          "source": "Europe/Vienna",
+          "message": "유럽/빈"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WaWxuaXVz.display_name": {
+          "source": "Europe/Vilnius",
+          "message": "유럽/빌뉴스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Wb2xnb2dyYWQ.display_name": {
+          "source": "Europe/Volgograd",
+          "message": "유럽/볼고그라드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9XYXJzYXc.display_name": {
+          "source": "Europe/Warsaw",
+          "message": "유럽/바르샤바"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9aYWdyZWI.display_name": {
+          "source": "Europe/Zagreb",
+          "message": "유럽/자그레브"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9aYXBvcm96aHll.display_name": {
+          "source": "Europe/Zaporozhye",
+          "message": "유럽/자포로제"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9adXJpY2g.display_name": {
+          "source": "Europe/Zurich",
+          "message": "유럽/취리히"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9BbnRhbmFuYXJpdm8.display_name": {
+          "source": "Indian/Antananarivo",
+          "message": "인도양/안타나나리보"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9DaGFnb3M.display_name": {
+          "source": "Indian/Chagos",
+          "message": "인도양/차고스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9DaHJpc3RtYXM.display_name": {
+          "source": "Indian/Christmas",
+          "message": "인도양/크리스마스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9Db21vcm8.display_name": {
+          "source": "Indian/Comoro",
+          "message": "인도양/코모로"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9Db2Nvcw.display_name": {
+          "source": "Indian/Cocos",
+          "message": "인도양/코코스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9LZXJndWVsZW4.display_name": {
+          "source": "Indian/Kerguelen",
+          "message": "인도양/케르겔렌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYWhl.display_name": {
+          "source": "Indian/Mahe",
+          "message": "인도양/마에"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYWxkaXZlcw.display_name": {
+          "source": "Indian/Maldives",
+          "message": "인도양/몰디브"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYXVyaXRpdXM.display_name": {
+          "source": "Indian/Mauritius",
+          "message": "인도양/모리셔스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYXlvdHRl.display_name": {
+          "source": "Indian/Mayotte",
+          "message": "인도양/마요트"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9SZXVuaW9u.display_name": {
+          "source": "Indian/Reunion",
+          "message": "인도양/레위니옹"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQ2h1dWs.display_name": {
+          "source": "Pacific/Chuuk",
+          "message": "태평양/추크"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQ2hhdGhhbQ.display_name": {
+          "source": "Pacific/Chatham",
+          "message": "태평양/채텀"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQXBpYQ.display_name": {
+          "source": "Pacific/Apia",
+          "message": "태평양/아피아"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQXVja2xhbmQ.display_name": {
+          "source": "Pacific/Auckland",
+          "message": "태평양/오클랜드"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQm91Z2FpbnZpbGxl.display_name": {
+          "source": "Pacific/Bougainville",
+          "message": "태평양/부갱빌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR2FsYXBhZ29z.display_name": {
+          "source": "Pacific/Galapagos",
+          "message": "태평양/갈라파고스"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR2FtYmllcg.display_name": {
+          "source": "Pacific/Gambier",
+          "message": "태평양/감비어"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR3VhZGFsY2FuYWw.display_name": {
+          "source": "Pacific/Guadalcanal",
+          "message": "태평양/과달카날"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR3VhbQ.display_name": {
+          "source": "Pacific/Guam",
+          "message": "태평양/괌"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRW5kZXJidXJ5.display_name": {
+          "source": "Pacific/Enderbury",
+          "message": "태평양/엔더버리"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRWFzdGVy.display_name": {
+          "source": "Pacific/Easter",
+          "message": "태평양/이스터"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRWZhdGU.display_name": {
+          "source": "Pacific/Efate",
+          "message": "태평양/에파테"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRmFrYW9mbw.display_name": {
+          "source": "Pacific/Fakaofo",
+          "message": "태평양/파카오포"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRmlqaQ.display_name": {
+          "source": "Pacific/Fiji",
+          "message": "태평양/피지"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRnVuYWZ1dGk.display_name": {
+          "source": "Pacific/Funafuti",
+          "message": "Pacific/Funafuti"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS29zcmFl.display_name": {
+          "source": "Pacific/Kosrae",
+          "message": "Pacific/Kosrae"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS2FudG9u.display_name": {
+          "source": "Pacific/Kanton",
+          "message": "Pacific/Kanton"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS2lyaXRpbWF0aQ.display_name": {
+          "source": "Pacific/Kiritimati",
+          "message": "Pacific/Kiritimati"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS3dhamFsZWlu.display_name": {
+          "source": "Pacific/Kwajalein",
+          "message": "Pacific/Kwajalein"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvSG9ub2x1bHU.display_name": {
+          "source": "Pacific/Honolulu",
+          "message": "Pacific/Honolulu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWFqdXJv.display_name": {
+          "source": "Pacific/Majuro",
+          "message": "Pacific/Majuro"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWFycXVlc2Fz.display_name": {
+          "source": "Pacific/Marquesas",
+          "message": "Pacific/Marquesas"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWlkd2F5.display_name": {
+          "source": "Pacific/Midway",
+          "message": "Pacific/Midway"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTm91bWVh.display_name": {
+          "source": "Pacific/Noumea",
+          "message": "Pacific/Noumea"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTm9yZm9saw.display_name": {
+          "source": "Pacific/Norfolk",
+          "message": "Pacific/Norfolk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTmF1cnU.display_name": {
+          "source": "Pacific/Nauru",
+          "message": "Pacific/Nauru"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTml1ZQ.display_name": {
+          "source": "Pacific/Niue",
+          "message": "Pacific/Niue"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvU2FpcGFu.display_name": {
+          "source": "Pacific/Saipan",
+          "message": "Pacific/Saipan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUG9obnBlaQ.display_name": {
+          "source": "Pacific/Pohnpei",
+          "message": "Pacific/Pohnpei"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUG9ydF9Nb3Jlc2J5.display_name": {
+          "source": "Pacific/Port Moresby",
+          "message": "Pacific/Port Moresby"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGFnb19QYWdv.display_name": {
+          "source": "Pacific/Pago Pago",
+          "message": "Pacific/Pago Pago"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGFsYXU.display_name": {
+          "source": "Pacific/Palau",
+          "message": "Pacific/Palau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGl0Y2Fpcm4.display_name": {
+          "source": "Pacific/Pitcairn",
+          "message": "Pacific/Pitcairn"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUmFyb3Rvbmdh.display_name": {
+          "source": "Pacific/Rarotonga",
+          "message": "Pacific/Rarotonga"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvV2FrZQ.display_name": {
+          "source": "Pacific/Wake",
+          "message": "Pacific/Wake"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvV2FsbGlz.display_name": {
+          "source": "Pacific/Wallis",
+          "message": "Pacific/Wallis"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVG9uZ2F0YXB1.display_name": {
+          "source": "Pacific/Tongatapu",
+          "message": "Pacific/Tongatapu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVGFoaXRp.display_name": {
+          "source": "Pacific/Tahiti",
+          "message": "Pacific/Tahiti"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVGFyYXdh.display_name": {
+          "source": "Pacific/Tarawa",
+          "message": "Pacific/Tarawa"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOmNsaWVudA.display_name": {
+          "source": "Client",
+          "message": "클라이언트"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOnV0Yw.display_name": {
+          "source": "UTC",
+          "message": "UTC"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.desc": {
+          "source": "The timezone to use when formatting date and time fields in the response",
+          "message": "응답의 날짜 및 시간 필드를 서식 지정할 때 사용할 시간대"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.display_name": {
+          "source": "Timezone",
+          "message": "시간대"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.short_desc": {
+          "source": "Timezone for date formatting",
+          "message": "날짜 서식 지정용 시간대"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.desc": {
+          "source": "The locale to use for formatting numbers, dates, and other locale-specific data",
+          "message": "숫자, 날짜 및 기타 로캘별 데이터를 서식 지정하는 데 사용할 로캘"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.display_name": {
+          "source": "User Locale",
+          "message": "사용자 로캘"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.short_desc": {
+          "source": "Locale for formatting",
+          "message": "서식 지정용 로캘"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to apply its filtering and sorting",
+          "message": "필터링 및 정렬을 적용할 테이블의 특정 뷰를 선택합니다."
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "뷰"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.short_desc": {
+          "source": "Table view to use",
+          "message": "사용할 테이블 뷰"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve records from an Airtable table",
+          "message": "Airtable 테이블에서 레코드 가져오기"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Airtable** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Airtable**에 사용자 지정 HTTP / REST API를 호출합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에 기본 작업으로 아직 노출되지 않은 엔드포인트에 이 작업을 사용합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Airtable",
+          "message": "Airtable에 사용자 지정 API 호출"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitor an Airtable table for newly created records and trigger automation when new records are added",
+          "message": "새로 생성된 레코드에 대해 Airtable 테이블을 모니터링하고 새 레코드가 추가될 때 자동화를 트리거합니다."
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "새 레코드"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to monitor for new records",
+          "message": "새 레코드를 모니터링할 테이블이 포함된 Airtable 베이스를 선택합니다."
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base to monitor",
+          "message": "모니터링할 Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base to monitor for new record creation",
+          "message": "새 레코드 생성을 모니터링할 베이스 내의 특정 테이블을 선택합니다."
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to monitor",
+          "message": "모니터링할 테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria",
+          "message": "뷰의 필터링 및 정렬 기준에 일치하는 레코드만 모니터링하려면 테이블에서 특정 뷰를 선택합니다."
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "뷰"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.short_desc": {
+          "source": "Optional table view to filter records",
+          "message": "레코드를 필터링하기 위한 선택적 테이블 뷰"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in Airtable",
+          "message": "Airtable에서 새 레코드가 생성될 때 트리거됩니다."
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "레코드 검색"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "단일 레코드 찾기"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "레코드 업데이트"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Airtable\"",
+          "message": "\"Airtable\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Monitor an Airtable table for record modifications and trigger automation when existing records are updated",
+          "message": "레코드 수정 사항에 대해 Airtable 테이블을 모니터링하고 기존 레코드가 업데이트될 때 자동화를 트리거합니다."
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "업데이트된 레코드"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to monitor for record updates",
+          "message": "레코드 업데이트를 모니터링할 테이블이 포함된 Airtable 베이스를 선택합니다."
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "베이스 ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base to monitor",
+          "message": "모니터링할 Airtable 베이스의 ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base to monitor for record modifications",
+          "message": "레코드 수정을 모니터링할 베이스 내의 특정 테이블을 선택합니다."
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "테이블 ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to monitor",
+          "message": "모니터링할 테이블의 ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria",
+          "message": "뷰의 필터링 및 정렬 기준에 일치하는 레코드만 모니터링하려면 테이블에서 특정 뷰를 선택합니다."
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "뷰"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.short_desc": {
+          "source": "Optional table view to filter records",
+          "message": "레코드를 필터링하기 위한 선택적 테이블 뷰"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggers when a record is updated in Airtable",
+          "message": "Airtable에서 레코드가 업데이트될 때 트리거됩니다."
+        },
+        "app.QWlydGFibGU.desc": {
+          "source": "Airtable combines the simplicity of a spreadsheet with the power of a database. Create and manage bases, tables, and records with ease. Perfect for project management, CRM, content planning, and team collaboration.",
+          "message": "Airtable은 스프레드시트의 단순함과 데이터베이스의 강력함을 결합한 서비스입니다. 베이스, 테이블, 레코드를 쉽게 생성하고 관리하세요. 프로젝트 관리, CRM, 콘텐츠 기획, 팀 협업에 완벽합니다."
+        },
+        "app.QWlydGFibGU.display_name": {
+          "source": "Airtable",
+          "message": "Airtable"
+        },
+        "app.QWlydGFibGU.short_desc": {
+          "source": "Cloud-based database and collaboration platform",
+          "message": "클라우드 기반 데이터베이스 및 협업 플랫폼"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.desc": {
+          "source": "Creates a new asset from a URL. The asset will be processed (downloaded and stored) automatically. Optionally publishes the asset after creation.",
+          "message": "Crée une nouvelle ressource à partir d'une URL. La ressource sera traitée (téléchargée et stockée) automatiquement. Publie éventuellement la ressource après sa création."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.display_name": {
+          "source": "Create an Asset",
+          "message": "Créer une ressource"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmF1ZGlvL21wZWc.display_name": {
+          "source": "MP3 Audio",
+          "message": "Audio MP3"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL2pzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9uL3BkZg.display_name": {
+          "source": "PDF Document",
+          "message": "Document PDF"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2dpZg.display_name": {
+          "source": "GIF Image",
+          "message": "Image GIF"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL2pwZWc.display_name": {
+          "source": "JPEG Image",
+          "message": "Image JPEG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3BuZw.display_name": {
+          "source": "PNG Image",
+          "message": "Image PNG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3N2Zyt4bWw.display_name": {
+          "source": "SVG Image",
+          "message": "Image SVG"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOmltYWdlL3dlYnA.display_name": {
+          "source": "WebP Image",
+          "message": "Image WebP"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvY3N2.display_name": {
+          "source": "CSV",
+          "message": "CSV"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvaHRtbA.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnRleHQvcGxhaW4.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.allowed-value.c3RyaW5nOnZpZGVvL21wNA.display_name": {
+          "source": "MP4 Video",
+          "message": "Vidéo MP4"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.desc": {
+          "source": "The MIME type of the file (e.g., \"image/jpeg\", \"application/pdf\").",
+          "message": "Le type MIME du fichier (par ex. \"image/jpeg\", \"application/pdf\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.Y29udGVudF90eXBl.short_desc": {
+          "source": "The MIME type of the file",
+          "message": "Le type MIME du fichier"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description for the asset.",
+          "message": "Une description optionnelle pour la ressource."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The asset description",
+          "message": "La description de l'asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.desc": {
+          "source": "The publicly accessible URL from which Contentful will download the file.",
+          "message": "L'URL accessible publiquement à partir de laquelle Contentful téléchargera le fichier."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.display_name": {
+          "source": "File URL",
+          "message": "URL du fichier"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV91cmw.short_desc": {
+          "source": "The URL of the file to upload",
+          "message": "L'URL du fichier à téléverser"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.desc": {
+          "source": "The file name including extension (e.g., \"photo.jpg\").",
+          "message": "Le nom du fichier, extension comprise (ex. : \"photo.jpg\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Nom du fichier"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "The file name for the asset",
+          "message": "Le nom de fichier pour l'asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the asset will be created.",
+          "message": "Sélectionnez l'espace Contentful dans lequel l'asset sera créé."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the asset will be published immediately after processing.",
+          "message": "Si cette option est activée, l'asset sera publié immédiatement après le traitement."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "Publier"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the asset after creation",
+          "message": "Indique s'il faut publier l'asset après sa création"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the asset.",
+          "message": "Un titre descriptif pour l'asset."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titre"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "The asset title",
+          "message": "Le titre de l'asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2Fzc2V0.short_desc": {
+          "source": "Creates a new asset",
+          "message": "Crée un nouvel asset"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Creates a new content type with the specified name, description, and field definitions. The content type will be created in draft state.",
+          "message": "Crée un nouveau type de contenu avec le nom, la description et les définitions de champs spécifiés. Le type de contenu sera créé à l'état de brouillon."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Create a Content Type",
+          "message": "Créer un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description explaining the purpose of this content type.",
+          "message": "Une description optionnelle expliquant l'objectif de ce type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The content type description",
+          "message": "La description du type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.desc": {
+          "source": "A list of field definitions. Each field requires an ID, name, and type. Supported types: Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location.",
+          "message": "Une liste de définitions de champs. Chaque champ requiert un ID, un nom et un type. Types pris en charge : Symbol, Text, Integer, Number, Date, Boolean, RichText, Link, Array, Object, Location."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.ZmllbGRz.short_desc": {
+          "source": "The field definitions for the content type",
+          "message": "Les définitions de champs pour le type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the content type (e.g., \"Blog Post\", \"Product\").",
+          "message": "Un nom descriptif pour le type de contenu (ex. : \"Blog Post\", \"Product\")."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "The content type name",
+          "message": "Le nom du type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the content type will be created.",
+          "message": "Sélectionnez l'espace Contentful dans lequel le type de contenu sera créé."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Creates a new content type",
+          "message": "Crée un nouveau type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.desc": {
+          "source": "Creates a new entry of the specified content type in the given space and environment. Optionally publishes the entry immediately after creation.",
+          "message": "Crée une nouvelle entrée du type de contenu spécifié dans l'espace et l'environnement donnés. Publie optionnellement l'entrée immédiatement après sa création."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.display_name": {
+          "source": "Create an Entry",
+          "message": "Créer une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type that defines the schema for the new entry.",
+          "message": "Sélectionnez le type de contenu qui définit le schéma de la nouvelle entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type for the new entry",
+          "message": "Le type de contenu pour la nouvelle entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values as a key-value object. Keys should match the field IDs of the content type.",
+          "message": "Fournissez les valeurs des champs sous forme d'objet clé-valeur. Les clés doivent correspondre aux ID de champ du type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values for the new entry",
+          "message": "Les valeurs des champs pour la nouvelle entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space where the entry will be created.",
+          "message": "Sélectionnez l'espace Contentful dans lequel l'entrée sera créée."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.desc": {
+          "source": "If enabled, the entry will be published immediately after creation. Otherwise, it will be saved as a draft.",
+          "message": "Si cette option est activée, l'entrée sera publiée immédiatement après sa création. Sinon, elle sera enregistrée en tant que brouillon."
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.display_name": {
+          "source": "Publish",
+          "message": "Publier"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.option.cHVibGlzaA.short_desc": {
+          "source": "Whether to publish the entry after creation",
+          "message": "Indique s'il faut publier l'entrée après sa création"
+        },
+        "app.Q29udGVudGZ1bA.action.Y3JlYXRlX2VudHJ5.short_desc": {
+          "source": "Creates a new entry",
+          "message": "Crée une nouvelle entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.desc": {
+          "source": "Publishes (activates) a content type, making it available for creating entries.",
+          "message": "Publie (active) un type de contenu, le rendant disponible pour la création d'entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.display_name": {
+          "source": "Activate a Content Type",
+          "message": "Activer un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to activate (publish).",
+          "message": "Sélectionnez le type de contenu à activer (publier)."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to activate",
+          "message": "Le type de contenu à activer"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.YWN0aXZhdGVfY29udGVudF90eXBl.short_desc": {
+          "source": "Activates a content type by its ID",
+          "message": "Active un type de contenu par son ID"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Adds a new field definition to an existing content type. The content type will need to be re-activated after adding the field.",
+          "message": "Ajoute une nouvelle définition de champ à un type de contenu existant. Le type de contenu devra être réactivé après l'ajout du champ."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Add a Field to a Content Type",
+          "message": "Ajouter un champ à un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Sélectionnez le type de contenu à modifier."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to add the field to",
+          "message": "Le type de contenu auquel ajouter le champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "A unique ID for the field (e.g., \"heroImage\", \"publishDate\"). Must be unique within the content type.",
+          "message": "Un ID unique pour le champ (ex. : \"heroImage\", \"publishDate\"). Doit être unique au sein du type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field ID",
+          "message": "ID du champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "Unique identifier for the new field",
+          "message": "Identifiant unique pour le nouveau champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "A human-readable name for the field (e.g., \"Hero Image\", \"Publish Date\").",
+          "message": "Un nom lisible pour le champ (ex. : \"Hero Image\", \"Publish Date\")."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "Nom du champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "Display name for the new field",
+          "message": "Nom d'affichage pour le nouveau champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk51bWJlcg.display_name": {
+          "source": "Decimal Number",
+          "message": "Nombre décimal"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOk9iamVjdA.display_name": {
+          "source": "JSON Object",
+          "message": "Objet JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkFycmF5.display_name": {
+          "source": "Array (List)",
+          "message": "Tableau (Liste)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkJvb2xlYW4.display_name": {
+          "source": "Boolean",
+          "message": "Boolean"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkRhdGU.display_name": {
+          "source": "Date and Time",
+          "message": "Date et heure"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkludGVnZXI.display_name": {
+          "source": "Integer",
+          "message": "Entier"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxpbms.display_name": {
+          "source": "Link (Reference)",
+          "message": "Lien (Référence)"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOkxvY2F0aW9u.display_name": {
+          "source": "Location",
+          "message": "Emplacement"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlJpY2hUZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "Texte enrichi"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlN5bWJvbA.display_name": {
+          "source": "Short Text",
+          "message": "Texte court"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.allowed-value.c3RyaW5nOlRleHQ.display_name": {
+          "source": "Long Text",
+          "message": "Texte long"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.desc": {
+          "source": "Select the data type: Symbol (short text), Text (long text), Integer, Number, Date, Boolean, RichText, Link, Array, Object, or Location.",
+          "message": "Sélectionnez le type de données : Symbol (texte court), Text (texte long), Integer, Number, Date, Boolean, RichText, Link, Array, Object ou Location."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.display_name": {
+          "source": "Field Type",
+          "message": "Type de champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfdHlwZQ.short_desc": {
+          "source": "The data type for the field",
+          "message": "Le type de données du champ"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "If enabled, the field can have different values for different locales.",
+          "message": "S'il est activé, le champ peut avoir des valeurs différentes selon les paramètres régionaux."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "Localisé"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "Indique si le champ prend en charge la localisation"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "If enabled, entries must provide a value for this field.",
+          "message": "S'il est activé, les entrées doivent fournir une valeur pour ce champ."
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "Requis"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "Indique si le champ est requis"
+        },
+        "app.Q29udGVudGZ1bA.action.YWRkX2ZpZWxkX3RvX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Adds a new field to a specific content type",
+          "message": "Ajoute un nouveau champ à un type de contenu spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.desc": {
+          "source": "Archives or unarchives an asset. The asset must be unpublished before it can be archived.",
+          "message": "Archive ou désarchive un élément multimédia. L'élément multimédia doit être dépublié avant de pouvoir être archivé."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.display_name": {
+          "source": "Archive/Unarchive an Asset",
+          "message": "Archiver/Désarchiver un élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the asset will be archived. When disabled, the asset will be unarchived.",
+          "message": "Lorsqu'il est activé, l'élément multimédia sera archivé. Lorsqu'il est désactivé, l'élément multimédia sera désarchivé."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "Archive"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "Définir sur true pour archiver, false pour désarchiver"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset.",
+          "message": "Sélectionnez ou saisissez l'ID de l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to archive or unarchive",
+          "message": "L'élément multimédia à archiver ou désarchiver"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9hc3NldA.short_desc": {
+          "source": "Archives/Unarchives an unpublished asset",
+          "message": "Archive/Désarchive un élément multimédia non publié"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.desc": {
+          "source": "Archives or unarchives an entry. The entry must be unpublished before it can be archived. Archived entries are hidden from the default entry list.",
+          "message": "Archive ou désarchive une entrée. L'entrée doit être dépubliée avant de pouvoir être archivée. Les entrées archivées sont masquées de la liste d'entrées par défaut."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.display_name": {
+          "source": "Archive/Unarchive an Entry",
+          "message": "Archiver/Désarchiver une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Sélectionnez le type de contenu pour filtrer la liste déroulante des entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Le type de contenu pour filtrer les entrées"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.desc": {
+          "source": "When enabled, the entry will be archived. When disabled, the entry will be unarchived.",
+          "message": "Lorsqu'il est activé, l'entrée sera archivée. Lorsqu'il est désactivé, l'entrée sera désarchivée."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.display_name": {
+          "source": "Archive",
+          "message": "Archive"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.YXJjaGl2ZQ.short_desc": {
+          "source": "Set to true to archive, false to unarchive",
+          "message": "Définir sur true pour archiver, false pour désarchiver"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to archive or unarchive",
+          "message": "L'entrée à archiver ou désarchiver"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.YXJjaGl2ZV9lbnRyeQ.short_desc": {
+          "source": "Archives/Unarchives an unpublished entry",
+          "message": "Archive/Désarchive une entrée non publiée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.desc": {
+          "source": "Retrieves a single asset by its ID, returning metadata including title, description, file URL, MIME type, and size.",
+          "message": "Récupère un seul élément multimédia par son ID, en renvoyant des métadonnées incluant le titre, la description, l'URL du fichier, le type MIME et la taille."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.display_name": {
+          "source": "Get an Asset",
+          "message": "Obtenir un élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to retrieve.",
+          "message": "Sélectionnez ou saisissez l'ID de l'élément multimédia à récupérer."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to retrieve",
+          "message": "L'élément multimédia à récupérer"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2Fzc2V0.short_desc": {
+          "source": "Returns attributes of a specific asset",
+          "message": "Renvoie les attributs d'un élément multimédia spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Retrieves a content type by its ID, including its name, description, and field definitions.",
+          "message": "Récupère un type de contenu par son ID, y compris son nom, sa description et ses définitions de champs."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Get a Content Type",
+          "message": "Obtenir un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to retrieve details for.",
+          "message": "Sélectionnez le type de contenu dont vous souhaitez récupérer les détails."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to retrieve",
+          "message": "Le type de contenu à récupérer"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Returns attributes of a specific content type",
+          "message": "Renvoie les attributs d'un type de contenu spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.desc": {
+          "source": "Retrieves a single entry by its ID from the specified space and environment. Returns all entry fields with their values in the default locale.",
+          "message": "Récupère une seule entrée par son ID depuis l'espace et l'environnement spécifiés. Renvoie tous les champs de l'entrée avec leurs valeurs dans les paramètres régionaux par défaut."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.display_name": {
+          "source": "Get an Entry",
+          "message": "Obtenir une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Sélectionnez le type de contenu pour filtrer les entrées par type."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Le type de contenu de l'entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à récupérer."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve",
+          "message": "L'entrée à récupérer"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5.short_desc": {
+          "source": "Returns attributes of a specific entry",
+          "message": "Renvoie les attributs d'une entrée spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.desc": {
+          "source": "Retrieves an entry and performs text replacements on all string fields. For each replacement pair, all occurrences of the tag are replaced with the specified value. Useful for template-based content.",
+          "message": "Récupère une entrée et effectue des remplacements de texte sur tous les champs de chaîne. Pour chaque paire de remplacement, toutes les occurrences de la balise sont remplacées par la valeur spécifiée. Utile pour le contenu basé sur des modèles."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.display_name": {
+          "source": "Get an Entry with Replacement",
+          "message": "Obtenir une entrée avec remplacement"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Sélectionnez le type de contenu pour filtrer les entrées par type."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Le type de contenu de l'entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to retrieve.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à récupérer."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to retrieve and apply replacements to",
+          "message": "L'entrée à récupérer et à laquelle appliquer les remplacements"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "Provide a list of replacement pairs. Each pair has a \"tag\" (placeholder to find) and a \"value\" (text to replace it with). All string fields in the entry will be processed.",
+          "message": "Fournissez une liste de paires de remplacement. Chaque paire possède un \"tag\" (espace réservé à rechercher) et une \"value\" (texte par lequel le remplacer). Tous les champs de chaîne dans l'entrée seront traités."
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Replacements",
+          "message": "Remplacements"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "List of tag/value pairs for text replacement",
+          "message": "Liste de paires tag/valeur pour le remplacement de texte"
+        },
+        "app.Q29udGVudGZ1bA.action.Z2V0X2VudHJ5X3dpdGhfcmVwbGFjZW1lbnQ.short_desc": {
+          "source": "Replaces text fields with new values using specific tags; returns new values as output",
+          "message": "Remplace les champs de texte par de nouvelles valeurs à l'aide de balises spécifiques ; renvoie les nouvelles valeurs en sortie"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.desc": {
+          "source": "Unpublishes (deactivates) a content type, reverting it to draft state. No new entries can be created for a deactivated content type.",
+          "message": "Dépublie (désactive) un type de contenu, le rétablissant à l'état de brouillon. Aucune nouvelle entrée ne peut être créée pour un type de contenu désactivé."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.display_name": {
+          "source": "Deactivate a Content Type",
+          "message": "Désactiver un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to deactivate (unpublish).",
+          "message": "Sélectionnez le type de contenu à désactiver (dépublier)."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to deactivate",
+          "message": "Le type de contenu à désactiver"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVhY3RpdmF0ZV9jb250ZW50X3R5cGU.short_desc": {
+          "source": "Changes a content type status to \"draft\"",
+          "message": "Remplace le statut d'un type de contenu par \"draft\""
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.desc": {
+          "source": "Permanently deletes an asset. If the asset is published, it will be unpublished first. This action is irreversible.",
+          "message": "Supprime définitivement un élément multimédia. Si l'élément multimédia est publié, il sera d'abord dépublié. Cette action est irréversible."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.display_name": {
+          "source": "Delete an Asset",
+          "message": "Supprimer un élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to permanently remove.",
+          "message": "Sélectionnez ou saisissez l'ID de l'asset à supprimer définitivement."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to delete",
+          "message": "L'asset à supprimer"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2Fzc2V0.short_desc": {
+          "source": "Permanently removes an unpublished asset",
+          "message": "Supprime définitivement un asset non publié"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Permanently deletes a content type. The content type must be deactivated (unpublished) first. This action is irreversible.",
+          "message": "Supprime définitivement un type de contenu. Le type de contenu doit d'abord être désactivé (dépublié). Cette action est irréversible."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Delete a Content Type",
+          "message": "Supprimer un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to permanently remove.",
+          "message": "Sélectionnez le type de contenu à supprimer définitivement."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to delete",
+          "message": "Le type de contenu à supprimer"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Permanently removes a deactivated content type",
+          "message": "Supprime définitivement un type de contenu désactivé"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.desc": {
+          "source": "Permanently deletes an entry from the space. If the entry is published, it will be unpublished first. This action is irreversible.",
+          "message": "Supprime définitivement une entrée de l'espace. Si l'entrée est publiée, elle sera d'abord dépubliée. Cette action est irréversible."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.display_name": {
+          "source": "Delete an Entry",
+          "message": "Supprimer une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Sélectionnez le type de contenu pour filtrer les entrées par type."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Le type de contenu de l'entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to permanently remove.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à supprimer définitivement."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to delete",
+          "message": "L'entrée à supprimer"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2VudHJ5.short_desc": {
+          "source": "Permanently removes a specific entry",
+          "message": "Supprime définitivement une entrée spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.desc": {
+          "source": "Removes a field from a content type. The field is first marked as omitted, then removed entirely. Existing entry data for this field will be lost.",
+          "message": "Supprime un champ d'un type de contenu. Le champ est d'abord marqué comme omis, puis entièrement supprimé. Les données d'entrée existantes pour ce champ seront perdues."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.display_name": {
+          "source": "Delete a Field from a Content Type",
+          "message": "Supprimer un champ d'un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Sélectionnez le type de contenu à modifier."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "Le type de contenu contenant le champ"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to permanently remove from the content type.",
+          "message": "Sélectionnez le champ à supprimer définitivement du type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "Champ"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to remove",
+          "message": "Le champ à supprimer"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.ZGVsZXRlX2ZpZWxkX2Zyb21fY29udGVudF90eXBl.short_desc": {
+          "source": "Removes a field from a specific content type",
+          "message": "Supprime un champ d'un type de contenu spécifique"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Contentful** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel API HTTP / REST personnalisé à **Contentful** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est retournée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.Q29udGVudGZ1bA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Contentful",
+          "message": "Effectuer un appel API personnalisé à Contentful"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.desc": {
+          "source": "Searches for assets with optional full-text search and MIME type filtering. Returns a paginated list of assets.",
+          "message": "Recherche des assets avec recherche en texte intégral optionnelle et filtrage par type MIME. Renvoie une liste paginée d'assets."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.display_name": {
+          "source": "Search Assets",
+          "message": "Rechercher des assets"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of assets to return. Default is 100, maximum is 1000.",
+          "message": "Le nombre maximum d'assets à renvoyer. La valeur par défaut est 100, le maximum est 1000."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of assets to return",
+          "message": "Nombre maximum d'assets à renvoyer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOm1hcmt1cA.display_name": {
+          "source": "Markup",
+          "message": "Balisage"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmF1ZGlv.display_name": {
+          "source": "Audio",
+          "message": "Audio"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmFyY2hpdmU.display_name": {
+          "source": "Archive",
+          "message": "Archive"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmNvZGU.display_name": {
+          "source": "Code",
+          "message": "Code"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOmltYWdl.display_name": {
+          "source": "Image",
+          "message": "Image"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBkZmRvY3VtZW50.display_name": {
+          "source": "PDF Document",
+          "message": "Document PDF"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnByZXNlbnRhdGlvbg.display_name": {
+          "source": "Presentation",
+          "message": "Présentation"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnJpY2h0ZXh0.display_name": {
+          "source": "Rich Text",
+          "message": "Texte enrichi"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnNwcmVhZHNoZWV0.display_name": {
+          "source": "Spreadsheet",
+          "message": "Feuille de calcul"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.allowed-value.c3RyaW5nOnZpZGVv.display_name": {
+          "source": "Video",
+          "message": "Vidéo"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.desc": {
+          "source": "Optionally filter assets by MIME type group (e.g., image, video, audio, pdfdocument).",
+          "message": "Filtrer facultativement les assets par groupe de types MIME (par ex. image, video, audio, pdfdocument)."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.display_name": {
+          "source": "MIME Type Group",
+          "message": "Groupe de types MIME"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.bWltZV90eXBlX2dyb3Vw.short_desc": {
+          "source": "Filter by file type group",
+          "message": "Filtrer par groupe de types de fichiers"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.desc": {
+          "source": "The number of assets to skip for pagination. Default is 0.",
+          "message": "Le nombre d'assets à ignorer pour la pagination. La valeur par défaut est 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c2tpcA.short_desc": {
+          "source": "Number of assets to skip",
+          "message": "Nombre d'assets à ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Sélectionnez l'espace Contentful dans lequel rechercher."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "L'espace Contentful dans lequel rechercher"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.desc": {
+          "source": "Optional text to search across asset titles and descriptions.",
+          "message": "Texte facultatif à rechercher dans les titres et descriptions des assets."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Requête de recherche"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "Requête de recherche en texte intégral"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2Fzc2V0cw.short_desc": {
+          "source": "Searches for assets",
+          "message": "Recherche des assets"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.desc": {
+          "source": "Searches for content types with optional text filtering. Returns a paginated list of content types with their field definitions.",
+          "message": "Recherche des types de contenu avec filtrage de texte optionnel. Renvoie une liste paginée de types de contenu avec leurs définitions de champs."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.display_name": {
+          "source": "Search Content Types",
+          "message": "Rechercher des types de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of content types to return. Default is 100.",
+          "message": "Le nombre maximum de types de contenu à renvoyer. La valeur par défaut est 100."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Nombre maximum de résultats à renvoyer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.desc": {
+          "source": "The number of content types to skip for pagination. Default is 0.",
+          "message": "Le nombre de types de contenu à ignorer pour la pagination. La valeur par défaut est 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c2tpcA.short_desc": {
+          "source": "Number of results to skip",
+          "message": "Nombre de résultats à ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Sélectionnez l'espace Contentful dans lequel rechercher."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "L'espace Contentful dans lequel rechercher"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across content type names and descriptions.",
+          "message": "Texte facultatif à rechercher dans les noms et descriptions des types de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Requête de recherche"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.option.cXVlcnk.short_desc": {
+          "source": "Text search query",
+          "message": "Requête de recherche textuelle"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2NvbnRlbnRfdHlwZXM.short_desc": {
+          "source": "Searches for content types",
+          "message": "Recherche des types de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.desc": {
+          "source": "Searches for entries of a specific content type with optional full-text search. Returns a paginated list of entries.",
+          "message": "Recherche des entrées d'un type de contenu spécifique avec recherche en texte intégral optionnelle. Renvoie une liste paginée d'entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.display_name": {
+          "source": "Search Entries",
+          "message": "Rechercher des entrées"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter results by.",
+          "message": "Sélectionnez le type de contenu pour filtrer les résultats."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to search",
+          "message": "Le type de contenu à rechercher"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 100, maximum is 1000.",
+          "message": "Le nombre maximum d'entrées à renvoyer. La valeur par défaut est 100, le maximum est 1000."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "Nombre maximum d'entrées à renvoyer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.desc": {
+          "source": "The number of entries to skip for pagination. Default is 0.",
+          "message": "Le nombre d'entrées à ignorer pour la pagination. La valeur par défaut est 0."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.display_name": {
+          "source": "Skip",
+          "message": "Ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c2tpcA.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "Nombre d'entrées à ignorer"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to search in.",
+          "message": "Sélectionnez l'espace Contentful dans lequel rechercher."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to search",
+          "message": "L'espace Contentful dans lequel rechercher"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.desc": {
+          "source": "Optional text to search across all text fields of the entries.",
+          "message": "Texte facultatif à rechercher dans tous les champs textuels des entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Requête de recherche"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.option.cXVlcnk.short_desc": {
+          "source": "Full-text search query",
+          "message": "Requête de recherche en texte intégral"
+        },
+        "app.Q29udGVudGZ1bA.action.c2VhcmNoX2VudHJpZXM.short_desc": {
+          "source": "Searches for entries",
+          "message": "Recherche des entrées"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.desc": {
+          "source": "Publishes a draft asset, making it available through the Content Delivery API.",
+          "message": "Publie un asset en brouillon, le rendant disponible via la Content Delivery API."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.display_name": {
+          "source": "Publish an Asset",
+          "message": "Publier un asset"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to publish.",
+          "message": "Sélectionnez ou saisissez l'ID de l'asset à publier."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to publish",
+          "message": "L'asset à publier"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9hc3NldA.short_desc": {
+          "source": "Changes asset status to \"published\"",
+          "message": "Modifie le statut de l'asset en \"published\""
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.desc": {
+          "source": "Publishes a draft entry, making it available through the Content Delivery API.",
+          "message": "Publie une entrée en brouillon, la rendant disponible via la Content Delivery API."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.display_name": {
+          "source": "Publish an Entry",
+          "message": "Publier une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Sélectionnez le type de contenu pour filtrer la liste déroulante des entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Le type de contenu pour filtrer les entrées"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to publish.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à publier."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to publish",
+          "message": "L'entrée à publier"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.cHVibGlzaF9lbnRyeQ.short_desc": {
+          "source": "Changes entry status to \"published\"",
+          "message": "Modifie le statut de l'entrée en \"published\""
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.desc": {
+          "source": "Creates a webhook in Contentful that triggers when selected events occur. Supports entry, asset, and content type events such as creation, updates, publishing, and deletion.",
+          "message": "Crée un webhook dans Contentful qui se déclenche lorsque les événements sélectionnés se produisent. Prise en charge des événements d'entrée, d'asset et de type de contenu tels que la création, la mise à jour, la publication et la suppression."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.display_name": {
+          "source": "Watch an Event",
+          "message": "Surveiller un événement"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Asset Auto-Saved",
+          "message": "Asset enregistré automatiquement"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmFyY2hpdmU.display_name": {
+          "source": "Asset Archived",
+          "message": "Asset archivé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmNyZWF0ZQ.display_name": {
+          "source": "Asset Created",
+          "message": "Asset créé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LmRlbGV0ZQ.display_name": {
+          "source": "Asset Deleted",
+          "message": "Asset supprimé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnB1Ymxpc2g.display_name": {
+          "source": "Asset Published",
+          "message": "Asset publié"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnNhdmU.display_name": {
+          "source": "Asset Saved",
+          "message": "Asset enregistré"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Asset Unarchived",
+          "message": "Asset désarchivé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkFzc2V0LnVucHVibGlzaA.display_name": {
+          "source": "Asset Unpublished",
+          "message": "Asset dépublié"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmNyZWF0ZQ.display_name": {
+          "source": "Content Type Created",
+          "message": "Type de contenu créé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLmRlbGV0ZQ.display_name": {
+          "source": "Content Type Deleted",
+          "message": "Type de contenu supprimé"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnB1Ymxpc2g.display_name": {
+          "source": "Content Type Published",
+          "message": "Type de contenu publié"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnNhdmU.display_name": {
+          "source": "Content Type Saved",
+          "message": "Type de contenu enregistré"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkNvbnRlbnRUeXBlLnVucHVibGlzaA.display_name": {
+          "source": "Content Type Unpublished",
+          "message": "Type de contenu dépublié"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmF1dG9fc2F2ZQ.display_name": {
+          "source": "Entry Auto-Saved",
+          "message": "Entrée enregistrée automatiquement"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmFyY2hpdmU.display_name": {
+          "source": "Entry Archived",
+          "message": "Entrée archivée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmNyZWF0ZQ.display_name": {
+          "source": "Entry Created",
+          "message": "Entrée créée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LmRlbGV0ZQ.display_name": {
+          "source": "Entry Deleted",
+          "message": "Entrée supprimée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnB1Ymxpc2g.display_name": {
+          "source": "Entry Published",
+          "message": "Entrée publiée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnNhdmU.display_name": {
+          "source": "Entry Saved",
+          "message": "Entrée enregistrée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVuYXJjaGl2ZQ.display_name": {
+          "source": "Entry Unarchived",
+          "message": "Entrée désarchivée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOkVudHJ5LnVucHVibGlzaA.display_name": {
+          "source": "Entry Unpublished",
+          "message": "Entrée dépubliée"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.desc": {
+          "source": "Select one or more event types to trigger on. Events include entry, asset, and content type lifecycle events.",
+          "message": "Sélectionnez un ou plusieurs types d'événements sur lesquels déclencher. Les événements incluent les événements du cycle de vie des entrées, des assets et des types de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.display_name": {
+          "source": "Event Types",
+          "message": "Types d'événements"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.ZXZlbnRfdHlwZXM.short_desc": {
+          "source": "The types of events to watch for",
+          "message": "Les types d'événements à surveiller"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space to monitor for events.",
+          "message": "Sélectionnez l'espace Contentful à surveiller pour les événements."
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to monitor",
+          "message": "L'espace Contentful à surveiller"
+        },
+        "app.Q29udGVudGZ1bA.action.d2F0Y2hfZXZlbnQ.short_desc": {
+          "source": "Triggers when a new event occurs",
+          "message": "Se déclenche lorsqu'un nouvel événement se produit"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.desc": {
+          "source": "Unpublishes an asset, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "Dépublie un asset, le retirant de la Content Delivery API et le rétablissant à l'état de brouillon."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.display_name": {
+          "source": "Unpublish an Asset",
+          "message": "Dépublier un asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to unpublish.",
+          "message": "Sélectionnez ou saisissez l'ID de l'asset à dépublier."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to unpublish",
+          "message": "L'asset à dépublier"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2Fzc2V0.short_desc": {
+          "source": "Puts an asset back into \"draft\" state",
+          "message": "Remet un asset à l'état \"draft\""
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.desc": {
+          "source": "Unpublishes an entry, removing it from the Content Delivery API and reverting it to draft state.",
+          "message": "Dépublie une entrée, la retirant de la Content Delivery API et la rétablissant à l'état de brouillon."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.display_name": {
+          "source": "Unpublish an Entry",
+          "message": "Dépublier une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter the entry dropdown.",
+          "message": "Sélectionnez le type de contenu pour filtrer la liste déroulante des entrées."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to filter entries",
+          "message": "Le type de contenu pour filtrer les entrées"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to unpublish.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à dépublier."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to unpublish",
+          "message": "L'entrée à dépublier"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dW5wdWJsaXNoX2VudHJ5.short_desc": {
+          "source": "Puts an entry back into \"draft\" state",
+          "message": "Remet une entrée à l'état \"draft\""
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.desc": {
+          "source": "Updates the title and/or description of an existing asset.",
+          "message": "Met à jour le titre et/ou la description d'un asset existant."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.display_name": {
+          "source": "Update an Asset",
+          "message": "Mettre à jour un asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.desc": {
+          "source": "Select or enter the ID of the asset to update.",
+          "message": "Sélectionnez ou saisissez l'ID de l'asset à mettre à jour."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.display_name": {
+          "source": "Asset",
+          "message": "Élément multimédia"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.YXNzZXRfaWQ.short_desc": {
+          "source": "The asset to update",
+          "message": "L'asset à mettre à jour"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the asset.",
+          "message": "La description mise à jour pour l'asset."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the asset",
+          "message": "Nouvelle description pour l'asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the asset.",
+          "message": "Sélectionnez l'espace Contentful contenant l'élément multimédia."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.desc": {
+          "source": "The updated title for the asset.",
+          "message": "Le titre mis à jour pour l'asset."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titre"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.option.dGl0bGU.short_desc": {
+          "source": "New title for the asset",
+          "message": "Nouveau titre pour l'asset"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2Fzc2V0.short_desc": {
+          "source": "Updates an asset by its ID",
+          "message": "Met à jour un asset par son ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the name and/or description of an existing content type.",
+          "message": "Met à jour le nom et/ou la description d'un type de contenu existant."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Content Type",
+          "message": "Mettre à jour un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to update.",
+          "message": "Sélectionnez le type de contenu à mettre à jour."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type to update",
+          "message": "Le type de contenu à mettre à jour"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description for the content type.",
+          "message": "La description mise à jour pour le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Description"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the content type",
+          "message": "Nouvelle description pour le type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.desc": {
+          "source": "The updated name for the content type.",
+          "message": "Le nom mis à jour pour le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.bmFtZQ.short_desc": {
+          "source": "New name for the content type",
+          "message": "Nouveau nom pour le type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a specific content type by its ID",
+          "message": "Met à jour un type de contenu spécifique via son ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.desc": {
+          "source": "Updates an existing entry with new field values. Only the specified fields are updated; other fields remain unchanged.",
+          "message": "Met à jour une entrée existante avec de nouvelles valeurs de champ. Seuls les champs spécifiés sont mis à jour ; les autres champs restent inchangés."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.display_name": {
+          "source": "Update an Entry",
+          "message": "Mettre à jour une entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to filter entries by type.",
+          "message": "Sélectionnez le type de contenu pour filtrer les entrées par type."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type of the entry",
+          "message": "Le type de contenu de l'entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.desc": {
+          "source": "Select or enter the ID of the entry to update.",
+          "message": "Sélectionnez ou saisissez l'ID de l'entrée à mettre à jour."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry",
+          "message": "Entrée"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The entry to update",
+          "message": "L'entrée à mettre à jour"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.desc": {
+          "source": "Provide the field values to update as a key-value object. Only the specified fields will be changed.",
+          "message": "Fournissez les valeurs de champ à mettre à jour sous forme d'objet clé-valeur. Seuls les champs spécifiés seront modifiés."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.ZmllbGRz.short_desc": {
+          "source": "The field values to update",
+          "message": "Les valeurs de champ à mettre à jour"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the entry.",
+          "message": "Sélectionnez l'espace Contentful contenant l'entrée."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2VudHJ5.short_desc": {
+          "source": "Updates a specific entry by its ID",
+          "message": "Met à jour une entrée spécifique via son ID"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.desc": {
+          "source": "Updates the properties of an existing field in a content type.",
+          "message": "Met à jour les propriétés d'un champ existant dans un type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.display_name": {
+          "source": "Update a Field of a Content Type",
+          "message": "Mettre à jour un champ d'un type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.desc": {
+          "source": "Select the content type to modify.",
+          "message": "Sélectionnez le type de contenu à modifier."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.display_name": {
+          "source": "Content Type",
+          "message": "Type de contenu"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.Y29udGVudF90eXBlX2lk.short_desc": {
+          "source": "The content type containing the field",
+          "message": "Le type de contenu contenant le champ"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.desc": {
+          "source": "Select the environment within the space. Defaults to \"master\" if not specified.",
+          "message": "Sélectionnez l'environnement au sein de l'espace. La valeur par défaut est \"master\" si elle n'est pas spécifiée."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.display_name": {
+          "source": "Environment",
+          "message": "Environnement"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZW52aXJvbm1lbnRfaWQ.short_desc": {
+          "source": "The environment to use (default: master)",
+          "message": "L'environnement à utiliser (par défaut : master)"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.desc": {
+          "source": "Select the field to update.",
+          "message": "Sélectionnez le champ à mettre à jour."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.display_name": {
+          "source": "Field",
+          "message": "Champ"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfaWQ.short_desc": {
+          "source": "The field to update",
+          "message": "Le champ à mettre à jour"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.desc": {
+          "source": "The updated display name for the field.",
+          "message": "Le nom d'affichage mis à jour pour le champ."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.display_name": {
+          "source": "Field Name",
+          "message": "Nom du champ"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.ZmllbGRfbmFtZQ.short_desc": {
+          "source": "New display name for the field",
+          "message": "Nouveau nom d'affichage pour le champ"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.desc": {
+          "source": "Update whether the field can have different values for different locales.",
+          "message": "Définissez si le champ peut avoir des valeurs différentes selon les paramètres régionaux."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.display_name": {
+          "source": "Localized",
+          "message": "Localisé"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.bG9jYWxpemVk.short_desc": {
+          "source": "Whether the field supports localization",
+          "message": "Indique si le champ prend en charge la localisation"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.desc": {
+          "source": "Select the Contentful space containing the content type.",
+          "message": "Sélectionnez l'espace Contentful contenant le type de contenu."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.display_name": {
+          "source": "Space",
+          "message": "Espace"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.c3BhY2VfaWQ.short_desc": {
+          "source": "The Contentful space to use",
+          "message": "L'espace Contentful à utiliser"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.desc": {
+          "source": "Update whether entries must provide a value for this field.",
+          "message": "Définissez si les entrées doivent fournir une valeur pour ce champ."
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.display_name": {
+          "source": "Required",
+          "message": "Requis"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.option.cmVxdWlyZWQ.short_desc": {
+          "source": "Whether the field is required",
+          "message": "Indique si le champ est requis"
+        },
+        "app.Q29udGVudGZ1bA.action.dXBkYXRlX2ZpZWxkX29mX2NvbnRlbnRfdHlwZQ.short_desc": {
+          "source": "Updates a field inside a specific content type",
+          "message": "Met à jour un champ dans un type de contenu spécifique"
+        },
+        "app.Q29udGVudGZ1bA.desc": {
+          "source": "Integrate with Contentful to automate content management workflows. Create, update, publish, and manage entries, assets, and content types. Monitor content changes with real-time webhook triggers. This integration provides full access to the Contentful Content Management API for comprehensive headless CMS automation.",
+          "message": "Intégrez Contentful pour automatiser les flux de travail de gestion de contenu. Créez, mettez à jour, publiez et gérez des entrées, des ressources et des types de contenu. Suivez les modifications de contenu à l'aide de déclencheurs webhook en temps réel. Cette intégration offre un accès complet à l'API Contentful Content Management pour une automatisation complète du CMS headless."
+        },
+        "app.Q29udGVudGZ1bA.display_name": {
+          "source": "Contentful",
+          "message": "Contentful"
+        },
+        "app.Q29udGVudGZ1bA.short_desc": {
+          "source": "Connect to Contentful to manage your content, assets, and content models",
+          "message": "Connectez-vous à Contentful pour gérer votre contenu, vos ressources et vos modèles de contenu"
+        }
+      }
+    }
+  }
+}

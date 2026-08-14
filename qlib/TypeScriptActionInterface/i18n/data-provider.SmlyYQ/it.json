@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.SmlyYQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crea record"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Creates a new custom field in the Jira instance",
+          "message": "Crea un nuovo campo personalizzato nell'istanza di Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Create Custom Field",
+          "message": "Crea campo personalizzato"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Creates a new custom field",
+          "message": "Crea un nuovo campo personalizzato"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.desc": {
+          "source": "Creates a new issue in a Jira project",
+          "message": "Crea una nuova issue in un progetto Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
+          "source": "Create Issue",
+          "message": "Crea issue"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
+          "source": "Creates a new issue",
+          "message": "Crea una nuova issue"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Creates a new project in Jira",
+          "message": "Crea un nuovo progetto in Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create Project",
+          "message": "Crea progetto"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Creates a new project",
+          "message": "Crea un nuovo progetto"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.desc": {
+          "source": "Adds a new comment to a specific issue",
+          "message": "Aggiunge un nuovo commento a una issue specifica"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
+          "source": "Add Comment",
+          "message": "Aggiungi commento"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
+          "source": "Adds a comment to an issue",
+          "message": "Aggiunge un commento a una issue"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.desc": {
+          "source": "Adds a new worklog entry to a specific issue",
+          "message": "Aggiunge una nuova voce del registro di lavoro a una issue specifica"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
+          "source": "Add Worklog",
+          "message": "Aggiungi worklog"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
+          "source": "Adds a worklog to an issue",
+          "message": "Aggiunge un worklog a una issue"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.desc": {
+          "source": "Retrieves a specific comment by its ID",
+          "message": "Recupera un commento specifico tramite il relativo ID"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
+          "source": "Get Comment",
+          "message": "Recupera commento"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
+          "source": "Gets a specific comment",
+          "message": "Recupera un commento specifico"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.desc": {
+          "source": "Retrieves all comments for a specific issue",
+          "message": "Recupera tutti i commenti per una issue specifica"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
+          "source": "Get Comments",
+          "message": "Recupera commenti"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
+          "source": "Gets all comments for an issue",
+          "message": "Recupera tutti i commenti per una issue"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.desc": {
+          "source": "Retrieves all projects visible to the authenticated user",
+          "message": "Recupera tutti i progetti visibili all'utente autenticato"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "Recupera tutti i progetti"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response. This parameter accepts a comma-separated list. Expanded options include:\n\n *  `description` Returns the project description.\n *  `issueTypes` Returns all issue types associated with the project.\n *  `lead` Returns information about the project lead.\n *  `projectKeys` Returns all project keys associated with the project.",
+          "message": "Usa [expand](#expansion) per includere informazioni aggiuntive nella risposta. Questo parametro accetta un elenco separato da virgole. Le opzioni espanse includono:\n\n *  `description` Restituisce la descrizione del progetto.\n *  `issueTypes` Restituisce tutti i tipi di issue associati al progetto.\n *  `lead` Restituisce informazioni sul responsabile del progetto.\n *  `projectKeys` Restituisce tutte le chiavi di progetto associate al progetto."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.display_name": {
+          "source": "Expand",
+          "message": "Espandi"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.short_desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response",
+          "message": "Usa [expand](#expansion) per includere informazioni aggiuntive nella risposta"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.desc": {
+          "source": "A list of project properties to return for the project. This parameter accepts a comma-separated list.",
+          "message": "Un elenco di proprietà del progetto da restituire per il progetto. Questo parametro accetta un elenco separato da virgole."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Proprietà"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.short_desc": {
+          "source": "A list of project properties to return for the project",
+          "message": "Un elenco di proprietà del progetto da restituire per il progetto"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.desc": {
+          "source": "Returns the user's most recently accessed projects. You may specify the number of results to return up to a maximum of 20. If access is anonymous, then the recently accessed projects are based on the current HTTP session.",
+          "message": "Restituisce i progetti a cui l'utente ha effettuato l'accesso più di recente. È possibile specificare il numero di risultati da restituire fino a un massimo di 20. Se l'accesso è anonimo, i progetti a cui si è effettuato l'accesso di recente si basano sulla sessione HTTP corrente."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.display_name": {
+          "source": "Recent",
+          "message": "Recenti"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.short_desc": {
+          "source": "Returns the user's most recently accessed projects",
+          "message": "Restituisce i progetti a cui l'utente ha effettuato l'accesso più di recente"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
+          "source": "Gets all projects",
+          "message": "Recupera tutti i progetti"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.desc": {
+          "source": "Retrieves the current announcement banner configuration for the Jira instance",
+          "message": "Recupera la configurazione corrente del banner degli annunci per l'istanza di Jira"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
+          "source": "Get Announcement Banner",
+          "message": "Recupera banner degli annunci"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
+          "source": "Gets the current announcement banner configuration",
+          "message": "Recupera la configurazione corrente del banner degli annunci"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.desc": {
+          "source": "Returns all fields, both system and custom fields, in the Jira instance",
+          "message": "Restituisce tutti i campi, sia di sistema che personalizzati, nell'istanza di Jira"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
+          "source": "Get Fields",
+          "message": "Recupera campi"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
+          "source": "Gets all fields in the system",
+          "message": "Recupera tutti i campi nel sistema"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.desc": {
+          "source": "Retrieves the details of a specific issue by its ID or key",
+          "message": "Recupera i dettagli di un problema specifico tramite il relativo ID o chiave"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
+          "source": "Get Issue",
+          "message": "Ottieni problema"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
+          "source": "Gets an issue by ID or key",
+          "message": "Recupera un problema tramite ID o chiave"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.desc": {
+          "source": "Retrieves all worklogs for a specific issue",
+          "message": "Recupera tutti i registri di lavoro per un problema specifico"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
+          "source": "Get Issue Worklogs",
+          "message": "Ottieni registri di lavoro del problema"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
+          "source": "Gets all worklogs for an issue",
+          "message": "Recupera tutti i registri di lavoro per un problema"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Retrieves the details of a specific project by its ID or key",
+          "message": "Recupera i dettagli di un progetto specifico tramite il relativo ID o chiave"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Project",
+          "message": "Ottieni progetto"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Gets a project by ID or key",
+          "message": "Recupera un progetto tramite ID o chiave"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.desc": {
+          "source": "Retrieves a specific worklog entry by its ID",
+          "message": "Recupera una voce di registro di lavoro specifica tramite il relativo ID"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
+          "source": "Get Worklog",
+          "message": "Ottieni registro di lavoro"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
+          "source": "Gets a specific worklog",
+          "message": "Recupera un registro di lavoro specifico"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Elimina record"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.desc": {
+          "source": "Deletes a specific comment from an issue",
+          "message": "Elimina un commento specifico da un problema"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
+          "source": "Delete Comment",
+          "message": "Elimina commento"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
+          "source": "Deletes a comment from an issue",
+          "message": "Elimina un commento da un problema"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.desc": {
+          "source": "Deletes an issue from a Jira project",
+          "message": "Elimina un problema da un progetto Jira"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
+          "source": "Delete Issue",
+          "message": "Elimina problema"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
+          "source": "Deletes an issue",
+          "message": "Elimina un problema"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Deletes a project from Jira",
+          "message": "Elimina un progetto da Jira"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete Project",
+          "message": "Elimina progetto"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Deletes a project",
+          "message": "Elimina un progetto"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.desc": {
+          "source": "Deletes a specific worklog entry from an issue",
+          "message": "Elimina una voce di registro di lavoro specifica da un problema"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
+          "source": "Delete Worklog",
+          "message": "Elimina registro di lavoro"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
+          "source": "Deletes a worklog from an issue",
+          "message": "Elimina un registro di lavoro da un problema"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.desc": {
+          "source": "Updates the fields of an existing issue",
+          "message": "Aggiorna i campi di un problema esistente"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
+          "source": "Edit Issue",
+          "message": "Modifica problema"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
+          "source": "Updates an existing issue",
+          "message": "Aggiorna un problema esistente"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "Si attiva quando viene creato un nuovo problema"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
+          "source": "New Issue",
+          "message": "Nuovo problema"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for new issues",
+          "message": "Il progetto da monitorare per i nuovi problemi"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for new issues",
+          "message": "Il progetto da monitorare per i nuovi problemi"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "Si attiva quando viene creato un nuovo problema"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "Si attiva quando un problema viene aggiornato"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
+          "source": "Updated Issue",
+          "message": "Problema aggiornato"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for updated issues",
+          "message": "Il progetto da monitorare per i problemi aggiornati"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Progetto"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for updated issues",
+          "message": "Il progetto da monitorare per i problemi aggiornati"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "Si attiva quando un problema viene aggiornato"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Jira** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effettua una chiamata API HTTP / REST personalizzata a **Jira** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni native in questa app."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Jira",
+          "message": "Effettua una chiamata API personalizzata a Jira"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.desc": {
+          "source": "Updates the announcement banner configuration for the Jira instance",
+          "message": "Aggiorna la configurazione del banner di annuncio per l'istanza Jira"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
+          "source": "Set Announcement Banner",
+          "message": "Imposta banner di annuncio"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
+          "source": "Updates the announcement banner configuration",
+          "message": "Aggiorna la configurazione del banner di annuncio"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Cerca record"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trova un singolo record"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.desc": {
+          "source": "Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria",
+          "message": "Cerca problemi utilizzando JQL (Jira Query Language). Restituisce i problemi corrispondenti ai criteri di ricerca"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
+          "source": "Search Issues",
+          "message": "Cerca problemi"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
+          "source": "Searches for issues using JQL",
+          "message": "Cerca problemi utilizzando JQL"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.desc": {
+          "source": "Moves a custom field to the trash. The custom field can be restored from trash within 60 days",
+          "message": "Sposta un campo personalizzato nel cestino. Il campo personalizzato può essere ripristinato dal cestino entro 60 giorni"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
+          "source": "Trash Custom Field",
+          "message": "Cestina campo personalizzato"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
+          "source": "Moves a custom field to trash",
+          "message": "Sposta un campo personalizzato nel cestino"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aggiorna record"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Jira\""
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.desc": {
+          "source": "Updates an existing comment on an issue",
+          "message": "Aggiorna un commento esistente su un problema"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
+          "source": "Update Comment",
+          "message": "Aggiorna commento"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
+          "source": "Updates a comment",
+          "message": "Aggiorna un commento"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Updates the name and description of a custom field",
+          "message": "Aggiorna il nome e la descrizione di un campo personalizzato"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Update Custom Field",
+          "message": "Aggiorna campo personalizzato"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Updates a custom field",
+          "message": "Aggiorna un campo personalizzato"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates the details of an existing project",
+          "message": "Aggiorna i dettagli di un progetto esistente"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update Project",
+          "message": "Aggiorna progetto"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Updates a project",
+          "message": "Aggiorna un progetto"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.desc": {
+          "source": "Updates an existing worklog entry on an issue",
+          "message": "Aggiorna una voce di registro di lavoro esistente su un problema"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
+          "source": "Update Worklog",
+          "message": "Aggiorna registro di lavoro"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
+          "source": "Updates a worklog",
+          "message": "Aggiorna un registro di lavoro"
+        },
+        "app.SmlyYQ.desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Raccolta di azioni per interagire con l'API Jira"
+        },
+        "app.SmlyYQ.display_name": {
+          "source": "Jira",
+          "message": "Jira"
+        },
+        "app.SmlyYQ.short_desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Raccolta di azioni per interagire con l'API Jira"
+        }
+      }
+    }
+  }
+}

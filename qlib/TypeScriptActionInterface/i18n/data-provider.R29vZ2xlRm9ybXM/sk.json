@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a new Google Form with specified title, description, and optional questions. Supports various question types, quiz functionality, and custom form settings.",
+          "message": "Vytvorí nový formulár Google Forms so zadaným názvom, popisom a voliteľnými otázkami. Podporuje rôzne typy otázok, funkcie kvízu a vlastné nastavenia formulára."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Vytvoriť formulár"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.desc": {
+          "source": "The document title that appears in the browser tab. If not specified, the form title will be used.",
+          "message": "Názov dokumentu, ktorý sa zobrazuje na karte prehliadača. Ak nie je zadané, použije sa názov formulára."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.display_name": {
+          "source": "Document Title",
+          "message": "Názov dokumentu"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZG9jdW1lbnRfdGl0bGU.short_desc": {
+          "source": "Title for the document",
+          "message": "Názov dokumentu"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "An optional description that appears below the form title to provide additional context.",
+          "message": "Voliteľný popis, ktorý sa zobrazuje pod názvom formulára na poskytnutie dodatočného kontextu."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Form description",
+          "message": "Popis formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure additional form settings like email collection and quiz mode.",
+          "message": "Nakonfigurujte dodatočné nastavenia formulára, ako je zhromažďovanie e-mailov a režim kvízu."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Nastavenia formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Additional form settings",
+          "message": "Dodatočné nastavenia formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.desc": {
+          "source": "List of questions to add to the form. Each question can have different types and properties.",
+          "message": "Zoznam otázok, ktoré sa majú pridať do formulára. Každá otázka môže mať rôzne typy a vlastnosti."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.display_name": {
+          "source": "Questions",
+          "message": "Otázky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.cXVlc3Rpb25z.short_desc": {
+          "source": "Form questions",
+          "message": "Otázky formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The title of the Google Form. This will be displayed at the top of the form.",
+          "message": "Názov formulára Google Forms. Zobrazí sa v hornej časti formulára."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "Form title",
+          "message": "Názov formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Google Form with customizable questions and settings.",
+          "message": "Vytvorte nový formulár Google Forms s prispôsobiteľnými otázkami a nastaveniami."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches comprehensive information about a Google Form, including its metadata, questions, and optionally its responses.",
+          "message": "Získa komplexné informácie o formulári Google Forms vrátane jeho metadát, otázok a voliteľne aj jeho odpovedí."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Získať formulár"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve.",
+          "message": "Jedinečný identifikátor formulára Google Forms, ktorý sa má načítať."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "ID formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "Google Form ID",
+          "message": "ID formulára Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "When enabled, returns the complete list of questions in the form with their properties.",
+          "message": "Ak je povolené, vráti úplný zoznam otázok vo formulári s ich vlastnosťami."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Zahrnúť otázky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the response",
+          "message": "Zahrnúť otázky formulára do odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve details of a Google Form by ID.",
+          "message": "Získajte podrobnosti o formulári Google Forms podľa ID."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Retrieves a single response from a specified Google Form using the response ID. Optionally includes form questions and metadata for additional context.",
+          "message": "Získa jednu odpoveď zo zadaného formulára Google Forms pomocou ID odpovede. Voliteľne zahŕňa otázky formulára a metadáta pre dodatočný kontext."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "Get Form Response",
+          "message": "Získať odpoveď formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form that contains the response.",
+          "message": "Jedinečný identifikátor formulára Google Forms, ktorý obsahuje odpoveď."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "ID formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get the response from",
+          "message": "Formulár Google Forms, z ktorého sa má získať odpoveď"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Či sa majú do odpovede zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Zahrnúť otázky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Zahrnúť otázky formulára do odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the form response to retrieve.",
+          "message": "Jedinečný identifikátor odpovede formulára, ktorá sa má získať."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "ID odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The specific response to retrieve",
+          "message": "Konkrétna odpoveď, ktorá sa má získať"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Retrieve a specific response from a Google Form by its ID.",
+          "message": "Získajte konkrétnu odpoveď z formulára Google Forms podľa jej ID."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.desc": {
+          "source": "Retrieves all responses from a specified Google Form. Supports filtering by respondent email and answer values, pagination with page tokens, and optional inclusion of form questions and metadata.",
+          "message": "Získa všetky odpovede zo zadaného formulára Google Forms. Podporuje filtrovanie podľa e-mailu respondenta a hodnôt odpovedí, stránkovanie pomocou tokenov stránok a voliteľné zahrnutie otázok a metadát formulára."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.display_name": {
+          "source": "Get Form Responses",
+          "message": "Získať odpovede formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to retrieve responses from.",
+          "message": "Jedinečný identifikátor formulára Google Forms, z ktorého sa majú získať odpovede."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "ID formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to get responses from",
+          "message": "Formulár Google Forms, z ktorého sa majú získať odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.desc": {
+          "source": "Filter responses based on specific question answers. Each filter specifies a question ID, filter type, and expected value.",
+          "message": "Filtrujte odpovede na základe konkrétnych odpovedí na otázky. Každý filter určuje ID otázky, typ filtra a očakávanú hodnotu."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.display_name": {
+          "source": "Filter Answers",
+          "message": "Filtrovať odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.ZmlsdGVyX2Fuc3dlcnM.short_desc": {
+          "source": "Filter responses by specific answer values",
+          "message": "Filtrovať odpovede podľa konkrétnych hodnôt odpovedí"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the detailed answer data for each response. Default is true.",
+          "message": "Či sa majú zahrnúť podrobné údaje odpovedí pre každú odpoveď. Predvolená hodnota je true."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Zahrnúť odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in response",
+          "message": "Zahrnúť podrobné odpovede do odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in the response. Default is false.",
+          "message": "Či sa majú do odpovede zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Zahrnúť otázky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in response",
+          "message": "Zahrnúť otázky formulára do odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.desc": {
+          "source": "The maximum number of responses to return per request. Default is 50, maximum is 1000.",
+          "message": "Maximálny počet odpovedí, ktoré sa majú vrátiť na požiadavku. Predvolená hodnota je 50, maximum je 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "Maximálny počet odpovedí na vrátenie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token to retrieve the next page of results. Used for pagination through large response sets.",
+          "message": "Token na získanie ďalšej stránky výsledkov. Používa sa na stránkovanie cez veľké množiny odpovedí."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Token stránky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.desc": {
+          "source": "Filter responses to only include those from respondents with emails containing this value.",
+          "message": "Filtrujte odpovede tak, aby zahŕňali iba tie od respondentov s e-mailami obsahujúcimi túto hodnotu."
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.display_name": {
+          "source": "Respondent Email",
+          "message": "E-mail respondenta"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.option.cmVzcG9uZGVudF9lbWFpbA.short_desc": {
+          "source": "Filter by respondent email",
+          "message": "Filtrovať podľa e-mailu respondenta"
+        },
+        "app.R29vZ2xlRm9ybXM.action.Z2V0X2Zvcm1fcmVzcG9uc2Vz.short_desc": {
+          "source": "Retrieve responses from a Google Form with filtering and pagination.",
+          "message": "Získajte odpovede z formulára Google Forms s filtrovaním a stránkovaním."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Forms** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Google Forms** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú vystavené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Forms",
+          "message": "Vykonať vlastné volanie API do Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "Monitors a Google Form for new responses and triggers when someone submits a new response. Optionally includes form questions and metadata in the event data.",
+          "message": "Monitoruje formulár Google Forms na prítomnosť nových odpovedí a spustí sa, keď niekto odošle novú odpoveď. Voliteľne zahŕňa otázky a metadáta formulára v údajoch udalosti."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "Nová odpoveď formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "The unique identifier of the Google Form to monitor for new responses.",
+          "message": "Jedinečný identifikátor formulára Google Forms, ktorý sa má monitorovať na prítomnosť nových odpovedí."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form ID",
+          "message": "ID formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Google Form to monitor",
+          "message": "Formulár Google Forms na monitorovanie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "Whether to include the form answers in each triggered event. Default is false.",
+          "message": "Či sa majú do každej spustenej udalosti zahrnúť odpovede formulára. Predvolená hodnota je false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Zahrnúť odpovede"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answers in the event data",
+          "message": "Zahrnúť podrobné odpovede do údajov udalosti"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.desc": {
+          "source": "Whether to include the form questions and metadata in each triggered event. Default is false.",
+          "message": "Či sa majú do každej spustenej udalosti zahrnúť otázky a metadáta formulára. Predvolená hodnota je false."
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.display_name": {
+          "source": "Include Questions",
+          "message": "Zahrnúť otázky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.aW5jbHVkZV9xdWVzdGlvbnM.short_desc": {
+          "source": "Include form questions in the event data",
+          "message": "Zahrnúť otázky formulára do údajov udalosti"
+        },
+        "app.R29vZ2xlRm9ybXM.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Google Form.",
+          "message": "Spustí sa po odoslaní novej odpovede do formulára Google Forms."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.desc": {
+          "source": "Search for Google Forms in your Google Drive with options to filter by filename, specify search type, and paginate results.",
+          "message": "Vyhľadávajte formuláre Google Forms vo svojom Google Disku s možnosťami filtrovania podľa názvu súboru, určenia typu vyhľadávania a stránkovania výsledkov."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.display_name": {
+          "source": "Search Forms",
+          "message": "Vyhľadať formuláre"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or part of the name of the Google Forms to search for. Leave empty to retrieve all forms.",
+          "message": "Názov alebo časť názvu formulárov Google Forms, ktoré sa majú vyhľadať. Ak chcete získať všetky formuláre, nechajte prázdne."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.display_name": {
+          "source": "Form Name",
+          "message": "Názov formulára"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the form to search for",
+          "message": "Názov formulára na vyhľadanie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.desc": {
+          "source": "The maximum number of forms to return in a single request. Maximum value is 1000.",
+          "message": "Maximálny počet formulárov, ktoré sa majú vrátiť v jednej požiadavke. Maximálna hodnota je 1000."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of forms to return",
+          "message": "Maximálny počet formulárov na vrátenie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Obsahuje"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Presná zhoda"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Specify whether to search for forms where the name contains the search term or matches it exactly.",
+          "message": "Zadajte, či sa majú vyhľadávať formuláre, ktorých názov obsahuje hľadaný výraz, alebo sa s ním presne zhoduje."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Typ vyhľadávania"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Typ vyhľadávania, ktorý sa má vykonať"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.desc": {
+          "source": "A token returned from a previous search to continue pagination. Use the next_page_token from a previous response.",
+          "message": "Token vrátený z predchádzajúceho vyhľadávania na pokračovanie v stránkovaní. Použite next_page_token z predchádzajúcej odpovede."
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Token stránky"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.R29vZ2xlRm9ybXM.action.c2VhcmNoX2Zvcm1z.short_desc": {
+          "source": "Search for Google Forms by name with filtering options.",
+          "message": "Vyhľadávajte formuláre Google Forms podľa názvu s možnosťami filtrovania."
+        },
+        "app.R29vZ2xlRm9ybXM.desc": {
+          "source": "Integrate with Google Forms to create, update, and manage your forms and responses. This integration allows you to perform actions and respond to events in your Google Forms account, enabling you to automate form management and data collection workflows.",
+          "message": "Integrujte s Google Forms na vytváranie, aktualizáciu a správu vašich formulárov a odpovedí. Táto integrácia vám umožňuje vykonávať akcie a reagovať na udalosti vo vašom účte Google Forms, čo vám umožní automatizovať správu formulárov a pracovné postupy zberu údajov."
+        },
+        "app.R29vZ2xlRm9ybXM.display_name": {
+          "source": "Google Forms",
+          "message": "Google Forms"
+        },
+        "app.R29vZ2xlRm9ybXM.short_desc": {
+          "source": "Connect with Google Forms to manage your forms and responses",
+          "message": "Pripojte sa k Google Forms a spravujte svoje formuláre a odpovede"
+        }
+      }
+    }
+  }
+}

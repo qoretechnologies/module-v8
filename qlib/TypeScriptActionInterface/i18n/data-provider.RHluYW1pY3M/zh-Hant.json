@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.desc": {
+          "source": "Monitors your Dynamics 365 environment for contacts, allowing you to trigger workflows either when new contacts are added or when existing contact records are changed.",
+          "message": "監控 Dynamics 365 環境中的聯絡人，讓您可以在新增聯絡人或變更現有聯絡人記錄時觸發工作流程。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.display_name": {
+          "source": "New or Updated Contact",
+          "message": "新增或已更新的聯絡人"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether the trigger should fire for newly created contacts or for updates to existing contacts. Only one option can be active.",
+          "message": "選取觸發程序應針對新建立的聯絡人還是現有聯絡人的更新來引發。只能啟用一個選項。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.short_desc": {
+          "source": "Triggers when a contact is created or modified",
+          "message": "建立或修改聯絡人時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.desc": {
+          "source": "Detects when support cases are created or updated in Dynamics 365, enabling automated responses, notifications, or case management workflows.",
+          "message": "偵測 Dynamics 365 中何時建立或更新支援案例，以便啟用自動回應、通知或案例管理工作流程。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.display_name": {
+          "source": "New or Updated Case",
+          "message": "新增或更新的案例"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on new cases (created) or when existing cases are modified (updated). You must select one option.",
+          "message": "指定要在新案例（已建立）還是既有案例修改（已更新）時觸發。您必須選擇一個選項。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.short_desc": {
+          "source": "Triggers when a case is created or modified",
+          "message": "當建立或修改案例時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.desc": {
+          "source": "Monitors Dynamics 365 for accounts, allowing you to choose whether to trigger on newly created accounts or when existing accounts are modified.",
+          "message": "監視 Dynamics 365 中的客戶，讓您選擇要在新建立客戶還是修改既有客戶時觸發。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.display_name": {
+          "source": "New or Updated Account",
+          "message": "新增或更新的客戶"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger when accounts are created or when they are updated. Only one condition can be selected at a time.",
+          "message": "選擇要在建立客戶時觸發，還是在更新客戶時觸發。一次只能選擇一個條件。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.short_desc": {
+          "source": "Triggers when an account is created or modified",
+          "message": "當建立或修改客戶時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.desc": {
+          "source": "Monitors invoice-related activities in Dynamics 365, letting you choose to trigger workflows either when new invoices are created or when existing ones are updated.",
+          "message": "監視 Dynamics 365 中與發票相關的活動，讓您選擇要在建立新發票還是更新現有發票時觸發工作流程。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.display_name": {
+          "source": "New or Updated Invoice",
+          "message": "新增或更新的發票"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on newly created invoices or when existing invoices are modified. You must select one option.",
+          "message": "指定要在新建立發票還是修改現有發票時觸發。您必須選擇一個選項。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.short_desc": {
+          "source": "Triggers when an invoice is created or modified",
+          "message": "當建立或修改發票時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.desc": {
+          "source": "Monitors your sales pipeline in Dynamics 365, giving you the option to trigger workflows either when new opportunities are created or when existing ones change.",
+          "message": "監視 Dynamics 365 中的銷售管道，讓您可以選擇在建立新商機或現有商機變更時觸發工作流程。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.display_name": {
+          "source": "New or Updated Opportunity",
+          "message": "新增或更新的商機"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on new opportunities being created or on updates to existing opportunities. You must select one option.",
+          "message": "指定要在建立新商機還是更新現有商機時觸發。您必須選擇一個選項。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.short_desc": {
+          "source": "Triggers when an opportunity is created or modified",
+          "message": "當建立或修改商機時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.desc": {
+          "source": "Tracks order-related activities in Dynamics 365, allowing you to choose whether to trigger workflows when new orders are placed or when existing orders are updated.",
+          "message": "追蹤 Dynamics 365 中與訂單相關的活動，讓您選擇要在下達新訂單還是更新現有訂單時觸發工作流程。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.display_name": {
+          "source": "New or Updated Order",
+          "message": "新增或更新的訂單"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger on newly created orders or when existing orders are modified. Only one condition can be active at a time.",
+          "message": "選擇要在新建立訂單還是修改現有訂單時觸發。一次只能啟用一個條件。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.short_desc": {
+          "source": "Triggers when an order is created or modified",
+          "message": "當建立或修改訂單時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.desc": {
+          "source": "Detects when leads are added or modified in Dynamics 365, allowing you to choose whether to trigger on new leads or when existing lead records change.",
+          "message": "偵測 Dynamics 365 中何時新增或修改潛在客戶，讓您選擇要在新增潛在客戶還是既有潛在客戶記錄變更時觸發。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.display_name": {
+          "source": "New or Updated Lead",
+          "message": "新增或更新的潛在客戶"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger when new leads are created or when existing leads are updated. Only one condition can be selected.",
+          "message": "選擇要在建立新潛在客戶還是更新現有潛在客戶時觸發。只能選擇一個條件。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "觸發條件"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "選擇已建立或已更新"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.short_desc": {
+          "source": "Triggers when a lead is created or modified",
+          "message": "當建立或修改潛在客戶時觸發"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.desc": {
+          "source": "Works with your organization's custom entities in Dynamics 365, allowing you to monitor and respond when new records are created for any custom entity type you specify.",
+          "message": "適用於貴組織在 Dynamics 365 中的自訂實體，可讓您在為指定的任何自訂實體類型建立新記錄時進行監視並回應。"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.display_name": {
+          "source": "New Custom Entity Record",
+          "message": "新增自訂實體記錄"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.desc": {
+          "source": "The logical name of the custom entity to monitor",
+          "message": "要監視之自訂實體的邏輯名稱"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.display_name": {
+          "source": "Entity Logical Name",
+          "message": "實體邏輯名稱"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.short_desc": {
+          "source": "The internal name of the custom entity",
+          "message": "自訂實體的內部名稱"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.short_desc": {
+          "source": "Triggers when a custom entity record is created",
+          "message": "當建立自訂實體記錄時觸發"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1413 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate an anomaly score by applying a trained anomaly detector to input data. This helps identify unusual patterns or outliers in your dataset.",
+          "message": "透過將已訓練的異常檢測器套用至輸入資料來產生異常分數。這有助於識別資料集中的異常模式或離群值。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Anomaly Score",
+          "message": "建立異常分數"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate the anomaly score for the input data.",
+          "message": "選擇將用於為輸入資料產生異常分數的已訓練異常檢測器模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "異常檢測器"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for scoring",
+          "message": "用於評分的異常檢測器"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this anomaly score and its purpose.",
+          "message": "選填說明，提供有關此異常分數及其用途的額外上下文。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the anomaly score",
+          "message": "異常分數的說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data that you want to analyze for anomalies. The data should match the format expected by the selected anomaly detector.",
+          "message": "提供您想要分析異常的輸入資料。資料應符合所選異常檢測器所預期的格式。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "輸入資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to analyze for anomalies",
+          "message": "要分析異常的資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this anomaly score in your BigML dashboard and for future reference.",
+          "message": "可選的名稱，用於在 BigML 儀表板中識別此異常分數，以及供未來參考。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the anomaly score",
+          "message": "異常分數的名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this anomaly score with related resources for better workflow management.",
+          "message": "可選的專案，將此異常分數與相關資源組織在一起，以進行更好的工作流程管理。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the anomaly score",
+          "message": "組織異常分數的專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your anomaly scores for easier management and searching.",
+          "message": "可選的標籤，有助於組織和歸類您的異常分數，以便於管理與搜尋。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing anomaly scores",
+          "message": "組織異常分數的標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create an anomaly score for detecting outliers in data",
+          "message": "建立異常分數以檢測資料中的異常值"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.desc": {
+          "source": "Generate anomaly scores for multiple data points at once by applying an anomaly detector to a dataset. This is efficient for processing large amounts of data.",
+          "message": "透過將異常檢測器套用至資料集，一次為多個資料點生成異常分數。這對處理大量資料非常有效率。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.display_name": {
+          "source": "Create Batch Anomaly Score",
+          "message": "建立批次異常分數"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.desc": {
+          "source": "Select the trained anomaly detector model that will be used to generate anomaly scores for all data points in the dataset.",
+          "message": "選擇將用於為資料集中所有資料點生成異常分數的已訓練異常檢測器模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.display_name": {
+          "source": "Anomaly Detector",
+          "message": "異常檢測器"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.YW5vbWFseQ.short_desc": {
+          "source": "The anomaly detector to use for batch scoring",
+          "message": "用於批次計分的異常檢測器"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.desc": {
+          "source": "Select the dataset containing multiple data points that you want to analyze for anomalies using the selected anomaly detector.",
+          "message": "選擇包含多個資料點的資料集，您想使用所選的異常檢測器對這些資料點進行異常分析。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.display_name": {
+          "source": "Dataset",
+          "message": "資料集"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGF0YXNldA.short_desc": {
+          "source": "The dataset to analyze for anomalies",
+          "message": "要分析異常的資料集"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this batch anomaly score and its purpose.",
+          "message": "可選的說明，提供有關此批次異常分數及其用途的額外內容。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the batch anomaly score",
+          "message": "批次異常分數的說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this batch anomaly score in your BigML dashboard and for future reference.",
+          "message": "可選的名稱，用於在 BigML 儀表板中識別此批次異常分數，以及供未來參考。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.bmFtZQ.short_desc": {
+          "source": "Name for the batch anomaly score",
+          "message": "批次異常分數的名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this batch anomaly score with related resources for better workflow management.",
+          "message": "可選的專案，將此批次異常分數與相關資源組織在一起，以進行更好的工作流程管理。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the batch anomaly score",
+          "message": "組織批次異常分數的專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your batch anomaly scores for easier management and searching.",
+          "message": "可選的標籤，有助於組織和歸類您的批次異常分數，以便於管理與搜尋。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.option.dGFncw.short_desc": {
+          "source": "Tags for organizing batch anomaly scores",
+          "message": "組織批次異常分數的標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2JhdGNoX2Fub21hbHlfc2NvcmU.short_desc": {
+          "source": "Create anomaly scores for multiple data points in batch",
+          "message": "批次為多個資料點建立異常分數"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.desc": {
+          "source": "Determine which cluster centroid is closest to the provided input data using a trained cluster model. This helps classify new data points into existing clusters.",
+          "message": "使用已訓練的分群模型，確定哪個群集質心最接近提供的輸入資料。這有助於將新資料點分類到現有群集中。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.display_name": {
+          "source": "Create Centroid",
+          "message": "建立質心"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.desc": {
+          "source": "Select the trained cluster model that will be used to find the closest centroid for the input data.",
+          "message": "選擇將用於尋找輸入資料最接近質心的已訓練分群模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.display_name": {
+          "source": "Cluster Model",
+          "message": "分群模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.Y2x1c3Rlcg.short_desc": {
+          "source": "The cluster model to use for centroid calculation",
+          "message": "用於質心計算的分群模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this centroid calculation and its purpose.",
+          "message": "可選的說明，提供有關此質心計算及其用途的額外內容。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the centroid calculation",
+          "message": "質心計算的說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to find the closest cluster centroid. The data should match the format used to train the cluster model.",
+          "message": "提供您想要尋找最接近群集質心的輸入資料。資料應符合用於訓練分群模型的格式。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "輸入資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to find the closest centroid for",
+          "message": "要尋找最接近質心的資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this centroid calculation in your BigML dashboard and for future reference.",
+          "message": "可選的名稱，用於在 BigML 儀表板中識別此質心計算，以及供未來參考。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.bmFtZQ.short_desc": {
+          "source": "Name for the centroid result",
+          "message": "質心結果的名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this centroid calculation with related resources for better workflow management.",
+          "message": "可選的專案，將此質心計算與相關資源組織在一起，以進行更好的工作流程管理。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the centroid result",
+          "message": "組織質心結果的專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your centroid calculations for easier management and searching.",
+          "message": "可選的標籤，有助於組織和歸類您的質心計算，以便於管理與搜尋。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.option.dGFncw.short_desc": {
+          "source": "Tags for organizing centroid results",
+          "message": "組織質心結果的標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX2NlbnRyb2lk.short_desc": {
+          "source": "Find the closest cluster centroid for input data",
+          "message": "尋找輸入資料最接近的群集質心"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.desc": {
+          "source": "Create predictions for new data using trained machine learning models, ensembles, or deep networks. This allows you to apply your trained models to make predictions on new data.",
+          "message": "使用已訓練的機器學習模型、集成模型或深度網路為新資料建立預測。這允許您套用已訓練的模型對新資料進行預測。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.display_name": {
+          "source": "Create Prediction",
+          "message": "建立預測"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.desc": {
+          "source": "Select the trained deep network that will be used to generate predictions for the input data.",
+          "message": "選擇將用於為輸入資料生成預測的已訓練深度網路。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.display_name": {
+          "source": "Deep Network",
+          "message": "深度網路"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVlcG5ldA.short_desc": {
+          "source": "The deep network to use for prediction",
+          "message": "用於預測的深度網路"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this prediction and its purpose.",
+          "message": "可選的說明，提供有關此預測及其用途的額外內容。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the prediction",
+          "message": "預測的說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.desc": {
+          "source": "Select the trained ensemble that will be used to generate predictions for the input data.",
+          "message": "選擇將用於為輸入資料生成預測的已訓練集成模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.display_name": {
+          "source": "Ensemble",
+          "message": "集成"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.ZW5zZW1ibGU.short_desc": {
+          "source": "The ensemble to use for prediction",
+          "message": "用於預測的集成模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the input data for which you want to generate predictions. The data should match the format used to train the selected model.",
+          "message": "提供您想要生成預測的輸入資料。資料應符合用於訓練所選模型的格式。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "輸入資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The data to make predictions for",
+          "message": "要進行預測的資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.desc": {
+          "source": "Select the trained model that will be used to generate predictions for the input data.",
+          "message": "選擇將用於為輸入資料生成預測的已訓練模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.display_name": {
+          "source": "Model",
+          "message": "模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bW9kZWw.short_desc": {
+          "source": "The model to use for prediction",
+          "message": "用於預測的模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this prediction in your BigML dashboard and for future reference.",
+          "message": "可選的名稱，用於在 BigML 儀表板中識別此預測，以及供未來參考。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.bmFtZQ.short_desc": {
+          "source": "Name for the prediction",
+          "message": "預測的名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this prediction with related resources for better workflow management.",
+          "message": "可選的專案，將此預測與相關資源組織在一起，以進行更好的工作流程管理。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the prediction",
+          "message": "組織預測的專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your predictions for easier management and searching.",
+          "message": "可選的標籤，有助於組織和歸類您的預測，以便於管理與搜尋。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.option.dGFncw.short_desc": {
+          "source": "Tags for organizing predictions",
+          "message": "組織預測的標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3ByZWRpY3Rpb24.short_desc": {
+          "source": "Generate predictions using trained models",
+          "message": "使用已訓練的模型生成預測"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.desc": {
+          "source": "Create topic distributions for text data using a trained topic model. This helps understand the main topics present in your text and their relative importance.",
+          "message": "使用已訓練的主題模型為文字資料建立主題分布。這有助於瞭解文字中存在的主要主題及其相對重要性。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.display_name": {
+          "source": "Create Topic Distribution",
+          "message": "建立主題分布"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description to provide additional context about this topic distribution and its purpose.",
+          "message": "可選說明，提供有關此主題分佈及其用途的附加背景資訊。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the topic distribution",
+          "message": "主題分佈的說明"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.desc": {
+          "source": "Provide the text data for which you want to generate topic distributions. The data should match the format used to train the topic model.",
+          "message": "提供要為其生成主題分佈的文字資料。資料格式應與用於訓練主題模型的格式相符。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.display_name": {
+          "source": "Input Data",
+          "message": "輸入資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.aW5wdXRfZGF0YQ.short_desc": {
+          "source": "The text data to analyze for topics",
+          "message": "要分析主題的文字資料"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.desc": {
+          "source": "Optional name to identify this topic distribution in your BigML dashboard and for future reference.",
+          "message": "可選名稱，用於在 BigML 儀表板中識別此主題分佈並供日後參考。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.bmFtZQ.short_desc": {
+          "source": "Name for the topic distribution",
+          "message": "主題分佈的名稱"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.desc": {
+          "source": "Optional project to organize this topic distribution with related resources for better workflow management.",
+          "message": "可選專案，將此主題分佈與相關資源一起組織，以進行更好的工作流程管理。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.cHJvamVjdA.short_desc": {
+          "source": "Project to organize the topic distribution",
+          "message": "用於組織主題分佈的專案"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.desc": {
+          "source": "Select the trained topic model that will be used to generate topic distributions for the input text data.",
+          "message": "選擇將用於為輸入文字資料生成主題分佈的已訓練主題模型。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.display_name": {
+          "source": "Topic Model",
+          "message": "主題模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dG9waWNtb2RlbA.short_desc": {
+          "source": "The topic model to use for distribution analysis",
+          "message": "用於分佈分析的主題模型"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.desc": {
+          "source": "Optional tags to help organize and categorize your topic distributions for easier management and searching.",
+          "message": "可選標籤，有助於組織和分類您的主題分佈，以便更輕鬆地進行管理和搜尋。"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.option.dGFncw.short_desc": {
+          "source": "Tags for organizing topic distributions",
+          "message": "用於組織主題分佈的標籤"
+        },
+        "app.QmlnTWw.action.Y3JlYXRlX3RvcGljX2Rpc3RyaWJ1dGlvbg.short_desc": {
+          "source": "Generate topic distributions for text data",
+          "message": "為文字資料生成主題分佈"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.desc": {
+          "source": "Get a paginated list of all topic models in your BigML account with filtering and sorting options.",
+          "message": "取得 BigML 帳戶中所有主題模型的分頁清單，並提供篩選與排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.display_name": {
+          "source": "List Topic Models",
+          "message": "列出主題模型"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of topic models based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小主題模型清單的範圍。"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for topic models",
+          "message": "主題模型的篩選條件"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of topic models to skip for pagination purposes.",
+          "message": "指定為了分頁目的而要跳過的主題模型數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of topic models to skip",
+          "message": "要跳過的主題模型數量"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of topic models to return in a single request. Default is 20.",
+          "message": "設定單一請求中要傳回的主題模型最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of topic models to return",
+          "message": "要傳回的主題模型最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of topic models.",
+          "message": "指定如何排序主題模型清單。"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for topic models",
+          "message": "主題模型的排序條件"
+        },
+        "app.QmlnTWw.action.bGlzdF90b3BpY19tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of topic models",
+          "message": "擷取主題模型清單"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.desc": {
+          "source": "Get a paginated list of all anomaly detectors in your BigML account with filtering and sorting options.",
+          "message": "取得 BigML 帳戶中所有異常檢測器的分頁清單，並提供篩選與排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.display_name": {
+          "source": "List Anomaly Detectors",
+          "message": "列出異常檢測器"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of anomaly detectors based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小異常檢測器清單的範圍。"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for anomaly detectors",
+          "message": "異常檢測器的篩選條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of anomaly detectors to skip for pagination purposes.",
+          "message": "指定為了分頁目的而要跳過的異常檢測器數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of anomaly detectors to skip",
+          "message": "要跳過的異常檢測器數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of anomaly detectors to return in a single request. Default is 20.",
+          "message": "設定單一請求中要傳回的異常檢測器最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of anomaly detectors to return",
+          "message": "要傳回的異常檢測器最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of anomaly detectors.",
+          "message": "指定如何排序異常檢測器清單。"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for anomaly detectors",
+          "message": "異常檢測器的排序條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9hbm9tYWx5X2RldGVjdG9ycw.short_desc": {
+          "source": "Retrieve a list of anomaly detectors",
+          "message": "擷取異常檢測器清單"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.desc": {
+          "source": "Get a paginated list of all cluster models in your BigML account with filtering and sorting options.",
+          "message": "取得 BigML 帳戶中所有分群模型的分頁清單，並提供篩選與排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.display_name": {
+          "source": "List Clusters",
+          "message": "列出分群"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of cluster models based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小分群模型清單的範圍。"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for clusters",
+          "message": "分群的篩選條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of cluster models to skip for pagination purposes.",
+          "message": "指定為了分頁目的而要跳過的分群模型數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of clusters to skip",
+          "message": "要跳過的分群數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of cluster models to return in a single request. Default is 20.",
+          "message": "設定單一請求中要傳回的分群模型最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of clusters to return",
+          "message": "要傳回的分群最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of cluster models.",
+          "message": "指定如何排序分群模型清單。"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for clusters",
+          "message": "分群的排序條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9jbHVzdGVycw.short_desc": {
+          "source": "Retrieve a list of cluster models",
+          "message": "擷取分群模型清單"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.desc": {
+          "source": "Get a paginated list of all datasets in your BigML account with filtering and sorting options.",
+          "message": "取得 BigML 帳戶中所有資料集的分頁清單，並提供篩選與排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.display_name": {
+          "source": "List Datasets",
+          "message": "列出資料集"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of datasets based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小資料集清單的範圍。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for datasets",
+          "message": "資料集的篩選條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of datasets to skip for pagination purposes.",
+          "message": "指定為了分頁目的而要跳過的資料集數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of datasets to skip",
+          "message": "要跳過的資料集數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of datasets to return in a single request. Default is 20.",
+          "message": "設定單一請求中要傳回的資料集最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of datasets to return",
+          "message": "要傳回的資料集最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of datasets.",
+          "message": "指定如何排序資料集清單。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for datasets",
+          "message": "資料集的排序條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9kYXRhc2V0cw.short_desc": {
+          "source": "Retrieve a list of datasets",
+          "message": "擷取資料集清單"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.desc": {
+          "source": "Get a paginated list of all deep networks in your BigML account with filtering and sorting options.",
+          "message": "取得 BigML 帳戶中所有深度網路的分頁清單，並提供篩選與排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.display_name": {
+          "source": "List Deep Networks",
+          "message": "列出深度網路"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of deep networks based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小深度網路清單的範圍。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for deep networks",
+          "message": "深度網路的篩選條件"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of deep networks to skip for pagination purposes.",
+          "message": "指定為了分頁目的而要跳過的深度網路數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deep networks to skip",
+          "message": "要跳過的深度網路數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of deep networks to return in a single request. Default is 20.",
+          "message": "設定單次請求中要返回的深度網路最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deep networks to return",
+          "message": "要返回的深度網路最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of deep networks.",
+          "message": "指定如何排序深度網路列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for deep networks",
+          "message": "深度網路的排序標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9kZWVwbmV0cw.short_desc": {
+          "source": "Retrieve a list of deep networks",
+          "message": "擷取深度網路列表"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.desc": {
+          "source": "Get a paginated list of all ensemble models in your BigML account with filtering and sorting options.",
+          "message": "取得您 BigML 帳號中所有整合模型的分頁列表，並提供篩選和排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.display_name": {
+          "source": "List Ensembles",
+          "message": "列出整合模型"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of ensemble models based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小整合模型列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for ensembles",
+          "message": "整合模型的篩選標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of ensemble models to skip for pagination purposes.",
+          "message": "指定分頁時要跳過的整合模型數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of ensembles to skip",
+          "message": "要跳過的整合模型數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of ensemble models to return in a single request. Default is 20.",
+          "message": "設定單次請求中要返回的整合模型最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ensembles to return",
+          "message": "要返回的整合模型最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of ensemble models.",
+          "message": "指定如何排序整合模型列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for ensembles",
+          "message": "整合模型的排序標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9lbnNlbWJsZXM.short_desc": {
+          "source": "Retrieve a list of ensemble models",
+          "message": "擷取整合模型列表"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.desc": {
+          "source": "Get a paginated list of all machine learning models in your BigML account with filtering and sorting options.",
+          "message": "取得您 BigML 帳號中所有機器學習模型的分頁列表，並提供篩選和排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.display_name": {
+          "source": "List Models",
+          "message": "列出模型"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of models based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小模型列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for models",
+          "message": "模型的篩選標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of models to skip for pagination purposes.",
+          "message": "指定分頁時要跳過的模型數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of models to skip",
+          "message": "要跳過的模型數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of models to return in a single request. Default is 20.",
+          "message": "設定單次請求中要返回的模型最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of models to return",
+          "message": "要返回的模型最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of models.",
+          "message": "指定如何排序模型列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for models",
+          "message": "模型的排序標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9tb2RlbHM.short_desc": {
+          "source": "Retrieve a list of machine learning models",
+          "message": "擷取機器學習模型列表"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Get a paginated list of all projects in your BigML account with filtering and sorting options.",
+          "message": "取得您 BigML 帳號中所有專案的分頁列表，並提供篩選和排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "列出專案"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of projects based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小專案列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for projects",
+          "message": "專案的篩選標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of projects to skip for pagination purposes.",
+          "message": "指定分頁時要跳過的專案數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of projects to skip",
+          "message": "要跳過的專案數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of projects to return in a single request. Default is 20.",
+          "message": "設定單次請求中要返回的專案最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of projects to return",
+          "message": "要傳回的最大專案數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of projects.",
+          "message": "指定如何排序專案列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for projects",
+          "message": "專案的排序標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve a list of projects",
+          "message": "擷取專案列表"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.desc": {
+          "source": "Get a paginated list of all data sources in your BigML account with filtering and sorting options.",
+          "message": "取得您 BigML 帳號中所有資料源的分頁列表，並提供篩選和排序選項。"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.display_name": {
+          "source": "List Sources",
+          "message": "列出資料源"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.desc": {
+          "source": "Apply filters to narrow down the list of data sources based on specific criteria.",
+          "message": "套用篩選條件以根據特定標準縮小資料源列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾波器"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for sources",
+          "message": "資料源的篩選標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of data sources to skip for pagination purposes.",
+          "message": "指定分頁時要跳過的資料源數量。"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of sources to skip",
+          "message": "要跳過的資料源數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of data sources to return in a single request. Default is 20.",
+          "message": "設定單次請求中要返回的資料源最大數量。預設值為 20。"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of sources to return",
+          "message": "要返回的資料源最大數量"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.desc": {
+          "source": "Specify how to sort the list of data sources.",
+          "message": "指定如何排序資料源列表。"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.option.c29ydA.short_desc": {
+          "source": "Sorting criteria for sources",
+          "message": "資料源的排序標準"
+        },
+        "app.QmlnTWw.action.bGlzdF9zb3VyY2Vz.short_desc": {
+          "source": "Retrieve a list of data sources",
+          "message": "擷取資料源列表"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **BigML** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的身份驗證對 **BigML** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭和請求內文。回應將以包含狀態碼、回應標頭和回應內文的 Hash 格式返回。\n\n對於尚未在此應用程式中公開為主要動作的端點，請使用此動作。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.QmlnTWw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to BigML",
+          "message": "對 BigML 發起自訂 API 呼叫"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.desc": {
+          "source": "Monitor your BigML account for newly created resources such as models, datasets, clusters, and other machine learning resources. This trigger allows you to automate workflows when specific types of resources are created.",
+          "message": "監控您 BigML 帳號中新建立的資源，例如模型、資料集、群集和其他機器學習資源。當建立特定類型的資源時，此觸發條件可讓您自動化工作流程。"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.display_name": {
+          "source": "New Resource",
+          "message": "新資源"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.desc": {
+          "source": "Optional filter to only trigger for resources whose names contain this text. Leave empty to monitor all resources of the selected type.",
+          "message": "選填篩選條件，僅針對名稱包含此文字的資源觸發。留空可監控所選取類型的所有資源。"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.display_name": {
+          "source": "Name Filter",
+          "message": "名稱篩選器"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.bmFtZQ.short_desc": {
+          "source": "Filter resources by name pattern",
+          "message": "依名稱模式篩選資源"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.desc": {
+          "source": "Optional filter to only trigger for resources created within a specific project. Leave empty to monitor resources across all projects.",
+          "message": "選填篩選條件，僅針對在特定專案中建立的資源觸發。留空可監控所有專案中的資源。"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.display_name": {
+          "source": "Project Filter",
+          "message": "專案篩選器"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.cHJvamVjdA.short_desc": {
+          "source": "Filter resources by project",
+          "message": "依專案篩選資源"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.desc": {
+          "source": "Optional filter to only trigger for resources that have any of the specified tags. Leave empty to monitor all resources regardless of tags.",
+          "message": "選填篩選條件，僅針對擁有任何指定標籤的資源觸發。留空可監控所有資源（不限標籤）。"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.display_name": {
+          "source": "Tags Filter",
+          "message": "標籤篩選器"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dGFncw.short_desc": {
+          "source": "Filter resources by tags",
+          "message": "依標籤篩選資源"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOm1vZGVs.display_name": {
+          "source": "Model",
+          "message": "模型"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmFub21hbHk.display_name": {
+          "source": "Anomaly Detector",
+          "message": "異常檢測器"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmNsdXN0ZXI.display_name": {
+          "source": "Cluster",
+          "message": "Cluster"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmRlZXBuZXQ.display_name": {
+          "source": "Deepnet",
+          "message": "Deepnet"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOmVuc2VtYmxl.display_name": {
+          "source": "Ensemble",
+          "message": "集成"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.allowed-value.c3RyaW5nOnRvcGljbW9kZWw.display_name": {
+          "source": "Topic Model",
+          "message": "主題模型"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.desc": {
+          "source": "Select the specific type of BigML resource you want to monitor for new creations. The trigger will only fire when resources of this type are created.",
+          "message": "選取您要監控建立項目的特定 BigML 資源類型。僅在建立此類型的資源時才會觸發。"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.display_name": {
+          "source": "Resource Type",
+          "message": "資源類型"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.option.dHlwZQ.short_desc": {
+          "source": "Type of BigML resource to monitor",
+          "message": "要監控的 BigML 資源類型"
+        },
+        "app.QmlnTWw.action.bmV3X3Jlc291cmNl.short_desc": {
+          "source": "Triggers when a new BigML resource is created",
+          "message": "當建立新的 BigML 資源時觸發"
+        },
+        "app.QmlnTWw.desc": {
+          "source": "Connect your BigML account to build, evaluate, and deploy machine learning models at scale. Create datasets, build predictive models, perform anomaly detection, cluster analysis, and time series forecasting. Automate your machine learning workflows and integrate predictive analytics into your applications with BigML's comprehensive machine learning platform.",
+          "message": "連接您的 BigML 帳戶，以大規模建立、評估和部署機器學習模型。建立資料集、建置預測模型、執行異常偵測、群集分析和時間序列預測。透過 BigML 完整的機器學習平台自動化您的機器學習工作流程，並將預測分析整合至您的應用程式中。"
+        },
+        "app.QmlnTWw.display_name": {
+          "source": "BigML",
+          "message": "BigML"
+        },
+        "app.QmlnTWw.short_desc": {
+          "source": "Machine learning platform for predictive analytics",
+          "message": "用於預測分析的機器學習平台"
+        }
+      }
+    }
+  }
+}

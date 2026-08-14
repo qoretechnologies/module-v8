@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.desc": {
+          "source": "This trigger fires when a card has passed its due date and has not been marked as complete.",
+          "message": "Questo trigger si attiva quando una scheda ha superato la data di scadenza e non è stata contrassegnata come completata."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
+          "source": "Card Due",
+          "message": "Scheda in scadenza"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board that contains the cards you want to monitor for due dates.",
+          "message": "Seleziona la bacheca Trello che contiene le schede di cui desideri monitorare le date di scadenza."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Bacheca"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board containing the cards to monitor.",
+          "message": "La bacheca contenente le schede da monitorare."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.desc": {
+          "source": "When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.",
+          "message": "Se abilitato, il trigger includerà le schede scadute contrassegnate come completate. Per impostazione predefinita, vengono incluse solo le schede scadute incomplete."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
+          "source": "Include Completed Cards",
+          "message": "Includi schede completate"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
+          "source": "Include cards marked as complete.",
+          "message": "Includi schede contrassegnate come completate."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for overdue cards. Only required if Source is set to \"list\".",
+          "message": "Seleziona un elenco specifico da monitorare per le schede scadute. Richiesto solo se Source è impostato su \"list\"."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.short_desc": {
+          "source": "The specific list containing the cards to monitor.",
+          "message": "L'elenco specifico contenente le schede da monitorare."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "board"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "list"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "Seleziona \"board\" per monitorare tutti gli elenchi in una bacheca o \"list\" per monitorare solo un elenco specifico."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Origine"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "Scegli se monitorare un'intera bacheca o un elenco specifico."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
+          "source": "Triggers when a card becomes overdue.",
+          "message": "Si attiva quando una scheda diventa scaduta."
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crea record"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Get a member",
+          "message": "Ottieni un membro"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Get a Member",
+          "message": "Ottieni un membro"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Get a Member",
+          "message": "Ottieni un membro"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Get-organizations-id",
+          "message": "Get-organizations-id"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Get an Organization",
+          "message": "Ottieni un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Get an Organization",
+          "message": "Ottieni un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.desc": {
+          "source": "List the boards in a Workspace",
+          "message": "Elenca le bacheche in un'area di lavoro"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.display_name": {
+          "source": "Get Boards in an Organization",
+          "message": "Ottieni bacheche in un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.short_desc": {
+          "source": "Get Boards in an Organization",
+          "message": "Ottieni bacheche in un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "List the members in a Workspace",
+          "message": "Elenca i membri in un'area di lavoro"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Get the Members of an Organization",
+          "message": "Ottieni i membri di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Get the Members of an Organization",
+          "message": "Ottieni i membri di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.desc": {
+          "source": "Request a single board.",
+          "message": "Richiedi una singola bacheca."
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.display_name": {
+          "source": "Get a Board",
+          "message": "Ottieni una bacheca"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Get a Board",
+          "message": "Ottieni una bacheca"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.desc": {
+          "source": "Get-checklists-id-checkitems",
+          "message": "Get-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.display_name": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "Ottieni elementi di una checklist"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.short_desc": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "Ottieni elementi di una checklist"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.desc": {
+          "source": "Get information about a single Label.",
+          "message": "Ottieni informazioni su una singola etichetta."
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.display_name": {
+          "source": "Get a Label",
+          "message": "Ottieni un'etichetta"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.short_desc": {
+          "source": "Get a Label",
+          "message": "Ottieni un'etichetta"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.desc": {
+          "source": "Get information about a List",
+          "message": "Ottieni informazioni su una lista"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.display_name": {
+          "source": "Get a List",
+          "message": "Ottieni una lista"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.short_desc": {
+          "source": "Get a List",
+          "message": "Ottieni una lista"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.desc": {
+          "source": "Search for Trello members.",
+          "message": "Cerca membri di Trello."
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.display_name": {
+          "source": "Search for Members",
+          "message": "Cerca membri"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.short_desc": {
+          "source": "Search for Members",
+          "message": "Cerca membri"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "Elimina record dalla tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Elimina record"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "Elimina record dalla tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Delete an Organization",
+          "message": "Elimina un'organizzazione"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Delete an Organization",
+          "message": "Elimina un'organizzazione"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Delete an Organization",
+          "message": "Elimina un'organizzazione"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Remove a member from a Workspace",
+          "message": "Rimuovi un membro da un'area di lavoro"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Remove a Member from an Organization",
+          "message": "Rimuovi un membro da un'organizzazione"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Remove a Member from an Organization",
+          "message": "Rimuovi un membro da un'organizzazione"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.desc": {
+          "source": "Delete a board.",
+          "message": "Elimina una bacheca."
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.display_name": {
+          "source": "Delete a Board",
+          "message": "Elimina una bacheca"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.short_desc": {
+          "source": "Delete a Board",
+          "message": "Elimina una bacheca"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.desc": {
+          "source": "Delete a label by ID.",
+          "message": "Elimina un'etichetta tramite ID."
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.display_name": {
+          "source": "Delete a Label",
+          "message": "Elimina un'etichetta"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.short_desc": {
+          "source": "Delete a Label",
+          "message": "Elimina un'etichetta"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Trello** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Trello** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Trello",
+          "message": "Esegui una chiamata API personalizzata a Trello"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.desc": {
+          "source": "This trigger fires when a new member is added to a specified Trello board.",
+          "message": "Questo trigger si attiva quando un nuovo membro viene aggiunto a una bacheca Trello specificata."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
+          "source": "New Member",
+          "message": "Nuovo membro"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new members being added.",
+          "message": "Seleziona la bacheca Trello in cui desideri monitorare l'aggiunta di nuovi membri."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Bacheca"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new members.",
+          "message": "La bacheca da monitorare per i nuovi membri."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {
+          "source": "Triggers when a new member is added to a board.",
+          "message": "Si attiva quando un nuovo membro viene aggiunto a una bacheca."
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.desc": {
+          "source": "This trigger fires when a new Trello board is created or shared with the authenticated user.",
+          "message": "Questo trigger si attiva quando una nuova bacheca Trello viene creata o condivisa con l'utente autenticato."
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
+          "source": "New Board",
+          "message": "Nuova bacheca"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
+          "source": "Triggers when a new board is created.",
+          "message": "Si attiva quando viene creata una nuova bacheca."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.desc": {
+          "source": "This trigger fires when a new card is added to a specified board or list in Trello.",
+          "message": "Questo trigger si attiva quando una nuova scheda viene aggiunta a una bacheca o lista specificata in Trello."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
+          "source": "New Card",
+          "message": "Nuova scheda"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new cards being created.",
+          "message": "Seleziona la bacheca Trello in cui desideri monitorare la creazione di nuove schede."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Bacheca"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new cards.",
+          "message": "La bacheca da monitorare per le nuove schede."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for new cards. Only required if Source is set to \"list\".",
+          "message": "Seleziona una lista specifica da monitorare per le nuove schede. Richiesto solo se Source è impostato su \"list\"."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.short_desc": {
+          "source": "The specific list to monitor for new cards.",
+          "message": "La lista specifica da monitorare per le nuove schede."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "board"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "list"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "Seleziona \"board\" per monitorare tutti gli elenchi in una bacheca o \"list\" per monitorare solo un elenco specifico."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Origine"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "Scegli se monitorare un'intera bacheca o un elenco specifico."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
+          "source": "Triggers when a new card is created.",
+          "message": "Si attiva quando viene creata una nuova scheda."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.desc": {
+          "source": "This trigger fires when a new label is created on a specified Trello board.",
+          "message": "Questo trigger si attiva quando una nuova etichetta viene creata su una bacheca Trello specificata."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
+          "source": "New Label",
+          "message": "Nuova etichetta"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new labels being created.",
+          "message": "Seleziona la bacheca Trello in cui desideri monitorare la creazione di nuove etichette."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Bacheca"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new labels.",
+          "message": "La bacheca da monitorare per le nuove etichette."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
+          "source": "Triggers when a new label is created.",
+          "message": "Si attiva quando viene creata una nuova etichetta."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.desc": {
+          "source": "This trigger fires when a new list is added to a specified Trello board.",
+          "message": "Questo trigger si attiva quando una nuova lista viene aggiunta a una bacheca Trello specificata."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
+          "source": "New List",
+          "message": "Nuova lista"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new lists being created.",
+          "message": "Seleziona la bacheca Trello in cui desideri monitorare la creazione di nuove liste."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Bacheca"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new lists.",
+          "message": "La bacheca da monitorare per le nuove liste."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.desc": {
+          "source": "When enabled, the trigger will include new lists that are archived. By default, only open lists are included.",
+          "message": "Se abilitato, il trigger includerà le nuove liste archiviate. Per impostazione predefinita, sono incluse solo le liste aperte."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
+          "source": "Include Archived Lists",
+          "message": "Includi liste archiviate"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
+          "source": "Include lists that are archived.",
+          "message": "Includi le liste archiviate."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
+          "source": "Triggers when a new list is created.",
+          "message": "Si attiva quando viene creata una nuova lista."
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "Cerca record corrispondenti nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Cerca record"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "Cerca record corrispondenti nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trova un singolo record"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.desc": {
+          "source": "Create a new board.",
+          "message": "Crea una nuova bacheca."
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.display_name": {
+          "source": "Create a Board",
+          "message": "Crea una bacheca"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.short_desc": {
+          "source": "Create a Board",
+          "message": "Crea una bacheca"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.desc": {
+          "source": "Create a new card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "Crea una nuova scheda. I parametri di query possono anche essere sostituiti con il corpo di una richiesta JSON."
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.display_name": {
+          "source": "Create a New Card",
+          "message": "Crea una nuova scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.short_desc": {
+          "source": "Create a new Card",
+          "message": "Crea una nuova scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.desc": {
+          "source": "Add a new comment to a card",
+          "message": "Aggiungi un nuovo commento a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.display_name": {
+          "source": "Add a New Comment to a Card",
+          "message": "Aggiungi un nuovo commento a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.short_desc": {
+          "source": "Add a new comment to a Card",
+          "message": "Aggiungi un nuovo commento a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.desc": {
+          "source": "Add a member to a card",
+          "message": "Aggiungi un membro a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.display_name": {
+          "source": "Add a Member to a Card",
+          "message": "Aggiungi un membro a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.short_desc": {
+          "source": "Add a Member to a Card",
+          "message": "Aggiungi un membro a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.desc": {
+          "source": "Add a label to a card",
+          "message": "Aggiungi un'etichetta a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.display_name": {
+          "source": "Add a Label to a Card",
+          "message": "Aggiungi un'etichetta a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.short_desc": {
+          "source": "Add a Label to a Card",
+          "message": "Aggiungi un'etichetta a una scheda"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.desc": {
+          "source": "Post-checklists-id-checkitems",
+          "message": "Post-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.display_name": {
+          "source": "Create Checkitem on Checklist",
+          "message": "Crea elemento nella checklist"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.short_desc": {
+          "source": "Create Checkitem on Checklist",
+          "message": "Crea elemento nella checklist"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.desc": {
+          "source": "Create a new Label on a Board.",
+          "message": "Crea una nuova etichetta in una bacheca."
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.display_name": {
+          "source": "Create a Label",
+          "message": "Crea un'etichetta"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.short_desc": {
+          "source": "Create a Label",
+          "message": "Crea un'etichetta"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.desc": {
+          "source": "Create a new List on a Board",
+          "message": "Crea un nuovo elenco in una bacheca"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.display_name": {
+          "source": "Create a New List",
+          "message": "Crea un nuovo elenco"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.short_desc": {
+          "source": "Create a new List",
+          "message": "Crea un nuovo elenco"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.desc": {
+          "source": "Create a new Workspace",
+          "message": "Crea un nuovo spazio di lavoro"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.display_name": {
+          "source": "Create a New Organization",
+          "message": "Crea una nuova organizzazione"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.desc": {
+          "source": "The description for the organizations",
+          "message": "La descrizione per le organizzazioni"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.display_name": {
+          "source": "Desc",
+          "message": "Descrizione"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.short_desc": {
+          "source": "The description for the organizations",
+          "message": "La descrizione per le organizzazioni"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The name to display for the Organization",
+          "message": "Il nome da visualizzare per l'organizzazione"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Nome visualizzato"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "The name to display for the Organization",
+          "message": "Il nome da visualizzare per l'organizzazione"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.desc": {
+          "source": "A string with a length of at least 3. Only lowercase letters, underscores, and numbers are allowed. If the name contains invalid characters, they will be removed. If the name conflicts with an existing name, a new name will be substituted.",
+          "message": "Una stringa con una lunghezza minima di 3 caratteri. Sono consentiti solo lettere minuscole, trattini bassi e numeri. Se il nome contiene caratteri non validi, verranno rimossi. Se il nome è in conflitto con un nome esistente, verrà sostituito con un nuovo nome."
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.short_desc": {
+          "source": "A string with a length of at least 3",
+          "message": "Una stringa con una lunghezza minima di 3 caratteri"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.desc": {
+          "source": "A URL starting with `http://` or `https://`",
+          "message": "Un URL che inizia con `http://` o `https://`"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Sito web"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.short_desc": {
+          "source": "A URL starting with 'http://' or 'https://'",
+          "message": "Un URL che inizia con 'http://' o 'https://'"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.short_desc": {
+          "source": "Create a new Organization",
+          "message": "Crea una nuova organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Update a Member",
+          "message": "Aggiorna un membro"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Update a Member",
+          "message": "Aggiorna un membro"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Update a Member",
+          "message": "Aggiorna un membro"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Update an organization",
+          "message": "Aggiorna un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Update an Organization",
+          "message": "Aggiorna un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Update an Organization",
+          "message": "Aggiorna un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Put-organizations-id-members",
+          "message": "Put-organizations-id-members"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Update an Organization's Members",
+          "message": "Aggiorna i membri di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Update an Organization's Members",
+          "message": "Aggiorna i membri di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.desc": {
+          "source": "Add a member to a Workspace or update their member type.",
+          "message": "Aggiungi un membro a uno spazio di lavoro o aggiorna il tipo di membro."
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.display_name": {
+          "source": "Update a Member of an Organization",
+          "message": "Aggiorna un membro di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.short_desc": {
+          "source": "Update a Member of an Organization",
+          "message": "Aggiorna un membro di un'organizzazione"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.desc": {
+          "source": "Update an existing board by id",
+          "message": "Aggiorna una bacheca esistente tramite ID"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.display_name": {
+          "source": "Update a Board",
+          "message": "Aggiorna una bacheca"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Update a Board",
+          "message": "Aggiorna una bacheca"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.desc": {
+          "source": "Add a member to the board.",
+          "message": "Aggiungi un membro alla bacheca."
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.display_name": {
+          "source": "Add a Member to a Board",
+          "message": "Aggiungi un membro a una bacheca"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.short_desc": {
+          "source": "Add a Member to a Board",
+          "message": "Aggiungi un membro a una bacheca"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.desc": {
+          "source": "Update a card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "Aggiorna una scheda. È inoltre possibile sostituire i parametri di query con il corpo della richiesta JSON."
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.display_name": {
+          "source": "Update a Card",
+          "message": "Aggiorna una scheda"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.short_desc": {
+          "source": "Update a Card",
+          "message": "Aggiorna una scheda"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.desc": {
+          "source": "Update an item in a checklist on a card.",
+          "message": "Aggiorna un elemento in una checklist su una scheda."
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.display_name": {
+          "source": "Update a Checkitem on a Card",
+          "message": "Aggiorna un elemento della checklist su una scheda"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.short_desc": {
+          "source": "Update a checkItem on a Card",
+          "message": "Aggiorna un elemento della checklist su una scheda"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.desc": {
+          "source": "Update a label by ID.",
+          "message": "Aggiorna un'etichetta tramite ID."
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.display_name": {
+          "source": "Update a Label",
+          "message": "Aggiorna un'etichetta"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.short_desc": {
+          "source": "Update a Label",
+          "message": "Aggiorna un'etichetta"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.desc": {
+          "source": "Update the properties of a List",
+          "message": "Aggiorna le proprietà di un elenco"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.display_name": {
+          "source": "Update a List",
+          "message": "Aggiorna un elenco"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.short_desc": {
+          "source": "Update a List",
+          "message": "Aggiorna un elenco"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aggiorna record"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Trello\""
+        },
+        "app.VHJlbGxv.desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.",
+          "message": "Trello è uno strumento di collaborazione che organizza i tuoi progetti in bacheche. È un'applicazione web per la creazione di elenchi in stile Kanban ed è una sussidiaria di Atlassian."
+        },
+        "app.VHJlbGxv.display_name": {
+          "source": "Trello",
+          "message": "Trello"
+        },
+        "app.VHJlbGxv.short_desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards.",
+          "message": "Trello è uno strumento di collaborazione che organizza i tuoi progetti in bacheche."
+        }
+      }
+    }
+  }
+}

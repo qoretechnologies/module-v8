@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.desc": {
+          "source": "Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.",
+          "message": "Získá kompletní podrobnosti o konkrétní události včetně úplného výpisu zásobníku, drobečkové navigace (sled událostí vedoucích k chybě), kontextu uživatele, informací o zařízení, štítků, podrobností o SDK a všech zachycených metadat. Zásadní pro ladění a pochopení přesných podmínek, za kterých k chybě došlo."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
+          "source": "Get Event Details",
+          "message": "Získat podrobnosti události"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.desc": {
+          "source": "Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings.",
+          "message": "Zadejte ID události (hexadecimální řetězec), kterou chcete načíst. ID událostí lze nalézt v podrobnostech problémů nebo ve výpisech událostí."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.display_name": {
+          "source": "Event ID",
+          "message": "ID události"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.short_desc": {
+          "source": "The unique identifier of the event",
+          "message": "Jedinečný identifikátor události"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.desc": {
+          "source": "Select the project that the event belongs to.",
+          "message": "Vyberte projekt, ke kterému událost patří."
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the event",
+          "message": "Projekt obsahující událost"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
+          "source": "Retrieve detailed information about a specific event",
+          "message": "Získat podrobné informace o konkrétní události"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.desc": {
+          "source": "Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.",
+          "message": "Získá komplexní podrobnosti o konkrétním problému včetně jeho stavu, metadat, přiřazení, statistik (počet událostí, dopad na uživatele, četnost), účastníků, historie aktivit, propojených integrací a podrobností o nejnovější události. Zásadní pro pochopení celkového kontextu a historie problému."
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
+          "source": "Get Issue Details",
+          "message": "Získat podrobnosti problému"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations.",
+          "message": "Zadejte ID problému, který chcete načíst. ID problémů jsou číselné hodnoty, které lze najít v uživatelském rozhraní Sentry nebo z operací výpisu."
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "ID problému"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue",
+          "message": "Jedinečný identifikátor problému"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
+          "source": "Retrieve detailed information about a specific issue",
+          "message": "Získat podrobné informace o konkrétním problému"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.",
+          "message": "Získá komplexní podrobnosti o konkrétním projektu Sentry včetně možností konfigurace, přiřazení týmů, integrací, funkcí, zdrojů symbolů a statistik projektu. Použijte k pochopení nastavení a možností projektu."
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project Details",
+          "message": "Získat podrobnosti projektu"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.desc": {
+          "source": "Select or enter the slug identifier of the project you want to retrieve details for.",
+          "message": "Vyberte nebo zadejte identifikátor (slug) projektu, pro který chcete získat podrobnosti."
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve",
+          "message": "Projekt k načtení"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific project",
+          "message": "Získat podrobné informace o konkrétním projektu"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.desc": {
+          "source": "Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.",
+          "message": "Získá komplexní podrobnosti o konkrétním týmu včetně jeho členů, přiřazených projektů, přístupových oprávnění, nastavení rolí, externích integrací (jako jsou kanály Slack) a role na úrovni organizace. Použijte k pochopení struktury týmu a vlastnictví projektů."
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
+          "source": "Get Team Details",
+          "message": "Získat podrobnosti týmu"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.desc": {
+          "source": "Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for.",
+          "message": "Zadejte slug týmu (identifikátor vhodný pro URL), pro který chcete získat podrobnosti."
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID týmu"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.short_desc": {
+          "source": "The team slug to retrieve",
+          "message": "Slug týmu k načtení"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
+          "source": "Retrieve detailed information about a specific team",
+          "message": "Získat podrobné informace o konkrétním týmu"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.desc": {
+          "source": "Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.",
+          "message": "Získá stránkovaný seznam všech týmů ve vaší organizaci Sentry. Týmy představují skupiny vývojářů spolupracujících na projektech. Vrací podrobnosti o týmu včetně počtu členů, přístupových oprávnění, přiřazení rolí, propojených projektů a externích týmových integrací."
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
+          "source": "List Teams",
+          "message": "Vypsat týmy"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of teams.",
+          "message": "Použijte kurzor z předchozí odpovědi k procházení stránek týmů."
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Kurzor stránkování pro načtení dalších výsledků"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
+          "source": "Retrieve all teams in your organization",
+          "message": "Získat všechny týmy ve vaší organizaci"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.desc": {
+          "source": "Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.",
+          "message": "Získá stránkovaný seznam problémů ze všech projektů ve vaší organizaci. To poskytuje celoorganizační přehled o problémech napříč všemi aplikacemi a službami. Použijte filtry dotazu k zúžení výsledků podle projektu, platformy, stavu nebo jiných kritérií."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
+          "source": "List Organization Issues",
+          "message": "Vypsat problémy organizace"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to retrieve additional pages of organization-wide issues.",
+          "message": "Použijte kurzor z předchozí odpovědi k načtení dalších stránek problémů v rámci celé organizace."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Kurzor stránkování pro načtení dalších výsledků"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs across all projects.",
+          "message": "Je-li povoleno, umožňuje vyhledávat problémy pomocí jejich krátkých ID napříč všemi projekty."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "Vyhledávání podle krátkého ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "Zda vyhledávat problémy podle jejich krátkého ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hodin"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics and metrics across the organization.",
+          "message": "Časové období pro výpočet statistik a metrik problémů v rámci celé organizace."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Období statistik"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Časové období pro statistiky problémů"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.",
+          "message": "Použijte syntaxi dotazů Sentry k filtrování problémů napříč všemi projekty. Filtrujte podle projektu, platformy, prostředí, stavu, štítků nebo jakékoli jiné vlastnosti problému."
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Filtr dotazu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "Vyhledávací dotaz pro filtrování problémů"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
+          "source": "Retrieve issues across the entire organization",
+          "message": "Získat problémy z celé organizace"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.desc": {
+          "source": "Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.",
+          "message": "Získá stránkovaný seznam událostí (jednotlivých výskytů chyb nebo transakcí) z konkrétního projektu. Události jsou nezpracovaná data odeslaná do Sentry a jsou seskupována do problémů. Použijte parametr full pro načtení kompletního datového obsahu události včetně kontextu, drobečků a metadat."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
+          "source": "List Project Events",
+          "message": "Vypsat události projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of events.",
+          "message": "Použijte kurzor z předchozí odpovědi k procházení stránek událostí."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Kurzor stránkování pro načtení dalších výsledků"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.desc": {
+          "source": "When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.",
+          "message": "Je-li povoleno, vrací úplný datový obsah události včetně veškerého kontextu, drobečků, výpisů zásobníku a metadat. Je-li zakázáno, vrací pouze souhrnné informace."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
+          "source": "Full Details",
+          "message": "Úplné podrobnosti"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
+          "source": "Whether to return complete event data",
+          "message": "Zda vracet kompletní data události"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose events you want to list.",
+          "message": "Vyberte projekt, jehož události chcete vypsat."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve events from",
+          "message": "Projekt, ze kterého se mají načíst události"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
+          "source": "Retrieve events from a specific project",
+          "message": "Získat události z konkrétního projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.desc": {
+          "source": "Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.",
+          "message": "Získá stránkovaný seznam problémů (seskupených chyb nebo potíží) z konkrétního projektu. Problémy představují jednotlivé chyby ovlivňující vaši aplikaci, přičemž více výskytů událostí je seskupeno podle otisku. Filtrujte pomocí dotazu pro vyhledání konkrétních typů problémů a použijte období statistik pro zobrazení relevantních metrik."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
+          "source": "List Project Issues",
+          "message": "Vypsat problémy projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of issues.",
+          "message": "Použijte kurzor z předchozí odpovědi k procházení stránek problémů."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Kurzor stránkování pro načtení dalších výsledků"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.",
+          "message": "Je-li povoleno, umožňuje vyhledávat problémy pomocí jejich krátkých ID (např. PROJECT-123) místo úplných ID problémů."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "Vyhledávání podle krátkého ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "Zda vyhledávat problémy podle jejich krátkého ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hodin"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 dní"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics such as event count, frequency, and user impact.",
+          "message": "Časový rozsah pro výpočet statistik problémů, jako je počet událostí, frekvence a dopad na uživatele."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Období statistik"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Časové období pro statistiky problémů"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose issues you want to list.",
+          "message": "Vyberte projekt, jehož problémy chcete vypsat."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve issues from",
+          "message": "Projekt, ze kterého se mají načíst problémy"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: \"is:unresolved assigned:me\"",
+          "message": "Použijte syntaxi dotazů Sentry k filtrování problémů podle vlastností, jako je stav, řešitel, tagy, platforma nebo časový rozsah. Příklad: \"is:unresolved assigned:me\""
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Filtr dotazu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "Vyhledávací dotaz pro filtrování problémů"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
+          "source": "Retrieve issues from a specific project",
+          "message": "Načíst problémy z konkrétního projektu"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.",
+          "message": "Načte stránkovaný seznam všech projektů ve vaší organizaci Sentry. Každý projekt představuje jednotlivou monitorovanou aplikaci nebo službu. Vrací podrobnosti o projektu včetně názvu, platformy, data vytvoření, členství v týmu a konfigurace."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Seznam projektů"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning.",
+          "message": "Použijte kurzor z předchozí odpovědi k načtení další nebo předchozí stránky výsledků. Chcete-li začít od začátku, ponechte prázdné."
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "Kurzor stránkování pro načtení dalších výsledků"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all projects in your organization",
+          "message": "Načíst všechny projekty ve vaší organizaci"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Sentry** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do služby **Sentry** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď je vrácena jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci k dispozici jako samostatné akce."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Sentry",
+          "message": "Provést vlastní volání API do Sentry"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.desc": {
+          "source": "Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.",
+          "message": "Monitoruje všechny projekty ve vaší organizaci Sentry a spustí se, když je v libovolném projektu zjištěn nový problém. To poskytuje celoorganizační přehled o problémech napříč všemi aplikacemi a službami. Pomocí filtrů dotazů se můžete zaměřit na konkrétní typy nebo charakteristiky problémů."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
+          "source": "New Organization Issue",
+          "message": "Nový problém v organizaci"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hodin"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.",
+          "message": "Časový rozsah pro sběr statistik problémů napříč všemi projekty. Určuje časové okno pro metriky, jako je frekvence a dopad na uživatele."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Období statistik"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Časové období pro statistiky problémů"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.",
+          "message": "Použijte syntaxi dotazů Sentry k filtrování, které problémy vyvolají tuto událost napříč všemi projekty. Filtrujte podle vlastností, jako je platforma, prostředí, vydání nebo vlastní tagy."
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Filtr dotazu"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "Volitelný vyhledávací dotaz pro filtrování problémů"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
+          "source": "Triggers when a new issue is detected across the entire organization",
+          "message": "Spustí se, když je zjištěn nový problém v celé organizaci"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.desc": {
+          "source": "Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.",
+          "message": "Monitoruje konkrétní projekt Sentry a spustí se, když je zjištěn nový problém (seskupená chyba nebo potíž). Problémy představují jednotlivé chyby v aplikaci s událostmi seskupenými podle otisku (fingerprint). Pomocí volitelných filtrů dotazů a časových období se můžete zaměřit na konkrétní typy problémů."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
+          "source": "New Project Issue",
+          "message": "Nový problém v projektu"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 hodin"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 dní"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.",
+          "message": "Časový rozsah pro sběr statistik problémů. Ovlivňuje metriky, jako je počet událostí a dopad na uživatele ve vybraném období."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "Období statistik"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "Časové období pro statistiky problémů"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.desc": {
+          "source": "Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.",
+          "message": "Vyberte projekt Sentry, který chcete monitorovat. Projekty představují jednotlivé aplikace nebo služby ve vaší organizaci."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to monitor for new issues",
+          "message": "Projekt k monitorování nových problémů"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.",
+          "message": "Použijte syntaxi dotazů Sentry k filtrování, které problémy vyvolají tuto událost. Můžete například filtrovat podle prohlížeče, zařízení, tagů nebo podle toho, zda jsou chyby neošetřené."
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "Filtr dotazu"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "Volitelný vyhledávací dotaz pro filtrování problémů"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
+          "source": "Triggers when a new issue is detected in a specific project",
+          "message": "Spustí se, když je zjištěn nový problém v konkrétním projektu"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.desc": {
+          "source": "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.",
+          "message": "Upravuje stav problému (vyřešeno, nevyřešeno, ignorováno), přiřazení, stav záložky, stav odběru nebo viditelnost. Slouží k třídění problémů, jejich přiřazování členům týmu, řešení chyb nebo označování problémů jako ignorovaných. Změny stavu mohou vyvolat upozornění a ovlivnit seskupování problémů."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
+          "source": "Update Issue",
+          "message": "Aktualizovat problém"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.desc": {
+          "source": "Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., \"team:backend\") or user ID.",
+          "message": "Přiřaďte problém konkrétnímu uživateli nebo týmu z důvodu vlastnictví a odpovědnosti. Zadejte slug týmu (např. \"team:backend\") nebo ID uživatele."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "Přiřazeno uživateli"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "User or team to assign the issue to",
+          "message": "Uživatel nebo tým, kterému má být problém přiřazen"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.desc": {
+          "source": "Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.",
+          "message": "Označte problém jako zhlédnutý (zkontrolovaný) nebo nezkontrolovaný. Pomáhá sledovat, které problémy váš tým již prošel."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
+          "source": "Has Seen",
+          "message": "Zhlédnuto"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
+          "source": "Mark whether the issue has been viewed",
+          "message": "Označit, zda byl problém zobrazen"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.desc": {
+          "source": "Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.",
+          "message": "Uložte si problém do záložek pro snadný přístup a filtrování. Problémy v záložkách se zobrazují ve vašem osobním seznamu problémů."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
+          "source": "Is Bookmarked",
+          "message": "Je v záložkách"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
+          "source": "Bookmark status for the issue",
+          "message": "Stav záložky problému"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.desc": {
+          "source": "Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.",
+          "message": "Určuje, zda je problém veřejně viditelný prostřednictvím odkazu ke sdílení. Veřejné problémy si může prohlédnout kdokoli s odkazem, i bez přístupu k Sentry."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
+          "source": "Is Public",
+          "message": "Je veřejný"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
+          "source": "Whether the issue should be publicly accessible",
+          "message": "Zda má být problém veřejně přístupný"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.desc": {
+          "source": "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.",
+          "message": "Přihlaste se k odběru nebo zrušte odběr oznámení o tomto problému. Při přihlášení k odběru budete dostávat upozornění na změny nebo eskalaci problému."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
+          "source": "Is Subscribed",
+          "message": "Odebíráno"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
+          "source": "Subscription status for notifications",
+          "message": "Stav odběru oznámení"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations.",
+          "message": "Zadejte ID problému, který chcete aktualizovat. ID problémů najdete v uživatelském rozhraní Sentry nebo z operací výpisu/vyhledávání."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "ID problému"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue to update",
+          "message": "Jedinečný identifikátor problému k aktualizaci"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOmlnbm9yZWQ.display_name": {
+          "source": "Ignored",
+          "message": "Ignorováno"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVk.display_name": {
+          "source": "Resolved",
+          "message": "Vyřešeno"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVkSW5OZXh0UmVsZWFzZQ.display_name": {
+          "source": "Resolved in Next Release",
+          "message": "Vyřešeno v příštím vydání"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnVucmVzb2x2ZWQ.display_name": {
+          "source": "Unresolved",
+          "message": "Nevyřešeno"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.desc": {
+          "source": "Change the issue status to control its lifecycle. \"Resolved\" marks it as fixed, \"Unresolved\" reopens it, \"Ignored\" archives it temporarily, and \"Resolved in Next Release\" indicates it will be fixed in an upcoming deployment.",
+          "message": "Změnou stavu problému řídíte jeho životní cyklus. Hodnota „Vyřešeno“ jej označí jako opravený, „Nevyřešeno“ jej znovu otevře, „Ignorováno“ jej dočasně archivuje a „Vyřešeno v příštím vydání“ značí, že bude opraven v nadcházejícím nasazení."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the issue",
+          "message": "Nový stav problému"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.desc": {
+          "source": "Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization.",
+          "message": "Volitelně zadejte projekt pro kontext. Ačkoli lze problémy aktualizovat pouze podle ID, uvedení projektu může být užitečné pro organizaci."
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the issue (optional)",
+          "message": "Projekt obsahující problém (volitelné)"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
+          "source": "Update the status or properties of an issue",
+          "message": "Aktualizovat stav nebo vlastnosti problému"
+        },
+        "app.U2VudHJ5.desc": {
+          "source": "The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.",
+          "message": "Integrace se Sentry umožňuje komplexní monitorování chyb a sledování výkonu vašich aplikací. Získejte přístup k projektům, problémům, událostem a týmům a rychle identifikujte, třiďte a řešte problémy. Díky upozorněním v reálném čase a podrobnému kontextu ladění včetně výpisů zásobníku (stack traces), drobečkové navigace (breadcrumbs) a metrik dopadu na uživatele pomáhá Sentry vašemu týmu udržovat kvalitu kódu a poskytovat bezproblémový uživatelský zážitek."
+        },
+        "app.U2VudHJ5.display_name": {
+          "source": "Sentry",
+          "message": "Sentry"
+        },
+        "app.U2VudHJ5.short_desc": {
+          "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
+          "message": "Monitorujte a opravujte chyby, sledujte problémy s výkonem a udržujte funkčnost aplikace pomocí ladicí platformy zaměřené na vývojáře."
+        }
+      }
+    }
+  }
+}

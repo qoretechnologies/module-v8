@@ -1,0 +1,1253 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.desc": {
+          "source": "Create a new item with custom field data in a specified Webflow collection. You can set the item as archived or draft and specify a CMS locale.",
+          "message": "Vytvoriť novú položku s vlastnými údajmi polí v zadanej kolekcii Webflow. Položku môžete nastaviť ako archivovanú alebo koncept a zadať jazykové nastavenie CMS."
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.display_name": {
+          "source": "Create Item",
+          "message": "Vytvoriť položku"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID jazykového nastavenia CMS"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "ID jazykového nastavenia pre položku"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection where you want to create the new item",
+          "message": "Vyberte kolekciu Webflow, v ktorej chcete vytvoriť novú položku"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to create the item in",
+          "message": "Kolekcia, v ktorej sa má položka vytvoriť"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.desc": {
+          "source": "Set to true if you want the item to be archived upon creation",
+          "message": "Nastavte na hodnotu true, ak chcete, aby bola položka po vytvorení archivovaná"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
+          "source": "Is Archived",
+          "message": "Je archivované"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
+          "source": "Whether the item should be archived",
+          "message": "Či má byť položka archivovaná"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.desc": {
+          "source": "Set to true if you want the item to be saved as a draft (default: true)",
+          "message": "Nastavte na hodnotu true, ak chcete, aby bola položka uložená ako koncept (predvolené: true)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
+          "source": "Is Draft",
+          "message": "Je koncept"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
+          "source": "Whether the item should be a draft",
+          "message": "Či má byť položka konceptom"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Y3JlYXRlX2l0ZW0.short_desc": {
+          "source": "Create a new item in a Webflow collection",
+          "message": "Vytvoriť novú položku v kolekcii Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.desc": {
+          "source": "Get detailed information about a specific order from Webflow, including customer details, purchased items, and payment information.",
+          "message": "Získať podrobné informácie o konkrétnej objednávke zo služby Webflow vrátane podrobností o zákazníkovi, zakúpených položkách a informáciách o platbe."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.display_name": {
+          "source": "Get Order",
+          "message": "Získať objednávku"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.desc": {
+          "source": "Select the specific order you want to retrieve information about",
+          "message": "Vyberte konkrétnu objednávku, o ktorej chcete získať informácie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Poradie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.b3JkZXI.short_desc": {
+          "source": "The order to retrieve",
+          "message": "Objednávka na načítanie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site that contains the order",
+          "message": "Vyberte web Webflow, ktorý obsahuje objednávku"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Web Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X29yZGVy.short_desc": {
+          "source": "Retrieve a specific order from Webflow",
+          "message": "Načítať konkrétnu objednávku zo služby Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Get detailed information about a specific Webflow collection including its fields, settings, and metadata.",
+          "message": "Získať podrobné informácie o konkrétnej kolekcii Webflow vrátane jej polí, nastavení a metadát."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "Získať kolekciu"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the specific Webflow collection you want to get information about",
+          "message": "Vyberte konkrétnu kolekciu Webflow, o ktorej chcete získať informácie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to retrieve",
+          "message": "Kolekcia na načítanie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Retrieve information about a Webflow collection",
+          "message": "Načítať informácie o kolekcii Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.desc": {
+          "source": "Get detailed information about a specific item from a Webflow collection, including all its field data.",
+          "message": "Získať podrobné informácie o konkrétnej položke z kolekcie Webflow vrátane všetkých údajov jej polí."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.display_name": {
+          "source": "Get Item",
+          "message": "Získať položku"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID jazykového nastavenia CMS"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "ID jazykového nastavenia pre položku"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to retrieve",
+          "message": "Vyberte kolekciu Webflow, ktorá obsahuje položku, ktorú chcete načítať"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "Kolekcia obsahujúca položku"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to retrieve from the collection",
+          "message": "Vyberte konkrétnu položku, ktorú chcete načítať z kolekcie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Položka"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to retrieve",
+          "message": "Položka na načítanie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X2l0ZW0.short_desc": {
+          "source": "Retrieve a specific item from a Webflow collection",
+          "message": "Načítať konkrétnu položku z kolekcie Webflow"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.desc": {
+          "source": "Get detailed information about a specific Webflow site including its settings, domains, and locale configuration.",
+          "message": "Získať podrobné informácie o konkrétnom webe Webflow vrátane jeho nastavení, domén a konfigurácie jazykových nastavení."
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.display_name": {
+          "source": "Get Site",
+          "message": "Získať web"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.desc": {
+          "source": "Select the specific Webflow site you want to get information about",
+          "message": "Vyberte konkrétny web Webflow, o ktorom chcete získať informácie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.option.c2l0ZQ.short_desc": {
+          "source": "The site to retrieve",
+          "message": "Web na načítanie"
+        },
+        "app.V2ViZmxvdw.action.Z2V0X3NpdGU.short_desc": {
+          "source": "Retrieve information about a Webflow site",
+          "message": "Získať informácie o webe Webflow"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.desc": {
+          "source": "Permanently delete a specified item from a Webflow collection. This action cannot be undone.",
+          "message": "Natrvalo odstrániť zadanú položku z kolekcie Webflow. Túto akciu nemožno vrátiť späť."
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.display_name": {
+          "source": "Delete Item",
+          "message": "Odstrániť položku"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to delete",
+          "message": "Vyberte kolekciu Webflow, ktorá obsahuje položku, ktorú chcete odstrániť"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "Kolekcia obsahujúca položku"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to delete from the collection",
+          "message": "Vyberte konkrétnu položku, ktorú chcete odstrániť z kolekcie"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Položka"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to delete",
+          "message": "Položka na odstránenie"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.ZGVsZXRlX2l0ZW0.short_desc": {
+          "source": "Delete an item from a Webflow collection",
+          "message": "Odstrániť položku z kolekcie Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieve a list of all collections from a specified Webflow site with their basic information.",
+          "message": "Načítať zoznam všetkých kolekcií zo zadaného webu Webflow s ich základnými informáciami."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Zoznam kolekcií"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list collections from",
+          "message": "Vyberte web Webflow, z ktorého chcete zobraziť zoznam kolekcií"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Web Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections from a Webflow site",
+          "message": "Zoznam všetkých kolekcií z webu Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.desc": {
+          "source": "Retrieve a list of all custom domains configured for a specified Webflow site.",
+          "message": "Načítať zoznam všetkých vlastných domén nakonfigurovaných pre zadaný web Webflow."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.display_name": {
+          "source": "List Custom Domains",
+          "message": "Zoznam vlastných domén"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list custom domains from",
+          "message": "Vyberte web Webflow, z ktorého chcete zobraziť zoznam vlastných domén"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Web Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9jdXN0b21fZG9tYWlucw.short_desc": {
+          "source": "List custom domains for a Webflow site",
+          "message": "Zoznam vlastných domén pre web Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.desc": {
+          "source": "Retrieve a paginated list of items from a specified Webflow collection with filtering and sorting options.",
+          "message": "Načítať stránkovaný zoznam položiek zo zadanej kolekcie Webflow s možnosťami filtrovania a zoradenia."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.display_name": {
+          "source": "List Items",
+          "message": "Zoznam položiek"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID to filter items by locale",
+          "message": "Zadajte ID lokalizácie CMS na filtrovanie položiek podľa jazyka"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID jazykového nastavenia CMS"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for filtering items",
+          "message": "ID lokalizácie na filtrovanie položiek"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection you want to list items from",
+          "message": "Vyberte kolekciu Webflow, z ktorej chcete zobraziť položky"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection to list items from",
+          "message": "Kolekcia, z ktorej sa majú zobraziť položky"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.desc": {
+          "source": "The number of items to skip for pagination (default: 0)",
+          "message": "Počet položiek, ktoré sa majú preskočiť pri stránkovaní (predvolené: 0)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of items to skip",
+          "message": "Počet položiek na preskočenie"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.desc": {
+          "source": "Filter items by their last published date range",
+          "message": "Filtrovať položky podľa rozsahu dátumu ich posledného zverejnenia"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.display_name": {
+          "source": "Last Published",
+          "message": "Naposledy zverejnené"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGFzdFB1Ymxpc2hlZA.short_desc": {
+          "source": "Filter by publication date range",
+          "message": "Filtrovať podľa rozsahu dátumu zverejnenia"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of items to return per page (default: 20)",
+          "message": "Maximálny počet položiek vrátených na stránku (predvolené: 20)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of items to return",
+          "message": "Maximálny počet vrátených položiek"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.desc": {
+          "source": "Filter items by their name field",
+          "message": "Filtrovať položky podľa poľa názvu"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Názov"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.bmFtZQ.short_desc": {
+          "source": "Filter by item name",
+          "message": "Filtrovať podľa názvu položky"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Vzostupne"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Zostupne"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.desc": {
+          "source": "Choose whether to sort in ascending or descending order",
+          "message": "Vyberte, či chcete zoradiť vzostupne alebo zostupne"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Poradie zoradenia"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort direction",
+          "message": "Smer zoradenia"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "Name",
+          "message": "Názov"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOmxhc3RQdWJsaXNoZWQ.display_name": {
+          "source": "Last Published",
+          "message": "Naposledy zverejnené"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.allowed-value.c3RyaW5nOnNsdWc.display_name": {
+          "source": "Slug",
+          "message": "Slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.desc": {
+          "source": "Choose the field to sort the items by",
+          "message": "Vyberte pole, podľa ktorého chcete položky zoradiť"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.display_name": {
+          "source": "Sort By",
+          "message": "Zoradiť podľa"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c29ydEJ5.short_desc": {
+          "source": "Field to sort items by",
+          "message": "Pole na zoradenie položiek"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.desc": {
+          "source": "Filter items by their slug field",
+          "message": "Filtrovať položky podľa poľa slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.display_name": {
+          "source": "Slug",
+          "message": "Slug"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.option.c2x1Zw.short_desc": {
+          "source": "Filter by item slug",
+          "message": "Filtrovať podľa slugu položky"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9pdGVtcw.short_desc": {
+          "source": "List items from a Webflow collection",
+          "message": "Zoznam položiek z kolekcie Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.desc": {
+          "source": "Retrieve a paginated list of orders from a specified Webflow site with filtering options.",
+          "message": "Načítať stránkovaný zoznam objednávok zo zadaného webu Webflow s možnosťami filtrovania."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.display_name": {
+          "source": "List Orders",
+          "message": "Zoznam objednávok"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.desc": {
+          "source": "The number of orders to skip for pagination",
+          "message": "Počet objednávok, ktoré sa majú preskočiť pri stránkovaní"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of orders to skip",
+          "message": "Počet objednávok na preskočenie"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of orders to return per page (default: 20)",
+          "message": "Maximálny počet objednávok vrátených na stránku (predvolené: 20)"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of orders to return",
+          "message": "Maximálny počet vrátených objednávok"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to list orders from",
+          "message": "Vyberte web Webflow, z ktorého chcete zobraziť zoznam objednávok"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Web Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmRpc3B1dGUtbG9zdA.display_name": {
+          "source": "Dispute Lost",
+          "message": "Spor prehratý"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmRpc3B1dGVk.display_name": {
+          "source": "Disputed",
+          "message": "Spochybnené"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOmZ1bGZpbGxlZA.display_name": {
+          "source": "Fulfilled",
+          "message": "Vybavené"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Čakajúce"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlZnVuZGVk.display_name": {
+          "source": "Refunded",
+          "message": "Refundované"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.allowed-value.c3RyaW5nOnVuZnVsZmlsbGVk.display_name": {
+          "source": "Unfulfilled",
+          "message": "Nevybavené"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.desc": {
+          "source": "Filter orders by their current status",
+          "message": "Filtrovať objednávky podľa ich aktuálneho stavu"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.option.c3RhdHVz.short_desc": {
+          "source": "Filter by order status",
+          "message": "Filtrovať podľa stavu objednávky"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9vcmRlcnM.short_desc": {
+          "source": "List orders from a Webflow site",
+          "message": "Zoznam objednávok z webu Webflow"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.desc": {
+          "source": "Retrieve a list of all Webflow sites accessible with the current authentication token.",
+          "message": "Načítať zoznam všetkých webov Webflow prístupných pomocou aktuálneho autentifikačného tokenu."
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.display_name": {
+          "source": "List Sites",
+          "message": "Zoznam webov"
+        },
+        "app.V2ViZmxvdw.action.bGlzdF9zaXRlcw.short_desc": {
+          "source": "List all Webflow sites",
+          "message": "Zoznam všetkých webov Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Webflow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do **Webflow** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dotazu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako plnohodnotné akcie v tejto aplikácii."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.V2ViZmxvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Webflow",
+          "message": "Vykonať vlastné volanie API do Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.desc": {
+          "source": "Change the status of a Webflow order to fulfilled, unfulfilled, or refunded with additional options.",
+          "message": "Zmeniť stav objednávky Webflow na vybavená, nevybavená alebo vrátená s ďalšími možnosťami."
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.display_name": {
+          "source": "Mark Order Status",
+          "message": "Označiť stav objednávky"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.desc": {
+          "source": "Select the specific order you want to update the status for",
+          "message": "Vyberte konkrétnu objednávku, ktorej stav chcete aktualizovať"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Poradie"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.b3JkZXI.short_desc": {
+          "source": "The order to update",
+          "message": "Objednávka na aktualizáciu"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site that contains the order",
+          "message": "Vyberte web Webflow, ktorý obsahuje objednávku"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site",
+          "message": "Web Webflow"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOmZ1bGZpbGxlZA.display_name": {
+          "source": "Fulfilled",
+          "message": "Vybavené"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlZnVuZGVk.display_name": {
+          "source": "Refunded",
+          "message": "Refundované"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.allowed-value.c3RyaW5nOnVuZnVsZmlsbGVk.display_name": {
+          "source": "Unfulfilled",
+          "message": "Nevybavené"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.desc": {
+          "source": "Choose the new status to set for the order",
+          "message": "Vyberte nový stav, ktorý chcete nastaviť pre objednávku"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the order",
+          "message": "Nový stav objednávky"
+        },
+        "app.V2ViZmxvdw.action.bWFya19vcmRlcl9zdGF0dXM.short_desc": {
+          "source": "Update the status of a Webflow order",
+          "message": "Aktualizovať stav objednávky Webflow"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.desc": {
+          "source": "This trigger fires whenever a new order is placed on the specified Webflow site. It provides comprehensive order information including customer details, purchased items, payment information, and shipping details.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa na zadanom webe Webflow vytvorí nová objednávka. Poskytuje komplexné informácie o objednávke vrátane údajov o zákazníkovi, zakúpených položkách, informáciách o platbe a podrobnostiach o doručení."
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.display_name": {
+          "source": "New Order",
+          "message": "Nová objednávka"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for new order events",
+          "message": "Vyberte web Webflow, kde chcete sledovať udalosti nových objednávok"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Web Webflow na sledovanie"
+        },
+        "app.V2ViZmxvdw.action.bmV3X29yZGVy.short_desc": {
+          "source": "Triggered when a new order is placed",
+          "message": "Spustí sa pri vytvorení novej objednávky"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.desc": {
+          "source": "This trigger fires whenever a new item is created in any collection within the specified Webflow site. It provides detailed information about the newly created item including its field data.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa v akejkoľvek kolekcii v rámci zadaného webu Webflow vytvorí nová položka. Poskytuje podrobné informácie o novovytvorenej položke vrátane údajov jej polí."
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.display_name": {
+          "source": "New Item",
+          "message": "Nová položka"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for new item creation events",
+          "message": "Vyberte web Webflow, na ktorom chcete monitorovať udalosti vytvorenia novej položky"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Web Webflow na sledovanie"
+        },
+        "app.V2ViZmxvdw.action.bmV3X2l0ZW0.short_desc": {
+          "source": "Triggered when a new item is created in a collection",
+          "message": "Spustí sa pri vytvorení novej položky v kolekcii"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.desc": {
+          "source": "Publish one or more items from a Webflow collection to make them live on the website.",
+          "message": "Zverejnite jednu alebo viac položiek z kolekcie Webflow, aby boli aktívne na webovej stránke."
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.display_name": {
+          "source": "Publish Item",
+          "message": "Zverejniť položku"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the items you want to publish",
+          "message": "Vyberte kolekciu Webflow, ktorá obsahuje položky, ktoré chcete zverejniť"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the items",
+          "message": "Kolekcia obsahujúca položky"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.desc": {
+          "source": "Select one or more items from the collection to publish",
+          "message": "Vyberte jednu alebo viac položiek z kolekcie na zverejnenie"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.display_name": {
+          "source": "Items",
+          "message": "Položky"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.aXRlbXM.short_desc": {
+          "source": "The items to publish",
+          "message": "Položky na zverejnenie"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9pdGVt.short_desc": {
+          "source": "Publish items from a Webflow collection",
+          "message": "Zverejniť položky z kolekcie Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.desc": {
+          "source": "Publish a Webflow site to make all changes live. You can specify custom domains and whether to publish to the Webflow subdomain.",
+          "message": "Zverejnite web Webflow, aby sa uplatnili všetky zmeny. Môžete zadať vlastné domény a vybrať, či sa má zverejniť na subdoméne Webflow."
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.display_name": {
+          "source": "Publish Site",
+          "message": "Zverejniť web"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.desc": {
+          "source": "Specify custom domains to publish the site to (optional)",
+          "message": "Zadajte vlastné domény, na ktorých sa má web zverejniť (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.display_name": {
+          "source": "Custom Domains",
+          "message": "Vlastné domény"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.Y3VzdG9tRG9tYWlucw.short_desc": {
+          "source": "Custom domains to publish to",
+          "message": "Vlastné domény na zverejnenie"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site you want to publish",
+          "message": "Vyberte web Webflow, ktorý chcete zverejniť"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.c2l0ZQ.short_desc": {
+          "source": "The site to publish",
+          "message": "Web na zverejnenie"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.desc": {
+          "source": "Whether to publish the site to its Webflow subdomain",
+          "message": "Či sa má web zverejniť na svojej subdoméne Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.display_name": {
+          "source": "Publish to Webflow Subdomain",
+          "message": "Zverejniť na subdoméne Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.option.cHVibGlzaFRvV2ViZmxvd1N1YmRvbWFpbg.short_desc": {
+          "source": "Whether to publish to Webflow subdomain",
+          "message": "Či sa má zverejniť na subdoméne Webflow"
+        },
+        "app.V2ViZmxvdw.action.cHVibGlzaF9zaXRl.short_desc": {
+          "source": "Publish a Webflow site",
+          "message": "Zverejniť web Webflow"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.desc": {
+          "source": "Update the field data and settings of an existing item in a Webflow collection.",
+          "message": "Aktualizujte údaje polí a nastavenia existujúcej položky v kolekcii Webflow."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.display_name": {
+          "source": "Update Item",
+          "message": "Aktualizovať položku"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.desc": {
+          "source": "Specify the CMS locale ID if working with a multi-locale site",
+          "message": "Zadajte ID jazykového nastavenia CMS, ak pracujete s webom s viacerými jazykovými nastaveniami"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.display_name": {
+          "source": "CMS Locale ID",
+          "message": "ID jazykového nastavenia CMS"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y21zTG9jYWxlSWQ.short_desc": {
+          "source": "The locale ID for the item",
+          "message": "ID jazykového nastavenia pre položku"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.desc": {
+          "source": "Select the Webflow collection that contains the item you want to update",
+          "message": "Vyberte kolekciu Webflow, ktorá obsahuje položku, ktorú chcete aktualizovať"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.display_name": {
+          "source": "Collection",
+          "message": "Kolekcia"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.Y29sbGVjdGlvbg.short_desc": {
+          "source": "The collection containing the item",
+          "message": "Kolekcia obsahujúca položku"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.desc": {
+          "source": "Set to true to archive the item, false to unarchive it",
+          "message": "Nastavte na true pre archiváciu položky, false pre jej zrušenie z archívu"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.display_name": {
+          "source": "Is Archived",
+          "message": "Je archivované"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNBcmNoaXZlZA.short_desc": {
+          "source": "Whether the item should be archived",
+          "message": "Či má byť položka archivovaná"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.desc": {
+          "source": "Set to true to save the item as a draft, false to make it live",
+          "message": "Nastavte na true pre uloženie položky ako koncept, false pre jej zverejnenie"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.display_name": {
+          "source": "Is Draft",
+          "message": "Je koncept"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXNEcmFmdA.short_desc": {
+          "source": "Whether the item should be a draft",
+          "message": "Či má byť položka konceptom"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.desc": {
+          "source": "Select the specific item you want to update",
+          "message": "Vyberte konkrétnu položku, ktorú chcete aktualizovať"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.display_name": {
+          "source": "Item",
+          "message": "Položka"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.aXRlbQ.short_desc": {
+          "source": "The item to update",
+          "message": "Položka na aktualizáciu"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site to filter collections from (optional)",
+          "message": "Vyberte web Webflow, z ktorého chcete filtrovať kolekcie (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site (optional)",
+          "message": "Web Webflow (voliteľné)"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlX2l0ZW0.short_desc": {
+          "source": "Update an existing item in a Webflow collection",
+          "message": "Aktualizovať existujúcu položku v kolekcii Webflow"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.desc": {
+          "source": "This trigger fires whenever an existing item is modified in any collection within the specified Webflow site. It provides information about the updated item including its current field data.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď je upravená existujúca položka v akejkoľvek kolekcii v rámci zadaného webu Webflow. Poskytuje informácie o aktualizovanej položke vrátane jej aktuálnych údajov polí."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.display_name": {
+          "source": "Updated Item",
+          "message": "Aktualizovaná položka"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for item update events",
+          "message": "Vyberte web Webflow, na ktorom chcete monitorovať udalosti aktualizácie položiek"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Web Webflow na sledovanie"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9pdGVt.short_desc": {
+          "source": "Triggered when an item is updated in a collection",
+          "message": "Spustí sa pri aktualizácii položky v kolekcii"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.desc": {
+          "source": "This trigger fires whenever an existing order is modified on the specified Webflow site. This includes status changes, fulfillment updates, refunds, and other order modifications.",
+          "message": "Tento spúšťač sa aktivuje vždy, keď sa na zadanom webe Webflow upraví existujúca objednávka. Zahŕňa to zmeny stavu, aktualizácie vybavenia, refundácie a ďalšie úpravy objednávky."
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.display_name": {
+          "source": "Updated Order",
+          "message": "Aktualizovaná objednávka"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.desc": {
+          "source": "Select the Webflow site where you want to monitor for order update events",
+          "message": "Vyberte web Webflow, na ktorom chcete monitorovať udalosti aktualizácie objednávok"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.display_name": {
+          "source": "Site",
+          "message": "Web"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.option.c2l0ZQ.short_desc": {
+          "source": "The Webflow site to monitor",
+          "message": "Web Webflow na sledovanie"
+        },
+        "app.V2ViZmxvdw.action.dXBkYXRlZF9vcmRlcg.short_desc": {
+          "source": "Triggered when an order status is updated",
+          "message": "Spustí sa pri aktualizácii stavu objednávky"
+        },
+        "app.V2ViZmxvdw.desc": {
+          "source": "Webflow is a powerful web design tool that combines the flexibility of a CMS with the ease of use of a visual editor. It allows users to create responsive websites without writing code, making it accessible for designers and developers alike. With Webflow, you can design, build, and launch websites all in one platform, streamlining the web development process.",
+          "message": "Webflow je výkonný nástroj na tvorbu webov, ktorý spája flexibilitu CMS s jednoduchosťou používania vizuálneho editora. Používateľom umožňuje vytvárať responzívne webové stránky bez písania kódu, vďaka čomu je prístupný pre dizajnérov aj vývojárov. S Webflow môžete navrhovať, vytvárať a spúšťať weby na jednej platforme, čo zefektívňuje proces vývoja webu."
+        },
+        "app.V2ViZmxvdw.display_name": {
+          "source": "Webflow",
+          "message": "Webflow"
+        },
+        "app.V2ViZmxvdw.short_desc": {
+          "source": "Webflow is a web design tool, CMS, and hosting platform that allows users to build responsive websites visually.",
+          "message": "Webflow je nástroj na tvorbu webov, CMS a hostingová platforma, ktorá používateľom umožňuje vizuálne vytvárať responzívne webové stránky."
+        }
+      }
+    }
+  }
+}

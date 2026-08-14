@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.desc": {
+          "source": "Use this action to clear the content of a specified column within a record, resetting its value to empty.",
+          "message": "Tuto akci použijte k vymazání obsahu zadaného sloupce v záznamu a obnovení jeho hodnoty na prázdnou."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
+          "source": "Clear Column Value",
+          "message": "Vymazat hodnotu sloupce"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column you want to clear.",
+          "message": "Jedinečný identifikátor sloupce, který chcete vymazat."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID sloupce"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to clear.",
+          "message": "ID sloupce k vymazání."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to modify.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete upravit."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record.",
+          "message": "ID nástěnky obsahující záznam."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to modify.",
+          "message": "Jedinečný identifikátor záznamu, který chcete upravit."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to modify.",
+          "message": "ID záznamu k úpravě."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
+          "source": "Remove data from a column in a record.",
+          "message": "Odeberte data ze sloupce v záznamu."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Vytvořit nové záznamy v dané tabulce v aplikaci \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvořit záznamy"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Vytvořit nové záznamy v dané tabulce v aplikaci \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.",
+          "message": "Tato akce vám umožňuje vytvořit nový záznam (položku) na zadané nástěnce a při vytváření definovat počáteční hodnoty sloupců."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Vytvořit záznam"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board where you want to create a new record.",
+          "message": "Jedinečný identifikátor nástěnky, na které chcete vytvořit nový záznam."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board where the record will be created.",
+          "message": "ID nástěnky, na které bude záznam vytvořen."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group where you want to create a new record.",
+          "message": "Jedinečný identifikátor skupiny, ve které chcete vytvořit nový záznam."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group where the record will be created.",
+          "message": "ID skupiny, ve které bude záznam vytvořen."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Add a new record to a board.",
+          "message": "Přidat nový záznam na nástěnku."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.desc": {
+          "source": "This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.",
+          "message": "Tato akce vám umožňuje spustit vlastní operaci definovanou vaší integrací nebo konfigurací automatizace a poskytuje flexibilitu pro různé úkoly."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
+          "source": "Custom Action",
+          "message": "Vlastní akce"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.desc": {
+          "source": "The name of the custom action to execute",
+          "message": "Název vlastní akce ke spuštění"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
+          "source": "Action Name",
+          "message": "Název akce"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
+          "source": "The name of the custom action to execute",
+          "message": "Název vlastní akce ke spuštění"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.desc": {
+          "source": "The payload for your custom action",
+          "message": "Datová část (payload) pro vaši vlastní akci"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Datová zátěž"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.short_desc": {
+          "source": "Payload for your custom action",
+          "message": "Datová část (payload) pro vaši vlastní akci"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
+          "source": "Perform a user-defined operation.",
+          "message": "Provést uživatelem definovanou operaci."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.desc": {
+          "source": "This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.",
+          "message": "Tato akce vám umožňuje archivovat konkrétní záznam (položku) na nástěnce Monday.com, což vám pomůže udržet si pořádek v pracovním prostoru odstraněním dokončených nebo neaktivních položek ze zobrazení bez jejich trvalého smazání."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
+          "source": "Archive Record",
+          "message": "Archivovat záznam"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to archive.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete archivovat."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to archive.",
+          "message": "ID nástěnky obsahující záznam k archivaci."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to archive.",
+          "message": "Jedinečný identifikátor záznamu, který chcete archivovat."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to archive.",
+          "message": "ID záznamu k archivaci."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
+          "source": "Move a record to the archive.",
+          "message": "Přesunout záznam do archivu."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.desc": {
+          "source": "This action fetches the details of a specified record, including all column values and associated metadata.",
+          "message": "Tato akce načte podrobnosti o zadaném záznamu včetně všech hodnot sloupců a souvisejících metadat."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Získat záznam"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to get.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete získat."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to get.",
+          "message": "ID nástěnky obsahující záznam k načtení."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to get.",
+          "message": "Jedinečný identifikátor záznamu, který chcete získat."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to get.",
+          "message": "ID záznamu k načtení."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve details of a specific record.",
+          "message": "Získat podrobnosti o konkrétním záznamu."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Smazat záznamy z dané tabulky v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Smazat záznamy"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Smazat záznamy z dané tabulky v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Use this action to permanently delete a specific record from a board, removing all associated data.",
+          "message": "Pomocí této akce trvale smažete konkrétní záznam z nástěnky včetně všech souvisejících dat."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Smazat záznam"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to delete.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete smazat."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to delete.",
+          "message": "ID nástěnky obsahující záznam ke smazání."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to delete.",
+          "message": "Jedinečný identifikátor záznamu, který chcete smazat."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete.",
+          "message": "ID záznamu ke smazání."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Permanently remove a record.",
+          "message": "Trvale odebrat záznam."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.desc": {
+          "source": "Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.",
+          "message": "Pomocí této akce přesunete záznam z jeho aktuální skupiny nebo nástěnky do jiné určené skupiny nebo nástěnky se zachováním jeho dat a historie."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
+          "source": "Move Record",
+          "message": "Přesunout záznam"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to move.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete přesunout."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to move.",
+          "message": "ID nástěnky obsahující záznam k přesunutí."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to move the record to.",
+          "message": "Jedinečný identifikátor skupiny, do které chcete záznam přesunout."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
+          "source": "Destination Group ID",
+          "message": "ID cílové skupiny"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to move the record to.",
+          "message": "ID skupiny, do které chcete záznam přesunout."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to move.",
+          "message": "Jedinečný identifikátor záznamu, který chcete přesunout."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to move.",
+          "message": "ID záznamu k přesunutí."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
+          "source": "Transfer a record to another group or board.",
+          "message": "Přenést záznam do jiné skupiny nebo nástěnky."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Monday.com** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do **Monday.com** s použitím ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL rozhraní API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci zatím nejsou k dispozici jako samostatné akce."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Monday.com",
+          "message": "Provést vlastní volání API do Monday.com"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Spustí se při vytvoření nového záznamu."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nový záznam"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "Jedinečný identifikátor nástěnky, u které se má kontrolovat výskyt nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "ID nástěnky pro kontrolu nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Jedinečný identifikátor skupiny, ve které chcete kontrolovat výskyt nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID skupiny pro kontrolu nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggered when a new item is created.",
+          "message": "Spustí se při vytvoření nové položky."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Spustí se při vytvoření nového záznamu."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
+          "source": "New Record Moved To Group",
+          "message": "Nový záznam přesunut do skupiny"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "Jedinečný identifikátor nástěnky, u které se má kontrolovat výskyt nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "ID nástěnky pro kontrolu nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Jedinečný identifikátor skupiny, ve které chcete kontrolovat výskyt nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID skupiny pro kontrolu nových záznamů."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
+          "source": "Triggered when an item was moved to a group.",
+          "message": "Spustí se při přesunutí položky do skupiny."
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Vyhledat odpovídající záznamy v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhledat záznamy"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Vyhledat odpovídající záznamy v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Vyhledat jeden odpovídající záznam v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Najít jeden záznam"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Vyhledat jeden odpovídající záznam v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.desc": {
+          "source": "This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.",
+          "message": "Tato akce umožňuje vyhledávat záznamy splňující definovaná kritéria, například konkrétní hodnoty sloupců nebo stavy, a vrací seznam odpovídajících záznamů."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
+          "source": "Search Records",
+          "message": "Vyhledat záznamy"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.desc": {
+          "source": "The unique identifier of the column to search in.",
+          "message": "Jedinečný identifikátor sloupce, ve kterém se má vyhledávat."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.display_name": {
+          "source": "Column ID",
+          "message": "ID sloupce"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.short_desc": {
+          "source": "The ID of the column to search in.",
+          "message": "ID sloupce, ve kterém se má vyhledávat."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "Kurzor použitý pro stránkování."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Kurzor"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.short_desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "Kurzor použitý pro stránkování."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the records you want to search for.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznamy, které chcete vyhledat."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to search for records in.",
+          "message": "ID nástěnky, ve které se mají záznamy vyhledat."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return.",
+          "message": "Maximální počet vrácených záznamů."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return.",
+          "message": "Maximální počet vrácených záznamů."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.desc": {
+          "source": "The search query to use to find records.",
+          "message": "Vyhledávací dotaz pro nalezení záznamů."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.display_name": {
+          "source": "Query",
+          "message": "Dotaz"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.short_desc": {
+          "source": "The search query to use.",
+          "message": "Vyhledávací dotaz, který se má použít."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
+          "source": "Find records matching specific criteria.",
+          "message": "Najít záznamy odpovídající zadaným kritériím."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Spustí se při aktualizaci hodnoty sloupce záznamu."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
+          "source": "Record Column Value Updated",
+          "message": "Hodnota sloupce záznamu aktualizována"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column that should be checked for new value.",
+          "message": "Jedinečný identifikátor sloupce, u kterého se má kontrolovat nová hodnota."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID sloupce"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to check for new value.",
+          "message": "ID sloupce pro kontrolu nové hodnoty."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for record field updates.",
+          "message": "Jedinečný identifikátor nástěnky, u které se mají kontrolovat aktualizace polí záznamů."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for record field updates.",
+          "message": "ID nástěnky pro kontrolu aktualizací polí záznamů."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Spustí se při aktualizaci hodnoty sloupce záznamu."
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Aktualizovat existující záznamy v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovat záznamy"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Aktualizovat existující záznamy v dané tabulce v aplikaci „Monday“"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Use this action to update one or more column values of a specific record, allowing you to change its data as needed.",
+          "message": "Pomocí této akce aktualizujete jednu nebo více hodnot sloupců konkrétního záznamu a upravíte tak jeho data podle potřeby."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Aktualizovat záznam"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to update.",
+          "message": "Jedinečný identifikátor nástěnky obsahující záznam, který chcete aktualizovat."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to update.",
+          "message": "ID nástěnky obsahující záznam k aktualizaci."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to update.",
+          "message": "Jedinečný identifikátor záznamu, který chcete aktualizovat."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to update.",
+          "message": "ID záznamu k aktualizaci."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Modify the values of a record's columns.",
+          "message": "Upravit hodnoty sloupců záznamu."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Triggered when an item on the board is updated.",
+          "message": "Spustí se při aktualizaci položky na nástěnce."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "Aktualizovaný záznam"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for updated records.",
+          "message": "Jedinečný identifikátor nástěnky, u které se má kontrolovat výskyt aktualizovaných záznamů."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID nástěnky"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for updated records.",
+          "message": "ID tabule, u které se mají kontrolovat aktualizované záznamy."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Jedinečný identifikátor skupiny, ve které chcete kontrolovat výskyt nových záznamů."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID skupiny pro kontrolu nových záznamů."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggered when an item is updated.",
+          "message": "Spustí se při aktualizaci položky."
+        },
+        "app.TW9uZGF5.desc": {
+          "source": "The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.",
+          "message": "Integrace s Monday.com poskytuje komplexní přístup k vašemu pracovnímu operačnímu systému. Vytvářejte a spravujte tabule, položky, skupiny a sloupce. Sledujte průběh práce, aktualizujte stavy položek, spravujte hodnoty sloupců a monitorujte změny na tabulích. Automatizujte pracovní postupy vytvářením položek, aktualizací záznamů, přesouváním položek mezi skupinami a přijímáním oznámení při úpravě tabulí nebo položek. Ideální pro řízení projektů, sledování úkolů, týmovou spolupráci a automatizaci pracovních postupů v celé vaší organizaci."
+        },
+        "app.TW9uZGF5.display_name": {
+          "source": "Monday.com",
+          "message": "Monday.com"
+        },
+        "app.TW9uZGF5.short_desc": {
+          "source": "Connect to Monday.com to automate work management with boards, items, columns, and updates.",
+          "message": "Připojte se k Monday.com a automatizujte řízení práce pomocí tabulí, položek, sloupců a aktualizací."
+        }
+      }
+    }
+  }
+}

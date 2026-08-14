@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors for newly created records in a specified Business Central object. The trigger polls for records based on their creation timestamp and can be filtered by specific field criteria. Useful for automating workflows when new data is added to your Business Central system.",
+          "message": "監視指定 Business Central 物件中新建立的記錄。此觸發器會根據記錄建立的時間戳記進行輪詢，並可依特定欄位條件篩選。適用於在新資料新增至 Business Central 系統時自動化工作流程。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新增記錄"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which records trigger the event based on field values.",
+          "message": "可選的篩選器，用於根據欄位值限制哪些記錄會觸發事件。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾鏡"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "記錄的可選篩選條件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for new records, such as customers, items, or sales orders.",
+          "message": "要監視新記錄的 Business Central 物件（實體），例如客戶、項目或銷售訂單。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "物件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "要監視的 Business Central 物件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in Business Central.",
+          "message": "當在 Business Central 中建立新記錄時觸發。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Monitors for recently updated records in a specified Business Central object. The trigger polls for records based on their modification timestamp and can be filtered by specific field criteria. Ideal for tracking changes and automating workflows when existing data is modified in your Business Central system.",
+          "message": "監視指定 Business Central 物件中最近更新的記錄。此觸發器會根據記錄修改的時間戳記進行輪詢，並可依特定欄位條件篩選。適合用於追蹤變更並在修改 Business Central 系統中的既存資料時自動化工作流程。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "已更新記錄"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which updated records trigger the event based on field values.",
+          "message": "可選的篩選器，用於根據欄位值限制哪些更新記錄會觸發事件。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾鏡"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "記錄的可選篩選條件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for updated records, such as customers, items, or sales orders.",
+          "message": "要監視更新記錄的 Business Central 物件（實體），例如客戶、項目或銷售訂單。"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "物件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "要監視的 Business Central 物件"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggers when an existing record is modified in Business Central.",
+          "message": "當在 Business Central 中修改既存記錄時觸發。"
+        }
+      }
+    }
+  }
+}

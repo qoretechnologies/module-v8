@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a comprehensive new Typeform with complete customization options including fields, welcome screens, thank you screens, conditional logic, scoring, and advanced settings. Perfect for building surveys, quizzes, contact forms, or any interactive form with complex branching logic and custom styling.",
+          "message": "Vytvorí nový komplexný Typeform s úplnými možnosťami prispôsobenia vrátane polí, uvítacích obrazoviek, ďakovných obrazoviek, podmienenej logiky, bodovania a pokročilých nastavení. Ideálne na vytváranie prieskumov, kvízov, kontaktných formulárov alebo akýchkoľvek interaktívnych formulárov so zložitou logikou vetvenia a vlastným štýlom."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Vytvoriť formulár"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.desc": {
+          "source": "Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.",
+          "message": "Pridajte do formulára otázky a vstupné polia. Každé pole je možné prispôsobiť pomocou rôznych typov, vlastností, validácií a možností bodovania."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.display_name": {
+          "source": "Form Fields",
+          "message": "Polia formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.short_desc": {
+          "source": "The questions and input fields for your form",
+          "message": "Otázky a vstupné polia pre váš formulár"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.desc": {
+          "source": "List of hidden field names that can be used to pass data through URL parameters.",
+          "message": "Zoznam názvov skrytých polí, ktoré možno použiť na odovzdávanie údajov prostredníctvom parametrov URL."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.display_name": {
+          "source": "Hidden Fields",
+          "message": "Skryté polia"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.short_desc": {
+          "source": "Hidden fields to pass data through the form",
+          "message": "Skryté polia na odovzdávanie údajov cez formulár"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.desc": {
+          "source": "Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.",
+          "message": "Vytvorte pravidlá podmienenej logiky na zobrazenie/skrytie polí, prechod na iné sekcie alebo vykonávanie výpočtov na základe odpovedí používateľa."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.display_name": {
+          "source": "Conditional Logic",
+          "message": "Podmienená logika"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.short_desc": {
+          "source": "Rules for conditional branching and calculations",
+          "message": "Pravidlá pre podmienené vetvenie a výpočty"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure form-wide settings like language, progress bar, branding, and behavior options.",
+          "message": "Nakonfigurujte nastavenia celého formulára, ako je jazyk, indikátor priebehu, branding a možnosti správania."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Nastavenia formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Global settings and configuration for the form",
+          "message": "Globálne nastavenia a konfigurácia formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.desc": {
+          "source": "Create welcome screens to introduce your form, explain its purpose, or provide instructions.",
+          "message": "Vytvorte uvítacie obrazovky na predstavenie formulára, vysvetlenie jeho účelu alebo poskytnutie pokynov."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.display_name": {
+          "source": "Welcome Screens",
+          "message": "Uvítacie obrazovky"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.short_desc": {
+          "source": "Introductory screens shown before the form",
+          "message": "Úvodné obrazovky zobrazené pred formulárom"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.desc": {
+          "source": "Create custom thank you screens to show appreciation, provide next steps, or display results.",
+          "message": "Vytvorte vlastné ďakovné obrazovky na vyjadrenie vďaky, poskytnutie ďalších krokov alebo zobrazenie výsledkov."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.display_name": {
+          "source": "Thank You Screens",
+          "message": "Ďakovné obrazovky"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.short_desc": {
+          "source": "Screens shown after form completion",
+          "message": "Obrazovky zobrazené po dokončení formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The main title that will appear at the top of your form and in your form list.",
+          "message": "Hlavný názov, ktorý sa zobrazí v hornej časti formulára a v zozname formulárov."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Form Title",
+          "message": "Názov formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "The title of your new form",
+          "message": "Názov vášho nového formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.desc": {
+          "source": "Define custom variables that can be used in calculations and conditional logic.",
+          "message": "Definujte vlastné premenné, ktoré možno použiť vo výpočtoch a podmienenej logike."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.display_name": {
+          "source": "Form Variables",
+          "message": "Premenné formulára"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.short_desc": {
+          "source": "Custom variables for calculations and logic",
+          "message": "Vlastné premenné pre výpočty a logiku"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Typeform with fields, logic, and custom settings.",
+          "message": "Vytvorte nový Typeform s poľami, logikou a vlastnými nastaveniami."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.desc": {
+          "source": "Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.",
+          "message": "Nahrá obrázok do vášho účtu Typeform, ktorý možno použiť vo formulároch pre otázky s výberom obrázka, pozadia formulárov alebo iné vizuálne prvky. Môžete nahrať buď poskytnutím súboru, alebo zadaním URL adresy existujúceho obrázka."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.display_name": {
+          "source": "Create Image",
+          "message": "Vytvoriť obrázok"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded image. If not provided, the original filename will be used.",
+          "message": "Voliteľný vlastný názov pre nahraný obrázok. Ak nie je zadaný, použije sa pôvodný názov súboru."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Názov súboru"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for the uploaded image",
+          "message": "Vlastný názov pre nahraný obrázok"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "The image file to upload directly to your Typeform account. Supported formats include JPG, PNG, and GIF.",
+          "message": "Súbor obrázka na priame nahranie do vášho účtu Typeform. Medzi podporované formáty patria JPG, PNG a GIF."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "Súbor obrázka"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "Image file to upload",
+          "message": "Súbor obrázka na nahranie"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.desc": {
+          "source": "The URL of an existing image to upload to your Typeform account. Use this if you have an image hosted elsewhere.",
+          "message": "URL adresa existujúceho obrázka na nahranie do vášho účtu Typeform. Použite ju, ak máte obrázok hostovaný inde."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "URL adresa obrázka"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.short_desc": {
+          "source": "URL of the image to upload",
+          "message": "URL adresa obrázka na nahranie"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.short_desc": {
+          "source": "Upload an image to your Typeform account for use in forms.",
+          "message": "Nahrajte obrázok do svojho účtu Typeform na použitie vo formulároch."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches complete details about a specific Typeform including all fields, settings, thank you screens, and metadata. Use this to get the full form definition for analysis, backup, or integration purposes.",
+          "message": "Získa úplné podrobnosti o konkrétnom formulári Typeform vrátane všetkých polí, nastavení, ďakovných obrazoviek a metaúdajov. Použite to na získanie úplnej definície formulára na účely analýzy, zálohovania alebo integrácie."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Získať formulár"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to get detailed information about.",
+          "message": "Vyberte Typeform, o ktorom chcete získať podrobné informácie."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Formulár"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to retrieve",
+          "message": "Formulár na načítanie"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve detailed information about a specific Typeform.",
+          "message": "Získajte podrobné informácie o konkrétnom formulári Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.desc": {
+          "source": "Permanently deletes a Typeform from your account. This action cannot be undone, and all associated responses will also be deleted. Use with caution as this will remove the form and all its data.",
+          "message": "Natrvalo odstráni Typeform z vášho účtu. Túto akciu nemožno vrátiť späť a odstránia sa aj všetky priradené odpovede. Používajte opatrne, pretože tým odstránite formulár a všetky jeho údaje."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.display_name": {
+          "source": "Delete Form",
+          "message": "Odstrániť formulár"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to permanently delete from your account.",
+          "message": "Vyberte Typeform, ktorý chcete natrvalo odstrániť zo svojho účtu."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Formulár"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to delete",
+          "message": "Formulár na odstránenie"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.short_desc": {
+          "source": "Permanently delete a Typeform from your account.",
+          "message": "Natrvalo odstráňte Typeform zo svojho účtu."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Removes an image from your Typeform account. Once deleted, the image will no longer be available for use in any forms. Make sure the image is not currently being used in any active forms before deletion.",
+          "message": "Odstráni obrázok z vášho účtu Typeform. Po odstránení už obrázok nebude k dispozícii na použitie v žiadnych formulároch. Pred odstránením sa uistite, že sa obrázok momentálne nepoužíva v žiadnych aktívnych formulároch."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "Odstrániť obrázok"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.desc": {
+          "source": "Select the image that you want to delete from your Typeform account.",
+          "message": "Vyberte obrázok, ktorý chcete odstrániť zo svojho účtu Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.display_name": {
+          "source": "Image",
+          "message": "Obrázok"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.short_desc": {
+          "source": "The image to delete",
+          "message": "Obrázok na odstránenie"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from your Typeform account.",
+          "message": "Odstráňte obrázok zo svojho účtu Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.desc": {
+          "source": "Fetches all workspaces available in your Typeform account with pagination and search capabilities. Workspaces help organize your forms and collaborate with team members. Use this to get workspace information including form counts and sharing status.",
+          "message": "Získa všetky pracovné priestory dostupné vo vašom účte Typeform s možnosťami stránkovania a vyhľadávania. Pracovné priestory pomáhajú organizovať formuláre a spolupracovať s členmi tímu. Použite to na získanie informácií o pracovnom priestore vrátane počtu formulárov a stavu zdieľania."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
+          "source": "List Workspaces",
+          "message": "Zoznam pracovných priestorov"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter workspaces by their name. Leave empty to retrieve all workspaces.",
+          "message": "Voliteľný vyhľadávací výraz na filtrovanie pracovných priestorov podľa názvu. Ak chcete načítať všetky pracovné priestory, nechajte prázdne."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Hľadať"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter workspaces by name",
+          "message": "Vyhľadávací výraz na filtrovanie pracovných priestorov podľa názvu"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many workspaces.",
+          "message": "Číslo stránky na načítanie. Použite na stránkovanie, ak máte veľa pracovných priestorov."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Stránka"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Číslo stránky pre stránkovanie"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of workspaces to return per page. Maximum is 200, default is 10.",
+          "message": "Počet pracovných priestorov, ktoré sa majú vrátiť na stránku. Maximum je 200, predvolená hodnota je 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of workspaces to return per page",
+          "message": "Počet pracovných priestorov vrátených na stránku"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
+          "source": "Retrieve a list of workspaces in your Typeform account.",
+          "message": "Získajte zoznam pracovných priestorov vo vašom účte Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Fetches all forms in your Typeform account with filtering, sorting, and pagination options. Use this to get an overview of your forms, find specific forms by search criteria, or integrate with other systems.",
+          "message": "Získa všetky formuláre vo vašom účte Typeform s možnosťami filtrovania, zoradenia a stránkovania. Použite to na získanie prehľadu o svojich formulároch, nájdenie konkrétnych formulárov podľa kritérií vyhľadávania alebo integráciu s inými systémami."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "Zoznam formulárov"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned forms.",
+          "message": "Zadajte spôsob zoradenia vrátených formulárov."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Poradie zoradenia"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Spôsob zoradenia výsledkov"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter forms by their title. Leave empty to retrieve all forms.",
+          "message": "Voliteľný vyhľadávací výraz na filtrovanie formulárov podľa názvu. Ak chcete načítať všetky formuláre, nechajte prázdne."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Hľadať"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter forms by title",
+          "message": "Vyhľadávací výraz na filtrovanie formulárov podľa názvu"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many forms.",
+          "message": "Číslo stránky na načítanie. Použite na stránkovanie, ak máte veľa formulárov."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Stránka"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Číslo stránky pre stránkovanie"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of forms to return per page. Maximum is 200, default is 10.",
+          "message": "Počet formulárov, ktoré sa majú vrátiť na stránku. Maximum je 200, predvolená hodnota je 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of forms to return per page",
+          "message": "Počet formulárov vrátených na stránku"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.desc": {
+          "source": "Optional workspace ID to filter forms that belong to a specific workspace.",
+          "message": "Voliteľné ID pracovného priestoru na filtrovanie formulárov, ktoré patria do konkrétneho pracovného priestoru."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.display_name": {
+          "source": "Workspace ID",
+          "message": "ID pracovného priestoru"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.short_desc": {
+          "source": "Filter forms by workspace",
+          "message": "Filtrovať formuláre podľa pracovného priestoru"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms in your Typeform account.",
+          "message": "Získajte zoznam formulárov vo vašom účte Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.desc": {
+          "source": "Fetches all images that have been uploaded to your Typeform account. Use this to see what images are available for use in your forms, manage your image library, or get image URLs for integration purposes.",
+          "message": "Načíta všetky obrázky nahrané do vášho účtu Typeform. Použite túto akciu na zobrazenie dostupných obrázkov pre vaše formuláre, správu knižnice obrázkov alebo získanie URL adries obrázkov na integračné účely."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.display_name": {
+          "source": "List Images",
+          "message": "Zoznam obrázkov"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.short_desc": {
+          "source": "Retrieve all images in your Typeform account.",
+          "message": "Získajte všetky obrázky vo vašom účte Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Fetches all responses submitted to a specific Typeform with comprehensive filtering and sorting options. Use this to analyze form submissions, export data, or integrate responses with other systems.",
+          "message": "Načíta všetky odpovede odoslané do konkrétneho formulára Typeform s komplexnými možnosťami filtrovania a triedenia. Použite túto akciu na analýzu odoslaných formulárov, export údajov alebo integráciu odpovedí s inými systémami."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "Zoznam odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.desc": {
+          "source": "Set to true to only return completed responses, false for incomplete responses.",
+          "message": "Nastavte na true, ak chcete vrátiť iba dokončené odpovede, alebo false pre nedokončené odpovede."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.display_name": {
+          "source": "Completed Only",
+          "message": "Iba dokončené"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.short_desc": {
+          "source": "Only return completed responses",
+          "message": "Vrátiť iba dokončené odpovede"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.desc": {
+          "source": "List of field IDs that must have been answered for a response to be included.",
+          "message": "Zoznam ID polí, ktoré museli byť zodpovedané, aby bola odpoveď zahrnutá."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.display_name": {
+          "source": "Answered Fields",
+          "message": "Zodpovedané polia"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.short_desc": {
+          "source": "Only include responses that answered these fields",
+          "message": "Zahrnúť iba odpovede, ktoré obsahujú odpovede na tieto polia"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.desc": {
+          "source": "Use this token for pagination to get responses that come after a specific response.",
+          "message": "Použite tento token na stránkovanie pre získanie odpovedí nasledujúcich po konkrétnej odpovedi."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.display_name": {
+          "source": "After Token",
+          "message": "Token After"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination token for results after a specific response",
+          "message": "Stránkovací token pre výsledky po konkrétnej odpovedi"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.desc": {
+          "source": "Use this token for pagination to get responses that come before a specific response.",
+          "message": "Použite tento token na stránkovanie pre získanie odpovedí predchádzajúcich konkrétnej odpovedi."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.display_name": {
+          "source": "Before Token",
+          "message": "Token Before"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.short_desc": {
+          "source": "Pagination token for results before a specific response",
+          "message": "Stránkovací token pre výsledky pred konkrétnou odpoveďou"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to exclude from the results.",
+          "message": "Zoznam konkrétnych ID odpovedí, ktoré sa majú vylúčiť z výsledkov."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Exclude Response IDs",
+          "message": "Vylúčiť ID odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to exclude",
+          "message": "Konkrétne ID odpovedí na vylúčenie"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to retrieve responses from.",
+          "message": "Vyberte formulár Typeform, z ktorého chcete získať odpovede."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Formulár"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to get responses from",
+          "message": "Formulár, z ktorého sa majú získať odpovede"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.desc": {
+          "source": "List of specific field IDs to include in the response data.",
+          "message": "Zoznam konkrétnych ID polí, ktoré sa majú zahrnúť do údajov odpovede."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.display_name": {
+          "source": "Include Fields",
+          "message": "Zahrnúť polia"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to include in responses",
+          "message": "Konkrétne polia na zahrnutie do odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to include in the results. Only these responses will be returned.",
+          "message": "Zoznam konkrétnych ID odpovedí, ktoré sa majú zahrnúť do výsledkov. Vrátené budú iba tieto odpovede."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Include Response IDs",
+          "message": "Zahrnúť ID odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to include",
+          "message": "Konkrétne ID odpovedí na zahrnutie"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned responses.",
+          "message": "Zadajte spôsob triedenia vrátených odpovedí."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Poradie zoradenia"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Spôsob zoradenia výsledkov"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.desc": {
+          "source": "Filter responses to only include those submitted after the specified date.",
+          "message": "Filtrovať odpovede tak, aby zahŕňali iba tie, ktoré boli odoslané po zadanom dátume."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.display_name": {
+          "source": "Since Date",
+          "message": "Dátum od"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.short_desc": {
+          "source": "Only include responses submitted after this date",
+          "message": "Zahrnúť iba odpovede odoslané po tomto dátume"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of responses to return. Maximum is 1000, default is 25.",
+          "message": "Počet odpovedí, ktoré sa majú vrátiť. Maximum je 1000, predvolená hodnota je 25."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Veľkosť stránky"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of responses to return",
+          "message": "Počet odpovedí na vrátenie"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.desc": {
+          "source": "Advanced query string to filter responses based on answer values.",
+          "message": "Pokročilý vyhľadávací reťazec na filtrovanie odpovedí podľa hodnôt odpovedí."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Dopyt"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.short_desc": {
+          "source": "Advanced query to filter responses",
+          "message": "Pokročilý dopyt na filtrovanie odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Dokončené"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnBhcnRpYWw.display_name": {
+          "source": "Partial",
+          "message": "Čiastočné"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnN0YXJ0ZWQ.display_name": {
+          "source": "Started",
+          "message": "Začaté"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Filter responses by their completion status (started, partial, or completed).",
+          "message": "Filtrovať odpovede podľa stavu ich dokončenia (started, partial alebo completed)."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Types",
+          "message": "Typy odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Filter by response completion status",
+          "message": "Filtrovať podľa stavu dokončenia odpovede"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.desc": {
+          "source": "Filter responses to only include those submitted before the specified date.",
+          "message": "Filtrovať odpovede tak, aby zahŕňali iba tie, ktoré boli odoslané pred zadaným dátumom."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.display_name": {
+          "source": "Until Date",
+          "message": "Dátum do"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.short_desc": {
+          "source": "Only include responses submitted before this date",
+          "message": "Zahrnúť iba odpovede odoslané pred týmto dátumom"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve responses submitted to a specific Typeform.",
+          "message": "Získajte odpovede odoslané do konkrétneho formulára Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Typeform** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do služby **Typeform** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API daného pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Typeform",
+          "message": "Vykonať vlastné volanie API do Typeform"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "This trigger activates whenever someone submits a response to your Typeform. It provides complete response data including all answers, form definition, calculated scores, and metadata. Perfect for processing form submissions, updating databases, sending notifications, or triggering follow-up workflows based on user responses.",
+          "message": "Tento trigger sa aktivuje vždy, keď niekto odošle odpoveď do vášho formulára Typeform. Poskytuje kompletné údaje odpovede vrátane všetkých odpovedí, definície formulára, vypočítaných skóre a metadát. Ideálne na spracovanie odoslaných formulárov, aktualizáciu databáz, odosielanie oznámení alebo spúšťanie nadväzujúcich pracovných postupov na základe odpovedí používateľov."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "Nová odpoveď formulára"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "Select the specific Typeform that you want to monitor for new submissions. The trigger will fire every time someone completes and submits this form.",
+          "message": "Vyberte konkrétny formulár Typeform, ktorý chcete sledovať pre nové odoslania. Trigger sa spustí zakaždým, keď niekto vyplní a odošle tento formulár."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Formulár"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Typeform to monitor for new responses",
+          "message": "Formulár Typeform na sledovanie nových odpovedí"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Typeform form.",
+          "message": "Spustí sa pri odoslaní novej odpovede do formulára Typeform."
+        },
+        "app.VHlwZWZvcm0.desc": {
+          "source": "Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.",
+          "message": "Typeform je všestranný nástroj na vytváranie formulárov, ktorý vám umožňuje vytvárať pútavé, konverzačné formuláre, prieskumy, kvízy a ankety. Vďaka intuitívnemu rozhraniu a výkonným funkciám môžete zbierať odpovede, analyzovať údaje a integrovať nástroj s inými systémami na zefektívnenie vašich pracovných postupov. Ideálne pre získavanie potenciálnych zákazníkov, spätnú väzbu od zákazníkov, registráciu na udalosti a prieskum trhu."
+        },
+        "app.VHlwZWZvcm0.display_name": {
+          "source": "Typeform",
+          "message": "Typeform"
+        },
+        "app.VHlwZWZvcm0.short_desc": {
+          "source": "Create and manage interactive forms, surveys, and quizzes with Typeform.",
+          "message": "Vytvárajte a spravujte interaktívne formuláre, prieskumy a kvízy pomocou služby Typeform."
+        }
+      }
+    }
+  }
+}

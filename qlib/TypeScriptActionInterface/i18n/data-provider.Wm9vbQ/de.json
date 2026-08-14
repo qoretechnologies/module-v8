@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.desc": {
+          "source": "Display information about a meeting summary.\n\n**Prerequisites**\n* Host user type must have a Pro or higher plan.\n* Enable the **Meeting Summary with AI Companion** feature in the host's account.\n* E2ee meetings do not have summary feature enabled.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Informationen über eine Meeting-Zusammenfassung anzeigen.\n\n**Voraussetzungen**\n* Der Host-Benutzertyp muss über einen Pro- oder höheren Tarif verfügen.\n* Aktivieren Sie die Funktion **Meeting Summary with AI Companion** im Konto des Hosts.\n* Für E2ee-Meetings ist die Zusammenfassungsfunktion nicht aktiviert.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.display_name": {
+          "source": "Get a Meeting Summary",
+          "message": "Meeting-Zusammenfassung abrufen"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.short_desc": {
+          "source": "Get a meeting summary",
+          "message": "Eine Meeting-Zusammenfassung abrufen"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve a list of all the participants who attended a webinar hosted in the past. \n\n**Prerequisites:** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Rufen Sie eine Liste aller Teilnehmer ab, die an einem in der Vergangenheit veranstalteten Webinar teilgenommen haben. \n\n**Voraussetzungen:** \n* Ein Pro- oder höherer Tarif mit einem Webinar-Add-on.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.display_name": {
+          "source": "List Webinar Participants",
+          "message": "Webinar-Teilnehmer auflisten"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "List webinar participants",
+          "message": "Webinar-Teilnehmer auflisten"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Zoom** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwortheader und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoom",
+          "message": "Einen benutzerdefinierten API-Aufruf an Zoom durchführen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.desc": {
+          "source": "[Create a meeting](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The `start_url` value's expiration time is **two hours** for all regular users.\n* For `custCreate` meeting hosts - users created with the `custCreate` parameter via the [**Create users**](-docs-api-users-#tag-users-POST-users) API - the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.\n* For security reasons, the recommended way to programmatically get the updated `start_url` value after expiry is to call the [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) API. Refer to the `start_url` value in the response.\n* **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "[Meeting erstellen](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) für einen Benutzer. Übergeben Sie bei Apps auf Benutzerebene [den Wert `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) anstelle des Parameters `userId`.\n\n**Voraussetzungen:**\n* Der Wert `start_url` eines Meetings ist die URL, die ein Host oder ein alternativer Host verwenden kann, um ein Meeting zu starten. Die Ablaufzeit des Werts `start_url` beträgt für alle regulären Benutzer **zwei Stunden**.\n* Für `custCreate`-Meeting-Hosts – Benutzer, die mit dem Parameter `custCreate` über die API [**Create users**](-docs-api-users-#tag-users-POST-users) erstellt wurden – beträgt die Ablaufzeit des Parameters `start_url` **90 Tage** ab der Generierung von `start_url`.\n* Aus Sicherheitsgründen wird empfohlen, zum programmgesteuerten Abrufen des aktualisierten Werts `start_url` nach Ablauf die API [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) aufzurufen. Beachten Sie den Wert `start_url` in der Antwort.\n* **100 Anfragen pro Tag**. Das Rate-Limit wird auf die `userId` des **Meeting-Hosts** angewendet, die zum Ausführen der Anfrage verwendet wurde.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.display_name": {
+          "source": "Create a Meeting",
+          "message": "Meeting erstellen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.short_desc": {
+          "source": "Create a meeting",
+          "message": "Ein Meeting erstellen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.desc": {
+          "source": "Delete a meeting.\n\n**Prerequisites**:\n* For recurring meetings, the `occurrence_id` is required to delete a specific occurrence. If not provided, the entire recurring series will be deleted.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Ein Meeting löschen.\n\n**Voraussetzungen**:\n* Bei wiederkehrenden Meetings ist `occurrence_id` erforderlich, um ein bestimmtes Vorkommen zu löschen. Wird er nicht angegeben, wird die gesamte wiederkehrende Serie gelöscht.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.display_name": {
+          "source": "Delete a Meeting",
+          "message": "Meeting löschen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.short_desc": {
+          "source": "Delete a meeting",
+          "message": "Ein Meeting löschen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration to a meeting. See [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached. \n\n **Prerequisites:** \n* The host must be a **Licensed** user type.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Erstellen und übermitteln Sie die Registrierung eines Benutzers für ein Meeting. Weitere Informationen zum Festlegen der Anforderungen für diese Felder finden Sie unter [Webinar-Registrierung anpassen](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration). Beachten Sie, dass die Höchstgrenze bei 4.999 Registrierten pro Meeting liegt und Benutzer einen Fehler erhalten, wenn die Kapazität des Meetings erreicht ist. \n\n **Voraussetzungen:** \n* Der Host muss vom Benutzertyp **Licensed** (Lizenziert) sein.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Meeting Registrant",
+          "message": "Meeting-Registrierten hinzufügen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a meeting registrant",
+          "message": "Einen Meeting-Registrierten hinzufügen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.desc": {
+          "source": "List users that have registered for a meeting. A host or a user with admin permission can require [registration for a Zoom meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Prerequisites**:\n* Host user type must be **Pro** or higher plan.\n* Registration must be enabled for the meeting.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Listet Benutzer auf, die sich für ein Meeting registriert haben. Ein Host oder ein Benutzer mit Administratorberechtigung kann eine [Registrierung für ein Zoom-Meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings) verlangen.\n\n**Voraussetzungen**:\n* Der Benutzertyp des Hosts muss einen **Pro**- oder höheren Tarif haben.\n* Die Registrierung muss für das Meeting aktiviert sein.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.display_name": {
+          "source": "List Meeting Registrants",
+          "message": "Meeting-Registrierte auflisten"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.short_desc": {
+          "source": "List meeting registrants",
+          "message": "Meeting-Registrierte auflisten"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.desc": {
+          "source": "Update meeting details.\n\n**Prerequisites**\n* The `start_time` value must be a future date. If the value is omitted or a date is in the past, the API ignores this value and does not update any recurring meetings.\n* The `recurrence` object is required only when updating the entire series of a recurring meeting with `type=8`.\n* This API has a rate limit of **100 requests per day**. You can update a meeting for a maximum of 100 times within a 24-hour period.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Meeting-Details aktualisieren.\n\n**Voraussetzungen**\n* Der Wert `start_time` muss ein Datum in der Zukunft sein. Wenn der Wert weggelassen wird oder ein Datum in der Vergangenheit liegt, ignoriert die API diesen Wert und aktualisiert keine wiederkehrenden Meetings.\n* Das Objekt `recurrence` ist nur erforderlich, wenn die gesamte Serie eines wiederkehrenden Meetings mit `type=8` aktualisiert wird.\n* Diese API hat ein Rate-Limit von **100 Anfragen pro Tag**. Sie können ein Meeting innerhalb eines Zeitraums von 24 Stunden maximal 100 Mal aktualisieren.\n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.display_name": {
+          "source": "Update a Meeting",
+          "message": "Meeting aktualisieren"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.short_desc": {
+          "source": "Update a meeting",
+          "message": "Ein Meeting aktualisieren"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.desc": {
+          "source": "List a meeting host user's scheduled meetings. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* This API **only** supports scheduled meetings. This API does not return information about instant meetings.\n* This API only returns a user's [unexpired meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* When `type` is set to `upcoming`, `upcoming_meetings`, or `previous_meetings`, only a maximum of 6 months of meeting data will be returned. \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Geplante Meetings eines Meeting-Host-Benutzers auflisten. Übergeben Sie bei Apps auf Benutzerebene [den Wert `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) anstelle des Parameters `userId`.\n\n**Voraussetzungen:**\n* Diese API unterstützt **nur** geplante Meetings. Diese API gibt keine Informationen über Sofort-Meetings zurück.\n* Diese API gibt nur [nicht abgelaufene Meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844) eines Benutzers zurück.\n* Wenn `type` auf `upcoming`, `upcoming_meetings` oder `previous_meetings` festgelegt ist, werden Meeting-Daten von maximal 6 Monaten zurückgegeben. \n\n**[Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granulare Bereiche](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate-Limit-Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.display_name": {
+          "source": "List Meetings",
+          "message": "Meetings auflisten"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.short_desc": {
+          "source": "List meetings",
+          "message": "Meetings auflisten"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.desc": {
+          "source": "Retrieve the given meeting's details.\n\n**Prerequisites**:\n* Host user must have a Zoom Meetings Basic license or higher.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Ruft die Details des angegebenen Meetings ab.\n\n**Voraussetzungen**:\n* Der Host-Benutzer muss über eine Zoom Meetings Basic-Lizenz oder höher verfügen.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.display_name": {
+          "source": "Get a Meeting",
+          "message": "Meeting abrufen"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.short_desc": {
+          "source": "Get a meeting",
+          "message": "Meeting abrufen"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.desc": {
+          "source": "Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type.",
+          "message": "Überwacht Zoom-Meetings und löst aus, wenn Meetings basierend auf dem ausgewählten Ereignistyp erstellt, gestartet (live) oder beendet (vergangene Meetings) werden. Gibt Meeting-Details einschließlich Thema, Dauer, Beitritts-URL und Meeting-Typ zurück."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "Neue Besprechung"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOmxpdmU.display_name": {
+          "source": "Triggers when a meeting is started",
+          "message": "Löst aus, wenn ein Meeting gestartet wird"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnByZXZpb3VzX21lZXRpbmdz.display_name": {
+          "source": "Triggers when a meeting is ended",
+          "message": "Löst aus, wenn ein Meeting beendet wird"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Triggers when a meeting is created",
+          "message": "Löst aus, wenn ein Meeting erstellt wird"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.desc": {
+          "source": "Specifies which type of meeting event should trigger this action. Choose \"any\" to trigger on all meeting creations, \"live\" for when meetings start, or \"previous_meetings\" for when meetings end.",
+          "message": "Gibt an, welcher Typ von Meeting-Ereignis diese Aktion auslösen soll. Wählen Sie \"any\", um bei allen Meeting-Erstellungen auszulösen, \"live\", wenn Meetings starten, oder \"previous_meetings\", wenn Meetings enden."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
+          "source": "Meeting Event Type",
+          "message": "Meeting-Ereignistyp"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
+          "source": "Type of meeting event to monitor",
+          "message": "Typ des zu überwachenden Meeting-Ereignisses"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
+          "source": "Triggers when a Zoom meeting is created, started, or ended.",
+          "message": "Löst aus, wenn ein Zoom-Meeting erstellt, gestartet oder beendet wird."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.desc": {
+          "source": "Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.",
+          "message": "Überwacht Zoom-Meeting-Zusammenfassungen und löst aus, wenn nach dem Ende von Meetings neue Zusammenfassungen generiert werden. Gibt Zusammenfassungsdetails einschließlich Meeting-Informationen, Host-Details und Zusammenfassungs-Zeitstempeln zurück."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
+          "source": "New Meeting Summary",
+          "message": "Neue Meeting-Zusammenfassung"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {
+          "source": "Triggers when a new Zoom meeting summary is created.",
+          "message": "Löst aus, wenn eine neue Zoom-Meeting-Zusammenfassung erstellt wird."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.desc": {
+          "source": "Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type.",
+          "message": "Überwacht Zoom-Webinare und löst aus, wenn neue Webinare erstellt werden. Gibt Webinar-Details einschließlich Thema, Dauer, Beitritts-URL, Registrierungs-URL und Webinar-Typ zurück."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
+          "source": "New Webinar",
+          "message": "Neues Webinar"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
+          "source": "Triggers when a new Zoom webinar is created.",
+          "message": "Löst aus, wenn ein neues Zoom-Webinar erstellt wird."
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve information on participants from a past meeting. Note the API doesn't return results if there's only one participant in a meeting.  \n   \n \n**Prerequisites:**  \n \n* Paid account on a Pro or higher plan.\n\n  \n    \n   **Note**: Please double encode your UUID when using this API if the UUID begins with a '-'or contains '-' in it.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Ruft Informationen über Teilnehmer eines vergangenen Meetings ab. Beachten Sie, dass die API keine Ergebnisse zurückgibt, wenn sich nur ein Teilnehmer in einem Meeting befindet.  \n   \n \n**Voraussetzungen:**  \n \n* Kostenpflichtiges Konto mit einem Pro- oder höherwertigen Plan.\n\n  \n    \n   **Hinweis**: Bitte kodieren Sie Ihre UUID doppelt, wenn Sie diese API verwenden und die UUID mit einem '-' beginnt oder ein '-' enthält.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.display_name": {
+          "source": "Get Past Meeting Participants",
+          "message": "Teilnehmer vergangener Meetings abrufen"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "Get past meeting participants",
+          "message": "Teilnehmer vergangener Meetings abrufen"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.desc": {
+          "source": "Returns all of a meeting's [recordings](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4). Use the `download_url` property listed in the response to download the recording files.  To access a password-protected cloud recording, send the `download_access_token` or the user's [OAuth access token](-docs-integrations-oauth-) as a Bearer token in the Authorization header. For example: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Gibt alle [Aufzeichnungen](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4) eines Meetings zurück. Verwenden Sie die in der Antwort aufgeführte Eigenschaft `download_url`, um die Aufzeichnungsdateien herunterzuladen. Um auf eine passwortgeschützte Cloud-Aufzeichnung zuzugreifen, senden Sie das `download_access_token` oder das [OAuth-Zugriffstoken](-docs-integrations-oauth-) des Benutzers als Bearer-Token im Authorization-Header. Zum Beispiel: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.display_name": {
+          "source": "Get Meeting Recordings",
+          "message": "Meeting-Aufzeichnungen abrufen"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.short_desc": {
+          "source": "Get meeting recordings",
+          "message": "Meeting-Aufzeichnungen abrufen"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.desc": {
+          "source": "Delete all of a meeting's or webinar's recording files.  \n\n**Prerequisites**:\n* Cloud Recording should be enabled on the user's account.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Löscht alle Aufzeichnungsdateien eines Meetings oder Webinars.  \n\n**Voraussetzungen**:\n* Cloud Recording sollte im Konto des Benutzers aktiviert sein.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.display_name": {
+          "source": "Delete Meeting or Webinar Recordings",
+          "message": "Meeting- oder Webinar-Aufzeichnungen löschen"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.short_desc": {
+          "source": "Delete meeting or webinar recordings",
+          "message": "Meeting- oder Webinar-Aufzeichnungen löschen"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.desc": {
+          "source": "Lists all [cloud recordings](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) for a user.  \n\nFor user-level apps, pass the [`me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.  To access a user's passcode protected cloud recording, send the user's [OAuth access token](https:-developers.zoom.us-docs-integrations-oauth-) as a bearer token in the authorization header.  \n\nExample:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Prerequisites:**  \n* Must have a Pro or a higher plan.  \n* Must enable Cloud Recording on the user's account.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Listet alle [Cloud-Aufzeichnungen](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) für einen Benutzer auf.  \n\nÜbergeben Sie bei Apps auf Benutzerebene den [`me`-Wert](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) anstelle des Parameters `userId`. Um auf eine passwortgeschützte Cloud-Aufzeichnung eines Benutzers zuzugreifen, senden Sie das [OAuth-Zugriffstoken](https:-developers.zoom.us-docs-integrations-oauth-) des Benutzers als Bearer-Token im Authorization-Header.  \n\nBeispiel:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Voraussetzungen:**  \n* Erfordert einen Pro- oder höherwertigen Plan.  \n* Cloud Recording muss im Konto des Benutzers aktiviert sein.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.display_name": {
+          "source": "List All Recordings",
+          "message": "Alle Aufzeichnungen auflisten"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.short_desc": {
+          "source": "List all recordings",
+          "message": "Alle Aufzeichnungen auflisten"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.desc": {
+          "source": "Get details for a scheduled Zoom webinar.\n  \n   \n \n**Prerequisites:**\n* Pro or higher plan with a Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Ruft Details für ein geplantes Zoom-Webinar ab.\n  \n   \n \n**Voraussetzungen:**\n* Pro- oder höherwertiger Plan mit einem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.display_name": {
+          "source": "Get a Webinar",
+          "message": "Webinar abrufen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.short_desc": {
+          "source": "Get a webinar",
+          "message": "Webinar abrufen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.desc": {
+          "source": "Schedule a webinar for a user who is a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Webinars allow a host to broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Rate limit:**\nUp to a maximum of **100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites:** \n* A Pro or higher plan with a [Webinar plan](https:-zoom.us-webinar) add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Plant ein Webinar für einen Benutzer, der ein Webinar-Host ist. Übergeben Sie bei Apps auf Benutzerebene [den Wert `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) anstelle des Parameters `userId`. \n\n Webinare ermöglichen es einem Host, ein Zoom-Meeting an bis zu 10.000 Teilnehmer zu übertragen. \n\n**Ratenbegrenzung:**\nBis zu maximal **100 Anfragen pro Tag**. Die Ratenbegrenzung gilt für die `userId` des **Webinar-Hosts**, der für die Anfrage verwendet wird. \n\n**Voraussetzungen:** \n* Ein Pro- oder höherwertiger Plan mit einem [Webinar-Plan](https:-zoom.us-webinar)-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.display_name": {
+          "source": "Create a Webinar",
+          "message": "Webinar erstellen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.short_desc": {
+          "source": "Create a webinar",
+          "message": "Webinar erstellen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.desc": {
+          "source": "Delete a webinar. \n\n\n**Prerequisites:**  \n \n* Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Löscht ein Webinar. \n\n\n**Voraussetzungen:**  \n \n* Pro- oder höherwertiger Plan mit dem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.display_name": {
+          "source": "Delete a Webinar",
+          "message": "Webinar löschen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.short_desc": {
+          "source": "Delete a webinar",
+          "message": "Webinar löschen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Erstellt und übermittelt die Registrierung eines Benutzers für ein Webinar. Zoom-Benutzer mit einem [Webinar-Plan](https:-zoom.us-webinar) haben Zugriff auf das Erstellen und Verwalten von Webinaren. Webinare ermöglichen es Hosts, ein Zoom-Meeting an bis zu 10.000 Teilnehmer zu übertragen. Das Planen eines [Webinars mit Registrierung](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) erfordert, dass Ihre Registrierten ein kurzes Formular ausfüllen, bevor sie den Link zum Beitritt zum Webinar erhalten. \n\n**Voraussetzungen:** \n* Ein Pro- oder höherwertiger Plan mit dem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Webinar Registrant",
+          "message": "Webinar-Registrierten hinzufügen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a webinar registrant",
+          "message": "Webinar-Registrierten hinzufügen"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.desc": {
+          "source": "List all users that have registered for a given webinar. Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. The webinar functionality lets a host broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar.  \n\n\n**Prerequisites**\n* Pro or higher plan with a Webinar add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Listet alle Benutzer auf, die sich für ein bestimmtes Webinar registriert haben. Zoom-Benutzer mit einem [Webinar-Plan](https:-zoom.us-webinar) haben Zugriff auf das Erstellen und Verwalten von Webinaren. Die Webinar-Funktion ermöglicht es einem Host, ein Zoom-Meeting an bis zu 10.000 Teilnehmer zu übertragen. Das Planen eines [Webinars mit Registrierung](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) erfordert, dass Ihre Registrierten ein kurzes Formular ausfüllen, bevor sie den Link zum Beitritt zum Webinar erhalten.  \n\n\n**Voraussetzungen**\n* Pro- oder höherwertiger Plan mit einem Webinar-Add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.display_name": {
+          "source": "List Webinar Registrants",
+          "message": "Webinar-Registrierte auflisten"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.short_desc": {
+          "source": "List webinar registrants",
+          "message": "Webinar-Registrierte auflisten"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.desc": {
+          "source": "Make updates to a scheduled webinar. \n\n**100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Aktualisiert ein geplantes Webinar. \n\n**100 Anfragen pro Tag**. Die Ratenbegrenzung gilt für die `userId` des **Webinar-Hosts**, der für die Anfrage verwendet wird. \n\n**Voraussetzungen** \n* Ein Pro- oder höherwertiger Plan mit einem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.display_name": {
+          "source": "Update a Webinar",
+          "message": "Webinar aktualisieren"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.short_desc": {
+          "source": "Update a webinar",
+          "message": "Webinar aktualisieren"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.desc": {
+          "source": "List all the webinars scheduled by or on behalf a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars let a host broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Note** This API only returns a user's [unexpired webinars](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Prerequisites** \n* A Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Listet alle Webinare auf, die von oder im Namen eines Webinar-Hosts geplant wurden. Übergeben Sie bei Apps auf Benutzerebene [den Wert `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) anstelle des Parameters `userId`. \n\n Zoom-Benutzer mit einem [Webinar-Plan](https:-zoom.us-webinar) haben Zugriff auf das Erstellen und Verwalten von Webinaren. Webinare ermöglichen es einem Host, ein Zoom-Meeting an bis zu 10.000 Teilnehmer zu übertragen. \n\n**Hinweis** Diese API gibt nur [nicht abgelaufene Webinare](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844) eines Benutzers zurück. \n\n **Voraussetzungen** \n* Ein Pro- oder höherwertiger Plan mit dem Webinar-Add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.display_name": {
+          "source": "List Webinars",
+          "message": "Webinare auflisten"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.short_desc": {
+          "source": "List webinars",
+          "message": "Webinare auflisten"
+        },
+        "app.Wm9vbQ.desc": {
+          "source": "Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.",
+          "message": "Zoom ist eine Videokonferenz- und Online-Meeting-Plattform, mit der Benutzer virtuelle Meetings, Webinare und Videokonferenzen hosten und daran teilnehmen können. Sie bietet Funktionen wie Bildschirmfreigabe, Aufzeichnung und Chat-Funktionen, um die Zusammenarbeit und Kommunikation zwischen den Teilnehmern zu verbessern."
+        },
+        "app.Wm9vbQ.display_name": {
+          "source": "Zoom",
+          "message": "Zoom"
+        },
+        "app.Wm9vbQ.short_desc": {
+          "source": "Video conferencing and online meeting platform",
+          "message": "Videokonferenz- und Online-Meeting-Plattform"
+        }
+      }
+    }
+  }
+}

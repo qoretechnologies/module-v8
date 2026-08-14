@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.desc": {
+          "source": "Use this action to clear the content of a specified column within a record, resetting its value to empty.",
+          "message": "Utilice esta acción para borrar el contenido de una columna especificada dentro de un registro, restableciendo su valor a vacío."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
+          "source": "Clear Column Value",
+          "message": "Borrar valor de columna"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column you want to clear.",
+          "message": "El identificador único de la columna que desea borrar."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID de columna"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to clear.",
+          "message": "El ID de la columna que se borrará."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to modify.",
+          "message": "El identificador único del tablero que contiene el registro que desea modificar."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record.",
+          "message": "El ID del tablero que contiene el registro."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to modify.",
+          "message": "El identificador único del registro que desea modificar."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to modify.",
+          "message": "El ID del registro a modificar."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
+          "source": "Remove data from a column in a record.",
+          "message": "Elimine los datos de una columna en un registro."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Cree nuevos registros en la tabla especificada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crear registros"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Cree nuevos registros en la tabla especificada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.",
+          "message": "Esta acción le permite crear un nuevo registro (elemento) en un tablero especificado, permitiéndole definir los valores iniciales de las columnas al momento de la creación."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Crear registro"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board where you want to create a new record.",
+          "message": "El identificador único del tablero donde desea crear un nuevo registro."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board where the record will be created.",
+          "message": "El ID del tablero donde se creará el registro."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group where you want to create a new record.",
+          "message": "El identificador único del grupo donde desea crear un nuevo registro."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID de grupo"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group where the record will be created.",
+          "message": "El ID del grupo donde se creará el registro."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Add a new record to a board.",
+          "message": "Agregue un nuevo registro a un tablero."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.desc": {
+          "source": "This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.",
+          "message": "Esta acción le permite ejecutar una operación personalizada definida por su configuración de integración o automatización, brindando flexibilidad para diversas tareas."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
+          "source": "Custom Action",
+          "message": "Acción personalizada"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.desc": {
+          "source": "The name of the custom action to execute",
+          "message": "El nombre de la acción personalizada que se ejecutará"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
+          "source": "Action Name",
+          "message": "Nombre de la acción"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
+          "source": "The name of the custom action to execute",
+          "message": "El nombre de la acción personalizada que se ejecutará"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.desc": {
+          "source": "The payload for your custom action",
+          "message": "El payload para su acción personalizada"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Carga útil"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.short_desc": {
+          "source": "Payload for your custom action",
+          "message": "Payload para su acción personalizada"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
+          "source": "Perform a user-defined operation.",
+          "message": "Realice una operación definida por el usuario."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.desc": {
+          "source": "This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.",
+          "message": "Esta acción le permite archivar un registro (elemento) específico en un tablero de Monday.com, lo que le ayuda a mantener organizado su espacio de trabajo al eliminar de la vista los elementos completados o inactivos sin eliminarlos permanentemente."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
+          "source": "Archive Record",
+          "message": "Archivar registro"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to archive.",
+          "message": "El identificador único del tablero que contiene el registro que desea archivar."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to archive.",
+          "message": "El ID del tablero que contiene el registro a archivar."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to archive.",
+          "message": "El identificador único del registro que desea archivar."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to archive.",
+          "message": "El ID del registro a archivar."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
+          "source": "Move a record to the archive.",
+          "message": "Mover un registro al archivo."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.desc": {
+          "source": "This action fetches the details of a specified record, including all column values and associated metadata.",
+          "message": "Esta acción obtiene los detalles de un registro especificado, incluidos todos los valores de columna y los metadatos asociados."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Obtener registro"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to get.",
+          "message": "El identificador único del tablero que contiene el registro que desea obtener."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to get.",
+          "message": "El ID del tablero que contiene el registro a obtener."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to get.",
+          "message": "El identificador único del registro que desea obtener."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to get.",
+          "message": "El ID del registro a obtener."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve details of a specific record.",
+          "message": "Recuperar detalles de un registro específico."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Eliminar registros"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Use this action to permanently delete a specific record from a board, removing all associated data.",
+          "message": "Use esta acción para eliminar permanentemente un registro específico de un tablero, eliminando todos los datos asociados."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Eliminar registro"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to delete.",
+          "message": "El identificador único del tablero que contiene el registro que desea eliminar."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to delete.",
+          "message": "El ID del tablero que contiene el registro a eliminar."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to delete.",
+          "message": "El identificador único del registro que desea eliminar."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete.",
+          "message": "El ID del registro a eliminar."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Permanently remove a record.",
+          "message": "Eliminar permanentemente un registro."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.desc": {
+          "source": "Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.",
+          "message": "Use esta acción para mover un registro de su grupo o tablero actual a otro grupo o tablero especificado, manteniendo sus datos e historial."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
+          "source": "Move Record",
+          "message": "Mover registro"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to move.",
+          "message": "El identificador único del tablero que contiene el registro que desea mover."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to move.",
+          "message": "El ID del tablero que contiene el registro a mover."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to move the record to.",
+          "message": "El identificador único del grupo al que desea mover el registro."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
+          "source": "Destination Group ID",
+          "message": "ID de grupo de destino"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to move the record to.",
+          "message": "El ID del grupo al que mover el registro."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to move.",
+          "message": "El identificador único del registro que desea mover."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to move.",
+          "message": "El ID del registro a mover."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
+          "source": "Transfer a record to another group or board.",
+          "message": "Transferir un registro a otro grupo o tablero."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Monday.com** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada HTTP / REST API personalizada a **Monday.com** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para endpoints que aún no estén expuestos como acciones de primera clase en esta aplicación."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Monday.com",
+          "message": "Realizar una llamada de API personalizada a Monday.com"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Se activa cuando se crea un nuevo registro."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nuevo registro"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "El identificador único del tablero que debe comprobarse para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "El ID del tablero a comprobar para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "El identificador único del grupo en el que desea comprobar si hay nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID de grupo"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "El ID del grupo a comprobar para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggered when a new item is created.",
+          "message": "Se activa cuando se crea un nuevo elemento."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Se activa cuando se crea un nuevo registro."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
+          "source": "New Record Moved To Group",
+          "message": "Nuevo registro movido a grupo"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "El identificador único del tablero que debe comprobarse para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "El ID del tablero a comprobar para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "El identificador único del grupo en el que desea comprobar si hay nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID de grupo"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "El ID del grupo a comprobar para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
+          "source": "Triggered when an item was moved to a group.",
+          "message": "Se activa cuando se movió un elemento a un grupo."
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Buscar un único registro"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.desc": {
+          "source": "This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.",
+          "message": "Esta acción le permite buscar registros que cumplan con criterios definidos, como valores de columna o estados específicos, y devuelve una lista de registros coincidentes."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.desc": {
+          "source": "The unique identifier of the column to search in.",
+          "message": "El identificador único de la columna en la que buscar."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.display_name": {
+          "source": "Column ID",
+          "message": "ID de columna"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.short_desc": {
+          "source": "The ID of the column to search in.",
+          "message": "El ID de la columna en la que buscar."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "El cursor que se utilizará para la paginación."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.short_desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "El cursor que se utilizará para la paginación."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the records you want to search for.",
+          "message": "El identificador único del tablero que contiene los registros que desea buscar."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to search for records in.",
+          "message": "El ID del tablero en el que buscar registros."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return.",
+          "message": "El número máximo de registros a devolver."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return.",
+          "message": "El número máximo de registros a devolver."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.desc": {
+          "source": "The search query to use to find records.",
+          "message": "La consulta de búsqueda que se utilizará para encontrar registros."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.display_name": {
+          "source": "Query",
+          "message": "Consulta"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.short_desc": {
+          "source": "The search query to use.",
+          "message": "La consulta de búsqueda que se utilizará."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
+          "source": "Find records matching specific criteria.",
+          "message": "Buscar registros que coincidan con criterios específicos."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Se activa cuando se actualiza el valor de una columna de un registro."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
+          "source": "Record Column Value Updated",
+          "message": "Valor de columna de registro actualizado"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column that should be checked for new value.",
+          "message": "El identificador único de la columna que debe comprobarse para detectar un nuevo valor."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID de columna"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to check for new value.",
+          "message": "El ID de la columna a comprobar para detectar un nuevo valor."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for record field updates.",
+          "message": "El identificador único del tablero que debe comprobarse para detectar actualizaciones en los campos del registro."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for record field updates.",
+          "message": "El ID del tablero a comprobar para detectar actualizaciones en los campos del registro."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Se activa cuando se actualiza el valor de una columna de un registro."
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Actualizar registros"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"Monday\""
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Use this action to update one or more column values of a specific record, allowing you to change its data as needed.",
+          "message": "Use esta acción para actualizar uno o más valores de columna de un registro específico, lo que le permite cambiar sus datos según sea necesario."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Actualizar registro"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to update.",
+          "message": "El identificador único del tablero que contiene el registro que desea actualizar."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to update.",
+          "message": "El ID del tablero que contiene el registro a actualizar."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to update.",
+          "message": "El identificador único del registro que desea actualizar."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to update.",
+          "message": "El ID del registro a actualizar."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Modify the values of a record's columns.",
+          "message": "Modifique los valores de las columnas de un registro."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Triggered when an item on the board is updated.",
+          "message": "Se activa cuando se actualiza un elemento del tablero."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "Registro actualizado"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for updated records.",
+          "message": "El identificador único del tablero que se debe comprobar en busca de registros actualizados."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID del tablero"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for updated records.",
+          "message": "El ID del tablero que se comprobará en busca de registros actualizados."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "El identificador único del grupo en el que desea comprobar si hay nuevos registros."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID de grupo"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "El ID del grupo a comprobar para detectar nuevos registros."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggered when an item is updated.",
+          "message": "Se activa cuando se actualiza un elemento."
+        },
+        "app.TW9uZGF5.desc": {
+          "source": "The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.",
+          "message": "La integración con Monday.com proporciona un acceso completo a su sistema operativo de trabajo. Cree y gestione tableros, elementos, grupos y columnas. Realice un seguimiento del progreso del trabajo, actualice los estados de los elementos, gestione los valores de las columnas y supervise los cambios en los tableros. Automatice los flujos de trabajo creando elementos, actualizando registros, moviendo elementos entre grupos y recibiendo notificaciones cuando se modifiquen tableros o elementos. Ideal para la gestión de proyectos, el seguimiento de tareas, la colaboración en equipo y la automatización de flujos de trabajo en toda su organización."
+        },
+        "app.TW9uZGF5.display_name": {
+          "source": "Monday.com",
+          "message": "Monday.com"
+        },
+        "app.TW9uZGF5.short_desc": {
+          "source": "Connect to Monday.com to automate work management with boards, items, columns, and updates.",
+          "message": "Conéctese a Monday.com para automatizar la gestión del trabajo con tableros, elementos, columnas y actualizaciones."
+        }
+      }
+    }
+  }
+}

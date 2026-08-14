@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.desc": {
+          "source": "This trigger fires when a card has passed its due date and has not been marked as complete.",
+          "message": "Цей тригер спрацьовує, коли термін виконання картки минув і вона не була позначена як виконана."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
+          "source": "Card Due",
+          "message": "Термін картки минув"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board that contains the cards you want to monitor for due dates.",
+          "message": "Виберіть дошку Trello, яка містить картки, терміни виконання яких потрібно відстежувати."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Дошка"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board containing the cards to monitor.",
+          "message": "Дошка, що містить картки для відстеження."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.desc": {
+          "source": "When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.",
+          "message": "Якщо ввімкнено, тригер включатиме прострочені картки, які було позначено як виконані. За замовчуванням включаються лише незавершені прострочені картки."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
+          "source": "Include Completed Cards",
+          "message": "Включати виконані картки"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
+          "source": "Include cards marked as complete.",
+          "message": "Включати картки, позначені як виконані."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for overdue cards. Only required if Source is set to \"list\".",
+          "message": "Виберіть конкретний список для відстеження прострочених карток. Потрібно, лише якщо для параметра «Source» вибрано значення «list»."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "Список"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.short_desc": {
+          "source": "The specific list containing the cards to monitor.",
+          "message": "Конкретний список, що містить картки для відстеження."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "дошка"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "список"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "Виберіть «board», щоб відстежувати всі списки на дошці, або «list», щоб відстежувати лише конкретний список."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Джерело"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "Виберіть, відстежувати всю дошку чи конкретний список."
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
+          "source": "Triggers when a card becomes overdue.",
+          "message": "Спрацьовує, коли картка стає простроченою."
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку «Trello»"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Створити записи"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку «Trello»"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Get a member",
+          "message": "Отримати учасника"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Get a Member",
+          "message": "Отримати учасника"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Get a Member",
+          "message": "Отримати учасника"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Get-organizations-id",
+          "message": "Get-organizations-id"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Get an Organization",
+          "message": "Отримати організацію"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Get an Organization",
+          "message": "Отримати організацію"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.desc": {
+          "source": "List the boards in a Workspace",
+          "message": "Отримати список дощок у робочій області"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.display_name": {
+          "source": "Get Boards in an Organization",
+          "message": "Отримати дошки в організації"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.short_desc": {
+          "source": "Get Boards in an Organization",
+          "message": "Отримати дошки в організації"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "List the members in a Workspace",
+          "message": "Отримати список учасників у робочій області"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Get the Members of an Organization",
+          "message": "Отримати учасників організації"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Get the Members of an Organization",
+          "message": "Отримати учасників організації"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.desc": {
+          "source": "Request a single board.",
+          "message": "Запит однієї дошки."
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.display_name": {
+          "source": "Get a Board",
+          "message": "Отримати дошку"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Get a Board",
+          "message": "Отримати дошку"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.desc": {
+          "source": "Get-checklists-id-checkitems",
+          "message": "Get-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.display_name": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "Отримати пункти чек-листа"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.short_desc": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "Отримати пункти чек-листа"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.desc": {
+          "source": "Get information about a single Label.",
+          "message": "Отримати інформацію про одну мітку."
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.display_name": {
+          "source": "Get a Label",
+          "message": "Отримати мітку"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.short_desc": {
+          "source": "Get a Label",
+          "message": "Отримати мітку"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.desc": {
+          "source": "Get information about a List",
+          "message": "Отримати інформацію про список"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.display_name": {
+          "source": "Get a List",
+          "message": "Отримати список"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.short_desc": {
+          "source": "Get a List",
+          "message": "Отримати список"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.desc": {
+          "source": "Search for Trello members.",
+          "message": "Пошук учасників Trello."
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.display_name": {
+          "source": "Search for Members",
+          "message": "Пошук учасників"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.short_desc": {
+          "source": "Search for Members",
+          "message": "Пошук учасників"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "Видалити записи із зазначеної таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Видалити записи"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "Видалити записи із зазначеної таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Delete an Organization",
+          "message": "Видалити організацію"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Delete an Organization",
+          "message": "Видалити організацію"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Delete an Organization",
+          "message": "Видалити організацію"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Remove a member from a Workspace",
+          "message": "Видалити учасника з робочої області"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Remove a Member from an Organization",
+          "message": "Видалити учасника з організації"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Remove a Member from an Organization",
+          "message": "Видалити учасника з організації"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.desc": {
+          "source": "Delete a board.",
+          "message": "Видалити дошку."
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.display_name": {
+          "source": "Delete a Board",
+          "message": "Видалити дошку"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.short_desc": {
+          "source": "Delete a Board",
+          "message": "Видалити дошку"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.desc": {
+          "source": "Delete a label by ID.",
+          "message": "Видалити мітку за ID."
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.display_name": {
+          "source": "Delete a Label",
+          "message": "Видалити мітку"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.short_desc": {
+          "source": "Delete a Label",
+          "message": "Видалити мітку"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Trello** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати довільний виклик HTTP / REST API до **Trello**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API підключення), необов’язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Trello",
+          "message": "Виконати довільний виклик API до Trello"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.desc": {
+          "source": "This trigger fires when a new member is added to a specified Trello board.",
+          "message": "Цей тригер спрацьовує, коли нового учасника додано до вказаної дошки Trello."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
+          "source": "New Member",
+          "message": "Новий учасник"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new members being added.",
+          "message": "Виберіть дошку Trello, на якій потрібно відстежувати додавання нових учасників."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new members.",
+          "message": "Дошка для відстеження нових учасників."
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {
+          "source": "Triggers when a new member is added to a board.",
+          "message": "Спрацьовує, коли на дошку додається новий учасник."
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.desc": {
+          "source": "This trigger fires when a new Trello board is created or shared with the authenticated user.",
+          "message": "Цей тригер спрацьовує, коли створюється нова дошка Trello або коли нею діляться з автентифікованим користувачем."
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
+          "source": "New Board",
+          "message": "Нова дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
+          "source": "Triggers when a new board is created.",
+          "message": "Спрацьовує, коли створюється нова дошка."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.desc": {
+          "source": "This trigger fires when a new card is added to a specified board or list in Trello.",
+          "message": "Цей тригер спрацьовує, коли нова картка додається до вказаної дошки або списку в Trello."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
+          "source": "New Card",
+          "message": "Нова картка"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new cards being created.",
+          "message": "Виберіть дошку Trello, на якій потрібно відстежувати створення нових карток."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new cards.",
+          "message": "Дошка для відстеження нових карток."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for new cards. Only required if Source is set to \"list\".",
+          "message": "Виберіть певний список для відстеження нових карток. Потрібно, лише якщо джерело встановлено на «list»."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "Список"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.short_desc": {
+          "source": "The specific list to monitor for new cards.",
+          "message": "Конкретний список для відстеження нових карток."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "список"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "Виберіть «board», щоб відстежувати всі списки на дошці, або «list», щоб відстежувати лише конкретний список."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Джерело"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "Виберіть, відстежувати всю дошку чи конкретний список."
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
+          "source": "Triggers when a new card is created.",
+          "message": "Спрацьовує, коли створюється нова картка."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.desc": {
+          "source": "This trigger fires when a new label is created on a specified Trello board.",
+          "message": "Цей тригер спрацьовує, коли створюється нова мітка на вказаній дошці Trello."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
+          "source": "New Label",
+          "message": "Нова мітка"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new labels being created.",
+          "message": "Виберіть дошку Trello, на якій потрібно відстежувати створення нових міток."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new labels.",
+          "message": "Дошка для відстеження нових міток."
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
+          "source": "Triggers when a new label is created.",
+          "message": "Спрацьовує, коли створюється нова мітка."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.desc": {
+          "source": "This trigger fires when a new list is added to a specified Trello board.",
+          "message": "Цей тригер спрацьовує, коли новий список додається до вказаної дошки Trello."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
+          "source": "New List",
+          "message": "Новий список"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new lists being created.",
+          "message": "Виберіть дошку Trello, на якій потрібно відстежувати створення нових списків."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "Дошка"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new lists.",
+          "message": "Дошка для відстеження нових списків."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.desc": {
+          "source": "When enabled, the trigger will include new lists that are archived. By default, only open lists are included.",
+          "message": "Якщо ввімкнено, тригер включатиме нові списки, які архівовано. За замовчуванням включаються лише відкриті списки."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
+          "source": "Include Archived Lists",
+          "message": "Включати архівовані списки"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
+          "source": "Include lists that are archived.",
+          "message": "Включати списки, які архівовано."
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
+          "source": "Triggers when a new list is created.",
+          "message": "Спрацьовує, коли створюється новий список."
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "Пошук відповідних записів у зазначеній таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "Пошук відповідних записів у зазначеній таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "Пошук одного відповідного запису в зазначеній таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Знайти один запис"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "Пошук одного відповідного запису в зазначеній таблиці в додатку «Trello»"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.desc": {
+          "source": "Create a new board.",
+          "message": "Створити нову дошку."
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.display_name": {
+          "source": "Create a Board",
+          "message": "Створити дошку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.short_desc": {
+          "source": "Create a Board",
+          "message": "Створити дошку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.desc": {
+          "source": "Create a new card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "Створити нову картку. Параметри запиту також можна замінити тілом запиту JSON."
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.display_name": {
+          "source": "Create a New Card",
+          "message": "Створити нову картку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.short_desc": {
+          "source": "Create a new Card",
+          "message": "Створити нову картку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.desc": {
+          "source": "Add a new comment to a card",
+          "message": "Додати новий коментар до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.display_name": {
+          "source": "Add a New Comment to a Card",
+          "message": "Додати новий коментар до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.short_desc": {
+          "source": "Add a new comment to a Card",
+          "message": "Додати новий коментар до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.desc": {
+          "source": "Add a member to a card",
+          "message": "Додати учасника до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.display_name": {
+          "source": "Add a Member to a Card",
+          "message": "Додати учасника до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.short_desc": {
+          "source": "Add a Member to a Card",
+          "message": "Додати учасника до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.desc": {
+          "source": "Add a label to a card",
+          "message": "Додати мітку до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.display_name": {
+          "source": "Add a Label to a Card",
+          "message": "Додати мітку до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.short_desc": {
+          "source": "Add a Label to a Card",
+          "message": "Додати мітку до картки"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.desc": {
+          "source": "Post-checklists-id-checkitems",
+          "message": "Post-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.display_name": {
+          "source": "Create Checkitem on Checklist",
+          "message": "Створити пункт у чек-листі"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.short_desc": {
+          "source": "Create Checkitem on Checklist",
+          "message": "Створити пункт у чек-листі"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.desc": {
+          "source": "Create a new Label on a Board.",
+          "message": "Створити нову мітку на дошці."
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.display_name": {
+          "source": "Create a Label",
+          "message": "Створити мітку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.short_desc": {
+          "source": "Create a Label",
+          "message": "Створити мітку"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.desc": {
+          "source": "Create a new List on a Board",
+          "message": "Створити новий список на дошці"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.display_name": {
+          "source": "Create a New List",
+          "message": "Створити новий список"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.short_desc": {
+          "source": "Create a new List",
+          "message": "Створити новий список"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.desc": {
+          "source": "Create a new Workspace",
+          "message": "Створити новий робочий простір"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.display_name": {
+          "source": "Create a New Organization",
+          "message": "Створити нову організацію"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.desc": {
+          "source": "The description for the organizations",
+          "message": "Опис для організацій"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.display_name": {
+          "source": "Desc",
+          "message": "Опис"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.short_desc": {
+          "source": "The description for the organizations",
+          "message": "Опис для організацій"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The name to display for the Organization",
+          "message": "Відображуване ім'я організації"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Відображуване ім'я"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "The name to display for the Organization",
+          "message": "Відображуване ім'я організації"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.desc": {
+          "source": "A string with a length of at least 3. Only lowercase letters, underscores, and numbers are allowed. If the name contains invalid characters, they will be removed. If the name conflicts with an existing name, a new name will be substituted.",
+          "message": "Рядок довжиною не менше 3 символів. Дозволені лише малі літери, символи підкреслення та цифри. Якщо ім'я містить неприпустимі символи, їх буде видалено. Якщо ім'я конфліктує з наявним, його буде замінено новим."
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Назва"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.short_desc": {
+          "source": "A string with a length of at least 3",
+          "message": "Рядок довжиною не менше 3 символів"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.desc": {
+          "source": "A URL starting with `http://` or `https://`",
+          "message": "URL-адреса, що починається з `http://` або `https://`"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "Вебсайт"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.short_desc": {
+          "source": "A URL starting with 'http://' or 'https://'",
+          "message": "URL-адреса, що починається з 'http://' або 'https://'"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.short_desc": {
+          "source": "Create a new Organization",
+          "message": "Створити нову організацію"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Update a Member",
+          "message": "Оновити учасника"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Update a Member",
+          "message": "Оновити учасника"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Update a Member",
+          "message": "Оновити учасника"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Update an organization",
+          "message": "Оновити організацію"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Update an Organization",
+          "message": "Оновити організацію"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Update an Organization",
+          "message": "Оновити організацію"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Put-organizations-id-members",
+          "message": "Put-organizations-id-members"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Update an Organization's Members",
+          "message": "Оновити учасників організації"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Update an Organization's Members",
+          "message": "Оновити учасників організації"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.desc": {
+          "source": "Add a member to a Workspace or update their member type.",
+          "message": "Додати учасника до робочого простору або оновити його тип участі."
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.display_name": {
+          "source": "Update a Member of an Organization",
+          "message": "Оновити учасника організації"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.short_desc": {
+          "source": "Update a Member of an Organization",
+          "message": "Оновити учасника організації"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.desc": {
+          "source": "Update an existing board by id",
+          "message": "Оновити наявну дошку за ID"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.display_name": {
+          "source": "Update a Board",
+          "message": "Оновити дошку"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Update a Board",
+          "message": "Оновити дошку"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.desc": {
+          "source": "Add a member to the board.",
+          "message": "Додати учасника до дошки."
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.display_name": {
+          "source": "Add a Member to a Board",
+          "message": "Додати учасника до дошки"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.short_desc": {
+          "source": "Add a Member to a Board",
+          "message": "Додати учасника до дошки"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.desc": {
+          "source": "Update a card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "Оновити картку. Параметри запиту також можна замінити тілом запиту JSON."
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.display_name": {
+          "source": "Update a Card",
+          "message": "Оновити картку"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.short_desc": {
+          "source": "Update a Card",
+          "message": "Оновити картку"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.desc": {
+          "source": "Update an item in a checklist on a card.",
+          "message": "Оновити пункт у чек-листі на картці."
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.display_name": {
+          "source": "Update a Checkitem on a Card",
+          "message": "Оновити пункт чек-листа на картці"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.short_desc": {
+          "source": "Update a checkItem on a Card",
+          "message": "Оновити пункт чек-листа на картці"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.desc": {
+          "source": "Update a label by ID.",
+          "message": "Оновити мітку за ID."
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.display_name": {
+          "source": "Update a Label",
+          "message": "Оновити мітку"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.short_desc": {
+          "source": "Update a Label",
+          "message": "Оновити мітку"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.desc": {
+          "source": "Update the properties of a List",
+          "message": "Оновити властивості списку"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.display_name": {
+          "source": "Update a List",
+          "message": "Оновити список"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.short_desc": {
+          "source": "Update a List",
+          "message": "Оновити список"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"Trello\""
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Оновити записи"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"Trello\""
+        },
+        "app.VHJlbGxv.desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.",
+          "message": "Trello — це інструмент для співпраці, який упорядковує ваші проєкти у дошки. Це вебзастосунок для створення списків у стилі канбан, що є дочірньою компанією Atlassian."
+        },
+        "app.VHJlbGxv.display_name": {
+          "source": "Trello",
+          "message": "Trello"
+        },
+        "app.VHJlbGxv.short_desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards.",
+          "message": "Trello — це інструмент для співпраці, який упорядковує ваші проєкти у дошки."
+        }
+      }
+    }
+  }
+}

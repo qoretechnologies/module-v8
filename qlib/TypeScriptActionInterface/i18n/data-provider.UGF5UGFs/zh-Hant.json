@@ -1,0 +1,3441 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.desc": {
+          "source": "Captures payment for an order that has been approved by the customer. This completes the payment process and transfers funds from the customer to your account. Should be called after receiving order approval or for immediate capture orders.",
+          "message": "為客戶已核准的訂單請款。這將完成付款流程並將款項從客戶轉移至您的帳戶。應在收到訂單核准後或針對即時請款訂單進行呼叫。"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
+          "source": "Capture Order",
+          "message": "訂單請款"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.desc": {
+          "source": "Whether this is the final capture for the order",
+          "message": "這是否為該訂單的最後一次請款"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
+          "source": "Final Capture",
+          "message": "最終請款"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
+          "source": "Whether this is the final capture for the order",
+          "message": "這是否為該訂單的最後一次請款"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.desc": {
+          "source": "The ID of the approved order to capture",
+          "message": "要請款的已核准訂單 ID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.short_desc": {
+          "source": "ID of the approved order to capture",
+          "message": "要請款的已核准訂單 ID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.desc": {
+          "source": "Special instructions for processing this payment, such as disbursement timing or platform fee collection.",
+          "message": "處理此付款的特殊指示，例如撥款時間或平台費用收取。"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
+          "source": "Payment Instructions",
+          "message": "付款指示"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
+          "source": "Additional payment processing instructions",
+          "message": "其他付款處理指示"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
+          "source": "Capture payment for an approved order",
+          "message": "為已核准的訂單請款"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.desc": {
+          "source": "Creates a new PayPal order with specified payment amount, items, shipping details, and payment preferences. Orders represent a payment between two or more parties and can be authorized immediately or captured later. Supports various payment sources including PayPal, cards, and alternative payment methods.",
+          "message": "建立包含指定付款金額、項目、運送詳細資訊及付款偏好設定的新 PayPal 訂單。訂單代表兩方或多方之間的付款，可立即授權或稍後請款。支援多種付款來源，包含 PayPal、信用卡與其他替代付款方式。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
+          "source": "Create Order",
+          "message": "建立訂單"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.desc": {
+          "source": "The URL where customers will be redirected if they cancel the payment process. Should provide information about the cancelled transaction and next steps.",
+          "message": "客戶取消付款程序時將被重新導向的 URL。應提供有關已取消交易的資訊和後續步驟。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.display_name": {
+          "source": "Cancel URL",
+          "message": "取消 URL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.short_desc": {
+          "source": "URL to redirect if payment is cancelled",
+          "message": "付款取消時要重新導向的 URL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "墨西哥披索"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "墨西哥披索 (MXN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "馬來西亞令吉 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "馬來西亞令吉 (MYR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "挪威克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "挪威克朗 (NOK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "紐西蘭元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "紐西蘭元 (NZD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "澳幣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "澳幣 (AUD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "巴西雷亞爾 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "巴西雷亞爾 (BRL)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "加拿大元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "加拿大元 (CAD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "瑞士法郎"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "瑞士法郎 (CHF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "人民幣 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "人民幣 (CNY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "捷克克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "捷克克朗 (CZK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "丹麥克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "丹麥克朗 (DKK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "歐元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "歐元 (EUR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英鎊"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英鎊 (GBP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "港幣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "港幣 (HKD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "匈牙利福林 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "匈牙利福林 (HUF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "以色列新謝克爾"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "以色列新謝克爾 (ILS)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日圓 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日圓 (JPY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "菲律賓披索"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "菲律賓披索 (PHP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "波蘭茲羅提"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "波蘭茲羅提 (PLN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "俄羅斯盧布"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "俄羅斯盧布 (RUB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "瑞典克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "瑞典克朗 (SEK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "新加坡元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "新加坡元 (SGD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "泰銖"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "泰銖 (THB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台幣 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台幣 (TWD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "美元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "美元 (USD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The three-character ISO-4217 currency code that identifies the currency for this transaction. Must be supported by PayPal and match your business account settings.",
+          "message": "識別此交易貨幣的三字元 ISO-4217 貨幣代碼。必須受 PayPal 支援並符合您的商業帳戶設定。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "Three-letter ISO currency code for the transaction",
+          "message": "交易的三位字母 ISO 貨幣代碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.desc": {
+          "source": "A custom identifier that you can use to track this order in your own systems. This will be returned in webhooks and API responses.",
+          "message": "可用於在您自己的系統中追蹤此訂單的自訂識別碼。此資訊將在 Webhook 和 API 回應中傳回。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.display_name": {
+          "source": "Custom ID",
+          "message": "自訂 ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.short_desc": {
+          "source": "Your custom identifier for this order",
+          "message": "此訂單的自訂識別碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "A brief description of the order that will be visible to the customer during checkout and in their transaction history.",
+          "message": "訂單的簡短說明，將在結帳期間和交易紀錄中對顧客顯示。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Order Description",
+          "message": "訂單說明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the order or purchase",
+          "message": "訂單或購買項目的說明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.desc": {
+          "source": "The total discount amount applied to this order, including coupon codes, promotions, or bulk discounts. This reduces the overall order total.",
+          "message": "套用於此訂單的總折扣金額，包括優惠券代碼、促銷活動或大宗折扣。這會減少訂單總額。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
+          "source": "Discount Amount",
+          "message": "折扣金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
+          "source": "Total discount applied to the order",
+          "message": "套用於訂單的總折扣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.allowed-value.c3RyaW5nOkRFTEFZRUQ.display_name": {
+          "source": "Delayed",
+          "message": "延遲"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.allowed-value.c3RyaW5nOklOU1RBTlQ.display_name": {
+          "source": "Instant",
+          "message": "立即"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.desc": {
+          "source": "Controls when captured funds are released to the seller. INSTANT releases funds immediately, while DELAYED allows you to hold funds for verification before release.",
+          "message": "控制何時將請款資金發放給賣家。INSTANT 會立即發放資金，而 DELAYED 允許您在發放前保留資金以進行驗證。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
+          "source": "Disbursement Mode",
+          "message": "撥款模式"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
+          "source": "When to release funds to the seller",
+          "message": "何時將資金發放給賣家"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.desc": {
+          "source": "Additional handling fee charged for processing this order. This covers costs like packaging and order processing.",
+          "message": "處理此訂單收取的額外手續費。這涵蓋包裝和訂單處理等費用。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
+          "source": "Handling Amount",
+          "message": "手續費金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
+          "source": "Handling fee for processing this order",
+          "message": "處理此訂單的手續費"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkFVVEhPUklaRQ.desc": {
+          "source": "The merchant intends to authorize a payment and place funds on hold after the customer makes a payment. Authorized payments are best captured within three days but are available to capture for up to 29 days.",
+          "message": "商家打算在顧客付款後授權付款並保留資金。已授權的付款最好在三天內請款，但最長可在 29 天內請款。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkFVVEhPUklaRQ.display_name": {
+          "source": "Authorize",
+          "message": "授權"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkNBUFRVUkU.desc": {
+          "source": "The merchant intends to capture payment immediately after the customer makes a payment.",
+          "message": "商家打算在顧客付款後立即請款。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkNBUFRVUkU.display_name": {
+          "source": "Capture",
+          "message": "請款"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.desc": {
+          "source": "Determines when the payment will be processed. CAPTURE processes payment immediately after approval, while AUTHORIZE places a hold on funds for up to 29 days, allowing you to capture payment when ready to fulfill the order.",
+          "message": "決定何時處理付款。CAPTURE 會在核准後立即處理付款，而 AUTHORIZE 會保留資金長達 29 天，讓您可以在準備好履行訂單時請款。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
+          "source": "Payment Intent",
+          "message": "付款意圖"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
+          "source": "Whether to capture payment immediately or authorize for later capture",
+          "message": "要立即請款還是授權以供日後請款"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.desc": {
+          "source": "The invoice number for this order. Helps match orders with your accounting system and prevents duplicate payments.",
+          "message": "此訂單的發票號碼。有助於將訂單與您的會計系統進行比對，並防止重複付款。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "發票 ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Invoice number for this order",
+          "message": "此訂單的發票號碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.desc": {
+          "source": "Optional insurance amount to protect the shipment. This covers the value of items in case of loss or damage during shipping.",
+          "message": "用於保障貨件的選填保險金額。這涵蓋在運送過程中遺失或損壞時的商品價值。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
+          "source": "Insurance Amount",
+          "message": "保險金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
+          "source": "Insurance cost for this shipment",
+          "message": "此貨件的保險費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.desc": {
+          "source": "The total cost of all items in the order before applying taxes, shipping, handling, insurance, or discounts. Should equal the sum of (quantity × unit_amount) for all items.",
+          "message": "套用稅金、運費、手續費、保險或折扣之前訂單中所有項目的總費用。應等於所有項目的 (quantity × unit_amount) 總和。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
+          "source": "Item Total",
+          "message": "項目總計"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
+          "source": "Total cost of all items before taxes and fees",
+          "message": "未計稅金與費用前所有項目的總費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.desc": {
+          "source": "Array of items included in this order. Each item should specify name, quantity, unit price, and optionally description, SKU, category, and tax amount.",
+          "message": "包含在此訂單中的項目陣列。每個項目應指定名稱、數量、單價，並可選填描述、SKU、類別和稅額。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
+          "source": "Order Items",
+          "message": "訂單項目"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
+          "source": "List of items being purchased",
+          "message": "購買的項目清單"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.desc": {
+          "source": "The text that appears on the customer's credit card or bank statement. Keep it short and recognizable to avoid chargebacks.",
+          "message": "顯示在顧客信用卡或銀行對帳單上的文字。請保持簡短且易於辨識，以避免退單。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
+          "source": "Soft Descriptor",
+          "message": "帳單顯示名稱"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
+          "source": "Text that appears on customer's credit card statement",
+          "message": "顯示在顧客信用卡對帳單上的文字"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.desc": {
+          "source": "The two-character ISO 3166-1 country code for the shipping address.",
+          "message": "運送地址的雙字元 ISO 3166-1 國家/地區代碼。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
+          "source": "Shipping Country Code",
+          "message": "運送國家/地區代碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
+          "source": "Two-letter country code for shipping",
+          "message": "用於運送的兩位字母國家/地區代碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.desc": {
+          "source": "The city where the items will be delivered.",
+          "message": "商品將送達的城市。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
+          "source": "Shipping City",
+          "message": "運送城市"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
+          "source": "City for shipping address",
+          "message": "運送地址的城市"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.desc": {
+          "source": "The shipping cost for delivering the items in this order. This amount is added to the total order amount.",
+          "message": "運送此訂單商品的運費。此金額會加至訂單總額中。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
+          "source": "Shipping Amount",
+          "message": "運費金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
+          "source": "Cost of shipping for this order",
+          "message": "此訂單的運費"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.desc": {
+          "source": "The first line of the shipping address, typically containing street number and name.",
+          "message": "運送地址的第一行，通常包含門牌號碼和街道名稱。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
+          "source": "Shipping Address Line 1",
+          "message": "運送地址第 1 行"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
+          "source": "Primary shipping address",
+          "message": "主要運送地址"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.desc": {
+          "source": "Optional second line of the shipping address for apartment numbers, suite numbers, or additional location details.",
+          "message": "運送地址的選填第二行，用於填寫公寓號碼、套房號碼或其他詳細位置資訊。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
+          "source": "Shipping Address Line 2",
+          "message": "運送地址第 2 行"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
+          "source": "Secondary shipping address line",
+          "message": "次要運送地址行"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.desc": {
+          "source": "Any discount applied specifically to shipping costs, such as free shipping promotions or reduced shipping fees for bulk orders.",
+          "message": "專門套用於運費的任何折扣，例如免運促銷或大宗訂單的運費減免。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
+          "source": "Shipping Discount",
+          "message": "運費折扣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
+          "source": "Discount applied to shipping costs",
+          "message": "套用於運費的折扣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.desc": {
+          "source": "The complete name of the person who will receive the shipment at the delivery address.",
+          "message": "將在收件地址接收貨件的人員完整姓名。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
+          "source": "Shipping Name",
+          "message": "收件人姓名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
+          "source": "Full name for shipping address",
+          "message": "運送地址的全名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.desc": {
+          "source": "The state, province, or region for the shipping address. Use appropriate codes for the country.",
+          "message": "運送地址的州、省或地區。請使用該國家/地區適用的代碼。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
+          "source": "Shipping State",
+          "message": "運送州/省"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
+          "source": "State or province for shipping",
+          "message": "用於運送的州或省"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.desc": {
+          "source": "The ZIP code, postal code, or equivalent for the shipping address.",
+          "message": "運送地址的郵遞區號或同等代碼。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
+          "source": "Shipping Postal Code",
+          "message": "運送郵遞區號"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
+          "source": "ZIP or postal code for shipping",
+          "message": "用於運送的郵遞區號"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.allowed-value.c3RyaW5nOlBJQ0tVUF9JTl9QRVJTT04.display_name": {
+          "source": "Pickup in Person",
+          "message": "親自取貨"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.allowed-value.c3RyaW5nOlNISVBQSU5H.display_name": {
+          "source": "Shipping",
+          "message": "運送"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.desc": {
+          "source": "Specifies how the items will be delivered to the customer. Affects shipping costs and delivery timeline.",
+          "message": "指定商品交付給顧客的方式。會影響運費和配送時間表。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
+          "source": "Shipping Type",
+          "message": "運送類型"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
+          "source": "Method of delivery for this order",
+          "message": "此訂單的運送方式"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.desc": {
+          "source": "The email address of the merchant or seller who will receive the payment. Required for marketplace transactions or when specifying a different recipient.",
+          "message": "將接收付款的商家或賣家電子郵件地址。用於市集交易或指定不同收款人時為必填。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
+          "source": "Payee Email",
+          "message": "收款人電子郵件"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
+          "source": "Email address of the payment recipient",
+          "message": "付款收款人的電子郵件地址"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.desc": {
+          "source": "The PayPal merchant ID of the account that will receive the payment. Used for marketplace transactions or when routing payments to specific merchants.",
+          "message": "將接收付款帳戶的 PayPal 商家 ID。用於市集交易或將款項路由至特定商家。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
+          "source": "Payee Merchant ID",
+          "message": "收款人商家 ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
+          "source": "PayPal merchant ID of the payment recipient",
+          "message": "付款收款人的 PayPal 商家 ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.desc": {
+          "source": "Array of platform fees to be collected on this transaction. Used by marketplaces to collect fees from transactions processed on their platform.",
+          "message": "要在本次交易中收取的平台費用陣列。市集用於從其平台上處理的交易中收取費用。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
+          "source": "Platform Fees",
+          "message": "平台費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
+          "source": "Fees collected by the platform",
+          "message": "平台收取的費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.desc": {
+          "source": "The URL where customers will be redirected after successfully completing their payment. Should be a page confirming the successful transaction.",
+          "message": "客戶成功完成付款後將重新導向的 URL。應為確認交易成功的頁面。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.display_name": {
+          "source": "Return URL",
+          "message": "返回 URL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.short_desc": {
+          "source": "URL to redirect after successful payment",
+          "message": "付款成功後重新導向的 URL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.desc": {
+          "source": "The total amount for this order. Must be a positive number and match the sum of all breakdown components if provided. Format as a string with appropriate decimal precision for the currency.",
+          "message": "此訂單的總金額。必須為正數，且若有提供各項明細，則必須與明細加總相符。請格式化為符合該貨幣適當小數位數的字串。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
+          "source": "Total Amount",
+          "message": "總金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
+          "source": "Total payment amount as a string",
+          "message": "字串格式的付款總金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.desc": {
+          "source": "The total tax amount for all items in this order. This includes sales tax, VAT, or other applicable taxes based on the shipping address and local regulations.",
+          "message": "此訂單中所有品項的總稅額。包含根據運送地址與當地法規適用的營業稅、加值稅 (VAT) 或其他適用稅項。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
+          "source": "Tax Total",
+          "message": "稅額總計"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
+          "source": "Total tax amount for this order",
+          "message": "此訂單的總稅額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
+          "source": "Create a new payment order with purchase details",
+          "message": "建立包含購買詳細資訊的新付款訂單"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.desc": {
+          "source": "Creates a new invoice that can be sent to customers for payment. Includes item details, pricing, tax information, and payment terms. Invoices can be automatically sent to recipients or manually shared.",
+          "message": "建立可傳送給客戶以進行付款的新發票。包含品項詳細資訊、定價、稅務資訊和付款條件。發票可自動傳送給收件人或手動分享。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
+          "source": "Create Invoice",
+          "message": "建立發票"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "墨西哥披索"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "墨西哥披索 (MXN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "馬來西亞令吉 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "馬來西亞令吉 (MYR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "挪威克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "挪威克朗 (NOK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "紐西蘭元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "紐西蘭元 (NZD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "澳幣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "澳幣 (AUD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "巴西雷亞爾 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "巴西雷亞爾 (BRL)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "加拿大元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "加拿大元 (CAD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "瑞士法郎"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "瑞士法郎 (CHF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "人民幣 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "人民幣 (CNY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "捷克克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "捷克克朗 (CZK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "丹麥克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "丹麥克朗 (DKK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "歐元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "歐元 (EUR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英鎊"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英鎊 (GBP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "港幣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "港幣 (HKD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "匈牙利福林 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "匈牙利福林 (HUF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "以色列新謝克爾"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "以色列新謝克爾 (ILS)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日圓 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日圓 (JPY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "菲律賓披索"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "菲律賓披索 (PHP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "波蘭茲羅提"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "波蘭茲羅提 (PLN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "俄羅斯盧布"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "俄羅斯盧布 (RUB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "瑞典克朗"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "瑞典克朗 (SEK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "新加坡元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "新加坡元 (SGD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "泰銖"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "泰銖 (THB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台幣 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台幣 (TWD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "美元"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "美元 (USD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The three-character ISO currency code for this invoice.",
+          "message": "此發票的三位字元 ISO 貨幣代碼。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "Currency for the invoice amount",
+          "message": "發票金額的貨幣"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.desc": {
+          "source": "A unique identifier for this invoice. If not provided, PayPal will generate one automatically.",
+          "message": "此發票的唯一識別碼。若未提供，PayPal 將自動產生一個。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
+          "source": "Invoice Number",
+          "message": "發票號碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
+          "source": "Unique invoice number for tracking",
+          "message": "用於追蹤的唯一發票號碼"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.desc": {
+          "source": "The cost per individual unit of the item or service.",
+          "message": "品項或服務的單價。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
+          "source": "Unit Price",
+          "message": "單價"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
+          "source": "Price per unit of the item",
+          "message": "品項的單位價格"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.desc": {
+          "source": "Optional detailed description providing more information about the product or service.",
+          "message": "提供有關產品或服務詳細資訊的選填描述。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
+          "source": "Item Description",
+          "message": "品項描述"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
+          "source": "Detailed description of the item",
+          "message": "品項的詳細描述"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.desc": {
+          "source": "A descriptive name for the product or service being invoiced.",
+          "message": "要開立發票之產品或服務的描述性名稱。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
+          "source": "Item Name",
+          "message": "品項名稱"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
+          "source": "Name of the item or service",
+          "message": "品項或服務的名稱"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.desc": {
+          "source": "The quantity of the item being invoiced. Defaults to 1 if not specified.",
+          "message": "開立發票的品項數量。若未指定，預設值為 1。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
+          "source": "Item Quantity",
+          "message": "品項數量"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
+          "source": "Number of items or units",
+          "message": "品項或單位數量"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.desc": {
+          "source": "Optional note or memo to include with the invoice. Visible to the recipient.",
+          "message": "要包含在發票中的選填備註或備忘錄。收件人可見。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "備註"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.short_desc": {
+          "source": "Note or memo for the invoice",
+          "message": "發票的備註或備忘錄"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.desc": {
+          "source": "If true, the invoice will be automatically sent to the recipient's email address. If false, you can send it manually later.",
+          "message": "若為 true，發票將自動傳送至收件人的電子郵件地址。若為 false，您可以稍後手動傳送。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
+          "source": "Send to Recipient",
+          "message": "傳送給收件人"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
+          "source": "Automatically send the invoice via email",
+          "message": "透過電子郵件自動傳送發票"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF80NQ.display_name": {
+          "source": "Net 45 Days",
+          "message": "Net 45 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF82MA.display_name": {
+          "source": "Net 60 Days",
+          "message": "Net 60 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF85MA.display_name": {
+          "source": "Net 90 Days",
+          "message": "Net 90 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8xMA.display_name": {
+          "source": "Net 10 Days",
+          "message": "Net 10 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8xNQ.display_name": {
+          "source": "Net 15 Days",
+          "message": "Net 15 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8zMA.display_name": {
+          "source": "Net 30 Days",
+          "message": "Net 30 天"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOkRVRV9PTl9SRUNFSVBU.display_name": {
+          "source": "Due on Receipt",
+          "message": "收到即付"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.desc": {
+          "source": "Specifies when payment is due for this invoice, such as immediately upon receipt or within a specific number of days.",
+          "message": "指定此發票的付款到期日，例如收到即付或在特定天數內。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
+          "source": "Payment Terms",
+          "message": "付款條件"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
+          "source": "When payment is due",
+          "message": "付款到期時間"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.desc": {
+          "source": "The email address where the invoice will be sent. This is the primary recipient who will receive payment requests.",
+          "message": "發票將寄送至的電子郵件地址。這是將接收付款請求的主要收件人。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
+          "source": "Recipient Email",
+          "message": "收件人電子郵件"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
+          "source": "Email address of the invoice recipient",
+          "message": "發票收件人的電子郵件地址"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.desc": {
+          "source": "The first name of the person or business contact receiving the invoice.",
+          "message": "接收發票的個人名字或商家聯絡人名字。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
+          "source": "Recipient First Name",
+          "message": "收件人名字"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
+          "source": "First name of the invoice recipient",
+          "message": "發票收件人的名字"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.desc": {
+          "source": "The last name of the person receiving the invoice.",
+          "message": "接收發票的個人姓氏。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
+          "source": "Recipient Last Name",
+          "message": "收件人姓氏"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
+          "source": "Last name of the invoice recipient",
+          "message": "發票收件人的姓氏"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.desc": {
+          "source": "A descriptive name for the tax being applied, such as \"Sales Tax\", \"VAT\", or \"GST\".",
+          "message": "所套用稅項的描述性名稱，例如「Sales Tax」、「VAT」或「GST」。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
+          "source": "Tax Name",
+          "message": "稅項名稱"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
+          "source": "Name for the tax (e.g., \"Sales Tax\")",
+          "message": "稅費名稱（例如「營業稅」）"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.desc": {
+          "source": "The tax rate as a percentage to be applied to the item amount.",
+          "message": "要套用至項目金額的稅率百分比。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
+          "source": "Tax Percentage",
+          "message": "稅率百分比"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
+          "source": "Tax rate to apply to the item",
+          "message": "要套用至項目的稅率"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
+          "source": "Create a new invoice for payment",
+          "message": "建立新的付款發票"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.desc": {
+          "source": "Authorizes payment for an order that has been approved by the customer. This places a hold on the funds without capturing them, allowing you to capture the payment later when ready to fulfill the order. Authorization is valid for up to 29 days.",
+          "message": "為客戶已核准的訂單授權付款。這會暫扣款項而不請款，讓您稍後準備好履行訂單時再請款。授權效期最長為 29 天。"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
+          "source": "Authorize Order",
+          "message": "授權訂單"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.desc": {
+          "source": "The ID of the approved order to capture",
+          "message": "要請款的已核准訂單 ID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.short_desc": {
+          "source": "ID of the approved order to authorize",
+          "message": "要授權之已核准訂單的 ID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
+          "source": "Authorize payment for an approved order",
+          "message": "為已核准的訂單授權付款"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.desc": {
+          "source": "Retrieves complete details for an order by its ID, including current status, payment information, customer details, and transaction history. Use this to check order status or retrieve information for order management.",
+          "message": "依訂單 ID 擷取完整的訂單詳細資料，包括目前狀態、付款資訊、客戶詳細資料及交易記錄。可用於檢查訂單狀態或擷取訂單管理資訊。"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
+          "source": "Get Order",
+          "message": "取得訂單"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.desc": {
+          "source": "The unique identifier of the order you want to retrieve details for.",
+          "message": "要擷取其詳細資料的訂單唯一識別碼。"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique identifier of the order to retrieve",
+          "message": "要擷取的訂單唯一識別碼"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
+          "source": "Retrieve order details by ID",
+          "message": "依 ID 擷取訂單詳細資料"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.desc": {
+          "source": "Retrieves complete details for an invoice by its ID, including payment status, recipient information, line items, and payment history.",
+          "message": "依發票 ID 擷取完整的發票詳細資料，包括付款狀態、收款人資訊、明細項目及付款記錄。"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
+          "source": "Get Invoice",
+          "message": "取得發票"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.desc": {
+          "source": "The unique identifier of the invoice you want to retrieve details for.",
+          "message": "要擷取其詳細資料的發票唯一識別碼。"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "發票 ID"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Unique identifier of the invoice to retrieve",
+          "message": "要擷取的發票唯一識別碼"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
+          "source": "Retrieve invoice details by ID",
+          "message": "依 ID 擷取發票詳細資料"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.desc": {
+          "source": "Triggers when customer dispute events occur, such as when a new dispute is created, updated, or resolved. Essential for managing customer service workflows and responding to payment disputes promptly.",
+          "message": "當發生客戶爭議事件時觸發，例如建立、更新或解決新爭議時。對於管理客戶服務工作流程及迅速回應付款爭議至關重要。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
+          "source": "Dispute Events",
+          "message": "爭議事件"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuQ1JFQVRFRA.desc": {
+          "source": "A dispute is created.",
+          "message": "已建立爭議。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuQ1JFQVRFRA.display_name": {
+          "source": "Dispute Created",
+          "message": "爭議已建立"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuUkVTT0xWRUQ.desc": {
+          "source": "A dispute is resolved.",
+          "message": "爭議已解決。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuUkVTT0xWRUQ.display_name": {
+          "source": "Dispute Resolved",
+          "message": "爭議已解決"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuVVBEQVRFRA.desc": {
+          "source": "A dispute is updated.",
+          "message": "爭議已更新。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuVVBEQVRFRA.display_name": {
+          "source": "Dispute Updated",
+          "message": "爭議已更新"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.",
+          "message": "選取應觸發此 Webhook 的爭議事件。每個事件代表爭議解決流程中的不同階段。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Dispute Event Type",
+          "message": "爭議事件類型"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific dispute event to listen for",
+          "message": "要接聽的特定爭議事件"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
+          "source": "Receive notifications when dispute events occur",
+          "message": "在發生爭議事件時接收通知"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.desc": {
+          "source": "Triggers when invoice-related events happen, such as when an invoice is created, paid, cancelled, refunded, or updated. Essential for managing billing workflows and keeping invoice status synchronized with your systems.",
+          "message": "當發生發票相關事件時觸發，例如建立、付款、取消、退款或更新發票時。對於管理帳單工作流程及讓發票狀態與您的系統保持同步至關重要。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
+          "source": "Invoice Events",
+          "message": "發票事件"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNBTkNFTExFRA.desc": {
+          "source": "A merchant or customer cancels an invoice.",
+          "message": "商家或客戶取消了發票。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNBTkNFTExFRA.display_name": {
+          "source": "Invoice Cancelled",
+          "message": "發票已取消"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNSRUFURUQ.desc": {
+          "source": "An invoice is created.",
+          "message": "已建立發票。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNSRUFURUQ.display_name": {
+          "source": "Invoice Created",
+          "message": "發票已建立"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlBBSUQ.desc": {
+          "source": "An invoice is paid, partially paid, or payment is made and is pending.",
+          "message": "發票已付款、部分付款，或已付款且待處理。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlBBSUQ.display_name": {
+          "source": "Invoice Paid",
+          "message": "發票已付款"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlJFRlVOREVE.desc": {
+          "source": "An invoice is refunded or partially refunded.",
+          "message": "發票已退款或部分退款。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlJFRlVOREVE.display_name": {
+          "source": "Invoice Refunded",
+          "message": "發票已退款"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlNDSEVEVUxFRA.desc": {
+          "source": "An invoice is scheduled.",
+          "message": "發票已排程。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlNDSEVEVUxFRA.display_name": {
+          "source": "Invoice Scheduled",
+          "message": "發票已排程"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlVQREFURUQ.desc": {
+          "source": "An invoice is updated.",
+          "message": "發票已更新。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlVQREFURUQ.display_name": {
+          "source": "Invoice Updated",
+          "message": "發票已更新"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which invoice event should trigger this webhook. Each event represents a different stage in the invoice lifecycle.",
+          "message": "選取應觸發此 Webhook 的發票事件。每個事件代表發票生命週期中的不同階段。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Invoice Event Type",
+          "message": "發票事件類型"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific invoice event to listen for",
+          "message": "要接聽的特定發票事件"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
+          "source": "Receive notifications when invoice events occur",
+          "message": "在發生發票事件時接收通知"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.desc": {
+          "source": "Triggers when specific order-related events happen, such as when an order is approved by the customer, completed, or when payment approval is reversed. Use this to automate order processing workflows and handle order status changes.",
+          "message": "當發生特定訂單相關事件時觸發，例如客戶核准訂單、訂單完成或付款核准撤銷時。可用於自動化訂單處理工作流程並處理訂單狀態變更。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
+          "source": "Order Events",
+          "message": "訂單事件"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkFQUFJPVkVE.desc": {
+          "source": "A buyer approved a checkout order.",
+          "message": "買方已核准結帳訂單。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkFQUFJPVkVE.display_name": {
+          "source": "Order Approved",
+          "message": "訂單已核准"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkNPTVBMRVRFRA.desc": {
+          "source": "A checkout order is processed.",
+          "message": "結帳訂單已處理。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkNPTVBMRVRFRA.display_name": {
+          "source": "Order Completed",
+          "message": "訂單已完成"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULlBBWU1FTlQtQVBQUk9WQUwuUkVWRVJTRUQ.desc": {
+          "source": "A problem occurred after the buyer approved the order but before you captured the payment.",
+          "message": "買方核准訂單後但您請款前發生問題。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULlBBWU1FTlQtQVBQUk9WQUwuUkVWRVJTRUQ.display_name": {
+          "source": "Payment Approval Reversed",
+          "message": "付款核准已撤銷"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which order event should trigger this webhook. Each event represents a different stage in the order lifecycle.",
+          "message": "選取應觸發此 Webhook 的訂單事件。每個事件代表訂單生命週期中的不同階段。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Order Event Type",
+          "message": "訂單事件類型"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific order event to listen for",
+          "message": "要接聽的特定訂單事件"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Receive notifications when order events occur",
+          "message": "在發生訂單事件時接收通知"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.desc": {
+          "source": "Retrieves a list of transactions for your PayPal account within a specified date range. Supports filtering by transaction type, status, amount range, currency, and payment method to help you find specific transactions or generate reports.",
+          "message": "擷取指定日期範圍內 PayPal 帳戶的交易清單。支援依交易類型、狀態、金額範圍、貨幣及付款方式進行篩選，以協助您尋找特定交易或產生報告。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
+          "source": "List Transactions",
+          "message": "列出交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.desc": {
+          "source": "The latest date to include in the transaction search. Transactions on or before this date will be included in the results.",
+          "message": "交易搜尋中包含的最晚日期。在此日期當天或之前的交易將包含在結果中。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "結束日期"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Ending date for transaction search",
+          "message": "交易搜尋的結束日期"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "The earliest date to include in the transaction search. Transactions on or after this date will be included in the results.",
+          "message": "要在交易搜尋中包含的最早日期。在此日期當日或之後的交易將包含在結果中。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日期"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Beginning date for transaction search",
+          "message": "交易搜尋的開始日期"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.allowed-value.c3RyaW5nOkNSRURJVENBUkQ.display_name": {
+          "source": "Credit Card",
+          "message": "信用卡"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.allowed-value.c3RyaW5nOkRFQklUQ0FSRA.display_name": {
+          "source": "Debit Card",
+          "message": "簽帳金融卡"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.desc": {
+          "source": "Filter transactions by the type of payment method used, such as credit card, debit card, or bank account.",
+          "message": "依使用的付款方式類型篩選交易，例如信用卡、簽帳金融卡或銀行帳戶。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
+          "source": "Payment Method Type",
+          "message": "付款方式類型"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
+          "source": "Filter by payment method used",
+          "message": "依使用的付款方式篩選"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve when paginating through large result sets.",
+          "message": "分頁瀏覽大量結果集時要擷取的頁碼。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "頁碼"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "分頁的頁碼"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of transactions to return in a single response. Use for pagination of large result sets.",
+          "message": "單次回應中返回的最多交易筆數。用於大量結果集的分頁。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of transactions per page",
+          "message": "每頁交易筆數"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "墨西哥披索"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "墨西哥披索 (MXN)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "馬來西亞令吉 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "馬來西亞令吉 (MYR)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "挪威克朗"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "挪威克朗 (NOK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "紐西蘭元"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "紐西蘭元 (NZD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "澳幣"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "澳幣 (AUD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "巴西雷亞爾 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "巴西雷亞爾 (BRL)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "加拿大元"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "加拿大元 (CAD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "瑞士法郎"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "瑞士法郎 (CHF)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "人民幣 - 僅支援境內 PayPal 帳戶作為付款貨幣和貨幣餘額"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "人民幣 (CNY)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "捷克克朗"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "捷克克朗 (CZK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "丹麥克朗"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "丹麥克朗 (DKK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "歐元"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "歐元 (EUR)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英鎊"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英鎊 (GBP)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "港幣"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "港幣 (HKD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "匈牙利福林 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "匈牙利福林 (HUF)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "以色列新謝克爾"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "以色列新謝克爾 (ILS)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日圓 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日圓 (JPY)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "菲律賓披索"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "菲律賓披索 (PHP)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "波蘭茲羅提"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "波蘭茲羅提 (PLN)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "俄羅斯盧布"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "俄羅斯盧布 (RUB)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "瑞典克朗"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "瑞典克朗 (SEK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "新加坡元"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "新加坡元 (SGD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "泰銖"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "泰銖 (THB)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台幣 - 不支援小數點"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台幣 (TWD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "美元"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "美元 (USD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.desc": {
+          "source": "Filter transactions by currency code to see only transactions in specific currencies.",
+          "message": "依貨幣代碼篩選交易，僅查看特定貨幣的交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
+          "source": "Transaction Currency",
+          "message": "交易貨幣"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
+          "source": "Filter by currency code",
+          "message": "依貨幣代碼篩選"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.desc": {
+          "source": "Specify a range of transaction amounts to filter results. Useful for finding transactions within specific value ranges.",
+          "message": "指定交易金額範圍以篩選結果。適用於尋找特定金額範圍內的交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
+          "source": "Transaction Amount Range",
+          "message": "交易金額範圍"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
+          "source": "Filter by transaction amount range",
+          "message": "依交易金額範圍篩選"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOkQ.display_name": {
+          "source": "Denied",
+          "message": "已拒絕"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlA.display_name": {
+          "source": "Pending",
+          "message": "擱置中"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlM.desc": {
+          "source": "The transaction successfully completed without a denial and after any pending statuses.",
+          "message": "交易已成功完成，未被拒絕且在任何待處理狀態之後。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlM.display_name": {
+          "source": "Success",
+          "message": "成功"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlY.desc": {
+          "source": "A successful transaction was reversed and funds were refunded to the original sender.",
+          "message": "成功的交易已被撤銷，款項已退還給原付款人。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlY.display_name": {
+          "source": "Refunded",
+          "message": "已退款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.desc": {
+          "source": "Filter transactions by their processing status such as Success, Pending, Denied, or Refunded.",
+          "message": "依交易處理狀態篩選，例如「成功」、「待處理」、「已拒絕」或「已退款」。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
+          "source": "Transaction Status",
+          "message": "交易狀態"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
+          "source": "Status of transactions to include",
+          "message": "要包含的交易狀態"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAw.desc": {
+          "source": "Deferred disbursement. Funds collected for disbursement.",
+          "message": "延期撥款。已收取待撥付的款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAw.display_name": {
+          "source": "Deferred Disbursement",
+          "message": "延期撥款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAx.desc": {
+          "source": "Delayed disbursement. Funds disbursed.",
+          "message": "延遲撥款。款項已撥付。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAx.display_name": {
+          "source": "Delayed Disbursement",
+          "message": "延遲撥款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAw.desc": {
+          "source": "Account receivable for shipping.",
+          "message": "運費應收帳款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAw.display_name": {
+          "source": "Account Receivable for Shipping",
+          "message": "運費應收帳款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAx.desc": {
+          "source": "Funds payable. PayPal-provided funds that must be paid back.",
+          "message": "應付款項。必須償還的 PayPal 提供資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAx.display_name": {
+          "source": "Funds Payable",
+          "message": "應付款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAy.desc": {
+          "source": "Funds receivable. PayPal-provided funds that are being paid back.",
+          "message": "應收款項。正在償還的 PayPal 提供資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAy.display_name": {
+          "source": "Funds Receivable",
+          "message": "應收款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5ODAw.desc": {
+          "source": "Display only transaction.",
+          "message": "僅顯示交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5ODAw.display_name": {
+          "source": "Display Only Transaction",
+          "message": "僅顯示交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5OTAw.desc": {
+          "source": "Other.",
+          "message": "其他。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5OTAw.display_name": {
+          "source": "Other",
+          "message": "其他"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA0.desc": {
+          "source": "eBay auction payment.",
+          "message": "eBay 拍賣付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA0.display_name": {
+          "source": "eBay Auction Payment",
+          "message": "eBay 拍賣付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA1.desc": {
+          "source": "Direct payment API.",
+          "message": "Direct payment API。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA1.display_name": {
+          "source": "Direct Payment API",
+          "message": "Direct Payment API"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA2.desc": {
+          "source": "PayPal Checkout APIs.",
+          "message": "PayPal Checkout APIs。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA2.display_name": {
+          "source": "PayPal Checkout APIs",
+          "message": "PayPal Checkout APIs"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA3.desc": {
+          "source": "Website payments standard payment.",
+          "message": "Website Payments Standard 付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA3.display_name": {
+          "source": "Website Payments Standard",
+          "message": "Website Payments Standard"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA4.desc": {
+          "source": "Postage payment to carrier.",
+          "message": "支付給承運商的郵資款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA4.display_name": {
+          "source": "Postage Payment",
+          "message": "郵資付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA5.desc": {
+          "source": "Gift certificate payment. Purchase of gift certificate.",
+          "message": "禮券付款。購買禮券。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA5.display_name": {
+          "source": "Gift Certificate Payment",
+          "message": "禮券付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAw.desc": {
+          "source": "General: received payment of a type not belonging to the other T00nn categories.",
+          "message": "一般：收到不屬於其他 T00nn 類別的付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAw.display_name": {
+          "source": "General Payment",
+          "message": "一般付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAx.desc": {
+          "source": "MassPay payment.",
+          "message": "MassPay 付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAx.display_name": {
+          "source": "MassPay Payment",
+          "message": "MassPay 付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAy.desc": {
+          "source": "Subscription payment. Either payment sent or payment received.",
+          "message": "訂閱付款。發送的付款或收到的付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAy.display_name": {
+          "source": "Subscription Payment",
+          "message": "訂閱付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAz.desc": {
+          "source": "Pre-approved payment (BillUser API). Either sent or received.",
+          "message": "預先核准付款（BillUser API）。發送或接收皆適用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAz.display_name": {
+          "source": "Pre-approved Payment",
+          "message": "預先核准付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE0.desc": {
+          "source": "Rebate payments.",
+          "message": "回饋金付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE0.display_name": {
+          "source": "Rebate Payments",
+          "message": "回饋金付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE1.desc": {
+          "source": "Third-party payout.",
+          "message": "第三方撥款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE1.display_name": {
+          "source": "Third-party Payout",
+          "message": "第三方撥款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE2.desc": {
+          "source": "Third-party recoupment.",
+          "message": "第三方追回款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE2.display_name": {
+          "source": "Third-party Recoupment",
+          "message": "第三方追回款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE3.desc": {
+          "source": "Store-to-store transfers.",
+          "message": "店鋪間轉帳。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE3.display_name": {
+          "source": "Store-to-store Transfers",
+          "message": "店鋪間轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE4.desc": {
+          "source": "PayPal Here payment.",
+          "message": "PayPal Here 付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE4.display_name": {
+          "source": "PayPal Here Payment",
+          "message": "PayPal Here 付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE5.desc": {
+          "source": "Generic instrument-funded payment.",
+          "message": "一般支付工具注資的付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE5.display_name": {
+          "source": "Generic Instrument-funded Payment",
+          "message": "一般支付工具注資的付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEw.desc": {
+          "source": "Third-party auction payment.",
+          "message": "第三方拍賣付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEw.display_name": {
+          "source": "Third-party Auction Payment",
+          "message": "第三方拍賣付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEx.desc": {
+          "source": "Mobile payment, made through a mobile phone.",
+          "message": "行動支付，透過行動電話進行。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEx.display_name": {
+          "source": "Mobile Payment",
+          "message": "行動支付"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEy.desc": {
+          "source": "Virtual terminal payment.",
+          "message": "虛擬終端機付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEy.display_name": {
+          "source": "Virtual Terminal Payment",
+          "message": "虛擬終端機付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEz.desc": {
+          "source": "Donation payment.",
+          "message": "捐款付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEz.display_name": {
+          "source": "Donation Payment",
+          "message": "捐款付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDIx.desc": {
+          "source": "Cryptocurrency payment.",
+          "message": "加密貨幣付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDIx.display_name": {
+          "source": "Cryptocurrency Payment",
+          "message": "加密貨幣付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA0.desc": {
+          "source": "Mass payment batch fee.",
+          "message": "大宗付款批次手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA0.display_name": {
+          "source": "Mass Payment Batch Fee",
+          "message": "大宗付款批次手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA1.desc": {
+          "source": "Check withdrawal.",
+          "message": "支票提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA1.display_name": {
+          "source": "Check Withdrawal",
+          "message": "支票提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA2.desc": {
+          "source": "Chargeback processing fee.",
+          "message": "退單處理手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA2.display_name": {
+          "source": "Chargeback Processing Fee",
+          "message": "退單處理手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA3.desc": {
+          "source": "Payment fee.",
+          "message": "付款手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA3.display_name": {
+          "source": "Payment Fee",
+          "message": "付款手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA4.desc": {
+          "source": "ATM withdrawal.",
+          "message": "ATM 提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA4.display_name": {
+          "source": "ATM Withdrawal",
+          "message": "ATM 提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA5.desc": {
+          "source": "Auto-sweep from account.",
+          "message": "從帳戶自動轉帳。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA5.display_name": {
+          "source": "Auto-sweep from Account",
+          "message": "從帳戶自動轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAw.desc": {
+          "source": "General non-payment fee of a type not belonging to the other T01nn categories.",
+          "message": "不屬於其他 T01nn 類別的一般非付款手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAw.display_name": {
+          "source": "General Non-payment Fee",
+          "message": "一般非付款手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAx.desc": {
+          "source": "Website payments. Pro account monthly fee.",
+          "message": "網站付款。Pro 帳戶月費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAx.display_name": {
+          "source": "Website Payments Pro Fee",
+          "message": "Website Payments Pro 費用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAy.desc": {
+          "source": "Foreign bank withdrawal fee.",
+          "message": "國外銀行提款手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAy.display_name": {
+          "source": "Foreign Bank Withdrawal Fee",
+          "message": "國外銀行提款手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAz.desc": {
+          "source": "WorldLink check withdrawal fee.",
+          "message": "WorldLink 支票提款手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAz.display_name": {
+          "source": "WorldLink Check Withdrawal Fee",
+          "message": "WorldLink 支票提款手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTE0.desc": {
+          "source": "Dispute fee.",
+          "message": "爭議處理費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTE0.display_name": {
+          "source": "Dispute Fee",
+          "message": "爭議處理費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEw.desc": {
+          "source": "International credit card withdrawal.",
+          "message": "國際信用卡提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEw.display_name": {
+          "source": "International Credit Card Withdrawal",
+          "message": "國際信用卡提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEx.desc": {
+          "source": "Warranty fee for warranty purchase.",
+          "message": "購買保固的保固費用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEx.display_name": {
+          "source": "Warranty Fee",
+          "message": "保固費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEy.desc": {
+          "source": "Gift certificate expiration fee.",
+          "message": "禮券到期手續費。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEy.display_name": {
+          "source": "Gift Certificate Expiration Fee",
+          "message": "禮券到期手續費"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEz.desc": {
+          "source": "Partner fee.",
+          "message": "合作夥伴費用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEz.display_name": {
+          "source": "Partner Fee",
+          "message": "合作夥伴費用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAw.desc": {
+          "source": "General currency conversion.",
+          "message": "一般貨幣轉換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAw.display_name": {
+          "source": "General Currency Conversion",
+          "message": "一般貨幣轉換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAx.desc": {
+          "source": "User-initiated currency conversion.",
+          "message": "使用者發起的貨幣轉換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAx.display_name": {
+          "source": "User-initiated Currency Conversion",
+          "message": "使用者發起的貨幣轉換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAy.desc": {
+          "source": "Currency conversion required to cover negative balance. PayPal-system generated.",
+          "message": "彌補負餘額所需的貨幣轉換。由 PayPal 系統產生。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAy.display_name": {
+          "source": "System Currency Conversion",
+          "message": "系統貨幣轉換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAw.desc": {
+          "source": "General funding of PayPal account. Deposit to PayPal balance from a bank account.",
+          "message": "PayPal 帳戶的一般注資。從銀行帳戶存入 PayPal 餘額。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAw.display_name": {
+          "source": "General Bank Deposit",
+          "message": "一般銀行存款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAx.desc": {
+          "source": "PayPal balance manager funding of PayPal account. PayPal-system generated.",
+          "message": "PayPal 餘額管理工具為 PayPal 帳戶注資。由 PayPal 系統產生。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAx.display_name": {
+          "source": "Balance Manager Funding",
+          "message": "餘額管理工具注資"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAy.desc": {
+          "source": "ACH funding for funds recovery from account balance.",
+          "message": "用於從帳戶餘額追回款項的 ACH 注資。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAy.display_name": {
+          "source": "ACH Funding Recovery",
+          "message": "ACH 注資追回"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAz.desc": {
+          "source": "Electronic funds transfer (EFT) (German banking).",
+          "message": "電子轉帳 (EFT)（德國銀行業務）。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAz.display_name": {
+          "source": "Electronic Funds Transfer",
+          "message": "電子轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAw.desc": {
+          "source": "General withdrawal from PayPal account. Settlement withdrawal or user-initiated.",
+          "message": "從 PayPal 帳戶一般提款。結算提款或使用者發起的提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAw.display_name": {
+          "source": "General Bank Withdrawal",
+          "message": "一般銀行提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAx.desc": {
+          "source": "AutoSweep.",
+          "message": "AutoSweep。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAx.display_name": {
+          "source": "AutoSweep",
+          "message": "AutoSweep"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAz.desc": {
+          "source": "You initiated a transfer from your PayPal balance to your bank account.",
+          "message": "你已發起從 PayPal 餘額轉帳至銀行帳戶。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAz.display_name": {
+          "source": "Bank Transfer",
+          "message": "銀行轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA0.desc": {
+          "source": "PayPal debit card cash advance.",
+          "message": "PayPal 簽帳金融卡預借現金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA0.display_name": {
+          "source": "Debit Card Cash Advance",
+          "message": "簽帳金融卡預借現金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA1.desc": {
+          "source": "PayPal debit authorization.",
+          "message": "PayPal 簽帳授權。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA1.display_name": {
+          "source": "Debit Authorization",
+          "message": "簽帳授權"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAw.desc": {
+          "source": "General PayPal debit card transaction.",
+          "message": "一般 PayPal 簽帳金融卡交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAw.display_name": {
+          "source": "General Debit Card Transaction",
+          "message": "一般簽帳金融卡交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAx.desc": {
+          "source": "Virtual PayPal debit card transaction.",
+          "message": "虛擬 PayPal 簽帳金融卡交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAx.display_name": {
+          "source": "Virtual Debit Card Transaction",
+          "message": "虛擬簽帳金融卡交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAy.desc": {
+          "source": "PayPal debit card withdrawal to ATM.",
+          "message": "PayPal 簽帳金融卡 ATM 提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAy.display_name": {
+          "source": "Debit Card ATM Withdrawal",
+          "message": "簽帳金融卡 ATM 提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAz.desc": {
+          "source": "Hidden virtual PayPal debit card transaction.",
+          "message": "隱藏的虛擬 PayPal 簽帳金融卡交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAz.display_name": {
+          "source": "Hidden Virtual Debit Card",
+          "message": "隱藏的虛擬簽帳金融卡"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNjAw.desc": {
+          "source": "General credit card withdrawal. Reversal of purchase with a credit card.",
+          "message": "一般信用卡提款。使用信用卡購物的撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNjAw.display_name": {
+          "source": "General Credit Card Withdrawal",
+          "message": "一般信用卡提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAw.desc": {
+          "source": "General credit card deposit. Purchase with a credit card.",
+          "message": "一般信用卡存入。使用信用卡購物。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAw.display_name": {
+          "source": "General Credit Card Deposit",
+          "message": "一般信用卡存入"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAx.desc": {
+          "source": "Credit card deposit for negative PayPal account balance.",
+          "message": "用於 PayPal 帳戶負餘額的信用卡存入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAx.display_name": {
+          "source": "Credit Card Negative Balance",
+          "message": "信用卡負餘額"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA0.desc": {
+          "source": "PayPal buyer warranty bonus.",
+          "message": "PayPal 買家保固獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA0.display_name": {
+          "source": "Buyer Warranty Bonus",
+          "message": "買家保固獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA1.desc": {
+          "source": "PayPal protection bonus, payout for PayPal buyer protection.",
+          "message": "PayPal 保護獎勵，PayPal 買家保護支付。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA1.display_name": {
+          "source": "Protection Bonus",
+          "message": "保護獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA2.desc": {
+          "source": "Bonus for first ACH use.",
+          "message": "首次使用 ACH 的獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA2.display_name": {
+          "source": "First ACH Bonus",
+          "message": "首次 ACH 獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA3.desc": {
+          "source": "Credit card security charge refund.",
+          "message": "信用卡安全費用退款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA3.display_name": {
+          "source": "Security Charge Refund",
+          "message": "安全費用退款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA4.desc": {
+          "source": "Credit card cash back bonus.",
+          "message": "信用卡現金回饋獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA4.display_name": {
+          "source": "Credit Card Cash Back Bonus",
+          "message": "信用卡現金回饋獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAw.desc": {
+          "source": "General bonus of a type not belonging to the other T08nn categories.",
+          "message": "不屬於其他 T08nn 類別的一般獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAw.display_name": {
+          "source": "General Bonus",
+          "message": "一般獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAx.desc": {
+          "source": "Debit card cash back bonus.",
+          "message": "簽帳金融卡現金回饋獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAx.display_name": {
+          "source": "Debit Card Cash Back Bonus",
+          "message": "簽帳金融卡現金回饋獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAy.desc": {
+          "source": "Merchant referral account bonus.",
+          "message": "商家推薦帳戶獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAy.display_name": {
+          "source": "Merchant Referral Bonus",
+          "message": "商家推薦獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAz.desc": {
+          "source": "Balance manager account bonus.",
+          "message": "餘額管理員帳戶獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAz.display_name": {
+          "source": "Balance Manager Bonus",
+          "message": "餘額管理員獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA0.desc": {
+          "source": "eBay loyalty incentive.",
+          "message": "eBay 忠誠度獎勵。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA0.display_name": {
+          "source": "eBay Loyalty Incentive",
+          "message": "eBay 忠誠度獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA1.desc": {
+          "source": "Offers used as funding source.",
+          "message": "作為資金來源的優惠。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA1.display_name": {
+          "source": "Offers Funding",
+          "message": "優惠資金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAw.desc": {
+          "source": "General incentive or certificate redemption.",
+          "message": "一般獎勵或禮券兌換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAw.display_name": {
+          "source": "General Incentive",
+          "message": "一般獎勵"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAx.desc": {
+          "source": "Gift certificate redemption.",
+          "message": "禮券兌換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAx.display_name": {
+          "source": "Gift Certificate Redemption",
+          "message": "禮券兌換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAy.desc": {
+          "source": "Points incentive redemption.",
+          "message": "點數獎勵兌換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAy.display_name": {
+          "source": "Points Redemption",
+          "message": "點數兌換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAz.desc": {
+          "source": "Coupon redemption.",
+          "message": "優惠券兌換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAz.display_name": {
+          "source": "Coupon Redemption",
+          "message": "優惠券兌換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMDAw.desc": {
+          "source": "Bill pay transaction.",
+          "message": "帳單支付交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMDAw.display_name": {
+          "source": "Bill Pay Transaction",
+          "message": "帳單支付交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA0.desc": {
+          "source": "Reversal of ACH deposit.",
+          "message": "撤銷 ACH 存入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA0.display_name": {
+          "source": "ACH Deposit Reversal",
+          "message": "ACH 存入撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA1.desc": {
+          "source": "Reversal of general account hold.",
+          "message": "撤銷一般帳戶保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA1.display_name": {
+          "source": "Account Hold Reversal",
+          "message": "帳戶保留撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA2.desc": {
+          "source": "Payment reversal, initiated by PayPal.",
+          "message": "款項撤銷，由 PayPal 發起。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA2.display_name": {
+          "source": "Payment Reversal",
+          "message": "款項撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA3.desc": {
+          "source": "Payment refund, initiated by merchant.",
+          "message": "款項退款，由商家發起。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA3.display_name": {
+          "source": "Payment Refund",
+          "message": "款項退款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA4.desc": {
+          "source": "Fee reversal.",
+          "message": "費用撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA4.display_name": {
+          "source": "Fee Reversal",
+          "message": "費用撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA5.desc": {
+          "source": "Fee refund.",
+          "message": "費用退款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA5.display_name": {
+          "source": "Fee Refund",
+          "message": "費用退款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAw.desc": {
+          "source": "General reversal of a type not belonging to the other T11nn categories.",
+          "message": "不屬於其他 T11nn 類別的一般撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAw.display_name": {
+          "source": "General Reversal",
+          "message": "一般撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAx.desc": {
+          "source": "Reversal of ACH withdrawal transaction.",
+          "message": "撤銷 ACH 提款交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAx.display_name": {
+          "source": "ACH Withdrawal Reversal",
+          "message": "ACH 提款撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAy.desc": {
+          "source": "Reversal of debit card transaction.",
+          "message": "簽帳金融卡交易撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAy.display_name": {
+          "source": "Debit Card Reversal",
+          "message": "簽帳金融卡撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAz.desc": {
+          "source": "Reversal of points usage.",
+          "message": "點數折抵撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAz.display_name": {
+          "source": "Points Usage Reversal",
+          "message": "點數折抵撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE0.desc": {
+          "source": "MassPay reversal transaction.",
+          "message": "MassPay 撤銷交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE0.display_name": {
+          "source": "MassPay Reversal",
+          "message": "MassPay 撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE1.desc": {
+          "source": "MassPay refund transaction.",
+          "message": "MassPay 退款交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE1.display_name": {
+          "source": "MassPay Refund",
+          "message": "MassPay 退款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE2.desc": {
+          "source": "Instant payment review (IPR) reversal.",
+          "message": "即時付款審查 (IPR) 撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE2.display_name": {
+          "source": "IPR Reversal",
+          "message": "IPR 撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE3.desc": {
+          "source": "Rebate or cash back reversal.",
+          "message": "回扣或現金回饋撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE3.display_name": {
+          "source": "Rebate Reversal",
+          "message": "回扣撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE4.desc": {
+          "source": "Generic instrument/Open Wallet reversals (seller side).",
+          "message": "通用支付工具／Open Wallet 撤銷（賣家端）。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE4.display_name": {
+          "source": "Generic Instrument Reversal (Seller)",
+          "message": "通用支付工具撤銷（賣家）"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE5.desc": {
+          "source": "Generic instrument/Open Wallet reversals (buyer side).",
+          "message": "通用支付工具／Open Wallet 撤銷（買家端）。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE5.display_name": {
+          "source": "Generic Instrument Reversal (Buyer)",
+          "message": "通用支付工具撤銷（買家）"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEw.desc": {
+          "source": "Hold for dispute investigation.",
+          "message": "爭議調查暫扣款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEw.display_name": {
+          "source": "Hold for Dispute",
+          "message": "爭議暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEx.desc": {
+          "source": "Cancellation of hold for dispute resolution.",
+          "message": "取消爭議解決暫扣款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEx.display_name": {
+          "source": "Cancel Hold",
+          "message": "取消暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEy.desc": {
+          "source": "MAM reversal.",
+          "message": "MAM 撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEy.display_name": {
+          "source": "MAM Reversal",
+          "message": "MAM 撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEz.desc": {
+          "source": "Non-reference credit payment.",
+          "message": "無參考資料信用付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEz.display_name": {
+          "source": "Non-reference Credit",
+          "message": "無參考資料信用款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA0.desc": {
+          "source": "Incentive adjustment.",
+          "message": "獎勵調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA0.display_name": {
+          "source": "Incentive Adjustment",
+          "message": "獎勵調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA1.desc": {
+          "source": "Reimbursement of chargeback.",
+          "message": "拒付償還。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA1.display_name": {
+          "source": "Chargeback Reimbursement",
+          "message": "拒付償還"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA3.desc": {
+          "source": "Chargeback re-presentment rejection.",
+          "message": "拒付重新提示遭拒。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA3.display_name": {
+          "source": "Chargeback Re-presentment Rejection",
+          "message": "拒付重新提示遭拒"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA4.desc": {
+          "source": "Chargeback cancellation.",
+          "message": "取消拒付。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA4.display_name": {
+          "source": "Chargeback Cancellation",
+          "message": "取消拒付"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAw.desc": {
+          "source": "General account adjustment.",
+          "message": "一般帳戶調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAw.display_name": {
+          "source": "General Account Adjustment",
+          "message": "一般帳戶調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAx.desc": {
+          "source": "Chargeback.",
+          "message": "拒付。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAx.display_name": {
+          "source": "Chargeback",
+          "message": "拒付"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAy.desc": {
+          "source": "Chargeback reversal.",
+          "message": "拒付撤銷。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAy.display_name": {
+          "source": "Chargeback Reversal",
+          "message": "拒付撤銷"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAz.desc": {
+          "source": "Charge-off adjustment.",
+          "message": "呆帳沖銷調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAz.display_name": {
+          "source": "Charge-off Adjustment",
+          "message": "呆帳沖銷調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAw.desc": {
+          "source": "General authorization.",
+          "message": "一般授權。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAw.display_name": {
+          "source": "General Authorization",
+          "message": "一般授權"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAx.desc": {
+          "source": "Reauthorization.",
+          "message": "重新授權。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAx.display_name": {
+          "source": "Reauthorization",
+          "message": "重新授權"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAy.desc": {
+          "source": "Void of authorization.",
+          "message": "取消授權。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAy.display_name": {
+          "source": "Void Authorization",
+          "message": "取消授權"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNDAw.desc": {
+          "source": "General dividend.",
+          "message": "一般股利。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNDAw.display_name": {
+          "source": "General Dividend",
+          "message": "一般股利"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAw.desc": {
+          "source": "General temporary hold of a type not belonging to the other T15nn categories.",
+          "message": "不屬於其他 T15nn 類別的一般暫時保留款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAw.display_name": {
+          "source": "General Hold",
+          "message": "一般暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAx.desc": {
+          "source": "Account hold for open authorization.",
+          "message": "未結授權之帳戶暫扣款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAx.display_name": {
+          "source": "Authorization Hold",
+          "message": "授權暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAy.desc": {
+          "source": "Account hold for ACH deposit.",
+          "message": "ACH 存款之帳戶暫扣款項。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAy.display_name": {
+          "source": "ACH Deposit Hold",
+          "message": "ACH 存款暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAz.desc": {
+          "source": "Temporary hold on available balance.",
+          "message": "可用餘額暫時保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAz.display_name": {
+          "source": "Balance Hold",
+          "message": "餘額暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAw.desc": {
+          "source": "PayPal buyer credit payment funding.",
+          "message": "PayPal 買家信用付款資金來源。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAw.display_name": {
+          "source": "Buyer Credit Funding",
+          "message": "買家信用資金來源"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAx.desc": {
+          "source": "BML credit. Transfer from BML.",
+          "message": "BML 信用款項。從 BML 轉入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAx.display_name": {
+          "source": "BML Credit",
+          "message": "BML 信用款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAy.desc": {
+          "source": "Buyer credit payment.",
+          "message": "買家信用付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAy.display_name": {
+          "source": "Buyer Credit Payment",
+          "message": "買家信用付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAz.desc": {
+          "source": "Buyer credit payment withdrawal. Transfer to BML.",
+          "message": "買家信用付款提款。轉帳至 BML。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAz.display_name": {
+          "source": "Buyer Credit Withdrawal",
+          "message": "買家信用提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAw.desc": {
+          "source": "General withdrawal to non-bank institution.",
+          "message": "向非銀行機構的一般提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAw.display_name": {
+          "source": "General Non-bank Withdrawal",
+          "message": "一般非銀行提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAx.desc": {
+          "source": "WorldLink withdrawal.",
+          "message": "WorldLink 提款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAx.display_name": {
+          "source": "WorldLink Withdrawal",
+          "message": "WorldLink 提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAw.desc": {
+          "source": "General buyer credit payment.",
+          "message": "一般買家信用付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAw.display_name": {
+          "source": "General Buyer Credit Payment",
+          "message": "一般買家信用付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAx.desc": {
+          "source": "BML withdrawal. Transfer to BML.",
+          "message": "BML 提款。轉帳至 BML。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAx.display_name": {
+          "source": "BML Withdrawal",
+          "message": "BML 提款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxOTAw.desc": {
+          "source": "General adjustment without business-related event.",
+          "message": "無業務相關事件的一般調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxOTAw.display_name": {
+          "source": "General Account Correction",
+          "message": "一般帳戶更正"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDA0.desc": {
+          "source": "Receivables financing.",
+          "message": "應收帳款融資。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDA0.display_name": {
+          "source": "Receivables Financing",
+          "message": "應收帳款融資"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAw.desc": {
+          "source": "General intra-account transfer.",
+          "message": "一般帳戶內轉帳。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAw.display_name": {
+          "source": "General Intra-account Transfer",
+          "message": "一般帳戶內轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAx.desc": {
+          "source": "Settlement consolidation.",
+          "message": "結算合併。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAx.display_name": {
+          "source": "Settlement Consolidation",
+          "message": "結算合併"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAy.desc": {
+          "source": "Transfer of funds from payable.",
+          "message": "從應付款項轉入資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAy.display_name": {
+          "source": "Funds Transfer from Payable",
+          "message": "從應付款項轉入資金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAz.desc": {
+          "source": "Transfer to external GL entity.",
+          "message": "轉帳至外部總帳實體。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAz.display_name": {
+          "source": "External GL Transfer",
+          "message": "外部總帳轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA0.desc": {
+          "source": "Reserve release.",
+          "message": "準備金解除保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA0.display_name": {
+          "source": "Reserve Release",
+          "message": "準備金解除保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA1.desc": {
+          "source": "Payment review hold.",
+          "message": "付款審查保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA1.display_name": {
+          "source": "Payment Review Hold",
+          "message": "付款審查保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA2.desc": {
+          "source": "Payment review release.",
+          "message": "付款審查解除保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA2.display_name": {
+          "source": "Payment Review Release",
+          "message": "付款審查解除保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA3.desc": {
+          "source": "Payment hold.",
+          "message": "付款保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA3.display_name": {
+          "source": "Payment Hold",
+          "message": "付款保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA4.desc": {
+          "source": "Payment hold release.",
+          "message": "付款保留解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA4.display_name": {
+          "source": "Payment Hold Release",
+          "message": "付款解除保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA5.desc": {
+          "source": "Gift certificate purchase.",
+          "message": "購買禮券。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA5.display_name": {
+          "source": "Gift Certificate Purchase",
+          "message": "禮券購買"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAx.desc": {
+          "source": "General hold.",
+          "message": "一般保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAx.display_name": {
+          "source": "General Hold",
+          "message": "一般暫扣款項"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAy.desc": {
+          "source": "General hold release.",
+          "message": "一般解除保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAy.display_name": {
+          "source": "General Hold Release",
+          "message": "一般解除保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAz.desc": {
+          "source": "Reserve hold.",
+          "message": "準備金保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAz.display_name": {
+          "source": "Reserve Hold",
+          "message": "準備金保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEw.desc": {
+          "source": "Gift certificate redemption.",
+          "message": "禮券兌換。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEw.display_name": {
+          "source": "Gift Certificate Redemption",
+          "message": "禮券兌換"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEx.desc": {
+          "source": "Funds not yet available.",
+          "message": "資金尚未可用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEx.display_name": {
+          "source": "Funds Not Yet Available",
+          "message": "資金尚未可用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEy.desc": {
+          "source": "Funds available.",
+          "message": "資金可用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEy.display_name": {
+          "source": "Funds Available",
+          "message": "資金可用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEz.desc": {
+          "source": "Blocked payments.",
+          "message": "已封鎖付款。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEz.display_name": {
+          "source": "Blocked Payments",
+          "message": "已封鎖付款"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMjAx.desc": {
+          "source": "Transfer to and from a credit-card-funded restricted balance.",
+          "message": "轉入及轉出信用卡出資的限制餘額。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMjAx.display_name": {
+          "source": "Credit Card Restricted Balance Transfer",
+          "message": "信用卡限制餘額轉帳"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQzMDAw.desc": {
+          "source": "Generic instrument/Open Wallet transaction.",
+          "message": "通用工具／Open Wallet 交易。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQzMDAw.display_name": {
+          "source": "Generic Instrument Transaction",
+          "message": "通用工具交易"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.desc": {
+          "source": "Filter results by specific transaction types such as payments, refunds, fees, or other transaction categories.",
+          "message": "依特定交易類型篩選結果，例如付款、退款、費用或其他交易類別。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
+          "source": "Transaction Type",
+          "message": "交易類型"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
+          "source": "Type of transactions to retrieve",
+          "message": "要擷取的交易類型"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
+          "source": "Get transaction history for your account",
+          "message": "取得你帳戶的交易紀錄"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.desc": {
+          "source": "Retrieves a list of customer disputes for your account. Disputes occur when customers challenge transactions, and this API helps you manage and respond to them effectively.",
+          "message": "擷取你帳戶的客戶糾紛申訴清單。當客戶對交易提出質疑時會產生糾紛申訴，此 API 可協助你有效管理並回覆這些糾紛申訴。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
+          "source": "List Disputes",
+          "message": "列出糾紛申訴"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOk9QRU5fSU5RVUlSSUVT.desc": {
+          "source": "The dispute is in the inquiry phase where the customer and merchant can communicate to resolve the issue.",
+          "message": "糾紛申訴處於查詢階段，客戶與商家可在此階段溝通以解決問題。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOk9QRU5fSU5RVUlSSUVT.display_name": {
+          "source": "Open Inquiries",
+          "message": "進行中的查詢"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOkFQUEVBTEFCTEU.desc": {
+          "source": "The dispute decision can be appealed by either party.",
+          "message": "任一方均可對糾紛申訴裁決提出申訴。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOkFQUEVBTEFCTEU.display_name": {
+          "source": "Appealable",
+          "message": "可提出申訴"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFU09MVkVE.desc": {
+          "source": "The dispute has been resolved and closed.",
+          "message": "糾紛申訴已解決並結束。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFU09MVkVE.display_name": {
+          "source": "Resolved",
+          "message": "已解決"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX09USEVSX1BBUlRZX0FDVElPTg.desc": {
+          "source": "Action is required from the other party (customer) to proceed with the dispute.",
+          "message": "需要對方（客戶）採取動作以繼續處理糾紛申訴。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX09USEVSX1BBUlRZX0FDVElPTg.display_name": {
+          "source": "Required Other Party Action",
+          "message": "需要對方動作"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX0FDVElPTg.desc": {
+          "source": "Action is required from the merchant to respond to or resolve the dispute.",
+          "message": "需要商家採取動作以回覆或解決糾紛申訴。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX0FDVElPTg.display_name": {
+          "source": "Required Action",
+          "message": "需要採取動作"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlVOREVSX1BBWVBBTF9SRVZJRVc.desc": {
+          "source": "The dispute is being reviewed by PayPal for a decision.",
+          "message": "PayPal 正在審查此糾紛申訴以做出裁決。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlVOREVSX1BBWVBBTF9SRVZJRVc.display_name": {
+          "source": "Under PayPal Review",
+          "message": "PayPal 審查中"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.desc": {
+          "source": "Filter disputes by their current states, such as open, under review, or resolved.",
+          "message": "依爭議的目前狀態（例如開啟、審查中或已解決）進行篩選。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
+          "source": "Dispute States",
+          "message": "爭議狀態"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
+          "source": "Filter by dispute states",
+          "message": "依爭議狀態篩選"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.desc": {
+          "source": "Show only disputes related to a specific transaction ID.",
+          "message": "僅顯示與特定交易 ID 相關的爭議。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
+          "source": "Disputed Transaction ID",
+          "message": "爭議交易 ID"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
+          "source": "Filter by specific transaction ID",
+          "message": "依特定交易 ID 篩選"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Token for pagination to retrieve the next page of disputes.",
+          "message": "用於分頁以擷取下一頁爭議的權杖。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "下一頁權杖"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page",
+          "message": "用於擷取下一頁的權杖"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.desc": {
+          "source": "Filter disputes created on or after this date and time.",
+          "message": "篩選在此日期和時間或之後建立的爭議。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "開始時間"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
+          "source": "Earliest dispute creation time to include",
+          "message": "要包含的最早爭議建立時間"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of disputes to return in a single response.",
+          "message": "單次回應中傳回的爭議數量上限。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of disputes per page",
+          "message": "每頁爭議數量"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.desc": {
+          "source": "Filter disputes that were last updated after this date and time.",
+          "message": "篩選在此日期和時間之後最後更新的爭議。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
+          "source": "Updated After",
+          "message": "更新時間晚於"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
+          "source": "Include disputes updated after this date",
+          "message": "包含在此日期之後更新的爭議"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.desc": {
+          "source": "Filter disputes that were last updated before this date and time.",
+          "message": "篩選在此日期和時間之前最後更新的爭議。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
+          "source": "Updated Before",
+          "message": "更新時間早於"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
+          "source": "Include disputes updated before this date",
+          "message": "包含在此日期之前更新的爭議"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
+          "source": "Get a list of customer disputes",
+          "message": "取得客戶爭議清單"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.desc": {
+          "source": "Retrieves a paginated list of invoices in your account. Use pagination parameters to navigate through large numbers of invoices.",
+          "message": "擷取帳戶中的發票分頁清單。使用分頁參數瀏覽大量發票。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
+          "source": "List Invoices",
+          "message": "列出發票"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve when paginating through invoices.",
+          "message": "分頁瀏覽發票時要擷取的頁碼。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "頁碼"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "分頁的頁碼"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of invoices to return in a single response.",
+          "message": "單次回應中傳回的發票數量上限。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of invoices per page",
+          "message": "每頁發票數量"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
+          "source": "Get a list of your invoices",
+          "message": "取得您的發票清單"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **PayPal** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **PayPal** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭以及請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊形式傳回。\n\n對於此應用程式中尚未公開為一級動作的端點，請使用此動作。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to PayPal",
+          "message": "向 PayPal 發出自訂 API 呼叫"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.desc": {
+          "source": "Triggers when subscription-related events happen, including subscription creation, activation, updates, cancellation, expiration, or suspension. Critical for managing recurring billing and subscription lifecycle automation.",
+          "message": "當發生與訂閱相關的事件時觸發，包括訂閱建立、啟用、更新、取消、過期或暫停。對於管理定期計費和訂閱生命週期自動化至關重要。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
+          "source": "Subscription Events",
+          "message": "訂閱事件"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkFDVElWQVRFRA.desc": {
+          "source": "A subscription is activated.",
+          "message": "訂閱已啟用。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkFDVElWQVRFRA.display_name": {
+          "source": "Subscription Activated",
+          "message": "訂閱已啟用"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNBTkNFTExFRA.desc": {
+          "source": "A subscription is cancelled.",
+          "message": "訂閱已取消。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNBTkNFTExFRA.display_name": {
+          "source": "Subscription Cancelled",
+          "message": "訂閱已取消"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNSRUFURUQ.desc": {
+          "source": "A subscription is created.",
+          "message": "訂閱已建立。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNSRUFURUQ.display_name": {
+          "source": "Subscription Created",
+          "message": "訂閱已建立"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkVYUElSRUQ.desc": {
+          "source": "A subscription is expired.",
+          "message": "訂閱已過期。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkVYUElSRUQ.display_name": {
+          "source": "Subscription Expired",
+          "message": "訂閱已過期"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlNVU1BFTkRFRA.desc": {
+          "source": "A subscription is suspended.",
+          "message": "訂閱已暫停。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlNVU1BFTkRFRA.display_name": {
+          "source": "Subscription Suspended",
+          "message": "訂閱已暫停"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlVQREFURUQ.desc": {
+          "source": "A subscription is updated.",
+          "message": "訂閱已更新。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlVQREFURUQ.display_name": {
+          "source": "Subscription Updated",
+          "message": "訂閱已更新"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which subscription event should trigger this webhook. Each event represents a different stage in the subscription lifecycle.",
+          "message": "選取應觸發此 Webhook 的訂閱事件。每個事件代表訂閱生命週期中的不同階段。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Subscription Event Type",
+          "message": "訂閱事件類型"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific subscription event to listen for",
+          "message": "要監聽的特定訂閱事件"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
+          "source": "Receive notifications when subscription events occur",
+          "message": "在發生訂閱事件時接收通知"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.desc": {
+          "source": "Issues a refund for a previously captured payment. Can process full or partial refunds. The refunded amount will be returned to the customer's original payment method and deducted from your account balance.",
+          "message": "為先前已請款的付款辦理退款。可處理全額或部分退款。退款金額將退回客戶原先的付款方式，並從您的帳戶餘額中扣除。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
+          "source": "Refund Payment",
+          "message": "退款"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.desc": {
+          "source": "The unique identifier of the captured payment that you want to refund. This can be found in the capture response or order details.",
+          "message": "您要退款的已請款付款唯一識別碼。可以在請款回應或訂單詳細資料中找到。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.display_name": {
+          "source": "Capture ID",
+          "message": "請款 ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.short_desc": {
+          "source": "ID of the captured payment to refund",
+          "message": "要退款的已請款付款 ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.desc": {
+          "source": "The amount to refund. If not specified, the full captured amount will be refunded. For partial refunds, specify the currency and amount.",
+          "message": "要退款的金額。若未指定，將退還已請款的全額。如需部分退款，請指定幣別與金額。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
+          "source": "Refund Amount",
+          "message": "退款金額"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
+          "source": "Amount to refund (optional for full refund)",
+          "message": "要退款的金額（全額退款時選填）"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.desc": {
+          "source": "Optional invoice ID to associate with this refund for accounting and tracking purposes.",
+          "message": "可選填的發票 ID，用於會計和追蹤目的並與此退款建立關聯。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "發票 ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Invoice ID for the refund",
+          "message": "退款的發票 ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.desc": {
+          "source": "An optional note that will be sent to the customer explaining the reason for the refund.",
+          "message": "將傳送給客戶以說明退款原因的選填備註。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
+          "source": "Note to Payer",
+          "message": "給付款人的備註"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
+          "source": "Optional note explaining the refund",
+          "message": "說明退款的選填備註"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
+          "source": "Process a refund for a captured payment",
+          "message": "處理已請款付款的退款"
+        },
+        "app.UGF5UGFs.desc": {
+          "source": "The PayPal integration provides complete access to PayPal's REST APIs for managing e-commerce transactions. Create and capture orders, process payments and refunds, manage invoices and billing, handle customer disputes, set up recurring subscriptions, and receive real-time webhook notifications. Perfect for businesses of all sizes looking to accept payments securely and efficiently.",
+          "message": "PayPal 整合功能提供對 PayPal REST API 的完整存取權，以管理電子商務交易。建立及請款訂單、處理付款與退款、管理發票與計費、處理客戶爭議、設定定期訂閱，並接收即時 Webhook 通知。非常適合希望安全且有效率地接受付款的各類規模企業。"
+        },
+        "app.UGF5UGFs.display_name": {
+          "source": "PayPal",
+          "message": "PayPal"
+        },
+        "app.UGF5UGFs.short_desc": {
+          "source": "Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.",
+          "message": "與 PayPal 整合，透過完整的 API 管理付款、訂單、發票、爭議和訂閱。"
+        }
+      }
+    }
+  }
+}

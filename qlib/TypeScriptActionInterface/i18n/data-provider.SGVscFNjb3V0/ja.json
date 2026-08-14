@@ -1,0 +1,2185 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.desc": {
+          "source": "Create a new customer profile in Help Scout. Customers represent the people who contact your support team. You can store their contact information, company details, and other relevant data.",
+          "message": "Help Scoutで新しい顧客プロファイルを作成します。顧客はサポートチームに連絡するユーザーを表します。連絡先情報、会社情報、その他の関連データを保存できます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Create Customer",
+          "message": "顧客を作成"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.desc": {
+          "source": "The age of the customer as a string.",
+          "message": "文字列としての顧客の年齢。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.display_name": {
+          "source": "Age",
+          "message": "経過日数"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.short_desc": {
+          "source": "The customer age",
+          "message": "顧客の年齢"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.desc": {
+          "source": "Internal notes or background information about the customer. Maximum 200 characters. This is only visible to your team.",
+          "message": "顧客に関する内部メモまたは背景情報。最大200文字。これはチームにのみ表示されます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.display_name": {
+          "source": "Background",
+          "message": "背景"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.short_desc": {
+          "source": "Background notes about the customer",
+          "message": "顧客に関する背景メモ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOm1hbGU.display_name": {
+          "source": "Male",
+          "message": "男性"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOmZlbWFsZQ.display_name": {
+          "source": "Female",
+          "message": "女性"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOnVua25vd24.display_name": {
+          "source": "Unknown",
+          "message": "不明"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.desc": {
+          "source": "The gender of the customer: male, female, or unknown.",
+          "message": "顧客の性別: male、female、またはunknown。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.display_name": {
+          "source": "Gender",
+          "message": "性別"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.short_desc": {
+          "source": "The customer gender",
+          "message": "顧客の性別"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.desc": {
+          "source": "The primary email address for the customer. This is used to identify the customer when they send emails to your support address.",
+          "message": "顧客のメインメールアドレス。顧客がサポートアドレスにメールを送信した際に顧客を特定するために使用されます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.short_desc": {
+          "source": "The customer email address",
+          "message": "顧客のメールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "自宅"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "勤務先"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.desc": {
+          "source": "Categorize the email address type: work (business email), home (personal email), or other.",
+          "message": "メールアドレスの種類を分類します: work（ビジネスメール）、home（個人メール）、またはother。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.display_name": {
+          "source": "Email Type",
+          "message": "メールのタイプ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.short_desc": {
+          "source": "The type of email address",
+          "message": "メールアドレスの種類"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name of the customer. Maximum 40 characters.",
+          "message": "顧客の名。最大40文字。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The customer first name",
+          "message": "顧客の名"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.desc": {
+          "source": "The job title or position of the customer. Maximum 60 characters.",
+          "message": "顧客の役職または職位。最大60文字。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "役職"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
+          "source": "The customer job title",
+          "message": "顧客の役職"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.desc": {
+          "source": "The company or organization the customer belongs to.",
+          "message": "顧客が所属する会社または組織。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.display_name": {
+          "source": "Organization",
+          "message": "組織"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.short_desc": {
+          "source": "The customer company or organization",
+          "message": "顧客の会社または組織"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.desc": {
+          "source": "The geographic location of the customer. Maximum 60 characters.",
+          "message": "顧客の地理的な場所。最大60文字。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "位置情報"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.short_desc": {
+          "source": "The customer location",
+          "message": "顧客の場所"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.desc": {
+          "source": "The last name of the customer. Maximum 40 characters.",
+          "message": "顧客の姓。最大40文字。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
+          "source": "The customer last name",
+          "message": "顧客の姓"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.desc": {
+          "source": "The phone number for the customer.",
+          "message": "顧客の電話番号。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "電話番号"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.short_desc": {
+          "source": "The customer phone number",
+          "message": "顧客の電話番号"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "携帯電話"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOmZheA.display_name": {
+          "source": "Fax",
+          "message": "FAX"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "自宅"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "ポケットベル"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "勤務先"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.desc": {
+          "source": "Categorize the phone number type: work, home, mobile, fax, pager, or other.",
+          "message": "電話番号の種類を分類します: work、home、mobile、fax、pager、またはother。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.display_name": {
+          "source": "Phone Type",
+          "message": "電話番号の種類"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.short_desc": {
+          "source": "The type of phone number",
+          "message": "電話番号の種類"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Create a new customer",
+          "message": "新しい顧客を作成します"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Create a new conversation in Help Scout. A conversation represents an email thread or support ticket with a customer. You must specify the mailbox, customer, and initial message content.",
+          "message": "Help Scoutで新しい会話を作成します。会話は顧客とのメールスレッドまたはサポートチケットを表します。メールボックス、顧客、および最初のメッセージ内容を指定する必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Create Conversation",
+          "message": "会話を作成"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.desc": {
+          "source": "The email address of the customer. If the customer does not exist, they will be created. Either Customer ID or Customer Email must be provided.",
+          "message": "顧客のメールアドレス。顧客が存在しない場合は作成されます。顧客IDまたは顧客のメールアドレスのいずれかを指定する必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.display_name": {
+          "source": "Customer Email",
+          "message": "顧客のメールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.short_desc": {
+          "source": "The email address of the customer",
+          "message": "顧客のメールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select an existing customer from Help Scout. Either Customer ID or Customer Email must be provided.",
+          "message": "Help Scoutから既存の顧客を選択します。顧客IDまたは顧客のメールアドレスのいずれかを指定する必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer ID",
+          "message": "顧客ID"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The ID of an existing customer",
+          "message": "既存の顧客のID"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.desc": {
+          "source": "Optionally assign the conversation to a specific Help Scout user. If not specified, the conversation will be unassigned or follow your mailbox routing rules.",
+          "message": "オプションで会話を特定のHelp Scoutユーザーに割り当てます。指定しない場合、会話は未割り当てになるか、メールボックスのルーティングルールに従います。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "担当者"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign the conversation to a user",
+          "message": "会話をユーザーに割り当てます"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.desc": {
+          "source": "When set to true, Help Scout will send an auto-reply to the customer if one is configured for the mailbox. Set to false to prevent auto-replies.",
+          "message": "trueに設定すると、メールボックスに自動返信が設定されている場合にHelp Scoutが顧客に自動返信を送信します。自動返信を無効にするにはfalseに設定します。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.display_name": {
+          "source": "Auto Reply",
+          "message": "自動返信"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.short_desc": {
+          "source": "Enable auto-reply for this conversation",
+          "message": "この会話の自動返信を有効にします"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.desc": {
+          "source": "Select the Help Scout mailbox (inbox) where this conversation should be created. Each mailbox typically corresponds to a different support email address or team.",
+          "message": "この会話を作成するHelp Scoutメールボックス（受信トレイ）を選択します。通常、各メールボックスは異なるサポートメールアドレスまたはチームに対応しています。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.short_desc": {
+          "source": "The mailbox to create the conversation in",
+          "message": "会話を作成するメールボックス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "The initial status of the conversation. Active means the conversation needs attention, closed means it is resolved, and pending means waiting for customer response.",
+          "message": "会話の初期ステータス。Activeは対応が必要、closedは解決済み、pendingは顧客の返信待ちを意味します。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The initial conversation status",
+          "message": "会話の初期ステータス"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.desc": {
+          "source": "The subject line for the conversation. This will be visible to the customer in email communications.",
+          "message": "会話の件名です。これはメールでのやり取りにおいて顧客に表示されます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "サブジェクト"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.short_desc": {
+          "source": "The conversation subject line",
+          "message": "会話の件名"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.desc": {
+          "source": "A list of tag names to add to the conversation. Tags help organize and categorize conversations for easier filtering and reporting.",
+          "message": "会話に追加するタグ名のリストです。タグは、フィルタリングやレポート作成を容易にするために会話を整理・分類するのに役立ちます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.short_desc": {
+          "source": "Tags to add to the conversation",
+          "message": "会話に追加するタグ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.desc": {
+          "source": "The text content of the first message in the conversation. This can include HTML formatting.",
+          "message": "会話の最初のメッセージのテキスト内容です。HTML形式を含めることができます。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.display_name": {
+          "source": "Thread Text",
+          "message": "スレッドテキスト"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.short_desc": {
+          "source": "The content of the initial message",
+          "message": "最初のメッセージの内容"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOm5vdGU.display_name": {
+          "source": "Note",
+          "message": "ノート"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOmN1c3RvbWVy.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "チャット"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "電話番号"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOnJlcGx5.display_name": {
+          "source": "Reply",
+          "message": "返信"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.desc": {
+          "source": "The type of the first message in the conversation. Customer means the message is from the customer, reply means it is from your team, and note is an internal note.",
+          "message": "会話の最初のメッセージのタイプです。customerは顧客からのメッセージ、replyはチームからのメッセージ、noteは社内ノートを意味します。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.display_name": {
+          "source": "Thread Type",
+          "message": "スレッドタイプ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.short_desc": {
+          "source": "The type of the initial thread",
+          "message": "最初のスレッドのタイプ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "チャット"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "電話番号"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.desc": {
+          "source": "The type of conversation: email (standard email thread), phone (phone call record), or chat (live chat conversation).",
+          "message": "会話のタイプ: email（標準のメールスレッド）、phone（通話記録）、またはchat（ライブチャットの会話）。"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "タイプ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.short_desc": {
+          "source": "The conversation type",
+          "message": "会話タイプ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Create a new conversation",
+          "message": "新しい会話を作成"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.desc": {
+          "source": "Add an internal note to an existing conversation in Help Scout. Notes are only visible to your team members and are not sent to the customer. Use notes to document internal discussions, research, or context about a customer issue.",
+          "message": "Help Scoutの既存の会話に社内ノートを追加します。ノートはチームメンバーにのみ表示され、顧客には送信されません。ノートを使用して、社内での議論、調査、または顧客の問題に関するコンテキストを記録します。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.display_name": {
+          "source": "Add Note to Conversation",
+          "message": "会話にノートを追加"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation where you want to add the note. You can search for conversations by number or subject.",
+          "message": "ノートを追加する会話のIDを選択または入力します。番号または件名で会話を検索できます。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add the note to",
+          "message": "ノートを追加する会話"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "スパム"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.desc": {
+          "source": "Optionally change the conversation status when adding the note. Options include active, closed, open, pending, or spam.",
+          "message": "ノートの追加時に会話ステータスを任意で変更します。選択肢には active、closed、open、pending、または spam があります。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.short_desc": {
+          "source": "Change the conversation status",
+          "message": "会話ステータスを変更"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.desc": {
+          "source": "The text content of the internal note. This can include HTML formatting. The note will only be visible to your team members.",
+          "message": "社内ノートのテキスト内容です。HTML形式を含めることができます。ノートはチームメンバーにのみ表示されます。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.display_name": {
+          "source": "Note Text",
+          "message": "ノートテキスト"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.short_desc": {
+          "source": "The content of the note",
+          "message": "メモの内容"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.desc": {
+          "source": "The Help Scout user who is adding the note. If not specified, defaults to the authenticated user.",
+          "message": "ノートを追加するHelp Scoutユーザーです。指定しない場合、デフォルトで認証済みユーザーになります。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.display_name": {
+          "source": "User",
+          "message": "ユーザー"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.short_desc": {
+          "source": "The user adding the note",
+          "message": "ノートを追加するユーザー"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.short_desc": {
+          "source": "Add an internal note to a conversation",
+          "message": "会話に社内ノートを追加"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.desc": {
+          "source": "Add one or more tags to an existing conversation in Help Scout. Tags help organize and categorize conversations for easier filtering, reporting, and workflow automation.",
+          "message": "Help Scoutの既存の会話に1つ以上のタグを追加します。タグは、フィルタリング、レポート作成、ワークフローの自動化を容易にするために会話を整理・分類するのに役立ちます。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.display_name": {
+          "source": "Add Tags to Conversation",
+          "message": "会話にタグを追加"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add tags to.",
+          "message": "タグを追加する会話の ID を選択または入力します。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add tags to",
+          "message": "タグを追加する会話"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.desc": {
+          "source": "A list of tag names to add to the conversation. Tags are case-insensitive and will be created if they do not already exist.",
+          "message": "会話に追加するタグ名のリストです。タグは大文字と小文字を区別せず、まだ存在しない場合は作成されます。"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.short_desc": {
+          "source": "Tags to add",
+          "message": "追加するタグ"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.short_desc": {
+          "source": "Add tags to a conversation",
+          "message": "会話にタグを追加"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.desc": {
+          "source": "This trigger fires whenever a conversation is assigned to a user in Help Scout. This includes both new assignments and reassignments.",
+          "message": "このトリガーは、Help Scoutで会話がユーザーに割り当てられるたびに起動します。これには新規の割り当てと再割り当ての両方が含まれます。"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.display_name": {
+          "source": "Assigned Conversation",
+          "message": "割り当てられた会話"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.",
+          "message": "特定のメールボックス内の会話に対してのみトリガーするように任意でフィルタリングします。すべてのメールボックスに対してトリガーする場合は空のままにしてください。"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "メールボックスでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.short_desc": {
+          "source": "Triggers when a conversation is assigned",
+          "message": "会話が割り当てられたときにトリガー"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.desc": {
+          "source": "Retrieve the full details of a specific customer from Help Scout by their ID. Returns all customer data including contact information, organization, and custom fields.",
+          "message": "IDによってHelp Scoutから特定の顧客の詳細情報を取得します。連絡先情報、組織、カスタムフィールドを含むすべての顧客データを返します。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.display_name": {
+          "source": "Get Customer",
+          "message": "顧客を取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select or enter the ID of the customer whose profile you want to retrieve.",
+          "message": "プロファイルを取得する顧客のIDを選択または入力します。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to retrieve",
+          "message": "取得する顧客"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.short_desc": {
+          "source": "Retrieve a single customer by ID",
+          "message": "IDで単一の顧客を取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.desc": {
+          "source": "Retrieve a company-wide performance report from Help Scout. Includes metrics like customers helped, closed conversations, total replies, and happiness scores. Only available on Plus and Pro plans.",
+          "message": "Help Scoutから全社的なパフォーマンスレポートを取得します。対応した顧客数、クローズした会話、総返信数、満足度スコアなどのメトリクスが含まれます。PlusおよびProプランでのみ利用可能です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.display_name": {
+          "source": "Get Company Report",
+          "message": "会社レポートを取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.desc": {
+          "source": "The end date and time for the reporting period in ISO 8601 format.",
+          "message": "ISO 8601形式のレポート対象期間の終了日時です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.display_name": {
+          "source": "End Date",
+          "message": "終了日"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.short_desc": {
+          "source": "End of the reporting period",
+          "message": "レポート対象期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.desc": {
+          "source": "Comma-separated list of folder IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのフォルダーIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.display_name": {
+          "source": "Folders",
+          "message": "フォルダー"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.short_desc": {
+          "source": "Filter by folder IDs",
+          "message": "フォルダーIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.desc": {
+          "source": "Comma-separated list of mailbox IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのメールボックスIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.display_name": {
+          "source": "Mailboxes",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.short_desc": {
+          "source": "Filter by mailbox IDs",
+          "message": "メールボックスIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.desc": {
+          "source": "The start date and time for the reporting period in ISO 8601 format.",
+          "message": "ISO 8601形式のレポート対象期間の開始日時です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.short_desc": {
+          "source": "Start of the reporting period",
+          "message": "レポート対象期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.desc": {
+          "source": "The end date for a previous period to compare against. Used to calculate deltas.",
+          "message": "比較対象となる過去の期間の終了日です。差分の計算に使用されます。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.display_name": {
+          "source": "Previous End",
+          "message": "前期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.short_desc": {
+          "source": "End of the comparison period",
+          "message": "比較期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.desc": {
+          "source": "The start date for a previous period to compare against. Used to calculate deltas.",
+          "message": "比較対象となる過去の期間の開始日です。差分の計算に使用されます。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.display_name": {
+          "source": "Previous Start",
+          "message": "前期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.short_desc": {
+          "source": "Start of the comparison period",
+          "message": "比較期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.desc": {
+          "source": "Comma-separated list of tag IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのタグIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.short_desc": {
+          "source": "Filter by tag IDs",
+          "message": "タグIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "チャット"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "電話番号"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.desc": {
+          "source": "Filter by conversation type: email, chat, or phone.",
+          "message": "会話タイプでフィルタリング: email、chat、またはphone。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.display_name": {
+          "source": "Types",
+          "message": "タイプ"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.short_desc": {
+          "source": "Filter by conversation types",
+          "message": "会話タイプで絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.short_desc": {
+          "source": "Get company-wide performance report",
+          "message": "全社的なパフォーマンスレポートを取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Retrieve the full details of a specific conversation from Help Scout by its ID. Returns all conversation data including subject, status, customer information, tags, and custom fields.",
+          "message": "ID を指定して Help Scout から特定の会話の詳細情報を取得します。件名、ステータス、顧客情報、タグ、カスタムフィールドを含むすべての会話データを返します。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Get Conversation",
+          "message": "会話を取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to retrieve.",
+          "message": "取得する会話の ID を選択または入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to retrieve",
+          "message": "取得する会話"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Retrieve a single conversation by ID",
+          "message": "ID で単一の会話を取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.desc": {
+          "source": "Retrieve an email channel performance report from Help Scout. Includes volume metrics, resolution times, response times, and time distribution data. Only available on Plus and Pro plans.",
+          "message": "Help Scout からメールチャネルのパフォーマンスレポートを取得します。ボリュームメトリクス、解決時間、応答時間、時間分布データが含まれます。Plus および Pro プランでのみ利用可能です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.display_name": {
+          "source": "Get Email Report",
+          "message": "メールレポートを取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.desc": {
+          "source": "The end date and time for the reporting period in ISO 8601 format.",
+          "message": "ISO 8601形式のレポート対象期間の終了日時です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.display_name": {
+          "source": "End Date",
+          "message": "終了日"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.short_desc": {
+          "source": "End of the reporting period",
+          "message": "レポート対象期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.desc": {
+          "source": "Comma-separated list of folder IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのフォルダーIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.display_name": {
+          "source": "Folders",
+          "message": "フォルダー"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.short_desc": {
+          "source": "Filter by folder IDs",
+          "message": "フォルダーIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.desc": {
+          "source": "When set to true, time-based metrics will only consider office hours. Defaults to false.",
+          "message": "true に設定すると、時間ベースのメトリクスは営業時間のみを考慮します。デフォルトは false です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.display_name": {
+          "source": "Office Hours",
+          "message": "営業時間"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.short_desc": {
+          "source": "Consider office hours in calculations",
+          "message": "計算に営業時間を考慮"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.desc": {
+          "source": "Comma-separated list of mailbox IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのメールボックスIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.display_name": {
+          "source": "Mailboxes",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.short_desc": {
+          "source": "Filter by mailbox IDs",
+          "message": "メールボックスIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.desc": {
+          "source": "The start date and time for the reporting period in ISO 8601 format.",
+          "message": "ISO 8601形式のレポート対象期間の開始日時です。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.short_desc": {
+          "source": "Start of the reporting period",
+          "message": "レポート対象期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.desc": {
+          "source": "The end date for a previous period to compare against. Used to calculate deltas.",
+          "message": "比較対象となる過去の期間の終了日です。差分の計算に使用されます。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.display_name": {
+          "source": "Previous End",
+          "message": "前期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.short_desc": {
+          "source": "End of the comparison period",
+          "message": "比較期間の終了"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.desc": {
+          "source": "The start date for a previous period to compare against. Used to calculate deltas.",
+          "message": "比較対象となる過去の期間の開始日です。差分の計算に使用されます。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.display_name": {
+          "source": "Previous Start",
+          "message": "前期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.short_desc": {
+          "source": "Start of the comparison period",
+          "message": "比較期間の開始"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.desc": {
+          "source": "Comma-separated list of tag IDs to filter the report by.",
+          "message": "レポートをフィルタリングするためのカンマ区切りのタグIDリストです。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.short_desc": {
+          "source": "Filter by tag IDs",
+          "message": "タグIDでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.short_desc": {
+          "source": "Get email channel performance report",
+          "message": "メールチャネルのパフォーマンスレポートを取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.desc": {
+          "source": "Retrieve the full details of a specific thread (message) within a conversation. Returns the thread content, type, status, and metadata.",
+          "message": "会話内の特定のメッセージ (スレッド) の詳細情報を取得します。スレッドの内容、タイプ、ステータス、メタデータを返します。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.display_name": {
+          "source": "Get Thread",
+          "message": "スレッドを取得"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation that contains the thread.",
+          "message": "スレッドが含まれる会話の ID を選択または入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation containing the thread",
+          "message": "スレッドを含む会話"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.desc": {
+          "source": "Enter the ID of the specific thread you want to retrieve.",
+          "message": "取得する特定のメッセージ (スレッド) の ID を入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.display_name": {
+          "source": "Thread ID",
+          "message": "スレッド ID"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.short_desc": {
+          "source": "The thread to retrieve",
+          "message": "取得するスレッド"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.short_desc": {
+          "source": "Retrieve a specific thread by ID",
+          "message": "ID で特定のスレッドを取得"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.desc": {
+          "source": "Delete a customer profile from Help Scout. Be cautious as this action may affect conversation history and is typically irreversible.",
+          "message": "Help Scout から顧客プロファイルを削除します。この操作は会話履歴に影響を与える可能性があり、通常は元に戻せないため注意してください。"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.display_name": {
+          "source": "Delete Customer",
+          "message": "顧客を削除"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select or enter the ID of the customer you want to delete.",
+          "message": "削除する顧客の ID を選択または入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to delete",
+          "message": "削除する顧客"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Delete a customer",
+          "message": "顧客を削除"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Delete a conversation from Help Scout. This action moves the conversation to the trash. Be cautious as this action may be irreversible depending on your Help Scout settings.",
+          "message": "Help Scout から会話を削除します。この操作により会話はゴミ箱に移動します。Help Scout の設定によっては元に戻せない場合があるため注意してください。"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Delete Conversation",
+          "message": "会話を削除"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to delete.",
+          "message": "削除する会話の ID を選択または入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to delete",
+          "message": "削除する会話"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Delete a conversation",
+          "message": "会話を削除"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.desc": {
+          "source": "Search for a mailbox in Help Scout by its name. Returns the mailbox details if found. The search is case-insensitive and supports partial matching.",
+          "message": "名前で Help Scout 内のメールボックスを検索します。見つかった場合はメールボックスの詳細を返します。大文字と小文字を区別せず、部分一致に対応しています。"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.display_name": {
+          "source": "Find Mailbox by Name",
+          "message": "名前でメールボックスを検索"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.desc": {
+          "source": "The name of the mailbox to search for. The search is case-insensitive and will match partial names or slugs.",
+          "message": "検索するメールボックスの名前。大文字と小文字を区別せず、部分名またはスラッグに一致します。"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.display_name": {
+          "source": "Mailbox Name",
+          "message": "メールボックス名"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.short_desc": {
+          "source": "The name of the mailbox to find",
+          "message": "検索するメールボックスの名前"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.short_desc": {
+          "source": "Find a mailbox by its name",
+          "message": "名前でメールボックスを検索"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.desc": {
+          "source": "Retrieve all threads (messages) within a specific conversation. Threads include customer messages, agent replies, notes, and other conversation activities.",
+          "message": "特定の会話内のすべてのスレッド (メッセージ) を取得します。スレッドには顧客のメッセージ、エージェントの返信、ノート、その他の会話アクティビティが含まれます。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.display_name": {
+          "source": "List Threads",
+          "message": "スレッドを一覧表示"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose threads you want to retrieve.",
+          "message": "スレッドを取得する会話の ID を選択または入力してください。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list threads from",
+          "message": "スレッドを一覧表示する会話"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of thread records to return. Default is 50.",
+          "message": "返すスレッドレコードの最大数。デフォルトは 50 です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of threads to return",
+          "message": "返すスレッドの最大数"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.short_desc": {
+          "source": "List all threads in a conversation",
+          "message": "会話内のすべてのスレッドを一覧表示"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of users from your Help Scout account. You can filter users by email address or mailbox. Returns all user types including those who have not yet accepted their invitations.",
+          "message": "Help Scout アカウントからユーザーの一覧を取得します。メールアドレスまたはメールボックスでユーザーを絞り込むことができます。招待をまだ承諾していないユーザーを含むすべてのユーザータイプを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.desc": {
+          "source": "Only return users with this exact email address.",
+          "message": "このメールアドレスと完全に一致するユーザーのみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.short_desc": {
+          "source": "Filter by email address",
+          "message": "メールアドレスで絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of user records to return. Default is 50.",
+          "message": "返すユーザーレコードの最大数。デフォルトは 50 です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "返すユーザーの最大数"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.desc": {
+          "source": "Only return users associated with this mailbox.",
+          "message": "このメールボックスに関連付けられているユーザーのみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "メールボックスでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of Help Scout users",
+          "message": "Help Scout ユーザーの一覧を取得"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.desc": {
+          "source": "Retrieve a list of conversations from Help Scout. You can filter by mailbox, status, assignee, tags, and more. Results can be sorted and paginated.",
+          "message": "Help Scout から会話の一覧を取得します。メールボックス、ステータス、担当者、タグなどで絞り込むことができます。結果は並べ替えやページネーションが可能です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
+          "source": "List Conversations",
+          "message": "会話の一覧"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.desc": {
+          "source": "Only return conversations assigned to this user.",
+          "message": "このユーザーに割り当てられている会話のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "担当者"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "Filter by assignee",
+          "message": "担当者でフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "取得する会話レコードの最大数。デフォルトは50です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "取得する会話の最大数"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.desc": {
+          "source": "Only return conversations modified on or after this date.",
+          "message": "この日付以降に変更された会話のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.display_name": {
+          "source": "Modified Since",
+          "message": "更新日時以降"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
+          "source": "Filter by modification date",
+          "message": "変更日で絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.desc": {
+          "source": "Only return conversations from this mailbox.",
+          "message": "このメールボックスの会話のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "メールボックスでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "結果を並べ替える順序: desc（新しい順）または asc（古い順）。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1haWxib3hpZA.display_name": {
+          "source": "Mailbox ID",
+          "message": "メールボックス ID"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "変更日時"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm51bWJlcg.display_name": {
+          "source": "Number",
+          "message": "番号"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmN1c3RvbWVyRW1haWw.display_name": {
+          "source": "Customer Email",
+          "message": "顧客のメールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmN1c3RvbWVyTmFtZQ.display_name": {
+          "source": "Customer Name",
+          "message": "顧客名"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "作成日時"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOnN0YXR1cw.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOnN1YmplY3Q.display_name": {
+          "source": "Subject",
+          "message": "サブジェクト"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, customerEmail, customerName, mailboxid, modifiedAt, number, status, or subject.",
+          "message": "結果を並べ替えるフィールド: createdAt、customerEmail、customerName、mailboxid、modifiedAt、number、status、または subject。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "並べ替えフィールド"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "並べ替えに使用するフィールド"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "すべて"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "スパム"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.desc": {
+          "source": "Only return conversations with this status: all, active, closed, open, pending, or spam.",
+          "message": "このステータスの会話のみを返します: all、active、closed、open、pending、または spam。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "会話ステータスで絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.desc": {
+          "source": "An advanced search query using Help Scout query syntax. For example: (subject:\"billing issue\") AND (status:active)",
+          "message": "Help Scout のクエリ構文を使用した高度な検索クエリ。例: (subject:\"billing issue\") AND (status:active)"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "クエリ"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.short_desc": {
+          "source": "Advanced search query",
+          "message": "高度な検索クエリ"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.desc": {
+          "source": "Only return conversations with this tag. You can specify multiple tags separated by commas.",
+          "message": "このタグが付いた会話のみを返します。カンマで区切って複数のタグを指定できます。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "タグ"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.short_desc": {
+          "source": "Filter by tag",
+          "message": "タグで絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
+          "source": "Retrieve a list of conversations",
+          "message": "会話のリストを取得"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.desc": {
+          "source": "Retrieve a list of customers from Help Scout. You can filter customers by mailbox, name, email, or modification date. Results can be sorted and paginated.",
+          "message": "Help Scout から顧客のリストを取得します。メールボックス、名前、メールアドレス、または変更日で顧客を絞り込むことができます。結果は並べ替えやページネーションが可能です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.display_name": {
+          "source": "List Customers",
+          "message": "顧客の一覧表示"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.desc": {
+          "source": "Only return customers with this email address.",
+          "message": "このメールアドレスを持つ顧客のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.short_desc": {
+          "source": "Filter by email address",
+          "message": "メールアドレスで絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.desc": {
+          "source": "Only return customers with this first name.",
+          "message": "この名を持つ顧客のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "Filter by first name",
+          "message": "名で絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.desc": {
+          "source": "Only return customers with this last name.",
+          "message": "この姓を持つ顧客のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.short_desc": {
+          "source": "Filter by last name",
+          "message": "姓で絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer records to return. Default is 50.",
+          "message": "返される顧客レコードの最大数。デフォルトは 50 です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of customers to return",
+          "message": "返される顧客の最大数"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.desc": {
+          "source": "Only return customers modified on or after this date.",
+          "message": "この日付以降に変更された顧客のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.display_name": {
+          "source": "Modified Since",
+          "message": "更新日時以降"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
+          "source": "Filter by modification date",
+          "message": "変更日で絞り込み"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.desc": {
+          "source": "Only return customers associated with conversations in this mailbox.",
+          "message": "このメールボックス内の会話に関連付けられている顧客のみを返します。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "メールボックスでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "結果を並べ替える順序: desc（新しい順）または asc（古い順）。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "変更日時"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "作成日時"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmZpcnN0TmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmxhc3ROYW1l.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, firstName, lastName, or modifiedAt.",
+          "message": "結果を並べ替えるフィールド：createdAt、firstName、lastName、または modifiedAt。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "並べ替えフィールド"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "並べ替えに使用するフィールド"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.short_desc": {
+          "source": "Retrieve a list of customers",
+          "message": "顧客のリストを取得"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.desc": {
+          "source": "Retrieve a list of saved reply templates for a specific mailbox. Saved replies are pre-written response templates that agents can use to quickly respond to common questions.",
+          "message": "特定のメールボックスの保存済み返信テンプレートのリストを取得します。保存済み返信は、エージェントがよくある質問に迅速に対応するために使用できる作成済みの返信テンプレートです。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.display_name": {
+          "source": "List Saved Replies",
+          "message": "保存済み返信の一覧表示"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of saved reply records to return. Default is 50.",
+          "message": "返される保存済み返信レコードの最大数。デフォルトは 50 です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of saved replies to return",
+          "message": "返される保存済み返信の最大数"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.desc": {
+          "source": "Select the mailbox whose saved replies you want to retrieve. Saved replies are specific to each mailbox.",
+          "message": "保存済み返信を取得するメールボックスを選択します。保存済み返信はメールボックスごとに固有です。"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.short_desc": {
+          "source": "The mailbox to list saved replies from",
+          "message": "保存済み返信を一覧表示するメールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.short_desc": {
+          "source": "List saved replies for a mailbox",
+          "message": "メールボックスの保存済み返信を一覧表示"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Help Scout** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して **Help Scout** へのカスタム HTTP / REST API コールを実行します。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。応答はステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して使用します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Help Scout",
+          "message": "Help Scout へのカスタム API コールを実行"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.desc": {
+          "source": "This trigger fires whenever a new organization is created in Help Scout. Organizations help group customers from the same company.",
+          "message": "このトリガーは、Help Scout で新しい組織が作成されるたびに起動します。組織を使用すると、同じ会社の顧客をグループ化できます。"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
+          "source": "New Organization",
+          "message": "新しい組織"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "新しい組織が作成されたときにトリガー"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.desc": {
+          "source": "This trigger fires whenever a new customer is created in Help Scout. It provides the full customer profile including contact information, organization, and custom fields.",
+          "message": "このトリガーは、Help Scout で新しい顧客が作成されるたびに起動します。連絡先情報、組織、カスタムフィールドを含む完全な顧客プロファイルを提供します。"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.display_name": {
+          "source": "New Customer",
+          "message": "新規顧客"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.short_desc": {
+          "source": "Triggers when a new customer is created",
+          "message": "新しい顧客が作成されたときにトリガー"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation (support ticket) is created in Help Scout. You can optionally filter by mailbox to only receive events from specific inboxes.",
+          "message": "このトリガーは、Help Scout で新しい会話（サポートチケット）が作成されるたびに起動します。オプションでメールボックスごとに絞り込み、特定の受信トレイからのみイベントを受信できます。"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "新しい会話"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.",
+          "message": "特定のメールボックス内の会話に対してのみトリガーするように任意でフィルタリングします。すべてのメールボックスに対してトリガーする場合は空のままにしてください。"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "メールボックス"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "メールボックスでフィルタリング"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created",
+          "message": "新しい会話が作成されたときにトリガー"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.desc": {
+          "source": "Search for customers in Help Scout using a query string. You can search by email, name, phone number, or other customer properties using Help Scout query syntax.",
+          "message": "クエリ文字列を使用して Help Scout 内の顧客を検索します。Help Scout のクエリ構文を使用して、メール、名前、電話番号、またはその他の顧客プロパティで検索できます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.display_name": {
+          "source": "Search Customers",
+          "message": "顧客を検索"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer records to return. Default is 50.",
+          "message": "返される顧客レコードの最大数。デフォルトは 50 です。"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of customers to return",
+          "message": "返される顧客の最大数"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "結果を並べ替える順序: desc（新しい順）または asc（古い順）。"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "並べ替え順序"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "変更日時"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "作成日時"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmZpcnN0TmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmxhc3ROYW1l.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, firstName, lastName, or modifiedAt.",
+          "message": "結果を並べ替えるフィールド：createdAt、firstName、lastName、または modifiedAt。"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "並べ替えフィールド"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "並べ替えに使用するフィールド"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.desc": {
+          "source": "The search query using Help Scout query syntax. Examples: (email:\"john@example.com\"), (firstName:\"John\"), (phone:\"555-1234\"). You can combine multiple conditions with AND/OR operators.",
+          "message": "Help Scout のクエリ構文を使用した検索クエリ。例: (email:\"john@example.com\")、(firstName:\"John\")、(phone:\"555-1234\")。AND/OR 演算子を使用して複数の条件を組み合わせることができます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "クエリ"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.short_desc": {
+          "source": "Search query",
+          "message": "検索クエリ"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.short_desc": {
+          "source": "Search for customers using a query",
+          "message": "クエリを使用して顧客を検索"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.desc": {
+          "source": "Send a reply to an existing conversation in Help Scout. The reply will be sent to the customer via email. You can optionally CC/BCC additional recipients, save as draft, or change the conversation status.",
+          "message": "Help Scout 内の既存の会話に返信を送信します。返信はメールで顧客に送信されます。オプションで追加の受信者を CC/BCC に設定したり、下書きとして保存したり、会話のステータスを変更したりできます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.display_name": {
+          "source": "Send Reply",
+          "message": "返信を送信"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to reply to.",
+          "message": "返信先の会話の ID を選択または入力します。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to reply to",
+          "message": "返信先の会話"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.desc": {
+          "source": "A list of email addresses to CC on the reply. These recipients will receive a copy of the email.",
+          "message": "返信で CC に含めるメールアドレスのリスト。これらの受信者はメールのコピーを受信します。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.display_name": {
+          "source": "CC",
+          "message": "CC"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.short_desc": {
+          "source": "Carbon copy email addresses",
+          "message": "CC メールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select the customer who will receive this reply. This should match the customer associated with the conversation.",
+          "message": "この返信を受信する顧客を選択します。これは会話に関連付けられた顧客と一致する必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer being replied to",
+          "message": "返信先の顧客"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.desc": {
+          "source": "Optionally assign the conversation to a different Help Scout user after sending the reply.",
+          "message": "返信を送信した後、オプションで会話を別の Help Scout ユーザーに割り当てます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "担当者"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign the conversation after replying",
+          "message": "返信後に会話を割り当て"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.desc": {
+          "source": "A list of email addresses to BCC on the reply. These recipients will receive a copy of the email without other recipients knowing.",
+          "message": "返信で BCC に含めるメールアドレスのリスト。これらの受信者には、他の受信者に知られることなくメールのコピーが送信されます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.display_name": {
+          "source": "BCC",
+          "message": "BCC"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.short_desc": {
+          "source": "Blind carbon copy email addresses",
+          "message": "BCC メールアドレス"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.desc": {
+          "source": "When set to true, the reply is saved as a draft and not sent to the customer. You can review and send it later from Help Scout.",
+          "message": "true に設定すると、返信は下書きとして保存され、顧客には送信されません。Help Scout から後で確認して送信できます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.display_name": {
+          "source": "Save as Draft",
+          "message": "下書きとして保存"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.short_desc": {
+          "source": "Save the reply as a draft",
+          "message": "返信を下書きとして保存"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "スパム"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.desc": {
+          "source": "Optionally change the conversation status after sending the reply. For example, set to closed after resolving an issue.",
+          "message": "返信を送信した後、オプションで会話のステータスを変更します。たとえば、問題が解決した後にクローズに設定します。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.short_desc": {
+          "source": "Change the conversation status",
+          "message": "会話ステータスを変更"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.desc": {
+          "source": "The text content of the reply message. This can include HTML formatting. The reply will be sent to the customer via email.",
+          "message": "返信メッセージのテキストコンテンツ。HTML 形式を含めることができます。返信はメールで顧客に送信されます。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.display_name": {
+          "source": "Reply Text",
+          "message": "返信テキスト"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.short_desc": {
+          "source": "The content of the reply",
+          "message": "返信のコンテンツ"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.desc": {
+          "source": "The Help Scout user sending the reply. If not specified, defaults to the authenticated user.",
+          "message": "返信を送信する Help Scout ユーザー。指定されていない場合は、認証されたユーザーがデフォルトになります。"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.display_name": {
+          "source": "User",
+          "message": "ユーザー"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.short_desc": {
+          "source": "The user sending the reply",
+          "message": "返信を送信するユーザー"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.short_desc": {
+          "source": "Send a reply to a conversation",
+          "message": "会話に返信を送信"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.desc": {
+          "source": "Update the profile information of an existing customer in Help Scout. You can modify their name, contact details, organization, and other profile fields.",
+          "message": "Help Scout 内の既存の顧客のプロファイル情報を更新します。名前、連絡先詳細、組織、その他のプロファイルフィールドを変更できます。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Update Customer",
+          "message": "顧客を更新"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select the customer whose profile you want to update.",
+          "message": "プロファイルを更新する顧客を選択します。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "顧客"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to update",
+          "message": "更新する顧客"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.desc": {
+          "source": "Update the age of the customer.",
+          "message": "顧客の年齢を更新します。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.display_name": {
+          "source": "Age",
+          "message": "経過日数"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.short_desc": {
+          "source": "The new age",
+          "message": "新しい年齢"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.desc": {
+          "source": "Update the internal background notes about the customer. Maximum 200 characters.",
+          "message": "顧客に関する内部バックグラウンドノートを更新します。最大 200 文字です。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.display_name": {
+          "source": "Background",
+          "message": "背景"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.short_desc": {
+          "source": "The new background notes",
+          "message": "新しいバックグラウンドノート"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOm1hbGU.display_name": {
+          "source": "Male",
+          "message": "男性"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOmZlbWFsZQ.display_name": {
+          "source": "Female",
+          "message": "女性"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOnVua25vd24.display_name": {
+          "source": "Unknown",
+          "message": "不明"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.desc": {
+          "source": "Update the gender of the customer: male, female, or unknown.",
+          "message": "顧客の性別を更新します：male、female、または unknown。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.display_name": {
+          "source": "Gender",
+          "message": "性別"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.short_desc": {
+          "source": "The new gender",
+          "message": "新しい性別"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.desc": {
+          "source": "Update the first name of the customer. Maximum 40 characters.",
+          "message": "顧客の名を更新します。最大 40 文字です。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The new first name",
+          "message": "新しい名"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.desc": {
+          "source": "Update the job title of the customer. Maximum 60 characters.",
+          "message": "顧客の役職を更新します。最大60文字です。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "役職"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
+          "source": "The new job title",
+          "message": "新しい役職"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "Update the company or organization of the customer.",
+          "message": "顧客の会社または組織を更新します。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "組織"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "The new organization",
+          "message": "新しい組織"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.desc": {
+          "source": "Update the geographic location of the customer. Maximum 60 characters.",
+          "message": "顧客の地理的な場所を更新します。最大60文字です。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "位置情報"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.short_desc": {
+          "source": "The new location",
+          "message": "新しい場所"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.desc": {
+          "source": "Update the last name of the customer. Maximum 40 characters.",
+          "message": "顧客の姓を更新します。最大40文字です。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
+          "source": "The new last name",
+          "message": "新しい姓"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Update an existing customer",
+          "message": "既存の顧客を更新"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Update the properties of an existing conversation in Help Scout. You can change the subject, status, or assignee. At least one field must be provided to update.",
+          "message": "Help Scout の既存の会話のプロパティを更新します。件名、ステータス、または担当者を変更できます。更新するには少なくとも1つのフィールドを指定する必要があります。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Update Conversation",
+          "message": "会話を更新"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to update.",
+          "message": "更新する会話の ID を選択または入力します。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "会話"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "更新する会話"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.desc": {
+          "source": "Assign or reassign the conversation to a specific Help Scout user.",
+          "message": "会話を特定の Help Scout ユーザーに割り当てまたは再割り当てします。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "担当者"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign to a user",
+          "message": "ユーザーに割り当て"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Update the status of the conversation. Options include active, closed, or pending.",
+          "message": "会話のステータスを更新します。オプションには active、closed、pending が含まれます。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new conversation status",
+          "message": "新しい会話ステータス"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.desc": {
+          "source": "Update the subject line of the conversation. This will be visible to the customer in email communications.",
+          "message": "会話の件名を更新します。これはメールでのやり取りにおいて顧客に表示されます。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "サブジェクト"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.short_desc": {
+          "source": "The new subject line",
+          "message": "新しい件名"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Update an existing conversation",
+          "message": "既存の会話を更新"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.desc": {
+          "source": "This trigger fires whenever a customer profile is updated in Help Scout. It provides the updated customer data including any changed fields.",
+          "message": "このトリガーは、Help Scout で顧客プロファイルが更新されるたびに起動します。変更されたフィールドを含む更新後の顧客データを提供します。"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.display_name": {
+          "source": "Updated Customer",
+          "message": "更新された顧客"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.short_desc": {
+          "source": "Triggers when a customer is updated",
+          "message": "顧客が更新されたときにトリガー"
+        },
+        "app.SGVscFNjb3V0.desc": {
+          "source": "Integrate with Help Scout to manage customer support conversations, create and update customers, send replies, and track support interactions. This integration enables you to automate support workflows, respond to customers, and maintain customer relationships through Help Scout.",
+          "message": "Help Scout と連携して、カスタマーサポートの会話の管理、顧客の作成および更新、返信の送信、サポート対応の追跡を行います。この連携により、Help Scout を通じたサポートワークフローの自動化、顧客への対応、顧客関係の維持が可能になります。"
+        },
+        "app.SGVscFNjb3V0.display_name": {
+          "source": "Help Scout",
+          "message": "Help Scout"
+        },
+        "app.SGVscFNjb3V0.short_desc": {
+          "source": "Connect with Help Scout to manage customer conversations and support tickets",
+          "message": "Help Scout に接続して顧客との会話やサポートチケットを管理"
+        }
+      }
+    }
+  }
+}

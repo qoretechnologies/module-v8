@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a comprehensive new Typeform with complete customization options including fields, welcome screens, thank you screens, conditional logic, scoring, and advanced settings. Perfect for building surveys, quizzes, contact forms, or any interactive form with complex branching logic and custom styling.",
+          "message": "Створює новий повнофункціональний Typeform з повними можливостями налаштування, включаючи поля, екрани привітання, екрани подяки, умовну логіку, підрахунок балів і розширені налаштування. Ідеально підходить для створення опитувань, вікторин, форм зворотного зв'язку або будь-яких інтерактивних форм зі складною логікою розгалуження та власним оформленням."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Створити форму"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.desc": {
+          "source": "Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.",
+          "message": "Додайте запитання та поля вводу до вашої форми. Кожне поле можна налаштувати за допомогою різних типів, властивостей, перевірок та параметрів підрахунку балів."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.display_name": {
+          "source": "Form Fields",
+          "message": "Поля форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.short_desc": {
+          "source": "The questions and input fields for your form",
+          "message": "Запитання та поля вводу для вашої форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.desc": {
+          "source": "List of hidden field names that can be used to pass data through URL parameters.",
+          "message": "Список імен прихованих полів, які можна використовувати для передачі даних через параметри URL."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.display_name": {
+          "source": "Hidden Fields",
+          "message": "Приховані поля"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.short_desc": {
+          "source": "Hidden fields to pass data through the form",
+          "message": "Приховані поля для передачі даних через форму"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.desc": {
+          "source": "Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.",
+          "message": "Створюйте правила умовної логіки, щоб показувати/приховувати поля, переходити до різних розділів або виконувати обчислення на основі відповідей користувача."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.display_name": {
+          "source": "Conditional Logic",
+          "message": "Умовна логіка"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.short_desc": {
+          "source": "Rules for conditional branching and calculations",
+          "message": "Правила для умовного розгалуження та обчислень"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure form-wide settings like language, progress bar, branding, and behavior options.",
+          "message": "Налаштуйте загальні параметри форми, такі як мова, індикатор виконання, брендинг та параметри поведінки."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Налаштування форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Global settings and configuration for the form",
+          "message": "Глобальні налаштування та конфігурація форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.desc": {
+          "source": "Create welcome screens to introduce your form, explain its purpose, or provide instructions.",
+          "message": "Створюйте екрани привітання, щоб представити форму, пояснити її мету або надати інструкції."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.display_name": {
+          "source": "Welcome Screens",
+          "message": "Екрани привітання"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.short_desc": {
+          "source": "Introductory screens shown before the form",
+          "message": "Вступні екрани, що відображаються перед формою"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.desc": {
+          "source": "Create custom thank you screens to show appreciation, provide next steps, or display results.",
+          "message": "Створюйте власні екрани подяки, щоб висловити вдячність, надати наступні кроки або показати результати."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.display_name": {
+          "source": "Thank You Screens",
+          "message": "Екрани подяки"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.short_desc": {
+          "source": "Screens shown after form completion",
+          "message": "Екрани, що відображаються після заповнення форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The main title that will appear at the top of your form and in your form list.",
+          "message": "Основна назва, яка відображатиметься у верхній частині вашої форми та у списку форм."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Form Title",
+          "message": "Назва форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "The title of your new form",
+          "message": "Назва вашої нової форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.desc": {
+          "source": "Define custom variables that can be used in calculations and conditional logic.",
+          "message": "Визначте власні змінні, які можна використовувати в обчисленнях та умовній логіці."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.display_name": {
+          "source": "Form Variables",
+          "message": "Змінні форми"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.short_desc": {
+          "source": "Custom variables for calculations and logic",
+          "message": "Власні змінні для обчислень та логіки"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Typeform with fields, logic, and custom settings.",
+          "message": "Створити новий Typeform із полями, логікою та власними налаштуваннями."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.desc": {
+          "source": "Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.",
+          "message": "Завантажує зображення у ваш обліковий запис Typeform, яке можна використовувати у формах для запитань із вибором зображення, фону форми або інших візуальних елементів. Ви можете завантажити, надавши файл або URL-адресу наявного зображення."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.display_name": {
+          "source": "Create Image",
+          "message": "Створити зображення"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded image. If not provided, the original filename will be used.",
+          "message": "Необов'язкова власна назва для завантаженого зображення. Якщо не вказано, використовуватиметься оригінальне ім'я файлу."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Назва файлу"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for the uploaded image",
+          "message": "Власна назва для завантаженого зображення"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "The image file to upload directly to your Typeform account. Supported formats include JPG, PNG, and GIF.",
+          "message": "Файл зображення для прямого завантаження у ваш обліковий запис Typeform. Підтримувані формати: JPG, PNG та GIF."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "Файл зображення"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "Image file to upload",
+          "message": "Файл зображення для завантаження"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.desc": {
+          "source": "The URL of an existing image to upload to your Typeform account. Use this if you have an image hosted elsewhere.",
+          "message": "URL-адреса наявного зображення для завантаження у ваш обліковий запис Typeform. Використовуйте це, якщо ваше зображення розміщено в іншому місці."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "URL-адреса зображення"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.short_desc": {
+          "source": "URL of the image to upload",
+          "message": "URL-адреса зображення для завантаження"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.short_desc": {
+          "source": "Upload an image to your Typeform account for use in forms.",
+          "message": "Завантажити зображення у ваш обліковий запис Typeform для використання у формах."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches complete details about a specific Typeform including all fields, settings, thank you screens, and metadata. Use this to get the full form definition for analysis, backup, or integration purposes.",
+          "message": "Отримує повні відомості про конкретний Typeform, включаючи всі поля, налаштування, екрани подяки та метадані. Використовуйте це, щоб отримати повне визначення форми для аналізу, резервного копіювання або інтеграції."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Отримати форму"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to get detailed information about.",
+          "message": "Виберіть Typeform, про який ви хочете отримати детальну інформацію."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Форма"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to retrieve",
+          "message": "Форма для отримання"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve detailed information about a specific Typeform.",
+          "message": "Отримати детальну інформацію про конкретний Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.desc": {
+          "source": "Permanently deletes a Typeform from your account. This action cannot be undone, and all associated responses will also be deleted. Use with caution as this will remove the form and all its data.",
+          "message": "Остаточно видаляє Typeform з вашого облікового запису. Цю дію неможливо скасувати, і всі пов'язані відповіді також будуть видалені. Використовуйте з обережністю, оскільки це призведе до видалення форми та всіх її даних."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.display_name": {
+          "source": "Delete Form",
+          "message": "Видалити форму"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to permanently delete from your account.",
+          "message": "Виберіть Typeform, який ви хочете остаточно видалити зі свого облікового запису."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Форма"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to delete",
+          "message": "Форма для видалення"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.short_desc": {
+          "source": "Permanently delete a Typeform from your account.",
+          "message": "Остаточно видалити Typeform зі свого облікового запису."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Removes an image from your Typeform account. Once deleted, the image will no longer be available for use in any forms. Make sure the image is not currently being used in any active forms before deletion.",
+          "message": "Видаляє зображення з вашого облікового запису Typeform. Після видалення зображення більше не буде доступним для використання в будь-яких формах. Перед видаленням переконайтеся, що зображення наразі не використовується в активних формах."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "Видалити зображення"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.desc": {
+          "source": "Select the image that you want to delete from your Typeform account.",
+          "message": "Виберіть зображення, яке потрібно видалити з вашого облікового запису Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.display_name": {
+          "source": "Image",
+          "message": "Зображення"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.short_desc": {
+          "source": "The image to delete",
+          "message": "Зображення для видалення"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from your Typeform account.",
+          "message": "Видалити зображення з вашого облікового запису Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.desc": {
+          "source": "Fetches all workspaces available in your Typeform account with pagination and search capabilities. Workspaces help organize your forms and collaborate with team members. Use this to get workspace information including form counts and sharing status.",
+          "message": "Отримує всі робочі простори, доступні у вашому обліковому записі Typeform, з підтримкою розбивки на сторінки та пошуку. Робочі простори допомагають упорядковувати форми та співпрацювати з членами команди. Використовуйте це для отримання інформації про робочі простори, включаючи кількість форм і статус спільного доступу."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
+          "source": "List Workspaces",
+          "message": "Отримати список робочих просторів"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter workspaces by their name. Leave empty to retrieve all workspaces.",
+          "message": "Необов'язковий пошуковий запит для фільтрації робочих просторів за назвою. Залиште порожнім, щоб отримати всі робочі простори."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Пошук"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter workspaces by name",
+          "message": "Пошуковий запит для фільтрації робочих просторів за назвою"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many workspaces.",
+          "message": "Номер сторінки для отримання. Використовуйте для розбивки на сторінки, якщо у вас багато робочих просторів."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Сторінка"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Номер сторінки для пагінації"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of workspaces to return per page. Maximum is 200, default is 10.",
+          "message": "Кількість робочих просторів на сторінці. Максимум — 200, за замовчуванням — 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Розмір сторінки"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of workspaces to return per page",
+          "message": "Кількість робочих просторів на сторінці"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
+          "source": "Retrieve a list of workspaces in your Typeform account.",
+          "message": "Отримати список робочих просторів у вашому обліковому записі Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Fetches all forms in your Typeform account with filtering, sorting, and pagination options. Use this to get an overview of your forms, find specific forms by search criteria, or integrate with other systems.",
+          "message": "Отримує всі форми у вашому обліковому записі Typeform з параметрами фільтрації, сортування та розбивки на сторінки. Використовуйте це для перегляду ваших форм, пошуку конкретних форм за критеріями або інтеграції з іншими системами."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "Список форм"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned forms.",
+          "message": "Вкажіть спосіб сортування отриманих форм."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Як сортувати результати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter forms by their title. Leave empty to retrieve all forms.",
+          "message": "Необов'язковий пошуковий запит для фільтрації форм за назвою. Залиште порожнім, щоб отримати всі форми."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Пошук"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter forms by title",
+          "message": "Пошуковий запит для фільтрації форм за назвою"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many forms.",
+          "message": "Номер сторінки для отримання. Використовуйте для розбивки на сторінки, якщо у вас багато форм."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Сторінка"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Номер сторінки для пагінації"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of forms to return per page. Maximum is 200, default is 10.",
+          "message": "Кількість форм на сторінці. Максимум — 200, за замовчуванням — 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Розмір сторінки"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of forms to return per page",
+          "message": "Кількість форм на сторінці"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.desc": {
+          "source": "Optional workspace ID to filter forms that belong to a specific workspace.",
+          "message": "Необов'язковий ID робочого простору для фільтрації форм, що належать до конкретного робочого простору."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.display_name": {
+          "source": "Workspace ID",
+          "message": "ID робочого простору"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.short_desc": {
+          "source": "Filter forms by workspace",
+          "message": "Фільтрувати форми за робочою областю"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms in your Typeform account.",
+          "message": "Отримати список форм у вашому обліковому записі Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.desc": {
+          "source": "Fetches all images that have been uploaded to your Typeform account. Use this to see what images are available for use in your forms, manage your image library, or get image URLs for integration purposes.",
+          "message": "Отримує всі зображення, завантажені у ваш обліковий запис Typeform. Використовуйте це, щоб переглянути доступні зображення для використання у формах, керувати бібліотекою зображень або отримати URL-адреси зображень для інтеграції."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.display_name": {
+          "source": "List Images",
+          "message": "Список зображень"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.short_desc": {
+          "source": "Retrieve all images in your Typeform account.",
+          "message": "Отримати всі зображення у вашому обліковому записі Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Fetches all responses submitted to a specific Typeform with comprehensive filtering and sorting options. Use this to analyze form submissions, export data, or integrate responses with other systems.",
+          "message": "Отримує всі відповіді, надіслані до певної форми Typeform, із широкими можливостями фільтрації та сортування. Використовуйте це для аналізу відповідей форми, експорту даних або інтеграції відповідей з іншими системами."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "Список відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.desc": {
+          "source": "Set to true to only return completed responses, false for incomplete responses.",
+          "message": "Установіть значення true, щоб повертати лише завершені відповіді, або false — для незавершених відповідей."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.display_name": {
+          "source": "Completed Only",
+          "message": "Лише завершені"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.short_desc": {
+          "source": "Only return completed responses",
+          "message": "Повертати лише завершені відповіді"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.desc": {
+          "source": "List of field IDs that must have been answered for a response to be included.",
+          "message": "Список ідентифікаторів полів, які мають бути заповнені, щоб відповідь було включено."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.display_name": {
+          "source": "Answered Fields",
+          "message": "Заповнені поля"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.short_desc": {
+          "source": "Only include responses that answered these fields",
+          "message": "Включати лише відповіді, у яких заповнено ці поля"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.desc": {
+          "source": "Use this token for pagination to get responses that come after a specific response.",
+          "message": "Використовуйте цей токен для пагінації, щоб отримати відповіді, які йдуть після певної відповіді."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.display_name": {
+          "source": "After Token",
+          "message": "Токен після"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination token for results after a specific response",
+          "message": "Токен пагінації для результатів після певної відповіді"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.desc": {
+          "source": "Use this token for pagination to get responses that come before a specific response.",
+          "message": "Використовуйте цей токен для пагінації, щоб отримати відповіді, які йдуть перед певною відповіддю."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.display_name": {
+          "source": "Before Token",
+          "message": "Токен до"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.short_desc": {
+          "source": "Pagination token for results before a specific response",
+          "message": "Токен пагінації для результатів перед певною відповіддю"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to exclude from the results.",
+          "message": "Список ідентифікаторів конкретних відповідей, які слід виключити з результатів."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Exclude Response IDs",
+          "message": "Виключити ідентифікатори відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to exclude",
+          "message": "Конкретні ідентифікатори відповідей для виключення"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to retrieve responses from.",
+          "message": "Виберіть форму Typeform, з якої потрібно отримати відповіді."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Форма"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to get responses from",
+          "message": "Форма, з якої потрібно отримати відповіді"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.desc": {
+          "source": "List of specific field IDs to include in the response data.",
+          "message": "Список ідентифікаторів конкретних полів, які слід включити в дані відповіді."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.display_name": {
+          "source": "Include Fields",
+          "message": "Включити поля"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to include in responses",
+          "message": "Конкретні поля для включення у відповіді"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to include in the results. Only these responses will be returned.",
+          "message": "Список ідентифікаторів конкретних відповідей, які слід включити в результати. Буде повернено лише ці відповіді."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Include Response IDs",
+          "message": "Включити ідентифікатори відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to include",
+          "message": "Конкретні ідентифікатори відповідей для включення"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned responses.",
+          "message": "Укажіть спосіб сортування повернутих відповідей."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Порядок сортування"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Як сортувати результати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.desc": {
+          "source": "Filter responses to only include those submitted after the specified date.",
+          "message": "Фільтрувати відповіді, щоб включити лише ті, які надіслано після вказаної дати."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.display_name": {
+          "source": "Since Date",
+          "message": "Починаючи з дати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.short_desc": {
+          "source": "Only include responses submitted after this date",
+          "message": "Включати лише відповіді, надіслані після цієї дати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of responses to return. Maximum is 1000, default is 25.",
+          "message": "Кількість відповідей для повернення. Максимум — 1000, за замовчуванням — 25."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Розмір сторінки"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of responses to return",
+          "message": "Кількість відповідей для повернення"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.desc": {
+          "source": "Advanced query string to filter responses based on answer values.",
+          "message": "Розширений рядок запиту для фільтрації відповідей на основі значень відповідей."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Запит"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.short_desc": {
+          "source": "Advanced query to filter responses",
+          "message": "Розширений запит для фільтрації відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Завершено"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnBhcnRpYWw.display_name": {
+          "source": "Partial",
+          "message": "Частково"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnN0YXJ0ZWQ.display_name": {
+          "source": "Started",
+          "message": "Розпочато"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Filter responses by their completion status (started, partial, or completed).",
+          "message": "Фільтрувати відповіді за статусом завершення (started, partial або completed)."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Types",
+          "message": "Типи відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Filter by response completion status",
+          "message": "Фільтрувати за статусом завершення відповіді"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.desc": {
+          "source": "Filter responses to only include those submitted before the specified date.",
+          "message": "Фільтрувати відповіді, щоб включити лише ті, які надіслано до вказаної дати."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.display_name": {
+          "source": "Until Date",
+          "message": "До дати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.short_desc": {
+          "source": "Only include responses submitted before this date",
+          "message": "Включати лише відповіді, надіслані до цієї дати"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve responses submitted to a specific Typeform.",
+          "message": "Отримати відповіді, надіслані до певної форми Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Typeform** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати спеціальний виклик HTTP / REST API до **Typeform**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цій програмі."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Typeform",
+          "message": "Виконати спеціальний виклик API до Typeform"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "This trigger activates whenever someone submits a response to your Typeform. It provides complete response data including all answers, form definition, calculated scores, and metadata. Perfect for processing form submissions, updating databases, sending notifications, or triggering follow-up workflows based on user responses.",
+          "message": "Цей тригер спрацьовує щоразу, коли хтось надсилає відповідь на вашу форму Typeform. Він надає повні дані відповіді, включаючи всі відповіді, визначення форми, розраховані бали та метадані. Ідеально підходить для обробки надісланих форм, оновлення баз даних, надсилання сповіщень або запуску подальших робочих процесів на основі відповідей користувачів."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "Нова відповідь на форму"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "Select the specific Typeform that you want to monitor for new submissions. The trigger will fire every time someone completes and submits this form.",
+          "message": "Виберіть конкретну форму Typeform, яку ви хочете відстежувати на наявність нових відповідей. Тригер спрацьовуватиме щоразу, коли хтось заповнює та надсилає цю форму."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Форма"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Typeform to monitor for new responses",
+          "message": "Форма Typeform для відстеження нових відповідей"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Typeform form.",
+          "message": "Спрацьовує, коли надсилається нова відповідь у форму Typeform."
+        },
+        "app.VHlwZWZvcm0.desc": {
+          "source": "Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.",
+          "message": "Typeform — це універсальний конструктор форм, який дозволяє створювати привабливі інтерактивні форми, опитування, вікторини та голосування. Завдяки інтуїтивно зрозумілому інтерфейсу та потужним функціям ви можете збирати відповіді, аналізувати дані та інтегруватися з іншими інструментами для оптимізації робочого процесу. Ідеально підходить для генерації лідів, збору відгуків клієнтів, реєстрації на події та дослідження ринку."
+        },
+        "app.VHlwZWZvcm0.display_name": {
+          "source": "Typeform",
+          "message": "Typeform"
+        },
+        "app.VHlwZWZvcm0.short_desc": {
+          "source": "Create and manage interactive forms, surveys, and quizzes with Typeform.",
+          "message": "Створюйте та керуйте інтерактивними формами, опитуваннями та вікторинами за допомогою Typeform."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.desc": {
+          "source": "Monitors Google Meet conferences and triggers when a conference has ended. Returns details about the completed conference including name, start time, end time, expiration time, and space information.",
+          "message": "Google Meet の会議を監視し、会議が終了したときにトリガーされます。名前、開始時刻、終了時刻、有効期限、スペース情報など、終了した会議の詳細を返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.display_name": {
+          "source": "Conference Ended",
+          "message": "会議終了"
+        },
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.short_desc": {
+          "source": "Triggers when a Google Meet conference has ended.",
+          "message": "Google Meet 会議が終了したときにトリガーされます。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.desc": {
+          "source": "Fetches comprehensive details about a specific Google Meet conference including basic information, recordings, participants, and transcripts. Returns all related data in a single response.",
+          "message": "基本情報、録画、参加者、文字起こしなど、特定の Google Meet 会議に関する詳細情報を取得します。関連するすべてのデータを単一のレスポンスで返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.display_name": {
+          "source": "Get Conference",
+          "message": "会議を取得"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The conference ID or meeting code of the Google Meet conference to retrieve detailed information for.",
+          "message": "詳細情報を取得する Google Meet 会議の会議 ID または会議コード。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The conference to retrieve",
+          "message": "取得する会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.short_desc": {
+          "source": "Retrieve detailed information about a Google Meet conference.",
+          "message": "Google Meet 会議に関する詳細情報を取得します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.desc": {
+          "source": "Retrieves detailed information about participants who attended a specific Google Meet conference. Can filter participants by search term and include time spent metrics.",
+          "message": "特定の Google Meet 会議に参加した参加者に関する詳細情報を取得します。検索語で参加者をフィルタリングしたり、所要時間の指標を含めたりできます。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.display_name": {
+          "source": "Get Conference Participants",
+          "message": "会議の参加者を取得"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to retrieve participant information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "参加者情報を取得する Google Meet 会議の識別子または会議コード。会議 ID または XXX-XXXX-XXX 形式の会議コードのいずれかを指定できます。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to retrieve participants from",
+          "message": "参加者を取得する Google Meet 会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.desc": {
+          "source": "When enabled, includes information about how long each participant spent in the conference. Default is true.",
+          "message": "有効にすると、各参加者が会議に費やした時間に関する情報が含まれます。デフォルトは true です。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.display_name": {
+          "source": "Include Time Spent",
+          "message": "滞在時間を含める"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.short_desc": {
+          "source": "Include participant time metrics",
+          "message": "参加者の時間指標を含める"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter participants by name or other attributes. Only participants matching the search term will be returned.",
+          "message": "名前やその他の属性で参加者をフィルタリングするためのオプションの検索語。検索語に一致する参加者のみが返されます。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.short_desc": {
+          "source": "Filter participants by search term",
+          "message": "検索語で参加者をフィルタリング"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.short_desc": {
+          "source": "Retrieves participant information for a specific Google Meet conference.",
+          "message": "特定の Google Meet 会議の参加者情報を取得します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.desc": {
+          "source": "Retrieves all available recordings associated with a specific Google Meet conference. Returns details about each recording including state, timing information, and storage location.",
+          "message": "特定の Google Meet 会議に関連付けられているすべての利用可能な録画を取得します。ステータス、時間情報、ストレージの場所など、各録画に関する詳細を返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.display_name": {
+          "source": "Get Conference Recordings",
+          "message": "会議の録画を取得"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to retrieve recording information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "録画情報を取得する Google Meet 会議の識別子または会議コード。会議 ID または XXX-XXXX-XXX 形式の会議コードのいずれかを指定できます。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to retrieve recordings from",
+          "message": "録画を取得する Google Meet 会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.short_desc": {
+          "source": "Retrieves recordings for a specific Google Meet conference.",
+          "message": "特定の Google Meet 会議の録画を取得します。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.desc": {
+          "source": "Retrieves the detailed content of a specific transcript created for a Google Meet conference. Requires either a conference ID and transcript ID or just a transcript ID if it is already known.",
+          "message": "Google Meet 会議用に作成された特定の文字起こしの詳細コンテンツを取得します。会議 ID と文字起こし ID の両方、またはすでに判明している場合は文字起こし ID のみが必用です。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.display_name": {
+          "source": "Get Conference Transcript",
+          "message": "会議の文字起こしを取得"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference that contains the transcript. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX. Optional if the transcript ID is already known.",
+          "message": "文字起こしが含まれる Google Meet 会議の識別子または会議コード。会議 ID または XXX-XXXX-XXX 形式の会議コードのいずれかを指定できます。文字起こし ID がすでに判明している場合は省略可能です。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference containing the transcript",
+          "message": "文字起こしが含まれる Google Meet 会議"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.desc": {
+          "source": "The identifier of the specific transcript to retrieve from the Google Meet conference.",
+          "message": "Google Meet 会議から取得する特定の文字起こしの識別子。"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.display_name": {
+          "source": "Transcript",
+          "message": "文字起こし"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.short_desc": {
+          "source": "The transcript to retrieve",
+          "message": "取得する文字起こし"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.short_desc": {
+          "source": "Retrieves a specific transcript from a Google Meet conference.",
+          "message": "Google Meet 会議から特定の文字起こしを取得します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.desc": {
+          "source": "Retrieves a paginated list of Google Meet conferences with support for filtering by meeting code, time range, and space name. Returns conference details including ID, start time, end time, expiration time, and space information.",
+          "message": "会議コード、時間範囲、スペース名によるフィルタリングをサポートする、Google Meet 会議のページ分割されたリストを取得します。ID、開始時刻、終了時刻、有効期限、スペース情報などの会議の詳細を返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.display_name": {
+          "source": "List Conferences",
+          "message": "会議一覧"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.desc": {
+          "source": "Filter results to only include conferences that ended on or before the specified date and time.",
+          "message": "指定された日時以前に終了した会議のみを含めるように結果をフィルタリングします。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.display_name": {
+          "source": "End Time",
+          "message": "終了時刻"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.short_desc": {
+          "source": "Filter by end time",
+          "message": "終了時刻でフィルタリング"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of conference records to return in a single response. Default is 100.",
+          "message": "単一のレスポンスで返す会議レコードの最大数。デフォルトは 100 です。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conferences to return",
+          "message": "返す会議の最大数"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.desc": {
+          "source": "Filter results to only include conferences with the specified meeting code.",
+          "message": "指定された会議コードを持つ会議のみを含めるように結果をフィルタリングします。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.display_name": {
+          "source": "Meeting Code",
+          "message": "会議コード"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.short_desc": {
+          "source": "Filter by meeting code",
+          "message": "会議コードでフィルタリング"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "A token from a previous response that allows retrieving the next page of results. Leave empty for the first request.",
+          "message": "次のページの結果を取得できるようにする前回のレスポンスからのトークン。最初のリクエストでは空のままにしてください。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "次ページトークン"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "ページネーション用トークン"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.desc": {
+          "source": "Filter results to only include conferences associated with the specified space name.",
+          "message": "指定されたスペース名に関連付けられている会議のみを含めるように結果をフィルタリングします。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.display_name": {
+          "source": "Space Name",
+          "message": "スペース名"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.short_desc": {
+          "source": "Filter by space name",
+          "message": "スペース名でフィルタリング"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.desc": {
+          "source": "Filter results to only include conferences that started on or after the specified date and time.",
+          "message": "指定された日時以降に開始された会議のみを含めるように結果をフィルタリングします。"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "開始時刻"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.short_desc": {
+          "source": "Filter by start time",
+          "message": "開始時刻でフィルタリング"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.short_desc": {
+          "source": "Retrieves a list of Google Meet conferences with filtering options.",
+          "message": "フィルタリングオプションを使用して Google Meet 会議のリストを取得します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Meet** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証を使用して、**Google Meet** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (コネクションの API ベース URL 相対)、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、およびレスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して、このアクションを使用します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Meet",
+          "message": "Google Meet へのカスタム API 呼び出しを作成"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.desc": {
+          "source": "Monitors a specific Google Meet conference and triggers when a new recording has been generated. Returns details about the recording including its name, state, timing information, and Drive destination details.",
+          "message": "特定の Google Meet 会議を監視し、新しい録画が生成されたときにトリガーされます。名前、ステータス、時間情報、Drive の保存先詳細など、録画に関する詳細を返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.display_name": {
+          "source": "Recording Created",
+          "message": "録画作成時"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to monitor for new recordings. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "新しい録画を監視する Google Meet 会議の識別子または会議コード。会議 ID または XXX-XXXX-XXX 形式の会議コードのいずれかを指定できます。"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to monitor",
+          "message": "監視する Google Meet 会議"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.short_desc": {
+          "source": "Triggers when a new recording is created for a Google Meet conference.",
+          "message": "Google Meet 会議の新しい録画が作成されたときにトリガーされます。"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.desc": {
+          "source": "Monitors a specific Google Meet conference and triggers when a new transcript has been generated. Returns details about the transcript including its name, state, timing information, and Google Docs destination details.",
+          "message": "特定の Google Meet 会議を監視し、新しい文字起こしが生成されたときにトリガーされます。名前、ステータス、時間情報、Google ドキュメントの保存先詳細など、文字起こしに関する詳細を返します。"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.display_name": {
+          "source": "Transcript Created",
+          "message": "文字起こし作成時"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to monitor for new transcripts. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "新しい文字起こしを監視する Google Meet 会議の識別子または会議コード。会議 ID または XXX-XXXX-XXX 形式の会議コードのいずれかを指定できます。"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "会議"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to monitor",
+          "message": "監視する Google Meet 会議"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new transcript is created for a Google Meet conference.",
+          "message": "Google Meet 会議の新しい文字起こしが作成されたときにトリガーされます。"
+        },
+        "app.R29vZ2xlTWVldA.desc": {
+          "source": "Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.",
+          "message": "Google Meet と連携して、会議やイベントを管理します。この連携により、Google Meet アカウントでのアクションの実行やイベントへの対応が可能になり、会議の管理やスケジューリングのワークフローを自動化できます。"
+        },
+        "app.R29vZ2xlTWVldA.display_name": {
+          "source": "Google Meet",
+          "message": "Google Meet"
+        },
+        "app.R29vZ2xlTWVldA.short_desc": {
+          "source": "Connect with Google Meet to manage your meetings and events",
+          "message": "Google Meet に接続して会議やイベントを管理"
+        }
+      }
+    }
+  }
+}

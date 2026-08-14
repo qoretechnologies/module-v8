@@ -1,0 +1,1245 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.desc": {
+          "source": "Create a new recipient list for organizing your contacts. Lists help you segment your audience for targeted marketing campaigns.",
+          "message": "Vytvorte nový zoznam príjemcov na organizáciu kontaktov. Zoznamy vám pomáhajú segmentovať publikum pre cielené marketingové kampane."
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.display_name": {
+          "source": "Create a List",
+          "message": "Vytvoriť zoznam"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for your contact list. Choose a name that clearly identifies the purpose or audience of the list.",
+          "message": "Popisný názov vášho zoznamu kontaktov. Vyberte názov, ktorý jasne identifikuje účel alebo cieľovú skupinu zoznamu."
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Názov"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "The name of the new list",
+          "message": "Názov nového zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.Y3JlYXRlX2xpc3Q.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Vytvoriť nový zoznam kontaktov"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.desc": {
+          "source": "Add a new contact to your SendGrid contact database or update an existing contact if the email already exists. You can also assign the contact to one or more lists.",
+          "message": "Pridajte nový kontakt do databázy kontaktov SendGrid alebo aktualizujte existujúci kontakt, ak už e-mail existuje. Kontakt môžete tiež priradiť k jednému alebo viacerým zoznamom."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.display_name": {
+          "source": "Add or Update a Contact",
+          "message": "Pridať alebo aktualizovať kontakt"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.desc": {
+          "source": "A JSON object containing custom field names and values. Custom fields must be created in your SendGrid account first.",
+          "message": "Objekt JSON obsahujúci názvy a hodnoty vlastných polí. Vlastné polia musia byť najprv vytvorené vo vašom účte SendGrid."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.display_name": {
+          "source": "Custom Fields",
+          "message": "Vlastné polia"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Y3VzdG9tRmllbGRz.short_desc": {
+          "source": "Additional custom field values",
+          "message": "Ďalšie hodnoty vlastných polí"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.desc": {
+          "source": "The email address for the contact. This is the unique identifier - if a contact with this email exists, it will be updated.",
+          "message": "E-mailová adresa kontaktu. Ide o jedinečný identifikátor – ak kontakt s týmto e-mailom existuje, bude aktualizovaný."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.ZW1haWw.short_desc": {
+          "source": "The email address of the contact",
+          "message": "E-mailová adresa kontaktu"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.desc": {
+          "source": "The contact's first name.",
+          "message": "Krstné meno kontaktu."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Meno"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The first name of the contact",
+          "message": "Meno kontaktu"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.desc": {
+          "source": "The contact's last name.",
+          "message": "Priezvisko kontaktu."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Priezvisko"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGFzdE5hbWU.short_desc": {
+          "source": "The last name of the contact",
+          "message": "Priezvisko kontaktu"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.desc": {
+          "source": "One or more list IDs to add this contact to. The contact will be added to all specified lists.",
+          "message": "Jedno alebo viacero ID zoznamov, do ktorých sa má tento kontakt pridať. Kontakt bude pridaný do všetkých zadaných zoznamov."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.display_name": {
+          "source": "List IDs",
+          "message": "ID zoznamov"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.option.bGlzdElkcw.short_desc": {
+          "source": "Lists to add the contact to",
+          "message": "Zoznamy, do ktorých sa má kontakt pridať"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX29yX3VwZGF0ZV9jb250YWN0.short_desc": {
+          "source": "Add a new contact or update an existing one",
+          "message": "Pridať nový kontakt alebo aktualizovať existujúci"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.desc": {
+          "source": "Add one or more email addresses to the global suppression list. These addresses will no longer receive any emails from your account until they are removed from the list.",
+          "message": "Pridajte jednu alebo viacero e-mailových adries do globálneho zoznamu potlačení. Tieto adresy už nebudú dostávať žiadne e-maily z vášho účtu, kým nebudú zo zoznamu odstránené."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.display_name": {
+          "source": "Add Global Suppressions",
+          "message": "Pridať globálne potlačenia"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to add to the global suppression list. These addresses will be blocked from receiving all future emails.",
+          "message": "Pole e-mailových adries, ktoré sa majú pridať do globálneho zoznamu potlačení. Týmto adresám bude zablokované doručovanie všetkých budúcich e-mailov."
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "E-maily"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to add",
+          "message": "Zoznam e-mailových adries na pridanie"
+        },
+        "app.U2VuZEdyaWQ.action.YWRkX2dsb2JhbF9zdXBwcmVzc2lvbnM.short_desc": {
+          "source": "Add email addresses to the global suppression list",
+          "message": "Pridať e-mailové adresy do globálneho zoznamu potlačení"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.desc": {
+          "source": "Retrieve a list of all email addresses that have bounced. Bounces occur when an email cannot be delivered to the recipient. You can filter by time range and paginate through results.",
+          "message": "Získať zoznam všetkých e-mailových adries, pri ktorých došlo k vráteniu. K vráteniu dochádza vtedy, keď e-mail nie je možné doručiť príjemcovi. Môžete filtrovať podľa časového rozsahu a stránkovať výsledky."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.display_name": {
+          "source": "Get All Bounces",
+          "message": "Získať všetky vrátené e-maily"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve bounces that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Načítať odmietnuté e-maily (bounces), ktoré boli vytvorené pred týmto časovým bodom. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "Čas ukončenia"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter bounces created before this Unix timestamp",
+          "message": "Filtrovať odmietnuté e-maily vytvorené pred týmto Unix timestampom"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Počiatočný bod v zozname výsledkov"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.desc": {
+          "source": "The maximum number of bounce records to return. Default is 500.",
+          "message": "Maximálny počet záznamov o odmietnutí, ktoré sa majú vrátiť. Predvolená hodnota je 500."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of bounces to return",
+          "message": "Maximálny počet vrátených odmietnutí"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve bounces that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Načítať odmietnuté e-maily (bounces), ktoré boli vytvorené po tomto časovom bode. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Čas začiatku"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter bounces created after this Unix timestamp",
+          "message": "Filtrovať odmietnuté e-maily vytvorené po tomto Unix timestampe"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9ib3VuY2Vz.short_desc": {
+          "source": "Retrieve a list of bounced email addresses",
+          "message": "Načítať zoznam odmietnutých e-mailových adries"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.desc": {
+          "source": "Retrieve all recipient lists in your SendGrid account. Returns list details including name and recipient count.",
+          "message": "Načítať všetky zoznamy príjemcov vo vašom SendGrid účte. Vracia podrobnosti o zozname vrátane názvu a počtu príjemcov."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.display_name": {
+          "source": "Get All Lists",
+          "message": "Získať všetky zoznamy"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2FsbF9saXN0cw.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Získať všetky zoznamy kontaktov"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.desc": {
+          "source": "Fetch detailed information about a specific blocked email address, including the reason for the block and when it was added to the list.",
+          "message": "Získať podrobné informácie o konkrétnej zablokovanej e-mailovej adrese vrátane dôvodu zablokovania a času jej pridania do zoznamu."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.display_name": {
+          "source": "Get a Block",
+          "message": "Získať blokovanie"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.desc": {
+          "source": "The email address to retrieve from the blocks list. This should be the exact email address that was blocked.",
+          "message": "E-mailová adresa, ktorú chcete načítať zo zoznamu blokovaní. Toto by mala byť presná e-mailová adresa, ktorá bola zablokovaná."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.option.ZW1haWw.short_desc": {
+          "source": "The blocked email address to retrieve",
+          "message": "Zablokovaná e-mailová adresa na načítanie"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2Jsb2Nr.short_desc": {
+          "source": "Retrieve details of a specific blocked email",
+          "message": "Načítať podrobnosti o konkrétnom zablokovanom e-maile"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.desc": {
+          "source": "Check if a specific email address is on the global suppression list and retrieve its details.",
+          "message": "Skontrolovať, či sa konkrétna e-mailová adresa nachádza v globálnom zozname potlačení, a načítať jej podrobnosti."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
+          "source": "Get a Global Suppression",
+          "message": "Získať globálne potlačenie"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.desc": {
+          "source": "The email address to look up in the global suppression list. Returns the suppression details if found.",
+          "message": "E-mailová adresa, ktorú chcete vyhľadať v globálnom zozname potlačení. Ak sa nájde, vráti podrobnosti o potlačení."
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.short_desc": {
+          "source": "The email address to check",
+          "message": "E-mailová adresa na kontrolu"
+        },
+        "app.U2VuZEdyaWQ.action.Z2V0X2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
+          "source": "Retrieve details of a specific globally suppressed email",
+          "message": "Načítať podrobnosti o konkrétnom globálne potlačenom e-maile"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.desc": {
+          "source": "Remove email addresses from your blocks list. You can either delete all blocks at once or specify individual email addresses to remove. Deleting blocks allows those addresses to receive emails again.",
+          "message": "Odstrániť e-mailové adresy zo zoznamu blokovaní. Môžete buď vymazať všetky blokovania naraz, alebo určiť konkrétne e-mailové adresy na odstránenie. Odstránenie blokovaní umožní týmto adresám opäť prijímať e-maily."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
+          "source": "Delete Blocks",
+          "message": "Odstrániť bloky"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.desc": {
+          "source": "Set to true to delete all blocked email addresses from your list. When true, the emails parameter is ignored.",
+          "message": "Nastavte na true na vymazanie všetkých zablokovaných e-mailových adries zo zoznamu. Keď je hodnota true, parameter emails sa ignoruje."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.display_name": {
+          "source": "Delete All",
+          "message": "Vymazať všetko"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZGVsZXRlQWxs.short_desc": {
+          "source": "Delete all blocked emails",
+          "message": "Vymazať všetky zablokované e-maily"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to remove from the blocks list. Required if Delete All is not set to true.",
+          "message": "Pole e-mailových adries na odstránenie zo zoznamu blokovaní. Povinné, ak nie je Delete All nastavené na true."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "E-maily"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to delete",
+          "message": "Zoznam e-mailových adries na vymazanie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
+          "source": "Delete blocked email addresses from your list",
+          "message": "Vymazať zablokované e-mailové adresy zo zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.desc": {
+          "source": "Remove email addresses from your bounces list. You can either delete all bounces at once or specify individual email addresses to remove. Deleting bounces allows those addresses to receive emails again.",
+          "message": "Odstrániť e-mailové adresy zo zoznamu odmietnutí. Môžete buď vymazať všetky odmietnutia naraz, alebo určiť konkrétne e-mailové adresy na odstránenie. Odstránenie odmietnutí umožní týmto adresám opäť prijímať e-maily."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.display_name": {
+          "source": "Delete Bounces",
+          "message": "Vymazať odmietnutia"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.desc": {
+          "source": "Set to true to delete all bounced email addresses from your list. When true, the emails parameter is ignored.",
+          "message": "Nastavte na true na vymazanie všetkých odmietnutých e-mailových adries zo zoznamu. Keď je hodnota true, parameter emails sa ignoruje."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.display_name": {
+          "source": "Delete All",
+          "message": "Vymazať všetko"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZGVsZXRlQWxs.short_desc": {
+          "source": "Delete all bounced emails",
+          "message": "Vymazať všetky odmietnuté e-maily"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.desc": {
+          "source": "An array of email addresses to remove from the bounces list. Required if Delete All is not set to true.",
+          "message": "Pole e-mailových adries na odstránenie zo zoznamu odmietnutí. Povinné, ak nie je Delete All nastavené na true."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.display_name": {
+          "source": "Emails",
+          "message": "E-maily"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.option.ZW1haWxz.short_desc": {
+          "source": "List of email addresses to delete",
+          "message": "Zoznam e-mailových adries na vymazanie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2JvdW5jZXM.short_desc": {
+          "source": "Delete bounced email addresses from your list",
+          "message": "Vymazať odmietnuté e-mailové adresy zo zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.desc": {
+          "source": "Permanently delete one or more contacts from your SendGrid contact database. This action cannot be undone.",
+          "message": "Natrvalo vymazať jeden alebo viac kontaktov z vašej databázy kontaktov SendGrid. Túto akciu nemožno vrátiť späť."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.display_name": {
+          "source": "Delete Contacts",
+          "message": "Vymazať kontakty"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.desc": {
+          "source": "An array of contact IDs to delete. Select from your existing contacts. All selected contacts will be permanently removed.",
+          "message": "Pole ID kontaktov na vymazanie. Vyberte zo svojich existujúcich kontaktov. Všetky vybrané kontakty budú natrvalo odstránené."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contact IDs",
+          "message": "ID kontaktov"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The IDs of contacts to delete",
+          "message": "ID kontaktov na vymazanie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2NvbnRhY3Rz.short_desc": {
+          "source": "Permanently delete contacts from your database",
+          "message": "Natrvalo vymazať kontakty z databázy"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.desc": {
+          "source": "Remove an email address from the global suppression list. This will allow the address to receive emails from your account again.",
+          "message": "Odstrániť e-mailovú adresu z globálneho zoznamu potlačení. Tým sa umožní danej adrese opäť prijímať e-maily z vášho účtu."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.display_name": {
+          "source": "Delete a Global Suppression",
+          "message": "Vymazať globálne potlačenie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.desc": {
+          "source": "The email address to remove from the global suppression list. Once removed, this address will be able to receive emails again.",
+          "message": "E-mailová adresa, ktorú chcete odstrániť z globálneho zoznamu potlačení. Po odstránení bude táto adresa opäť schopná prijímať e-maily."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.option.ZW1haWw.short_desc": {
+          "source": "The email address to remove",
+          "message": "E-mailová adresa na odstránenie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2dsb2JhbF9zdXBwcmVzc2lvbg.short_desc": {
+          "source": "Remove an email address from the global suppression list",
+          "message": "Odstrániť e-mailovú adresu z globálneho zoznamu potlačení"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.desc": {
+          "source": "Delete a recipient list from your SendGrid account. You can optionally delete all contacts within the list as well.",
+          "message": "Vymazať zoznam príjemcov z vášho SendGrid účtu. Voliteľne môžete vymazať aj všetky kontakty v tomto zozname."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.display_name": {
+          "source": "Delete a List",
+          "message": "Vymazať zoznam"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.desc": {
+          "source": "When set to true, all contacts within the list will also be permanently deleted from your contact database. Use with caution.",
+          "message": "Keď je nastavené na true, všetky kontakty v zozname budú tiež natrvalo vymazané z vašej databázy kontaktov. Používajte opatrne."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.display_name": {
+          "source": "Delete Contacts",
+          "message": "Vymazať kontakty"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.ZGVsZXRlQ29udGFjdHM.short_desc": {
+          "source": "Also delete all contacts in the list",
+          "message": "Vymazať aj všetky kontakty v zozname"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.desc": {
+          "source": "The unique identifier of the list you want to delete. Select from your existing lists.",
+          "message": "Jedinečný identifikátor zoznamu, ktorý chcete vymazať. Vyberte zo svojich existujúcich zoznamov."
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.option.bGlzdElk.short_desc": {
+          "source": "The ID of the list to delete",
+          "message": "ID zoznamu na vymazanie"
+        },
+        "app.U2VuZEdyaWQ.action.ZGVsZXRlX2xpc3Q.short_desc": {
+          "source": "Delete a contact list",
+          "message": "Vymazať zoznam kontaktov"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.desc": {
+          "source": "Retrieve a list of all email addresses that are currently on your blocks list. Blocked addresses are emails that have been rejected by receiving servers. You can filter by time range and paginate through results.",
+          "message": "Načítať zoznam všetkých e-mailových adries, ktoré sú aktuálne vo vašom zozname blokovaní. Zablokované adresy sú e-maily, ktoré boli odmietnuté prijímacími servermi. Môžete filtrovať podľa časového rozsahu a stránkovať výsledky."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.display_name": {
+          "source": "List Blocks",
+          "message": "Zoznam blokov"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve blocks that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Načítať blokovania, ktoré boli vytvorené pred týmto časovým bodom. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "Čas ukončenia"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter blocks created before this Unix timestamp",
+          "message": "Filtrovať blokovania vytvorené pred týmto Unix timestampom"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Počiatočný bod v zozname výsledkov"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.desc": {
+          "source": "The maximum number of block records to return. Default is 500.",
+          "message": "Maximálny počet záznamov o blokovaní, ktoré sa majú vrátiť. Predvolená hodnota je 500."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of blocks to return",
+          "message": "Maximálny počet vrátených blokovaní"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve blocks that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Načítať blokovania, ktoré boli vytvorené po tomto časovom bode. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Čas začiatku"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter blocks created after this Unix timestamp",
+          "message": "Filtrovať blokovania vytvorené po tomto Unix timestampe"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9ibG9ja3M.short_desc": {
+          "source": "Retrieve a list of blocked email addresses",
+          "message": "Načítať zoznam zablokovaných e-mailových adries"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.desc": {
+          "source": "Retrieve a list of all email addresses that have globally unsubscribed from all of your emails. These addresses will not receive any emails from your account until they are removed from this list.",
+          "message": "Načítať zoznam všetkých e-mailových adries, ktoré sa globálne odhlásili zo všetkých vašich e-mailov. Tieto adresy nebudú dostávať žiadne e-maily z vášho účtu, kým nebudú z tohto zoznamu odstránené."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.display_name": {
+          "source": "List Global Suppressions",
+          "message": "Vypísať globálne potlačenia"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.desc": {
+          "source": "Retrieve suppressions that were created before this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Načítať potlačenia, ktoré boli vytvorené pred týmto časovým bodom. Zadajte čas ako Unix timestamp (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.display_name": {
+          "source": "End Time",
+          "message": "Čas ukončenia"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.ZW5kVGltZQ.short_desc": {
+          "source": "Filter suppressions created before this Unix timestamp",
+          "message": "Filtrovať potlačenia vytvorené pred týmto Unix timestampom"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.desc": {
+          "source": "The starting point in the list of results for pagination. Default is 0.",
+          "message": "Počiatočný bod v zozname výsledkov pre stránkovanie. Predvolená hodnota je 0."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.b2Zmc2V0.short_desc": {
+          "source": "Starting point in the list of results",
+          "message": "Počiatočný bod v zozname výsledkov"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of suppression records to return. Default is 500.",
+          "message": "Maximálny počet záznamov o potlačení, ktoré sa majú vrátiť. Predvolená hodnota je 500."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of suppressions to return",
+          "message": "Maximálny počet vrátených potlačení"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.desc": {
+          "source": "Retrieve suppressions that were created after this point in time. Provide the time as a Unix timestamp (seconds since epoch).",
+          "message": "Získať potlačenia vytvorené po tomto čase. Čas zadajte ako časovú pečiatku Unixu (sekundy od začiatku epochy)."
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.display_name": {
+          "source": "Start Time",
+          "message": "Čas začiatku"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.option.c3RhcnRUaW1l.short_desc": {
+          "source": "Filter suppressions created after this Unix timestamp",
+          "message": "Filtrovať potlačenia vytvorené po tejto časovej pečiatke Unixu"
+        },
+        "app.U2VuZEdyaWQ.action.bGlzdF9nbG9iYWxfc3VwcHJlc3Npb25z.short_desc": {
+          "source": "Retrieve a list of globally unsubscribed email addresses",
+          "message": "Získať zoznam globálne odhlásených e-mailových adries"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **SendGrid** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **SendGrid** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.U2VuZEdyaWQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to SendGrid",
+          "message": "Vykonať vlastné volanie API do SendGrid"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search your contact database for contacts matching a specific field value. You can search by email, name, or any custom field.",
+          "message": "Vyhľadajte vo svojej databáze kontaktov kontakty, ktoré zodpovedajú konkrétnej hodnote poľa. Môžete vyhľadávať podľa e-mailu, mena alebo ľubovoľného vlastného poľa."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search for Contacts",
+          "message": "Vyhľadať kontakty"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.desc": {
+          "source": "The name of the field to search. Common fields include `email`, `first_name`, `last_name`, or any custom field name.",
+          "message": "Názov poľa, v ktorom sa má vyhľadávať. Medzi bežné polia patria `email`, `first_name`, `last_name` alebo ľubovoľný vlastný názov poľa."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.display_name": {
+          "source": "Field Name",
+          "message": "Názov poľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.ZmllbGROYW1l.short_desc": {
+          "source": "The field to search on",
+          "message": "Pole, v ktorom sa má vyhľadávať"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.desc": {
+          "source": "The value to match against the specified field. Text fields may require URL encoding.",
+          "message": "Hodnota, s ktorou sa má zhodovať zadané pole. Textové polia môžu vyžadovať kódovanie URL."
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.display_name": {
+          "source": "Value",
+          "message": "Hodnota"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.option.dmFsdWU.short_desc": {
+          "source": "The value to search for",
+          "message": "Hodnota, ktorá sa má vyhľadať"
+        },
+        "app.U2VuZEdyaWQ.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search contacts by field value",
+          "message": "Vyhľadať kontakty podľa hodnoty poľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.desc": {
+          "source": "Send a transactional email using a predefined SendGrid dynamic template. Customize the email content by providing dynamic template data for personalization.",
+          "message": "Odošlite transakčný e-mail pomocou preddefinovanej dynamickej šablóny SendGrid. Prispôsobte obsah e-mailu zadaním dynamických údajov šablóny na personalizáciu."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.display_name": {
+          "source": "Send Template Email",
+          "message": "Odoslať e-mail zo šablóny"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.desc": {
+          "source": "An array of email addresses to include as CC recipients.",
+          "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v kópii (CC)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
+          "source": "CC Emails",
+          "message": "E-maily v kópii (CC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
+          "source": "Carbon copy recipients",
+          "message": "Príjemcovia v kópii (CC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.desc": {
+          "source": "An array of email addresses to include as BCC recipients.",
+          "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v skrytej kópii (BCC)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.display_name": {
+          "source": "BCC Emails",
+          "message": "E-maily v skrytej kópii (BCC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
+          "source": "Blind carbon copy recipients",
+          "message": "Príjemcovia v skrytej kópii (BCC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.desc": {
+          "source": "Optional name to display as the sender in the 'From' field.",
+          "message": "Voliteľné meno, ktoré sa zobrazí ako odosielateľ v poli „Od“."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
+          "source": "From Name",
+          "message": "Meno odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
+          "source": "The sender name",
+          "message": "Meno odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.desc": {
+          "source": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account.",
+          "message": "E-mailová adresa, ktorá sa zobrazí ako odosielateľ. Musí ísť o overeného odosielateľa vo vašom účte SendGrid."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
+          "source": "From Email",
+          "message": "E-mail odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
+          "source": "The sender email address",
+          "message": "E-mailová adresa odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.desc": {
+          "source": "Optional name to display for the reply-to address.",
+          "message": "Voliteľné meno, ktoré sa zobrazí pre adresu na odpoveď."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
+          "source": "Reply-To Name",
+          "message": "Meno pre odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
+          "source": "Name for the reply-to address",
+          "message": "Meno pre adresu na odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.desc": {
+          "source": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address.",
+          "message": "Voliteľná e-mailová adresa, na ktorú by mali príjemcovia odpovedať. Ak nie je zadaná, odpovede pôjdu na adresu odosielateľa."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
+          "source": "Reply-To Email",
+          "message": "E-mail pre odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
+          "source": "Email address for replies",
+          "message": "E-mailová adresa pre odpovede"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.desc": {
+          "source": "The email address of the primary recipient.",
+          "message": "E-mailová adresa primárneho príjemcu."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.display_name": {
+          "source": "To Email",
+          "message": "E-mail príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9FbWFpbA.short_desc": {
+          "source": "The recipient email address",
+          "message": "E-mailová adresa príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.desc": {
+          "source": "Optional name of the recipient to personalize the 'To' field.",
+          "message": "Voliteľné meno príjemcu na prispôsobenie poľa „Komu“."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.display_name": {
+          "source": "To Name",
+          "message": "Meno príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dG9OYW1l.short_desc": {
+          "source": "The recipient name",
+          "message": "Meno príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.desc": {
+          "source": "Select the dynamic template to use for this email. The template must be created in your SendGrid account.",
+          "message": "Vyberte dynamickú šablónu, ktorá sa má použiť pre tento e-mail. Šablóna musí byť vytvorená vo vašom účte SendGrid."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.display_name": {
+          "source": "Template ID",
+          "message": "ID šablóny"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dGVtcGxhdGVJZA.short_desc": {
+          "source": "The SendGrid template to use",
+          "message": "Šablóna SendGrid, ktorá sa má použiť"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.desc": {
+          "source": "A JSON object containing key-value pairs for dynamic template data. These values will replace the corresponding placeholders in the selected template.",
+          "message": "Objekt JSON obsahujúci páry kľúč – hodnota pre dynamické údaje šablóny. Tieto hodnoty nahradia príslušné zástupné symboly vo vybratej šablóne."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.display_name": {
+          "source": "Template Values",
+          "message": "Hodnoty šablóny"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.option.dmFsdWVz.short_desc": {
+          "source": "Dynamic data for template personalization",
+          "message": "Dynamické údaje na personalizáciu šablóny"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF90ZW1wbGF0ZV9lbWFpbA.short_desc": {
+          "source": "Send an email message using a SendGrid template",
+          "message": "Odoslať e-mailovú správu pomocou šablóny SendGrid"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.desc": {
+          "source": "Send a transactional email to one or more recipients. You can send plain text, HTML, or both. Supports CC, BCC, and custom reply-to addresses.",
+          "message": "Odošlite transakčný e-mail jednému alebo viacerým príjemcom. Môžete odoslať čistý text, HTML alebo oboje. Podporuje CC, BCC a vlastné adresy na odpoveď."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.display_name": {
+          "source": "Send Email",
+          "message": "Odoslať e-mail"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.desc": {
+          "source": "An array of email addresses to include as CC recipients.",
+          "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v kópii (CC)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.display_name": {
+          "source": "CC Emails",
+          "message": "E-maily v kópii (CC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.Y2NFbWFpbHM.short_desc": {
+          "source": "Carbon copy recipients",
+          "message": "Príjemcovia v kópii (CC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.desc": {
+          "source": "An array of email addresses to include as BCC recipients.",
+          "message": "Pole e-mailových adries, ktoré sa majú zahrnúť ako príjemcovia v skrytej kópii (BCC)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.display_name": {
+          "source": "BCC Emails",
+          "message": "E-maily v skrytej kópii (BCC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.YmNjRW1haWxz.short_desc": {
+          "source": "Blind carbon copy recipients",
+          "message": "Príjemcovia v skrytej kópii (BCC)"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.desc": {
+          "source": "Optional name to display as the sender in the 'From' field.",
+          "message": "Voliteľné meno, ktoré sa zobrazí ako odosielateľ v poli „Od“."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.display_name": {
+          "source": "From Name",
+          "message": "Meno odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbU5hbWU.short_desc": {
+          "source": "The sender name",
+          "message": "Meno odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.desc": {
+          "source": "The email address that will appear as the sender. Must be a verified sender in your SendGrid account.",
+          "message": "E-mailová adresa, ktorá sa zobrazí ako odosielateľ. Musí ísť o overeného odosielateľa vo vašom účte SendGrid."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.display_name": {
+          "source": "From Email",
+          "message": "E-mail odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.ZnJvbUVtYWls.short_desc": {
+          "source": "The sender email address",
+          "message": "E-mailová adresa odosielateľa"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.desc": {
+          "source": "The HTML version of the email content. Either text content or HTML content (or both) must be provided.",
+          "message": "HTML verzia obsahu e-mailu. Musí byť zadaný buď textový obsah, alebo HTML obsah (prípadne oboje)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.display_name": {
+          "source": "HTML Content",
+          "message": "HTML obsah"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.aHRtbENvbnRlbnQ.short_desc": {
+          "source": "HTML content of the email",
+          "message": "HTML obsah e-mailu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.desc": {
+          "source": "The subject line of the email.",
+          "message": "Riadok predmetu e-mailu."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Predmet"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.c3ViamVjdA.short_desc": {
+          "source": "The email subject line",
+          "message": "Predmet e-mailu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.desc": {
+          "source": "Optional name to display for the reply-to address.",
+          "message": "Voliteľné meno, ktoré sa zobrazí pre adresu na odpoveď."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.display_name": {
+          "source": "Reply-To Name",
+          "message": "Meno pre odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb05hbWU.short_desc": {
+          "source": "Name for the reply-to address",
+          "message": "Meno pre adresu na odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.desc": {
+          "source": "Optional email address that recipients should reply to. If not provided, replies will go to the sender address.",
+          "message": "Voliteľná e-mailová adresa, na ktorú by mali príjemcovia odpovedať. Ak nie je zadaná, odpovede pôjdu na adresu odosielateľa."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.display_name": {
+          "source": "Reply-To Email",
+          "message": "E-mail pre odpoveď"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.cmVwbHlUb0VtYWls.short_desc": {
+          "source": "Email address for replies",
+          "message": "E-mailová adresa pre odpovede"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.desc": {
+          "source": "The email address of the primary recipient.",
+          "message": "E-mailová adresa primárneho príjemcu."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.display_name": {
+          "source": "To Email",
+          "message": "E-mail príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9FbWFpbA.short_desc": {
+          "source": "The recipient email address",
+          "message": "E-mailová adresa príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.desc": {
+          "source": "Optional name of the recipient to personalize the 'To' field.",
+          "message": "Voliteľné meno príjemcu na prispôsobenie poľa „Komu“."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.display_name": {
+          "source": "To Name",
+          "message": "Meno príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dG9OYW1l.short_desc": {
+          "source": "The recipient name",
+          "message": "Meno príjemcu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.desc": {
+          "source": "The plain text version of the email content. Either text content or HTML content (or both) must be provided.",
+          "message": "Verzia obsahu e-mailu v čistom texte. Musí byť zadaný buď textový obsah, alebo HTML obsah (prípadne oboje)."
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.display_name": {
+          "source": "Text Content",
+          "message": "Textový obsah"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.option.dGV4dENvbnRlbnQ.short_desc": {
+          "source": "Plain text content of the email",
+          "message": "Čistý textový obsah e-mailu"
+        },
+        "app.U2VuZEdyaWQ.action.c2VuZF9lbWFpbA.short_desc": {
+          "source": "Send an email message",
+          "message": "Odoslať e-mailovú správu"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.desc": {
+          "source": "Remove one or more contacts from a specific list without deleting them from your contact database. The contacts will remain in your database but will no longer be associated with the specified list.",
+          "message": "Odstráňte jeden alebo viacero kontaktov z konkrétneho zoznamu bez toho, aby ste ich vymazali z databázy kontaktov. Kontakty zostanú vo vašej databáze, ale už nebudú priradené k danému zoznamu."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.display_name": {
+          "source": "Remove Contacts from List",
+          "message": "Odstrániť kontakty zo zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.desc": {
+          "source": "An array of contact IDs to remove from the list. The contacts will remain in your database but will be unlinked from this list.",
+          "message": "Pole identifikátorov kontaktov (ID), ktoré sa majú odstrániť zo zoznamu. Kontakty zostanú vo vašej databáze, ale ich prepojenie s týmto zoznamom sa zruší."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.display_name": {
+          "source": "Contact IDs",
+          "message": "ID kontaktov"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.Y29udGFjdElkcw.short_desc": {
+          "source": "The contacts to remove from the list",
+          "message": "Kontakty, ktoré sa majú odstrániť zo zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.desc": {
+          "source": "The unique identifier of the list from which you want to remove contacts.",
+          "message": "Jedinečný identifikátor zoznamu, z ktorého chcete odstrániť kontakty."
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.display_name": {
+          "source": "List ID",
+          "message": "ID zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.option.bGlzdElk.short_desc": {
+          "source": "The list to remove contacts from",
+          "message": "Zoznam, z ktorého sa majú odstrániť kontakty"
+        },
+        "app.U2VuZEdyaWQ.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fbGlzdA.short_desc": {
+          "source": "Remove contacts from a specific list",
+          "message": "Odstrániť kontakty z konkrétneho zoznamu"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.desc": {
+          "source": "Check if an email address is valid and likely to receive emails. Returns a verdict (Valid, Risky, or Invalid) along with detailed checks including domain validity, suspected disposable address detection, and bounce history.",
+          "message": "Skontrolujte, či je e-mailová adresa platná a schopná prijímať e-maily. Vráti verdikt (Valid, Risky alebo Invalid) spolu s podrobnými kontrolami vrátane platnosti domény, detekcie podozrenia na jednorazovú adresu a histórie vrátených správ (bounce history)."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.display_name": {
+          "source": "Validate Email",
+          "message": "Overiť e-mail"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.desc": {
+          "source": "The email address you want to validate. The validation will check syntax, domain records, and historical data.",
+          "message": "E-mailová adresa, ktorú chcete overiť. Overenie skontroluje syntax, záznamy domény a historické údaje."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.ZW1haWw.short_desc": {
+          "source": "The email address to validate",
+          "message": "E-mailová adresa na overenie"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.desc": {
+          "source": "An optional source string to help you track where the validation request originated from.",
+          "message": "Voliteľný zdrojový reťazec, ktorý vám pomôže sledovať, odkiaľ požiadavka na overenie prišla."
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "Zdroj"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.option.c291cmNl.short_desc": {
+          "source": "Optional source identifier for tracking",
+          "message": "Voliteľný identifikátor zdroja na sledovanie"
+        },
+        "app.U2VuZEdyaWQ.action.dmFsaWRhdGVfZW1haWw.short_desc": {
+          "source": "Validate an email address for deliverability",
+          "message": "Overiť doručiteľnosť e-mailovej adresy"
+        },
+        "app.U2VuZEdyaWQ.desc": {
+          "source": "Integrate with Twilio SendGrid for comprehensive email management. Send transactional and marketing emails, manage your contact lists, validate email addresses for deliverability, and maintain your sender reputation by handling suppressions including blocks, bounces, and global unsubscribes. This integration provides full control over your email infrastructure and helps ensure high deliverability rates.",
+          "message": "Integrujte s Twilio SendGrid pre komplexnú správu e-mailov. Posielajte transakčné a marketingové e-maily, spravujte zoznamy kontaktov, overujte doručiteľnosť e-mailových adries a udržiavajte reputáciu odosielateľa správou potlačení vrátane blokovaní, nedoručení a globálnych odhlásení. Táto integrácia poskytuje plnú kontrolu nad vašou e-mailovou infraštruktúrou a pomáha zaistiť vysokú mieru doručiteľnosti."
+        },
+        "app.U2VuZEdyaWQ.display_name": {
+          "source": "SendGrid",
+          "message": "SendGrid"
+        },
+        "app.U2VuZEdyaWQ.short_desc": {
+          "source": "Connect with SendGrid to send emails, manage contacts, and handle suppressions",
+          "message": "Pripojte sa k službe SendGrid a posielajte e-maily, spravujte kontakty a spravujte potlačenia"
+        }
+      }
+    }
+  }
+}

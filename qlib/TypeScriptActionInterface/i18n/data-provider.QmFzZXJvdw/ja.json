@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.QmFzZXJvdw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.",
+          "message": "指定したBaserowテーブルに新しいレコードを作成します。このアクションはテーブルスキーマを動的に表示し、各列の値を入力できるようにします。オプションで行IDを指定して、その行の前に新しい行を挿入することもできます。すべてのデータを含む新規作成された行を返します。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "行を作成"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.desc": {
+          "source": "Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.",
+          "message": "必要に応じて行IDを指定し、テーブルの順序でその行の前に新しい行を挿入します。末尾に挿入する場合は空のままにしてください。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.display_name": {
+          "source": "Before Row ID",
+          "message": "前の行ID"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.short_desc": {
+          "source": "Insert the new row before this row",
+          "message": "この行の前に新しい行を挿入"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "テーブルの列の値を入力します。構造は選択したテーブルスキーマに基づいて動的に生成され、利用可能なすべての列とそのデータ型および制約が表示されます。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "行データ"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "新しい行に挿入するデータ"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "新しい行を挿入する対象のBaserowテーブルを選択します。選択したテーブルスキーマに基づいて、利用可能なフィールドが動的に読み込まれます。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "行が挿入されるテーブル"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Baserow table",
+          "message": "Baserowテーブルに新しい行を挿入"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.desc": {
+          "source": "Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.",
+          "message": "フィールドタイプ、順序、説明、デフォルト値、プロパティなど、特定のBaserowテーブル内にあるすべてのフィールドの包括的なメタデータを取得します。このアクションは、データベーステーブルの構造と設定を理解するのに役立ちます。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.display_name": {
+          "source": "Get Table Fields",
+          "message": "テーブルフィールドを取得"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table whose field definitions you want to fetch. All fields and their configurations will be returned.",
+          "message": "フィールド定義を取得するBaserowテーブルを選択します。すべてのフィールドとその設定が返されます。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve fields from",
+          "message": "フィールドを取得するテーブル"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.short_desc": {
+          "source": "Retrieve all field definitions from a Baserow table",
+          "message": "Baserowテーブルからすべてのフィールド定義を取得"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.desc": {
+          "source": "Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.",
+          "message": "IDによってBaserowテーブル内の単一行の詳細データを取得します。動的に読み込まれたフィールドタイプを持つ指定行のすべての列値を返します。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.display_name": {
+          "source": "Get Table Row",
+          "message": "テーブル行を取得"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to retrieve from the table by its ID. All data for this row will be returned.",
+          "message": "IDによってテーブルから取得する特定の行を選択します。この行のすべてのデータが返されます。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "行"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to retrieve",
+          "message": "取得する行"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve a row. The available rows will be loaded based on this selection.",
+          "message": "行を取得するBaserowテーブルを選択します。利用可能な行はこの選択に基づいて読み込まれます。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve the row from",
+          "message": "行を取得するテーブル"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Retrieve a specific row from a Baserow table",
+          "message": "Baserow テーブルから特定の行を取得します"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.",
+          "message": "ID を使用して Baserow テーブルから単一の行を削除します。この操作は元に戻せず、指定した行が恒久的に削除されるため、注意して実行してください。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "行を削除"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to delete from the table by its ID. This row will be permanently removed.",
+          "message": "テーブルから削除する特定の行を ID で選択します。この行は恒久的に削除されます。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "行"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to delete",
+          "message": "削除する行"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to delete a row. Ensure you have proper permissions for delete operations on this table.",
+          "message": "行を削除する Baserow テーブルを選択します。このテーブルに対する削除操作の適切な権限があることを確認してください。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to delete the row from",
+          "message": "行を削除するテーブル"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Baserow table",
+          "message": "Baserow テーブルから特定の行を削除します"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.",
+          "message": "Baserow データベースから、テーブル ID、名前、順序、関連するデータベース ID などの基本メタデータを含むすべてのテーブルのリストを取得します。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "テーブル一覧"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get all tables in your Baserow database",
+          "message": "Baserow データベース内のすべてのテーブルを取得"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.",
+          "message": "フィルタリング、ソート、ページネーション、検索のサポート付きで Baserow テーブルから行を取得します。クエリ条件に一致するレコードのリストを、合計件数およびページネーション情報とともに返します。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "行の一覧表示"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply multiple filter conditions to retrieve only rows that match specific criteria. Supports various comparison operators and logical combinations.",
+          "message": "複数のフィルター条件を適用して、特定の条件に一致する行のみを取得します。さまざまな比較演算子および論理組み合わせをサポートします。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on conditions",
+          "message": "条件に基づいて行をフィルター"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a field and sort direction (ascending or descending).",
+          "message": "フィールドとソート順（昇順または降順）を指定して、取得した行のソート方法を定義します。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "順序"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.short_desc": {
+          "source": "Sort the results by a specific field",
+          "message": "特定フィールドで結果をソート"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to filter rows across all text fields in the table. Only rows containing this term will be returned.",
+          "message": "テーブル内のすべてのテキストフィールドで行をフィルター処理するための検索語を指定します。この用語を含む行のみが返されます。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter rows",
+          "message": "行をフィルターするための検索語"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve per page. Defaults to 100 rows if not specified.",
+          "message": "1 ページあたりに取得する行の最大数を指定します。指定しない場合のデフォルトは 100 行です。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.display_name": {
+          "source": "Size",
+          "message": "サイズ"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.short_desc": {
+          "source": "Number of rows per page",
+          "message": "1 ページあたりの行数"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve. Used in combination with size for pagination through large datasets. Defaults to page 1.",
+          "message": "取得する結果のページを指定します。大量のデータセットをページネーションするためにサイズと組み合わせて使用されます。デフォルトはページ 1 です。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "行を取得する Baserow テーブルを選択します。フィルターおよび順序付けに使用できる列は、この選択に基づいて読み込まれます。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.short_desc": {
+          "source": "The table to query",
+          "message": "クエリ対象のテーブル"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Baserow table",
+          "message": "Baserow テーブルのクエリおよび行の取得"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Baserow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Baserow** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Baserow",
+          "message": "Baserow へのカスタム API 呼び出しの実行"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.",
+          "message": "Baserow テーブルの新しい行を監視し、新しいレコードが挿入されたときにトリガーします。特定の条件に一致する行のみトリガーするオプションのフィルタリングと検索をサポートしています。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "新しい行"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.desc": {
+          "source": "Apply filter conditions to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "特定の条件に一致する新しい行でのみトリガーするようにフィルター条件を適用します。すべての新しい行でトリガーする場合は空のままにしてください。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.short_desc": {
+          "source": "Optional conditions to filter new rows",
+          "message": "新しい行をフィルターするためのオプションの条件"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to trigger only for new rows that contain this term in any text field. Leave empty to trigger for all new rows.",
+          "message": "いずれかのテキストフィールドにこの用語を含む新しい行でのみトリガーするための検索語を指定します。すべての新しい行でトリガーする場合は空のままにしてください。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.short_desc": {
+          "source": "Optional search term to filter new rows",
+          "message": "新しい行をフィルターするためのオプションの検索語"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the Baserow table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "監視する Baserow テーブルを選択します。新しい行がこのテーブルに挿入されるたびにトリガーが実行されます。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "新しい行を監視するテーブル"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new row is added to a Baserow table",
+          "message": "Baserow テーブルに新しい行が追加されたときにトリガー"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルの既存レコードを更新します"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "アプリ「Baserow」の指定されたテーブルの既存レコードを更新します"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.desc": {
+          "source": "Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.",
+          "message": "Baserow テーブル内の既存の行の値を更新します。このアクションはテーブルスキーマを動的に表示し、各列の値を変更できるようにします。現在のすべてのデータを含む更新された行を返します。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.display_name": {
+          "source": "Update Row",
+          "message": "行を更新"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.",
+          "message": "更新するテーブル列の新しい値を指定します。構造は、選択したテーブルスキーマに基づいて動的に生成されます。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "行データ"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the row",
+          "message": "行の新しいデータ"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to update by its ID. The current values of this row will be modified.",
+          "message": "ID を使用して更新する特定の行を選択します。この行の現在の値が変更されます。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "行"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to update",
+          "message": "更新する行"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table containing the row you want to update. The available fields will be dynamically loaded based on the table schema.",
+          "message": "更新する行が含まれる Baserow テーブルを選択します。使用可能なフィールドはテーブルスキーマに基づいて動的に読み込まれます。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table containing the row to update",
+          "message": "更新する行が含まれるテーブル"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.short_desc": {
+          "source": "Update an existing row in a Baserow table",
+          "message": "Baserow テーブル内の既存の行を更新"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.",
+          "message": "Baserow のファイルストレージシステムにファイルをアップロードします。URL、サイズ、MIME タイプ、および画像用に生成されたサムネイルを含む、アップロードされたファイルのメタデータを返します。アップロードされたファイルは、テーブル内のファイルフィールドで参照できます。"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "ファイルをアップロード"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload to Baserow storage. The file will be stored and available for use in file fields.",
+          "message": "Baserow ストレージにアップロードするファイルを選択または提供します。ファイルは保存され、ファイルフィールドで使用できるようになります。"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "ファイル"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "アップロードするファイル"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Baserow storage",
+          "message": "Baserow ストレージにファイルをアップロード"
+        },
+        "app.QmFzZXJvdw.desc": {
+          "source": "The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.",
+          "message": "Baserow 連携により、Baserow データベース操作への包括的なアクセスが提供されます。テーブル内の行の作成、読み取り、更新、削除、ファイルのアップロード、リアルタイムトリガーによる新しいエントリの監視が可能です。データの管理、結果のフィルタリング、新しいレコードの追跡のいずれが必要であっても、この連携により Baserow ワークフローの自動化とデータベース管理が効率化されます。"
+        },
+        "app.QmFzZXJvdw.display_name": {
+          "source": "Baserow",
+          "message": "Baserow"
+        },
+        "app.QmFzZXJvdw.short_desc": {
+          "source": "Connect to Baserow to manage your database tables, rows, and files with powerful automation",
+          "message": "Baserow に接続して、強力な自動化機能でデータベーステーブル、行、ファイルを管理します"
+        }
+      }
+    }
+  }
+}

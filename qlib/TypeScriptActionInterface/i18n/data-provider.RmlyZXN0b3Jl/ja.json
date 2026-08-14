@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.desc": {
+          "source": "Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object.",
+          "message": "指定された Firestore コレクションに新しいドキュメントを作成します。ドキュメント ID を Firestore に自動生成させるか、独自に指定することができます。ドキュメントデータは構造化フィールドまたはカスタムハッシュオブジェクトとして指定できます。"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
+          "source": "Create Document",
+          "message": "ドキュメントを作成"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "ドキュメントを作成するコレクションへの完全なパス。ネストされたコレクションの場合は、parent_collection/parent_doc_id/nested_collection の形式を使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "構造化データとマージするオプションの追加フィールド。事前定義されたスキーマに含まれていないフィールドを追加したり、動的フィールドを含めたりする場合に使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "追加データ"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to include in the document",
+          "message": "ドキュメントに含める追加フィールド"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes.",
+          "message": "ドキュメント用のオプションのカスタム識別子。指定しない場合、Firestore が一意の ID を自動生成します。ドキュメント ID は有効な UTF-8 文字列である必要があり、スラッシュを含めることはできません。"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Custom document ID (optional)",
+          "message": "カスタムドキュメント ID（オプション）"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type.",
+          "message": "ドキュメントに保存する構造化データ。コレクションスキーマが利用可能な場合は、それに基づいて動的に型付けされます。各フィールドは適切な Firestore データ型で保存されます。"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "ドキュメントデータ"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The data to store in the document",
+          "message": "ドキュメントに保存するデータ"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Create a new document in a Firestore collection",
+          "message": "Firestore コレクションに新しいドキュメントを作成"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time.",
+          "message": "データを Google Cloud Storage にエクスポートして、Firestore データベースまたは特定のコレクションのバックアップを作成します。これは、ディザスタリカバリ、データ移行、特定時点のデータベースのスナップショット作成に役立ちます。"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Backup to Google Cloud Storage",
+          "message": "Google Cloud Storage へのバックアップ"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections.",
+          "message": "バックアップするコレクション ID のオプションのリスト。指定しない場合、データベース全体がバックアップされます。特定のコレクションを選択してバックアップを作成する場合に使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "コレクション ID"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to backup (optional)",
+          "message": "バックアップする特定のコレクション（オプション）"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions.",
+          "message": "バックアップファイルが書き込まれる Google Cloud Storage の URI プレフィックス。形式: gs://bucket-name/path/to/backup。バケットが既に存在し、書き込み権限を持っている必要があります。"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
+          "source": "Output URI Prefix",
+          "message": "出力 URI プレフィックス"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
+          "source": "GCS bucket URI where backup will be stored",
+          "message": "バックアップが保存される GCS バケット URI"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database to backup",
+          "message": "バックアップ対象の Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Export Firestore data to Google Cloud Storage",
+          "message": "Firestore データを Google Cloud Storage にエクスポート"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection.",
+          "message": "特定の Firestore コレクションに関するメタデータと情報を取得します。これには、コレクションが存在するかどうか、ドキュメントが含まれているかどうかの確認、およびオプションでコレクションからサンプルドキュメントを取得することが含まれます。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "コレクションを取得"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.desc": {
+          "source": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path.",
+          "message": "情報を取得するコレクションの識別子。これは親パスを含まないコレクション名です。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.display_name": {
+          "source": "Collection ID",
+          "message": "コレクション ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.short_desc": {
+          "source": "The ID of the collection",
+          "message": "コレクションの ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.desc": {
+          "source": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection.",
+          "message": "true の場合、レスポンスにコレクションからのサンプルドキュメントを含めます。これにより、コレクションの構造と内容を把握できます。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
+          "source": "Include Sample Documents",
+          "message": "サンプルドキュメントを含める"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
+          "source": "Whether to include sample documents",
+          "message": "サンプルドキュメントを含めるかどうか"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.desc": {
+          "source": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5.",
+          "message": "include_sample_documents が true の場合に取得するサンプルドキュメントの最大数。デフォルトは 5 です。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
+          "source": "Sample Limit",
+          "message": "サンプル制限"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
+          "source": "Number of sample documents to include",
+          "message": "含めるサンプルドキュメントの数"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id",
+          "message": "サブコレクションの場合の親ドキュメントへのオプションのパス。指定しない場合、ルートレベルのコレクションとみなされます。形式: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "親ドキュメントパス"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "親ドキュメントへのパス（オプション）"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Get information about a Firestore collection",
+          "message": "Firestore コレクションに関する情報を取得"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.desc": {
+          "source": "Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist.",
+          "message": "Firestore コレクションから ID で単一のドキュメントを取得します。作成日時や最終更新日時などのメタデータを含む完全なドキュメントデータを返します。ドキュメントが存在しない場合、このアクションは失敗します。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "ドキュメントを取得"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "ドキュメントを含むコレクションへの完全なパス。ネストされたコレクションの場合は、parent_collection/parent_doc_id/nested_collection の形式を使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created.",
+          "message": "取得するドキュメントの一意の識別子。これはドキュメントの作成時に自動生成されたか、指定されたドキュメント ID です。"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to retrieve",
+          "message": "取得するドキュメントの ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
+          "source": "Retrieve a specific document from a Firestore collection",
+          "message": "Firestore コレクションから特定のドキュメントを取得"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.desc": {
+          "source": "Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted.",
+          "message": "Firestore コレクションからドキュメントを完全に削除します。この操作は元に戻せません。ドキュメントが存在しない場合、操作は失敗します。ドキュメント配下のすべてのサブコレクションは自動的には削除されません。"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
+          "source": "Delete Document",
+          "message": "ドキュメントを削除"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "ドキュメントを含むコレクションへの完全なパス。ネストされたコレクションの場合は、parent_collection/parent_doc_id/nested_collection の形式を使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to delete. The document must exist or the operation will fail.",
+          "message": "削除するドキュメントの一意の識別子。ドキュメントが存在しない場合、操作は失敗します。"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to delete",
+          "message": "削除するドキュメントの ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
+          "source": "Delete a document from a Firestore collection",
+          "message": "Firestoreコレクションからドキュメントを削除します"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections.",
+          "message": "Firestoreデータベースのルートレベルまたは特定のドキュメント内のすべてのコレクションIDを取得します。これは、Firestoreデータベースの構造を把握したり、ネストされたコレクション間を移動したりするのに役立ちます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "コレクションの一覧表示"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id",
+          "message": "サブコレクションを一覧表示したいドキュメントへのオプションのパス。指定しない場合はルートレベルのコレクションを一覧表示します。形式: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "親ドキュメントパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "親ドキュメントへのパス（オプション）"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections in a Firestore database or document",
+          "message": "Firestoreデータベースまたはドキュメント内のすべてのコレクションを一覧表示します"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document.",
+          "message": "指定したFirestoreコレクションからすべてのドキュメントを取得します。結果の件数を制限したり、並び替え条件を指定したりできます。このアクションは、各ドキュメントの完全なドキュメントデータとメタデータを返します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "ドキュメント一覧"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "ドキュメントを一覧表示するコレクションのフルパス。ネストされたコレクションの場合は、次の形式を使用します: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.desc": {
+          "source": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date).",
+          "message": "ドキュメントの並び替えに使用するオプションのフィールド名。フィールドはドキュメント内に存在し、比較可能な型（文字列、数値、日付）である必要があります。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "並べ替え"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
+          "source": "Field to order documents by",
+          "message": "ドキュメントを並び替えるフィールド"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkFTQ0VORElORw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkRFU0NFTkRJTkc.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.desc": {
+          "source": "The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest.",
+          "message": "order_byフィールドが指定されている場合にドキュメントをソートする方向。昇順（最小から最大）または降順（最大から最小）を選択します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
+          "source": "Order Direction",
+          "message": "並び替え方向"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
+          "source": "Sort direction for ordering",
+          "message": "並び替えのソート方向"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance.",
+          "message": "取得するドキュメントの最大数。デフォルトは100です。これを使用して結果セットのサイズを制御し、パフォーマンスを向上させます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "返されるドキュメントの最大数"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "List all documents in a Firestore collection",
+          "message": "Firestoreコレクション内のすべてのドキュメントを一覧表示します"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases.",
+          "message": "認証情報でアクセス可能なすべてのGoogle Cloudプロジェクトのリストを取得します。名前でプロジェクトをフィルタリングしたり、ページネーションを使用して大規模な結果セット内を移動したりできます。これは、どのプロジェクトにFirestoreデータベースが含まれているかを把握するのに役立ちます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "プロジェクトの一覧表示"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.desc": {
+          "source": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names.",
+          "message": "この名前を含むプロジェクトを検索するためのオプションのフィルター。検索は大文字と小文字を区別せず、部分一致します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "プロジェクト名"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter projects by name",
+          "message": "名前でプロジェクトをフィルタリング"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size.",
+          "message": "前回のリクエストから取得したページネーショントークン。結果がページサイズを超える場合に、次のプロジェクトページを取得するために使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "次ページトークン"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "結果の次のページを取得するためのトークン"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets.",
+          "message": "1回のリクエストで返されるプロジェクトの最大数。デフォルトは100です。ページネーショントークンと共に使用して、大規模な結果セットを取得します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of projects to return per page",
+          "message": "1ページあたりに返すプロジェクト数"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "List all Google Cloud projects accessible with the current credentials",
+          "message": "現在の認証情報でアクセス可能なすべてのGoogle Cloudプロジェクトを一覧表示します"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Firestore**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、リクエスト本文を指定します。応答は、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firestore",
+          "message": "FirestoreへのカスタムAPI呼び出しを実行します"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents.",
+          "message": "Firestoreコレクションを監視して、新しく作成されたドキュメントを検出します。ドキュメントは指定した基準に基づいて並び替えられ、並び替えられたリストの先頭に新しいドキュメントが表示されるとトリガーが実行されます。オプションでドキュメントをフィルタリングし、並び順をカスタマイズして特定の種類のドキュメントを追跡できます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "新しいドキュメント"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "監視するコレクションへのフルパス。ネストされたコレクションの場合は、次の形式を使用します: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.desc": {
+          "source": "Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic.",
+          "message": "イベントをトリガーするドキュメントを絞り込むための1つ以上のフィルターを定義します。複数のフィルターはANDロジックで結合されます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "フィルター"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.short_desc": {
+          "source": "Optional filters to apply to documents",
+          "message": "ドキュメントに適用するオプションのフィルター"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.desc": {
+          "source": "Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first).",
+          "message": "ドキュメントの並び替え基準を定義します。並び替えられたリストの先頭に表示されるドキュメントに対してトリガーが実行されます。指定しない場合、ドキュメントは作成日時の降順（新しい順）で並び替えられます。"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "並べ替え"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {
+          "source": "Specify how to order documents",
+          "message": "ドキュメントの並び替え方法を指定"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new document is created in a Firestore collection",
+          "message": "Firestoreコレクションで新しいドキュメントが作成されたときにトリガーされます"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.desc": {
+          "source": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.",
+          "message": "複数のフィルター、並び替え、制限をサポートする高度なクエリをFirestoreコレクションに対して実行します。これにより、フィールド値に基づいて特定のドキュメントを検索し、特定の順序で取得できます。"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
+          "source": "Query Documents",
+          "message": "ドキュメントのクエリ"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "クエリを実行するコレクションのフルパス。ネストされたコレクションの場合は、次の形式を使用します: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.desc": {
+          "source": "Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match.",
+          "message": "クエリに適用するオプションのフィルターのリスト。複数のフィルターはANDロジックで結合されます。各フィルターには、フィールド、比較演算子、一致させる値を指定します。"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "フィルター"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.short_desc": {
+          "source": "Filter criteria for documents",
+          "message": "ドキュメントのフィルター条件"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.desc": {
+          "source": "Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed.",
+          "message": "クエリ結果に適用する並び替え条件のオプションのリスト。ドキュメントは、リストされている順序で指定されたフィールドによってソートされます。"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "並べ替え"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
+          "source": "Ordering criteria for results",
+          "message": "結果の並び替え条件"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size.",
+          "message": "取得するドキュメントの最大数。デフォルトは100です。これを使用してクエリのパフォーマンスと結果セットのサイズを制御します。"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "返されるドキュメントの最大数"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
+          "source": "Query documents in a Firestore collection with filters and ordering",
+          "message": "フィルターと並び替えを使用してFirestoreコレクション内のドキュメントをクエリします"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.",
+          "message": "Google Cloud Storageに保存されている以前のバックアップからFirestoreデータを復元します。この操作により、データベース全体または特定のコレクションを復元できます。警告: 同じIDを持つ既存のドキュメントが上書きされます。"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Restore from Google Cloud Storage",
+          "message": "Google Cloud Storageから復元"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections.",
+          "message": "バックアップから復元するコレクションIDのオプションのリスト。指定しない場合、バックアップ内のすべてのコレクションが復元されます。これを使用して特定のコレクションを選択して復元します。"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "コレクション ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to restore (optional)",
+          "message": "復元する特定のコレクション（オプション）"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup",
+          "message": "バックアップファイルが配置されているGoogle Cloud Storage URIプレフィックス。これは、バックアップの作成時に使用されたoutput_uri_prefixと一致している必要があります。形式: gs://bucket-name/path/to/backup"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
+          "source": "Input URI Prefix",
+          "message": "入力URIプレフィックス"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
+          "source": "GCS bucket URI where backup is stored",
+          "message": "バックアップが保存されているGCSバケットURI"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project where the data will be restored",
+          "message": "データが復元されるGoogle Cloudプロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Import Firestore data from Google Cloud Storage",
+          "message": "Google Cloud StorageからFirestoreデータをインポートします"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.desc": {
+          "source": "Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields.",
+          "message": "Firestore内の既存のドキュメントを新しいデータで更新します。新しいデータを既存のフィールドにマージするか、ドキュメント全体を置き換えるかを選択できます。デフォルトでは、指定されていないフィールドを保持しながら新しいフィールドをマージします。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "ドキュメントの更新"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "ドキュメントを含むコレクションへの完全なパス。ネストされたコレクションの場合は、parent_collection/parent_doc_id/nested_collection の形式を使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "コレクションパス"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Firestore コレクションへのパス"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "構造化データとマージするオプションの追加フィールド。事前定義されたスキーマに含まれていないフィールドを更新したり、動的フィールドを含めたりするために使用します。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "追加データ"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to update",
+          "message": "更新する追加フィールド"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to update. The document must exist or the operation will fail.",
+          "message": "更新するドキュメントの一意の識別子。ドキュメントが存在している必要があります。存在しない場合、操作は失敗します。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to update",
+          "message": "更新するドキュメントのID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document.",
+          "message": "ドキュメント内で更新するデータ。マージが有効な場合、指定されたフィールドのみが更新されます。マージが無効な場合、このデータによってドキュメント全体が置き換えられます。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "ドキュメントデータ"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the document",
+          "message": "ドキュメントの新しいデータ"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.desc": {
+          "source": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data.",
+          "message": "true（デフォルト）の場合、指定されたフィールドのみが更新され、他のフィールドは変更されません。falseの場合、ドキュメント全体が新しいデータに置き換えられます。"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.display_name": {
+          "source": "Merge",
+          "message": "マージ"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.short_desc": {
+          "source": "Whether to merge with existing data",
+          "message": "既存のデータとマージするかどうか"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Firestore データベースを含む Google Cloud プロジェクトの一意の識別子"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "Google Cloud プロジェクト ID"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Update an existing document in a Firestore collection",
+          "message": "Firestoreコレクション内の既存のドキュメントを更新します"
+        },
+        "app.RmlyZXN0b3Jl.desc": {
+          "source": "The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.",
+          "message": "Firestore統合により、柔軟でスケーラブルなNoSQLクラウドデータベースであるGoogle Cloud Firestoreを操作できます。ドキュメントの作成、読み取り、更新、削除、コレクションの管理、クエリの実行を行い、ドキュメントデータベースの操作をシームレスに自動化します。"
+        },
+        "app.RmlyZXN0b3Jl.display_name": {
+          "source": "Firestore",
+          "message": "Firestore"
+        },
+        "app.RmlyZXN0b3Jl.short_desc": {
+          "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
+          "message": "Google Cloud Firestoreに接続して、NoSQLドキュメントデータベースを管理します。"
+        }
+      }
+    }
+  }
+}

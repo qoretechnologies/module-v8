@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Create a new group in Active Directory with specified properties, type, and security settings. Supports both security groups and Microsoft 365 groups.",
+          "message": "Vytvorte novú skupinu v Active Directory so špecifikovanými vlastnosťami, typom a nastaveniami zabezpečenia. Podporuje bezpečnostné skupiny aj skupiny Microsoft 365."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Group",
+          "message": "Vytvoriť skupinu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.desc": {
+          "source": "Group membership is automatically managed based on user or device attributes",
+          "message": "Členstvo v skupine sa spravuje automaticky na základe atribútov používateľa alebo zariadenia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOkR5bmFtaWNNZW1iZXJzaGlw.display_name": {
+          "source": "Dynamic Group",
+          "message": "Dynamická skupina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.desc": {
+          "source": "Creates a Microsoft 365 group with modern collaboration features",
+          "message": "Vytvorí skupinu Microsoft 365 s modernými funkciami spolupráce"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.allowed-value.c3RyaW5nOlVuaWZpZWQ.display_name": {
+          "source": "Microsoft 365 Group (Unified)",
+          "message": "Skupina Microsoft 365 (zjednotená)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.desc": {
+          "source": "Optional array specifying special characteristics of the group, such as Unified (Microsoft 365) or DynamicMembership.",
+          "message": "Voliteľné pole špecifikujúce špeciálne charakteristiky skupiny, ako napríklad Unified (Microsoft 365) alebo DynamicMembership."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.display_name": {
+          "source": "Group Types",
+          "message": "Typy skupín"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.Z3JvdXBUeXBlcw.short_desc": {
+          "source": "Type characteristics of the group",
+          "message": "Charakteristiky typu skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose and scope of the group.",
+          "message": "Voliteľný popis vysvetľujúci účel a rozsah skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Group description",
+          "message": "Popis skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name of the group as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Zobrazovaný názov skupiny, ako sa bude zobrazovať v Active Directory a v službách Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Zobrazovaný názov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the group",
+          "message": "Názov skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.desc": {
+          "source": "Whether the group can be assigned to Azure AD roles. This setting cannot be changed after group creation.",
+          "message": "Určuje, či je možné skupinu priradiť k úlohám Azure AD. Toto nastavenie nie je možné po vytvorení skupiny zmeniť."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.display_name": {
+          "source": "Assignable to Role",
+          "message": "Priraditeľné k úlohe"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.aXNBc3NpZ25hYmxlVG9Sb2xl.short_desc": {
+          "source": "Allow role assignment",
+          "message": "Povoliť priradenie úlohy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname used for the group's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "E-mailová prezývka použitá pre e-mailovú adresu skupiny. Musí obsahovať iba písmená, čísla, bodky, pomlčky a podčiarkovníky."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "E-mailová prezývka"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the group",
+          "message": "E-mailový alias pre skupinu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.desc": {
+          "source": "Whether the group should be mail-enabled, allowing it to receive and send emails.",
+          "message": "Určuje, či má mať skupina povolený e-mail, čo jej umožní prijímať a odosielať e-maily."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.display_name": {
+          "source": "Mail Enabled",
+          "message": "E-mail povolený"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.bWFpbEVuYWJsZWQ.short_desc": {
+          "source": "Enable email functionality",
+          "message": "Povoliť e-mailové funkcie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.desc": {
+          "source": "Whether the group should be security-enabled, allowing it to be assigned permissions and used for access control.",
+          "message": "Určuje, či má byť skupina bezpečnostná, čo umožňuje priraďovať jej oprávnenia a používať ju na riadenie prístupu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.display_name": {
+          "source": "Security Enabled",
+          "message": "Bezpečnosť povolená"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.c2VjdXJpdHlFbmFibGVk.short_desc": {
+          "source": "Enable security functionality",
+          "message": "Povoliť bezpečnostné funkcie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "Skupina je viditeľná, ale členstvo je pre nečlenov skryté"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "Skryté členstvo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "Ktokoľvek v organizácii môže vidieť skupinu a jej obsah"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Verejné"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "Iba členovia skupiny môžu vidieť skupinu a jej obsah"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Súkromné"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "Controls who can see the group and its content. Options include Public, Private, or HiddenMembership.",
+          "message": "Riadi, kto môže vidieť skupinu a jej obsah. Možnosti zahŕňajú Public, Private alebo HiddenMembership."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "Viditeľnosť"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Group visibility setting",
+          "message": "Nastavenie viditeľnosti skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new group in Active Directory",
+          "message": "Vytvoriť novú skupinu v Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.desc": {
+          "source": "Create a new user account in Active Directory with comprehensive profile information, security settings, and organizational details. Supports setting passwords, contact information, and location data.",
+          "message": "Vytvorte nový používateľský účet v Active Directory s komplexnými informáciami o profile, bezpečnostnými nastaveniami a organizačnými údajmi. Podporuje nastavenie hesiel, kontaktných informácií a údajov o polohe."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.display_name": {
+          "source": "Create User",
+          "message": "Vytvoriť používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The country where the user is located for contact and organizational purposes.",
+          "message": "Krajina, v ktorej sa používateľ nachádza na kontaktné a organizačné účely."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Krajina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Country of residence",
+          "message": "Krajina pobytu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The city where the user is located for contact and organizational purposes.",
+          "message": "Mesto, v ktorom sa používateľ nachádza na kontaktné a organizačné účely."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Mesto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "City of residence",
+          "message": "Mesto pobytu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled and able to sign in. When disabled, the user cannot access any services.",
+          "message": "Určuje, či má byť používateľský účet povolený a či sa môže prihlásiť. Ak je zakázaný, používateľ nemá prístup k žiadnym službám."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "Účet je povolený"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable the user account",
+          "message": "Povoliť používateľský účet"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The given name (first name) of the user for profile completion and directory organization.",
+          "message": "Krstné meno používateľa na dokončenie profilu a organizáciu adresára."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "Meno"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "User's first name",
+          "message": "Meno používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The department or organizational unit the user belongs to within the company structure.",
+          "message": "Oddelenie alebo organizačná jednotka, do ktorej používateľ patrí v rámci štruktúry spoločnosti."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Oddelenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "User's department",
+          "message": "Oddelenie používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Celé zobrazované meno používateľa, ako sa bude zobrazovať v službe Active Directory a v službách Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Zobrazovaný názov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Full name of the user",
+          "message": "Celé meno používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.desc": {
+          "source": "When enabled, the user will be required to change their password on their first sign-in to the account.",
+          "message": "Keď je táto možnosť povolená, používateľ bude musieť pri prvom prihlásení do účtu zmeniť svoje heslo."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.display_name": {
+          "source": "Force Password Change",
+          "message": "Vynútiť zmenu hesla"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW4.short_desc": {
+          "source": "Require password change on first login",
+          "message": "Vyžadovať zmenu hesla pri prvom prihlásení"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.desc": {
+          "source": "When enabled, the user will be required to change their password with multi-factor authentication on their first sign-in.",
+          "message": "Keď je táto možnosť povolená, používateľ bude musieť pri prvom prihlásení zmeniť svoje heslo pomocou viacfaktorového overenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.display_name": {
+          "source": "Force Password Change with MFA",
+          "message": "Vynútiť zmenu hesla pomocou MFA"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.Zm9yY2VDaGFuZ2VQYXNzd29yZE5leHRTaWduSW5XaXRoTWZh.short_desc": {
+          "source": "Require password change with multi-factor authentication",
+          "message": "Vyžadovať zmenu hesla pomocou viacfaktorového overenia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The job title or position of the user within the organization for directory and contact information.",
+          "message": "Pracovná pozícia používateľa v rámci organizácie pre adresár a kontaktné informácie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Pracovná pozícia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "User's job title",
+          "message": "Pracovná pozícia používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The mobile phone number for the user, used for contact information and potential multi-factor authentication.",
+          "message": "Mobilné telefónne číslo používateľa, použité pre kontaktné informácie a prípadné viacfaktorové overenie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "Mobilný telefón"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "User's mobile phone number",
+          "message": "Mobilné telefónne číslo používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The primary email address for the user. If not specified, it may be automatically generated based on the user principal name.",
+          "message": "Hlavná e-mailová adresa používateľa. Ak nie je zadaná, môže sa automaticky vygenerovať na základe používateľského mena (user principal name)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "E-mailová adresa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Primary email address",
+          "message": "Hlavná e-mailová adresa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The mail nickname that will be used as part of the user's email address. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "E-mailová prezývka, ktorá sa použije ako súčasť e-mailovej adresy používateľa. Musí obsahovať iba písmená, čísla, bodky, pomlčky a podčiarkovníky."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "E-mailová prezývka"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Email alias for the user",
+          "message": "E-mailový alias používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The state or province where the user is located for contact and organizational purposes.",
+          "message": "Štát alebo provincia, kde sa používateľ nachádza, na kontaktné a organizačné účely."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "Štát/Provincia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "State or province",
+          "message": "Štát alebo provincia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The street address component of the user's physical location for contact and organizational purposes.",
+          "message": "Ulica a číslo ako časť fyzickej adresy používateľa na kontaktné a organizačné účely."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "Ulica a číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Physical street address",
+          "message": "Fyzická ulica a číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The surname (last name) of the user for profile completion and directory organization.",
+          "message": "Priezvisko používateľa na dokončenie profilu a organizáciu adresára."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "Priezvisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "User's last name",
+          "message": "Priezvisko používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The postal code or ZIP code for the user's location.",
+          "message": "Poštové smerovacie číslo (PSČ) pre lokalitu používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Poštové smerovacie číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "ZIP or postal code",
+          "message": "PSČ alebo poštové smerovacie číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.desc": {
+          "source": "The initial password for the user account. Must meet your organization's password complexity requirements and be at least 8 characters long.",
+          "message": "Prvotné heslo pre používateľský účet. Musí spĺňať požiadavky na zložitosť hesla vo vašej organizácii a mať dĺžku minimálne 8 znakov."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.display_name": {
+          "source": "Password",
+          "message": "Heslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.cGFzc3dvcmQ.short_desc": {
+          "source": "Initial password for the user",
+          "message": "Prvotné heslo pre používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "Mexiko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "Austrália"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "Brazília"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "Kanada"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "Nemecko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "Francúzsko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "Spojené kráľovstvo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "India"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "Japonsko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "Spojené štáty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The two-letter country code (ISO 3166-1 alpha-2) that represents the user's usage location. Required for license assignment in some regions.",
+          "message": "Dvojpísmenový kód krajiny (ISO 3166-1 alpha-2), ktorý predstavuje lokalitu používania používateľa. V niektorých regiónoch sa vyžaduje na priradenie licencie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "Lokalita používania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Country code for license assignment",
+          "message": "Kód krajiny pre priradenie licencie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.desc": {
+          "source": "The user principal name (UPN) that serves as the primary login identifier. Must be in email format (user@domain.com).",
+          "message": "Používateľské meno (UPN), ktoré slúži ako hlavný prihlasovací identifikátor. Musí byť vo formáte e-mailu (user@domain.com)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.display_name": {
+          "source": "User Principal Name",
+          "message": "User Principal Name"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.option.dXNlclByaW5jaXBhbE5hbWU.short_desc": {
+          "source": "Primary login identifier",
+          "message": "Hlavný prihlasovací identifikátor"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Y3JlYXRlX3VzZXI.short_desc": {
+          "source": "Create a new user in Active Directory",
+          "message": "Vytvoriť nového používateľa v Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.desc": {
+          "source": "Add a user as a member of an existing group in Active Directory. This grants the user any permissions and access rights associated with the group.",
+          "message": "Pridať používateľa ako člena existujúcej skupiny v Active Directory. Tým používateľovi udelíte všetky oprávnenia a prístupové práva spojené s touto skupinou."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.display_name": {
+          "source": "Add User to Group",
+          "message": "Pridať používateľa do skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to add the user to. Select from existing groups in your directory.",
+          "message": "Jedinečný identifikátor skupiny, do ktorej sa má používateľ pridať. Vyberte z existujúcich skupín vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Target group",
+          "message": "Cieľová skupina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be added to the group. Select from existing users in your directory.",
+          "message": "Jedinečný identifikátor používateľa, ktorý sa má pridať do skupiny. Vyberte z existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to add to the group",
+          "message": "Používateľ na pridanie do skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.YWRkX3VzZXJfdG9fZ3JvdXA.short_desc": {
+          "source": "Add a user to an Active Directory group",
+          "message": "Pridať používateľa do skupiny Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.desc": {
+          "source": "Fetch detailed information about a specific group from Active Directory, including properties, settings, and configuration details.",
+          "message": "Získať podrobné informácie o konkrétnej skupine z Active Directory, vrátane vlastností, nastavení a podrobností konfigurácie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.display_name": {
+          "source": "Get Group",
+          "message": "Získať skupinu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to retrieve information for. Select from existing groups in your directory.",
+          "message": "Jedinečný identifikátor skupiny, pre ktorú sa majú získať informácie. Vyberte z existujúcich skupín vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to retrieve",
+          "message": "Identifikátor skupiny na načítanie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X2dyb3Vw.short_desc": {
+          "source": "Retrieve group information from Active Directory",
+          "message": "Získať informácie o skupine z Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.desc": {
+          "source": "Fetch detailed information about a specific user from Active Directory, including profile data, contact information, and account status.",
+          "message": "Získať podrobné informácie o konkrétnom používateľovi z Active Directory, vrátane údajov profilu, kontaktných informácií a stavu účtu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Získať používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to retrieve information for. Select from existing users in your directory.",
+          "message": "Jedinečný identifikátor používateľského účtu, pre ktorý sa majú získať informácie. Vyberte z existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to retrieve",
+          "message": "Identifikátor používateľa na získanie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve user information from Active Directory",
+          "message": "Získať informácie o používateľovi zo služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.desc": {
+          "source": "Permanently remove a group from Active Directory. This action cannot be undone and will remove all group memberships and associated permissions.",
+          "message": "Trvalo odstrániť skupinu zo služby Active Directory. Túto akciu nie je možné vrátiť späť a odstráni všetky členstvá v skupine a súvisiace oprávnenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.display_name": {
+          "source": "Delete Group",
+          "message": "Odstrániť skupinu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be deleted. Select from existing groups in your directory.",
+          "message": "Unikátny identifikátor skupiny, ktorá sa má odstrániť. Vyberte zo existujúcich skupín vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to delete",
+          "message": "Identifikátor skupiny na odstránenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX2dyb3Vw.short_desc": {
+          "source": "Delete a group from Active Directory",
+          "message": "Odstrániť skupinu zo služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.desc": {
+          "source": "Permanently remove a user account from Active Directory. This action cannot be undone and will remove all associated data and access permissions.",
+          "message": "Trvalo odstrániť používateľský účet zo služby Active Directory. Túto akciu nie je možné vrátiť späť a odstráni všetky súvisiace údaje a prístupové oprávnenia."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.display_name": {
+          "source": "Delete User",
+          "message": "Odstrániť používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be deleted. Select from existing users in your directory.",
+          "message": "Unikátny identifikátor používateľského účtu, ktorý sa má odstrániť. Vyberte zo existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to delete",
+          "message": "Identifikátor používateľa na odstránenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGVsZXRlX3VzZXI.short_desc": {
+          "source": "Delete a user from Active Directory",
+          "message": "Odstrániť používateľa zo služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.desc": {
+          "source": "Disable a user account to prevent sign-in while preserving the account and its data. The user will be unable to access any services until the account is re-enabled.",
+          "message": "Zakázať používateľský účet, aby sa zabránilo prihláseniu, pričom účet a jeho údaje zostanú zachované. Používateľ nebude mať prístup k žiadnym službám, kým sa účet znova nepovolí."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.display_name": {
+          "source": "Disable User",
+          "message": "Zakázať používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be disabled. Select from existing users in your directory.",
+          "message": "Unikátny identifikátor používateľského účtu, ktorý sa má zakázať. Vyberte zo existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to disable",
+          "message": "Identifikátor používateľa na zakázanie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.ZGlzYWJsZV91c2Vy.short_desc": {
+          "source": "Disable a user account in Active Directory",
+          "message": "Zakázať používateľský účet v službe Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.desc": {
+          "source": "Get a paginated list of users from Active Directory with optional filtering and group membership criteria. Useful for reporting and bulk operations.",
+          "message": "Získať stránkovaný zoznam používateľov zo služby Active Directory s voliteľnými kritériami filtrovania a členstva v skupinách. Užitočné na vytváranie prehľadov a hromadné operácie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Zoznam používateľov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to filter users who are members of a specific group. When specified, only users belonging to this group will be returned.",
+          "message": "Voliteľný identifikátor skupiny na filtrovanie používateľov, ktorí sú členmi konkrétnej skupiny. Ak je zadaný, vrátia sa len používatelia patriaci do tejto skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Filter users by group membership",
+          "message": "Filtrovať používateľov podľa členstva v skupine"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the user list based on specific attributes and conditions.",
+          "message": "Voliteľné kritériá filtra na zúženie zoznamu používateľov na základe konkrétnych atribútov a podmienok."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kritériá filtra"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.ZmlsdGVy.short_desc": {
+          "source": "Additional filter conditions",
+          "message": "Dodatočné podmienky filtra"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "Maximálny počet používateľov, ktorí sa majú vrátiť v jednej požiadavke. Predvolená hodnota je 20, pričom pre väčšie množiny výsledkov je k dispozícii stránkovanie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maximálny počet používateľov na vrátenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "Token stránkovania na získanie ďalšej stránky výsledkov. Získaný z predchádzajúcich operácií výpisu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users from Active Directory",
+          "message": "Získať zoznam používateľov zo služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Get a paginated list of groups from Active Directory with optional filtering criteria. Useful for reporting and group management operations.",
+          "message": "Získať stránkovaný zoznam skupín zo služby Active Directory s voliteľnými kritériami filtrovania. Užitočné na vytváranie prehľadov a operácie správy skupín."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Groups",
+          "message": "Zobraziť skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to narrow down the group list based on specific attributes and conditions.",
+          "message": "Voliteľné kritériá filtra na zúženie zoznamu skupín na základe konkrétnych atribútov a podmienok."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kritériá filtra"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for groups",
+          "message": "Podmienky filtra pre skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of groups to return in a single request. Default is 20, with pagination available for larger result sets.",
+          "message": "Maximálny počet skupín, ktoré sa majú vrátiť v jednej požiadavke. Predvolená hodnota je 20, pričom pre väčšie množiny výsledkov je k dispozícii stránkovanie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of groups to return",
+          "message": "Maximálny počet skupín na vrátenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "The pagination token to retrieve the next page of results. Obtained from previous list operations.",
+          "message": "Token stránkovania na získanie ďalšej stránky výsledkov. Získaný z predchádzajúcich operácií výpisu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of groups from Active Directory",
+          "message": "Získať zoznam skupín zo služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Active Directory** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do služby **Active Directory** s použitím overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako haš obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Active Directory",
+          "message": "Vykonať vlastné volanie API do služby Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.desc": {
+          "source": "Monitor Active Directory for newly created groups. This trigger can be filtered by specific criteria such as group type, visibility, or naming patterns to detect relevant group additions.",
+          "message": "Monitorovať službu Active Directory na novovytvorené skupiny. Tento spúšťač možno filtrovať podľa konkrétnych kritérií, ako je typ skupiny, viditeľnosť alebo vzory pomenovania, na zistenie relevantných pridaní skupín."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.display_name": {
+          "source": "New Group",
+          "message": "Nová skupina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which groups should trigger the event. Configure field, operator, and value to match specific group attributes.",
+          "message": "Voliteľné kritériá filtra na určenie, ktoré skupiny majú spustiť udalosť. Nakonfigurujte pole, operátor a hodnotu tak, aby zodpovedali konkrétnym atribútom skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kritériá filtra"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for group monitoring",
+          "message": "Podmienky filtra pre monitorovanie skupín"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X2dyb3Vw.short_desc": {
+          "source": "Triggers when a new group is created in Active Directory",
+          "message": "Spustí sa pri vytvorení novej skupiny v službe Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.desc": {
+          "source": "Monitor Active Directory for newly created users. This trigger can be filtered by specific criteria such as user attributes, group membership, or organizational units to detect relevant user additions.",
+          "message": "Monitorovať službu Active Directory na novovytvorených používateľov. Tento spúšťač možno filtrovať podľa konkrétnych kritérií, ako sú atribúty používateľa, členstvo v skupine alebo organizačné jednotky, na zistenie relevantných pridaní používateľov."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "Nový používateľ"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.desc": {
+          "source": "Optional group identifier to monitor for new user additions. When specified, the trigger will only fire for users added to this particular group.",
+          "message": "Voliteľný identifikátor skupiny na monitorovanie pridaní nových používateľov. Ak je zadaný, spúšťač sa aktivuje len pre používateľov pridaných do tejto konkrétnej skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Monitor users added to a specific group",
+          "message": "Monitorovať používateľov pridaných do konkrétnej skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.desc": {
+          "source": "Optional filter criteria to specify which users should trigger the event. Configure field, operator, and value to match specific user attributes.",
+          "message": "Voliteľné kritériá filtra na určenie, ktorí používatelia majú spustiť udalosť. Nakonfigurujte pole, operátor a hodnotu tak, aby zodpovedali konkrétnym atribútom používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.display_name": {
+          "source": "Filter Criteria",
+          "message": "Kritériá filtra"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.option.ZmlsdGVy.short_desc": {
+          "source": "Filter conditions for user monitoring",
+          "message": "Podmienky filtra pre monitorovanie používateľov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created in Active Directory",
+          "message": "Spustí sa pri vytvorení nového používateľa v službe Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.desc": {
+          "source": "Remove a user from membership in an existing group in Active Directory. This revokes any permissions and access rights the user had through this group.",
+          "message": "Odstrániť používateľa z členstva v existujúcej skupine v službe Active Directory. Týmto sa odobrujú všetky oprávnenia a prístupové práva, ktoré mal používateľ prostredníctvom tejto skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.display_name": {
+          "source": "Remove User from Group",
+          "message": "Odstrániť používateľa zo skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to remove the user from. Select from existing groups in your directory.",
+          "message": "Unikátny identifikátor skupiny, z ktorej sa má používateľ odstrániť. Vyberte zo existujúcich skupín vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Source group",
+          "message": "Zdrojová skupina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user to be removed from the group. Select from existing users in your directory.",
+          "message": "Unikátny identifikátor používateľa, ktorý sa má odstrániť zo skupiny. Vyberte zo existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.option.dXNlcl9pZA.short_desc": {
+          "source": "User to remove from the group",
+          "message": "Používateľ na odstránenie zo skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.cmVtb3ZlX3VzZXJfZnJvbV9ncm91cA.short_desc": {
+          "source": "Remove a user from an Active Directory group",
+          "message": "Odstrániť používateľa zo skupiny v službe Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.desc": {
+          "source": "Modify properties of an existing group in Active Directory, including display name, description, visibility, and other configurable settings.",
+          "message": "Upraviť vlastnosti existujúcej skupiny v službe Active Directory vrátane zobrazovaného názvu, popisu, viditeľnosti a ďalších nastaviteľných možností."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.display_name": {
+          "source": "Update Group",
+          "message": "Aktualizovať skupinu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.desc": {
+          "source": "Allow people external to the organization to send messages to the group",
+          "message": "Povoliť osobám mimo organizácie odosielať správy tejto skupine"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.display_name": {
+          "source": "Allow External Senders",
+          "message": "Povoliť externých odosielateľov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YWxsb3dFeHRlcm5hbFNlbmRlcnM.short_desc": {
+          "source": "Allow external email senders",
+          "message": "Povoliť externých odosielateľov e-mailov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.desc": {
+          "source": "Automatically subscribe new members to receive email notifications",
+          "message": "Automaticky prihlásiť nových členov na odber e-mailových oznámení"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.display_name": {
+          "source": "Auto-Subscribe New Members",
+          "message": "Automaticky prihlásiť nových členov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.YXV0b1N1YnNjcmliZU5ld01lbWJlcnM.short_desc": {
+          "source": "Automatically subscribe new members",
+          "message": "Automaticky prihlásiť nových členov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group to be updated. Select from existing groups in your directory.",
+          "message": "Unikátny identifikátor skupiny, ktorá sa má aktualizovať. Vyberte zo existujúcich skupín vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "Identifier of the group to update",
+          "message": "Identifikátor skupiny na aktualizáciu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "The updated description explaining the purpose and scope of the group.",
+          "message": "Aktualizovaný popis vysvetľujúci účel a rozsah skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Popis"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated group description",
+          "message": "Aktualizovaný popis skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated display name of the group as it will appear in Active Directory.",
+          "message": "Aktualizovaný zobrazovaný názov skupiny, ako sa bude zobrazovať v Active Directory."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Zobrazovaný názov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated group name",
+          "message": "Aktualizovaný názov skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.desc": {
+          "source": "Hide this group from address lists",
+          "message": "Skryť túto skupinu zo zoznamov adries"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.display_name": {
+          "source": "Hide from Address Lists",
+          "message": "Skryť zo zoznamov adries"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21BZGRyZXNzTGlzdHM.short_desc": {
+          "source": "Hide group from address lists",
+          "message": "Skryť skupinu zo zoznamov adries"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.desc": {
+          "source": "Hide this group from Outlook clients",
+          "message": "Skryť túto skupinu pred klientmi Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.display_name": {
+          "source": "Hide from Outlook Clients",
+          "message": "Skryť pred klientmi Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.aGlkZUZyb21PdXRsb29rQ2xpZW50cw.short_desc": {
+          "source": "Hide group from Outlook clients",
+          "message": "Skryť skupinu pred klientmi Outlook"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the group. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Aktualizovaný e-mailový alias pre skupinu. Musí obsahovať iba písmená, čísla, bodky, pomlčky a podčiarkovníky."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "E-mailová prezývka"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "Aktualizovaný e-mailový alias"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "Nemčina (Nemecko)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "Angličtina (Spojené kráľovstvo)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "Angličtina (Spojené štáty)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "Španielčina (Španielsko)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "Francúzština (Francúzsko)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "Taliančina (Taliansko)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "Japončina (Japonsko)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "Portugalčina (Brazília)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.allowed-value.c3RyaW5nOnpoLUNO.display_name": {
+          "source": "Chinese (Simplified)",
+          "message": "Čínština (zjednodušená)"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.desc": {
+          "source": "The preferred language for the group's communications and interface.",
+          "message": "Preferovaný jazyk pre komunikáciu a rozhranie skupiny."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.display_name": {
+          "source": "Preferred Language",
+          "message": "Preferovaný jazyk"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.cHJlZmVycmVkTGFuZ3VhZ2U.short_desc": {
+          "source": "Group's preferred language",
+          "message": "Preferovaný jazyk skupiny"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.desc": {
+          "source": "Group is visible but membership is hidden from non-members",
+          "message": "Skupina je viditeľná, ale členstvo je pre nečlenov skryté"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOkhpZGRlbk1lbWJlcnNoaXA.display_name": {
+          "source": "Hidden Membership",
+          "message": "Skryté členstvo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.desc": {
+          "source": "Anyone in the organization can see the group and its content",
+          "message": "Ktokoľvek v organizácii môže vidieť skupinu a jej obsah"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Verejné"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.desc": {
+          "source": "Only group members can see the group and its content",
+          "message": "Iba členovia skupiny môžu vidieť skupinu a jej obsah"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOlByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Súkromné"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.desc": {
+          "source": "The updated visibility setting controlling who can see the group and its content.",
+          "message": "Aktualizované nastavenie viditeľnosti určujúce, kto môže vidieť skupinu a jej obsah."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.display_name": {
+          "source": "Visibility",
+          "message": "Viditeľnosť"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.option.dmlzaWJpbGl0eQ.short_desc": {
+          "source": "Updated visibility setting",
+          "message": "Aktualizované nastavenie viditeľnosti"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX2dyb3Vw.short_desc": {
+          "source": "Update an existing group in Active Directory",
+          "message": "Aktualizovať existujúcu skupinu v Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.desc": {
+          "source": "Modify properties of an existing user account in Active Directory. Update profile information, contact details, organizational data, and account settings.",
+          "message": "Upravte vlastnosti existujúceho používateľského účtu v Active Directory. Aktualizujte profilové informácie, kontaktné údaje, organizačné údaje a nastavenia účtu."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.display_name": {
+          "source": "Update User",
+          "message": "Aktualizovať používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.desc": {
+          "source": "The updated country where the user is located.",
+          "message": "Aktualizovaná krajina, v ktorej sa používateľ nachádza."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.display_name": {
+          "source": "Country",
+          "message": "Krajina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y291bnRyeQ.short_desc": {
+          "source": "Updated country",
+          "message": "Aktualizovaná krajina"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.desc": {
+          "source": "The updated city where the user is located.",
+          "message": "Aktualizované mesto, v ktorom sa používateľ nachádza."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.display_name": {
+          "source": "City",
+          "message": "Mesto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Y2l0eQ.short_desc": {
+          "source": "Updated city",
+          "message": "Aktualizované mesto"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.desc": {
+          "source": "Whether the user account should be enabled or disabled. Disabled accounts cannot sign in to any services.",
+          "message": "Či má byť používateľský účet povolený alebo zakázaný. Zakázané účty sa nemôžu prihlásiť do žiadnych služieb."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.display_name": {
+          "source": "Account Enabled",
+          "message": "Účet je povolený"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.YWNjb3VudEVuYWJsZWQ.short_desc": {
+          "source": "Enable or disable the account",
+          "message": "Povoliť alebo zakázať účet"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.desc": {
+          "source": "The updated given name (first name) of the user.",
+          "message": "Aktualizované krstné meno používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.display_name": {
+          "source": "First Name",
+          "message": "Meno"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.Z2l2ZW5OYW1l.short_desc": {
+          "source": "Updated first name",
+          "message": "Aktualizované meno"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.desc": {
+          "source": "The updated department or organizational unit the user belongs to.",
+          "message": "Aktualizované oddelenie alebo organizačná jednotka, do ktorej používateľ patrí."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Oddelenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGVwYXJ0bWVudA.short_desc": {
+          "source": "Updated department",
+          "message": "Aktualizované oddelenie"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The updated full display name of the user as it will appear in Active Directory and throughout Microsoft services.",
+          "message": "Aktualizované celé zobrazované meno používateľa, ako sa bude zobrazovať v Active Directory a v službách Microsoft."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "Zobrazovaný názov"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Updated full name",
+          "message": "Aktualizované celé meno"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.desc": {
+          "source": "The updated job title or position of the user within the organization.",
+          "message": "Aktualizovaný pracovný názov alebo pozícia používateľa v rámci organizácie."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Pracovná pozícia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.am9iVGl0bGU.short_desc": {
+          "source": "Updated job title",
+          "message": "Aktualizovaná pracovná pozícia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.desc": {
+          "source": "The updated mobile phone number for the user.",
+          "message": "Aktualizované číslo mobilného telefónu používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.display_name": {
+          "source": "Mobile Phone",
+          "message": "Mobilný telefón"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bW9iaWxlUGhvbmU.short_desc": {
+          "source": "Updated mobile phone number",
+          "message": "Aktualizované číslo mobilného telefónu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.desc": {
+          "source": "The updated primary email address for the user.",
+          "message": "Aktualizovaná primárna e-mailová adresa používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.display_name": {
+          "source": "Email Address",
+          "message": "E-mailová adresa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbA.short_desc": {
+          "source": "Updated email address",
+          "message": "Aktualizovaná e-mailová adresa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.desc": {
+          "source": "The updated mail nickname for the user. Must contain only letters, numbers, periods, hyphens, and underscores.",
+          "message": "Aktualizovaný e-mailový alias používateľa. Musí obsahovať iba písmená, čísla, bodky, pomlčky a podčiarkovníky."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.display_name": {
+          "source": "Mail Nickname",
+          "message": "E-mailová prezývka"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.bWFpbE5pY2tuYW1l.short_desc": {
+          "source": "Updated email alias",
+          "message": "Aktualizovaný e-mailový alias"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.desc": {
+          "source": "The updated state or province where the user is located.",
+          "message": "Aktualizovaný štát alebo provincia, kde sa používateľ nachádza."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.display_name": {
+          "source": "State/Province",
+          "message": "Štát/Provincia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RhdGU.short_desc": {
+          "source": "Updated state or province",
+          "message": "Aktualizovaný štát alebo provincia"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.desc": {
+          "source": "The updated street address component of the user's physical location.",
+          "message": "Aktualizovaná ulica a číslo fyzickej adresy používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.display_name": {
+          "source": "Street Address",
+          "message": "Ulica a číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3RyZWV0QWRkcmVzcw.short_desc": {
+          "source": "Updated street address",
+          "message": "Aktualizovaná ulica a číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.desc": {
+          "source": "The updated surname (last name) of the user.",
+          "message": "Aktualizované priezvisko používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.display_name": {
+          "source": "Last Name",
+          "message": "Priezvisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.c3VybmFtZQ.short_desc": {
+          "source": "Updated last name",
+          "message": "Aktualizované priezvisko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.desc": {
+          "source": "The updated postal code or ZIP code for the user's location.",
+          "message": "Aktualizované poštové smerovacie číslo (PSČ) pre lokalitu používateľa."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.display_name": {
+          "source": "Postal Code",
+          "message": "Poštové smerovacie číslo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.cG9zdGFsQ29kZQ.short_desc": {
+          "source": "Updated postal code",
+          "message": "Aktualizované PSČ"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOk1Y.display_name": {
+          "source": "Mexico",
+          "message": "Mexiko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkFV.display_name": {
+          "source": "Australia",
+          "message": "Austrália"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkJS.display_name": {
+          "source": "Brazil",
+          "message": "Brazília"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkNB.display_name": {
+          "source": "Canada",
+          "message": "Kanada"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkRF.display_name": {
+          "source": "Germany",
+          "message": "Nemecko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkZS.display_name": {
+          "source": "France",
+          "message": "Francúzsko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkdC.display_name": {
+          "source": "United Kingdom",
+          "message": "Spojené kráľovstvo"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOklO.display_name": {
+          "source": "India",
+          "message": "India"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOkpQ.display_name": {
+          "source": "Japan",
+          "message": "Japonsko"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.allowed-value.c3RyaW5nOlVT.display_name": {
+          "source": "United States",
+          "message": "Spojené štáty"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.desc": {
+          "source": "The updated two-letter country code representing the user's usage location for license assignment purposes.",
+          "message": "Aktualizovaný dvojpísmenový kód krajiny predstavujúci lokalitu používania používateľa na účely priraďovania licencií."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.display_name": {
+          "source": "Usage Location",
+          "message": "Lokalita používania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNhZ2VMb2NhdGlvbg.short_desc": {
+          "source": "Updated usage location",
+          "message": "Aktualizovaná lokalita používania"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "The unique identifier of the user account to be updated. Select from existing users in your directory.",
+          "message": "Jedinečný identifikátor používateľského účtu, ktorý sa má aktualizovať. Vyberte zo zoznamu existujúcich používateľov vo vašom adresári."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "Identifier of the user to update",
+          "message": "Identifikátor používateľa na aktualizáciu"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.action.dXBkYXRlX3VzZXI.short_desc": {
+          "source": "Update an existing user in Active Directory",
+          "message": "Aktualizovať existujúceho používateľa v Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.desc": {
+          "source": "The Active Directory integration provides comprehensive actions and triggers to interact with Microsoft Graph API for user and group management. Automate user provisioning, group membership management, and organizational administration tasks with enterprise-grade security and compliance.",
+          "message": "Integrácia s Active Directory poskytuje komplexné akcie a spúšťače pre interakciu s rozhraním Microsoft Graph API na správu používateľov a skupín. Automatizujte zriaďovanie používateľov, správu členstva v skupinách a úlohy organizačnej správy s bezpečnosťou a súladom na podnikovej úrovni."
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.display_name": {
+          "source": "Active Directory",
+          "message": "Active Directory"
+        },
+        "app.QXp1cmVBY3RpdmVEaXJlY3Rvcnk.short_desc": {
+          "source": "Seamlessly connect to Microsoft Active Directory to manage users, groups, and organizational resources.",
+          "message": "Bezproblémovo sa pripojte k Microsoft Active Directory a spravujte používateľov, skupiny a organizačné zdroje."
+        }
+      }
+    }
+  }
+}

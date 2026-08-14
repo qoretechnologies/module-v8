@@ -1,0 +1,1337 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "在應用程式 \"Pipedrive\" 中的指定資料表建立新記錄"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "在應用程式 \"Pipedrive\" 中的指定資料表建立新記錄"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.desc": {
+          "source": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "新增活動。在回應的 `additional_data` 中包含 `more_activities_scheduled_in_context` 屬性，用以指示是否還有更多排程於相同交易、人員或組織（取決於提供的資料）的未完成活動。如需詳細資訊，請參閱 <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a> 的教學課程。<br -> <br -> ***自 2024 年 9 月 30 日起，僅當活動擁有者啟用了有效的行事曆同步時，活動參與者才會收到更新***"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.display_name": {
+          "source": "Add an Activity",
+          "message": "新增活動"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.short_desc": {
+          "source": "Add an activity",
+          "message": "新增活動"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.desc": {
+          "source": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>.",
+          "message": "新增一筆交易。所有透過 Pipedrive API 建立的交易，其 `origin` 都會設定為 `API`。請注意，您可以在請求中提供此處未說明的額外自訂欄位。這些自訂欄位在每個 Pipedrive 帳戶中都不同，可透過作為索引鍵的長雜湊值來識別。若要確定存在哪些自訂欄位，請擷取 dealFields 並尋找 `key` 值。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">新增交易<-a>的教學課程。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.display_name": {
+          "source": "Add a Deal",
+          "message": "新增交易"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.short_desc": {
+          "source": "Add a deal",
+          "message": "新增交易"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.desc": {
+          "source": "Adds a new organization. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the organizationFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">adding an organization<-a>.",
+          "message": "新增一個組織。請注意，您可以在請求中提供此處未說明的額外自訂欄位。這些自訂欄位在每個 Pipedrive 帳戶中都不同，可透過作為索引鍵的長雜湊值來識別。若要確定存在哪些自訂欄位，請擷取 organizationFields 並尋找 `key` 值。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">新增組織<-a>的教學課程。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.display_name": {
+          "source": "Add an Organization",
+          "message": "新增組織"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Add an organization",
+          "message": "新增組織"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.desc": {
+          "source": "Creates a lead. A lead always has to be linked to a person or an organization or both. All leads created through the Pipedrive API will have a lead source and origin set to `API`. Here's the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">adding a lead<-a>. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields' values tutorial<-a>.",
+          "message": "建立潛在客戶。潛在客戶必須始終連結至人員或組織，或兩者皆連結。所有透過 Pipedrive API 建立的潛在客戶，其潛在客戶來源 (source) 與起源 (origin) 都會設定為 `API`。此處為<a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">新增潛在客戶<-a>的教學課程。如果潛在客戶包含自訂欄位，該欄位的值將以與 `Deals` 端點相同的格式包含在回應中。如果尚未為該潛在客戶設定自訂欄位的值，則不會顯示在回應中。請注意，潛在客戶沒有獨立的一組自訂欄位，而是繼承交易的自訂欄位結構。請參閱<a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">更新自訂欄位值的教學課程<-a>中提供的範例。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.display_name": {
+          "source": "Add a Lead",
+          "message": "新增潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.short_desc": {
+          "source": "Add a lead",
+          "message": "新增潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.desc": {
+          "source": "Adds a new note.",
+          "message": "新增一則備註。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.display_name": {
+          "source": "Add a Note",
+          "message": "新增備註"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.short_desc": {
+          "source": "Add a note",
+          "message": "新增備註"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.desc": {
+          "source": "Adds a new person. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the personFields and look for `key` values.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "新增一個聯絡人。請注意，您可以在請求中提供此處未說明的額外自訂欄位。這些自訂欄位在每個 Pipedrive 帳戶中都不同，可透過作為索引鍵的長雜湊值來識別。若要確定存在哪些自訂欄位，請擷取 personFields 並尋找 `key` 值。<br>若公司使用 [Campaigns 產品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)，則此端點也會接受並傳回 `data.marketing_status` 欄位。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.display_name": {
+          "source": "Add a Person",
+          "message": "新增聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.short_desc": {
+          "source": "Add a person",
+          "message": "新增聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.desc": {
+          "source": "Adds a new project. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys.",
+          "message": "新增一個專案。請注意，您可以在請求中提供此處未說明的額外自訂欄位。這些自訂欄位在每個 Pipedrive 帳戶中都不同，可透過作為索引鍵的長雜湊值來識別。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.display_name": {
+          "source": "Add a Project",
+          "message": "新增專案"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.short_desc": {
+          "source": "Add a project",
+          "message": "新增專案"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.desc": {
+          "source": "Adds a new task.",
+          "message": "新增一項任務。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.display_name": {
+          "source": "Add a Task",
+          "message": "新增任務"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.short_desc": {
+          "source": "Add a task",
+          "message": "新增任務"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.desc": {
+          "source": "Returns all activities assigned to a particular user.",
+          "message": "傳回指派給特定使用者的所有活動。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.display_name": {
+          "source": "Get All Activities Assigned to a Particular User",
+          "message": "取得指派給特定使用者的所有活動"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.short_desc": {
+          "source": "Get all activities assigned to a particular user",
+          "message": "取得指派給特定使用者的所有活動"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.desc": {
+          "source": "Returns the details of a specific activity.",
+          "message": "傳回特定活動的詳細資料。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.display_name": {
+          "source": "Get Details of an Activity",
+          "message": "取得活動的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.short_desc": {
+          "source": "Get details of an activity",
+          "message": "取得活動的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.desc": {
+          "source": "Returns the details of a specific deal. Note that this also returns some additional fields which are not present when asking for all deals – such as deal age and stay in pipeline stages. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of dealFields. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">getting details of a deal<-a>.",
+          "message": "傳回特定交易的詳細資料。請注意，這也會傳回一些在查詢所有交易時不會出現的額外欄位，例如交易年齡和在銷售流程階段的停留時間。另請注意，自訂欄位在結果資料中會顯示為長雜湊值。這些雜湊值可對應至 dealFields 的 `key` 值。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">取得交易詳細資料<-a>的教學課程。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.display_name": {
+          "source": "Get Details of a Deal",
+          "message": "取得交易的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.short_desc": {
+          "source": "Get details of a deal",
+          "message": "取得交易的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.desc": {
+          "source": "Returns all deals. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">getting all deals<-a>.",
+          "message": "傳回所有交易。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">取得所有交易<-a>的教學課程。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.display_name": {
+          "source": "Get All Deals",
+          "message": "取得所有交易"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.short_desc": {
+          "source": "Get all deals",
+          "message": "取得所有交易"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.desc": {
+          "source": "Returns the details of an organization. Note that this also returns some additional fields which are not present when asking for all organizations. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of organizationFields.",
+          "message": "傳回組織的詳細資料。請注意，這也會傳回一些在查詢所有組織時不會出現的額外欄位。另請注意，自訂欄位在結果資料中會顯示為長雜湊值。這些雜湊值可對應至 organizationFields 的 `key` 值。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.display_name": {
+          "source": "Get Details of an Organization",
+          "message": "取得組織的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.short_desc": {
+          "source": "Get details of an organization",
+          "message": "取得組織的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.desc": {
+          "source": "Returns all organizations.",
+          "message": "傳回所有組織。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.display_name": {
+          "source": "Get All Organizations",
+          "message": "取得所有組織"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.short_desc": {
+          "source": "Get all organizations",
+          "message": "取得所有組織"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.desc": {
+          "source": "Returns details of a specific lead. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals.",
+          "message": "傳回特定潛在客戶的詳細資料。如果潛在客戶包含自訂欄位，該欄位的值將以與 `Deals` 端點相同的格式包含在回應中。如果尚未為該潛在客戶設定自訂欄位的值，則不會顯示在回應中。請注意，潛在客戶沒有獨立的一組自訂欄位，而是繼承交易的自訂欄位結構。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.display_name": {
+          "source": "Get One Lead",
+          "message": "取得單一潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.short_desc": {
+          "source": "Get one lead",
+          "message": "取得單一潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.desc": {
+          "source": "Returns multiple leads. Leads are sorted by the time they were created, from oldest to newest. Pagination can be controlled using `limit` and `start` query parameters. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals.\n",
+          "message": "傳回多個潛在客戶。潛在客戶依建立時間從早到晚排序。可使用 `limit` 和 `start` 查詢參數控制分頁。如果潛在客戶包含自訂欄位，該欄位的值將以與 `Deals` 端點相同的格式包含在回應中。如果尚未為該潛在客戶設定自訂欄位的值，則不會顯示在回應中。請注意，潛在客戶沒有獨立的一組自訂欄位，而是繼承交易的自訂欄位結構。\n"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.display_name": {
+          "source": "Get All Leads",
+          "message": "取得所有潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.short_desc": {
+          "source": "Get all leads",
+          "message": "取得所有潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.desc": {
+          "source": "Returns details about a specific note.",
+          "message": "傳回特定備註的詳細資訊。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.display_name": {
+          "source": "Get One Note",
+          "message": "取得單一備註"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.short_desc": {
+          "source": "Get one note",
+          "message": "取得單一備註"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.desc": {
+          "source": "Returns all notes.",
+          "message": "傳回所有備註。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.display_name": {
+          "source": "Get All Notes",
+          "message": "取得所有備註"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.short_desc": {
+          "source": "Get all notes",
+          "message": "取得所有備註"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.desc": {
+          "source": "Returns the details of a person. Note that this also returns some additional fields which are not present when asking for all persons. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of personFields.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also return the `data.marketing_status` field.",
+          "message": "傳回聯絡人的詳細資料。請注意，這也會傳回一些在查詢所有聯絡人時不會出現的額外欄位。另請注意，自訂欄位在結果資料中會顯示為長雜湊值。這些雜湊值可對應至 personFields 的 `key` 值。<br>若公司使用 [Campaigns 產品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)，則此端點也會傳回 `data.marketing_status` 欄位。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.display_name": {
+          "source": "Get Details of a Person",
+          "message": "取得聯絡人的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.short_desc": {
+          "source": "Get details of a person",
+          "message": "取得聯絡人的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.desc": {
+          "source": "Returns all persons.",
+          "message": "傳回所有聯絡人。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.display_name": {
+          "source": "Get All Persons",
+          "message": "取得所有聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.short_desc": {
+          "source": "Get all persons",
+          "message": "取得所有聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the details of a specific project. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of project fields.",
+          "message": "傳回特定專案的詳細資料。另請注意，自訂欄位在結果資料中會顯示為長雜湊值。這些雜湊值可對應至專案欄位的 `key` 值。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Details of a Project",
+          "message": "取得專案的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get details of a project",
+          "message": "取得專案的詳細資料"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns all projects. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "傳回所有專案。這是一個游標分頁端點。如需詳細資訊，請參閱我們關於<a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">分頁<-a>的說明文件。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "獲取所有專案"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get all projects",
+          "message": "取得所有專案"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.desc": {
+          "source": "Returns all tasks. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "傳回所有任務。這是一個游標分頁端點。如需詳細資訊，請參閱我們關於<a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">分頁<-a>的說明文件。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.display_name": {
+          "source": "Get All Tasks",
+          "message": "取得所有任務"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get all tasks",
+          "message": "取得所有任務"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the details of a specific task.",
+          "message": "傳回特定任務的詳細資訊。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.display_name": {
+          "source": "Get Details of a Task",
+          "message": "取得任務詳細資訊"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get details of a task",
+          "message": "取得任務詳細資訊"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "從應用程式「Pipedrive」中的指定資料表刪除記錄"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "從應用程式「Pipedrive」中的指定資料表刪除記錄"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.desc": {
+          "source": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted.",
+          "message": "將活動標記為已刪除。30 天後，該活動將會被永久刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.display_name": {
+          "source": "Delete an Activity",
+          "message": "刪除活動"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.short_desc": {
+          "source": "Delete an activity",
+          "message": "刪除活動"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.desc": {
+          "source": "Marks a deal as deleted. After 30 days, the deal will be permanently deleted.",
+          "message": "將交易標記為已刪除。30 天後，該交易將會被永久刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
+          "source": "Delete a Deal",
+          "message": "刪除交易"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
+          "source": "Delete a deal",
+          "message": "刪除交易"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Marks an organization as deleted. After 30 days, the organization will be permanently deleted.",
+          "message": "將組織標記為已刪除。30 天後，該組織將會被永久刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete an Organization",
+          "message": "刪除組織"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete an organization",
+          "message": "刪除組織"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.desc": {
+          "source": "Deletes a specific lead.",
+          "message": "刪除特定潛在客戶。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.display_name": {
+          "source": "Delete a Lead",
+          "message": "刪除潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.short_desc": {
+          "source": "Delete a lead",
+          "message": "刪除潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.desc": {
+          "source": "Deletes a specific note.",
+          "message": "刪除特定備註。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.display_name": {
+          "source": "Delete a Note",
+          "message": "刪除備註"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.short_desc": {
+          "source": "Delete a note",
+          "message": "刪除備註"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.desc": {
+          "source": "Marks a person as deleted. After 30 days, the person will be permanently deleted.",
+          "message": "將聯絡人標記為已刪除。30 天後，該聯絡人將會被永久刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.display_name": {
+          "source": "Delete a Person",
+          "message": "刪除聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.short_desc": {
+          "source": "Delete a person",
+          "message": "刪除聯絡人"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Marks a project as deleted.",
+          "message": "將專案標記為已刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "刪除專案"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "刪除專案"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "Marks a task as deleted. If the task has subtasks then those will also be deleted.",
+          "message": "將任務標記為已刪除。若該任務包含子任務，則子任務也將一併刪除。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "刪除任務"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "刪除任務"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pipedrive** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Pipedrive** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用查詢參數、標頭和請求主體。回應將以雜湊形式傳回，其中包含狀態碼、回應標頭和回應主體。\n\n此動作適用於此應用程式中尚未公開為一級動作的端點。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pipedrive",
+          "message": "向 Pipedrive 進行自訂 API 呼叫"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "在應用程式「Pipedrive」中的指定資料表中搜尋相符的記錄"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "在應用程式「Pipedrive」中的指定資料表中搜尋相符的記錄"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "在應用程式「Pipedrive」中的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "在應用程式「Pipedrive」中的指定資料表中搜尋單筆相符的記錄"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.",
+          "message": "當對 Pipedrive 中的備註執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除備註或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
+          "source": "Note Action",
+          "message": "備註動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a note",
+          "message": "在對備註執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on an organization in Pipedrive. Actions include creating, updating, deleting an organization or any change.",
+          "message": "當對 Pipedrive 中的組織執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除組織或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
+          "source": "Organization Action",
+          "message": "組織動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on an organization",
+          "message": "在對組織執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.desc": {
+          "source": "This trigger activates when a selected action is performed on an activity in Pipedrive. Actions include creating, updating, deleting an activity or any change.",
+          "message": "當對 Pipedrive 中的活動執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除活動或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
+          "source": "Activity Action",
+          "message": "活動動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
+          "source": "Triggers when an action is performed on an activity",
+          "message": "在對活動執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a deal in Pipedrive. Actions include creating, updating, deleting a deal or any change.",
+          "message": "當對 Pipedrive 中的交易執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除交易或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
+          "source": "Deal Action",
+          "message": "交易動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a deal",
+          "message": "在對交易執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a lead in Pipedrive. Actions include creating, updating, deleting a lead or any change.",
+          "message": "當對 Pipedrive 中的潛在客戶執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除潛在客戶或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
+          "source": "Lead Action",
+          "message": "潛在客戶動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a lead",
+          "message": "在對潛在客戶執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on a person in Pipedrive. Actions include creating, updating, deleting a person or any change.",
+          "message": "當對 Pipedrive 中的聯絡人執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除聯絡人或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
+          "source": "Person Action",
+          "message": "聯絡人動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on a person",
+          "message": "在對聯絡人執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a user in Pipedrive. Actions include creating, updating, deleting a user or any change.",
+          "message": "當對 Pipedrive 中的使用者執行選取的動作時，此觸發程序將會啟動。動作包括建立、更新、刪除使用者或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
+          "source": "User Action",
+          "message": "使用者動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "在建立、變更或刪除任何活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "任何"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "在現有活動變更時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "變更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "在建立新活動時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "已建立"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "在現有活動刪除時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "已刪除"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "選取觸發流程的動作。可選擇：建立、更新、刪除或任何變更。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "操作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "選取觸發流程的動作"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a user",
+          "message": "在對使用者執行動作時觸發"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "更新應用程式「Pipedrive」中指定資料表內的現有記錄"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "更新應用程式「Pipedrive」中指定資料表內的現有記錄"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.desc": {
+          "source": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "更新活動。在回應的 `additional_data` 中包含 `more_activities_scheduled_in_context` 屬性，用以指示是否排定了相同交易、聯絡人或組織的更多未完成活動（取決於提供的資料）。<br -> <br -> ***自 2024 年 9 月 30 日起，只有在活動擁有者啟用有效的行事曆同步時，活動參與者才會收到更新***"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.display_name": {
+          "source": "Update an Activity",
+          "message": "更新活動"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.short_desc": {
+          "source": "Update an activity",
+          "message": "更新活動"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.desc": {
+          "source": "Updates the properties of a deal. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">updating a deal<-a>.",
+          "message": "更新交易的屬性。如需更多資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">更新交易<-a>的教學課程。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.display_name": {
+          "source": "Update a Deal",
+          "message": "更新交易"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.short_desc": {
+          "source": "Update a deal",
+          "message": "更新交易"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Updates the properties of an organization.",
+          "message": "更新組織的屬性。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update an Organization",
+          "message": "更新組織"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update an organization",
+          "message": "更新組織"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.desc": {
+          "source": "Updates one or more properties of a lead. Only properties included in the request will be updated. Send `null` to unset a property (applicable for example for `value`, `person_id` or `organization_id`). If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields’ values tutorial<-a>.",
+          "message": "更新潛在客戶的一或多個屬性。僅會更新請求中包含的屬性。傳送 `null` 可取消設定屬性（例如適用於 `value`、`person_id` 或 `organization_id`）。如果潛在客戶包含自訂欄位，欄位的值將以與 `Deals` 端點相同的格式包含在回應中。如果尚未為該潛在客戶設定自訂欄位的值，則不會出現在回應中。請注意，潛在客戶沒有獨立的自訂欄位集，而是從交易繼承自訂欄位的結構。請參閱<a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">更新自訂欄位值教學課程<-a>中提供的範例。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.display_name": {
+          "source": "Update a Lead",
+          "message": "更新潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.short_desc": {
+          "source": "Update a lead",
+          "message": "更新潛在客戶"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.desc": {
+          "source": "Updates a note.",
+          "message": "更新備註。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.display_name": {
+          "source": "Update a Note",
+          "message": "更新備註"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.short_desc": {
+          "source": "Update a note",
+          "message": "更新備註"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.desc": {
+          "source": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "更新連絡人的屬性。如需詳細資訊，請參閱<a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">更新連絡人<-a>教學課程。<br>如果公司使用 [Campaigns 產品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)，則此端點也會接受並傳回 `data.marketing_status` 欄位。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.display_name": {
+          "source": "Update a Person",
+          "message": "更新連絡人"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.short_desc": {
+          "source": "Update a person",
+          "message": "更新連絡人"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates a project.",
+          "message": "更新專案。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "更新專案"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "更新專案"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.desc": {
+          "source": "Updates a task.",
+          "message": "更新任務。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "更新任務"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "更新任務"
+        },
+        "app.UGlwZWRyaXZl.desc": {
+          "source": "Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.",
+          "message": "Pipedrive 是一套銷售管理工具，旨在協助小型銷售團隊管理錯綜複雜或冗長的銷售流程。"
+        },
+        "app.UGlwZWRyaXZl.display_name": {
+          "source": "Pipedrive",
+          "message": "Pipedrive"
+        },
+        "app.UGlwZWRyaXZl.short_desc": {
+          "source": "Manage your sales pipeline and customer relationships with Pipedrive.",
+          "message": "使用 Pipedrive 管理您的銷售管道與客戶關係。"
+        }
+      }
+    }
+  }
+}

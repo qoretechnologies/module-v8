@@ -1,0 +1,1061 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.desc": {
+          "source": "Creates a new document in the specified Firestore collection. You can either let Firestore auto-generate a document ID or provide your own. The document data can be specified through structured fields or as a custom hash object.",
+          "message": "Створює новий документ у вказаній колекції Firestore. Ви можете дозволити Firestore автоматично згенерувати ідентифікатор документа або надати власний. Дані документа можна вказати за допомогою структурованих полів або як власний об'єкт hash."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.display_name": {
+          "source": "Create Document",
+          "message": "Створити документ"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection where the document will be created. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, де буде створено документ. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to add fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Необов'язкові додаткові поля для об'єднання зі структурованими даними. Використовуйте це, щоб додати поля, які не входять до попередньо визначеної схеми, або включити динамічні поля."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Додаткові дані"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to include in the document",
+          "message": "Додаткові поля для включення в документ"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "Optional custom identifier for the document. If not provided, Firestore will auto-generate a unique ID. Document IDs must be valid UTF-8 strings and cannot contain forward slashes.",
+          "message": "Необов'язковий власний ідентифікатор для документа. Якщо не вказано, Firestore автоматично згенерує унікальний ID. Ідентифікатори документів мають бути коректними рядками UTF-8 і не можуть містити скісну риску."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Ідентифікатор документа"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Custom document ID (optional)",
+          "message": "Власний ID документа (необов'язково)"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The structured data to store in the document. This will be dynamically typed based on the collection schema if available. Each field will be stored with its appropriate Firestore data type.",
+          "message": "Структуровані дані для збереження в документі. Типи даних визначатимуться динамічно на основі схеми колекції, якщо вона доступна. Кожне поле зберігатиметься з відповідним типом даних Firestore."
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Дані документа"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The data to store in the document",
+          "message": "Дані для збереження в документі"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Y3JlYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Create a new document in a Firestore collection",
+          "message": "Створити новий документ у колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Creates a backup of your Firestore database or specific collections by exporting the data to Google Cloud Storage. This is useful for disaster recovery, data migration, or creating snapshots of your database at a point in time.",
+          "message": "Створює резервну копію вашої бази даних Firestore або певних колекцій шляхом експорту даних у Google Cloud Storage. Це корисно для аварійного відновлення, міграції даних або створення знімків бази даних на певний момент часу."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Backup to Google Cloud Storage",
+          "message": "Резервне копіювання в Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to backup. If not specified, the entire database will be backed up. Use this to create selective backups of specific collections.",
+          "message": "Необов'язковий список ідентифікаторів колекцій для резервного копіювання. Якщо не вказано, резервна копія створюється для всієї бази даних. Використовуйте це для створення вибіркових резервних копій певних колекцій."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "Ідентифікатори колекцій"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to backup (optional)",
+          "message": "Певні колекції для резервного копіювання (необов'язково)"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files will be written. Format: gs://bucket-name/path/to/backup. The bucket must already exist and you must have write permissions.",
+          "message": "Префікс URI Google Cloud Storage, куди записуватимуться файли резервної копії. Формат: gs://bucket-name/path/to/backup. Бакет уже має існувати, і ви повинні мати права на запис."
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.display_name": {
+          "source": "Output URI Prefix",
+          "message": "Префікс вихідного URI"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.b3V0cHV0X3VyaV9wcmVmaXg.short_desc": {
+          "source": "GCS bucket URI where backup will be stored",
+          "message": "URI бакета GCS, де зберігатиметься резервна копія"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database to backup",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore для резервного копіювання"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.YmFja3VwX3RvX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Export Firestore data to Google Cloud Storage",
+          "message": "Експортувати дані Firestore у Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.desc": {
+          "source": "Retrieves metadata and information about a specific Firestore collection. This includes checking if the collection exists, whether it has documents, and optionally retrieving sample documents from the collection.",
+          "message": "Отримує метадані та інформацію про певну колекцію Firestore. Це включає перевірку існування колекції, наявності в ній документів і за бажанням отримання зразків документів із колекції."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.display_name": {
+          "source": "Get Collection",
+          "message": "Отримати колекцію"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.desc": {
+          "source": "The identifier of the collection you want to retrieve information about. This is the collection name without any parent path.",
+          "message": "Ідентифікатор колекції, відомості про яку потрібно отримати. Це назва колекції без батьківського шляху."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.display_name": {
+          "source": "Collection ID",
+          "message": "ID колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.Y29sbGVjdGlvbl9pZA.short_desc": {
+          "source": "The ID of the collection",
+          "message": "ID колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.desc": {
+          "source": "When true, includes sample documents from the collection in the response. This helps you understand the structure and content of the collection.",
+          "message": "Якщо має значення true, додає до відповіді зразки документів із колекції. Це допомагає зрозуміти структуру та вміст колекції."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.display_name": {
+          "source": "Include Sample Documents",
+          "message": "Включити зразки документів"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.aW5jbHVkZV9zYW1wbGVfZG9jdW1lbnRz.short_desc": {
+          "source": "Whether to include sample documents",
+          "message": "Чи включати зразки документів"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.desc": {
+          "source": "The maximum number of sample documents to retrieve when include_sample_documents is true. Default is 5.",
+          "message": "Максимальна кількість зразків документів для отримання, якщо для include_sample_documents встановлено значення true. За замовчуванням: 5."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.display_name": {
+          "source": "Sample Limit",
+          "message": "Ліміт зразків"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.c2FtcGxlX2xpbWl0.short_desc": {
+          "source": "Number of sample documents to include",
+          "message": "Кількість зразків документів для включення"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to the parent document if this is a subcollection. If not specified, assumes this is a root-level collection. Format: collection_id/document_id",
+          "message": "Необов'язковий шлях до батьківського документа, якщо це підколекція. Якщо не вказано, вважається, що це колекція кореневого рівня. Формат: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Шлях до батьківського документа"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Шлях до батьківського документа (необов'язково)"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2NvbGxlY3Rpb24.short_desc": {
+          "source": "Get information about a Firestore collection",
+          "message": "Отримати інформацію про колекцію Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.desc": {
+          "source": "Fetches a single document by its ID from a Firestore collection. Returns the complete document data including metadata such as creation time and last update time. This action will fail if the document does not exist.",
+          "message": "Отримує один документ за його ID з колекції Firestore. Повертає повні дані документа, включно з метаданими, такими як час створення та час останнього оновлення. Ця дія завершиться помилкою, якщо документ не існує."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.display_name": {
+          "source": "Get Document",
+          "message": "Отримати документ"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, що містить документ. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to retrieve. This is the document ID that was either auto-generated or specified when the document was created.",
+          "message": "Унікальний ідентифікатор документа, який потрібно отримати. Це ID документа, автоматично згенерований або вказаний під час створення документа."
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Ідентифікатор документа"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to retrieve",
+          "message": "ID документа для отримання"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.Z2V0X2RvY3VtZW50.short_desc": {
+          "source": "Retrieve a specific document from a Firestore collection",
+          "message": "Отримати певний документ із колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.desc": {
+          "source": "Permanently deletes a document from a Firestore collection. This operation cannot be undone. The document must exist or the operation will fail. All subcollections under the document will NOT be automatically deleted.",
+          "message": "Остаточно видаляє документ із колекції Firestore. Цю операцію неможливо скасувати. Документ має існувати, інакше операція завершиться помилкою. Усі підколекції під документом НЕ будуть автоматично видалені."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.display_name": {
+          "source": "Delete Document",
+          "message": "Видалити документ"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, що містить документ. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to delete. The document must exist or the operation will fail.",
+          "message": "Унікальний ідентифікатор документа, який потрібно видалити. Документ має існувати, інакше операція завершиться помилкою."
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Ідентифікатор документа"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to delete",
+          "message": "ID документа для видалення"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.ZGVsZXRlX2RvY3VtZW50.short_desc": {
+          "source": "Delete a document from a Firestore collection",
+          "message": "Видалити документ із колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Retrieves all collection IDs at the root level of a Firestore database or within a specific document. This is useful for discovering the structure of your Firestore database and navigating nested collections.",
+          "message": "Отримує всі ID колекцій на кореневому рівні бази даних Firestore або всередині певного документа. Це корисно для виявлення структури бази даних Firestore та навігації по вкладених колекціях."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Список колекцій"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.desc": {
+          "source": "Optional path to a document whose subcollections you want to list. If not specified, lists root-level collections. Format: collection_id/document_id",
+          "message": "Необов'язковий шлях до документа, підколекції якого потрібно отримати у вигляді списку. Якщо не вказано, виводить список колекцій кореневого рівня. Формат: collection_id/document_id"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.display_name": {
+          "source": "Parent Document Path",
+          "message": "Шлях до батьківського документа"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cGFyZW50X2RvY3VtZW50X3BhdGg.short_desc": {
+          "source": "Path to the parent document (optional)",
+          "message": "Шлях до батьківського документа (необов'язково)"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "List all collections in a Firestore database or document",
+          "message": "Отримати список усіх колекцій у базі даних або документі Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Retrieves all documents from a specified Firestore collection. You can limit the number of results and specify ordering criteria. This action returns the complete document data along with metadata for each document.",
+          "message": "Отримує всі документи із зазначеної колекції Firestore. Ви можете обмежити кількість результатів та вказати критерії сортування. Ця дія повертає повні дані документа разом із метаданими для кожного документа."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "Отримати список документів"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection whose documents you want to list. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, документи якої потрібно перелічити. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.desc": {
+          "source": "Optional field name to use for ordering the documents. The field must exist in the documents and be of a comparable type (string, number, date).",
+          "message": "Необов'язкова назва поля для сортування документів. Поле має існувати в документах і мати тип, що підтримує порівняння (рядок, число, дата)."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Сортувати за"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfYnk.short_desc": {
+          "source": "Field to order documents by",
+          "message": "Поле для сортування документів"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkFTQ0VORElORw.display_name": {
+          "source": "Ascending",
+          "message": "За зростанням"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.allowed-value.c3RyaW5nOkRFU0NFTkRJTkc.display_name": {
+          "source": "Descending",
+          "message": "За спаданням"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.desc": {
+          "source": "The direction to sort documents when an order_by field is specified. Choose ascending for lowest to highest or descending for highest to lowest.",
+          "message": "Напрямок сортування документів, коли вказано поле order_by. Виберіть за зростанням (від найменшого до найбільшого) або за спаданням (від найбільшого до найменшого)."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.display_name": {
+          "source": "Order Direction",
+          "message": "Напрямок сортування"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.b3JkZXJfZGlyZWN0aW9u.short_desc": {
+          "source": "Sort direction for ordering",
+          "message": "Напрямок сортування"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control the size of the result set and improve performance.",
+          "message": "Максимальна кількість документів для отримання. За замовчуванням — 100. Використовуйте це для керування розміром вибірки результатів та покращення продуктивності."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Максимальна кількість документів для повернення"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "List all documents in a Firestore collection",
+          "message": "Отримати список усіх документів у колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieves a list of all Google Cloud projects that are accessible with your credentials. You can filter projects by name and use pagination to navigate through large result sets. This is useful for discovering which projects contain Firestore databases.",
+          "message": "Отримує список усіх проєктів Google Cloud, доступних за вашими обліковими даними. Ви можете фільтрувати проєкти за назвою та використовувати пагінацію для перегляду великих наборів результатів. Це корисно для визначення проєктів, які містять бази даних Firestore."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Отримати список проєктів"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.desc": {
+          "source": "Optional filter to search for projects containing this name. The search is case-insensitive and matches partial names.",
+          "message": "Необов'язковий фільтр для пошуку проєктів, які містять цю назву. Пошук нечутливий до регістру та знаходить часткові збіги назв."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "Назва проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter projects by name",
+          "message": "Фільтрувати проєкти за назвою"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Pagination token obtained from a previous request. Use this to retrieve the next page of projects when there are more results than the page size.",
+          "message": "Токен пагінації, отриманий з попереднього запиту. Використовуйте його для отримання наступної сторінки проєктів, коли результатів більше, ніж розмір сторінки."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Токен наступної сторінки"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Токен для отримання наступної сторінки результатів"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 100. Use this with pagination tokens to retrieve large result sets.",
+          "message": "Максимальна кількість проєктів для повернення в одному запиті. За замовчуванням — 100. Використовуйте разом із токенами пагінації для отримання великих наборів результатів."
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Розмір сторінки"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of projects to return per page",
+          "message": "Кількість проєктів для повернення на сторінку"
+        },
+        "app.RmlyZXN0b3Jl.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "List all Google Cloud projects accessible with the current credentials",
+          "message": "Отримати список усіх проєктів Google Cloud, доступних за поточними обліковими даними"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firestore** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконайте користувацький виклик HTTP / REST API до **Firestore**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається як хеш, що містить код статусу, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовано як окремі дії в цьому додатку."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.RmlyZXN0b3Jl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firestore",
+          "message": "Виконати користувацький виклик API до Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Firestore collection for newly created documents. Documents are ordered based on your specified criteria, and the trigger activates when new documents appear at the top of the ordered list. You can optionally filter documents and customize the ordering to track specific types of documents.",
+          "message": "Відстежує колекцію Firestore на предмет створення нових документів. Документи впорядковуються відповідно до ваших критеріїв, і тригер спрацьовує, коли нові документи з'являються на початку впорядкованого списку. За бажанням ви можете фільтрувати документи та налаштовувати сортування для відстеження певних типів документів."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "Новий документ"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to monitor. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, яку ви хочете відстежувати. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.desc": {
+          "source": "Define one or more filters to narrow down which documents will trigger the event. Multiple filters are combined with AND logic.",
+          "message": "Визначте один або кілька фільтрів для звуження списку документів, які запускатимуть подію. Кілька фільтрів об'єднуються за логікою AND."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Фільтри"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.ZmlsdGVycw.short_desc": {
+          "source": "Optional filters to apply to documents",
+          "message": "Необов'язкові фільтри для застосування до документів"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.desc": {
+          "source": "Define the ordering criteria for documents. The trigger will activate for documents that appear at the top of the ordered list. If not specified, documents are ordered by creation time in descending order (newest first).",
+          "message": "Визначте критерії сортування документів. Тригер спрацьовуватиме для документів, які з'являються на початку впорядкованого списку. Якщо не вказано, документи сортуються за часом створення за спаданням (спочатку найновіші)."
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Сортувати за"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.b3JkZXJfYnk.short_desc": {
+          "source": "Specify how to order documents",
+          "message": "Вкажіть спосіб сортування документів"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new document is created in a Firestore collection",
+          "message": "Спрацьовує при створенні нового документа в колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.desc": {
+          "source": "Performs advanced queries on a Firestore collection with support for multiple filters, ordering, and limits. This allows you to search for specific documents based on field values and retrieve them in a particular order.",
+          "message": "Виконує розширені запити до колекції Firestore із підтримкою кількох фільтрів, сортування та обмежень. Це дозволяє шукати конкретні документи на основі значень полів і отримувати їх у певному порядку."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.display_name": {
+          "source": "Query Documents",
+          "message": "Запит документів"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection you want to query. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, до якої потрібно виконати запит. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.desc": {
+          "source": "Optional list of filters to apply to the query. Multiple filters are combined with AND logic. Each filter specifies a field, comparison operator, and value to match.",
+          "message": "Необов'язковий список фільтрів для застосування до запиту. Кілька фільтрів об'єднуються за логікою AND. Кожен фільтр визначає поле, оператор порівняння та значення для зіставлення."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.display_name": {
+          "source": "Filters",
+          "message": "Фільтри"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.ZmlsdGVycw.short_desc": {
+          "source": "Filter criteria for documents",
+          "message": "Критерії фільтрації документів"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.desc": {
+          "source": "Optional list of ordering criteria to apply to the query results. Documents will be sorted by the specified fields in the order they are listed.",
+          "message": "Необов'язковий список критеріїв сортування для застосування до результатів запиту. Документи будуть відсортовані за вказаними полями в порядку їхнього переліку."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Сортувати за"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.b3JkZXJfYnk.short_desc": {
+          "source": "Ordering criteria for results",
+          "message": "Критерії сортування результатів"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of documents to retrieve. Default is 100. Use this to control query performance and result set size.",
+          "message": "Максимальна кількість документів для отримання. За замовчуванням — 100. Використовуйте це для керування продуктивністю запиту та розміром вибірки результатів."
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of documents to return",
+          "message": "Максимальна кількість документів для повернення"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.cXVlcnlfZG9jdW1lbnRz.short_desc": {
+          "source": "Query documents in a Firestore collection with filters and ordering",
+          "message": "Виконати запит документів у колекції Firestore з фільтрами та сортуванням"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.desc": {
+          "source": "Restores Firestore data from a previous backup stored in Google Cloud Storage. This operation can restore the entire database or specific collections. Warning: This will overwrite existing documents with the same IDs.",
+          "message": "Відновлює дані Firestore з попередньої резервної копії, збереженої в Google Cloud Storage. Ця операція може відновити всю базу даних або окремі колекції. Попередження: це перезапише наявні документи з такими ж ID."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.display_name": {
+          "source": "Restore from Google Cloud Storage",
+          "message": "Відновити з Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.desc": {
+          "source": "Optional list of collection IDs to restore from the backup. If not specified, all collections in the backup will be restored. Use this to selectively restore specific collections.",
+          "message": "Необов'язковий список ID колекцій для відновлення з резервної копії. Якщо не вказано, будуть відновлені всі колекції з резервної копії. Використовуйте це для вибіркового відновлення конкретних колекцій."
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.display_name": {
+          "source": "Collection IDs",
+          "message": "Ідентифікатори колекцій"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.Y29sbGVjdGlvbl9pZHM.short_desc": {
+          "source": "Specific collections to restore (optional)",
+          "message": "Конкретні колекції для відновлення (необов'язково)"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.desc": {
+          "source": "The Google Cloud Storage URI prefix where the backup files are located. This should match the output_uri_prefix used when creating the backup. Format: gs://bucket-name/path/to/backup",
+          "message": "Префікс URI Google Cloud Storage, де розташовані файли резервної копії. Має збігатися з output_uri_prefix, використаним під час створення резервної копії. Формат: gs://bucket-name/path/to/backup"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.display_name": {
+          "source": "Input URI Prefix",
+          "message": "Префікс вхідного URI"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.aW5wdXRfdXJpX3ByZWZpeA.short_desc": {
+          "source": "GCS bucket URI where backup is stored",
+          "message": "URI бакета GCS, де збережено резервну копію"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project where the data will be restored",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, до якого будуть відновлені дані"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.cmVzdG9yZV9mcm9tX2dvb2dsZV9jbG91ZF9zdG9yYWdl.short_desc": {
+          "source": "Import Firestore data from Google Cloud Storage",
+          "message": "Імпортувати дані Firestore з Google Cloud Storage"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.desc": {
+          "source": "Updates an existing document in Firestore with new data. You can choose to merge the new data with existing fields or replace the entire document. By default, the update merges new fields while preserving unspecified fields.",
+          "message": "Оновлює наявний документ у Firestore новими даними. Ви можете об'єднати нові дані з наявними полями або замінити весь документ. За замовчуванням оновлення об'єднує нові поля, зберігаючи невказані поля."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.display_name": {
+          "source": "Update Document",
+          "message": "Оновити документ"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.desc": {
+          "source": "The full path to the collection containing the document. For nested collections, use the format: parent_collection/parent_doc_id/nested_collection",
+          "message": "Повний шлях до колекції, що містить документ. Для вкладених колекцій використовуйте формат: parent_collection/parent_doc_id/nested_collection"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.display_name": {
+          "source": "Collection Path",
+          "message": "Шлях до колекції"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.Y29sbGVjdGlvbl9wYXRo.short_desc": {
+          "source": "The path to the Firestore collection",
+          "message": "Шлях до колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.desc": {
+          "source": "Optional additional fields to merge with the structured data. Use this to update fields that are not part of the predefined schema or to include dynamic fields.",
+          "message": "Необов'язкові додаткові поля для об'єднання зі структурованими даними. Використовуйте це для оновлення полів, які не входять до попередньо визначеної схеми, або для додавання динамічних полів."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.display_name": {
+          "source": "Additional Data",
+          "message": "Додаткові дані"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.YWRkaXRpb25hbF9kYXRh.short_desc": {
+          "source": "Additional fields to update",
+          "message": "Додаткові поля для оновлення"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the document you want to update. The document must exist or the operation will fail.",
+          "message": "Унікальний ідентифікатор документа, який потрібно оновити. Документ повинен існувати, інакше операція зазнає невдачі."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Ідентифікатор документа"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The ID of the document to update",
+          "message": "ID документа для оновлення"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.desc": {
+          "source": "The data to update in the document. When merge is enabled, only the specified fields will be updated. When merge is disabled, this data will replace the entire document.",
+          "message": "Дані для оновлення в документі. Якщо об'єднання увімкнено, оновлюються лише вказані поля. Якщо об'єднання вимкнено, ці дані замінять увесь документ."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.display_name": {
+          "source": "Document Data",
+          "message": "Дані документа"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the document",
+          "message": "Нові дані для документа"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.desc": {
+          "source": "When true (default), only the specified fields are updated and other fields remain unchanged. When false, the entire document is replaced with the new data.",
+          "message": "Якщо true (за замовчуванням), оновлюються лише вказані поля, а інші поля залишаються без змін. Якщо false, увесь документ замінюється новими даними."
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.display_name": {
+          "source": "Merge",
+          "message": "Об'єднати"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.bWVyZ2U.short_desc": {
+          "source": "Whether to merge with existing data",
+          "message": "Чи об'єднувати з наявними даними"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.desc": {
+          "source": "The unique identifier for your Google Cloud project containing the Firestore database",
+          "message": "Унікальний ідентифікатор вашого проєкту Google Cloud, який містить базу даних Firestore"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID проєкту"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Google Cloud project ID",
+          "message": "ID проєкту Google Cloud"
+        },
+        "app.RmlyZXN0b3Jl.action.dXBkYXRlX2RvY3VtZW50.short_desc": {
+          "source": "Update an existing document in a Firestore collection",
+          "message": "Оновити наявний документ у колекції Firestore"
+        },
+        "app.RmlyZXN0b3Jl.desc": {
+          "source": "The Firestore integration enables you to interact with Google Cloud Firestore, a flexible, scalable NoSQL cloud database. Create, read, update, and delete documents, manage collections, and execute queries to automate your document database operations seamlessly.",
+          "message": "Інтеграція з Firestore дозволяє взаємодіяти з Google Cloud Firestore — гнучкою, масштабованою NoSQL хмарною базою даних. Створюйте, читайте, оновлюйте та видаляйте документи, керуйте колекціями та виконуйте запити для безперешкодної автоматизації операцій з базою даних документів."
+        },
+        "app.RmlyZXN0b3Jl.display_name": {
+          "source": "Firestore",
+          "message": "Firestore"
+        },
+        "app.RmlyZXN0b3Jl.short_desc": {
+          "source": "Connect to Google Cloud Firestore to manage your NoSQL document database.",
+          "message": "Підключіться до Google Cloud Firestore для керування вашою базою даних документів NoSQL."
+        }
+      }
+    }
+  }
+}

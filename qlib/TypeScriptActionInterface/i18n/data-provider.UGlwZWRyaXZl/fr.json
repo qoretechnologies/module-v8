@@ -1,0 +1,1337 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "Créer de nouveaux enregistrements dans la table spécifiée dans l'application \"Pipedrive\""
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Créer des enregistrements"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "Créer de nouveaux enregistrements dans la table spécifiée dans l'application \"Pipedrive\""
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.desc": {
+          "source": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "Ajoute une nouvelle activité. Comprend la propriété `more_activities_scheduled_in_context` dans `additional_data` de la réponse, qui indique s'il reste d'autres activités non terminées planifiées avec la même affaire, personne ou organisation (selon les données fournies). Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">ajouter une activité<-a>. <br -> <br -> ***À compter du 30.09.2024, les participants à l'activité ne recevront des mises à jour que si le propriétaire de l'activité dispose d'une synchronisation de calendrier active***"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.display_name": {
+          "source": "Add an Activity",
+          "message": "Ajouter une activité"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.short_desc": {
+          "source": "Add an activity",
+          "message": "Ajouter une activité"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.desc": {
+          "source": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>.",
+          "message": "Ajoute une nouvelle affaire. Toutes les affaires créées via l'API Pipedrive auront un `origin` défini sur `API`. Notez que vous pouvez fournir des champs personnalisés supplémentaires avec la requête qui ne sont pas décrits ici. Ces champs personnalisés sont différents pour chaque compte Pipedrive et sont reconnaissables par de longs hachages comme clés. Pour déterminer quels champs personnalisés existent, récupérez les dealFields et recherchez les valeurs `key`. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">ajouter une affaire<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.display_name": {
+          "source": "Add a Deal",
+          "message": "Ajouter une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.short_desc": {
+          "source": "Add a deal",
+          "message": "Ajouter une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.desc": {
+          "source": "Adds a new organization. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the organizationFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">adding an organization<-a>.",
+          "message": "Ajoute une nouvelle organisation. Notez que vous pouvez fournir des champs personnalisés supplémentaires avec la requête qui ne sont pas décrits ici. Ces champs personnalisés sont différents pour chaque compte Pipedrive et sont reconnaissables par de longs hachages comme clés. Pour déterminer quels champs personnalisés existent, récupérez les organizationFields et recherchez les valeurs `key`. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">ajouter une organisation<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.display_name": {
+          "source": "Add an Organization",
+          "message": "Ajouter une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Add an organization",
+          "message": "Ajouter une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.desc": {
+          "source": "Creates a lead. A lead always has to be linked to a person or an organization or both. All leads created through the Pipedrive API will have a lead source and origin set to `API`. Here's the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">adding a lead<-a>. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields' values tutorial<-a>.",
+          "message": "Crée un prospect. Un prospect doit toujours être lié à une personne ou une organisation, ou les deux. Tous les prospects créés via l'API Pipedrive auront une source et une origine de prospect définies sur `API`. Voici le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">ajouter un prospect<-a>. Si un prospect contient des champs personnalisés, les valeurs des champs seront incluses dans la réponse dans le même format qu'avec les points de terminaison `Deals`. Si la valeur d'un champ personnalisé n'a pas été définie pour le prospect, elle n'apparaîtra pas dans la réponse. Veuillez noter que les prospects n'ont pas d'ensemble distinct de champs personnalisés, ils héritent plutôt de la structure de champs personnalisés des affaires. Consultez l'exemple fourni dans le tutoriel de <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">mise à jour des valeurs des champs personnalisés<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.display_name": {
+          "source": "Add a Lead",
+          "message": "Ajouter un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.short_desc": {
+          "source": "Add a lead",
+          "message": "Ajouter un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.desc": {
+          "source": "Adds a new note.",
+          "message": "Ajoute une nouvelle note."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.display_name": {
+          "source": "Add a Note",
+          "message": "Ajouter une note"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.short_desc": {
+          "source": "Add a note",
+          "message": "Ajouter une note"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.desc": {
+          "source": "Adds a new person. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the personFields and look for `key` values.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "Ajoute une nouvelle personne. Notez que vous pouvez fournir des champs personnalisés supplémentaires avec la requête qui ne sont pas décrits ici. Ces champs personnalisés sont différents pour chaque compte Pipedrive et sont reconnaissables par de longs hachages comme clés. Pour déterminer quels champs personnalisés existent, récupérez les personFields et recherchez les valeurs `key`.<br>Si une entreprise utilise le [produit Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), ce point de terminaison acceptera et renverra également le champ `data.marketing_status`."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.display_name": {
+          "source": "Add a Person",
+          "message": "Ajouter une personne"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.short_desc": {
+          "source": "Add a person",
+          "message": "Ajouter une personne"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.desc": {
+          "source": "Adds a new project. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys.",
+          "message": "Ajoute un nouveau projet. Notez que vous pouvez fournir des champs personnalisés supplémentaires avec la requête qui ne sont pas décrits ici. Ces champs personnalisés sont différents pour chaque compte Pipedrive et sont reconnaissables par de longs hachages comme clés."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.display_name": {
+          "source": "Add a Project",
+          "message": "Ajouter un projet"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.short_desc": {
+          "source": "Add a project",
+          "message": "Ajouter un projet"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.desc": {
+          "source": "Adds a new task.",
+          "message": "Ajoute une nouvelle tâche."
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.display_name": {
+          "source": "Add a Task",
+          "message": "Ajouter une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.short_desc": {
+          "source": "Add a task",
+          "message": "Ajouter une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.desc": {
+          "source": "Returns all activities assigned to a particular user.",
+          "message": "Renvoie toutes les activités attribuées à un utilisateur particulier."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.display_name": {
+          "source": "Get All Activities Assigned to a Particular User",
+          "message": "Obtenir toutes les activités attribuées à un utilisateur particulier"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.short_desc": {
+          "source": "Get all activities assigned to a particular user",
+          "message": "Obtenir toutes les activités attribuées à un utilisateur particulier"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.desc": {
+          "source": "Returns the details of a specific activity.",
+          "message": "Renvoie les détails d'une activité spécifique."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.display_name": {
+          "source": "Get Details of an Activity",
+          "message": "Obtenir les détails d'une activité"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.short_desc": {
+          "source": "Get details of an activity",
+          "message": "Obtenir les détails d'une activité"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.desc": {
+          "source": "Returns the details of a specific deal. Note that this also returns some additional fields which are not present when asking for all deals – such as deal age and stay in pipeline stages. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of dealFields. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">getting details of a deal<-a>.",
+          "message": "Renvoie les détails d'une affaire spécifique. Notez que cela renvoie également des champs supplémentaires qui ne sont pas présents lors de la demande de toutes les affaires – comme l'âge de l'affaire et la durée passée dans les étapes du pipeline. Notez également que les champs personnalisés apparaissent sous forme de longs hachages dans les données obtenues. Ces hachages peuvent être mis en correspondance avec la valeur `key` de dealFields. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">obtenir les détails d'une affaire<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.display_name": {
+          "source": "Get Details of a Deal",
+          "message": "Obtenir les détails d'une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.short_desc": {
+          "source": "Get details of a deal",
+          "message": "Obtenir les détails d'une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.desc": {
+          "source": "Returns all deals. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">getting all deals<-a>.",
+          "message": "Renvoie toutes les affaires. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">obtenir toutes les affaires<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.display_name": {
+          "source": "Get All Deals",
+          "message": "Obtenir toutes les affaires"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.short_desc": {
+          "source": "Get all deals",
+          "message": "Obtenir toutes les affaires"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.desc": {
+          "source": "Returns the details of an organization. Note that this also returns some additional fields which are not present when asking for all organizations. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of organizationFields.",
+          "message": "Renvoie les détails d'une organisation. Notez que cela renvoie également des champs supplémentaires qui ne sont pas présents lors de la demande de toutes les organisations. Notez également que les champs personnalisés apparaissent sous forme de longs hachages dans les données obtenues. Ces hachages peuvent être mis en correspondance avec la valeur `key` de organizationFields."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.display_name": {
+          "source": "Get Details of an Organization",
+          "message": "Obtenir les détails d'une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.short_desc": {
+          "source": "Get details of an organization",
+          "message": "Obtenir les détails d'une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.desc": {
+          "source": "Returns all organizations.",
+          "message": "Renvoie toutes les organisations."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.display_name": {
+          "source": "Get All Organizations",
+          "message": "Obtenir toutes les organisations"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.short_desc": {
+          "source": "Get all organizations",
+          "message": "Obtenir toutes les organisations"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.desc": {
+          "source": "Returns details of a specific lead. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals.",
+          "message": "Renvoie les détails d'un prospect spécifique. Si un prospect contient des champs personnalisés, les valeurs des champs seront incluses dans la réponse dans le même format qu'avec les points de terminaison `Deals`. Si la valeur d'un champ personnalisé n'a pas été définie pour le prospect, elle n'apparaîtra pas dans la réponse. Veuillez noter que les prospects n'ont pas d'ensemble distinct de champs personnalisés, ils héritent plutôt de la structure de champs personnalisés des affaires."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.display_name": {
+          "source": "Get One Lead",
+          "message": "Obtenir un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.short_desc": {
+          "source": "Get one lead",
+          "message": "Obtenir un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.desc": {
+          "source": "Returns multiple leads. Leads are sorted by the time they were created, from oldest to newest. Pagination can be controlled using `limit` and `start` query parameters. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals.\n",
+          "message": "Renvoie plusieurs prospects. Les prospects sont triés selon leur date de création, du plus ancien au plus récent. La pagination peut être contrôlée à l'aide des paramètres de requête `limit` et `start`. Si un prospect contient des champs personnalisés, les valeurs des champs seront incluses dans la réponse dans le même format qu'avec les points de terminaison `Deals`. Si la valeur d'un champ personnalisé n'a pas été définie pour le prospect, elle n'apparaîtra pas dans la réponse. Veuillez noter que les prospects n'ont pas d'ensemble distinct de champs personnalisés, ils héritent plutôt de la structure de champs personnalisés des affaires.\n"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.display_name": {
+          "source": "Get All Leads",
+          "message": "Obtenir tous les prospects"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.short_desc": {
+          "source": "Get all leads",
+          "message": "Obtenir tous les prospects"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.desc": {
+          "source": "Returns details about a specific note.",
+          "message": "Renvoie les détails d'une note spécifique."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.display_name": {
+          "source": "Get One Note",
+          "message": "Obtenir une note"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.short_desc": {
+          "source": "Get one note",
+          "message": "Obtenir une note"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.desc": {
+          "source": "Returns all notes.",
+          "message": "Renvoie toutes les notes."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.display_name": {
+          "source": "Get All Notes",
+          "message": "Obtenir toutes les notes"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.short_desc": {
+          "source": "Get all notes",
+          "message": "Obtenir toutes les notes"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.desc": {
+          "source": "Returns the details of a person. Note that this also returns some additional fields which are not present when asking for all persons. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of personFields.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also return the `data.marketing_status` field.",
+          "message": "Renvoie les détails d'une personne. Notez que cela renvoie également des champs supplémentaires qui ne sont pas présents lors de la demande de toutes les personnes. Notez également que les champs personnalisés apparaissent sous forme de longs hachages dans les données obtenues. Ces hachages peuvent être mis en correspondance avec la valeur `key` de personFields.<br>Si une entreprise utilise le [produit Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), ce point de terminaison renverra également le champ `data.marketing_status`."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.display_name": {
+          "source": "Get Details of a Person",
+          "message": "Obtenir les détails d'une personne"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.short_desc": {
+          "source": "Get details of a person",
+          "message": "Obtenir les détails d'une personne"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.desc": {
+          "source": "Returns all persons.",
+          "message": "Renvoie toutes les personnes."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.display_name": {
+          "source": "Get All Persons",
+          "message": "Obtenir toutes les personnes"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.short_desc": {
+          "source": "Get all persons",
+          "message": "Obtenir toutes les personnes"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the details of a specific project. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of project fields.",
+          "message": "Renvoie les détails d'un projet spécifique. Notez également que les champs personnalisés apparaissent sous forme de longs hachages dans les données obtenues. Ces hachages peuvent être mis en correspondance avec la valeur `key` des champs de projet."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Details of a Project",
+          "message": "Obtenir les détails d'un projet"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get details of a project",
+          "message": "Obtenir les détails d'un projet"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns all projects. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "Renvoie tous les projets. Il s'agit d'un point de terminaison avec pagination par curseur. Pour plus d'informations, veuillez vous référer à notre documentation sur la <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "Obtenir tous les projets"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get all projects",
+          "message": "Obtenir tous les projets"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.desc": {
+          "source": "Returns all tasks. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "Renvoie toutes les tâches. Il s'agit d'un point de terminaison avec pagination par curseur. Pour plus d'informations, veuillez vous reporter à notre documentation sur la <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.display_name": {
+          "source": "Get All Tasks",
+          "message": "Obtenir toutes les tâches"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get all tasks",
+          "message": "Obtenir toutes les tâches"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the details of a specific task.",
+          "message": "Renvoie les détails d'une tâche spécifique."
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.display_name": {
+          "source": "Get Details of a Task",
+          "message": "Obtenir les détails d'une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get details of a task",
+          "message": "Obtenir les détails d'une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "Supprimer des enregistrements de la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Supprimer les enregistrements"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "Supprimer des enregistrements de la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.desc": {
+          "source": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted.",
+          "message": "Marque une activité comme supprimée. Après 30 jours, l'activité sera définitivement supprimée."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.display_name": {
+          "source": "Delete an Activity",
+          "message": "Supprimer une activité"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.short_desc": {
+          "source": "Delete an activity",
+          "message": "Supprimer une activité"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.desc": {
+          "source": "Marks a deal as deleted. After 30 days, the deal will be permanently deleted.",
+          "message": "Marque une affaire comme supprimée. Après 30 jours, l'affaire sera définitivement supprimée."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
+          "source": "Delete a Deal",
+          "message": "Supprimer une transaction"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
+          "source": "Delete a deal",
+          "message": "Supprimer une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Marks an organization as deleted. After 30 days, the organization will be permanently deleted.",
+          "message": "Marque une organisation comme supprimée. Après 30 jours, l'organisation sera définitivement supprimée."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete an Organization",
+          "message": "Supprimer une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete an organization",
+          "message": "Supprimer une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.desc": {
+          "source": "Deletes a specific lead.",
+          "message": "Supprime un lead spécifique."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.display_name": {
+          "source": "Delete a Lead",
+          "message": "Supprimer un lead"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.short_desc": {
+          "source": "Delete a lead",
+          "message": "Supprimer un lead"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.desc": {
+          "source": "Deletes a specific note.",
+          "message": "Supprime une note spécifique."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.display_name": {
+          "source": "Delete a Note",
+          "message": "Supprimer une note"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.short_desc": {
+          "source": "Delete a note",
+          "message": "Supprimer une note"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.desc": {
+          "source": "Marks a person as deleted. After 30 days, the person will be permanently deleted.",
+          "message": "Marque une personne comme supprimée. Après 30 jours, la personne sera définitivement supprimée."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.display_name": {
+          "source": "Delete a Person",
+          "message": "Supprimer une personne"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.short_desc": {
+          "source": "Delete a person",
+          "message": "Supprimer une personne"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Marks a project as deleted.",
+          "message": "Marque un projet comme supprimé."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "Supprimer un projet"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "Supprimer un projet"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "Marks a task as deleted. If the task has subtasks then those will also be deleted.",
+          "message": "Marque une tâche comme supprimée. Si la tâche comporte des sous-tâches, celles-ci seront également supprimées."
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "Supprimer une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "Supprimer une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pipedrive** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Passe un appel API HTTP / REST personnalisé à **Pipedrive** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme des actions de premier ordre sur cette application."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pipedrive",
+          "message": "Passer un appel API personnalisé à Pipedrive"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Rechercher des enregistrements"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trouver un seul enregistrement"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur une note dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'une note ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
+          "source": "Note Action",
+          "message": "Action sur une note"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a note",
+          "message": "Se déclenche lorsqu'une action est effectuée sur une note"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on an organization in Pipedrive. Actions include creating, updating, deleting an organization or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur une organisation dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'une organisation ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
+          "source": "Organization Action",
+          "message": "Action sur une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on an organization",
+          "message": "Se déclenche lorsqu'une action est effectuée sur une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.desc": {
+          "source": "This trigger activates when a selected action is performed on an activity in Pipedrive. Actions include creating, updating, deleting an activity or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur une activité dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'une activité ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
+          "source": "Activity Action",
+          "message": "Action sur une activité"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
+          "source": "Triggers when an action is performed on an activity",
+          "message": "Se déclenche lorsqu'une action est effectuée sur une activité"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a deal in Pipedrive. Actions include creating, updating, deleting a deal or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur une affaire dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'une affaire ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
+          "source": "Deal Action",
+          "message": "Action sur une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a deal",
+          "message": "Se déclenche lorsqu'une action est effectuée sur une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a lead in Pipedrive. Actions include creating, updating, deleting a lead or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur un lead dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'un lead ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
+          "source": "Lead Action",
+          "message": "Action sur un lead"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a lead",
+          "message": "Se déclenche lorsqu'une action est effectuée sur un lead"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on a person in Pipedrive. Actions include creating, updating, deleting a person or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur une personne dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'une personne ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
+          "source": "Person Action",
+          "message": "Action sur une personne"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on a person",
+          "message": "Se déclenche lorsqu'une action est effectuée sur une personne"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a user in Pipedrive. Actions include creating, updating, deleting a user or any change.",
+          "message": "Ce déclencheur s'active lorsqu'une action sélectionnée est effectuée sur un utilisateur dans Pipedrive. Les actions incluent la création, la mise à jour, la suppression d'un utilisateur ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
+          "source": "User Action",
+          "message": "Action sur un utilisateur"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "Déclenché lorsqu'une activité est créée, modifiée ou supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "Déclenché lorsqu'une activité existante est modifiée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "Modification"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "Déclenché lorsqu'une nouvelle activité est créée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "Créé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "Déclenché lorsqu'une activité existante est supprimée"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "Supprimé"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "Sélectionnez l'action qui déclenche le flux. Choisissez parmi : création, mise à jour, suppression ou toute modification."
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "Action"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "Sélectionner l'action qui déclenche le flux"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a user",
+          "message": "Se déclenche lorsqu'une action est effectuée sur un utilisateur"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "Mettre à jour des enregistrements existants dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Mettre à jour des enregistrements"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "Mettre à jour des enregistrements existants dans la table donnée dans l'application « Pipedrive »"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.desc": {
+          "source": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "Met à jour une activité. Comprend la propriété `more_activities_scheduled_in_context` dans `additional_data` de la réponse qui indique s'il existe d'autres activités non terminées planifiées avec la même affaire, personne ou organisation (selon les données fournies). <br -> <br -> ***À compter du 30.09.2024, les participants à l'activité ne recevront des mises à jour que si le propriétaire de l'activité a une synchronisation de calendrier active***"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.display_name": {
+          "source": "Update an Activity",
+          "message": "Mettre à jour une activité"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.short_desc": {
+          "source": "Update an activity",
+          "message": "Mettre à jour une activité"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.desc": {
+          "source": "Updates the properties of a deal. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">updating a deal<-a>.",
+          "message": "Met à jour les propriétés d'une affaire. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">mettre à jour une affaire<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.display_name": {
+          "source": "Update a Deal",
+          "message": "Mettre à jour une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.short_desc": {
+          "source": "Update a deal",
+          "message": "Mettre à jour une affaire"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Updates the properties of an organization.",
+          "message": "Met à jour les propriétés d'une organisation."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update an Organization",
+          "message": "Mettre à jour une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update an organization",
+          "message": "Mettre à jour une organisation"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.desc": {
+          "source": "Updates one or more properties of a lead. Only properties included in the request will be updated. Send `null` to unset a property (applicable for example for `value`, `person_id` or `organization_id`). If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields’ values tutorial<-a>.",
+          "message": "Met à jour une ou plusieurs propriétés d'un prospect. Seules les propriétés incluses dans la requête seront mises à jour. Envoyez `null` pour réinitialiser une propriété (applicable par exemple pour `value`, `person_id` ou `organization_id`). Si un prospect contient des champs personnalisés, les valeurs des champs seront incluses dans la réponse au même format qu'avec les points de terminaison `Deals`. Si la valeur d'un champ personnalisé n'a pas été définie pour le prospect, elle n'apparaîtra pas dans la réponse. Veuillez noter que les prospects n'ont pas d'ensemble distinct de champs personnalisés ; ils héritent plutôt de la structure des champs personnalisés des affaires. Consultez l'exemple fourni dans le <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">tutoriel de mise à jour des valeurs des champs personnalisés<-a>."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.display_name": {
+          "source": "Update a Lead",
+          "message": "Mettre à jour un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.short_desc": {
+          "source": "Update a lead",
+          "message": "Mettre à jour un prospect"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.desc": {
+          "source": "Updates a note.",
+          "message": "Met à jour une note."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.display_name": {
+          "source": "Update a Note",
+          "message": "Mettre à jour une note"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.short_desc": {
+          "source": "Update a note",
+          "message": "Mettre à jour une note"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.desc": {
+          "source": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "Met à jour les propriétés d'une personne. Pour plus d'informations, consultez le tutoriel pour <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">mettre à jour une personne<-a>.<br>Si une entreprise utilise le [produit Campaigns](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), ce point de terminaison acceptera et renverra également le champ `data.marketing_status`."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.display_name": {
+          "source": "Update a Person",
+          "message": "Mettre à jour une personne"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.short_desc": {
+          "source": "Update a person",
+          "message": "Mettre à jour une personne"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates a project.",
+          "message": "Met à jour un projet."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "Mettre à jour un projet"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "Mettre à jour un projet"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.desc": {
+          "source": "Updates a task.",
+          "message": "Met à jour une tâche."
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "Mettre à jour une tâche"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "Mettre à jour une tâche"
+        },
+        "app.UGlwZWRyaXZl.desc": {
+          "source": "Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.",
+          "message": "Pipedrive est un outil de gestion des ventes conçu pour aider les petites équipes commerciales à gérer des processus de vente complexes ou longs."
+        },
+        "app.UGlwZWRyaXZl.display_name": {
+          "source": "Pipedrive",
+          "message": "Pipedrive"
+        },
+        "app.UGlwZWRyaXZl.short_desc": {
+          "source": "Manage your sales pipeline and customer relationships with Pipedrive.",
+          "message": "Gérez votre pipeline de ventes et vos relations clients avec Pipedrive."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.desc": {
+          "source": "Creates a new Google Docs document from provided text content. Supports HTML parsing for rich formatting and can optionally export the document to various formats.",
+          "message": "Erstellt ein neues Google Docs-Dokument aus bereitgestelltem Textinhalt. Unterstützt HTML-Parsing für Formatierungen und kann das Dokument optional in verschiedene Formate exportieren."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.display_name": {
+          "source": "Create Document from Text",
+          "message": "Dokument aus Text erstellen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.desc": {
+          "source": "The text content to be inserted into the new document. Can be plain text or HTML.",
+          "message": "Der Textinhalt, der in das neue Dokument eingefügt werden soll. Kann Klartext oder HTML sein."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.display_name": {
+          "source": "Document Content",
+          "message": "Dokumentinhalt"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.short_desc": {
+          "source": "Text content for the document",
+          "message": "Textinhalt für das Dokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "Der Name für das neu erstellte Dokument."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.display_name": {
+          "source": "Document Name",
+          "message": "Dokumentenname"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.short_desc": {
+          "source": "Name for the new document",
+          "message": "Name für das neue Dokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML-Dokument (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF-Dokument (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "Nur-Text (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "Rich Text Format (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "Optionales Format, in das das erstellte Dokument exportiert werden soll (PDF, DOCX usw.)."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "Exportformat"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "Format, in das das Dokument exportiert werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "Die Google Drive-Ordner-ID, in der das neue Dokument erstellt werden soll. Wenn nicht angegeben, wird es im Stammordner erstellt."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "Ordner-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "Ordner, in dem das Dokument erstellt werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.desc": {
+          "source": "Whether to parse the document content as HTML to preserve formatting like bold, italic, and other styling.",
+          "message": "Gibt an, ob der Dokumentinhalt als HTML geparst werden soll, um Formatierungen wie fett, kursiv und andere Formatstile beizubehalten."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.display_name": {
+          "source": "Parse HTML",
+          "message": "HTML parsen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.short_desc": {
+          "source": "Parse content as HTML",
+          "message": "Inhalt als HTML parsen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.short_desc": {
+          "source": "Create a new Google Docs document from text content.",
+          "message": "Ein neues Google Docs-Dokument aus Textinhalt erstellen."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.desc": {
+          "source": "Creates a new Google Docs document by copying a template and replacing placeholders with specified values. Supports text replacements, image insertions, automatic sharing with template collaborators, and exporting to various formats.",
+          "message": "Erstellt ein neues Google Docs-Dokument durch Kopieren einer Vorlage und Ersetzen von Platzhaltern durch angegebene Werte. Unterstützt Textersetzungen, Bildeinfügungen, automatisches Teilen mit Mitwirkenden der Vorlage und Export in verschiedene Formate."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.display_name": {
+          "source": "Create Document from Template",
+          "message": "Dokument aus Vorlage erstellen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "Die Google Drive-Ordner-ID, in der das neue Dokument erstellt werden soll. Wenn nicht angegeben, wird es im Stammordner erstellt."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.display_name": {
+          "source": "Destination Folder",
+          "message": "Zielordner"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "Ordner, in dem das Dokument erstellt werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML-Dokument (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF-Dokument (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "Nur-Text (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "Rich Text Format (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "Optionales Format, in das das erstellte Dokument exportiert werden soll (PDF, DOCX usw.)."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "Exportformat"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "Format, in das das Dokument exportiert werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.desc": {
+          "source": "List of placeholder image replacements to make in the template.",
+          "message": "Liste der Ersetzungen für Platzhalterbilder in der Vorlage."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.display_name": {
+          "source": "Image Replacements",
+          "message": "Bildersetzungen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.short_desc": {
+          "source": "Placeholder image replacements",
+          "message": "Platzhalter-Bildersetzungen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "Der Name für das neu erstellte Dokument."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.display_name": {
+          "source": "New Document Name",
+          "message": "Neuer Dokumentname"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.short_desc": {
+          "source": "Name for the new document",
+          "message": "Name für das neue Dokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.desc": {
+          "source": "Whether to automatically share the new document with all collaborators of the original template.",
+          "message": "Gibt an, ob das neue Dokument automatisch mit allen Mitwirkenden der ursprünglichen Vorlage geteilt werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.display_name": {
+          "source": "Share with Template Collaborators",
+          "message": "Mit Mitwirkenden der Vorlage teilen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.short_desc": {
+          "source": "Share with template collaborators",
+          "message": "Mit Mitwirkenden der Vorlage teilen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.desc": {
+          "source": "Whether to remove placeholder text that was not replaced with actual values.",
+          "message": "Gibt an, ob Platzhaltertext entfernt werden soll, der nicht durch tatsächliche Werte ersetzt wurde."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.display_name": {
+          "source": "Remove Unused Fields",
+          "message": "Unbenutzte Felder entfernen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.short_desc": {
+          "source": "Remove unreplaced placeholders",
+          "message": "Nicht ersetzte Platzhalter entfernen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "List of placeholder text replacements to make in the template.",
+          "message": "Liste der Ersetzungen für Platzhaltertext in der Vorlage."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Text Replacements",
+          "message": "Textersetzungen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "Placeholder text replacements",
+          "message": "Platzhalter-Textersetzungen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.desc": {
+          "source": "The Google Docs document ID to use as a template for creating the new document.",
+          "message": "Die Google Docs-Dokument-ID, die als Vorlage zum Erstellen des neuen Dokuments verwendet werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.display_name": {
+          "source": "Template ID",
+          "message": "Vorlagen-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.short_desc": {
+          "source": "Template document to copy",
+          "message": "Zu kopierendes Vorlagendokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.short_desc": {
+          "source": "Create a new Google Docs document from an existing template with placeholder replacements.",
+          "message": "Ein neues Google Docs-Dokument aus einer vorhandenen Vorlage mit Platzhalterersetzungen erstellen."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.desc": {
+          "source": "Appends text to a Google Docs document with options for positioning (beginning, end, or specific index), text formatting, and line breaks. Supports bold, italic, underline, font size, and font family styling.",
+          "message": "Hängt Text an ein Google Docs-Dokument an, mit Optionen für die Positionierung (Anfang, Ende oder bestimmter Index), Textformatierung und Zeilenumbrüche. Unterstützt Fett-, Kursiv-, Unterstrichen-, Schriftgrößen- und Schriftarten-Formatierungen."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.display_name": {
+          "source": "Append Text to Document",
+          "message": "Text an Dokument anhängen"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.desc": {
+          "source": "Whether to add a line break before or after the inserted text for better formatting.",
+          "message": "Gibt an, ob vor oder nach dem eingefügten Text ein Zeilenumbruch für eine bessere Formatierung hinzugefügt werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.display_name": {
+          "source": "Add Line Break",
+          "message": "Zeilenumbruch hinzufügen"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.short_desc": {
+          "source": "Add line break with text",
+          "message": "Zeilenumbruch mit Text hinzufügen"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to append text to.",
+          "message": "Die eindeutige Kennung des Google Docs-Dokuments, an das Text angehängt werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Dokument-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The Google Docs document to modify",
+          "message": "Das zu ändernde Google Docs-Dokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.desc": {
+          "source": "The specific character index position where text should be inserted (required when insert_position is \"index\").",
+          "message": "Die genaue Zeichenindex-Position, an der Text eingefügt werden soll (erforderlich, wenn insert_position \"index\" ist)."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.display_name": {
+          "source": "Index",
+          "message": "Index"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.short_desc": {
+          "source": "Specific position index",
+          "message": "Spezifischer Positionsindex"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmJlZ2lubmluZw.display_name": {
+          "source": "Beginning of Document",
+          "message": "Anfang des Dokuments"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmVuZA.display_name": {
+          "source": "End of Document",
+          "message": "Ende des Dokuments"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmluZGV4.display_name": {
+          "source": "Specific Index",
+          "message": "Spezifischer Index"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.desc": {
+          "source": "Specifies where in the document to insert the text: at the end, beginning, or at a specific index position.",
+          "message": "Gibt an, wo im Dokument der Text eingefügt werden soll: am Ende, am Anfang oder an einer bestimmten Indexposition."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.display_name": {
+          "source": "Insert Position",
+          "message": "Einfügeposition"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.short_desc": {
+          "source": "Where to insert the text",
+          "message": "Wo der Text eingefügt werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.desc": {
+          "source": "The text content to be added to the document.",
+          "message": "Der Textinhalt, der dem Dokument hinzugefügt werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.display_name": {
+          "source": "Text",
+          "message": "Text"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.short_desc": {
+          "source": "Text content to append",
+          "message": "Anzuhängender Textinhalt"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.desc": {
+          "source": "Formatting options to apply to the inserted text.",
+          "message": "Formatierungsoptionen, die auf den eingefügten Text angewendet werden sollen."
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.display_name": {
+          "source": "Text Style",
+          "message": "Textstil"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.short_desc": {
+          "source": "Formatting options for text",
+          "message": "Formatierungsoptionen für Text"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.short_desc": {
+          "source": "Add text to an existing Google Docs document at a specified position.",
+          "message": "Text an einer angegebenen Position zu einem bestehenden Google Docs-Dokument hinzufügen."
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.desc": {
+          "source": "Retrieves comprehensive information about a Google Docs document including metadata, permissions, content, and sharing settings. Also provides the document content as plain text.",
+          "message": "Ruft umfassende Informationen über ein Google Docs-Dokument ab, einschließlich Metadaten, Berechtigungen, Inhalt und Freigabeeinstellungen. Stellt den Dokumentinhalt auch als Klartext bereit."
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.display_name": {
+          "source": "Get Document by ID",
+          "message": "Dokument nach ID abrufen"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to retrieve information for.",
+          "message": "Die eindeutige Kennung des Google Docs-Dokuments, für das Informationen abgerufen werden sollen."
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "Dokument-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Google Docs document ID",
+          "message": "Google Docs-Dokument-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.short_desc": {
+          "source": "Retrieve detailed information about a Google Docs document.",
+          "message": "Detaillierte Informationen über ein Google Docs-Dokument abrufen."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Docs** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Google Docs** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfrage-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die noch nicht als erstklassige Aktionen in dieser App bereitgestellt werden."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Docs",
+          "message": "Benutzerdefinierten API-Aufruf an Google Docs durchführen"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors for new Google Docs documents created in Google Drive. Can be filtered by folder, filename patterns, and optionally includes document content in the trigger payload.",
+          "message": "Überwacht in Google Drive erstellte neue Google Docs-Dokumente. Kann nach Ordner und Dateinamensmustern gefiltert werden und enthält optional den Dokumentinhalt in der Auslöser-Nutzlast."
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "Neues Dokument"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID to monitor for new documents. If not specified, monitors all accessible folders.",
+          "message": "Die Google Drive-Ordner-ID, die auf neue Dokumente überwacht werden soll. Wenn nicht angegeben, werden alle zugänglichen Ordner überwacht."
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "Ordner-ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Specific folder to monitor",
+          "message": "Zu überwachender spezifischer Ordner"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.desc": {
+          "source": "Optional filename filter to only trigger for documents with names that match this pattern.",
+          "message": "Optionaler Dateinamenfilter, um den Auslöser nur für Dokumente zu aktivieren, deren Namen diesem Muster entsprechen."
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename Filter",
+          "message": "Dateinamenfilter"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Filter by document name",
+          "message": "Nach Dokumentnamen filtern"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.desc": {
+          "source": "Whether to include the actual document content in the trigger payload. This may increase processing time and payload size.",
+          "message": "Gibt an, ob der tatsächliche Dokumentinhalt in die Auslöser-Nutzlast aufgenommen werden soll. Dies kann die Verarbeitungszeit und die Nutzlastgröße erhöhen."
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.display_name": {
+          "source": "Include Content",
+          "message": "Inhalt einbinden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.short_desc": {
+          "source": "Include document content in trigger",
+          "message": "Dokumentinhalt im Auslöser einbinden"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Enthält"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Exakte Übereinstimmung"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Determines how the filename filter is applied - either contains the text or matches exactly.",
+          "message": "Bestimmt, wie der Dateinamenfilter angewendet wird – enthält entweder den Text oder stimmt exakt überein."
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Suchtyp"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "How to match the filename",
+          "message": "Wie der Dateiname abgeglichen werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new Google Docs document is created.",
+          "message": "Wird ausgelöst, wenn ein neues Google Docs-Dokument erstellt wird."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.desc": {
+          "source": "Search for Google Docs documents in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "Suchen Sie nach Google Docs-Dokumenten in Google Drive mithilfe verschiedener Kriterien wie Dateiname, Ordnerspeicherort und benutzerdefinierte Abfragen. Unterstützt die Sortierung nach verschiedenen Feldern und Richtungen mit Paginierung."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.display_name": {
+          "source": "Search Documents",
+          "message": "Dokumente suchen"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "Benutzerdefinierte Google Drive-Suchabfrage, um zusätzliche Filterkriterien über die grundlegenden Optionen hinaus hinzuzufügen."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "Benutzerdefinierte Abfrage"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "Zusätzliche Suchkriterien"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "Die Google Drive-Ordner-ID, auf die die Suche beschränkt werden soll. Wenn nicht angegeben, werden alle zugänglichen Ordner durchsucht."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "Ordner"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "Ordner, in dem gesucht werden soll"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Docs document to search for.",
+          "message": "Der Name oder Teilname des Google Docs-Dokuments, nach dem gesucht werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Dateiname"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the document to search for",
+          "message": "Name des zu suchenden Dokuments"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "Liste der Sortierkriterien, die auf die Suchergebnisse angewendet werden sollen. Jedes Element gibt ein Feld und eine Richtung an."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Sortieren nach"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "Sortierkriterien für Ergebnisse"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Enthält"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Exakte Übereinstimmung"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "Wie der Dateiname abgeglichen werden soll – enthält entweder den Text oder genaue Übereinstimmung. Standard ist enthält."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Suchtyp"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "Art des Dateinamenabgleichs"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of documents to return in a single request. Default is 100.",
+          "message": "Die maximale Anzahl von Dokumenten, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standard ist 100."
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Seitengröße"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maximale Anzahl der zurückzugebenden Ergebnisse"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.short_desc": {
+          "source": "Search for Google Docs documents with advanced filtering and sorting options.",
+          "message": "Suchen Sie nach Google Docs-Dokumenten mit erweiterter Filterung und Sortieroptionen."
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.desc": {
+          "source": "Uploads a document file (Word, PDF, etc.) to Google Drive and converts it to Google Docs format for editing and collaboration.",
+          "message": "Lädt eine Dokumentdatei (Word, PDF usw.) in Google Drive hoch und konvertiert sie zur Bearbeitung und Zusammenarbeit in das Google Docs-Format."
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.display_name": {
+          "source": "Upload Document",
+          "message": "Dokument hochladen"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID where the uploaded document should be stored. If not specified, it will be uploaded to the root folder.",
+          "message": "Die Google Drive-Ordner-ID, in der das hochgeladene Dokument gespeichert werden soll. Wenn nicht angegeben, wird es im Stammordner hochgeladen."
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "Ordner"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.short_desc": {
+          "source": "Destination folder for upload",
+          "message": "Zielordner für den Upload"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.desc": {
+          "source": "The document file to upload and convert to Google Docs format.",
+          "message": "Die Dokumentdatei, die hochgeladen und in das Google Docs-Format konvertiert werden soll."
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Datei"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.short_desc": {
+          "source": "Document file to upload",
+          "message": "Hochzuladende Dokumentdatei"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded file. If not provided, the original filename will be used.",
+          "message": "Optionaler benutzerdefinierter Name für die hochgeladene Datei. Wenn nicht angegeben, wird der ursprüngliche Dateiname verwendet."
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Dateiname"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for uploaded file",
+          "message": "Benutzerdefinierter Name für hochgeladene Datei"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.short_desc": {
+          "source": "Upload a file and convert it to Google Docs format.",
+          "message": "Datei hochladen und in das Google Docs-Format konvertieren."
+        },
+        "app.R29vZ2xlRG9jcw.desc": {
+          "source": "Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.",
+          "message": "Integrieren Sie Google Docs, um Ihre Dokumente zu erstellen, zu aktualisieren und zu verwalten. Diese Integration ermöglicht es Ihnen, Aktionen auszuführen und auf Ereignisse in Ihrem Google Docs-Konto zu reagieren, wodurch Sie Dokumentenverwaltungs- und Zusammenarbeits-Workflows automatisieren können."
+        },
+        "app.R29vZ2xlRG9jcw.display_name": {
+          "source": "Google Docs",
+          "message": "Google Docs"
+        },
+        "app.R29vZ2xlRG9jcw.short_desc": {
+          "source": "Connect with Google Docs to manage your documents",
+          "message": "Mit Google Docs verbinden, um Ihre Dokumente zu verwalten"
+        }
+      }
+    }
+  }
+}

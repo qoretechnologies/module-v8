@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.SmlyYQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表建立新記錄"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表建立新記錄"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Creates a new custom field in the Jira instance",
+          "message": "在 Jira 執行個體中建立新的自訂欄位"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Create Custom Field",
+          "message": "建立自訂欄位"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Creates a new custom field",
+          "message": "建立新的自訂欄位"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.desc": {
+          "source": "Creates a new issue in a Jira project",
+          "message": "在 Jira 專案中建立新問題"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
+          "source": "Create Issue",
+          "message": "建立問題"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
+          "source": "Creates a new issue",
+          "message": "建立新問題"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Creates a new project in Jira",
+          "message": "在 Jira 中建立新專案"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create Project",
+          "message": "建立專案"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Creates a new project",
+          "message": "建立新專案"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.desc": {
+          "source": "Adds a new comment to a specific issue",
+          "message": "為指定問題新增評論"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
+          "source": "Add Comment",
+          "message": "新增評論"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
+          "source": "Adds a comment to an issue",
+          "message": "為問題新增評論"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.desc": {
+          "source": "Adds a new worklog entry to a specific issue",
+          "message": "為指定問題新增工作記錄項目"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
+          "source": "Add Worklog",
+          "message": "新增工作記錄"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
+          "source": "Adds a worklog to an issue",
+          "message": "為問題新增工作記錄"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.desc": {
+          "source": "Retrieves a specific comment by its ID",
+          "message": "透過其 ID 擷取特定評論"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
+          "source": "Get Comment",
+          "message": "獲取評論"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
+          "source": "Gets a specific comment",
+          "message": "獲取特定評論"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.desc": {
+          "source": "Retrieves all comments for a specific issue",
+          "message": "擷取指定問題的所有評論"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
+          "source": "Get Comments",
+          "message": "獲取評論列表"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
+          "source": "Gets all comments for an issue",
+          "message": "獲取問題的所有評論"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.desc": {
+          "source": "Retrieves all projects visible to the authenticated user",
+          "message": "擷取已驗證使用者可見的所有專案"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "獲取所有專案"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response. This parameter accepts a comma-separated list. Expanded options include:\n\n *  `description` Returns the project description.\n *  `issueTypes` Returns all issue types associated with the project.\n *  `lead` Returns information about the project lead.\n *  `projectKeys` Returns all project keys associated with the project.",
+          "message": "使用 [expand](#expansion) 在回應中包含其他資訊。此參數接受以逗號分隔的列表。展開選項包括：\n\n *  `description` 返回專案描述。\n *  `issueTypes` 返回與專案關聯的所有問題類型。\n *  `lead` 返回有關專案負責人的資訊。\n *  `projectKeys` 返回與專案關聯的所有專案金鑰。"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.display_name": {
+          "source": "Expand",
+          "message": "展開"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.short_desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response",
+          "message": "使用 [expand](#expansion) 在回應中包含其他資訊"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.desc": {
+          "source": "A list of project properties to return for the project. This parameter accepts a comma-separated list.",
+          "message": "要為專案返回的專案屬性列表。此參數接受以逗號分隔的列表。"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "屬性"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.short_desc": {
+          "source": "A list of project properties to return for the project",
+          "message": "要為專案返回的專案屬性列表"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.desc": {
+          "source": "Returns the user's most recently accessed projects. You may specify the number of results to return up to a maximum of 20. If access is anonymous, then the recently accessed projects are based on the current HTTP session.",
+          "message": "返回使用者最近存取的專案。您可以指定最多返回 20 個結果。如果是匿名存取，最近存取的專案將基於目前的 HTTP 工作階段。"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.display_name": {
+          "source": "Recent",
+          "message": "最近存取"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.short_desc": {
+          "source": "Returns the user's most recently accessed projects",
+          "message": "返回使用者最近存取的專案"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
+          "source": "Gets all projects",
+          "message": "獲取所有專案"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.desc": {
+          "source": "Retrieves the current announcement banner configuration for the Jira instance",
+          "message": "擷取 Jira 執行個體的目前公告橫幅設定"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
+          "source": "Get Announcement Banner",
+          "message": "獲取公告橫幅"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
+          "source": "Gets the current announcement banner configuration",
+          "message": "獲取目前的公告橫幅設定"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.desc": {
+          "source": "Returns all fields, both system and custom fields, in the Jira instance",
+          "message": "返回 Jira 執行個體中的所有欄位（包括系統欄位和自訂欄位）"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
+          "source": "Get Fields",
+          "message": "獲取欄位"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
+          "source": "Gets all fields in the system",
+          "message": "取得系統中的所有欄位"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.desc": {
+          "source": "Retrieves the details of a specific issue by its ID or key",
+          "message": "依 ID 或鍵值擷取特定議題的詳細資訊"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
+          "source": "Get Issue",
+          "message": "取得議題"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
+          "source": "Gets an issue by ID or key",
+          "message": "依 ID 或鍵值取得議題"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.desc": {
+          "source": "Retrieves all worklogs for a specific issue",
+          "message": "擷取特定議題的所有工作記錄"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
+          "source": "Get Issue Worklogs",
+          "message": "取得議題工作記錄"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
+          "source": "Gets all worklogs for an issue",
+          "message": "取得議題的所有工作記錄"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Retrieves the details of a specific project by its ID or key",
+          "message": "依 ID 或鍵值擷取特定專案的詳細資訊"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Project",
+          "message": "取得專案"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Gets a project by ID or key",
+          "message": "依 ID 或鍵值取得專案"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.desc": {
+          "source": "Retrieves a specific worklog entry by its ID",
+          "message": "依 ID 擷取特定工作記錄項目"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
+          "source": "Get Worklog",
+          "message": "取得工作記錄"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
+          "source": "Gets a specific worklog",
+          "message": "取得特定工作記錄"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "從應用程式「Jira」中的指定資料表刪除記錄"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "從應用程式「Jira」中的指定資料表刪除記錄"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.desc": {
+          "source": "Deletes a specific comment from an issue",
+          "message": "從議題中刪除特定留言"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
+          "source": "Delete Comment",
+          "message": "刪除留言"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
+          "source": "Deletes a comment from an issue",
+          "message": "從議題中刪除留言"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.desc": {
+          "source": "Deletes an issue from a Jira project",
+          "message": "從 Jira 專案中刪除議題"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
+          "source": "Delete Issue",
+          "message": "刪除議題"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
+          "source": "Deletes an issue",
+          "message": "刪除議題"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Deletes a project from Jira",
+          "message": "從 Jira 中刪除專案"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete Project",
+          "message": "刪除專案"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Deletes a project",
+          "message": "刪除專案"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.desc": {
+          "source": "Deletes a specific worklog entry from an issue",
+          "message": "從議題中刪除特定工作記錄項目"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
+          "source": "Delete Worklog",
+          "message": "刪除工作記錄"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
+          "source": "Deletes a worklog from an issue",
+          "message": "從議題中刪除工作記錄"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.desc": {
+          "source": "Updates the fields of an existing issue",
+          "message": "更新現有議題的欄位"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
+          "source": "Edit Issue",
+          "message": "編輯議題"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
+          "source": "Updates an existing issue",
+          "message": "更新現有議題"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "在建立新議題時觸發"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
+          "source": "New Issue",
+          "message": "新議題"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for new issues",
+          "message": "要監視新議題的專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for new issues",
+          "message": "要監視新議題的專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "在建立新議題時觸發"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "在議題更新時觸發"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
+          "source": "Updated Issue",
+          "message": "已更新議題"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for updated issues",
+          "message": "要監視已更新議題的專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for updated issues",
+          "message": "要監視已更新議題的專案"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "在議題更新時觸發"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Jira** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Jira** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、可選的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n當端點尚未在此應用程式中公開為一級動作時，請使用此動作。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Jira",
+          "message": "對 Jira 發起自訂 API 呼叫"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.desc": {
+          "source": "Updates the announcement banner configuration for the Jira instance",
+          "message": "更新 Jira 執行個體的公告橫幅設定"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
+          "source": "Set Announcement Banner",
+          "message": "設定公告橫幅"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
+          "source": "Updates the announcement banner configuration",
+          "message": "更新公告橫幅設定"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表搜尋相符記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表搜尋相符記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表搜尋單筆相符記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "在應用程式「Jira」中的指定資料表搜尋單筆相符記錄"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.desc": {
+          "source": "Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria",
+          "message": "使用 JQL (Jira Query Language) 搜尋議題。傳回符合搜尋條件的議題"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
+          "source": "Search Issues",
+          "message": "搜尋議題"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
+          "source": "Searches for issues using JQL",
+          "message": "使用 JQL 搜尋議題"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.desc": {
+          "source": "Moves a custom field to the trash. The custom field can be restored from trash within 60 days",
+          "message": "將自訂欄位移至垃圾桶。自訂欄位可在 60 天內從垃圾桶還原"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
+          "source": "Trash Custom Field",
+          "message": "將自訂欄位移至垃圾桶"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
+          "source": "Moves a custom field to trash",
+          "message": "將自訂欄位移至垃圾桶"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "更新應用程式「Jira」中指定資料表的現有記錄"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "資料表名稱"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "更新應用程式「Jira」中指定資料表的現有記錄"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.desc": {
+          "source": "Updates an existing comment on an issue",
+          "message": "更新議題上的現有留言"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
+          "source": "Update Comment",
+          "message": "更新留言"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
+          "source": "Updates a comment",
+          "message": "更新留言"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Updates the name and description of a custom field",
+          "message": "更新自訂欄位的名稱與說明"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Update Custom Field",
+          "message": "更新自訂欄位"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Updates a custom field",
+          "message": "更新自訂欄位"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates the details of an existing project",
+          "message": "更新現有專案的詳細資訊"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update Project",
+          "message": "更新專案"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Updates a project",
+          "message": "更新專案"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.desc": {
+          "source": "Updates an existing worklog entry on an issue",
+          "message": "更新議題上的現有工作記錄項目"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
+          "source": "Update Worklog",
+          "message": "更新工作記錄"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
+          "source": "Updates a worklog",
+          "message": "更新工作記錄"
+        },
+        "app.SmlyYQ.desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "與 Jira API 互動的動作集合"
+        },
+        "app.SmlyYQ.display_name": {
+          "source": "Jira",
+          "message": "Jira"
+        },
+        "app.SmlyYQ.short_desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "與 Jira API 互動的動作集合"
+        }
+      }
+    }
+  }
+}

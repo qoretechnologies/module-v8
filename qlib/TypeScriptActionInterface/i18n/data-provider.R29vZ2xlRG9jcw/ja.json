@@ -1,0 +1,893 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.desc": {
+          "source": "Creates a new Google Docs document from provided text content. Supports HTML parsing for rich formatting and can optionally export the document to various formats.",
+          "message": "提供されたテキストコンテンツから新しい Google ドキュメントを作成します。リッチフォーマット用のHTML解析をサポートし、オプションでドキュメントをさまざまな形式にエクスポートできます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.display_name": {
+          "source": "Create Document from Text",
+          "message": "テキストからドキュメントを作成"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.desc": {
+          "source": "The text content to be inserted into the new document. Can be plain text or HTML.",
+          "message": "新しいドキュメントに挿入するテキストコンテンツ。プレーンテキストまたはHTMLを使用できます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.display_name": {
+          "source": "Document Content",
+          "message": "ドキュメントコンテンツ"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfY29udGVudA.short_desc": {
+          "source": "Text content for the document",
+          "message": "ドキュメントのテキストコンテンツ"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "新しく作成するドキュメントの名前。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.display_name": {
+          "source": "Document Name",
+          "message": "ドキュメント名"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZG9jdW1lbnRfbmFtZQ.short_desc": {
+          "source": "Name for the new document",
+          "message": "新しいドキュメントの名前"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML ドキュメント (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF ドキュメント (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "プレーンテキスト (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "リッチテキストフォーマット (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "作成されたドキュメントをエクスポートするオプションの形式（PDF、DOCXなど）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "エクスポート形式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "ドキュメントをエクスポートする形式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "新しいドキュメントを作成する Google ドライブのフォルダID。指定しない場合、ルートフォルダに作成されます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "フォルダID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "ドキュメントを作成するフォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.desc": {
+          "source": "Whether to parse the document content as HTML to preserve formatting like bold, italic, and other styling.",
+          "message": "太字、斜体、その他のスタイルなどの書式設定を保持するために、ドキュメントコンテンツをHTMLとして解析するかどうか。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.display_name": {
+          "source": "Parse HTML",
+          "message": "HTMLを解析"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.option.cGFyc2VfaHRtbA.short_desc": {
+          "source": "Parse content as HTML",
+          "message": "コンテンツをHTMLとして解析"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGV4dA.short_desc": {
+          "source": "Create a new Google Docs document from text content.",
+          "message": "テキストコンテンツから新しい Google ドキュメントを作成します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.desc": {
+          "source": "Creates a new Google Docs document by copying a template and replacing placeholders with specified values. Supports text replacements, image insertions, automatic sharing with template collaborators, and exporting to various formats.",
+          "message": "テンプレートをコピーし、プレースホルダーを指定された値に置換して、新しい Google ドキュメントを作成します。テキスト置換、画像挿入、テンプレートの共同編集者との自動共有、さまざまな形式へのエクスポートをサポートします。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.display_name": {
+          "source": "Create Document from Template",
+          "message": "テンプレートからドキュメントを作成"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID where the new document should be created. If not specified, it will be created in the root folder.",
+          "message": "新しいドキュメントを作成する Google ドライブのフォルダID。指定しない場合、ルートフォルダに作成されます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.display_name": {
+          "source": "Destination Folder",
+          "message": "保存先フォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZGVzdGluYXRpb25fZm9sZGVyX2lk.short_desc": {
+          "source": "Folder to create document in",
+          "message": "ドキュメントを作成するフォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmRvY3g.display_name": {
+          "source": "Microsoft Word (.docx)",
+          "message": "Microsoft Word (.docx)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML Document (.html)",
+          "message": "HTML ドキュメント (.html)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBkZg.display_name": {
+          "source": "PDF Document (.pdf)",
+          "message": "PDF ドキュメント (.pdf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text (.txt)",
+          "message": "プレーンテキスト (.txt)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.allowed-value.c3RyaW5nOnJ0Zg.display_name": {
+          "source": "Rich Text Format (.rtf)",
+          "message": "リッチテキストフォーマット (.rtf)"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.desc": {
+          "source": "Optional format to export the created document as (PDF, DOCX, etc.).",
+          "message": "作成されたドキュメントをエクスポートするオプションの形式（PDF、DOCXなど）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.display_name": {
+          "source": "Export Format",
+          "message": "エクスポート形式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.ZXhwb3J0X2Zvcm1hdA.short_desc": {
+          "source": "Format to export document as",
+          "message": "ドキュメントをエクスポートする形式"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.desc": {
+          "source": "List of placeholder image replacements to make in the template.",
+          "message": "テンプレート内で行うプレースホルダー画像の置換リスト。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.display_name": {
+          "source": "Image Replacements",
+          "message": "画像の置換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.aW1hZ2Vz.short_desc": {
+          "source": "Placeholder image replacements",
+          "message": "プレースホルダー画像の置換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.desc": {
+          "source": "The name to give the newly created document.",
+          "message": "新しく作成するドキュメントの名前。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.display_name": {
+          "source": "New Document Name",
+          "message": "新しいドキュメント名"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.bmV3X2RvY3VtZW50X25hbWU.short_desc": {
+          "source": "Name for the new document",
+          "message": "新しいドキュメントの名前"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.desc": {
+          "source": "Whether to automatically share the new document with all collaborators of the original template.",
+          "message": "元のテンプレートのすべての共同編集者と新しいドキュメントを自動的に共有するかどうか。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.display_name": {
+          "source": "Share with Template Collaborators",
+          "message": "テンプレートの共同編集者と共有"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.c2hhcmVfd2l0aF90ZW1wbGF0ZV9jb2xsYWJvcmF0b3Jz.short_desc": {
+          "source": "Share with template collaborators",
+          "message": "テンプレートの共同編集者と共有"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.desc": {
+          "source": "Whether to remove placeholder text that was not replaced with actual values.",
+          "message": "実際の値に置換されなかったプレースホルダーテキストを削除するかどうか。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.display_name": {
+          "source": "Remove Unused Fields",
+          "message": "未使用のフィールドを削除"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVtb3ZlX3VudXNlZF9maWVsZHM.short_desc": {
+          "source": "Remove unreplaced placeholders",
+          "message": "未置換のプレースホルダーを削除"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.desc": {
+          "source": "List of placeholder text replacements to make in the template.",
+          "message": "テンプレート内で行うプレースホルダーテキストの置換リスト。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.display_name": {
+          "source": "Text Replacements",
+          "message": "テキストの置換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.cmVwbGFjZW1lbnRz.short_desc": {
+          "source": "Placeholder text replacements",
+          "message": "プレースホルダーテキストの置換"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.desc": {
+          "source": "The Google Docs document ID to use as a template for creating the new document.",
+          "message": "新しいドキュメントを作成するためのテンプレートとして使用する Google ドキュメントのドキュメントID。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.display_name": {
+          "source": "Template ID",
+          "message": "テンプレートID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.option.dGVtcGxhdGVfaWQ.short_desc": {
+          "source": "Template document to copy",
+          "message": "コピーするテンプレートドキュメント"
+        },
+        "app.R29vZ2xlRG9jcw.action.Y3JlYXRlX2RvY3VtZW50X2Zyb21fdGVtcGxhdGU.short_desc": {
+          "source": "Create a new Google Docs document from an existing template with placeholder replacements.",
+          "message": "プレースホルダーの置換を行い、既存のテンプレートから新しい Google ドキュメントを作成します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.desc": {
+          "source": "Appends text to a Google Docs document with options for positioning (beginning, end, or specific index), text formatting, and line breaks. Supports bold, italic, underline, font size, and font family styling.",
+          "message": "位置（先頭、末尾、または特定インデックス）、テキストの書式設定、改行のオプションを指定して、Google ドキュメントにテキストを追加します。太字、斜体、下線、フォントサイズ、フォントファミリーのスタイル設定をサポートします。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.display_name": {
+          "source": "Append Text to Document",
+          "message": "ドキュメントにテキストを追加"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.desc": {
+          "source": "Whether to add a line break before or after the inserted text for better formatting.",
+          "message": "フォーマットを整えるために、挿入するテキストの前または後に改行を追加するかどうか。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.display_name": {
+          "source": "Add Line Break",
+          "message": "改行を追加"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.YWRkX2xpbmVfYnJlYWs.short_desc": {
+          "source": "Add line break with text",
+          "message": "テキストに改行を追加"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to append text to.",
+          "message": "テキストを追加する Google ドキュメントの一意の識別子。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "The Google Docs document to modify",
+          "message": "変更する Google ドキュメント"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.desc": {
+          "source": "The specific character index position where text should be inserted (required when insert_position is \"index\").",
+          "message": "テキストを挿入する特定の文字インデックス位置（insert_positionが \"index\" の場合に必要）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.display_name": {
+          "source": "Index",
+          "message": "インデックス"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5kZXg.short_desc": {
+          "source": "Specific position index",
+          "message": "特定位置のインデックス"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmJlZ2lubmluZw.display_name": {
+          "source": "Beginning of Document",
+          "message": "ドキュメントの先頭"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmVuZA.display_name": {
+          "source": "End of Document",
+          "message": "ドキュメントの末尾"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.allowed-value.c3RyaW5nOmluZGV4.display_name": {
+          "source": "Specific Index",
+          "message": "特定のインデックス"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.desc": {
+          "source": "Specifies where in the document to insert the text: at the end, beginning, or at a specific index position.",
+          "message": "テキストをドキュメント内のどこに挿入するか（末尾、先頭、または特定のインデックス位置）を指定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.display_name": {
+          "source": "Insert Position",
+          "message": "挿入位置"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.aW5zZXJ0X3Bvc2l0aW9u.short_desc": {
+          "source": "Where to insert the text",
+          "message": "テキストを挿入する場所"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.desc": {
+          "source": "The text content to be added to the document.",
+          "message": "ドキュメントに追加するテキストコンテンツ。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.display_name": {
+          "source": "Text",
+          "message": "テキスト"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dA.short_desc": {
+          "source": "Text content to append",
+          "message": "追加するテキストコンテンツ"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.desc": {
+          "source": "Formatting options to apply to the inserted text.",
+          "message": "挿入されたテキストに適用する書式設定オプション。"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.display_name": {
+          "source": "Text Style",
+          "message": "テキスト スタイル"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.option.dGV4dF9zdHlsZQ.short_desc": {
+          "source": "Formatting options for text",
+          "message": "テキストの書式設定オプション"
+        },
+        "app.R29vZ2xlRG9jcw.action.YXBwZW5kX3RleHRfdG9fZG9jdW1lbnQ.short_desc": {
+          "source": "Add text to an existing Google Docs document at a specified position.",
+          "message": "既存の Google ドキュメントの指定した位置にテキストを追加します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.desc": {
+          "source": "Retrieves comprehensive information about a Google Docs document including metadata, permissions, content, and sharing settings. Also provides the document content as plain text.",
+          "message": "メタデータ、権限、コンテンツ、共有設定を含む Google ドキュメントの包括的な情報を取得します。また、ドキュメントのコンテンツをプレーンテキストとして提供します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.display_name": {
+          "source": "Get Document by ID",
+          "message": "ID でドキュメントを取得"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.desc": {
+          "source": "The unique identifier of the Google Docs document to retrieve information for.",
+          "message": "情報を取得する Google ドキュメントの一意の識別子。"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.display_name": {
+          "source": "Document ID",
+          "message": "ドキュメントID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.option.ZG9jdW1lbnRfaWQ.short_desc": {
+          "source": "Google Docs document ID",
+          "message": "Google ドキュメント ID"
+        },
+        "app.R29vZ2xlRG9jcw.action.Z2V0X2RvY3VtZW50X2J5X2lk.short_desc": {
+          "source": "Retrieve detailed information about a Google Docs document.",
+          "message": "Google ドキュメントに関する詳細情報を取得します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Docs** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Google ドキュメント**へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、リクエスト本文を指定します。応答は、ステータスコード、応答ヘッダー、応答本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Docs",
+          "message": "Google ドキュメントへのカスタム API 呼び出しを実行"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors for new Google Docs documents created in Google Drive. Can be filtered by folder, filename patterns, and optionally includes document content in the trigger payload.",
+          "message": "Google ドライブで作成された新しい Google ドキュメントを監視します。フォルダやファイル名のパターンでフィルタリングでき、オプションでトリガーのペイロードにドキュメントのコンテンツを含めることができます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Document",
+          "message": "新しいドキュメント"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.desc": {
+          "source": "The Google Drive folder ID to monitor for new documents. If not specified, monitors all accessible folders.",
+          "message": "新しいドキュメントを監視する Google ドライブのフォルダ ID。指定しない場合は、アクセス可能なすべてのフォルダを監視します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "フォルダID"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "Specific folder to monitor",
+          "message": "監視する特定のフォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.desc": {
+          "source": "Optional filename filter to only trigger for documents with names that match this pattern.",
+          "message": "このパターンに一致する名前のドキュメントでのみトリガーするためのオプションのファイル名フィルター。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename Filter",
+          "message": "ファイル名フィルター"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Filter by document name",
+          "message": "ドキュメント名でフィルター"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.desc": {
+          "source": "Whether to include the actual document content in the trigger payload. This may increase processing time and payload size.",
+          "message": "トリガーのペイロードに実際のドキュメントコンテンツを含めるかどうか。これにより、処理時間とペイロードサイズが増加する可能性があります。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.display_name": {
+          "source": "Include Content",
+          "message": "コンテンツを含める"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.aW5jbHVkZV9jb250ZW50.short_desc": {
+          "source": "Include document content in trigger",
+          "message": "トリガーにドキュメントコンテンツを含める"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "次を含む"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全一致"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Determines how the filename filter is applied - either contains the text or matches exactly.",
+          "message": "ファイル名フィルターの適用方法を決定します（テキストを含む、または完全一致）。"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "検索タイプ"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "How to match the filename",
+          "message": "ファイル名の照合方法"
+        },
+        "app.R29vZ2xlRG9jcw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new Google Docs document is created.",
+          "message": "新しい Google ドキュメントが作成されたときにトリガーします。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.desc": {
+          "source": "Search for Google Docs documents in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "ファイル名、フォルダの場所、カスタムクエリなどのさまざまな基準を使用して、Google ドライブ内の Google ドキュメントを検索します。ページネーションを使用したさまざまなフィールドおよび方向での並べ替えをサポートします。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.display_name": {
+          "source": "Search Documents",
+          "message": "ドキュメントを検索"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "基本オプション以外の追加のフィルター基準を追加するためのカスタム Google ドライブ検索クエリ。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "カスタム クエリ"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "追加の検索基準"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "検索を限定する Google ドライブのフォルダ ID。指定しない場合は、アクセス可能なすべてのフォルダを検索します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "フォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "検索対象のフォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Docs document to search for.",
+          "message": "検索する Google ドキュメントの名前または名前の一部。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "ファイル名"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the document to search for",
+          "message": "検索するドキュメントの名前"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "検索結果に適用する並べ替え基準のリスト。各項目でフィールドと方向を指定します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "並べ替え"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "結果の並べ替え基準"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "次を含む"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全一致"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "ファイル名の照合方法（テキストを含む、または完全一致）。デフォルトは「含む」です。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "検索タイプ"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "ファイル名照合の種類"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of documents to return in a single request. Default is 100.",
+          "message": "単一のリクエストで返すドキュメントの最大数。デフォルトは 100 です。"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "返す結果の最大数"
+        },
+        "app.R29vZ2xlRG9jcw.action.c2VhcmNoX2RvY3VtZW50cw.short_desc": {
+          "source": "Search for Google Docs documents with advanced filtering and sorting options.",
+          "message": "高度なフィルタリングおよび並べ替えオプションを使用して Google ドキュメントを検索します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.desc": {
+          "source": "Uploads a document file (Word, PDF, etc.) to Google Drive and converts it to Google Docs format for editing and collaboration.",
+          "message": "ドキュメントファイル（Word、PDFなど）を Google ドライブにアップロードし、編集や共同作業のために Google ドキュメント形式に変換します。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.display_name": {
+          "source": "Upload Document",
+          "message": "ドキュメントをアップロード"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID where the uploaded document should be stored. If not specified, it will be uploaded to the root folder.",
+          "message": "アップロードしたドキュメントを保存する Google ドライブのフォルダ ID。指定しない場合は、ルートフォルダにアップロードされます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "フォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.Zm9sZGVy.short_desc": {
+          "source": "Destination folder for upload",
+          "message": "アップロード先のフォルダ"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.desc": {
+          "source": "The document file to upload and convert to Google Docs format.",
+          "message": "アップロードして Google ドキュメント形式に変換するドキュメントファイル。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "ファイル"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZQ.short_desc": {
+          "source": "Document file to upload",
+          "message": "アップロードするドキュメントファイル"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded file. If not provided, the original filename will be used.",
+          "message": "アップロードするファイルのオプションのカスタム名。指定しない場合は、元のファイル名が使用されます。"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "ファイル名"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for uploaded file",
+          "message": "アップロードするファイルのカスタム名"
+        },
+        "app.R29vZ2xlRG9jcw.action.dXBsb2FkX2RvY3VtZW50.short_desc": {
+          "source": "Upload a file and convert it to Google Docs format.",
+          "message": "ファイルをアップロードして Google ドキュメント形式に変換します。"
+        },
+        "app.R29vZ2xlRG9jcw.desc": {
+          "source": "Integrate with Google Docs to create, update, and manage your documents. This integration allows you to perform actions and respond to events in your Google Docs account, enabling you to automate document management and collaboration workflows.",
+          "message": "Google ドキュメントと統合して、ドキュメントを作成、更新、管理します。この統合により、Google ドキュメントアカウントでのアクションの実行やイベントへの応答が可能になり、ドキュメント管理やコラボレーションワークフローを自動化できます。"
+        },
+        "app.R29vZ2xlRG9jcw.display_name": {
+          "source": "Google Docs",
+          "message": "Google ドキュメント"
+        },
+        "app.R29vZ2xlRG9jcw.short_desc": {
+          "source": "Connect with Google Docs to manage your documents",
+          "message": "Google ドキュメントに接続してドキュメントを管理"
+        }
+      }
+    }
+  }
+}

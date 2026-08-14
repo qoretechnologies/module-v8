@@ -1,0 +1,2217 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.QXNhbmE.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Asana\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crear registros"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Asana\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.desc": {
+          "source": "Creates a new goal in a workspace or team.\n\nReturns the full record of the newly created goal.",
+          "message": "Crea un nuevo objetivo en un espacio de trabajo o equipo.\n\nDevuelve el registro completo del objetivo recién creado."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.display_name": {
+          "source": "Create a Goal",
+          "message": "Crear un objetivo"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.short_desc": {
+          "source": "Create a goal",
+          "message": "Crear un objetivo"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.desc": {
+          "source": "Creates a new section in a project.\nReturns the full record of the newly created section.",
+          "message": "Crea una sección nueva en un proyecto.\nDevuelve el registro completo de la sección recién creada."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.display_name": {
+          "source": "Create a Section in a Project",
+          "message": "Crear una sección en un proyecto"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.short_desc": {
+          "source": "Create a section in a project",
+          "message": "Crear una sección en un proyecto"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.desc": {
+          "source": "Adds a story to a task. This endpoint currently only allows for comment\nstories to be created. The comment will be authored by the currently\nauthenticated user, and timestamped when the server receives the request.\n\nReturns the full record for the new story added to the task.",
+          "message": "Añade una historia a una tarea. Actualmente, este extremo solo permite crear historias de tipo comentario. El comentario será creado por el usuario autenticado actualmente y se registrará la marca de tiempo cuando el servidor reciba la solicitud.\n\nDevuelve el registro completo de la nueva historia añadida a la tarea."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.display_name": {
+          "source": "Create a Story on a Task",
+          "message": "Crear una historia en una tarea"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.short_desc": {
+          "source": "Create a story on a task",
+          "message": "Crear una historia en una tarea"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.desc": {
+          "source": "Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.",
+          "message": "Crea una nueva subtarea y la añade a la tarea madre. Devuelve el registro completo de la subtarea recién creada."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.display_name": {
+          "source": "Create a Subtask",
+          "message": "Crear una subtarea"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.short_desc": {
+          "source": "Create a subtask",
+          "message": "Crear una subtarea"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Create a new project in a workspace or team.\n\nEvery project is required to be created in a specific workspace or\norganization, and this cannot be changed once set. Note that you can use\nthe `workspace` parameter regardless of whether or not it is an\norganization.\n\nIf the workspace for your project is an organization, you must also\nsupply a `team` to share the project with.\n\nReturns the full record of the newly created project.",
+          "message": "Crea un nuevo proyecto en un espacio de trabajo o equipo.\n\nEs obligatorio crear cada proyecto en un espacio de trabajo u organización específicos, y esto no se puede cambiar una vez establecido. Tenga en cuenta que puede utilizar el parámetro `workspace` independientemente de si es o no una organización.\n\nSi el espacio de trabajo de su proyecto es una organización, también debe proporcionar un `team` con el que compartir el proyecto.\n\nDevuelve el registro completo del proyecto recién creado."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create a Project",
+          "message": "Crear un proyecto"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Create a project",
+          "message": "Crear un proyecto"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.desc": {
+          "source": "Creates a project shared with the given team.\n\nReturns the full record of the newly created project.",
+          "message": "Crea un proyecto compartido con el equipo dado.\n\nDevuelve el registro completo del proyecto recién creado."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.display_name": {
+          "source": "Create a Project in a Team",
+          "message": "Crear un proyecto en un equipo"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.short_desc": {
+          "source": "Create a project in a team",
+          "message": "Crear un proyecto en un equipo"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.desc": {
+          "source": "Creates a new tag in a workspace or organization.\n\nEvery tag is required to be created in a specific workspace or\norganization, and this cannot be changed once set. Note that you can use\nthe workspace parameter regardless of whether or not it is an\norganization.\n\nReturns the full record of the newly created tag.",
+          "message": "Crea una nueva etiqueta en un espacio de trabajo u organización.\n\nEs obligatorio crear cada etiqueta en un espacio de trabajo u organización específicos, y esto no se puede cambiar una vez establecido. Tenga en cuenta que puede utilizar el parámetro workspace independientemente de si es o no una organización.\n\nDevuelve el registro completo de la etiqueta recién creada."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.display_name": {
+          "source": "Create a Tag",
+          "message": "Crear una etiqueta"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.short_desc": {
+          "source": "Create a tag",
+          "message": "Crear una etiqueta"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.desc": {
+          "source": "Creating a new task is as easy as POSTing to the `-tasks` endpoint with a\ndata block containing the fields you’d like to set on the task. Any\nunspecified fields will take on default values.\n\nEvery task is required to be created in a specific workspace, and this\nworkspace cannot be changed once set. The workspace need not be set\nexplicitly if you specify `projects` or a `parent` task instead.",
+          "message": "Crear una nueva tarea es tan fácil como hacer una solicitud POST al extremo `-tasks` con un bloque de datos que contenga los campos que desea establecer en la tarea. Todos los campos no especificados tomarán valores predeterminados.\n\nEs obligatorio crear cada tarea en un espacio de trabajo específico, y este espacio de trabajo no se puede cambiar una vez establecido. No es necesario establecer el espacio de trabajo de forma explícita si en su lugar especifica `projects` o una tarea `parent`."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.display_name": {
+          "source": "Create a Task",
+          "message": "Crear una tarea"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.short_desc": {
+          "source": "Create a task",
+          "message": "Crear una tarea"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a file is attached to any task within the specified project. Optionally filter by a specific task. Use this to process or track files as they are added to tasks.",
+          "message": "Inicia un flujo de trabajo cuando se adjunta un archivo a cualquier tarea dentro del proyecto especificado. Opcionalmente, filtre por una tarea específica. Utilice esto para procesar o realizar un seguimiento de los archivos a medida que se añaden a las tareas."
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
+          "source": "Attachment Added",
+          "message": "Archivo adjunto añadido"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where attachment activities will be monitored",
+          "message": "El identificador único del proyecto donde se supervisarán las actividades de archivos adjuntos"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the tasks with attachments",
+          "message": "El proyecto que contiene las tareas con archivos adjuntos"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.desc": {
+          "source": "The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow",
+          "message": "El identificador único de una tarea específica para supervisar. Si no se proporciona, los archivos adjuntos de todas las tareas del proyecto activarán el flujo de trabajo"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
+          "source": "Task ID (Optional)",
+          "message": "ID de la tarea (opcional)"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
+          "source": "Specific task to monitor for attachments",
+          "message": "Tarea específica para supervisar en busca de archivos adjuntos"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
+          "source": "Triggers when an attachment is uploaded to a task",
+          "message": "Se activa cuando se carga un archivo adjunto a una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.desc": {
+          "source": "Returns the complete goal record for a single goal.",
+          "message": "Devuelve el registro de objetivo completo para un solo objetivo."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.display_name": {
+          "source": "Get a Goal",
+          "message": "Obtener un objetivo"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "Variable de ruta URI \"goal_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.display_name": {
+          "source": "Goal Gid",
+          "message": "GID del objetivo"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.short_desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "Variable de ruta URI \"goal_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.short_desc": {
+          "source": "Get a goal",
+          "message": "Obtener un objetivo"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.desc": {
+          "source": "Returns compact goal records.",
+          "message": "Devuelve registros de objetivos compactos."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.display_name": {
+          "source": "Get Goals",
+          "message": "Obtener objetivos"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.short_desc": {
+          "source": "Get goals",
+          "message": "Obtener objetivos"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.desc": {
+          "source": "Returns the compact representations of all of the dependents of a task.",
+          "message": "Devuelve las representaciones compactas de todos los dependientes de una tarea."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.display_name": {
+          "source": "Get Dependents from a Task",
+          "message": "Obtener dependientes de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.short_desc": {
+          "source": "Get dependents from a task",
+          "message": "Obtener dependientes de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.desc": {
+          "source": "Returns the compact representations of all of the dependencies of a task.",
+          "message": "Devuelve las representaciones compactas de todas las dependencias de una tarea."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.display_name": {
+          "source": "Get Dependencies from a Task",
+          "message": "Obtener dependencias de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.short_desc": {
+          "source": "Get dependencies from a task",
+          "message": "Obtener dependencias de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.desc": {
+          "source": "Returns the full record for all events that have occurred since the sync\ntoken was created.\n\nA `GET` request to the endpoint `-[path_to_resource]-events` can be made in\nlieu of including the resource ID in the data for the request.\n\nAsana limits a single sync token to 100 events. If more than 100 events exist\nfor a given resource, `has_more: true` will be returned in the response, indicating\nthat there are more events to pull.\n\n*Note: The resource returned will be the resource that triggered the\nevent. This may be different from the one that the events were requested\nfor. For example, a subscription to a project will contain events for\ntasks contained within the project.*",
+          "message": "Devuelve el registro completo de todos los eventos que han ocurrido desde que se creó el token de sincronización.\n\nSe puede realizar una solicitud `GET` al extremo `-[path_to_resource]-events` en lugar de incluir el ID del recurso en los datos de la solicitud.\n\nAsana limita un único token de sincronización a 100 eventos. Si existen más de 100 eventos para un recurso determinado, se devolverá `has_more: true` en la respuesta, indicando que hay más eventos para obtener.\n\n*Nota: El recurso devuelto será el recurso que activó el evento. Este puede ser diferente de aquel para el que se solicitaron los eventos. Por ejemplo, una suscripción a un proyecto contendrá eventos para las tareas contenidas en el proyecto.*"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.display_name": {
+          "source": "Get Events on a Resource",
+          "message": "Obtener eventos en un recurso"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.short_desc": {
+          "source": "Get events on a resource",
+          "message": "Obtener eventos en un recurso"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.desc": {
+          "source": "Returns the complete record for a single section.",
+          "message": "Devuelve el registro completo para una sola sección."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.display_name": {
+          "source": "Get a Section",
+          "message": "Obtener una sección"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "GID de la sección"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.short_desc": {
+          "source": "Get a section",
+          "message": "Obtener una sección"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.desc": {
+          "source": "Returns the compact records for all sections in the specified project.",
+          "message": "Devuelve los registros compactos de todas las secciones del proyecto especificado."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.display_name": {
+          "source": "Get Sections in a Project",
+          "message": "Obtener secciones de un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.short_desc": {
+          "source": "Get sections in a project",
+          "message": "Obtener secciones de un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.desc": {
+          "source": "Returns the compact records for all stories on the task.",
+          "message": "Devuelve los registros compactos de todas las historias de la tarea."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.display_name": {
+          "source": "Get Stories from a Task",
+          "message": "Obtener historias de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.short_desc": {
+          "source": "Get stories from a task",
+          "message": "Obtener historias de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.desc": {
+          "source": "Returns a compact representation of all of the subtasks of a task.",
+          "message": "Devuelve una representación compacta de todas las subtareas de una tarea."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.display_name": {
+          "source": "Get Subtasks from a Task",
+          "message": "Obtener subtareas de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.short_desc": {
+          "source": "Get subtasks from a task",
+          "message": "Obtener subtareas de una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the complete project record for a single project.",
+          "message": "Devuelve el registro completo del proyecto para un solo proyecto."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get a Project",
+          "message": "Obtener un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get a project",
+          "message": "Obtener un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns the compact project records for some filtered set of projects. Use one or more of the parameters provided to filter the projects returned.\n*Note: This endpoint may timeout for large domains. Try filtering by team!*",
+          "message": "Devuelve los registros compactos de proyectos para un conjunto filtrado de proyectos. Utilice uno o más de los parámetros proporcionados para filtrar los proyectos devueltos.\n*Nota: Este punto de enlace puede agotar el tiempo de espera en dominios grandes. ¡Pruebe a filtrar por equipo!*"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get Multiple Projects",
+          "message": "Obtener varios proyectos"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get multiple projects",
+          "message": "Obtener varios proyectos"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.desc": {
+          "source": "Returns the compact project records for all projects in the team.",
+          "message": "Devuelve los registros compactos de proyectos para todos los proyectos del equipo."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.display_name": {
+          "source": "Get a Team's Projects",
+          "message": "Obtener proyectos de un equipo"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.desc": {
+          "source": "Only return projects whose `archived` field takes on the value of this parameter.",
+          "message": "Devolver solo los proyectos cuyo campo `archived` tome el valor de este parámetro."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.display_name": {
+          "source": "Archived",
+          "message": "Archivado"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.short_desc": {
+          "source": "Only return projects whose 'archived' field takes on the value of this parameter",
+          "message": "Devolver solo los proyectos cuyo campo 'archived' tome el valor de este parámetro"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.desc": {
+          "source": "URI path variable \"team_gid\"",
+          "message": "Variable de ruta URI \"team_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.display_name": {
+          "source": "Team Gid",
+          "message": "GID de equipo"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.short_desc": {
+          "source": "URI path variable \"team_gid\"",
+          "message": "Variable de ruta URI \"team_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.short_desc": {
+          "source": "Get a team's projects",
+          "message": "Obtener proyectos de un equipo"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.desc": {
+          "source": "Returns the full workspace record for a single workspace.",
+          "message": "Devuelve el registro completo del espacio de trabajo para un solo espacio de trabajo."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.display_name": {
+          "source": "Get a Workspace",
+          "message": "Obtener un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.short_desc": {
+          "source": "Get a workspace",
+          "message": "Obtener un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.desc": {
+          "source": "Returns the compact records for all workspaces visible to the authorized user.",
+          "message": "Devuelve los registros compactos de todos los espacios de trabajo visibles para el usuario autorizado."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.display_name": {
+          "source": "Get Multiple Workspaces",
+          "message": "Obtener varios espacios de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.short_desc": {
+          "source": "Get multiple workspaces",
+          "message": "Obtener varios espacios de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.desc": {
+          "source": "Returns the complete tag record for a single tag.",
+          "message": "Devuelve el registro completo de la etiqueta para una sola etiqueta."
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.display_name": {
+          "source": "Get a Tag",
+          "message": "Obtener una etiqueta"
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.short_desc": {
+          "source": "Get a tag",
+          "message": "Obtener una etiqueta"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.desc": {
+          "source": "Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.",
+          "message": "Devuelve los registros compactos de etiquetas para un conjunto filtrado de etiquetas. Utilice uno o más de los parámetros proporcionados para filtrar las etiquetas devueltas."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.display_name": {
+          "source": "Get Multiple Tags",
+          "message": "Obtener varias etiquetas"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.desc": {
+          "source": "The workspace to filter tags on.",
+          "message": "El espacio de trabajo por el que filtrar las etiquetas."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to filter tags on",
+          "message": "El espacio de trabajo por el que filtrar las etiquetas"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.short_desc": {
+          "source": "Get multiple tags",
+          "message": "Obtener varias etiquetas"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.desc": {
+          "source": "Returns the compact task records for some filtered set of tasks. Use one or more of the parameters provided to filter the tasks returned. You must specify a `project` or `tag` if you do not specify `assignee` and `workspace`.\n\nFor more complex task retrieval, use [workspaces-workspace_gid-tasks-search](-reference-searchtasksforworkspace).",
+          "message": "Devuelve los registros compactos de tareas para un conjunto filtrado de tareas. Utilice uno o más de los parámetros proporcionados para filtrar las tareas devueltas. Debe especificar un `project` o `tag` si no especifica `assignee` y `workspace`.\n\nPara una recuperación de tareas más compleja, utilice [workspaces-workspace_gid-tasks-search](-reference-searchtasksforworkspace)."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.display_name": {
+          "source": "Get Multiple Tasks",
+          "message": "Obtener varias tareas"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get multiple tasks",
+          "message": "Obtener varias tareas"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.desc": {
+          "source": "Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.",
+          "message": "Devuelve los registros compactos de tareas para todas las tareas del proyecto dado, ordenadas por su prioridad dentro del proyecto. Las tareas pueden existir en más de un proyecto a la vez."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.display_name": {
+          "source": "Get Tasks from a Project",
+          "message": "Obtener tareas de un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.short_desc": {
+          "source": "Get tasks from a project",
+          "message": "Obtener tareas de un proyecto"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.desc": {
+          "source": "*Board view only*: Returns the compact section records for all tasks within the given section.",
+          "message": "*Solo vista de tablero*: Devuelve los registros compactos de sección para todas las tareas dentro de la sección dada."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.display_name": {
+          "source": "Get Tasks from a Section",
+          "message": "Obtener tareas de una sección"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.desc": {
+          "source": "Only return tasks that are either incomplete or that have been completed since this time. Accepts a date-time string or the keyword *now*.\n",
+          "message": "Devolver solo tareas que estén incompletas o que se hayan completado desde esta hora. Acepta una cadena de fecha y hora o la palabra clave *now*.\n"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.display_name": {
+          "source": "Completed Since",
+          "message": "Completadas desde"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.short_desc": {
+          "source": "Only return tasks that are either incomplete or that have been completed since this time",
+          "message": "Devolver solo tareas que estén incompletas o que se hayan completado desde esta hora"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "GID de la sección"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.short_desc": {
+          "source": "Get tasks from a section",
+          "message": "Obtener tareas de una sección"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.desc": {
+          "source": "Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.",
+          "message": "Devuelve los registros compactos de tareas para todas las tareas con la etiqueta dada. Las tareas pueden tener más de una etiqueta a la vez."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.display_name": {
+          "source": "Get Tasks from a Tag",
+          "message": "Obtener tareas de una etiqueta"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.short_desc": {
+          "source": "Get tasks from a tag",
+          "message": "Obtener tareas de una etiqueta"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the complete task record for a single task.",
+          "message": "Devuelve el registro completo de la tarea para una sola tarea."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.display_name": {
+          "source": "Get a Task",
+          "message": "Obtener una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get a task",
+          "message": "Obtener una tarea"
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.desc": {
+          "source": "Returns compact time period records.",
+          "message": "Devuelve registros compactos de períodos de tiempo."
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.display_name": {
+          "source": "Get Time Periods",
+          "message": "Obtener períodos de tiempo"
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.short_desc": {
+          "source": "Get time periods",
+          "message": "Obtener períodos de tiempo"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.desc": {
+          "source": "Returns the full user record for the single user with the provided ID.",
+          "message": "Devuelve el registro de usuario completo para el usuario individual con el ID proporcionado."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.display_name": {
+          "source": "Get a User",
+          "message": "Obtener un usuario"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.short_desc": {
+          "source": "Get a user",
+          "message": "Obtener un usuario"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.desc": {
+          "source": "Returns the user records for all users in all workspaces and organizations accessible to the authenticated user. Accepts an optional workspace ID parameter.\nResults are sorted by user ID.",
+          "message": "Devuelve los registros de usuario para todos los usuarios de todos los espacios de trabajo y organizaciones accesibles para el usuario autenticado. Acepta un parámetro opcional de ID de espacio de trabajo.\nLos resultados se ordenan por ID de usuario."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.display_name": {
+          "source": "Get Multiple Users",
+          "message": "Obtener varios usuarios"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "Token de desplazamiento.\nUn desplazamiento hacia la página siguiente devuelta por la API. Una solicitud de paginación devolverá un token de desplazamiento, que se puede utilizar como parámetro de entrada para la siguiente solicitud. Si no se pasa un desplazamiento, la API devolverá la primera página de resultados.\n*Nota: Solo puede pasar un desplazamiento que se le haya devuelto a través de una solicitud paginada anteriormente.*"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "Token de desplazamiento"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto. Para incluir esas propiedades opcionales, establezca este parámetro de consulta en una lista separada por comas de las propiedades que desea incluir."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Campos opcionales"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "Este extremo devuelve un recurso compacto, que excluye algunas propiedades por defecto"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "Resultados por página.\nEl número de objetos que se devolverán por página. El valor debe estar entre 1 y 100."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "Resultados por página"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.desc": {
+          "source": "The workspace or organization ID to filter users on.",
+          "message": "El ID de espacio de trabajo u organización por el que filtrar los usuarios."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace or organization ID to filter users on",
+          "message": "El ID de espacio de trabajo u organización por el cual filtrar usuarios"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.desc": {
+          "source": "The team ID to filter users on.",
+          "message": "El ID de equipo por el cual filtrar usuarios."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Equipo"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.short_desc": {
+          "source": "The team ID to filter users on",
+          "message": "El ID de equipo por el cual filtrar usuarios"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.short_desc": {
+          "source": "Get multiple users",
+          "message": "Obtener varios usuarios"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Asana\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Eliminar registros"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Asana\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.desc": {
+          "source": "A specific, existing goal can be deleted by making a DELETE request on the URL for that goal.\n\nReturns an empty data record.",
+          "message": "Se puede eliminar un objetivo existente específico haciendo una solicitud DELETE en la URL de ese objetivo.\n\nDevuelve un registro de datos vacío."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.display_name": {
+          "source": "Delete a Goal",
+          "message": "Eliminar un objetivo"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "Variable de ruta URI \"goal_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.display_name": {
+          "source": "Goal Gid",
+          "message": "GID del objetivo"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.short_desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "Variable de ruta URI \"goal_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.short_desc": {
+          "source": "Delete a goal",
+          "message": "Eliminar un objetivo"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.desc": {
+          "source": "A specific, existing section can be deleted by making a DELETE request on\nthe URL for that section.\n\nNote that sections must be empty to be deleted.\n\nThe last remaining section cannot be deleted.\n\nReturns an empty data block.",
+          "message": "Se puede eliminar una sección existente específica haciendo una solicitud DELETE en\nla URL de esa sección.\n\nTenga en cuenta que las secciones deben estar vacías para poder eliminarse.\n\nLa última sección restante no se puede eliminar.\n\nDevuelve un bloque de datos vacío."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.display_name": {
+          "source": "Delete a Section",
+          "message": "Eliminar una sección"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "GID de la sección"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "Variable de ruta URI \"section_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.short_desc": {
+          "source": "Delete a section",
+          "message": "Eliminar una sección"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "A specific, existing project can be deleted by making a DELETE request on\nthe URL for that project.\n\nReturns an empty data record.",
+          "message": "Se puede eliminar un proyecto existente específico haciendo una solicitud DELETE en\nla URL de ese proyecto.\n\nDevuelve un registro de datos vacío."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "Eliminar un proyecto"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "Eliminar un proyecto"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.desc": {
+          "source": "A specific, existing tag can be deleted by making a DELETE request on\nthe URL for that tag.\n\nReturns an empty data record.",
+          "message": "Se puede eliminar una etiqueta existente específica haciendo una solicitud DELETE en\nla URL de esa etiqueta.\n\nDevuelve un registro de datos vacío."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.display_name": {
+          "source": "Delete a Tag",
+          "message": "Eliminar una etiqueta"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.short_desc": {
+          "source": "Delete a tag",
+          "message": "Eliminar una etiqueta"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "A specific, existing task can be deleted by making a DELETE request on\nthe URL for that task. Deleted tasks go into the “trash” of the user\nmaking the delete request. Tasks can be recovered from the trash within a\nperiod of 30 days; afterward they are completely removed from the system.\n\nReturns an empty data record.",
+          "message": "Se puede eliminar una tarea existente específica haciendo una solicitud DELETE en\nla URL de esa tarea. Las tareas eliminadas van a la “papelera” del usuario\nque realiza la solicitud de eliminación. Las tareas se pueden recuperar de la papelera dentro de un\nperíodo de 30 días; después de eso, se eliminan por completo del sistema.\n\nDevuelve un registro de datos vacío."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "Eliminar una tarea"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "Proporciona una salida «pretty».\nProporciona la respuesta en un formato «pretty». En el caso de JSON, esto significa realizar saltos de línea e sangría adecuados para que sea legible. Esto llevará tiempo adicional y aumentará el tamaño de la respuesta, por lo que se recomienda usarlo únicamente durante la depuración."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "Proporciona una salida «pretty»"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "GID de la tarea"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "Variable de ruta URI \"task_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "Eliminar una tarea"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Asana** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada personalizada a la API HTTP / REST a **Asana** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta de URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los puntos de acceso que aún no están expuestos como acciones de primera clase en esta aplicación."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Asana",
+          "message": "Realizar una llamada personalizada a la API de Asana"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Asana\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Asana\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Asana\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Buscar un único registro"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Asana\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.desc": {
+          "source": "Initiates a workflow when a subtask within a specific parent task is marked as completed. Use this to track progress on multi-stage tasks or to trigger the next steps in a workflow.",
+          "message": "Inicia un flujo de trabajo cuando una subtarea dentro de una tarea principal específica se marca como completada. Utilice esto para hacer un seguimiento del progreso en tareas de varias etapas o para activar los siguientes pasos en un flujo de trabajo."
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
+          "source": "Subtask Completed",
+          "message": "Subtarea completada"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the parent task exists",
+          "message": "El identificador único del proyecto donde existe la tarea principal"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the parent task",
+          "message": "El proyecto que contiene la tarea principal"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.desc": {
+          "source": "The unique identifier of the parent task whose subtasks will be monitored for completion",
+          "message": "El identificador único de la tarea principal cuyas subtareas se supervisarán para verificar su finalización"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
+          "source": "Parent Task ID",
+          "message": "ID de la tarea principal"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
+          "source": "The parent task containing the subtasks",
+          "message": "La tarea principal que contiene las subtareas"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
+          "source": "Triggers when a subtask is marked complete",
+          "message": "Se activa cuando una subtarea se marca como completada"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.desc": {
+          "source": "Initiates a workflow whenever a new task is added to the specified project. Use this to automatically process, categorize, or assign new tasks as they are created.",
+          "message": "Inicia un flujo de trabajo cada vez que se añade una nueva tarea al proyecto especificado. Utilice esto para procesar, categorizar o asignar automáticamente nuevas tareas a medida que se crean."
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
+          "source": "Project Task Added",
+          "message": "Tarea de proyecto añadida"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where new task creation will be monitored",
+          "message": "El identificador único del proyecto donde se supervisará la creación de nuevas tareas"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project to monitor for new tasks",
+          "message": "El proyecto a supervisar en busca de nuevas tareas"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
+          "source": "Triggers when a new task is created in a project",
+          "message": "Se activa cuando se crea una nueva tarea en un proyecto"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.desc": {
+          "source": "Initiates a workflow whenever a new project is created within the specified workspace. Use this to automate project setup, create standard templates, or notify team members about new initiatives.",
+          "message": "Inicia un flujo de trabajo cada vez que se crea un nuevo proyecto dentro del espacio de trabajo especificado. Utilice esto para automatizar la configuración de proyectos, crear plantillas estándar o notificar a los miembros del equipo sobre nuevas iniciativas."
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
+          "source": "Project Added",
+          "message": "Proyecto añadido"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new project creation will be monitored",
+          "message": "El identificador único del espacio de trabajo donde se supervisará la creación de nuevos proyectos"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new projects",
+          "message": "El espacio de trabajo a supervisar en busca de nuevos proyectos"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
+          "source": "Triggers when a new project is created in a workspace",
+          "message": "Se activa cuando se crea un nuevo proyecto en un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.desc": {
+          "source": "Initiates a workflow when a new tag is created within the specified workspace. Use this to monitor taxonomy changes or to standardize tag usage across projects.",
+          "message": "Inicia un flujo de trabajo cuando se crea una nueva etiqueta dentro del espacio de trabajo especificado. Utilice esto para supervisar los cambios de taxonomía o estandarizar el uso de etiquetas en todos los proyectos."
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
+          "source": "Tag Created",
+          "message": "Etiqueta creada"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new tag creation will be monitored",
+          "message": "El identificador único del espacio de trabajo donde se supervisará la creación de nuevas etiquetas"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new tags",
+          "message": "El espacio de trabajo a supervisar en busca de nuevas etiquetas"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
+          "source": "Triggers when a new tag is created in a workspace",
+          "message": "Se activa cuando se crea una nueva etiqueta en un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.desc": {
+          "source": "Initiates a workflow when a tag is added to the specified task. Use this to automate actions based on task categorization or to monitor how tasks are being classified.",
+          "message": "Inicia un flujo de trabajo cuando se añade una etiqueta a la tarea especificada. Utilice esto para automatizar acciones según la categorización de tareas o para supervisar cómo se clasifican las tareas."
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
+          "source": "Task Tag Added",
+          "message": "Etiqueta de tarea añadida"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "El identificador único del proyecto donde existe la tarea"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "El proyecto que contiene la tarea"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where tag additions will be monitored",
+          "message": "El identificador único de la tarea donde se supervisará la adición de etiquetas"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "ID de tarea"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for tag additions",
+          "message": "La tarea específica a supervisar en busca de adiciones de etiquetas"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
+          "source": "Triggers when a tag is applied to a task",
+          "message": "Se activa cuando se aplica una etiqueta a una tarea"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.desc": {
+          "source": "Initiates a workflow when a new comment is posted on the specified task. Use this to monitor discussions, notify stakeholders, or track communication around critical tasks.",
+          "message": "Inicia un flujo de trabajo cuando se publica un nuevo comentario en la tarea especificada. Utilice esto para supervisar discusiones, notificar a las partes interesadas o hacer un seguimiento de la comunicación en torno a tareas críticas."
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
+          "source": "Task Comment Added",
+          "message": "Comentario de tarea añadido"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "El identificador único del proyecto donde existe la tarea"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "El proyecto que contiene la tarea"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where comments will be monitored",
+          "message": "El identificador único de la tarea donde se supervisarán los comentarios"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "ID de tarea"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for comments",
+          "message": "La tarea específica a supervisar en busca de comentarios"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
+          "source": "Triggers when a comment is added to a specific task",
+          "message": "Se activa cuando se añade un comentario a una tarea específica"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.desc": {
+          "source": "Initiates a workflow when any task within the specified project is marked as completed. Use this to automate follow-up actions or notifications upon task completion.",
+          "message": "Inicia un flujo de trabajo cuando cualquier tarea dentro del proyecto especificado se marca como completada. Utilice esto para automatizar acciones de seguimiento o notificaciones tras la finalización de la tarea."
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
+          "source": "Task Completed",
+          "message": "Tarea completada"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where task completions will be monitored",
+          "message": "El identificador único del proyecto donde se supervisará la finalización de tareas"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the completed tasks",
+          "message": "El proyecto que contiene las tareas completadas"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
+          "source": "Triggers when a task is marked complete in a specific project",
+          "message": "Se activa cuando una tarea se marca como completada en un proyecto específico"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.desc": {
+          "source": "Initiates a workflow when a task is moved between sections in the specified project. Use this to track task progress through different stages or to automate actions based on task status changes.",
+          "message": "Inicia un flujo de trabajo cuando una tarea se mueve entre secciones en el proyecto especificado. Úselo para realizar el seguimiento del progreso de la tarea a través de diferentes etapas o para automatizar acciones basadas en cambios de estado de la tarea."
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
+          "source": "Task Moved to Section",
+          "message": "Tarea movida a sección"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where task movements between sections will be monitored",
+          "message": "El identificador único del proyecto donde se supervisarán los movimientos de tareas entre secciones"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the sections and tasks",
+          "message": "El proyecto que contiene las secciones y tareas"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {
+          "source": "Triggers when a task is moved to a different section",
+          "message": "Se activa cuando una tarea se mueve a una sección diferente"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.desc": {
+          "source": "Initiates a workflow when any story (comment, status update, field change) is added to a task. This captures all activity including automated system updates. Use this for comprehensive task activity monitoring.",
+          "message": "Inicia un flujo de trabajo cuando se agrega cualquier historia (comentario, actualización de estado, cambio de campo) a una tarea. Esto captura toda la actividad, incluidas las actualizaciones automáticas del sistema. Úselo para una supervisión exhaustiva de la actividad de la tarea."
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
+          "source": "Task Story Added",
+          "message": "Historia de tarea agregada"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "El identificador único del proyecto donde existe la tarea"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "El proyecto que contiene la tarea"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where all activity will be monitored",
+          "message": "El identificador único de la tarea donde se supervisará toda la actividad"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "ID de tarea"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for activity",
+          "message": "La tarea específica que se supervisará para detectar actividad"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
+          "source": "Triggers when any activity occurs on a task",
+          "message": "Se activa cuando ocurre cualquier actividad en una tarea"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.desc": {
+          "source": "Initiates a workflow when a new subtask is added to the specified parent task. Use this to track task breakdown or to automate subtask assignments and deadlines.",
+          "message": "Inicia un flujo de trabajo cuando se agrega una nueva subtarea a la tarea principal especificada. Úselo para realizar el seguimiento de la descomposición de tareas o para automatizar las asignaciones de subtareas y sus fechas límite."
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
+          "source": "Task Subtask Added",
+          "message": "Subtarea de tarea agregada"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the parent task exists",
+          "message": "El identificador único del proyecto donde existe la tarea principal"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID del proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the parent task",
+          "message": "El proyecto que contiene la tarea principal"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "El identificador único del espacio de trabajo donde existe el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "El espacio de trabajo que contiene el proyecto"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.desc": {
+          "source": "The unique identifier of the parent task where subtask creation will be monitored",
+          "message": "El identificador único de la tarea principal donde se supervisará la creación de subtareas"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
+          "source": "Parent Task ID",
+          "message": "ID de la tarea principal"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
+          "source": "The parent task to monitor for new subtasks",
+          "message": "La tarea principal que se supervisará para detectar nuevas subtareas"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
+          "source": "Triggers when a subtask is created under a parent task",
+          "message": "Se activa cuando se crea una subtarea dentro de una tarea principal"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a new team is formed within the specified workspace. Use this to automate team onboarding processes or to set up default team resources.",
+          "message": "Inicia un flujo de trabajo cuando se forma un nuevo equipo dentro del espacio de trabajo especificado. Úselo para automatizar los procesos de incorporación del equipo o para configurar recursos predeterminados del equipo."
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
+          "source": "Team Added",
+          "message": "Equipo agregado"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new team creation will be monitored",
+          "message": "El identificador único del espacio de trabajo donde se supervisará la creación de nuevos equipos"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new teams",
+          "message": "El espacio de trabajo que se supervisará para detectar nuevos equipos"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
+          "source": "Triggers when a new team is created in a workspace",
+          "message": "Se activa cuando se crea un nuevo equipo en un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Asana\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Actualizar registros"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Asana\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"Asana\""
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.desc": {
+          "source": "An existing goal can be updated by making a PUT request on the URL for\nthat goal. Only the fields provided in the `data` block will be updated;\nany unspecified fields will remain unchanged.\n\nReturns the complete updated goal record.",
+          "message": "Un objetivo existente se puede actualizar realizando una solicitud PUT en la URL para\nese objetivo. Solo se actualizarán los campos proporcionados en el bloque `data`;\ncualquier campo no especificado permanecerá sin cambios.\n\nDevuelve el registro de objetivo actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.display_name": {
+          "source": "Update a Goal",
+          "message": "Actualizar un objetivo"
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.short_desc": {
+          "source": "Update a goal",
+          "message": "Actualizar un objetivo"
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.desc": {
+          "source": "A specific, existing section can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the `data` block\nwill be updated; any unspecified fields will remain unchanged. (note that\nat this time, the only field that can be updated is the `name` field.)\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated section record.",
+          "message": "Una sección específica y existente se puede actualizar realizando una solicitud PUT en\nla URL para ese proyecto. Solo se actualizarán los campos proporcionados en el bloque `data`;\ncualquier campo no especificado permanecerá sin cambios. (tenga en cuenta que\nen este momento, el único campo que se puede actualizar es el campo `name`).\n\nAl usar este método, es mejor especificar solo los campos que desea\ncambiar; de lo contrario, puede sobrescribir los cambios realizados por otro usuario desde\nla última vez que recuperó la tarea.\n\nDevuelve el registro de sección actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.display_name": {
+          "source": "Update a Section",
+          "message": "Actualizar una sección"
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.short_desc": {
+          "source": "Update a section",
+          "message": "Actualizar una sección"
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "A specific, existing project can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the `data` block\nwill be updated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated project record.",
+          "message": "Un proyecto específico y existente se puede actualizar realizando una solicitud PUT en\nla URL para ese proyecto. Solo se actualizarán los campos proporcionados en el bloque `data`;\ncualquier campo no especificado permanecerá sin cambios.\n\nAl usar este método, es mejor especificar solo los campos que desea\ncambiar; de lo contrario, puede sobrescribir los cambios realizados por otro usuario desde\nla última vez que recuperó la tarea.\n\nDevuelve el registro de proyecto actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "Actualizar un proyecto"
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "Actualizar un proyecto"
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.desc": {
+          "source": "A specific, existing workspace can be updated by making a PUT request on the URL for that workspace. Only the fields provided in the data block will be updated; any unspecified fields will remain unchanged.\nCurrently the only field that can be modified for a workspace is its name.\nReturns the complete, updated workspace record.",
+          "message": "Un espacio de trabajo específico y existente se puede actualizar realizando una solicitud PUT en la URL de ese espacio de trabajo. Solo se actualizarán los campos proporcionados en el bloque de datos; cualquier campo no especificado permanecerá sin cambios.\nActualmente, el único campo que se puede modificar para un espacio de trabajo es su nombre.\nDevuelve el registro de espacio de trabajo actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.display_name": {
+          "source": "Update a Workspace",
+          "message": "Actualizar un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.short_desc": {
+          "source": "Update a workspace",
+          "message": "Actualizar un espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.desc": {
+          "source": "Updates the properties of a tag. Only the fields provided in the `data`\nblock will be updated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the tag.\n\nReturns the complete updated tag record.",
+          "message": "Actualiza las propiedades de una etiqueta. Solo se actualizarán los campos proporcionados en el bloque `data`;\ncualquier campo no especificado permanecerá sin cambios.\n\nAl usar este método, es mejor especificar solo los campos que desea\ncambiar; de lo contrario, puede sobrescribir los cambios realizados por otro usuario desde\nla última vez que recuperó la etiqueta.\n\nDevuelve el registro de etiqueta actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.display_name": {
+          "source": "Update a Tag",
+          "message": "Actualizar una etiqueta"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.short_desc": {
+          "source": "Update a tag",
+          "message": "Actualizar una etiqueta"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.desc": {
+          "source": "A specific, existing task can be updated by making a PUT request on the\nURL for that task. Only the fields provided in the `data` block will be\nupdated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated task record.",
+          "message": "Una tarea específica y existente se puede actualizar realizando una solicitud PUT en la\nURL de esa tarea. Solo se actualizarán los campos proporcionados en el bloque `data`;\ncualquier campo no especificado permanecerá sin cambios.\n\nAl usar este método, es mejor especificar solo los campos que desea\ncambiar; de lo contrario, puede sobrescribir los cambios realizados por otro usuario desde\nla última vez que recuperó la tarea.\n\nDevuelve el registro de tarea actualizado completo."
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "Actualizar una tarea"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "Actualizar una tarea"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a new user is added to the specified workspace. Use this to automate user onboarding, permission assignments, or welcome notifications.",
+          "message": "Inicia un flujo de trabajo cuando se agrega un nuevo usuario al espacio de trabajo especificado. Úselo para automatizar la incorporación de usuarios, asignaciones de permisos o notificaciones de bienvenida."
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
+          "source": "User Added",
+          "message": "Usuario agregado"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new user additions will be monitored",
+          "message": "El identificador único del espacio de trabajo donde se supervisarán las adiciones de nuevos usuarios"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "ID del espacio de trabajo"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new users",
+          "message": "El espacio de trabajo que se supervisará para detectar nuevos usuarios"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
+          "source": "Triggers when a user joins a workspace",
+          "message": "Se activa cuando un usuario se une a un espacio de trabajo"
+        },
+        "app.QXNhbmE.desc": {
+          "source": "Connect to Asana to automate task management, project monitoring, and team collaboration workflows. Use these triggers to respond to changes in tasks, projects, and workspaces.",
+          "message": "Conéctese a Asana para automatizar la gestión de tareas, la supervisión de proyectos y los flujos de trabajo de colaboración en equipo. Utilice estos activadores para responder a los cambios en tareas, proyectos y espacios de trabajo."
+        },
+        "app.QXNhbmE.display_name": {
+          "source": "Asana",
+          "message": "Asana"
+        },
+        "app.QXNhbmE.short_desc": {
+          "source": "Automate workflows by integrating with the Asana project management platform",
+          "message": "Automatice flujos de trabajo integrándose con la plataforma de gestión de proyectos Asana"
+        }
+      }
+    }
+  }
+}

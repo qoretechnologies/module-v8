@@ -1,0 +1,1337 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.desc": {
+          "source": "Adds a new activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">adding an activity<-a>. <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "新しいアクティビティを追加します。レスポンスの `additional_data` に `more_activities_scheduled_in_context` プロパティが含まれ、（指定されたデータに応じて）同じ案件、人物、または組織で予定されている未完了のアクティビティが他にもあるかどうかを示します。詳細については、<a href=\"https:-pipedrive.readme.io-docs-adding-an-activity\" target=\"_blank\" rel=\"noopener noreferrer\">アクティビティの追加<-a>に関するチュートリアルを参照してください。<br -> <br -> ***2024年9月30日以降、アクティビティの所有者がアクティブなカレンダー同期を行っている場合にのみ、アクティビティの参加者は更新を受け取ります***"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.display_name": {
+          "source": "Add an Activity",
+          "message": "アクティビティの追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkQWN0aXZpdHk.short_desc": {
+          "source": "Add an activity",
+          "message": "アクティビティを追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.desc": {
+          "source": "Adds a new deal. All deals created through the Pipedrive API will have a `origin` set to `API`. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the dealFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">adding a deal<-a>.",
+          "message": "新しい案件を追加します。Pipedrive API経由で作成されたすべての案件は、`origin` が `API` に設定されます。ここには記載されていない追加のカスタムフィールドをリクエストとともに指定できることに注意してください。これらのカスタムフィールドは各Pipedriveアカウントごとに異なり、キーとして長いハッシュで識別できます。どのカスタムフィールドが存在するかを確認するには、dealFieldsを取得して `key` の値を探してください。詳細については、<a href=\"https:-pipedrive.readme.io-docs-creating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">案件の追加<-a>に関するチュートリアルを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.display_name": {
+          "source": "Add a Deal",
+          "message": "案件の追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkRGVhbA.short_desc": {
+          "source": "Add a deal",
+          "message": "案件を追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.desc": {
+          "source": "Adds a new organization. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the organizationFields and look for `key` values. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">adding an organization<-a>.",
+          "message": "新しい組織を追加します。ここには記載されていない追加のカスタムフィールドをリクエストとともに指定できることに注意してください。これらのカスタムフィールドは各Pipedriveアカウントごとに異なり、キーとして長いハッシュで識別できます。どのカスタムフィールドが存在するかを確認するには、organizationFieldsを取得して `key` の値を探してください。詳細については、<a href=\"https:-pipedrive.readme.io-docs-adding-an-organization\" target=\"_blank\" rel=\"noopener noreferrer\">組織の追加<-a>に関するチュートリアルを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.display_name": {
+          "source": "Add an Organization",
+          "message": "組織の追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Add an organization",
+          "message": "組織を追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.desc": {
+          "source": "Creates a lead. A lead always has to be linked to a person or an organization or both. All leads created through the Pipedrive API will have a lead source and origin set to `API`. Here's the tutorial for <a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">adding a lead<-a>. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields' values tutorial<-a>.",
+          "message": "リードを作成します。リードは常に人物または組織、あるいはその両方にリンクされている必要があります。Pipedrive API経由で作成されたすべてのリードは、リードのソースとオリジンが `API` に設定されます。<a href=\"https:-pipedrive.readme.io-docs-adding-a-lead\" target=\"_blank\" rel=\"noopener noreferrer\">リードの追加<-a>に関するチュートリアルを参照してください。リードにカスタムフィールドが含まれている場合、フィールドの値は `Deals` エンドポイントと同じ形式でレスポンスに含まれます。リードにカスタムフィールドの値が設定されていない場合、レスポンスには表示されません。リードには独立したカスタムフィールドのセットはなく、案件からカスタムフィールドの構造を継承することに注意してください。<a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">カスタムフィールド値の更新チュートリアル<-a>に記載されている例を参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.display_name": {
+          "source": "Add a Lead",
+          "message": "リードの追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTGVhZA.short_desc": {
+          "source": "Add a lead",
+          "message": "リードを追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.desc": {
+          "source": "Adds a new note.",
+          "message": "新しいメモを追加します。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.display_name": {
+          "source": "Add a Note",
+          "message": "メモの追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkTm90ZQ.short_desc": {
+          "source": "Add a note",
+          "message": "メモを追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.desc": {
+          "source": "Adds a new person. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys. To determine which custom fields exists, fetch the personFields and look for `key` values.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "新しい人物を追加します。ここには記載されていない追加のカスタムフィールドをリクエストとともに指定できることに注意してください。これらのカスタムフィールドは各Pipedriveアカウントごとに異なり、キーとして長いハッシュで識別できます。どのカスタムフィールドが存在するかを確認するには、personFieldsを取得して `key` の値を探してください。<br>企業が[Campaigns製品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)を使用している場合、このエンドポイントは `data.marketing_status` フィールドも受け入れ、返します。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.display_name": {
+          "source": "Add a Person",
+          "message": "人物の追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUGVyc29u.short_desc": {
+          "source": "Add a person",
+          "message": "人物を追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.desc": {
+          "source": "Adds a new project. Note that you can supply additional custom fields along with the request that are not described here. These custom fields are different for each Pipedrive account and can be recognized by long hashes as keys.",
+          "message": "新しいプロジェクトを追加します。ここには記載されていない追加のカスタムフィールドをリクエストとともに指定できることに注意してください。これらのカスタムフィールドは各Pipedriveアカウントごとに異なり、キーとして長いハッシュで識別できます。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.display_name": {
+          "source": "Add a Project",
+          "message": "プロジェクトの追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkUHJvamVjdA.short_desc": {
+          "source": "Add a project",
+          "message": "プロジェクトを追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.desc": {
+          "source": "Adds a new task.",
+          "message": "新しいタスクを追加します。"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.display_name": {
+          "source": "Add a Task",
+          "message": "タスクの追加"
+        },
+        "app.UGlwZWRyaXZl.action.YWRkVGFzaw.short_desc": {
+          "source": "Add a task",
+          "message": "タスクを追加"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.desc": {
+          "source": "Returns all activities assigned to a particular user.",
+          "message": "特定のユーザーに割り当てられているすべてのアクティビティを返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.display_name": {
+          "source": "Get All Activities Assigned to a Particular User",
+          "message": "特定のユーザーに割り当てられたすべてのアクティビティの取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdGllcw.short_desc": {
+          "source": "Get all activities assigned to a particular user",
+          "message": "特定のユーザーに割り当てられたすべてのアクティビティを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.desc": {
+          "source": "Returns the details of a specific activity.",
+          "message": "特定のアクティビティの詳細を返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.display_name": {
+          "source": "Get Details of an Activity",
+          "message": "アクティビティの詳細の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0QWN0aXZpdHk.short_desc": {
+          "source": "Get details of an activity",
+          "message": "アクティビティの詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.desc": {
+          "source": "Returns the details of a specific deal. Note that this also returns some additional fields which are not present when asking for all deals – such as deal age and stay in pipeline stages. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of dealFields. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">getting details of a deal<-a>.",
+          "message": "特定の案件の詳細を返します。すべての案件を要求した際には存在しない追加のフィールド（案件の経過期間やパイプラインステージの滞在期間など）も返されることに注意してください。また、結果データではカスタムフィールドが長いハッシュとして表示されることにも注意してください。これらのハッシュは、dealFieldsの `key` の値にマッピングできます。詳細については、<a href=\"https:-pipedrive.readme.io-docs-getting-details-of-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">案件の詳細取得<-a>に関するチュートリアルを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.display_name": {
+          "source": "Get Details of a Deal",
+          "message": "案件の詳細の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbA.short_desc": {
+          "source": "Get details of a deal",
+          "message": "案件の詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.desc": {
+          "source": "Returns all deals. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">getting all deals<-a>.",
+          "message": "すべての案件を返します。詳細については、<a href=\"https:-pipedrive.readme.io-docs-getting-all-deals\" target=\"_blank\" rel=\"noopener noreferrer\">すべての案件の取得<-a>に関するチュートリアルを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.display_name": {
+          "source": "Get All Deals",
+          "message": "すべての案件の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0RGVhbHM.short_desc": {
+          "source": "Get all deals",
+          "message": "すべての案件を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.desc": {
+          "source": "Returns the details of an organization. Note that this also returns some additional fields which are not present when asking for all organizations. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of organizationFields.",
+          "message": "組織の詳細を返します。すべての組織を要求した際には存在しない追加のフィールドも返されることに注意してください。また、結果データではカスタムフィールドが長いハッシュとして表示されることにも注意してください。これらのハッシュは、organizationFieldsの `key` の値にマッピングできます。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.display_name": {
+          "source": "Get Details of an Organization",
+          "message": "組織の詳細の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9u.short_desc": {
+          "source": "Get details of an organization",
+          "message": "組織の詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.desc": {
+          "source": "Returns all organizations.",
+          "message": "すべての組織を返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.display_name": {
+          "source": "Get All Organizations",
+          "message": "すべての組織の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0T3JnYW5pemF0aW9ucw.short_desc": {
+          "source": "Get all organizations",
+          "message": "すべての組織を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.desc": {
+          "source": "Returns details of a specific lead. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals.",
+          "message": "特定のリードの詳細を返します。リードにカスタムフィールドが含まれている場合、フィールドの値は `Deals` エンドポイントと同じ形式でレスポンスに含まれます。リードにカスタムフィールドの値が設定されていない場合、レスポンスには表示されません。リードには独立したカスタムフィールドのセットはなく、案件からカスタムフィールドの構造を継承することに注意してください。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.display_name": {
+          "source": "Get One Lead",
+          "message": "リード1件の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZA.short_desc": {
+          "source": "Get one lead",
+          "message": "リード1件を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.desc": {
+          "source": "Returns multiple leads. Leads are sorted by the time they were created, from oldest to newest. Pagination can be controlled using `limit` and `start` query parameters. If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields' structure from deals.\n",
+          "message": "複数のリードを返します。リードは作成日時順（古い順）にソートされます。ページネーションは `limit` および `start` クエリパラメータを使用して制御できます。リードにカスタムフィールドが含まれている場合、フィールドの値は `Deals` エンドポイントと同じ形式でレスポンスに含まれます。リードにカスタムフィールドの値が設定されていない場合、レスポンスには表示されません。リードには独立したカスタムフィールドのセットはなく、案件からカスタムフィールドの構造を継承することに注意してください。\n"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.display_name": {
+          "source": "Get All Leads",
+          "message": "すべてのリードの取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0TGVhZHM.short_desc": {
+          "source": "Get all leads",
+          "message": "すべてのリードを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.desc": {
+          "source": "Returns details about a specific note.",
+          "message": "特定のメモに関する詳細を返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.display_name": {
+          "source": "Get One Note",
+          "message": "メモ1件の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZQ.short_desc": {
+          "source": "Get one note",
+          "message": "メモ1件を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.desc": {
+          "source": "Returns all notes.",
+          "message": "すべてのメモを返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.display_name": {
+          "source": "Get All Notes",
+          "message": "すべてのメモの取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0Tm90ZXM.short_desc": {
+          "source": "Get all notes",
+          "message": "すべてのメモを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.desc": {
+          "source": "Returns the details of a person. Note that this also returns some additional fields which are not present when asking for all persons. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of personFields.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also return the `data.marketing_status` field.",
+          "message": "人物の詳細を返します。すべての人物を要求した際には存在しない追加のフィールドも返されることに注意してください。また、結果データではカスタムフィールドが長いハッシュとして表示されることにも注意してください。これらのハッシュは、personFieldsの `key` の値にマッピングできます。<br>企業が[Campaigns製品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)を使用している場合、このエンドポイントは `data.marketing_status` フィールドも返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.display_name": {
+          "source": "Get Details of a Person",
+          "message": "人物の詳細の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29u.short_desc": {
+          "source": "Get details of a person",
+          "message": "人物の詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.desc": {
+          "source": "Returns all persons.",
+          "message": "すべての人物を返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.display_name": {
+          "source": "Get All Persons",
+          "message": "すべての人物の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UGVyc29ucw.short_desc": {
+          "source": "Get all persons",
+          "message": "すべての人物を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the details of a specific project. Also note that custom fields appear as long hashes in the resulting data. These hashes can be mapped against the `key` value of project fields.",
+          "message": "特定のプロジェクトの詳細を返します。また、結果データではカスタムフィールドが長いハッシュとして表示されることにも注意してください。これらのハッシュは、プロジェクトフィールドの `key` の値にマッピングできます。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Details of a Project",
+          "message": "プロジェクトの詳細の取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get details of a project",
+          "message": "プロジェクトの詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns all projects. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "すべてのプロジェクトを返します。これはカーソルベースのページネーションを使用するエンドポイントです。詳細については、<a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">ページネーション<-a>に関するドキュメントを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "すべてのプロジェクトを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get all projects",
+          "message": "すべてのプロジェクトを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.desc": {
+          "source": "Returns all tasks. This is a cursor-paginated endpoint. For more information, please refer to our documentation on <a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">pagination<-a>.",
+          "message": "すべてのタスクを返します。これはカーソルベースのページネーションを使用するエンドポイントです。詳細については、<a href=\"https:-pipedrive.readme.io-docs-core-api-concepts-pagination\" target=\"_blank\" rel=\"noopener noreferrer\">ページネーション<-a>に関するドキュメントを参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.display_name": {
+          "source": "Get All Tasks",
+          "message": "すべてのタスクを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get all tasks",
+          "message": "すべてのタスクを取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the details of a specific task.",
+          "message": "特定のタスクの詳細を返します。"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.display_name": {
+          "source": "Get Details of a Task",
+          "message": "タスクの詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get details of a task",
+          "message": "タスクの詳細を取得"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルからレコードを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルからレコードを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.desc": {
+          "source": "Marks an activity as deleted. After 30 days, the activity will be permanently deleted.",
+          "message": "アクティビティに削除済みマークを付けます。30日後にアクティビティは完全に削除されます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.display_name": {
+          "source": "Delete an Activity",
+          "message": "アクティビティを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlQWN0aXZpdHk.short_desc": {
+          "source": "Delete an activity",
+          "message": "アクティビティを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.desc": {
+          "source": "Marks a deal as deleted. After 30 days, the deal will be permanently deleted.",
+          "message": "取引に削除済みマークを付けます。30日後に取引は完全に削除されます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.display_name": {
+          "source": "Delete a Deal",
+          "message": "取引を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlRGVhbA.short_desc": {
+          "source": "Delete a deal",
+          "message": "取引を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Marks an organization as deleted. After 30 days, the organization will be permanently deleted.",
+          "message": "組織に削除済みマークを付けます。30日後に組織は完全に削除されます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete an Organization",
+          "message": "組織を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete an organization",
+          "message": "組織を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.desc": {
+          "source": "Deletes a specific lead.",
+          "message": "特定のリードを削除します。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.display_name": {
+          "source": "Delete a Lead",
+          "message": "リードを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTGVhZA.short_desc": {
+          "source": "Delete a lead",
+          "message": "リードを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.desc": {
+          "source": "Deletes a specific note.",
+          "message": "特定のメモを削除します。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.display_name": {
+          "source": "Delete a Note",
+          "message": "メモを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlTm90ZQ.short_desc": {
+          "source": "Delete a note",
+          "message": "メモを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.desc": {
+          "source": "Marks a person as deleted. After 30 days, the person will be permanently deleted.",
+          "message": "人物に削除済みマークを付けます。30日後に人物は完全に削除されます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.display_name": {
+          "source": "Delete a Person",
+          "message": "人物を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUGVyc29u.short_desc": {
+          "source": "Delete a person",
+          "message": "人物を削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Marks a project as deleted.",
+          "message": "プロジェクトに削除済みマークを付けます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "プロジェクトの削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "プロジェクトを削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "Marks a task as deleted. If the task has subtasks then those will also be deleted.",
+          "message": "タスクに削除済みマークを付けます。タスクにサブタスクがある場合、それらも削除されます。"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "タスクの削除"
+        },
+        "app.UGlwZWRyaXZl.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "タスクを削除"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pipedrive** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定済みの接続の認証を使用して、**Pipedrive** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.UGlwZWRyaXZl.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pipedrive",
+          "message": "PipedriveへのカスタムAPI呼び出しを実行"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルで一致するレコードを検索"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルで一致するレコードを検索"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルで一致する単一レコードを検索"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブルで一致する単一レコードを検索"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a note in Pipedrive. Actions include creating, updating, deleting a note or any change.",
+          "message": "このトリガーは、Pipedriveでメモに対して選択したアクションが実行されたときにアクティブになります。アクションには、メモの作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.display_name": {
+          "source": "Note Action",
+          "message": "メモのアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX25vdGVfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a note",
+          "message": "メモに対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on an organization in Pipedrive. Actions include creating, updating, deleting an organization or any change.",
+          "message": "このトリガーは、Pipedriveで組織に対して選択したアクションが実行されたときにアクティブになります。アクションには、組織の作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.display_name": {
+          "source": "Organization Action",
+          "message": "組織のアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX29yZ2FuaXphdGlvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on an organization",
+          "message": "組織に対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.desc": {
+          "source": "This trigger activates when a selected action is performed on an activity in Pipedrive. Actions include creating, updating, deleting an activity or any change.",
+          "message": "このトリガーは、Pipedriveでアクティビティに対して選択したアクションが実行されたときにアクティブになります。アクションには、アクティビティの作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.display_name": {
+          "source": "Activity Action",
+          "message": "アクティビティのアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2FjdGl2aXR5X3RyaWdnZXI.short_desc": {
+          "source": "Triggers when an action is performed on an activity",
+          "message": "アクティビティに対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a deal in Pipedrive. Actions include creating, updating, deleting a deal or any change.",
+          "message": "このトリガーは、Pipedriveで取引に対して選択したアクションが実行されたときにアクティブになります。アクションには、取引の作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.display_name": {
+          "source": "Deal Action",
+          "message": "取引のアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2RlYWxfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a deal",
+          "message": "取引に対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a lead in Pipedrive. Actions include creating, updating, deleting a lead or any change.",
+          "message": "このトリガーは、Pipedriveでリードに対して選択したアクションが実行されたときにアクティブになります。アクションには、リードの作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.display_name": {
+          "source": "Lead Action",
+          "message": "リードのアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX2xlYWRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a lead",
+          "message": "リードに対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.desc": {
+          "source": "This trigger activates when a selected action is performed on a person in Pipedrive. Actions include creating, updating, deleting a person or any change.",
+          "message": "このトリガーは、Pipedriveで人物に対して選択したアクションが実行されたときにアクティブになります。アクションには、人物の作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.display_name": {
+          "source": "Person Action",
+          "message": "人物のアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3BlcnNvbl90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an action is performed on a person",
+          "message": "人物に対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.desc": {
+          "source": "This trigger activates when a selected action is performed on a user in Pipedrive. Actions include creating, updating, deleting a user or any change.",
+          "message": "このトリガーは、Pipedriveでユーザーに対して選択したアクションが実行されたときにアクティブになります。アクションには、ユーザーの作成、更新、削除、または任意の変更が含まれます。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.display_name": {
+          "source": "User Action",
+          "message": "ユーザーのアクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.desc": {
+          "source": "Triggered when any activity is created, changed, or deleted",
+          "message": "アクティビティが作成、変更、または削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOio.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.desc": {
+          "source": "Triggered when an existing activity is changed",
+          "message": "既存のアクティビティが変更されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNoYW5nZQ.display_name": {
+          "source": "Change",
+          "message": "変更"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new activity is created",
+          "message": "新しいアクティビティが作成されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZQ.display_name": {
+          "source": "Created",
+          "message": "作成日時"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.desc": {
+          "source": "Triggered when an existing activity is deleted",
+          "message": "既存のアクティビティが削除されたときにトリガーされます"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmRlbGV0ZQ.display_name": {
+          "source": "Deleted",
+          "message": "削除済み"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select the action that triggers the flow. Choose from: create, update, delete, or any change.",
+          "message": "フローをトリガーするアクションを選択します。作成、更新、削除、または任意の変更から選択します。"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Select the action that triggers the flow",
+          "message": "フローをトリガーするアクションを選択"
+        },
+        "app.UGlwZWRyaXZl.action.cGlwZWRyaXZlX3VzZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an action is performed on a user",
+          "message": "ユーザーに対してアクションが実行されたときにトリガー"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Pipedrive\"",
+          "message": "アプリ「Pipedrive」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.desc": {
+          "source": "Updates an activity. Includes `more_activities_scheduled_in_context` property in response's `additional_data` which indicates whether there are more undone activities scheduled with the same deal, person or organization (depending on the supplied data). <br -> <br -> ***Starting from 30.09.2024, activity attendees will receive updates only if the activity owner has an active calendar sync***",
+          "message": "アクティビティを更新します。レスポンスの `additional_data` には、同じ取引、人物、または組織で予定されている未完了のアクティビティが他にあるかどうかを示す `more_activities_scheduled_in_context` プロパティが含まれます（指定されたデータによって異なります）。<br -> <br -> ***2024年9月30日より、アクティビティの所有者がカレンダー同期を有効にしている場合にのみ、アクティビティの参加者に更新が通知されます***"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.display_name": {
+          "source": "Update an Activity",
+          "message": "アクティビティを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlQWN0aXZpdHk.short_desc": {
+          "source": "Update an activity",
+          "message": "アクティビティを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.desc": {
+          "source": "Updates the properties of a deal. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">updating a deal<-a>.",
+          "message": "取引のプロパティを更新します。詳細については、<a href=\"https:-pipedrive.readme.io-docs-updating-a-deal\" target=\"_blank\" rel=\"noopener noreferrer\">取引の更新チュートリアル<-a>を参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.display_name": {
+          "source": "Update a Deal",
+          "message": "取引を更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlRGVhbA.short_desc": {
+          "source": "Update a deal",
+          "message": "取引を更新します"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "Updates the properties of an organization.",
+          "message": "組織のプロパティを更新します。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update an Organization",
+          "message": "組織を更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update an organization",
+          "message": "組織を更新します"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.desc": {
+          "source": "Updates one or more properties of a lead. Only properties included in the request will be updated. Send `null` to unset a property (applicable for example for `value`, `person_id` or `organization_id`). If a lead contains custom fields, the fields' values will be included in the response in the same format as with the `Deals` endpoints. If a custom field's value hasn't been set for the lead, it won't appear in the response. Please note that leads do not have a separate set of custom fields, instead they inherit the custom fields’ structure from deals. See an example given in the <a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">updating custom fields’ values tutorial<-a>.",
+          "message": "リードの1つ以上のプロパティを更新します。リクエストに含まれているプロパティのみが更新されます。プロパティの設定を解除するには `null` を送信します（`value`、`person_id`、`organization_id` などに適用可能）。リードにカスタムフィールドが含まれている場合、フィールドの値は `Deals` エンドポイントと同じ形式でレスポンスに含まれます。リードにカスタムフィールドの値が設定されていない場合は、レスポンスに表示されません。リードには個別のカスタムフィールドのセットはなく、取引からカスタムフィールドの構造を継承することにご注意ください。<a href=\"https:-pipedrive.readme.io-docs-updating-custom-field-value\" target=\"_blank\" rel=\"noopener noreferrer\">カスタムフィールド値の更新チュートリアル<-a>に記載されている例を参照してください。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.display_name": {
+          "source": "Update a Lead",
+          "message": "リードを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTGVhZA.short_desc": {
+          "source": "Update a lead",
+          "message": "リードを更新します"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.desc": {
+          "source": "Updates a note.",
+          "message": "メモを更新します。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.display_name": {
+          "source": "Update a Note",
+          "message": "メモを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlTm90ZQ.short_desc": {
+          "source": "Update a note",
+          "message": "メモを更新します"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.desc": {
+          "source": "Updates the properties of a person. For more information, see the tutorial for <a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">updating a person<-a>.<br>If a company uses the [Campaigns product](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api), then this endpoint will also accept and return the `data.marketing_status` field.",
+          "message": "人物のプロパティを更新します。詳細については、<a href=\"https:-pipedrive.readme.io-docs-updating-a-person\" target=\"_blank\" rel=\"noopener noreferrer\">人物の更新チュートリアル<-a>を参照してください。<br>企業が[Campaigns製品](https:-pipedrive.readme.io-docs-campaigns-in-pipedrive-api)を使用している場合、このエンドポイントは `data.marketing_status` フィールドも受け入れ、返します。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.display_name": {
+          "source": "Update a Person",
+          "message": "人物を更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUGVyc29u.short_desc": {
+          "source": "Update a person",
+          "message": "人物を更新します"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates a project.",
+          "message": "プロジェクトを更新します。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "プロジェクトを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "プロジェクトを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.desc": {
+          "source": "Updates a task.",
+          "message": "タスクを更新します。"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "タスクを更新"
+        },
+        "app.UGlwZWRyaXZl.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "タスクを更新"
+        },
+        "app.UGlwZWRyaXZl.desc": {
+          "source": "Pipedrive is a sales management tool designed to help small sales teams manage intricate or lengthy sales processes.",
+          "message": "Pipedriveは、小規模な営業チームが複雑または長期にわたる営業プロセスを管理できるように設計された営業管理ツールです。"
+        },
+        "app.UGlwZWRyaXZl.display_name": {
+          "source": "Pipedrive",
+          "message": "Pipedrive"
+        },
+        "app.UGlwZWRyaXZl.short_desc": {
+          "source": "Manage your sales pipeline and customer relationships with Pipedrive.",
+          "message": "Pipedriveで営業パイプラインと顧客関係を管理します。"
+        }
+      }
+    }
+  }
+}

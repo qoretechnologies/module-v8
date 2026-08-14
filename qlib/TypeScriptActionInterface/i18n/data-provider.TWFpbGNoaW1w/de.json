@@ -1,0 +1,977 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "Neue Datensätze in der angegebenen Tabelle in der App \"Mailchimp\" erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Datensätze erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "Neue Datensätze in der angegebenen Tabelle in der App \"Mailchimp\" erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.desc": {
+          "source": "Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics.",
+          "message": "Ruft alle E-Mail-Kampagnen aus Ihrem Mailchimp-Konto mit ihren Details einschließlich Status, Einstellungen und Leistungsmetriken ab."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
+          "source": "Get Campaigns",
+          "message": "Kampagnen abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
+          "source": "Retrieve a list of email campaigns",
+          "message": "Eine Liste von E-Mail-Kampagnen abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific customer from your connected e-commerce store.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Kunden aus Ihrem verbundenen E-Commerce-Shop ab."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
+          "source": "Get Store Customer",
+          "message": "Shop-Kunden abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
+          "source": "Retrieve a specific store customer",
+          "message": "Einen bestimmten Shop-Kunden abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.desc": {
+          "source": "Fetches all members (subscribers) from a specific audience with their contact information and subscription details.",
+          "message": "Ruft alle Mitglieder (Abonnenten) aus einer bestimmten Zielgruppe mit ihren Kontaktinformationen und Abonnementdetails ab."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
+          "source": "Get Audience Members",
+          "message": "Zielgruppenmitglieder abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
+          "source": "Retrieve members from an audience",
+          "message": "Mitglieder aus einer Zielgruppe abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Mitglied (Abonnenten) aus einer Zielgruppe einschließlich seiner Profil- und Aktivitätsdaten ab."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Get Audience Member",
+          "message": "Zielgruppenmitglied abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Retrieve a specific audience member",
+          "message": "Ein bestimmtes Zielgruppenmitglied abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.desc": {
+          "source": "Searches through your email campaigns using various criteria to find specific campaigns quickly.",
+          "message": "Durchsucht Ihre E-Mail-Kampagnen anhand verschiedener Kriterien, um bestimmte Kampagnen schnell zu finden."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
+          "source": "Search Campaigns",
+          "message": "Kampagnen durchsuchen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "Eine kommagetrennte Liste der auszuschließenden Felder. Verweisen Sie auf Parameter von Unterobjekten mit Punktnotation."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "Felder ausschließen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "Eine kommagetrennte Liste der auszuschließenden Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "Eine kommagetrennte Liste der zurückzugebenden Felder. Verweisen Sie auf Parameter von Unterobjekten mit Punktnotation."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "Eine kommagetrennte Liste der zurückzugebenden Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.desc": {
+          "source": "The search query used to filter results.",
+          "message": "Die Suchanfrage zum Filtern der Ergebnisse."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Abfrage"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.short_desc": {
+          "source": "The search query used to filter results",
+          "message": "Die Suchanfrage zum Filtern der Ergebnisse"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
+          "source": "Search for campaigns",
+          "message": "Nach Kampagnen suchen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.desc": {
+          "source": "Searches through audience members using various criteria such as email, name, or tags to find specific subscribers.",
+          "message": "Durchsucht Zielgruppenmitglieder anhand verschiedener Kriterien wie E-Mail, Name oder Tags, um bestimmte Abonnenten zu finden."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
+          "source": "Search Audience Members",
+          "message": "Zielgruppenmitglieder suchen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
+          "source": "Search for audience members",
+          "message": "Nach Zielgruppenmitgliedern suchen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.desc": {
+          "source": "Fetches detailed performance metrics and analytics for a specific email campaign.",
+          "message": "Ruft detaillierte Leistungskennzahlen und Analysen für eine bestimmte E-Mail-Kampagne ab."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
+          "source": "Get Campaign Report",
+          "message": "Kampagnenbericht abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
+          "source": "Retrieve a specific campaign report",
+          "message": "Einen bestimmten Kampagnenbericht abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.desc": {
+          "source": "Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom.",
+          "message": "Ruft detaillierte Informationen über Klicks in einer bestimmten Kampagne ab, einschließlich welche Links von wem angeklickt wurden."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
+          "source": "Get Campaign Click Details",
+          "message": "Kampagnen-Klickdetails abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
+          "source": "Retrieve click details for a campaign",
+          "message": "Klickdetails für eine Kampagne abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.desc": {
+          "source": "Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics.",
+          "message": "Ruft Leistungsberichte für Ihre E-Mail-Kampagnen ab, einschließlich Öffnungsraten, Klickraten und Interaktionsmetriken."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
+          "source": "Get Campaign Reports",
+          "message": "Kampagnenberichte abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.desc": {
+          "source": "The number of records to return. Default value is 10. Maximum value is 1000",
+          "message": "Die Anzahl der zurückzugebenden Datensätze. Der Standardwert ist 10. Der Maximalwert ist 1000"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Anzahl"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.short_desc": {
+          "source": "The number of records to return",
+          "message": "Die Anzahl der zurückzugebenden Datensätze"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.desc": {
+          "source": "Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "Schränkt die Antwort auf Kampagnen ein, die vor dem festgelegten Zeitpunkt gesendet wurden. Verwendet das ISO-8601-Zeitformat: 2015-10-21T15:41:36+00:00."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.display_name": {
+          "source": "Before Send Time",
+          "message": "Vor Sendezeitpunkt"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.short_desc": {
+          "source": "Restrict the response to campaigns sent before the set time",
+          "message": "Schränkt die Antwort auf Kampagnen ein, die vor dem festgelegten Zeitpunkt gesendet wurden"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "Eine kommagetrennte Liste der auszuschließenden Felder. Verweisen Sie auf Parameter von Unterobjekten mit Punktnotation."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "Felder ausschließen"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "Eine kommagetrennte Liste der auszuschließenden Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "Eine kommagetrennte Liste der zurückzugebenden Felder. Verweisen Sie auf Parameter von Unterobjekten mit Punktnotation."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "Eine kommagetrennte Liste der zurückzugebenden Felder"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.desc": {
+          "source": "Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.",
+          "message": "Wird für die [Paginierung](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination) verwendet; dies ist die Anzahl der zu überspringenden Datensätze aus einer Sammlung. Der Standardwert ist 0."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Used for [pagination](https://mailchimp",
+          "message": "Wird für die [Paginierung](https://mailchimp"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.desc": {
+          "source": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "Schränkt die Antwort auf Kampagnen ein, die nach dem festgelegten Zeitpunkt gesendet wurden. Verwendet das ISO-8601-Zeitformat: 2015-10-21T15:41:36+00:00."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.display_name": {
+          "source": "Since Send Time",
+          "message": "Seit Sendezeitpunkt"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.short_desc": {
+          "source": "Restrict the response to campaigns sent after the set time",
+          "message": "Schränkt die Antwort auf Kampagnen ein, die nach dem festgelegten Zeitpunkt gesendet wurden"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.desc": {
+          "source": "The campaign type.",
+          "message": "Der Kampagnentyp."
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Typ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.short_desc": {
+          "source": "The campaign type",
+          "message": "Der Kampagnentyp"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
+          "source": "Retrieve campaign performance reports",
+          "message": "Kampagnenleistungsberichte abrufen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "Datensätze aus der angegebenen Tabelle in App \"Mailchimp\" löschen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Datensätze löschen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "Datensätze aus der angegebenen Tabelle in App \"Mailchimp\" löschen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Removes a subscriber from an audience while preserving their data for compliance purposes.",
+          "message": "Entfernt einen Abonnenten aus einer Zielgruppe, behält dessen Daten jedoch zu Compliance-Zwecken bei."
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Remove Audience Member",
+          "message": "Zielgruppenmitglied entfernen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Remove a member from an audience",
+          "message": "Ein Mitglied aus einer Zielgruppe entfernen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.desc": {
+          "source": "Permanently removes a note from an audience member's profile.",
+          "message": "Entfernt eine Notiz dauerhaft aus dem Profil eines Zielgruppenmitglieds."
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
+          "source": "Delete Member Note",
+          "message": "Mitgliedsnotiz löschen"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
+          "source": "Delete an audience member note",
+          "message": "Eine Notiz eines Zielgruppenmitglieds löschen"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.desc": {
+          "source": "This trigger fires whenever a subscriber opens an email from your campaigns or automation workflows.",
+          "message": "Dieser Trigger wird ausgelöst, wenn ein Abonnent eine E-Mail aus Ihren Kampagnen oder Automatisierungs-Workflows öffnet."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
+          "source": "Email Opened",
+          "message": "E-Mail geöffnet"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmF1dG9tYXRpb24.display_name": {
+          "source": "Automation",
+          "message": "Automatisierung"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmNhbXBhaWdu.display_name": {
+          "source": "Campaign",
+          "message": "Kampagne"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.desc": {
+          "source": "Specify whether to track regular campaigns, automations.",
+          "message": "Geben Sie an, ob reguläre Kampagnen oder Automatisierungen verfolgt werden sollen."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
+          "source": "Campaign Type",
+          "message": "Kampagnentyp"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
+          "source": "Type of campaign to monitor",
+          "message": "Zu überwachender Kampagnentyp"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience (mailing list) to track for email opens.",
+          "message": "Wählen Sie aus, welche Mailchimp-Zielgruppe (Mailingliste) für geöffnete E-Mails überwacht werden soll."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Zielgruppe"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Die zu überwachende Zielgruppe auswählen"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.desc": {
+          "source": "Optionally specify one or more email addresses to only trigger for these specific subscribers.",
+          "message": "Geben Sie optional eine oder mehrere E-Mail-Adressen an, um nur für diese bestimmten Abonnenten auszulösen."
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
+          "source": "Trigger on Subscriber",
+          "message": "Bei Abonnent auslösen"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
+          "source": "Trigger for specific subscribers only",
+          "message": "Nur für bestimmte Abonnenten auslösen"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
+          "source": "Triggers when a subscriber opens an email",
+          "message": "Wird ausgelöst, wenn ein Abonnent eine E-Mail öffnet"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Mailchimp** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Mailchimp** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Mailchimp",
+          "message": "Einen benutzerdefinierten API-Aufruf an Mailchimp durchführen"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.desc": {
+          "source": "This trigger fires whenever a new contact subscribes to your Mailchimp audience.",
+          "message": "Dieser Trigger wird ausgelöst, wenn ein neuer Kontakt Ihre Mailchimp-Zielgruppe abonniert."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
+          "source": "New Subscriber",
+          "message": "Neuer Abonnent"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for new subscribers.",
+          "message": "Wählen Sie aus, welche Mailchimp-Zielgruppe für neue Abonnenten überwacht werden soll."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Zielgruppe"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Die zu überwachende Zielgruppe auswählen"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
+          "source": "Triggers when a new subscriber joins",
+          "message": "Wird ausgelöst, wenn ein neuer Abonnent beitritt"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.desc": {
+          "source": "This trigger fires whenever a contact unsubscribes from your Mailchimp audience.",
+          "message": "Dieser Trigger wird ausgelöst, wenn ein Kontakt sich von Ihrer Mailchimp-Zielgruppe abmeldet."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
+          "source": "New Unsubscriber",
+          "message": "Neuer abgemeldeter Kontakt"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for unsubscribes.",
+          "message": "Wählen Sie aus, welche Mailchimp-Zielgruppe für Abmeldungen überwacht werden soll."
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "Zielgruppe"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "Die zu überwachende Zielgruppe auswählen"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {
+          "source": "Triggers when someone unsubscribes",
+          "message": "Wird ausgelöst, wenn sich jemand abmeldet"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "Nach übereinstimmenden Datensätzen in der angegebenen Tabelle in App \"Mailchimp\" suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Datensätze suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "Nach übereinstimmenden Datensätzen in der angegebenen Tabelle in App \"Mailchimp\" suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "Nach einem einzelnen übereinstimmenden Datensatz in der angegebenen Tabelle in App \"Mailchimp\" suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Einzeldatensatz suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "Nach einem einzelnen übereinstimmenden Datensatz in der angegebenen Tabelle in App \"Mailchimp\" suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.desc": {
+          "source": "Searches for subscriber tags by name to help organize and segment your audience members.",
+          "message": "Sucht nach Abonnenten-Tags nach Namen, um Ihre Zielgruppenmitglieder besser zu organisieren und zu segmentieren."
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
+          "source": "Search Tags by Name",
+          "message": "Tags nach Name suchen"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
+          "source": "Search for tags by name",
+          "message": "Nach Tags nach Name suchen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.desc": {
+          "source": "Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery.",
+          "message": "Sendet eine zuvor erstellte E-Mail-Kampagne sofort an deren Zielgruppe oder plant sie für eine spätere Zustellung."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
+          "source": "Send Campaign",
+          "message": "Kampagne senden"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
+          "source": "Send an email campaign",
+          "message": "Eine E-Mail-Kampagne senden"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.desc": {
+          "source": "Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options.",
+          "message": "Erstellt eine neue E-Mail-Kampagne in Mailchimp mit den angegebenen Einstellungen, Inhalten und Zielgruppen-Targeting-Optionen."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
+          "source": "Create Campaign",
+          "message": "Kampagne erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
+          "source": "Create a new email campaign",
+          "message": "Neue E-Mail-Kampagne erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.desc": {
+          "source": "Records custom events for audience members to track their behavior and interactions with your brand.",
+          "message": "Zeichnet benutzerdefinierte Ereignisse für Zielgruppenmitglieder auf, um deren Verhalten und Interaktionen mit Ihrer Marke zu verfolgen."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
+          "source": "Add Member Events",
+          "message": "Mitgliederereignisse hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
+          "source": "Add events to audience members",
+          "message": "Ereignisse zu Zielgruppenmitgliedern hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.desc": {
+          "source": "Adds one or more tags to audience members for better segmentation and organization.",
+          "message": "Fügt Zielgruppenmitgliedern ein oder mehrere Tags zur besseren Segmentierung und Organisation hinzu."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
+          "source": "Add Member Tags",
+          "message": "Mitglieder-Tags hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
+          "source": "Add tags to audience members",
+          "message": "Tags zu Zielgruppenmitgliedern hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.desc": {
+          "source": "Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options.",
+          "message": "Erstellt eine neue Zielgruppe (Mailingliste) in Mailchimp mit den angegebenen Einstellungen und Konfigurationsoptionen."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
+          "source": "Create Audience",
+          "message": "Zielgruppe erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
+          "source": "Create a new audience",
+          "message": "Neue Zielgruppe erstellen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.desc": {
+          "source": "Adds a new subscriber to a specific audience with their contact information and subscription preferences.",
+          "message": "Fügt einer bestimmten Zielgruppe einen neuen Abonnenten mit dessen Kontaktinformationen und Abonnement-Einstellungen hinzu."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
+          "source": "Add Audience Member",
+          "message": "Zielgruppenmitglied hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
+          "source": "Add a new member to an audience",
+          "message": "Ein neues Mitglied zu einer Zielgruppe hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.desc": {
+          "source": "Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone.",
+          "message": "Entfernt ein Zielgruppenmitglied und alle zugehörigen Daten dauerhaft aus Mailchimp. Diese Aktion kann nicht rückgängig gemacht werden."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
+          "source": "Permanently Delete Member",
+          "message": "Mitglied dauerhaft löschen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
+          "source": "Permanently delete an audience member",
+          "message": "Ein Zielgruppenmitglied dauerhaft löschen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.desc": {
+          "source": "Adds a note to a specific audience member for internal tracking and customer relationship management.",
+          "message": "Fügt einem bestimmten Zielgruppenmitglied eine Notiz für internes Tracking und Kundenbeziehungsmanagement hinzu."
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
+          "source": "Add Member Note",
+          "message": "Mitgliedernotiz hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
+          "source": "Add a note to an audience member",
+          "message": "Eine Notiz zu einem Zielgruppenmitglied hinzufügen"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.desc": {
+          "source": "Updates an existing note attached to an audience member with new information or corrections.",
+          "message": "Aktualisiert eine vorhandene Notiz eines Zielgruppenmitglieds mit neuen Informationen oder Korrekturen."
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
+          "source": "Update Member Note",
+          "message": "Mitgliedernotiz aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
+          "source": "Update an audience member note",
+          "message": "Eine Notiz eines Zielgruppenmitglieds aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Updates the information and subscription preferences of an existing member in an audience.",
+          "message": "Aktualisiert die Informationen und Abonnement-Einstellungen eines bestehenden Mitglieds in einer Zielgruppe."
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Update Audience Member",
+          "message": "Zielgruppenmitglied aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Update an audience member",
+          "message": "Ein Zielgruppenmitglied aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "Bestehende Datensätze in der angegebenen Tabelle in App \"Mailchimp\" aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Datensätze aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "Bestehende Datensätze in der angegebenen Tabelle in App \"Mailchimp\" aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "Datensätze in der angegebenen Tabelle in App \"Mailchimp\" einfügen oder aktualisieren (Upsert)"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Datensätze einfügen/aktualisieren"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabelle"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Der Tabellenname"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "Datensätze in der angegebenen Tabelle in App \"Mailchimp\" einfügen oder aktualisieren (Upsert)"
+        },
+        "app.TWFpbGNoaW1w.desc": {
+          "source": "Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.",
+          "message": "Verbinden Sie sich mit Mailchimp, um E-Mail-Kampagnen zu erstellen und zu verwalten, Abonnentenaktivitäten zu verfolgen und Marketing-Workflows zu automatisieren."
+        },
+        "app.TWFpbGNoaW1w.display_name": {
+          "source": "Mailchimp",
+          "message": "Mailchimp"
+        },
+        "app.TWFpbGNoaW1w.short_desc": {
+          "source": "Email marketing, automation, and analytics platform",
+          "message": "Plattform für E-Mail-Marketing, Automatisierung und Analysen"
+        }
+      }
+    }
+  }
+}

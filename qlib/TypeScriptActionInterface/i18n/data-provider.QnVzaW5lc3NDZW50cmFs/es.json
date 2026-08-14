@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors for newly created records in a specified Business Central object. The trigger polls for records based on their creation timestamp and can be filtered by specific field criteria. Useful for automating workflows when new data is added to your Business Central system.",
+          "message": "Supervisa si se crean registros nuevos en un objeto especificado de Business Central. El activador sondea los registros en función de su marca de tiempo de creación y se puede filtrar según criterios de campos específicos. Útil para automatizar flujos de trabajo cuando se añaden nuevos datos a su sistema de Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nuevo registro"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which records trigger the event based on field values.",
+          "message": "Filtro opcional para limitar qué registros activan el evento en función de los valores de los campos."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "Criterios de filtro opcionales para registros"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for new records, such as customers, items, or sales orders.",
+          "message": "El objeto (entidad) de Business Central a supervisar para nuevos registros, como clientes, productos u órdenes de venta."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objeto"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "Objeto de Business Central a supervisar"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in Business Central.",
+          "message": "Se activa cuando se crea un nuevo registro en Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Monitors for recently updated records in a specified Business Central object. The trigger polls for records based on their modification timestamp and can be filtered by specific field criteria. Ideal for tracking changes and automating workflows when existing data is modified in your Business Central system.",
+          "message": "Supervisa si se actualizan registros recientemente en un objeto especificado de Business Central. El activador sondea los registros en función de su marca de tiempo de modificación y se puede filtrar según criterios de campos específicos. Ideal para realizar un seguimiento de cambios y automatizar flujos de trabajo cuando se modifican datos existentes en su sistema de Business Central."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "Registro actualizado"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.desc": {
+          "source": "Optional filter to limit which updated records trigger the event based on field values.",
+          "message": "Filtro opcional para limitar qué registros actualizados activan el evento en función de los valores de los campos."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.ZmlsdGVy.short_desc": {
+          "source": "Optional filter criteria for records",
+          "message": "Criterios de filtro opcionales para registros"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The Business Central object (entity) to monitor for updated records, such as customers, items, or sales orders.",
+          "message": "El objeto (entidad) de Business Central a supervisar para registros actualizados, como clientes, productos u órdenes de venta."
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objeto"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Business Central object to monitor",
+          "message": "Objeto de Business Central a supervisar"
+        },
+        "app.QnVzaW5lc3NDZW50cmFs.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggers when an existing record is modified in Business Central.",
+          "message": "Se activa cuando se modifica un registro existente en Business Central."
+        }
+      }
+    }
+  }
+}

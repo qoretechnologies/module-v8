@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.desc": {
+          "source": "This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.",
+          "message": "Questo trigger si attiva quando un collettore (metodo di distribuzione) per un'indagine viene modificato, ad esempio in caso di variazioni di stato o aggiornamenti di configurazione."
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
+          "source": "Collector Updated",
+          "message": "Collettore aggiornato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for collector changes",
+          "message": "Seleziona l'indagine specifica che desideri monitorare per le modifiche al collettore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for collector updates",
+          "message": "L'indagine da monitorare per gli aggiornamenti del collettore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers when a collector is updated",
+          "message": "Si attiva quando un collettore viene aggiornato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.desc": {
+          "source": "Clone an existing survey to create a new survey with the same structure and questions",
+          "message": "Clona un'indagine esistente per creare una nuova indagine con la stessa struttura e le stesse domande"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
+          "source": "Copy Survey",
+          "message": "Copia indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to create a copy of",
+          "message": "Seleziona l'indagine di cui desideri creare una copia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to copy",
+          "message": "L'indagine da copiare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the copied survey",
+          "message": "Il titolo che verrà visualizzato per l'indagine copiata"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.short_desc": {
+          "source": "The title for the new survey",
+          "message": "Il titolo per la nuova indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
+          "source": "Create a copy of an existing survey",
+          "message": "Crea una copia di un'indagine esistente"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Create a new collector (distribution method) for a survey in SurveyMonkey",
+          "message": "Crea un nuovo raccoglitore (metodo di distribuzione) per un sondaggio in SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Create Collector",
+          "message": "Crea raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the collector",
+          "message": "Un nome descrittivo per il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Collector Name",
+          "message": "Nome raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "The name of the collector",
+          "message": "Il nome del raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that you want to create a collector for",
+          "message": "Seleziona il sondaggio per cui desideri creare un raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to create a collector for",
+          "message": "Il sondaggio per cui creare un raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYmVk.display_name": {
+          "source": "Embedded Survey",
+          "message": "Sondaggio incorporato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmZhY2Vib29r.display_name": {
+          "source": "Facebook",
+          "message": "Facebook"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOndlYmxpbms.display_name": {
+          "source": "Web Link",
+          "message": "Collegamento Web"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.desc": {
+          "source": "Select the type of collector (email, weblink, facebook, or embed)",
+          "message": "Seleziona il tipo di raccoglitore (email, weblink, facebook o embed)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
+          "source": "Collector Type",
+          "message": "Tipo di raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
+          "source": "The type of collector",
+          "message": "Il tipo di raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Create a collector for a survey",
+          "message": "Crea un raccoglitore per un sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in SurveyMonkey with first name, last name, email, or phone number",
+          "message": "Crea un nuovo contatto in SurveyMonkey con nome, cognome, email o numero di telefono"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Crea contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The email address for the contact (either email or phone number is required)",
+          "message": "L'indirizzo email per il contatto (è richiesto l'indirizzo email o il numero di telefono)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "L'indirizzo email del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The first name of the contact",
+          "message": "Il nome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Nome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "Il nome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The last name of the contact",
+          "message": "Il cognome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Cognome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "Il cognome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The phone number for the contact (either email or phone number is required)",
+          "message": "Il numero di telefono per il contatto (è richiesto l'indirizzo email o il numero di telefono)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Numero di telefono"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Il numero di telefono del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Crea un nuovo contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list for organizing contacts in SurveyMonkey",
+          "message": "Crea un nuovo elenco di contatti per organizzare i contatti in SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "Crea lista di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the new contact list",
+          "message": "Un nome descrittivo per il nuovo elenco di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The name of the contact list",
+          "message": "Il nome dell'elenco di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Crea un nuovo elenco contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.desc": {
+          "source": "Create a new survey in SurveyMonkey from scratch or from a template",
+          "message": "Crea un nuovo sondaggio in SurveyMonkey da zero o da un modello"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
+          "source": "Create Survey",
+          "message": "Crea sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.desc": {
+          "source": "The ID of the folder where the survey should be created",
+          "message": "L'ID della cartella in cui deve essere creato il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "ID cartella"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "The folder to create the survey in",
+          "message": "La cartella in cui creare il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.desc": {
+          "source": "The ID of a template to use as the basis for the new survey",
+          "message": "L'ID di un modello da utilizzare come base per il nuovo sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.display_name": {
+          "source": "Template ID",
+          "message": "ID modello"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.short_desc": {
+          "source": "Template to create survey from",
+          "message": "Modello da cui creare il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language code for the survey (e.g., en, es, fr). Defaults to en.",
+          "message": "Il codice lingua per il sondaggio (ad es. en, es, fr). Il valore predefinito è en."
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "Lingua"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language of the survey",
+          "message": "La lingua del sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.desc": {
+          "source": "An optional internal nickname to help identify the survey",
+          "message": "Un soprannome interno facoltativo per facilitare l'identificazione del sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.display_name": {
+          "source": "Nickname",
+          "message": "Soprannome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.short_desc": {
+          "source": "Internal nickname for the survey",
+          "message": "Soprannome interno per il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the survey",
+          "message": "Il titolo che verrà visualizzato per il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.short_desc": {
+          "source": "The title of the survey",
+          "message": "Il titolo del sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
+          "source": "Create a new survey",
+          "message": "Crea un nuovo sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.desc": {
+          "source": "Create a new folder to organize your surveys in SurveyMonkey",
+          "message": "Crea una nuova cartella per organizzare i tuoi sondaggi in SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
+          "source": "Create Survey Folder",
+          "message": "Crea cartella sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the new survey folder",
+          "message": "Un titolo descrittivo per la nuova cartella sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.short_desc": {
+          "source": "The title of the folder",
+          "message": "Il titolo della cartella"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
+          "source": "Create a new survey folder",
+          "message": "Crea una nuova cartella sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.desc": {
+          "source": "Add one or more existing contacts to a contact list in bulk",
+          "message": "Aggiungi uno o più contatti esistenti a un elenco di contatti in blocco"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
+          "source": "Add Contacts to List",
+          "message": "Aggiungi contatti all'elenco"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.desc": {
+          "source": "A list of contact IDs to add to the contact list",
+          "message": "Un elenco di ID contatto da aggiungere all'elenco di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.display_name": {
+          "source": "Contact IDs",
+          "message": "ID contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.short_desc": {
+          "source": "The contacts to add",
+          "message": "I contatti da aggiungere"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.desc": {
+          "source": "The ID of the contact list where contacts will be added",
+          "message": "L'ID dell'elenco di contatti in cui verranno aggiunti i contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
+          "source": "Contact List ID",
+          "message": "ID elenco contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "L'elenco contatti a cui aggiungere contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "Aggiungi contatti a un elenco contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.desc": {
+          "source": "Retrieve detailed information about a specific collector",
+          "message": "Recupera informazioni dettagliate su uno specifico raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
+          "source": "Get Collector",
+          "message": "Ottieni raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to get detailed information for",
+          "message": "Seleziona il raccoglitore di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to retrieve",
+          "message": "Il raccoglitore da recuperare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Seleziona il sondaggio che contiene il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Il sondaggio contenente il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
+          "source": "Retrieve collector details",
+          "message": "Recupera i dettagli del raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.desc": {
+          "source": "Retrieve detailed information about a specific survey response, optionally including full answer details",
+          "message": "Recupera informazioni dettagliate su una risposta specifica al sondaggio, includendo facoltativamente i dettagli completi delle risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
+          "source": "Get Response",
+          "message": "Ottieni risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "When enabled, retrieves the full response details including all question answers",
+          "message": "Se abilitato, recupera i dettagli completi della risposta incluse tutte le risposte alle domande"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Includi risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answer data",
+          "message": "Includi dati di risposta dettagliati"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the response",
+          "message": "Seleziona il sondaggio che contiene la risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the response",
+          "message": "Il sondaggio contenente la risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the response you want to retrieve",
+          "message": "L'identificatore univoco della risposta che desideri recuperare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "ID risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The ID of the response to retrieve",
+          "message": "L'ID della risposta da recuperare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
+          "source": "Retrieve a specific survey response",
+          "message": "Recupera una risposta specifica al sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.desc": {
+          "source": "Quickly retrieve the total number of responses for a survey without fetching all response data",
+          "message": "Recupera rapidamente il numero totale di risposte per un sondaggio senza recuperare tutti i dati delle risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
+          "source": "Get Response Counts",
+          "message": "Ottieni conteggi risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get response counts for",
+          "message": "Seleziona il sondaggio di cui desideri ottenere i conteggi delle risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get counts for",
+          "message": "Il sondaggio di cui ottenere i conteggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
+          "source": "Get total response count for a survey",
+          "message": "Ottieni il conteggio totale delle risposte per un sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.desc": {
+          "source": "Retrieve detailed information about a specific survey including pages and questions",
+          "message": "Recupera informazioni dettagliate su un sondaggio specifico, incluse pagine e domande"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
+          "source": "Get Survey",
+          "message": "Ottieni sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get detailed information for",
+          "message": "Seleziona il sondaggio di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to retrieve",
+          "message": "Il sondaggio da recuperare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
+          "source": "Retrieve survey details",
+          "message": "Recupera dettagli sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.desc": {
+          "source": "Retrieve aggregated response statistics for a survey including question-level summaries",
+          "message": "Recupera le statistiche aggregate delle risposte per un sondaggio, inclusi i riepiloghi a livello di domanda"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
+          "source": "Get Survey Rollup",
+          "message": "Ottieni riepilogo sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get aggregated statistics for",
+          "message": "Seleziona il sondaggio per cui desideri ottenere statistiche aggregate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get statistics for",
+          "message": "Il sondaggio per cui ottenere statistiche"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
+          "source": "Get aggregated survey statistics",
+          "message": "Ottieni statistiche aggregate del sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.desc": {
+          "source": "Retrieve details about the authenticated SurveyMonkey user including account type and permissions",
+          "message": "Recupera i dettagli sull'utente SurveyMonkey autenticato, inclusi tipo di account e autorizzazioni"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
+          "source": "Get User Details",
+          "message": "Ottieni dettagli utente"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
+          "source": "Get authenticated user information",
+          "message": "Ottieni informazioni sull'utente autenticato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Permanently remove a collector from a survey. This action cannot be undone.",
+          "message": "Rimuovi definitivamente un raccoglitore da un sondaggio. Questa azione non può essere annullata."
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Delete Collector",
+          "message": "Elimina raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to permanently delete",
+          "message": "Seleziona il raccoglitore che desideri eliminare definitivamente"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to delete",
+          "message": "Il raccoglitore da eliminare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Seleziona il sondaggio che contiene il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Il sondaggio contenente il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Delete a collector from a survey",
+          "message": "Elimina un raccoglitore da un sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently remove a contact from SurveyMonkey. This action cannot be undone.",
+          "message": "Rimuovi definitivamente un contatto da SurveyMonkey. Questa azione non può essere annullata."
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Elimina contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to delete",
+          "message": "L'identificatore univoco del contatto che desideri eliminare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "ID contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to delete",
+          "message": "L'ID del contatto da eliminare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Elimina un contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your SurveyMonkey account",
+          "message": "Recupera un elenco di tutti gli elenchi di contatti nel tuo account SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "Elenca elenchi di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contact lists to retrieve (default: 500)",
+          "message": "Il numero totale massimo di elenchi di contatti da recuperare (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "Numero massimo di liste da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Recupera tutti gli elenchi di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a paginated list of contacts from SurveyMonkey",
+          "message": "Recupera un elenco impaginato di contatti da SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Elenca contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contacts to retrieve across all pages (default: 500)",
+          "message": "Il numero totale massimo di contatti da recuperare in tutte le pagine (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Numero massimo di contatti da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.desc": {
+          "source": "The page number for pagination (starts at 1)",
+          "message": "Il numero di pagina per la paginazione (inizia da 1)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Pagina"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.short_desc": {
+          "source": "Page number to retrieve",
+          "message": "Numero di pagina da recuperare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.desc": {
+          "source": "The number of contacts to return per page (default: 100)",
+          "message": "Il numero di contatti da restituire per pagina (predefinito: 100)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Per Page",
+          "message": "Per pagina"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of contacts per page",
+          "message": "Numero di contatti per pagina"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Recupera un elenco di contatti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.desc": {
+          "source": "Retrieve a paginated list of collectors for a specific survey",
+          "message": "Recupera un elenco impaginato di raccoglitori per un sondaggio specifico"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
+          "source": "List Collectors",
+          "message": "Elenca raccoglitori"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of collectors to retrieve (default: 500)",
+          "message": "Il numero totale massimo di raccoglitori da recuperare (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of collectors to return",
+          "message": "Numero massimo di raccoglitori da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve collectors from",
+          "message": "Seleziona il sondaggio da cui recuperare i raccoglitori"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list collectors for",
+          "message": "Il sondaggio per cui elencare i raccoglitori"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
+          "source": "Retrieve collectors for a survey",
+          "message": "Recupera raccoglitori per un sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Retrieve a paginated list of responses for a specific survey",
+          "message": "Recupera un elenco impaginato di risposte per un sondaggio specifico"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "Elenca risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.desc": {
+          "source": "The maximum total number of responses to retrieve (default: 500)",
+          "message": "Il numero totale massimo di risposte da recuperare (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "Numero massimo di risposte da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve responses from",
+          "message": "Seleziona il sondaggio da cui recuperare le risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list responses for",
+          "message": "Il sondaggio per cui elencare le risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve survey responses",
+          "message": "Recupera risposte del sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.desc": {
+          "source": "Retrieve a list of all survey folders in your SurveyMonkey account",
+          "message": "Recupera un elenco di tutte le cartelle di sondaggi nel tuo account SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
+          "source": "List Survey Folders",
+          "message": "Elenca cartelle sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of survey folders to retrieve (default: 500)",
+          "message": "Il numero totale massimo di cartelle di sondaggi da recuperare (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of folders to return",
+          "message": "Numero massimo di cartelle da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
+          "source": "Retrieve all survey folders",
+          "message": "Recupera tutte le cartelle dei sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.desc": {
+          "source": "Retrieve a paginated list of all surveys in your SurveyMonkey account",
+          "message": "Recupera un elenco impaginato di tutti i sondaggi nel tuo account SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
+          "source": "List Surveys",
+          "message": "Elenca sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of surveys to retrieve (default: 500)",
+          "message": "Il numero totale massimo di sondaggi da recuperare (predefinito: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of surveys to return",
+          "message": "Numero massimo di sondaggi da restituire"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
+          "source": "Retrieve a list of surveys",
+          "message": "Recupera un elenco di sondaggi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **SurveyMonkey** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effettua una chiamata API HTTP / REST personalizzata a **SurveyMonkey** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine su questa app."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to SurveyMonkey",
+          "message": "Effettua una chiamata API personalizzata a SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.desc": {
+          "source": "This trigger fires when a respondent completes a survey. The webhook payload includes basic response information. Use the \"Get Response\" action to fetch detailed response data including answers.",
+          "message": "Questo trigger si attiva quando un rispondente completa un sondaggio. Il payload del webhook include informazioni di base sulla risposta. Usa l'azione \"Get Response\" per recuperare i dati dettagliati della risposta, incluse le risposte fornite."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
+          "source": "New Response",
+          "message": "Nuova risposta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for completed responses",
+          "message": "Seleziona il sondaggio specifico che desideri monitorare per le risposte completate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for new responses",
+          "message": "Il sondaggio da monitorare per nuove risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
+          "source": "Triggers when a new survey response is completed",
+          "message": "Si attiva quando viene completata una nuova risposta al sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.desc": {
+          "source": "Send a survey invitation to recipients via an email collector",
+          "message": "Invia un invito al sondaggio ai destinatari tramite un raccoglitore email"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
+          "source": "Send Survey",
+          "message": "Invia sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the email collector to send the survey through",
+          "message": "Seleziona il raccoglitore email tramite cui inviare il sondaggio"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The email collector to use",
+          "message": "Il raccoglitore email da utilizzare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.desc": {
+          "source": "The message body that will appear in the invitation email",
+          "message": "Il corpo del messaggio che apparirà nell'email di invito"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
+          "source": "Email Body",
+          "message": "Corpo dell'email"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
+          "source": "The body text for the invitation email",
+          "message": "Il testo del corpo per l'email di invito"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.desc": {
+          "source": "The subject line that will appear in the invitation email",
+          "message": "La riga dell'oggetto che apparirà nell'email di invito"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
+          "source": "Email Subject",
+          "message": "Oggetto email"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
+          "source": "The subject line for the invitation email",
+          "message": "La riga dell'oggetto per l'email di invito"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to send",
+          "message": "Seleziona l'indagine che desideri inviare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to send",
+          "message": "L'indagine da inviare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.desc": {
+          "source": "A list of email addresses to send the survey invitation to",
+          "message": "Un elenco di indirizzi email a cui inviare l'invito all'indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
+          "source": "Recipient Emails",
+          "message": "Email dei destinatari"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
+          "source": "List of recipient email addresses",
+          "message": "Elenco degli indirizzi email dei destinatari"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
+          "source": "Send survey invitation via collector",
+          "message": "Invia invito all'indagine tramite raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.desc": {
+          "source": "This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.",
+          "message": "Questo trigger si attiva quando un rispondente viene escluso o squalificato da un'indagine in base alle risposte alle domande di qualificazione."
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
+          "source": "Response Disqualified",
+          "message": "Risposta squalificata"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for disqualified responses",
+          "message": "Seleziona l'indagine specifica da monitorare per le risposte squalificate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for disqualified responses",
+          "message": "L'indagine da monitorare per le risposte squalificate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
+          "source": "Triggers when a respondent is disqualified from a survey",
+          "message": "Si attiva quando un rispondente viene squalificato da un'indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.desc": {
+          "source": "This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.",
+          "message": "Questo trigger si attiva quando una risposta esistente all'indagine viene modificata o aggiornata. Utile per tracciare risposte parziali o modifiche alle risposte."
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
+          "source": "Response Updated",
+          "message": "Risposta aggiornata"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for updated responses",
+          "message": "Seleziona l'indagine specifica da monitorare per le risposte aggiornate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for updated responses",
+          "message": "L'indagine da monitorare per le risposte aggiornate"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when a survey response is updated",
+          "message": "Si attiva quando una risposta all'indagine viene aggiornata"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Modify the settings of an existing collector such as status, close date, or redirect URL",
+          "message": "Modifica le impostazioni di un raccoglitore esistente come stato, data di chiusura o URL di reindirizzamento"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Update Collector",
+          "message": "Aggiorna raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to modify",
+          "message": "Seleziona il raccoglitore che desideri modificare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to update",
+          "message": "Il raccoglitore da aggiornare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "The date and time when the collector should automatically close (ISO 8601 format)",
+          "message": "La data e l'ora in cui il raccoglitore deve chiudersi automaticamente (formato ISO 8601)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "Data di chiusura"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "When to automatically close the collector",
+          "message": "Quando chiudere automaticamente il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A new descriptive name for the collector",
+          "message": "Un nuovo nome descrittivo per il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "New name for the collector",
+          "message": "Nuovo nome per il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Aperto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Chiuso"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.desc": {
+          "source": "Set the collector to open or closed",
+          "message": "Imposta il raccoglitore come aperto o chiuso"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stato"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.short_desc": {
+          "source": "The collector status",
+          "message": "Lo stato del raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Seleziona il sondaggio che contiene il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Il sondaggio contenente il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.desc": {
+          "source": "The URL where respondents will be redirected after completing the survey",
+          "message": "L'URL a cui i rispondenti verranno reindirizzati dopo aver completato l'indagine"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.display_name": {
+          "source": "Redirect URL",
+          "message": "URL di reindirizzamento"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.short_desc": {
+          "source": "URL to redirect respondents after completion",
+          "message": "URL per reindirizzare i rispondenti dopo il completamento"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.desc": {
+          "source": "The maximum number of responses to accept before closing the collector",
+          "message": "Il numero massimo di risposte da accettare prima di chiudere il raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
+          "source": "Response Limit",
+          "message": "Limite di risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
+          "source": "Maximum number of responses",
+          "message": "Numero massimo di risposte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Update collector settings",
+          "message": "Aggiorna impostazioni del raccoglitore"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Modify the details of an existing contact in SurveyMonkey",
+          "message": "Modifica i dettagli di un contatto esistente in SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Aggiorna contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to update",
+          "message": "L'identificatore univoco del contatto che desideri aggiornare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "ID contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to update",
+          "message": "L'ID del contatto da aggiornare"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "Il nuovo indirizzo email per il contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "L'indirizzo email del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The new first name for the contact",
+          "message": "Il nuovo nome per il contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Nome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "Il nome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The new last name for the contact",
+          "message": "Il nuovo cognome per il contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Cognome"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "Il cognome del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The new phone number for the contact",
+          "message": "Il nuovo numero di telefono per il contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Numero di telefono"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Il numero di telefono del contatto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Aggiorna un contatto esistente"
+        },
+        "app.U3VydmV5TW9ua2V5.desc": {
+          "source": "Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.",
+          "message": "Connetti il tuo account SurveyMonkey per automatizzare la gestione delle indagini, raccogliere risposte e gestire i contatti. Crea raccoglitori, invia indagini, recupera risposte e configura webhook per notifiche di risposta in tempo reale, tutto all'interno di Qore."
+        },
+        "app.U3VydmV5TW9ua2V5.display_name": {
+          "source": "SurveyMonkey",
+          "message": "SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.short_desc": {
+          "source": "Online survey platform for collecting feedback and responses",
+          "message": "Piattaforma di indagini online per raccogliere feedback e risposte"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.desc": {
+          "source": "This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.",
+          "message": "Ten wyzwalacz uruchamia się, gdy moduł zbierający (metoda dystrybucji) ankiety zostanie zmodyfikowany, np. w przypadku zmian statusu lub aktualizacji konfiguracji."
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
+          "source": "Collector Updated",
+          "message": "Zaktualizowano moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for collector changes",
+          "message": "Wybierz konkretną ankietę, którą chcesz monitorować pod kątem zmian modułów zbierających"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for collector updates",
+          "message": "Ankieta do monitorowania aktualizacji modułów zbierających"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers when a collector is updated",
+          "message": "Uruchamia wyzwalacz po zaktualizowaniu modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.desc": {
+          "source": "Clone an existing survey to create a new survey with the same structure and questions",
+          "message": "Sklonuj istniejącą ankietę, aby utworzyć nową ankietę o tej samej strukturze i pytaniach"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
+          "source": "Copy Survey",
+          "message": "Kopiuj ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to create a copy of",
+          "message": "Wybierz ankietę, którą chcesz skopiować"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to copy",
+          "message": "Ankieta do skopiowania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the copied survey",
+          "message": "Tytuł, który będzie wyświetlany dla skopiowanej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.short_desc": {
+          "source": "The title for the new survey",
+          "message": "Tytuł nowej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
+          "source": "Create a copy of an existing survey",
+          "message": "Utwórz kopię istniejącej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Create a new collector (distribution method) for a survey in SurveyMonkey",
+          "message": "Utwórz nowy moduł zbierający (metodę dystrybucji) dla ankiety w SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Create Collector",
+          "message": "Utwórz moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the collector",
+          "message": "Opisowa nazwa modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Collector Name",
+          "message": "Nazwa modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "The name of the collector",
+          "message": "Nazwa modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that you want to create a collector for",
+          "message": "Wybierz ankietę, dla której chcesz utworzyć moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to create a collector for",
+          "message": "Ankieta, dla której ma zostać utworzony moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYmVk.display_name": {
+          "source": "Embedded Survey",
+          "message": "Osadzona ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmZhY2Vib29r.display_name": {
+          "source": "Facebook",
+          "message": "Facebook"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOndlYmxpbms.display_name": {
+          "source": "Web Link",
+          "message": "Łącze internetowe"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.desc": {
+          "source": "Select the type of collector (email, weblink, facebook, or embed)",
+          "message": "Wybierz typ modułu zbierającego (email, weblink, facebook lub embed)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
+          "source": "Collector Type",
+          "message": "Typ modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
+          "source": "The type of collector",
+          "message": "Typ modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Create a collector for a survey",
+          "message": "Utwórz moduł zbierający dla ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in SurveyMonkey with first name, last name, email, or phone number",
+          "message": "Utwórz nowy kontakt w SurveyMonkey z imieniem, nazwiskiem, adresem e-mail lub numerem telefonu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Utwórz kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The email address for the contact (either email or phone number is required)",
+          "message": "Adres e-mail kontaktu (wymagany jest adres e-mail lub numer telefonu)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "Adres e-mail kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The first name of the contact",
+          "message": "Imię kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Imię"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "Imię kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The last name of the contact",
+          "message": "Nazwisko kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Nazwisko"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "Nazwisko kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The phone number for the contact (either email or phone number is required)",
+          "message": "Numer telefonu kontaktu (wymagany jest adres e-mail lub numer telefonu)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Numer telefonu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Numer telefonu kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Utwórz nowy kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list for organizing contacts in SurveyMonkey",
+          "message": "Utwórz nową listę kontaktów do organizowania kontaktów w SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "Utwórz listę kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the new contact list",
+          "message": "Opisowa nazwa nowej listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nazwa"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The name of the contact list",
+          "message": "Nazwa listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "Utwórz nową listę kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.desc": {
+          "source": "Create a new survey in SurveyMonkey from scratch or from a template",
+          "message": "Utwórz nową ankietę w SurveyMonkey od podstaw lub z szablonu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
+          "source": "Create Survey",
+          "message": "Utwórz ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.desc": {
+          "source": "The ID of the folder where the survey should be created",
+          "message": "Identyfikator folderu, w którym powinna zostać utworzona ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "Identyfikator folderu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "The folder to create the survey in",
+          "message": "Folder, w którym ma zostać utworzona ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.desc": {
+          "source": "The ID of a template to use as the basis for the new survey",
+          "message": "Identyfikator szablonu, który ma posłużyć jako podstawa nowej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.display_name": {
+          "source": "Template ID",
+          "message": "Identyfikator szablonu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.short_desc": {
+          "source": "Template to create survey from",
+          "message": "Szablon, na podstawie którego ma zostać utworzona ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language code for the survey (e.g., en, es, fr). Defaults to en.",
+          "message": "Kod języka ankiety (np. en, es, fr). Wartość domyślna to en."
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "Język"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language of the survey",
+          "message": "Język ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.desc": {
+          "source": "An optional internal nickname to help identify the survey",
+          "message": "Opcjonalny wewnętrzny pseudonim ułatwiający identyfikację ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.display_name": {
+          "source": "Nickname",
+          "message": "Pseudonim"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.short_desc": {
+          "source": "Internal nickname for the survey",
+          "message": "Wewnętrzny pseudonim ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the survey",
+          "message": "Tytuł, który będzie wyświetlany dla ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.short_desc": {
+          "source": "The title of the survey",
+          "message": "Tytuł ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
+          "source": "Create a new survey",
+          "message": "Utwórz nową ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.desc": {
+          "source": "Create a new folder to organize your surveys in SurveyMonkey",
+          "message": "Utwórz nowy folder do organizowania ankiet w SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
+          "source": "Create Survey Folder",
+          "message": "Utwórz folder ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the new survey folder",
+          "message": "Opisowy tytuł nowego folderu ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.short_desc": {
+          "source": "The title of the folder",
+          "message": "Tytuł folderu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
+          "source": "Create a new survey folder",
+          "message": "Utwórz nowy folder ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.desc": {
+          "source": "Add one or more existing contacts to a contact list in bulk",
+          "message": "Dodaj masowo jeden lub więcej istniejących kontaktów do listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
+          "source": "Add Contacts to List",
+          "message": "Dodaj kontakty do listy"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.desc": {
+          "source": "A list of contact IDs to add to the contact list",
+          "message": "Lista identyfikatorów kontaktów do dodania do listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.display_name": {
+          "source": "Contact IDs",
+          "message": "Identyfikatory kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.short_desc": {
+          "source": "The contacts to add",
+          "message": "Kontakty do dodania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.desc": {
+          "source": "The ID of the contact list where contacts will be added",
+          "message": "Identyfikator listy kontaktów, do której zostaną dodane kontakty"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
+          "source": "Contact List ID",
+          "message": "Identyfikator listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "Lista kontaktów, do której mają zostać dodane kontakty"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "Dodaj kontakty do listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.desc": {
+          "source": "Retrieve detailed information about a specific collector",
+          "message": "Pobierz szczegółowe informacje o określonym module zbierającym"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
+          "source": "Get Collector",
+          "message": "Pobierz moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to get detailed information for",
+          "message": "Wybierz moduł zbierający, dla którego chcesz pobrać szczegółowe informacje"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to retrieve",
+          "message": "Moduł zbierający do pobrania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Wybierz ankietę zawierającą moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Ankieta zawierająca moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
+          "source": "Retrieve collector details",
+          "message": "Pobierz szczegóły modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.desc": {
+          "source": "Retrieve detailed information about a specific survey response, optionally including full answer details",
+          "message": "Pobierz szczegółowe informacje o określonej odpowiedzi na ankietę, opcjonalnie uwzględniając pełne szczegóły odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
+          "source": "Get Response",
+          "message": "Pobierz odpowiedź"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "When enabled, retrieves the full response details including all question answers",
+          "message": "Gdy włączone, pobiera pełne szczegóły odpowiedzi, w tym odpowiedzi na wszystkie pytania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "Dołącz odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answer data",
+          "message": "Dołącz szczegółowe dane odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the response",
+          "message": "Wybierz ankietę zawierającą odpowiedź"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the response",
+          "message": "Ankieta zawierająca odpowiedź"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the response you want to retrieve",
+          "message": "Unikalny identyfikator odpowiedzi, którą chcesz pobrać"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "ID odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The ID of the response to retrieve",
+          "message": "Identyfikator odpowiedzi do pobrania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
+          "source": "Retrieve a specific survey response",
+          "message": "Pobierz określoną odpowiedź na ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.desc": {
+          "source": "Quickly retrieve the total number of responses for a survey without fetching all response data",
+          "message": "Szybko pobierz łączną liczbę odpowiedzi na ankietę bez pobierania wszystkich danych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
+          "source": "Get Response Counts",
+          "message": "Pobierz liczbę odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get response counts for",
+          "message": "Wybierz ankietę, dla której chcesz pobrać liczbę odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get counts for",
+          "message": "Ankieta, dla której ma zostać pobrana liczba odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
+          "source": "Get total response count for a survey",
+          "message": "Pobierz łączną liczbę odpowiedzi dla ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.desc": {
+          "source": "Retrieve detailed information about a specific survey including pages and questions",
+          "message": "Pobierz szczegółowe informacje o określonej ankiecie, w tym strony i pytania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
+          "source": "Get Survey",
+          "message": "Pobierz ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get detailed information for",
+          "message": "Wybierz ankietę, dla której chcesz pobrać szczegółowe informacje"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to retrieve",
+          "message": "Ankieta do pobrania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
+          "source": "Retrieve survey details",
+          "message": "Pobierz szczegóły ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.desc": {
+          "source": "Retrieve aggregated response statistics for a survey including question-level summaries",
+          "message": "Pobierz zagregowane statystyki odpowiedzi dla ankiety, w tym podsumowania na poziomie pytań"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
+          "source": "Get Survey Rollup",
+          "message": "Pobierz zbiorcze statystyki ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get aggregated statistics for",
+          "message": "Wybierz ankietę, dla której chcesz pobrać zagregowane statystyki"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get statistics for",
+          "message": "Ankieta, dla której mają zostać pobrane statystyki"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
+          "source": "Get aggregated survey statistics",
+          "message": "Pobierz zagregowane statystyki ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.desc": {
+          "source": "Retrieve details about the authenticated SurveyMonkey user including account type and permissions",
+          "message": "Pobierz szczegóły dotyczące uwierzytelnionego użytkownika SurveyMonkey, w tym typ konta i uprawnienia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
+          "source": "Get User Details",
+          "message": "Pobierz szczegóły użytkownika"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
+          "source": "Get authenticated user information",
+          "message": "Pobierz informacje o uwierzytelnionym użytkowniku"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Permanently remove a collector from a survey. This action cannot be undone.",
+          "message": "Trwale usuń moduł zbierający z ankiety. Tej operacji nie można cofnąć."
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Delete Collector",
+          "message": "Usuń moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to permanently delete",
+          "message": "Wybierz moduł zbierający, który chcesz trwale usunąć"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to delete",
+          "message": "Moduł zbierający do usunięcia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Wybierz ankietę zawierającą moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Ankieta zawierająca moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Delete a collector from a survey",
+          "message": "Usuń moduł zbierający z ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently remove a contact from SurveyMonkey. This action cannot be undone.",
+          "message": "Trwale usuń kontakt z SurveyMonkey. Tej operacji nie można cofnąć."
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "Usuń kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to delete",
+          "message": "Unikalny identyfikator kontaktu, który chcesz usunąć"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "ID kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to delete",
+          "message": "Identyfikator kontaktu do usunięcia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "Usuń kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your SurveyMonkey account",
+          "message": "Pobierz listę wszystkich list kontaktów na swoim koncie SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "Pobierz listę list kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contact lists to retrieve (default: 500)",
+          "message": "Maksymalna łączna liczba list kontaktów do pobrania (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "Maksymalna liczba list do zwrócenia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "Pobierz wszystkie listy kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a paginated list of contacts from SurveyMonkey",
+          "message": "Pobierz stronicowaną listę kontaktów z SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Lista kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contacts to retrieve across all pages (default: 500)",
+          "message": "Maksymalna łączna liczba kontaktów do pobrania ze wszystkich stron (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Maksymalna liczba kontaktów do zwrócenia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.desc": {
+          "source": "The page number for pagination (starts at 1)",
+          "message": "Numer strony do stronicowania (zaczyna się od 1)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Strona"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.short_desc": {
+          "source": "Page number to retrieve",
+          "message": "Numer strony do pobrania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.desc": {
+          "source": "The number of contacts to return per page (default: 100)",
+          "message": "Liczba kontaktów do zwrócenia na stronę (domyślnie: 100)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Per Page",
+          "message": "Na stronę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of contacts per page",
+          "message": "Liczba kontaktów na stronę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Pobierz listę kontaktów"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.desc": {
+          "source": "Retrieve a paginated list of collectors for a specific survey",
+          "message": "Pobierz stronicowaną listę modułów zbierających dla określonej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
+          "source": "List Collectors",
+          "message": "Wyświetl moduły zbierające"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of collectors to retrieve (default: 500)",
+          "message": "Maksymalna łączna liczba modułów zbierających do pobrania (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of collectors to return",
+          "message": "Maksymalna liczba modułów zbierających do zwrócenia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve collectors from",
+          "message": "Wybierz ankietę, z której mają zostać pobrane moduły zbierające"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list collectors for",
+          "message": "Ankieta, dla której mają zostać wyświetlone moduły zbierające"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
+          "source": "Retrieve collectors for a survey",
+          "message": "Pobierz moduły zbierające dla ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Retrieve a paginated list of responses for a specific survey",
+          "message": "Pobierz stronicowaną listę odpowiedzi dla określonej ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "Wyświetl odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.desc": {
+          "source": "The maximum total number of responses to retrieve (default: 500)",
+          "message": "Maksymalna łączna liczba odpowiedzi do pobrania (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "Maksymalna liczba zwracanych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve responses from",
+          "message": "Wybierz ankietę, z której mają zostać pobrane odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list responses for",
+          "message": "Ankieta, dla której mają zostać wyświetlone odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve survey responses",
+          "message": "Pobierz odpowiedzi na ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.desc": {
+          "source": "Retrieve a list of all survey folders in your SurveyMonkey account",
+          "message": "Pobierz listę wszystkich folderów ankiet na swoim koncie SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
+          "source": "List Survey Folders",
+          "message": "Wyświetl foldery ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of survey folders to retrieve (default: 500)",
+          "message": "Maksymalna łączna liczba folderów ankiet do pobrania (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of folders to return",
+          "message": "Maksymalna liczba folderów do zwrócenia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
+          "source": "Retrieve all survey folders",
+          "message": "Pobierz wszystkie foldery ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.desc": {
+          "source": "Retrieve a paginated list of all surveys in your SurveyMonkey account",
+          "message": "Pobierz stronicowaną listę wszystkich ankiet na swoim koncie SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
+          "source": "List Surveys",
+          "message": "Wyświetl ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of surveys to retrieve (default: 500)",
+          "message": "Maksymalna łączna liczba ankiet do pobrania (domyślnie: 500)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of surveys to return",
+          "message": "Maksymalna liczba ankiet do zwrócenia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
+          "source": "Retrieve a list of surveys",
+          "message": "Pobierz listę ankiet"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **SurveyMonkey** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **SurveyMonkey** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako pierwszorzędne akcje w tej aplikacji."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to SurveyMonkey",
+          "message": "Wykonaj niestandardowe wywołanie API do SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.desc": {
+          "source": "This trigger fires when a respondent completes a survey. The webhook payload includes basic response information. Use the \"Get Response\" action to fetch detailed response data including answers.",
+          "message": "Ten wyzwalacz uruchamia się, gdy respondent wypełni ankietę. Ładunek elementu webhook zawiera podstawowe informacje o odpowiedzi. Użyj akcji „Get Response”, aby pobrać szczegółowe dane odpowiedzi, w tym udzielone odpowiedzi."
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
+          "source": "New Response",
+          "message": "Nowa odpowiedź"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for completed responses",
+          "message": "Wybierz konkretną ankietę, którą chcesz monitorować pod kątem wypełnionych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for new responses",
+          "message": "Ankieta do monitorowania pod kątem nowych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
+          "source": "Triggers when a new survey response is completed",
+          "message": "Uruchamia się po wypełnieniu nowej odpowiedzi na ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.desc": {
+          "source": "Send a survey invitation to recipients via an email collector",
+          "message": "Wyślij zaproszenie do ankiety do odbiorców za pośrednictwem e-mailowego modułu zbierającego"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
+          "source": "Send Survey",
+          "message": "Wyślij ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the email collector to send the survey through",
+          "message": "Wybierz e-mailowy moduł zbierający, za pośrednictwem którego chcesz wysłać ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The email collector to use",
+          "message": "Kolektor e-mail do użycia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.desc": {
+          "source": "The message body that will appear in the invitation email",
+          "message": "Treść wiadomości, która pojawi się w wiadomości e-mail z zaproszeniem"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
+          "source": "Email Body",
+          "message": "Treść wiadomości e-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
+          "source": "The body text for the invitation email",
+          "message": "Treść wiadomości e-mail z zaproszeniem"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.desc": {
+          "source": "The subject line that will appear in the invitation email",
+          "message": "Wiersz tematu, który pojawi się w wiadomości e-mail z zaproszeniem"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
+          "source": "Email Subject",
+          "message": "Temat wiadomości e-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
+          "source": "The subject line for the invitation email",
+          "message": "Temat wiadomości e-mail z zaproszeniem"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to send",
+          "message": "Wybierz ankietę, którą chcesz wysłać"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to send",
+          "message": "Ankieta do wysłania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.desc": {
+          "source": "A list of email addresses to send the survey invitation to",
+          "message": "Lista adresów e-mail, na które ma zostać wysłane zaproszenie do ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
+          "source": "Recipient Emails",
+          "message": "Adresy e-mail odbiorców"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
+          "source": "List of recipient email addresses",
+          "message": "Lista adresów e-mail odbiorców"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
+          "source": "Send survey invitation via collector",
+          "message": "Wyślij zaproszenie do ankiety za pośrednictwem kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.desc": {
+          "source": "This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.",
+          "message": "Ten wyzwalacz uruchamia się, gdy respondent zostanie wykluczony lub zdyskwalifikowany z ankiety na podstawie odpowiedzi na pytania kwalifikacyjne."
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
+          "source": "Response Disqualified",
+          "message": "Odpowiedź zdyskwalifikowana"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for disqualified responses",
+          "message": "Wybierz konkretną ankietę, którą chcesz monitorować pod kątem zdyskwalifikowanych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for disqualified responses",
+          "message": "Ankieta do monitorowania zdyskwalifikowanych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
+          "source": "Triggers when a respondent is disqualified from a survey",
+          "message": "Uruchamia się, gdy respondent zostanie zdyskwalifikowany z ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.desc": {
+          "source": "This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.",
+          "message": "Ten wyzwalacz uruchamia się, gdy istniejąca odpowiedź na ankietę zostanie zmodyfikowana lub zaktualizowana. Przydatne do śledzenia częściowych odpowiedzi lub edycji odpowiedzi."
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
+          "source": "Response Updated",
+          "message": "Odpowiedź zaktualizowana"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for updated responses",
+          "message": "Wybierz konkretną ankietę, którą chcesz monitorować pod kątem zaktualizowanych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for updated responses",
+          "message": "Ankieta do monitorowania zaktualizowanych odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when a survey response is updated",
+          "message": "Uruchamia się po zaktualizowaniu odpowiedzi na ankietę"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Modify the settings of an existing collector such as status, close date, or redirect URL",
+          "message": "Modyfikuj ustawienia istniejącego kolektora, takie jak status, data zamknięcia lub adres URL przekierowania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Update Collector",
+          "message": "Zaktualizuj kolektor"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to modify",
+          "message": "Wybierz kolektor, który chcesz zmodyfikować"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "Moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to update",
+          "message": "Kolektor do zaktualizowania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "The date and time when the collector should automatically close (ISO 8601 format)",
+          "message": "Data i godzina automatycznego zamknięcia kolektora (format ISO 8601)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "Data zamknięcia"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "When to automatically close the collector",
+          "message": "Kiedy automatycznie zamknąć kolektor"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A new descriptive name for the collector",
+          "message": "Nowa opisowa nazwa kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nazwa"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "New name for the collector",
+          "message": "Nowa nazwa kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Otwarta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Zamknięte"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.desc": {
+          "source": "Set the collector to open or closed",
+          "message": "Ustaw kolektor jako otwarty lub zamknięty"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.short_desc": {
+          "source": "The collector status",
+          "message": "Status kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "Wybierz ankietę zawierającą moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "Ankieta"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "Ankieta zawierająca moduł zbierający"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.desc": {
+          "source": "The URL where respondents will be redirected after completing the survey",
+          "message": "Adres URL, pod który respondenci zostaną przekierowani po ukończeniu ankiety"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.display_name": {
+          "source": "Redirect URL",
+          "message": "Adres URL przekierowania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.short_desc": {
+          "source": "URL to redirect respondents after completion",
+          "message": "Adres URL do przekierowania respondentów po ukończeniu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.desc": {
+          "source": "The maximum number of responses to accept before closing the collector",
+          "message": "Maksymalna liczba odpowiedzi do zaakceptowania przed zamknięciem kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
+          "source": "Response Limit",
+          "message": "Limit odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
+          "source": "Maximum number of responses",
+          "message": "Maksymalna liczba odpowiedzi"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Update collector settings",
+          "message": "Zaktualizuj ustawienia kolektora"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Modify the details of an existing contact in SurveyMonkey",
+          "message": "Modyfikuj dane istniejącego kontaktu w SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Zaktualizuj kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to update",
+          "message": "Unikalny identyfikator kontaktu, który chcesz zaktualizować"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "ID kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to update",
+          "message": "Identyfikator kontaktu do zaktualizowania"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "Nowy adres e-mail kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "Adres e-mail kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The new first name for the contact",
+          "message": "Nowe imię kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Imię"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "Imię kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The new last name for the contact",
+          "message": "Nowe nazwisko kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Nazwisko"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "Nazwisko kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The new phone number for the contact",
+          "message": "Nowy numer telefonu kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Numer telefonu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Numer telefonu kontaktu"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Zaktualizuj istniejący kontakt"
+        },
+        "app.U3VydmV5TW9ua2V5.desc": {
+          "source": "Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.",
+          "message": "Połącz swoje konto SurveyMonkey, aby zautomatyzować zarządzanie ankietami, zbierać odpowiedzi i zarządzać kontaktami. Twórz kolektory, wysyłaj ankiety, pobieraj odpowiedzi i konfiguruj webhooki do powiadomień o odpowiedziach w czasie rzeczywistym — wszystko z poziomu Qore."
+        },
+        "app.U3VydmV5TW9ua2V5.display_name": {
+          "source": "SurveyMonkey",
+          "message": "SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.short_desc": {
+          "source": "Online survey platform for collecting feedback and responses",
+          "message": "Internetowa platforma ankietowa do zbierania opinii i odpowiedzi"
+        }
+      }
+    }
+  }
+}

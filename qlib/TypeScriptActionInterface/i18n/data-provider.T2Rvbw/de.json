@@ -1,0 +1,1569 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.desc": {
+          "source": "Creates a new lead or opportunity record in Odoo CRM with comprehensive contact, sales, and marketing information. Supports grouping related fields for better organization.",
+          "message": "Erstellt einen neuen Lead- oder Opportunity-Datensatz in Odoo CRM mit umfassenden Kontakt-, Vertriebs- und Marketinginformationen. Unterstützt die Gruppierung zugehöriger Felder für eine bessere Organisation."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.display_name": {
+          "source": "Create Lead",
+          "message": "Lead erstellen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.desc": {
+          "source": "A color index (0-11) used for visual identification in the user interface. This helps with quick visual organization of leads.",
+          "message": "Ein Farbindex (0-11), der zur visuellen Identifizierung in der Benutzeroberfläche verwendet wird. Dies hilft bei der schnellen visuellen Organisation von Leads."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.display_name": {
+          "source": "Color Index",
+          "message": "Farbindex"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
+          "source": "Color index for UI display (0-11)",
+          "message": "Farbindex für die UI-Anzeige (0-11)"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "The ID of the company record that owns this lead. Typically this is the current user's company.",
+          "message": "Die ID des Unternehmensdatensatzes, dem dieser Lead gehört. In der Regel ist dies das Unternehmen des aktuellen Benutzers."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "ID of the company (usually current user company)",
+          "message": "ID des Unternehmens (normalerweise das Unternehmen des aktuellen Benutzers)"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Complete contact information including email addresses, phone numbers, job position, and website details.",
+          "message": "Vollständige Kontaktinformationen einschließlich E-Mail-Adressen, Telefonnummern, Position und Website-Details."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "Kontaktinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the lead",
+          "message": "Kontaktdaten für den Lead"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.desc": {
+          "source": "The full name of the primary contact person associated with this lead.",
+          "message": "Der vollständige Name der primären Kontaktperson, die diesem Lead zugeordnet ist."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
+          "source": "Contact Name",
+          "message": "Kontaktname"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
+          "source": "Name of the contact person",
+          "message": "Name der Kontaktperson"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.desc": {
+          "source": "Indicates whether this lead is currently active and should appear in standard views and reports.",
+          "message": "Gibt an, ob dieser Lead derzeit aktiv ist und in Standardansichten sowie Berichten angezeigt werden soll."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZl.short_desc": {
+          "source": "Whether the lead is active",
+          "message": "Gibt an, ob der Lead aktiv ist"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.desc": {
+          "source": "Information about the next planned activity or follow-up action for this lead.",
+          "message": "Informationen über die nächste geplante Aktivität oder Folgeaktion für diesen Lead."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
+          "source": "Activity Information",
+          "message": "Aktivitätsinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
+          "source": "Next activity planning information",
+          "message": "Informationen zur nächsten Aktivitätsplanung"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Complete address information including street address, city, state, country, and postal code.",
+          "message": "Vollständige Adressinformationen einschließlich Straße, Stadt, Bundesland/Kanton, Land und Postleitzahl."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "Adressinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the lead",
+          "message": "Adressdetails für den Lead"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Internal notes and comments about this lead. This information is for internal use and not visible to the customer.",
+          "message": "Interne Notizen und Kommentare zu diesem Lead. Diese Informationen sind für den internen Gebrauch bestimmt und für den Kunden nicht sichtbar."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Notes",
+          "message": "Notizen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Internal notes about the lead",
+          "message": "Interne Notizen zum Lead"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.desc": {
+          "source": "The number of email bounces recorded for this lead's email address.",
+          "message": "Die Anzahl der erfassten E-Mail-Bounces für die E-Mail-Adresse dieses Leads."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
+          "source": "Bounce",
+          "message": "Bounce"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
+          "source": "Email bounce count",
+          "message": "Anzahl der E-Mail-Bounces"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.desc": {
+          "source": "The ID of the reason why this lead was marked as lost, if applicable.",
+          "message": "Die ID des Grundes, warum dieser Lead gegebenenfalls als verloren markiert wurde."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
+          "source": "Lost Reason",
+          "message": "Verlustgrund"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
+          "source": "ID of lost reason if lead was lost",
+          "message": "ID des Verlustgrunds, falls der Lead verloren ging"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.desc": {
+          "source": "The preferred language code for communications with this lead (e.g., en_US for English, fr_FR for French).",
+          "message": "Der bevorzugte Sprachcode für die Kommunikation mit diesem Lead (z. B. en_US für Englisch, fr_FR für Französisch)."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.display_name": {
+          "source": "Language",
+          "message": "Sprache"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bGFuZ19jb2Rl.short_desc": {
+          "source": "Language code (e.g., en_US, fr_FR)",
+          "message": "Sprachcode (z. B. en_US, fr_FR)"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.desc": {
+          "source": "Marketing campaign and lead source tracking information to understand how this lead was generated and acquired.",
+          "message": "Informationen zur Marketingkampagne und Lead-Quellenverfolgung, um nachzuvollziehen, wie dieser Lead generiert und akquiriert wurde."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
+          "source": "Marketing Information",
+          "message": "Marketinginformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
+          "source": "Marketing and source tracking information",
+          "message": "Marketing- und Quellverfolgungsinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.desc": {
+          "source": "The main title or name that identifies this lead or opportunity. This is a required field that will be displayed in lead lists and reports.",
+          "message": "Der Haupttitel oder Name, der diesen Lead oder diese Opportunity identifiziert. Dies ist ein Pflichtfeld, das in Lead-Listen und Berichten angezeigt wird."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.display_name": {
+          "source": "Opportunity",
+          "message": "Opportunity"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.bmFtZQ.short_desc": {
+          "source": "The name/title of the lead or opportunity",
+          "message": "Der Name/Titel des Leads oder der Opportunity"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.desc": {
+          "source": "Sales management information including assigned salesperson, team, stage, priority, and expected closing details.",
+          "message": "Vertriebsmanagement-Informationen einschließlich zugewiesener Vertriebsmitarbeiter, Team, Phase, Priorität und voraussichtlichen Abschlussdetails."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
+          "source": "Sales Information",
+          "message": "Vertriebsinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
+          "source": "Sales-related details for the lead",
+          "message": "Vertriebsbezogene Details für den Lead"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.desc": {
+          "source": "The ID of an existing customer or partner record if this lead is associated with an existing contact.",
+          "message": "Die ID eines bestehenden Kunden- oder Partnerdatensatzes, falls dieser Lead einem bestehenden Kontakt zugeordnet ist."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of existing customer/partner record",
+          "message": "ID des bestehenden Kunden-/Partnerdatensatzes"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.desc": {
+          "source": "The name of the company or organization that this lead represents.",
+          "message": "Der Name des Unternehmens oder der Organisation, die dieser Lead repräsentiert."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
+          "source": "Company Name",
+          "message": "Unternehmensname"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
+          "source": "Name of the customer company",
+          "message": "Name des Kundenunternehmens"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "A list of tag IDs to categorize and organize this lead. Tags help with filtering and grouping leads.",
+          "message": "Eine Liste von Tag-IDs zur Kategorisierung und Organisation dieses Leads. Tags helfen beim Filtern und Gruppieren von Leads."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "List of tag IDs to associate with the lead",
+          "message": "Liste der Tag-IDs, die dem Lead zugeordnet werden sollen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "Opportunity"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "Lead"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.desc": {
+          "source": "Specifies whether this record should be treated as a lead (early stage) or opportunity (qualified prospect).",
+          "message": "Gibt an, ob dieser Datensatz als Lead (frühe Phase) oder als Opportunity (qualifizierter Interessent) behandelt werden soll."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Typ"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.option.dHlwZQ.short_desc": {
+          "source": "Whether this is a lead or opportunity",
+          "message": "Gibt an, ob es sich um einen Lead oder eine Opportunity handelt"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX2xlYWQ.short_desc": {
+          "source": "Create a new lead or opportunity in Odoo CRM",
+          "message": "Einen neuen Lead oder eine neue Opportunity in Odoo CRM erstellen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.desc": {
+          "source": "Creates a new partner record in Odoo with comprehensive contact information, address details, business information, and relationship data. Partners can be individuals or companies and serve as customers, vendors, or both.",
+          "message": "Erstellt einen neuen Partnerdatensatz in Odoo mit umfassenden Kontaktinformationen, Adressdetails, Geschäftsinformationen und Beziehungsdaten. Partner können Einzelpersonen oder Unternehmen sein und als Kunden, Lieferanten oder beides fungieren."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.display_name": {
+          "source": "Create Partner",
+          "message": "Partner erstellen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.desc": {
+          "source": "Internal notes or comments about the partner.",
+          "message": "Interne Notizen oder Kommentare über den Partner."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.display_name": {
+          "source": "Internal Notes",
+          "message": "Interne Notizen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29tbWVudA.short_desc": {
+          "source": "Internal notes about the partner",
+          "message": "Interne Notizen über den Partner"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Contact information including email, phone, website, job function and title.",
+          "message": "Kontaktinformationen einschließlich E-Mail, Telefon, Website, Funktion und Titel."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "Kontaktinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the partner",
+          "message": "Kontaktdaten für den Partner"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.desc": {
+          "source": "Categories or tags to classify and organize partners.",
+          "message": "Kategorien oder Tags zur Klassifizierung und Organisation von Partnern."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.display_name": {
+          "source": "Categories",
+          "message": "Kategorien"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.Y2F0ZWdvcnlfaWRz.short_desc": {
+          "source": "Partner categories or tags",
+          "message": "Partnerkategorien oder -Tags"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.desc": {
+          "source": "Set to false to archive the partner without deleting it.",
+          "message": "Auf false setzen, um den Partner zu archivieren, ohne ihn zu löschen."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWN0aXZl.short_desc": {
+          "source": "Whether the partner is active",
+          "message": "Gibt an, ob der Partner aktiv ist"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Complete address information including street, city, state, country, and postal code.",
+          "message": "Vollständige Adressinformationen einschließlich Straße, Stadt, Bundesland/Kanton, Land und Postleitzahl."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "Adressinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the partner",
+          "message": "Adressdetails für den Partner"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.desc": {
+          "source": "Business information including VAT number, reference code, and industry classification.",
+          "message": "Geschäftsinformationen einschließlich USt-IdNr., Referenzcode und Branchenklassifizierung."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.display_name": {
+          "source": "Business Information",
+          "message": "Unternehmensinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.YnVzaW5lc3NfaW5mbw.short_desc": {
+          "source": "Business-related details",
+          "message": "Unternehmensbezogene Details"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.desc": {
+          "source": "Profile image for the partner (base64 encoded).",
+          "message": "Profilbild für den Partner (Base64-codiert)."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.display_name": {
+          "source": "Profile Image",
+          "message": "Profilbild"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aW1hZ2VfMTkyMA.short_desc": {
+          "source": "Partner profile image",
+          "message": "Partner-Profilbild"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.desc": {
+          "source": "Set to true if this partner represents a company/organization, false for individual contacts.",
+          "message": "Auf 'true' setzen, wenn dieser Partner ein Unternehmen/eine Organisation darstellt, auf 'false' für Einzelkontakte."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.display_name": {
+          "source": "Is Company",
+          "message": "Ist Unternehmen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.aXNfY29tcGFueQ.short_desc": {
+          "source": "Whether this partner is a company",
+          "message": "Gibt an, ob dieser Partner ein Unternehmen ist"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.desc": {
+          "source": "Preferred language for communication with this partner.",
+          "message": "Bevorzugte Sprache für die Kommunikation mit diesem Partner."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "Sprache"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bGFuZw.short_desc": {
+          "source": "Preferred language",
+          "message": "Bevorzugte Sprache"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.desc": {
+          "source": "The name of the partner (individual or company name).",
+          "message": "Der Name des Partners (Name der Einzelperson oder des Unternehmens)."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.bmFtZQ.short_desc": {
+          "source": "Partner name",
+          "message": "Partnername"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.desc": {
+          "source": "Information about relationships to other partners and user assignments.",
+          "message": "Informationen über Beziehungen zu anderen Partnern und Benutzerzuweisungen."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.display_name": {
+          "source": "Relationship Information",
+          "message": "Beziehungsinformationen"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.cmVsYXRpb25zaGlwX2luZm8.short_desc": {
+          "source": "Relationship and assignment details",
+          "message": "Beziehungs- und Zuweisungsdetails"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9TeWRuZXk.display_name": {
+          "source": "Australia/Sydney",
+          "message": "Australien/Sydney"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkFzaWEvU2hhbmdoYWk.display_name": {
+          "source": "Asia/Shanghai",
+          "message": "Asia/Shanghai"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkFzaWEvVG9reW8.display_name": {
+          "source": "Asia/Tokyo",
+          "message": "Asia/Tokyo"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9CZXJsaW4.display_name": {
+          "source": "Europe/Berlin",
+          "message": "Europe/Berlin"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9Mb25kb24.display_name": {
+          "source": "Europe/London",
+          "message": "Europe/London"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOkV1cm9wZS9QYXJpcw.display_name": {
+          "source": "Europe/Paris",
+          "message": "Europe/Paris"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL01vdW50YWlu.display_name": {
+          "source": "US/Mountain",
+          "message": "US/Mountain"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL0NlbnRyYWw.display_name": {
+          "source": "US/Central",
+          "message": "US/Central"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL0Vhc3Rlcm4.display_name": {
+          "source": "US/Eastern",
+          "message": "US/Eastern"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVTL1BhY2lmaWM.display_name": {
+          "source": "US/Pacific",
+          "message": "US/Pacific"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.allowed-value.c3RyaW5nOlVUQw.display_name": {
+          "source": "UTC",
+          "message": "UTC"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.desc": {
+          "source": "Timezone where the partner is located.",
+          "message": "Zeitzone, in der sich der Partner befindet."
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.display_name": {
+          "source": "Timezone",
+          "message": "Zeitzone"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.option.dHo.short_desc": {
+          "source": "Partner timezone",
+          "message": "Partner-Zeitzone"
+        },
+        "app.T2Rvbw.action.Y3JlYXRlX3BhcnRuZXI.short_desc": {
+          "source": "Create a new partner (contact or company) in Odoo",
+          "message": "Neuen Partner (Kontakt oder Unternehmen) in Odoo erstellen"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.desc": {
+          "source": "Fetches detailed information about a specific lead from Odoo CRM. Allows you to specify which fields to retrieve, with common fields like ID, name, email, contact name, and partner name selected by default.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Lead aus Odoo CRM ab. Ermöglicht die Angabe der abzurufenden Felder, wobei gängige Felder wie ID, Name, E-Mail, Kontaktname und Partnername standardmäßig ausgewählt sind."
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.display_name": {
+          "source": "Get Lead",
+          "message": "Lead abrufen"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from the lead record. Common fields are pre-selected.",
+          "message": "Liste der Feldnamen, die aus dem Lead-Datensatz abgerufen werden sollen. Gängige Felder sind vorausgewählt."
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "Abzurufende Felder"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record in Odoo CRM.",
+          "message": "Die eindeutige Kennung des Lead-Datensatzes in Odoo CRM."
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "Lead-ID"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to retrieve",
+          "message": "Die ID des abzurufenden Leads"
+        },
+        "app.T2Rvbw.action.Z2V0X2xlYWQ.short_desc": {
+          "source": "Retrieve a specific lead by ID with customizable fields.",
+          "message": "Bestimmten Lead anhand der ID mit anpassbaren Feldern abrufen."
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.desc": {
+          "source": "Fetches detailed information about a specific partner from Odoo. Allows selecting which fields to retrieve for customized data requirements.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Partner aus Odoo ab. Ermöglicht die Auswahl der abzurufenden Felder für benutzerdefinierte Datenanforderungen."
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.display_name": {
+          "source": "Get Partner",
+          "message": "Partner abrufen"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.desc": {
+          "source": "List of specific partner fields to retrieve. If not specified, returns basic partner information including ID, name, email, phone, and company status.",
+          "message": "Liste bestimmter Partnerfelder, die abgerufen werden sollen. Falls nicht angegeben, werden grundlegende Partnerinformationen einschließlich ID, Name, E-Mail, Telefon und Unternehmensstatus zurückgegeben."
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.display_name": {
+          "source": "Fields to Retrieve",
+          "message": "Abzurufende Felder"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.ZmllbGRz.short_desc": {
+          "source": "Partner fields to include in response",
+          "message": "In die Antwort aufzunehmende Partnerfelder"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.desc": {
+          "source": "The unique identifier of the partner record to fetch from Odoo.",
+          "message": "Die eindeutige Kennung des Partnerdatensatzes, der aus Odoo abgerufen werden soll."
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner ID",
+          "message": "Partner-ID"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of the partner to retrieve",
+          "message": "ID des abzurufenden Partners"
+        },
+        "app.T2Rvbw.action.Z2V0X3BhcnRuZXI.short_desc": {
+          "source": "Retrieve a single partner record from Odoo",
+          "message": "Einzelnen Partnerdatensatz aus Odoo abrufen"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.desc": {
+          "source": "Permanently deletes a lead record from Odoo CRM. This action cannot be undone. Consider archiving the lead instead by setting it as inactive.",
+          "message": "Löscht einen Lead-Datensatz dauerhaft aus Odoo CRM. Diese Aktion kann nicht rückgängig gemacht werden. Ziehen Sie in Betracht, den Lead stattdessen zu archivieren, indem Sie ihn auf inaktiv setzen."
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.display_name": {
+          "source": "Delete Lead",
+          "message": "Lead löschen"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record to permanently delete from Odoo CRM.",
+          "message": "Die eindeutige Kennung des Lead-Datensatzes, der dauerhaft aus Odoo CRM gelöscht werden soll."
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "Lead-ID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to delete",
+          "message": "Die ID des zu löschenden Leads"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX2xlYWQ.short_desc": {
+          "source": "Delete a lead from Odoo CRM.",
+          "message": "Lead aus Odoo CRM löschen."
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.desc": {
+          "source": "Permanently deletes a partner record from Odoo. This action cannot be undone. Consider archiving (setting active to false) instead if you need to preserve the record.",
+          "message": "Löscht einen Partnerdatensatz dauerhaft aus Odoo. Diese Aktion kann nicht rückgängig gemacht werden. Ziehen Sie stattdessen eine Archivierung in Betracht (indem Sie 'active' auf 'false' setzen), falls Sie den Datensatz behalten müssen."
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.display_name": {
+          "source": "Delete Partner",
+          "message": "Partner löschen"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.desc": {
+          "source": "The unique identifier of the partner record to delete from Odoo.",
+          "message": "Die eindeutige Kennung des Partnerdatensatzes, der aus Odoo gelöscht werden soll."
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner ID",
+          "message": "Partner-ID"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "ID of the partner to delete",
+          "message": "ID des zu löschenden Partners"
+        },
+        "app.T2Rvbw.action.ZGVsZXRlX3BhcnRuZXI.short_desc": {
+          "source": "Delete a partner record from Odoo",
+          "message": "Partnerdatensatz aus Odoo löschen"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.desc": {
+          "source": "Retrieves a list of companies from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns company information including display name, email, phone, and website.",
+          "message": "Ruft eine Liste von Unternehmen aus Odoo ab, mit Unterstützung für Filterung nach Feldwerten, Sortierung nach bestimmten Feldern und Paginierung. Gibt Unternehmensinformationen einschließlich Anzeigename, E-Mail, Telefon und Website zurück."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.display_name": {
+          "source": "List Companies",
+          "message": "Unternehmen auflisten"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each company record. Common fields are pre-selected.",
+          "message": "Liste der Feldnamen, die aus jedem Unternehmensdatensatz abgerufen werden sollen. Gängige Felder sind vorausgewählt."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "Abzurufende Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "Liste von Filterbedingungen, die auf die Abfrage angewendet werden sollen."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Filterkriterien"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of company records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Die Anzahl der zu überspringenden Unternehmensdatensätze, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standardwert ist 0."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of companies to skip",
+          "message": "Anzahl der zu überspringenden Unternehmen"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of company records to return. Default is 10.",
+          "message": "Die maximale Anzahl der zurückzugebenden Unternehmensdatensätze. Standardwert ist 10."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of companies to return",
+          "message": "Maximale Anzahl zurückzugebender Unternehmen"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "Geben Sie das Feld und die Richtung zum Sortieren der Ergebnisse an."
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Sortierung"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "Sortierkonfiguration"
+        },
+        "app.T2Rvbw.action.bGlzdF9jb21wYW5pZXM.short_desc": {
+          "source": "List companies with filtering, sorting, and pagination options.",
+          "message": "Unternehmen mit Optionen für Filterung, Sortierung und Paginierung auflisten."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.desc": {
+          "source": "Retrieves a list of leads from Odoo CRM with support for filtering by field values, sorting by specific fields, and pagination. Returns lead information including ID, name, email, contact name, and partner name.",
+          "message": "Ruft eine Liste von Leads aus Odoo CRM ab, mit Unterstützung für Filterung nach Feldwerten, Sortierung nach bestimmten Feldern und Paginierung. Gibt Lead-Informationen einschließlich ID, Name, E-Mail, Kontaktname und Partnername zurück."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.display_name": {
+          "source": "List Leads",
+          "message": "Leads auflisten"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each lead record. Common fields are pre-selected.",
+          "message": "Liste der Feldnamen, die aus jedem Lead-Datensatz abgerufen werden sollen. Gängige Felder sind vorausgewählt."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "Abzurufende Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "Liste von Filterbedingungen, die auf die Abfrage angewendet werden sollen."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Filterkriterien"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.desc": {
+          "source": "The number of lead records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Die Anzahl der zu überspringenden Lead-Datensätze, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standardwert ist 0."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of leads to skip",
+          "message": "Anzahl der zu überspringenden Leads"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of lead records to return. Default is 10.",
+          "message": "Die maximale Anzahl der zurückzugebenden Lead-Datensätze. Standardwert ist 10."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of leads to return",
+          "message": "Maximale Anzahl zurückzugebender Leads"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "Geben Sie das Feld und die Richtung zum Sortieren der Ergebnisse an."
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Sortierung"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "Sortierkonfiguration"
+        },
+        "app.T2Rvbw.action.bGlzdF9sZWFkcw.short_desc": {
+          "source": "List leads with filtering, sorting, and pagination options.",
+          "message": "Leads mit Optionen für Filterung, Sortierung und Paginierung auflisten."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.desc": {
+          "source": "Retrieves a list of partners from Odoo with support for filtering by field values, sorting by specific fields, and pagination. Returns partner information including ID, display name, and email.",
+          "message": "Ruft eine Liste von Partnern aus Odoo ab, mit Unterstützung für Filterung nach Feldwerten, Sortierung nach bestimmten Feldern und Paginierung. Gibt Partnerinformationen einschließlich ID, Anzeigename und E-Mail zurück."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.display_name": {
+          "source": "List Partners",
+          "message": "Partner auflisten"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.desc": {
+          "source": "List of field names to retrieve from each partner record. Common fields are pre-selected.",
+          "message": "Liste der Feldnamen, die von jedem Partner-Datensatz abgerufen werden sollen. Häufig verwendete Felder sind vorausgewählt."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmllbGRz.short_desc": {
+          "source": "Fields to retrieve",
+          "message": "Abzurufende Felder"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.desc": {
+          "source": "List of filter conditions to apply to the query.",
+          "message": "Liste von Filterbedingungen, die auf die Abfrage angewendet werden sollen."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filter"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Filterkriterien"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.desc": {
+          "source": "The number of partner records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Die Anzahl der zu überspringenden Partner-Datensätze, bevor Ergebnisse zurückgegeben werden. Wird für die Paginierung verwendet. Standardwert ist 0."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of partners to skip",
+          "message": "Anzahl der zu überspringenden Partner"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of partner records to return. Default is 10.",
+          "message": "Die maximale Anzahl der zurückzugebenden Partner-Datensätze. Standardwert ist 10."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of partners to return",
+          "message": "Maximale Anzahl der zurückzugebenden Partner"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.desc": {
+          "source": "Specify the field and direction to sort the results.",
+          "message": "Geben Sie das Feld und die Richtung zum Sortieren der Ergebnisse an."
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "Sortierung"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "Sortierkonfiguration"
+        },
+        "app.T2Rvbw.action.bGlzdF9wYXJ0bmVycw.short_desc": {
+          "source": "List partners with filtering, sorting, and pagination options.",
+          "message": "Partner mit Filter-, Sortier- und Paginierungsoptionen auflisten."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Odoo CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Odoo CRM** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.T2Rvbw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Odoo CRM",
+          "message": "Benutzerdefinierten API-Aufruf an Odoo CRM durchführen"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.desc": {
+          "source": "Monitors Odoo for newly created leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.",
+          "message": "Überwacht Odoo auf neu erstellte Leads oder Verkaufschancen. Unterstützt das Filtern nach Unternehmen, Team, Benutzer, Phase, Lead-Typ und Tags, um nur bei bestimmten Leads auszulösen, die Ihren Kriterien entsprechen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.display_name": {
+          "source": "New Lead",
+          "message": "Neuer Lead"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.",
+          "message": "Nur für Leads auslösen, die zum angegebenen Unternehmen gehören. Leer lassen, um alle Unternehmen zu überwachen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Filter by company",
+          "message": "Nach Unternehmen filtern"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "Opportunity"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmJvdGg.display_name": {
+          "source": "Both",
+          "message": "Beide"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "Lead"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.desc": {
+          "source": "Choose whether to monitor leads, opportunities, or both types of records.",
+          "message": "Wählen Sie, ob Leads, Verkaufschancen oder beide Datensatztypen überwacht werden sollen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.display_name": {
+          "source": "Lead Type",
+          "message": "Lead-Typ"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.bGVhZF90eXBl.short_desc": {
+          "source": "Type of records to monitor",
+          "message": "Typ der zu überwachenden Datensätze"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.desc": {
+          "source": "Only trigger for leads in the specified stage. Leave empty to monitor all stages.",
+          "message": "Nur für Leads in der angegebenen Phase auslösen. Leer lassen, um alle Phasen zu überwachen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.display_name": {
+          "source": "Stage",
+          "message": "Phase"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.c3RhZ2VfaWQ.short_desc": {
+          "source": "Filter by lead stage",
+          "message": "Nach Lead-Phase filtern"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.",
+          "message": "Nur für Leads auslösen, die eines der angegebenen Tags haben. Leer lassen, um alle Leads unabhängig von Tags zu überwachen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "Filter by tags",
+          "message": "Nach Tags filtern"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.",
+          "message": "Nur für Leads auslösen, die dem angegebenen Vertriebsteam zugewiesen sind. Leer lassen, um alle Teams zu überwachen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.display_name": {
+          "source": "Sales Team",
+          "message": "Vertriebsteam"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dGVhbV9pZA.short_desc": {
+          "source": "Filter by sales team",
+          "message": "Nach Vertriebsteam filtern"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.",
+          "message": "Nur für Leads auslösen, die dem angegebenen Vertriebsmitarbeiter zugewiesen sind. Leer lassen, um alle Benutzer zu überwachen."
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.display_name": {
+          "source": "Salesperson",
+          "message": "Vertriebsmitarbeiter"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.option.dXNlcl9pZA.short_desc": {
+          "source": "Filter by assigned salesperson",
+          "message": "Nach zugewiesenem Vertriebsmitarbeiter filtern"
+        },
+        "app.T2Rvbw.action.bmV3X2xlYWQ.short_desc": {
+          "source": "Triggers when a new lead is created in Odoo",
+          "message": "Wird ausgelöst, wenn ein neuer Lead in Odoo erstellt wird"
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.desc": {
+          "source": "Monitors Odoo for newly created partner records in the res.partner model. This trigger fires whenever a new partner entity is added to your Odoo system, providing partner configuration details including address, contact information, and organizational information.",
+          "message": "Überwacht Odoo auf neu erstellte Partner-Datensätze im Modell res.partner. Dieser Trigger wird ausgelöst, sobald eine neue Partner-Entität zu Ihrem Odoo-System hinzugefügt wird, und liefert Partner-Konfigurationsdetails einschließlich Adresse, Kontaktinformationen und Organisationsinformationen."
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.display_name": {
+          "source": "New Partner",
+          "message": "Neuer Partner"
+        },
+        "app.T2Rvbw.action.bmV3X3BhcnRuZXI.short_desc": {
+          "source": "Triggers when a new partner is created in Odoo",
+          "message": "Wird ausgelöst, wenn ein neuer Partner in Odoo erstellt wird"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.desc": {
+          "source": "Updates an existing lead in Odoo CRM with new information. Supports updating contact information, address details, sales information, marketing data, and activity details. All fields are optional except the lead ID.",
+          "message": "Aktualisiert einen bestehenden Lead in Odoo CRM mit neuen Informationen. Unterstützt die Aktualisierung von Kontaktinformationen, Adressdetails, Vertriebsinformationen, Marketingdaten und Aktivitätsdetails. Alle Felder sind optional, außer der Lead-ID."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.display_name": {
+          "source": "Update Lead",
+          "message": "Lead aktualisieren"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.desc": {
+          "source": "A color code to visually distinguish this lead in the interface.",
+          "message": "Ein Farbcode, um diesen Lead in der Benutzeroberfläche visuell zu unterscheiden."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.display_name": {
+          "source": "Color",
+          "message": "Farbe"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29sb3I.short_desc": {
+          "source": "Color code for the lead",
+          "message": "Farbcode für den Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.desc": {
+          "source": "The company that owns this lead record.",
+          "message": "Das Unternehmen, dem dieser Lead-Datensatz gehört."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Company that owns this lead",
+          "message": "Unternehmen, dem dieser Lead gehört"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.desc": {
+          "source": "Email addresses, phone number, job function, and website information.",
+          "message": "E-Mail-Adressen, Telefonnummer, Funktion und Website-Informationen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.display_name": {
+          "source": "Contact Information",
+          "message": "Kontaktinformationen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9pbmZv.short_desc": {
+          "source": "Contact details for the lead",
+          "message": "Kontaktdaten für den Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.desc": {
+          "source": "The name of the primary contact person for this lead.",
+          "message": "Der Name der primären Kontaktperson für diesen Lead."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.display_name": {
+          "source": "Contact Name",
+          "message": "Kontaktname"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.Y29udGFjdF9uYW1l.short_desc": {
+          "source": "Name of the contact person",
+          "message": "Name der Kontaktperson"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.desc": {
+          "source": "Set to false to archive the lead without deleting it.",
+          "message": "Auf false setzen, um den Lead zu archivieren, ohne ihn zu löschen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZl.short_desc": {
+          "source": "Whether the lead is active",
+          "message": "Gibt an, ob der Lead aktiv ist"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.desc": {
+          "source": "Information about the next planned activity for this lead.",
+          "message": "Informationen über die nächste geplante Aktivität für diesen Lead."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.display_name": {
+          "source": "Activity Information",
+          "message": "Aktivitätsinformationen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWN0aXZpdHlfaW5mbw.short_desc": {
+          "source": "Next activity details",
+          "message": "Details zur nächsten Aktivität"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.desc": {
+          "source": "Street address, city, postal code, country, and state information.",
+          "message": "Straßenadresse, Ort, Postleitzahl, Land und Bundesland-/Regionsinformationen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.display_name": {
+          "source": "Address Information",
+          "message": "Adressinformationen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.YWRkcmVzc19pbmZv.short_desc": {
+          "source": "Address details for the lead",
+          "message": "Adressdetails für den Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Additional notes or description about the lead.",
+          "message": "Zusätzliche Notizen oder Beschreibung zum Lead."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Lead description or notes",
+          "message": "Lead-Beschreibung oder Notizen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.desc": {
+          "source": "The number of times emails to this contact have bounced.",
+          "message": "Die Anzahl der Male, die E-Mails an diesen Kontakt unzustellbar waren (Bounces)."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.display_name": {
+          "source": "Email Bounce Count",
+          "message": "Anzahl der E-Mail-Bounces"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.ZW1haWxfYm91bmNl.short_desc": {
+          "source": "Number of email bounces",
+          "message": "Anzahl der E-Mail-Bounces"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.desc": {
+          "source": "The reason why this lead was marked as lost.",
+          "message": "Der Grund, warum dieser Lead als verloren markiert wurde."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.display_name": {
+          "source": "Lost Reason",
+          "message": "Verlustgrund"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bG9zdF9yZWFzb24.short_desc": {
+          "source": "Reason for losing the lead",
+          "message": "Grund für den Verlust des Leads"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.desc": {
+          "source": "The preferred language for communicating with this contact.",
+          "message": "Die bevorzugte Sprache für die Kommunikation mit diesem Kontakt."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.display_name": {
+          "source": "Language",
+          "message": "Sprache"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGFuZ19jb2Rl.short_desc": {
+          "source": "Preferred language",
+          "message": "Bevorzugte Sprache"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.desc": {
+          "source": "The unique identifier of the lead record to update in Odoo CRM.",
+          "message": "Die eindeutige Kennung des zu aktualisierenden Lead-Datensatzes in Odoo CRM."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.display_name": {
+          "source": "Lead ID",
+          "message": "Lead-ID"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bGVhZF9pZA.short_desc": {
+          "source": "The ID of the lead to update",
+          "message": "Die ID des zu aktualisierenden Leads"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.desc": {
+          "source": "Information about the marketing campaign, medium, source, and referral that generated this lead.",
+          "message": "Informationen über die Marketingkampagne, das Medium, die Quelle und die Weiterempfehlung, die diesen Lead generiert haben."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.display_name": {
+          "source": "Marketing Information",
+          "message": "Marketinginformationen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bWFya2V0aW5nX2luZm8.short_desc": {
+          "source": "Marketing campaign and source details",
+          "message": "Details zu Marketingkampagne und Quelle"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.desc": {
+          "source": "The title or subject of the lead.",
+          "message": "Der Titel oder Betreff des Leads."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Name"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.bmFtZQ.short_desc": {
+          "source": "Lead title or subject",
+          "message": "Lead-Titel oder -Betreff"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.desc": {
+          "source": "Salesperson assignment, team, stage, priority, probability, and deadline information.",
+          "message": "Informationen zu Vertriebsmitarbeiter-Zuweisung, Team, Phase, Priorität, Wahrscheinlichkeit und Frist."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.display_name": {
+          "source": "Sales Information",
+          "message": "Vertriebsinformationen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.c2FsZXNfaW5mbw.short_desc": {
+          "source": "Sales-related details for the lead",
+          "message": "Vertriebsbezogene Details für den Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.desc": {
+          "source": "Link this lead to an existing partner/customer record.",
+          "message": "Verknüpft diesen Lead mit einem bestehenden Partner-/Kundendatensatz."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.display_name": {
+          "source": "Partner",
+          "message": "Partner"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9pZA.short_desc": {
+          "source": "Associated partner record",
+          "message": "Zugehöriger Partner-Datensatz"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.desc": {
+          "source": "The name of the partner or company associated with this lead.",
+          "message": "Der Name des Partners oder Unternehmens, der bzw. das mit diesem Lead verknüpft ist."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.display_name": {
+          "source": "Partner Name",
+          "message": "Partnername"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.cGFydG5lcl9uYW1l.short_desc": {
+          "source": "Name of the partner/company",
+          "message": "Name des Partners/Unternehmens"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.desc": {
+          "source": "List of tags to help categorize and organize this lead.",
+          "message": "Liste von Tags zur Kategorisierung und Organisation dieses Leads."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dGFnX2lkcw.short_desc": {
+          "source": "Tags to categorize the lead",
+          "message": "Tags zur Kategorisierung des Leads"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "Opportunity"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.desc": {
+          "source": "Whether this record is a lead or has been converted to an opportunity.",
+          "message": "Gibt an, ob dieser Datensatz ein Lead ist oder in eine Verkaufschance umgewandelt wurde."
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Typ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.option.dHlwZQ.short_desc": {
+          "source": "Lead or opportunity",
+          "message": "Lead oder Verkaufschance"
+        },
+        "app.T2Rvbw.action.dXBkYXRlX2xlYWQ.short_desc": {
+          "source": "Update an existing lead with new information.",
+          "message": "Einen bestehenden Lead mit neuen Informationen aktualisieren."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.desc": {
+          "source": "Monitors Odoo for updates to existing leads or opportunities. Supports filtering by company, team, user, stage, lead type, and tags to only trigger for specific leads that match your criteria.",
+          "message": "Überwacht Odoo auf Aktualisierungen vorhandener Leads oder Opportunities. Unterstützt das Filtern nach Unternehmen, Team, Benutzer, Phase, Lead-Typ und Tags, um nur bei bestimmten Leads auszulösen, die Ihren Kriterien entsprechen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.display_name": {
+          "source": "Updated Lead",
+          "message": "Aktualisierter Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.desc": {
+          "source": "Only trigger for leads belonging to the specified company. Leave empty to monitor all companies.",
+          "message": "Nur für Leads auslösen, die zum angegebenen Unternehmen gehören. Leer lassen, um alle Unternehmen zu überwachen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.display_name": {
+          "source": "Company",
+          "message": "Unternehmen"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.Y29tcGFueV9pZA.short_desc": {
+          "source": "Filter by company",
+          "message": "Nach Unternehmen filtern"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOm9wcG9ydHVuaXR5.display_name": {
+          "source": "Opportunity",
+          "message": "Opportunity"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmJvdGg.display_name": {
+          "source": "Both",
+          "message": "Beide"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "Lead"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.desc": {
+          "source": "Choose whether to monitor leads, opportunities, or both types of records.",
+          "message": "Wählen Sie, ob Leads, Verkaufschancen oder beide Datensatztypen überwacht werden sollen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.display_name": {
+          "source": "Lead Type",
+          "message": "Lead-Typ"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.bGVhZF90eXBl.short_desc": {
+          "source": "Type of records to monitor",
+          "message": "Typ der zu überwachenden Datensätze"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.desc": {
+          "source": "Only trigger for leads in the specified stage. Leave empty to monitor all stages.",
+          "message": "Nur für Leads in der angegebenen Phase auslösen. Leer lassen, um alle Phasen zu überwachen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.display_name": {
+          "source": "Stage",
+          "message": "Phase"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.c3RhZ2VfaWQ.short_desc": {
+          "source": "Filter by lead stage",
+          "message": "Nach Lead-Phase filtern"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.desc": {
+          "source": "Only trigger for leads that have any of the specified tags. Leave empty to monitor all leads regardless of tags.",
+          "message": "Nur für Leads auslösen, die eines der angegebenen Tags haben. Leer lassen, um alle Leads unabhängig von Tags zu überwachen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGFnX2lkcw.short_desc": {
+          "source": "Filter by tags",
+          "message": "Nach Tags filtern"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified sales team. Leave empty to monitor all teams.",
+          "message": "Nur für Leads auslösen, die dem angegebenen Vertriebsteam zugewiesen sind. Leer lassen, um alle Teams zu überwachen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.display_name": {
+          "source": "Sales Team",
+          "message": "Vertriebsteam"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dGVhbV9pZA.short_desc": {
+          "source": "Filter by sales team",
+          "message": "Nach Vertriebsteam filtern"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.desc": {
+          "source": "Only trigger for leads assigned to the specified salesperson. Leave empty to monitor all users.",
+          "message": "Nur für Leads auslösen, die dem angegebenen Vertriebsmitarbeiter zugewiesen sind. Leer lassen, um alle Benutzer zu überwachen."
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.display_name": {
+          "source": "Salesperson",
+          "message": "Vertriebsmitarbeiter"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.option.dXNlcl9pZA.short_desc": {
+          "source": "Filter by assigned salesperson",
+          "message": "Nach zugewiesenem Vertriebsmitarbeiter filtern"
+        },
+        "app.T2Rvbw.action.dXBkYXRlZF9sZWFk.short_desc": {
+          "source": "Triggers when an existing lead is updated in Odoo",
+          "message": "Wird ausgelöst, wenn ein bestehender Lead in Odoo aktualisiert wird"
+        },
+        "app.T2Rvbw.desc": {
+          "source": "Odoo is a suite of open-source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.",
+          "message": "Odoo ist eine Suite von Open-Source-Geschäftsanwendungen, die alle Ihre Unternehmensanforderungen abdeckt: CRM, E-Commerce, Buchhaltung, Inventar, Point of Sale, Projektmanagement usw."
+        },
+        "app.T2Rvbw.display_name": {
+          "source": "Odoo CRM",
+          "message": "Odoo CRM"
+        },
+        "app.T2Rvbw.short_desc": {
+          "source": "Connect to your Odoo CRM instance",
+          "message": "Verbinden Sie sich mit Ihrer Odoo CRM-Instanz"
+        }
+      }
+    }
+  }
+}

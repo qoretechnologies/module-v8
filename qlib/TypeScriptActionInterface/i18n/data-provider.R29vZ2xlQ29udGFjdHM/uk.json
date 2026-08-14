@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Creates a new contact in Google Contacts with comprehensive information including names, contact details, addresses, organizations, relationships, and custom fields. Returns the created contact's basic information.",
+          "message": "Створює новий контакт у Google Contacts із детальною інформацією, включаючи імена, контактні дані, адреси, організації, зв'язки та користувацькі поля. Повертає базову інформацію про створений контакт."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Створити контакт"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company or organization where the contact works. This field is optional.",
+          "message": "Назва компанії чи організації, де працює контакт. Це поле є необов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Компанія"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "Contact's company or organization",
+          "message": "Компанія чи організація контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "A hash of custom key-value pairs for storing additional contact information.",
+          "message": "Хеш користувацьких пар «ключ-значення» для збереження додаткової інформації контакту."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Настроювані поля"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom user-defined fields",
+          "message": "Користувацькі поля"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.desc": {
+          "source": "A list of additional phone numbers with their respective types. Each entry contains a number and type.",
+          "message": "Список додаткових номерів телефонів із відповідними типами. Кожен запис містить номер і тип."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.display_name": {
+          "source": "Additional Phone Numbers",
+          "message": "Додаткові номери телефонів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.short_desc": {
+          "source": "Additional phone numbers for the contact",
+          "message": "Додаткові номери телефонів контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.desc": {
+          "source": "Complete address information for the contact including street, city, state, and country.",
+          "message": "Повна інформація про адресу контакту, включаючи вулицю, місто, область/штат і країну."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "Адреса"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.short_desc": {
+          "source": "Contact's address information",
+          "message": "Інформація про адресу контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.desc": {
+          "source": "The contact's date of birth. Provide as a date value.",
+          "message": "Дата народження контакту. Вкажіть як значення дати."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.display_name": {
+          "source": "Birthday",
+          "message": "День народження"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.short_desc": {
+          "source": "Contact's birthday",
+          "message": "День народження контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The contact's primary email address. This field is optional but commonly used.",
+          "message": "Основна адреса електронної пошти контакту. Це поле є необов'язковим, але часто використовуваним."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Адреса електронної пошти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Primary email address",
+          "message": "Основна адреса електронної пошти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Інше"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Дім"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Робота"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.desc": {
+          "source": "The type of email address: \"home\", \"work\", or \"other\". Default is \"other\".",
+          "message": "Тип адреси електронної пошти: \"home\", \"work\" або \"other\". За замовчуванням: \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.display_name": {
+          "source": "Email Type",
+          "message": "Тип електронної пошти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.short_desc": {
+          "source": "Type of email address",
+          "message": "Тип адреси електронної пошти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The given name (first name) of the contact. This field is required.",
+          "message": "Ім'я контакту. Це поле є обов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Ім'я"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "Contact's first name",
+          "message": "Ім'я контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.desc": {
+          "source": "The contact's job title or position. This field is optional.",
+          "message": "Посада або посадові обов'язки контакту. Це поле є необов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.display_name": {
+          "source": "Job Title",
+          "message": "Посада"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.short_desc": {
+          "source": "Contact's job title",
+          "message": "Посада контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The family name (last name) of the contact. This field is required.",
+          "message": "Прізвище контакту. Це поле є обов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Прізвище"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "Contact's last name",
+          "message": "Прізвище контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The middle name of the contact. This field is optional.",
+          "message": "По батькові (друге ім'я) контакту. Це поле є необов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "По батькові"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "Contact's middle name",
+          "message": "По батькові (друге ім'я) контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.desc": {
+          "source": "Free-form text notes or biography information about the contact.",
+          "message": "Примітки у довільній формі або біографічні відомості про контакт."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Примітки"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.short_desc": {
+          "source": "Additional notes about the contact",
+          "message": "Додаткові примітки про контакт"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.desc": {
+          "source": "Honorific prefix such as \"Mr.\", \"Ms.\", \"Dr.\", etc. This field is optional.",
+          "message": "Шанобливий префікс, наприклад \"Mr.\", \"Ms.\", \"Dr.\" тощо. Це поле є необов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.display_name": {
+          "source": "Name Prefix",
+          "message": "Префікс імені"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.short_desc": {
+          "source": "Honorific prefix (e.g., Mr., Dr.)",
+          "message": "Шанобливий префікс (наприклад, Mr., Dr.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.desc": {
+          "source": "Honorific suffix such as \"Jr.\", \"Sr.\", \"III\", etc. This field is optional.",
+          "message": "Шанобливий суфікс, наприклад \"Jr.\", \"Sr.\", \"III\" тощо. Це поле є необов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.display_name": {
+          "source": "Name Suffix",
+          "message": "Суфікс імені"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.short_desc": {
+          "source": "Honorific suffix (e.g., Jr., Sr.)",
+          "message": "Почесний суфікс (наприклад, Jr., Sr.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The contact's primary phone number. This field is optional.",
+          "message": "Основний номер телефону контакту. Це поле необов'язкове."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Номер телефону"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Primary phone number",
+          "message": "Основний номер телефону"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1haW4.display_name": {
+          "source": "Main",
+          "message": "Основний"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "Мобільний"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Інше"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Дім"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWVGYXg.display_name": {
+          "source": "Home Fax",
+          "message": "Домашній факс"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "Пейджер"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Робота"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcmtGYXg.display_name": {
+          "source": "Work Fax",
+          "message": "Робочий факс"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.desc": {
+          "source": "The type of phone number: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\", or \"other\". Default is \"other\".",
+          "message": "Тип номера телефону: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\" або \"other\". За замовчуванням — \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.display_name": {
+          "source": "Phone Type",
+          "message": "Тип телефону"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.short_desc": {
+          "source": "Type of phone number",
+          "message": "Тип номера телефону"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.desc": {
+          "source": "The name of a person related to this contact (e.g., spouse, manager, etc.).",
+          "message": "Ім'я пов'язаної з цим контактом особи (наприклад, чоловік/дружина, керівник тощо)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.display_name": {
+          "source": "Related Person",
+          "message": "Пов'язана особа"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.short_desc": {
+          "source": "Name of a related person",
+          "message": "Ім'я пов'язаної особи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1hbmFnZXI.display_name": {
+          "source": "Manager",
+          "message": "Керівник"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1vdGhlcg.display_name": {
+          "source": "Mother",
+          "message": "Мати"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Інше"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmFzc2lzdGFudA.display_name": {
+          "source": "Assistant",
+          "message": "Асистент"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmJyb3RoZXI.display_name": {
+          "source": "Brother",
+          "message": "Брат"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmNoaWxk.display_name": {
+          "source": "Child",
+          "message": "Дитина"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmRvbWVzdGljUGFydG5lcg.display_name": {
+          "source": "Domestic Partner",
+          "message": "Цивільний партнер"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZhdGhlcg.display_name": {
+          "source": "Father",
+          "message": "Батько"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZyaWVuZA.display_name": {
+          "source": "Friend",
+          "message": "Друг"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "Parent",
+          "message": "Один із батьків"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcnRuZXI.display_name": {
+          "source": "Partner",
+          "message": "Партнер"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlZmVycmVkQnk.display_name": {
+          "source": "Referred By",
+          "message": "Рекомендовано ким"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlbGF0aXZl.display_name": {
+          "source": "Relative",
+          "message": "Родич"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNpc3Rlcg.display_name": {
+          "source": "Sister",
+          "message": "Сестра"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNwb3VzZQ.display_name": {
+          "source": "Spouse",
+          "message": "Чоловік/Дружина"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.desc": {
+          "source": "The type of relationship: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\", or \"other\". Default is \"other\".",
+          "message": "Тип зв'язку: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\" або \"other\". За замовчуванням — \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.display_name": {
+          "source": "Relationship Type",
+          "message": "Тип зв'язку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.short_desc": {
+          "source": "Type of relationship",
+          "message": "Тип зв'язку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.desc": {
+          "source": "A website URL associated with the contact.",
+          "message": "URL-адреса вебсайту, пов'язана з контактом."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.display_name": {
+          "source": "Website URL",
+          "message": "URL-адреса вебсайту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.short_desc": {
+          "source": "Contact's website or URL",
+          "message": "Вебсайт або URL-адреса контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact in Google Contacts.",
+          "message": "Створити новий контакт у Google Контактах."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Creates a new user-defined contact group in Google Contacts. The group can then be used to organize contacts. Returns the created group's information including its resource name.",
+          "message": "Створює нову групу контактів користувача в Google Контактах. Після цього групу можна використовувати для впорядкування контактів. Повертає відомості про створену групу, включно з назвою її ресурсу."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Contact Group",
+          "message": "Створити групу контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The display name for the new contact group. This name will be visible in Google Contacts and must be provided.",
+          "message": "Відображуване ім'я для нової групи контактів. Це ім'я відображатиметься в Google Контактах і є обов'язковим."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Group Name",
+          "message": "Назва групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new contact group",
+          "message": "Назва для нової групи контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new contact group in Google Contacts.",
+          "message": "Створити нову групу контактів у Google Контактах."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.desc": {
+          "source": "Adds a contact to an existing contact group in Google Contacts. Both the contact and group must already exist. Returns confirmation with details about both the contact and group.",
+          "message": "Додає контакт до наявної групи контактів у Google Контактах. І контакт, і група вже мають існувати. Повертає підтвердження з відомостями про контакт і групу."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.display_name": {
+          "source": "Add Contact to Group",
+          "message": "Додати контакт до групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.desc": {
+          "source": "The resource name of the contact to add to the group (e.g., \"people/12345\").",
+          "message": "Назва ресурсу контакту, який потрібно додати до групи (наприклад, \"people/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Назва ресурсу контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.short_desc": {
+          "source": "The contact to add to the group",
+          "message": "Контакт для додавання до групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact group where the contact will be added (e.g., \"contactGroups/12345\").",
+          "message": "Назва ресурсу групи контактів, до якої буде додано контакт (наприклад, \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Group Resource Name",
+          "message": "Назва ресурсу групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The contact group to add to",
+          "message": "Група контактів для додавання"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.short_desc": {
+          "source": "Add an existing contact to a contact group.",
+          "message": "Додати наявний контакт до групи контактів."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Fetches comprehensive contact information from Google Contacts including names, email addresses, phone numbers, organizations, addresses, birthdays, and other personal details. Returns all available fields for the specified contact.",
+          "message": "Отримує вичерпну інформацію про контакт із Google Контактів, зокрема імена, адреси електронної пошти, номери телефонів, організації, адреси, дні народження та інші особисті дані. Повертає всі доступні поля для вказаного контакту."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Отримати контакт"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact to retrieve (e.g., \"people/12345\"). This uniquely identifies the contact in Google Contacts.",
+          "message": "Назва ресурсу контакту, який потрібно отримати (наприклад, \"people/12345\"). Вона однозначно ідентифікує контакт у Google Контактах."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Назва ресурсу контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The unique identifier for the contact",
+          "message": "Унікальний ідентифікатор контакту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific Google contact.",
+          "message": "Отримати детальну інформацію про конкретний контакт Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Fetches all contact groups from Google Contacts with support for filtering by group type, searching by name, and selecting specific fields. Returns both system and user-created groups with metadata including member counts.",
+          "message": "Отримує всі групи контактів із Google Контактів із підтримкою фільтрації за типом групи, пошуку за назвою та вибору конкретних полів. Повертає як системні групи, так і створені користувачем, разом із метаданими, включно з кількістю учасників."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Contact Groups",
+          "message": "Список груп контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All Groups",
+          "message": "Усі групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnN5c3RlbQ.display_name": {
+          "source": "System Groups Only",
+          "message": "Лише системні групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User Created Groups Only",
+          "message": "Лише створені користувачем групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.desc": {
+          "source": "Filter groups by type: \"all\" for both system and user groups, \"user\" for user-created groups only, or \"system\" for system groups only. Default is \"all\".",
+          "message": "Фільтрувати групи за типом: \"all\" для системних і створених користувачем груп, \"user\" лише для створених користувачем груп або \"system\" лише для системних груп. За замовчуванням — \"all\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.display_name": {
+          "source": "Group Type",
+          "message": "Тип групи"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.short_desc": {
+          "source": "Type of groups to retrieve",
+          "message": "Тип груп для отримання"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.desc": {
+          "source": "Optional search term to filter groups by name. The search is case-insensitive and matches partial names.",
+          "message": "Необов'язковий пошуковий запит для фільтрації груп за назвою. Пошук не чутливий до регістру та знаходить часткові збіги в назвах."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.display_name": {
+          "source": "Search Name",
+          "message": "Назва для пошуку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.short_desc": {
+          "source": "Filter groups by name",
+          "message": "Фільтрувати групи за назвою"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of contact groups from Google Contacts.",
+          "message": "Отримати список груп контактів із Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Contacts** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконайте користувацький виклик HTTP / REST API до **Google Contacts**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Contacts",
+          "message": "Зробити спеціальний виклик API до Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.",
+          "message": "Цей тригер спрацьовує щоразу, коли новий контакт додається до Google Contacts. Він надає детальну інформацію про щойно створений контакт, зокрема імена, електронні адреси, номери телефонів тощо."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact Created",
+          "message": "Створено новий контакт"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Trigger when a new contact is created in Google Contacts.",
+          "message": "Спрацьовує, коли в Google Contacts створюється новий контакт."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search through Google Contacts using email addresses, full names, or phone numbers. Supports both exact matching and partial matching (contains) search types. Returns basic contact information for matching contacts.",
+          "message": "Шукайте в Google Contacts за електронними адресами, повними іменами або номерами телефонів. Підтримує як точний збіг, так і частковий пошук (містить). Повертає базову інформацію про знайдені контакти."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search Contacts",
+          "message": "Пошук контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.desc": {
+          "source": "Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., \"contactGroups/12345\").",
+          "message": "Необов'язкова група контактів для фільтрації результатів. Повертатимуться лише контакти з цієї групи. Укажіть назву ресурсу групи (наприклад, \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.display_name": {
+          "source": "Contact Group",
+          "message": "Група контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.short_desc": {
+          "source": "Filter by contact group",
+          "message": "Фільтрувати за групою контактів"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email Address",
+          "message": "Адреса електронної пошти"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmZ1bGxfbmFtZQ.display_name": {
+          "source": "Full Name",
+          "message": "Повне ім'я"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOnBob25lX251bWJlcg.display_name": {
+          "source": "Phone Number",
+          "message": "Номер телефону"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.desc": {
+          "source": "The contact field to search in: \"email\" for email addresses, \"full_name\" for names, or \"phone_number\" for phone numbers.",
+          "message": "Поле контакту для пошуку: \"email\" для електронних адрес, \"full_name\" для імен або \"phone_number\" для номерів телефонів."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.display_name": {
+          "source": "Search Field",
+          "message": "Поле пошуку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.short_desc": {
+          "source": "Field to search in",
+          "message": "Поле для пошуку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Містить"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Точний збіг"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Search matching type: \"contains\" for partial matches or \"exact\" for exact matches. Default is \"contains\".",
+          "message": "Тип відповідності пошуку: \"contains\" для часткового збігу або \"exact\" для точного збігу. За замовчуванням — \"contains\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Тип пошуку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Тип пошуку для виконання"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.desc": {
+          "source": "The search term or value to look for in the specified field. Search is case-insensitive.",
+          "message": "Пошуковий термін або значення для пошуку у вказаному полі. Пошук не чутливий до регістру."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.display_name": {
+          "source": "Search Value",
+          "message": "Шукане значення"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.short_desc": {
+          "source": "Value to search for",
+          "message": "Значення для пошуку"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search for contacts in Google Contacts by various criteria.",
+          "message": "Пошук контактів у Google Contacts за різними критеріями."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.desc": {
+          "source": "Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.",
+          "message": "Підключіться до Google Contacts, щоб керувати своїми контактами безпосередньо з вашого додатку. Створюйте, оновлюйте та видаляйте контакти без проблем."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.display_name": {
+          "source": "Google Contacts",
+          "message": "Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.short_desc": {
+          "source": "Manage your Google Contacts",
+          "message": "Керуйте своїми Google Contacts"
+        }
+      }
+    }
+  }
+}

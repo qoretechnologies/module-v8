@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.desc": {
+          "source": "Returns the total number of records in a NocoDB table. You can optionally filter the count using a where clause to count only records matching specific criteria.",
+          "message": "Devuelve el número total de registros en una tabla de NocoDB. Opcionalmente, puede filtrar el recuento utilizando una cláusula where para contar solo los registros que coincidan con criterios específicos."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.display_name": {
+          "source": "Count Records",
+          "message": "Contar registros"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only count records matching specific criteria.",
+          "message": "Opcionalmente, especifique un filtro utilizando la sintaxis where de NocoDB (por ejemplo, \"(Status,eq,Active)\") para contar solo los registros que coincidan con criterios específicos."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Filtro Where"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.d2hlcmU.short_desc": {
+          "source": "Optional filter to count specific records",
+          "message": "Filtro opcional para contar registros específicos"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to count records from.",
+          "message": "Seleccione la tabla de NocoDB de la que desea contar los registros."
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.option.dGFibGU.short_desc": {
+          "source": "The table to count records from",
+          "message": "La tabla de la que se van a contar los registros"
+        },
+        "app.Tm9jb0RC.action.Y291bnRfcmVjb3Jkcw.short_desc": {
+          "source": "Get the count of records in a table",
+          "message": "Obtener el recuento de registros en una tabla"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crear registros"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NocoDB\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Eliminar registros"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NocoDB\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.desc": {
+          "source": "Links records from another table to a record via a link field. This creates a relationship between the records without affecting existing links.",
+          "message": "Vincula registros de otra tabla a un registro mediante un campo de enlace. Esto crea una relación entre los registros sin afectar a los enlaces existentes."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.display_name": {
+          "source": "Link Records",
+          "message": "Vincular registros"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship between tables.",
+          "message": "Seleccione el campo de enlace (Enlazar con otro registro) que define la relación entre tablas."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "Campo de enlace"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field to use for the relationship",
+          "message": "El campo de enlace que se utilizará para la relación"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to connect to the source record.",
+          "message": "Proporcione los ID de los registros de la tabla vinculada para conectar con el registro de origen."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Link",
+          "message": "Registros para vincular"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to link",
+          "message": "ID de los registros que se van a vincular"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to link from.",
+          "message": "Especifique el ID del registro en la tabla de origen desde el que vincular."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "El ID del registro de origen"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to link from.",
+          "message": "Seleccione la tabla de NocoDB que contiene el registro desde el que desea vincular."
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "La tabla que contiene el registro de origen"
+        },
+        "app.Tm9jb0RC.action.bGlua19yZWNvcmRz.short_desc": {
+          "source": "Create relationships between records",
+          "message": "Crear relaciones entre registros"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NocoDB** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada personalizada a la API HTTP / REST para **NocoDB** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), los parámetros de consulta opcionales, los encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para los extremos que aún no están expuestos como acciones de primer nivel en esta aplicación."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.Tm9jb0RC.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NocoDB",
+          "message": "Realizar una llamada personalizada a la API de NocoDB"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a NocoDB table for new rows and triggers when new records are detected. You can optionally filter which rows trigger the event using a where clause.",
+          "message": "Supervisa una tabla de NocoDB para detectar nuevas filas y se activa cuando se detectan nuevos registros. Opcionalmente, puede filtrar qué filas activan el evento utilizando una cláusula where."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "Nueva fila"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table you want to monitor for new rows.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla que desea supervisar para detectar nuevas filas."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table you want to monitor.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla que desea supervisar."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.desc": {
+          "source": "Optionally specify a filter using NocoDB where syntax (e.g., \"(Status,eq,Active)\") to only trigger for rows matching specific criteria.",
+          "message": "Opcionalmente, especifique un filtro utilizando la sintaxis where de NocoDB (por ejemplo, \"(Status,eq,Active)\") para activarse solo para las filas que coincidan con criterios específicos."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.display_name": {
+          "source": "Where Filter",
+          "message": "Filtro Where"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.d2hlcmU.short_desc": {
+          "source": "Optional filter for new rows",
+          "message": "Filtro opcional para nuevas filas"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table to monitor. The trigger will fire when new rows are added to this table.",
+          "message": "Seleccione la tabla de NocoDB que desea supervisar. El disparador se activará cuando se agreguen nuevas filas a esta tabla."
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "La tabla a supervisar en busca de nuevas filas"
+        },
+        "app.Tm9jb0RC.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Trigger when a new row is added to a NocoDB table",
+          "message": "Se activa cuando se agrega una nueva fila a una tabla de NocoDB"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NocoDB\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Buscar un único registro"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NocoDB\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.desc": {
+          "source": "Programmatically triggers a button action (such as AI generation or webhook) for specified records. Maximum of 25 records can be processed at a time.",
+          "message": "Activa mediante programación la acción de un botón (como generación de IA o webhook) para los registros especificados. Se puede procesar un máximo de 25 registros a la vez."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.display_name": {
+          "source": "Trigger Button",
+          "message": "Activar botón"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.desc": {
+          "source": "Select the button field whose action should be triggered for the specified records.",
+          "message": "Seleccione el campo de botón cuya acción debe activarse para los registros especificados."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.display_name": {
+          "source": "Button Field",
+          "message": "Campo de botón"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.YnV0dG9uRmllbGQ.short_desc": {
+          "source": "The button field to trigger",
+          "message": "El campo de botón que se va a activar"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.desc": {
+          "source": "When enabled, the button action runs in preview mode and changes are not saved. Useful for testing.",
+          "message": "Cuando está habilitado, la acción del botón se ejecuta en modo de vista previa y los cambios no se guardan. Útil para pruebas."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.display_name": {
+          "source": "Preview Mode",
+          "message": "Modo de vista previa"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cHJldmlldw.short_desc": {
+          "source": "Run in preview mode without saving changes",
+          "message": "Ejecutar en modo de vista previa sin guardar los cambios"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records to trigger the button action for. Maximum 25 records per request.",
+          "message": "Proporcione los ID de los registros para los que activar la acción del botón. Máximo 25 registros por solicitud."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.display_name": {
+          "source": "Record IDs",
+          "message": "ID de registros"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.cmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to process",
+          "message": "ID de los registros a procesar"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the button field to trigger.",
+          "message": "Seleccione la tabla de NocoDB que contiene el campo de botón que se va a activar."
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.option.dGFibGU.short_desc": {
+          "source": "The table containing the button field",
+          "message": "La tabla que contiene el campo de botón"
+        },
+        "app.Tm9jb0RC.action.dHJpZ2dlcl9idXR0b24.short_desc": {
+          "source": "Trigger a button action on records",
+          "message": "Activar una acción de botón en registros"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.desc": {
+          "source": "Removes the link between records via a link field. This breaks the relationship without deleting any records.",
+          "message": "Elimina el enlace entre registros a través de un campo de enlace. Esto rompe la relación sin eliminar ningún registro."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.display_name": {
+          "source": "Unlink Records",
+          "message": "Desvincular registros"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.desc": {
+          "source": "Select the link field (Link to Another Record) that defines the relationship to remove.",
+          "message": "Seleccione el campo de enlace (Enlazar a otro registro) que define la relación que se va a eliminar."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.display_name": {
+          "source": "Link Field",
+          "message": "Campo de enlace"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua0ZpZWxk.short_desc": {
+          "source": "The link field with the relationship",
+          "message": "El campo de enlace con la relación"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.desc": {
+          "source": "Provide the IDs of records from the linked table to disconnect from the source record.",
+          "message": "Proporcione los ID de los registros de la tabla vinculada que se van a desconectar del registro de origen."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.display_name": {
+          "source": "Records to Unlink",
+          "message": "Registros para desvincular"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.bGlua2VkUmVjb3JkSWRz.short_desc": {
+          "source": "IDs of records to unlink",
+          "message": "ID de los registros a desvincular"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record in the source table to unlink from.",
+          "message": "Especifique el ID del registro en la tabla de origen del que desea desvincular."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The source record ID",
+          "message": "El ID del registro de origen"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record you want to unlink from.",
+          "message": "Seleccione la tabla de NocoDB que contiene el registro del que desea desvincular."
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.option.dGFibGU.short_desc": {
+          "source": "The table containing the source record",
+          "message": "La tabla que contiene el registro de origen"
+        },
+        "app.Tm9jb0RC.action.dW5saW5rX3JlY29yZHM.short_desc": {
+          "source": "Remove relationships between records",
+          "message": "Eliminar relaciones entre registros"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "Actualizar registros existentes en la tabla indicada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Actualizar registros"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.Tm9jb0RC.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NocoDB\"",
+          "message": "Actualizar registros existentes en la tabla indicada en la aplicación \"NocoDB\""
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.desc": {
+          "source": "Uploads a file to a specific attachment field in a NocoDB record. The file will be stored in NocoDB and associated with the specified record.",
+          "message": "Sube un archivo a un campo de adjuntos específico en un registro de NocoDB. El archivo se almacenará en NocoDB y se asociará con el registro especificado."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.display_name": {
+          "source": "Upload Attachment",
+          "message": "Subir adjunto"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.desc": {
+          "source": "Select the attachment field in the table where the file will be stored.",
+          "message": "Seleccione el campo de adjuntos en la tabla donde se almacenará el archivo."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.display_name": {
+          "source": "Attachment Field",
+          "message": "Campo de adjuntos"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YXR0YWNobWVudEZpZWxk.short_desc": {
+          "source": "The attachment field to upload to",
+          "message": "El campo de adjuntos al que subir"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.desc": {
+          "source": "Select the NocoDB base (project) containing the table.",
+          "message": "Seleccione la base (proyecto) de NocoDB que contiene la tabla."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.display_name": {
+          "source": "Base",
+          "message": "Base"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.YmFzZUlk.short_desc": {
+          "source": "The NocoDB base containing the table",
+          "message": "La base de NocoDB que contiene la tabla"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.desc": {
+          "source": "The file to upload to the attachment field. Supports various file types including images, documents, and more.",
+          "message": "El archivo para subir al campo de adjuntos. Admite varios tipos de archivo, incluidas imágenes, documentos y más."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Archivo"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "El archivo que se va a subir"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.desc": {
+          "source": "Specify the ID of the record where the file should be uploaded.",
+          "message": "Especifique el ID del registro donde se debe subir el archivo."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.display_name": {
+          "source": "Record ID",
+          "message": "ID de registro"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.cmVjb3JkSWQ.short_desc": {
+          "source": "The ID of the record to attach the file to",
+          "message": "El ID del registro al que adjuntar el archivo"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.desc": {
+          "source": "Select the NocoDB workspace containing the base with the table.",
+          "message": "Seleccione el espacio de trabajo de NocoDB que contiene la base con la tabla."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.display_name": {
+          "source": "Workspace",
+          "message": "Entorno de trabajo"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.d29ya3NwYWNlSWQ.short_desc": {
+          "source": "The NocoDB workspace containing the base",
+          "message": "El espacio de trabajo de NocoDB que contiene la base"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.desc": {
+          "source": "Select the NocoDB table containing the record to attach the file to.",
+          "message": "Seleccione la tabla de NocoDB que contiene el registro al que adjuntar el archivo."
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.option.dGFibGU.short_desc": {
+          "source": "The table containing the record",
+          "message": "La tabla que contiene el registro"
+        },
+        "app.Tm9jb0RC.action.dXBsb2FkX2F0dGFjaG1lbnQ.short_desc": {
+          "source": "Upload a file to an attachment field",
+          "message": "Subir un archivo a un campo de adjuntos"
+        },
+        "app.Tm9jb0RC.desc": {
+          "source": "The NocoDB integration provides comprehensive access to your NocoDB database operations. Create, read, update, and delete records in your tables, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your NocoDB workflow automation and database management.",
+          "message": "La integración de NocoDB proporciona acceso integral a las operaciones de su base de datos NocoDB. Cree, lea, actualice y elimine registros en sus tablas, y supervise nuevas entradas con activadores en tiempo real. Ya sea que necesite administrar datos, filtrar resultados o rastrear nuevos registros, esta integración agiliza la automatización de su flujo de trabajo y la gestión de bases de datos en NocoDB."
+        },
+        "app.Tm9jb0RC.display_name": {
+          "source": "NocoDB",
+          "message": "NocoDB"
+        },
+        "app.Tm9jb0RC.short_desc": {
+          "source": "Connect to NocoDB to manage your database tables and records with powerful automation",
+          "message": "Conéctese a NocoDB para administrar las tablas y los registros de su base de datos con una potente automatización"
+        }
+      }
+    }
+  }
+}

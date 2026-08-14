@@ -1,0 +1,2185 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.desc": {
+          "source": "Create a new customer profile in Help Scout. Customers represent the people who contact your support team. You can store their contact information, company details, and other relevant data.",
+          "message": "Erstellen Sie ein neues Kundenprofil in Help Scout. Kunden repräsentieren die Personen, die Ihr Support-Team kontaktieren. Sie können deren Kontaktdaten, Unternehmensdetails und andere relevante Daten speichern."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Create Customer",
+          "message": "Kunde erstellen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.desc": {
+          "source": "The age of the customer as a string.",
+          "message": "Das Alter des Kunden als Zeichenfolge."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.display_name": {
+          "source": "Age",
+          "message": "Alter"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YWdl.short_desc": {
+          "source": "The customer age",
+          "message": "Das Alter des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.desc": {
+          "source": "Internal notes or background information about the customer. Maximum 200 characters. This is only visible to your team.",
+          "message": "Interne Notizen oder Hintergrundinformationen über den Kunden. Maximal 200 Zeichen. Dies ist nur für Ihr Team sichtbar."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.display_name": {
+          "source": "Background",
+          "message": "Hintergrund"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.short_desc": {
+          "source": "Background notes about the customer",
+          "message": "Hintergrundnotizen über den Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOm1hbGU.display_name": {
+          "source": "Male",
+          "message": "Männlich"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOmZlbWFsZQ.display_name": {
+          "source": "Female",
+          "message": "Weiblich"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOnVua25vd24.display_name": {
+          "source": "Unknown",
+          "message": "Unbekannt"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.desc": {
+          "source": "The gender of the customer: male, female, or unknown.",
+          "message": "Das Geschlecht des Kunden: männlich, weiblich oder unbekannt."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.display_name": {
+          "source": "Gender",
+          "message": "Geschlecht"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2VuZGVy.short_desc": {
+          "source": "The customer gender",
+          "message": "Das Geschlecht des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.desc": {
+          "source": "The primary email address for the customer. This is used to identify the customer when they send emails to your support address.",
+          "message": "Die primäre E-Mail-Adresse des Kunden. Diese wird verwendet, um den Kunden zu identifizieren, wenn er E-Mails an Ihre Support-Adresse sendet."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.short_desc": {
+          "source": "The customer email address",
+          "message": "Die E-Mail-Adresse des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Sonstige"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Privat"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Geschäftlich"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.desc": {
+          "source": "Categorize the email address type: work (business email), home (personal email), or other.",
+          "message": "Kategorisieren Sie den E-Mail-Adresstyp: work (geschäftliche E-Mail), home (private E-Mail) oder other."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.display_name": {
+          "source": "Email Type",
+          "message": "E-Mail-Typ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWxUeXBl.short_desc": {
+          "source": "The type of email address",
+          "message": "Der Typ der E-Mail-Adresse"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name of the customer. Maximum 40 characters.",
+          "message": "Der Vorname des Kunden. Maximal 40 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The customer first name",
+          "message": "Der Vorname des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.desc": {
+          "source": "The job title or position of the customer. Maximum 60 characters.",
+          "message": "Die Berufsbezeichnung oder Position des Kunden. Maximal 60 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Berufsbezeichnung"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
+          "source": "The customer job title",
+          "message": "Die Berufsbezeichnung des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.desc": {
+          "source": "The company or organization the customer belongs to.",
+          "message": "Das Unternehmen oder die Organisation, zu der der Kunde gehört."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9uSWQ.short_desc": {
+          "source": "The customer company or organization",
+          "message": "Das Unternehmen oder die Organisation des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.desc": {
+          "source": "The geographic location of the customer. Maximum 60 characters.",
+          "message": "Der geografische Standort des Kunden. Maximal 60 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Standort"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.short_desc": {
+          "source": "The customer location",
+          "message": "Der Standort des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.desc": {
+          "source": "The last name of the customer. Maximum 40 characters.",
+          "message": "Der Nachname des Kunden. Maximal 40 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
+          "source": "The customer last name",
+          "message": "Der Nachname des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.desc": {
+          "source": "The phone number for the customer.",
+          "message": "Die Telefonnummer des Kunden."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmU.short_desc": {
+          "source": "The customer phone number",
+          "message": "Die Telefonnummer des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "Mobil"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Sonstige"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOmZheA.display_name": {
+          "source": "Fax",
+          "message": "Fax"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Privat"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "Pager"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Geschäftlich"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.desc": {
+          "source": "Categorize the phone number type: work, home, mobile, fax, pager, or other.",
+          "message": "Kategorisieren Sie den Telefonnummertyp: work, home, mobile, fax, pager oder other."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.display_name": {
+          "source": "Phone Type",
+          "message": "Telefonnummerntyp"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.option.cGhvbmVUeXBl.short_desc": {
+          "source": "The type of phone number",
+          "message": "Der Typ der Telefonnummer"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Create a new customer",
+          "message": "Einen neuen Kunden erstellen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Create a new conversation in Help Scout. A conversation represents an email thread or support ticket with a customer. You must specify the mailbox, customer, and initial message content.",
+          "message": "Erstellen Sie eine neue Konversation in Help Scout. Eine Konversation repräsentiert einen E-Mail-Thread oder ein Support-Ticket mit einem Kunden. Sie müssen das Postfach, den Kunden und den anfänglichen Nachrichteninhalt angeben."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Create Conversation",
+          "message": "Konversation erstellen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.desc": {
+          "source": "The email address of the customer. If the customer does not exist, they will be created. Either Customer ID or Customer Email must be provided.",
+          "message": "Die E-Mail-Adresse des Kunden. Wenn der Kunde nicht existiert, wird er erstellt. Es muss entweder die Kunden-ID oder die E-Mail-Adresse des Kunden angegeben werden."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.display_name": {
+          "source": "Customer Email",
+          "message": "Kunden-E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJFbWFpbA.short_desc": {
+          "source": "The email address of the customer",
+          "message": "Die E-Mail-Adresse des Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select an existing customer from Help Scout. Either Customer ID or Customer Email must be provided.",
+          "message": "Wählen Sie einen bestehenden Kunden aus Help Scout aus. Es muss entweder die Kunden-ID oder die E-Mail-Adresse des Kunden angegeben werden."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer ID",
+          "message": "Kunden-ID"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The ID of an existing customer",
+          "message": "Die ID eines bestehenden Kunden"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.desc": {
+          "source": "Optionally assign the conversation to a specific Help Scout user. If not specified, the conversation will be unassigned or follow your mailbox routing rules.",
+          "message": "Weisen Sie die Konversation optional einem bestimmten Help Scout-Benutzer zu. Wenn nichts angegeben ist, wird die Konversation nicht zugewiesen oder folgt Ihren Postfach-Routing-Regeln."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "Zuweisen an"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign the conversation to a user",
+          "message": "Die Konversation einem Benutzer zuweisen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.desc": {
+          "source": "When set to true, Help Scout will send an auto-reply to the customer if one is configured for the mailbox. Set to false to prevent auto-replies.",
+          "message": "Wenn dies auf true gesetzt ist, sendet Help Scout eine automatische Antwort an den Kunden, falls eine für das Postfach konfiguriert ist. Auf false setzen, um automatische Antworten zu verhindern."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.display_name": {
+          "source": "Auto Reply",
+          "message": "Automatische Antwort"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.YXV0b1JlcGx5.short_desc": {
+          "source": "Enable auto-reply for this conversation",
+          "message": "Automatische Antwort für diese Konversation aktivieren"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.desc": {
+          "source": "Select the Help Scout mailbox (inbox) where this conversation should be created. Each mailbox typically corresponds to a different support email address or team.",
+          "message": "Wählen Sie das Help Scout-Postfach (Posteingang) aus, in dem diese Konversation erstellt werden soll. Jedes Postfach entspricht in der Regel einer anderen Support-E-Mail-Adresse oder einem anderen Team."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.short_desc": {
+          "source": "The mailbox to create the conversation in",
+          "message": "Das Postfach, in dem die Konversation erstellt werden soll"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Geschlossen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Ausstehend"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "The initial status of the conversation. Active means the conversation needs attention, closed means it is resolved, and pending means waiting for customer response.",
+          "message": "Der anfängliche Status der Konversation. „active“ bedeutet, dass die Konversation Aufmerksamkeit erfordert, „closed“ bedeutet, dass sie gelöst ist, und „pending“ bedeutet, dass auf eine Antwort des Kunden gewartet wird."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The initial conversation status",
+          "message": "Der anfängliche Konversationsstatus"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.desc": {
+          "source": "The subject line for the conversation. This will be visible to the customer in email communications.",
+          "message": "Die Betreffzeile für die Konversation. Diese ist für den Kunden in der E-Mail-Kommunikation sichtbar."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Betreff"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.short_desc": {
+          "source": "The conversation subject line",
+          "message": "Die Betreffzeile der Konversation"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.desc": {
+          "source": "A list of tag names to add to the conversation. Tags help organize and categorize conversations for easier filtering and reporting.",
+          "message": "Eine Liste von Tag-Namen, die der Konversation hinzugefügt werden sollen. Tags helfen beim Organisieren und Kategorisieren von Konversationen für einfacheres Filtern und Berichten."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGFncw.short_desc": {
+          "source": "Tags to add to the conversation",
+          "message": "Tags, die der Konversation hinzugefügt werden sollen"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.desc": {
+          "source": "The text content of the first message in the conversation. This can include HTML formatting.",
+          "message": "Der Textinhalt der ersten Nachricht in der Konversation. Dies kann HTML-Formatierung enthalten."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.display_name": {
+          "source": "Thread Text",
+          "message": "Thread-Text"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVGV4dA.short_desc": {
+          "source": "The content of the initial message",
+          "message": "Der Inhalt der ursprünglichen Nachricht"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOm5vdGU.display_name": {
+          "source": "Note",
+          "message": "Notiz"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOmN1c3RvbWVy.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.allowed-value.c3RyaW5nOnJlcGx5.display_name": {
+          "source": "Reply",
+          "message": "Antwort"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.desc": {
+          "source": "The type of the first message in the conversation. Customer means the message is from the customer, reply means it is from your team, and note is an internal note.",
+          "message": "Der Typ der ersten Nachricht in der Konversation. „customer“ bedeutet, dass die Nachricht vom Kunden stammt, „reply“ bedeutet, dass sie von Ihrem Team stammt, und „note“ ist eine interne Notiz."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.display_name": {
+          "source": "Thread Type",
+          "message": "Thread-Typ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dGhyZWFkVHlwZQ.short_desc": {
+          "source": "The type of the initial thread",
+          "message": "Der Typ des ursprünglichen Threads"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.desc": {
+          "source": "The type of conversation: email (standard email thread), phone (phone call record), or chat (live chat conversation).",
+          "message": "Der Typ der Konversation: E-Mail (standardmäßiger E-Mail-Thread), Telefon (Telefonanruf-Aufzeichnung) oder Chat (Live-Chat-Konversation)."
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "Typ"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.option.dHlwZQ.short_desc": {
+          "source": "The conversation type",
+          "message": "Der Konversationstyp"
+        },
+        "app.SGVscFNjb3V0.action.Y3JlYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Create a new conversation",
+          "message": "Eine neue Konversation erstellen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.desc": {
+          "source": "Add an internal note to an existing conversation in Help Scout. Notes are only visible to your team members and are not sent to the customer. Use notes to document internal discussions, research, or context about a customer issue.",
+          "message": "Fügen Sie einer bestehenden Konversation in Help Scout eine interne Notiz hinzu. Notizen sind nur für Ihre Teammitglieder sichtbar und werden nicht an den Kunden gesendet. Verwenden Sie Notizen, um interne Diskussionen, Recherchen oder Kontext zu einem Kundenproblem zu dokumentieren."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.display_name": {
+          "source": "Add Note to Conversation",
+          "message": "Notiz zu Konversation hinzufügen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation where you want to add the note. You can search for conversations by number or subject.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, zu der Sie die Notiz hinzufügen möchten. Sie können nach Konversationen anhand der Nummer oder des Betreffs suchen."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add the note to",
+          "message": "Die Konversation, zu der die Notiz hinzugefügt werden soll"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Geschlossen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Ausstehend"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.desc": {
+          "source": "Optionally change the conversation status when adding the note. Options include active, closed, open, pending, or spam.",
+          "message": "Ändern Sie optional den Konversationsstatus beim Hinzufügen der Notiz. Zu den Optionen gehören active, closed, open, pending oder spam."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.c3RhdHVz.short_desc": {
+          "source": "Change the conversation status",
+          "message": "Konversationsstatus ändern"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.desc": {
+          "source": "The text content of the internal note. This can include HTML formatting. The note will only be visible to your team members.",
+          "message": "Der Textinhalt der internen Notiz. Dies kann HTML-Formatierung enthalten. Die Notiz ist nur für Ihre Teammitglieder sichtbar."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.display_name": {
+          "source": "Note Text",
+          "message": "Notiztext"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dGV4dA.short_desc": {
+          "source": "The content of the note",
+          "message": "Der Inhalt der Notiz"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.desc": {
+          "source": "The Help Scout user who is adding the note. If not specified, defaults to the authenticated user.",
+          "message": "Der Help Scout-Benutzer, der die Notiz hinzufügt. Wenn nicht angegeben, wird standardmäßig der authentifizierte Benutzer verwendet."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.display_name": {
+          "source": "User",
+          "message": "Benutzer"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.option.dXNlcg.short_desc": {
+          "source": "The user adding the note",
+          "message": "Der Benutzer, der die Notiz hinzufügt"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX25vdGU.short_desc": {
+          "source": "Add an internal note to a conversation",
+          "message": "Eine interne Notiz zu einer Konversation hinzufügen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.desc": {
+          "source": "Add one or more tags to an existing conversation in Help Scout. Tags help organize and categorize conversations for easier filtering, reporting, and workflow automation.",
+          "message": "Fügen Sie einer bestehenden Konversation in Help Scout ein oder mehrere Tags hinzu. Tags helfen beim Organisieren und Kategorisieren von Konversationen für einfacheres Filtern, Berichten und die Workflow-Automatisierung."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.display_name": {
+          "source": "Add Tags to Conversation",
+          "message": "Tags zu Konversation hinzufügen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to add tags to.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, der Sie Tags hinzufügen möchten."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to add tags to",
+          "message": "Die Konversation, zu der Tags hinzugefügt werden sollen"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.desc": {
+          "source": "A list of tag names to add to the conversation. Tags are case-insensitive and will be created if they do not already exist.",
+          "message": "Eine Liste von Tag-Namen, die der Konversation hinzugefügt werden sollen. Bei Tags wird nicht zwischen Groß- und Kleinschreibung unterschieden; sie werden erstellt, falls sie noch nicht existieren."
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.option.dGFncw.short_desc": {
+          "source": "Tags to add",
+          "message": "Hinzuzufügende Tags"
+        },
+        "app.SGVscFNjb3V0.action.YWRkX3RhZ3M.short_desc": {
+          "source": "Add tags to a conversation",
+          "message": "Tags zu einer Konversation hinzufügen"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.desc": {
+          "source": "This trigger fires whenever a conversation is assigned to a user in Help Scout. This includes both new assignments and reassignments.",
+          "message": "Dieser Trigger wird ausgelöst, sobald eine Konversation in Help Scout einem Benutzer zugewiesen wird. Dies umfasst sowohl Neuzuweisungen als auch Umverteilungen."
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.display_name": {
+          "source": "Assigned Conversation",
+          "message": "Zugewiesene Konversation"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.",
+          "message": "Optional filtern, um nur für Konversationen in einem bestimmten Postfach auszulösen. Leer lassen, um für alle Postfächer auszulösen."
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.option.bWFpbGJveElk.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "Nach Postfach filtern"
+        },
+        "app.SGVscFNjb3V0.action.YXNzaWduZWRfY29udmVyc2F0aW9u.short_desc": {
+          "source": "Triggers when a conversation is assigned",
+          "message": "Wird ausgelöst, wenn eine Konversation zugewiesen wird"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.desc": {
+          "source": "Retrieve the full details of a specific customer from Help Scout by their ID. Returns all customer data including contact information, organization, and custom fields.",
+          "message": "Rufen Sie die vollständigen Details eines bestimmten Kunden aus Help Scout anhand seiner ID ab. Gibt alle Kundendaten einschließlich Kontaktinformationen, Organisation und benutzerdefinierten Feldern zurück."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.display_name": {
+          "source": "Get Customer",
+          "message": "Kunde abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select or enter the ID of the customer whose profile you want to retrieve.",
+          "message": "Wählen Sie die ID des Kunden aus oder geben Sie sie ein, dessen Profil Sie abrufen möchten."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to retrieve",
+          "message": "Der abzurufende Kunde"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2N1c3RvbWVy.short_desc": {
+          "source": "Retrieve a single customer by ID",
+          "message": "Einzelnen Kunden nach ID abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.desc": {
+          "source": "Retrieve a company-wide performance report from Help Scout. Includes metrics like customers helped, closed conversations, total replies, and happiness scores. Only available on Plus and Pro plans.",
+          "message": "Rufen Sie einen unternehmensweiten Leistungsbericht aus Help Scout ab. Enthält Metriken wie betreute Kunden, geschlossene Konversationen, Gesamtzahl der Antworten und Zufriedenheitswerte. Nur in Plus- und Pro-Plänen verfügbar."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.display_name": {
+          "source": "Get Company Report",
+          "message": "Unternehmensbericht abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.desc": {
+          "source": "The end date and time for the reporting period in ISO 8601 format.",
+          "message": "Das Enddatum und die Endzeit für den Berichtszeitraum im ISO 8601-Format."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.display_name": {
+          "source": "End Date",
+          "message": "Enddatum"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.ZW5k.short_desc": {
+          "source": "End of the reporting period",
+          "message": "Ende des Berichtszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.desc": {
+          "source": "Comma-separated list of folder IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Ordner-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.display_name": {
+          "source": "Folders",
+          "message": "Ordner"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.Zm9sZGVycw.short_desc": {
+          "source": "Filter by folder IDs",
+          "message": "Nach Ordner-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.desc": {
+          "source": "Comma-separated list of mailbox IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Postfach-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.display_name": {
+          "source": "Mailboxes",
+          "message": "Postfächer"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.bWFpbGJveGVz.short_desc": {
+          "source": "Filter by mailbox IDs",
+          "message": "Nach Postfach-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.desc": {
+          "source": "The start date and time for the reporting period in ISO 8601 format.",
+          "message": "Das Startdatum und die Startzeit für den Berichtszeitraum im ISO 8601-Format."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.display_name": {
+          "source": "Start Date",
+          "message": "Startdatum"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.c3RhcnQ.short_desc": {
+          "source": "Start of the reporting period",
+          "message": "Beginn des Berichtszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.desc": {
+          "source": "The end date for a previous period to compare against. Used to calculate deltas.",
+          "message": "Das Enddatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.display_name": {
+          "source": "Previous End",
+          "message": "Vorheriges Ende"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNFbmQ.short_desc": {
+          "source": "End of the comparison period",
+          "message": "Ende des Vergleichszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.desc": {
+          "source": "The start date for a previous period to compare against. Used to calculate deltas.",
+          "message": "Das Startdatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.display_name": {
+          "source": "Previous Start",
+          "message": "Vorheriger Beginn"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.cHJldmlvdXNTdGFydA.short_desc": {
+          "source": "Start of the comparison period",
+          "message": "Beginn des Vergleichszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.desc": {
+          "source": "Comma-separated list of tag IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Tag-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dGFncw.short_desc": {
+          "source": "Filter by tag IDs",
+          "message": "Nach Tag-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOmNoYXQ.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "Phone",
+          "message": "Telefon"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.desc": {
+          "source": "Filter by conversation type: email, chat, or phone.",
+          "message": "Nach Konversationstyp filtern: email, chat oder phone."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.display_name": {
+          "source": "Types",
+          "message": "Typen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.option.dHlwZXM.short_desc": {
+          "source": "Filter by conversation types",
+          "message": "Nach Konversationstypen filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbXBhbnlfcmVwb3J0.short_desc": {
+          "source": "Get company-wide performance report",
+          "message": "Unternehmensweiten Leistungsbericht abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Retrieve the full details of a specific conversation from Help Scout by its ID. Returns all conversation data including subject, status, customer information, tags, and custom fields.",
+          "message": "Rufen Sie die vollständigen Details einer bestimmten Konversation anhand ihrer ID aus Help Scout ab. Gibt alle Konversationsdaten einschließlich Betreff, Status, Kundeninformationen, Tags und benutzerdefinierten Feldern zurück."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Get Conversation",
+          "message": "Konversation abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to retrieve.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie abrufen möchten."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to retrieve",
+          "message": "Die abzurufende Konversation"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Retrieve a single conversation by ID",
+          "message": "Eine einzelne Konversation anhand der ID abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.desc": {
+          "source": "Retrieve an email channel performance report from Help Scout. Includes volume metrics, resolution times, response times, and time distribution data. Only available on Plus and Pro plans.",
+          "message": "Rufen Sie einen Leistungsbericht für den E-Mail-Kanal aus Help Scout ab. Enthält Volumenmetriken, Lösungszeiten, Antwortzeiten und Zeitverteilungsdaten. Nur in den Tarifen Plus und Pro verfügbar."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.display_name": {
+          "source": "Get Email Report",
+          "message": "E-Mail-Bericht abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.desc": {
+          "source": "The end date and time for the reporting period in ISO 8601 format.",
+          "message": "Das Enddatum und die Endzeit für den Berichtszeitraum im ISO 8601-Format."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.display_name": {
+          "source": "End Date",
+          "message": "Enddatum"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.ZW5k.short_desc": {
+          "source": "End of the reporting period",
+          "message": "Ende des Berichtszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.desc": {
+          "source": "Comma-separated list of folder IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Ordner-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.display_name": {
+          "source": "Folders",
+          "message": "Ordner"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.Zm9sZGVycw.short_desc": {
+          "source": "Filter by folder IDs",
+          "message": "Nach Ordner-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.desc": {
+          "source": "When set to true, time-based metrics will only consider office hours. Defaults to false.",
+          "message": "Wenn auf true gesetzt, berücksichtigen zeitbasierte Metriken nur die Geschäftszeiten. Standardmäßig false."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.display_name": {
+          "source": "Office Hours",
+          "message": "Geschäftszeiten"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.b2ZmaWNlSG91cnM.short_desc": {
+          "source": "Consider office hours in calculations",
+          "message": "Geschäftszeiten bei Berechnungen berücksichtigen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.desc": {
+          "source": "Comma-separated list of mailbox IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Postfach-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.display_name": {
+          "source": "Mailboxes",
+          "message": "Postfächer"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.bWFpbGJveGVz.short_desc": {
+          "source": "Filter by mailbox IDs",
+          "message": "Nach Postfach-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.desc": {
+          "source": "The start date and time for the reporting period in ISO 8601 format.",
+          "message": "Das Startdatum und die Startzeit für den Berichtszeitraum im ISO 8601-Format."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.display_name": {
+          "source": "Start Date",
+          "message": "Startdatum"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.c3RhcnQ.short_desc": {
+          "source": "Start of the reporting period",
+          "message": "Beginn des Berichtszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.desc": {
+          "source": "The end date for a previous period to compare against. Used to calculate deltas.",
+          "message": "Das Enddatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.display_name": {
+          "source": "Previous End",
+          "message": "Vorheriges Ende"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNFbmQ.short_desc": {
+          "source": "End of the comparison period",
+          "message": "Ende des Vergleichszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.desc": {
+          "source": "The start date for a previous period to compare against. Used to calculate deltas.",
+          "message": "Das Startdatum für einen vorherigen Zeitraum zum Vergleich. Wird zur Berechnung von Deltas verwendet."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.display_name": {
+          "source": "Previous Start",
+          "message": "Vorheriger Beginn"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.cHJldmlvdXNTdGFydA.short_desc": {
+          "source": "Start of the comparison period",
+          "message": "Beginn des Vergleichszeitraums"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.desc": {
+          "source": "Comma-separated list of tag IDs to filter the report by.",
+          "message": "Kommagetrennte Liste von Tag-IDs, nach denen der Bericht gefiltert werden soll."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tags"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.option.dGFncw.short_desc": {
+          "source": "Filter by tag IDs",
+          "message": "Nach Tag-IDs filtern"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X2VtYWlsX3JlcG9ydA.short_desc": {
+          "source": "Get email channel performance report",
+          "message": "Leistungsbericht für E-Mail-Kanal abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.desc": {
+          "source": "Retrieve the full details of a specific thread (message) within a conversation. Returns the thread content, type, status, and metadata.",
+          "message": "Rufen Sie die vollständigen Details eines bestimmten Threads (Nachricht) innerhalb einer Konversation ab. Gibt Thread-Inhalt, Typ, Status und Metadaten zurück."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.display_name": {
+          "source": "Get Thread",
+          "message": "Thread abrufen"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation that contains the thread.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die den Thread enthält."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation containing the thread",
+          "message": "Die Konversation, die den Thread enthält"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.desc": {
+          "source": "Enter the ID of the specific thread you want to retrieve.",
+          "message": "Geben Sie die ID des spezifischen Threads ein, den Sie abrufen möchten."
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.display_name": {
+          "source": "Thread ID",
+          "message": "Thread-ID"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.option.dGhyZWFkSWQ.short_desc": {
+          "source": "The thread to retrieve",
+          "message": "Der abzurufende Thread"
+        },
+        "app.SGVscFNjb3V0.action.Z2V0X3RocmVhZA.short_desc": {
+          "source": "Retrieve a specific thread by ID",
+          "message": "Einen bestimmten Thread anhand der ID abrufen"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.desc": {
+          "source": "Delete a customer profile from Help Scout. Be cautious as this action may affect conversation history and is typically irreversible.",
+          "message": "Löschen Sie ein Kundenprofil aus Help Scout. Seien Sie vorsichtig, da diese Aktion den Konversationsverlauf beeinflussen kann und normalerweise unwiderruflich ist."
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.display_name": {
+          "source": "Delete Customer",
+          "message": "Kunde löschen"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select or enter the ID of the customer you want to delete.",
+          "message": "Wählen Sie die ID des Kunden aus oder geben Sie sie ein, den Sie löschen möchten."
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to delete",
+          "message": "Der zu löschende Kunde"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Delete a customer",
+          "message": "Einen Kunden löschen"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Delete a conversation from Help Scout. This action moves the conversation to the trash. Be cautious as this action may be irreversible depending on your Help Scout settings.",
+          "message": "Löschen Sie eine Konversation aus Help Scout. Diese Aktion verschiebt die Konversation in den Papierkorb. Seien Sie vorsichtig, da diese Aktion je nach Ihren Help Scout-Einstellungen unwiderruflich sein kann."
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Delete Conversation",
+          "message": "Konversation löschen"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to delete.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie löschen möchten."
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to delete",
+          "message": "Die zu löschende Konversation"
+        },
+        "app.SGVscFNjb3V0.action.ZGVsZXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Delete a conversation",
+          "message": "Eine Konversation löschen"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.desc": {
+          "source": "Search for a mailbox in Help Scout by its name. Returns the mailbox details if found. The search is case-insensitive and supports partial matching.",
+          "message": "Suchen Sie in Help Scout anhand ihres Namens nach einer Mailbox. Gibt die Mailbox-Details zurück, falls gefunden. Die Suche unterscheidet nicht zwischen Groß- und Kleinschreibung und unterstützt Teilübereinstimmungen."
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.display_name": {
+          "source": "Find Mailbox by Name",
+          "message": "Mailbox nach Name suchen"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.desc": {
+          "source": "The name of the mailbox to search for. The search is case-insensitive and will match partial names or slugs.",
+          "message": "Der Name der Mailbox, nach der gesucht werden soll. Die Suche unterscheidet nicht zwischen Groß- und Kleinschreibung und findet auch Teilnamen oder Slugs."
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.display_name": {
+          "source": "Mailbox Name",
+          "message": "Mailbox-Name"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.option.bmFtZQ.short_desc": {
+          "source": "The name of the mailbox to find",
+          "message": "Der Name der zu suchenden Mailbox"
+        },
+        "app.SGVscFNjb3V0.action.ZmluZF9tYWlsYm94.short_desc": {
+          "source": "Find a mailbox by its name",
+          "message": "Eine Mailbox anhand ihres Namens suchen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.desc": {
+          "source": "Retrieve all threads (messages) within a specific conversation. Threads include customer messages, agent replies, notes, and other conversation activities.",
+          "message": "Rufen Sie alle Threads (Nachrichten) innerhalb einer bestimmten Konversation ab. Threads umfassen Kundennachrichten, Agentenantworten, Notizen und andere Konversationsaktivitäten."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.display_name": {
+          "source": "List Threads",
+          "message": "Threads auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation whose threads you want to retrieve.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, deren Threads Sie abrufen möchten."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to list threads from",
+          "message": "Die Konversation, aus der Threads aufgelistet werden sollen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of thread records to return. Default is 50.",
+          "message": "Die maximale Anzahl der zurückzugebenden Thread-Datensätze. Standard ist 50."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of threads to return",
+          "message": "Maximale Anzahl der zurückzugebenden Threads"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF90aHJlYWRz.short_desc": {
+          "source": "List all threads in a conversation",
+          "message": "Alle Threads in einer Konversation auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of users from your Help Scout account. You can filter users by email address or mailbox. Returns all user types including those who have not yet accepted their invitations.",
+          "message": "Rufen Sie eine Liste von Benutzern aus Ihrem Help Scout-Konto ab. Sie können Benutzer nach E-Mail-Adresse oder Mailbox filtern. Gibt alle Benutzertypen zurück, einschließlich derjenigen, die ihre Einladungen noch nicht angenommen haben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Benutzer auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.desc": {
+          "source": "Only return users with this exact email address.",
+          "message": "Nur Benutzer mit genau dieser E-Mail-Adresse zurückgeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.ZW1haWw.short_desc": {
+          "source": "Filter by email address",
+          "message": "Nach E-Mail-Adresse filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of user records to return. Default is 50.",
+          "message": "Die maximale Anzahl der zurückzugebenden Benutzerdatensätze. Standard ist 50."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maximale Anzahl zurückzugebender Benutzer"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.desc": {
+          "source": "Only return users associated with this mailbox.",
+          "message": "Nur Benutzer zurückgeben, die dieser Mailbox zugeordnet sind."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "Nach Postfach filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of Help Scout users",
+          "message": "Eine Liste von Help Scout-Benutzern abrufen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.desc": {
+          "source": "Retrieve a list of conversations from Help Scout. You can filter by mailbox, status, assignee, tags, and more. Results can be sorted and paginated.",
+          "message": "Rufen Sie eine Liste von Konversationen aus Help Scout ab. Sie können nach Mailbox, Status, Zugewiesenem, Tags und mehr filtern. Die Ergebnisse können sortiert und paginiert werden."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.display_name": {
+          "source": "List Conversations",
+          "message": "Unterhaltungen auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.desc": {
+          "source": "Only return conversations assigned to this user.",
+          "message": "Nur Konversationen zurückgeben, die diesem Benutzer zugewiesen sind."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "Zugewiesen an"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "Filter by assignee",
+          "message": "Nach zugewiesener Person filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversation records to return. Default is 50.",
+          "message": "Die maximale Anzahl an zurückzugebenden Unterhaltungsdatensätzen. Standard ist 50."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversations to return",
+          "message": "Maximale Anzahl an zurückzugebenden Unterhaltungen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.desc": {
+          "source": "Only return conversations modified on or after this date.",
+          "message": "Nur Konversationen zurückgeben, die an oder nach diesem Datum geändert wurden."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.display_name": {
+          "source": "Modified Since",
+          "message": "Geändert seit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
+          "source": "Filter by modification date",
+          "message": "Nach Änderungsdatum filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.desc": {
+          "source": "Only return conversations from this mailbox.",
+          "message": "Nur Konversationen aus dieser Mailbox zurückgeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "Nach Postfach filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: desc (neueste zuerst) oder asc (älteste zuerst)."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Sortierreihenfolge"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "Sortierrichtung"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1haWxib3hpZA.display_name": {
+          "source": "Mailbox ID",
+          "message": "Mailbox-ID"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "Geändert am"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm51bWJlcg.display_name": {
+          "source": "Number",
+          "message": "Nummer"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmN1c3RvbWVyRW1haWw.display_name": {
+          "source": "Customer Email",
+          "message": "Kunden-E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmN1c3RvbWVyTmFtZQ.display_name": {
+          "source": "Customer Name",
+          "message": "Kundenname"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "Erstellt am"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOnN0YXR1cw.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOnN1YmplY3Q.display_name": {
+          "source": "Subject",
+          "message": "Betreff"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, customerEmail, customerName, mailboxid, modifiedAt, number, status, or subject.",
+          "message": "Das Feld, nach dem die Ergebnisse sortiert werden sollen: createdAt, customerEmail, customerName, mailboxid, modifiedAt, number, status oder subject."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "Sortierfeld"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "Feld zum Sortieren"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "Alle"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Geschlossen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Ausstehend"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.desc": {
+          "source": "Only return conversations with this status: all, active, closed, open, pending, or spam.",
+          "message": "Nur Konversationen mit diesem Status zurückgeben: all, active, closed, open, pending oder spam."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.c3RhdHVz.short_desc": {
+          "source": "Filter by conversation status",
+          "message": "Nach Unterhaltungsstatus filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.desc": {
+          "source": "An advanced search query using Help Scout query syntax. For example: (subject:\"billing issue\") AND (status:active)",
+          "message": "Eine erweiterte Suchabfrage mit der Help Scout-Abfragesyntax. Zum Beispiel: (subject:\"billing issue\") AND (status:active)"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Abfrage"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.cXVlcnk.short_desc": {
+          "source": "Advanced search query",
+          "message": "Erweiterte Suchabfrage"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.desc": {
+          "source": "Only return conversations with this tag. You can specify multiple tags separated by commas.",
+          "message": "Nur Konversationen mit diesem Tag zurückgeben. Sie können mehrere Tags durch Kommas getrennt angeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "Tag"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.option.dGFn.short_desc": {
+          "source": "Filter by tag",
+          "message": "Nach Tag filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jb252ZXJzYXRpb25z.short_desc": {
+          "source": "Retrieve a list of conversations",
+          "message": "Eine Liste von Unterhaltungen abrufen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.desc": {
+          "source": "Retrieve a list of customers from Help Scout. You can filter customers by mailbox, name, email, or modification date. Results can be sorted and paginated.",
+          "message": "Eine Liste von Kunden aus Help Scout abrufen. Sie können Kunden nach Postfach, Name, E-Mail oder Änderungsdatum filtern. Die Ergebnisse können sortiert und paginiert werden."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.display_name": {
+          "source": "List Customers",
+          "message": "Kunden auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.desc": {
+          "source": "Only return customers with this email address.",
+          "message": "Nur Kunden mit dieser E-Mail-Adresse zurückgeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-Mail"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.ZW1haWw.short_desc": {
+          "source": "Filter by email address",
+          "message": "Nach E-Mail-Adresse filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.desc": {
+          "source": "Only return customers with this first name.",
+          "message": "Nur Kunden mit diesem Vornamen zurückgeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "Filter by first name",
+          "message": "Nach Vorname filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.desc": {
+          "source": "Only return customers with this last name.",
+          "message": "Nur Kunden mit diesem Nachnamen zurückgeben."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGFzdE5hbWU.short_desc": {
+          "source": "Filter by last name",
+          "message": "Nach Nachname filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer records to return. Default is 50.",
+          "message": "Die maximale Anzahl der zurückzugebenden Kundendatensätze. Standardwert ist 50."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of customers to return",
+          "message": "Maximale Anzahl der zurückzugebenden Kunden"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.desc": {
+          "source": "Only return customers modified on or after this date.",
+          "message": "Nur Kunden zurückgeben, die an oder nach diesem Datum geändert wurden."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.display_name": {
+          "source": "Modified Since",
+          "message": "Geändert seit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bW9kaWZpZWRTaW5jZQ.short_desc": {
+          "source": "Filter by modification date",
+          "message": "Nach Änderungsdatum filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.desc": {
+          "source": "Only return customers associated with conversations in this mailbox.",
+          "message": "Nur Kunden zurückgeben, die Konversationen in diesem Postfach zugeordnet sind."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.bWFpbGJveA.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "Nach Postfach filtern"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: desc (neueste zuerst) oder asc (älteste zuerst)."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Sortierreihenfolge"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "Sortierrichtung"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "Geändert am"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "Erstellt am"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmZpcnN0TmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmxhc3ROYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, firstName, lastName, or modifiedAt.",
+          "message": "Das Feld, nach dem die Ergebnisse sortiert werden sollen: createdAt, firstName, lastName oder modifiedAt."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "Sortierfeld"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "Feld zum Sortieren"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9jdXN0b21lcnM.short_desc": {
+          "source": "Retrieve a list of customers",
+          "message": "Eine Liste von Kunden abrufen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.desc": {
+          "source": "Retrieve a list of saved reply templates for a specific mailbox. Saved replies are pre-written response templates that agents can use to quickly respond to common questions.",
+          "message": "Eine Liste gespeicherter Antwortvorlagen für ein bestimmtes Postfach abrufen. Gespeicherte Antworten sind vorgefertigte Antwortvorlagen, die Agenten verwenden können, um schnell auf häufige Fragen zu antworten."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.display_name": {
+          "source": "List Saved Replies",
+          "message": "Gespeicherte Antworten auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of saved reply records to return. Default is 50.",
+          "message": "Die maximale Anzahl der zurückzugebenden Datensätze gespeicherter Antworten. Standardwert ist 50."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of saved replies to return",
+          "message": "Maximale Anzahl der zurückzugebenden gespeicherten Antworten"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.desc": {
+          "source": "Select the mailbox whose saved replies you want to retrieve. Saved replies are specific to each mailbox.",
+          "message": "Wählen Sie das Postfach aus, dessen gespeicherte Antworten Sie abrufen möchten. Gespeicherte Antworten sind spezifisch für jedes Postfach."
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.option.bWFpbGJveElk.short_desc": {
+          "source": "The mailbox to list saved replies from",
+          "message": "Das Postfach, aus dem gespeicherte Antworten aufgelistet werden sollen"
+        },
+        "app.SGVscFNjb3V0.action.bGlzdF9zYXZlZF9yZXBsaWVz.short_desc": {
+          "source": "List saved replies for a mailbox",
+          "message": "Gespeicherte Antworten für ein Postfach auflisten"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Help Scout** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Help Scout** unter Verwendung der Authentifizierung der konfigurierten Verbindung durch.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Anfragetext an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antworttext enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.SGVscFNjb3V0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Help Scout",
+          "message": "Benutzerdefinierten API-Aufruf an Help Scout ausführen"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.desc": {
+          "source": "This trigger fires whenever a new organization is created in Help Scout. Organizations help group customers from the same company.",
+          "message": "Dieser Trigger wird ausgelöst, sobald eine neue Organisation in Help Scout erstellt wird. Organisationen helfen dabei, Kunden desselben Unternehmens zu gruppieren."
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
+          "source": "New Organization",
+          "message": "Neue Organisation"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "Wird ausgelöst, wenn eine neue Organisation erstellt wird"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.desc": {
+          "source": "This trigger fires whenever a new customer is created in Help Scout. It provides the full customer profile including contact information, organization, and custom fields.",
+          "message": "Dieser Trigger wird ausgelöst, sobald ein neuer Kunde in Help Scout erstellt wird. Er stellt das vollständige Kundenprofil einschließlich Kontaktinformationen, Organisation und benutzerdefinierten Feldern bereit."
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.display_name": {
+          "source": "New Customer",
+          "message": "Neuer Kunde"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2N1c3RvbWVy.short_desc": {
+          "source": "Triggers when a new customer is created",
+          "message": "Wird ausgelöst, wenn ein neuer Kunde erstellt wird"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation (support ticket) is created in Help Scout. You can optionally filter by mailbox to only receive events from specific inboxes.",
+          "message": "Dieser Trigger wird ausgelöst, sobald eine neue Konversation (Support-Ticket) in Help Scout erstellt wird. Sie können optional nach Postfach filtern, um nur Ereignisse aus bestimmten Postfächern zu erhalten."
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "Neue Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.desc": {
+          "source": "Optionally filter to only trigger for conversations in a specific mailbox. Leave empty to trigger for all mailboxes.",
+          "message": "Optional filtern, um nur für Konversationen in einem bestimmten Postfach auszulösen. Leer lassen, um für alle Postfächer auszulösen."
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.display_name": {
+          "source": "Mailbox",
+          "message": "Postfach"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.option.bWFpbGJveElk.short_desc": {
+          "source": "Filter by mailbox",
+          "message": "Nach Postfach filtern"
+        },
+        "app.SGVscFNjb3V0.action.bmV3X2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created",
+          "message": "Wird ausgelöst, wenn eine neue Unterhaltung erstellt wird"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.desc": {
+          "source": "Search for customers in Help Scout using a query string. You can search by email, name, phone number, or other customer properties using Help Scout query syntax.",
+          "message": "Suchen Sie mithilfe einer Abfragezeichenfolge nach Kunden in Help Scout. Sie können mithilfe der Help Scout-Abfragesyntax nach E-Mail, Name, Telefonnummer oder anderen Kundeneigenschaften suchen."
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.display_name": {
+          "source": "Search Customers",
+          "message": "Kunden suchen"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer records to return. Default is 50.",
+          "message": "Die maximale Anzahl der zurückzugebenden Kundendatensätze. Standardwert ist 50."
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of customers to return",
+          "message": "Maximale Anzahl der zurückzugebenden Kunden"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Aufsteigend"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Absteigend"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.desc": {
+          "source": "The direction to sort results: desc (newest first) or asc (oldest first).",
+          "message": "Die Richtung zum Sortieren der Ergebnisse: desc (neueste zuerst) oder asc (älteste zuerst)."
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.display_name": {
+          "source": "Sort Order",
+          "message": "Sortierreihenfolge"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydE9yZGVy.short_desc": {
+          "source": "Sort order direction",
+          "message": "Sortierrichtung"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOm1vZGlmaWVkQXQ.display_name": {
+          "source": "Modified At",
+          "message": "Geändert am"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmNyZWF0ZWRBdA.display_name": {
+          "source": "Created At",
+          "message": "Erstellt am"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmZpcnN0TmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.allowed-value.c3RyaW5nOmxhc3ROYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.desc": {
+          "source": "The field to sort results by: createdAt, firstName, lastName, or modifiedAt.",
+          "message": "Das Feld, nach dem die Ergebnisse sortiert werden sollen: createdAt, firstName, lastName oder modifiedAt."
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.display_name": {
+          "source": "Sort Field",
+          "message": "Sortierfeld"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.c29ydEZpZWxk.short_desc": {
+          "source": "Field to sort by",
+          "message": "Feld zum Sortieren"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.desc": {
+          "source": "The search query using Help Scout query syntax. Examples: (email:\"john@example.com\"), (firstName:\"John\"), (phone:\"555-1234\"). You can combine multiple conditions with AND/OR operators.",
+          "message": "Die Suchabfrage unter Verwendung der Help Scout-Abfragesyntax. Beispiele: (email:\"john@example.com\"), (firstName:\"John\"), (phone:\"555-1234\"). Sie können mehrere Bedingungen mit AND/OR-Operatoren kombinieren."
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Abfrage"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.option.cXVlcnk.short_desc": {
+          "source": "Search query",
+          "message": "Suchabfrage"
+        },
+        "app.SGVscFNjb3V0.action.c2VhcmNoX2N1c3RvbWVycw.short_desc": {
+          "source": "Search for customers using a query",
+          "message": "Mithilfe einer Abfrage nach Kunden suchen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.desc": {
+          "source": "Send a reply to an existing conversation in Help Scout. The reply will be sent to the customer via email. You can optionally CC/BCC additional recipients, save as draft, or change the conversation status.",
+          "message": "Eine Antwort auf eine bestehende Konversation in Help Scout senden. Die Antwort wird per E-Mail an den Kunden gesendet. Sie können optional weitere Empfänger in CC/BCC setzen, als Entwurf speichern oder den Konversationsstatus ändern."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.display_name": {
+          "source": "Send Reply",
+          "message": "Antwort senden"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to reply to.",
+          "message": "Wählen Sie die ID der Unterhaltung aus oder geben Sie sie ein, auf die Sie antworten möchten."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to reply to",
+          "message": "Die Unterhaltung, auf die geantwortet werden soll"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.desc": {
+          "source": "A list of email addresses to CC on the reply. These recipients will receive a copy of the email.",
+          "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in CC gesetzt werden sollen. Diese Empfänger erhalten eine Kopie der E-Mail."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.display_name": {
+          "source": "CC",
+          "message": "CC"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y2M.short_desc": {
+          "source": "Carbon copy email addresses",
+          "message": "CC-E-Mail-Adressen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select the customer who will receive this reply. This should match the customer associated with the conversation.",
+          "message": "Wählen Sie den Kunden aus, der diese Antwort erhalten soll. Dies sollte mit dem der Konversation zugeordneten Kunden übereinstimmen."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer being replied to",
+          "message": "Der Kunde, dem geantwortet wird"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.desc": {
+          "source": "Optionally assign the conversation to a different Help Scout user after sending the reply.",
+          "message": "Die Konversation nach dem Senden der Antwort optional einem anderen Help Scout-Benutzer zuweisen."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "Zuweisen an"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign the conversation after replying",
+          "message": "Die Konversation nach dem Antworten zuweisen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.desc": {
+          "source": "A list of email addresses to BCC on the reply. These recipients will receive a copy of the email without other recipients knowing.",
+          "message": "Eine Liste von E-Mail-Adressen, die bei der Antwort in BCC gesetzt werden sollen. Diese Empfänger erhalten eine Kopie der E-Mail, ohne dass andere Empfänger davon erfahren."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.display_name": {
+          "source": "BCC",
+          "message": "BCC"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.YmNj.short_desc": {
+          "source": "Blind carbon copy email addresses",
+          "message": "BCC-E-Mail-Adressen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.desc": {
+          "source": "When set to true, the reply is saved as a draft and not sent to the customer. You can review and send it later from Help Scout.",
+          "message": "Wenn auf true gesetzt, wird die Antwort als Entwurf gespeichert und nicht an den Kunden gesendet. Sie können sie später in Help Scout überprüfen und senden."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.display_name": {
+          "source": "Save as Draft",
+          "message": "Als Entwurf speichern"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.ZHJhZnQ.short_desc": {
+          "source": "Save the reply as a draft",
+          "message": "Die Antwort als Entwurf speichern"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "Offen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Geschlossen"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Ausstehend"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.allowed-value.c3RyaW5nOnNwYW0.display_name": {
+          "source": "Spam",
+          "message": "Spam"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.desc": {
+          "source": "Optionally change the conversation status after sending the reply. For example, set to closed after resolving an issue.",
+          "message": "Den Konversationsstatus nach dem Senden der Antwort optional ändern. Setzen Sie ihn beispielsweise auf „closed“, nachdem ein Problem gelöst wurde."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.c3RhdHVz.short_desc": {
+          "source": "Change the conversation status",
+          "message": "Konversationsstatus ändern"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.desc": {
+          "source": "The text content of the reply message. This can include HTML formatting. The reply will be sent to the customer via email.",
+          "message": "Der Textinhalt der Antwortnachricht. Dies kann HTML-Formatierung enthalten. Die Antwort wird per E-Mail an den Kunden gesendet."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.display_name": {
+          "source": "Reply Text",
+          "message": "Antworttext"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dGV4dA.short_desc": {
+          "source": "The content of the reply",
+          "message": "Der Inhalt der Antwort"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.desc": {
+          "source": "The Help Scout user sending the reply. If not specified, defaults to the authenticated user.",
+          "message": "Der Help Scout-Benutzer, der die Antwort sendet. Falls nicht angegeben, wird standardmäßig der authentifizierte Benutzer verwendet."
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.display_name": {
+          "source": "User",
+          "message": "Benutzer"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.option.dXNlcg.short_desc": {
+          "source": "The user sending the reply",
+          "message": "Der Benutzer, der die Antwort sendet"
+        },
+        "app.SGVscFNjb3V0.action.c2VuZF9yZXBseQ.short_desc": {
+          "source": "Send a reply to a conversation",
+          "message": "Eine Antwort auf eine Konversation senden"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.desc": {
+          "source": "Update the profile information of an existing customer in Help Scout. You can modify their name, contact details, organization, and other profile fields.",
+          "message": "Die Profilinformationen eines bestehenden Kunden in Help Scout aktualisieren. Sie können dessen Namen, Kontaktdaten, Organisation und andere Profilfelder ändern."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Update Customer",
+          "message": "Kunde aktualisieren"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.desc": {
+          "source": "Select the customer whose profile you want to update.",
+          "message": "Wählen Sie den Kunden aus, dessen Profil Sie aktualisieren möchten."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.display_name": {
+          "source": "Customer",
+          "message": "Kunde"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJJZA.short_desc": {
+          "source": "The customer to update",
+          "message": "Der zu aktualisierende Kunde"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.desc": {
+          "source": "Update the age of the customer.",
+          "message": "Das Alter des Kunden aktualisieren."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.display_name": {
+          "source": "Age",
+          "message": "Alter"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YWdl.short_desc": {
+          "source": "The new age",
+          "message": "Das neue Alter"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.desc": {
+          "source": "Update the internal background notes about the customer. Maximum 200 characters.",
+          "message": "Die internen Hintergrundnotizen zum Kunden aktualisieren. Maximal 200 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.display_name": {
+          "source": "Background",
+          "message": "Hintergrund"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.YmFja2dyb3VuZA.short_desc": {
+          "source": "The new background notes",
+          "message": "Die neuen Hintergrundnotizen"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOm1hbGU.display_name": {
+          "source": "Male",
+          "message": "Männlich"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOmZlbWFsZQ.display_name": {
+          "source": "Female",
+          "message": "Weiblich"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.allowed-value.c3RyaW5nOnVua25vd24.display_name": {
+          "source": "Unknown",
+          "message": "Unbekannt"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.desc": {
+          "source": "Update the gender of the customer: male, female, or unknown.",
+          "message": "Das Geschlecht des Kunden aktualisieren: male, female oder unknown."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.display_name": {
+          "source": "Gender",
+          "message": "Geschlecht"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Z2VuZGVy.short_desc": {
+          "source": "The new gender",
+          "message": "Das neue Geschlecht"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.desc": {
+          "source": "Update the first name of the customer. Maximum 40 characters.",
+          "message": "Den Vornamen des Kunden aktualisieren. Maximal 40 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Vorname"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The new first name",
+          "message": "Der neue Vorname"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.desc": {
+          "source": "Update the job title of the customer. Maximum 60 characters.",
+          "message": "Die Berufsbezeichnung des Kunden aktualisieren. Maximal 60 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Berufsbezeichnung"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.am9iVGl0bGU.short_desc": {
+          "source": "The new job title",
+          "message": "Die neue Berufsbezeichnung"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.desc": {
+          "source": "Update the company or organization of the customer.",
+          "message": "Das Unternehmen oder die Organisation des Kunden aktualisieren."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.display_name": {
+          "source": "Organization",
+          "message": "Organisation"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.b3JnYW5pemF0aW9u.short_desc": {
+          "source": "The new organization",
+          "message": "Die neue Organisation"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.desc": {
+          "source": "Update the geographic location of the customer. Maximum 60 characters.",
+          "message": "Den geografischen Standort des Kunden aktualisieren. Maximal 60 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Standort"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bG9jYXRpb24.short_desc": {
+          "source": "The new location",
+          "message": "Der neue Standort"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.desc": {
+          "source": "Update the last name of the customer. Maximum 40 characters.",
+          "message": "Den Nachnamen des Kunden aktualisieren. Maximal 40 Zeichen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nachname"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.option.bGFzdE5hbWU.short_desc": {
+          "source": "The new last name",
+          "message": "Der neue Nachname"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Update an existing customer",
+          "message": "Einen vorhandenen Kunden aktualisieren"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.desc": {
+          "source": "Update the properties of an existing conversation in Help Scout. You can change the subject, status, or assignee. At least one field must be provided to update.",
+          "message": "Aktualisieren Sie die Eigenschaften einer vorhandenen Konversation in Help Scout. Sie können den Betreff, den Status oder die zugewiesene Person ändern. Mindestens ein Feld muss für die Aktualisierung angegeben werden."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.display_name": {
+          "source": "Update Conversation",
+          "message": "Konversation aktualisieren"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Select or enter the ID of the conversation you want to update.",
+          "message": "Wählen Sie die ID der Konversation aus oder geben Sie sie ein, die Sie aktualisieren möchten."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation",
+          "message": "Unterhaltung"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to update",
+          "message": "Die zu aktualisierende Konversation"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.desc": {
+          "source": "Assign or reassign the conversation to a specific Help Scout user.",
+          "message": "Die Konversation einem bestimmten Help Scout-Benutzer zuweisen oder neu zuweisen."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.display_name": {
+          "source": "Assign To",
+          "message": "Zuweisen an"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.YXNzaWduVG8.short_desc": {
+          "source": "Assign to a user",
+          "message": "Einem Benutzer zuweisen"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Aktiv"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "Geschlossen"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Ausstehend"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.desc": {
+          "source": "Update the status of the conversation. Options include active, closed, or pending.",
+          "message": "Den Status der Konversation aktualisieren. Zu den Optionen gehören active, closed oder pending."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Status"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new conversation status",
+          "message": "Der neue Konversationsstatus"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.desc": {
+          "source": "Update the subject line of the conversation. This will be visible to the customer in email communications.",
+          "message": "Die Betreffzeile der Konversation aktualisieren. Dies ist für den Kunden in E-Mail-Mitteilungen sichtbar."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Betreff"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.option.c3ViamVjdA.short_desc": {
+          "source": "The new subject line",
+          "message": "Die neue Betreffzeile"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlX2NvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Update an existing conversation",
+          "message": "Eine vorhandene Konversation aktualisieren"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.desc": {
+          "source": "This trigger fires whenever a customer profile is updated in Help Scout. It provides the updated customer data including any changed fields.",
+          "message": "Dieser Trigger wird ausgelöst, wenn ein Kundenprofil in Help Scout aktualisiert wird. Er liefert die aktualisierten Kundendaten einschließlich aller geänderten Felder."
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.display_name": {
+          "source": "Updated Customer",
+          "message": "Aktualisierter Kunde"
+        },
+        "app.SGVscFNjb3V0.action.dXBkYXRlZF9jdXN0b21lcg.short_desc": {
+          "source": "Triggers when a customer is updated",
+          "message": "Wird ausgelöst, wenn ein Kunde aktualisiert wird"
+        },
+        "app.SGVscFNjb3V0.desc": {
+          "source": "Integrate with Help Scout to manage customer support conversations, create and update customers, send replies, and track support interactions. This integration enables you to automate support workflows, respond to customers, and maintain customer relationships through Help Scout.",
+          "message": "Integrieren Sie Help Scout, um Kundensupport-Konversationen zu verwalten, Kunden zu erstellen und zu aktualisieren, Antworten zu senden und Support-Interaktionen zu verfolgen. Diese Integration ermöglicht es Ihnen, Support-Workflows zu automatisieren, auf Kunden zu reagieren und Kundenbeziehungen über Help Scout zu pflegen."
+        },
+        "app.SGVscFNjb3V0.display_name": {
+          "source": "Help Scout",
+          "message": "Help Scout"
+        },
+        "app.SGVscFNjb3V0.short_desc": {
+          "source": "Connect with Help Scout to manage customer conversations and support tickets",
+          "message": "Mit Help Scout verbinden, um Kundenkonversationen und Support-Tickets zu verwalten"
+        }
+      }
+    }
+  }
+}

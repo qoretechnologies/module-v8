@@ -1,0 +1,1361 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.QXR0aW8.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.desc": {
+          "source": "This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace.",
+          "message": "このアクションは、新しいノートを作成し、Attioオブジェクト内の特定のレコードに添付します。ノートはプレーンテキストまたはMarkdown形式で記述でき、タイトルと本文を含めることができます。ワークスペース内のレコードに関する重要な情報をドキュメント化する方法として機能します。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
+          "source": "Create Note",
+          "message": "ノートを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.desc": {
+          "source": "Enter the content for your note. This can be formatted according to the selected format type (plain text or markdown).",
+          "message": "ノートのコンテンツを入力します。選択したフォーマット形式（プレーンテキストまたはMarkdown）に従ってフォーマットできます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "コンテンツ"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.short_desc": {
+          "source": "The main body text of the note",
+          "message": "ノートのメイン本文テキスト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.desc": {
+          "source": "Choose whether the note content should be treated as plain text or markdown. Markdown allows for rich text formatting including headers, lists, links, and more.",
+          "message": "ノートのコンテンツをプレーンテキストまたはMarkdownとして扱うかを選択します。Markdownを使用すると、見出し、リスト、リンクなどを含むリッチテキスト形式の指定が可能になります。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.display_name": {
+          "source": "Format",
+          "message": "フォーマット"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.short_desc": {
+          "source": "The text format to use for the note content",
+          "message": "ノートコンテンツに使用するテキスト形式"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with.",
+          "message": "このノートを添付するレコードを含むAttioオブジェクトを選択します。これにより、ノートが関連付けられるオブジェクトタイプが定義されます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "親オブジェクト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The object that contains the record to attach the note to",
+          "message": "ノートを添付するレコードを含むオブジェクト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "Select the specific record within the parent object that this note should be attached to. Available options will be based on the parent object you selected.",
+          "message": "このノートを添付する親オブジェクト内の特定レコードを選択します。利用可能なオプションは、選択した親オブジェクトに基づきます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "親レコードID"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "The specific record to attach the note to",
+          "message": "ノートを添付する特定のレコード"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.desc": {
+          "source": "Provide a title for the note. This will appear as the heading when viewing the note in Attio.",
+          "message": "ノートのタイトルを入力します。これは、Attioでノートを表示する際の見出しとして表示されます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.short_desc": {
+          "source": "The title of the note",
+          "message": "ノートのタイトル"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
+          "source": "Creates a new note attached to a specific record in Attio.",
+          "message": "Attioの特定のレコードに添付された新しいノートを作成します。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.",
+          "message": "Attio ワークスペース内の指定されたオブジェクトに新しいレコードを作成します。このアクションにより、オブジェクトタイプと新しいレコードの属性を定義できます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Create Object Record",
+          "message": "オブジェクトレコードを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace.",
+          "message": "新しいレコードを作成するオブジェクトタイプを選択します。これは Attio ワークスペース内のカスタムオブジェクトまたは標準オブジェクトです。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "オブジェクト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Select the object type",
+          "message": "オブジェクトタイプを選択"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Create a new record in a specified object",
+          "message": "指定されたオブジェクトに新しいレコードを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.",
+          "message": "指定された Attio リストに新しいエントリーを作成します。エントリーに入力するには、リスト識別子、親オブジェクトの参照、および属性値が必要です。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Create List Entry",
+          "message": "リストエントリーを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list where the new entry will be created.",
+          "message": "新しいエントリーが作成される Attio リストの API スラッグ。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to create entry in",
+          "message": "エントリーを作成する Attio リスト"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this list entry will be linked.",
+          "message": "このリストエントリーがリンクされる親レコードの一意の識別子。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "親レコードID"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "親レコードの ID"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Create a new entry in an Attio list.",
+          "message": "Attio リストに新しいエントリーを作成します。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members.",
+          "message": "このアクションは、内容、期限、完了ステータス、およびオプションの担当者を指定して、Attio に新しいタスクを作成します。タスク内容の設定、期限日の指定、完了/未完了のマーク設定、1人以上のワークスペースメンバーへの割り当てが可能です。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "タスクを作成"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "Enter the content or description for the task. This will be the main text describing what needs to be done.",
+          "message": "タスクの内容または説明を入力します。これが実行すべき作業を説明する本文になります。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "タスクの内容"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The content or description of the task",
+          "message": "タスクの内容または説明"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.desc": {
+          "source": "Select one or more workspace members who will be assigned to this task. These members will be responsible for completing the task and will receive notifications about it.",
+          "message": "このタスクに割り当てる1人以上のワークスペースメンバーを選択します。これらのメンバーはタスクの完了を担当し、タスクに関する通知を受け取ります。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.display_name": {
+          "source": "Assignees",
+          "message": "担当者"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.short_desc": {
+          "source": "Workspace members to assign the task to",
+          "message": "タスクを割り当てるワークスペースメンバー"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.desc": {
+          "source": "Specify the date and time by which the task should be completed. This will be displayed in the task details and can be used for sorting and filtering tasks.",
+          "message": "タスクを完了する日時を指定します。これはタスクの詳細に表示され、タスクの並べ替えやフィルター処理に使用できます。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.display_name": {
+          "source": "Deadline",
+          "message": "期限"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.short_desc": {
+          "source": "The deadline date for the task",
+          "message": "タスクの期限日"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Specify whether the task should be marked as completed when created. Default is false (task is not completed).",
+          "message": "作成時にタスクを完了としてマークするかどうかを指定します。デフォルトは false（タスクは未完了）です。"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Whether the task is already completed",
+          "message": "タスクがすでに完了しているかどうか"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Creates a new task in Attio with specified details.",
+          "message": "指定された詳細で Attio に新しいタスクを作成します。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.desc": {
+          "source": "Retrieve Notes from your Attio workspace. ",
+          "message": "Attio ワークスペースからノートを取得します。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
+          "source": "Get Notes",
+          "message": "ノートを取得"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.desc": {
+          "source": "The number of notes to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするノートの数。ページネーションに使用されます。デフォルトは 0 です。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of notes to skip",
+          "message": "スキップするノートの数"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of notes to return. Default is 50. You can specify a value between 1 and 100.",
+          "message": "返されるノートの最大数。デフォルトは 50 です。1 から 100 の間の値を指定できます。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "返されるノートの最大数"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "The type of the parent object that this note is linked to. This is required to filter notes by their parent object.",
+          "message": "このノートがリンクされている親オブジェクトのタイプ。ノートを親オブジェクトでフィルター処理するために必要です。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "親オブジェクト"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The parent object type",
+          "message": "親オブジェクトタイプ"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record.",
+          "message": "このノートがリンクされている親レコードの一意の識別子。ノートを親レコードでフィルター処理するために必要です。"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "親レコードID"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "親レコードの ID"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
+          "source": "Retrieves Notes from Attio.",
+          "message": "Attio からノートを取得します。"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.desc": {
+          "source": "This action retrieves a single record from an Attio object by its record ID. You must specify both the object and the specific record ID you want to retrieve. This provides detailed information about the record including all its attributes and values.",
+          "message": "このアクションは、レコード ID を使用して Attio オブジェクトから単一のレコードを取得します。取得するオブジェクトと特定のレコード ID の両方を指定する必要があります。これにより、すべての属性と値を含むレコードの詳細情報が提供されます。"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Get Single Object Record",
+          "message": "単一オブジェクトレコードを取得"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Select the Attio object that contains the record you want to retrieve. This is required to identify which object to search in.",
+          "message": "取得したいレコードが含まれている Attio オブジェクトを選択します。検索対象のオブジェクトを特定するために必要です。"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "オブジェクト"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to retrieve the record from",
+          "message": "レコードを取得する Attio オブジェクト"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "Specify the unique identifier of the record you want to retrieve. This ID is specific to the object you've selected and will load available records based on your object selection.",
+          "message": "取得したいレコードの一意の識別子を指定します。この ID は選択したオブジェクトに固有であり、オブジェクトの選択に基づいて利用可能なレコードがロードされます。"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "レコードID"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the specific record to retrieve",
+          "message": "取得する特定のレコードの ID"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Retrieves a specific record from an Attio object.",
+          "message": "Attio オブジェクトから特定のレコードを取得します。"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.desc": {
+          "source": "This action retrieves a single entry from an Attio list by its entry ID. You must specify both the list and the specific entry ID you want to retrieve. This provides detailed information about the entry including all its attributes and values.",
+          "message": "このアクションは、エントリー ID を使用して Attio リストから単一のエントリーを取得します。取得するリストと特定のエントリー ID の両方を指定する必要があります。これにより、すべての属性と値を含むエントリーの詳細情報が提供されます。"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
+          "source": "Get Single List Entry",
+          "message": "単一リストエントリーを取得"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "Specify the unique identifier of the entry you want to retrieve. This ID is specific to the list you've selected and will load available entries based on your list selection.",
+          "message": "取得したいエントリーの一意の識別子を指定します。この ID は選択したリストに固有であり、リストの選択に基づいて利用可能なエントリーがロードされます。"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "エントリー ID"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The ID of the specific entry to retrieve",
+          "message": "取得する特定のエントリーの ID"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "Select the Attio list that contains the entry you want to retrieve. This is required to identify which list to search in.",
+          "message": "取得したいエントリーが含まれている Attio リストを選択します。検索対象のリストを特定するために必要です。"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to retrieve the entry from",
+          "message": "エントリーを取得する Attio リスト"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
+          "source": "Retrieves a specific entry from an Attio list.",
+          "message": "Attio リストから特定のエントリーを取得します。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.desc": {
+          "source": "This action retrieves a single task from Attio using its unique task ID. The response includes all task details such as content, completion status, deadline, linked records, assignees, and creation information.",
+          "message": "このアクションは、一意のタスク ID を使用して Attio から単一のタスクを取得します。レスポンスには、内容、完了ステータス、期限、リンクされたレコード、担当者、作成情報などのすべてのタスク詳細が含まれます。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "タスクの取得"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Specify the unique identifier of the task you want to retrieve. The available task IDs will be loaded based on your previous object selection.",
+          "message": "取得したいタスクの一意の識別子を指定します。前に行ったオブジェクトの選択に基づいて、利用可能なタスク ID がロードされます。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "タスク ID"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The ID of the specific task to retrieve",
+          "message": "取得する特定のタスクの ID"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieves a specific task from Attio by its ID.",
+          "message": "ID を使用して Attio から特定のタスクを取得します。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.desc": {
+          "source": "This action retrieves a list of tasks from Attio with various filtering, sorting, and pagination options. You can filter tasks by linked records, completion status, and assignee, as well as control the order and number of results returned.",
+          "message": "このアクションは、多様なフィルター、並べ替え、およびページネーションオプションを使用して、Attio からタスクのリストを取得します。リンクされたレコード、完了ステータス、担当者でタスクをフィルター処理したり、返される結果の順序や件数を制御したりできます。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
+          "source": "List Tasks",
+          "message": "タスクの一覧表示"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.desc": {
+          "source": "Filter tasks to only include those assigned to a specific workspace member.",
+          "message": "特定のワークスペースメンバーに割り当てられているタスクのみを含むようにフィルター処理します。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "担当者"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.short_desc": {
+          "source": "Filter tasks by assignee",
+          "message": "担当者でタスクをフィルター処理"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks).",
+          "message": "完了しているかどうかに基づいてタスクをフィルター処理します。デフォルトは false（未完了のタスクを表示）です。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Filter by completion status",
+          "message": "完了ステータスでフィルター処理"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするタスクの数を指定します。ページネーションに便利です。デフォルトは 0 です。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tasks to skip",
+          "message": "スキップするタスクの数"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of tasks to return in a single request. Default is 10.",
+          "message": "1回のリクエストで返されるタスクの最大数を指定します。デフォルトは 10 です。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "返されるタスクの最大数"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.desc": {
+          "source": "Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record.",
+          "message": "Attio 内の特定のオブジェクトタイプにリンクされているタスクのみを含むようにフィルター処理します。選択すると、特定のレコードを指定してさらに絞り込むことができます。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
+          "source": "Linked Object",
+          "message": "リンクされたオブジェクト"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
+          "source": "Filter tasks by linked object type",
+          "message": "リンクされたオブジェクトタイプでタスクをフィルター処理"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.desc": {
+          "source": "Filter tasks to only include those linked to a specific record in the selected linked object. This option is only available after selecting a linked object.",
+          "message": "選択したリンク先オブジェクト内の特定のレコードにリンクされているタスクのみを含むようにフィルター処理します。このオプションは、リンク先オブジェクトを選択した後にのみ利用可能になります。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
+          "source": "Linked Record ID",
+          "message": "リンクされたレコード ID"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
+          "source": "Filter tasks by specific linked record",
+          "message": "特定のリンクされたレコードでタスクをフィルタリング"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm5ld2VzdF9maXJzdA.display_name": {
+          "source": "Newest First",
+          "message": "新しい順"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm9sZGVzdF9maXJzdA.display_name": {
+          "source": "Oldest First",
+          "message": "古い順"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.desc": {
+          "source": "Specify the order in which tasks should be returned. 'Oldest First' sorts by creation date ascending, 'Newest First' sorts by creation date descending.",
+          "message": "タスクを返す順序を指定します。「古い順」は作成日時の昇順でソートし、「新しい順」は作成日時の降順でソートします。"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
+          "source": "Order of returned tasks",
+          "message": "返されるタスクの順序"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
+          "source": "Retrieves a list of tasks from Attio with filtering options.",
+          "message": "フィルタリングオプションを使用してAttioからタスクのリストを取得します。"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "アプリ「Attio」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "アプリ「Attio」の指定されたテーブルからレコードを削除します"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.desc": {
+          "source": "Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.",
+          "message": "属性値によるフィルタリング、属性によるソート、ページネーションをサポートし、特定のAttioリストからエントリーをクエリします。指定した条件に一致するエントリーのリストを返します。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
+          "source": "Find List Entries",
+          "message": "リストエントリーを検索"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "クエリに適用するフィルター条件。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "フィルター条件"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of entries to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするエントリーの数。ページネーションに使用されます。デフォルトは0です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "スキップするエントリの数"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 50.",
+          "message": "返答するエントリーの最大数。デフォルトは50です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "返すエントリの最大数"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to search entries in.",
+          "message": "エントリーを検索するAttioリストのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.short_desc": {
+          "source": "The Attio list to search",
+          "message": "検索対象のAttioリスト"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "結果をソートする属性。デフォルトは「created_at」です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "ソート属性"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "ソート基準となる属性"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "結果をソートする方向。昇順または降順のいずれかを指定できます。デフォルトは昇順です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "並べ替えの方向"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "ソート方向"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
+          "source": "Search for entries in an Attio list with filtering and sorting options.",
+          "message": "フィルタリングとソートのオプションを使用して、Attioリスト内のエントリーを検索します。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.desc": {
+          "source": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.",
+          "message": "属性値によるフィルタリング、属性によるソート、ページネーションをサポートし、特定のAttioオブジェクトからレコードをクエリします。指定した条件に一致するレコードのリストを返します。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
+          "source": "Find Object Records",
+          "message": "オブジェクトレコードを検索"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "クエリに適用するフィルター条件。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "フィルター条件"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to search in.",
+          "message": "検索対象のAttioオブジェクトタイプのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "オブジェクトタイプ"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to search",
+          "message": "検索対象のAttioオブジェクト"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "結果の返却を開始する前にスキップするレコードの数。ページネーションに使用されます。デフォルトは0です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "スキップするレコード数"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return. Default is 50.",
+          "message": "返答するレコードの最大数。デフォルトは50です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "返答するレコードの最大数"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "結果をソートする属性。デフォルトは「created_at」です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "ソート属性"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "ソート基準となる属性"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "昇順"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "降順"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "結果をソートする方向。昇順または降順のいずれかを指定できます。デフォルトは昇順です。"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "並べ替えの方向"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "ソート方向"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
+          "source": "Search for records in an Attio object with filtering and sorting options.",
+          "message": "フィルタリングとソートのオプションを使用して、Attioオブジェクト内のレコードを検索します。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.",
+          "message": "このトリガーは、指定されたAttioオブジェクトのレコードが更新されるたびに実行されます。ID、オブジェクトタイプ、更新を行ったアクター、行われた具体的な変更など、更新されたレコードの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
+          "source": "Object Record Updated",
+          "message": "オブジェクトレコードが更新されました"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for updated records.",
+          "message": "更新されたレコードを監視するAttioオブジェクトタイプのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "オブジェクトタイプ"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for updated records",
+          "message": "更新されたレコードを監視するAttioオブジェクト"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
+          "source": "Triggers when a record is updated for an Attio object.",
+          "message": "Attioオブジェクトのレコードが更新されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it.",
+          "message": "このトリガーは、指定されたAttioオブジェクトの新しいレコードが作成されるたびに実行されます。ID、オブジェクトタイプ、作成したアクターなど、作成されたレコードの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
+          "source": "New Object Record Created",
+          "message": "新規オブジェクトレコードが作成されました"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for new records.",
+          "message": "新しいレコードを監視するAttioオブジェクトタイプのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "オブジェクトタイプ"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for new records",
+          "message": "新しいレコードを監視するAttioオブジェクト"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new record is created for an Attio object.",
+          "message": "Attioオブジェクトの新しいレコードが作成されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion.",
+          "message": "このトリガーは、指定されたAttioオブジェクトからレコードが削除されるたびに実行されます。ID、オブジェクトタイプ、削除を実行したアクターなど、削除されたレコードの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
+          "source": "Object Record Deleted",
+          "message": "オブジェクトレコードが削除されました"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for deleted records.",
+          "message": "削除されたレコードを監視するAttioオブジェクトタイプのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "オブジェクトタイプ"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for deleted records",
+          "message": "削除されたレコードを監視するAttioオブジェクト"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
+          "source": "Triggers when a record is deleted from an Attio object.",
+          "message": "Attioオブジェクトからレコードが削除されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever an entry is updated in a specified Attio list. It provides details about the updated entry including its ID, parent object, the actor who made the update, and the specific changes that were made.",
+          "message": "このトリガーは、指定されたAttioリストのエントリーが更新されるたびに実行されます。ID、親オブジェクト、更新を行ったアクター、行われた具体的な変更など、更新されたエントリーの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
+          "source": "List Entry Updated",
+          "message": "リストエントリーが更新されました"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for updated entries.",
+          "message": "更新されたエントリーを監視するAttioリストのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for updated entries",
+          "message": "更新されたエントリーを監視するAttioリスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
+          "source": "Triggers when an entry is updated in an Attio list.",
+          "message": "Attioリストのエントリーが更新されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new entry is created in a specified Attio list. It provides details about the created entry including its ID, parent object, and the actor who created it.",
+          "message": "このトリガーは、指定されたAttioリストに新しいエントリーが作成されるたびに実行されます。ID、親オブジェクト、作成したアクターなど、作成されたエントリーの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
+          "source": "New List Entry Created",
+          "message": "新規リストエントリーが作成されました"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for new entries.",
+          "message": "新しいエントリーを監視するAttioリストのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for new entries",
+          "message": "新しいエントリーを監視するAttioリスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new entry is created in an Attio list.",
+          "message": "Attioリストに新しいエントリーが作成されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever an entry is deleted from a specified Attio list. It provides details about the deleted entry including its ID, parent object, and the actor who performed the deletion.",
+          "message": "このトリガーは、指定されたAttioリストからエントリーが削除されるたびに実行されます。ID、親オブジェクト、削除を実行したアクターなど、削除されたエントリーの詳細を提供します。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
+          "source": "List Entry Deleted",
+          "message": "リストエントリーが削除されました"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for deleted entries.",
+          "message": "削除されたエントリーを監視するAttioリストのAPIスラグ。"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for deleted entries",
+          "message": "削除されたエントリーを監視するAttioリスト"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
+          "source": "Triggers when an entry is deleted from an Attio list.",
+          "message": "Attioリストからエントリーが削除されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Attio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Attio** にカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Attio",
+          "message": "AttioへのカスタムAPI呼び出しを作成"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.",
+          "message": "このトリガーは、Attio ワークスペースで新しいタスクが作成されるたびに実行されます。ID、タイトル、説明、担当者、期限、作成したアクターなど、作成されたタスクに関する詳細情報を提供します。"
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
+          "source": "New Task Created",
+          "message": "新しいタスクの作成"
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new task is created in Attio.",
+          "message": "Attio で新しいタスクが作成されたときに実行されます。"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルの既存のレコードを更新します"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルの既存のレコードを更新します"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.",
+          "message": "指定された Attio オブジェクト内の既存レコードの値を更新します。オブジェクトタイプ、レコード ID、更新する属性値が必要です。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Update Object Record",
+          "message": "オブジェクトレコードを更新"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type containing the record to update.",
+          "message": "更新するレコードが含まれる Attio オブジェクトタイプの API スラグ。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "オブジェクト"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to update",
+          "message": "更新する Attio オブジェクト"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record to update.",
+          "message": "更新するレコードの一意の識別子。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "レコードID"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "ID of the record to update",
+          "message": "更新するレコードの ID"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Update an existing record in an Attio object.",
+          "message": "Attio オブジェクト内の既存のレコードを更新します。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.",
+          "message": "指定された Attio リスト内の既存のエントリの属性値を更新します。リスト識別子、エントリ ID、更新する属性値が必要です。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Update List Entry",
+          "message": "リストエントリを更新"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "The unique identifier of the list entry to update.",
+          "message": "更新するリストエントリの一意の識別子。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "エントリー ID"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "ID of the entry to update",
+          "message": "更新するエントリの ID"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list containing the entry to update.",
+          "message": "更新するエントリが含まれる Attio リストの API スラグ。"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list containing the entry",
+          "message": "エントリが含まれる Attio リスト"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Update an existing entry in an Attio list.",
+          "message": "Attio リスト内の既存のエントリを更新します。"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルでレコードをアップサートします"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "レコードのアップサート"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "アプリ「Attio」内の指定されたテーブルでレコードをアップサートします"
+        },
+        "app.QXR0aW8.desc": {
+          "source": "Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.",
+          "message": "Attio と統合して、連絡先、会社、データを管理します。この統合により、Attio ワークスペースでアクションを実行し、イベントに応答できるようになり、ワークフローを自動化して生産性を向上させることができます。"
+        },
+        "app.QXR0aW8.display_name": {
+          "source": "Attio",
+          "message": "Attio"
+        },
+        "app.QXR0aW8.short_desc": {
+          "source": "Connect with Attio to manage your contacts and data",
+          "message": "Attio に接続して連絡先とデータを管理します"
+        }
+      }
+    }
+  }
+}

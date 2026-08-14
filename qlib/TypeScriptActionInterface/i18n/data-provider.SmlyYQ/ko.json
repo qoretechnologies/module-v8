@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.SmlyYQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에 새 레코드를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "레코드 생성"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에 새 레코드를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Creates a new custom field in the Jira instance",
+          "message": "Jira 인스턴스에 새 커스텀 필드를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Create Custom Field",
+          "message": "커스텀 필드 생성"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Creates a new custom field",
+          "message": "새 커스텀 필드를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.desc": {
+          "source": "Creates a new issue in a Jira project",
+          "message": "Jira 프로젝트에 새 이슈를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
+          "source": "Create Issue",
+          "message": "이슈 생성"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
+          "source": "Creates a new issue",
+          "message": "새 이슈를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Creates a new project in Jira",
+          "message": "Jira에 새 프로젝트를 생성합니다"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create Project",
+          "message": "프로젝트 생성"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Creates a new project",
+          "message": "새 프로젝트를 생성합니다"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.desc": {
+          "source": "Adds a new comment to a specific issue",
+          "message": "특정 이슈에 새 댓글을 추가합니다"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
+          "source": "Add Comment",
+          "message": "댓글 추가"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
+          "source": "Adds a comment to an issue",
+          "message": "이슈에 댓글을 추가합니다"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.desc": {
+          "source": "Adds a new worklog entry to a specific issue",
+          "message": "특정 이슈에 새 작업 로그 항목을 추가합니다"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
+          "source": "Add Worklog",
+          "message": "작업 로그 추가"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
+          "source": "Adds a worklog to an issue",
+          "message": "이슈에 작업 로그를 추가합니다"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.desc": {
+          "source": "Retrieves a specific comment by its ID",
+          "message": "ID로 특정 댓글을 조회합니다"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
+          "source": "Get Comment",
+          "message": "댓글 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
+          "source": "Gets a specific comment",
+          "message": "특정 댓글을 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.desc": {
+          "source": "Retrieves all comments for a specific issue",
+          "message": "특정 이슈의 모든 댓글을 조회합니다"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
+          "source": "Get Comments",
+          "message": "댓글 목록 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
+          "source": "Gets all comments for an issue",
+          "message": "이슈의 모든 댓글을 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.desc": {
+          "source": "Retrieves all projects visible to the authenticated user",
+          "message": "인증된 사용자에게 표시되는 모든 프로젝트를 조회합니다"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "모든 프로젝트 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response. This parameter accepts a comma-separated list. Expanded options include:\n\n *  `description` Returns the project description.\n *  `issueTypes` Returns all issue types associated with the project.\n *  `lead` Returns information about the project lead.\n *  `projectKeys` Returns all project keys associated with the project.",
+          "message": "응답에 추가 정보를 포함하려면 [expand](#expansion)를 사용하세요. 이 매개변수는 쉼표로 구분된 목록을 허용합니다. 확장 옵션은 다음과 같습니다:\n\n *  `description` 프로젝트 설명을 반환합니다.\n *  `issueTypes` 프로젝트와 연결된 모든 이슈 유형을 반환합니다.\n *  `lead` 프로젝트 리더에 대한 정보를 반환합니다.\n *  `projectKeys` 프로젝트와 연결된 모든 프로젝트 키를 반환합니다."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.display_name": {
+          "source": "Expand",
+          "message": "확장"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.short_desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response",
+          "message": "응답에 추가 정보를 포함하려면 [expand](#expansion)를 사용하세요"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.desc": {
+          "source": "A list of project properties to return for the project. This parameter accepts a comma-separated list.",
+          "message": "프로젝트에 대해 반환할 프로젝트 속성 목록입니다. 이 매개변수는 쉼표로 구분된 목록을 허용합니다."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "속성"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.short_desc": {
+          "source": "A list of project properties to return for the project",
+          "message": "프로젝트에 대해 반환할 프로젝트 속성 목록"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.desc": {
+          "source": "Returns the user's most recently accessed projects. You may specify the number of results to return up to a maximum of 20. If access is anonymous, then the recently accessed projects are based on the current HTTP session.",
+          "message": "사용자가 가장 최근에 액세스한 프로젝트를 반환합니다. 반환할 결과 수를 최대 20개까지 지정할 수 있습니다. 익명 액세스인 경우 최근에 액세스한 프로젝트는 현재 HTTP 세션을 기반으로 합니다."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.display_name": {
+          "source": "Recent",
+          "message": "최근"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.short_desc": {
+          "source": "Returns the user's most recently accessed projects",
+          "message": "사용자가 가장 최근에 액세스한 프로젝트를 반환합니다"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
+          "source": "Gets all projects",
+          "message": "모든 프로젝트를 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.desc": {
+          "source": "Retrieves the current announcement banner configuration for the Jira instance",
+          "message": "Jira 인스턴스의 현재 공지 배너 구성을 조회합니다"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
+          "source": "Get Announcement Banner",
+          "message": "공지 배너 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
+          "source": "Gets the current announcement banner configuration",
+          "message": "현재 공지 배너 구성을 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.desc": {
+          "source": "Returns all fields, both system and custom fields, in the Jira instance",
+          "message": "Jira 인스턴스의 시스템 필드 및 커스텀 필드를 포함한 모든 필드를 반환합니다"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
+          "source": "Get Fields",
+          "message": "필드 목록 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
+          "source": "Gets all fields in the system",
+          "message": "시스템의 모든 필드를 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.desc": {
+          "source": "Retrieves the details of a specific issue by its ID or key",
+          "message": "ID 또는 키로 특정 이슈의 세부 정보를 조회합니다"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
+          "source": "Get Issue",
+          "message": "이슈 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
+          "source": "Gets an issue by ID or key",
+          "message": "ID 또는 키로 이슈를 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.desc": {
+          "source": "Retrieves all worklogs for a specific issue",
+          "message": "특정 이슈의 모든 작업 로그를 검색합니다"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
+          "source": "Get Issue Worklogs",
+          "message": "이슈 작업 로그 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
+          "source": "Gets all worklogs for an issue",
+          "message": "이슈의 모든 작업 로그를 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Retrieves the details of a specific project by its ID or key",
+          "message": "ID 또는 키로 특정 프로젝트의 세부 정보를 검색합니다"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Project",
+          "message": "프로젝트 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Gets a project by ID or key",
+          "message": "ID 또는 키로 프로젝트를 가져옵니다"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.desc": {
+          "source": "Retrieves a specific worklog entry by its ID",
+          "message": "ID로 특정 작업 로그 항목을 검색합니다"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
+          "source": "Get Worklog",
+          "message": "작업 로그 가져오기"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
+          "source": "Gets a specific worklog",
+          "message": "특정 작업 로그를 가져옵니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 레코드를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "레코드 삭제"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 레코드를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.desc": {
+          "source": "Deletes a specific comment from an issue",
+          "message": "이슈에서 특정 댓글을 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
+          "source": "Delete Comment",
+          "message": "댓글 삭제"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
+          "source": "Deletes a comment from an issue",
+          "message": "이슈에서 댓글을 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.desc": {
+          "source": "Deletes an issue from a Jira project",
+          "message": "Jira 프로젝트에서 이슈를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
+          "source": "Delete Issue",
+          "message": "이슈 삭제"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
+          "source": "Deletes an issue",
+          "message": "이슈를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Deletes a project from Jira",
+          "message": "Jira에서 프로젝트를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete Project",
+          "message": "프로젝트 삭제"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Deletes a project",
+          "message": "프로젝트를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.desc": {
+          "source": "Deletes a specific worklog entry from an issue",
+          "message": "이슈에서 특정 작업 로그 항목을 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
+          "source": "Delete Worklog",
+          "message": "작업 로그 삭제"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
+          "source": "Deletes a worklog from an issue",
+          "message": "이슈에서 작업 로그를 삭제합니다"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.desc": {
+          "source": "Updates the fields of an existing issue",
+          "message": "기존 이슈의 필드를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
+          "source": "Edit Issue",
+          "message": "이슈 편집"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
+          "source": "Updates an existing issue",
+          "message": "기존 이슈를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "새 이슈가 생성될 때 트리거됩니다"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
+          "source": "New Issue",
+          "message": "새 이슈"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for new issues",
+          "message": "새 이슈를 감시할 프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for new issues",
+          "message": "새 이슈를 감시할 프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "새 이슈가 생성될 때 트리거됩니다"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "이슈가 업데이트될 때 트리거됩니다"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
+          "source": "Updated Issue",
+          "message": "업데이트된 이슈"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for updated issues",
+          "message": "업데이트된 이슈를 감시할 프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for updated issues",
+          "message": "업데이트된 이슈를 감시할 프로젝트"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "이슈가 업데이트될 때 트리거됩니다"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Jira** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Jira**에 맞춤 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL에 대한 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 기본 액션으로 아직 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Jira",
+          "message": "Jira에 맞춤 API 호출 수행"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.desc": {
+          "source": "Updates the announcement banner configuration for the Jira instance",
+          "message": "Jira 인스턴스의 공지 배너 구성을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
+          "source": "Set Announcement Banner",
+          "message": "공지 배너 설정"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
+          "source": "Updates the announcement banner configuration",
+          "message": "공지 배너 구성을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 일치하는 레코드를 검색합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "레코드 검색"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 일치하는 레코드를 검색합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 일치하는 단일 레코드를 검색합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "단일 레코드 찾기"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 일치하는 단일 레코드를 검색합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.desc": {
+          "source": "Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria",
+          "message": "JQL(Jira Query Language)을 사용하여 이슈를 검색합니다. 검색 기준과 일치하는 이슈를 반환합니다"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
+          "source": "Search Issues",
+          "message": "이슈 검색"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
+          "source": "Searches for issues using JQL",
+          "message": "JQL을 사용하여 이슈를 검색합니다"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.desc": {
+          "source": "Moves a custom field to the trash. The custom field can be restored from trash within 60 days",
+          "message": "사용자 지정 필드를 휴지통으로 이동합니다. 사용자 지정 필드는 60일 이내에 휴지통에서 복원할 수 있습니다"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
+          "source": "Trash Custom Field",
+          "message": "사용자 지정 필드 휴지통으로 이동"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
+          "source": "Moves a custom field to trash",
+          "message": "사용자 지정 필드를 휴지통으로 이동합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 기존 레코드를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "레코드 업데이트"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "\"Jira\" 앱의 지정된 테이블에서 기존 레코드를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.desc": {
+          "source": "Updates an existing comment on an issue",
+          "message": "이슈의 기존 댓글을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
+          "source": "Update Comment",
+          "message": "댓글 업데이트"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
+          "source": "Updates a comment",
+          "message": "댓글을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Updates the name and description of a custom field",
+          "message": "사용자 지정 필드의 이름과 설명을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Update Custom Field",
+          "message": "사용자 지정 필드 업데이트"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Updates a custom field",
+          "message": "사용자 지정 필드를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates the details of an existing project",
+          "message": "기존 프로젝트의 세부 정보를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update Project",
+          "message": "프로젝트 업데이트"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Updates a project",
+          "message": "프로젝트를 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.desc": {
+          "source": "Updates an existing worklog entry on an issue",
+          "message": "이슈의 기존 작업 로그 항목을 업데이트합니다"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
+          "source": "Update Worklog",
+          "message": "작업 로그 업데이트"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
+          "source": "Updates a worklog",
+          "message": "작업 로그를 업데이트합니다"
+        },
+        "app.SmlyYQ.desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Jira API와 상호 작용하기 위한 액션 모음"
+        },
+        "app.SmlyYQ.display_name": {
+          "source": "Jira",
+          "message": "Jira"
+        },
+        "app.SmlyYQ.short_desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Jira API와 상호 작용하기 위한 액션 모음"
+        }
+      }
+    }
+  }
+}

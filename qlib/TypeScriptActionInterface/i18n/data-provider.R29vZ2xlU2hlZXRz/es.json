@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.desc": {
+          "source": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization",
+          "message": "Crea una copia de una hoja de trabajo de una hoja de cálculo de origen a una hoja de cálculo de destino con personalización opcional"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
+          "source": "Copy Worksheet",
+          "message": "Copiar hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be copied to",
+          "message": "La hoja de cálculo de Google Sheets a la que se copiará la hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Destination Spreadsheet",
+          "message": "Hoja de cálculo de destino"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the destination Google Sheets spreadsheet",
+          "message": "Seleccione la hoja de cálculo de Google Sheets de destino"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet",
+          "message": "El índice de base cero donde se debe insertar la nueva hoja de trabajo. Si no se especifica, la hoja de trabajo se añade al final de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Insert Position",
+          "message": "Posición de inserción"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Optional position to insert the new worksheet",
+          "message": "Posición opcional para insertar la nueva hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.desc": {
+          "source": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix",
+          "message": "Especifique un nombre personalizado para la hoja de trabajo copiada. Si no se proporciona, se utilizará el nombre original con el prefijo \"Copia de\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
+          "source": "New Worksheet Name",
+          "message": "Nombre de la nueva hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
+          "source": "Optional new name for the copied worksheet",
+          "message": "Nuevo nombre opcional para la hoja de trabajo copiada"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.desc": {
+          "source": "The specific worksheet within the source spreadsheet that will be copied",
+          "message": "La hoja de trabajo específica de la hoja de cálculo de origen que se copiará"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
+          "source": "Source Worksheet",
+          "message": "Hoja de trabajo de origen"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
+          "source": "Select the worksheet to copy",
+          "message": "Seleccione la hoja de trabajo a copiar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "The Google Sheets spreadsheet containing the worksheet you want to copy",
+          "message": "La hoja de cálculo de Google Sheets que contiene la hoja de trabajo que desea copiar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Hoja de cálculo de origen"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "Select the source Google Sheets spreadsheet",
+          "message": "Seleccione la hoja de cálculo de Google Sheets de origen"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
+          "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
+          "message": "Copiar una hoja de trabajo de una hoja de cálculo de Google Sheets a otra"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
+          "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
+          "message": "Eliminar todos los datos de las filas seleccionadas en una hoja de cálculo de Google Sheets conservando el formato"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
+          "source": "Clear Spreadsheet Row(s)",
+          "message": "Borrar fila(s) de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific sheet within the spreadsheet where rows will be cleared",
+          "message": "La hoja específica dentro de la hoja de cálculo donde se borrarán las filas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the sheet within the spreadsheet",
+          "message": "Seleccione la hoja dentro de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet containing the rows to be cleared",
+          "message": "La hoja de cálculo de Google Sheets que contiene las filas que se van a borrar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Seleccione la hoja de cálculo de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.desc": {
+          "source": "List of row indices to clear (1-based, as seen in the spreadsheet)",
+          "message": "Lista de índices de filas a borrar (basado en 1, como se ve en la hoja de cálculo)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
+          "source": "Rows to Clear",
+          "message": "Filas a borrar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
+          "source": "The row numbers to clear (1-based)",
+          "message": "Los números de fila a borrar (basado en 1)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
+          "source": "Clear content from specific rows in a Google Sheets spreadsheet",
+          "message": "Borrar contenido de filas específicas en una hoja de cálculo de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crear registros"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "Crear nuevos registros en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
+          "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
+          "message": "Crea una nueva hoja de cálculo de Google Sheets. Puede crearla desde cero con encabezados personalizados o copiar una hoja de cálculo existente. Cuando se proporcionan encabezados, se aplican formatos en negrita con bordes y se inmoviliza la fila de encabezado."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
+          "source": "Create Spreadsheet",
+          "message": "Crear hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.desc": {
+          "source": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.",
+          "message": "Opcional. Una lista de encabezados de columna para agregar a la primera fila de la nueva hoja de cálculo. Los encabezados tendrán formato en negrita con bordes y la fila de encabezado se inmovilizará. Esta opción se ignora si se proporciona una hoja de cálculo de origen."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Encabezados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers for the new spreadsheet",
+          "message": "Encabezados de columna para la nueva hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.",
+          "message": "Opcional. Si se proporciona, la nueva hoja de cálculo se creará como una copia de esta hoja de cálculo existente. La opción de encabezados se ignorará si se proporciona esto."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "Hoja de cálculo de origen"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "ID of an existing spreadsheet to copy",
+          "message": "ID de una hoja de cálculo existente para copiar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.desc": {
+          "source": "The name that will be given to the newly created Google Sheets spreadsheet.",
+          "message": "El nombre que se le dará a la hoja de cálculo de Google Sheets recién creada."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
+          "source": "Spreadsheet Title",
+          "message": "Título de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
+          "source": "The title for the new spreadsheet",
+          "message": "El título para la nueva hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
+          "message": "Crear una nueva hoja de cálculo de Google Sheets con encabezados opcionales o copiando una existente."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
+          "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
+          "message": "Inserta una nueva columna en la posición especificada en una hoja de cálculo de Google Sheets y agrega un encabezado con formato en la parte superior de la columna."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
+          "source": "Create Spreadsheet Column",
+          "message": "Crear columna de hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.desc": {
+          "source": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.",
+          "message": "Índice de base cero de la posición donde se debe insertar la nueva columna. Por ejemplo, 0 significa que la columna se insertará al principio de la hoja, 1 significa después de la primera columna, etc."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
+          "source": "Column Index",
+          "message": "Índice de columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
+          "source": "The position where the column will be inserted",
+          "message": "La posición donde se insertará la columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.desc": {
+          "source": "The header text that will appear at the top of the new column.",
+          "message": "El texto de encabezado que aparecerá en la parte superior de la nueva columna."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
+          "source": "Column Title",
+          "message": "Título de la columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
+          "source": "The title for the new column",
+          "message": "El título para la nueva columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet within the spreadsheet where the column will be added.",
+          "message": "El ID de la hoja específica dentro de la hoja de cálculo donde se agregará la columna."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "Hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The sheet within the spreadsheet",
+          "message": "La hoja dentro de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet where the column will be created.",
+          "message": "El ID de la hoja de cálculo de Google Sheets donde se creará la columna."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet",
+          "message": "La hoja de cálculo de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
+          "source": "Insert a new column into a Google Sheets spreadsheet.",
+          "message": "Insertar una nueva columna en una hoja de cálculo de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.desc": {
+          "source": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.",
+          "message": "Crea una nueva hoja de trabajo (pestaña) en una hoja de cálculo de Google Sheets especificada con un título personalizado y encabezados de columna opcionales. Opcionalmente puede sobrescribir una hoja de trabajo existente con el mismo nombre."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
+          "source": "Create Worksheet",
+          "message": "Crear hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.desc": {
+          "source": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold.",
+          "message": "Una lista de encabezados de columna que se agregarán a la primera fila de la nueva hoja de trabajo y tendrán formato en negrita."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "Encabezados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers to add to the first row",
+          "message": "Encabezados de columna para agregar a la primera fila"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.",
+          "message": "La posición (índice de base cero) donde se debe insertar la nueva hoja de trabajo en la hoja de cálculo. Si no se especifica, la hoja de trabajo se agregará al final."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Sheet Position",
+          "message": "Posición de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Position where the new worksheet should be placed",
+          "message": "Posición donde se debe ubicar la nueva hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.desc": {
+          "source": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.",
+          "message": "Si es verdadero y ya existe una hoja de trabajo con el mismo título, la hoja de trabajo existente se eliminará y reemplazará. Si es falso y existe un duplicado, la acción fallará."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
+          "source": "Overwrite Existing",
+          "message": "Sobrescribir existente"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
+          "source": "Whether to replace an existing worksheet with the same title",
+          "message": "Si se debe reemplazar una hoja de trabajo existente con el mismo título"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet in which to create the new worksheet.",
+          "message": "El ID de la hoja de cálculo de Google Sheets en la que se creará la nueva hoja de trabajo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be created",
+          "message": "La hoja de cálculo de Google Sheets donde se creará la hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.desc": {
+          "source": "The name that will appear on the tab of the new worksheet.",
+          "message": "El nombre que aparecerá en la pestaña de la nueva hoja de trabajo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
+          "source": "Worksheet Title",
+          "message": "Título de la hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
+          "source": "Title for the new worksheet",
+          "message": "Título para la nueva hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
+          "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
+          "message": "Cree una nueva hoja de trabajo en una hoja de cálculo de Google Sheets con encabezados opcionales."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
+          "message": "Añada nuevas filas a una tabla existente de Google Sheets con los datos asignados a los encabezados de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Add Rows to Spreadsheet",
+          "message": "Añadir filas a la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.desc": {
+          "source": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.",
+          "message": "Si se selecciona, las nuevas filas se insertarán al principio de la tabla. Si no se selecciona, las filas se añadirán al final de la tabla."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
+          "source": "Insert at Start",
+          "message": "Insertar al principio"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
+          "source": "Insert rows at the start of the table",
+          "message": "Insertar filas al principio de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific worksheet within the spreadsheet where the rows will be added",
+          "message": "La hoja de trabajo específica dentro de la hoja de cálculo donde se añadirán las filas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the worksheet within the spreadsheet",
+          "message": "Seleccione la hoja de trabajo dentro de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where you want to add rows",
+          "message": "La hoja de cálculo de Google Sheets donde desea añadir filas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Seleccione la hoja de cálculo de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Add one or more rows to the end of a Google Sheets table",
+          "message": "Añada una o más filas al final de una tabla de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Eliminar registros"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "Eliminar registros de la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.",
+          "message": "Elimina completamente una fila de una hoja de trabajo especificada de Google Sheets sin dejar un espacio vacío. La indexación de filas comienza en 1, coincidiendo con lo que ve en la interfaz de usuario de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "Eliminar fila"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.",
+          "message": "El ID de la hoja de trabajo (pestaña) dentro de la hoja de cálculo que contiene la fila que desea eliminar."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The worksheet containing the row to delete",
+          "message": "La hoja de trabajo que contiene la fila que desea eliminar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.",
+          "message": "El ID de la hoja de cálculo de Google Sheets que contiene la hoja de trabajo con la fila que desea eliminar."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet containing the row to delete",
+          "message": "La hoja de cálculo de Google Sheets que contiene la fila que desea eliminar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.desc": {
+          "source": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.",
+          "message": "La posición de la fila que se va a eliminar, comenzando desde 1 (no 0). Esto coincide con los números de fila que ve en la interfaz de usuario de Google Sheets. Por ejemplo, para eliminar la primera fila, use 1."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
+          "source": "Row Index",
+          "message": "Índice de fila"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
+          "source": "The index of the row to delete (starting from 1)",
+          "message": "El índice de la fila que se va a eliminar (comenzando desde 1)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Google Sheets worksheet.",
+          "message": "Elimine una fila específica de una hoja de trabajo de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.",
+          "message": "Aplique varias opciones de formato, como colores, estilos de texto y alineación, a las filas especificadas en una hoja de cálculo de Google Sheets. Formatee varias filas a la vez con un estilo coherente."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Format Spreadsheet Rows",
+          "message": "Formatear filas de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.desc": {
+          "source": "Whether to make the text in the specified rows bold.",
+          "message": "Indica si se debe poner en negrita el texto de las filas especificadas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.display_name": {
+          "source": "Bold",
+          "message": "Negrita"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.short_desc": {
+          "source": "Make text bold",
+          "message": "Poner texto en negrita"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.desc": {
+          "source": "The background color to apply to the cells in the specified rows. Uses RGB color format.",
+          "message": "El color de fondo que se aplicará a las celdas de las filas especificadas. Utiliza el formato de color RGB."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
+          "source": "Background Color",
+          "message": "Color de fondo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
+          "source": "Background color for the cells",
+          "message": "Color de fondo para las celdas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.desc": {
+          "source": "Font size in points",
+          "message": "Tamaño de fuente en puntos"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
+          "source": "Font Size",
+          "message": "Tamaño de fuente"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
+          "source": "Text font size in points",
+          "message": "Tamaño de fuente del texto en puntos"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkNFTlRFUg.display_name": {
+          "source": "Center",
+          "message": "Centro"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkxFRlQ.display_name": {
+          "source": "Left",
+          "message": "Izquierda"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOlJJR0hU.display_name": {
+          "source": "Right",
+          "message": "Derecha"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.desc": {
+          "source": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).",
+          "message": "La alineación horizontal que se aplicará al contenido de las filas especificadas (Izquierda, Centro o Derecha)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
+          "source": "Horizontal Alignment",
+          "message": "Alineación horizontal"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
+          "source": "Horizontal alignment of content",
+          "message": "Alineación horizontal del contenido"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.desc": {
+          "source": "Whether to make the text in the specified rows italic.",
+          "message": "Indica si se debe poner en cursiva el texto de las filas especificadas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.display_name": {
+          "source": "Italic",
+          "message": "Cursiva"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.short_desc": {
+          "source": "Make text italic",
+          "message": "Poner texto en cursiva"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.",
+          "message": "El ID de la hoja de trabajo (pestaña) específica que contiene las filas que se van a formatear. Cada hoja de trabajo tiene un ID único dentro de una hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "Hoja de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific worksheet within the spreadsheet",
+          "message": "El ID de la hoja de trabajo específica dentro de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.",
+          "message": "El ID de la hoja de cálculo de Google Sheets que contiene las filas que se van a formatear. Se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "Hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet to format",
+          "message": "El ID de la hoja de cálculo de Google Sheets que se va a formatear"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.desc": {
+          "source": "Whether to apply strikethrough formatting to the text in the specified rows.",
+          "message": "Indica si se debe aplicar el formato de tachado al texto de las filas especificadas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.display_name": {
+          "source": "Strikethrough",
+          "message": "Tachado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.short_desc": {
+          "source": "Apply strikethrough to text",
+          "message": "Aplicar tachado al texto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.desc": {
+          "source": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.",
+          "message": "Lista de números de fila a los que aplicar formato (indexación basada en 1). Por ejemplo, [1, 2, 5] formateará la primera, segunda y quinta filas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.display_name": {
+          "source": "Rows",
+          "message": "Filas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.short_desc": {
+          "source": "List of row numbers to format",
+          "message": "Lista de números de fila a formatear"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Indica si se debe ajustar el texto en las celdas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
+          "source": "Wrap Text",
+          "message": "Ajustar texto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "Indica si se debe ajustar el texto en las celdas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.desc": {
+          "source": "The color to apply to the text in the cells of the specified rows. Uses RGB color format.",
+          "message": "El color que se aplicará al texto de las celdas de las filas especificadas. Utiliza el formato de color RGB."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
+          "source": "Text Color",
+          "message": "Color del texto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
+          "source": "Color for the text in the cells",
+          "message": "Color para el texto de las celdas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.desc": {
+          "source": "Whether to underline the text in the specified rows.",
+          "message": "Indica si se debe subrayar el texto de las filas especificadas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.display_name": {
+          "source": "Underline",
+          "message": "Subrayado"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.short_desc": {
+          "source": "Underline the text",
+          "message": "Subrayar el texto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOk1JRERMRQ.display_name": {
+          "source": "Middle",
+          "message": "Medio"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOkJPVFRPTQ.display_name": {
+          "source": "Bottom",
+          "message": "Inferior"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOlRPUA.display_name": {
+          "source": "Top",
+          "message": "Superior"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.desc": {
+          "source": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).",
+          "message": "La alineación vertical que se aplicará al contenido de las filas especificadas (Superior, Medio o Inferior)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
+          "source": "Vertical Alignment",
+          "message": "Alineación vertical"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
+          "source": "Vertical alignment of content",
+          "message": "Alineación vertical del contenido"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Apply formatting to specific rows in a Google Sheets spreadsheet.",
+          "message": "Aplique formato a filas específicas en una hoja de cálculo de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
+          "message": "Busca filas en una hoja de Google Sheets que coincidan con un valor específico en una columna designada. Admite la búsqueda por encabezado o letra de columna, paginación y diferentes formatos de respuesta."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
+          "source": "Find Spreadsheet Rows",
+          "message": "Buscar filas de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "The number of matching rows to skip before returning results. Used for pagination. Default is 0.",
+          "message": "El número de filas coincidentes que se omitirán antes de devolver los resultados. Se utiliza para la paginación. El valor predeterminado es 0."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Desplazamiento"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of matching rows to skip",
+          "message": "Número de filas coincidentes a omitir"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.desc": {
+          "source": "The maximum number of matching rows to include in the results. Default is 10.",
+          "message": "El número máximo de filas coincidentes que se incluirán en los resultados. El valor predeterminado es 10."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of matching rows to return",
+          "message": "Número máximo de filas coincidentes a devolver"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
+          "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
+          "message": "Limita el número total de filas a buscar para controlar el rendimiento con hojas grandes. El valor predeterminado es 5000."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
+          "source": "Maximum Rows to Search",
+          "message": "Número máximo de filas a buscar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
+          "source": "Maximum number of rows to search through",
+          "message": "Número máximo de filas que se van a buscar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Defines the search criteria to use when looking for matching rows.",
+          "message": "Define los criterios de búsqueda que se utilizarán al buscar filas coincidentes."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search Criteria",
+          "message": "Criterios de búsqueda"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Criteria for finding matching rows",
+          "message": "Criterios para encontrar filas coincidentes"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.desc": {
+          "source": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.",
+          "message": "Cuando se habilita, busca desde la parte inferior de la hoja hacia arriba en lugar de arriba hacia abajo. Útil para encontrar las entradas más recientes en hojas donde los nuevos datos se añaden al final."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
+          "source": "Search From Last Row",
+          "message": "Buscar desde la última fila"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
+          "source": "Start searching from the bottom of the sheet",
+          "message": "Comenzar a buscar desde la parte inferior de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.",
+          "message": "El ID de la hoja específica dentro de la hoja de cálculo en la que se buscará. Cada hoja tiene un ID único que se puede seleccionar de las hojas disponibles."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.short_desc": {
+          "source": "ID of the specific sheet within the spreadsheet",
+          "message": "ID de la hoja específica dentro de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.",
+          "message": "El identificador único de la hoja de cálculo de Google Sheets en la que buscar. Se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "ID of the Google Sheets spreadsheet",
+          "message": "ID de la hoja de cálculo de Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.desc": {
+          "source": "Return values mapped to column letters (A, B, C, etc.)",
+          "message": "Devolver valores asignados a letras de columna (A, B, C, etc.)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.display_name": {
+          "source": "Column letter mapped values",
+          "message": "Valores asignados a letras de columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.desc": {
+          "source": "Return values mapped to column headers",
+          "message": "Devolver valores asignados a encabezados de columna"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.display_name": {
+          "source": "Header mapped values",
+          "message": "Valores asignados a encabezados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.desc": {
+          "source": "Return only raw row values as arrays (most efficient)",
+          "message": "Devolver solo los valores de fila sin procesar como matrices (más eficiente)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.display_name": {
+          "source": "Raw values only",
+          "message": "Solo valores sin procesar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.",
+          "message": "Determina cómo se formatean las filas coincidentes en la respuesta. Las opciones incluyen valores sin procesar, valores asignados a encabezados de columna o valores asignados a letras de columna."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Format",
+          "message": "Formato de respuesta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Format of the returned rows",
+          "message": "Formato de las filas devueltas"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
+          "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
+          "message": "Buscar filas en una hoja de cálculo de Google Sheets que coincidan con criterios específicos."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada personalizada a la API HTTP / REST a **Google Sheets** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de la respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para endpoints que aún no estén expuestos como acciones principales en esta aplicación."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Sheets",
+          "message": "Realizar una llamada a la API personalizada a Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.desc": {
+          "source": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.",
+          "message": "Supervisa Google Drive en busca de hojas de cálculo de Google recién creadas. El activador proporciona metadatos sobre la hoja de cálculo recién creada, incluidos su ID, nombre, URL, hora de creación e información del propietario."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
+          "source": "New Spreadsheet",
+          "message": "Nueva hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Triggers when a new Google Spreadsheet is created.",
+          "message": "Se activa cuando se crea una nueva hoja de cálculo de Google."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.desc": {
+          "source": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.",
+          "message": "Supervisa una hoja específica en una hoja de cálculo de Google y se activa cuando se añaden nuevas filas. El activador proporciona los datos de la fila con encabezados de columna como nombres de campo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
+          "source": "New Spreadsheet Row",
+          "message": "Nueva fila en hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.",
+          "message": "El identificador único de la hoja específica dentro de la hoja de cálculo que desea supervisar para detectar nuevas filas. El ID de la hoja se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific sheet to monitor",
+          "message": "El ID de la hoja específica que se va a supervisar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.",
+          "message": "El identificador único de la hoja de cálculo de Google que contiene la hoja que desea supervisar para detectar nuevas filas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "El ID de la hoja de cálculo de Google que se va a supervisar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Google Sheet.",
+          "message": "Se activa cuando se añade una nueva fila a una hoja de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.desc": {
+          "source": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.",
+          "message": "Supervisa una hoja de cálculo de Google y se activa cuando se añaden nuevas hojas. El activador proporciona metadatos sobre la hoja recién creada, incluidos su ID, título, posición de índice y dimensiones."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
+          "source": "New Spreadsheet Sheet",
+          "message": "Nueva hoja en hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.",
+          "message": "El identificador único de la hoja de cálculo de Google que desea supervisar para detectar nuevas hojas. El ID de la hoja de cálculo se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "El ID de la hoja de cálculo de Google que se va a supervisar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
+          "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
+          "message": "Se activa cuando se añade una nueva hoja a una hoja de cálculo de Google."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Buscar registros"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "Buscar registros coincidentes en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Buscar un único registro"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "Buscar un único registro coincidente en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
+          "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "Buscar hojas de cálculo de Google Sheets en Google Drive utilizando varios criterios, incluidos el nombre de archivo, la ubicación de la carpeta y consultas personalizadas. Admite la ordenación por diferentes campos y direcciones con paginación."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
+          "source": "Search Spreadsheets",
+          "message": "Buscar hojas de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "Consulta de búsqueda personalizada de Google Drive para agregar criterios de filtrado adicionales más allá de las opciones básicas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "Consulta personalizada"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "Criterios de búsqueda adicionales"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "El ID de la carpeta de Google Drive a la que se limitará la búsqueda. Si no se especifica, busca en todas las carpetas accesibles."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "Carpeta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "Carpeta en la que buscar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Sheets spreadsheet to search for.",
+          "message": "El nombre completo o parcial de la hoja de cálculo de Google Sheets que se desea buscar."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Nombre de archivo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the spreadsheet to search for",
+          "message": "Nombre de la hoja de cálculo que se desea buscar"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "Lista de criterios de ordenación que se aplicarán a los resultados de búsqueda. Cada elemento especifica un campo y una dirección."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "Ordenar por"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "Criterios de ordenación para los resultados"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Contiene"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Coincidencia exacta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "Cómo hacer coincidir el nombre de archivo: si contiene el texto o es una coincidencia exacta. El valor predeterminado es contiene."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Tipo de búsqueda"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "Tipo de coincidencia de nombre de archivo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of spreadsheets to return in a single request. Default is 100.",
+          "message": "El número máximo de hojas de cálculo que se devolverán en una sola solicitud. El valor predeterminado es 100."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Número máximo de resultados a devolver"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
+          "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
+          "message": "Buscar hojas de cálculo de Google Sheets con opciones avanzadas de filtrado y ordenación."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
+          "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
+          "message": "Busca hojas de trabajo (pestañas) dentro de una hoja de cálculo de Google por sus títulos. Devuelve información detallada sobre las hojas de trabajo coincidentes, incluidas las dimensiones, la posición y la visibilidad. Se puede utilizar para buscar hojas de trabajo específicas o listar todas las hojas de trabajo de una hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
+          "source": "Search Worksheets",
+          "message": "Buscar hojas de trabajo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.desc": {
+          "source": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.",
+          "message": "Si se habilita, solo se devolverán las hojas de trabajo con títulos con coincidencia exacta. Si se deshabilita (predeterminado), se incluirán en los resultados las hojas de trabajo cuyos títulos contengan el texto de búsqueda."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
+          "source": "Exact Match",
+          "message": "Coincidencia exacta"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
+          "source": "Whether to match the title exactly",
+          "message": "Indica si se debe hacer coincidir el título exactamente"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.",
+          "message": "El identificador único de la hoja de cálculo de Google en la que desea buscar hojas de trabajo. Se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to search within",
+          "message": "El ID de la hoja de cálculo de Google en la que se buscará"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.desc": {
+          "source": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.",
+          "message": "Buscar hojas de trabajo cuyos títulos contengan este texto. Dejar en blanco para listar todas las hojas de trabajo de la hoja de cálculo. La búsqueda no distingue entre mayúsculas y minúsculas de forma predeterminada."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
+          "source": "Sheet Title",
+          "message": "Título de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
+          "source": "Title text to search for (case-insensitive)",
+          "message": "Texto del título que se desea buscar (no distingue entre mayúsculas y minúsculas)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
+          "source": "Find worksheets within a Google Spreadsheet by title.",
+          "message": "Buscar hojas de trabajo dentro de una hoja de cálculo de Google por título."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Actualizar registros"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "El nombre de la tabla"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "Actualizar registros existentes en la tabla dada en la aplicación \"GoogleSheets\""
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",
+          "message": "Actualiza filas específicas en una hoja de cálculo de Google Sheets mediante sus índices de fila. Esta acción le permite modificar varias filas en una sola operación conservando la estructura de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Update Spreadsheet Rows",
+          "message": "Actualizar filas de hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated.",
+          "message": "El identificador único de la hoja específica dentro de la hoja de cálculo donde se actualizarán las filas."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "ID de la hoja"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the sheet within the spreadsheet.",
+          "message": "El ID de la hoja dentro de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.",
+          "message": "El identificador único de la hoja de cálculo de Google Sheets en la que desea actualizar filas. Se puede encontrar en la URL de la hoja de cálculo."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "ID de la hoja de cálculo"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet.",
+          "message": "El ID de la hoja de cálculo de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Update existing rows in a Google Sheets spreadsheet.",
+          "message": "Actualizar filas existentes en una hoja de cálculo de Google Sheets."
+        },
+        "app.R29vZ2xlU2hlZXRz.desc": {
+          "source": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.",
+          "message": "Intégrese con Google Sheets para crear, actualizar y gestionar sus hojas de cálculo. Esta integración le permite realizar acciones y responder a eventos en su cuenta de Google Sheets, lo que le permite automatizar la gestión de datos y los flujos de trabajo de informes."
+        },
+        "app.R29vZ2xlU2hlZXRz.display_name": {
+          "source": "Google Sheets",
+          "message": "Google Sheets"
+        },
+        "app.R29vZ2xlU2hlZXRz.short_desc": {
+          "source": "Connect with Google Sheets to manage your spreadsheets",
+          "message": "Conéctese con Google Sheets para gestionar sus hojas de cálculo"
+        }
+      }
+    }
+  }
+}

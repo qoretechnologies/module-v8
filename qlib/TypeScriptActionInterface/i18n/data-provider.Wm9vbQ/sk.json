@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.desc": {
+          "source": "Display information about a meeting summary.\n\n**Prerequisites**\n* Host user type must have a Pro or higher plan.\n* Enable the **Meeting Summary with AI Companion** feature in the host's account.\n* E2ee meetings do not have summary feature enabled.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Zobraziť informácie o zhrnutí stretnutia.\n\n**Predpoklady**\n* Typ používateľa hostiteľa musí mať plán Pro alebo vyšší.\n* V účte hostiteľa povoľte funkciu **Meeting Summary with AI Companion**.\n* Pre E2ee stretnutia nie je funkcia zhrnutia povolená.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.display_name": {
+          "source": "Get a Meeting Summary",
+          "message": "Získať zhrnutie stretnutia"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.short_desc": {
+          "source": "Get a meeting summary",
+          "message": "Získať zhrnutie stretnutia"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve a list of all the participants who attended a webinar hosted in the past. \n\n**Prerequisites:** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Získať zoznam všetkých účastníkov, ktorí sa zúčastnili webinára organizovaného v minulosti.\n\n**Predpoklady:**\n* Plán Pro alebo vyšší s doplnkom pre webináre.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.display_name": {
+          "source": "List Webinar Participants",
+          "message": "Zoznam účastníkov webinára"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "List webinar participants",
+          "message": "Zoznam účastníkov webinára"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Zoom** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú v tejto aplikácii sprístupnené ako vstavané akcie."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoom",
+          "message": "Vykonať vlastné volanie API do Zoom"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.desc": {
+          "source": "[Create a meeting](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The `start_url` value's expiration time is **two hours** for all regular users.\n* For `custCreate` meeting hosts - users created with the `custCreate` parameter via the [**Create users**](-docs-api-users-#tag-users-POST-users) API - the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.\n* For security reasons, the recommended way to programmatically get the updated `start_url` value after expiry is to call the [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) API. Refer to the `start_url` value in the response.\n* **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "[Vytvorte stretnutie](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) pre používateľa. Pre aplikácie na úrovni používateľa zadajte [hodnotu `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) namiesto parametra `userId`.\n\n**Predpoklady:**\n* Hodnota `start_url` stretnutia je URL adresa, ktorú môže hostiteľ alebo alternatívny hostiteľ použiť na spustenie stretnutia. Čas expirácie hodnoty `start_url` je **dve hodiny** pre všetkých bežných používateľov.\n* Pre hostiteľov stretnutí `custCreate` – používateľov vytvorených s parametrom `custCreate` cez API [**Create users**](-docs-api-users-#tag-users-POST-users) – je čas expirácie parametra `start_url` **90 dní** od vygenerovania `start_url`.\n* Z bezpečnostných dôvodov je odporúčaný spôsob, ako programovo získať aktualizovanú hodnotu `start_url` po vypršaní platnosti, zavolať API [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId). Pozrite si hodnotu `start_url` v odpovedi.\n* **100 požiadaviek za deň**. Limit volaní sa uplatňuje voči `userId` **hostiteľa stretnutia** použitého na odoslanie požiadavky.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.display_name": {
+          "source": "Create a Meeting",
+          "message": "Vytvoriť stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.short_desc": {
+          "source": "Create a meeting",
+          "message": "Vytvoriť stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.desc": {
+          "source": "Delete a meeting.\n\n**Prerequisites**:\n* For recurring meetings, the `occurrence_id` is required to delete a specific occurrence. If not provided, the entire recurring series will be deleted.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Odstrániť stretnutie.\n\n**Predpoklady**:\n* V prípade opakovaných stretnutí sa vyžaduje `occurrence_id` na odstránenie konkrétneho výskytu. Ak nie je zadané, odstráni sa celá opakovaná séria.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.display_name": {
+          "source": "Delete a Meeting",
+          "message": "Odstrániť stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.short_desc": {
+          "source": "Delete a meeting",
+          "message": "Odstrániť stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration to a meeting. See [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached. \n\n **Prerequisites:** \n* The host must be a **Licensed** user type.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Vytvoriť a odoslať registráciu používateľa na stretnutie. Podrobnosti o nastavení požiadaviek pre tieto polia nájdete v časti [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration). Upozorňujeme, že maximálny limit je 4 999 registrovaných na jedno stretnutie a ak sa kapacita stretnutia naplní, používateľom sa zobrazí chyba.\n\n **Predpoklady:** \n* Hostiteľ musí mať typ používateľa **Licensed**.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Meeting Registrant",
+          "message": "Pridať registrovaného účastníka stretnutia"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a meeting registrant",
+          "message": "Pridať registrovaného účastníka stretnutia"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.desc": {
+          "source": "List users that have registered for a meeting. A host or a user with admin permission can require [registration for a Zoom meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Prerequisites**:\n* Host user type must be **Pro** or higher plan.\n* Registration must be enabled for the meeting.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Zoznam používateľov, ktorí sa zaregistrovali na stretnutie. Hostiteľ alebo používateľ s oprávnením správcu môže vyžadovať [registráciu na stretnutie Zoom](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Predpoklady**:\n* Typ používateľa hostiteľa musí byť s plánom **Pro** alebo vyšším.\n* Pre stretnutie musí byť povolená registrácia.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.display_name": {
+          "source": "List Meeting Registrants",
+          "message": "Zoznam registrovaných účastníkov stretnutia"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.short_desc": {
+          "source": "List meeting registrants",
+          "message": "Zoznam registrovaných účastníkov stretnutia"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.desc": {
+          "source": "Update meeting details.\n\n**Prerequisites**\n* The `start_time` value must be a future date. If the value is omitted or a date is in the past, the API ignores this value and does not update any recurring meetings.\n* The `recurrence` object is required only when updating the entire series of a recurring meeting with `type=8`.\n* This API has a rate limit of **100 requests per day**. You can update a meeting for a maximum of 100 times within a 24-hour period.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Aktualizovať podrobnosti stretnutia.\n\n**Predpoklady**\n* Hodnota `start_time` musí byť dátum v budúcnosti. Ak je hodnota vynechaná alebo je dátum v minulosti, API túto hodnotu ignoruje a neaktualizuje žiadne opakované stretnutia.\n* Objekt `recurrence` sa vyžaduje iba pri aktualizácii celej série opakovaného stretnutia s `type=8`.\n* Toto API má limit **100 požiadaviek za deň**. Stretnutie môžete aktualizovať maximálne 100-krát v priebehu 24-hodinového obdobia.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.display_name": {
+          "source": "Update a Meeting",
+          "message": "Aktualizovať stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.short_desc": {
+          "source": "Update a meeting",
+          "message": "Aktualizovať stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.desc": {
+          "source": "List a meeting host user's scheduled meetings. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* This API **only** supports scheduled meetings. This API does not return information about instant meetings.\n* This API only returns a user's [unexpired meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* When `type` is set to `upcoming`, `upcoming_meetings`, or `previous_meetings`, only a maximum of 6 months of meeting data will be returned. \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Zoznam naplánovaných stretnutí používateľa, ktorý je hostiteľom. Pre aplikácie na úrovni používateľa zadajte [hodnotu `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) namiesto parametra `userId`.\n\n**Predpoklady:**\n* Toto API podporuje **iba** naplánované stretnutia. Toto API nevracia informácie o okamžitých stretnutiach.\n* Toto API vracia iba používateľove [neexpirované stretnutia](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* Ak je `type` nastavené na `upcoming`, `upcoming_meetings` alebo `previous_meetings`, vrátia sa údaje o stretnutiach za maximálne 6 mesiacov.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.display_name": {
+          "source": "List Meetings",
+          "message": "Zoznam stretnutí"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.short_desc": {
+          "source": "List meetings",
+          "message": "Zoznam stretnutí"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.desc": {
+          "source": "Retrieve the given meeting's details.\n\n**Prerequisites**:\n* Host user must have a Zoom Meetings Basic license or higher.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Získať podrobnosti o danom stretnutí.\n\n**Predpoklady**:\n* Hostiteľ musí mať licenciu Zoom Meetings Basic alebo vyššiu.\n\n**[Rozsahy (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Označenie limitu volaní (Rate Limit)](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.display_name": {
+          "source": "Get a Meeting",
+          "message": "Získať stretnutie"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.short_desc": {
+          "source": "Get a meeting",
+          "message": "Získať stretnutie"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.desc": {
+          "source": "Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type.",
+          "message": "Monitoruje stretnutia Zoom a spúšťa sa pri vytvorení, začatí (live) alebo ukončení (predchádzajúce stretnutia) stretnutí na základe vybratého typu udalosti. Vracia podrobnosti o stretnutí vrátane témy, trvania, adresy URL na pripojenie a typu stretnutia."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "Nová schôdza"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOmxpdmU.display_name": {
+          "source": "Triggers when a meeting is started",
+          "message": "Spustí sa pri začatí stretnutia"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnByZXZpb3VzX21lZXRpbmdz.display_name": {
+          "source": "Triggers when a meeting is ended",
+          "message": "Spustí sa pri ukončení stretnutia"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Triggers when a meeting is created",
+          "message": "Spustí sa pri vytvorení stretnutia"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.desc": {
+          "source": "Specifies which type of meeting event should trigger this action. Choose \"any\" to trigger on all meeting creations, \"live\" for when meetings start, or \"previous_meetings\" for when meetings end.",
+          "message": "Určuje, ktorý typ udalosti stretnutia má spustiť túto akciu. Vyberte \"any\" pre spustenie pri každom vytvorení stretnutia, \"live\" pre spustenie pri začatí stretnutí alebo \"previous_meetings\" pre spustenie pri ukončení stretnutí."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
+          "source": "Meeting Event Type",
+          "message": "Typ udalosti stretnutia"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
+          "source": "Type of meeting event to monitor",
+          "message": "Typ udalosti stretnutia na monitorovanie"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
+          "source": "Triggers when a Zoom meeting is created, started, or ended.",
+          "message": "Spustí sa pri vytvorení, začatí alebo ukončení stretnutia Zoom."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.desc": {
+          "source": "Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.",
+          "message": "Monitoruje zhrnutia stretnutí Zoom a spúšťa sa, keď sú po ukončení stretnutí vygenerované nové zhrnutia. Vracia podrobnosti o zhrnutí vrátane informácií o stretnutí, údajov o hostiteľovi a časových pečiatok zhrnutia."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
+          "source": "New Meeting Summary",
+          "message": "Nové zhrnutie stretnutia"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {
+          "source": "Triggers when a new Zoom meeting summary is created.",
+          "message": "Spustí sa pri vytvorení nového zhrnutia stretnutia Zoom."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.desc": {
+          "source": "Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type.",
+          "message": "Monitoruje webináre Zoom a spúšťa sa pri vytvorení nových webinárov. Vracia podrobnosti o webinári vrátane témy, trvania, adresy URL na pripojenie, registračnej adresy URL a typu webinára."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
+          "source": "New Webinar",
+          "message": "Nový webinár"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
+          "source": "Triggers when a new Zoom webinar is created.",
+          "message": "Spustí sa pri vytvorení nového webinára Zoom."
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve information on participants from a past meeting. Note the API doesn't return results if there's only one participant in a meeting.  \n   \n \n**Prerequisites:**  \n \n* Paid account on a Pro or higher plan.\n\n  \n    \n   **Note**: Please double encode your UUID when using this API if the UUID begins with a '-'or contains '-' in it.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Získať informácie o účastníkoch z minulého stretnutia. Upozorňujeme, že API nevracia výsledky, ak je na stretnutí iba jeden účastník.  \n   \n \n**Požiadavky:**  \n \n* Platený účet s plánom Pro alebo vyšším.\n\n  \n    \n   **Poznámka**: Pri použití tohto API dvakrát zakódujte svoje UUID, ak UUID začína znakom „-“ alebo obsahuje znak „-“.\n\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.display_name": {
+          "source": "Get Past Meeting Participants",
+          "message": "Získať účastníkov minulého stretnutia"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "Get past meeting participants",
+          "message": "Získať účastníkov minulého stretnutia"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.desc": {
+          "source": "Returns all of a meeting's [recordings](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4). Use the `download_url` property listed in the response to download the recording files.  To access a password-protected cloud recording, send the `download_access_token` or the user's [OAuth access token](-docs-integrations-oauth-) as a Bearer token in the Authorization header. For example: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Vráti všetky [záznamy](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4) stretnutia. Na stiahnutie súborov záznamov použite vlastnosť `download_url` uvedenú v odpovedi. Pre prístup ku cloudovému záznamu chránenému heslom odošlite `download_access_token` alebo používateľov [prístupový token OAuth](-docs-integrations-oauth-) ako Bearer token v hlavičke Authorization. Napríklad: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.display_name": {
+          "source": "Get Meeting Recordings",
+          "message": "Získať záznamy stretnutia"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.short_desc": {
+          "source": "Get meeting recordings",
+          "message": "Získať záznamy stretnutia"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.desc": {
+          "source": "Delete all of a meeting's or webinar's recording files.  \n\n**Prerequisites**:\n* Cloud Recording should be enabled on the user's account.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Odstrániť všetky súbory záznamu stretnutia alebo webinára.  \n\n**Požiadavky**:\n* Cloud Recording by malo byť povolené v používateľskom účte.  \n \n\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.display_name": {
+          "source": "Delete Meeting or Webinar Recordings",
+          "message": "Odstrániť záznamy stretnutia alebo webinára"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.short_desc": {
+          "source": "Delete meeting or webinar recordings",
+          "message": "Odstrániť záznamy stretnutia alebo webinára"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.desc": {
+          "source": "Lists all [cloud recordings](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) for a user.  \n\nFor user-level apps, pass the [`me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.  To access a user's passcode protected cloud recording, send the user's [OAuth access token](https:-developers.zoom.us-docs-integrations-oauth-) as a bearer token in the authorization header.  \n\nExample:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Prerequisites:**  \n* Must have a Pro or a higher plan.  \n* Must enable Cloud Recording on the user's account.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Vypíše všetky [cloudové záznamy](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) pre používateľa.  \n\nPre aplikácie na úrovni používateľa zadajte [hodnotu `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) namiesto parametra `userId`.  Pre prístup ku cloudovému záznamu používateľa chránenému prístupovým kódom odošlite [prístupový token OAuth](https:-developers.zoom.us-docs-integrations-oauth-) používateľa ako bearer token v hlavičke autorizácie.  \n\nPríklad:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Požiadavky:**  \n* Musí mať plán Pro alebo vyšší.  \n* Musí mať povolené Cloud Recording v používateľskom účte.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.display_name": {
+          "source": "List All Recordings",
+          "message": "Zoznam všetkých záznamov"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.short_desc": {
+          "source": "List all recordings",
+          "message": "Zoznam všetkých záznamov"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.desc": {
+          "source": "Get details for a scheduled Zoom webinar.\n  \n   \n \n**Prerequisites:**\n* Pro or higher plan with a Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Získať podrobnosti o naplánovanom webinári Zoom.\n  \n   \n \n**Požiadavky:**\n* Plán Pro alebo vyšší s doplnkom Webinar.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.display_name": {
+          "source": "Get a Webinar",
+          "message": "Získať webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.short_desc": {
+          "source": "Get a webinar",
+          "message": "Získať webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.desc": {
+          "source": "Schedule a webinar for a user who is a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Webinars allow a host to broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Rate limit:**\nUp to a maximum of **100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites:** \n* A Pro or higher plan with a [Webinar plan](https:-zoom.us-webinar) add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Naplánovať webinár pre používateľa, ktorý je hostiteľom webinára. Pre aplikácie na úrovni používateľa zadajte [hodnotu `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) namiesto parametra `userId`. \n\n Webináre umožňujú hostiteľovi vysielať stretnutie Zoom až pre 10 000 účastníkov. \n\n**Limit sadzieb:**\nMaximálne **100 požiadaviek za deň**. Limit sadzieb sa vzťahuje na `userId` **hostiteľa webinára** použitého na odoslanie požiadavky. \n\n**Požiadavky:** \n* Plán Pro alebo vyšší s doplnkom [Webinar plan](https:-zoom.us-webinar).\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.display_name": {
+          "source": "Create a Webinar",
+          "message": "Vytvoriť webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.short_desc": {
+          "source": "Create a webinar",
+          "message": "Vytvoriť webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.desc": {
+          "source": "Delete a webinar. \n\n\n**Prerequisites:**  \n \n* Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Odstrániť webinár. \n\n\n**Požiadavky:**  \n \n* Plán Pro alebo vyšší s doplnkom pre webináre.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.display_name": {
+          "source": "Delete a Webinar",
+          "message": "Odstrániť webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.short_desc": {
+          "source": "Delete a webinar",
+          "message": "Odstrániť webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Vytvoriť a odoslať registráciu používateľa na webinár. Používatelia Zoom s plánom [Webinar plan](https:-zoom.us-webinar) majú prístup k vytváraniu a správe webinárov. Webináre umožňujú hostiteľom vysielať stretnutie Zoom až pre 10 000 účastníkov. Plánovanie [webinára s registráciou](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) vyžaduje, aby vaši registrujúci sa účastníci vyplnili krátky formulár pred prijatím odkazu na pripojenie k webináru. \n\n**Požiadavky:** \n* Plán Pro alebo vyšší s doplnkom Webinar.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Webinar Registrant",
+          "message": "Pridať registrovaného účastníka webinára"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a webinar registrant",
+          "message": "Pridať registrovaného účastníka webinára"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.desc": {
+          "source": "List all users that have registered for a given webinar. Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. The webinar functionality lets a host broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar.  \n\n\n**Prerequisites**\n* Pro or higher plan with a Webinar add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Vypísať všetkých používateľov, ktorí sa zaregistrovali na daný webinár. Používatelia Zoom s plánom [webinar plan](https:-zoom.us-webinar) majú prístup k vytváraniu a správe webinárov. Funkcionalita webinárov umožňuje hostiteľovi vysielať stretnutie Zoom až pre 10 000 účastníkov. Plánovanie [webinára s registráciou](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) vyžaduje, aby vaši registrujúci sa účastníci vyplnili krátky formulár pred prijatím odkazu na pripojenie k webináru.  \n\n\n**Požiadavky**\n* Plán Pro alebo vyšší s doplnkom Webinar.  \n \n\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.display_name": {
+          "source": "List Webinar Registrants",
+          "message": "Zoznam registrovaných účastníkov webinára"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.short_desc": {
+          "source": "List webinar registrants",
+          "message": "Zoznam registrovaných účastníkov webinára"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.desc": {
+          "source": "Make updates to a scheduled webinar. \n\n**100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Aktualizovať naplánovaný webinár. \n\n**100 požiadaviek za deň**. Limit sadzieb sa vzťahuje na `userId` **hostiteľa webinára** použitého na odoslanie požiadavky. \n\n**Požiadavky** \n* Plán Pro alebo vyšší s doplnkom pre webináre.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.display_name": {
+          "source": "Update a Webinar",
+          "message": "Aktualizovať webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.short_desc": {
+          "source": "Update a webinar",
+          "message": "Aktualizovať webinár"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.desc": {
+          "source": "List all the webinars scheduled by or on behalf a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars let a host broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Note** This API only returns a user's [unexpired webinars](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Prerequisites** \n* A Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Vypísať všetky webináre naplánované hostiteľom webinára alebo v jeho mene. Pre aplikácie na úrovni používateľa zadajte [hodnotu `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) namiesto parametra `userId`. \n\n Používatelia Zoom s plánom [webinar plan](https:-zoom.us-webinar) majú prístup k vytváraniu a správe webinárov. Webináre umožňujú hostiteľovi vysielať stretnutie Zoom až pre 10 000 účastníkov. \n\n**Poznámka**: Toto API vracia iba používateľove [neexpirované webináre](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Požiadavky** \n* Plán Pro alebo vyšší s doplnkom pre webináre.\n\n**[Rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granulárne rozsahy](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Označenie limitu sadzieb](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.display_name": {
+          "source": "List Webinars",
+          "message": "Zoznam webinárov"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.short_desc": {
+          "source": "List webinars",
+          "message": "Zoznam webinárov"
+        },
+        "app.Wm9vbQ.desc": {
+          "source": "Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.",
+          "message": "Zoom je platforma na videokonferencie a online stretnutia, ktorá používateľom umožňuje organizovať virtuálne stretnutia, webináre a videokonferencie a pripájať sa k nim. Ponúka funkcie ako zdieľanie obrazovky, nahrávanie a chat na zlepšenie spolupráce a komunikácie medzi účastníkmi."
+        },
+        "app.Wm9vbQ.display_name": {
+          "source": "Zoom",
+          "message": "Zoom"
+        },
+        "app.Wm9vbQ.short_desc": {
+          "source": "Video conferencing and online meeting platform",
+          "message": "Platforma na videokonferencie a online stretnutia"
+        }
+      }
+    }
+  }
+}

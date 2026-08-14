@@ -1,0 +1,861 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.SmlyYQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „Jira“"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Jira\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii „Jira“"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Creates a new custom field in the Jira instance",
+          "message": "Vytvorí nové vlastné pole v inštancii Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Create Custom Field",
+          "message": "Vytvoriť vlastné pole"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Creates a new custom field",
+          "message": "Vytvorí nové vlastné pole"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.desc": {
+          "source": "Creates a new issue in a Jira project",
+          "message": "Vytvorí novú požiadavku v projekte Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.display_name": {
+          "source": "Create Issue",
+          "message": "Vytvoriť požiadavku"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlSXNzdWU.short_desc": {
+          "source": "Creates a new issue",
+          "message": "Vytvorí novú požiadavku"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Creates a new project in Jira",
+          "message": "Vytvorí nový projekt v Jira"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create Project",
+          "message": "Vytvoriť projekt"
+        },
+        "app.SmlyYQ.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Creates a new project",
+          "message": "Vytvorí nový projekt"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.desc": {
+          "source": "Adds a new comment to a specific issue",
+          "message": "Pridá nový komentár ku konkrétnej požiadavke"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.display_name": {
+          "source": "Add Comment",
+          "message": "Pridať komentár"
+        },
+        "app.SmlyYQ.action.YWRkQ29tbWVudA.short_desc": {
+          "source": "Adds a comment to an issue",
+          "message": "Pridá komentár k požiadavke"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.desc": {
+          "source": "Adds a new worklog entry to a specific issue",
+          "message": "Pridá nový záznam do denníka prác ku konkrétnej požiadavke"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.display_name": {
+          "source": "Add Worklog",
+          "message": "Pridať záznam do denníka prác"
+        },
+        "app.SmlyYQ.action.YWRkV29ya2xvZw.short_desc": {
+          "source": "Adds a worklog to an issue",
+          "message": "Pridá záznam do denníka prác k požiadavke"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.desc": {
+          "source": "Retrieves a specific comment by its ID",
+          "message": "Získa konkrétny komentár podľa jeho ID"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.display_name": {
+          "source": "Get Comment",
+          "message": "Získať komentár"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudA.short_desc": {
+          "source": "Gets a specific comment",
+          "message": "Získa konkrétny komentár"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.desc": {
+          "source": "Retrieves all comments for a specific issue",
+          "message": "Získa všetky komentáre pre konkrétnu požiadavku"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.display_name": {
+          "source": "Get Comments",
+          "message": "Získať komentáre"
+        },
+        "app.SmlyYQ.action.Z2V0Q29tbWVudHM.short_desc": {
+          "source": "Gets all comments for an issue",
+          "message": "Získa všetky komentáre k požiadavke"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.desc": {
+          "source": "Retrieves all projects visible to the authenticated user",
+          "message": "Získa všetky projekty viditeľné pre overeného používateľa"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.display_name": {
+          "source": "Get All Projects",
+          "message": "Získať všetky projekty"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response. This parameter accepts a comma-separated list. Expanded options include:\n\n *  `description` Returns the project description.\n *  `issueTypes` Returns all issue types associated with the project.\n *  `lead` Returns information about the project lead.\n *  `projectKeys` Returns all project keys associated with the project.",
+          "message": "Použite [expand](#expansion) na zahrnutie ďalších informácií do odpovede. Tento parameter prijíma zoznam oddelený čiarkami. Rozšírené možnosti zahŕňajú:\n\n *  `description` Vráti popis projektu.\n *  `issueTypes` Vráti všetky typy požiadaviek spojené s projektom.\n *  `lead` Vráti informácie o vedúcom projektu.\n *  `projectKeys` Vráti všetky kľúče projektov priradené k projektu."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.display_name": {
+          "source": "Expand",
+          "message": "Rozbaliť"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.ZXhwYW5k.short_desc": {
+          "source": "Use [expand](#expansion) to include additional information in the response",
+          "message": "Použite [expand](#expansion) na zahrnutie ďalších informácií do odpovede"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.desc": {
+          "source": "A list of project properties to return for the project. This parameter accepts a comma-separated list.",
+          "message": "Zoznam vlastností projektu, ktoré sa majú vrátiť pre projekt. Tento parameter prijíma zoznam oddelený čiarkami."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Vlastnosti"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cHJvcGVydGllcw.short_desc": {
+          "source": "A list of project properties to return for the project",
+          "message": "Zoznam vlastností projektu, ktoré sa majú vrátiť pre projekt"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.desc": {
+          "source": "Returns the user's most recently accessed projects. You may specify the number of results to return up to a maximum of 20. If access is anonymous, then the recently accessed projects are based on the current HTTP session.",
+          "message": "Vráti naposledy navštívené projekty používateľa. Môžete zadať počet výsledkov, ktoré sa majú vrátiť, maximálne však 20. Ak je prístup anonymný, naposledy navštívené projekty sú založené na aktuálnej relácii HTTP."
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.display_name": {
+          "source": "Recent",
+          "message": "Nedávne"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.option.cmVjZW50.short_desc": {
+          "source": "Returns the user's most recently accessed projects",
+          "message": "Vráti naposledy navštívené projekty používateľa"
+        },
+        "app.SmlyYQ.action.Z2V0QWxsUHJvamVjdHM.short_desc": {
+          "source": "Gets all projects",
+          "message": "Získa všetky projekty"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.desc": {
+          "source": "Retrieves the current announcement banner configuration for the Jira instance",
+          "message": "Získa aktuálnu konfiguráciu oznamovacieho banera pre inštanciu Jira"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.display_name": {
+          "source": "Get Announcement Banner",
+          "message": "Získať oznamovací baner"
+        },
+        "app.SmlyYQ.action.Z2V0QmFubmVy.short_desc": {
+          "source": "Gets the current announcement banner configuration",
+          "message": "Získa aktuálnu konfiguráciu oznamovacieho banera"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.desc": {
+          "source": "Returns all fields, both system and custom fields, in the Jira instance",
+          "message": "Vráti všetky polia, systémové aj vlastné, v inštancii Jira"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.display_name": {
+          "source": "Get Fields",
+          "message": "Získať polia"
+        },
+        "app.SmlyYQ.action.Z2V0RmllbGRz.short_desc": {
+          "source": "Gets all fields in the system",
+          "message": "Získa všetky polia v systéme"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.desc": {
+          "source": "Retrieves the details of a specific issue by its ID or key",
+          "message": "Získa podrobnosti o konkrétnej úlohe podľa jej ID alebo kľúča"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.display_name": {
+          "source": "Get Issue",
+          "message": "Získať úlohu"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWU.short_desc": {
+          "source": "Gets an issue by ID or key",
+          "message": "Získa úlohu podľa ID alebo kľúča"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.desc": {
+          "source": "Retrieves all worklogs for a specific issue",
+          "message": "Získa všetky záznamy o práci pre konkrétnu úlohu"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.display_name": {
+          "source": "Get Issue Worklogs",
+          "message": "Získať záznamy o práci k úlohe"
+        },
+        "app.SmlyYQ.action.Z2V0SXNzdWVXb3JrbG9n.short_desc": {
+          "source": "Gets all worklogs for an issue",
+          "message": "Získa všetky záznamy o práci pre úlohu"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Retrieves the details of a specific project by its ID or key",
+          "message": "Získa podrobnosti o konkrétnom projekte podľa jeho ID alebo kľúča"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get Project",
+          "message": "Získať projekt"
+        },
+        "app.SmlyYQ.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Gets a project by ID or key",
+          "message": "Získa projekt podľa ID alebo kľúča"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.desc": {
+          "source": "Retrieves a specific worklog entry by its ID",
+          "message": "Získa konkrétny záznam o práci podľa jeho ID"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.display_name": {
+          "source": "Get Worklog",
+          "message": "Získať záznam o práci"
+        },
+        "app.SmlyYQ.action.Z2V0V29ya2xvZw.short_desc": {
+          "source": "Gets a specific worklog",
+          "message": "Získa konkrétny záznam o práci"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "Vymazať záznamy z danej tabuľky v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Jira\"",
+          "message": "Vymazať záznamy z danej tabuľky v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.desc": {
+          "source": "Deletes a specific comment from an issue",
+          "message": "Odstráni konkrétny komentár z úlohy"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.display_name": {
+          "source": "Delete Comment",
+          "message": "Odstrániť komentár"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlQ29tbWVudA.short_desc": {
+          "source": "Deletes a comment from an issue",
+          "message": "Odstráni komentár z úlohy"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.desc": {
+          "source": "Deletes an issue from a Jira project",
+          "message": "Odstráni úlohu z projektu Jira"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.display_name": {
+          "source": "Delete Issue",
+          "message": "Odstrániť úlohu"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlSXNzdWU.short_desc": {
+          "source": "Deletes an issue",
+          "message": "Odstráni úlohu"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "Deletes a project from Jira",
+          "message": "Odstráni projekt z Jira"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete Project",
+          "message": "Odstrániť projekt"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Deletes a project",
+          "message": "Odstráni projekt"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.desc": {
+          "source": "Deletes a specific worklog entry from an issue",
+          "message": "Odstráni konkrétny záznam o práci z úlohy"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.display_name": {
+          "source": "Delete Worklog",
+          "message": "Odstrániť záznam o práci"
+        },
+        "app.SmlyYQ.action.ZGVsZXRlV29ya2xvZw.short_desc": {
+          "source": "Deletes a worklog from an issue",
+          "message": "Odstráni záznam o práci z úlohy"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.desc": {
+          "source": "Updates the fields of an existing issue",
+          "message": "Aktualizuje polia existujúcej úlohy"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.display_name": {
+          "source": "Edit Issue",
+          "message": "Upraviť úlohu"
+        },
+        "app.SmlyYQ.action.ZWRpdElzc3Vl.short_desc": {
+          "source": "Updates an existing issue",
+          "message": "Aktualizuje existujúcu úlohu"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "Spustí sa pri vytvorení novej úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.display_name": {
+          "source": "New Issue",
+          "message": "Nová úloha"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for new issues",
+          "message": "Projekt, v ktorom sa majú sledovať nové úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for new issues",
+          "message": "Projekt, v ktorom sa majú sledovať nové úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new issue is created",
+          "message": "Spustí sa pri vytvorení novej úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "Spustí sa pri aktualizácii úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.display_name": {
+          "source": "Updated Issue",
+          "message": "Aktualizovaná úloha"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.desc": {
+          "source": "The project to watch for updated issues",
+          "message": "Projekt, v ktorom sa majú sledovať aktualizované úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projekt"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project to watch for updated issues",
+          "message": "Projekt, v ktorom sa majú sledovať aktualizované úlohy"
+        },
+        "app.SmlyYQ.action.aXNzdWVfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when an issue is updated",
+          "message": "Spustí sa pri aktualizácii úlohy"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Jira** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykoná vlastné volanie HTTP / REST API do služby **Jira** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré v tejto aplikácii zatiaľ nie sú k dispozícii ako samostatné akcie."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.SmlyYQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Jira",
+          "message": "Vykonať vlastné volanie API do Jira"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.desc": {
+          "source": "Updates the announcement banner configuration for the Jira instance",
+          "message": "Aktualizuje konfiguráciu oznamovacieho bannera pre inštanciu Jira"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.display_name": {
+          "source": "Set Announcement Banner",
+          "message": "Nastaviť oznamovací banner"
+        },
+        "app.SmlyYQ.action.c2V0QmFubmVy.short_desc": {
+          "source": "Updates the announcement banner configuration",
+          "message": "Aktualizuje konfiguráciu oznamovacieho bannera"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Jira\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Jira\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.desc": {
+          "source": "Searches for issues using JQL (Jira Query Language). Returns issues matching the search criteria",
+          "message": "Vyhľadáva úlohy pomocou JQL (Jira Query Language). Vracia úlohy zodpovedajúce kritériám vyhľadávania"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.display_name": {
+          "source": "Search Issues",
+          "message": "Vyhľadať úlohy"
+        },
+        "app.SmlyYQ.action.c2VhcmNoQW5kUmVjb25zaWxlSXNzdWVzVXNpbmdKcWxQb3N0.short_desc": {
+          "source": "Searches for issues using JQL",
+          "message": "Vyhľadáva úlohy pomocou JQL"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.desc": {
+          "source": "Moves a custom field to the trash. The custom field can be restored from trash within 60 days",
+          "message": "Presunie vlastné pole do koša. Vlastné pole je možné obnoviť z koša do 60 dní"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.display_name": {
+          "source": "Trash Custom Field",
+          "message": "Presunúť vlastné pole do koša"
+        },
+        "app.SmlyYQ.action.dHJhc2hDdXN0b21GaWVsZA.short_desc": {
+          "source": "Moves a custom field to trash",
+          "message": "Presunie vlastné pole do koša"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.SmlyYQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Jira\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Jira\""
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.desc": {
+          "source": "Updates an existing comment on an issue",
+          "message": "Aktualizuje existujúci komentár k úlohe"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.display_name": {
+          "source": "Update Comment",
+          "message": "Aktualizovať komentár"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ29tbWVudA.short_desc": {
+          "source": "Updates a comment",
+          "message": "Aktualizuje komentár"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.desc": {
+          "source": "Updates the name and description of a custom field",
+          "message": "Aktualizuje názov a popis vlastného poľa"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.display_name": {
+          "source": "Update Custom Field",
+          "message": "Aktualizovať vlastné pole"
+        },
+        "app.SmlyYQ.action.dXBkYXRlQ3VzdG9tRmllbGQ.short_desc": {
+          "source": "Updates a custom field",
+          "message": "Aktualizuje vlastné pole"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "Updates the details of an existing project",
+          "message": "Aktualizuje podrobnosti existujúceho projektu"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update Project",
+          "message": "Aktualizovať projekt"
+        },
+        "app.SmlyYQ.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Updates a project",
+          "message": "Aktualizuje projekt"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.desc": {
+          "source": "Updates an existing worklog entry on an issue",
+          "message": "Aktualizuje existujúci záznam o práci v úlohe"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.display_name": {
+          "source": "Update Worklog",
+          "message": "Aktualizovať záznam o práci"
+        },
+        "app.SmlyYQ.action.dXBkYXRlV29ya2xvZw.short_desc": {
+          "source": "Updates a worklog",
+          "message": "Aktualizuje záznam o práci"
+        },
+        "app.SmlyYQ.desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Zbierka akcií na interakciu s API Jira"
+        },
+        "app.SmlyYQ.display_name": {
+          "source": "Jira",
+          "message": "Jira"
+        },
+        "app.SmlyYQ.short_desc": {
+          "source": "Collection of actions to interact with the Jira API",
+          "message": "Zbierka akcií na interakciu s API Jira"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a comprehensive new Typeform with complete customization options including fields, welcome screens, thank you screens, conditional logic, scoring, and advanced settings. Perfect for building surveys, quizzes, contact forms, or any interactive form with complex branching logic and custom styling.",
+          "message": "Crea un nuovo Typeform completo con opzioni di personalizzazione avanzate, inclusi campi, schermate di benvenuto, schermate di ringraziamento, logica condizionale, punteggi e impostazioni avanzate. Perfetto per creare sondaggi, quiz, moduli di contatto o qualsiasi modulo interattivo con logica di diramazione complessa e stile personalizzato."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "Crea modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.desc": {
+          "source": "Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.",
+          "message": "Aggiungi domande e campi di input al modulo. Ogni campo può essere personalizzato con diversi tipi, proprietà, convalide e opzioni di punteggio."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.display_name": {
+          "source": "Form Fields",
+          "message": "Campi modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.short_desc": {
+          "source": "The questions and input fields for your form",
+          "message": "Domande e campi di input per il modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.desc": {
+          "source": "List of hidden field names that can be used to pass data through URL parameters.",
+          "message": "Elenco dei nomi dei campi nascosti utilizzabili per passare dati tramite parametri URL."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.display_name": {
+          "source": "Hidden Fields",
+          "message": "Campi nascosti"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.short_desc": {
+          "source": "Hidden fields to pass data through the form",
+          "message": "Campi nascosti per passare dati attraverso il modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.desc": {
+          "source": "Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.",
+          "message": "Crea regole di logica condizionale per mostrare/nascondere campi, saltare a diverse sezioni o eseguire calcoli in base alle risposte dell'utente."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.display_name": {
+          "source": "Conditional Logic",
+          "message": "Logica condizionale"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.short_desc": {
+          "source": "Rules for conditional branching and calculations",
+          "message": "Regole per la diramazione condizionale e i calcoli"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure form-wide settings like language, progress bar, branding, and behavior options.",
+          "message": "Configura le impostazioni globali del modulo come lingua, barra di avanzamento, branding e opzioni di comportamento."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "Impostazioni modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Global settings and configuration for the form",
+          "message": "Impostazioni globali e configurazione per il modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.desc": {
+          "source": "Create welcome screens to introduce your form, explain its purpose, or provide instructions.",
+          "message": "Crea schermate di benvenuto per presentare il modulo, spiegarne lo scopo o fornire istruzioni."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.display_name": {
+          "source": "Welcome Screens",
+          "message": "Schermate di benvenuto"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.short_desc": {
+          "source": "Introductory screens shown before the form",
+          "message": "Schermate introduttive mostrate prima del modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.desc": {
+          "source": "Create custom thank you screens to show appreciation, provide next steps, or display results.",
+          "message": "Crea schermate di ringraziamento personalizzate per mostrare apprezzamento, fornire i passaggi successivi o mostrare i risultati."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.display_name": {
+          "source": "Thank You Screens",
+          "message": "Schermate di ringraziamento"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.short_desc": {
+          "source": "Screens shown after form completion",
+          "message": "Schermate mostrate dopo il completamento del modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The main title that will appear at the top of your form and in your form list.",
+          "message": "Il titolo principale che apparirà nella parte superiore del modulo e nel tuo elenco dei moduli."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Form Title",
+          "message": "Titolo del modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "The title of your new form",
+          "message": "Il titolo del nuovo modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.desc": {
+          "source": "Define custom variables that can be used in calculations and conditional logic.",
+          "message": "Definisci variabili personalizzate utilizzabili nei calcoli e nella logica condizionale."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.display_name": {
+          "source": "Form Variables",
+          "message": "Variabili del modulo"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.short_desc": {
+          "source": "Custom variables for calculations and logic",
+          "message": "Variabili personalizzate per calcoli e logica"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Typeform with fields, logic, and custom settings.",
+          "message": "Crea un nuovo Typeform con campi, logica e impostazioni personalizzate."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.desc": {
+          "source": "Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.",
+          "message": "Carica un'immagine sul tuo account Typeform utilizzabile nei moduli per domande a scelta con immagine, sfondi del modulo o altri elementi visivi. Puoi effettuare il caricamento fornendo un file o un URL a un'immagine esistente."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.display_name": {
+          "source": "Create Image",
+          "message": "Crea immagine"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded image. If not provided, the original filename will be used.",
+          "message": "Nome personalizzato opzionale per l'immagine caricata. Se non fornito, verrà utilizzato il nome file originale."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "Nome file"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for the uploaded image",
+          "message": "Nome personalizzato per l'immagine caricata"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "The image file to upload directly to your Typeform account. Supported formats include JPG, PNG, and GIF.",
+          "message": "Il file immagine da caricare direttamente sul tuo account Typeform. I formati supportati includono JPG, PNG e GIF."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "File immagine"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "Image file to upload",
+          "message": "File immagine da caricare"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.desc": {
+          "source": "The URL of an existing image to upload to your Typeform account. Use this if you have an image hosted elsewhere.",
+          "message": "L'URL di un'immagine esistente da caricare sul tuo account Typeform. Utilizzalo se hai un'immagine ospitata altrove."
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "URL dell'immagine"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.short_desc": {
+          "source": "URL of the image to upload",
+          "message": "URL dell'immagine da caricare"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.short_desc": {
+          "source": "Upload an image to your Typeform account for use in forms.",
+          "message": "Carica un'immagine sul tuo account Typeform per utilizzarla nei moduli."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches complete details about a specific Typeform including all fields, settings, thank you screens, and metadata. Use this to get the full form definition for analysis, backup, or integration purposes.",
+          "message": "Recupera i dettagli completi relativi a uno specifico Typeform, inclusi tutti i campi, le impostazioni, le schermate di ringraziamento e i metadati. Utilizzalo per ottenere la definizione completa del modulo per scopi di analisi, backup o integrazione."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Ottieni modulo"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to get detailed information about.",
+          "message": "Seleziona il Typeform di cui desideri ottenere informazioni dettagliate."
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Modulo"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to retrieve",
+          "message": "Il modulo da recuperare"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve detailed information about a specific Typeform.",
+          "message": "Recupera informazioni dettagliate su uno specifico Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.desc": {
+          "source": "Permanently deletes a Typeform from your account. This action cannot be undone, and all associated responses will also be deleted. Use with caution as this will remove the form and all its data.",
+          "message": "Elimina definitivamente un Typeform dal tuo account. Questa azione non può essere annullata e verranno eliminate anche tutte le risposte associate. Usa con cautela poiché rimuoverà il modulo e tutti i relativi dati."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.display_name": {
+          "source": "Delete Form",
+          "message": "Elimina modulo"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to permanently delete from your account.",
+          "message": "Seleziona il Typeform che desideri eliminare definitivamente dal tuo account."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Modulo"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to delete",
+          "message": "Il modulo da eliminare"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.short_desc": {
+          "source": "Permanently delete a Typeform from your account.",
+          "message": "Elimina definitivamente un Typeform dal tuo account."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Removes an image from your Typeform account. Once deleted, the image will no longer be available for use in any forms. Make sure the image is not currently being used in any active forms before deletion.",
+          "message": "Rimuove un'immagine dal tuo account Typeform. Una volta eliminata, l'immagine non sarà più disponibile per l'uso in alcun modulo. Assicurati che l'immagine non sia attualmente utilizzata in moduli attivi prima dell'eliminazione."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "Elimina immagine"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.desc": {
+          "source": "Select the image that you want to delete from your Typeform account.",
+          "message": "Seleziona l'immagine che desideri eliminare dal tuo account Typeform."
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.display_name": {
+          "source": "Image",
+          "message": "Immagine"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.short_desc": {
+          "source": "The image to delete",
+          "message": "L'immagine da eliminare"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from your Typeform account.",
+          "message": "Elimina un'immagine dal tuo account Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.desc": {
+          "source": "Fetches all workspaces available in your Typeform account with pagination and search capabilities. Workspaces help organize your forms and collaborate with team members. Use this to get workspace information including form counts and sharing status.",
+          "message": "Recupera tutti gli spazi di lavoro disponibili nel tuo account Typeform con funzionalità di paginazione e ricerca. Gli spazi di lavoro aiutano a organizzare i moduli e a collaborare con i membri del team. Utilizzalo per ottenere informazioni sugli spazi di lavoro, inclusi il conteggio dei moduli e lo stato di condivisione."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
+          "source": "List Workspaces",
+          "message": "Elenca workspace"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter workspaces by their name. Leave empty to retrieve all workspaces.",
+          "message": "Termine di ricerca facoltativo per filtrare gli spazi di lavoro in base al nome. Lascia vuoto per recuperare tutti gli spazi di lavoro."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Cerca"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter workspaces by name",
+          "message": "Termine di ricerca per filtrare gli spazi di lavoro per nome"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many workspaces.",
+          "message": "Il numero di pagina da recuperare. Utilizzalo per la paginazione quando sono presenti molti spazi di lavoro."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Numero di pagina per la paginazione"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of workspaces to return per page. Maximum is 200, default is 10.",
+          "message": "Il numero di spazi di lavoro da restituire per pagina. Il valore massimo è 200, il valore predefinito è 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Dimensione pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of workspaces to return per page",
+          "message": "Numero di spazi di lavoro da restituire per pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
+          "source": "Retrieve a list of workspaces in your Typeform account.",
+          "message": "Recupera un elenco di spazi di lavoro nel tuo account Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Fetches all forms in your Typeform account with filtering, sorting, and pagination options. Use this to get an overview of your forms, find specific forms by search criteria, or integrate with other systems.",
+          "message": "Recupera tutti i moduli nel tuo account Typeform con opzioni di filtro, ordinamento e paginazione. Utilizzalo per ottenere una panoramica dei moduli, trovare moduli specifici tramite criteri di ricerca o integrarli con altri sistemi."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "Elenca moduli"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned forms.",
+          "message": "Specifica la modalità di ordinamento dei moduli restituiti."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Criterio di ordinamento"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Come ordinare i risultati"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter forms by their title. Leave empty to retrieve all forms.",
+          "message": "Termine di ricerca facoltativo per filtrare i moduli in base al titolo. Lascia vuoto per recuperare tutti i moduli."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Cerca"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter forms by title",
+          "message": "Termine di ricerca per filtrare i moduli per titolo"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many forms.",
+          "message": "Il numero di pagina da recuperare. Utilizzalo per la paginazione quando sono presenti molti moduli."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Numero di pagina per la paginazione"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of forms to return per page. Maximum is 200, default is 10.",
+          "message": "Il numero di moduli da restituire per pagina. Il valore massimo è 200, il valore predefinito è 10."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Dimensione pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of forms to return per page",
+          "message": "Numero di moduli da restituire per pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.desc": {
+          "source": "Optional workspace ID to filter forms that belong to a specific workspace.",
+          "message": "ID spazio di lavoro opzionale per filtrare i moduli appartenenti a uno specifico spazio di lavoro."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.display_name": {
+          "source": "Workspace ID",
+          "message": "ID spazio di lavoro"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.short_desc": {
+          "source": "Filter forms by workspace",
+          "message": "Filtra i moduli per spazio di lavoro"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms in your Typeform account.",
+          "message": "Recupera un elenco di moduli nel tuo account Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.desc": {
+          "source": "Fetches all images that have been uploaded to your Typeform account. Use this to see what images are available for use in your forms, manage your image library, or get image URLs for integration purposes.",
+          "message": "Recupera tutte le immagini caricate sul tuo account Typeform. Utilizzalo per visualizzare le immagini disponibili per i tuoi moduli, gestire la tua libreria di immagini o ottenere gli URL delle immagini a scopo di integrazione."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.display_name": {
+          "source": "List Images",
+          "message": "Elenca immagini"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.short_desc": {
+          "source": "Retrieve all images in your Typeform account.",
+          "message": "Recupera tutte le immagini nel tuo account Typeform."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Fetches all responses submitted to a specific Typeform with comprehensive filtering and sorting options. Use this to analyze form submissions, export data, or integrate responses with other systems.",
+          "message": "Recupera tutte le risposte inviate a un Typeform specifico con opzioni complete di filtro e ordinamento. Utilizzalo per analizzare gli invii dei moduli, esportare dati o integrare le risposte con altri sistemi."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "Elenca risposte"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.desc": {
+          "source": "Set to true to only return completed responses, false for incomplete responses.",
+          "message": "Imposta su true per restituire solo le risposte completate, false per le risposte incomplete."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.display_name": {
+          "source": "Completed Only",
+          "message": "Solo completate"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.short_desc": {
+          "source": "Only return completed responses",
+          "message": "Restituisci solo le risposte completate"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.desc": {
+          "source": "List of field IDs that must have been answered for a response to be included.",
+          "message": "Elenco di ID di campo a cui è necessario aver risposto affinché una risposta venga inclusa."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.display_name": {
+          "source": "Answered Fields",
+          "message": "Campi con risposta"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.short_desc": {
+          "source": "Only include responses that answered these fields",
+          "message": "Includi solo le risposte che hanno compilato questi campi"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.desc": {
+          "source": "Use this token for pagination to get responses that come after a specific response.",
+          "message": "Usa questo token per la paginazione per ottenere le risposte successive a una risposta specifica."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.display_name": {
+          "source": "After Token",
+          "message": "Token successivo"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination token for results after a specific response",
+          "message": "Token di paginazione per i risultati successivi a una risposta specifica"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.desc": {
+          "source": "Use this token for pagination to get responses that come before a specific response.",
+          "message": "Usa questo token per la paginazione per ottenere le risposte precedenti a una risposta specifica."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.display_name": {
+          "source": "Before Token",
+          "message": "Token precedente"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.short_desc": {
+          "source": "Pagination token for results before a specific response",
+          "message": "Token di paginazione per i risultati precedenti a una risposta specifica"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to exclude from the results.",
+          "message": "Elenco di ID di risposta specifici da escludere dai risultati."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Exclude Response IDs",
+          "message": "Escludi ID risposta"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to exclude",
+          "message": "ID di risposta specifici da escludere"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to retrieve responses from.",
+          "message": "Seleziona il Typeform da cui desideri recuperare le risposte."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Modulo"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to get responses from",
+          "message": "Il modulo da cui ottenere le risposte"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.desc": {
+          "source": "List of specific field IDs to include in the response data.",
+          "message": "Elenco di ID di campo specifici da includere nei dati della risposta."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.display_name": {
+          "source": "Include Fields",
+          "message": "Includi campi"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to include in responses",
+          "message": "Campi specifici da includere nelle risposte"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to include in the results. Only these responses will be returned.",
+          "message": "Elenco di ID di risposta specifici da includere nei risultati. Verranno restituite solo queste risposte."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Include Response IDs",
+          "message": "Includi ID risposta"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to include",
+          "message": "ID di risposta specifici da includere"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned responses.",
+          "message": "Specifica come ordinare le risposte restituite."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Criterio di ordinamento"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "Come ordinare i risultati"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.desc": {
+          "source": "Filter responses to only include those submitted after the specified date.",
+          "message": "Filtra le risposte per includere solo quelle inviate dopo la data specificata."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.display_name": {
+          "source": "Since Date",
+          "message": "Data iniziale"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.short_desc": {
+          "source": "Only include responses submitted after this date",
+          "message": "Includi solo le risposte inviate dopo questa data"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of responses to return. Maximum is 1000, default is 25.",
+          "message": "Il numero di risposte da restituire. Il valore massimo è 1000, il valore predefinito è 25."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "Dimensione pagina"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of responses to return",
+          "message": "Numero di risposte da restituire"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.desc": {
+          "source": "Advanced query string to filter responses based on answer values.",
+          "message": "Stringa di query avanzata per filtrare le risposte in base ai valori delle risposte."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Query"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.short_desc": {
+          "source": "Advanced query to filter responses",
+          "message": "Query avanzata per filtrare le risposte"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Completato"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnBhcnRpYWw.display_name": {
+          "source": "Partial",
+          "message": "Parziale"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnN0YXJ0ZWQ.display_name": {
+          "source": "Started",
+          "message": "Avviato"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Filter responses by their completion status (started, partial, or completed).",
+          "message": "Filtra le risposte in base al loro stato di completamento (started, partial o completed)."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Types",
+          "message": "Tipi di risposta"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Filter by response completion status",
+          "message": "Filtra in base allo stato di completamento della risposta"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.desc": {
+          "source": "Filter responses to only include those submitted before the specified date.",
+          "message": "Filtra le risposte per includere solo quelle inviate prima della data specificata."
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.display_name": {
+          "source": "Until Date",
+          "message": "Data finale"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.short_desc": {
+          "source": "Only include responses submitted before this date",
+          "message": "Includi solo le risposte inviate prima di questa data"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve responses submitted to a specific Typeform.",
+          "message": "Recupera le risposte inviate a un Typeform specifico."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Typeform** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Typeform** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora disponibili come azioni native in questa app."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Typeform",
+          "message": "Esegui una chiamata API personalizzata a Typeform"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "This trigger activates whenever someone submits a response to your Typeform. It provides complete response data including all answers, form definition, calculated scores, and metadata. Perfect for processing form submissions, updating databases, sending notifications, or triggering follow-up workflows based on user responses.",
+          "message": "Questo trigger si attiva ogni volta che qualcuno invia una risposta al tuo Typeform. Fornisce i dati completi della risposta, inclusi tutte le risposte, la definizione del modulo, i punteggi calcolati e i metadati. Perfetto per elaborare gli invii dei moduli, aggiornare database, inviare notifiche o attivare flussi di lavoro successivi in base alle risposte degli utenti."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "Nuova risposta del modulo"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "Select the specific Typeform that you want to monitor for new submissions. The trigger will fire every time someone completes and submits this form.",
+          "message": "Seleziona il Typeform specifico che desideri monitorare per i nuovi invii. Il trigger si attiverà ogni volta che qualcuno compila e invia questo modulo."
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "Modulo"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Typeform to monitor for new responses",
+          "message": "Il Typeform da monitorare per le nuove risposte"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Typeform form.",
+          "message": "Si attiva quando viene inviata una nuova risposta a un modulo Typeform."
+        },
+        "app.VHlwZWZvcm0.desc": {
+          "source": "Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.",
+          "message": "Typeform è un versatile generatore di moduli che ti consente di creare moduli, sondaggi, quiz e votazioni coinvolgenti e interattivi. Grazie alla sua interfaccia intuitiva e alle potenti funzionalità, puoi raccogliere risposte, analizzare dati e integrare altri strumenti per ottimizzare il tuo flusso di lavoro. Perfetto per la lead generation, il feedback dei clienti, la registrazione agli eventi e le ricerche di mercato."
+        },
+        "app.VHlwZWZvcm0.display_name": {
+          "source": "Typeform",
+          "message": "Typeform"
+        },
+        "app.VHlwZWZvcm0.short_desc": {
+          "source": "Create and manage interactive forms, surveys, and quizzes with Typeform.",
+          "message": "Crea e gestisci moduli, sondaggi e quiz interattivi con Typeform."
+        }
+      }
+    }
+  }
+}

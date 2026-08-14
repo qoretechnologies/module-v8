@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.QmFzZXJvdw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Créer des enregistrements"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.",
+          "message": "Crée un nouvel enregistrement dans la table Baserow spécifiée. L'action présente dynamiquement le schéma de la table, vous permettant de fournir des valeurs pour chaque colonne. Vous pouvez éventuellement spécifier un ID de ligne pour insérer la nouvelle ligne avant celle-ci. Renvoie la ligne nouvellement créée avec toutes ses données."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "Créer une ligne"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.desc": {
+          "source": "Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.",
+          "message": "Spécifiez éventuellement un ID de ligne pour insérer la nouvelle ligne avant celle-ci dans l'ordre de la table. Laissez vide pour ajouter la ligne à la fin."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.display_name": {
+          "source": "Before Row ID",
+          "message": "Avant l'ID de ligne"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.short_desc": {
+          "source": "Insert the new row before this row",
+          "message": "Insérer la nouvelle ligne avant cette ligne"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "Fournissez des valeurs pour les colonnes de la table. La structure est générée dynamiquement en fonction du schéma de la table sélectionnée, affichant toutes les colonnes disponibles avec leurs types de données et contraintes."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "Données de la ligne"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "Les données à insérer dans la nouvelle ligne"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "Sélectionnez la table Baserow cible pour insérer la nouvelle ligne. Les champs disponibles seront chargés dynamiquement en fonction du schéma de la table sélectionnée."
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "La table dans laquelle la ligne sera insérée"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Baserow table",
+          "message": "Insérer une nouvelle ligne dans une table Baserow"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.desc": {
+          "source": "Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.",
+          "message": "Récupère des métadonnées complètes pour tous les champs d'une table Baserow spécifique, y compris les types de champs, l'ordre, les descriptions, les valeurs par défaut et les propriétés. Cette action vous aide à comprendre la structure et la configuration de vos tables de base de données."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.display_name": {
+          "source": "Get Table Fields",
+          "message": "Obtenir les champs de la table"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table whose field definitions you want to fetch. All fields and their configurations will be returned.",
+          "message": "Sélectionnez la table Baserow dont vous souhaitez récupérer les définitions de champs. Tous les champs et leurs configurations seront renvoyés."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve fields from",
+          "message": "La table à partir de laquelle récupérer les champs"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.short_desc": {
+          "source": "Retrieve all field definitions from a Baserow table",
+          "message": "Récupérer toutes les définitions de champs d'une table Baserow"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.desc": {
+          "source": "Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.",
+          "message": "Récupère des données détaillées pour une seule ligne dans une table Baserow par son ID. Renvoie toutes les valeurs de colonne pour la ligne spécifiée avec des types de champs chargés dynamiquement."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.display_name": {
+          "source": "Get Table Row",
+          "message": "Obtenir la ligne de la table"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to retrieve from the table by its ID. All data for this row will be returned.",
+          "message": "Sélectionnez la ligne spécifique à récupérer dans la table par son ID. Toutes les données de cette ligne seront renvoyées."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Ligne"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to retrieve",
+          "message": "La ligne à récupérer"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve a row. The available rows will be loaded based on this selection.",
+          "message": "Sélectionnez la table Baserow à partir de laquelle vous souhaitez récupérer une ligne. Les lignes disponibles seront chargées en fonction de cette sélection."
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve the row from",
+          "message": "La table à partir de laquelle récupérer la ligne"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Retrieve a specific row from a Baserow table",
+          "message": "Récupérer une ligne spécifique d'un tableau Baserow"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "Supprimer des enregistrements du tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Supprimer les enregistrements"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "Supprimer des enregistrements du tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.",
+          "message": "Supprime une seule ligne d'un tableau Baserow grâce à son ID. À utiliser avec précaution car cette opération est irréversible et supprime définitivement la ligne spécifiée."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "Supprimer la ligne"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to delete from the table by its ID. This row will be permanently removed.",
+          "message": "Sélectionnez la ligne spécifique à supprimer du tableau par son ID. Cette ligne sera supprimée définitivement."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Ligne"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to delete",
+          "message": "La ligne à supprimer"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to delete a row. Ensure you have proper permissions for delete operations on this table.",
+          "message": "Sélectionnez le tableau Baserow dont vous souhaitez supprimer une ligne. Assurez-vous d'avoir les autorisations appropriées pour les opérations de suppression sur ce tableau."
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to delete the row from",
+          "message": "Le tableau duquel supprimer la ligne"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Baserow table",
+          "message": "Supprimer une ligne spécifique d'un tableau Baserow"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.",
+          "message": "Récupère une liste de tous les tableaux de votre base de données Baserow avec leurs métadonnées de base, notamment les ID de tableau, les noms, l'ordre et les ID de base de données associés."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "Lister les tables"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get all tables in your Baserow database",
+          "message": "Obtenir tous les tableaux de votre base de données Baserow"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.",
+          "message": "Récupère les lignes d'un tableau Baserow avec prise en charge du filtrage, du tri, de la pagination et de la recherche. Renvoie une liste d'enregistrements correspondant à vos critères de requête ainsi que le nombre total et les informations de pagination."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "Lister les lignes"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply multiple filter conditions to retrieve only rows that match specific criteria. Supports various comparison operators and logical combinations.",
+          "message": "Appliquez plusieurs conditions de filtrage pour ne récupérer que les lignes correspondant à des critères spécifiques. Prend en charge divers opérateurs de comparaison et combinaisons logiques."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtre"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on conditions",
+          "message": "Filtrer les lignes selon des conditions"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a field and sort direction (ascending or descending).",
+          "message": "Définissez comment trier les lignes récupérées en spécifiant un champ et un sens de tri (croissant ou décroissant)."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Ordre"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.short_desc": {
+          "source": "Sort the results by a specific field",
+          "message": "Trier les résultats par un champ spécifique"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to filter rows across all text fields in the table. Only rows containing this term will be returned.",
+          "message": "Saisissez un terme de recherche pour filtrer les lignes dans tous les champs textuels du tableau. Seules les lignes contenant ce terme seront renvoyées."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Rechercher"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter rows",
+          "message": "Terme de recherche pour filtrer les lignes"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve per page. Defaults to 100 rows if not specified.",
+          "message": "Spécifiez le nombre maximal de lignes à récupérer par page. La valeur par défaut est de 100 lignes si elle n'est pas spécifiée."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.display_name": {
+          "source": "Size",
+          "message": "Taille"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.short_desc": {
+          "source": "Number of rows per page",
+          "message": "Nombre de lignes par page"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve. Used in combination with size for pagination through large datasets. Defaults to page 1.",
+          "message": "Spécifiez la page de résultats à récupérer. Utilisé en combinaison avec la taille pour la pagination dans de grands ensembles de données. La valeur par défaut est la page 1."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Page"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "Numéro de page pour la pagination"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "Sélectionnez le tableau Baserow dont vous souhaitez récupérer les lignes. Les colonnes disponibles pour le filtrage et le tri seront chargées en fonction de cette sélection."
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.short_desc": {
+          "source": "The table to query",
+          "message": "Le tableau à interroger"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Baserow table",
+          "message": "Interroger et récupérer des lignes à partir d'un tableau Baserow"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Baserow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Passez un appel API HTTP / REST personnalisé à **Baserow** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'accès URI (relatif à l'URL de base de l'API de la connexion), des paramètres de requête facultatifs, des en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code d'état, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme actions principales dans cette application."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Baserow",
+          "message": "Effectuer un appel API personnalisé vers Baserow"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.",
+          "message": "Surveille un tableau Baserow pour détecter les nouvelles lignes et se déclenche lorsque de nouveaux enregistrements sont insérés. Prend en charge le filtrage et la recherche optionnels pour ne se déclencher que pour les lignes correspondant à des critères spécifiques."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "Nouvelle ligne"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.desc": {
+          "source": "Apply filter conditions to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "Appliquez des conditions de filtrage pour ne vous déclencher que pour les nouvelles lignes correspondant à des critères spécifiques. Laissez vide pour vous déclencher pour toutes les nouvelles lignes."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtre"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.short_desc": {
+          "source": "Optional conditions to filter new rows",
+          "message": "Conditions facultatives pour filtrer les nouvelles lignes"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to trigger only for new rows that contain this term in any text field. Leave empty to trigger for all new rows.",
+          "message": "Saisissez un terme de recherche pour ne déclencher que pour les nouvelles lignes qui contiennent ce terme dans n'importe quel champ textuel. Laissez vide pour déclencher pour toutes les nouvelles lignes."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Rechercher"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.short_desc": {
+          "source": "Optional search term to filter new rows",
+          "message": "Terme de recherche facultatif pour filtrer les nouvelles lignes"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the Baserow table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "Sélectionnez le tableau Baserow que vous souhaitez surveiller. Le déclencheur s'activera chaque fois que de nouvelles lignes seront insérées dans ce tableau."
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "Le tableau à surveiller pour les nouvelles lignes"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new row is added to a Baserow table",
+          "message": "Se déclenche lorsqu'une nouvelle ligne est ajoutée à un tableau Baserow"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "Rechercher des enregistrements correspondants dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Rechercher des enregistrements"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "Rechercher des enregistrements correspondants dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "Rechercher un enregistrement correspondant unique dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trouver un seul enregistrement"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "Rechercher un enregistrement correspondant unique dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "Mettre à jour des enregistrements existants dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Mettre à jour des enregistrements"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "Mettre à jour des enregistrements existants dans le tableau donné dans l'application \"Baserow\""
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.desc": {
+          "source": "Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.",
+          "message": "Met à jour les valeurs d'une ligne existante dans un tableau Baserow. L'action présente dynamiquement le schéma du tableau, vous permettant de modifier les valeurs de chaque colonne. Renvoie la ligne mise à jour avec toutes ses données actuelles."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.display_name": {
+          "source": "Update Row",
+          "message": "Mettre à jour la ligne"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.",
+          "message": "Fournissez de nouvelles valeurs pour les colonnes du tableau que vous souhaitez mettre à jour. La structure est générée dynamiquement sur la base du schéma du tableau sélectionné."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "Données de la ligne"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the row",
+          "message": "Les nouvelles données pour la ligne"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to update by its ID. The current values of this row will be modified.",
+          "message": "Sélectionnez la ligne spécifique à mettre à jour par son ID. Les valeurs actuelles de cette ligne seront modifiées."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "Ligne"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to update",
+          "message": "La ligne à mettre à jour"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table containing the row you want to update. The available fields will be dynamically loaded based on the table schema.",
+          "message": "Sélectionnez le tableau Baserow contenant la ligne que vous souhaitez mettre à jour. Les champs disponibles seront chargés dynamiquement en fonction du schéma du tableau."
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table containing the row to update",
+          "message": "Le tableau contenant la ligne à mettre à jour"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.short_desc": {
+          "source": "Update an existing row in a Baserow table",
+          "message": "Mettre à jour une ligne existante dans un tableau Baserow"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.",
+          "message": "Téléverse un fichier dans le système de stockage de fichiers de Baserow. Renvoie les métadonnées du fichier téléversé, notamment l'URL, la taille, le type MIME et les vignettes générées pour les images. Le fichier téléversé peut ensuite être référencé dans des champs de fichier au sein de vos tableaux."
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Téléverser un fichier"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload to Baserow storage. The file will be stored and available for use in file fields.",
+          "message": "Sélectionnez ou fournissez le fichier à téléverser sur le stockage Baserow. Le fichier sera stocké et disponible pour être utilisé dans les champs de fichier."
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Fichier"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Le fichier à téléverser"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Baserow storage",
+          "message": "Téléverser un fichier sur le stockage Baserow"
+        },
+        "app.QmFzZXJvdw.desc": {
+          "source": "The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.",
+          "message": "L'intégration Baserow offre un accès complet aux opérations de votre base de données Baserow. Créez, lisez, mettez à jour et supprimez des lignes dans vos tableaux, téléversez des fichiers et surveillez les nouvelles entrées avec des déclencheurs en temps réel. Que vous ayez besoin de gérer des données, de filtrer des résultats ou de suivre de nouveaux enregistrements, cette intégration simplifie l'automatisation de vos flux de travail et la gestion de vos bases de données Baserow."
+        },
+        "app.QmFzZXJvdw.display_name": {
+          "source": "Baserow",
+          "message": "Baserow"
+        },
+        "app.QmFzZXJvdw.short_desc": {
+          "source": "Connect to Baserow to manage your database tables, rows, and files with powerful automation",
+          "message": "Connectez-vous à Baserow pour gérer vos tableaux de base de données, lignes et fichiers grâce à une automatisation puissante"
+        }
+      }
+    }
+  }
+}

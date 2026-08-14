@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
+          "message": "채팅에서 메시지를 삭제합니다. 봇은 자신의 메시지를 삭제할 수 있으며, 관리자 권한이 있는 경우 다른 사용자의 메시지도 삭제할 수 있습니다."
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "메시지 삭제"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be deleted is located",
+          "message": "삭제할 메시지가 있는 채팅을 선택하세요"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be deleted",
+          "message": "메시지를 삭제할 채팅"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be deleted from the chat",
+          "message": "채팅에서 삭제할 메시지의 고유 식별자입니다"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "메시지 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to delete",
+          "message": "삭제할 메시지의 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a specific message from a chat",
+          "message": "채팅에서 특정 메시지 삭제"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.desc": {
+          "source": "Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.",
+          "message": "이전에 봇이 전송한 메시지의 텍스트 내용을 수정합니다. 봇이 전송한 텍스트 메시지에서만 작동합니다."
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.display_name": {
+          "source": "Edit Message",
+          "message": "메시지 수정"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be edited is located",
+          "message": "수정할 메시지가 있는 채팅을 선택하세요"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat containing the message to edit",
+          "message": "수정할 메시지가 포함된 채팅"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "활성화하면 메시지의 링크에 자동 미리보기가 표시되지 않습니다"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.display_name": {
+          "source": "Disable Web Page Preview",
+          "message": "웹 페이지 미리보기 비활성화"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "자동 링크 미리보기 비활성화"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be edited",
+          "message": "수정할 메시지의 고유 식별자입니다"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "메시지 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to edit",
+          "message": "수정할 메시지의 ID"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "마크다운"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the text (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "텍스트 서식 모드(일반 텍스트, Markdown, Markdown V2 또는 HTML)를 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.display_name": {
+          "source": "Text Format",
+          "message": "텍스트 서식"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the new message text",
+          "message": "새 메시지 텍스트의 서식 지정 방법"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The updated text that will replace the current message content",
+          "message": "현재 메시지 콘텐츠를 대체할 업데이트된 텍스트입니다"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "새 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The new text content for the message",
+          "message": "메시지의 새 텍스트 콘텐츠입니다"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.short_desc": {
+          "source": "Edit the text of a previously sent message",
+          "message": "이전에 전송한 메시지의 텍스트를 편집합니다"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.desc": {
+          "source": "Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions",
+          "message": "봇이 최근에 메시지나 상호작용을 받은 대화, 그룹 및 채널 목록을 조회합니다"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.display_name": {
+          "source": "List Recent Chats",
+          "message": "최근 대화 목록 조회"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of recent chats to retrieve (default: 10)",
+          "message": "조회할 최대 최근 대화 수 (기본값: 10)"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of chats to return",
+          "message": "반환할 최대 대화 수"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.short_desc": {
+          "source": "Get a list of recent chats the bot has interacted with",
+          "message": "봇이 상호작용한 최근 대화 목록을 가져옵니다"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Telegram** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Telegram**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 노출되지 않은 엔드포인트에 이 작업을 사용하세요."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Telegram",
+          "message": "Telegram에 사용자 지정 API 호출 수행"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors a chat for new incoming messages and triggers automation workflows when messages are received from users or other bots",
+          "message": "새 수신 메시지가 있는지 대화를 모니터링하고 사용자 또는 다른 봇으로부터 메시지를 수신했을 때 자동화 워크플로를 트리거합니다"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "새 메시지"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the specific chat, group, or channel where you want to detect new incoming messages",
+          "message": "새 수신 메시지를 감지할 특정 대화, 그룹 또는 채널을 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat to Monitor",
+          "message": "모니터링할 대화"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat to monitor for new messages",
+          "message": "새 메시지를 모니터링할 대화입니다"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in a specific chat",
+          "message": "특정 대화에서 새 메시지가 수신되면 트리거됩니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",
+          "message": "봇이 액세스할 수 있는 대화, 그룹 또는 채널에 서식이 포함된(선택 사항) 텍스트 메시지를 보냅니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message",
+          "message": "메시지 전송"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the message",
+          "message": "메시지를 보낼 대화, 그룹 또는 채널을 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the message to",
+          "message": "메시지를 보낼 대화입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "활성화하면 메시지의 링크에 자동 미리보기가 표시되지 않습니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.display_name": {
+          "source": "Disable Link Preview",
+          "message": "링크 미리보기 비활성화"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "자동 링크 미리보기 비활성화"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the message without notification sound",
+          "message": "활성화하면 사용자가 알림 소리 없이 메시지를 받게 됩니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "무음으로 전송"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the message without notification sound",
+          "message": "알림 소리 없이 메시지를 보냅니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "마크다운"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.desc": {
+          "source": "Choose the formatting mode for the message (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "메시지 서식 모드(일반 텍스트, Markdown, Markdown V2 또는 HTML)를 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.display_name": {
+          "source": "Text Format",
+          "message": "텍스트 서식"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.short_desc": {
+          "source": "How to format the message text",
+          "message": "메시지 텍스트의 서식 지정 방법"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.desc": {
+          "source": "The message content to send. Can include formatting depending on the selected format mode",
+          "message": "전송할 메시지 내용입니다. 선택한 서식 모드에 따라 서식을 포함할 수 있습니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.display_name": {
+          "source": "Message Text",
+          "message": "메시지 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "메시지의 텍스트 내용"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a text message to a chat",
+          "message": "대화에 텍스트 메시지를 보냅니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.desc": {
+          "source": "Upload and send an image file to any chat, group, or channel with optional caption and formatting",
+          "message": "선택적 캡션 및 서식과 함께 이미지 파일을 모든 대화, 그룹 또는 채널에 업로드하여 전송합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.display_name": {
+          "source": "Send Photo",
+          "message": "사진 보내기"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.desc": {
+          "source": "Text description or caption to accompany the photo",
+          "message": "사진과 함께 표시할 텍스트 설명 또는 캡션입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.display_name": {
+          "source": "Photo Caption",
+          "message": "사진 캡션"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the photo",
+          "message": "사진에 대한 선택적 캡션입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "마크다운"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the photo caption",
+          "message": "사진 캡션의 서식 모드를 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "캡션 서식"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "캡션 텍스트의 서식 지정 방법"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the photo",
+          "message": "사진을 보낼 대화, 그룹 또는 채널을 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the photo to",
+          "message": "사진을 보낼 대화입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the photo without notification sound",
+          "message": "활성화하면 사용자가 알림 소리 없이 사진을 받게 됩니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "무음으로 전송"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the photo without notification sound",
+          "message": "알림 소리 없이 사진을 보냅니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.desc": {
+          "source": "Upload the image file (JPG, PNG, GIF, etc.) to send to the chat",
+          "message": "대화로 전송할 이미지 파일(JPG, PNG, GIF 등)을 업로드합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.display_name": {
+          "source": "Photo File",
+          "message": "사진 파일"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.short_desc": {
+          "source": "The image file to send",
+          "message": "전송할 이미지 파일입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the photo cannot be forwarded or saved by users",
+          "message": "활성화하면 사용자가 사진을 전달하거나 저장할 수 없습니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "콘텐츠 보호"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "콘텐츠 전달 및 저장 방지"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.short_desc": {
+          "source": "Send a photo with optional caption to a chat",
+          "message": "선택적 캡션과 함께 사진을 대화로 보냅니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.desc": {
+          "source": "Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge",
+          "message": "피드백을 수집하거나 지식을 테스트하는 데 적합한 여러 선택지가 있는 대화형 투표 또는 퀴즈를 만듭니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.display_name": {
+          "source": "Send Poll",
+          "message": "투표 보내기"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.desc": {
+          "source": "Select which answer option is correct (zero-based index, only for quiz polls)",
+          "message": "어느 응답 옵션이 정답인지 선택합니다(0부터 시작하는 인덱스, 퀴즈 투표 전용)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.display_name": {
+          "source": "Correct Answer",
+          "message": "정답"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.short_desc": {
+          "source": "The correct answer for quiz polls",
+          "message": "퀴즈 투표의 정답입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the poll",
+          "message": "투표를 보낼 대화, 그룹 또는 채널을 선택합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the poll to",
+          "message": "투표를 보낼 대화입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "Unix timestamp for when the poll should automatically close",
+          "message": "투표가 자동으로 마감되어야 하는 Unix 타임스탬프입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "마감일"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "Specific date/time to close the poll",
+          "message": "투표를 마감할 특정 날짜/시간입니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.desc": {
+          "source": "The answer choices that users can select from. Must have between 2 and 10 options",
+          "message": "사용자가 선택할 수 있는 답변 선택지입니다. 2개에서 10개 사이의 옵션이 있어야 합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.display_name": {
+          "source": "Answer Options",
+          "message": "응답 옵션"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.short_desc": {
+          "source": "List of possible answers (2-10 options)",
+          "message": "가능한 답변 목록(2~10개 옵션)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.desc": {
+          "source": "If enabled, users can select more than one answer option (only for regular polls)",
+          "message": "활성화하면 사용자가 둘 이상의 응답 옵션을 선택할 수 있습니다(일반 투표 전용)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.display_name": {
+          "source": "Multiple Answers",
+          "message": "복수 응답"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.short_desc": {
+          "source": "Allow users to select multiple options",
+          "message": "사용자가 여러 옵션을 선택할 수 있도록 허용합니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the poll without notification sound",
+          "message": "활성화하면 사용자가 알림 소리 없이 투표를 받게 됩니다"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "무음으로 전송"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the poll without notification sound",
+          "message": "알림 소리 없이 투표 보내기"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.desc": {
+          "source": "Optional explanation that appears when users answer the quiz",
+          "message": "사용자가 퀴즈를 풀 때 표시되는 선택적 설명"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.display_name": {
+          "source": "Explanation",
+          "message": "설명"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.short_desc": {
+          "source": "Explanation text for the correct answer",
+          "message": "정답에 대한 설명 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "마크다운"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the explanation text",
+          "message": "설명 텍스트의 서식 모드 선택"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.display_name": {
+          "source": "Explanation Format",
+          "message": "설명 서식"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the explanation text",
+          "message": "설명 텍스트 서식 지정 방법"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.desc": {
+          "source": "If enabled, the poll will be sent already closed (for demonstration purposes)",
+          "message": "활성화하면 투표가 이미 마감된 상태로 전송됩니다(시연 목적)."
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.display_name": {
+          "source": "Send Closed Poll",
+          "message": "마감된 투표 보내기"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.short_desc": {
+          "source": "Send the poll in a closed state",
+          "message": "마감된 상태로 투표 보내기"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.desc": {
+          "source": "If enabled, user votes will be anonymous. If disabled, votes will be visible to other users",
+          "message": "활성화하면 사용자 투표가 익명으로 처리됩니다. 비활성화하면 다른 사용자에게 투표 내역이 표시됩니다."
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.display_name": {
+          "source": "Anonymous Poll",
+          "message": "익명 투표"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.short_desc": {
+          "source": "Should the poll be anonymous?",
+          "message": "투표를 익명으로 설정할까요?"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.desc": {
+          "source": "Duration in seconds that the poll will accept votes (5-600 seconds)",
+          "message": "투표를 받을 시간(초 단위, 5~600초)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.display_name": {
+          "source": "Open Period",
+          "message": "진행 기간"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.short_desc": {
+          "source": "How long the poll stays open (in seconds)",
+          "message": "투표 진행 시간(초 단위)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnF1aXo.display_name": {
+          "source": "Quiz",
+          "message": "퀴즈"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnJlZ3VsYXI.display_name": {
+          "source": "Regular Poll",
+          "message": "일반 투표"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.desc": {
+          "source": "Choose between a regular poll or a quiz where you can specify correct answers",
+          "message": "일반 투표 또는 정답을 지정할 수 있는 퀴즈 중에서 선택"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.display_name": {
+          "source": "Poll Type",
+          "message": "투표 유형"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.short_desc": {
+          "source": "Regular poll or quiz with correct answers",
+          "message": "일반 투표 또는 정답이 있는 퀴즈"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the poll cannot be forwarded by users",
+          "message": "활성화하면 사용자가 투표를 전달할 수 없습니다."
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "콘텐츠 보호"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "콘텐츠 전달 및 저장 방지"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.desc": {
+          "source": "The question that users will answer in the poll",
+          "message": "사용자가 투표에서 답변할 질문"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.display_name": {
+          "source": "Poll Question",
+          "message": "투표 질문"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.short_desc": {
+          "source": "The main question for the poll",
+          "message": "투표의 기본 질문"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.short_desc": {
+          "source": "Create and send a poll or quiz to a chat",
+          "message": "채팅에 투표 또는 퀴즈를 생성하여 전송"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.desc": {
+          "source": "Pin an important message to the top of a group or channel chat for all members to see",
+          "message": "모든 멤버가 볼 수 있도록 그룹 또는 채널 채팅 상단에 중요 메시지 고정"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.display_name": {
+          "source": "Pin Message",
+          "message": "메시지 고정"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to pin the message",
+          "message": "메시지를 고정할 그룹 또는 채널 선택"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be pinned",
+          "message": "메시지를 고정할 채팅"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, the message will be pinned without sending a notification to group members",
+          "message": "활성화하면 그룹 멤버에게 알림을 보내지 않고 메시지를 고정합니다."
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Pin Silently",
+          "message": "알림 없이 고정"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Pin the message without notification",
+          "message": "알림 없이 메시지 고정"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be pinned",
+          "message": "고정할 메시지의 고유 식별자"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "메시지 ID"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to pin",
+          "message": "고정할 메시지 ID"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.short_desc": {
+          "source": "Pin a message in a group or channel",
+          "message": "그룹 또는 채널에 메시지 고정"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.desc": {
+          "source": "Remove a pinned message from a group or channel, or unpin all currently pinned messages",
+          "message": "그룹 또는 채널에서 고정된 메시지를 제거하거나 현재 고정된 모든 메시지의 고정을 해제합니다."
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.display_name": {
+          "source": "Unpin Message",
+          "message": "메시지 고정 해제"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to unpin messages",
+          "message": "메시지 고정을 해제할 그룹 또는 채널 선택"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "채팅"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be unpinned",
+          "message": "메시지 고정을 해제할 채팅"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the specific message to unpin. Leave empty to unpin all pinned messages",
+          "message": "고정을 해제할 특정 메시지의 고유 식별자입니다. 고정된 모든 메시지를 해제하려면 비워 두세요."
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "메시지 ID"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to unpin (leave empty to unpin all)",
+          "message": "고정을 해제할 메시지 ID(모두 해제하려면 비워 둠)"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.short_desc": {
+          "source": "Unpin a specific message or all pinned messages",
+          "message": "특정 메시지 또는 고정된 모든 메시지 고정 해제"
+        },
+        "app.VGVsZWdyYW0.desc": {
+          "source": "Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.",
+          "message": "Bot Token을 사용하여 Telegram 봇을 연결하고 메시지를 보내며 수신 업데이트를 처리합니다. 인증은 @BotFather가 발급한 Bot Token으로만 이루어지며 사용자 로그인은 필요하지 않습니다."
+        },
+        "app.VGVsZWdyYW0.display_name": {
+          "source": "Telegram",
+          "message": "Telegram"
+        },
+        "app.VGVsZWdyYW0.short_desc": {
+          "source": "Connect and interact with Telegram via a bot",
+          "message": "봇을 통해 Telegram에 연결하고 상호 작용"
+        }
+      }
+    }
+  }
+}

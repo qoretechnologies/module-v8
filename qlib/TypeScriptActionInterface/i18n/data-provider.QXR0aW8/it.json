@@ -1,0 +1,1361 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.QXR0aW8.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "Crea nuovi record nella tabella data nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crea record"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "Crea nuovi record nella tabella data nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.desc": {
+          "source": "This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace.",
+          "message": "Questa azione crea una nuova nota e la allega a un record specifico all'interno di un oggetto Attio. Le note possono essere scritte in testo semplice o in formato markdown e includono un titolo e un corpo del contenuto. Servono a documentare informazioni importanti sui record nel tuo workspace."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
+          "source": "Create Note",
+          "message": "Crea nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.desc": {
+          "source": "Enter the content for your note. This can be formatted according to the selected format type (plain text or markdown).",
+          "message": "Inserisci il contenuto della nota. Questo può essere formattato in base al tipo di formato selezionato (testo semplice o markdown)."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "Contenuto"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.short_desc": {
+          "source": "The main body text of the note",
+          "message": "Il testo principale del corpo della nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.desc": {
+          "source": "Choose whether the note content should be treated as plain text or markdown. Markdown allows for rich text formatting including headers, lists, links, and more.",
+          "message": "Scegli se il contenuto della nota debba essere trattato come testo semplice o markdown. Il markdown consente la formattazione di testo arricchito tra cui intestazioni, elenchi, link e altro ancora."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.display_name": {
+          "source": "Format",
+          "message": "Formato"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.short_desc": {
+          "source": "The text format to use for the note content",
+          "message": "Il formato di testo da utilizzare per il contenuto della nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with.",
+          "message": "Seleziona l'oggetto Attio che contiene il record a cui desideri allegare questa nota. Questo definisce a quale tipo di oggetto verrà associata la nota."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "Oggetto padre"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The object that contains the record to attach the note to",
+          "message": "L'oggetto che contiene il record a cui allegare la nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "Select the specific record within the parent object that this note should be attached to. Available options will be based on the parent object you selected.",
+          "message": "Seleziona il record specifico all'interno dell'oggetto padre a cui allegare questa nota. Le opzioni disponibili dipenderanno dall'oggetto padre selezionato."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID record padre"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "The specific record to attach the note to",
+          "message": "Il record specifico a cui allegare la nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.desc": {
+          "source": "Provide a title for the note. This will appear as the heading when viewing the note in Attio.",
+          "message": "Fornisci un titolo per la nota. Questo apparirà come intestazione durante la visualizzazione della nota in Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.short_desc": {
+          "source": "The title of the note",
+          "message": "Il titolo della nota"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
+          "source": "Creates a new note attached to a specific record in Attio.",
+          "message": "Crea una nuova nota collegata a un record specifico in Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.",
+          "message": "Crea un nuovo record in un oggetto specificato all'interno del tuo workspace Attio. Questa azione ti consente di definire il tipo di oggetto e gli attributi per il nuovo record."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Create Object Record",
+          "message": "Crea record oggetto"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace.",
+          "message": "Scegli il tipo di oggetto in cui desideri creare un nuovo record. Può essere un oggetto personalizzato o un oggetto standard nel tuo workspace Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Oggetto"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Select the object type",
+          "message": "Seleziona il tipo di oggetto"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Create a new record in a specified object",
+          "message": "Crea un nuovo record in un oggetto specificato"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.",
+          "message": "Crea una nuova voce in una lista Attio specificata. Richiede l'identificatore della lista, il riferimento all'oggetto padre e i valori degli attributi per compilare la voce."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Create List Entry",
+          "message": "Crea voce di lista"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list where the new entry will be created.",
+          "message": "Lo slug API della lista Attio in cui verrà creata la nuova voce."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to create entry in",
+          "message": "La lista Attio in cui creare la voce"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this list entry will be linked.",
+          "message": "L'identificatore unico del record padre a cui verrà collegata questa voce di lista."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID record padre"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "ID del record padre"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Create a new entry in an Attio list.",
+          "message": "Crea una nuova voce in una lista Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members.",
+          "message": "Questa azione crea un nuovo compito in Attio con contenuto, scadenza, stato di completamento e assegnatari opzionali. Puoi impostare il contenuto del compito, specificare una data di scadenza, contrassegnarlo come completato o meno e assegnarlo a uno o più membri del workspace."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Crea attività"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "Enter the content or description for the task. This will be the main text describing what needs to be done.",
+          "message": "Inserisci il contenuto o la descrizione per il compito. Questo sarà il testo principale che descrive ciò che deve essere fatto."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "Contenuto dell'attività"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The content or description of the task",
+          "message": "Il contenuto o la descrizione del compito"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.desc": {
+          "source": "Select one or more workspace members who will be assigned to this task. These members will be responsible for completing the task and will receive notifications about it.",
+          "message": "Seleziona uno o più membri del workspace che verranno assegnati a questo compito. Questi membri saranno responsabili del completamento del compito e riceveranno notifiche al riguardo."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.display_name": {
+          "source": "Assignees",
+          "message": "Assegnatari"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.short_desc": {
+          "source": "Workspace members to assign the task to",
+          "message": "Membri del workspace a cui assegnare il compito"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.desc": {
+          "source": "Specify the date and time by which the task should be completed. This will be displayed in the task details and can be used for sorting and filtering tasks.",
+          "message": "Specifica la data e l'ora entro cui il compito deve essere completato. Verrà visualizzata nei dettagli del compito e potrà essere utilizzata per ordinare e filtrare i compiti."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.display_name": {
+          "source": "Deadline",
+          "message": "Scadenza"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.short_desc": {
+          "source": "The deadline date for the task",
+          "message": "La data di scadenza per il compito"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Specify whether the task should be marked as completed when created. Default is false (task is not completed).",
+          "message": "Specifica se il compito deve essere contrassegnato come completato al momento della creazione. Il valore predefinito è false (il compito non è completato)."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "Completato"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Whether the task is already completed",
+          "message": "Se il compito è già completato"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Creates a new task in Attio with specified details.",
+          "message": "Crea un nuovo compito in Attio con i dettagli specificati."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.desc": {
+          "source": "Retrieve Notes from your Attio workspace. ",
+          "message": "Recupera le note dal tuo workspace Attio. "
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
+          "source": "Get Notes",
+          "message": "Ottieni note"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.desc": {
+          "source": "The number of notes to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Il numero di note da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of notes to skip",
+          "message": "Numero di note da ignorare"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of notes to return. Default is 50. You can specify a value between 1 and 100.",
+          "message": "Il numero massimo di note da restituire. Il valore predefinito è 50. Puoi specificare un valore compreso tra 1 e 100."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "Numero massimo di note da restituire"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "The type of the parent object that this note is linked to. This is required to filter notes by their parent object.",
+          "message": "Il tipo dell'oggetto padre a cui è collegata questa nota. È richiesto per filtrare le note in base al loro oggetto padre."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "Oggetto padre"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The parent object type",
+          "message": "Il tipo di oggetto padre"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record.",
+          "message": "L'identificatore unico del record padre a cui è collegata questa nota. È richiesto per filtrare le note in base al loro record padre."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID record padre"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "ID del record padre"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
+          "source": "Retrieves Notes from Attio.",
+          "message": "Recupera le note da Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.desc": {
+          "source": "This action retrieves a single record from an Attio object by its record ID. You must specify both the object and the specific record ID you want to retrieve. This provides detailed information about the record including all its attributes and values.",
+          "message": "Questa azione recupera un singolo record da un oggetto Attio in base al suo ID record. Devi specificare sia l'oggetto sia l'ID record specifico che desideri recuperare. Questo fornisce informazioni dettagliate sul record, inclusi tutti i suoi attributi e valori."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Get Single Object Record",
+          "message": "Ottieni singolo record oggetto"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Select the Attio object that contains the record you want to retrieve. This is required to identify which object to search in.",
+          "message": "Seleziona l'oggetto Attio che contiene il record che desideri recuperare. È richiesto per identificare in quale oggetto cercare."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Oggetto"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to retrieve the record from",
+          "message": "L'oggetto Attio da cui recuperare il record"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "Specify the unique identifier of the record you want to retrieve. This ID is specific to the object you've selected and will load available records based on your object selection.",
+          "message": "Specifica l'identificatore unico del record che desideri recuperare. Questo ID è specifico per l'oggetto selezionato e caricherà i record disponibili in base alla selezione dell'oggetto."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID record"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the specific record to retrieve",
+          "message": "L'ID del record specifico da recuperare"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Retrieves a specific record from an Attio object.",
+          "message": "Recupera un record specifico da un oggetto Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.desc": {
+          "source": "This action retrieves a single entry from an Attio list by its entry ID. You must specify both the list and the specific entry ID you want to retrieve. This provides detailed information about the entry including all its attributes and values.",
+          "message": "Questa azione recupera una singola voce da una lista Attio in base al suo ID voce. Devi specificare sia la lista sia l'ID voce specifico che desideri recuperare. Questo fornisce informazioni dettagliate sulla voce, inclusi tutti i suoi attributi e valori."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
+          "source": "Get Single List Entry",
+          "message": "Ottieni singola voce di lista"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "Specify the unique identifier of the entry you want to retrieve. This ID is specific to the list you've selected and will load available entries based on your list selection.",
+          "message": "Specifica l'identificatore unico della voce che desideri recuperare. Questo ID è specifico per la lista selezionata e caricherà le voci disponibili in base alla selezione della lista."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "ID voce"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The ID of the specific entry to retrieve",
+          "message": "L'ID della voce specifica da recuperare"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "Select the Attio list that contains the entry you want to retrieve. This is required to identify which list to search in.",
+          "message": "Seleziona la lista Attio che contiene la voce che desideri recuperare. È richiesto per identificare in quale lista cercare."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to retrieve the entry from",
+          "message": "La lista Attio da cui recuperare la voce"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
+          "source": "Retrieves a specific entry from an Attio list.",
+          "message": "Recupera una voce specifica da una lista Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.desc": {
+          "source": "This action retrieves a single task from Attio using its unique task ID. The response includes all task details such as content, completion status, deadline, linked records, assignees, and creation information.",
+          "message": "Questa azione recupera un singolo compito da Attio utilizzando il suo ID compito unico. La risposta include tutti i dettagli del compito come contenuto, stato di completamento, scadenza, record collegati, assegnatari e informazioni sulla creazione."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Ottieni attività"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Specify the unique identifier of the task you want to retrieve. The available task IDs will be loaded based on your previous object selection.",
+          "message": "Specifica l'identificatore unico del compito che desideri recuperare. Gli ID compito disponibili verranno caricati in base alla selezione dell'oggetto precedente."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "ID attività"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The ID of the specific task to retrieve",
+          "message": "L'ID del compito specifico da recuperare"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieves a specific task from Attio by its ID.",
+          "message": "Recupera un compito specifico da Attio in base al suo ID."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.desc": {
+          "source": "This action retrieves a list of tasks from Attio with various filtering, sorting, and pagination options. You can filter tasks by linked records, completion status, and assignee, as well as control the order and number of results returned.",
+          "message": "Questa azione recupera un elenco di compiti da Attio con varie opzioni di filtraggio, ordinamento e paginazione. Puoi filtrare i compiti per record collegati, stato di completamento e assegnatario, oltre a controllare l'ordine e il numero di risultati restituiti."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
+          "source": "List Tasks",
+          "message": "Elenca attività"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.desc": {
+          "source": "Filter tasks to only include those assigned to a specific workspace member.",
+          "message": "Filtra i compiti per includere solo quelli assegnati a un membro specifico del workspace."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "Assegnatario"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.short_desc": {
+          "source": "Filter tasks by assignee",
+          "message": "Filtra i compiti per assegnatario"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks).",
+          "message": "Filtra i compiti in base al fatto che siano completati o meno. Il valore predefinito è false (mostra i compiti non completati)."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "Completato"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Filter by completion status",
+          "message": "Filtra per stato di completamento"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0.",
+          "message": "Specifica il numero di compiti da ignorare prima di iniziare a restituire i risultati. Utile per la paginazione. Il valore predefinito è 0."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tasks to skip",
+          "message": "Numero di attività da ignorare"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of tasks to return in a single request. Default is 10.",
+          "message": "Specifica il numero massimo di compiti da restituire in una singola richiesta. Il valore predefinito è 10."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Numero massimo di attività da restituire"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.desc": {
+          "source": "Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record.",
+          "message": "Filtra i compiti per includere solo quelli collegati a un tipo di oggetto specifico in Attio. Quando selezionato, puoi perfezionare ulteriormente specificando un record particolare."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
+          "source": "Linked Object",
+          "message": "Oggetto collegato"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
+          "source": "Filter tasks by linked object type",
+          "message": "Filtra i compiti per tipo di oggetto collegato"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.desc": {
+          "source": "Filter tasks to only include those linked to a specific record in the selected linked object. This option is only available after selecting a linked object.",
+          "message": "Filtra i compiti per includere solo quelli collegati a un record specifico nell'oggetto collegato selezionato. Questa opzione è disponibile solo dopo aver selezionato un oggetto collegato."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
+          "source": "Linked Record ID",
+          "message": "ID record collegato"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
+          "source": "Filter tasks by specific linked record",
+          "message": "Filtra le attività per record collegato specifico"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm5ld2VzdF9maXJzdA.display_name": {
+          "source": "Newest First",
+          "message": "I più recenti prima"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm9sZGVzdF9maXJzdA.display_name": {
+          "source": "Oldest First",
+          "message": "I più vecchi prima"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.desc": {
+          "source": "Specify the order in which tasks should be returned. 'Oldest First' sorts by creation date ascending, 'Newest First' sorts by creation date descending.",
+          "message": "Specifica l'ordine in cui restituire le attività. 'I più vecchi prima' ordina per data di creazione in modo crescente, 'I più recenti prima' ordina per data di creazione in modo decrescente."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Criterio di ordinamento"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
+          "source": "Order of returned tasks",
+          "message": "Ordine delle attività restituite"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
+          "source": "Retrieves a list of tasks from Attio with filtering options.",
+          "message": "Recupera un elenco di attività da Attio con opzioni di filtraggio."
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Elimina record"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.desc": {
+          "source": "Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.",
+          "message": "Interroga le voci di un elenco Attio specifico con supporto per il filtraggio in base ai valori degli attributi, l'ordinamento in base agli attributi e la paginazione. Restituisce un elenco di voci corrispondenti ai criteri specificati."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
+          "source": "Find List Entries",
+          "message": "Trova voci di elenco"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "Criteri di filtraggio da applicare alla query."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Criteri di filtraggio"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of entries to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Il numero di voci da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "Numero di voci da ignorare"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 50.",
+          "message": "Il numero massimo di voci da restituire. Il valore predefinito è 50."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "Numero massimo di voci da restituire"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to search entries in.",
+          "message": "Lo slug API dell'elenco Attio in cui cercare le voci."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.short_desc": {
+          "source": "The Attio list to search",
+          "message": "L'elenco Attio da cercare"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "L'attributo in base al quale ordinare i risultati. Il valore predefinito è \"created_at\"."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "Attributo di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "Attributo in base al quale ordinare"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Crescente"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Decrescente"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "La direzione di ordinamento dei risultati. Può essere crescente o decrescente. Il valore predefinito è crescente."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "Direzione di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "Direzione di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
+          "source": "Search for entries in an Attio list with filtering and sorting options.",
+          "message": "Cerca voci in un elenco Attio con opzioni di filtraggio e ordinamento."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.desc": {
+          "source": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.",
+          "message": "Interroga i record di un oggetto Attio specifico con supporto per il filtraggio in base ai valori degli attributi, l'ordinamento in base agli attributi e la paginazione. Restituisce un elenco di record corrispondenti ai criteri specificati."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
+          "source": "Find Object Records",
+          "message": "Trova record di oggetti"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "Criteri di filtraggio da applicare alla query."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtro"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Criteri di filtraggio"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to search in.",
+          "message": "Lo slug API del tipo di oggetto Attio in cui cercare."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Tipo di oggetto"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to search",
+          "message": "L'oggetto Attio da cercare"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Il numero di record da ignorare prima di iniziare a restituire i risultati. Utilizzato per la paginazione. Il valore predefinito è 0."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "Numero di record da ignorare"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return. Default is 50.",
+          "message": "Il numero massimo di record da restituire. Il valore predefinito è 50."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "Numero massimo di record da restituire"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "L'attributo in base al quale ordinare i risultati. Il valore predefinito è \"created_at\"."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "Attributo di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "Attributo in base al quale ordinare"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Crescente"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Decrescente"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "La direzione di ordinamento dei risultati. Può essere crescente o decrescente. Il valore predefinito è crescente."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "Direzione di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "Direzione di ordinamento"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
+          "source": "Search for records in an Attio object with filtering and sorting options.",
+          "message": "Cerca record in un oggetto Attio con opzioni di filtraggio e ordinamento."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.",
+          "message": "Questo trigger viene attivato ogni volta che un record viene aggiornato per un oggetto Attio specificato. Fornisce dettagli sul record aggiornato, inclusi il suo ID, il tipo di oggetto, l'esecutore che ha apportato l'aggiornamento e le modifiche specifiche apportate."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
+          "source": "Object Record Updated",
+          "message": "Record dell'oggetto aggiornato"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for updated records.",
+          "message": "Lo slug API del tipo di oggetto Attio da monitorare per i record aggiornati."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Tipo di oggetto"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for updated records",
+          "message": "L'oggetto Attio da monitorare per i record aggiornati"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
+          "source": "Triggers when a record is updated for an Attio object.",
+          "message": "Si attiva quando un record viene aggiornato per un oggetto Attio."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it.",
+          "message": "Questo trigger viene attivato ogni volta che viene creato un nuovo record per un oggetto Attio specificato. Fornisce dettagli sul record creato, inclusi il suo ID, il tipo di oggetto e l'esecutore che lo ha creato."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
+          "source": "New Object Record Created",
+          "message": "Nuovo record dell'oggetto creato"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for new records.",
+          "message": "Lo slug API del tipo di oggetto Attio da monitorare per i nuovi record."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Tipo di oggetto"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for new records",
+          "message": "L'oggetto Attio da monitorare per i nuovi record"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new record is created for an Attio object.",
+          "message": "Si attiva quando viene creato un nuovo record per un oggetto Attio."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion.",
+          "message": "Questo trigger viene attivato ogni volta che un record viene eliminato da un oggetto Attio specificato. Fornisce dettagli sul record eliminato, inclusi il suo ID, il tipo di oggetto e l'esecutore che ha effettuato l'eliminazione."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
+          "source": "Object Record Deleted",
+          "message": "Record dell'oggetto eliminato"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for deleted records.",
+          "message": "Lo slug API del tipo di oggetto Attio da monitorare per i record eliminati."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Tipo di oggetto"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for deleted records",
+          "message": "L'oggetto Attio da monitorare per i record eliminati"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
+          "source": "Triggers when a record is deleted from an Attio object.",
+          "message": "Si attiva quando un record viene eliminato da un oggetto Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever an entry is updated in a specified Attio list. It provides details about the updated entry including its ID, parent object, the actor who made the update, and the specific changes that were made.",
+          "message": "Questo trigger viene attivato ogni volta che una voce viene aggiornata in un elenco Attio specificato. Fornisce dettagli sulla voce aggiornata, inclusi il suo ID, l'oggetto padre, l'esecutore che ha apportato l'aggiornamento e le modifiche specifiche apportate."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
+          "source": "List Entry Updated",
+          "message": "Voce dell'elenco aggiornata"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for updated entries.",
+          "message": "Lo slug API dell'elenco Attio da monitorare per le voci aggiornate."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for updated entries",
+          "message": "L'elenco Attio da monitorare per le voci aggiornate"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
+          "source": "Triggers when an entry is updated in an Attio list.",
+          "message": "Si attiva quando una voce viene aggiornata in un elenco Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new entry is created in a specified Attio list. It provides details about the created entry including its ID, parent object, and the actor who created it.",
+          "message": "Questo trigger viene attivato ogni volta che viene creata una nuova voce in un elenco Attio specificato. Fornisce dettagli sulla voce creata, inclusi il suo ID, l'oggetto padre e l'esecutore che l'ha creata."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
+          "source": "New List Entry Created",
+          "message": "Nuova voce dell'elenco creata"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for new entries.",
+          "message": "Lo slug API dell'elenco Attio da monitorare per le nuove voci."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for new entries",
+          "message": "L'elenco Attio da monitorare per le nuove voci"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new entry is created in an Attio list.",
+          "message": "Si attiva quando viene creata una nuova voce in un elenco Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever an entry is deleted from a specified Attio list. It provides details about the deleted entry including its ID, parent object, and the actor who performed the deletion.",
+          "message": "Questo trigger viene attivato ogni volta che una voce viene eliminata da un elenco Attio specificato. Fornisce dettagli sulla voce eliminata, inclusi il suo ID, l'oggetto padre e l'esecutore che ha effettuato l'eliminazione."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
+          "source": "List Entry Deleted",
+          "message": "Voce dell'elenco eliminata"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for deleted entries.",
+          "message": "Lo slug API dell'elenco Attio da monitorare per le voci eliminate."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for deleted entries",
+          "message": "L'elenco Attio da monitorare per le voci eliminate"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
+          "source": "Triggers when an entry is deleted from an Attio list.",
+          "message": "Si attiva quando una voce viene eliminata da un elenco Attio."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Attio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata ad **Attio** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e corpo della richiesta. La risposta viene restituita come un hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Attio",
+          "message": "Esegui una chiamata API personalizzata ad Attio"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Cerca record"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trova un singolo record"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.",
+          "message": "Questo trigger si attiva ogni volta che viene creato un nuovo compito nel tuo workspace Attio. Fornisce dettagli sul compito creato, tra cui ID, titolo, descrizione, assegnatari, data di scadenza e l'autore che lo ha creato."
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
+          "source": "New Task Created",
+          "message": "Nuovo compito creato"
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new task is created in Attio.",
+          "message": "Si attiva quando viene creato un nuovo compito in Attio."
+        },
+        "app.QXR0aW8.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aggiorna record"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.",
+          "message": "Aggiorna i valori di un record esistente in un oggetto Attio specificato. Richiede il tipo di oggetto, l'ID del record e i valori degli attributi da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Update Object Record",
+          "message": "Aggiorna record oggetto"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type containing the record to update.",
+          "message": "Lo slug API del tipo di oggetto Attio contenente il record da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Oggetto"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to update",
+          "message": "L'oggetto Attio da aggiornare"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record to update.",
+          "message": "L'identificatore univoco del record da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID record"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "ID of the record to update",
+          "message": "ID del record da aggiornare"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Update an existing record in an Attio object.",
+          "message": "Aggiorna un record esistente in un oggetto Attio."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.",
+          "message": "Aggiorna i valori degli attributi di una voce esistente in un elenco Attio specificato. Richiede l'identificatore dell'elenco, l'ID della voce e i valori degli attributi da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Update List Entry",
+          "message": "Aggiorna voce dell'elenco"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "The unique identifier of the list entry to update.",
+          "message": "L'identificatore univoco della voce dell'elenco da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "ID voce"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "ID of the entry to update",
+          "message": "ID della voce da aggiornare"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list containing the entry to update.",
+          "message": "Lo slug API dell'elenco Attio contenente la voce da aggiornare."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list containing the entry",
+          "message": "L'elenco Attio contenente la voce"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Update an existing entry in an Attio list.",
+          "message": "Aggiorna una voce esistente in un elenco Attio."
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "Esegui l'upsert dei record nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Upsert record"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "Esegui l'upsert dei record nella tabella specificata nell'app \"Attio\""
+        },
+        "app.QXR0aW8.desc": {
+          "source": "Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.",
+          "message": "Integrati con Attio per gestire i tuoi contatti, le tue aziende e i tuoi dati. Questa integrazione ti consente di eseguire azioni e rispondere agli eventi nel tuo workspace Attio, permettendoti di automatizzare i flussi di lavoro e migliorare la tua produttività."
+        },
+        "app.QXR0aW8.display_name": {
+          "source": "Attio",
+          "message": "Attio"
+        },
+        "app.QXR0aW8.short_desc": {
+          "source": "Connect with Attio to manage your contacts and data",
+          "message": "Connettiti con Attio per gestire i tuoi contatti e i tuoi dati"
+        }
+      }
+    }
+  }
+}

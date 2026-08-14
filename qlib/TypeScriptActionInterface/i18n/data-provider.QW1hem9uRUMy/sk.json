@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.desc": {
+          "source": "Retrieves comprehensive information about one or more EC2 instances including their state, configuration, networking details, and tags.",
+          "message": "Načíta komplexné informácie o jednej alebo viacerých inštanciách EC2 vrátane ich stavu, konfigurácie, podrobností o sieti a značiek."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.display_name": {
+          "source": "Describe Instances",
+          "message": "Opísať inštancie"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "Optional list of specific EC2 instance IDs to describe. If not provided, information about all instances in the region will be returned.",
+          "message": "Voliteľný zoznam konkrétnych ID inštancií EC2 na opis. Ak nie je zadaný, vrátia sa informácie o všetkých inštanciách v regióne."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "ID inštancií"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "Specific instance IDs to describe (optional)",
+          "message": "Konkrétne ID inštancií na opis (voliteľné)"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "The maximum number of instances to return in a single request. Defaults to 100.",
+          "message": "Maximálny počet inštancií vrátených v jednej požiadavke. Predvolená hodnota je 100."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of instances to return",
+          "message": "Maximálny počet inštancií na vrátenie"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Token used for pagination to retrieve the next set of results when there are more instances than the max results limit.",
+          "message": "Token používaný na stránkovanie na načípanie ďalšej sady výsledkov, ak je viac inštancií ako limit maximálneho počtu výsledkov."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to retrieve instance information.",
+          "message": "Región AWS, z ktorého chcete načítať informácie o inštancii."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to query",
+          "message": "Región AWS na dopytovanie"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfaW5zdGFuY2Vz.short_desc": {
+          "source": "Get detailed information about EC2 instances",
+          "message": "Získať podrobné informácie o inštanciách EC2"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.desc": {
+          "source": "Retrieves information about available AWS regions including their endpoints and opt-in status.",
+          "message": "Získa informácie o dostupných regiónoch AWS vrátane ich koncových bodov a stavu vyžiadaného aktivovania (opt-in)."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.display_name": {
+          "source": "Describe Regions",
+          "message": "Opísať regióny"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.desc": {
+          "source": "When enabled, includes all AWS regions including those that require you to opt-in before you can use them.",
+          "message": "Ak je povolené, zahrnie všetky regióny AWS vrátane tých, ktoré pred použitím vyžadujú vyžiadané aktivovanie (opt-in)."
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.display_name": {
+          "source": "All Regions",
+          "message": "Všetky regióny"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.option.YWxsX3JlZ2lvbnM.short_desc": {
+          "source": "Include all regions including opt-in regions",
+          "message": "Zahrnúť všetky regióny vrátane regiónov vyžadujúcich opt-in"
+        },
+        "app.QW1hem9uRUMy.action.ZGVzY3JpYmVfcmVnaW9ucw.short_desc": {
+          "source": "Get information about available AWS regions",
+          "message": "Získať informácie o dostupných regiónoch AWS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon EC2** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do **Amazon EC2** pomocou overenia nakonfigurovaného spojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API spojenia), voliteľné parametre vyhľadávania, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QW1hem9uRUMy.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon EC2",
+          "message": "Vykonať vlastné volanie API do Amazon EC2"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.desc": {
+          "source": "This trigger monitors for newly created EC2 instances or instances that have transitioned to specific states like pending or running. It provides comprehensive instance information including networking details, tags, and configuration.",
+          "message": "Tento spúšťač sleduje novo vytvorené inštancie EC2 alebo inštancie, ktoré prešli do špecifických stavov, ako je pending alebo running. Poskytuje komplexné informácie o inštancii vrátane sieťových podrobností, značiek a konfigurácie."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.display_name": {
+          "source": "New Instance",
+          "message": "Nová inštancia"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnBlbmRpbmc.display_name": {
+          "source": "Pending",
+          "message": "Čakajúce"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnJ1bm5pbmc.display_name": {
+          "source": "Running",
+          "message": "Spustené"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnN0b3BwZWQ.display_name": {
+          "source": "Stopped",
+          "message": "Zastavené"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnN0b3BwaW5n.display_name": {
+          "source": "Stopping",
+          "message": "Zastavuje sa"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnNodXR0aW5nLWRvd24.display_name": {
+          "source": "Shutting Down",
+          "message": "Vypína sa"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.allowed-value.c3RyaW5nOnRlcm1pbmF0ZWQ.display_name": {
+          "source": "Terminated",
+          "message": "Ukončené"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.desc": {
+          "source": "List of EC2 instance states to monitor. The trigger will fire when instances are in any of these states. Common states include pending, running, stopping, stopped, shutting-down, and terminated.",
+          "message": "Zoznam stavov inštancií EC2 na sledovanie. Spúšťač sa aktivuje, keď sú inštancie v ktoromkoľvek z týchto stavov. Bežné stavy zahŕňajú pending, running, stopping, stopped, shutting-down a terminated."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.display_name": {
+          "source": "Instance States",
+          "message": "Stavy inštancií"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.aW5zdGFuY2Vfc3RhdGVz.short_desc": {
+          "source": "Instance states to monitor",
+          "message": "Stavy inštancií na sledovanie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for new EC2 instances. Defaults to us-east-1 if not specified.",
+          "message": "Región AWS, v ktorom chcete sledovať nové inštancie EC2. Ak nie je určené, predvolená hodnota je us-east-1."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new instances",
+          "message": "Región AWS na sledovanie nových inštancií"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X2luc3RhbmNl.short_desc": {
+          "source": "Triggers when a new EC2 instance is created or reaches a specified state",
+          "message": "Spustí sa, keď sa vytvorí nová inštancia EC2 alebo dosiahne špecifikovaný stav"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.desc": {
+          "source": "This trigger monitors for new scheduled events on EC2 instances such as system reboots, maintenance windows, or instance retirements. It helps you stay informed about upcoming AWS-initiated actions on your infrastructure.",
+          "message": "Tento spúšťač sleduje nové naplánované udalosti na inštanciách EC2, ako sú reštarty systému, okná údržby alebo vyradenie inštancií. Pomáha vám byť informovaní o nadchádzajúcich akciách iniciovaných AWS na vašej infraštruktúre."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.display_name": {
+          "source": "New Scheduled Event",
+          "message": "Nová naplánovaná udalosť"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOmluc3RhbmNlLXJldGlyZW1lbnQ.display_name": {
+          "source": "Instance Retirement",
+          "message": "Vyradenie inštancie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOmluc3RhbmNlLXN0b3A.display_name": {
+          "source": "Instance Stop",
+          "message": "Zastavenie inštancie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOnN5c3RlbS1tYWludGVuYW5jZQ.display_name": {
+          "source": "System Maintenance",
+          "message": "Údržba systému"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.allowed-value.c3RyaW5nOnN5c3RlbS1yZWJvb3Q.display_name": {
+          "source": "System Reboot",
+          "message": "Reštart systému"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.desc": {
+          "source": "List of scheduled event types to monitor, such as system-reboot, system-maintenance, instance-retirement, or instance-stop.",
+          "message": "Zoznam typov naplánovaných udalostí na sledovanie, ako napríklad system-reboot, system-maintenance, instance-retirement alebo instance-stop."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.display_name": {
+          "source": "Event Types",
+          "message": "Typy udalostí"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.ZXZlbnRfdHlwZXM.short_desc": {
+          "source": "Types of scheduled events to monitor",
+          "message": "Typy naplánovaných udalostí na sledovanie"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "Optional list of specific EC2 instance IDs to monitor. If left empty, all instances in the region will be monitored for scheduled events.",
+          "message": "Voliteľný zoznam konkrétnych ID inštancií EC2 na sledovanie. Ak zostane prázdny, u všetkých inštancií v regióne sa budú sledovať naplánované udalosti."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "ID inštancií"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "Specific instances to monitor (optional)",
+          "message": "Konkrétne inštancie na sledovanie (voliteľné)"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for scheduled events on EC2 instances.",
+          "message": "Región AWS, v ktorom chcete sledovať naplánované udalosti na inštanciách EC2."
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for scheduled events",
+          "message": "Región AWS na sledovanie naplánovaných udalostí"
+        },
+        "app.QW1hem9uRUMy.action.bmV3X3NjaGVkdWxlZF9ldmVudA.short_desc": {
+          "source": "Triggers when a new scheduled maintenance event is detected on EC2 instances",
+          "message": "Spustí sa, keď sa na inštanciách EC2 zistí nová naplánovaná udalosť údržby"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.desc": {
+          "source": "Starts one or more Amazon EC2 instances that are currently in a stopped state. The instances will transition from stopped to pending and then to running state.",
+          "message": "Spustí jednu alebo viacero inštancií Amazon EC2, ktoré sú momentálne v zastavenom stave. Inštancie prejdú zo stavu stopped do pending a potom do stavu running."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.display_name": {
+          "source": "Start Instance",
+          "message": "Spustiť inštanciu"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to start. These instances must be in a stopped state.",
+          "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete spustiť. Tieto inštancie musia byť v zastavenom stave."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "ID inštancií"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to start",
+          "message": "Zoznam ID inštancií na spustenie"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Región AWS, v ktorom sa nachádzajú inštancie EC2."
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Región AWS obsahujúci inštancie"
+        },
+        "app.QW1hem9uRUMy.action.c3RhcnRfaW5zdGFuY2U.short_desc": {
+          "source": "Start one or more stopped EC2 instances",
+          "message": "Spustiť jednu alebo viacero zastavených inštancií EC2"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.desc": {
+          "source": "Stops one or more Amazon EC2 instances. The instances will transition from running to stopping and then to stopped state. You can optionally force stop instances.",
+          "message": "Zastaví jednu alebo viacero inštancií Amazon EC2. Inštancie prejdú zo stavu running do stopping a potom do stavu stopped. Voliteľne môžete vynútiť zastavenie inštancií."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.display_name": {
+          "source": "Stop Instance",
+          "message": "Zastaviť inštanciu"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.desc": {
+          "source": "When enabled, forces the instances to stop immediately. This is equivalent to pulling the power plug on a physical computer.",
+          "message": "Ak je povolené, vynúti okamžité zastavenie inštancií. Je to ekvivalent odpojenia fyzického počítača od napájania."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.display_name": {
+          "source": "Force Stop",
+          "message": "Vynútiť zastavenie"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.Zm9yY2U.short_desc": {
+          "source": "Force stop the instances",
+          "message": "Vynútiť zastavenie inštancií"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to stop. These instances should be in a running state.",
+          "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete zastaviť. Tieto inštancie by mali byť v spustenom stave."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "ID inštancií"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to stop",
+          "message": "Zoznam ID inštancií na zastavenie"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Región AWS, v ktorom sa nachádzajú inštancie EC2."
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Región AWS obsahujúci inštancie"
+        },
+        "app.QW1hem9uRUMy.action.c3RvcF9pbnN0YW5jZQ.short_desc": {
+          "source": "Stop one or more running EC2 instances",
+          "message": "Zastaviť jednu alebo viacero spustených inštancií EC2"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.desc": {
+          "source": "Performs a reboot of one or more Amazon EC2 instances. This is equivalent to performing a restart from within the operating system.",
+          "message": "Reštartuje jednu alebo viacero inštancií Amazon EC2. Je to ekvivalent reštartu priamo z operačného systému."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.display_name": {
+          "source": "Reboot Instance",
+          "message": "Reštartovať inštanciu"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.desc": {
+          "source": "One or more EC2 instance IDs that you want to reboot. These instances should be in a running state.",
+          "message": "Jedno alebo viacero ID inštancií EC2, ktoré chcete reštartovať. Tieto inštancie by mali byť v spustenom stave."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.display_name": {
+          "source": "Instance IDs",
+          "message": "ID inštancií"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.aW5zdGFuY2VfaWRz.short_desc": {
+          "source": "List of instance IDs to reboot",
+          "message": "Zoznam ID inštancií na reštartovanie"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the EC2 instances are located.",
+          "message": "Región AWS, v ktorom sa nachádzajú inštancie EC2."
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.option.cmVnaW9u.short_desc": {
+          "source": "AWS region containing the instances",
+          "message": "Región AWS obsahujúci inštancie"
+        },
+        "app.QW1hem9uRUMy.action.cmVib290X2luc3RhbmNl.short_desc": {
+          "source": "Reboot one or more running EC2 instances",
+          "message": "Reštartovať jednu alebo viacero spustených inštancií EC2"
+        },
+        "app.QW1hem9uRUMy.desc": {
+          "source": "The Amazon EC2 integration provides comprehensive actions and triggers to interact with Amazon Elastic Compute Cloud services. Manage instances, volumes, security groups, snapshots, and other EC2 resources to automate your cloud infrastructure workflows and monitoring.",
+          "message": "Integrácia Amazon EC2 poskytuje komplexné akcie a spúšťače na interakciu so službami Amazon Elastic Compute Cloud. Spravujte inštancie, zväzky, bezpečnostné skupiny, snímky a ďalšie zdroje EC2 na automatizáciu pracovných postupov a monitorovania vašej cloudovej infraštruktúry."
+        },
+        "app.QW1hem9uRUMy.display_name": {
+          "source": "Amazon EC2",
+          "message": "Amazon EC2"
+        },
+        "app.QW1hem9uRUMy.short_desc": {
+          "source": "Connect to Amazon EC2 to manage and automate your cloud infrastructure operations.",
+          "message": "Pripojte sa k Amazon EC2 a spravujte a automatizujte operácie cloudovej infraštruktúry."
+        }
+      }
+    }
+  }
+}

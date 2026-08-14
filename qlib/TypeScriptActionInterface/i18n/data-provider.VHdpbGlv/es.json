@@ -1,0 +1,2121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.",
+          "message": "Cree y envíe un nuevo mensaje SMS o MMS mediante Twilio. Puede enviar mensajes de texto, incluir archivos adjuntos multimedia, programar mensajes y configurar opciones de entrega. Esta acción es compatible tanto con mensajería estándar como con servicios de mensajería."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create a Message",
+          "message": "Crear un mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.desc": {
+          "source": "The text of the message you want to send, limited to 1600 characters. For SMS messages longer than 160 characters, the message will be sent as multiple segments.",
+          "message": "El texto del mensaje que desea enviar, limitado a 1600 caracteres. Para mensajes SMS de más de 160 caracteres, el mensaje se enviará en múltiples segmentos."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "El contenido de texto del mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "A Twilio phone number in E.164 format, a Messaging Service SID, or a short code. This number must be enabled for the type of message you wish to send.",
+          "message": "Un número de teléfono de Twilio en formato E.164, un SID de servicio de mensajería o un código corto. Este número debe estar habilitado para el tipo de mensaje que desea enviar."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "The sender phone number or messaging service SID",
+          "message": "El número de teléfono del remitente o el SID del servicio de mensajería"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.desc": {
+          "source": "The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.",
+          "message": "El precio total máximo en USD aceptable para el envío del mensaje. Si el costo supera este valor, el mensaje fallará."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
+          "source": "Max Price",
+          "message": "Precio máximo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
+          "source": "Maximum acceptable price for the message",
+          "message": "Precio máximo aceptable para el mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.desc": {
+          "source": "A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.",
+          "message": "Una lista de URLs accesibles públicamente de archivos multimedia para enviar con el mensaje. Compatible con mensajes MMS. Puede incluir hasta 10 archivos multimedia."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.display_name": {
+          "source": "Media URLs",
+          "message": "URLs de multimedia"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.short_desc": {
+          "source": "URLs of media to include in the message",
+          "message": "URLs del contenido multimedia a incluir en el mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.desc": {
+          "source": "The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.",
+          "message": "El SID del servicio de mensajería a utilizar para el mensaje. Cuando se establece, el parámetro remitente puede omitirse y Twilio seleccionará un número de teléfono adecuado del grupo del servicio de mensajería."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
+          "source": "Messaging Service SID",
+          "message": "SID del servicio de mensajería"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
+          "source": "The SID of the Messaging Service to use",
+          "message": "El SID del servicio de mensajería a utilizar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.allowed-value.c3RyaW5nOmZpeGVk.display_name": {
+          "source": "Fixed",
+          "message": "Fijo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.desc": {
+          "source": "Set to \"fixed\" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.",
+          "message": "Establezca en \"fixed\" para programar el envío del mensaje a una hora específica. Requiere que se defina el parámetro Send At."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
+          "source": "Schedule Type",
+          "message": "Tipo de programación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
+          "source": "The type of message scheduling",
+          "message": "El tipo de programación del mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.desc": {
+          "source": "The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to \"fixed\".",
+          "message": "La hora a la que debe enviarse el mensaje programado, en formato ISO 8601. Este parámetro es obligatorio cuando Schedule Type está establecido en \"fixed\"."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
+          "source": "Send At",
+          "message": "Enviar a las"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
+          "source": "When to send the scheduled message",
+          "message": "Cuándo enviar el mensaje programado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.",
+          "message": "La URL a la que Twilio enviará una solicitud POST cada vez que cambie el estado del mensaje. Esto le permite realizar un seguimiento del estado de entrega de sus mensajes."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL de callback de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive message status updates",
+          "message": "URL para recibir actualizaciones del estado del mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.desc": {
+          "source": "The phone number to send the message to in E.164 format (e.g., +15551234567). For WhatsApp messages, use the format whatsapp:+15551234567.",
+          "message": "El número de teléfono al que se enviará el mensaje en formato E.164 (p. ej., +15551234567). Para mensajes de WhatsApp, usa el formato whatsapp:+15551234567."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "The destination phone number",
+          "message": "El número de teléfono de destino"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.desc": {
+          "source": "The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).",
+          "message": "La cantidad de segundos que el mensaje puede permanecer en la cola. Transcurrido este tiempo, si el mensaje no se ha entregado, fallará. El máximo es de 14400 segundos (4 horas)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
+          "source": "Validity Period",
+          "message": "Período de validez"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
+          "source": "How long the message is valid for delivery",
+          "message": "Tiempo durante el cual el mensaje es válido para su entrega"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a new SMS or MMS message",
+          "message": "Enviar un nuevo mensaje SMS o MMS"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.desc": {
+          "source": "Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.",
+          "message": "Inicia una llamada telefónica saliente mediante Twilio. Puedes proporcionar instrucciones TwiML mediante una URL o directamente, configurar la grabación de llamadas, la detección de contestador automático y configurar callbacks de estado para realizar el seguimiento del progreso de la llamada."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
+          "source": "Create a Call",
+          "message": "Crear una llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number or client identifier to use as the caller ID. If calling a phone number, this must also be a phone number.",
+          "message": "El número de teléfono de Twilio o el identificador de cliente que se usará como identificador de llamada. Si llamas a un número de teléfono, este también debe ser un número de teléfono."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.short_desc": {
+          "source": "The caller ID to display",
+          "message": "El identificador de llamada que se mostrará"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "Detectar fin de mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "Habilitar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection. \"Enable\" returns AnsweredBy immediately, \"DetectMessageEnd\" waits for the beep to leave a message.",
+          "message": "Habilita la detección de contestador automático. \"Enable\" devuelve AnsweredBy de inmediato, \"DetectMessageEnd\" espera al pitido para dejar un mensaje."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "Detección de contestador"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "Habilitar la detección de contestador automático"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.desc": {
+          "source": "The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.",
+          "message": "El número de segundos para intentar la detección de contestador automático antes de que se agote el tiempo. El valor predeterminado es de 30 segundos."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
+          "source": "Machine Detection Timeout",
+          "message": "Tiempo de espera de detección de contestador"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
+          "source": "Seconds to wait for detection",
+          "message": "Segundos a esperar para la detección"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.",
+          "message": "El método HTTP que se utilizará al solicitar la URL. Puede ser GET o POST. El valor predeterminado es POST."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
+          "source": "HTTP method for fetching TwiML",
+          "message": "Método HTTP para obtener TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: \"W1234#\".",
+          "message": "Una cadena de teclas que se marcarán tras la conexión. Caracteres válidos: 0-9, A-D, #, *, w (pausa de 0,5 s), W (pausa de 1 s). Por ejemplo: \"W1234#\"."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "Enviar dígitos"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "Tonos DTMF para enviar después de la conexión"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.",
+          "message": "La URL a la que Twilio enviará una solicitud POST cuando cambie el estado de la llamada. Puedes especificar qué eventos activan los callbacks mediante Eventos de callback de estado."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL de callback de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "URL para recibir actualizaciones del estado de la llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmFuc3dlcmVk.display_name": {
+          "source": "Answered",
+          "message": "Respondida"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Completada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmluaXRpYXRlZA.display_name": {
+          "source": "Initiated",
+          "message": "Iniciada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "Sonando"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.desc": {
+          "source": "The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.",
+          "message": "Los eventos de progreso de la llamada que activarán un POST a la URL de callback de estado. Las opciones incluyen: initiated, ringing, answered y completed."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
+          "source": "Status Callback Events",
+          "message": "Eventos de callback de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
+          "source": "Events that trigger status callbacks",
+          "message": "Eventos que activan callbacks de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.desc": {
+          "source": "The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.",
+          "message": "El método HTTP que se utilizará al enviar una solicitud POST a la URL de callback de estado. Puede ser GET o POST. El valor predeterminado es POST."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
+          "source": "Status Callback Method",
+          "message": "Método de callback de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
+          "source": "HTTP method for status callbacks",
+          "message": "Método HTTP para callbacks de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes.",
+          "message": "Establécelo en true para grabar toda la llamada. La grabación estará disponible una vez finalizada la llamada."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.display_name": {
+          "source": "Record",
+          "message": "Grabar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "Si se debe grabar la llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOm1vbm8.display_name": {
+          "source": "Mono",
+          "message": "Mono"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOmR1YWw.display_name": {
+          "source": "Dual",
+          "message": "Dual"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.desc": {
+          "source": "The number of channels in the final recording. \"mono\" records both legs in a single channel, \"dual\" records each leg separately.",
+          "message": "El número de canales en la grabación final. \"mono\" graba ambos tramos en un solo canal, \"dual\" graba cada tramo por separado."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
+          "source": "Recording Channels",
+          "message": "Canales de grabación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
+          "source": "Number of channels in the recording",
+          "message": "Número de canales en la grabación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.",
+          "message": "La URL a la que Twilio enviará una solicitud POST cuando la grabación esté disponible. Esto te permite procesar o almacenar grabaciones de inmediato."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Recording Status Callback",
+          "message": "Callback de estado de grabación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to notify when recording is available",
+          "message": "URL para notificar cuando la grabación esté disponible"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.desc": {
+          "source": "The phone number, SIP address, or client identifier to call. Phone numbers must be in E.164 format (e.g., +15551234567).",
+          "message": "El número de teléfono, dirección SIP o identificador de cliente al que llamar. Los números de teléfono deben estar en formato E.164 (p. ej., +15551234567)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "El número de teléfono al que llamar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.desc": {
+          "source": "The maximum duration of the call in seconds. The call will be automatically ended after this time.",
+          "message": "La duración máxima de la llamada en segundos. La llamada finalizará automáticamente transcurrido este tiempo."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
+          "source": "Time Limit",
+          "message": "Límite de tiempo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
+          "source": "Maximum call duration in seconds",
+          "message": "Duración máxima de la llamada en segundos"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "El número de segundos que se esperará a que se responda la llamada antes de que se agote el tiempo de espera. El valor predeterminado es de 60 segundos; el máximo es de 600 segundos."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "Tiempo de espera"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "Segundos a esperar para responder"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.desc": {
+          "source": "TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.",
+          "message": "Instrucciones TwiML que se ejecutarán cuando se conecte la llamada. Si se proporcionan tanto TwiML como URL, TwiML tiene prioridad. Máximo 4000 caracteres."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.display_name": {
+          "source": "TwiML",
+          "message": "TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.short_desc": {
+          "source": "TwiML instructions for the call",
+          "message": "Instrucciones TwiML para la llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.desc": {
+          "source": "The URL that Twilio will fetch TwiML instructions from when the call connects. This URL should return valid TwiML to control the call flow.",
+          "message": "La URL desde la cual Twilio obtendrá las instrucciones TwiML cuando se conecte la llamada. Esta URL debe devolver TwiML válido para controlar el flujo de la llamada."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.display_name": {
+          "source": "TwiML URL",
+          "message": "URL de TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.short_desc": {
+          "source": "URL that returns TwiML instructions",
+          "message": "URL que devuelve instrucciones TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
+          "source": "Initiate an outbound phone call",
+          "message": "Iniciar una llamada telefónica saliente"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.desc": {
+          "source": "Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.",
+          "message": "Inicia una llamada telefónica saliente con un mensaje automatizado de texto a voz. Esta acción simplificada genera automáticamente TwiML según tus entradas, lo que te permite crear llamadas rápidamente con mensajes de voz sin escribir código TwiML manualmente. Puedes personalizar la voz, el idioma, grabar la llamada y, opcionalmente, transcribir grabaciones."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
+          "source": "Create Call with Text-to-Speech",
+          "message": "Crear llamada con texto a voz"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to use as the caller ID. This must be a phone number you own in your Twilio account.",
+          "message": "El número de teléfono de Twilio que se usará como identificador de llamadas. Debe ser un número de teléfono de su propiedad en su cuenta de Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.short_desc": {
+          "source": "Your Twilio phone number",
+          "message": "Su número de teléfono de Twilio"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5iLU5P.display_name": {
+          "source": "Norwegian (Norway)",
+          "message": "Noruego (Noruega)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5sLU5M.display_name": {
+          "source": "Dutch (Netherlands)",
+          "message": "Neerlandés (Países Bajos)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmFyYg.display_name": {
+          "source": "Arabic (Gulf)",
+          "message": "Árabe (Golfo)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmNtbi1DTg.display_name": {
+          "source": "Chinese (Mandarin)",
+          "message": "Chino (Mandarín)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRhLURL.display_name": {
+          "source": "Danish (Denmark)",
+          "message": "Danés (Dinamarca)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "Alemán (Alemania)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUFV.display_name": {
+          "source": "English (Australia)",
+          "message": "Inglés (Australia)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUNB.display_name": {
+          "source": "English (Canada)",
+          "message": "Inglés (Canadá)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "Inglés (Reino Unido)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUlO.display_name": {
+          "source": "English (India)",
+          "message": "Inglés (India)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "Inglés (Estados Unidos)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLU1Y.display_name": {
+          "source": "Spanish (Mexico)",
+          "message": "Español (México)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "Español (España)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLVVT.display_name": {
+          "source": "Spanish (United States)",
+          "message": "Español (Estados Unidos)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUNB.display_name": {
+          "source": "French (Canada)",
+          "message": "Francés (Canadá)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "Francés (Francia)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmhpLUlO.display_name": {
+          "source": "Hindi (India)",
+          "message": "Hindi (India)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "Italiano (Italia)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "Japonés (Japón)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmtvLUtS.display_name": {
+          "source": "Korean (South Korea)",
+          "message": "Coreano (Corea del Sur)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "Portugués (Brasil)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LVBU.display_name": {
+          "source": "Portuguese (Portugal)",
+          "message": "Portugués (Portugal)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnBsLVBM.display_name": {
+          "source": "Polish (Poland)",
+          "message": "Polaco (Polonia)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnN2LVNF.display_name": {
+          "source": "Swedish (Sweden)",
+          "message": "Sueco (Suecia)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnRyLVRS.display_name": {
+          "source": "Turkish (Turkey)",
+          "message": "Turco (Turquía)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).",
+          "message": "El idioma y la configuración regional para texto a voz. Esto debe coincidir con el idioma del texto de su mensaje. Si no se especifica, el valor predeterminado es en-US (Inglés, Estados Unidos)."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "Idioma"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language for text-to-speech",
+          "message": "El idioma para texto a voz"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "Detectar fin de mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "Habilitar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection to determine if a human or machine answered the call. \"Enable\" returns the result immediately, \"DetectMessageEnd\" waits for the voicemail beep before playing your message.",
+          "message": "Habilite la detección de contestador automático para determinar si un humano o una máquina respondió la llamada. \"Enable\" devuelve el resultado de inmediato, \"DetectMessageEnd\" espera el tono del buzón de voz antes de reproducir su mensaje."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "Detección de contestador"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "Habilitar la detección de contestador automático"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.desc": {
+          "source": "The text message that will be spoken when the call is answered. This will be converted to speech using Twilio's text-to-speech engine.",
+          "message": "El mensaje de texto que se pronunciará cuando se responda la llamada. Esto se convertirá a voz mediante el motor de texto a voz de Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Mensaje"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text message to speak",
+          "message": "El mensaje de texto a pronunciar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: \"w123#\" waits 0.5 seconds then dials 123#.",
+          "message": "Una cadena de teclas para marcar después de que se conecte la llamada. Útil para navegar menús telefónicos automáticamente. Caracteres válidos: 0-9, #, *, w (espera 0,5 segundos). Por ejemplo: \"w123#\" espera 0,5 segundos y luego marca 123#."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "Enviar dígitos"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "Tonos DTMF para enviar después de la conexión"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.",
+          "message": "La URL a la que Twilio enviará una solicitud POST cuando cambie el estado de la llamada. Use esto para rastrear el progreso y la finalización de la llamada."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "URL de callback de estado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "URL para recibir actualizaciones del estado de la llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.",
+          "message": "Establézcalo en true para grabar toda la llamada. La grabación estará disponible una vez que se complete la llamada y se puede recuperar mediante la acción List Recordings."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
+          "source": "Record Call",
+          "message": "Grabar llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "Si se debe grabar la llamada"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.desc": {
+          "source": "The phone number to call in E.164 format (e.g., +15551234567). You can also call SIP addresses or Twilio client identifiers.",
+          "message": "El número de teléfono al que llamar en formato E.164 (por ejemplo, +15551234567). También puede llamar a direcciones SIP o identificadores de cliente de Twilio."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "El número de teléfono al que llamar"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "El número de segundos que se esperará a que se responda la llamada antes de que se agote el tiempo de espera. El valor predeterminado es de 60 segundos; el máximo es de 600 segundos."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "Tiempo de espera"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "Segundos a esperar para responder"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.desc": {
+          "source": "Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.",
+          "message": "Establézcalo en true para transcribir automáticamente la grabación de la llamada. Esto requiere que la opción Record Call esté habilitada. La transcripción estará disponible después del procesamiento."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
+          "source": "Transcribe Recording",
+          "message": "Transcribir grabación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
+          "source": "Whether to transcribe the recording",
+          "message": "Si se debe transcribir la grabación"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.desc": {
+          "source": "The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.",
+          "message": "La URL a la que Twilio enviará una solicitud POST cuando se complete la transcripción. Esto le permite procesar o almacenar transcripciones inmediatamente después de que estén disponibles."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
+          "source": "Transcription Callback URL",
+          "message": "URL de devolución de llamada de transcripción"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
+          "source": "URL to receive transcription results",
+          "message": "URL para recibir los resultados de la transcripción"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5jbW4tQ04tU3RhbmRhcmQtQQ.display_name": {
+          "source": "Chinese (Mandarin) - Google Standard (Female)",
+          "message": "Chino (Mandarín) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5kZS1ERS1TdGFuZGFyZC1B.display_name": {
+          "source": "German - Google Standard (Female)",
+          "message": "Alemán - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1B.display_name": {
+          "source": "English (UK) - Google Standard (Female)",
+          "message": "Inglés (Reino Unido) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1C.display_name": {
+          "source": "English (UK) - Google Standard (Male)",
+          "message": "Inglés (Reino Unido) - Google Estándar (Masculino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUE.display_name": {
+          "source": "English (US) - Google Neural (Female)",
+          "message": "Inglés (EE. UU.) - Google Neural (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUQ.display_name": {
+          "source": "English (US) - Google Neural (Male)",
+          "message": "Inglés (EE. UU.) - Google Neural (Masculino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1B.display_name": {
+          "source": "English (US) - Google Standard (Female)",
+          "message": "Inglés (EE. UU.) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1C.display_name": {
+          "source": "English (US) - Google Standard (Male)",
+          "message": "Inglés (EE. UU.) - Google Estándar (Masculino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lcy1FUy1TdGFuZGFyZC1B.display_name": {
+          "source": "Spanish (Spain) - Google Standard (Female)",
+          "message": "Español (España) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1DQS1TdGFuZGFyZC1B.display_name": {
+          "source": "French (Canada) - Google Standard (Female)",
+          "message": "Francés (Canadá) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1GUi1TdGFuZGFyZC1B.display_name": {
+          "source": "French (France) - Google Standard (Female)",
+          "message": "Francés (Francia) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5oaS1JTi1TdGFuZGFyZC1B.display_name": {
+          "source": "Hindi - Google Standard (Female)",
+          "message": "Hindi - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5pdC1JVC1TdGFuZGFyZC1B.display_name": {
+          "source": "Italian - Google Standard (Female)",
+          "message": "Italiano - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5qYS1KUC1TdGFuZGFyZC1B.display_name": {
+          "source": "Japanese - Google Standard (Female)",
+          "message": "Japonés - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5rby1LUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Korean - Google Standard (Female)",
+          "message": "Coreano - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5ubC1OTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Dutch - Google Standard (Female)",
+          "message": "Neerlandés - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wbC1QTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Polish - Google Standard (Female)",
+          "message": "Polaco - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wdC1CUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Portuguese (Brazil) - Google Standard (Female)",
+          "message": "Portugués (Brasil) - Google Estándar (Femenino)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdGhpZXUtTmV1cmFs.display_name": {
+          "source": "French (France) - Polly Mathieu (Male, Neural)",
+          "message": "Francés (Francia) - Polly Mathieu (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdHRoZXctTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Matthew (Male, Neural)",
+          "message": "Inglés (EE. UU.) - Polly Matthew (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk9sYS1OZXVyYWw.display_name": {
+          "source": "Polish - Polly Ola (Female, Neural)",
+          "message": "Polaco - Polly Ola (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFkcmlhbm8tTmV1cmFs.display_name": {
+          "source": "Italian - Polly Adriano (Male, Neural)",
+          "message": "Italiano - Polly Adriano (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFteS1OZXVyYWw.display_name": {
+          "source": "English (UK) - Polly Amy (Female, Neural)",
+          "message": "Inglés (Reino Unido) - Polly Amy (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJpYW5jYS1OZXVyYWw.display_name": {
+          "source": "Italian - Polly Bianca (Female, Neural)",
+          "message": "Italiano - Polly Bianca (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJyaWFuLU5ldXJhbA.display_name": {
+          "source": "English (UK) - Polly Brian (Male, Neural)",
+          "message": "Inglés (Reino Unido) - Polly Brian (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNhbWlsYS1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Camila (Female, Neural)",
+          "message": "Portugués (Brasil) - Polly Camila (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNlbGluZS1OZXVyYWw.display_name": {
+          "source": "French (France) - Polly Celine (Female, Neural)",
+          "message": "Francés (Francia) - Polly Celine (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkRhbmllbC1OZXVyYWw.display_name": {
+          "source": "German - Polly Daniel (Male, Neural)",
+          "message": "Alemán - Polly Daniel (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkhhbGEtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Hala (Female, Neural)",
+          "message": "Árabe - Polly Hala (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvYW5uYS1OZXVyYWw.display_name": {
+          "source": "English (US) - Polly Joanna (Female, Neural)",
+          "message": "Inglés (EE. UU.) - Polly Joanna (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvZXktTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Joey (Male, Neural)",
+          "message": "Inglés (EE. UU.) - Polly Joey (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthamFsLU5ldXJhbA.display_name": {
+          "source": "Hindi - Polly Kajal (Female, Neural)",
+          "message": "Hindi - Polly Kajal (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthenVoYS1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Kazuha (Female, Neural)",
+          "message": "Japonés - Polly Kazuha (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1Y2lhLU5ldXJhbA.display_name": {
+          "source": "Spanish (Spain) - Polly Lucia (Female, Neural)",
+          "message": "Español (España) - Polly Lucia (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1cGUtTmV1cmFs.display_name": {
+          "source": "Spanish (US) - Polly Lupe (Female, Neural)",
+          "message": "Español (EE. UU.) - Polly Lupe (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkxhdXJhLU5ldXJhbA.display_name": {
+          "source": "Dutch - Polly Laura (Female, Neural)",
+          "message": "Neerlandés - Polly Laura (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlBlZHJvLU5ldXJhbA.display_name": {
+          "source": "Spanish (US) - Polly Pedro (Male, Neural)",
+          "message": "Español (EE. UU.) - Polly Pedro (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlNlb3llb24tTmV1cmFs.display_name": {
+          "source": "Korean - Polly Seoyeon (Female, Neural)",
+          "message": "Coreano - Polly Seoyeon (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRoaWFnby1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Thiago (Male, Neural)",
+          "message": "Portugués (Brasil) - Polly Thiago (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRvbW9rby1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Tomoko (Female, Neural)",
+          "message": "Japonés - Polly Tomoko (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlZpY2tpLU5ldXJhbA.display_name": {
+          "source": "German - Polly Vicki (Female, Neural)",
+          "message": "Alemán - Polly Vicki (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpheWQtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Zayd (Male, Neural)",
+          "message": "Árabe - Polly Zayd (Masculino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpoaXl1LU5ldXJhbA.display_name": {
+          "source": "Chinese (Mandarin) - Polly Zhiyu (Female, Neural)",
+          "message": "Chino (mandarín) - Polly Zhiyu (Femenino, Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.desc": {
+          "source": "The voice to use for text-to-speech. Choose from various voices with different languages, genders, and quality levels (Standard, Neural, Generative). If not specified, uses your account's default voice.",
+          "message": "La voz que se utilizará para la conversión de texto a voz. Elija entre varias voces con diferentes idiomas, géneros y niveles de calidad (Standard, Neural, Generative). Si no se especifica, utiliza la voz predeterminada de su cuenta."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.display_name": {
+          "source": "Voice",
+          "message": "Voz"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.short_desc": {
+          "source": "The voice to use for text-to-speech",
+          "message": "La voz que se utilizará para la conversión de texto a voz"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
+          "source": "Make a call with automated voice message",
+          "message": "Realizar una llamada con un mensaje de voz automatizado"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.",
+          "message": "Cree e inicie una nueva ejecución de un Studio Flow. Esto activa la ejecución del flujo con la información de contacto especificada y los parámetros opcionales a los que se puede acceder dentro del flujo."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Create an Execution",
+          "message": "Crear una ejecución"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow to execute. Flow SIDs start with \"FW\".",
+          "message": "El SID del Studio Flow que se va a ejecutar. Los SID de flujo comienzan con \"FW\"."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "SID del flujo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "El identificador único del Studio Flow"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to send messages or make calls from during the execution. Available as flow.channel.address. Can also be a Messaging Service SID.",
+          "message": "El número de teléfono de Twilio desde el cual enviar mensajes o realizar llamadas durante la ejecución. Disponible como flow.channel.address. También puede ser un SID de Messaging Service."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.short_desc": {
+          "source": "The Twilio phone number",
+          "message": "El número de teléfono de Twilio"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.desc": {
+          "source": "JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow.",
+          "message": "Datos JSON que se agregarán al contexto del flujo y estarán accesibles como variables. Por ejemplo: un objeto JSON con la propiedad name pasa a estar disponible como flow.data.name en el flujo."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.display_name": {
+          "source": "Parameters",
+          "message": "Parámetros"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.short_desc": {
+          "source": "JSON data for the flow context",
+          "message": "Datos JSON para el contexto del flujo"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.desc": {
+          "source": "The contact phone number to start the Flow execution with. Available in the flow as contact.channel.address.",
+          "message": "El número de teléfono de contacto con el cual iniciar la ejecución del flujo. Disponible en el flujo como contact.channel.address."
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.short_desc": {
+          "source": "The contact phone number",
+          "message": "El número de teléfono de contacto"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Start a Studio Flow execution",
+          "message": "Iniciar una ejecución de Studio Flow"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.",
+          "message": "Obtenga información detallada sobre un mensaje específico utilizando su SID (String Identifier) único. Esto devuelve toda la información disponible sobre el mensaje, incluidos el estado, el contenido, los precios y las marcas de tiempo."
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get a Message",
+          "message": "Obtener un mensaje"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "El identificador de cadena único (SID) del mensaje que se va a recuperar. Los SID de mensaje comienzan con \"SM\" o \"MM\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "SID del mensaje"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "El identificador único del mensaje"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve details of a specific message",
+          "message": "Recuperar detalles de un mensaje específico"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.desc": {
+          "source": "Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.",
+          "message": "Obtenga información detallada sobre una llamada específica utilizando su SID único. Esto devuelve toda la información disponible sobre la llamada, incluidos el estado, la duración, los precios y las marcas de tiempo."
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
+          "source": "Get a Call",
+          "message": "Obtener una llamada"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to retrieve. Call SIDs start with \"CA\".",
+          "message": "El identificador de cadena único (SID) de la llamada que se va a recuperar. Los SID de llamada comienzan con \"CA\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "SID de la llamada"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call",
+          "message": "El identificador único de la llamada"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
+          "source": "Retrieve details of a specific call",
+          "message": "Recuperar detalles de una llamada específica"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.desc": {
+          "source": "Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.",
+          "message": "Obtenga información detallada sobre una ejecución específica de Studio Flow, incluidos su estado actual, los datos de contexto y el estado."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
+          "source": "Get an Execution",
+          "message": "Obtener una ejecución"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with \"FN\".",
+          "message": "El identificador de cadena único (SID) de la ejecución que se va a recuperar. Los SID de ejecución comienzan con \"FN\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "SID de la ejecución"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "El identificador único de la ejecución"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "El SID del Studio Flow que contiene la ejecución. Los SID de flujo comienzan con \"FW\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "SID del flujo"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "El identificador único del Studio Flow"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
+          "source": "Retrieve details of a specific execution",
+          "message": "Recuperar detalles de una ejecución específica"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.desc": {
+          "source": "Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.",
+          "message": "Obtenga información detallada sobre una grabación de llamada específica, incluidos la duración, el estado, los precios, la URL de medios y los detalles de cifrado."
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
+          "source": "Get a Recording",
+          "message": "Obtener una grabación"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with \"RE\".",
+          "message": "El identificador de cadena único (SID) de la grabación que se va a recuperar. Los SID de grabación comienzan con \"RE\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "SID de la grabación"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "El identificador único de la grabación"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
+          "source": "Retrieve details of a specific recording",
+          "message": "Recuperar detalles de una grabación específica"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.",
+          "message": "Obtenga información detallada sobre una transcripción específica, incluido el texto completo transcrito de la grabación. Esto devuelve el campo transcriptionText que contiene el contenido real de la transcripción."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "Get a Transcription",
+          "message": "Obtener una transcripción"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording that contains the transcription. Recording SIDs start with \"RE\".",
+          "message": "El SID de la grabación que contiene la transcripción. Los SID de grabación comienzan con \"RE\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "SID de la grabación"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "El identificador único de la grabación"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.desc": {
+          "source": "The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with \"TR\".",
+          "message": "El identificador de cadena único (SID) de la transcripción que se va a recuperar. Los SID de transcripción comienzan con \"TR\"."
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.display_name": {
+          "source": "Transcription SID",
+          "message": "SID de la transcripción"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.short_desc": {
+          "source": "The unique identifier of the transcription",
+          "message": "El identificador único de la transcripción"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Retrieve a specific transcription with text",
+          "message": "Recuperar una transcripción específica con texto"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.",
+          "message": "Elimine de forma permanente un registro de mensaje de su cuenta de Twilio. Esta acción no se puede deshacer. Tenga en cuenta que eliminar un registro de mensaje no redacta ni oculta el contenido del mensaje de los registros de Twilio."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete a Message",
+          "message": "Eliminar un mensaje"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to delete. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "El identificador de cadena único (SID) del mensaje que se va a eliminar. Los SID de mensaje comienzan con \"SM\" o \"MM\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "SID del mensaje"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message to delete",
+          "message": "El identificador único del mensaje a eliminar"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from your account",
+          "message": "Eliminar un mensaje de su cuenta"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.desc": {
+          "source": "Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.",
+          "message": "Elimine de forma permanente un registro de llamada de su cuenta de Twilio. Esta acción no se puede deshacer. Tenga en cuenta que eliminar un registro de llamada no oculta los datos de la llamada de los registros de Twilio."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
+          "source": "Delete a Call",
+          "message": "Eliminar una llamada"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to delete. Call SIDs start with \"CA\".",
+          "message": "El identificador de cadena único (SID) de la llamada que se va a eliminar. Los SID de llamada comienzan con \"CA\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "SID de la llamada"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call to delete",
+          "message": "El identificador único de la llamada a eliminar"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
+          "source": "Delete a call record from your account",
+          "message": "Eliminar un registro de llamada de su cuenta"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Permanently delete an execution record from your Twilio account. This action cannot be undone.",
+          "message": "Elimine de forma permanente un registro de ejecución de su cuenta de Twilio. Esta acción no se puede deshacer."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Delete an Execution",
+          "message": "Eliminar una ejecución"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to delete. Execution SIDs start with \"FN\".",
+          "message": "El identificador de cadena único (SID) de la ejecución que se va a eliminar. Los SID de ejecución comienzan con \"FN\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "SID de la ejecución"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution to delete",
+          "message": "El identificador único de la ejecución a eliminar"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "El SID del Studio Flow que contiene la ejecución. Los SID de flujo comienzan con \"FW\"."
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "SID del flujo"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "El identificador único del Studio Flow"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Delete an execution record",
+          "message": "Eliminar un registro de ejecución"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.desc": {
+          "source": "Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.",
+          "message": "Recupere una lista de transcripciones de una grabación de llamada específica. Las transcripciones convierten el audio de las grabaciones en texto."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
+          "source": "List Transcriptions",
+          "message": "Listar transcripciones"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of transcription records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros de transcripción a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of transcriptions to return",
+          "message": "Número máximo de transcripciones a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.desc": {
+          "source": "The number of transcription records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros de transcripción a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of transcriptions per page",
+          "message": "Número de transcripciones por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording whose transcriptions you want to list. Recording SIDs start with \"RE\".",
+          "message": "El SID de la grabación cuyas transcripciones desea listar. Los SID de grabación comienzan con \"RE\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "SID de la grabación"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "El identificador único de la grabación"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
+          "source": "Retrieve transcriptions for a recording",
+          "message": "Recuperar transcripciones de una grabación"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.desc": {
+          "source": "Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Recupere una lista de llamadas de su cuenta de Twilio. Puede filtrar llamadas por números de teléfono de participantes, estado, rango de fechas y otros criterios. Los resultados se devuelven en orden cronológico inverso."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
+          "source": "List Calls",
+          "message": "Listar llamadas"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.desc": {
+          "source": "Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "Devolver solo las llamadas que finalizaron en o después de esta fecha y hora. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
+          "source": "End Time After",
+          "message": "Hora de finalización posterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
+          "source": "Filter by minimum end time",
+          "message": "Filtrar por hora de finalización mínima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.desc": {
+          "source": "Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "Devolver solo las llamadas que finalizaron en o antes de esta fecha y hora. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
+          "source": "End Time Before",
+          "message": "Hora de finalización anterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
+          "source": "Filter by maximum end time",
+          "message": "Filtrar por hora de finalización máxima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.desc": {
+          "source": "Only return calls from this phone number, SIP address, or client identifier.",
+          "message": "Devolver solo llamadas desde este número de teléfono, dirección SIP o identificador de cliente."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by caller phone number",
+          "message": "Filtrar por número de teléfono de la persona que llama"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of call records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros de llamadas a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of calls to return",
+          "message": "Número máximo de llamadas a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.desc": {
+          "source": "Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "Devolver solo las llamadas que comenzaron en o después de esta fecha y hora. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
+          "source": "Start Time After",
+          "message": "Hora de inicio posterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
+          "source": "Filter by minimum start time",
+          "message": "Filtrar por hora de inicio mínima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.desc": {
+          "source": "Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "Devolver solo las llamadas que comenzaron en o antes de esta fecha y hora. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
+          "source": "Start Time Before",
+          "message": "Hora de inicio anterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
+          "source": "Filter by maximum start time",
+          "message": "Filtrar por hora de inicio máxima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOm5vLWFuc3dlcg.display_name": {
+          "source": "No Answer",
+          "message": "Sin respuesta"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmJ1c3k.display_name": {
+          "source": "Busy",
+          "message": "Ocupado"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Cancelado"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Completada"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmZhaWxlZA.display_name": {
+          "source": "Failed",
+          "message": "Fallido"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmluLXByb2dyZXNz.display_name": {
+          "source": "In Progress",
+          "message": "En progreso"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnF1ZXVlZA.display_name": {
+          "source": "Queued",
+          "message": "En cola"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "Sonando"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.desc": {
+          "source": "Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.",
+          "message": "Devolver solo las llamadas con este estado. Las opciones incluyen: queued, ringing, in-progress, canceled, completed, failed, busy o no-answer."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Estado"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.short_desc": {
+          "source": "Filter by call status",
+          "message": "Filtrar por estado de la llamada"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.desc": {
+          "source": "The number of call records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros de llamadas a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of calls per page",
+          "message": "Número de llamadas por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.desc": {
+          "source": "Only return calls made to this phone number, SIP address, or client identifier.",
+          "message": "Devolver solo llamadas realizadas a este número de teléfono, dirección SIP o identificador de cliente."
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrar por número de teléfono del destinatario"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
+          "source": "Retrieve a list of calls",
+          "message": "Recuperar una lista de llamadas"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.desc": {
+          "source": "Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.",
+          "message": "Recupere una lista de ejecuciones para un Studio Flow específico. Puede filtrar las ejecuciones por rango de fechas para encontrar instancias de ejecución específicas."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
+          "source": "List Executions",
+          "message": "Listar ejecuciones"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.desc": {
+          "source": "Only return executions created on or after this date and time, in ISO 8601 format.",
+          "message": "Devolver solo las ejecuciones creadas en o después de esta fecha y hora, en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
+          "source": "Date Created From",
+          "message": "Fecha de creación desde"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "Filtrar por fecha de creación mínima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.desc": {
+          "source": "Only return executions created before this date and time, in ISO 8601 format.",
+          "message": "Devolver solo las ejecuciones creadas antes de esta fecha y hora, en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
+          "source": "Date Created To",
+          "message": "Fecha de creación hasta"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "Filtrar por fecha de creación máxima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow whose executions you want to list. Flow SIDs start with \"FW\".",
+          "message": "El SID del Studio Flow cuyas ejecuciones desea listar. Los SID de Flow comienzan con \"FW\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "SID del flujo"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "El identificador único del Studio Flow"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of execution records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros de ejecución a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of executions to return",
+          "message": "Número máximo de ejecuciones a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.desc": {
+          "source": "The number of execution records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros de ejecución a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of executions per page",
+          "message": "Número de ejecuciones por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
+          "source": "Retrieve executions for a Studio Flow",
+          "message": "Recuperar ejecuciones de un Studio Flow"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.desc": {
+          "source": "Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.",
+          "message": "Recupere una lista de todos los archivos multimedia adjuntos a un mensaje específico. Esto es útil para acceder a archivos adjuntos MMS o multimedia enviados a través de WhatsApp u otros canales."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
+          "source": "List Message Media",
+          "message": "Listar archivos multimedia de mensajes"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.desc": {
+          "source": "The maximum number of media records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros multimedia a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of media items to return",
+          "message": "Número máximo de elementos multimedia a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message whose media you want to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "El identificador de cadena único (SID) del mensaje cuyos archivos multimedia desea recuperar. Los SID de mensaje comienzan con \"SM\" o \"MM\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "SID del mensaje"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "El identificador único del mensaje"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.desc": {
+          "source": "The number of media records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros multimedia a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of media items per page",
+          "message": "Número de elementos multimedia por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
+          "source": "Retrieve media attached to a message",
+          "message": "Recuperar archivos multimedia adjuntos a un mensaje"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Recupere una lista de mensajes de su cuenta de Twilio. Puede filtrar mensajes por destinatario, remitente, rango de fechas y otros criterios. Los resultados se devuelven en orden cronológico inverso."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "Listar mensajes"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.desc": {
+          "source": "Only return messages sent on or after this date. Provide the date in ISO 8601 format.",
+          "message": "Solo devolver mensajes enviados en o después de esta fecha. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
+          "source": "Date Sent After",
+          "message": "Fecha de envío posterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
+          "source": "Filter by minimum send date",
+          "message": "Filtrar por fecha mínima de envío"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.desc": {
+          "source": "Only return messages sent on or before this date. Provide the date in ISO 8601 format.",
+          "message": "Solo devolver mensajes enviados en o antes de esta fecha. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
+          "source": "Date Sent Before",
+          "message": "Fecha de envío anterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum send date",
+          "message": "Filtrar por fecha máxima de envío"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.desc": {
+          "source": "Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.",
+          "message": "Solo devolver mensajes enviados desde este número de teléfono o ID de remitente alfanumérico. El número de teléfono debe estar en formato E.164."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "Filtrar por número de teléfono del remitente"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros de mensajes a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "Número máximo de mensajes a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.desc": {
+          "source": "The number of message records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros de mensajes a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of messages per page",
+          "message": "Número de mensajes por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.desc": {
+          "source": "Only return messages sent to this phone number. The phone number should be in E.164 format.",
+          "message": "Solo devolver mensajes enviados a este número de teléfono. El número de teléfono debe estar en formato E.164."
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrar por número de teléfono del destinatario"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Retrieve a list of messages",
+          "message": "Recuperar una lista de mensajes"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.desc": {
+          "source": "Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.",
+          "message": "Recupere una lista de grabaciones de llamadas de su cuenta de Twilio. Puede filtrar grabaciones por SID de llamada, SID de conferencia, rango de fechas e incluir grabaciones eliminadas de forma recuperable."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
+          "source": "List Recordings",
+          "message": "Listar grabaciones"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only return recordings associated with this specific conference. The Conference SID should start with \"CF\".",
+          "message": "Solo devolver grabaciones asociadas a esta conferencia específica. El SID de conferencia debe comenzar con \"CF\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrar por SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.desc": {
+          "source": "Only return recordings associated with this specific call. The Call SID should start with \"CA\".",
+          "message": "Solo devolver grabaciones asociadas a esta llamada específica. El SID de llamada debe comenzar con \"CA\"."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "SID de la llamada"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrar por SID de llamada"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.desc": {
+          "source": "Only return recordings created on or after this date. Provide the date in ISO 8601 format.",
+          "message": "Solo devolver grabaciones creadas en o después de esta fecha. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
+          "source": "Date Created After",
+          "message": "Fecha de creación posterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "Filtrar por fecha de creación mínima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.desc": {
+          "source": "Only return recordings created on or before this date. Provide the date in ISO 8601 format.",
+          "message": "Solo devolver grabaciones creadas en o antes de esta fecha. Proporcione la fecha en formato ISO 8601."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
+          "source": "Date Created Before",
+          "message": "Fecha de creación anterior a"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "Filtrar por fecha de creación máxima"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.desc": {
+          "source": "Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.",
+          "message": "Indica si se deben incluir grabaciones eliminadas de forma recuperable. Los metadatos de grabación se retienen durante 40 días tras la eliminación."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
+          "source": "Include Soft Deleted",
+          "message": "Incluir eliminaciones recuperables"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
+          "source": "Include soft-deleted recordings",
+          "message": "Incluir grabaciones eliminadas de forma recuperable"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of recording records to return. The default is 50 and the maximum is 1000.",
+          "message": "El número máximo de registros de grabación a devolver. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Límite"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of recordings to return",
+          "message": "Número máximo de grabaciones a devolver"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.desc": {
+          "source": "The number of recording records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "El número de registros de grabación a devolver por página. El valor predeterminado es 50 y el máximo es 1000."
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "Tamaño de página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of recordings per page",
+          "message": "Número de grabaciones por página"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
+          "source": "Retrieve a list of call recordings",
+          "message": "Recuperar una lista de grabaciones de llamadas"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Twilio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada API HTTP / REST personalizada a **Twilio** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para endpoints que aún no estén expuestos como acciones de primer nivel en esta app."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Twilio",
+          "message": "Realizar una llamada API personalizada a Twilio"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.",
+          "message": "Monitorea su cuenta de Twilio en busca de nuevos mensajes entrantes o salientes. Puede filtrar mensajes por número de teléfono del destinatario o del remitente. El disparador se activa cada vez que se detecta un nuevo mensaje que coincide con sus filtros."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nuevo mensaje"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders.",
+          "message": "Solo activar para mensajes enviados desde este número de teléfono o ID de remitente alfanumérico. El número de teléfono debe estar en formato E.164 (p. ej., +15551234567). Deje vacío para activar para todos los remitentes."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "De"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "Filtrar por número de teléfono del remitente"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.desc": {
+          "source": "Only trigger for messages sent to this phone number. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all recipients.",
+          "message": "Solo activar para mensajes enviados a este número de teléfono. El número de teléfono debe estar en formato E.164 (p. ej., +15551234567). Deje vacío para activar para todos los destinatarios."
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "Para"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "Filtrar por número de teléfono del destinatario"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new SMS or MMS message is received",
+          "message": "Se activa cuando se recibe un nuevo mensaje SMS o MMS"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.desc": {
+          "source": "Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.",
+          "message": "Monitorea su cuenta de Twilio en busca de nuevas grabaciones de llamadas. Puede filtrar grabaciones por SID de llamada o SID de conferencia específicos. El disparador se activa cada vez que se detecta una nueva grabación que coincide con sus filtros."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
+          "source": "New Recording",
+          "message": "Nueva grabación"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "Solo activar para grabaciones asociadas a esta conferencia específica. El SID de conferencia debe comenzar con \"CF\". Deje vacío para activar para todas las conferencias."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrar por SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "Solo activar para grabaciones asociadas a esta llamada específica. El SID de llamada debe comenzar con \"CA\". Deje vacío para activar para todas las llamadas."
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "SID de la llamada"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrar por SID de llamada"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
+          "source": "Triggers when a new call recording is created",
+          "message": "Se activa cuando se crea una nueva grabación de llamada"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.",
+          "message": "Monitorea su cuenta de Twilio en busca de nuevas transcripciones comprobando las grabaciones más recientes. Puede filtrar por SID de llamada o SID de conferencia específicos. El disparador se activa cada vez que se detecta una nueva transcripción para grabaciones que coinciden con sus filtros."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "New Transcription",
+          "message": "Nueva transcripción"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "Solo activar para transcripciones de grabaciones asociadas a esta conferencia específica. El SID de conferencia debe comenzar con \"CF\". Deje vacío para activar para todas las conferencias."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "Filtrar por SID de conferencia"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "Solo activar para transcripciones de grabaciones asociadas a esta llamada específica. El SID de llamada debe comenzar con \"CA\". Deje vacío para activar para todas las llamadas."
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "SID de la llamada"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "Filtrar por SID de llamada"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Triggers when a new recording transcription is created",
+          "message": "Se activa cuando se crea una nueva transcripción de grabación"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Update the status of a Studio Flow execution. This is typically used to end an active execution early.",
+          "message": "Actualice el estado de una ejecución de Studio Flow. Esto se utiliza normalmente para finalizar una ejecución activa de forma anticipada."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Update an Execution",
+          "message": "Actualizar una ejecución"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to update. Execution SIDs start with \"FN\".",
+          "message": "El identificador de cadena único (SID) de la ejecución a actualizar. Los SID de ejecución comienzan con \"FN\"."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "SID de la ejecución"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "El identificador único de la ejecución"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "El SID del Studio Flow que contiene la ejecución. Los SID de flujo comienzan con \"FW\"."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "SID del flujo"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "El identificador único del Studio Flow"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Activo"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmVuZGVk.display_name": {
+          "source": "Ended",
+          "message": "Finalizado"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.desc": {
+          "source": "The status to set for the execution. Set to \"ended\" to terminate an active execution.",
+          "message": "El estado a establecer para la ejecución. Establézcalo en \"ended\" para finalizar una ejecución activa."
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Estado"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the execution",
+          "message": "El nuevo estado para la ejecución"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Update the status of an execution",
+          "message": "Actualizar el estado de una ejecución"
+        },
+        "app.VHdpbGlv.desc": {
+          "source": "Integrate with Twilio to send SMS messages, make voice calls, and manage your communications infrastructure. This integration allows you to automate messaging workflows, handle incoming calls and messages, and build powerful communication features into your applications.",
+          "message": "Intégrese con Twilio para enviar mensajes SMS, realizar llamadas de voz y administrar su infraestructura de comunicaciones. Esta integración le permite automatizar flujos de trabajo de mensajería, gestionar llamadas y mensajes entrantes y crear potentes funciones de comunicación en sus aplicaciones."
+        },
+        "app.VHdpbGlv.display_name": {
+          "source": "Twilio",
+          "message": "Twilio"
+        },
+        "app.VHdpbGlv.short_desc": {
+          "source": "Connect with Twilio to send SMS, make calls, and manage communications",
+          "message": "Conéctese con Twilio para enviar SMS, realizar llamadas y administrar comunicaciones"
+        }
+      }
+    }
+  }
+}

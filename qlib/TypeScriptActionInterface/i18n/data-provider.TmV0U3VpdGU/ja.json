@@ -1,0 +1,1357 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.desc": {
+          "source": "Removes a contact record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから連絡先レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Contact",
+          "message": "連絡先を削除"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific contact.",
+          "message": "特定の連絡先を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single contact by its ID.",
+          "message": "IDによって単一の連絡先の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.display_name": {
+          "source": "Get Contact",
+          "message": "連絡先の取得"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific contact.",
+          "message": "特定の連絡先の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific contact by its ID.",
+          "message": "ユーザーがIDによって特定の連絡先の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.display_name": {
+          "source": "Update Contact",
+          "message": "連絡先を更新"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing contact.",
+          "message": "既存の連絡先を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.desc": {
+          "source": "Allows the user to create a new contact record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい連絡先レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.display_name": {
+          "source": "Create Contact",
+          "message": "コンタクトを作成"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.short_desc": {
+          "source": "Creates a new contact.",
+          "message": "新しい連絡先を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブル内に新しいレコードを作成します"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブル内に新しいレコードを作成します"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single customer by its ID.",
+          "message": "IDによって単一の顧客の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.display_name": {
+          "source": "Get Customer",
+          "message": "顧客を取得"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific customer.",
+          "message": "特定の顧客の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.desc": {
+          "source": "Removes a customer record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから顧客レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Customer",
+          "message": "顧客を削除"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific customer.",
+          "message": "特定の顧客を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific customer by its ID.",
+          "message": "ユーザーがIDによって特定の顧客の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.display_name": {
+          "source": "Update Customer",
+          "message": "顧客を更新"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing customer.",
+          "message": "既存の顧客を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.desc": {
+          "source": "Allows the user to create a new customer record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい顧客レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.display_name": {
+          "source": "Create Customer",
+          "message": "顧客を作成"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.short_desc": {
+          "source": "Creates a new customer.",
+          "message": "新しい顧客を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.desc": {
+          "source": "Creates a new customer in NetSuite with simplified fields",
+          "message": "簡素化されたフィールドを使用してNetSuiteに新しい顧客を作成します"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.display_name": {
+          "source": "Create Customer (simplified)",
+          "message": "顧客を作成（簡易版）"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.short_desc": {
+          "source": "Creates a new customer with simplified options.",
+          "message": "簡素化されたオプションで新しい顧客を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.desc": {
+          "source": "Removes an account record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから勘定科目レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Account",
+          "message": "アカウントを削除"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific account.",
+          "message": "特定の勘定科目を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single account by its ID.",
+          "message": "IDによって単一の勘定科目の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.display_name": {
+          "source": "Get Account",
+          "message": "アカウントの取得"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific account.",
+          "message": "特定の勘定科目の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific account by its ID.",
+          "message": "ユーザーがIDによって特定の勘定科目の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.display_name": {
+          "source": "Update Account",
+          "message": "アカウントを更新"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing account.",
+          "message": "既存の勘定科目を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.desc": {
+          "source": "Allows the user to create a new account record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい勘定科目レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.display_name": {
+          "source": "Create Account",
+          "message": "アカウントを作成"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.short_desc": {
+          "source": "Creates a new account.",
+          "message": "新しい勘定科目を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブルからレコードを削除します"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブルからレコードを削除します"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.desc": {
+          "source": "Removes an invoice record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから請求書レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.display_name": {
+          "source": "Delete Invoice",
+          "message": "請求書を削除"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific invoice.",
+          "message": "特定の請求書を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single invoice by its ID.",
+          "message": "IDによって単一の請求書の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.display_name": {
+          "source": "Get Invoice",
+          "message": "請求書を取得"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific invoice.",
+          "message": "特定の請求書の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific invoice by its ID.",
+          "message": "IDを指定して特定の請求書の詳細を更新できます。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.display_name": {
+          "source": "Update Invoice",
+          "message": "請求書を更新"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing invoice.",
+          "message": "既存の請求書を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.desc": {
+          "source": "Allows the user to create a new invoice record in NetSuite.",
+          "message": "NetSuiteで新しい請求書レコードを作成できます。"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.display_name": {
+          "source": "Create Invoice",
+          "message": "請求書を作成"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.short_desc": {
+          "source": "Creates a new invoice.",
+          "message": "新しい請求書を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a journal entry record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから仕訳帳エントリレコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Journal Entry",
+          "message": "仕訳帳エントリを削除"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific journal entry.",
+          "message": "特定の仕訳帳エントリを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single journal entry by its ID.",
+          "message": "IDを指定して単一の仕訳帳エントリの詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.display_name": {
+          "source": "Get Journal Entry",
+          "message": "仕訳帳エントリを取得"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific journal entry.",
+          "message": "特定の仕訳帳エントリの詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.desc": {
+          "source": "Journal entry id patch",
+          "message": "仕訳帳エントリIDパッチ"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.display_name": {
+          "source": "Update Record.",
+          "message": "レコードを更新します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.short_desc": {
+          "source": "Update record.",
+          "message": "レコードを更新します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.desc": {
+          "source": "Allows the user to create a new journal entry record in NetSuite.",
+          "message": "NetSuiteで新しい仕訳帳エントリレコードを作成できます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.display_name": {
+          "source": "Create Journal Entry",
+          "message": "仕訳帳エントリを作成"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.desc": {
+          "source": "The server behavior requested by the client. Use 'respond-async' to execute the request asynchronously. If the request is executed asynchronously, 'Preference-applied: respond-async' is returned in the response.",
+          "message": "クライアントが要求するサーバーの動作。リクエストを非同期で実行するには 'respond-async' を使用します。リクエストが非同期で実行されると、レスポンスに 'Preference-applied: respond-async' が返されます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.display_name": {
+          "source": "Prefer",
+          "message": "Prefer"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.short_desc": {
+          "source": "The server behavior requested by the client",
+          "message": "クライアントが要求するサーバーの動作"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once. Only one request can be executed with every unique idempotency key. Use UUID in string format as defined by RFC 4122. If the request is executed synchronously, this value is ignored.",
+          "message": "リクエストが一度だけ実行されるようにするために、すべての非同期リクエストに適用されるユーザー定義の一意のべき等キー。一意のべき等キーごとに実行できるリクエストは1つだけです。RFC 4122で定義されている文字列形式のUUIDを使用してください。リクエストが同期的に実行される場合、この値は無視されます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.display_name": {
+          "source": "X Net Suite Idempotency Key",
+          "message": "X Net Suite Idempotency Key"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
+          "message": "リクエストが一度だけ実行されるようにするためにすべての非同期リクエストに適用されるユーザー定義の一意のべき等キー"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
+          "source": "Sets the strictness of property name validation.",
+          "message": "プロパティ名検証の厳密性を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.display_name": {
+          "source": "X Net Suite Property Name Validation",
+          "message": "X Net Suite Property Name Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.short_desc": {
+          "source": "Sets the strictness of property name validation",
+          "message": "プロパティ名検証の厳密性を設定します"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.desc": {
+          "source": "Sets the strictness of property value validation.",
+          "message": "プロパティ値検証の厳密性を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.display_name": {
+          "source": "X Net Suite Property Value Validation",
+          "message": "X Net Suite Property Value Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.short_desc": {
+          "source": "Sets the strictness of property value validation",
+          "message": "プロパティ値検証の厳密性を設定します"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y2xhc3M.display_name": {
+          "source": "Class",
+          "message": "クラス"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZERhdGU.display_name": {
+          "source": "Created Date",
+          "message": "作成日"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZEZyb20.display_name": {
+          "source": "Created From",
+          "message": "作成元"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "通貨"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VzdG9tRm9ybQ.display_name": {
+          "source": "Custom Form",
+          "message": "カスタムフォーム"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2s.display_name": {
+          "source": "Accounting Book",
+          "message": "会計帳簿"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2tEZXRhaWw.display_name": {
+          "source": "Accounting Book Detail",
+          "message": "会計帳簿の詳細"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwbGllZFJ1bGVz.display_name": {
+          "source": "Applied Rules",
+          "message": "適用されたルール"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.desc": {
+          "source": "Check this box to indicate that this journal entry is approved. If you check this box, this journal entry will post immediately. If you do not check this box, this journal entry must be approved before it posts.",
+          "message": "この仕訳帳エントリが承認済みであることを示すには、このチェックボックスをオンにします。オンにすると、この仕訳帳エントリは直ちに転記されます。オフのままの場合、この仕訳帳エントリは転記前に承認される必要があります。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.display_name": {
+          "source": "Approved",
+          "message": "承認済み"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.short_desc": {
+          "source": "Check this box to indicate that this journal entry is approved",
+          "message": "この仕訳帳エントリが承認済みであることを示すには、このチェックボックスをオンにします"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "部署"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External Id",
+          "message": "外部ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency. You can edit the exchange rate for this transaction only, or you can update the currency exchange rates list.",
+          "message": "このフィールドには、子会社の通貨に対する相手先子会社の通貨のデフォルト為替レートが表示されます。この取引のみの為替レートを編集することも、通貨為替レートリストを更新することもできます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.display_name": {
+          "source": "Exchange Rate",
+          "message": "為替レート"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
+          "message": "このフィールドには、子会社の通貨に対する相手先子会社の通貨のデフォルト為替レートが表示されます"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
+          "source": "Exclude From GL Numbering",
+          "message": "総勘定元帳ナンバリングから除外"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aWQ.display_name": {
+          "source": "Id",
+          "message": "ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aXNSZXZlcnNhbA.display_name": {
+          "source": "Is Reversal",
+          "message": "反対仕訳"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "位置情報"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGFzdE1vZGlmaWVkRGF0ZQ.display_name": {
+          "source": "Last Modified Date",
+          "message": "最終更新日"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGluZQ.display_name": {
+          "source": "Line",
+          "message": "行"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "リンク"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.desc": {
+          "source": "If you wish, enter a memo to describe this journal entry. It will appear on this transaction detail as well as reports such as a 2-line account register.",
+          "message": "必要に応じて、この仕訳帳エントリを説明するメモを入力します。これは、この取引の詳細や2行勘定元帳などのレポートに表示されます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.display_name": {
+          "source": "Memo",
+          "message": "メモ"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.short_desc": {
+          "source": "If you wish, enter a memo to describe this journal entry",
+          "message": "必要に応じて、この仕訳帳エントリを説明するメモを入力します"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.c3Vic2lkaWFyeQ.display_name": {
+          "source": "Subsidiary",
+          "message": "子会社"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.display_name": {
+          "source": "Posting Period",
+          "message": "転記期間"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cGFyZW50RXhwZW5zZUFsbG9j.display_name": {
+          "source": "Parent Expense Alloc",
+          "message": "親経費配賦"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted. If Defer Entry is checked, this field is mandatory.",
+          "message": "この仕訳帳エントリを反対仕訳する場合は、反対仕訳エントリを転記する日付を入力します。「仕訳の繰延」がオンの場合、このフィールドは必須です。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.display_name": {
+          "source": "Reversal Date",
+          "message": "反対仕訳日"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
+          "message": "この仕訳帳エントリを反対仕訳する場合は、反対仕訳エントリを転記する日付を入力します"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
+          "message": "必須の「反対仕訳日」フィールドに入力された日付に自動的に発生する定型取引として反対仕訳を処理するには、このチェックボックスをオンにします。「反対仕訳日」フィールドの日付で即時入力取引として反対仕訳を処理するには、このチェックボックスをオフにします。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
+          "source": "Reversal Defer",
+          "message": "反対仕訳の繰延"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
+          "message": "必須の「反対仕訳日」フィールドに入力された日付に自動的に発生する定型取引として反対仕訳を処理するには、このチェックボックスをオンにします"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
+          "source": "Ref Name",
+          "message": "参照名"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.desc": {
+          "source": "The names of sublists on this record. All sublist lines will be replaced with lines specified in the request. The names are delimited by comma.",
+          "message": "このレコードのサブリストの名前。すべてのサブリスト行はリクエストで指定された行に置換されます。名前はカンマで区切られます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.display_name": {
+          "source": "Replace",
+          "message": "置換"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.short_desc": {
+          "source": "The names of sublists on this record",
+          "message": "このレコードのサブリストの名前"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dG9TdWJzaWRpYXJ5.display_name": {
+          "source": "To Subsidiary",
+          "message": "相手先子会社"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry. You can enter or select another date.",
+          "message": "NetSuiteはこの仕訳帳エントリの日付として本日の日付を挿入します。別の日付を入力または選択できます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.display_name": {
+          "source": "Tran Date",
+          "message": "取引日"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.short_desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry",
+          "message": "NetSuiteはこの仕訳入力の日付として今日の日付を挿入します"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.desc": {
+          "source": "NetSuite increases the largest journal entry number by one. If you wish, you can type another number. The next journal entry number will revert to the standard pattern. You can enter a maximum of 45 characters in this field.",
+          "message": "NetSuiteは最大の仕訳入力番号を1増やします。必要に応じて別の番号を入力することもできます。次の仕訳入力番号は標準のパターンに戻ります。このフィールドには最大45文字を入力できます。"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.display_name": {
+          "source": "Tran Id",
+          "message": "トランザクションID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.short_desc": {
+          "source": "NetSuite increases the largest journal entry number by one",
+          "message": "NetSuiteは最大の仕訳入力番号を1増やします"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dm9pZA.display_name": {
+          "source": "Void",
+          "message": "無効化"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.short_desc": {
+          "source": "Creates a new journal entry.",
+          "message": "新しい仕訳入力を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single opportunity by its ID.",
+          "message": "IDによって単一の商談の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.display_name": {
+          "source": "Get Opportunity",
+          "message": "案件を取得"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific opportunity.",
+          "message": "特定の商談の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.desc": {
+          "source": "Removes an opportunity record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから商談レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Opportunity",
+          "message": "案件を削除"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific opportunity.",
+          "message": "特定の商談を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific opportunity by its ID.",
+          "message": "ユーザーがIDによって特定の商談の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.display_name": {
+          "source": "Update Opportunity",
+          "message": "案件の更新"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing opportunity.",
+          "message": "既存の商談を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.desc": {
+          "source": "Allows the user to create a new opportunity record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい商談レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.display_name": {
+          "source": "Create Opportunity",
+          "message": "案件を作成"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.short_desc": {
+          "source": "Creates a new opportunity.",
+          "message": "新しい商談を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Query NetSuite records by type with optional filtering, field selection, and pagination",
+          "message": "オプションのフィルタリング、フィールド選択、ページネーションを使用して、タイプ別にNetSuiteレコードをクエリします"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "レコード一覧"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "List of field names to include in results (returns all fields if omitted)",
+          "message": "結果に含めるフィールド名のリスト (省略した場合はすべてのフィールドを返します)"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specific record fields to return",
+          "message": "返す特定のレコードフィールド"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.desc": {
+          "source": "Used for pagination to skip a specified number of records in the result set",
+          "message": "結果セット内の指定した数のレコードをスキップするためのページネーションに使用されます"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "スキップするレコード数"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.desc": {
+          "source": "Caps the number of results returned in a single query",
+          "message": "単一のクエリで返される結果の最大数を制限します"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "返答するレコードの最大数"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.desc": {
+          "source": "If multiple query fields are provided, the record must match all of them",
+          "message": "複数のクエリフィールドが指定された場合、レコードはそれらすべてに一致する必要があります"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "すべて"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.desc": {
+          "source": "If multiple query fields are provided, the record must match at least one of them",
+          "message": "複数のクエリフィールドが指定された場合、レコードは少なくとも1つに一致する必要があります"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.desc": {
+          "source": "Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided",
+          "message": "複数のクエリフィールドが指定された場合に、レコードがすべての条件 (All) または任意の条件 (Any) に一致する必要があるかを決定します"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.display_name": {
+          "source": "Search Mode",
+          "message": "検索モード"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.short_desc": {
+          "source": "How multiple search criteria are combined",
+          "message": "複数の検索条件を組み合わせる方法"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.desc": {
+          "source": "Key-value pairs defining search criteria",
+          "message": "検索条件を定義するキーと値のペア"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.display_name": {
+          "source": "Query Criteria",
+          "message": "クエリ条件"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.short_desc": {
+          "source": "Search conditions for filtering records",
+          "message": "レコードをフィルタリングするための検索条件"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)",
+          "message": "クエリするNetSuiteレコードタイプ (customer、invoice、transactionなど) を指定します"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "レコードタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "Type of NetSuite record to retrieve",
+          "message": "取得するNetSuiteレコードのタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve NetSuite records based on search criteria",
+          "message": "検索条件に基づいてNetSuiteレコードを取得します"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NetSuite** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**NetSuite** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス (接続のAPIベースURLに対する相対パス)、オプションのクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NetSuite",
+          "message": "NetSuiteへのカスタムAPI呼び出しを実行"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggers when a new record is created",
+          "message": "新しいレコードが作成されたときにトリガーします"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新規レコード"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "The type of record to monitor",
+          "message": "監視するレコードのタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "レコードタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "The type of record to monitor",
+          "message": "監視するレコードのタイプ"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created",
+          "message": "新しいレコードが作成されたときにトリガーします"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a sales order record from NetSuite based on its ID.",
+          "message": "IDに基づいてNetSuiteから受注レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Sales Order",
+          "message": "受注を削除"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific sales order.",
+          "message": "特定の受注を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single sales order by its ID.",
+          "message": "IDによって単一の受注の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Sales Order",
+          "message": "受注を取得"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific sales order.",
+          "message": "特定の受注の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific sales order by its ID.",
+          "message": "ユーザーがIDによって特定の受注の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Sales Order",
+          "message": "受注を更新"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing sales order.",
+          "message": "既存の受注を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new sales order record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい受注レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.display_name": {
+          "source": "Create Sales Order",
+          "message": "受注を作成"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new sales order.",
+          "message": "新しい受注を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.desc": {
+          "source": "Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.",
+          "message": "最も一般的に使用されるフィールドのみを使用してNetSuiteで新しい顧客受注を作成し、注文作成をより迅速かつシンプルにします。"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.display_name": {
+          "source": "Create Sales Order (simplified)",
+          "message": "受注を作成 (簡易版)"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.short_desc": {
+          "source": "Creates a new sales order with simplified options.",
+          "message": "簡素化されたオプションで新しい受注を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "アプリ \"NetSuite\" の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "アプリ \"NetSuite\" の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "アプリ \"NetSuite\" の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "アプリ \"NetSuite\" の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.desc": {
+          "source": "Run a SuiteQL query",
+          "message": "SuiteQLクエリを実行"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.display_name": {
+          "source": "SuiteQL",
+          "message": "SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip",
+          "message": "スキップするレコード数"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.short_desc": {
+          "source": "The number of records to skip",
+          "message": "スキップするレコード数"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return",
+          "message": "返すレコードの最大数"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return",
+          "message": "返すレコードの最大数"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gY3VzdG9tZXI.display_name": {
+          "source": "Get all customers",
+          "message": "すべての顧客を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gYWNjb3VudA.display_name": {
+          "source": "Get all accounts",
+          "message": "すべてのアカウントを取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gIFdIRVJFIHR5cGUgPSAnU2FsZXNPcmQn.display_name": {
+          "source": "Get all sales orders",
+          "message": "すべての受注を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdDdXN0SW52Yyc.display_name": {
+          "source": "Get all invoices",
+          "message": "すべての請求書を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdKb3VybmFsJw.display_name": {
+          "source": "Get all journal entries",
+          "message": "すべての仕訳入力を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdQdXJjaE9yZCc.display_name": {
+          "source": "Get all purchase orders",
+          "message": "すべての発注書を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdmVuZG9y.display_name": {
+          "source": "Get all vendors",
+          "message": "すべての仕入先を取得"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.desc": {
+          "source": "The SuiteQL query to run",
+          "message": "実行するSuiteQLクエリ"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "クエリ"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.short_desc": {
+          "source": "The SuiteQL query to run",
+          "message": "実行するSuiteQLクエリ"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.short_desc": {
+          "source": "Run a SuiteQL query",
+          "message": "SuiteQLクエリを実行"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a purchase order record from NetSuite based on its ID.",
+          "message": "NetSuiteからIDに基づいて発注書レコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Purchase Order",
+          "message": "発注書を削除"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific purchase order.",
+          "message": "特定の発注書を削除します。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single purchase order by its ID.",
+          "message": "IDにより単一の発注書の詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Purchase Order",
+          "message": "発注書を取得"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific purchase order.",
+          "message": "特定の発注書の詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific purchase order by its ID.",
+          "message": "ユーザーがIDによって特定の発注書の詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Purchase Order",
+          "message": "発注書を更新"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing purchase order.",
+          "message": "既存の発注書を更新します。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new purchase order record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しい発注書レコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.display_name": {
+          "source": "Create Purchase Order",
+          "message": "発注書を作成"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new purchase order.",
+          "message": "新しい発注書を作成します。"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "アプリ「NetSuite」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a vendor record from NetSuite based on its ID.",
+          "message": "NetSuiteからIDに基づいてベンダーレコードを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Vendor",
+          "message": "ベンダーを削除"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific vendor.",
+          "message": "特定のベンダーを削除します。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single vendor by its ID.",
+          "message": "IDにより単一のベンダーの詳細情報を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.display_name": {
+          "source": "Get Vendor",
+          "message": "ベンダーを取得"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific vendor.",
+          "message": "特定のベンダーの詳細を取得します。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.desc": {
+          "source": "Allows the user to update details of a specific vendor by its ID.",
+          "message": "ユーザーがIDによって特定のベンダーの詳細を更新できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.display_name": {
+          "source": "Update Vendor",
+          "message": "ベンダーを更新"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.short_desc": {
+          "source": "Updates an existing vendor.",
+          "message": "既存のベンダーを更新します。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.desc": {
+          "source": "Allows the user to create a new vendor record in NetSuite.",
+          "message": "ユーザーがNetSuiteで新しいベンダーレコードを作成できるようにします。"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.display_name": {
+          "source": "Create Vendor",
+          "message": "ベンダーを作成"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.short_desc": {
+          "source": "Creates a new vendor.",
+          "message": "新しいベンダーを作成します。"
+        },
+        "app.TmV0U3VpdGU.desc": {
+          "source": "NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.",
+          "message": "NetSuiteはERP、CRM、Eコマースなどの統合プラットフォームを提供し、企業がすべての主要業務を単一のシステムで管理できるようにします。"
+        },
+        "app.TmV0U3VpdGU.display_name": {
+          "source": "NetSuite",
+          "message": "NetSuite"
+        },
+        "app.TmV0U3VpdGU.short_desc": {
+          "source": "A comprehensive suite of cloud-based business management solutions.",
+          "message": "クラウドベースの包括的なビジネス管理ソリューションスイート。"
+        }
+      }
+    }
+  }
+}

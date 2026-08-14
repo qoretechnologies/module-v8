@@ -1,0 +1,1025 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.desc": {
+          "source": "Schedule a new meeting in Microsoft Teams with specified participants, time, location, and other meeting details.",
+          "message": "Запланувати нову нараду в Microsoft Teams із зазначеними учасниками, часом, розташуванням та іншими деталями наради."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.display_name": {
+          "source": "Create Meeting",
+          "message": "Створити зустріч"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Optional text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "Необов'язковий текст із описом порядку денного зустрічі, підготовчих матеріалів або іншої важливої інформації."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "Вміст зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Meeting agenda or notes",
+          "message": "Порядок денний або нотатки зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Optional channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "Необов'язковий ідентифікатор каналу, якщо зустріч пов'язана з певним каналом у команді."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "Ідентифікатор пов'язаного каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "List of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "Список адрес електронної пошти або ID користувачів, яких слід запросити на зустріч."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "Учасники"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Meeting participants",
+          "message": "Учасники зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Дата й час завершення зустрічі у форматі ISO 8601 (РРРР-ММ-ДДTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "Час завершення"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Meeting end date and time",
+          "message": "Дата й час завершення зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, creates a Teams online meeting with video conferencing capabilities and a join link.",
+          "message": "Якщо встановлено значення true, створює онлайнову зустріч Teams із можливостями відеоконференції та посиланням для приєднання."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "Онлайн-нарада"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable Teams online meeting features",
+          "message": "Увімкнути функції онлайн-зустрічі Teams"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "Фізичне місце проведення зустрічі або спеціальний опис віртуального розташування."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Розташування"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Physical or virtual meeting location",
+          "message": "Фізичне або віртуальне місце зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Дата й час початку зустрічі у форматі ISO 8601 (РРРР-ММ-ДДTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "Час початку"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Meeting start date and time",
+          "message": "Дата й час початку зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "Назва або тема зустрічі, яка відображатиметься в запрошеннях у календарі та у списку зустрічей."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Тема"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Meeting title",
+          "message": "Тема зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Optional team identifier if the meeting is associated with a specific team.",
+          "message": "Необов'язковий ідентифікатор команди, якщо зустріч пов'язана з певною командою."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "Ідентифікатор пов'язаної команди"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "Часовий пояс для часу початку та завершення зустрічі, наприклад «Pacific Standard Time» або «UTC»."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "Часовий пояс"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Meeting time zone",
+          "message": "Часовий пояс зустрічі"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Schedule a new Teams meeting",
+          "message": "Запланувати нову зустріч Teams"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.desc": {
+          "source": "Create a new channel within a specified team where members can collaborate through conversations, files, and integrated apps.",
+          "message": "Створити новий канал у вказаній команді, де учасники можуть співпрацювати за допомогою бесід, файлів та інтегрованих програм."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.display_name": {
+          "source": "Create Channel",
+          "message": "Створити канал"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "Необов'язковий опис мети або теми каналу. Обмеження до 1024 символів."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the channel purpose",
+          "message": "Опис призначення каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The display name for the new channel. Must be unique within the team and between 1-50 characters.",
+          "message": "Відображуване ім'я нового каналу. Має бути унікальним у межах команди та містити від 1 до 50 символів."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Назва каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "Name of the new channel",
+          "message": "Назва нового каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Приватний"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnByaXZhdGU.short_desc": {
+          "source": "Private channel",
+          "message": "Приватний канал"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard",
+          "message": "Стандартний"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnN0YW5kYXJk.short_desc": {
+          "source": "Standard channel",
+          "message": "Стандартний канал"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "Спільні"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.allowed-value.c3RyaW5nOnNoYXJlZA.short_desc": {
+          "source": "Shared channel",
+          "message": "Спільний канал"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.desc": {
+          "source": "Defines the privacy level of the channel. Options include \"standard\" (visible to all team members) or \"private\" (visible only to specific members).",
+          "message": "Визначає рівень конфіденційності каналу. Варіанти включають «standard» (видимий усім учасникам команди) або «private» (видимий лише певним учасникам)."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.display_name": {
+          "source": "Membership Type",
+          "message": "Тип членства"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.bWVtYmVyc2hpcFR5cGU.short_desc": {
+          "source": "Channel privacy setting",
+          "message": "Параметр конфіденційності каналу"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier (GUID) for the team where the new channel will be created.",
+          "message": "Унікальний ідентифікатор (GUID) команди, у якій буде створено новий канал."
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Unique identifier for the team",
+          "message": "Унікальний ідентифікатор команди"
+        },
+        "app.VGVhbXM.action.Y3JlYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Create a new channel in a team",
+          "message": "Створити новий канал у команді"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.desc": {
+          "source": "Permanently cancels and removes a scheduled meeting from all participants' calendars.",
+          "message": "Остаточно скасовує та видаляє заплановану зустріч із календарів усіх учасників."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.display_name": {
+          "source": "Delete Meeting",
+          "message": "Видалити зустріч"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier (GUID) of the meeting to be canceled.",
+          "message": "Унікальний ідентифікатор (GUID) зустрічі, яку потрібно скасувати."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "ID зустрічі"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Unique meeting identifier",
+          "message": "Унікальний ідентифікатор зустрічі"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "Особисті"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "Команда"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies where the meeting was created, such as \"private\" or \"team\".",
+          "message": "Вказує, де було створено зустріч, наприклад «private» або «team»."
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "Джерело зустрічі"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "Походження зустрічі"
+        },
+        "app.VGVhbXM.action.ZGVsZXRlLW1lZXRpbmc.short_desc": {
+          "source": "Cancel an existing meeting",
+          "message": "Скасувати наявну зустріч"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Microsoft Teams** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробити власний виклик HTTP / REST API до **Microsoft Teams**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.VGVhbXM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Microsoft Teams",
+          "message": "Зробити власний виклик API до Microsoft Teams"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.desc": {
+          "source": "This trigger fires when a new meeting is scheduled that matches the specified criteria.",
+          "message": "Цей тригер спрацьовує, коли заплановано нову зустріч, що відповідає вказаним критеріям."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "Нова зустріч"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnBlcnNvbmFs.display_name": {
+          "source": "Personal",
+          "message": "Особисті"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.allowed-value.c3RyaW5nOnRlYW0.display_name": {
+          "source": "Team",
+          "message": "Команда"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.desc": {
+          "source": "Specifies which type of meetings to monitor, such as \"private\" or \"team\" meetings.",
+          "message": "Вказує, який тип зустрічей слід відстежувати, наприклад «private» або «team»."
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.display_name": {
+          "source": "Meeting Source",
+          "message": "Джерело зустрічі"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.option.bWVldGluZ1NvdXJjZQ.short_desc": {
+          "source": "Origin of the meeting",
+          "message": "Походження зустрічі"
+        },
+        "app.VGVhbXM.action.bmV3LW1lZXRpbmc.short_desc": {
+          "source": "Trigger when a meeting is created",
+          "message": "Спрацьовувати під час створення зустрічі"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is posted in a specified channel within a team.",
+          "message": "Цей тригер спрацьовує, коли нове повідомлення публікується у вказаному каналі всередині команди."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.display_name": {
+          "source": "New Channel Message",
+          "message": "Нове повідомлення в каналі"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to monitor for new messages.",
+          "message": "Унікальний ідентифікатор каналу для відстеження нових повідомлень."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID каналу"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Channel to monitor for messages",
+          "message": "Канал для відстеження повідомлень"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to monitor.",
+          "message": "Унікальний ідентифікатор команди, що містить канал для відстеження."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Ідентифікатор команди"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYW5uZWwtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is posted in a channel",
+          "message": "Спрацьовувати під час публікації повідомлення в каналі"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.desc": {
+          "source": "This trigger fires when a new message is sent in a direct chat or group chat conversation.",
+          "message": "Цей тригер спрацьовує, коли надсилається нове повідомлення в прямому чаті або груповій бесіді."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.display_name": {
+          "source": "New Chat Message",
+          "message": "Нове повідомлення в чаті"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat to monitor for new messages.",
+          "message": "Унікальний ідентифікатор прямого або групового чату для відстеження нових повідомлень."
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "ID чату"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.option.Y2hhdElk.short_desc": {
+          "source": "Chat to monitor for messages",
+          "message": "Чат для відстеження повідомлень"
+        },
+        "app.VGVhbXM.action.bmV3LWNoYXQtbWVzc2FnZQ.short_desc": {
+          "source": "Trigger when a message is sent in a chat",
+          "message": "Запускати, коли повідомлення надіслано в чат"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a direct chat or group chat conversation outside of a team channel.",
+          "message": "Надіслати нове повідомлення в особистий або груповий чат поза межами каналу команди."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.display_name": {
+          "source": "Send Chat Message",
+          "message": "Надіслати повідомлення в чат"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "Текст"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "Визначає формат вмісту повідомлення, наприклад \"text\" для звичайного тексту або \"html\" для форматованого вмісту."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "Тип вмісту"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "Формат вмісту повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.desc": {
+          "source": "The unique identifier of the direct chat or group chat where the message will be sent.",
+          "message": "Унікальний ідентифікатор особистого або групового чату, куди буде надіслано повідомлення."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.display_name": {
+          "source": "Chat ID",
+          "message": "ID чату"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.Y2hhdElk.short_desc": {
+          "source": "Target chat identifier",
+          "message": "Ідентифікатор цільового чату"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent in the chat.",
+          "message": "Текстовий вміст повідомлення, яке потрібно надіслати в чат."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "Вміст повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGF0LW1lc3NhZ2U.short_desc": {
+          "source": "Send a message to a chat conversation",
+          "message": "Надіслати повідомлення в чат"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.desc": {
+          "source": "Send a new message to a specific channel within a team that all channel members can view and respond to.",
+          "message": "Надіслати нове повідомлення до певного каналу команди, яке зможуть переглядати та на яке зможуть відповідати всі учасники каналу."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.display_name": {
+          "source": "Send Channel Message",
+          "message": "Надіслати повідомлення в канал"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Text",
+          "message": "Текст"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.desc": {
+          "source": "Specifies the format of the message content, such as \"text\" for plain text or \"html\" for formatted content.",
+          "message": "Визначає формат вмісту повідомлення, наприклад \"text\" для звичайного тексту або \"html\" для форматованого вмісту."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.display_name": {
+          "source": "Content Type",
+          "message": "Тип вмісту"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y29udGVudFR5cGU.short_desc": {
+          "source": "Format of the message content",
+          "message": "Формат вмісту повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel where the message will be posted.",
+          "message": "Унікальний ідентифікатор каналу, де буде опубліковано повідомлення."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID каналу"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "Ідентифікатор цільового каналу"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be posted in the channel.",
+          "message": "Текстовий вміст повідомлення, яке буде опубліковано в каналі."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content",
+          "message": "Вміст повідомлення"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the target channel.",
+          "message": "Унікальний ідентифікатор команди, яка містить цільовий канал."
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Ідентифікатор команди"
+        },
+        "app.VGVhbXM.action.c2VuZC1jaGFubmVsLW1lc3NhZ2U.short_desc": {
+          "source": "Post a message to a team channel",
+          "message": "Опублікувати повідомлення в каналі команди"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.desc": {
+          "source": "Update the details of a scheduled meeting, such as time, location, attendees, or other properties.",
+          "message": "Оновити відомості про заплановану нараду, такі як час, місце, учасники або інші властивості."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.display_name": {
+          "source": "Update Meeting",
+          "message": "Оновити нараду"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.desc": {
+          "source": "Updated text describing the meeting agenda, preparation materials, or other relevant information.",
+          "message": "Оновлений текст з описом порядку денного наради, матеріалів для підготовки або іншої відповідної інформації."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.display_name": {
+          "source": "Meeting Content",
+          "message": "Вміст зустрічі"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y29udGVudA.short_desc": {
+          "source": "Updated meeting agenda or notes",
+          "message": "Оновлений порядок денний або примітки до наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.desc": {
+          "source": "Updated channel identifier if the meeting is associated with a specific channel within a team.",
+          "message": "Оновлений ідентифікатор каналу, якщо нарада пов’язана з певним каналом у команді."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Associated channel identifier",
+          "message": "Ідентифікатор пов'язаного каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.desc": {
+          "source": "Updated list of email addresses or user IDs for people who should be invited to the meeting.",
+          "message": "Оновлений список адрес електронної пошти або ID користувачів, яких слід запросити на нараду."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.display_name": {
+          "source": "Attendees",
+          "message": "Учасники"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.YXR0ZW5kZWVz.short_desc": {
+          "source": "Updated meeting participants",
+          "message": "Оновлені учасники наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.desc": {
+          "source": "The new date and time when the meeting ends in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Нові дата й час завершення наради у форматі ISO 8601 (YYYY-MM-DDTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.display_name": {
+          "source": "End Time",
+          "message": "Час завершення"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.ZW5kRGF0ZVRpbWU.short_desc": {
+          "source": "Updated meeting end time",
+          "message": "Оновлений час завершення наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.desc": {
+          "source": "When set to true, ensures the meeting has Teams online meeting capabilities with video conferencing and a join link.",
+          "message": "Якщо встановлено значення true, нарада матиме можливості онлайнової наради Teams із відеоконференціями та посиланням для приєднання."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.display_name": {
+          "source": "Online Meeting",
+          "message": "Онлайн-нарада"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.aXNPbmxpbmVNZWV0aW5n.short_desc": {
+          "source": "Enable/disable Teams online meeting features",
+          "message": "Увімкнути/вимкнути функції онлайнових нарад Teams"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.desc": {
+          "source": "The new physical location where the meeting will take place, or a custom virtual location description.",
+          "message": "Нове фізичне місце проведення наради або спеціальний опис віртуального розташування."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Розташування"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bG9jYXRpb24.short_desc": {
+          "source": "Updated meeting location",
+          "message": "Оновлене місце проведення наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.desc": {
+          "source": "The unique identifier of the meeting to be updated.",
+          "message": "Унікальний ідентифікатор наради, яку потрібно оновити."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.display_name": {
+          "source": "Meeting ID",
+          "message": "ID зустрічі"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.bWVldGluZ0lk.short_desc": {
+          "source": "Target meeting identifier",
+          "message": "Ідентифікатор цільової наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.desc": {
+          "source": "The new date and time when the meeting begins in ISO 8601 format (YYYY-MM-DDTHH:MM:SS).",
+          "message": "Нові дата й час початку наради у форматі ISO 8601 (YYYY-MM-DDTHH:MM:SS)."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "Час початку"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3RhcnREYXRlVGltZQ.short_desc": {
+          "source": "Updated meeting start time",
+          "message": "Оновлений час початку наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.desc": {
+          "source": "The new title or subject of the meeting that will appear in calendar invitations and the meeting list.",
+          "message": "Нова назва або тема наради, яка відображатиметься в запрошеннях календаря та списку нарад."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Тема"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.c3ViamVjdA.short_desc": {
+          "source": "Updated meeting title",
+          "message": "Оновлена тема наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.desc": {
+          "source": "Updated team identifier if the meeting is associated with a specific team.",
+          "message": "Оновлений ідентифікатор команди, якщо нарада пов’язана з певною командою."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGVhbUlk.short_desc": {
+          "source": "Associated team identifier",
+          "message": "Ідентифікатор пов'язаної команди"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.desc": {
+          "source": "The new time zone for the meeting start and end times, such as \"Pacific Standard Time\" or \"UTC\".",
+          "message": "Новий часовий пояс для часу початку та завершення наради, наприклад \"Pacific Standard Time\" або \"UTC\"."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.display_name": {
+          "source": "Time Zone",
+          "message": "Часовий пояс"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.option.dGltZVpvbmU.short_desc": {
+          "source": "Updated meeting time zone",
+          "message": "Оновлений часовий пояс наради"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLW1lZXRpbmc.short_desc": {
+          "source": "Modify an existing meeting",
+          "message": "Змінити наявну нараду"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.desc": {
+          "source": "Update the properties or membership of an existing channel within a team.",
+          "message": "Оновити властивості або склад учасників наявного каналу в команді."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.display_name": {
+          "source": "Update Channel",
+          "message": "Оновити канал"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.desc": {
+          "source": "The unique identifier of the channel to be updated.",
+          "message": "Унікальний ідентифікатор каналу, який потрібно оновити."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.display_name": {
+          "source": "Channel ID",
+          "message": "ID каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.Y2hhbm5lbElk.short_desc": {
+          "source": "Target channel identifier",
+          "message": "Ідентифікатор цільового каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Updated description explaining the purpose or topic of the channel. Limited to 1024 characters.",
+          "message": "Оновлений опис призначення або теми каналу. Обмеження до 1024 символів."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Опис"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New channel description",
+          "message": "Новий опис каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The new display name for the channel. Must be unique within the team and between 1-50 characters.",
+          "message": "Нове відображуване ім'я для каналу. Має бути унікальним у межах команди та містити від 1 до 50 символів."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Назва каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "New channel name",
+          "message": "Нова назва каналу"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.desc": {
+          "source": "The unique identifier of the team containing the channel to be updated.",
+          "message": "Унікальний ідентифікатор команди, яка містить канал для оновлення."
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "ID команди"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.option.dGVhbUlk.short_desc": {
+          "source": "Team identifier",
+          "message": "Ідентифікатор команди"
+        },
+        "app.VGVhbXM.action.dXBkYXRlLWNoYW5uZWw.short_desc": {
+          "source": "Modify an existing channel",
+          "message": "Змінити наявний канал"
+        },
+        "app.VGVhbXM.desc": {
+          "source": "Microsoft Teams is a collaboration platform that enables messaging, file sharing, video meetings, and app integration within your organization.",
+          "message": "Microsoft Teams — це платформа для співпраці, яка забезпечує обмін повідомленнями, файлами, відеозустрічі та інтеграцію додатків у вашій організації."
+        },
+        "app.VGVhbXM.display_name": {
+          "source": "Microsoft Teams",
+          "message": "Microsoft Teams"
+        },
+        "app.VGVhbXM.short_desc": {
+          "source": "Collaborate with your team using channels, meetings, and messages",
+          "message": "Співпрацюйте зі своєю командою за допомогою каналів, нарад і повідомлень"
+        }
+      }
+    }
+  }
+}

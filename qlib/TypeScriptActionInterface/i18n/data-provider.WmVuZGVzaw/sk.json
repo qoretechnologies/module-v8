@@ -1,0 +1,897 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.desc": {
+          "source": "Returns an approximate count of tickets in the account. If the count exceeds 100,000, it is updated every 24 hours.\n\n`ccd` lists tickets that the specified user is cc'd on.\n\nThe `count[refreshed_at]` property is a timestamp that indicates when the count was last updated.\n\n**Note**: When the count exceeds 100,000, `count[refreshed_at]` may occasionally be null.\nThis indicates that the count is being updated in the background, and `count[value]` is limited to 100,000 until the update is complete.\n\n#### Allowed For\n* Agents",
+          "message": "Vráti približný počet tiketov v účte. Ak počet prekročí 100 000, aktualizuje sa každých 24 hodín.\n\n`ccd` uvádza tikety, v ktorých je zadaný používateľ v kópii (cc).\n\nVlastnosť `count[refreshed_at]` je časová pečiatka, ktorá udáva, kedy bol počet naposledy aktualizovaný.\n\n**Poznámka**: Keď počet prekročí 100 000, `count[refreshed_at]` môže byť občas null.\nToto indikuje, že počet sa aktualizuje na pozadí a `count[value]` je obmedzený na 100 000, kým sa aktualizácia nedokončí.\n\n#### Povolené pre\n* Agenti"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.display_name": {
+          "source": "Count Tickets",
+          "message": "Spočítať tikety"
+        },
+        "app.WmVuZGVzaw.action.Q291bnRUaWNrZXRz.short_desc": {
+          "source": "Count Tickets",
+          "message": "Spočítať tikety"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti priradení k vlastnej role s oprávneniami spravovať skupiny (iba Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.display_name": {
+          "source": "Create Group",
+          "message": "Vytvoriť skupinu"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlR3JvdXA.short_desc": {
+          "source": "Create Group",
+          "message": "Vytvoriť skupinu"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "You must provide a unique `name` for each organization. Normally\nthe system doesn't allow records to be created with identical names.\nHowever, a race condition can occur if you make two or more identical\nPOSTs very close to each other, causing the records to have identical\norganization names.\n\n#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "Pre každú organizáciu musíte zadať jedinečný `name`. Za normálnych okolností\nsystém neumožňuje vytvárať záznamy s identickými názvami.\nMôže sa však vyskytnúť súbeh (race condition), ak odošlete dva alebo viac identických\nPOST požiadaviek tesne za sebou, čo spôsobí, že záznamy budú mať identické\nnázvy organizácií.\n\n#### Povolené pre\n\n* Správcovia\n* Agenti priradení k vlastnej role s oprávneniami spravovať organizácie (iba Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Create Organization",
+          "message": "Vytvoriť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Create Organization",
+          "message": "Vytvoriť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.desc": {
+          "source": "Create ticket",
+          "message": "Vytvoriť tiket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.display_name": {
+          "source": "Create Ticket",
+          "message": "Vytvoriť tiket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVGlja2V0.short_desc": {
+          "source": "Create Ticket",
+          "message": "Vytvoriť tiket"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.desc": {
+          "source": "Create user",
+          "message": "Vytvoriť používateľa"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.display_name": {
+          "source": "Create User",
+          "message": "Vytvoriť používateľa"
+        },
+        "app.WmVuZGVzaw.action.Q3JlYXRlVXNlcg.short_desc": {
+          "source": "Create User",
+          "message": "Vytvoriť používateľa"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage groups (Enterprise only)\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti priradení k vlastnej role s oprávneniami spravovať skupiny (iba Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.display_name": {
+          "source": "Delete Group",
+          "message": "Odstrániť skupinu"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlR3JvdXA.short_desc": {
+          "source": "Delete Group",
+          "message": "Odstrániť skupinu"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents assigned to a custom role with permissions to manage organizations (Enterprise only)\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti priradení k vlastnej role s oprávneniami spravovať organizácie (iba Enterprise)\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Delete Organization",
+          "message": "Odstrániť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Delete Organization",
+          "message": "Odstrániť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents with permission to delete tickets\n\nAgent delete permissions are set in Support. See\n[Deleting tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nin the Support Help Center.\n\n#### Ticket deletion rate limit\n\nYou can delete 400 tickets every 1 minute using this endpoint.\nThe rate limiting mechanism behaves as described in\n[Rate limits](-api-reference-introduction-rate-limits-) in the API introduction.\nZendesk recommends that you obey the Retry-After header values.\nTo delete many tickets, you may use [Bulk Delete Tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets).",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti s oprávnením odstraňovať tikety\n\nOprávnenia agenta na odstraňovanie sa nastavujú v Supporte. Pozrite si časť\n[Deleting tickets](https:-support.zendesk.com-hc-en-us-articles-203690936)\nv Centre pomoci Support.\n\n#### Limit sadzieb pre odstraňovanie tiketov\n\nPomocou tohto koncového bodu môžete odstrániť 400 tiketov každú 1 minútu.\nMechanizmus obmedzenia sadzieb sa správa tak, ako je popísané v časti\n[Rate limits](-api-reference-introduction-rate-limits-) v úvode API.\nZendesk odporúča dodržiavať hodnoty hlavičky Retry-After.\nAk chcete odstrániť veľa tiketov, môžete použiť [Bulk Delete Tickets](-api-reference-ticketing-tickets-tickets-#bulk-delete-tickets)."
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.display_name": {
+          "source": "Delete Ticket",
+          "message": "Odstrániť tiket"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVGlja2V0.short_desc": {
+          "source": "Delete Ticket",
+          "message": "Odstrániť tiket"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.desc": {
+          "source": "#### Allowed for\n\n* End Users\n",
+          "message": "#### Povolené pre\n\n* Koncoví používatelia\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.display_name": {
+          "source": "Delete Upload",
+          "message": "Odstrániť nahraný súbor"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.desc": {
+          "source": "URI path variable \"token\"",
+          "message": "Premenná cesty URI \"token\""
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.display_name": {
+          "source": "Token",
+          "message": "Token"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.option.dG9rZW4.short_desc": {
+          "source": "URI path variable \"token\"",
+          "message": "Premenná cesty URI \"token\""
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXBsb2Fk.short_desc": {
+          "source": "Delete Upload",
+          "message": "Odstrániť nahraný súbor"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.desc": {
+          "source": "Deletes the user and associated records from the account.\n\n**Warning**:\n\n* Deleted users are not recoverable.\n* Both agents and administrators can soft delete users in the agent interface in Zendesk Support. Agents with permission can delete end users, while administrators can delete all users except the account owner.\n\nTo comply with GDPR, a further step is needed. See [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Allowed For\n\n* Admins and [agents in custom roles with permission](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) to manage end users or team members\n",
+          "message": "Odstráni používateľa a priradené záznamy z účtu.\n\n**Upozornenie**:\n\n* Odstránených používateľov nie je možné obnoviť.\n* Agenti aj správcovia môžu používateľov mäkko odstrániť v rozhraní agenta v Zendesk Support. Agenti s oprávnením môžu odstraňovať koncových používateľov, zatiaľ čo správcovia môžu odstraňovať všetkých používateľov okrem vlastníka účtu.\n\nNa dosiahnutie súladu s GDPR je potrebný ďalší krok. Pozrite si časť [Permanently Delete User](-api-reference-ticketing-users-users-#permanently-delete-user).\n\n#### Povolené pre\n\n* Správcovia a [agenti vo vlastných rolách s oprávnením](https:-support.zendesk.com-hc-en-us-articles-4408882153882#topic_cxn_hig_bd) spravovať koncových používateľov alebo členov tímu\n"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.display_name": {
+          "source": "Delete User",
+          "message": "Odstrániť používateľa"
+        },
+        "app.WmVuZGVzaw.action.RGVsZXRlVXNlcg.short_desc": {
+          "source": "Delete User",
+          "message": "Odstrániť používateľa"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents, with certain restrictions\n\nIf the agent has a custom agent role that restricts their access to only users in their own organization, a 403 Forbidden error is returned. See [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) in Zendesk help.\n",
+          "message": "#### Stránkovanie\n\n* Stránkovanie pomocou kurzora (odporúčané)\n* Stránkovanie pomocou offsetu\n\nPozrite si [Pagination](-api-reference-introduction-pagination-).\n\nVracia maximálne 100 záznamov na stránku.\n\n#### Povolené pre\n\n* Agenti, s určitými obmedzeniami\n\nAk má agent vlastnú rolu agenta, ktorá obmedzuje jeho prístup iba na používateľov v jeho vlastnej organizácii, vráti sa chyba 403 Forbidden. Pozrite si [Creating custom agent roles](https:-support.zendesk.com-hc-en-us-articles-203662026-Creating-custom-roles-and-assigning-agents#topic_cxn_hig_bd) v pomocníkovi Zendesk.\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.display_name": {
+          "source": "List Organizations",
+          "message": "Zoznam organizácií"
+        },
+        "app.WmVuZGVzaw.action.TGlzdE9yZ2FuaXphdGlvbnM.short_desc": {
+          "source": "List Organizations",
+          "message": "Zoznam organizácií"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Stránkovanie\n\n* Stránkovanie pomocou kurzora (odporúčané)\n* Stránkovanie pomocou offsetu\n\nPozrite si [Pagination](-api-reference-introduction-pagination-).\n\nVracia maximálne 100 záznamov na stránku.\n\n#### Povolené pre\n\n* Správcovia\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.display_name": {
+          "source": "List Groups",
+          "message": "Zobraziť skupiny"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "Či sa majú vylúčiť odstránené entity"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.display_name": {
+          "source": "Exclude Deleted",
+          "message": "Vylúčiť odstránené"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.option.ZXhjbHVkZV9kZWxldGVk.short_desc": {
+          "source": "Whether to exclude deleted entities",
+          "message": "Či sa majú vylúčiť odstránené entity"
+        },
+        "app.WmVuZGVzaw.action.TGlzdEdyb3Vwcw.short_desc": {
+          "source": "List Groups",
+          "message": "Zobraziť skupiny"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.desc": {
+          "source": "Returns the search results. See [Query basics](#query-basics) for the syntax of the `query` parameter.\n\nUse the ampersand character (&) to append the `sort_by` or `sort_order` parameters to the URL.\n\nFor examples, see [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Allowed For\n\n* Agents\n\n#### Pagination\n\n* Offset pagination only\n\nOffset pagination may result in duplicate results when paging. You can also use the \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results) endpoint, which \nuses cursor-based pagination and doesn't return duplicate results. See \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination) for more information.\n\n\n#### Errors JSON Format\n\nErrors are represented as JSON objects which have the following keys:\n\n| Name                  | Type                 | Comment\n| - | -| -\n| error                 | string               | The type of error. Examples: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Example Error\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n",
+          "message": "Vráti výsledky vyhľadávania. Syntaktické pravidlá parametra `query` nájdete v časti [Query basics](#query-basics).\n\nNa pridanie parametrov `sort_by` alebo `sort_order` do adresy URL použite znak ampersand (&).\n\nPríklady nájdete v časti [Searching with Zendesk API](-documentation-ticketing-using-the-zendesk-api-searching-with-the-zendesk-api).\n\n#### Povolené pre\n\n* Agenti\n\n#### Stránkovanie\n\n* Iba stránkovanie pomocou offsetu\n\nStránkovanie pomocou offsetu môže pri prechádzaní stránkami spôsobiť duplicitné výsledky. Môžete použiť aj koncový bod \n[Export Search Results](-api-reference-ticketing-ticket-management-search-#export-search-results), ktorý \npoužíva stránkovanie založené na kurzore a nevracia duplicitné výsledky. Ďalšie informácie nájdete v časti \n[Using cursor pagination](-api-reference-introduction-pagination-#using-cursor-pagination).\n\n\n#### Formát chýb JSON\n\nChyby sú reprezentované ako JSON objekty s nasledujúcimi kľúčmi:\n\n| Názov                 | Typ                  | Komentár\n| - | -| -\n| error                 | string               | Typ chyby. Príklady: \"unavailable\", \"invalid\"\n| description           | string               |\n\n##### Príklad chyby\n```js\n\n  \"error\": \"unavailable\",\n  \"description\": \"Sorry, we could not complete your search query. Please try again in a moment.\"\n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.display_name": {
+          "source": "List Search Results",
+          "message": "Zoznam výsledkov vyhľadávania"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFNlYXJjaFJlc3VsdHM.short_desc": {
+          "source": "List Search Results",
+          "message": "Zoznam výsledkov vyhľadávania"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a list of tickets with their metrics.\n\nTickets are ordered chronologically by created date, from newest to oldest.\nThe last ticket listed may not be the absolute oldest ticket in your account\ndue to ticket archiving.\n\nArchived tickets are not included in the response. See\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) in\nZendesk help.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Vráti zoznam tiketov s ich metrikami.\n\nTikety sú zoradené chronologicky podľa dátumu vytvorenia od najnovších po najstaršie.\nPosledný uvedený tiket nemusí byť úplne najstarším tiketom vo vašom účte\nz dôvodu archivácie tiketov.\n\nArchivované tikety nie sú zahrnuté v odpovedi. Pozrite si\n[About archived tickets](https:-support.zendesk.com-hc-en-us-articles-203657756) v\npomocníkovi Zendesk.\n\n#### Stránkovanie\n\n- Stránkovanie pomocou kurzora (odporúčané)\n- Stránkovanie pomocou offsetu\n\nPozrite si [Pagination](-api-reference-introduction-pagination-).\n\nVracia maximálne 100 záznamov na stránku.\n\n\n#### Povolené pre\n\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.display_name": {
+          "source": "List Ticket Metrics",
+          "message": "Zoznam metrík tiketov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldE1ldHJpY3M.short_desc": {
+          "source": "List Ticket Metrics",
+          "message": "Zoznam metrík tiketov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.desc": {
+          "source": "List tickets",
+          "message": "Zoznam tiketov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.display_name": {
+          "source": "List Tickets",
+          "message": "Zoznam tiketov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.desc": {
+          "source": "Lists tickets by external id. External ids don't have to be unique for each ticket. As a result, the request may return multiple tickets with the same external id.",
+          "message": "Zobrazí zoznam tiketov podľa externého ID. Externé ID nemusia byť pre každý tiket jedinečné. V dôsledku toho môže požiadavka vrátiť viacero tiketov s rovnakým externým ID."
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.display_name": {
+          "source": "External Id",
+          "message": "Externé ID"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.option.ZXh0ZXJuYWxfaWQ.short_desc": {
+          "source": "Lists tickets by external id",
+          "message": "Zoznam tiketov podľa externého ID"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFRpY2tldHM.short_desc": {
+          "source": "List Tickets",
+          "message": "Zoznam tiketov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.desc": {
+          "source": "#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Admins, Agents and Light Agents\n",
+          "message": "#### Stránkovanie\n\n* Stránkovanie pomocou kurzora (odporúčané)\n* Stránkovanie pomocou offsetu\n\nPozrite si [Pagination](-api-reference-introduction-pagination-).\n\nVracia maximálne 100 záznamov na stránku.\n\n#### Povolené pre\n\n* Správcovia, Agenti a Light Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.display_name": {
+          "source": "List Users",
+          "message": "Zoznam používateľov"
+        },
+        "app.WmVuZGVzaw.action.TGlzdFVzZXJz.short_desc": {
+          "source": "List Users",
+          "message": "Zoznam používateľov"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.display_name": {
+          "source": "Show Organization",
+          "message": "Zobraziť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd09yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Show Organization",
+          "message": "Zobraziť organizáciu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.desc": {
+          "source": "Shows attachment details. You can get the value of the `attachment_id` parameter by listing the ticket's comments.\nSee [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Each comment\nin the list has an `attachments` list that specifies an `id` for each attachment.\n\n\n #### Allowed for\n\n * Agents\n",
+          "message": "Zobrazí podrobnosti o prílohe. Hodnotu parametra `attachment_id` môžete získať vypísaním komentárov tiketu.\nPozrite si [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments). Každý komentár\nv zozname má zoznam `attachments`, ktorý špecifikuje `id` pre každú prílohu.\n\n\n #### Povolené pre\n\n * Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.display_name": {
+          "source": "Show Attachment",
+          "message": "Zobraziť prílohu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "Premenná cesty URI \"attachment_id\""
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.display_name": {
+          "source": "Attachment Id",
+          "message": "ID prílohy"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.option.YXR0YWNobWVudF9pZA.short_desc": {
+          "source": "URI path variable \"attachment_id\"",
+          "message": "Premenná cesty URI \"attachment_id\""
+        },
+        "app.WmVuZGVzaw.action.U2hvd0F0dGFjaG1lbnQ.short_desc": {
+          "source": "Show Attachment",
+          "message": "Zobraziť prílohu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.desc": {
+          "source": "Shows the settings that are available for the account.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Zobrazí nastavenia, ktoré sú dostupné pre daný účet.\n\n#### Povolené pre\n\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.display_name": {
+          "source": "Show Settings",
+          "message": "Zobraziť nastavenia"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0FjY291bnRTZXR0aW5ncw.short_desc": {
+          "source": "Show Settings",
+          "message": "Zobraziť nastavenia"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.display_name": {
+          "source": "Show Group",
+          "message": "Zobraziť skupinu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd0dyb3VwQnlJZA.short_desc": {
+          "source": "Show Group",
+          "message": "Zobraziť skupinu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.desc": {
+          "source": "Returns a number of ticket properties though not the ticket comments. To get the comments, use [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Allowed For\n* Agents",
+          "message": "Vráti niekoľko vlastností tiketu, ale nie komentáre k tiketu. Ak chcete získať komentáre, použite [List Comments](-api-reference-ticketing-tickets-ticket_comments-#list-comments)\n\n#### Povolené pre\n* Agenti"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.display_name": {
+          "source": "Show Ticket",
+          "message": "Zobraziť tiket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldA.short_desc": {
+          "source": "Show Ticket",
+          "message": "Zobraziť tiket"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.desc": {
+          "source": "Returns a specific metric, or the metrics of a specific ticket.\n\n#### Pagination\n\n- Cursor pagination (recommended)\n- Offset pagination\n\nSee [Pagination](-api-reference-introduction-pagination-).\n\nReturns a maximum of 100 records per page.\n\n#### Allowed For\n\n* Agents\n",
+          "message": "Vráti konkrétnu metriku alebo metriky konkrétneho tiketu.\n\n#### Stránkovanie\n\n- Stránkovanie pomocou kurzora (odporúčané)\n- Stránkovanie pomocou offsetu\n\nPozrite si [Pagination](-api-reference-introduction-pagination-).\n\nVracia maximálne 100 záznamov na stránku.\n\n#### Povolené pre\n\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.display_name": {
+          "source": "Show Ticket Metrics",
+          "message": "Zobraziť metriky tiketu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1RpY2tldE1ldHJpY3M.short_desc": {
+          "source": "Show Ticket Metrics",
+          "message": "Zobraziť metriky tiketu"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.desc": {
+          "source": "#### Allowed For\n\n* Agents\n",
+          "message": "#### Povolené pre\n\n* Agenti\n"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.display_name": {
+          "source": "Show User",
+          "message": "Zobraziť používateľa"
+        },
+        "app.WmVuZGVzaw.action.U2hvd1VzZXI.short_desc": {
+          "source": "Show User",
+          "message": "Zobraziť používateľa"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.desc": {
+          "source": "#### Allowed For\n\n* Admins\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.display_name": {
+          "source": "Update Group",
+          "message": "Aktualizovať skupinu"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlR3JvdXA.short_desc": {
+          "source": "Update Group",
+          "message": "Aktualizovať skupinu"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.desc": {
+          "source": "#### Allowed For\n\n* Admins\n* Agents\n\nAgents with no permissions restrictions can only update \"notes\" on organizations.\n\n**Note:** Updating an organization's `domain_names` property overwrites all existing `domain_names` values. To prevent this, submit a complete list of `domain_names` for the organization in your request.\n\n#### Example Request\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n",
+          "message": "#### Povolené pre\n\n* Správcovia\n* Agenti\n\nAgenti bez obmedzení oprávnení môžu v organizáciách aktualizovať iba \"notes\".\n\n**Poznámka:** Aktualizácia vlastnosti `domain_names` organizácie prepíše všetky existujúce hodnoty `domain_names`. Aby ste tomu zabránili, odošlite v požiadavke úplný zoznam `domain_names` pre danú organizáciu.\n\n#### Príklad požiadavky\n\n```js\n\n  \"organization\": \n    \"notes\": \"Something interesting\"\n  \n\n```\n"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.display_name": {
+          "source": "Update Organization",
+          "message": "Aktualizovať organizáciu"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlT3JnYW5pemF0aW9u.short_desc": {
+          "source": "Update Organization",
+          "message": "Aktualizovať organizáciu"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.desc": {
+          "source": "Update ticket",
+          "message": "Aktualizovať tiket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.display_name": {
+          "source": "Update Ticket",
+          "message": "Aktualizovať tiket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVGlja2V0.short_desc": {
+          "source": "Update Ticket",
+          "message": "Aktualizovať tiket"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.desc": {
+          "source": "Update user",
+          "message": "Aktualizovať používateľa"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.display_name": {
+          "source": "Update User",
+          "message": "Aktualizovať používateľa"
+        },
+        "app.WmVuZGVzaw.action.VXBkYXRlVXNlcg.short_desc": {
+          "source": "Update User",
+          "message": "Aktualizovať používateľa"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Zendesk\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Zendesk\"",
+          "message": "Odstrániť záznamy z danej tabuľky v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zendesk** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Zendesk** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú vystavené ako priame akcie v tejto aplikácii."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.WmVuZGVzaw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zendesk",
+          "message": "Vykonať vlastné volanie API do Zendesk"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "Spustí sa pri vytvorení novej organizácie"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.display_name": {
+          "source": "New Organization",
+          "message": "Nová organizácia"
+        },
+        "app.WmVuZGVzaw.action.bmV3X29yZ2FuaXphdGlvbg.short_desc": {
+          "source": "Triggers when a new organization is created",
+          "message": "Spustí sa pri vytvorení novej organizácie"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.desc": {
+          "source": "Triggers when a new custom object record is created in Zendesk",
+          "message": "Spustí sa pri vytvorení nového záznamu vlastného objektu v službe Zendesk"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.display_name": {
+          "source": "New Custom Object Record",
+          "message": "Nový záznam vlastného objektu"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.desc": {
+          "source": "Select the custom object type to monitor for new records",
+          "message": "Vyberte typ vlastného objektu, ktorý sa má sledovať na nové záznamy"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.display_name": {
+          "source": "Custom Object",
+          "message": "Vlastný objekt"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.option.Y3VzdG9tX29iamVjdA.short_desc": {
+          "source": "The custom object to monitor for new records",
+          "message": "Vlastný objekt, ktorý sa má monitorovať na nové záznamy"
+        },
+        "app.WmVuZGVzaw.action.bmV3X2N1c3RvbV9vYmplY3RfcmVjb3Jk.short_desc": {
+          "source": "Triggers when a new custom object record is created",
+          "message": "Spustí sa pri vytvorení nového záznamu vlastného objektu"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "Spustí sa pri vytvorení nového tiketu"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.display_name": {
+          "source": "New Ticket",
+          "message": "Nový tiket"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3RpY2tldA.short_desc": {
+          "source": "Triggers when a new ticket is created",
+          "message": "Spustí sa pri vytvorení nového tiketu"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.desc": {
+          "source": "Triggers when a new user is created",
+          "message": "Spustí sa pri vytvorení nového používateľa"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "Nový používateľ"
+        },
+        "app.WmVuZGVzaw.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created",
+          "message": "Spustí sa pri vytvorení nového používateľa"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Zendesk\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Zendesk\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.WmVuZGVzaw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Zendesk\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii \"Zendesk\""
+        },
+        "app.WmVuZGVzaw.desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Zbierka akcií na interakciu s rozhraním Zendesk API"
+        },
+        "app.WmVuZGVzaw.display_name": {
+          "source": "Zendesk",
+          "message": "Zendesk"
+        },
+        "app.WmVuZGVzaw.short_desc": {
+          "source": "Collection of actions to interact with the Zendesk API",
+          "message": "Zbierka akcií na interakciu s rozhraním Zendesk API"
+        }
+      }
+    }
+  }
+}

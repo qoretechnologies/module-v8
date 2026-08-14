@@ -1,0 +1,1297 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.desc": {
+          "source": "Closes a task by marking it as completed. This action moves the task to the completed tasks list and updates its status accordingly.",
+          "message": "Schließt eine Aufgabe ab, indem sie als erledigt markiert wird. Diese Aktion verschiebt die Aufgabe in die Liste der erledigten Aufgaben und aktualisiert ihren Status entsprechend."
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.display_name": {
+          "source": "Complete Task",
+          "message": "Aufgabe abschließen"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to mark as complete.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, die Sie als erledigt markieren möchten."
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to complete",
+          "message": "Die abzuschließende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.Y29tcGxldGVfdGFzaw.short_desc": {
+          "source": "Mark a Todoist task as complete",
+          "message": "Eine Todoist-Aufgabe als erledigt markieren"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.desc": {
+          "source": "Creates a new project in Todoist. Projects help you organize related tasks and collaborate with team members.",
+          "message": "Erstellt ein neues Projekt in Todoist. Projekte helfen Ihnen, zusammenhängende Aufgaben zu organisieren und mit Teammitgliedern zusammenzuarbeiten."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.display_name": {
+          "source": "Create Project",
+          "message": "Projekt erstellen"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.desc": {
+          "source": "The color used to visually identify the project in the Todoist interface.",
+          "message": "Die Farbe, die verwendet wird, um das Projekt in der Todoist-Benutzeroberfläche visuell zu kennzeichnen."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.display_name": {
+          "source": "Color",
+          "message": "Farbe"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.Y29sb3I.short_desc": {
+          "source": "Project color identifier",
+          "message": "Projektfarbkennung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description explaining the purpose and scope of the project.",
+          "message": "Optionale detaillierte Beschreibung, die den Zweck und Umfang des Projekts erklärt."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Project description",
+          "message": "Projektbeschreibung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.desc": {
+          "source": "When enabled, the project will appear in your favorites section for quick access.",
+          "message": "Wenn aktiviert, wird das Projekt für einen schnellen Zugriff in Ihrem Favoritenbereich angezeigt."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.display_name": {
+          "source": "Is Favorite",
+          "message": "Ist Favorit"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.aXNfZmF2b3JpdGU.short_desc": {
+          "source": "Mark project as favorite",
+          "message": "Projekt als Favorit markieren"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for your new Todoist project.",
+          "message": "Ein aussagekräftiger Name für Ihr neues Todoist-Projekt."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.display_name": {
+          "source": "Project Name",
+          "message": "Projektname"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.bmFtZQ.short_desc": {
+          "source": "The name of the project",
+          "message": "Der Name des Projekts"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "Board",
+          "message": "Board"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmNhbGVuZGFy.display_name": {
+          "source": "Calendar",
+          "message": "Kalender"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "List",
+          "message": "Liste"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.desc": {
+          "source": "Choose how tasks in this project are displayed: as a list, board (Kanban), or calendar view.",
+          "message": "Wählen Sie, wie Aufgaben in diesem Projekt angezeigt werden: als Liste, Board (Kanban) oder Kalenderansicht."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.display_name": {
+          "source": "View Style",
+          "message": "Ansichtsstil"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.option.dmlld19zdHlsZQ.short_desc": {
+          "source": "How the project is displayed",
+          "message": "Wie das Projekt angezeigt wird"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Byb2plY3Q.short_desc": {
+          "source": "Create a new Todoist project",
+          "message": "Ein neues Todoist-Projekt erstellen"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in Todoist. Tasks can be assigned to projects, sections, given labels, priorities, due dates, and more.",
+          "message": "Erstellt eine neue Aufgabe in Todoist. Aufgaben können Projekten oder Abschnitten zugewiesen werden und mit Labels, Prioritäten, Fälligkeitsdaten und mehr versehen werden."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Aufgabe erstellen"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The main text describing what needs to be done. This is the primary content of the task.",
+          "message": "Der Haupttext, der beschreibt, was zu tun ist. Dies ist der primäre Inhalt der Aufgabe."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "Aufgabeninhalt"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The task description",
+          "message": "Die Aufgabenbeschreibung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.desc": {
+          "source": "Assign the task to a specific collaborator in the selected project.",
+          "message": "Die Aufgabe einem bestimmten Mitarbeiter im ausgewählten Projekt zuweisen."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.display_name": {
+          "source": "Assignee ID",
+          "message": "ID der zugewiesenen Person"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVfaWQ.short_desc": {
+          "source": "Person assigned to the task",
+          "message": "Der Aufgabe zugewiesene Person"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "Optionale detaillierte Beschreibung oder Notizen zur Aufgabe. Unterstützt Markdown-Formatierung."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Additional task details",
+          "message": "Zusätzliche Aufgabendetails"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Set a due date and optionally a time for when the task should be completed.",
+          "message": "Legen Sie ein Fälligkeitsdatum und optional eine Uhrzeit fest, bis wann die Aufgabe erledigt sein soll."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "Fälligkeitsdatum"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "When the task is due",
+          "message": "Wann die Aufgabe fällig ist"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Specify how long you expect the task to take. Used for time tracking and scheduling.",
+          "message": "Geben Sie an, wie lange die Aufgabe voraussichtlich dauern wird. Wird für Zeiterfassung und Terminplanung verwendet."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "Dauer"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Estimated time to complete",
+          "message": "Geschätzte Dauer bis zur Fertigstellung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Specify the position of the task in the project or section. Lower numbers appear first.",
+          "message": "Geben Sie die Position der Aufgabe im Projekt oder Abschnitt an. Kleinere Zahlen erscheinen zuerst."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Sortierung"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "Task position in the list",
+          "message": "Aufgabenposition in der Liste"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Add one or more labels to categorize and filter the task. Labels help with organization and quick filtering.",
+          "message": "Fügen Sie ein oder mehrere Etiketten hinzu, um die Aufgabe zu kategorisieren und zu filtern. Etiketten helfen bei der Organisation und schnellen Filterung."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "Etiketten"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Task labels",
+          "message": "Aufgabenetiketten"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Organize the task within a specific section of the project for better categorization.",
+          "message": "Organisieren Sie die Aufgabe in einem bestimmten Abschnitt des Projekts zur besseren Kategorisierung."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "Abschnitts-ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "The section within the project",
+          "message": "Der Abschnitt innerhalb des Projekts"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Set the priority level for the task. Higher priority tasks are displayed with color-coded flags: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "Legen Sie die Prioritätsstufe für die Aufgabe fest. Aufgaben mit höherer Priorität werden mit farbcodierten Flaggen angezeigt: 1 (dringend), 2 (hoch), 3 (normal), 4 (niedrig)."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priorität"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Task priority level",
+          "message": "Prioritätsstufe der Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select which Todoist project this task belongs to. If not specified, the task will be added to your Inbox.",
+          "message": "Wählen Sie aus, zu welchem Todoist-Projekt diese Aufgabe gehört. Wenn nicht angegeben, wird die Aufgabe Ihrem Eingang hinzugefügt."
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project for this task",
+          "message": "Das Projekt für diese Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new Todoist task",
+          "message": "Eine neue Todoist-Aufgabe erstellen"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.desc": {
+          "source": "Creates a new comment on a specified Todoist project. Comments can be used to provide updates, notes, or collaborate with team members on project-related discussions.",
+          "message": "Erstellt einen neuen Kommentar zu einem bestimmten Todoist-Projekt. Kommentare können verwendet werden, um Updates oder Notizen bereitzustellen oder mit Teammitgliedern an projektbezogenen Diskussionen zusammenzuarbeiten."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.display_name": {
+          "source": "Add Comment to Project",
+          "message": "Kommentar zu Projekt hinzufügen"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the project. Supports Markdown formatting for rich text.",
+          "message": "Die Nachricht oder Notiz, die Sie dem Projekt hinzufügen möchten. Unterstützt Markdown-Formatierung für Rich-Text."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "Kommentarinhalt"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "Der Textinhalt des Kommentars"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project where you want to add the comment.",
+          "message": "Wählen Sie das Todoist-Projekt aus, zu dem Sie den Kommentar hinzufügen möchten."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to comment on",
+          "message": "Das zu kommentierende Projekt"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fcHJvamVjdA.short_desc": {
+          "source": "Add a comment to a Todoist project",
+          "message": "Einen Kommentar zu einem Todoist-Projekt hinzufügen"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.desc": {
+          "source": "Creates a new comment on a specified Todoist task. Use comments to add notes, updates, or collaborate with team members on specific tasks.",
+          "message": "Erstellt einen neuen Kommentar zu einer bestimmten Todoist-Aufgabe. Verwenden Sie Kommentare, um Notizen oder Updates hinzuzufügen oder mit Teammitgliedern an bestimmten Aufgaben zusammenzuarbeiten."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.display_name": {
+          "source": "Add Comment to Task",
+          "message": "Kommentar zu Aufgabe hinzufügen"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.desc": {
+          "source": "The message or note you want to add to the task. Supports Markdown formatting for rich text.",
+          "message": "Die Nachricht oder Notiz, die Sie der Aufgabe hinzufügen möchten. Unterstützt Markdown-Formatierung für Rich-Text."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.display_name": {
+          "source": "Comment Content",
+          "message": "Kommentarinhalt"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.Y29udGVudA.short_desc": {
+          "source": "The text content of the comment",
+          "message": "Der Textinhalt des Kommentars"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task where you want to add the comment.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, zu der Sie den Kommentar hinzufügen möchten."
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.option.dGFza19pZA.short_desc": {
+          "source": "The task to comment on",
+          "message": "Die zu kommentierende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.YWRkX2NvbW1lbnRfdG9fdGFzaw.short_desc": {
+          "source": "Add a comment to a Todoist task",
+          "message": "Einen Kommentar zu einer Todoist-Aufgabe hinzufügen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches detailed information about a specific Todoist project, including its properties, metadata, and settings.",
+          "message": "Ruft detaillierte Informationen zu einem bestimmten Todoist-Projekt ab, einschließlich dessen Eigenschaften, Metadaten und Einstellungen."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project",
+          "message": "Projekt abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project you want to get details for.",
+          "message": "Wählen Sie das Todoist-Projekt aus, für das Sie Details abrufen möchten."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to retrieve",
+          "message": "Das abzurufende Projekt"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve details of a Todoist project",
+          "message": "Details eines Todoist-Projekts abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.desc": {
+          "source": "Retrieves a list of all collaborators who have access to a specific Todoist project. Useful for managing team assignments and permissions.",
+          "message": "Ruft eine Liste aller Mitarbeiter ab, die Zugriff auf ein bestimmtes Todoist-Projekt haben. Nützlich für die Verwaltung von Teamzuweisungen und Berechtigungen."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.display_name": {
+          "source": "Get Project Collaborators",
+          "message": "Projektmitarbeiter abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of collaborators to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl der Mitarbeiter, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standard ist 50."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Todoist project to retrieve the list of collaborators.",
+          "message": "Wählen Sie das Todoist-Projekt aus, um die Liste der Mitarbeiter abzurufen."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The project to get collaborators for",
+          "message": "Das Projekt, für das Mitarbeiter abgerufen werden sollen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Byb2plY3RfY29sbGFib3JhdG9ycw.short_desc": {
+          "source": "List collaborators in a project",
+          "message": "Mitarbeiter in einem Projekt auflisten"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.desc": {
+          "source": "Fetches detailed information about a specific Todoist task, including all its properties, labels, due dates, and metadata.",
+          "message": "Ruft detaillierte Informationen zu einer bestimmten Todoist-Aufgabe ab, einschließlich aller Eigenschaften, Etiketten, Fälligkeitsdaten und Metadaten."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Task abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to get details for.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, für die Sie Details abrufen möchten."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to retrieve",
+          "message": "Die abzurufende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a Todoist task",
+          "message": "Details einer Todoist-Aufgabe abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.desc": {
+          "source": "Retrieves tasks that match a specific filter query. Todoist filters allow powerful searches using keywords, dates, priorities, labels, and more. See Todoist filter documentation for advanced query syntax.",
+          "message": "Ruft Aufgaben ab, die mit einer bestimmten Filterabfrage übereinstimmen. Todoist-Filter ermöglichen leistungsstarke Suchen anhand von Schlüsselwörtern, Datumsangaben, Prioritäten, Etiketten und mehr. Weitere Informationen zur erweiterten Abfragesyntax finden Sie in der Todoist-Filterdokumentation."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.display_name": {
+          "source": "Get Tasks by Filter",
+          "message": "Aufgaben nach Filter abrufen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl von Aufgaben, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standard ist 50."
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "Kein Datum & keine Frist"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "Alle Aufgaben anzeigen, die kein Datum oder keine Frist haben"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "Mir zugewiesen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "Alle Ihnen zugewiesenen Aufgaben anzeigen"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.display_name": {
+          "source": "Today or Overdue",
+          "message": "Heute oder überfällig"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.allowed-value.c3RyaW5nOnRvZGF5IHwgb3ZlcmR1ZQ.short_desc": {
+          "source": "See all tasks that are overdue or due today",
+          "message": "Alle Aufgaben anzeigen, die überfällig oder heute fällig sind"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "Die zu verwendende Filterabfrage, siehe [Dokumentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) für weitere Details"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "Filterabfrage"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.option.cXVlcnk.short_desc": {
+          "source": "The filter expression",
+          "message": "Der Filterausdruck"
+        },
+        "app.VG9kb2lzdA.action.Z2V0X3Rhc2tzX2J5X2ZpbHRlcg.short_desc": {
+          "source": "Search tasks using Todoist filter queries",
+          "message": "Aufgaben mithilfe von Todoist-Filterabfragen suchen"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently removes a task from Todoist. This action cannot be undone. Use with caution.",
+          "message": "Entfernt eine Aufgabe dauerhaft aus Todoist. Diese Aktion kann nicht rückgängig gemacht werden. Mit Vorsicht verwenden."
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "Aufgabe löschen"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to permanently delete.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, die Sie dauerhaft löschen möchten."
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to delete",
+          "message": "Die zu löschende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Permanently delete a Todoist task",
+          "message": "Eine Todoist-Aufgabe dauerhaft löschen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.desc": {
+          "source": "Fetches a list of tasks with optional filtering by project, section, or label. Use this to retrieve tasks for processing or display.",
+          "message": "Ruft eine Liste von Aufgaben mit optionaler Filterung nach Projekt, Abschnitt oder Label ab. Verwenden Sie dies, um Aufgaben zur Verarbeitung oder Anzeige abzurufen."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Tasks auflisten"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.desc": {
+          "source": "Optionally specify a list of task IDs to retrieve only those specific tasks.",
+          "message": "Geben Sie optional eine Liste von Aufgaben-IDs an, um nur diese bestimmten Aufgaben abzurufen."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "Aufgaben-IDs"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.aWRz.short_desc": {
+          "source": "Filter by specific task IDs",
+          "message": "Nach bestimmten Aufgaben-IDs filtern"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.desc": {
+          "source": "Retrieve only tasks that have a specific label assigned.",
+          "message": "Nur Aufgaben abrufen, denen ein bestimmtes Label zugewiesen ist."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.display_name": {
+          "source": "Label",
+          "message": "Label"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGFiZWw.short_desc": {
+          "source": "Filter by label",
+          "message": "Nach Label filtern"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl von Aufgaben, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standard ist 50."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Retrieve only tasks from a specific section within a project.",
+          "message": "Nur Aufgaben aus einem bestimmten Abschnitt innerhalb eines Projekts abrufen."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "Abschnitts-ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by section",
+          "message": "Nach Abschnitt filtern"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Retrieve only tasks from a specific project.",
+          "message": "Nur Aufgaben aus einem bestimmten Projekt abrufen."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "Nach Projekt filtern"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve Todoist tasks",
+          "message": "Todoist-Aufgaben abrufen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.desc": {
+          "source": "Fetches a list of all labels in your Todoist account. Labels are used to categorize and filter tasks across projects.",
+          "message": "Ruft eine Liste aller Labels in Ihrem Todoist-Konto ab. Labels werden verwendet, um Aufgaben über Projekte hinweg zu kategorisieren und zu filtern."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.display_name": {
+          "source": "List Labels",
+          "message": "Labels auflisten"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of labels to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl an Labels, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standardwert ist 50."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9sYWJlbHM.short_desc": {
+          "source": "Retrieve all Todoist labels",
+          "message": "Alle Todoist-Labels abrufen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a list of all projects in your Todoist account, including shared and personal projects. Use this to discover available projects for task organization.",
+          "message": "Ruft eine Liste aller Projekte in Ihrem Todoist-Konto ab, einschließlich geteilter und persönlicher Projekte. Verwenden Sie dies, um verfügbare Projekte für die Aufgabenorganisation zu ermitteln."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Projekte auflisten"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of projects to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl an Projekten, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standardwert ist 50."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all Todoist projects",
+          "message": "Alle Todoist-Projekte abrufen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.desc": {
+          "source": "Fetches a list of sections. Sections are used within projects to organize tasks into logical groups or categories.",
+          "message": "Ruft eine Liste von Abschnitten ab. Abschnitte werden innerhalb von Projekten verwendet, um Aufgaben in logische Gruppen oder Kategorien zu strukturieren."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.display_name": {
+          "source": "List Sections",
+          "message": "Abschnitte auflisten"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.desc": {
+          "source": "Used for pagination. Provide the cursor from a previous response to get the next page of results.",
+          "message": "Wird für die Seitennummerierung verwendet. Geben Sie den Cursor aus einer vorherigen Antwort an, um die nächste Seite der Ergebnisse zu erhalten."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor",
+          "message": "Paginierungs-Cursor"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of sections to return in a single request. Default is 50.",
+          "message": "Die maximale Anzahl an Abschnitten, die in einer einzelnen Anfrage zurückgegeben werden sollen. Standardwert ist 50."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of results",
+          "message": "Maximale Anzahl von Ergebnissen"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally filter sections to only those within a specific project.",
+          "message": "Filtern Sie Abschnitte optional auf diejenigen innerhalb eines bestimmten Projekts."
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by project",
+          "message": "Nach Projekt filtern"
+        },
+        "app.VG9kb2lzdA.action.bGlzdF9zZWN0aW9ucw.short_desc": {
+          "source": "Retrieve sections from projects",
+          "message": "Abschnitte aus Projekten abrufen"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.desc": {
+          "source": "Moves a task to a different section within the same project, or to a different project entirely. Useful for reorganizing tasks and workflows.",
+          "message": "Verschiebt eine Aufgabe in einen anderen Abschnitt innerhalb desselben Projekts oder in ein komplett anderes Projekt. Nützlich für die Reorganisation von Aufgaben und Workflows."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.display_name": {
+          "source": "Move Task to Section",
+          "message": "Aufgabe in Abschnitt verschieben"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.desc": {
+          "source": "The section where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "Der Abschnitt, in den Sie die Aufgabe verschieben möchten. Es muss entweder section_id oder project_id angegeben werden."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "Abschnitts-ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Destination section",
+          "message": "Zielabschnitt"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.desc": {
+          "source": "The project where you want to move the task. Either section_id or project_id must be specified.",
+          "message": "Das Projekt, in das Sie die Aufgabe verschieben möchten. Es muss entweder section_id oder project_id angegeben werden."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Destination project",
+          "message": "Zielprojekt"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to move.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, die Sie verschieben möchten."
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.option.dGFza19pZA.short_desc": {
+          "source": "The task to move",
+          "message": "Die zu verschiebende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.bW92ZV90YXNrX3RvX3NlY3Rpb24.short_desc": {
+          "source": "Move a task to a different section or project",
+          "message": "Eine Aufgabe in einen anderen Abschnitt oder ein anderes Projekt verschieben"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Todoist** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Todoist** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Request-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Response-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die in dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.VG9kb2lzdA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Todoist",
+          "message": "Benutzerdefinierten API-Aufruf an Todoist ausführen"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Todoist account for newly completed tasks. This trigger fires whenever any task is marked as complete, with optional filtering by project, section, or custom query. Perfect for tracking productivity, logging completions, or triggering follow-up workflows based on task completion.",
+          "message": "Überwacht Ihr Todoist-Konto auf neu erledigte Aufgaben. Dieser Trigger wird ausgelöst, wenn eine Aufgabe als erledigt markiert wird, mit optionaler Filterung nach Projekt, Abschnitt oder benutzerdefinierter Abfrage. Ideal zum Verfolgen der Produktivität, Protokollieren von Fertigstellungen oder Auslösen von Folge-Workflows basierend auf Aufgabenerledigungen."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "Neue erledigte Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific section within a project. This allows you to track completions in specific areas of your workflow.",
+          "message": "Überwachen Sie optional nur erledigte Aufgaben aus einem bestimmten Abschnitt innerhalb eines Projekts. Dadurch können Sie Erledigungen in bestimmten Bereichen Ihres Workflows verfolgen."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "Abschnitts-ID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Filter by specific section",
+          "message": "Nach bestimmtem Abschnitt filtern"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.desc": {
+          "source": "Optionally monitor only completed tasks from a specific Todoist project. If not specified, all completed tasks across all projects will trigger the event.",
+          "message": "Überwachen Sie optional nur erledigte Aufgaben aus einem bestimmten Todoist-Projekt. Falls nicht angegeben, lösen alle erledigten Aufgaben über alle Projekte hinweg das Ereignis aus."
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Filter by specific project",
+          "message": "Nach bestimmtem Projekt filtern"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.display_name": {
+          "source": "No Date & No Deadline",
+          "message": "Kein Datum & keine Frist"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOm5vIGRhdGUgJiBubyBkZWFkbGluZQ.short_desc": {
+          "source": "See all tasks that do not have a date or deadline",
+          "message": "Alle Aufgaben anzeigen, die kein Datum oder keine Frist haben"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.display_name": {
+          "source": "Assigned to Me",
+          "message": "Mir zugewiesen"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.allowed-value.c3RyaW5nOmFzc2lnbmVkIHRvOiBtZQ.short_desc": {
+          "source": "See all tasks assigned to you",
+          "message": "Alle Ihnen zugewiesenen Aufgaben anzeigen"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.desc": {
+          "source": "The filter query to use, see [documentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) for more details",
+          "message": "Die zu verwendende Filterabfrage, siehe [Dokumentation](https://www.todoist.com/help/articles/introduction-to-filters-V98wIH) für weitere Details"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.display_name": {
+          "source": "Filter Query",
+          "message": "Filterabfrage"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.option.cXVlcnk.short_desc": {
+          "source": "Custom filter expression",
+          "message": "Benutzerdefinierter Filterausdruck"
+        },
+        "app.VG9kb2lzdA.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is completed in Todoist",
+          "message": "Wird ausgelöst, wenn eine Aufgabe in Todoist erledigt wird"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Modifies the properties of an existing Todoist task. You can update content, description, due dates, labels, priority, and more.",
+          "message": "Ändert die Eigenschaften einer vorhandenen Todoist-Aufgabe. Sie können Inhalt, Beschreibung, Fälligkeitsdaten, Labels, Priorität und mehr aktualisieren."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Aufgabe aktualisieren"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "The new main text describing what needs to be done.",
+          "message": "Der neue Haupttext, der beschreibt, was zu tun ist."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "Aufgabeninhalt"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "Updated task description",
+          "message": "Aktualisierte Aufgabenbeschreibung"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "New detailed description or notes about the task. Supports Markdown formatting.",
+          "message": "Neue detaillierte Beschreibung oder Notizen zur Aufgabe. Unterstützt Markdown-Formatierung."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Beschreibung"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated task details",
+          "message": "Aktualisierte Aufgabendetails"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.desc": {
+          "source": "Change the due date and optionally the time for the task.",
+          "message": "Fälligkeitsdatum und optional die Uhrzeit für die Aufgabe ändern."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.display_name": {
+          "source": "Due Date",
+          "message": "Fälligkeitsdatum"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVlX2RhdGV0aW1l.short_desc": {
+          "source": "Updated due date",
+          "message": "Aktualisiertes Fälligkeitsdatum"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.desc": {
+          "source": "Change how long you expect the task to take.",
+          "message": "Ändern Sie die erwartete Dauer der Aufgabe."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.display_name": {
+          "source": "Duration",
+          "message": "Dauer"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.ZHVyYXRpb24.short_desc": {
+          "source": "Updated estimated time",
+          "message": "Aktualisierte geschätzte Zeit"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.desc": {
+          "source": "Change the position of the task in the project or section.",
+          "message": "Position der Aufgabe im Projekt oder Abschnitt ändern."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Sortierung"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.b3JkZXI.short_desc": {
+          "source": "New task position",
+          "message": "Neue Aufgabenposition"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.desc": {
+          "source": "Replace the task's labels with a new set of labels.",
+          "message": "Ersetzen Sie die Labels der Aufgabe durch neue Labels."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.display_name": {
+          "source": "Labels",
+          "message": "Etiketten"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.bGFiZWxz.short_desc": {
+          "source": "Updated task labels",
+          "message": "Aktualisierte Aufgaben-Labels"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.desc": {
+          "source": "Move the task to a different section within the project.",
+          "message": "Aufgabe in einen anderen Abschnitt innerhalb des Projekts verschieben."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.display_name": {
+          "source": "Section ID",
+          "message": "Abschnitts-ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.c2VjdGlvbl9pZA.short_desc": {
+          "source": "Move to different section",
+          "message": "In anderen Abschnitt verschieben"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.desc": {
+          "source": "Change the priority level: 1 (urgent), 2 (high), 3 (normal), 4 (low).",
+          "message": "Prioritätsstufe ändern: 1 (dringend), 2 (hoch), 3 (normal), 4 (niedrig)."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priorität"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJpb3JpdHk.short_desc": {
+          "source": "Updated priority level",
+          "message": "Aktualisierte Prioritätsstufe"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.desc": {
+          "source": "Move the task to a different Todoist project.",
+          "message": "Aufgabe in ein anderes Todoist-Projekt verschieben."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "Projekt-ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "Move to different project",
+          "message": "In anderes Projekt verschieben"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Select the Todoist task you want to modify.",
+          "message": "Wählen Sie die Todoist-Aufgabe aus, die Sie ändern möchten."
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "Task-ID"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The task to update",
+          "message": "Die zu aktualisierende Aufgabe"
+        },
+        "app.VG9kb2lzdA.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing Todoist task",
+          "message": "Eine vorhandene Todoist-Aufgabe aktualisieren"
+        },
+        "app.VG9kb2lzdA.desc": {
+          "source": "The Todoist integration enables you to seamlessly interact with the Todoist API to manage tasks, projects, labels, and comments. Automate your task management workflows, sync project data, and streamline team collaboration with comprehensive actions and triggers.",
+          "message": "Die Todoist-Integration ermöglicht Ihnen die nahtlose Interaktion mit der Todoist-API zur Verwaltung von Aufgaben, Projekten, Labels und Kommentaren. Automatisieren Sie Ihre Aufgabenmanagement-Workflows, synchronisieren Sie Projektdaten und optimieren Sie die Teamzusammenarbeit mit umfassenden Aktionen und Triggern."
+        },
+        "app.VG9kb2lzdA.display_name": {
+          "source": "Todoist",
+          "message": "Todoist"
+        },
+        "app.VG9kb2lzdA.short_desc": {
+          "source": "Connect to Todoist to automate task and project management workflows.",
+          "message": "Stellen Sie eine Verbindung zu Todoist her, um Aufgaben- und Projektmanagement-Workflows zu automatisieren."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.desc": {
+          "source": "This trigger fires when a card has passed its due date and has not been marked as complete.",
+          "message": "當卡片已過到期日且尚未標記為完成時觸發此觸發器。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
+          "source": "Card Due",
+          "message": "卡片到期"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board that contains the cards you want to monitor for due dates.",
+          "message": "選取包含要監控到期日卡片的 Trello 看板。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board containing the cards to monitor.",
+          "message": "包含要監控卡片的看板。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.desc": {
+          "source": "When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.",
+          "message": "啟用時，觸發器將包含已標記為完成的逾期卡片。預設情況下，僅包含未完成的逾期卡片。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
+          "source": "Include Completed Cards",
+          "message": "包含已完成的卡片"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
+          "source": "Include cards marked as complete.",
+          "message": "包含標記為完成的卡片。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for overdue cards. Only required if Source is set to \"list\".",
+          "message": "選取要監控逾期卡片的特定清單。僅在 Source 設為「list」時需要。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "清單"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.short_desc": {
+          "source": "The specific list containing the cards to monitor.",
+          "message": "包含要監控卡片的特定清單。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "清單"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "選取「board」以監控看板上的所有清單，或選取「list」以僅監控特定清單。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "來源"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "選擇要監控整個看板還是特定清單。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
+          "source": "Triggers when a card becomes overdue.",
+          "message": "在卡片逾期時觸發。"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中建立新記錄"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中建立新記錄"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Get a member",
+          "message": "取得成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Get a Member",
+          "message": "取得成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Get a Member",
+          "message": "取得成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Get-organizations-id",
+          "message": "Get-organizations-id"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Get an Organization",
+          "message": "取得組織"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Get an Organization",
+          "message": "取得組織"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.desc": {
+          "source": "List the boards in a Workspace",
+          "message": "列出工作區中的看板"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.display_name": {
+          "source": "Get Boards in an Organization",
+          "message": "取得組織中的看板"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.short_desc": {
+          "source": "Get Boards in an Organization",
+          "message": "取得組織中的看板"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "List the members in a Workspace",
+          "message": "列出工作區中的成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Get the Members of an Organization",
+          "message": "取得組織成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Get the Members of an Organization",
+          "message": "取得組織成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.desc": {
+          "source": "Request a single board.",
+          "message": "請求單一看板。"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.display_name": {
+          "source": "Get a Board",
+          "message": "取得看板"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Get a Board",
+          "message": "取得看板"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.desc": {
+          "source": "Get-checklists-id-checkitems",
+          "message": "Get-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.display_name": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "取得檢查清單上的檢查項目"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.short_desc": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "取得檢查清單上的檢查項目"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.desc": {
+          "source": "Get information about a single Label.",
+          "message": "取得單一標籤的資訊。"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.display_name": {
+          "source": "Get a Label",
+          "message": "取得標籤"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.short_desc": {
+          "source": "Get a Label",
+          "message": "取得標籤"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.desc": {
+          "source": "Get information about a List",
+          "message": "取得清單的資訊"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.display_name": {
+          "source": "Get a List",
+          "message": "取得清單"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.short_desc": {
+          "source": "Get a List",
+          "message": "取得清單"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.desc": {
+          "source": "Search for Trello members.",
+          "message": "搜尋 Trello 成員。"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.display_name": {
+          "source": "Search for Members",
+          "message": "搜尋成員"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.short_desc": {
+          "source": "Search for Members",
+          "message": "搜尋成員"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "從應用程式「Trello」的指定資料表中刪除記錄"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "從應用程式「Trello」的指定資料表中刪除記錄"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Delete an Organization",
+          "message": "刪除組織"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Delete an Organization",
+          "message": "刪除組織"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Delete an Organization",
+          "message": "刪除組織"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Remove a member from a Workspace",
+          "message": "從工作區移除成員"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Remove a Member from an Organization",
+          "message": "從組織移除成員"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Remove a Member from an Organization",
+          "message": "從組織移除成員"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.desc": {
+          "source": "Delete a board.",
+          "message": "刪除看板。"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.display_name": {
+          "source": "Delete a Board",
+          "message": "刪除看板"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.short_desc": {
+          "source": "Delete a Board",
+          "message": "刪除看板"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.desc": {
+          "source": "Delete a label by ID.",
+          "message": "依 ID 刪除標籤。"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.display_name": {
+          "source": "Delete a Label",
+          "message": "刪除標籤"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.short_desc": {
+          "source": "Delete a Label",
+          "message": "刪除標籤"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Trello** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Trello** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭與請求內文。回應將以包含狀態碼、回應標頭和回應內文的雜湊形式返回。\n\n針對此應用程式尚未公開為一級動作的端點使用此動作。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Trello",
+          "message": "對 Trello 發出自訂 API 呼叫"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.desc": {
+          "source": "This trigger fires when a new member is added to a specified Trello board.",
+          "message": "當新成員新增至指定的 Trello 看板時觸發此觸發程序。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
+          "source": "New Member",
+          "message": "新成員"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new members being added.",
+          "message": "選取您要監控新增成員的 Trello 看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new members.",
+          "message": "要監控新成員的看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {
+          "source": "Triggers when a new member is added to a board.",
+          "message": "當新成員新增至看板時觸發。"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.desc": {
+          "source": "This trigger fires when a new Trello board is created or shared with the authenticated user.",
+          "message": "當建立新 Trello 看板或與已驗證使用者共用時觸發此觸發程序。"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
+          "source": "New Board",
+          "message": "新看板"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
+          "source": "Triggers when a new board is created.",
+          "message": "當建立新看板時觸發。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.desc": {
+          "source": "This trigger fires when a new card is added to a specified board or list in Trello.",
+          "message": "當新卡片新增至 Trello 中的指定看板或清單時觸發此觸發程序。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
+          "source": "New Card",
+          "message": "新卡片"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new cards being created.",
+          "message": "選取您要監控建立新卡片的 Trello 看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new cards.",
+          "message": "要監控新卡片的看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for new cards. Only required if Source is set to \"list\".",
+          "message": "選取要監控新卡片的特定清單。僅在 Source 設為「list」時需要。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "清單"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.short_desc": {
+          "source": "The specific list to monitor for new cards.",
+          "message": "要監控新卡片的特定清單。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "清單"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "選取「board」以監控看板上的所有清單，或選取「list」以僅監控特定清單。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "來源"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "選擇要監控整個看板還是特定清單。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
+          "source": "Triggers when a new card is created.",
+          "message": "當建立新卡片時觸發。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.desc": {
+          "source": "This trigger fires when a new label is created on a specified Trello board.",
+          "message": "當在指定的 Trello 看板上建立新標籤時觸發此觸發程序。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
+          "source": "New Label",
+          "message": "新標籤"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new labels being created.",
+          "message": "選取您要監控建立新標籤的 Trello 看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new labels.",
+          "message": "要監控新標籤的看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
+          "source": "Triggers when a new label is created.",
+          "message": "當建立新標籤時觸發。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.desc": {
+          "source": "This trigger fires when a new list is added to a specified Trello board.",
+          "message": "當新清單新增至指定的 Trello 看板時觸發此觸發程序。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
+          "source": "New List",
+          "message": "新增清單"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new lists being created.",
+          "message": "選取您要監控建立新清單的 Trello 看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "看板"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new lists.",
+          "message": "要監控新清單的看板。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.desc": {
+          "source": "When enabled, the trigger will include new lists that are archived. By default, only open lists are included.",
+          "message": "啟用時，觸發程序將包含已封存的新清單。預設情況下僅包含已開啟的清單。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
+          "source": "Include Archived Lists",
+          "message": "包含已封存清單"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
+          "source": "Include lists that are archived.",
+          "message": "包含已封存的清單。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
+          "source": "Triggers when a new list is created.",
+          "message": "當建立新清單時觸發。"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中搜尋相符的記錄"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中搜尋相符的記錄"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中搜尋單一相符記錄"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "在應用程式「Trello」的指定資料表中搜尋單一相符記錄"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.desc": {
+          "source": "Create a new board.",
+          "message": "建立新看板。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.display_name": {
+          "source": "Create a Board",
+          "message": "建立看板"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.short_desc": {
+          "source": "Create a Board",
+          "message": "建立看板"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.desc": {
+          "source": "Create a new card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "建立新卡片。查詢參數亦可替換為 JSON 請求內文。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.display_name": {
+          "source": "Create a New Card",
+          "message": "建立新卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.short_desc": {
+          "source": "Create a new Card",
+          "message": "建立新卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.desc": {
+          "source": "Add a new comment to a card",
+          "message": "為卡片新增評論"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.display_name": {
+          "source": "Add a New Comment to a Card",
+          "message": "為卡片新增評論"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.short_desc": {
+          "source": "Add a new comment to a Card",
+          "message": "為卡片新增評論"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.desc": {
+          "source": "Add a member to a card",
+          "message": "將成員新增至卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.display_name": {
+          "source": "Add a Member to a Card",
+          "message": "將成員新增至卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.short_desc": {
+          "source": "Add a Member to a Card",
+          "message": "將成員新增至卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.desc": {
+          "source": "Add a label to a card",
+          "message": "為卡片新增標籤"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.display_name": {
+          "source": "Add a Label to a Card",
+          "message": "新增標籤至卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.short_desc": {
+          "source": "Add a Label to a Card",
+          "message": "新增標籤至卡片"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.desc": {
+          "source": "Post-checklists-id-checkitems",
+          "message": "Post-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.display_name": {
+          "source": "Create Checkitem on Checklist",
+          "message": "在檢查清單建立檢查項目"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.short_desc": {
+          "source": "Create Checkitem on Checklist",
+          "message": "在檢查清單建立檢查項目"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.desc": {
+          "source": "Create a new Label on a Board.",
+          "message": "在看板上建立新標籤。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.display_name": {
+          "source": "Create a Label",
+          "message": "建立標籤"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.short_desc": {
+          "source": "Create a Label",
+          "message": "建立標籤"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.desc": {
+          "source": "Create a new List on a Board",
+          "message": "在看板上建立新清單"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.display_name": {
+          "source": "Create a New List",
+          "message": "建立新清單"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.short_desc": {
+          "source": "Create a new List",
+          "message": "建立新清單"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.desc": {
+          "source": "Create a new Workspace",
+          "message": "建立新工作區"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.display_name": {
+          "source": "Create a New Organization",
+          "message": "建立新組織"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.desc": {
+          "source": "The description for the organizations",
+          "message": "組織的說明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.display_name": {
+          "source": "Desc",
+          "message": "說明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.short_desc": {
+          "source": "The description for the organizations",
+          "message": "組織的說明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The name to display for the Organization",
+          "message": "組織的顯示名稱"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "顯示名稱"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "The name to display for the Organization",
+          "message": "組織的顯示名稱"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.desc": {
+          "source": "A string with a length of at least 3. Only lowercase letters, underscores, and numbers are allowed. If the name contains invalid characters, they will be removed. If the name conflicts with an existing name, a new name will be substituted.",
+          "message": "長度至少為 3 的字串。僅允許小寫字母、底線和數字。如果名稱包含無效字元，系統將會將其移除。如果名稱與現有名稱衝突，將會替換為新名稱。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名稱"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.short_desc": {
+          "source": "A string with a length of at least 3",
+          "message": "長度至少為 3 的字串"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.desc": {
+          "source": "A URL starting with `http://` or `https://`",
+          "message": "以 `http://` 或 `https://` 開頭的 URL"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "網站"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.short_desc": {
+          "source": "A URL starting with 'http://' or 'https://'",
+          "message": "以 'http://' 或 'https://' 開頭的 URL"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.short_desc": {
+          "source": "Create a new Organization",
+          "message": "建立新組織"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Update a Member",
+          "message": "更新成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Update a Member",
+          "message": "更新成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Update a Member",
+          "message": "更新成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Update an organization",
+          "message": "更新組織"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Update an Organization",
+          "message": "更新組織"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Update an Organization",
+          "message": "更新組織"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Put-organizations-id-members",
+          "message": "Put-organizations-id-members"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Update an Organization's Members",
+          "message": "更新組織成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Update an Organization's Members",
+          "message": "更新組織成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.desc": {
+          "source": "Add a member to a Workspace or update their member type.",
+          "message": "將成員新增至工作區或更新其成員類型。"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.display_name": {
+          "source": "Update a Member of an Organization",
+          "message": "更新組織成員"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.short_desc": {
+          "source": "Update a Member of an Organization",
+          "message": "更新組織成員"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.desc": {
+          "source": "Update an existing board by id",
+          "message": "依 ID 更新現有看板"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.display_name": {
+          "source": "Update a Board",
+          "message": "更新看板"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Update a Board",
+          "message": "更新看板"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.desc": {
+          "source": "Add a member to the board.",
+          "message": "將成員新增至看板。"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.display_name": {
+          "source": "Add a Member to a Board",
+          "message": "將成員新增至看板"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.short_desc": {
+          "source": "Add a Member to a Board",
+          "message": "將成員新增至看板"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.desc": {
+          "source": "Update a card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "更新卡片。查詢參數亦可改為使用 JSON 請求本文替換。"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.display_name": {
+          "source": "Update a Card",
+          "message": "更新卡片"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.short_desc": {
+          "source": "Update a Card",
+          "message": "更新卡片"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.desc": {
+          "source": "Update an item in a checklist on a card.",
+          "message": "更新卡片上檢查清單中的項目。"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.display_name": {
+          "source": "Update a Checkitem on a Card",
+          "message": "更新卡片上的檢查項目"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.short_desc": {
+          "source": "Update a checkItem on a Card",
+          "message": "更新卡片上的檢查項目"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.desc": {
+          "source": "Update a label by ID.",
+          "message": "依 ID 更新標籤。"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.display_name": {
+          "source": "Update a Label",
+          "message": "更新標籤"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.short_desc": {
+          "source": "Update a Label",
+          "message": "更新標籤"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.desc": {
+          "source": "Update the properties of a List",
+          "message": "更新清單屬性"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.display_name": {
+          "source": "Update a List",
+          "message": "更新清單"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.short_desc": {
+          "source": "Update a List",
+          "message": "更新清單"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "更新應用程式 \"Trello\" 中指定資料表的現有記錄"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "更新應用程式 \"Trello\" 中指定資料表的現有記錄"
+        },
+        "app.VHJlbGxv.desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.",
+          "message": "Trello 是一套將專案整理至看板的協同作業工具。它是一個網頁版看板風格的清單製作應用程式，為 Atlassian 的子公司。"
+        },
+        "app.VHJlbGxv.display_name": {
+          "source": "Trello",
+          "message": "Trello"
+        },
+        "app.VHJlbGxv.short_desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards.",
+          "message": "Trello 是一套將專案整理至看板的協同作業工具。"
+        }
+      }
+    }
+  }
+}

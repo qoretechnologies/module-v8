@@ -1,0 +1,989 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.desc": {
+          "source": "Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.",
+          "message": "Rimuove tutte le attività completate dall'elenco attività specificato, aiutando a mantenere i tuoi elenchi puliti e organizzati."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.display_name": {
+          "source": "Clear Completed Tasks",
+          "message": "Cancella attività completate"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to remove all completed tasks.",
+          "message": "Seleziona l'elenco attività da cui desideri rimuovere tutte le attività completate."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to clear completed tasks from",
+          "message": "L'elenco attività da cui cancellare le attività completate"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.short_desc": {
+          "source": "Clear all completed tasks from a task list",
+          "message": "Cancella tutte le attività completate da un elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.",
+          "message": "Crea una nuova attività nell'elenco attività specificato con dettagli opzionali come note, data di scadenza e posizionamento gerarchico."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Crea attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set a due date for when this task should be completed.",
+          "message": "Imposta una data di scadenza entro la quale questa attività deve essere completata."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Data di scadenza"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "La data di scadenza per l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Add any additional notes, details, or description for the task.",
+          "message": "Aggiungi eventuali note, dettagli o descrizioni aggiuntive per l'attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Note"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Note o descrizione aggiuntive per l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to create this task as a subtask under another task.",
+          "message": "Seleziona un'attività padre se desideri creare questa attività come sottoattività di un'altra attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Compito padre"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to create a subtask)",
+          "message": "L'attività padre (per creare una sottoattività)"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this new task should be positioned in the list.",
+          "message": "Seleziona l'attività dopo la quale posizionare questa nuova attività nell'elenco."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Attività precedente"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "L'attività dopo la quale posizionare questa attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list where you want to create the new task.",
+          "message": "Seleziona l'elenco attività in cui desideri creare la nuova attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to add the task to",
+          "message": "L'elenco attività a cui aggiungere l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the title or main description for the new task.",
+          "message": "Inserisci il titolo o la descrizione principale per la nuova attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The title of the task",
+          "message": "Il titolo dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new task in Google Tasks",
+          "message": "Crea una nuova attività in Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Creates a new task list in your Google Tasks account with the specified title.",
+          "message": "Crea un nuovo elenco attività nel tuo account Google Tasks con il titolo specificato."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Create Task List",
+          "message": "Crea elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the name/title for the new task list that will be created in Google Tasks.",
+          "message": "Inserisci il nome/titolo per il nuovo elenco attività che verrà creato in Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The title of the new task list",
+          "message": "Il titolo del nuovo elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Create a new task list in Google Tasks",
+          "message": "Crea un nuovo elenco attività in Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieves detailed information about a specific task from the selected task list.",
+          "message": "Recupera informazioni dettagliate su un'attività specifica dall'elenco attività selezionato."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Ottieni attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to retrieve.",
+          "message": "Seleziona l'elenco attività che contiene l'attività che desideri recuperare."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "L'elenco attività contenente l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task whose details you want to retrieve.",
+          "message": "Seleziona l'attività specifica di cui desideri recuperare i dettagli."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to retrieve",
+          "message": "L'attività da recuperare"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a specific task",
+          "message": "Recupera i dettagli di un'attività specifica"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently deletes the specified task from the selected task list.",
+          "message": "Elimina definitivamente l'attività specificata dall'elenco attività selezionato."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "Elimina attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to delete.",
+          "message": "Seleziona l'elenco attività che contiene l'attività che desideri eliminare."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "L'elenco attività contenente l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to permanently delete.",
+          "message": "Seleziona l'attività specifica che desideri eliminare definitivamente."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to delete",
+          "message": "L'attività da eliminare"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Delete a task from Google Tasks",
+          "message": "Elimina un'attività da Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Permanently deletes the specified task list and all tasks within it from your Google Tasks account.",
+          "message": "Elimina definitivamente l'elenco attività specificato e tutte le attività al suo interno dal tuo account Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Delete Task List",
+          "message": "Elimina elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to permanently delete from Google Tasks.",
+          "message": "Seleziona l'elenco attività che desideri eliminare definitivamente da Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to delete",
+          "message": "L'elenco attività da eliminare"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Delete a task list from Google Tasks",
+          "message": "Elimina un elenco attività da Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.desc": {
+          "source": "Retrieves a list of all task lists in your Google Tasks account with optional pagination.",
+          "message": "Recupera un elenco di tutti gli elenchi attività nel tuo account Google Tasks con paginazione facoltativa."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.display_name": {
+          "source": "List Task Lists",
+          "message": "Mostra elenchi attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of task lists to return in the response. Default is 10.",
+          "message": "Specifica il numero massimo di elenchi attività da restituire nella risposta. Il valore predefinito è 10."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Risultati massimi"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of task lists to return",
+          "message": "Numero massimo di elenchi attività da restituire"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Provide the next page token from a previous request to get the next page of results.",
+          "message": "Fornisci il token della pagina successiva di una richiesta precedente per ottenere la pagina di risultati successiva."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Token pagina successiva"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token per la paginazione"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.short_desc": {
+          "source": "Get all task lists from Google Tasks",
+          "message": "Ottieni tutti gli elenchi attività da Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.",
+          "message": "Recupera un elenco di attività dall'elenco attività specificato con varie opzioni di filtro come date di scadenza, stato di completamento e altro."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Elenca attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.desc": {
+          "source": "Only return tasks completed before this date.",
+          "message": "Restituisci solo le attività completate prima di questa data."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.display_name": {
+          "source": "Completed Max Date",
+          "message": "Data massima di completamento"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.short_desc": {
+          "source": "Upper bound for a task completion date",
+          "message": "Limite superiore per la data di completamento dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.desc": {
+          "source": "Only return tasks completed after this date.",
+          "message": "Restituisci solo le attività completate dopo questa data."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.display_name": {
+          "source": "Completed Min Date",
+          "message": "Data minima di completamento"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.short_desc": {
+          "source": "Lower bound for a task completion date",
+          "message": "Limite inferiore per la data di completamento dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.desc": {
+          "source": "Only return tasks with due dates before this date.",
+          "message": "Restituisci solo le attività con data di scadenza precedente a questa data."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.display_name": {
+          "source": "Due Max Date",
+          "message": "Data massima di scadenza"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.short_desc": {
+          "source": "Upper bound for a task due date",
+          "message": "Limite superiore per la data di scadenza dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.desc": {
+          "source": "Only return tasks with due dates after this date.",
+          "message": "Restituisce solo le attività con date di scadenza successive a questa data."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.display_name": {
+          "source": "Due Min Date",
+          "message": "Data di scadenza minima"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.short_desc": {
+          "source": "Lower bound for a task due date",
+          "message": "Limite inferiore per la data di scadenza di un'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of tasks to return in the response.",
+          "message": "Specifica il numero massimo di attività da restituire nella risposta."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Risultati massimi"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Numero massimo di attività da restituire"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people.",
+          "message": "Abilita questa opzione per includere le attività che sono state assegnate ad altre persone."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.display_name": {
+          "source": "Show Assigned",
+          "message": "Mostra assegnate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.short_desc": {
+          "source": "Whether to include assigned tasks",
+          "message": "Indica se includere le attività assegnate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.desc": {
+          "source": "Enable this option to include completed tasks in the results.",
+          "message": "Abilita questa opzione per includere le attività completate nei risultati."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.display_name": {
+          "source": "Show Completed",
+          "message": "Mostra completate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.short_desc": {
+          "source": "Whether to include completed tasks",
+          "message": "Indica se includere le attività completate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.desc": {
+          "source": "Enable this option to include deleted tasks in the results.",
+          "message": "Abilita questa opzione per includere le attività eliminate nei risultati."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.display_name": {
+          "source": "Show Deleted",
+          "message": "Mostra eliminati"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
+          "source": "Whether to include deleted tasks",
+          "message": "Indica se includere le attività eliminate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.desc": {
+          "source": "Enable this option to include hidden tasks in the results.",
+          "message": "Abilita questa opzione per includere le attività nascoste nei risultati."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.display_name": {
+          "source": "Show Hidden",
+          "message": "Mostra nascoste"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.short_desc": {
+          "source": "Whether to include hidden tasks",
+          "message": "Indica se includere le attività nascoste"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.desc": {
+          "source": "Provide the page token from a previous request to get the next page of results.",
+          "message": "Fornisci il token di pagina da una richiesta precedente per ottenere la pagina successiva di risultati."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Token di pagina"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token per la paginazione"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to retrieve tasks.",
+          "message": "Seleziona l'elenco delle attività da cui desideri recuperare le attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to get tasks from",
+          "message": "L'elenco da cui recuperare le attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.desc": {
+          "source": "Only return tasks that have been updated after this date.",
+          "message": "Restituisce solo le attività aggiornate dopo questa data."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.display_name": {
+          "source": "Updated Min Date",
+          "message": "Data di aggiornamento minima"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.short_desc": {
+          "source": "Lower bound for a task last modification time",
+          "message": "Limite inferiore per l'ora dell'ultima modifica di un'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Get all tasks from a task list",
+          "message": "Recupera tutte le attività da un elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Tasks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Google Tasks** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni native in questa app."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Tasks",
+          "message": "Esegui una chiamata API personalizzata a Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.",
+          "message": "Monitora i tuoi elenchi di Google Tasks e si attiva quando un'attività nell'elenco specificato viene contrassegnata come completata."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "Nuova attività completata"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Abilita questa opzione per includere le attività assegnate ad altre persone nei risultati del trigger."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Includi attività assegnate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Indica se includere le attività assegnate ad altri"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly completed tasks.",
+          "message": "Seleziona l'elenco di Google Tasks che desideri monitorare per le attività appena completate."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for completed tasks",
+          "message": "L'elenco attività da monitorare per le attività completate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is marked as completed",
+          "message": "Si attiva quando un'attività viene contrassegnata come completata"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.",
+          "message": "Monitora i tuoi elenchi di Google Tasks e si attiva quando viene aggiunta una nuova attività all'elenco specificato."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.display_name": {
+          "source": "New Task",
+          "message": "Nuova attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Abilita questa opzione per includere le attività assegnate ad altre persone nei risultati del trigger."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Includi attività assegnate"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Indica se includere le attività assegnate ad altri"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly created tasks.",
+          "message": "Seleziona l'elenco di Google Tasks che desideri monitorare per le nuove attività create."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for new tasks",
+          "message": "L'elenco attività da monitorare per le nuove attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.short_desc": {
+          "source": "Triggers when a new task is created in Google Tasks",
+          "message": "Si attiva quando viene creata una nuova attività in Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.",
+          "message": "Aggiorna i dettagli di un'attività esistente inclusi titolo, note, data di scadenza, stato di completamento e posizionamento gerarchico."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Aggiorna attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set or update the due date for when this task should be completed.",
+          "message": "Imposta o aggiorna la data di scadenza per il completamento di questa attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Data di scadenza"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "La data di scadenza per l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Update any additional notes, details, or description for the task.",
+          "message": "Aggiorna eventuali note, dettagli o descrizioni aggiuntive per l'attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Note"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Note o descrizione aggiuntive per l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOm5lZWRzQWN0aW9u.display_name": {
+          "source": "Incomplete",
+          "message": "Incompleta"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Completato"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.desc": {
+          "source": "Set whether the task is incomplete (needs action) or completed.",
+          "message": "Imposta se l'attività è incompleta (richiede un'azione) o completata."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stato"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.short_desc": {
+          "source": "The completion status of the task",
+          "message": "Lo stato di completamento dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to make this task a subtask under another task.",
+          "message": "Seleziona un'attività padre se desideri impostare questa attività come sottoattività di un'altra."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Compito padre"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to make this a subtask)",
+          "message": "L'attività padre (per rendere questa una sottoattività)"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this task should be positioned in the list.",
+          "message": "Seleziona l'attività dopo la quale posizionare questa attività nell'elenco."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Attività precedente"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "L'attività dopo la quale posizionare questa attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to update.",
+          "message": "Seleziona l'elenco attività che contiene l'attività che desideri aggiornare."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "L'elenco attività contenente l'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to update.",
+          "message": "Seleziona l'attività specifica che desideri aggiornare."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to update",
+          "message": "L'attività da aggiornare"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the new title or main description for the task.",
+          "message": "Inserisci il nuovo titolo o la descrizione principale dell'attività."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The new title of the task",
+          "message": "Il nuovo titolo dell'attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing task in Google Tasks",
+          "message": "Aggiorna un'attività esistente in Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Updates the title of an existing task list in your Google Tasks account.",
+          "message": "Aggiorna il titolo di un elenco attività esistente nel tuo account Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Update Task List",
+          "message": "Aggiorna elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to update in Google Tasks.",
+          "message": "Seleziona l'elenco attività che desideri aggiornare in Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to update",
+          "message": "L'elenco attività da aggiornare"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the new title/name for the selected task list.",
+          "message": "Inserisci il nuovo titolo/nome per l'elenco attività selezionato."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The new title for the task list",
+          "message": "Il nuovo titolo per l'elenco attività"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Update an existing task list in Google Tasks",
+          "message": "Aggiorna un elenco attività esistente in Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.desc": {
+          "source": "The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.",
+          "message": "L'integrazione con Google Tasks fornisce azioni e trigger completi per interagire con l'API Google Tasks. Gestisci elenchi di attività, crea e aggiorna attività, imposta date di scadenza e organizza il tuo flusso di lavoro di produttività con funzionalità di automazione continue."
+        },
+        "app.R29vZ2xlVGFza3M.display_name": {
+          "source": "Google Tasks",
+          "message": "Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.short_desc": {
+          "source": "Connect to Google Tasks API to manage your task lists and tasks efficiently.",
+          "message": "Connettiti all'API Google Tasks per gestire in modo efficiente elenchi di attività e attività."
+        }
+      }
+    }
+  }
+}

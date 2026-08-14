@@ -1,0 +1,977 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.desc": {
+          "source": "Fetches all email campaigns from your Mailchimp account with their details including status, settings, and performance metrics.",
+          "message": "Mailchimpアカウントからすべてのメールキャンペーンをステータス、設定、パフォーマンス指標などの詳細とともに取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.display_name": {
+          "source": "Get Campaigns",
+          "message": "キャンペーンを取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0Q2FtcGFpZ25z.short_desc": {
+          "source": "Retrieve a list of email campaigns",
+          "message": "メールキャンペーンのリストを取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific customer from your connected e-commerce store.",
+          "message": "接続されたEコマースストアから特定の顧客に関する詳細情報を取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.display_name": {
+          "source": "Get Store Customer",
+          "message": "ストア顧客を取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0RWNvbW1lcmNlU3RvcmVzSWRDdXN0b21lcnNJZA.short_desc": {
+          "source": "Retrieve a specific store customer",
+          "message": "特定のストア顧客を取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.desc": {
+          "source": "Fetches all members (subscribers) from a specific audience with their contact information and subscription details.",
+          "message": "特定のオーディエンスからすべてのメンバー（購読者）を連絡先情報や購読の詳細とともに取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.display_name": {
+          "source": "Get Audience Members",
+          "message": "オーディエンスメンバーを取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnM.short_desc": {
+          "source": "Retrieve members from an audience",
+          "message": "オーディエンスからメンバーを取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Fetches detailed information about a specific member (subscriber) from an audience including their profile and activity data.",
+          "message": "プロフィールやアクティビティデータを含む、オーディエンスの特定のメンバー（購読者）に関する詳細情報を取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Get Audience Member",
+          "message": "オーディエンスメンバーを取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Retrieve a specific audience member",
+          "message": "特定のオーディエンスメンバーを取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.desc": {
+          "source": "Searches through your email campaigns using various criteria to find specific campaigns quickly.",
+          "message": "さまざまな条件を使用してメールキャンペーンを検索し、特定のキャンペーンを素早く見つけます。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.display_name": {
+          "source": "Search Campaigns",
+          "message": "キャンペーンを検索"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "除外するフィールドのカンマ区切りリスト。サブオブジェクトのパラメータはドット表記で参照します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "除外フィールド"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "除外するフィールドのカンマ区切りリスト"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "返されるフィールドのカンマ区切りリスト。サブオブジェクトのパラメータはドット表記で参照します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "返されるフィールドのカンマ区切りリスト"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.desc": {
+          "source": "The search query used to filter results.",
+          "message": "結果をフィルタリングするために使用される検索クエリ。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "クエリ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.option.cXVlcnk.short_desc": {
+          "source": "The search query used to filter results",
+          "message": "結果をフィルタリングするために使用される検索クエリ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoQ2FtcGFpZ25z.short_desc": {
+          "source": "Search for campaigns",
+          "message": "キャンペーンを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.desc": {
+          "source": "Searches through audience members using various criteria such as email, name, or tags to find specific subscribers.",
+          "message": "メール、名前、タグなどのさまざまな条件を使用してオーディエンスメンバーを検索し、特定の購読者を見つけます。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.display_name": {
+          "source": "Search Audience Members",
+          "message": "オーディエンスメンバーを検索"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0U2VhcmNoTWVtYmVycw.short_desc": {
+          "source": "Search for audience members",
+          "message": "オーディエンスメンバーを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.desc": {
+          "source": "Fetches detailed performance metrics and analytics for a specific email campaign.",
+          "message": "特定のメールキャンペーンの詳細なパフォーマンスメトリクスとアナリティクスを取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.display_name": {
+          "source": "Get Campaign Report",
+          "message": "キャンペーンレポートを取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lk.short_desc": {
+          "source": "Retrieve a specific campaign report",
+          "message": "特定のキャンペーンレポートを取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.desc": {
+          "source": "Fetches detailed information about clicks in a specific campaign including which links were clicked and by whom.",
+          "message": "どのリンクが誰によってクリックされたかなど、特定のキャンペーン内のクリックに関する詳細情報を取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.display_name": {
+          "source": "Get Campaign Click Details",
+          "message": "キャンペーンのクリック詳細を取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0c0lkQ2xpY2tEZXRhaWxz.short_desc": {
+          "source": "Retrieve click details for a campaign",
+          "message": "キャンペーンのクリック詳細を取得します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.desc": {
+          "source": "Fetches performance reports for your email campaigns including open rates, click rates, and engagement metrics.",
+          "message": "開封率、クリック率、エンゲージメント指標を含むメールキャンペーンのパフォーマンスレポートを取得します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.display_name": {
+          "source": "Get Campaign Reports",
+          "message": "キャンペーンレポートを取得"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.desc": {
+          "source": "The number of records to return. Default value is 10. Maximum value is 1000",
+          "message": "返すレコードの数。デフォルト値は 10 です。最大値は 1000 です。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "カウント"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.Y291bnQ.short_desc": {
+          "source": "The number of records to return",
+          "message": "返すレコードの数"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.desc": {
+          "source": "Restrict the response to campaigns sent before the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "指定した日時より前に送信されたキャンペーンに応答を制限します。ISO 8601 時刻形式を使用します: 2015-10-21T15:41:36+00:00。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.display_name": {
+          "source": "Before Send Time",
+          "message": "送信日時（以前）"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.YmVmb3JlX3NlbmRfdGltZQ.short_desc": {
+          "source": "Restrict the response to campaigns sent before the set time",
+          "message": "設定された時間より前に送信されたキャンペーンに応答を制限します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.desc": {
+          "source": "A comma-separated list of fields to exclude. Reference parameters of sub-objects with dot notation.",
+          "message": "除外するフィールドのカンマ区切りリスト。サブオブジェクトのパラメータはドット表記で参照します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.display_name": {
+          "source": "Exclude Fields",
+          "message": "除外フィールド"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZXhjbHVkZV9maWVsZHM.short_desc": {
+          "source": "A comma-separated list of fields to exclude",
+          "message": "除外するフィールドのカンマ区切りリスト"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.desc": {
+          "source": "A comma-separated list of fields to return. Reference parameters of sub-objects with dot notation.",
+          "message": "返されるフィールドのカンマ区切りリスト。サブオブジェクトのパラメータはドット表記で参照します。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.ZmllbGRz.short_desc": {
+          "source": "A comma-separated list of fields to return",
+          "message": "返されるフィールドのカンマ区切りリスト"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.desc": {
+          "source": "Used for [pagination](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination), this it the number of records from a collection to skip. Default value is 0.",
+          "message": "[ページネーション](https://mailchimp.com/developer/marketing/docs/methods-parameters/#pagination)に使用され、コレクションからスキップするレコードの数です。デフォルト値は 0 です。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Used for [pagination](https://mailchimp",
+          "message": "[ページネーション](https://mailchimp に使用されます"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.desc": {
+          "source": "Restrict the response to campaigns sent after the set time. Uses ISO 8601 time format: 2015-10-21T15:41:36+00:00.",
+          "message": "指定した日時より後に送信されたキャンペーンに応答を制限します。ISO 8601 時刻形式を使用します: 2015-10-21T15:41:36+00:00。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.display_name": {
+          "source": "Since Send Time",
+          "message": "送信日時（以降）"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.c2luY2Vfc2VuZF90aW1l.short_desc": {
+          "source": "Restrict the response to campaigns sent after the set time",
+          "message": "設定された時間より後に送信されたキャンペーンに応答を制限します"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.desc": {
+          "source": "The campaign type.",
+          "message": "キャンペーンタイプ。"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.display_name": {
+          "source": "Type",
+          "message": "タイプ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.option.dHlwZQ.short_desc": {
+          "source": "The campaign type",
+          "message": "キャンペーンタイプ"
+        },
+        "app.TWFpbGNoaW1w.action.Z2V0UmVwb3J0cw.short_desc": {
+          "source": "Retrieve campaign performance reports",
+          "message": "キャンペーンパフォーマンスレポートを取得します"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルからレコードを削除します"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルからレコードを削除します"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Removes a subscriber from an audience while preserving their data for compliance purposes.",
+          "message": "コンプライアンスの目的でデータを保持したまま、オーディエンスから購読者を削除します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Remove Audience Member",
+          "message": "オーディエンスメンバーを削除"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Remove a member from an audience",
+          "message": "オーディエンスからメンバーを削除します"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.desc": {
+          "source": "Permanently removes a note from an audience member's profile.",
+          "message": "オーディエンスメンバーのプロファイルからメモを完全に削除します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.display_name": {
+          "source": "Delete Member Note",
+          "message": "メンバーのメモを削除"
+        },
+        "app.TWFpbGNoaW1w.action.ZGVsZXRlTGlzdHNJZE1lbWJlcnNJZE5vdGVzSWQ.short_desc": {
+          "source": "Delete an audience member note",
+          "message": "オーディエンスメンバーのメモを削除します"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.desc": {
+          "source": "This trigger fires whenever a subscriber opens an email from your campaigns or automation workflows.",
+          "message": "このトリガーは、購読者がキャンペーンまたは自動化ワークフローのメールを開封するたびに起動します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.display_name": {
+          "source": "Email Opened",
+          "message": "メールが開封された時"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmF1dG9tYXRpb24.display_name": {
+          "source": "Automation",
+          "message": "自動化"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.allowed-value.c3RyaW5nOmNhbXBhaWdu.display_name": {
+          "source": "Campaign",
+          "message": "キャンペーン"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.desc": {
+          "source": "Specify whether to track regular campaigns, automations.",
+          "message": "通常のキャンペーンを追跡するか、自動化を追跡するかを指定します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.display_name": {
+          "source": "Campaign Type",
+          "message": "キャンペーンタイプ"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.Y2FtcGFpZ25fdHlwZQ.short_desc": {
+          "source": "Type of campaign to monitor",
+          "message": "監視するキャンペーンのタイプ"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience (mailing list) to track for email opens.",
+          "message": "メールの開封を追跡する Mailchimp オーディエンス（メーリングリスト）を選択します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "オーディエンス"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "監視するオーディエンスを選択"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.desc": {
+          "source": "Optionally specify one or more email addresses to only trigger for these specific subscribers.",
+          "message": "オプションで1つ以上のメールアドレスを指定して、これらの特定の購読者に対してのみトリガーを起動します。"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.display_name": {
+          "source": "Trigger on Subscriber",
+          "message": "特定の購読者でトリガー"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.option.dHJpZ2dlcl9vbl9zdWJzY3JpYmVy.short_desc": {
+          "source": "Trigger for specific subscribers only",
+          "message": "特定の購読者に対してのみトリガー"
+        },
+        "app.TWFpbGNoaW1w.action.ZW1haWxfb3BlbmVk.short_desc": {
+          "source": "Triggers when a subscriber opens an email",
+          "message": "購読者がメールを開封したときにトリガー"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Mailchimp** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Mailchimp** に対してカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（接続の API ベース URL からの相対パス）、任意のクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、およびレスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して、このアクションを使用します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.TWFpbGNoaW1w.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Mailchimp",
+          "message": "Mailchimp へのカスタム API 呼び出しを実行"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.desc": {
+          "source": "This trigger fires whenever a new contact subscribes to your Mailchimp audience.",
+          "message": "このトリガーは、新しい連絡先が Mailchimp オーディエンスに登録するたびに起動します。"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.display_name": {
+          "source": "New Subscriber",
+          "message": "新規購読者"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for new subscribers.",
+          "message": "新規購読者を追跡する Mailchimp オーディエンスを選択します。"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "オーディエンス"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "監視するオーディエンスを選択"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3N1YnNjcmliZXI.short_desc": {
+          "source": "Triggers when a new subscriber joins",
+          "message": "新しい購読者が登録したときにトリガー"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.desc": {
+          "source": "This trigger fires whenever a contact unsubscribes from your Mailchimp audience.",
+          "message": "このトリガーは、連絡先が Mailchimp オーディエンスから登録解除するたびに起動します。"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.display_name": {
+          "source": "New Unsubscriber",
+          "message": "新規登録解除者"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.desc": {
+          "source": "Choose which Mailchimp audience to track for unsubscribes.",
+          "message": "登録解除者を追跡する Mailchimp オーディエンスを選択します。"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.display_name": {
+          "source": "Audience",
+          "message": "オーディエンス"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.option.YXVkaWVuY2U.short_desc": {
+          "source": "Select the audience to monitor",
+          "message": "監視するオーディエンスを選択"
+        },
+        "app.TWFpbGNoaW1w.action.bmV3X3Vuc3Vic2NyaWJlcg.short_desc": {
+          "source": "Triggers when someone unsubscribes",
+          "message": "誰かが登録解除したときにトリガー"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.desc": {
+          "source": "Searches for subscriber tags by name to help organize and segment your audience members.",
+          "message": "オーディエンスメンバーの整理とセグメント化に役立てるため、名前で購読者タグを検索します。"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.display_name": {
+          "source": "Search Tags by Name",
+          "message": "タグを名前で検索"
+        },
+        "app.TWFpbGNoaW1w.action.c2VhcmNoVGFnc0J5TmFtZQ.short_desc": {
+          "source": "Search for tags by name",
+          "message": "名前でタグを検索します"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.desc": {
+          "source": "Sends a previously created email campaign to its targeted audience immediately or schedules it for later delivery.",
+          "message": "以前に作成されたメールキャンペーンを対象オーディエンスに即座に送信するか、後で配信するようにスケジュールします。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.display_name": {
+          "source": "Send Campaign",
+          "message": "キャンペーンを送信"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWduc0lkQWN0aW9uc1NlbmQ.short_desc": {
+          "source": "Send an email campaign",
+          "message": "メールキャンペーンを送信"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.desc": {
+          "source": "Creates a new email campaign in Mailchimp with specified settings, content, and audience targeting options.",
+          "message": "指定された設定、コンテンツ、およびオーディエンスターゲティングオプションを使用して、Mailchimp で新しいメールキャンペーンを作成します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.display_name": {
+          "source": "Create Campaign",
+          "message": "キャンペーンを作成"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdENhbXBhaWducw.short_desc": {
+          "source": "Create a new email campaign",
+          "message": "新しいメールキャンペーンを作成"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.desc": {
+          "source": "Records custom events for audience members to track their behavior and interactions with your brand.",
+          "message": "ブランドに対する行動やインタラクションを追跡するために、オーディエンスメンバーのカスタムイベントを記録します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.display_name": {
+          "source": "Add Member Events",
+          "message": "メンバーイベントの追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJFdmVudHM.short_desc": {
+          "source": "Add events to audience members",
+          "message": "オーディエンスメンバーにイベントを追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.desc": {
+          "source": "Adds one or more tags to audience members for better segmentation and organization.",
+          "message": "オーディエンスメンバーに1つ以上のタグを追加して、セグメンテーションと整理を改善します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.display_name": {
+          "source": "Add Member Tags",
+          "message": "メンバータグの追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RNZW1iZXJUYWdz.short_desc": {
+          "source": "Add tags to audience members",
+          "message": "オーディエンスメンバーにタグを追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.desc": {
+          "source": "Creates a new audience (mailing list) in Mailchimp with specified settings and configuration options.",
+          "message": "指定された設定と構成オプションを使用して、Mailchimp に新しいオーディエンス（メーリングリスト）を作成します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.display_name": {
+          "source": "Create Audience",
+          "message": "オーディエンスの作成"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3Rz.short_desc": {
+          "source": "Create a new audience",
+          "message": "新しいオーディエンスを作成"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.desc": {
+          "source": "Adds a new subscriber to a specific audience with their contact information and subscription preferences.",
+          "message": "連絡先情報と購読設定を含む新しい購読者を特定のオーディエンスに追加します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.display_name": {
+          "source": "Add Audience Member",
+          "message": "オーディエンスメンバーの追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJz.short_desc": {
+          "source": "Add a new member to an audience",
+          "message": "オーディエンスに新しいメンバーを追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.desc": {
+          "source": "Permanently removes an audience member and all their associated data from Mailchimp. This action cannot be undone.",
+          "message": "オーディエンスメンバーおよび関連するすべてのデータを Mailchimp から完全に削除します。この操作は元に戻せません。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.display_name": {
+          "source": "Permanently Delete Member",
+          "message": "メンバーを完全に削除"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSGFzaEFjdGlvbnNEZWxldGVQZXJtYW5lbnQ.short_desc": {
+          "source": "Permanently delete an audience member",
+          "message": "オーディエンスメンバーを完全に削除"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.desc": {
+          "source": "Adds a note to a specific audience member for internal tracking and customer relationship management.",
+          "message": "内部追跡および顧客関係管理のために、特定のオーディエンスメンバーにメモを追加します。"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.display_name": {
+          "source": "Add Member Note",
+          "message": "メンバーメモの追加"
+        },
+        "app.TWFpbGNoaW1w.action.cG9zdExpc3RzSWRNZW1iZXJzSWROb3Rlcw.short_desc": {
+          "source": "Add a note to an audience member",
+          "message": "オーディエンスメンバーにメモを追加"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.desc": {
+          "source": "Updates an existing note attached to an audience member with new information or corrections.",
+          "message": "オーディエンスメンバーに添付された既存のメモを新しい情報または修正で更新します。"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.display_name": {
+          "source": "Update Member Note",
+          "message": "メンバーメモの更新"
+        },
+        "app.TWFpbGNoaW1w.action.cGF0Y2hMaXN0c0lkTWVtYmVyc0lkTm90ZXNJZA.short_desc": {
+          "source": "Update an audience member note",
+          "message": "オーディエンスメンバーのメモを更新"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.desc": {
+          "source": "Updates the information and subscription preferences of an existing member in an audience.",
+          "message": "オーディエンス内の既存メンバーの情報と購読設定を更新します。"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.display_name": {
+          "source": "Update Audience Member",
+          "message": "オーディエンスメンバーの更新"
+        },
+        "app.TWFpbGNoaW1w.action.cHV0TGlzdHNJZE1lbWJlcnNJZA.short_desc": {
+          "source": "Update an audience member",
+          "message": "オーディエンスメンバーを更新"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブル内のレコードをアップサート"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "レコードのアップサート"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.TWFpbGNoaW1w.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Mailchimp\"",
+          "message": "アプリ「Mailchimp」の指定されたテーブル内のレコードをアップサート"
+        },
+        "app.TWFpbGNoaW1w.desc": {
+          "source": "Connect with Mailchimp to create and manage email campaigns, track subscriber activities, and automate marketing workflows.",
+          "message": "Mailchimp に接続して、メールキャンペーンの作成と管理、購読者のアクティビティ追跡、マーケティングワークフローの自動化を行います。"
+        },
+        "app.TWFpbGNoaW1w.display_name": {
+          "source": "Mailchimp",
+          "message": "Mailchimp"
+        },
+        "app.TWFpbGNoaW1w.short_desc": {
+          "source": "Email marketing, automation, and analytics platform",
+          "message": "メールマーケティング、自動化、アナリティクスプラットフォーム"
+        }
+      }
+    }
+  }
+}

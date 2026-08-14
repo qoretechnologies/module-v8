@@ -1,0 +1,1005 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Create a new item in a Craft collection with a title and optional custom properties. This allows you to programmatically add entries to your structured collections.",
+          "message": "Crea un nuovo elemento in una raccolta Craft con un titolo e proprietà personalizzate opzionali. Ciò ti consente di aggiungere voci a livello di codice alle tue raccolte strutturate."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Create Collection Item",
+          "message": "Crea elemento della raccolta"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection where you want to create the new item. The collection must exist before you can add items to it.",
+          "message": "Seleziona la raccolta Craft in cui desideri creare il nuovo elemento. La raccolta deve esistere prima che tu possa aggiungervi elementi."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Raccolta"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to add the item to",
+          "message": "La raccolta a cui aggiungere l'elemento"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Add custom properties to the collection item. The available properties are dynamically determined based on the schema of the selected collection.",
+          "message": "Aggiungi proprietà personalizzate all'elemento della raccolta. Le proprietà disponibili sono determinate in modo dinamico in base allo schema della raccolta selezionata."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Proprietà"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Custom properties for the item",
+          "message": "Proprietà personalizzate per l'elemento"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a title for the new collection item. This is the main identifier for the item within the collection.",
+          "message": "Fornisci un titolo per il nuovo elemento della raccolta. Questo è l'identificatore principale per l'elemento all'interno della raccolta."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "Title of the new collection item",
+          "message": "Titolo del nuovo elemento della raccolta"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Add a new item to a collection",
+          "message": "Aggiungi un nuovo elemento a una raccolta"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Create a new task in Craft with markdown content, optional task information (state, schedule, deadline), and a location (inbox or daily note).",
+          "message": "Crea una nuova attività in Craft con contenuto Markdown, informazioni sull'attività opzionali (stato, pianificazione, scadenza) e una posizione (posta in arrivo o nota giornaliera)."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Crea attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.desc": {
+          "source": "Where to create the task: in the task inbox or a specific daily note",
+          "message": "Dove creare l'attività: nella posta in arrivo delle attività o in una nota giornaliera specifica"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Posizione"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bG9jYXRpb24.short_desc": {
+          "source": "Where to create the task",
+          "message": "Dove creare l'attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "The task content in markdown format. This will be the task's text.",
+          "message": "Il contenuto dell'attività in formato Markdown. Questo sarà il testo dell'attività."
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "Contenuto dell'attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the task",
+          "message": "Il contenuto Markdown per l'attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.desc": {
+          "source": "Optional task metadata including state, schedule date, and deadline date",
+          "message": "Metadati opzionali dell'attività che includono stato, data di pianificazione e data di scadenza"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.display_name": {
+          "source": "Task Information",
+          "message": "Informazioni sull'attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.option.dGFza0luZm8.short_desc": {
+          "source": "Additional task details",
+          "message": "Dettagli aggiuntivi sull'attività"
+        },
+        "app.Q3JhZnQ.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Add a new task",
+          "message": "Aggiungi una nuova attività"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.desc": {
+          "source": "Fetch all blocks from a Craft daily note for a specific date. You can retrieve blocks from today, yesterday, tomorrow, or any custom date, with control over the depth and metadata of the returned content.",
+          "message": "Recupera tutti i blocchi da una nota giornaliera Craft per una data specifica. Puoi recuperare i blocchi di oggi, ieri, domani o qualsiasi data personalizzata, controllando la profondità e i metadati del contenuto restituito."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.display_name": {
+          "source": "Get Daily Note Blocks",
+          "message": "Ottieni blocchi nota giornaliera"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.desc": {
+          "source": "Select a specific date to retrieve the daily note blocks. If not provided, you can use the \"Day\" option to select relative dates like today, yesterday, or tomorrow.",
+          "message": "Seleziona una data specifica per recuperare i blocchi della nota giornaliera. Se non fornita, puoi utilizzare l'opzione \"Giorno\" per selezionare date relative come oggi, ieri o domani."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.display_name": {
+          "source": "Date",
+          "message": "Data"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF0ZQ.short_desc": {
+          "source": "Specific date for the daily note",
+          "message": "Data specifica per la nota giornaliera"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvZGF5.display_name": {
+          "source": "Today",
+          "message": "Oggi"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnRvbW9ycm93.display_name": {
+          "source": "Tomorrow",
+          "message": "Domani"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.allowed-value.c3RyaW5nOnllc3RlcmRheQ.display_name": {
+          "source": "Yesterday",
+          "message": "Ieri"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.desc": {
+          "source": "Choose a relative day option such as today, yesterday, or tomorrow to retrieve the corresponding daily note blocks.",
+          "message": "Scegli un'opzione di giorno relativo come oggi, ieri o domani per recuperare i blocchi della nota giornaliera corrispondenti."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.display_name": {
+          "source": "Day",
+          "message": "Giorno"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZGF5.short_desc": {
+          "source": "Relative day selector",
+          "message": "Selettore giorno relativo"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Enable this option to include additional metadata such as creation date, last modified date, and author information for each block in the response.",
+          "message": "Abilita questa opzione per includere metadati aggiuntivi come la data di creazione, la data di ultima modifica e le informazioni sull'autore per ciascun blocco nella risposta."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "Recupera metadati"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "Includi i metadati nella risposta"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit how deep the nested block structure should be retrieved.",
+          "message": "Specifica la profondità massima per il recupero dei blocchi annidati. Utilizza -1 per una profondità illimitata oppure fornisci un numero positivo per limitare la profondità della struttura dei blocchi annidati da recuperare."
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Profondità massima"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "Profondità massima per i blocchi annidati"
+        },
+        "app.Q3JhZnQ.action.Z2V0X2Jsb2Nrcw.short_desc": {
+          "source": "Retrieve blocks from a daily note",
+          "message": "Recupera blocchi da una nota giornaliera"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.desc": {
+          "source": "Delete one or more blocks from a Craft document by providing their block IDs. This action permanently removes the specified blocks.",
+          "message": "Elimina uno o più blocchi da un documento Craft fornendo i relativi ID blocco. Questa azione rimuove in modo permanente i blocchi specificati."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.display_name": {
+          "source": "Delete Blocks",
+          "message": "Elimina blocchi"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.desc": {
+          "source": "Provide a list of block IDs that you want to remove from the document. You can delete multiple blocks in a single operation.",
+          "message": "Fornisci un elenco di ID blocco che desideri rimuovere dal documento. Puoi eliminare più blocchi in un'unica operazione."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.display_name": {
+          "source": "Block IDs",
+          "message": "ID blocchi"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.option.YmxvY2tJZHM.short_desc": {
+          "source": "IDs of blocks to delete",
+          "message": "ID dei blocchi da eliminare"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2Jsb2Nrcw.short_desc": {
+          "source": "Remove blocks from a document",
+          "message": "Rimuovi blocchi da un documento"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.desc": {
+          "source": "Delete one or more items from a Craft collection by providing their IDs. This action permanently removes the specified items from the collection.",
+          "message": "Elimina uno o più elementi da una raccolta Craft fornendo i relativi ID. Questa azione rimuove in modo permanente gli elementi specificati dalla raccolta."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.display_name": {
+          "source": "Delete Collection Items",
+          "message": "Elimina elementi della raccolta"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the items you want to delete.",
+          "message": "Seleziona la raccolta Craft che contiene gli elementi che desideri eliminare."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Raccolta"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the items",
+          "message": "La raccolta contenente gli elementi"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.desc": {
+          "source": "Provide a list of item IDs that you want to remove from the collection. You can select multiple items to delete in a single operation.",
+          "message": "Fornisci un elenco di ID elemento che desideri rimuovere dalla raccolta. Puoi selezionare più elementi da eliminare in un'unica operazione."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.display_name": {
+          "source": "Item IDs",
+          "message": "ID elementi"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.option.aXRlbUlkcw.short_desc": {
+          "source": "IDs of items to delete",
+          "message": "ID degli elementi da eliminare"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX2NvbGxlY3Rpb25faXRlbXM.short_desc": {
+          "source": "Remove items from a collection",
+          "message": "Rimuovi elementi da una raccolta"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.desc": {
+          "source": "Delete one or more tasks from your Craft workspace by providing their task IDs. This action permanently removes the specified tasks.",
+          "message": "Elimina una o più attività dal tuo spazio di lavoro Craft fornendo i relativi ID attività. Questa azione rimuove in modo permanente le attività specificate."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.display_name": {
+          "source": "Delete Tasks",
+          "message": "Elimina attività"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.desc": {
+          "source": "Provide a list of task IDs that you want to remove. You can delete multiple tasks in a single operation.",
+          "message": "Fornisci un elenco di ID attività che desideri rimuovere. Puoi eliminare più attività in un'unica operazione."
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.display_name": {
+          "source": "Task IDs",
+          "message": "ID attività"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.option.aWRz.short_desc": {
+          "source": "IDs of tasks to delete",
+          "message": "ID delle attività da eliminare"
+        },
+        "app.Q3JhZnQ.action.ZGVsZXRlX3Rhc2tz.short_desc": {
+          "source": "Remove tasks",
+          "message": "Rimuovi attività"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.desc": {
+          "source": "Insert a new block with markdown content into a Craft document. You can specify whether to insert the block at the start or end of the target page.",
+          "message": "Inserisci un nuovo blocco con contenuto markdown in un documento Craft. Puoi specificare se inserire il blocco all'inizio o alla fine della pagina di destinazione."
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.display_name": {
+          "source": "Insert Block",
+          "message": "Inserisci blocco"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.desc": {
+          "source": "\n          The Markdown content to insert. Separate each paragraph and heading with two newlines. Separate each list item with one newline. The first item in any list cannot be empty. Craft-specific tokens are HTML tags.:\n\n\n\n          - <callout> for callouts. Can be used to wrap multiple paragraphs/images/etc.\n\n          - <caption> for caption text style. Can be used to wrap a paragraph.\n\n          - <highlight color=''> for highlights - color is optional. Can only be used inline.\n          ",
+          "message": "\n          Il contenuto Markdown da inserire. Separa ogni paragrafo e intestazione con due nuove righe. Separa ciascun elemento dell'elenco con una nuova riga. Il primo elemento di qualsiasi elenco non può essere vuoto. I token specifici di Craft sono tag HTML:\n\n\n\n          - <callout> per i callout. Può essere utilizzato per racchiudere più paragrafi/immagini/ecc.\n\n          - <caption> per lo stile di testo didascalia. Può essere utilizzato per racchiudere un paragrafo.\n\n          - <highlight color=''> per le evidenziazioni - il colore è opzionale. Può essere utilizzato solo in linea.\n          "
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.display_name": {
+          "source": "Markdown Content",
+          "message": "Contenuto Markdown"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.bWFya2Rvd24.short_desc": {
+          "source": "The markdown content for the block",
+          "message": "Il contenuto markdown per il blocco"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.desc": {
+          "source": "Specify the position where the block should be inserted within the document.",
+          "message": "Specifica la posizione in cui inserire il blocco all'interno del documento."
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Posizione"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.option.cG9zaXRpb24.short_desc": {
+          "source": "Where to insert the block",
+          "message": "Dove inserire il blocco"
+        },
+        "app.Q3JhZnQ.action.aW5zZXJ0X2Jsb2Nr.short_desc": {
+          "source": "Add a new block to a document",
+          "message": "Aggiungi un nuovo blocco a un documento"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.desc": {
+          "source": "Get a list of tasks from your Craft workspace filtered by scope. You can retrieve active tasks, upcoming tasks, inbox tasks, or tasks from your logbook.",
+          "message": "Ottieni un elenco di attività dal tuo spazio di lavoro Craft filtrate per ambito. Puoi recuperare attività attive, attività in arrivo, attività della posta in arrivo o attività dal registro."
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Elenca attività"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "Attivo"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmluYm94.display_name": {
+          "source": "Inbox",
+          "message": "Posta in arrivo"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOmxvZ2Jvb2s.display_name": {
+          "source": "Logbook",
+          "message": "Registro"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Upcoming",
+          "message": "In arrivo"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.desc": {
+          "source": "Filter tasks by scope: - 'active': Active tasks from inbox and other documents (tasks due before now that are not completed/cancelled) - 'upcoming': Upcoming tasks from inbox and other documents (tasks scheduled after now) - 'inbox': Only tasks in the task inbox - 'logbook': Only tasks in the task logbook (completed and cancelled tasks)",
+          "message": "Filtra le attività per ambito: - 'active': attività attive dalla posta in arrivo e da altri documenti (attività in scadenza prima di ora non completate/annullate) - 'upcoming': attività in arrivo dalla posta in arrivo e da altri documenti (attività pianificate dopo ora) - 'inbox': solo attività nella posta in arrivo delle attività - 'logbook': solo attività nel registro delle attività (attività completate e annullate)"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.display_name": {
+          "source": "Scope",
+          "message": "Ambito"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.option.c2NvcGU.short_desc": {
+          "source": "Filter tasks by scope",
+          "message": "Filtra le attività per ambito"
+        },
+        "app.Q3JhZnQ.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve tasks based on scope",
+          "message": "Recupera le attività in base all'ambito"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.desc": {
+          "source": "Fetch all blocks from a specific Craft document or page. This allows you to access the structured content of your documents, including nested blocks, with control over depth and metadata.",
+          "message": "Recupera tutti i blocchi da un documento o una pagina Craft specifici. Questo ti consente di accedere al contenuto strutturato dei tuoi documenti, inclusi i blocchi annidati, con il controllo sulla profondità e sui metadati."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.display_name": {
+          "source": "List Blocks",
+          "message": "Elenca blocchi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.desc": {
+          "source": "Whether to retrieve the markdown string representation of the blocks.",
+          "message": "Indica se recuperare la rappresentazione sotto forma di stringa markdown dei blocchi."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.display_name": {
+          "source": "Get Markdown String",
+          "message": "Ottieni stringa Markdown"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.Z2V0TWFya2Rvd25TdHJpbmc.short_desc": {
+          "source": "Retrieve the markdown string representation of blocks",
+          "message": "Recupera la rappresentazione sotto forma di stringa markdown dei blocchi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.desc": {
+          "source": "Whether to fetch metadata (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) for the blocks.",
+          "message": "Indica se recuperare i metadati (comments, createdBy, lastModifiedBy, lastModifiedAt, createdAt) per i blocchi."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.display_name": {
+          "source": "Fetch Metadata",
+          "message": "Recupera metadati"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.ZmV0Y2hNZXRhZGF0YQ.short_desc": {
+          "source": "Include metadata in the response",
+          "message": "Includi i metadati nella risposta"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.desc": {
+          "source": "The ID of the page block to fetch. Required for multi-document operations. Accepts IDs for documents, pages and blocks.",
+          "message": "L'ID del blocco pagina da recuperare. Obbligatorio per le operazioni multi-documento. Accetta ID per documenti, pagine e blocchi."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.display_name": {
+          "source": "Document/Page ID",
+          "message": "ID documento/pagina"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.aWQ.short_desc": {
+          "source": "The document or page to retrieve blocks from",
+          "message": "Il documento o la pagina da cui recuperare i blocchi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.desc": {
+          "source": "Specify the maximum depth for retrieving nested blocks. Use -1 for unlimited depth, or provide a positive number to limit the nesting level.",
+          "message": "Specifica la profondità massima per il recupero dei blocchi annidati. Utilizza -1 per una profondità illimitata oppure fornisci un numero positivo per limitare il livello di annidamento."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Profondità massima"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested blocks",
+          "message": "Profondità massima per i blocchi annidati"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9ibG9ja3M.short_desc": {
+          "source": "Retrieve blocks from a document",
+          "message": "Recupera blocchi da un documento"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.desc": {
+          "source": "Get a list of all items in a specific Craft collection, including their IDs, titles, properties, and content blocks. You can control the depth of nested content retrieval.",
+          "message": "Ottieni un elenco di tutti gli elementi in una raccolta Craft specifica, inclusi i loro ID, titoli, proprietà e blocchi di contenuto. Puoi controllare la profondità del recupero del contenuto annidato."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.display_name": {
+          "source": "List Collection Items",
+          "message": "Elenca elementi della raccolta"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection whose items you want to list. All items in the collection will be returned.",
+          "message": "Seleziona la raccolta Craft di cui desideri elencare gli elementi. Verranno restituiti tutti gli elementi della raccolta."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Raccolta"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to retrieve items from",
+          "message": "La raccolta da cui recuperare gli elementi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "La profondità massima del contenuto annidato da recuperare per ciascun elemento della raccolta. Il valore predefinito è -1 (tutti i discendenti). Con una profondità pari a 0, vengono recuperate solo le proprietà dell'elemento senza contenuto annidato."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Profondità massima"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content",
+          "message": "Profondità massima per il contenuto annidato"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9uX2l0ZW1z.short_desc": {
+          "source": "Retrieve all items in a collection",
+          "message": "Recupera tutti gli elementi in una raccolta"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.desc": {
+          "source": "Get a list of all collections in your Craft workspace. You can optionally filter collections by specific documents using include or exclude modes.",
+          "message": "Ottieni un elenco di tutte le raccolte nel tuo spazio di lavoro Craft. Puoi facoltativamente filtrare le raccolte per documenti specifici utilizzando le modalità include o exclude."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.display_name": {
+          "source": "List Collections",
+          "message": "Elenca raccolte"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmV4Y2x1ZGU.display_name": {
+          "source": "Exclude",
+          "message": "Escludi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.allowed-value.c3RyaW5nOmluY2x1ZGU.display_name": {
+          "source": "Include",
+          "message": "Includi"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.desc": {
+          "source": "Choose whether to include or exclude collections based on the provided document IDs. Select \"Include\" to only show collections from the specified documents, or \"Exclude\" to hide collections from those documents.",
+          "message": "Scegli se includere o escludere le raccolte in base agli ID documento forniti. Seleziona \"Includi\" per mostrare solo le raccolte dei documenti specificati oppure \"Escludi\" per nascondere le raccolte da tali documenti."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.display_name": {
+          "source": "Document Filter Mode",
+          "message": "Modalità di filtraggio documenti"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRGaWx0ZXJNb2Rl.short_desc": {
+          "source": "How to filter by documents",
+          "message": "Come filtrare per documenti"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.desc": {
+          "source": "The document IDs to filter. If not provided, collections in all documents will be listed.",
+          "message": "Gli ID documento da filtrare. Se non forniti, verranno elencate le raccolte in tutti i documenti."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.display_name": {
+          "source": "Document IDs",
+          "message": "ID documenti"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.option.ZG9jdW1lbnRJZHM.short_desc": {
+          "source": "Filter collections by documents",
+          "message": "Filtra le raccolte per documenti"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9jb2xsZWN0aW9ucw.short_desc": {
+          "source": "Retrieve all collections",
+          "message": "Recupera tutte le raccolte"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.desc": {
+          "source": "Get a list of all documents in your Craft workspace. This includes document IDs, titles, and their deletion status, providing a complete overview of your document library.",
+          "message": "Ottieni un elenco di tutti i documenti nel tuo spazio di lavoro Craft. Questo include gli ID dei documenti, i titoli e il loro stato di eliminazione, fornendo una panoramica completa della tua libreria di documenti."
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.display_name": {
+          "source": "List Documents",
+          "message": "Elenca documenti"
+        },
+        "app.Q3JhZnQ.action.bGlzdF9kb2N1bWVudHM.short_desc": {
+          "source": "Retrieve all documents",
+          "message": "Recupera tutti i documenti"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Craft** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Craft** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni principali su questa app."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.Q3JhZnQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Craft",
+          "message": "Esegui una chiamata API personalizzata a Craft"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "This trigger activates when a new item is created in the specified Craft collection, allowing you to automate workflows based on new collection entries.",
+          "message": "Questo trigger si attiva quando viene creato un nuovo elemento nella raccolta Craft specificata, consentendoti di automatizzare i flussi di lavoro in base alle nuove voci della raccolta."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "New Collection Item",
+          "message": "Nuovo elemento della raccolta"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection you want to monitor for new items. When a new item is added to this collection, the trigger will fire.",
+          "message": "Seleziona la raccolta Craft che desideri monitorare per i nuovi elementi. Quando un nuovo elemento viene aggiunto a questa raccolta, il trigger si attiverà."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Raccolta"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection to monitor for new items",
+          "message": "La raccolta da monitorare per i nuovi elementi"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.desc": {
+          "source": "The maximum depth of nested content to fetch for each collection item. Default is -1 (all descendants). With a depth of 0, only the item properties are fetched without nested content.",
+          "message": "La profondità massima del contenuto annidato da recuperare per ciascun elemento della raccolta. Il valore predefinito è -1 (tutti i discendenti). Con una profondità pari a 0, vengono recuperate solo le proprietà dell'elemento senza contenuto annidato."
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.display_name": {
+          "source": "Maximum Depth",
+          "message": "Profondità massima"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.option.bWF4RGVwdGg.short_desc": {
+          "source": "Maximum depth for nested content retrieval",
+          "message": "Profondità massima per il recupero dei contenuti nidificati"
+        },
+        "app.Q3JhZnQ.action.bmV3X2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Triggers when a new item is added to a collection",
+          "message": "Si attiva quando un nuovo elemento viene aggiunto a una raccolta"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.desc": {
+          "source": "Update the title and properties of an existing item in a Craft collection. You can modify any custom properties that are part of the collection schema.",
+          "message": "Aggiorna il titolo e le proprietà di un elemento esistente in una raccolta Craft. Puoi modificare qualsiasi proprietà personalizzata facente parte dello schema della raccolta."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.display_name": {
+          "source": "Update Collection Item",
+          "message": "Aggiorna elemento della raccolta"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.desc": {
+          "source": "Select the Craft collection that contains the item you want to update.",
+          "message": "Seleziona la raccolta Craft che contiene l'elemento che desideri aggiornare."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.display_name": {
+          "source": "Collection",
+          "message": "Raccolta"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.Y29sbGVjdGlvbklk.short_desc": {
+          "source": "The collection containing the item",
+          "message": "La raccolta contenente l'elemento"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.desc": {
+          "source": "Select the specific collection item you want to modify. The available items are dynamically populated based on the selected collection.",
+          "message": "Seleziona lo specifico elemento della raccolta che desideri modificare. Gli elementi disponibili vengono popolati dinamicamente in base alla raccolta selezionata."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.display_name": {
+          "source": "Item",
+          "message": "Elemento"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.aXRlbUlk.short_desc": {
+          "source": "The item to update",
+          "message": "L'elemento da aggiornare"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.desc": {
+          "source": "Update the custom properties of the collection item. Only the properties you specify will be updated; others will remain unchanged.",
+          "message": "Aggiorna le proprietà personalizzate dell'elemento della raccolta. Verranno aggiornate solo le proprietà specificate; le altre rimarranno invariate."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "Proprietà"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Updated properties for the item",
+          "message": "Proprietà aggiornate per l'elemento"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.desc": {
+          "source": "Provide a new title for the collection item. Leave empty to keep the existing title unchanged.",
+          "message": "Fornisci un nuovo titolo per l'elemento della raccolta. Lascia vuoto per mantenere invariato il titolo esistente."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.option.dGl0bGU.short_desc": {
+          "source": "New title for the item",
+          "message": "Nuovo titolo per l'elemento"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX2NvbGxlY3Rpb25faXRlbQ.short_desc": {
+          "source": "Modify an existing collection item",
+          "message": "Modifica un elemento della raccolta esistente"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Update an existing task in Craft by changing its markdown content, state, schedule date, or deadline date.",
+          "message": "Aggiorna un'attività esistente in Craft modificandone il contenuto markdown, lo stato, la data programmata o la data di scadenza."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Aggiorna attività"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.desc": {
+          "source": "Updated due date of the task. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing deadline.",
+          "message": "Data di scadenza aggiornata dell'attività. Accetta il formato ISO YYYY-MM-DD o date relative: 'today', 'tomorrow', 'yesterday'. Lascia vuoto per mantenere la scadenza esistente."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.display_name": {
+          "source": "Deadline Date",
+          "message": "Data di scadenza"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.ZGVhZGxpbmVEYXRl.short_desc": {
+          "source": "Updated deadline date",
+          "message": "Data di scadenza aggiornata"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.desc": {
+          "source": "Select the task you want to modify. Only active tasks are available for selection.",
+          "message": "Seleziona l'attività che desideri modificare. Sono selezionabili solo le attività attive."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.display_name": {
+          "source": "Task",
+          "message": "Attività"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.aWQ.short_desc": {
+          "source": "The task to update",
+          "message": "L'attività da aggiornare"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.desc": {
+          "source": "Provide new markdown-formatted content for the task. Leave empty to keep the existing content.",
+          "message": "Fornisci nuovi contenuti formattati in markdown per l'attività. Lascia vuoto per mantenere i contenuti esistenti."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.display_name": {
+          "source": "Task Content",
+          "message": "Contenuto dell'attività"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.bWFya2Rvd24.short_desc": {
+          "source": "Updated markdown content",
+          "message": "Contenuto markdown aggiornato"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.desc": {
+          "source": "Updated planned execution date. Accepts ISO format YYYY-MM-DD or relative dates: 'today', 'tomorrow', 'yesterday'. Leave empty to keep the existing schedule.",
+          "message": "Data di esecuzione pianificata aggiornata. Accetta il formato ISO YYYY-MM-DD o date relative: 'today', 'tomorrow', 'yesterday'. Lascia vuoto per mantenere la pianificazione esistente."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.display_name": {
+          "source": "Schedule Date",
+          "message": "Data programmata"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c2NoZWR1bGVEYXRl.short_desc": {
+          "source": "Updated schedule date",
+          "message": "Data programmata aggiornata"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Annullato"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOmRvbmU.display_name": {
+          "source": "Done",
+          "message": "Fatto"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.allowed-value.c3RyaW5nOnRvZG8.display_name": {
+          "source": "To Do",
+          "message": "Da fare"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.desc": {
+          "source": "Change the state of the task to To Do, Done, or Canceled. Leave empty to keep the current state.",
+          "message": "Modifica lo stato dell'attività in Da fare, Fatto o Annullato. Lascia vuoto per mantenere lo stato attuale."
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.display_name": {
+          "source": "State",
+          "message": "Stato"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.option.c3RhdGU.short_desc": {
+          "source": "Updated task state",
+          "message": "Stato dell'attività aggiornato"
+        },
+        "app.Q3JhZnQ.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Modify an existing task",
+          "message": "Modifica un'attività esistente"
+        },
+        "app.Q3JhZnQ.desc": {
+          "source": "The Craft integration provides comprehensive actions and triggers to interact with the Craft API. Manage your documents, collections, tasks, and blocks with powerful automation capabilities for your note-taking and document management workflows.\n\n## API Configuration Requirements\n\n### For Tasks and Daily Notes Actions\n\nTo use **List Tasks**, **Create Task**, **Update Task**, **Delete Tasks**, and **Get Daily Note Blocks** actions, you must create the **Daily notes & Tasks** API in the **Imagine** tab within Craft.\n\n### For All Other Actions\n\nTo use **Documents**, **Collections**, and **Blocks** actions, you need to connect **Selected Documents** in your Craft API configuration.",
+          "message": "L'integrazione Craft offre azioni e trigger completi per interagire con l'API di Craft. Gestisci i tuoi documenti, raccolte, attività e blocchi con potenti funzionalità di automazione per i tuoi flussi di lavoro di gestione note e documenti.\n\n## Requisiti di configurazione dell'API\n\n### Per le azioni Attività e Note giornaliere\n\nPer utilizzare le azioni **Elenca attività**, **Crea attività**, **Aggiorna attività**, **Elimina attività** e **Ottieni blocchi note giornaliera**, devi creare l'API **Note giornaliere e attività** nella scheda **Imagine** all'interno di Craft.\n\n### Per tutte le altre azioni\n\nPer utilizzare le azioni **Documenti**, **Raccolte** e **Blocchi**, devi collegare **Documenti selezionati** nella configurazione dell'API di Craft."
+        },
+        "app.Q3JhZnQ.display_name": {
+          "source": "Craft",
+          "message": "Craft"
+        },
+        "app.Q3JhZnQ.short_desc": {
+          "source": "Connect to Craft to manage documents, collections, tasks, and blocks seamlessly.",
+          "message": "Connettiti a Craft per gestire facilmente documenti, raccolte, attività e blocchi."
+        }
+      }
+    }
+  }
+}

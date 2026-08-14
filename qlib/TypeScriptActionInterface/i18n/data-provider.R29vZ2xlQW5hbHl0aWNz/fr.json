@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.desc": {
+          "source": "Check if specified dimensions and metrics are compatible before running a report. This helps avoid errors caused by incompatible combinations. Reports will fail if incompatible dimensions or metrics are requested together.",
+          "message": "Vérifiez si les dimensions et métriques spécifiées sont compatibles avant de générer un rapport. Cela permet d'éviter les erreurs causées par des combinaisons incompatibles. Les rapports échoueront si des dimensions ou des métriques incompatibles sont demandées ensemble."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
+          "source": "Check Compatibility",
+          "message": "Vérifier la compatibilité"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.allowed-value.c3RyaW5nOkNPTVBBVElCTEU.display_name": {
+          "source": "Compatible Only",
+          "message": "Compatibles uniquement"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.allowed-value.c3RyaW5nOklOQ09NUEFUSUJMRQ.display_name": {
+          "source": "Incompatible Only",
+          "message": "Incompatibles uniquement"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.desc": {
+          "source": "Optionally filter the results to show only compatible or only incompatible dimensions and metrics.",
+          "message": "Filtrez éventuellement les résultats pour afficher uniquement les dimensions et métriques compatibles ou uniquement les incompatibles."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
+          "source": "Compatibility Filter",
+          "message": "Filtre de compatibilité"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {
+          "source": "Filter results by compatibility status",
+          "message": "Filtrer les résultats par statut de compatibilité"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.desc": {
+          "source": "The dimensions you want to verify can be used together.",
+          "message": "Les dimensions dont vous souhaitez vérifier qu'elles peuvent être utilisées ensemble."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimensions"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The dimensions to check",
+          "message": "Les dimensions à vérifier"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.desc": {
+          "source": "The metrics you want to verify can be used together.",
+          "message": "Les métriques dont vous souhaitez vérifier qu'elles peuvent être utilisées ensemble."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.short_desc": {
+          "source": "The metrics to check",
+          "message": "Les métriques à vérifier"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property to check compatibility for.",
+          "message": "Sélectionnez la propriété GA4 pour laquelle vérifier la compatibilité."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property",
+          "message": "La propriété Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
+          "source": "Validate dimension and metric combinations",
+          "message": "Valider les combinaisons de dimensions et de métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.desc": {
+          "source": "Execute multiple report requests efficiently in one API call. This is ideal for dashboards or scenarios where you need several different reports. You can include up to 5 individual report requests per batch.",
+          "message": "Exécutez plusieurs requêtes de rapport de manière efficace en un seul appel d'API. Cela est idéal pour les tableaux de bord ou les scénarios où vous avez besoin de plusieurs rapports différents. Vous pouvez inclure jusqu'à 5 requêtes de rapport individuelles par lot."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
+          "source": "Batch Run Reports",
+          "message": "Exécuter des rapports en lot"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve analytics data for all reports.",
+          "message": "Sélectionnez la propriété GA4 à partir de laquelle récupérer les données d'analyse pour tous les rapports."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "La propriété Google Analytics 4 à interroger"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.desc": {
+          "source": "An array of report request configurations. Each request can have its own date ranges, metrics, dimensions, and limits. Maximum 5 requests per batch.",
+          "message": "Un tableau de configurations de requêtes de rapport. Chaque requête peut avoir ses propres plages de dates, métriques, dimensions et limites. Maximum 5 requêtes par lot."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
+          "source": "Report Requests",
+          "message": "Requêtes de rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
+          "source": "The individual report configurations",
+          "message": "Les configurations de rapport individuelles"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
+          "source": "Run multiple reports in a single API call",
+          "message": "Exécuter plusieurs rapports dans un seul appel d'API"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.desc": {
+          "source": "Retrieve the list of dimensions and metrics available for a Google Analytics property, including custom definitions. Use this to explore what data is available before building reports.",
+          "message": "Récupérer la liste des dimensions et métriques disponibles pour une propriété Google Analytics, y compris les définitions personnalisées. Utilisez cette option pour explorer les données disponibles avant de créer des rapports."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
+          "source": "Get Metadata",
+          "message": "Obtenir les métadonnées"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property to retrieve metadata for. The response will include both standard and custom dimensions/metrics.",
+          "message": "Sélectionnez la propriété GA4 pour laquelle récupérer les métadonnées. La réponse inclura les dimensions/métriques standard et personnalisées."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property",
+          "message": "La propriété Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
+          "source": "Discover available dimensions and metrics for a property",
+          "message": "Découvrir les dimensions et métriques disponibles pour une propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Analytics** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuer un appel API HTTP / REST personnalisé à **Google Analytics** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est retournée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés comme actions de premier ordre sur cette application."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Analytics",
+          "message": "Effectuer un appel d'API personnalisé à Google Analytics"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.desc": {
+          "source": "Retrieve real-time analytics data showing current activity on your property. Events appear within seconds of being sent to Google Analytics. Data is available for the last 30 minutes (or 60 minutes for Google Analytics 360 properties).",
+          "message": "Récupérer des données d'analyse en temps réel montrant l'activité actuelle sur votre propriété. Les événements apparaissent quelques secondes après avoir été envoyés à Google Analytics. Les données sont disponibles pour les 30 dernières minutes (ou 60 minutes pour les propriétés Google Analytics 360)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
+          "source": "Run Real-time Report",
+          "message": "Exécuter un rapport en temps réel"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter real-time data based on dimension values.",
+          "message": "Une expression de filtre avancée pour filtrer les données en temps réel en fonction des valeurs de dimension."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
+          "source": "Dimension Filter",
+          "message": "Filtre de dimension"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for dimensions",
+          "message": "Expression de filtre pour les dimensions"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.desc": {
+          "source": "Select the real-time dimensions to segment your data by (e.g., country, city, deviceCategory, unifiedScreenName).",
+          "message": "Sélectionnez les dimensions en temps réel par lesquelles segmenter vos données (par ex., country, city, deviceCategory, unifiedScreenName)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimensions"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The real-time dimensions to segment by",
+          "message": "Les dimensions en temps réel par lesquelles segmenter"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.desc": {
+          "source": "Specify how to sort the real-time report results.",
+          "message": "Spécifier comment trier les résultats du rapport en temps réel."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
+          "source": "Order By",
+          "message": "Trier par"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
+          "source": "Sorting specification for the report",
+          "message": "Spécification de tri pour le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 10,000.",
+          "message": "Le nombre maximal de lignes à retourner. La valeur par défaut est 10 000."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Nombre maximal de lignes à retourner"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter real-time data based on metric values.",
+          "message": "Une expression de filtre avancée pour filtrer les données en temps réel en fonction des valeurs de métrique."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
+          "source": "Metric Filter",
+          "message": "Filtre de métrique"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for metrics",
+          "message": "Expression de filtre pour les métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.desc": {
+          "source": "Select the real-time metrics to include in the report (e.g., activeUsers, screenPageViews, eventCount).",
+          "message": "Sélectionnez les métriques en temps réel à inclure dans le rapport (par ex., activeUsers, screenPageViews, eventCount)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.short_desc": {
+          "source": "The real-time metrics to include",
+          "message": "Les métriques en temps réel à inclure"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.desc": {
+          "source": "Specify custom time ranges for the real-time data. By default, data from the last 30 minutes is returned.",
+          "message": "Spécifiez des plages horaires personnalisées pour les données en temps réel. Par défaut, les données des 30 dernières minutes sont retournées."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
+          "source": "Minute Ranges",
+          "message": "Plages de minutes"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
+          "source": "Custom time ranges within the last 30 minutes",
+          "message": "Plages horaires personnalisées au cours des 30 dernières minutes"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve real-time analytics data.",
+          "message": "Sélectionnez la propriété GA4 à partir de laquelle récupérer les données d'analyse en temps réel."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "La propriété Google Analytics 4 à interroger"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
+          "source": "Get live analytics data from the last 30 minutes",
+          "message": "Obtenir des données d'analyse en direct des 30 dernières minutes"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.desc": {
+          "source": "Run a customized analytics report with specified metrics, dimensions, date ranges, and filters. Supports pagination for large result sets and various sorting options.",
+          "message": "Exécuter un rapport d'analyse personnalisé avec des métriques, dimensions, plages de dates et filtres spécifiés. Prend en charge la pagination pour les grands jeux de résultats et diverses options de tri."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
+          "source": "Run Report",
+          "message": "Exécuter le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.desc": {
+          "source": "Specify one or more date ranges for the report. Dates can be in YYYY-MM-DD format or relative values like \"7daysAgo\", \"yesterday\", \"today\".",
+          "message": "Spécifiez une ou plusieurs plages de dates pour le rapport. Les dates peuvent être au format YYYY-MM-DD ou des valeurs relatives telles que \"7daysAgo\", \"yesterday\", \"today\"."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
+          "source": "Date Ranges",
+          "message": "Plages de dates"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
+          "source": "The date ranges for the report",
+          "message": "Les plages de dates pour le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter report data based on dimension values. Use the GA4 filter expression syntax.",
+          "message": "Une expression de filtre avancée pour filtrer les données du rapport en fonction des valeurs de dimension. Utilisez la syntaxe d'expression de filtre GA4."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
+          "source": "Dimension Filter",
+          "message": "Filtre de dimension"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for dimensions",
+          "message": "Expression de filtre pour les dimensions"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.desc": {
+          "source": "Select the attributes to segment your data by (e.g., country, browser, pagePath). Dimensions are optional and allow you to break down metrics by specific categories.",
+          "message": "Sélectionnez les attributs par lesquels segmenter vos données (par ex., country, browser, pagePath). Les dimensions sont facultatives et vous permettent de ventiler les métriques par catégories spécifiques."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimensions"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The dimensions to segment the report by",
+          "message": "Les dimensions par lesquelles segmenter le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.desc": {
+          "source": "If true, includes rows where all metrics have zero values. If false (default), such rows are excluded.",
+          "message": "Si true, inclut les lignes où toutes les métriques ont des valeurs zéro. Si false (par défaut), ces lignes sont exclues."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
+          "source": "Keep Empty Rows",
+          "message": "Conserver les lignes vides"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
+          "source": "Include rows with all zero metric values",
+          "message": "Inclure les lignes contenant uniquement des valeurs de métrique égales à zéro"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.desc": {
+          "source": "The number of rows to skip before returning results. Used for pagination.",
+          "message": "Le nombre de lignes à ignorer avant de retourner les résultats. Utilisé pour la pagination."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Décalage"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.short_desc": {
+          "source": "Number of rows to skip",
+          "message": "Nombre de lignes à ignorer"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.desc": {
+          "source": "Specify how to sort the report results by dimension or metric values.",
+          "message": "Spécifier comment trier les résultats du rapport par valeurs de dimension ou de métrique."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
+          "source": "Order By",
+          "message": "Trier par"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
+          "source": "Sorting specification for the report",
+          "message": "Spécification de tri pour le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return in the report. Default is 10,000, maximum is 100,000.",
+          "message": "Le nombre maximal de lignes à retourner dans le rapport. La valeur par défaut est 10 000, le maximum est 100 000."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Nombre maximal de lignes à retourner"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter report data based on metric values. Use the GA4 filter expression syntax.",
+          "message": "Une expression de filtre avancée pour filtrer les données du rapport en fonction des valeurs de métrique. Utilisez la syntaxe d'expression de filtre GA4."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
+          "source": "Metric Filter",
+          "message": "Filtre de métrique"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for metrics",
+          "message": "Expression de filtre pour les métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.desc": {
+          "source": "Select the quantitative measurements to include (e.g., activeUsers, sessions, pageViews). You can include up to 10 metrics per report.",
+          "message": "Sélectionnez les mesures quantitatives à inclure (par ex., activeUsers, sessions, pageViews). Vous pouvez inclure jusqu'à 10 métriques par rapport."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Métriques"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.short_desc": {
+          "source": "The metrics to include in the report",
+          "message": "Les métriques à inclure dans le rapport"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve analytics data.",
+          "message": "Sélectionnez la propriété GA4 à partir de laquelle récupérer les données d'analyse."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "La propriété Google Analytics 4 à interroger"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.desc": {
+          "source": "If true, returns information about API quota usage for this property in the response.",
+          "message": "Si true, retourne dans la réponse des informations sur l'utilisation du quota d'API pour cette propriété."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
+          "source": "Return Property Quota",
+          "message": "Retourner le quota de la propriété"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
+          "source": "Include API quota information in response",
+          "message": "Inclure les informations de quota d'API dans la réponse"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
+          "source": "Execute a standard Google Analytics 4 report",
+          "message": "Exécuter un rapport standard Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.desc": {
+          "source": "Integrate with Google Analytics 4 (GA4) to run reports, access real-time data, and analyze metrics and dimensions. This integration supports standard reports, real-time analytics, metadata discovery, batch reporting, and compatibility checks for your analytics properties.",
+          "message": "S'intégrer à Google Analytics 4 (GA4) pour exécuter des rapports, accéder aux données en temps réel et analyser les métriques et les dimensions. Cette intégration prend en charge les rapports standards, l'analyse en temps réel, la découverte de métadonnées, les rapports par lots et les vérifications de compatibilité pour vos propriétés d'analyse."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.display_name": {
+          "source": "Google Analytics",
+          "message": "Google Analytics"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.short_desc": {
+          "source": "Connect with Google Analytics 4 to access your website and app analytics data",
+          "message": "Connectez-vous à Google Analytics 4 pour accéder aux données d'analyse de votre site Web et de votre application"
+        }
+      }
+    }
+  }
+}

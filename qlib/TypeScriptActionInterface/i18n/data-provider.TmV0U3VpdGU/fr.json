@@ -1,0 +1,1357 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.desc": {
+          "source": "Removes a contact record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de contact de NetSuite en fonction de son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Contact",
+          "message": "Supprimer le contact"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific contact.",
+          "message": "Supprime un contact spécifique."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single contact by its ID.",
+          "message": "Récupère les informations détaillées d'un contact individuel par son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.display_name": {
+          "source": "Get Contact",
+          "message": "Obtenir le contact"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific contact.",
+          "message": "Récupérer les détails d'un contact spécifique."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific contact by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'un contact spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.display_name": {
+          "source": "Update Contact",
+          "message": "Mettre à jour le contact"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing contact.",
+          "message": "Met à jour un contact existant."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.desc": {
+          "source": "Allows the user to create a new contact record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de contact dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.display_name": {
+          "source": "Create Contact",
+          "message": "Créer un contact"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.short_desc": {
+          "source": "Creates a new contact.",
+          "message": "Crée un nouveau contact."
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Créer des enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single customer by its ID.",
+          "message": "Récupère les informations détaillées d'un client individuel par son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.display_name": {
+          "source": "Get Customer",
+          "message": "Obtenir le client"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific customer.",
+          "message": "Récupérer les détails d'un client spécifique."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.desc": {
+          "source": "Removes a customer record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de client de NetSuite en fonction de son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Customer",
+          "message": "Supprimer le client"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific customer.",
+          "message": "Supprime un client spécifique."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific customer by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'un client spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.display_name": {
+          "source": "Update Customer",
+          "message": "Mettre à jour le client"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing customer.",
+          "message": "Met à jour un client existant."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.desc": {
+          "source": "Allows the user to create a new customer record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de client dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.display_name": {
+          "source": "Create Customer",
+          "message": "Créer un client"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.short_desc": {
+          "source": "Creates a new customer.",
+          "message": "Crée un nouveau client."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.desc": {
+          "source": "Creates a new customer in NetSuite with simplified fields",
+          "message": "Crée un nouveau client dans NetSuite avec des champs simplifiés"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.display_name": {
+          "source": "Create Customer (simplified)",
+          "message": "Créer un client (simplifié)"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.short_desc": {
+          "source": "Creates a new customer with simplified options.",
+          "message": "Crée un nouveau client avec des options simplifiées."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.desc": {
+          "source": "Removes an account record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de compte de NetSuite en fonction de son ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Account",
+          "message": "Supprimer le compte"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific account.",
+          "message": "Supprime un compte spécifique."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single account by its ID.",
+          "message": "Récupère les informations détaillées d'un compte individuel par son ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.display_name": {
+          "source": "Get Account",
+          "message": "Obtenir le compte"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific account.",
+          "message": "Récupérer les détails d'un compte spécifique."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific account by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'un compte spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.display_name": {
+          "source": "Update Account",
+          "message": "Mettre à jour le compte"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing account.",
+          "message": "Met à jour un compte existant."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.desc": {
+          "source": "Allows the user to create a new account record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de compte dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.display_name": {
+          "source": "Create Account",
+          "message": "Créer un compte"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.short_desc": {
+          "source": "Creates a new account.",
+          "message": "Crée un nouveau compte."
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "Supprimer des enregistrements de la table donnée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Supprimer les enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "Supprimer des enregistrements de la table donnée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.desc": {
+          "source": "Removes an invoice record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de facture de NetSuite en fonction de son ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.display_name": {
+          "source": "Delete Invoice",
+          "message": "Supprimer la facture"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific invoice.",
+          "message": "Supprime une facture spécifique."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single invoice by its ID.",
+          "message": "Récupère les informations détaillées d'une facture individuelle par son ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.display_name": {
+          "source": "Get Invoice",
+          "message": "Obtenir la facture"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific invoice.",
+          "message": "Récupérer les détails d'une facture spécifique."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific invoice by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'une facture spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.display_name": {
+          "source": "Update Invoice",
+          "message": "Mettre à jour la facture"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing invoice.",
+          "message": "Met à jour une facture existante."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.desc": {
+          "source": "Allows the user to create a new invoice record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de facture dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.display_name": {
+          "source": "Create Invoice",
+          "message": "Créer une facture"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.short_desc": {
+          "source": "Creates a new invoice.",
+          "message": "Crée une nouvelle facture."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a journal entry record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement d'écriture de journal de NetSuite en fonction de son ID."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Journal Entry",
+          "message": "Supprimer l'écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific journal entry.",
+          "message": "Supprime une écriture de journal spécifique."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single journal entry by its ID.",
+          "message": "Récupère les informations détaillées d'une seule écriture de journal par son ID."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.display_name": {
+          "source": "Get Journal Entry",
+          "message": "Obtenir l'écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific journal entry.",
+          "message": "Récupérer les détails d'une écriture de journal spécifique."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.desc": {
+          "source": "Journal entry id patch",
+          "message": "Patch de l'ID d'écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.display_name": {
+          "source": "Update Record.",
+          "message": "Mettre à jour l'enregistrement."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.short_desc": {
+          "source": "Update record.",
+          "message": "Mettre à jour l'enregistrement."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.desc": {
+          "source": "Allows the user to create a new journal entry record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement d'écriture de journal dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.display_name": {
+          "source": "Create Journal Entry",
+          "message": "Créer une écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.desc": {
+          "source": "The server behavior requested by the client. Use 'respond-async' to execute the request asynchronously. If the request is executed asynchronously, 'Preference-applied: respond-async' is returned in the response.",
+          "message": "Le comportement du serveur demandé par le client. Utilisez 'respond-async' pour exécuter la requête de manière asynchrone. Si la requête est exécutée de manière asynchrone, 'Preference-applied: respond-async' est renvoyé dans la réponse."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.display_name": {
+          "source": "Prefer",
+          "message": "Prefer"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.short_desc": {
+          "source": "The server behavior requested by the client",
+          "message": "Le comportement du serveur demandé par le client"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once. Only one request can be executed with every unique idempotency key. Use UUID in string format as defined by RFC 4122. If the request is executed synchronously, this value is ignored.",
+          "message": "Une clé d'idempotence unique définie par l'utilisateur qui est appliquée à chaque requête asynchrone pour garantir que la requête n'est exécutée qu'une seule fois. Une seule requête peut être exécutée avec chaque clé d'idempotence unique. Utilisez un UUID au format chaîne tel que défini par la RFC 4122. Si la requête est exécutée de manière synchrone, cette valeur est ignorée."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.display_name": {
+          "source": "X Net Suite Idempotency Key",
+          "message": "X Net Suite Idempotency Key"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
+          "message": "Une clé d'idempotence unique définie par l'utilisateur qui est appliquée à chaque requête asynchrone pour garantir que la requête n'est exécutée qu'une seule fois"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
+          "source": "Sets the strictness of property name validation.",
+          "message": "Définit le niveau de rigueur de la validation des noms de propriétés."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.display_name": {
+          "source": "X Net Suite Property Name Validation",
+          "message": "X Net Suite Property Name Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.short_desc": {
+          "source": "Sets the strictness of property name validation",
+          "message": "Définit le niveau de rigueur de la validation des noms de propriétés"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.desc": {
+          "source": "Sets the strictness of property value validation.",
+          "message": "Définit le niveau de rigueur de la validation des valeurs de propriétés."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.display_name": {
+          "source": "X Net Suite Property Value Validation",
+          "message": "X Net Suite Property Value Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.short_desc": {
+          "source": "Sets the strictness of property value validation",
+          "message": "Définit le niveau de rigueur de la validation des valeurs de propriétés"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y2xhc3M.display_name": {
+          "source": "Class",
+          "message": "Classe"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZERhdGU.display_name": {
+          "source": "Created Date",
+          "message": "Date de création"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZEZyb20.display_name": {
+          "source": "Created From",
+          "message": "Créé à partir de"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "Devise"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VzdG9tRm9ybQ.display_name": {
+          "source": "Custom Form",
+          "message": "Formulaire personnalisé"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2s.display_name": {
+          "source": "Accounting Book",
+          "message": "Livre comptable"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2tEZXRhaWw.display_name": {
+          "source": "Accounting Book Detail",
+          "message": "Détail du livre comptable"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwbGllZFJ1bGVz.display_name": {
+          "source": "Applied Rules",
+          "message": "Règles appliquées"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.desc": {
+          "source": "Check this box to indicate that this journal entry is approved. If you check this box, this journal entry will post immediately. If you do not check this box, this journal entry must be approved before it posts.",
+          "message": "Cochez cette case pour indiquer que cette écriture de journal est approuvée. Si vous cochez cette case, cette écriture de journal sera comptabilisée immédiatement. Si vous ne cochez pas cette case, cette écriture de journal doit être approuvée avant d'être comptabilisée."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.display_name": {
+          "source": "Approved",
+          "message": "Approuvé"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.short_desc": {
+          "source": "Check this box to indicate that this journal entry is approved",
+          "message": "Cochez cette case pour indiquer que cette écriture de journal est approuvée"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Service"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External Id",
+          "message": "ID externe"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency. You can edit the exchange rate for this transaction only, or you can update the currency exchange rates list.",
+          "message": "Ce champ affiche le taux de change par défaut de la devise de la filiale destinataire par rapport à la devise de la filiale. Vous pouvez modifier le taux de change pour cette transaction uniquement, ou vous pouvez mettre à jour la liste des taux de change des devises."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.display_name": {
+          "source": "Exchange Rate",
+          "message": "Taux de change"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
+          "message": "Ce champ affiche le taux de change par défaut de la devise de la filiale destinataire par rapport à la devise de la filiale"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
+          "source": "Exclude From GL Numbering",
+          "message": "Exclure de la numérotation GL"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aWQ.display_name": {
+          "source": "Id",
+          "message": "ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aXNSZXZlcnNhbA.display_name": {
+          "source": "Is Reversal",
+          "message": "Est une contrepassation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Emplacement"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGFzdE1vZGlmaWVkRGF0ZQ.display_name": {
+          "source": "Last Modified Date",
+          "message": "Date de dernière modification"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGluZQ.display_name": {
+          "source": "Line",
+          "message": "Ligne"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Liens"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.desc": {
+          "source": "If you wish, enter a memo to describe this journal entry. It will appear on this transaction detail as well as reports such as a 2-line account register.",
+          "message": "Si vous le souhaitez, saisissez un mémo pour décrire cette écriture de journal. Il apparaîtra sur le détail de cette transaction ainsi que sur des rapports tels qu'un registre de compte sur 2 lignes."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.display_name": {
+          "source": "Memo",
+          "message": "Mémo"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.short_desc": {
+          "source": "If you wish, enter a memo to describe this journal entry",
+          "message": "Si vous le souhaitez, saisissez un mémo pour décrire cette écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.c3Vic2lkaWFyeQ.display_name": {
+          "source": "Subsidiary",
+          "message": "Filiale"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.display_name": {
+          "source": "Posting Period",
+          "message": "Période de comptabilisation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cGFyZW50RXhwZW5zZUFsbG9j.display_name": {
+          "source": "Parent Expense Alloc",
+          "message": "Ventilation des dépenses parentes"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted. If Defer Entry is checked, this field is mandatory.",
+          "message": "Si cette écriture de journal est destinée à être contrepassée, saisissez la date à laquelle l'écriture de contrepassation doit être comptabilisée. Si Reporter l'écriture est coché, ce champ est obligatoire."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.display_name": {
+          "source": "Reversal Date",
+          "message": "Date de contrepassation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
+          "message": "Si cette écriture de journal est destinée à être contrepassée, saisissez la date à laquelle l'écriture de contrepassation doit être comptabilisée"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
+          "message": "Cochez cette case pour faire de la contrepassation une transaction mémorisée qui se produit automatiquement à la date saisie dans le champ obligatoire Date de contrepassation. Décochez cette case pour faire de la contrepassation une transaction immédiatement saisie avec la date dans le champ Date de contrepassation."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
+          "source": "Reversal Defer",
+          "message": "Différer la contrepassation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
+          "message": "Cochez cette case pour faire de la contrepassation une transaction mémorisée qui se produit automatiquement à la date saisie dans le champ obligatoire Date de contrepassation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
+          "source": "Ref Name",
+          "message": "Nom de référence"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.desc": {
+          "source": "The names of sublists on this record. All sublist lines will be replaced with lines specified in the request. The names are delimited by comma.",
+          "message": "Les noms des sous-listes sur cet enregistrement. Toutes les lignes de sous-liste seront remplacées par les lignes spécifiées dans la requête. Les noms sont délimités par une virgule."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.display_name": {
+          "source": "Replace",
+          "message": "Remplacer"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.short_desc": {
+          "source": "The names of sublists on this record",
+          "message": "Les noms des sous-listes sur cet enregistrement"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dG9TdWJzaWRpYXJ5.display_name": {
+          "source": "To Subsidiary",
+          "message": "Vers la filiale"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry. You can enter or select another date.",
+          "message": "NetSuite insère la date du jour comme date de cette écriture de journal. Vous pouvez saisir ou sélectionner une autre date."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.display_name": {
+          "source": "Tran Date",
+          "message": "Date de transaction"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.short_desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry",
+          "message": "NetSuite insère la date du jour comme date de cette écriture de journal"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.desc": {
+          "source": "NetSuite increases the largest journal entry number by one. If you wish, you can type another number. The next journal entry number will revert to the standard pattern. You can enter a maximum of 45 characters in this field.",
+          "message": "NetSuite incrémente le numéro d'écriture de journal le plus élevé de un. Si vous le souhaitez, vous pouvez saisir un autre numéro. Le numéro d'écriture de journal suivant reprendra le schéma standard. Vous pouvez saisir un maximum de 45 caractères dans ce champ."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.display_name": {
+          "source": "Tran Id",
+          "message": "ID de transaction"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.short_desc": {
+          "source": "NetSuite increases the largest journal entry number by one",
+          "message": "NetSuite incrémente le numéro d'écriture de journal le plus élevé de un"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dm9pZA.display_name": {
+          "source": "Void",
+          "message": "Annuler"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.short_desc": {
+          "source": "Creates a new journal entry.",
+          "message": "Crée une nouvelle écriture de journal."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single opportunity by its ID.",
+          "message": "Récupère les informations détaillées d'une opportunité spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.display_name": {
+          "source": "Get Opportunity",
+          "message": "Obtenir l'opportunité"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific opportunity.",
+          "message": "Récupérer les détails d'une opportunité spécifique."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.desc": {
+          "source": "Removes an opportunity record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement d'opportunité de NetSuite selon son ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Opportunity",
+          "message": "Supprimer l'opportunité"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific opportunity.",
+          "message": "Supprime une opportunité spécifique."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific opportunity by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'une opportunité spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.display_name": {
+          "source": "Update Opportunity",
+          "message": "Mettre à jour l'opportunité"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing opportunity.",
+          "message": "Met à jour une opportunité existante."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.desc": {
+          "source": "Allows the user to create a new opportunity record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement d'opportunité dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.display_name": {
+          "source": "Create Opportunity",
+          "message": "Créer une opportunité"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.short_desc": {
+          "source": "Creates a new opportunity.",
+          "message": "Crée une nouvelle opportunité."
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Query NetSuite records by type with optional filtering, field selection, and pagination",
+          "message": "Interroger les enregistrements NetSuite par type avec filtrage, sélection de champs et pagination facultatifs"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "Lister les enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "List of field names to include in results (returns all fields if omitted)",
+          "message": "Liste des noms de champs à inclure dans les résultats (renvoie tous les champs si omis)"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specific record fields to return",
+          "message": "Champs d'enregistrement spécifiques à renvoyer"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.desc": {
+          "source": "Used for pagination to skip a specified number of records in the result set",
+          "message": "Utilisé pour la pagination afin d'ignorer un nombre spécifié d'enregistrements dans le jeu de résultats"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Décalage"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "Nombre d'enregistrements à ignorer"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.desc": {
+          "source": "Caps the number of results returned in a single query",
+          "message": "Plafonne le nombre de résultats renvoyés dans une seule requête"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "Nombre maximum d'enregistrements à renvoyer"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.desc": {
+          "source": "If multiple query fields are provided, the record must match all of them",
+          "message": "Si plusieurs champs de requête sont fournis, l'enregistrement doit correspondre à tous ces critères"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "Tous"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.desc": {
+          "source": "If multiple query fields are provided, the record must match at least one of them",
+          "message": "Si plusieurs champs de requête sont fournis, l'enregistrement doit correspondre à au moins l'un d'entre eux"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Tous"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.desc": {
+          "source": "Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided",
+          "message": "Détermine si les enregistrements doivent correspondre à tous les critères (All) ou à n'importe quel critère (Any) lorsque plusieurs champs de requête sont fournis"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.display_name": {
+          "source": "Search Mode",
+          "message": "Mode de recherche"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.short_desc": {
+          "source": "How multiple search criteria are combined",
+          "message": "Manière dont les critères de recherche multiples sont combinés"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.desc": {
+          "source": "Key-value pairs defining search criteria",
+          "message": "Paires clé-valeur définissant les critères de recherche"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.display_name": {
+          "source": "Query Criteria",
+          "message": "Critères de requête"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.short_desc": {
+          "source": "Search conditions for filtering records",
+          "message": "Conditions de recherche pour filtrer les enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)",
+          "message": "Spécifie le type d'enregistrement NetSuite à interroger (customer, invoice, transaction, etc.)"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "Type d'enregistrement"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "Type of NetSuite record to retrieve",
+          "message": "Type d'enregistrement NetSuite à récupérer"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve NetSuite records based on search criteria",
+          "message": "Récupérer des enregistrements NetSuite en fonction de critères de recherche"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NetSuite** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel d'API HTTP / REST personnalisé à **NetSuite** à l'aide de l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de connexion), les paramètres de requête facultatifs, les en-têtes et le corps de requête. La réponse est renvoyée sous la forme d'un hachage contenant le code de statut, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NetSuite",
+          "message": "Effectuer un appel d'API personnalisé vers NetSuite"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggers when a new record is created",
+          "message": "Se déclenche lorsqu'un nouvel enregistrement est créé"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nouvel enregistrement"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "The type of record to monitor",
+          "message": "Le type d'enregistrement à surveiller"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "Type d'enregistrement"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "The type of record to monitor",
+          "message": "Le type d'enregistrement à surveiller"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created",
+          "message": "Se déclenche lorsqu'un nouvel enregistrement est créé"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a sales order record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de commande client de NetSuite selon son ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Sales Order",
+          "message": "Supprimer la commande client"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific sales order.",
+          "message": "Supprime une commande client spécifique."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single sales order by its ID.",
+          "message": "Récupère les informations détaillées d'une commande client spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Sales Order",
+          "message": "Obtenir la commande client"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific sales order.",
+          "message": "Récupérer les détails d'une commande client spécifique."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific sales order by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'une commande client spécifique par son ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Sales Order",
+          "message": "Mettre à jour la commande client"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing sales order.",
+          "message": "Met à jour une commande client existante."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new sales order record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de commande client dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.display_name": {
+          "source": "Create Sales Order",
+          "message": "Créer une commande client"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new sales order.",
+          "message": "Crée une nouvelle commande client."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.desc": {
+          "source": "Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.",
+          "message": "Crée une nouvelle commande client dans NetSuite avec uniquement les champs les plus couramment utilisés, rendant la création de commande plus rapide et plus simple."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.display_name": {
+          "source": "Create Sales Order (simplified)",
+          "message": "Créer une commande client (simplifié)"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.short_desc": {
+          "source": "Creates a new sales order with simplified options.",
+          "message": "Crée une nouvelle commande client avec des options simplifiées."
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "Rechercher les enregistrements correspondants dans la table donnée dans l'application « NetSuite »"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Rechercher des enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "Rechercher les enregistrements correspondants dans la table donnée dans l'application « NetSuite »"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « NetSuite »"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trouver un seul enregistrement"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "Rechercher un enregistrement correspondant unique dans la table donnée dans l'application « NetSuite »"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.desc": {
+          "source": "Run a SuiteQL query",
+          "message": "Exécuter une requête SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.display_name": {
+          "source": "SuiteQL",
+          "message": "SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip",
+          "message": "Le nombre d'enregistrements à ignorer"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Décalage"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.short_desc": {
+          "source": "The number of records to skip",
+          "message": "Le nombre d'enregistrements à ignorer"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return",
+          "message": "Le nombre maximum d'enregistrements à renvoyer"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return",
+          "message": "Le nombre maximum d'enregistrements à renvoyer"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gY3VzdG9tZXI.display_name": {
+          "source": "Get all customers",
+          "message": "Obtenir tous les clients"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gYWNjb3VudA.display_name": {
+          "source": "Get all accounts",
+          "message": "Obtenir tous les comptes"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gIFdIRVJFIHR5cGUgPSAnU2FsZXNPcmQn.display_name": {
+          "source": "Get all sales orders",
+          "message": "Obtenir toutes les commandes clients"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdDdXN0SW52Yyc.display_name": {
+          "source": "Get all invoices",
+          "message": "Obtenir toutes les factures"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdKb3VybmFsJw.display_name": {
+          "source": "Get all journal entries",
+          "message": "Obtenir toutes les écritures de journal"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdQdXJjaE9yZCc.display_name": {
+          "source": "Get all purchase orders",
+          "message": "Obtenir tous les bons de commande"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdmVuZG9y.display_name": {
+          "source": "Get all vendors",
+          "message": "Obtenir tous les fournisseurs"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.desc": {
+          "source": "The SuiteQL query to run",
+          "message": "La requête SuiteQL à exécuter"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Requête"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.short_desc": {
+          "source": "The SuiteQL query to run",
+          "message": "La requête SuiteQL à exécuter"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.short_desc": {
+          "source": "Run a SuiteQL query",
+          "message": "Exécuter une requête SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a purchase order record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de bon de commande de NetSuite d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Purchase Order",
+          "message": "Supprimer le bon de commande"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific purchase order.",
+          "message": "Supprime un bon de commande spécifique."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single purchase order by its ID.",
+          "message": "Récupère les informations détaillées d'un bon de commande unique d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Purchase Order",
+          "message": "Obtenir le bon de commande"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific purchase order.",
+          "message": "Récupérer les détails d'un bon de commande spécifique."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific purchase order by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'un bon de commande spécifique d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Purchase Order",
+          "message": "Mettre à jour le bon de commande"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing purchase order.",
+          "message": "Met à jour un bon de commande existant."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new purchase order record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de bon de commande dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.display_name": {
+          "source": "Create Purchase Order",
+          "message": "Créer un bon de commande"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new purchase order.",
+          "message": "Crée un nouveau bon de commande."
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "Mettre à jour des enregistrements existants dans la table spécifiée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Mettre à jour des enregistrements"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "Mettre à jour des enregistrements existants dans la table spécifiée de l'application \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a vendor record from NetSuite based on its ID.",
+          "message": "Supprime un enregistrement de fournisseur de NetSuite d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Vendor",
+          "message": "Supprimer le fournisseur"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific vendor.",
+          "message": "Supprime un fournisseur spécifique."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single vendor by its ID.",
+          "message": "Récupère les informations détaillées d'un fournisseur unique d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.display_name": {
+          "source": "Get Vendor",
+          "message": "Obtenir le fournisseur"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific vendor.",
+          "message": "Récupérer les détails d'un fournisseur spécifique."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.desc": {
+          "source": "Allows the user to update details of a specific vendor by its ID.",
+          "message": "Permet à l'utilisateur de mettre à jour les détails d'un fournisseur spécifique d'après son ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.display_name": {
+          "source": "Update Vendor",
+          "message": "Mettre à jour le fournisseur"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.short_desc": {
+          "source": "Updates an existing vendor.",
+          "message": "Met à jour un fournisseur existant."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.desc": {
+          "source": "Allows the user to create a new vendor record in NetSuite.",
+          "message": "Permet à l'utilisateur de créer un nouvel enregistrement de fournisseur dans NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.display_name": {
+          "source": "Create Vendor",
+          "message": "Créer un fournisseur"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.short_desc": {
+          "source": "Creates a new vendor.",
+          "message": "Crée un nouveau fournisseur."
+        },
+        "app.TmV0U3VpdGU.desc": {
+          "source": "NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.",
+          "message": "NetSuite propose une plateforme unifiée pour l'ERP, le CRM, le commerce électronique et bien plus encore, permettant aux entreprises de gérer toutes leurs opérations clés dans un système unique."
+        },
+        "app.TmV0U3VpdGU.display_name": {
+          "source": "NetSuite",
+          "message": "NetSuite"
+        },
+        "app.TmV0U3VpdGU.short_desc": {
+          "source": "A comprehensive suite of cloud-based business management solutions.",
+          "message": "Une suite complète de solutions de gestion d'entreprise basées sur le cloud."
+        }
+      }
+    }
+  }
+}

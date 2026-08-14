@@ -1,0 +1,1577 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.desc": {
+          "source": "Creates a new YouTube playlist with specified title, description, privacy settings, and optional tags",
+          "message": "Tworzy nową playlistę YouTube z określonym tytułem, opisem, ustawieniami prywatności i opcjonalnymi tagami"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.display_name": {
+          "source": "Create Playlist",
+          "message": "Utwórz playlistę"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.desc": {
+          "source": "Optional default language code for the playlist content (e.g., \"en\" for English)",
+          "message": "Opcjonalny domyślny kod języka zawartości playlisty (np. „en” dla języka angielskiego)"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.display_name": {
+          "source": "Default Language",
+          "message": "Domyślny język"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVmYXVsdExhbmd1YWdl.short_desc": {
+          "source": "The default language for the playlist",
+          "message": "Domyślny język playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description text for the playlist explaining its content or purpose",
+          "message": "Opcjonalny tekst opisu playlisty wyjaśniający jej zawartość lub cel"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The description of the playlist",
+          "message": "Opis playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Publiczny"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Prywatny"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnVubGlzdGVk.display_name": {
+          "source": "Unlisted",
+          "message": "Niepubliczny"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.desc": {
+          "source": "Privacy level for the playlist: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)",
+          "message": "Poziom prywatności playlisty: publiczny (widoczny dla wszystkich), prywatny (widoczny tylko dla Ciebie) lub niepubliczny (widoczny dla każdego, kto ma link)"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.display_name": {
+          "source": "Privacy Status",
+          "message": "Status prywatności"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.cHJpdmFjeQ.short_desc": {
+          "source": "The privacy setting for the playlist",
+          "message": "Ustawienie prywatności dla playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGFncw.desc": {
+          "source": "Optional list of tags/keywords to help categorize and make the playlist discoverable",
+          "message": "Opcjonalna lista tagów/słów kluczowych ułatwiających kategoryzację i wyszukiwanie playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tagi"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGFncw.short_desc": {
+          "source": "List of tags for the playlist",
+          "message": "Lista tagów dla playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGl0bGU.desc": {
+          "source": "The name/title of the new playlist",
+          "message": "Nazwa/tytuł nowej playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.option.dGl0bGU.short_desc": {
+          "source": "The title of the playlist",
+          "message": "Tytuł playlisty"
+        },
+        "app.WW91VHViZQ.action.Y3JlYXRlX3BsYXlsaXN0.short_desc": {
+          "source": "Create a new YouTube playlist",
+          "message": "Utwórz nową playlistę YouTube"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.desc": {
+          "source": "Adds a specified video to an existing YouTube playlist. You can optionally specify the position where the video should be inserted in the playlist.",
+          "message": "Dodaje określony film do istniejącej playlisty YouTube. Opcjonalnie możesz określić pozycję, na której film ma zostać wstawiony na playliście."
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.display_name": {
+          "source": "Add Video to Playlist",
+          "message": "Dodaj film do playlisty"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cG9zaXRpb24.desc": {
+          "source": "Optional position (0-based index) where the video should be inserted in the playlist. If not specified, the video will be added to the end",
+          "message": "Opcjonalna pozycja (indeksowana od 0), na której film powinien zostać wstawiony na playliście. Jeśli nie zostanie podana, film zostanie dodany na końcu"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cG9zaXRpb24.display_name": {
+          "source": "Position",
+          "message": "Pozycja"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cG9zaXRpb24.short_desc": {
+          "source": "The position in the playlist where the video should be inserted",
+          "message": "Pozycja na playliście, na której film ma zostać wstawiony"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cGxheWxpc3RJZA.desc": {
+          "source": "The unique identifier of the YouTube playlist where the video will be added",
+          "message": "Unikalny identyfikator playlisty YouTube, do której zostanie dodany film"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cGxheWxpc3RJZA.display_name": {
+          "source": "Playlist ID",
+          "message": "ID playlisty"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.cGxheWxpc3RJZA.short_desc": {
+          "source": "The ID of the playlist to add the video to",
+          "message": "Identyfikator playlisty, do której ma zostać dodany film"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.dmlkZW9JZA.desc": {
+          "source": "The unique identifier of the YouTube video to be added to the playlist",
+          "message": "Unikalny identyfikator filmu YouTube, który ma zostać dodany do playlisty"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.dmlkZW9JZA.display_name": {
+          "source": "Video ID",
+          "message": "ID filmu"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.option.dmlkZW9JZA.short_desc": {
+          "source": "The ID of the video to add to the playlist",
+          "message": "Identyfikator filmu, który ma zostać dodany do playlisty"
+        },
+        "app.WW91VHViZQ.action.YWRkX3ZpZGVvX3RvX3BsYXlsaXN0.short_desc": {
+          "source": "Add a video to an existing YouTube playlist",
+          "message": "Dodaj film do istniejącej playlisty YouTube"
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.desc": {
+          "source": "Extracts the channel ID from different YouTube URL formats including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), and video URLs. Also returns basic channel information.",
+          "message": "Wyodrębnia identyfikator kanału z różnych formatów adresów URL YouTube, w tym adresów URL kanałów, uchwytów (@nazwa_użytkownika), niestandardowych adresów URL (/c/), nazw użytkowników (/user/) i adresów URL filmów. Zwraca również podstawowe informacje o kanale."
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.display_name": {
+          "source": "Get Channel ID from URL",
+          "message": "Pobierz identyfikator kanału z adresu URL"
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.option.dXJs.desc": {
+          "source": "Any valid YouTube URL format including channel URLs, handles (@username), custom URLs (/c/), usernames (/user/), or video URLs",
+          "message": "Dowolny prawidłowy format adresu URL YouTube, w tym adresy URL kanałów, uchwyty (@nazwa_użytkownika), niestandardowe adresy URL (/c/), nazwy użytkowników (/user/) lub adresy URL filmów"
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.option.dXJs.display_name": {
+          "source": "YouTube URL",
+          "message": "Adres URL YouTube"
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.option.dXJs.short_desc": {
+          "source": "The YouTube URL to extract channel ID from",
+          "message": "Adres URL YouTube, z którego ma zostać wyodrębniony identyfikator kanału"
+        },
+        "app.WW91VHViZQ.action.Z2V0X2NoYW5uZWxfaWRfZnJvbV91cmw.short_desc": {
+          "source": "Extract YouTube channel ID from various URL formats",
+          "message": "Wyodrębnij identyfikator kanału YouTube z różnych formatów adresów URL"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.desc": {
+          "source": "Retrieve YouTube Analytics data for a specific channel within a date range, including metrics like views, watch time, and engagement",
+          "message": "Pobierz dane YouTube Analytics dla określonego kanału w wybranym zakresie dat, w tym dane takie jak wyświetlenia, czas oglądania i zaangażowanie"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.display_name": {
+          "source": "Get Analytics Report",
+          "message": "Pobierz raport analityczny"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.Y2hhbm5lbA.desc": {
+          "source": "The YouTube channel ID to retrieve analytics data for",
+          "message": "Identyfikator kanału YouTube, dla którego mają zostać pobrane dane analityczne"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Kanał"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to get analytics for",
+          "message": "Kanał, dla którego mają zostać pobrane dane analityczne"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.desc": {
+          "source": "The end date for the analytics report in YYYY-MM-DD format",
+          "message": "Data końcowa raportu analitycznego w formacie RRRR-MM-DD"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.display_name": {
+          "source": "End Date",
+          "message": "Data końcowa"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.ZW5kRGF0ZQ.short_desc": {
+          "source": "The end date for the report",
+          "message": "Data końcowa raportu"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of data points to return in the report (default is 10)",
+          "message": "Maksymalna liczba punktów danych do zwrócenia w raporcie (domyślnie: 10)"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maksymalna liczba wyników do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmF2ZXJhZ2VWaWV3RHVyYXRpb24.display_name": {
+          "source": "Average View Duration",
+          "message": "Średni czas trwania wyświetlenia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmF2ZXJhZ2VWaWV3UGVyY2VudGFnZQ.display_name": {
+          "source": "Average View Percentage",
+          "message": "Średni procent obejrzenia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbG9zYWJsZUltcHJlc3Npb25z.display_name": {
+          "source": "Annotation Closable Impressions",
+          "message": "Wyświetlenia zamykanych adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbG9zZVJhdGU.display_name": {
+          "source": "Annotation Close Rate",
+          "message": "Współczynnik zamknięć adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbG9zZXM.display_name": {
+          "source": "Annotation Closes",
+          "message": "Zamknięcia adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbGlja1Rocm91Z2hSYXRl.display_name": {
+          "source": "Annotation Click Through Rate",
+          "message": "Współczynnik klikalności adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbGlja2FibGVJbXByZXNzaW9ucw.display_name": {
+          "source": "Annotation Clickable Impressions",
+          "message": "Wyświetlenia klikalnych adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25DbGlja3M.display_name": {
+          "source": "Annotation Clicks",
+          "message": "Kliknięcia adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmFubm90YXRpb25JbXByZXNzaW9ucw.display_name": {
+          "source": "Annotation Impressions",
+          "message": "Wyświetlenia adnotacji"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRDbGlja1JhdGU.display_name": {
+          "source": "Card Click Rate",
+          "message": "Współczynnik kliknięć karty"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRDbGlja3M.display_name": {
+          "source": "Card Clicks",
+          "message": "Kliknięcia kart"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRJbXByZXNzaW9ucw.display_name": {
+          "source": "Card Impressions",
+          "message": "Wyświetlenia kart"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRUZWFzZXJDbGlja1JhdGU.display_name": {
+          "source": "Card Teaser Click Rate",
+          "message": "Współczynnik kliknięć zwiastuna karty"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRUZWFzZXJDbGlja3M.display_name": {
+          "source": "Card Teaser Clicks",
+          "message": "Kliknięcia zwiastuna karty"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNhcmRUZWFzZXJJbXByZXNzaW9ucw.display_name": {
+          "source": "Card Teaser Impressions",
+          "message": "Wyświetlenia zwiastuna karty"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmNvbW1lbnRz.display_name": {
+          "source": "Comments",
+          "message": "Komentarze"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmRpc2xpa2Vz.display_name": {
+          "source": "Dislikes",
+          "message": "Oceny negatywne"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmVzdGltYXRlZE1pbnV0ZXNXYXRjaGVk.display_name": {
+          "source": "Estimated Minutes Watched",
+          "message": "Szacowane minuty oglądania"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOmxpa2Vz.display_name": {
+          "source": "Likes",
+          "message": "Polubienia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnN1YnNjcmliZXJzR2FpbmVk.display_name": {
+          "source": "Subscribers Gained",
+          "message": "Pozyskani subskrybenci"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnN1YnNjcmliZXJzTG9zdA.display_name": {
+          "source": "Subscribers Lost",
+          "message": "Utraceni subskrybenci"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "Shares",
+          "message": "Udostępnienia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvc0FkZGVkVG9QbGF5bGlzdHM.display_name": {
+          "source": "Videos Added To Playlists",
+          "message": "Filmy dodane do playlist"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvc1JlbW92ZWRGcm9tUGxheWxpc3Rz.display_name": {
+          "source": "Videos Removed From Playlists",
+          "message": "Filmy usunięte z playlist"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZXdz.display_name": {
+          "source": "Views",
+          "message": "Wyświetlenia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.desc": {
+          "source": "List of analytics metrics to retrieve (e.g., views, estimatedMinutesWatched, likes, comments)",
+          "message": "Lista metryk analitycznych do pobrania (np. views, estimatedMinutesWatched, likes, comments)"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Dane"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.bWV0cmljcw.short_desc": {
+          "source": "List of metrics to include in the report",
+          "message": "Lista metryk do uwzględnienia w raporcie"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.desc": {
+          "source": "The start date for the analytics report in YYYY-MM-DD format",
+          "message": "Data początkowa raportu analitycznego w formacie RRRR-MM-DD"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.display_name": {
+          "source": "Start Date",
+          "message": "Data rozpoczęcia"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.option.c3RhcnREYXRl.short_desc": {
+          "source": "The start date for the report",
+          "message": "Data początkowa raportu"
+        },
+        "app.WW91VHViZQ.action.Z2V0X3JlcG9ydA.short_desc": {
+          "source": "Get YouTube Analytics report data",
+          "message": "Pobierz dane raportu YouTube Analytics"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.desc": {
+          "source": "Retrieve information about the authenticated user's YouTube channels including statistics and branding settings",
+          "message": "Pobierz informacje o kanałach YouTube uwierzytelnionego użytkownika, w tym statystyki i ustawienia marki"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.display_name": {
+          "source": "List User Channels",
+          "message": "Wyświetl listę kanałów użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of channels to return (default is 5)",
+          "message": "Maksymalna liczba kanałów do zwrócenia (domyślnie: 5)"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of channels to return",
+          "message": "Maksymalna liczba kanałów do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token do pobierania następnej strony wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX2NoYW5uZWxz.short_desc": {
+          "source": "Get list of authenticated user's YouTube channels",
+          "message": "Pobierz listę kanałów YouTube uwierzytelnionego użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.desc": {
+          "source": "Retrieves a paginated list of YouTube channels that the authenticated user is subscribed to, including channel details and thumbnails",
+          "message": "Pobiera stronicowaną listę kanałów YouTube subskrybowanych przez uwierzytelnionego użytkownika, w tym szczegóły kanałów i miniatury"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.display_name": {
+          "source": "List User Subscriptions",
+          "message": "Pobierz listę subskrypcji użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of subscription items to return in the response (1-50, default is 25)",
+          "message": "Maksymalna liczba elementów subskrypcji do zwrócenia w odpowiedzi (1–50, domyślnie 25)"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of subscriptions to return",
+          "message": "Maksymalna liczba subskrypcji do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "The token that can be used as the value of the pageToken parameter to retrieve the next page in the result set",
+          "message": "Token, którego można użyć jako wartości parametru pageToken, aby pobrać następną stronę w zestawie wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination to get the next page of results",
+          "message": "Token stronicowania do pobrania następnej strony wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3N1YnNjcmlwdGlvbnM.short_desc": {
+          "source": "Get a list of YouTube channel subscriptions for the authenticated user",
+          "message": "Pobierz listę subskrypcji kanałów YouTube dla uwierzytelnionego użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.desc": {
+          "source": "Retrieve a list of videos uploaded by the authenticated user to their YouTube channel",
+          "message": "Pobierz listę filmów przesłanych przez uwierzytelnionego użytkownika na jego kanał YouTube"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.display_name": {
+          "source": "List User Videos",
+          "message": "Pobierz listę filmów użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of videos to return (default is 10)",
+          "message": "Maksymalna liczba filmów do zwrócenia (domyślnie 10)"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of videos to return",
+          "message": "Maksymalna liczba filmów do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Token for retrieving the next page of videos",
+          "message": "Token do pobrania następnej strony filmów"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Token następnej strony"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.WW91VHViZQ.action.bGlzdF91c2VyX3ZpZGVvcw.short_desc": {
+          "source": "Get list of authenticated user's YouTube videos",
+          "message": "Pobierz listę filmów YouTube uwierzytelnionego użytkownika"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.desc": {
+          "source": "Retrieve comments and comment threads for a specific YouTube video with various filtering and sorting options",
+          "message": "Pobierz komentarze i wątki komentarzy dla określonego filmu YouTube z różnymi opcjami filtrowania i sortowania"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.display_name": {
+          "source": "List Video Comments",
+          "message": "Pobierz listę komentarzy do filmu"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.allowed-value.c3RyaW5nOnJlbGV2YW5jZQ.display_name": {
+          "source": "Relevance",
+          "message": "Trafność"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.allowed-value.c3RyaW5nOnRpbWU.display_name": {
+          "source": "Time (newest first)",
+          "message": "Czas (od najnowszych)"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.desc": {
+          "source": "The order in which comments should be returned: time (newest first) or relevance",
+          "message": "Kolejność zwracania komentarzy: czas (od najnowszych) lub trafność"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the comments",
+          "message": "Sposób sortowania komentarzy"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of comment threads to return (default is 20)",
+          "message": "Maksymalna liczba wątków komentarzy do zwrócenia (domyślnie 20)"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "Maksymalna liczba komentarzy do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.desc": {
+          "source": "Optional search terms to filter comments that contain specific keywords",
+          "message": "Opcjonalne wyszukiwane hasła do filtrowania komentarzy zawierających określone słowa kluczowe"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.display_name": {
+          "source": "Search Terms",
+          "message": "Wyszukiwane hasła"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.c2VhcmNoVGVybXM.short_desc": {
+          "source": "Filter comments by search terms",
+          "message": "Filtruj komentarze według wyszukiwanych haseł"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.desc": {
+          "source": "Token for retrieving a specific page of comments",
+          "message": "Token do pobrania określonej strony komentarzy"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Token strony"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.allowed-value.c3RyaW5nOnBsYWluVGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.desc": {
+          "source": "The format in which comment text should be returned: HTML or plain text",
+          "message": "Format zwracanego tekstu komentarza: HTML lub zwykły tekst"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.display_name": {
+          "source": "Text Format",
+          "message": "Format tekstu"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dGV4dEZvcm1hdA.short_desc": {
+          "source": "Format of the comment text",
+          "message": "Format tekstu komentarza"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dmlkZW9JZA.desc": {
+          "source": "The unique identifier of the YouTube video to retrieve comments from",
+          "message": "Unikalny identyfikator filmu YouTube, z którego mają zostać pobrane komentarze"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dmlkZW9JZA.display_name": {
+          "source": "Video ID",
+          "message": "ID filmu"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.option.dmlkZW9JZA.short_desc": {
+          "source": "The ID of the video to get comments for",
+          "message": "Identyfikator filmu, dla którego mają zostać pobrane komentarze"
+        },
+        "app.WW91VHViZQ.action.bGlzdF92aWRlb19jb21tZW50cw.short_desc": {
+          "source": "Get comments for a YouTube video",
+          "message": "Pobierz komentarze do filmu YouTube"
+        },
+        "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.desc": {
+          "source": "Retrieve the list of available YouTube video categories that can be assigned to videos",
+          "message": "Pobierz listę dostępnych kategorii filmów YouTube, które można przypisać do filmów"
+        },
+        "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.display_name": {
+          "source": "List Video Categories",
+          "message": "Pobierz listę kategorii filmów"
+        },
+        "app.WW91VHViZQ.action.bGlzdF9jYXRlZ29yaWVz.short_desc": {
+          "source": "Get list of YouTube video categories",
+          "message": "Pobierz listę kategorii filmów YouTube"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **YouTube** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **YouTube** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względną do bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako natywne akcje w tej aplikacji."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.WW91VHViZQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to YouTube",
+          "message": "Wykonaj niestandardowe wywołanie API do YouTube"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.desc": {
+          "source": "Monitors a specific YouTube channel for new video uploads and triggers when a new video is detected in the channel's uploads playlist.",
+          "message": "Monitoruje określony kanał YouTube pod kątem nowych przesłanych filmów i uruchamia się po wykryciu nowego filmu na liście odtwarzania przesłanych filmów kanału."
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.display_name": {
+          "source": "New Channel Video",
+          "message": "Nowy film na kanale"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbA.desc": {
+          "source": "Select the YouTube channel to monitor for new video uploads",
+          "message": "Wybierz kanał YouTube do monitorowania pod kątem nowych przesłanych filmów"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Kanał"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbA.short_desc": {
+          "source": "The YouTube channel to monitor",
+          "message": "Kanał YouTube do monitorowania"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbF91cmw.desc": {
+          "source": "Enter the full URL of the YouTube channel to monitor for new video uploads",
+          "message": "Wprowadź pełny adres URL kanału YouTube do monitorowania pod kątem nowych przesłanych filmów"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbF91cmw.display_name": {
+          "source": "Channel URL",
+          "message": "Adres URL kanału"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.option.Y2hhbm5lbF91cmw.short_desc": {
+          "source": "The YouTube channel URL to monitor for new videos",
+          "message": "Adres URL kanału YouTube do monitorowania pod kątem nowych filmów"
+        },
+        "app.WW91VHViZQ.action.bmV3X2NoYW5uZWxfdmlkZW8.short_desc": {
+          "source": "Triggers when a new video is uploaded to a channel",
+          "message": "Uruchamia się po przesłaniu nowego filmu na kanał"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.desc": {
+          "source": "Monitors for new live streams that are currently broadcasting. Can monitor all live streams or filter by a specific channel.",
+          "message": "Monitoruje nowe transmisje na żywo, które są obecnie nadawane. Może monitorować wszystkie transmisje na żywo lub filtrować według określonego kanału."
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.display_name": {
+          "source": "New Livestream",
+          "message": "Nowa transmisja na żywo"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbA.desc": {
+          "source": "Optionally filter livestreams by a specific channel. Leave empty to monitor all livestreams.",
+          "message": "Opcjonalnie filtruj transmisje na żywo według określonego kanału. Pozostaw puste, aby monitorować wszystkie transmisje na żywo."
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Kanał"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbA.short_desc": {
+          "source": "The YouTube channel to monitor for livestreams",
+          "message": "Kanał YouTube do monitorowania pod kątem transmisji na żywo"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbF91cmw.desc": {
+          "source": "Enter the full URL of the YouTube channel to monitor for livestreams",
+          "message": "Wprowadź pełny adres URL kanału YouTube do monitorowania pod kątem transmisji na żywo"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbF91cmw.display_name": {
+          "source": "Channel URL",
+          "message": "Adres URL kanału"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.option.Y2hhbm5lbF91cmw.short_desc": {
+          "source": "The YouTube channel URL to monitor for livestreams",
+          "message": "Adres URL kanału YouTube do monitorowania pod kątem transmisji na żywo"
+        },
+        "app.WW91VHViZQ.action.bmV3X2xpdmVzdHJlYW0.short_desc": {
+          "source": "Triggers when a new livestream starts",
+          "message": "Uruchamia się po rozpoczęciu nowej transmisji na żywo"
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.desc": {
+          "source": "Monitors a specific YouTube playlist for new videos being added and triggers when a new video is detected.",
+          "message": "Monitoruje określoną listę odtwarzania YouTube pod kątem dodawanych nowych filmów i uruchamia się po wykryciu nowego filmu."
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.display_name": {
+          "source": "New Playlist Video",
+          "message": "Nowy film na liście odtwarzania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.option.cGxheWxpc3Q.desc": {
+          "source": "Enter the YouTube playlist ID to monitor for new videos being added",
+          "message": "Wprowadź identyfikator listy odtwarzania YouTube do monitorowania pod kątem dodawanych nowych filmów"
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.option.cGxheWxpc3Q.display_name": {
+          "source": "Playlist ID",
+          "message": "ID playlisty"
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.option.cGxheWxpc3Q.short_desc": {
+          "source": "The YouTube playlist ID to monitor",
+          "message": "Identyfikator listy odtwarzania YouTube do monitorowania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3BsYXlsaXN0X3ZpZGVv.short_desc": {
+          "source": "Triggers when a new video is added to a playlist",
+          "message": "Uruchamia się po dodaniu nowego filmu do listy odtwarzania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.desc": {
+          "source": "Monitors YouTube search results for a specific query and triggers when new videos matching the search terms are found.",
+          "message": "Monitoruje wyniki wyszukiwania YouTube dla określonego zapytania i uruchamia się po znalezieniu nowych filmów pasujących do wyszukiwanych haseł."
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.display_name": {
+          "source": "New Video by Search",
+          "message": "Nowy film z wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.desc": {
+          "source": "Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either \"boating\" or \"sailing\", set the q parameter value to boating|sailing. Similarly, to search for videos matching either \"boating\" or \"sailing\" but not \"fishing\", set the q parameter value to boating|sailing -fishing.",
+          "message": "Żądanie może również używać operatorów logicznych NOT (-) i OR (|) do wykluczania filmów lub znajdowania filmów powiązanych z jednym z kilku wyszukiwanych haseł. Na przykład, aby wyszukać filmy pasujące do „boating” lub „sailing”, ustaw wartość parametru q na boating|sailing. Podobnie, aby wyszukać filmy pasujące do „boating” lub „sailing”, ale nie „fishing”, ustaw wartość parametru q na boating|sailing -fishing."
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Zapytanie wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.option.cXVlcnk.short_desc": {
+          "source": "The search terms to monitor",
+          "message": "Wyszukiwane hasła do monitorowania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2J5X3NlYXJjaA.short_desc": {
+          "source": "Triggers when new videos match a search query",
+          "message": "Uruchamia się, gdy nowe filmy pasują do zapytania wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.desc": {
+          "source": "Monitors a specific YouTube video for new comments and triggers when a new comment is detected.",
+          "message": "Monitoruje określony film YouTube pod kątem nowych komentarzy i uruchamia się po wykryciu nowego komentarza."
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.display_name": {
+          "source": "New Video Comment",
+          "message": "Nowy komentarz do filmu"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.option.dmlkZW8.desc": {
+          "source": "Select the YouTube video to monitor for new comments",
+          "message": "Wybierz film YouTube do monitorowania pod kątem nowych komentarzy"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.option.dmlkZW8.display_name": {
+          "source": "Video",
+          "message": "Wideo"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.option.dmlkZW8.short_desc": {
+          "source": "The YouTube video to monitor for comments",
+          "message": "Film YouTube do monitorowania pod kątem komentarzy"
+        },
+        "app.WW91VHViZQ.action.bmV3X3ZpZGVvX2NvbW1lbnQ.short_desc": {
+          "source": "Triggers when a new comment is posted on a video",
+          "message": "Uruchamia się po opublikowaniu nowego komentarza do filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.desc": {
+          "source": "Search for YouTube videos using various filters including keywords, duration, quality, upload date, and more",
+          "message": "Wyszukuj filmy w YouTube za pomocą różnych filtrów, w tym słów kluczowych, czasu trwania, jakości, daty przesłania i innych"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.display_name": {
+          "source": "Search Videos",
+          "message": "Wyszukaj filmy"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.allowed-value.c3RyaW5nOmRhdGU.display_name": {
+          "source": "Upload Date",
+          "message": "Data przesłania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.allowed-value.c3RyaW5nOnJhdGluZw.display_name": {
+          "source": "Rating",
+          "message": "Ocena"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.allowed-value.c3RyaW5nOnJlbGV2YW5jZQ.display_name": {
+          "source": "Relevance",
+          "message": "Trafność"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.allowed-value.c3RyaW5nOnRpdGxl.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.allowed-value.c3RyaW5nOnZpZXdDb3VudA.display_name": {
+          "source": "View Count",
+          "message": "Liczba wyświetleń"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.desc": {
+          "source": "The order in which search results should be returned (relevance, date, rating, title, or view count)",
+          "message": "Kolejność, w jakiej powinny być zwracane wyniki wyszukiwania (trafność, data, ocena, tytuł lub liczba wyświetleń)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "Kolejność sortowania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the search results",
+          "message": "Sposób sortowania wyników wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "The maximum number of search results to return (default is 25)",
+          "message": "Maksymalna liczba zwracanych wyników wyszukiwania (wartość domyślna to 25)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Maximum Results",
+          "message": "Maksymalna liczba wyników"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "Maksymalna liczba wyników do zwrócenia"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.allowed-value.c3RyaW5nOm1vZGVyYXRl.display_name": {
+          "source": "Moderate",
+          "message": "Umiarkowane"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None",
+          "message": "Brak"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.allowed-value.c3RyaW5nOnN0cmljdA.display_name": {
+          "source": "Strict",
+          "message": "Ścisłe"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.desc": {
+          "source": "Level of safe search filtering to apply: moderate (default), none, or strict",
+          "message": "Poziom filtrowania bezpiecznego wyszukiwania: moderate (domyślny), none lub strict"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.display_name": {
+          "source": "Safe Search",
+          "message": "Bezpieczne wyszukiwanie"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.c2FmZVNlYXJjaA.short_desc": {
+          "source": "Safe search filtering level",
+          "message": "Poziom filtrowania bezpiecznego wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.desc": {
+          "source": "Token for retrieving a specific page of results (used for pagination)",
+          "message": "Token do pobierania określonej strony wyników (używany do paginacji)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Token strony"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token do stronicowania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.desc": {
+          "source": "Filter to only include videos published after the specified date (ISO 8601 format)",
+          "message": "Filtr uwzględniający tylko filmy opublikowane po określonej dacie (format ISO 8601)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.display_name": {
+          "source": "Published After",
+          "message": "Opublikowano po"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQWZ0ZXI.short_desc": {
+          "source": "Only return videos published after this date",
+          "message": "Zwracaj tylko filmy opublikowane po tej dacie"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.desc": {
+          "source": "Filter to only include videos published before the specified date (ISO 8601 format)",
+          "message": "Filtr uwzględniający tylko filmy opublikowane przed określoną datą (format ISO 8601)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.display_name": {
+          "source": "Published Before",
+          "message": "Opublikowano przed"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cHVibGlzaGVkQmVmb3Jl.short_desc": {
+          "source": "Only return videos published before this date",
+          "message": "Zwracaj tylko filmy opublikowane przed tą datą"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.desc": {
+          "source": "Your request can also use the Boolean NOT (-) and OR (|) operators to exclude videos or to find videos that are associated with one of several search terms. For example, to search for videos matching either \"boating\" or \"sailing\", set the q parameter value to boating|sailing. Similarly, to search for videos matching either \"boating\" or \"sailing\" but not \"fishing\", set the q parameter value to boating|sailing -fishing.",
+          "message": "Żądanie może również używać operatorów logicznych NOT (-) i OR (|) do wykluczania filmów lub znajdowania filmów powiązanych z jednym z kilku wyszukiwanych haseł. Na przykład, aby wyszukać filmy pasujące do „boating” lub „sailing”, ustaw wartość parametru q na boating|sailing. Podobnie, aby wyszukać filmy pasujące do „boating” lub „sailing”, ale nie „fishing”, ustaw wartość parametru q na boating|sailing -fishing."
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.display_name": {
+          "source": "Search Query",
+          "message": "Zapytanie wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cQ.short_desc": {
+          "source": "Keywords to search for",
+          "message": "Słowa kluczowe do wyszukania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.desc": {
+          "source": "Optional two-letter country code to restrict search results to a specific region",
+          "message": "Opcjonalny dwuliterowy kod kraju do ograniczenia wyników wyszukiwania do określonego regionu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.display_name": {
+          "source": "Region Code",
+          "message": "Kod regionu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVnaW9uQ29kZQ.short_desc": {
+          "source": "Country code to search within",
+          "message": "Kod kraju, w obrębie którego ma być prowadzone wyszukiwanie"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.desc": {
+          "source": "Language code to use for relevance ranking of search results",
+          "message": "Kod języka używany do ustalania trafności wyników wyszukiwania"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.display_name": {
+          "source": "Relevance Language",
+          "message": "Język trafności"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.cmVsZXZhbmNlTGFuZ3VhZ2U.short_desc": {
+          "source": "Language for relevance ranking",
+          "message": "Język ustalania trafności"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None",
+          "message": "Brak"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Dowolne"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.allowed-value.c3RyaW5nOmNsb3NlZENhcHRpb24.display_name": {
+          "source": "Closed Caption",
+          "message": "Napisy kodowane"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.desc": {
+          "source": "Filter videos by caption availability: any, videos with closed captions, or videos without captions",
+          "message": "Filtruj filmy według dostępności napisów: dowolne, filmy z napisami kodowanymi lub filmy bez napisów"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.display_name": {
+          "source": "Video Caption",
+          "message": "Napisy filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXB0aW9u.short_desc": {
+          "source": "Filter by caption availability",
+          "message": "Filtruj według dostępności napisów"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.desc": {
+          "source": "Optional category ID to filter videos by specific YouTube category",
+          "message": "Opcjonalny identyfikator kategorii do filtrowania filmów według określonej kategorii YouTube"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.display_name": {
+          "source": "Video Category",
+          "message": "Kategoria filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9DYXRlZ29yeUlk.short_desc": {
+          "source": "Filter by video category",
+          "message": "Filtruj według kategorii filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Dowolne"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.allowed-value.c3RyaW5nOmhpZ2g.display_name": {
+          "source": "High Definition",
+          "message": "Wysoka rozdzielczość"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard Definition",
+          "message": "Standardowa rozdzielczość"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.desc": {
+          "source": "Filter videos by their definition quality: any, standard definition, or high definition",
+          "message": "Filtruj filmy według jakości rozdzielczości: dowolna, standardowa rozdzielczość lub wysoka rozdzielczość"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.display_name": {
+          "source": "Video Definition",
+          "message": "Rozdzielczość filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EZWZpbml0aW9u.short_desc": {
+          "source": "Filter by video quality",
+          "message": "Filtruj według jakości filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.allowed-value.c3RyaW5nOjJk.display_name": {
+          "source": "2D",
+          "message": "2D"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.allowed-value.c3RyaW5nOjNk.display_name": {
+          "source": "3D",
+          "message": "3D"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Dowolne"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.desc": {
+          "source": "Filter videos by their dimensional format: any, 2D only, or 3D only",
+          "message": "Filtruj filmy według formatu wymiarowego: dowolne, tylko 2D lub tylko 3D"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.display_name": {
+          "source": "Video Dimension",
+          "message": "Format filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EaW1lbnNpb24.short_desc": {
+          "source": "Filter by 2D or 3D videos",
+          "message": "Filtruj według filmów 2D lub 3D"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.allowed-value.c3RyaW5nOm1lZGl1bQ.display_name": {
+          "source": "Medium (4-20 minutes)",
+          "message": "Średni (4–20 minut)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Dowolne"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.allowed-value.c3RyaW5nOmxvbmc.display_name": {
+          "source": "Long (> 20 minutes)",
+          "message": "Długi (> 20 minut)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.allowed-value.c3RyaW5nOnNob3J0.display_name": {
+          "source": "Short (< 4 minutes)",
+          "message": "Krótki (< 4 minuty)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.desc": {
+          "source": "Filter videos by their duration: any, short (< 4 minutes), medium (4-20 minutes), or long (> 20 minutes)",
+          "message": "Filtruj filmy według czasu trwania: dowolny, krótki (< 4 minuty), średni (4–20 minut) lub długi (> 20 minut)"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.display_name": {
+          "source": "Video Duration",
+          "message": "Czas trwania filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9EdXJhdGlvbg.short_desc": {
+          "source": "Filter by video length",
+          "message": "Filtruj według długości filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Dowolne"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.allowed-value.c3RyaW5nOmNyZWF0aXZlQ29tbW9u.display_name": {
+          "source": "Creative Commons",
+          "message": "Creative Commons"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.allowed-value.c3RyaW5nOnlvdXR1YmU.display_name": {
+          "source": "Standard YouTube License",
+          "message": "Standardowa licencja YouTube"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.desc": {
+          "source": "Filter videos by their license: any, standard YouTube license, or Creative Commons license",
+          "message": "Filtruj filmy według licencji: dowolna, standardowa licencja YouTube lub licencja Creative Commons"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.display_name": {
+          "source": "Video License",
+          "message": "Licencja filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.option.dmlkZW9MaWNlbnNl.short_desc": {
+          "source": "Filter by video license type",
+          "message": "Filtruj według typu licencji filmu"
+        },
+        "app.WW91VHViZQ.action.c2VhcmNoX3ZpZGVvcw.short_desc": {
+          "source": "Search for YouTube videos",
+          "message": "Wyszukuj filmy w YouTube"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.desc": {
+          "source": "Post a reply to an existing comment or create a new one on a YouTube video",
+          "message": "Opublikuj odpowiedź na istniejący komentarz lub utwórz nowy pod filmem w YouTube"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
+          "source": "Create or Reply to Comment",
+          "message": "Utwórz komentarz lub odpowiedz na niego"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.desc": {
+          "source": "The unique identifier of the comment or comment thread to reply to",
+          "message": "Unikalny identyfikator komentarza lub wątku komentarzy, na który ma zostać udzielona odpowiedź"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.display_name": {
+          "source": "Parent Comment ID",
+          "message": "Identyfikator komentarza nadrzędnego"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.cGFyZW50SWQ.short_desc": {
+          "source": "The ID of the comment to reply to",
+          "message": "Identyfikator komentarza, na który ma zostać udzielona odpowiedź"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.desc": {
+          "source": "The text content of your reply to the comment",
+          "message": "Treść tekstowa odpowiedzi na komentarz"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.display_name": {
+          "source": "Reply Text",
+          "message": "Treść odpowiedzi"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.option.dGV4dE9yaWdpbmFs.short_desc": {
+          "source": "The text content of the reply",
+          "message": "Treść tekstowa odpowiedzi"
+        },
+        "app.WW91VHViZQ.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
+          "source": "Reply to a YouTube comment or create one",
+          "message": "Odpowiedz na komentarz w YouTube lub utwórz nowy"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.desc": {
+          "source": "Update the metadata of an existing YouTube video including title, description, privacy settings, and other properties",
+          "message": "Zaktualizuj metadane istniejącego filmu w YouTube, w tym tytuł, opis, ustawienia prywatności i inne właściwości"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.display_name": {
+          "source": "Update Video Details",
+          "message": "Zaktualizuj szczegóły filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Y2F0ZWdvcnk.desc": {
+          "source": "Optional new category for the video (numeric category ID)",
+          "message": "Opcjonalna nowa kategoria dla filmu (numeryczny identyfikator kategorii)"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategoria"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "Video category",
+          "message": "Kategoria filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional new description for the video (leave empty to keep current description)",
+          "message": "Opcjonalny nowy opis filmu (pozostaw puste, aby zachować bieżący opis)"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "New description for the video",
+          "message": "Nowy opis filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.desc": {
+          "source": "Optional setting to indicate if the video is specifically made for children",
+          "message": "Opcjonalne ustawienie wskazujące, czy film jest przeznaczony specjalnie dla dzieci"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.display_name": {
+          "source": "Made for Kids",
+          "message": "Przeznaczone dla dzieci"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.Zm9yS2lkcw.short_desc": {
+          "source": "Whether the video is made for kids",
+          "message": "Określa, czy film jest przeznaczony dla dzieci"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Publiczny"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Prywatny"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnVubGlzdGVk.display_name": {
+          "source": "Unlisted",
+          "message": "Niepubliczny"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.desc": {
+          "source": "Optional new privacy setting: public, private, or unlisted",
+          "message": "Opcjonalne nowe ustawienie prywatności: publiczny, prywatny lub niepubliczny"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.display_name": {
+          "source": "Privacy Status",
+          "message": "Status prywatności"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.cHJpdmFjeQ.short_desc": {
+          "source": "Privacy setting for the video",
+          "message": "Ustawienie prywatności dla filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGFncw.desc": {
+          "source": "Optional list of tags/keywords to help categorize the video",
+          "message": "Opcjonalna lista tagów/słów kluczowych pomagających w kategoryzacji filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tagi"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGFncw.short_desc": {
+          "source": "List of tags for the video",
+          "message": "Lista tagów dla filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGl0bGU.desc": {
+          "source": "Optional new title for the video (leave empty to keep current title)",
+          "message": "Opcjonalny nowy tytuł filmu (pozostaw puste, aby zachować bieżący tytuł)"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dGl0bGU.short_desc": {
+          "source": "New title for the video",
+          "message": "Nowy tytuł filmu"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dmlkZW8.desc": {
+          "source": "The YouTube video to update",
+          "message": "Film YouTube do zaktualizowania"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dmlkZW8.display_name": {
+          "source": "Video",
+          "message": "Wideo"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.option.dmlkZW8.short_desc": {
+          "source": "The video to update",
+          "message": "Film do zaktualizowania"
+        },
+        "app.WW91VHViZQ.action.dXBkYXRlX3ZpZGVvX2RldGFpbHM.short_desc": {
+          "source": "Update details of a YouTube video",
+          "message": "Zaktualizuj szczegóły filmu YouTube"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.desc": {
+          "source": "Upload a new video to YouTube with specified metadata including title, description, privacy settings, and category",
+          "message": "Prześlij nowy film do YouTube z określonymi metadanymi, w tym tytułem, opisem, ustawieniami prywatności i kategorią"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.display_name": {
+          "source": "Upload Video",
+          "message": "Prześlij film"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Y2F0ZWdvcnk.desc": {
+          "source": "The YouTube category for the video (numeric category ID)",
+          "message": "Kategoria YouTube dla filmu (numeryczny identyfikator kategorii)"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategoria"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "Video category",
+          "message": "Kategoria filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description text for the video explaining its content",
+          "message": "Opcjonalny tekst opisu filmu wyjaśniający jego zawartość"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "Opis"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "The description of the video",
+          "message": "Opis filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.desc": {
+          "source": "Optional setting to indicate if the video is specifically made for children (default is false)",
+          "message": "Opcjonalne ustawienie wskazujące, czy film jest przeznaczony specjalnie dla dzieci (wartość domyślna to false)"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.display_name": {
+          "source": "Made for Kids",
+          "message": "Przeznaczone dla dzieci"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.Zm9yS2lkcw.short_desc": {
+          "source": "Whether the video is made for kids",
+          "message": "Określa, czy film jest przeznaczony dla dzieci"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnB1YmxpYw.display_name": {
+          "source": "Public",
+          "message": "Publiczny"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnByaXZhdGU.display_name": {
+          "source": "Private",
+          "message": "Prywatny"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.allowed-value.c3RyaW5nOnVubGlzdGVk.display_name": {
+          "source": "Unlisted",
+          "message": "Niepubliczny"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.desc": {
+          "source": "Privacy level for the video: public (visible to everyone), private (only visible to you), or unlisted (visible to anyone with the link)",
+          "message": "Poziom prywatności filmu: publiczny (widoczny dla każdego), prywatny (widoczny tylko dla Ciebie) lub niepubliczny (widoczny dla każdego, kto ma link)"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.display_name": {
+          "source": "Privacy Status",
+          "message": "Status prywatności"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.cHJpdmFjeQ.short_desc": {
+          "source": "Privacy setting for the video",
+          "message": "Ustawienie prywatności dla filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGFncw.desc": {
+          "source": "Optional list of tags/keywords to help categorize and make the video discoverable",
+          "message": "Opcjonalna lista tagów/słów kluczowych ułatwiających kategoryzację i wyszukiwanie filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tagi"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGFncw.short_desc": {
+          "source": "List of tags for the video",
+          "message": "Lista tagów dla filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGl0bGU.desc": {
+          "source": "The title/name for the video being uploaded",
+          "message": "Tytuł/nazwa przesyłanego filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dGl0bGU.short_desc": {
+          "source": "The title of the video",
+          "message": "Tytuł filmu"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.desc": {
+          "source": "The video file to upload to YouTube",
+          "message": "Plik wideo do przesłania do YouTube"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.display_name": {
+          "source": "Video File",
+          "message": "Plik wideo"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.option.dmlkZW8.short_desc": {
+          "source": "The video file to upload",
+          "message": "Plik wideo do przesłania"
+        },
+        "app.WW91VHViZQ.action.dXBsb2FkX3ZpZGVv.short_desc": {
+          "source": "Upload a video to YouTube",
+          "message": "Prześlij film do YouTube"
+        },
+        "app.WW91VHViZQ.desc": {
+          "source": "YouTube integration allows you to manage videos, playlists, channels, and interact with the YouTube platform programmatically.",
+          "message": "Integracja z YouTube umożliwia programowe zarządzanie filmami, playlistami, kanałami oraz interakcję z platformą YouTube."
+        },
+        "app.WW91VHViZQ.display_name": {
+          "source": "YouTube",
+          "message": "YouTube"
+        },
+        "app.WW91VHViZQ.short_desc": {
+          "source": "Connect and interact with YouTube",
+          "message": "Połącz się i korzystaj z YouTube"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.desc": {
+          "source": "Fetches comprehensive metadata for a file stored in Firebase Cloud Storage including content type, size, creation date, update date, MD5 hash, custom metadata, and cache control settings. Useful for file verification and management.",
+          "message": "Získa komplexné metaúdaje pre súbor uložený v službe Firebase Cloud Storage vrátane typu obsahu, veľkosti, dátumu vytvorenia, dátumu aktualizácie, hodnoty MD5 hash, vlastných metaúdajov a nastavení riadenia vyrovnávacej pamäte. Užitočné na overenie a správu súborov."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.display_name": {
+          "source": "Get File Metadata",
+          "message": "Získať metaúdaje súboru"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file is located. The bucket must exist in the selected Firebase project.",
+          "message": "Vyberte bucket úložiska Cloud Storage, v ktorom sa súbor nachádza. Bucket musí existovať vo vybranom projekte Firebase."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket containing the file",
+          "message": "Bucket úložiska obsahujúci súbor"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path to the file in the bucket, including the filename and any directory structure.",
+          "message": "Zadajte úplnú cestu k súboru v buckete vrátane názvu súboru a akejkoľvek adresárovej štruktúry."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "Cesta k súboru"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Path to the file in storage",
+          "message": "Cesta k súboru v úložisku"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Vyberte projekt Firebase, v ktorom je súbor uložený. Projekt musí mať povolené úložisko Firebase Cloud Storage."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the file",
+          "message": "Projekt Firebase obsahujúci súbor"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X2ZpbGVfbWV0YWRhdGE.short_desc": {
+          "source": "Retrieve metadata for a specific file in Cloud Storage",
+          "message": "Získať metadáta pre konkrétny súbor v Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.desc": {
+          "source": "Fetches comprehensive details for a specific user from Firebase Authentication including email, display name, photo URL, verification status, account creation date, and custom attributes. Useful for user profile lookups and account verification.",
+          "message": "Získa podrobné informácie o konkrétnom používateľovi zo služby Firebase Authentication vrátane e-mailu, zobrazovaného mena, URL adresy fotografie, stavu overenia, dátumu vytvorenia účtu a vlastných atribútov. Užitočné na vyhľadávanie profilov používateľov a overovanie účtov."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Získať používateľa"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the user account exists. The project must have Firebase Authentication enabled.",
+          "message": "Vyberte projekt Firebase, v ktorom používateľský účet existuje. Projekt musí mať povolenú službu Firebase Authentication."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the user",
+          "message": "Projekt Firebase obsahujúci používateľa"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "Specify the Firebase user ID (localId) of the user whose details you want to retrieve. This is the unique identifier assigned by Firebase Authentication.",
+          "message": "Zadajte ID používateľa Firebase (localId) pre používateľa, ktorého podrobnosti chcete získať. Ide o jedinečný identifikátor priradený službou Firebase Authentication."
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User ID",
+          "message": "ID používateľa"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "The unique identifier of the user",
+          "message": "Jedinečný identifikátor používateľa"
+        },
+        "app.RmlyZWJhc2U.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve detailed information about a specific Firebase user",
+          "message": "Získať podrobné informácie o konkrétnom používateľovi Firebase"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.desc": {
+          "source": "Permanently removes a file from Firebase Cloud Storage. This operation is irreversible, so use with caution. Returns confirmation of the deletion including the file path and bucket name.",
+          "message": "Natrvalo odstráni súbor z úložiska Firebase Cloud Storage. Táto operácia je nevratná, preto ju používajte opatrne. Vráti potvrdenie o odstránení vrátane cesty k súboru a názvu bucketu."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.display_name": {
+          "source": "Delete File",
+          "message": "Odstrániť súbor"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file to be deleted is located. The bucket must exist in the selected Firebase project.",
+          "message": "Vyberte bucket v Cloud Storage, kde sa nachádza súbor určený na odstránenie. Bucket musí v zvolenom projekte Firebase existovať."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket containing the file",
+          "message": "Bucket úložiska obsahujúci súbor"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path to the file in the bucket that should be deleted, including the filename and any directory structure. This operation is permanent and cannot be undone.",
+          "message": "Zadajte úplnú cestu k súboru v buckete, ktorý sa má odstrániť, vrátane názvu súboru a akejkoľvek adresárovej štruktúry. Táto operácia je trvalá a nie je možné ju vrátiť späť."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "Cesta k súboru"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Path to the file to delete",
+          "message": "Cesta k súboru, ktorý sa má odstrániť"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file is stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Vyberte projekt Firebase, v ktorom je súbor uložený. Projekt musí mať povolené úložisko Firebase Cloud Storage."
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the file",
+          "message": "Projekt Firebase obsahujúci súbor"
+        },
+        "app.RmlyZWJhc2U.action.ZGVsZXRlX2ZpbGU.short_desc": {
+          "source": "Delete a file from Cloud Storage",
+          "message": "Odstrániť súbor z Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches users from Firebase Authentication with support for pagination. Returns user details including email, display name, verification status, and authentication metadata. Use pagination parameters to retrieve large user lists efficiently.",
+          "message": "Získa používateľov zo služby Firebase Authentication s podporou stránkovania. Vráti podrobnosti o používateľovi vrátane e-mailu, zobrazovaného mena, stavu overenia a autentifikačných metadát. Na efektívne načítanie veľkých zoznamov používateľov použite parametre stránkovania."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Zoznam používateľov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "Specify the maximum number of users to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger datasets.",
+          "message": "Zadajte maximálny počet používateľov, ktorí sa majú získať v rámci jednej požiadavky. Ak nie je zadané, predvolená hodnota je 100. Pre väčšie množiny údajov použite stránkovanie."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Maximálny počet používateľov na vrátenie"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Provide the pagination token from a previous response to retrieve the next set of users. Leave empty for the first page.",
+          "message": "Zadajte token stránkovania z predchádzajúcej odpovede na získanie ďalšej sady používateľov. Pre prvú stránku nechajte prázdne."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token na získanie ďalšej stránky výsledkov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project from which you want to retrieve users. The project must have Firebase Authentication enabled.",
+          "message": "Vyberte projekt Firebase, z ktorého chcete získať používateľov. Projekt musí mať povolenú službu Firebase Authentication."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to query",
+          "message": "Projekt Firebase, ktorý sa má dopytovať"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users from Firebase Authentication",
+          "message": "Získať zoznam používateľov zo služby Firebase Authentication"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Retrieves all Cloud Storage buckets configured for a Firebase project. Returns bucket details including names, locations, storage classes, creation dates, and update timestamps. Useful for bucket management and discovery.",
+          "message": "Získa všetky buckety Cloud Storage nakonfigurované pre projekt Firebase. Vráti podrobnosti o buckete vrátane názvov, umiestnení, tried úložiska, dátumov vytvorenia a časových pečiatok aktualizácie. Užitočné na správu a vyhľadávanie bucketov."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Buckets",
+          "message": "Zoznam bucketov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project whose storage buckets you want to list. The project must have Firebase Cloud Storage enabled.",
+          "message": "Vyberte projekt Firebase, ktorého buckety úložiska chcete zobraziť. Projekt musí mať povolené úložisko Firebase Cloud Storage."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to query",
+          "message": "Projekt Firebase, ktorý sa má dopytovať"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "List all Cloud Storage buckets in a Firebase project",
+          "message": "Zobraziť všetky buckety Cloud Storage v projekte Firebase"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.desc": {
+          "source": "Retrieves a list of files from a Firebase Cloud Storage bucket with support for filtering by prefix and pagination. Returns file metadata including paths, content types, sizes, and timestamps. Useful for browsing and managing stored files.",
+          "message": "Získa zoznam súborov z bucketu úložiska Firebase Cloud Storage s podporou filtrovania podľa predpony a stránkovania. Vráti metadáta súborov vrátane ciest, typov obsahu, veľkostí a časových pečiatok. Užitočné na prehľadávanie a správu uložených súborov."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.display_name": {
+          "source": "List Files in Bucket",
+          "message": "Zoznam súborov v buckete"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket whose files you want to list. The bucket must exist in the selected Firebase project.",
+          "message": "Vyberte bucket v Cloud Storage, ktorého súbory chcete zobraziť. Bucket musí v zvolenom projekte Firebase existovať."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket to list files from",
+          "message": "Bucket úložiska, z ktorého sa majú zobraziť súbory"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "Specify the maximum number of files to retrieve in a single request. Defaults to 100 if not specified. Use pagination for larger result sets.",
+          "message": "Zadajte maximálny počet súborov, ktoré sa majú získať v rámci jednej požiadavky. Ak nie je zadané, predvolená hodnota je 100. Pre väčšie množiny výsledkov použite stránkovanie."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of files to return",
+          "message": "Maximálny počet súborov, ktoré sa majú vrátiť"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.desc": {
+          "source": "Provide the pagination token from a previous response to retrieve the next set of files. Leave empty for the first page.",
+          "message": "Zadajte token stránkovania z predchádzajúcej odpovede na získanie ďalšej sady súborov. Pre prvú stránku nechajte prázdne."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Token stránky"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page",
+          "message": "Token na získanie ďalšej stránky"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.desc": {
+          "source": "Filter results to only include files whose paths start with this prefix. Useful for listing files in a specific directory or with a specific naming pattern.",
+          "message": "Filtrujte výsledky tak, aby zahŕňali iba súbory, ktorých cesty začínajú touto predponou. Užitočné na zobrazenie zoznamu súborov v konkrétnom adresári alebo so špecifickým vzorom pomenovania."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.display_name": {
+          "source": "Prefix",
+          "message": "Titul pred menom"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJlZml4.short_desc": {
+          "source": "Optional prefix to filter files",
+          "message": "Voliteľná predpona na filtrovanie súborov"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the storage bucket exists. The project must have Firebase Cloud Storage enabled.",
+          "message": "Vyberte projekt Firebase, v ktorom bucket úložiska existuje. Projekt musí mať povolené úložisko Firebase Cloud Storage."
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project containing the bucket",
+          "message": "Projekt Firebase obsahujúci bucket"
+        },
+        "app.RmlyZWJhc2U.action.bGlzdF9maWxlc19pbl9idWNrZXQ.short_desc": {
+          "source": "List all files in a Cloud Storage bucket",
+          "message": "Zobraziť všetky súbory v buckete Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Firebase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Firebase** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.RmlyZWJhc2U.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Firebase",
+          "message": "Vykonať vlastné volanie API do Firebase"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.desc": {
+          "source": "Monitors Firebase Authentication for new user registrations and triggers when new accounts are created. Captures user details including email, display name, verification status, and authentication provider information. Useful for user onboarding workflows, welcome emails, and account setup automation.",
+          "message": "Monitoruje registráciu nových používateľov v službe Firebase Authentication a spúšťa sa pri vytvorení nových účtov. Zaznamenáva podrobnosti o používateľovi vrátane e-mailu, zobrazovaného mena, stavu overenia a informácií o poskytovateľovi autentifikácie. Užitočné pre pracovné postupy registrácie používateľov, uvítacie e-maily a automatizáciu nastavenia účtu."
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.display_name": {
+          "source": "New User",
+          "message": "Nový používateľ"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project whose Authentication service you want to monitor for new user registrations. The project must have Firebase Authentication enabled.",
+          "message": "Vyberte projekt Firebase, ktorého službu Authentication chcete monitorovať pre nové registrácie používateľov. Projekt musí mať povolenú službu Firebase Authentication."
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project to monitor",
+          "message": "Projekt Firebase na monitorovanie"
+        },
+        "app.RmlyZWJhc2U.action.bmV3X3VzZXI.short_desc": {
+          "source": "Triggers when a new user is created in Firebase Authentication",
+          "message": "Spustí sa pri vytvorení nového používateľa v službe Firebase Authentication"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.desc": {
+          "source": "Sends push notifications to specific device tokens or topics using Firebase Cloud Messaging (FCM). Supports rich notifications with titles, body text, images, and custom data payloads. Configure priority levels for Android and iOS delivery.",
+          "message": "Odosiela push notifikácie na konkrétne tokeny zariadení alebo témy pomocou služby Firebase Cloud Messaging (FCM). Podporuje rozšírené oznámenia s názvami, textom správy, obrázkami a vlastnými dátovými obsahmi. Nakonfigurujte úrovne priority pre doručovanie v systémoch Android a iOS."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.display_name": {
+          "source": "Send Push Notification",
+          "message": "Odoslať push notifikáciu"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.desc": {
+          "source": "The main content of the notification message. This text appears below the title in the notification display.",
+          "message": "Hlavný obsah správy notifikácie. Tento text sa zobrazuje pod názvom v zobrazení oznámenia."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.Ym9keQ.short_desc": {
+          "source": "Notification message body",
+          "message": "Telo správy notifikácie"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.desc": {
+          "source": "Additional custom key-value pairs to include with the notification. This data can be accessed by your app when the notification is received.",
+          "message": "Dodatočné vlastné páry kľúč – hodnota, ktoré sa majú zahrnúť do notifikácie. K týmto údajom môže vaša aplikácia pristupovať po prijatí notifikácie."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.display_name": {
+          "source": "Data",
+          "message": "Dáta"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.ZGF0YQ.short_desc": {
+          "source": "Custom data payload",
+          "message": "Vlastný dátový obsah"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.desc": {
+          "source": "Provide a URL to an image that will be displayed in the notification. The image should be publicly accessible and in a supported format (JPEG, PNG).",
+          "message": "Zadajte URL adresu obrázka, ktorý sa zobrazí v notifikácii. Obrázok by mal byť verejne prístupný a v podporovanom formáte (JPEG, PNG)."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.display_name": {
+          "source": "Image",
+          "message": "Obrázok"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.aW1hZ2U.short_desc": {
+          "source": "Optional image URL for the notification",
+          "message": "Voliteľná URL adresa obrázka pre notifikáciu"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.allowed-value.c3RyaW5nOm5vcm1hbA.display_name": {
+          "source": "Normal",
+          "message": "Normálne"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.allowed-value.c3RyaW5nOmhpZ2g.display_name": {
+          "source": "High",
+          "message": "Vysoká"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.desc": {
+          "source": "Set the priority level for notification delivery. High priority notifications are delivered immediately and may wake the device. Normal priority allows for more battery-efficient delivery.",
+          "message": "Nastavte úroveň priority doručovania notifikácií. Notifikácie s vysokou prioritou sa doručujú okamžite a môžu prebudiť zariadenie. Bežná priorita umožňuje doručenie s nižšou spotrebou batérie."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priorita"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification delivery priority",
+          "message": "Priorita doručenia notifikácie"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project that will send the push notification. The project must have Firebase Cloud Messaging configured.",
+          "message": "Vyberte projekt Firebase, ktorý odošle push notifikáciu. Projekt musí mať nakonfigurovanú službu Firebase Cloud Messaging."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project for sending notifications",
+          "message": "Projekt Firebase na odosielanie notifikácií"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.desc": {
+          "source": "Specify either a device registration token for sending to a specific device, or a topic name (prefixed with /topics/) for sending to all devices subscribed to that topic.",
+          "message": "Zadajte buď registračný token zariadenia na odoslanie do konkrétneho zariadenia, alebo názov témy (s predponou /topics/) na odoslanie do všetkých zariadení prihlásených na odber tejto témy."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.display_name": {
+          "source": "Token or Topic",
+          "message": "Token alebo téma"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dG9rZW5fb3JfdG9waWM.short_desc": {
+          "source": "Device token or topic name",
+          "message": "Token zariadenia alebo názov témy"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.desc": {
+          "source": "The title text that will be displayed in the notification. Keep it concise and informative.",
+          "message": "Text názvu, ktorý sa zobrazí v notifikácii. Udržujte ho stručný a informatívny."
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.option.dGl0bGU.short_desc": {
+          "source": "Notification title",
+          "message": "Názov notifikácie"
+        },
+        "app.RmlyZWJhc2U.action.c2VuZF9wdXNoX25vdGlmaWNhdGlvbg.short_desc": {
+          "source": "Send a push notification via Firebase Cloud Messaging",
+          "message": "Odoslať push notifikáciu cez Firebase Cloud Messaging"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to a specified bucket in Firebase Cloud Storage. Returns metadata including file path, content type, size, and generation information. Optionally include custom metadata key-value pairs with the upload.",
+          "message": "Nahrá súbor do zadaného bucketu vo Firebase Cloud Storage. Vráti metaúdaje vrátane cesty k súboru, typu obsahu, veľkosti a informácií o generovaní. Pri nahrávaní môžete voliteľne zahrnúť vlastné metaúdaje vo forme kľúč – hodnota."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Odoslať súbor"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.desc": {
+          "source": "Select the Cloud Storage bucket where the file will be uploaded. The bucket must exist in the selected Firebase project.",
+          "message": "Vyberte bucket Cloud Storage, do ktorého sa súbor nahrá. Bucket musí existovať vo vybranom projekte Firebase."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.display_name": {
+          "source": "Bucket",
+          "message": "Bucket"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.YnVja2V0.short_desc": {
+          "source": "Storage bucket name",
+          "message": "Názov bucketu úložiska"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload. The file will be transferred to Firebase Cloud Storage at the specified path.",
+          "message": "Vyberte alebo zadajte súbor na nahratie. Súbor sa prenesie do Firebase Cloud Storage na zadanú cestu."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Súbor"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Súbor na nahranie"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.desc": {
+          "source": "Specify the full path where the file should be stored in the bucket, including the filename and any directory structure (e.g., \"images/profile/avatar.jpg\").",
+          "message": "Zadajte úplnú cestu, kde má byť súbor uložený v buckete, vrátane názvu súboru a akejkoľvek adresárovej štruktúry (napr. \"images/profile/avatar.jpg\")."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.display_name": {
+          "source": "File Path",
+          "message": "Cesta k súboru"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.ZmlsZV9wYXRo.short_desc": {
+          "source": "Destination path in storage",
+          "message": "Cieľová cesta v úložisku"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.desc": {
+          "source": "Optional custom metadata to associate with the uploaded file. Provide as key-value pairs that can be retrieved later with the file information.",
+          "message": "Voliteľné vlastné metaúdaje, ktoré sa priradia k nahranému súboru. Zadajte vo forme párov kľúč – hodnota, ktoré je možné neskôr získať s informáciami o súbore."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.display_name": {
+          "source": "Metadata",
+          "message": "Metadáta"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.bWV0YWRhdGE.short_desc": {
+          "source": "Custom metadata key-value pairs",
+          "message": "Vlastné páry kľúč – hodnota metaúdajov"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.desc": {
+          "source": "Select the Firebase project where the file will be stored. The project must have Firebase Cloud Storage enabled.",
+          "message": "Vyberte projekt Firebase, v ktorom bude súbor uložený. Projekt musí mať povolené Firebase Cloud Storage."
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.display_name": {
+          "source": "Project ID",
+          "message": "ID projektu"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.option.cHJvamVjdF9pZA.short_desc": {
+          "source": "The Firebase project for storage",
+          "message": "Projekt Firebase pre úložisko"
+        },
+        "app.RmlyZWJhc2U.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Firebase Cloud Storage",
+          "message": "Nahrať súbor do Firebase Cloud Storage"
+        },
+        "app.RmlyZWJhc2U.desc": {
+          "source": "The Firebase integration provides comprehensive access to Firebase services including Cloud Storage for file management, Authentication for user management, and Firebase Cloud Messaging for push notifications. Automate file uploads, user account operations, and notification delivery across your Firebase projects.",
+          "message": "Integrácia Firebase poskytuje komplexný prístup k službám Firebase vrátane Cloud Storage na správu súborov, Authentication na správu používateľov a Firebase Cloud Messaging na push notifikácie. Automatizujte nahrávanie súborov, operácie s používateľskými účtami a doručovanie oznámení naprieč vašimi projektmi Firebase."
+        },
+        "app.RmlyZWJhc2U.display_name": {
+          "source": "Firebase",
+          "message": "Firebase"
+        },
+        "app.RmlyZWJhc2U.short_desc": {
+          "source": "Connect to Firebase to manage files, users and push notifications",
+          "message": "Pripojte sa k Firebase a spravujte súbory, používateľov a push notifikácie"
+        }
+      }
+    }
+  }
+}

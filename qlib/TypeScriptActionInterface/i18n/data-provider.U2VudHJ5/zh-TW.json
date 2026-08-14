@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.desc": {
+          "source": "Fetches complete details about a specific event, including the full stack trace, breadcrumbs (trail of events leading to the error), user context, device information, tags, SDK details, and all captured metadata. Essential for debugging and understanding the exact conditions when an error occurred.",
+          "message": "擷取特定事件的完整詳細資訊，包括完整堆疊追蹤、麵包屑（導致錯誤的事件軌跡）、使用者上下文、裝置資訊、標籤、SDK 詳細資料以及所有擷取的詮釋資料。這對於偵錯和瞭解錯誤發生時的具體情況至關重要。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.display_name": {
+          "source": "Get Event Details",
+          "message": "取得事件詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.desc": {
+          "source": "Enter the event ID (hexadecimal string) you want to retrieve. Event IDs can be found in issue details or event listings.",
+          "message": "輸入您要擷取的事件 ID（十六進位字串）。事件 ID 可在問題詳細資訊或事件清單中找到。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.display_name": {
+          "source": "Event ID",
+          "message": "活動 ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.ZXZlbnRJZA.short_desc": {
+          "source": "The unique identifier of the event",
+          "message": "事件的唯一識別碼"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.desc": {
+          "source": "Select the project that the event belongs to.",
+          "message": "選取事件所屬的專案。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the event",
+          "message": "包含該事件的專案"
+        },
+        "app.U2VudHJ5.action.Z2V0X2V2ZW50.short_desc": {
+          "source": "Retrieve detailed information about a specific event",
+          "message": "擷取特定事件的詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.desc": {
+          "source": "Fetches comprehensive details about a specific issue, including its status, metadata, assignment, statistics (event count, user impact, frequency), participants, activity history, linked integrations, and the latest event details. Essential for understanding the full context and history of a problem.",
+          "message": "擷取特定問題的完整詳細資訊，包括其狀態、詮釋資料、指派對象、統計資料（事件計數、使用者影響、頻率）、參與者、活動歷史記錄、連結的整合以及最新事件詳細資訊。這對於瞭解問題的完整上下文和歷程至關重要。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.display_name": {
+          "source": "Get Issue Details",
+          "message": "取得問題詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to retrieve. Issue IDs are numeric values that can be found in the Sentry UI or from list operations.",
+          "message": "輸入您要擷取的問題 ID。問題 ID 為數值，可在 Sentry 使用者介面或從清單操作中找到。"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "問題 ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue",
+          "message": "問題的唯一識別碼"
+        },
+        "app.U2VudHJ5.action.Z2V0X2lzc3Vl.short_desc": {
+          "source": "Retrieve detailed information about a specific issue",
+          "message": "擷取特定問題的詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.desc": {
+          "source": "Fetches comprehensive details about a specific Sentry project, including configuration options, team assignments, integrations, features, symbol sources, and project statistics. Use this to understand project settings and capabilities.",
+          "message": "擷取特定 Sentry 專案的完整詳細資訊，包括組態選項、團隊指派、整合、功能、符號來源及專案統計資料。使用此功能可瞭解專案設定與功能。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.display_name": {
+          "source": "Get Project Details",
+          "message": "取得專案詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.desc": {
+          "source": "Select or enter the slug identifier of the project you want to retrieve details for.",
+          "message": "選取或輸入您要擷取詳細資訊的專案 slug 識別碼。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve",
+          "message": "要擷取的專案"
+        },
+        "app.U2VudHJ5.action.Z2V0X3Byb2plY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific project",
+          "message": "擷取特定專案的詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.desc": {
+          "source": "Fetches comprehensive details about a specific team, including its members, assigned projects, access permissions, role settings, external integrations (like Slack channels), and organization-level role. Use this to understand team structure and project ownership.",
+          "message": "擷取特定團隊的完整詳細資訊，包括其成員、指派的專案、存取權限、角色設定、外部整合（如 Slack 頻道）以及組織層級角色。使用此功能可瞭解團隊結構與專案擁有權。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.display_name": {
+          "source": "Get Team Details",
+          "message": "取得團隊詳細資訊"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.desc": {
+          "source": "Enter the team slug (URL-friendly identifier) of the team you want to retrieve details for.",
+          "message": "輸入您要擷取詳細資訊之團隊的團隊 slug（適合網址的識別碼）。"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.display_name": {
+          "source": "Team ID",
+          "message": "團隊 ID"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.option.dGVhbUlk.short_desc": {
+          "source": "The team slug to retrieve",
+          "message": "要擷取的團隊 slug"
+        },
+        "app.U2VudHJ5.action.Z2V0X3RlYW0.short_desc": {
+          "source": "Retrieve detailed information about a specific team",
+          "message": "擷取特定團隊的詳細資訊"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.desc": {
+          "source": "Fetches a paginated list of all teams within your Sentry organization. Teams represent groups of developers working together on projects. Returns team details including member count, access permissions, role assignments, linked projects, and external team integrations.",
+          "message": "擷取 Sentry 組織內所有團隊的分頁清單。團隊代表共同處理專案的開發人員群組。傳回團隊詳細資訊，包括成員人數、存取權限、角色指派、連結的專案和外部團隊整合。"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.display_name": {
+          "source": "List Teams",
+          "message": "列出團隊"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of teams.",
+          "message": "使用前次回應中的游標在各團隊頁面之間導覽。"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "用於擷取其他結果的分頁游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF90ZWFtcw.short_desc": {
+          "source": "Retrieve all teams in your organization",
+          "message": "擷取組織中的所有團隊"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.desc": {
+          "source": "Fetches a paginated list of issues from all projects within your organization. This provides organization-wide visibility into problems across all applications and services. Use query filters to narrow down results by project, platform, status, or other criteria.",
+          "message": "擷取組織內所有專案問題的分頁清單。這提供整個組織跨所有應用程式與服務之問題的可見度。使用查詢篩選條件依專案、平台、狀態或其他條件縮小結果範圍。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.display_name": {
+          "source": "List Organization Issues",
+          "message": "列出組織問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to retrieve additional pages of organization-wide issues.",
+          "message": "使用前次回應中的游標擷取整個組織問題的其他頁面。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "用於擷取其他結果的分頁游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs across all projects.",
+          "message": "啟用時，允許跨所有專案使用簡短 ID 搜尋問題。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "簡短 ID 查詢"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "是否依簡短 ID 查詢問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 小時"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics and metrics across the organization.",
+          "message": "用於計算整個組織問題統計資料與指標的時間範圍。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "問題統計的時間範圍"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues across all projects. Filter by project, platform, environment, status, tags, or any other issue property.",
+          "message": "使用 Sentry 查詢語法篩選所有專案的問題。依專案、平台、環境、狀態、標籤或任何其他問題屬性進行篩選。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "查詢篩選條件"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "用於篩選問題的搜尋查詢"
+        },
+        "app.U2VudHJ5.action.bGlzdF9vcmdhbml6YXRpb25faXNzdWVz.short_desc": {
+          "source": "Retrieve issues across the entire organization",
+          "message": "擷取整個組織的問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.desc": {
+          "source": "Fetches a paginated list of events (individual error or transaction occurrences) from a specific project. Events are the raw data sent to Sentry and are grouped into issues. Use the full parameter to retrieve complete event payloads including context, breadcrumbs, and metadata.",
+          "message": "擷取特定專案的事件（個別錯誤或交易事件）分頁清單。事件是傳送至 Sentry 的原始資料，並分組為問題。使用 full 參數可擷取完整的事件承載資料，包括上下文、麵包屑和詮釋資料。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.display_name": {
+          "source": "List Project Events",
+          "message": "列出專案事件"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of events.",
+          "message": "使用前次回應中的游標在各事件頁面之間導覽。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "用於擷取其他結果的分頁游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.desc": {
+          "source": "When enabled, returns the full event payload including all context, breadcrumbs, stack traces, and metadata. When disabled, returns summary information only.",
+          "message": "啟用時，傳回完整的事件承載資料，包括所有上下文、麵包屑、堆疊追蹤和詮釋資料。停用時，僅傳回摘要資訊。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.display_name": {
+          "source": "Full Details",
+          "message": "完整詳細資訊"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.ZnVsbA.short_desc": {
+          "source": "Whether to return complete event data",
+          "message": "是否傳回完整的事件資料"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose events you want to list.",
+          "message": "選取您要列出其事件的專案。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve events from",
+          "message": "要從中擷取事件的專案"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2V2ZW50cw.short_desc": {
+          "source": "Retrieve events from a specific project",
+          "message": "擷取特定專案的事件"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.desc": {
+          "source": "Fetches a paginated list of issues (grouped errors or problems) from a specific project. Issues represent single bugs affecting your application, with multiple event occurrences grouped by fingerprint. Filter by query to find specific types of issues, and use statistics period to see relevant metrics.",
+          "message": "擷取特定專案的問題（分組的錯誤或問題）分頁清單。問題代表影響應用程式的單一錯誤，並透過指紋將多個發生的事件分組。透過查詢進行篩選以尋找特定類型的問題，並使用統計期間查看相關指標。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.display_name": {
+          "source": "List Project Issues",
+          "message": "列出專案問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to navigate through pages of issues.",
+          "message": "使用前一個回應中的游標來瀏覽問題分頁。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "用於擷取其他結果的分頁游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.desc": {
+          "source": "When enabled, allows searching for issues using their short IDs (e.g., PROJECT-123) instead of full issue IDs.",
+          "message": "啟用時，允許使用簡短 ID（例如 PROJECT-123）而非完整問題 ID 搜尋問題。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.display_name": {
+          "source": "Short ID Lookup",
+          "message": "簡短 ID 查詢"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c2hvcnRJZExvb2t1cA.short_desc": {
+          "source": "Whether to look up issues by their short ID",
+          "message": "是否依簡短 ID 查詢問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 小時"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 天"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for calculating issue statistics such as event count, frequency, and user impact.",
+          "message": "用於計算問題統計資料（例如事件計數、頻率和使用者影響）的時間範圍。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "問題統計的時間範圍"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.desc": {
+          "source": "Select the project whose issues you want to list.",
+          "message": "選取您要列出其問題的專案。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to retrieve issues from",
+          "message": "要從中擷取問題的專案"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter issues by properties like status, assignee, tags, platform, or time range. Example: \"is:unresolved assigned:me\"",
+          "message": "使用 Sentry 查詢語法依狀態、被指派人、標籤、平台或時間範圍等屬性篩選問題。範例：\"is:unresolved assigned:me\""
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "查詢篩選條件"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.option.cXVlcnk.short_desc": {
+          "source": "Search query to filter issues",
+          "message": "用於篩選問題的搜尋查詢"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0X2lzc3Vlcw.short_desc": {
+          "source": "Retrieve issues from a specific project",
+          "message": "從特定專案擷取問題"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Fetches a paginated list of all projects within your Sentry organization. Each project represents an individual application or service being monitored. Returns project details including name, platform, creation date, team membership, and configuration.",
+          "message": "擷取 Sentry 組織中所有專案的分頁清單。每個專案代表受監控的個別應用程式或服務。傳回專案詳細資訊，包括名稱、平台、建立日期、團隊成員資格和設定。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "列出專案"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor from a previous response to fetch the next or previous page of results. Leave empty to start from the beginning.",
+          "message": "使用前一個回應中的游標來擷取結果的下一頁或上一頁。留空則從頭開始。"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving additional results",
+          "message": "用於擷取其他結果的分頁游標"
+        },
+        "app.U2VudHJ5.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "Retrieve all projects in your organization",
+          "message": "擷取組織中的所有專案"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Sentry** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Sentry** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的 hash 形式傳回。\n\n對此應用程式上尚未公開為第一級操作的端點使用此操作。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.U2VudHJ5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Sentry",
+          "message": "向 Sentry 發出自訂 API 呼叫"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.desc": {
+          "source": "Monitors all projects within your Sentry organization and triggers when a new issue is detected in any project. This provides organization-wide visibility into problems across all applications and services. Use query filters to focus on specific issue types or characteristics.",
+          "message": "監控 Sentry 組織中的所有專案，並在任何專案中偵測到新問題時觸發。這提供了全組織範圍內跨所有應用程式與服務的問題可見性。使用查詢篩選器聚焦於特定問題類型或特徵。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.display_name": {
+          "source": "New Organization Issue",
+          "message": "新的組織問題"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 天"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 小時"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 天"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 天"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics across all projects. Determines the time window for metrics like frequency and user impact.",
+          "message": "跨所有專案收集問題統計資料的時間範圍。決定頻率和使用者影響等指標的時間範圍。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "問題統計的時間範圍"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event across all projects. Filter by properties like platform, environment, release, or custom tags.",
+          "message": "使用 Sentry 查詢語法篩選跨所有專案觸發此事件的問題。依平台、環境、版本 (release) 或自訂標籤等屬性進行篩選。"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "查詢篩選條件"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "用於篩選問題的選用搜尋查詢"
+        },
+        "app.U2VudHJ5.action.bmV3X29yZ2FuaXphdGlvbl9pc3N1ZQ.short_desc": {
+          "source": "Triggers when a new issue is detected across the entire organization",
+          "message": "在整個組織中偵測到新問題時觸發"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.desc": {
+          "source": "Monitors a specific Sentry project and triggers when a new issue (grouped error or problem) is detected. Issues represent single bugs or problems in your application, with events grouped by fingerprint. Use optional query filters and time periods to focus on specific types of issues.",
+          "message": "監控特定 Sentry 專案，並在偵測到新問題（分組錯誤或問題）時觸發。問題代表應用程式中的單一錯誤或問題，其事件依指紋分組。使用選用查詢篩選器和時間週期來聚焦於特定類型的問題。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.display_name": {
+          "source": "New Project Issue",
+          "message": "新的專案問題"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjE0ZA.display_name": {
+          "source": "14 days",
+          "message": "14 天"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjI0aA.display_name": {
+          "source": "24 hours",
+          "message": "24 小時"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjMwZA.display_name": {
+          "source": "30 days",
+          "message": "30 天"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.allowed-value.c3RyaW5nOjdk.display_name": {
+          "source": "7 days",
+          "message": "7 天"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.desc": {
+          "source": "The time range for collecting issue statistics. Affects metrics like event counts and user impact within the selected period.",
+          "message": "收集問題統計資料的時間範圍。影響所選期間內的事件計數和使用者影響等指標。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.display_name": {
+          "source": "Statistics Period",
+          "message": "統計期間"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.c3RhdHNQZXJpb2Q.short_desc": {
+          "source": "Time period for issue statistics",
+          "message": "問題統計的時間範圍"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.desc": {
+          "source": "Select the Sentry project you want to monitor. Projects represent individual applications or services within your organization.",
+          "message": "選取您要監控的 Sentry 專案。專案代表組織內的個別應用程式或服務。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cHJvamVjdElk.short_desc": {
+          "source": "The project to monitor for new issues",
+          "message": "要監控新問題的專案"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.desc": {
+          "source": "Use Sentry query syntax to filter which issues trigger this event. For example, filter by browser, device, tags, or whether errors are unhandled.",
+          "message": "使用 Sentry 查詢語法篩選觸發此事件的問題。例如，依瀏覽器、裝置、標籤或錯誤是否未處理進行篩選。"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.display_name": {
+          "source": "Query Filter",
+          "message": "查詢篩選條件"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.option.cXVlcnk.short_desc": {
+          "source": "Optional search query to filter issues",
+          "message": "用於篩選問題的選用搜尋查詢"
+        },
+        "app.U2VudHJ5.action.bmV3X3Byb2plY3RfaXNzdWU.short_desc": {
+          "source": "Triggers when a new issue is detected in a specific project",
+          "message": "在特定專案中偵測到新問題時觸發"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.desc": {
+          "source": "Modifies an issue's status (resolved, unresolved, ignored), assignment, bookmarked state, subscription status, or visibility. Use this to triage issues, assign them to team members, resolve bugs, or mark issues as ignored. Status changes can trigger alerts and affect issue grouping.",
+          "message": "修改問題的狀態 (resolved、unresolved、ignored)、指派、書籤狀態、訂閱狀態或公開性。使用此操作分類問題、指派給團隊成員、解決錯誤或將問題標記為已忽略。狀態變更可能會觸發警示並影響問題分組。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.display_name": {
+          "source": "Update Issue",
+          "message": "更新問題"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.desc": {
+          "source": "Assign the issue to a specific user or team for ownership and accountability. Enter a team slug (e.g., \"team:backend\") or user ID.",
+          "message": "將問題指派給特定使用者或團隊以明確歸屬與責任。請輸入團隊代稱（例如 \"team:backend\"）或使用者 ID。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.display_name": {
+          "source": "Assigned To",
+          "message": "受指派人"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.YXNzaWduZWRUbw.short_desc": {
+          "source": "User or team to assign the issue to",
+          "message": "要指派問題的使用者或團隊"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.desc": {
+          "source": "Mark the issue as seen (reviewed) or unseen. This helps track which issues have been triaged by your team.",
+          "message": "將問題標記為已檢視（已審查）或未檢視。這有助於追蹤團隊已分類了哪些問題。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.display_name": {
+          "source": "Has Seen",
+          "message": "已檢視"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aGFzU2Vlbg.short_desc": {
+          "source": "Mark whether the issue has been viewed",
+          "message": "標記問題是否已檢視"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.desc": {
+          "source": "Bookmark the issue for easy access and filtering. Bookmarked issues appear in your personal issue list.",
+          "message": "將問題加入書籤以便輕鬆存取和篩選。已加書籤的問題會顯示在您的個人問題清單中。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.display_name": {
+          "source": "Is Bookmarked",
+          "message": "已加書籤"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNCb29rbWFya2Vk.short_desc": {
+          "source": "Bookmark status for the issue",
+          "message": "問題的書籤狀態"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.desc": {
+          "source": "Control whether the issue is publicly visible via a share link. Public issues can be viewed by anyone with the link, even without Sentry access.",
+          "message": "控制問題是否可透過分享連結公開檢視。公開問題可供任何擁有連結的人檢視，即使沒有 Sentry 存取權限亦可。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.display_name": {
+          "source": "Is Public",
+          "message": "公開"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNQdWJsaWM.short_desc": {
+          "source": "Whether the issue should be publicly accessible",
+          "message": "問題是否應可公開存取"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.desc": {
+          "source": "Subscribe to or unsubscribe from notifications about this issue. When subscribed, you'll receive alerts when the issue changes or escalates.",
+          "message": "訂閱或取消訂閱有關此問題的通知。訂閱後，您將在此問題發生變更或升級時收到警示。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.display_name": {
+          "source": "Is Subscribed",
+          "message": "已訂閱"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNTdWJzY3JpYmVk.short_desc": {
+          "source": "Subscription status for notifications",
+          "message": "通知的訂閱狀態"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.desc": {
+          "source": "Enter the issue ID you want to update. You can find issue IDs in the Sentry UI or from list/search operations.",
+          "message": "輸入您要更新的問題 ID。您可以在 Sentry UI 中或從清單/搜尋操作中找到問題 ID。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.display_name": {
+          "source": "Issue ID",
+          "message": "問題 ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.aXNzdWVJZA.short_desc": {
+          "source": "The unique identifier of the issue to update",
+          "message": "要更新的問題的唯一識別碼"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOmlnbm9yZWQ.display_name": {
+          "source": "Ignored",
+          "message": "已忽略"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVk.display_name": {
+          "source": "Resolved",
+          "message": "已解決"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlc29sdmVkSW5OZXh0UmVsZWFzZQ.display_name": {
+          "source": "Resolved in Next Release",
+          "message": "在下一個版本中解決"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.allowed-value.c3RyaW5nOnVucmVzb2x2ZWQ.display_name": {
+          "source": "Unresolved",
+          "message": "未解決"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.desc": {
+          "source": "Change the issue status to control its lifecycle. \"Resolved\" marks it as fixed, \"Unresolved\" reopens it, \"Ignored\" archives it temporarily, and \"Resolved in Next Release\" indicates it will be fixed in an upcoming deployment.",
+          "message": "變更問題狀態以控制其生命週期。\"Resolved\" 將其標記為已修正，\"Unresolved\" 會重新開啟它，\"Ignored\" 則暫時將其封存，而 \"Resolved in Next Release\" 則表示它將在即將進行的部署中修正。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the issue",
+          "message": "問題的新狀態"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.desc": {
+          "source": "Optionally specify the project for context. While issues can be updated by ID alone, providing the project can be helpful for organization.",
+          "message": "選擇性指定專案以提供內容定義。雖然僅憑 ID 即可更新問題，但提供專案有助於組織管理。"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.display_name": {
+          "source": "Project ID",
+          "message": "專案 ID"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.option.cHJvamVjdElk.short_desc": {
+          "source": "The project containing the issue (optional)",
+          "message": "包含問題的專案（選用）"
+        },
+        "app.U2VudHJ5.action.dXBkYXRlX2lzc3Vl.short_desc": {
+          "source": "Update the status or properties of an issue",
+          "message": "更新問題的狀態或屬性"
+        },
+        "app.U2VudHJ5.desc": {
+          "source": "The Sentry integration enables comprehensive error monitoring and performance tracking for your applications. Access projects, issues, events, and teams to quickly identify, triage, and resolve problems. With real-time alerts and detailed debugging context including stack traces, breadcrumbs, and user impact metrics, Sentry helps your team maintain code quality and deliver seamless user experiences.",
+          "message": "Sentry 整合功能可為您的應用程式提供全方位的錯誤監控與效能追蹤。存取專案、問題、事件和團隊，以快速識別、分類並解決問題。透過即時警示和詳細的除錯上下文（包括堆疊追蹤、記錄足跡 (breadcrumbs) 和使用者影響指標），Sentry 協助您的團隊維持程式碼品質並提供流暢的使用者體驗。"
+        },
+        "app.U2VudHJ5.display_name": {
+          "source": "Sentry",
+          "message": "Sentry"
+        },
+        "app.U2VudHJ5.short_desc": {
+          "source": "Monitor and fix errors, track performance issues, and maintain application health with the developer-first debugging platform.",
+          "message": "透過以開發人員為先的除錯平台監控並修正錯誤、追蹤效能問題，並維持應用程式的健康狀態。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.desc": {
+          "source": "Use this action to clear the content of a specified column within a record, resetting its value to empty.",
+          "message": "Використовуйте цю дію, щоб очистити вміст указаного стовпця в записі, скинувши його значення на порожнє."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.display_name": {
+          "source": "Clear Column Value",
+          "message": "Очистити значення стовпця"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column you want to clear.",
+          "message": "Унікальний ідентифікатор стовпця, який потрібно очистити."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID стовпця"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to clear.",
+          "message": "ID стовпця для очищення."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to modify.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який потрібно змінити."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record.",
+          "message": "ID дошки, що містить запис."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to modify.",
+          "message": "Унікальний ідентифікатор запису, який потрібно змінити."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to modify.",
+          "message": "ID запису для зміни."
+        },
+        "app.TW9uZGF5.action.Y2xlYXJfY29sdW1uX3ZhbHVl.short_desc": {
+          "source": "Remove data from a column in a record.",
+          "message": "Видалити дані зі стовпця в записі."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Створити записи"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Monday\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку \"Monday\""
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "This action enables you to create a new record (item) in a specified board, allowing you to define initial column values upon creation.",
+          "message": "Ця дія дає змогу створити новий запис (елемент) на вказаній дошці, дозволяючи визначити початкові значення стовпців під час створення."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Створити запис"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board where you want to create a new record.",
+          "message": "Унікальний ідентифікатор дошки, на якій потрібно створити новий запис."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board where the record will be created.",
+          "message": "ID дошки, де буде створено запис."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group where you want to create a new record.",
+          "message": "Унікальний ідентифікатор групи, у якій потрібно створити новий запис."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID групи"
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group where the record will be created.",
+          "message": "ID групи, де буде створено запис."
+        },
+        "app.TW9uZGF5.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Add a new record to a board.",
+          "message": "Додати новий запис до дошки."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.desc": {
+          "source": "This action allows you to execute a custom operation defined by your integration or automation setup, providing flexibility for various tasks.",
+          "message": "Ця дія дозволяє виконати користувацьку операцію, визначену вашою інтеграцією або налаштуванням автоматизації, забезпечуючи гнучкість для різноманітних завдань."
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.display_name": {
+          "source": "Custom Action",
+          "message": "Користувацька дія"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.desc": {
+          "source": "The name of the custom action to execute",
+          "message": "Назва користувацької дії для виконання"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.display_name": {
+          "source": "Action Name",
+          "message": "Назва дії"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.YWN0aW9uTmFtZQ.short_desc": {
+          "source": "The name of the custom action to execute",
+          "message": "Назва користувацької дії для виконання"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.desc": {
+          "source": "The payload for your custom action",
+          "message": "Корисне навантаження для вашої користувацької дії"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Корисні дані"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.option.cGF5bG9hZA.short_desc": {
+          "source": "Payload for your custom action",
+          "message": "Корисне навантаження для користувацької дії"
+        },
+        "app.TW9uZGF5.action.Y3VzdG9tX2FjdGlvbg.short_desc": {
+          "source": "Perform a user-defined operation.",
+          "message": "Виконати операцію, визначену користувачем."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.desc": {
+          "source": "This action allows you to archive a specific record (item) on a Monday.com board, helping you keep your workspace organized by removing completed or inactive items from view without permanently deleting them.",
+          "message": "Ця дія дозволяє архівувати певний запис (елемент) на дошці Monday.com, допомагаючи підтримувати порядок у робочому просторі шляхом приховування завершених або неактивних елементів без їх остаточного видалення."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.display_name": {
+          "source": "Archive Record",
+          "message": "Архівувати запис"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to archive.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який потрібно архівувати."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to archive.",
+          "message": "ID дошки, що містить запис для архівування."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to archive.",
+          "message": "Унікальний ідентифікатор запису, який потрібно архівувати."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to archive.",
+          "message": "ID запису для архівування."
+        },
+        "app.TW9uZGF5.action.YXJjaGl2ZV9yZWNvcmQ.short_desc": {
+          "source": "Move a record to the archive.",
+          "message": "Перемістити запис до архіву."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.desc": {
+          "source": "This action fetches the details of a specified record, including all column values and associated metadata.",
+          "message": "Ця дія отримує деталі вказаного запису, включно з усіма значеннями стовпців і пов'язаними метаданими."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Отримати запис"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to get.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який ви хочете отримати."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to get.",
+          "message": "ID дошки, що містить запис для отримання."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to get.",
+          "message": "Унікальний ідентифікатор запису, який ви хочете отримати."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to get.",
+          "message": "ID запису для отримання."
+        },
+        "app.TW9uZGF5.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve details of a specific record.",
+          "message": "Отримати деталі вказаного запису."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Видалити записи із зазначеної таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Видалити записи"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Monday\"",
+          "message": "Видалити записи із зазначеної таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Use this action to permanently delete a specific record from a board, removing all associated data.",
+          "message": "Використовуйте цю дію, щоб остаточно видалити певний запис із дошки разом з усіма пов'язаними даними."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Видалити запис"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to delete.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який потрібно видалити."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to delete.",
+          "message": "ID дошки, що містить запис для видалення."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to delete.",
+          "message": "Унікальний ідентифікатор запису, який потрібно видалити."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete.",
+          "message": "ID запису для видалення."
+        },
+        "app.TW9uZGF5.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Permanently remove a record.",
+          "message": "Остаточно видалити запис."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.desc": {
+          "source": "Use this action to move a record from its current group or board to another specified group or board, maintaining its data and history.",
+          "message": "Використовуйте цю дію, щоб перемістити запис із поточної групи або дошки до іншої вказаної групи або дошки зі збереженням його даних та історії."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.display_name": {
+          "source": "Move Record",
+          "message": "Перемістити запис"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to move.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який потрібно перемістити."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to move.",
+          "message": "ID дошки, що містить запис для переміщення."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to move the record to.",
+          "message": "Унікальний ідентифікатор групи, до якої потрібно перемістити запис."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.display_name": {
+          "source": "Destination Group ID",
+          "message": "ID цільової групи"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.ZGVzdGluYXRpb25fZ3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to move the record to.",
+          "message": "ID групи, до якої потрібно перемістити запис."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to move.",
+          "message": "Унікальний ідентифікатор запису, який потрібно перемістити."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to move.",
+          "message": "ID запису для переміщення."
+        },
+        "app.TW9uZGF5.action.bW92ZV9yZWNvcmQ.short_desc": {
+          "source": "Transfer a record to another group or board.",
+          "message": "Перенести запис до іншої групи або дошки."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Monday.com** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробіть користувацький виклик HTTP / REST API до **Monday.com**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть HTTP-метод, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.TW9uZGF5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Monday.com",
+          "message": "Зробити користувацький виклик API до Monday.com"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Спрацьовує при створенні нового запису."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Новий запис"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "Унікальний ідентифікатор дошки, яку слід перевіряти на наявність нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "ID дошки для перевірки нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Унікальний ідентифікатор групи, яку слід перевіряти на наявність нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID групи"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID групи для перевірки нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggered when a new item is created.",
+          "message": "Спрацьовує при створенні нового елемента."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.desc": {
+          "source": "Triggered when a new record is created.",
+          "message": "Спрацьовує при створенні нового запису."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.display_name": {
+          "source": "New Record Moved To Group",
+          "message": "Новий запис переміщено до групи"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for new records.",
+          "message": "Унікальний ідентифікатор дошки, яку слід перевіряти на наявність нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for new records.",
+          "message": "ID дошки для перевірки нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Унікальний ідентифікатор групи, яку слід перевіряти на наявність нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID групи"
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID групи для перевірки нових записів."
+        },
+        "app.TW9uZGF5.action.bmV3X3JlY29yZF9tb3ZlZF90b19ncm91cA.short_desc": {
+          "source": "Triggered when an item was moved to a group.",
+          "message": "Спрацьовує, коли елемент було переміщено до групи."
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Шукати відповідні записи у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Monday\"",
+          "message": "Шукати відповідні записи у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Шукати один відповідний запис у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Знайти один запис"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Monday\"",
+          "message": "Шукати один відповідний запис у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.desc": {
+          "source": "This action allows you to search for records that meet defined criteria, such as specific column values or statuses, and returns a list of matching records.",
+          "message": "Ця дія дозволяє шукати записи, які відповідають визначеним критеріям, наприклад значенням певних стовпців або статусам, і повертає список відповідних записів."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.desc": {
+          "source": "The unique identifier of the column to search in.",
+          "message": "Унікальний ідентифікатор стовпця для пошуку."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.display_name": {
+          "source": "Column ID",
+          "message": "ID стовпця"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y29sdW1uSWQ.short_desc": {
+          "source": "The ID of the column to search in.",
+          "message": "ID стовпця для пошуку."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "Курсор для використання у пагінації."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Курсор"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Y3Vyc29y.short_desc": {
+          "source": "The cursor to use for pagination.",
+          "message": "Курсор для використання у пагінації."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the records you want to search for.",
+          "message": "Унікальний ідентифікатор дошки, що містить записи, які ви хочете знайти."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to search for records in.",
+          "message": "ID дошки для пошуку записів."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return.",
+          "message": "Максимальна кількість записів для повернення."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return.",
+          "message": "Максимальна кількість записів для повернення."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.desc": {
+          "source": "The search query to use to find records.",
+          "message": "Пошуковий запит для пошуку записів."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.display_name": {
+          "source": "Query",
+          "message": "Запит"
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.option.cXVlcnlfdGV4dA.short_desc": {
+          "source": "The search query to use.",
+          "message": "Пошуковий запит для використання."
+        },
+        "app.TW9uZGF5.action.c2VhcmNoX3JlY29yZHM.short_desc": {
+          "source": "Find records matching specific criteria.",
+          "message": "Знайти записи, що відповідають певним критеріям."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Спрацьовує при оновленні значення стовпця запису."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.display_name": {
+          "source": "Record Column Value Updated",
+          "message": "Значення стовпця запису оновлено"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.desc": {
+          "source": "The unique identifier of the column that should be checked for new value.",
+          "message": "Унікальний ідентифікатор стовпця, який слід перевіряти на наявність нового значення."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.display_name": {
+          "source": "Column ID",
+          "message": "ID стовпця"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Y29sdW1uX2lk.short_desc": {
+          "source": "The ID of the column to check for new value.",
+          "message": "ID стовпця для перевірки нового значення."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for record field updates.",
+          "message": "Унікальний ідентифікатор дошки, яку слід перевіряти на оновлення полів записів."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for record field updates.",
+          "message": "ID дошки для перевірки оновлень полів записів."
+        },
+        "app.TW9uZGF5.action.cmVjb3JkX2NvbHVtbl92YWx1ZV91cGRhdGVk.short_desc": {
+          "source": "Triggered when a record column value is updated.",
+          "message": "Спрацьовує при оновленні значення стовпця запису."
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Оновити наявні записи у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Оновити записи"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.TW9uZGF5.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Monday\"",
+          "message": "Оновити наявні записи у зазначеній таблиці в додатку \"Monday\""
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Use this action to update one or more column values of a specific record, allowing you to change its data as needed.",
+          "message": "Використовуйте цю дію для оновлення значень одного або кількох стовпців певного запису, що дозволяє змінювати його дані за потреби."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Оновити запис"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board containing the record you want to update.",
+          "message": "Унікальний ідентифікатор дошки, що містить запис, який потрібно оновити."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board containing the record to update.",
+          "message": "ID дошки, що містить запис для оновлення."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record you want to update.",
+          "message": "Унікальний ідентифікатор запису, який потрібно оновити."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID запису"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to update.",
+          "message": "ID запису для оновлення."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Modify the values of a record's columns.",
+          "message": "Змінити значення стовпців запису."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Triggered when an item on the board is updated.",
+          "message": "Спрацьовує при оновленні елемента на дошці."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "Оновлений запис"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.desc": {
+          "source": "The unique identifier of the board that should be checked for updated records.",
+          "message": "Унікальний ідентифікатор дошки, яку слід перевіряти на наявність оновлених записів."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.display_name": {
+          "source": "Board ID",
+          "message": "ID дошки"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Ym9hcmRfaWQ.short_desc": {
+          "source": "The ID of the board to check for updated records.",
+          "message": "Ідентифікатор дошки для перевірки оновлених записів."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.desc": {
+          "source": "The unique identifier of the group you want to check for new records in.",
+          "message": "Унікальний ідентифікатор групи, яку слід перевіряти на наявність нових записів."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.display_name": {
+          "source": "Group ID",
+          "message": "ID групи"
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.option.Z3JvdXBfaWQ.short_desc": {
+          "source": "The ID of the group to check for new records.",
+          "message": "ID групи для перевірки нових записів."
+        },
+        "app.TW9uZGF5.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggered when an item is updated.",
+          "message": "Спрацьовує під час оновлення елемента."
+        },
+        "app.TW9uZGF5.desc": {
+          "source": "The Monday.com integration provides comprehensive access to your work operating system. Create and manage boards, items, groups, and columns. Track work progress, update item statuses, manage column values, and monitor board changes. Automate workflows by creating items, updating records, moving items between groups, and receiving notifications when boards or items are modified. Perfect for project management, task tracking, team collaboration, and workflow automation across your organization.",
+          "message": "Інтеграція з Monday.com забезпечує повний доступ до вашої операційної системи для роботи. Створюйте та керуйте дошками, елементами, групами та стовпцями. Відстежуйте перебіг роботи, оновлюйте статуси елементів, керуйте значеннями стовпців та стежте за змінами на дошці. Автоматизуйте робочі процеси: створюйте елементи, оновлюйте записи, переміщуйте елементи між групами та отримуйте сповіщення про зміну дощок або елементів. Ідеально підходить для керування проєктами, відстеження завдань, співпраці в команді та автоматизації робочих процесів у всій організації."
+        },
+        "app.TW9uZGF5.display_name": {
+          "source": "Monday.com",
+          "message": "Monday.com"
+        },
+        "app.TW9uZGF5.short_desc": {
+          "source": "Connect to Monday.com to automate work management with boards, items, columns, and updates.",
+          "message": "Підключіться до Monday.com для автоматизації керування роботою за допомогою дощок, елементів, стовпців та оновлень."
+        }
+      }
+    }
+  }
+}

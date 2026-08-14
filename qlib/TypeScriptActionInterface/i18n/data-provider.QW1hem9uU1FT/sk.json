@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters.",
+          "message": "Odoslať textovú správu do radu Amazon SQS s voliteľnými atribútmi správy, nastaveniami oneskorenia a parametrami radu FIFO."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "Vytvoriť správu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Doba (0-900 sekúnd), o ktorú sa má odložiť doručenie správy."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Oneskorenie (sekundy)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Počet sekúnd na odloženie doručenia správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Vlastné atribúty, ktoré sa majú zahrnúť do správy na filtrovanie a spracovanie."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Atribúty správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Dodatočné metadáta pre správu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.desc": {
+          "source": "The message content to send. Can be plain text or any string format up to 256 KB.",
+          "message": "Obsah správy na odoslanie. Môže to byť prostý text alebo akýkoľvek reťazcový formát až do 256 KB."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
+          "source": "Message Body",
+          "message": "Telo správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
+          "source": "The text content of the message",
+          "message": "Textový obsah správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Token používaný na deduplikáciu odoslaných správ (iba rady FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplikácie správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "ID deduplikácie pre rady FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Značka určujúca, že správa patrí do špecifickej skupiny správ (iba rady FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID skupiny správ"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "ID skupiny pre rady FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the message will be sent.",
+          "message": "Kompletná URL adresa radu Amazon SQS, kam bude správa odoslaná."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "URL adresa cieľového radu SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš cieľový rad SQS."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a text message to an SQS queue",
+          "message": "Odoslať textovú správu do radu SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body.",
+          "message": "Odoslať štruktúrované dáta JSON do radu Amazon SQS. Objekt JSON bude automaticky serializovaný do tela správy."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "Vytvoriť správu JSON"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Doba (0-900 sekúnd), o ktorú sa má odložiť doručenie správy."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Oneskorenie (sekundy)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Počet sekúnd na odloženie doručenia správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Vlastné atribúty, ktoré sa majú zahrnúť do správy na filtrovanie a spracovanie."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Atribúty správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Dodatočné metadáta pre správu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.desc": {
+          "source": "The structured data object that will be serialized to JSON and sent as the message body.",
+          "message": "Štruktúrovaný dátový objekt, ktorý bude serializovaný do JSON a odoslaný ako telo správy."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
+          "source": "Message Data",
+          "message": "Dáta správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
+          "source": "The JSON object to send",
+          "message": "Objekt JSON na odoslanie"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Token používaný na deduplikáciu odoslaných správ (iba rady FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplikácie správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "ID deduplikácie pre rady FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Značka určujúca, že správa patrí do špecifickej skupiny správ (iba rady FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID skupiny správ"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "ID skupiny pre rady FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the JSON message will be sent.",
+          "message": "Kompletná URL adresa radu Amazon SQS, kam bude správa JSON odoslaná."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "URL adresa cieľového radu SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš cieľový rad SQS."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a JSON message to an SQS queue",
+          "message": "Odoslať správu JSON do radu SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.desc": {
+          "source": "Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options.",
+          "message": "Vytvoriť nový rad Amazon SQS s konfigurovateľnými nastaveniami vrátane možností FIFO, radov neplatných správ a možností šifrovania."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
+          "source": "Create Queue",
+          "message": "Vytvoriť rad"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "For FIFO queues, enables deduplication using a SHA-256 hash of the message body.",
+          "message": "Pre rady FIFO povoľuje deduplikáciu pomocou hašu SHA-256 tela správy."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "Deduplikácia na základe obsahu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable automatic deduplication based on message content",
+          "message": "Povoliť automatickú deduplikáciu na základe obsahu správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.desc": {
+          "source": "The URL of the queue to use as a dead letter queue for failed message processing.",
+          "message": "URL adresa radu, ktorý sa použije ako rad neplatných správ pre zlyhané spracovanie správ."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
+          "source": "Dead Letter Queue URL",
+          "message": "URL adresa radu neplatných správ"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
+          "source": "URL of the dead letter queue",
+          "message": "URL adresa radu neplatných správ"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The default delay (0-900 seconds) for messages added to this queue.",
+          "message": "Predvolené oneskorenie (0-900 sekúnd) pre správy pridané do tohto radu."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Oneskorenie (sekundy)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Default delay for new messages",
+          "message": "Predvolené oneskorenie pre nové správy"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.desc": {
+          "source": "Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent.",
+          "message": "Či sa má vytvoriť rad FIFO, ktorý zabezpečí, že správy budú spracované práve raz a v presnom poradí, v akom boli odoslané."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
+          "source": "FIFO Queue",
+          "message": "Rad FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
+          "source": "Create as a FIFO (First-In-First-Out) queue",
+          "message": "Vytvoriť ako rad FIFO (First-In-First-Out)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key for server-side encryption of queue messages.",
+          "message": "ID kľúča AWS KMS pre šifrovanie správ v rade na strane servera."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "ID hlavného kľúča KMS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for server-side encryption",
+          "message": "Kľúč KMS pre šifrovanie na strane servera"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.desc": {
+          "source": "The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key.",
+          "message": "Doba (60-86400 sekúnd), po ktorú môže Amazon SQS znova použiť dátový kľúč."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
+          "source": "KMS Data Key Reuse Period (Seconds)",
+          "message": "Doba opätovného použitia dátového kľúča KMS (sekundy)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
+          "source": "How long to reuse KMS data keys",
+          "message": "Ako dlho znova používať dátové kľúče KMS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.desc": {
+          "source": "The number of times a message can be received before being moved to the dead letter queue.",
+          "message": "Počet prijatí správy predtým, ako bude presunutá do radu neplatných správ."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
+          "source": "Max Receive Count",
+          "message": "Maximálny počet prijatí"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
+          "source": "Maximum receives before moving to dead letter queue",
+          "message": "Maximálny počet prijatí pred presunutím do radu neplatných správ"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.desc": {
+          "source": "The length of time (60-1209600 seconds) that messages are retained in the queue.",
+          "message": "Doba (60-1209600 sekúnd), po ktorú sú správy uchovávané v rade."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
+          "source": "Message Retention Period (Seconds)",
+          "message": "Doba uchovávania správ (sekundy)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
+          "source": "How long messages are retained in the queue",
+          "message": "Ako dlho sú správy uchovávané vo fronte"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.desc": {
+          "source": "The name for the queue. FIFO queue names must end with .fifo suffix.",
+          "message": "Názov frontu. Názvy frontov FIFO musia končiť príponou .fifo."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
+          "source": "Queue Name",
+          "message": "Názov frontu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
+          "source": "The name of the new queue",
+          "message": "Názov nového frontu"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.desc": {
+          "source": "The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive.",
+          "message": "Čas (0 – 20 sekúnd), počas ktorého volania ReceiveMessage čakajú na príchod správ."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
+          "source": "Receive Wait Time (Seconds)",
+          "message": "Čas čakania na prijatie (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
+          "source": "Long polling wait time for receive operations",
+          "message": "Čas čakania pre dlhé dopytovanie (long polling) pri operáciách prijatia"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to create the new SQS queue.",
+          "message": "Vyberte región AWS, v ktorom chcete vytvoriť nový front SQS."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the queue will be created",
+          "message": "Región AWS, v ktorom bude front vytvorený"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The length of time (0-43200 seconds) that a message is invisible to other consumers after being received.",
+          "message": "Doba (0 – 43200 sekúnd), počas ktorej je správa po prijatí neviditeľná pre ostatných spotrebiteľov."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Časový limit viditeľnosti (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Time a message is invisible after being received",
+          "message": "Čas, počas ktorého je správa po prijatí neviditeľná"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
+          "source": "Create a new SQS queue",
+          "message": "Vytvoriť nový front SQS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.desc": {
+          "source": "Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps.",
+          "message": "Získať podrobné informácie a atribúty pre konkrétny front Amazon SQS vrátane konfigurácie, počtu správ a časových pečiatok."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
+          "source": "Get Queue",
+          "message": "Získať front"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of queue attributes to return. Use \"All\" to return all available attributes.",
+          "message": "Názvy atribútov frontu, ktoré sa majú vrátiť. Použite \"All\" na vrátenie všetkých dostupných atribútov."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Názvy atribútov"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of queue attributes to retrieve",
+          "message": "Zoznam atribútov frontu na získanie"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue to retrieve information about.",
+          "message": "Úplná adresa URL frontu Amazon SQS, o ktorom sa majú získať informácie."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to inspect",
+          "message": "Adresa URL frontu SQS na kontrolu"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš front SQS."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
+          "source": "Get details about a specific SQS queue",
+          "message": "Získať podrobnosti o konkrétnom fronte SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval.",
+          "message": "Získať správy z frontu Amazon SQS s nastaviteľnými možnosťami dopytovania a získavaním atribútov správ."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "Zoznam správ"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of system attributes to return with each message. Use \"All\" to return all attributes.",
+          "message": "Názvy systémových atribútov, ktoré sa majú vrátiť s každou správou. Použite \"All\" na vrátenie všetkých atribútov."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Názvy atribútov"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of message system attribute names to retrieve",
+          "message": "Zoznam názvov systémových atribútov správ na získanie"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.desc": {
+          "source": "The maximum number of messages to return in a single request (1-10).",
+          "message": "Maximálny počet správ, ktoré sa majú vrátiť v jednej požiadavke (1 – 10)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
+          "source": "Max Number of Messages",
+          "message": "Maximálny počet správ"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
+          "source": "Maximum messages to receive (1-10)",
+          "message": "Maximálny počet správ na prijatie (1 – 10)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.desc": {
+          "source": "The names of message attributes to return. Use \"All\" to return all attributes.",
+          "message": "Názvy atribútov správ, ktoré sa majú vrátiť. Použite \"All\" na vrátenie všetkých atribútov."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
+          "source": "Message Attribute Names",
+          "message": "Názvy atribútov správ"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
+          "source": "List of message attribute names to retrieve",
+          "message": "Zoznam názvov atribútov správ na získanie"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "Úplná adresa URL frontu Amazon SQS, z ktorého sa majú prijímať správy."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to read from",
+          "message": "Adresa URL frontu SQS, z ktorého sa má čítať"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš front SQS."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for messages to arrive.",
+          "message": "Trvanie (0 – 20 sekúnd), počas ktorého volanie čaká na príchod správ."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Čas čakania (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time",
+          "message": "Čas čakania pre dlhé dopytovanie"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The duration for which received messages are hidden from subsequent retrieve requests.",
+          "message": "Trvanie, počas ktorého sú prijaté správy skryté pred následnými požiadavkami na získanie."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Časový limit viditeľnosti (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Override the queue default visibility timeout",
+          "message": "Prepísať predvolený časový limit viditeľnosti frontu"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Receive messages from an SQS queue",
+          "message": "Prijímať správy z frontu SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.desc": {
+          "source": "Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes.",
+          "message": "Získať zoznam všetkých frontov Amazon SQS v zadanom regióne s voliteľným filtrovaním a podrobnými atribútmi frontov."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
+          "source": "List Queues",
+          "message": "Zoznam frontov"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed queue attributes like message counts, timestamps, and configuration settings.",
+          "message": "Či sa majú zahrnúť podrobné atribúty frontu, ako je počet správ, časové pečiatky a nastavenia konfigurácie."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "Zahrnúť atribúty"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed queue attributes in the response",
+          "message": "Zahrnúť do odpovede podrobné atribúty frontu"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "The maximum number of queue results to return (1-1000).",
+          "message": "Maximálny počet výsledkov frontov, ktoré sa majú vrátiť (1 – 1000)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of queues to return",
+          "message": "Maximálny počet frontov na vrátenie"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.desc": {
+          "source": "Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned.",
+          "message": "Voliteľná predpona na filtrovanie názvov frontov. Vrátia sa len fronty s názvami začínajúcimi touto predponou."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
+          "source": "Queue Name Prefix",
+          "message": "Predpona názvu frontu"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
+          "source": "Filter queues by name prefix",
+          "message": "Filtrovať fronty podľa predpony názvu"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region from which to retrieve the list of SQS queues.",
+          "message": "Vyberte región AWS, z ktorého sa má získať zoznam frontov SQS."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to list queues from",
+          "message": "Región AWS, z ktorého sa majú uviesť fronty"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
+          "source": "List all SQS queues in a region",
+          "message": "Zobraziť všetky fronty SQS v regióne"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SQS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vytvorte vlastné volanie HTTP / REST API do **Amazon SQS** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncovky (endpoints), ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SQS",
+          "message": "Vytvoriť vlastné volanie API do Amazon SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval.",
+          "message": "Monitoruje front Amazon SQS na prítomnosť nových správ a spúšťa sa, keď sú správy k dispozícii. Podporuje dlhé dopytovanie (long polling) a získavanie atribútov správ."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nová správa"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Maximálny počet správ, ktoré sa majú vrátiť (1 – 10). Upozorňujeme, že sa môže vrátiť menej správ."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Maximálny počet správ"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Maximálny počet správ na prijatie pri jednom dopytovaní"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "Úplná adresa URL frontu Amazon SQS, z ktorého sa majú prijímať správy."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "Adresa URL frontu SQS na monitorovanie"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš front SQS. Tým sa určuje koncový bod použitý pre volania API."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "Trvanie (0 – 20 sekúnd), počas ktorého volanie čaká na príchod správy do frontu pred návratom."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Čas čakania (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Čas čakania pre dlhé dopytovanie v sekundách"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in an SQS queue",
+          "message": "Spustí sa po prijatí novej správy vo fronte SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content.",
+          "message": "Monitoruje front Amazon SQS na prítomnosť nových správ obsahujúcich platné dáta JSON. Spúšťa sa len pre správy so spracovateľným obsahom JSON."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "New JSON Message",
+          "message": "Nová správa JSON"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Maximálny počet správ, ktoré sa majú vrátiť (1 – 10). Upozorňujeme, že sa môže vrátiť menej správ."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Maximálny počet správ"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Maximálny počet správ na prijatie pri jednom dopytovaní"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive JSON messages.",
+          "message": "Úplná URL adresa radu Amazon SQS, z ktorého sa majú prijímať správy JSON."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL adresa radu"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "Adresa URL frontu SQS na monitorovanie"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Vyberte región AWS, v ktorom je hostovaný váš front SQS. Tým sa určuje koncový bod použitý pre volania API."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Región AWS, v ktorom sa nachádza rad SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "Trvanie (0 – 20 sekúnd), počas ktorého volanie čaká na príchod správy do frontu pred návratom."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Čas čakania (v sekundách)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Čas čakania pre dlhé dopytovanie v sekundách"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Triggers when a new JSON message is received in an SQS queue",
+          "message": "Spustí sa pri prijatí novej správy JSON v rade SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.desc": {
+          "source": "Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected.",
+          "message": "Monitoruje novovytvorené rady Amazon SQS v špecifikovanom regióne a spustí sa, keď sa zistia nové rady."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
+          "source": "New Queue",
+          "message": "Nový rad"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to monitor for newly created SQS queues.",
+          "message": "Vyberte región AWS, v ktorom chcete monitorovať novovytvorené rady SQS."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Región AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to monitor for new queues",
+          "message": "Región AWS na monitorovanie nových radov"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
+          "source": "Triggers when a new SQS queue is created",
+          "message": "Spustí sa pri vytvorení nového radu SQS"
+        },
+        "app.QW1hem9uU1FT.desc": {
+          "source": "The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.",
+          "message": "Integrácia Amazon SQS poskytuje komplexnú správu radov a spracovanie správ pre službu Amazon Simple Queue Service. Vytvárajte a spravujte rady, odosielajte správy (vrátane JSON), prijímajte správy pomocou spúšťačov opytovania a automatizujte svoje architektúry riadené správami so spoľahlivými a škálovateľnými operáciami radov."
+        },
+        "app.QW1hem9uU1FT.display_name": {
+          "source": "Amazon SQS",
+          "message": "Amazon SQS"
+        },
+        "app.QW1hem9uU1FT.short_desc": {
+          "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
+          "message": "Pripojte sa k službe Amazon Simple Queue Service na správu radov správ a automatizáciu pracovných postupov spracovania správ."
+        }
+      }
+    }
+  }
+}

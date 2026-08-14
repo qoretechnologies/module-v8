@@ -1,0 +1,825 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.QmFzZXJvdw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "在應用程式「Baserow」的指定資料表中建立新記錄"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Baserow\"",
+          "message": "在應用程式「Baserow」的指定資料表中建立新記錄"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Baserow table. The action dynamically presents the table schema, allowing you to provide values for each column. Optionally specify a row ID to insert the new row before it. Returns the newly created row with all its data.",
+          "message": "在指定的 Baserow 資料表中建立新記錄。此動作會動態呈現資料表架構，允許您為每個欄位提供值。可選擇指定列 ID 以在該列之前插入新列。傳回包含所有資料的新建立列。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "建立列"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.desc": {
+          "source": "Optionally specify a row ID to insert the new row before it in the table order. Leave empty to append the row at the end.",
+          "message": "可選擇指定列 ID，以在資料表順序中將新列插入其前方。留空則附加在末尾。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.display_name": {
+          "source": "Before Row ID",
+          "message": "插入於此列 ID 之前"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.YmVmb3JlX3Jvd19pZA.short_desc": {
+          "source": "Insert the new row before this row",
+          "message": "在此列之前插入新列"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "提供資料表各欄的值。結構會根據所選資料表架構動態生成，顯示所有可用欄及其資料類型和限制。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "列資料"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "要插入新列的資料"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the target Baserow table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "選擇要插入新列的目標 Baserow 資料表。可用欄位將根據所選資料表架構動態載入。"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "將插入列的資料表"
+        },
+        "app.QmFzZXJvdw.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Baserow table",
+          "message": "將新列插入至 Baserow 資料表"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.desc": {
+          "source": "Fetches comprehensive metadata for all fields in a specific Baserow table including field types, order, descriptions, default values, and properties. This action helps you understand the structure and configuration of your database tables.",
+          "message": "擷取特定 Baserow 資料表中所有欄位的完整中繼資料，包含欄位類型、順序、描述、預設值與屬性。此動作有助於您瞭解資料庫表的結構和設定。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.display_name": {
+          "source": "Get Table Fields",
+          "message": "取得資料表欄位"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table whose field definitions you want to fetch. All fields and their configurations will be returned.",
+          "message": "選擇您要擷取其欄位定義的 Baserow 資料表。將傳回所有欄位及其設定。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve fields from",
+          "message": "要從中擷取欄位的資料表"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX2ZpZWxkcw.short_desc": {
+          "source": "Retrieve all field definitions from a Baserow table",
+          "message": "從 Baserow 資料表擷取所有欄位定義"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.desc": {
+          "source": "Fetches detailed data for a single row in a Baserow table by its ID. Returns all column values for the specified row with dynamically loaded field types.",
+          "message": "透過 ID 擷取 Baserow 資料表中單一列的詳細資料。傳回指定列的所有欄位值以及動態載入的欄位類型。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.display_name": {
+          "source": "Get Table Row",
+          "message": "取得資料表列"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to retrieve from the table by its ID. All data for this row will be returned.",
+          "message": "透過 ID 選擇要從資料表中擷取的特定列。將傳回此列的所有資料。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "列"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to retrieve",
+          "message": "要擷取的列"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve a row. The available rows will be loaded based on this selection.",
+          "message": "選擇您想要從中擷取列的 Baserow 資料表。可用的列將根據此選擇載入。"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to retrieve the row from",
+          "message": "要從中擷取列的資料表"
+        },
+        "app.QmFzZXJvdw.action.Z2V0X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Retrieve a specific row from a Baserow table",
+          "message": "從 Baserow 資料表中檢索特定列"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "從應用程式 \"Baserow\" 中的指定資料表中刪除記錄"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Baserow\"",
+          "message": "從應用程式 \"Baserow\" 中的指定資料表中刪除記錄"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Removes a single row from a Baserow table by its ID. Use with caution as this operation is irreversible and permanently deletes the specified row.",
+          "message": "根據 ID 從 Baserow 資料表中移除單一列。請謹慎使用，因為此操作無法復原，並會永久刪除指定的列。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "刪除列"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to delete from the table by its ID. This row will be permanently removed.",
+          "message": "根據 ID 選擇要從資料表中刪除的特定列。此列將被永久移除。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "列"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to delete",
+          "message": "要刪除的列"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to delete a row. Ensure you have proper permissions for delete operations on this table.",
+          "message": "選擇要從中刪除列的 Baserow 資料表。請確保您對此資料表擁有適當的刪除操作權限。"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table to delete the row from",
+          "message": "要刪除列的資料表"
+        },
+        "app.QmFzZXJvdw.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Baserow table",
+          "message": "從 Baserow 資料表中刪除特定列"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves a list of all tables from your Baserow database with their basic metadata including table IDs, names, order, and associated database IDs.",
+          "message": "從您的 Baserow 資料庫中檢索所有資料表的清單及其基本詮釋資料，包含資料表 ID、名稱、順序和關聯的資料庫 ID。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "列出資料表"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get all tables in your Baserow database",
+          "message": "取得您的 Baserow 資料庫中的所有資料表"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Baserow table with support for filtering, sorting, pagination, and search. Returns a list of records matching your query criteria along with total count and pagination information.",
+          "message": "從 Baserow 資料表中擷取列，支援篩選、排序、分頁與搜尋。傳回符合您查詢條件的記錄清單，以及總數和分頁資訊。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "列出資料列"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply multiple filter conditions to retrieve only rows that match specific criteria. Supports various comparison operators and logical combinations.",
+          "message": "套用多個篩選條件，僅檢索符合特定條件的列。支援各種比較運算子和邏輯組合。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾鏡"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on conditions",
+          "message": "根據條件篩選列"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a field and sort direction (ascending or descending).",
+          "message": "透過指定欄位和排序方向（升冪或降冪）來定義如何排序擷取的列。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "排序"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.b3JkZXI.short_desc": {
+          "source": "Sort the results by a specific field",
+          "message": "按特定欄位排序結果"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to filter rows across all text fields in the table. Only rows containing this term will be returned.",
+          "message": "提供搜尋字詞以篩選資料表中所有文字欄位的列。僅傳回包含此字詞的列。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "搜尋"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter rows",
+          "message": "用於篩選列的搜尋字詞"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve per page. Defaults to 100 rows if not specified.",
+          "message": "指定每頁要擷取的最大列數。若未指定，預設為 100 列。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.display_name": {
+          "source": "Size",
+          "message": "大小"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.c2l6ZQ.short_desc": {
+          "source": "Number of rows per page",
+          "message": "每頁列數"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve. Used in combination with size for pagination through large datasets. Defaults to page 1.",
+          "message": "指定要擷取的結果頁碼。與大小（size）結合使用，用於在大數據集中進行分頁。預設為第 1 頁。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "頁碼"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "分頁的頁碼"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.desc": {
+          "source": "Select the Baserow table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "選擇您要從中擷取列的 Baserow 資料表。可用於篩選和排序的欄位將根據此選擇進行載入。"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.option.dGFibGU.short_desc": {
+          "source": "The table to query",
+          "message": "要查詢的資料表"
+        },
+        "app.QmFzZXJvdw.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Baserow table",
+          "message": "查詢並從 Baserow 資料表中擷取列"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Baserow** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的身份驗證對 **Baserow** 進行自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基底 URL）、選填的查詢參數、標頭和請求主體。回應會以包含狀態碼、回應標頭和回應主體的雜湊（hash）形式傳回。\n\n當端點尚未在此應用程式上顯示為一級動作時，請使用此動作。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.QmFzZXJvdw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Baserow",
+          "message": "對 Baserow 進行自訂 API 呼叫"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.desc": {
+          "source": "Monitors a Baserow table for new rows and triggers when new records are inserted. Supports optional filtering and search to trigger only for rows matching specific criteria.",
+          "message": "監控 Baserow 資料表是否有新列，並在插入新記錄時觸發。支援選填的篩選和搜尋，以便僅針對符合特定條件的列觸發。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.display_name": {
+          "source": "New Row",
+          "message": "新增列"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.desc": {
+          "source": "Apply filter conditions to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "套用篩選條件以僅針對符合特定條件的新列觸發。留空則針對所有新列觸發。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾鏡"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.ZmlsdGVy.short_desc": {
+          "source": "Optional conditions to filter new rows",
+          "message": "用於篩選新列的選填條件"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.desc": {
+          "source": "Provide a search term to trigger only for new rows that contain this term in any text field. Leave empty to trigger for all new rows.",
+          "message": "提供搜尋字詞，以僅針對在任何文字欄位中包含此字詞的新列觸發。留空則針對所有新列觸發。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "搜尋"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.c2VhcmNo.short_desc": {
+          "source": "Optional search term to filter new rows",
+          "message": "用於篩選新列的選填搜尋字詞"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.desc": {
+          "source": "Select the Baserow table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "選擇您要監控的 Baserow 資料表。每當有新列插入此資料表時，觸發器就會啟動。"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.option.dGFibGU.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "要監控新列的資料表"
+        },
+        "app.QmFzZXJvdw.action.bmV3X2RvY3VtZW50.short_desc": {
+          "source": "Triggers when a new row is added to a Baserow table",
+          "message": "當新列新增至 Baserow 資料表時觸發"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "在應用程式 \"Baserow\" 中的指定資料表中搜尋符合的記錄"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Baserow\"",
+          "message": "在應用程式 \"Baserow\" 中的指定資料表中搜尋符合的記錄"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "在應用程式 \"Baserow\" 中的指定資料表中搜尋單一符合的記錄"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Baserow\"",
+          "message": "在應用程式 \"Baserow\" 中的指定資料表中搜尋單一符合的記錄"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "更新應用程式 \"Baserow\" 中指定資料表現有的記錄"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Baserow\"",
+          "message": "更新應用程式 \"Baserow\" 中指定資料表現有的記錄"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.desc": {
+          "source": "Updates the values of an existing row in a Baserow table. The action dynamically presents the table schema, allowing you to modify values for each column. Returns the updated row with all its current data.",
+          "message": "更新 Baserow 資料表中現有列的值。此動作會動態顯示資料表結構圖（schema），允許您修改每個欄位的值。傳回包含所有當前資料的已更新列。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.display_name": {
+          "source": "Update Row",
+          "message": "更新列"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.desc": {
+          "source": "Provide new values for the table columns you want to update. The structure is dynamically generated based on the selected table schema.",
+          "message": "為您想要更新的資料表欄位提供新值。結構會根據所選的資料表結構圖（schema）動態產生。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.display_name": {
+          "source": "Row Data",
+          "message": "列資料"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.ZGF0YQ.short_desc": {
+          "source": "The new data for the row",
+          "message": "列的新資料"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.desc": {
+          "source": "Select the specific row to update by its ID. The current values of this row will be modified.",
+          "message": "根據 ID 選擇要更新的特定列。此列的目前值將被修改。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.display_name": {
+          "source": "Row",
+          "message": "列"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.cm93.short_desc": {
+          "source": "The row to update",
+          "message": "要更新的列"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.desc": {
+          "source": "Select the Baserow table containing the row you want to update. The available fields will be dynamically loaded based on the table schema.",
+          "message": "選擇包含您想要更新之列的 Baserow 資料表。可用的欄位將根據資料表結構圖（schema）動態載入。"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.option.dGFibGU.short_desc": {
+          "source": "The table containing the row to update",
+          "message": "包含要更新之列的資料表"
+        },
+        "app.QmFzZXJvdw.action.dXBkYXRlX3Jvdw.short_desc": {
+          "source": "Update an existing row in a Baserow table",
+          "message": "更新 Baserow 資料表中的現有列"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Uploads a file to Baserow's file storage system. Returns the uploaded file's metadata including URL, size, MIME type, and generated thumbnails for images. The uploaded file can then be referenced in file fields within your tables.",
+          "message": "上傳檔案至 Baserow 的檔案儲存系統。傳回已上傳檔案的詮釋資料，包含 URL、大小、MIME 類型以及針對影像產生的縮圖。隨後可在資料表內的檔案欄位中引用上傳的檔案。"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "上傳檔案"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "Select or provide the file to upload to Baserow storage. The file will be stored and available for use in file fields.",
+          "message": "選擇或提供要上傳至 Baserow 儲存空間的檔案。該檔案將被儲存並可用於檔案欄位。"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "檔案"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "要上傳的檔案"
+        },
+        "app.QmFzZXJvdw.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Baserow storage",
+          "message": "上傳檔案至 Baserow 儲存空間"
+        },
+        "app.QmFzZXJvdw.desc": {
+          "source": "The Baserow integration provides comprehensive access to your Baserow database operations. Create, read, update, and delete rows in your tables, upload files, and monitor new entries with real-time triggers. Whether you need to manage data, filter results, or track new records, this integration streamlines your Baserow workflow automation and database management.",
+          "message": "Baserow 整合功能提供對您的 Baserow 資料庫操作的完整存取。在您的資料表中建立、讀取、更新和刪除列，上傳檔案，並透過即時觸發器監控新條目。無論您需要管理資料、篩選結果還是追蹤新記錄，此整合功能都能簡化您的 Baserow 工作流程自動化與資料庫管理。"
+        },
+        "app.QmFzZXJvdw.display_name": {
+          "source": "Baserow",
+          "message": "Baserow"
+        },
+        "app.QmFzZXJvdw.short_desc": {
+          "source": "Connect to Baserow to manage your database tables, rows, and files with powerful automation",
+          "message": "連接至 Baserow，透過強大的自動化功能管理您的資料庫資料表、列與檔案"
+        }
+      }
+    }
+  }
+}

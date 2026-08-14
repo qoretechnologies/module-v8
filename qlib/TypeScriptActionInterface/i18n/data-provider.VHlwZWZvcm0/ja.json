@@ -1,0 +1,921 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.desc": {
+          "source": "Creates a comprehensive new Typeform with complete customization options including fields, welcome screens, thank you screens, conditional logic, scoring, and advanced settings. Perfect for building surveys, quizzes, contact forms, or any interactive form with complex branching logic and custom styling.",
+          "message": "フィールド、ウェルカム画面、サンキュー画面、条件ロジック、スコアリング、詳細設定など、完全なカスタマイズオプションを備えた新しいTypeformを作成します。アンケート、クイズ、お問い合わせフォーム、または複雑な分岐ロジックやカスタムスタイルを持つインタラクティブなフォームの構築に最適です。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.display_name": {
+          "source": "Create Form",
+          "message": "フォームを作成"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.desc": {
+          "source": "Add questions and input fields to your form. Each field can be customized with different types, properties, validations, and scoring options.",
+          "message": "フォームに質問と入力フィールドを追加します。各フィールドは、さまざまなタイプ、プロパティ、バリデーション、スコアリングオプションでカスタマイズできます。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.display_name": {
+          "source": "Form Fields",
+          "message": "フォームフィールド"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.ZmllbGRz.short_desc": {
+          "source": "The questions and input fields for your form",
+          "message": "フォームの質問と入力フィールド"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.desc": {
+          "source": "List of hidden field names that can be used to pass data through URL parameters.",
+          "message": "URLパラメータ経由でデータを渡すために使用できる非表示フィールド名の一覧。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.display_name": {
+          "source": "Hidden Fields",
+          "message": "非表示フィールド"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.aGlkZGVu.short_desc": {
+          "source": "Hidden fields to pass data through the form",
+          "message": "フォーム経由でデータを渡すための非表示フィールド"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.desc": {
+          "source": "Create conditional logic rules to show/hide fields, jump to different sections, or perform calculations based on user responses.",
+          "message": "ユーザーの回答に基づいてフィールドの表示/非表示、別セクションへのジャンプ、計算を実行する条件ロジックルールを作成します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.display_name": {
+          "source": "Conditional Logic",
+          "message": "条件ロジック"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.bG9naWM.short_desc": {
+          "source": "Rules for conditional branching and calculations",
+          "message": "条件分岐と計算のルール"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.desc": {
+          "source": "Configure form-wide settings like language, progress bar, branding, and behavior options.",
+          "message": "言語、プログレスバー、ブランディング、動作オプションなど、フォーム全体の設定を構成します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.display_name": {
+          "source": "Form Settings",
+          "message": "フォーム設定"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.c2V0dGluZ3M.short_desc": {
+          "source": "Global settings and configuration for the form",
+          "message": "フォームのグローバル設定および構成"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.desc": {
+          "source": "Create welcome screens to introduce your form, explain its purpose, or provide instructions.",
+          "message": "フォームを紹介し、目的を説明し、または手順を提供するためのウェルカム画面を作成します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.display_name": {
+          "source": "Welcome Screens",
+          "message": "ウェルカム画面"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.d2VsY29tZV9zY3JlZW5z.short_desc": {
+          "source": "Introductory screens shown before the form",
+          "message": "フォームの前に表示される導入画面"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.desc": {
+          "source": "Create custom thank you screens to show appreciation, provide next steps, or display results.",
+          "message": "感謝の意を示し、次のステップを案内し、または結果を表示するためのカスタムサンキュー画面を作成します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.display_name": {
+          "source": "Thank You Screens",
+          "message": "サンキュー画面"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGhhbmt5b3Vfc2NyZWVucw.short_desc": {
+          "source": "Screens shown after form completion",
+          "message": "フォーム完了後に表示される画面"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.desc": {
+          "source": "The main title that will appear at the top of your form and in your form list.",
+          "message": "フォームの上部およびフォーム一覧に表示されるメインタイトル。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.display_name": {
+          "source": "Form Title",
+          "message": "フォームタイトル"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dGl0bGU.short_desc": {
+          "source": "The title of your new form",
+          "message": "新しいフォームのタイトル"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.desc": {
+          "source": "Define custom variables that can be used in calculations and conditional logic.",
+          "message": "計算や条件ロジックで使用できるカスタム変数を定義します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.display_name": {
+          "source": "Form Variables",
+          "message": "フォーム変数"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.option.dmFyaWFibGVz.short_desc": {
+          "source": "Custom variables for calculations and logic",
+          "message": "計算およびロジック用のカスタム変数"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2Zvcm0.short_desc": {
+          "source": "Create a new Typeform with fields, logic, and custom settings.",
+          "message": "フィールド、ロジック、カスタム設定を含む新しいTypeformを作成します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.desc": {
+          "source": "Uploads an image to your Typeform account that can be used in your forms for picture choice questions, form backgrounds, or other visual elements. You can upload either by providing a file or a URL to an existing image.",
+          "message": "画像選択の質問、フォームの背景、その他の視覚要素としてフォームで使用できる画像をTypeformアカウントにアップロードします。ファイルの指定または既存の画像へのURLの提供のいずれかでアップロードできます。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.display_name": {
+          "source": "Create Image",
+          "message": "画像の作成"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.desc": {
+          "source": "Optional custom name for the uploaded image. If not provided, the original filename will be used.",
+          "message": "アップロードする画像のオプションのカスタム名。指定しない場合、元のファイル名が使用されます。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.display_name": {
+          "source": "File Name",
+          "message": "ファイル名"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.ZmlsZV9uYW1l.short_desc": {
+          "source": "Custom name for the uploaded image",
+          "message": "アップロードする画像のカスタム名"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "The image file to upload directly to your Typeform account. Supported formats include JPG, PNG, and GIF.",
+          "message": "Typeformアカウントに直接アップロードする画像ファイル。サポートされている形式にはJPG、PNG、GIFが含まれます。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "画像ファイル"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "Image file to upload",
+          "message": "アップロードする画像ファイル"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.desc": {
+          "source": "The URL of an existing image to upload to your Typeform account. Use this if you have an image hosted elsewhere.",
+          "message": "Typeformアカウントにアップロードする既存画像のURL。画像が別の場所でホストされている場合に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "画像 URL"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.option.dXJs.short_desc": {
+          "source": "URL of the image to upload",
+          "message": "アップロードする画像のURL"
+        },
+        "app.VHlwZWZvcm0.action.Y3JlYXRlX2ltYWdl.short_desc": {
+          "source": "Upload an image to your Typeform account for use in forms.",
+          "message": "フォームで使用する画像をTypeformアカウントにアップロードします。"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.desc": {
+          "source": "Fetches complete details about a specific Typeform including all fields, settings, thank you screens, and metadata. Use this to get the full form definition for analysis, backup, or integration purposes.",
+          "message": "すべてのフィールド、設定、サンキュー画面、メタデータを含む、特定のTypeformの詳細情報を取得します。分析、バックアップ、統合の目的でフォーム定義全体を取得する場合に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "フォームの取得"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to get detailed information about.",
+          "message": "詳細情報を取得するTypeformを選択します。"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to retrieve",
+          "message": "取得するフォーム"
+        },
+        "app.VHlwZWZvcm0.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve detailed information about a specific Typeform.",
+          "message": "特定のTypeformに関する詳細情報を取得します。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.desc": {
+          "source": "Permanently deletes a Typeform from your account. This action cannot be undone, and all associated responses will also be deleted. Use with caution as this will remove the form and all its data.",
+          "message": "アカウントからTypeformを完全に削除します。この操作は元に戻すことができず、関連するすべての回答も削除されます。フォームとそのすべてのデータが削除されるため、注意して使用してください。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.display_name": {
+          "source": "Delete Form",
+          "message": "フォームを削除"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to permanently delete from your account.",
+          "message": "アカウントから完全に削除するTypeformを選択します。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to delete",
+          "message": "削除するフォーム"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2Zvcm0.short_desc": {
+          "source": "Permanently delete a Typeform from your account.",
+          "message": "アカウントからTypeformを完全に削除します。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Removes an image from your Typeform account. Once deleted, the image will no longer be available for use in any forms. Make sure the image is not currently being used in any active forms before deletion.",
+          "message": "Typeformアカウントから画像を削除します。削除すると、その画像はどのフォームでも使用できなくなります。削除する前に、アクティブなフォームで画像が現在使用されていないことを確認してください。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "画像の削除"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.desc": {
+          "source": "Select the image that you want to delete from your Typeform account.",
+          "message": "Typeformアカウントから削除する画像を選択します。"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.display_name": {
+          "source": "Image",
+          "message": "画像"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.option.aW1hZ2VfaWQ.short_desc": {
+          "source": "The image to delete",
+          "message": "削除する画像"
+        },
+        "app.VHlwZWZvcm0.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from your Typeform account.",
+          "message": "Typeformアカウントから画像を削除します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.desc": {
+          "source": "Fetches all workspaces available in your Typeform account with pagination and search capabilities. Workspaces help organize your forms and collaborate with team members. Use this to get workspace information including form counts and sharing status.",
+          "message": "ページネーションおよび検索機能を備え、Typeformアカウントで利用可能なすべてのワークスペースを取得します。ワークスペースはフォームの整理やチームメンバーとのコラボレーションに役立ちます。フォーム数や共有ステータスを含むワークスペース情報を取得する場合に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.display_name": {
+          "source": "List Workspaces",
+          "message": "ワークスペース一覧"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter workspaces by their name. Leave empty to retrieve all workspaces.",
+          "message": "ワークスペースを名前でフィルタリングするためのオプションの検索語。すべてのワークスペースを取得する場合は空のままにします。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter workspaces by name",
+          "message": "ワークスペースを名前でフィルタリングするための検索語"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many workspaces.",
+          "message": "取得するページ番号。ワークスペースが多数ある場合のページネーションに使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of workspaces to return per page. Maximum is 200, default is 10.",
+          "message": "1ページあたりに返すワークスペースの数。最大は200、デフォルトは10です。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of workspaces to return per page",
+          "message": "1ページあたりに返すワークスペースの数"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF93b3Jrc3BhY2Vz.short_desc": {
+          "source": "Retrieve a list of workspaces in your Typeform account.",
+          "message": "Typeformアカウント内のワークスペースの一覧を取得します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Fetches all forms in your Typeform account with filtering, sorting, and pagination options. Use this to get an overview of your forms, find specific forms by search criteria, or integrate with other systems.",
+          "message": "フィルタリング、ソート、ページネーションオプションを使用して、Typeformアカウント内のすべてのフォームを取得します。フォームの概要を把握したり、検索条件で特定のフォームを見つけたり、他のシステムと統合したりする場合に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "フォーム一覧"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned forms.",
+          "message": "返されるフォームのソート方法を指定します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "結果の並び替え方法"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter forms by their title. Leave empty to retrieve all forms.",
+          "message": "フォームをタイトルでフィルタリングするためのオプションの検索語。すべてのフォームを取得する場合は空のままにします。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "検索"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter forms by title",
+          "message": "フォームをタイトルでフィルタリングするための検索語"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve. Use this for pagination when you have many forms.",
+          "message": "取得するページ番号。フォームが多数ある場合のページネーションに使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of forms to return per page. Maximum is 200, default is 10.",
+          "message": "1ページあたりに返すフォームの数。最大値は200、デフォルトは10です。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of forms to return per page",
+          "message": "1ページあたりに返すフォームの数"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.desc": {
+          "source": "Optional workspace ID to filter forms that belong to a specific workspace.",
+          "message": "特定のワークスペースに属するフォームを絞り込むためのオプションのワークスペースID。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.display_name": {
+          "source": "Workspace ID",
+          "message": "ワークスペース ID"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.option.d29ya3NwYWNlX2lk.short_desc": {
+          "source": "Filter forms by workspace",
+          "message": "ワークスペースでフォームを絞り込む"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms in your Typeform account.",
+          "message": "Typeformアカウント内のフォーム一覧を取得します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.desc": {
+          "source": "Fetches all images that have been uploaded to your Typeform account. Use this to see what images are available for use in your forms, manage your image library, or get image URLs for integration purposes.",
+          "message": "Typeformアカウントにアップロードされたすべての画像を取得します。フォームで使用可能な画像を確認したり、画像ライブラリを管理したり、連携目的で画像URLを取得したりする場合に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.display_name": {
+          "source": "List Images",
+          "message": "画像の一覧取得"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9pbWFnZXM.short_desc": {
+          "source": "Retrieve all images in your Typeform account.",
+          "message": "Typeformアカウント内のすべての画像を取得します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Fetches all responses submitted to a specific Typeform with comprehensive filtering and sorting options. Use this to analyze form submissions, export data, or integrate responses with other systems.",
+          "message": "包括的なフィルタリングおよび並べ替えオプションを使用して、特定のTypeformに送信されたすべての回答を取得します。フォーム送信の分析、データのエクスポート、他システムとの回答連携に使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "回答の一覧表示"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.desc": {
+          "source": "Set to true to only return completed responses, false for incomplete responses.",
+          "message": "完了した回答のみを返す場合はtrue、未完了の回答を返す場合はfalseを設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.display_name": {
+          "source": "Completed Only",
+          "message": "完了済みのみ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Y29tcGxldGVk.short_desc": {
+          "source": "Only return completed responses",
+          "message": "完了した回答のみを返す"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.desc": {
+          "source": "List of field IDs that must have been answered for a response to be included.",
+          "message": "回答を含めるために回答済みである必要があるフィールドIDのリスト。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.display_name": {
+          "source": "Answered Fields",
+          "message": "回答済みフィールド"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YW5zd2VyZWRfZmllbGRz.short_desc": {
+          "source": "Only include responses that answered these fields",
+          "message": "これらのフィールドに回答した回答のみを含める"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.desc": {
+          "source": "Use this token for pagination to get responses that come after a specific response.",
+          "message": "特定の回答より後の回答を取得するページネーション用トークン。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.display_name": {
+          "source": "After Token",
+          "message": "Afterトークン"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YWZ0ZXI.short_desc": {
+          "source": "Pagination token for results after a specific response",
+          "message": "特定の回答より後の結果を取得するためのページネーショントークン"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.desc": {
+          "source": "Use this token for pagination to get responses that come before a specific response.",
+          "message": "特定の回答より前の回答を取得するページネーション用トークン。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.display_name": {
+          "source": "Before Token",
+          "message": "Beforeトークン"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.YmVmb3Jl.short_desc": {
+          "source": "Pagination token for results before a specific response",
+          "message": "特定の回答より前の結果を取得するためのページネーショントークン"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to exclude from the results.",
+          "message": "結果から除外する特定の回答IDのリスト。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Exclude Response IDs",
+          "message": "除外する回答ID"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZXhjbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to exclude",
+          "message": "除外する特定の回答ID"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.desc": {
+          "source": "Select the Typeform that you want to retrieve responses from.",
+          "message": "回答を取得するTypeformを選択します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.Zm9ybV9pZA.short_desc": {
+          "source": "The form to get responses from",
+          "message": "回答を取得するフォーム"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.desc": {
+          "source": "List of specific field IDs to include in the response data.",
+          "message": "回答データに含める特定のフィールドIDのリスト。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.display_name": {
+          "source": "Include Fields",
+          "message": "含めるフィールド"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to include in responses",
+          "message": "回答に含める特定のフィールド"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.desc": {
+          "source": "List of specific response IDs to include in the results. Only these responses will be returned.",
+          "message": "結果に含める特定の回答IDのリスト。これらの回答のみが返されます。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.display_name": {
+          "source": "Include Response IDs",
+          "message": "含める回答ID"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.aW5jbHVkZWRfcmVzcG9uc2VfaWRz.short_desc": {
+          "source": "Specific response IDs to include",
+          "message": "含める特定の回答ID"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.desc": {
+          "source": "Specify how to sort the returned responses.",
+          "message": "返される回答の並べ替え方法を指定します。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.display_name": {
+          "source": "Sort Order",
+          "message": "並べ替え順序"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.b3JkZXI.short_desc": {
+          "source": "How to sort the results",
+          "message": "結果の並び替え方法"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.desc": {
+          "source": "Filter responses to only include those submitted after the specified date.",
+          "message": "指定した日時以降に送信された回答のみを含めるよう絞り込みます。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.display_name": {
+          "source": "Since Date",
+          "message": "開始日時"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.c2luY2U.short_desc": {
+          "source": "Only include responses submitted after this date",
+          "message": "この日時以降に送信された回答のみを含める"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.desc": {
+          "source": "The number of responses to return. Maximum is 1000, default is 25.",
+          "message": "返す回答の件数。最大値は1000、デフォルトは25です。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of responses to return",
+          "message": "返す回答の件数"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.desc": {
+          "source": "Advanced query string to filter responses based on answer values.",
+          "message": "回答値に基づいて回答を絞り込むための高度なクエリ文字列。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "クエリ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cXVlcnk.short_desc": {
+          "source": "Advanced query to filter responses",
+          "message": "回答を絞り込むための高度なクエリ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnBhcnRpYWw.display_name": {
+          "source": "Partial",
+          "message": "一部"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnN0YXJ0ZWQ.display_name": {
+          "source": "Started",
+          "message": "開始済み"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Filter responses by their completion status (started, partial, or completed).",
+          "message": "完了ステータス（started、partial、またはcompleted）で回答を絞り込みます。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Types",
+          "message": "回答タイプ"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Filter by response completion status",
+          "message": "回答の完了ステータスで絞り込む"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.desc": {
+          "source": "Filter responses to only include those submitted before the specified date.",
+          "message": "指定した日時より前に送信された回答のみを含めるよう絞り込みます。"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.display_name": {
+          "source": "Until Date",
+          "message": "終了日時"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.option.dW50aWw.short_desc": {
+          "source": "Only include responses submitted before this date",
+          "message": "この日時より前に送信された回答のみを含める"
+        },
+        "app.VHlwZWZvcm0.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve responses submitted to a specific Typeform.",
+          "message": "特定のTypeformに送信された回答を取得します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Typeform** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Typeform**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLからの相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.VHlwZWZvcm0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Typeform",
+          "message": "TypeformへのカスタムAPI呼び出しを実行"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.desc": {
+          "source": "This trigger activates whenever someone submits a response to your Typeform. It provides complete response data including all answers, form definition, calculated scores, and metadata. Perfect for processing form submissions, updating databases, sending notifications, or triggering follow-up workflows based on user responses.",
+          "message": "誰かがTypeformに回答を送信するたびにこのトリガーが起動します。すべての回答、フォーム定義、計算されたスコア、メタデータを含む完全な回答データを提供します。フォーム送信の処理、データベースの更新、通知の送信、ユーザーの回答に基づくフォローアップワークフローのトリガーに最適です。"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.display_name": {
+          "source": "New Form Response",
+          "message": "新しいフォームの回答"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.desc": {
+          "source": "Select the specific Typeform that you want to monitor for new submissions. The trigger will fire every time someone completes and submits this form.",
+          "message": "新規送信を監視する特定のTypeformを選択します。誰かがこのフォームに入力して送信するたびにトリガーが実行されます。"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.display_name": {
+          "source": "Form",
+          "message": "フォーム"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.option.Zm9ybV9pZA.short_desc": {
+          "source": "The Typeform to monitor for new responses",
+          "message": "新しい回答を監視するTypeform"
+        },
+        "app.VHlwZWZvcm0.action.bmV3X2Zvcm1fcmVzcG9uc2U.short_desc": {
+          "source": "Triggers when a new response is submitted to a Typeform form.",
+          "message": "Typeformフォームに新しい回答が送信されたときにトリガーされます。"
+        },
+        "app.VHlwZWZvcm0.desc": {
+          "source": "Typeform is a versatile form builder that allows you to create engaging, conversational forms, surveys, quizzes, and polls. With its intuitive interface and powerful features, you can collect responses, analyze data, and integrate with other tools to streamline your workflow. Perfect for lead generation, customer feedback, event registration, and market research.",
+          "message": "Typeformは、魅力的で対話型のフォーム、アンケート、クイズ、投票を作成できる多機能なフォームビルダーです。直感的なインターフェースと強力な機能により、回答の収集、データの分析、他のツールとの連携を行い、ワークフローを効率化できます。リード獲得、顧客からのフィードバック、イベント登録、市場調査に最適です。"
+        },
+        "app.VHlwZWZvcm0.display_name": {
+          "source": "Typeform",
+          "message": "Typeform"
+        },
+        "app.VHlwZWZvcm0.short_desc": {
+          "source": "Create and manage interactive forms, surveys, and quizzes with Typeform.",
+          "message": "Typeformを使用してインタラクティブなフォーム、アンケート、クイズを作成および管理します。"
+        }
+      }
+    }
+  }
+}

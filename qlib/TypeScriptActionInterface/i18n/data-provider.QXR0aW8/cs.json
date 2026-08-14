@@ -1,0 +1,1361 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.QXR0aW8.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "Vytvořit nové záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvořit záznamy"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Attio\"",
+          "message": "Vytvořit nové záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.desc": {
+          "source": "This action creates a new note and attaches it to a specific record within an Attio object. Notes can be written in plain text or markdown format and include a title and content body. They serve as a way to document important information about records in your workspace.",
+          "message": "Tato akce vytvoří novou poznámku a připojí ji ke konkrétnímu záznamu v objektu Attio. Poznámky mohou být napsány v prostém textu nebo ve formátu markdown a obsahují název a tělo obsahu. Slouží k dokumentování důležitých informací o záznamech ve vašem pracovním prostoru."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.display_name": {
+          "source": "Create Note",
+          "message": "Vytvořit poznámku"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.desc": {
+          "source": "Enter the content for your note. This can be formatted according to the selected format type (plain text or markdown).",
+          "message": "Zadejte obsah poznámky. Ten lze naformátovat podle vybraného typu formátu (prostý text nebo markdown)."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "Obsah"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Y29udGVudA.short_desc": {
+          "source": "The main body text of the note",
+          "message": "Hlavní text obsahu poznámky"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWludGV4dA.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.desc": {
+          "source": "Choose whether the note content should be treated as plain text or markdown. Markdown allows for rich text formatting including headers, lists, links, and more.",
+          "message": "Zvolte, zda má být obsah poznámky považován za prostý text nebo markdown. Markdown umožňuje formátování bohatého textu včetně nadpisů, seznamů, odkazů a dalších prvků."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.display_name": {
+          "source": "Format",
+          "message": "Formát"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.Zm9ybWF0.short_desc": {
+          "source": "The text format to use for the note content",
+          "message": "Textový formát, který se má použít pro obsah poznámky"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "Select the Attio object that contains the record you want to attach this note to. This defines which object type the note will be associated with.",
+          "message": "Vyberte objekt Attio, který obsahuje záznam, ke kterému chcete tuto poznámku připojit. Tím se určí, ke kterému typu objektu bude poznámka přiřazena."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "Nadřazený objekt"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The object that contains the record to attach the note to",
+          "message": "Objekt obsahující záznam, ke kterému má být poznámka připojena"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "Select the specific record within the parent object that this note should be attached to. Available options will be based on the parent object you selected.",
+          "message": "Vyberte konkrétní záznam v nadřazeném objektu, ke kterému má být tato poznámka připojena. Dostupné možnosti se budou odvíjet od vybraného nadřazeného objektu."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID nadřazeného záznamu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "The specific record to attach the note to",
+          "message": "Konkrétní záznam, ke kterému má být poznámka připojena"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.desc": {
+          "source": "Provide a title for the note. This will appear as the heading when viewing the note in Attio.",
+          "message": "Zadejte název poznámky. Ten se zobrazí jako nadpis při prohlížení poznámky v aplikaci Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Název"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.option.dGl0bGU.short_desc": {
+          "source": "The title of the note",
+          "message": "Název poznámky"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX25vdGU.short_desc": {
+          "source": "Creates a new note attached to a specific record in Attio.",
+          "message": "Vytvoří novou poznámku připojenou ke konkrétnímu záznamu v Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Create a new record in a specified object within your Attio workspace. This action allows you to define the object type and the attributes for the new record.",
+          "message": "Vytvořte nový záznam v určeném objektu ve vašem pracovním prostoru Attio. Tato akce vám umožňuje definovat typ objektu a atributy pro nový záznam."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Create Object Record",
+          "message": "Vytvořit záznam objektu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Choose the object type in which you want to create a new record. This can be a custom object or a standard object in your Attio workspace.",
+          "message": "Vyberte typ objektu, ve kterém chcete vytvořit nový záznam. Může se jednat o vlastní objekt nebo standardní objekt ve vašem pracovním prostoru Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objekt"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "Select the object type",
+          "message": "Vyberte typ objektu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Create a new record in a specified object",
+          "message": "Vytvořit nový záznam v určeném objektu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Creates a new entry in a specified Attio list. Requires the list identifier, parent object reference, and attribute values to populate the entry.",
+          "message": "Vytvoří novou položku v určeném seznamu Attio. Vyžaduje identifikátor seznamu, odkaz na nadřazený objekt a hodnoty atributů pro naplnění položky."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Create List Entry",
+          "message": "Vytvořit položku seznamu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list where the new entry will be created.",
+          "message": "API slug seznamu Attio, kde bude vytvořena nová položka."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to create entry in",
+          "message": "Seznam Attio, ve kterém má být vytvořena položka"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this list entry will be linked.",
+          "message": "Unikátní identifikátor nadřazeného záznamu, ke kterému bude tato položka seznamu připojena."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID nadřazeného záznamu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "ID nadřazeného záznamu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Create a new entry in an Attio list.",
+          "message": "Vytvořit novou položku v seznamu Attio."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "This action creates a new task in Attio with content, deadline, completion status, and optional assignees. You can set the task content, specify a deadline date, mark it as completed or not, and assign it to one or more workspace members.",
+          "message": "Tato akce vytvoří nový úkol v Attio s obsahem, termínem dokončení, stavem dokončení a volitelnými řešiteli. Můžete nastavit obsah úkolu, určit datum termínu, označit jej jako dokončený nebo nedokončený a přiřadit jej jednomu nebo více členům pracovního prostoru."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Vytvořit úkol"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.desc": {
+          "source": "Enter the content or description for the task. This will be the main text describing what needs to be done.",
+          "message": "Zadejte obsah nebo popis úkolu. Toto bude hlavní text popisující, co je potřeba udělat."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.display_name": {
+          "source": "Task Content",
+          "message": "Obsah úkolu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.Y29udGVudA.short_desc": {
+          "source": "The content or description of the task",
+          "message": "Obsah nebo popis úkolu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.desc": {
+          "source": "Select one or more workspace members who will be assigned to this task. These members will be responsible for completing the task and will receive notifications about it.",
+          "message": "Vyberte jednoho nebo více členů pracovního prostoru, kteří budou k tomuto úkolu přiřazeni. Títo členové budou odpovídat za dokončení úkolu a budou o něm dostávat oznámení."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.display_name": {
+          "source": "Assignees",
+          "message": "Přiřazení uživatelé"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.YXNzaWduZWVz.short_desc": {
+          "source": "Workspace members to assign the task to",
+          "message": "Členové pracovního prostoru, kterým má být úkol přiřazen"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.desc": {
+          "source": "Specify the date and time by which the task should be completed. This will be displayed in the task details and can be used for sorting and filtering tasks.",
+          "message": "Uveďte datum a čas, do kdy by měl být úkol dokončen. Toto se zobrazí v detailu úkolu a lze to použít pro řazení a filtrování úkolů."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.display_name": {
+          "source": "Deadline",
+          "message": "Termín dokončení"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.ZGVhZGxpbmVfYXQ.short_desc": {
+          "source": "The deadline date for the task",
+          "message": "Datum termínu dokončení úkolu"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Specify whether the task should be marked as completed when created. Default is false (task is not completed).",
+          "message": "Určete, zda má být úkol při vytvoření označen jako dokončený. Výchozí hodnota je false (úkol není dokončen)."
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "Dokončeno"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Whether the task is already completed",
+          "message": "Zda je úkol již dokončen"
+        },
+        "app.QXR0aW8.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Creates a new task in Attio with specified details.",
+          "message": "Vytvoří nový úkol v Attio s určenými podrobnostmi."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.desc": {
+          "source": "Retrieve Notes from your Attio workspace. ",
+          "message": "Načíst poznámky z vašeho pracovního prostoru Attio. "
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.display_name": {
+          "source": "Get Notes",
+          "message": "Získat poznámky"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.desc": {
+          "source": "The number of notes to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Počet poznámek, které se mají přeskočit před vrácením výsledků. Používá se pro stránkování. Výchozí hodnota je 0."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of notes to skip",
+          "message": "Počet poznámek k přeskočení"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.desc": {
+          "source": "The maximum number of notes to return. Default is 50. You can specify a value between 1 and 100.",
+          "message": "Maximální počet poznámek k vrácení. Výchozí hodnota je 50. Můžete zadat hodnotu mezi 1 a 100."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of notes to return",
+          "message": "Maximální počet poznámek k vrácení"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.desc": {
+          "source": "The type of the parent object that this note is linked to. This is required to filter notes by their parent object.",
+          "message": "Typ nadřazeného objektu, ke kterému je tato poznámka připojena. Toto je vyžadováno pro filtrování poznámek podle jejich nadřazeného objektu."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.display_name": {
+          "source": "Parent Object",
+          "message": "Nadřazený objekt"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X29iamVjdA.short_desc": {
+          "source": "The parent object type",
+          "message": "Typ nadřazeného objektu"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.desc": {
+          "source": "The unique identifier of the parent record to which this note is linked. This is required to filter notes by their parent record.",
+          "message": "Unikátní identifikátor nadřazeného záznamu, ke kterému je tato poznámka připojena. Toto je vyžadováno pro filtrování poznámek podle jejich nadřazeného záznamu."
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.display_name": {
+          "source": "Parent Record ID",
+          "message": "ID nadřazeného záznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.option.cGFyZW50X3JlY29yZF9pZA.short_desc": {
+          "source": "ID of the parent record",
+          "message": "ID nadřazeného záznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X25vdGVz.short_desc": {
+          "source": "Retrieves Notes from Attio.",
+          "message": "Načte poznámky z Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.desc": {
+          "source": "This action retrieves a single record from an Attio object by its record ID. You must specify both the object and the specific record ID you want to retrieve. This provides detailed information about the record including all its attributes and values.",
+          "message": "Tato akce načte jediný záznam z objektu Attio podle jeho ID záznamu. Musíte určit jak objekt, tak konkrétní ID záznamu, který chcete načíst. Poskytuje podrobné informace o záznamu včetně všech jeho atributů a hodnot."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Get Single Object Record",
+          "message": "Získat jednotlivý záznam objektu"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "Select the Attio object that contains the record you want to retrieve. This is required to identify which object to search in.",
+          "message": "Vyberte objekt Attio, který obsahuje záznam, jenž chcete načíst. Toto je vyžadováno pro identifikaci objektu, ve kterém se má vyhledávat."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objekt"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to retrieve the record from",
+          "message": "Objekt Attio, ze kterého má být záznam načten"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "Specify the unique identifier of the record you want to retrieve. This ID is specific to the object you've selected and will load available records based on your object selection.",
+          "message": "Zadejte unikátní identifikátor záznamu, který chcete načíst. Toto ID je specifické pro vámi vybraný objekt a načte dostupné záznamy na základě výběru objektu."
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the specific record to retrieve",
+          "message": "ID konkrétního záznamu k načtení"
+        },
+        "app.QXR0aW8.action.Z2V0X29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Retrieves a specific record from an Attio object.",
+          "message": "Načte konkrétní záznam z objektu Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.desc": {
+          "source": "This action retrieves a single entry from an Attio list by its entry ID. You must specify both the list and the specific entry ID you want to retrieve. This provides detailed information about the entry including all its attributes and values.",
+          "message": "Tato akce načte jedinou položku ze seznamu Attio podle jejího ID položky. Musíte určit jak seznam, tak konkrétní ID položky, kterou chcete načíst. Poskytuje podrobné informace o položce včetně všech jejích atributů a hodnot."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.display_name": {
+          "source": "Get Single List Entry",
+          "message": "Získat jednotlivou položku seznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "Specify the unique identifier of the entry you want to retrieve. This ID is specific to the list you've selected and will load available entries based on your list selection.",
+          "message": "Zadejte unikátní identifikátor položky, kterou chcete načíst. Toto ID je specifické pro vámi vybraný seznam a načte dostupné položky na základě výběru seznamu."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "ID položky"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "The ID of the specific entry to retrieve",
+          "message": "ID konkrétní položky k načtení"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "Select the Attio list that contains the entry you want to retrieve. This is required to identify which list to search in.",
+          "message": "Vyberte seznam Attio, který obsahuje položku, kterou chcete načíst. Toto je vyžadováno pro identifikaci seznamu, ve kterém se má vyhledávat."
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to retrieve the entry from",
+          "message": "Seznam Attio, ze kterého má být položka načtena"
+        },
+        "app.QXR0aW8.action.Z2V0X2xpc3RfZW50cnk.short_desc": {
+          "source": "Retrieves a specific entry from an Attio list.",
+          "message": "Načte konkrétní položku ze seznamu Attio."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.desc": {
+          "source": "This action retrieves a single task from Attio using its unique task ID. The response includes all task details such as content, completion status, deadline, linked records, assignees, and creation information.",
+          "message": "Tato akce načte jediný úkol z Attio pomocí jeho unikátního ID úkolu. Odpověď obsahuje všechny podrobnosti o úkolu, jako je obsah, stav dokončení, termín, propojené záznamy, řešitelé a informace o vytvoření."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Získat úlohu"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.desc": {
+          "source": "Specify the unique identifier of the task you want to retrieve. The available task IDs will be loaded based on your previous object selection.",
+          "message": "Zadejte unikátní identifikátor úkolu, který chcete načíst. Dostupná ID úkolů budou načtena na základě vašeho předchozího výběru objektu."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.display_name": {
+          "source": "Task ID",
+          "message": "ID úlohy"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.option.dGFza19pZA.short_desc": {
+          "source": "The ID of the specific task to retrieve",
+          "message": "ID konkrétního úkolu k načtení"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieves a specific task from Attio by its ID.",
+          "message": "Načte konkrétní úkol z Attio podle jeho ID."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.desc": {
+          "source": "This action retrieves a list of tasks from Attio with various filtering, sorting, and pagination options. You can filter tasks by linked records, completion status, and assignee, as well as control the order and number of results returned.",
+          "message": "Tato akce načte seznam úkolů z Attio s různými možnostmi filtrování, řazení a stránkování. Úkoly můžete filtrovat podle propojených záznamů, stavu dokončení a řešitele a také řídit pořadí a počet vrácených výsledků."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.display_name": {
+          "source": "List Tasks",
+          "message": "Seznam úloh"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.desc": {
+          "source": "Filter tasks to only include those assigned to a specific workspace member.",
+          "message": "Filtrujte úkoly tak, aby zahrnovaly pouze ty, které jsou přiřazeny konkrétnímu členu pracovního prostoru."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "Přiřazený uživatel"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.YXNzaWduZWU.short_desc": {
+          "source": "Filter tasks by assignee",
+          "message": "Filtrovat úkoly podle řešitele"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.desc": {
+          "source": "Filter tasks based on whether they are completed or not. Default is false (shows incomplete tasks).",
+          "message": "Filtrujte úkoly podle toho, zda jsou dokončené, nebo ne. Výchozí hodnota je false (zobrazuje nedokončené úkoly)."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.display_name": {
+          "source": "Completed",
+          "message": "Dokončeno"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.aXNfY29tcGxldGVk.short_desc": {
+          "source": "Filter by completion status",
+          "message": "Filtrovat podle stavu dokončení"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.desc": {
+          "source": "Specify the number of tasks to skip before starting to return results. Useful for pagination. Default is 0.",
+          "message": "Určete počet úkolů, které se mají přeskočit před vrácením výsledků. Užitečné pro stránkování. Výchozí hodnota je 0."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tasks to skip",
+          "message": "Počet úkolů k přeskočení"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of tasks to return in a single request. Default is 10.",
+          "message": "Určete maximální počet úkolů k vrácení v jedné žádosti. Výchozí hodnota je 10."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Maximální počet úkolů k vrácení"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.desc": {
+          "source": "Filter tasks to only include those linked to a specific object type in Attio. When selected, you can further refine by specifying a particular record.",
+          "message": "Filtrujte úkoly tak, aby zahrnovaly pouze ty, které jsou propojeny s konkrétním typem objektu v Attio. Po výběru můžete vyhledávání dále upřesnit určením konkrétního záznamu."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.display_name": {
+          "source": "Linked Object",
+          "message": "Propojený objekt"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX29iamVjdA.short_desc": {
+          "source": "Filter tasks by linked object type",
+          "message": "Filtrovat úkoly podle typu propojeného objektu"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.desc": {
+          "source": "Filter tasks to only include those linked to a specific record in the selected linked object. This option is only available after selecting a linked object.",
+          "message": "Filtrujte úkoly tak, aby zahrnovaly pouze ty, které jsou propojeny s konkrétním záznamem ve vybraném propojeném objektu. Tato možnost je k dispozici až po výběru propojeného objektu."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.display_name": {
+          "source": "Linked Record ID",
+          "message": "ID propojeného záznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.bGlua2VkX3JlY29yZF9pZA.short_desc": {
+          "source": "Filter tasks by specific linked record",
+          "message": "Filtrovat úkoly podle konkrétního propojeného záznamu"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm5ld2VzdF9maXJzdA.display_name": {
+          "source": "Newest First",
+          "message": "Od nejnovějších"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.allowed-value.c3RyaW5nOm9sZGVzdF9maXJzdA.display_name": {
+          "source": "Oldest First",
+          "message": "Od nejstarších"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.desc": {
+          "source": "Specify the order in which tasks should be returned. 'Oldest First' sorts by creation date ascending, 'Newest First' sorts by creation date descending.",
+          "message": "Určete pořadí, ve kterém mají být úkoly vráceny. 'Od nejstarších' řadí vzestupně podle data vytvoření, 'Od nejnovějších' řadí sestupně podle data vytvoření."
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.display_name": {
+          "source": "Sort Order",
+          "message": "Pořadí řazení"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.option.c29ydA.short_desc": {
+          "source": "Order of returned tasks",
+          "message": "Pořadí vrácených úkolů"
+        },
+        "app.QXR0aW8.action.Z2V0X3Rhc2tz.short_desc": {
+          "source": "Retrieves a list of tasks from Attio with filtering options.",
+          "message": "Získá seznam úkolů z Attio s možností filtrování."
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "Smazat záznamy z dané tabulky v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Smazat záznamy"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Attio\"",
+          "message": "Smazat záznamy z dané tabulky v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.desc": {
+          "source": "Queries entries from a specific Attio list with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of entries matching the specified criteria.",
+          "message": "Dotazuje se na položky ze specifického seznamu Attio s podporou filtrování podle hodnot atributů, řazení podle atributů a stránkování. Vrací seznam položek odpovídajících zadaným kritériím."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.display_name": {
+          "source": "Find List Entries",
+          "message": "Vyhledat položky seznamu"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "Kritéria filtru použitá na dotaz."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Kritéria filtru"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of entries to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Počet položek, které se mají přeskočit před začátkem vracení výsledků. Používá se pro stránkování. Výchozí hodnota je 0."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of entries to skip",
+          "message": "Počet položek k přeskočení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of entries to return. Default is 50.",
+          "message": "Maximální počet položek k vrácení. Výchozí hodnota je 50."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of entries to return",
+          "message": "Maximální počet položek k vrácení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to search entries in.",
+          "message": "API slug seznamu Attio, ve kterém se mají vyhledávat položky."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.bGlzdA.short_desc": {
+          "source": "The Attio list to search",
+          "message": "Seznam Attio k prohledání"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "Atribut, podle kterého se mají výsledky řadit. Výchozí hodnota je \"created_at\"."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "Atribut řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "Atribut pro řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Vzestupně"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Sestupně"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "Směr řazení výsledků. Může být buď vzestupný, nebo sestupný. Výchozí hodnota je vzestupný."
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "Směr řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "Směr řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9saXN0X2VudHJpZXM.short_desc": {
+          "source": "Search for entries in an Attio list with filtering and sorting options.",
+          "message": "Vyhledávání položek v seznamu Attio s možnostmi filtrování a řazení."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.desc": {
+          "source": "Queries records from a specific Attio object with support for filtering by attribute values, sorting by attributes, and pagination. Returns a list of records matching the specified criteria.",
+          "message": "Dotazuje se na záznamy ze specifického objektu Attio s podporou filtrování podle hodnot atributů, řazení podle atributů a stránkování. Vrací seznam záznamů odpovídajících zadaným kritériím."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.display_name": {
+          "source": "Find Object Records",
+          "message": "Vyhledat záznamy objektu"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.desc": {
+          "source": "Filter criteria to apply to the query.",
+          "message": "Kritéria filtru použitá na dotaz."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria",
+          "message": "Kritéria filtru"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to search in.",
+          "message": "API slug typu objektu Attio, ve kterém se má vyhledávat."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Typ objektu"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to search",
+          "message": "Objekt Attio k prohledání"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip before starting to return results. Used for pagination. Default is 0.",
+          "message": "Počet záznamů, které se mají přeskočit před začátkem vracení výsledků. Používá se pro stránkování. Výchozí hodnota je 0."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "Počet záznamů k přeskočení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return. Default is 50.",
+          "message": "Maximální počet záznamů k vrácení. Výchozí hodnota je 50."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "Maximální počet záznamů k vrácení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.desc": {
+          "source": "The attribute to sort the results by. Default is \"created_at\".",
+          "message": "Atribut, podle kterého se mají výsledky řadit. Výchozí hodnota je \"created_at\"."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.display_name": {
+          "source": "Sort Attribute",
+          "message": "Atribut řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9hdHRyaWJ1dGU.short_desc": {
+          "source": "Attribute to sort by",
+          "message": "Atribut pro řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmFzYw.display_name": {
+          "source": "Ascending",
+          "message": "Vzestupně"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.allowed-value.c3RyaW5nOmRlc2M.display_name": {
+          "source": "Descending",
+          "message": "Sestupně"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.desc": {
+          "source": "The direction to sort the results. Can be either ascending or descending. Default is ascending.",
+          "message": "Směr řazení výsledků. Může být buď vzestupný, nebo sestupný. Výchozí hodnota je vzestupný."
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.display_name": {
+          "source": "Sort Direction",
+          "message": "Směr řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.option.c29ydF9kaXJlY3Rpb24.short_desc": {
+          "source": "Sort direction",
+          "message": "Směr řazení"
+        },
+        "app.QXR0aW8.action.ZmluZF9vYmplY3RfcmVjb3Jkcw.short_desc": {
+          "source": "Search for records in an Attio object with filtering and sorting options.",
+          "message": "Vyhledávání záznamů v objektu Attio s možnostmi filtrování a řazení."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever a record is updated for a specified Attio object. It provides details about the updated record including its ID, object type, the actor who made the update, and the specific changes that were made.",
+          "message": "Tento spouštěč se aktivuje vždy, když je aktualizován záznam u určeného objektu Attio. Poskytuje podrobnosti o aktualizovaném záznamu včetně jeho ID, typu objektu, aktéra, který aktualizaci provedl, a konkrétních provedených změn."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.display_name": {
+          "source": "Object Record Updated",
+          "message": "Záznam objektu aktualizován"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for updated records.",
+          "message": "API slug typu objektu Attio, u kterého se mají sledovat aktualizované záznamy."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Typ objektu"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for updated records",
+          "message": "Objekt Attio pro sledování aktualizovaných záznamů"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF91cGRhdGVk.short_desc": {
+          "source": "Triggers when a record is updated for an Attio object.",
+          "message": "Spustí se při aktualizaci záznamu objektu Attio."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new record is created for a specified Attio object. It provides details about the created record including its ID, object type, and the actor who created it.",
+          "message": "Tento spouštěč se aktivuje vždy, když je vytvořen nový záznam pro určený objekt Attio. Poskytuje podrobnosti o vytvořeném záznamu včetně jeho ID, typu objektu a aktéra, který jej vytvořil."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.display_name": {
+          "source": "New Object Record Created",
+          "message": "Vytvořen nový záznam objektu"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for new records.",
+          "message": "API slug typu objektu Attio, u kterého se mají sledovat nové záznamy."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Typ objektu"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for new records",
+          "message": "Objekt Attio pro sledování nových záznamů"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new record is created for an Attio object.",
+          "message": "Spustí se při vytvoření nového záznamu objektu Attio."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever a record is deleted from a specified Attio object. It provides details about the deleted record including its ID, object type, and the actor who performed the deletion.",
+          "message": "Tento spouštěč se aktivuje vždy, když je smazán záznam z určeného objektu Attio. Poskytuje podrobnosti o smazaném záznamu včetně jeho ID, typu objektu a aktéra, který smazání provedl."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.display_name": {
+          "source": "Object Record Deleted",
+          "message": "Záznam objektu smazán"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type to monitor for deleted records.",
+          "message": "API slug typu objektu Attio, u kterého se mají sledovat smazané záznamy."
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.display_name": {
+          "source": "Object Type",
+          "message": "Typ objektu"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to monitor for deleted records",
+          "message": "Objekt Attio pro sledování smazaných záznamů"
+        },
+        "app.QXR0aW8.action.b2JqZWN0X3JlY29yZF9kZWxldGVk.short_desc": {
+          "source": "Triggers when a record is deleted from an Attio object.",
+          "message": "Spustí se při smazání záznamu z objektu Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.desc": {
+          "source": "This trigger fires whenever an entry is updated in a specified Attio list. It provides details about the updated entry including its ID, parent object, the actor who made the update, and the specific changes that were made.",
+          "message": "Tento spouštěč se aktivuje vždy, když je aktualizována položka v určeném seznamu Attio. Poskytuje podrobnosti o aktualizované položce včetně jejího ID, nadřazeného objektu, aktéra, který aktualizaci provedl, a konkrétních provedených změn."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.display_name": {
+          "source": "List Entry Updated",
+          "message": "Položka seznamu aktualizována"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for updated entries.",
+          "message": "API slug seznamu Attio, u kterého se mají sledovat aktualizované položky."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for updated entries",
+          "message": "Seznam Attio pro sledování aktualizovaných položek"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV91cGRhdGVk.short_desc": {
+          "source": "Triggers when an entry is updated in an Attio list.",
+          "message": "Spustí se při aktualizaci položky v seznamu Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new entry is created in a specified Attio list. It provides details about the created entry including its ID, parent object, and the actor who created it.",
+          "message": "Tento spouštěč se aktivuje vždy, když je vytvořena nová položka v určeném seznamu Attio. Poskytuje podrobnosti o vytvořené položce včetně jejího ID, nadřazeného objektu a aktéra, který ji vytvořil."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.display_name": {
+          "source": "New List Entry Created",
+          "message": "Vytvořena nová položka seznamu"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for new entries.",
+          "message": "API slug seznamu Attio, u kterého se mají sledovat nové položky."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for new entries",
+          "message": "Seznam Attio pro sledování nových položek"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new entry is created in an Attio list.",
+          "message": "Spustí se při vytvoření nové položky v seznamu Attio."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.desc": {
+          "source": "This trigger fires whenever an entry is deleted from a specified Attio list. It provides details about the deleted entry including its ID, parent object, and the actor who performed the deletion.",
+          "message": "Tento spouštěč se aktivuje vždy, když je smazána položka z určeného seznamu Attio. Poskytuje podrobnosti o smazané položce včetně jejího ID, nadřazeného objektu a aktéra, který smazání provedl."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.display_name": {
+          "source": "List Entry Deleted",
+          "message": "Položka seznamu smazána"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list to monitor for deleted entries.",
+          "message": "API slug seznamu Attio, u kterého se mají sledovat smazané položky."
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.option.bGlzdA.short_desc": {
+          "source": "The Attio list to monitor for deleted entries",
+          "message": "Seznam Attio pro sledování smazaných položek"
+        },
+        "app.QXR0aW8.action.bGlzdF9lbnRyeV9kZWxldGVk.short_desc": {
+          "source": "Triggers when an entry is deleted from an Attio list.",
+          "message": "Spustí se při smazání položky ze seznamu Attio."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Attio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do **Attio** pomocí autentizace nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní vůči základní URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které ještě nejsou v této aplikaci dostupné jako prvotřídní akce."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.QXR0aW8.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Attio",
+          "message": "Provést vlastní volání API do Attio"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "Vyhledat odpovídající záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhledat záznamy"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Attio\"",
+          "message": "Vyhledat odpovídající záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "Vyhledat jeden odpovídající záznam v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Najít jeden záznam"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Attio\"",
+          "message": "Vyhledat jeden odpovídající záznam v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new task is created in your Attio workspace. It provides details about the created task including its ID, title, description, assignees, due date, and the actor who created it.",
+          "message": "Tento spouštěč se aktivuje při vytvoření nového úkolu ve vašem pracovním prostoru Attio. Poskytuje podrobnosti o vytvořeném úkolu včetně jeho ID, názvu, popisu, přiřazených osob, data splnění a uživatele, který jej vytvořil."
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.display_name": {
+          "source": "New Task Created",
+          "message": "Vytvořen nový úkol"
+        },
+        "app.QXR0aW8.action.dGFza19jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new task is created in Attio.",
+          "message": "Spustí se při vytvoření nového úkolu v Attio."
+        },
+        "app.QXR0aW8.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "Aktualizovat stávající záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovat záznamy"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Attio\"",
+          "message": "Aktualizovat stávající záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.desc": {
+          "source": "Updates the values of an existing record in a specified Attio object. Requires the object type, record ID, and the attribute values to update.",
+          "message": "Aktualizuje hodnoty stávajícího záznamu v určeném objektu Attio. Vyžaduje typ objektu, ID záznamu a hodnoty atributů k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.display_name": {
+          "source": "Update Object Record",
+          "message": "Aktualizovat záznam objektu"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.desc": {
+          "source": "The API slug of the Attio object type containing the record to update.",
+          "message": "API slug typu objektu Attio obsahujícího záznam k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.display_name": {
+          "source": "Object",
+          "message": "Objekt"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.b2JqZWN0.short_desc": {
+          "source": "The Attio object to update",
+          "message": "Objekt Attio k aktualizaci"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.desc": {
+          "source": "The unique identifier of the record to update.",
+          "message": "Jedinečný identifikátor záznamu k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID záznamu"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.option.cmVjb3JkX2lk.short_desc": {
+          "source": "ID of the record to update",
+          "message": "ID záznamu k aktualizaci"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX29iamVjdF9yZWNvcmQ.short_desc": {
+          "source": "Update an existing record in an Attio object.",
+          "message": "Aktualizovat stávající záznam v objektu Attio."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.desc": {
+          "source": "Updates the attribute values of an existing entry in a specified Attio list. Requires the list identifier, entry ID, and the attribute values to update.",
+          "message": "Aktualizuje hodnoty atributů stávající položky v určeném seznamu Attio. Vyžaduje identifikátor seznamu, ID položky a hodnoty atributů k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.display_name": {
+          "source": "Update List Entry",
+          "message": "Aktualizovat položku seznamu"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.desc": {
+          "source": "The unique identifier of the list entry to update.",
+          "message": "Jedinečný identifikátor položky seznamu k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.display_name": {
+          "source": "Entry ID",
+          "message": "ID položky"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.ZW50cnlfaWQ.short_desc": {
+          "source": "ID of the entry to update",
+          "message": "ID položky k aktualizaci"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.desc": {
+          "source": "The API slug of the Attio list containing the entry to update.",
+          "message": "API slug seznamu Attio obsahujícího položku k aktualizaci."
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Seznam"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.option.bGlzdA.short_desc": {
+          "source": "The Attio list containing the entry",
+          "message": "Seznam Attio obsahující položku"
+        },
+        "app.QXR0aW8.action.dXBkYXRlX2xpc3RfZW50cnk.short_desc": {
+          "source": "Update an existing entry in an Attio list.",
+          "message": "Aktualizovat stávající položku v seznamu Attio."
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "Vložit nebo aktualizovat (upsert) záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Vložit nebo aktualizovat záznamy"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabulka"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Název tabulky"
+        },
+        "app.QXR0aW8.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Attio\"",
+          "message": "Vložit nebo aktualizovat (upsert) záznamy v dané tabulce v aplikaci \"Attio\""
+        },
+        "app.QXR0aW8.desc": {
+          "source": "Integrate with Attio to manage your contacts, companies, and data. This integration allows you to perform actions and respond to events in your Attio workspace, enabling you to automate workflows and enhance your productivity.",
+          "message": "Integrujte s Attio a spravujte své kontakty, společnosti a data. Tato integrace vám umožňuje provádět akce a reagovat na události ve vašem pracovním prostoru Attio, což vám umožní automatizovat pracovní postupy a zvýšit produktivitu."
+        },
+        "app.QXR0aW8.display_name": {
+          "source": "Attio",
+          "message": "Attio"
+        },
+        "app.QXR0aW8.short_desc": {
+          "source": "Connect with Attio to manage your contacts and data",
+          "message": "Propojte se s Attio a spravujte své kontakty a data"
+        }
+      }
+    }
+  }
+}

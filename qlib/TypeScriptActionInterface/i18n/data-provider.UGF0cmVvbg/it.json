@@ -1,0 +1,753 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.desc": {
+          "source": "Fetches comprehensive details about a single campaign member (patron) including pledge amounts, payment history, membership status, and relationship timeline.",
+          "message": "Recupera dettagli completi su un singolo membro della campagna (patron) inclusi importi dei contributi, cronologia dei pagamenti, stato dell'abbonamento e cronologia della relazione."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.display_name": {
+          "source": "Get Member",
+          "message": "Ottieni membro"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Optionally select a campaign to filter the member selection. This helps narrow down the member list when searching.",
+          "message": "Seleziona facoltativamente una campagna per filtrare la selezione dei membri. Questo aiuta a restringere l'elenco dei membri durante la ricerca."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to filter members from",
+          "message": "La campagna da cui filtrare i membri"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.desc": {
+          "source": "Select or enter the ID of the member (patron) whose details you want to retrieve. This is a required field.",
+          "message": "Seleziona o inserisci l'ID del membro (patron) di cui desideri recuperare i dettagli. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.display_name": {
+          "source": "Member ID",
+          "message": "ID membro"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.option.bWVtYmVySWQ.short_desc": {
+          "source": "The ID of the member to retrieve",
+          "message": "L'ID del membro da recuperare"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X21lbWJlcg.short_desc": {
+          "source": "Retrieve detailed information about a specific member",
+          "message": "Recupera informazioni dettagliate su un membro specifico"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Fetches comprehensive details about a single campaign including summary, creation details, social media integration, RSS feed settings, and patron statistics.",
+          "message": "Recupera dettagli completi su una singola campagna inclusi riepilogo, dettagli di creazione, integrazione con i social media, impostazioni del feed RSS e statistiche sui patron."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "Ottieni campagna"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to get detailed information about. This is a required field.",
+          "message": "Seleziona la campagna di cui desideri ottenere informazioni dettagliate. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve",
+          "message": "L'ID della campagna da recuperare"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Retrieve detailed information about a specific campaign",
+          "message": "Recupera informazioni dettagliate su una campagna specifica"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.desc": {
+          "source": "Fetches comprehensive details about a single post including content, publish information, access settings, and engagement metrics.",
+          "message": "Recupera dettagli completi su un singolo post inclusi contenuto, informazioni di pubblicazione, impostazioni di accesso e metriche di engagement."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.display_name": {
+          "source": "Get Post",
+          "message": "Ottieni post"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Optionally select a campaign to filter the post selection. This helps narrow down the post list when searching.",
+          "message": "Seleziona facoltativamente una campagna per filtrare la selezione dei post. Questo aiuta a restringere l'elenco dei post durante la ricerca."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to filter posts from",
+          "message": "La campagna da cui filtrare i post"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.desc": {
+          "source": "Select or enter the ID of the post whose details you want to retrieve. This is a required field.",
+          "message": "Seleziona o inserisci l'ID del post di cui desideri recuperare i dettagli. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.display_name": {
+          "source": "Post ID",
+          "message": "ID post"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.option.cG9zdElk.short_desc": {
+          "source": "The ID of the post to retrieve",
+          "message": "L'ID del post da recuperare"
+        },
+        "app.UGF0cmVvbg.action.Z2V0X3Bvc3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific post",
+          "message": "Recupera informazioni dettagliate su un post specifico"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.desc": {
+          "source": "Fetches a paginated list of members (patrons) for a specified campaign. Returns detailed member information including pledge amounts, payment status, and membership details.",
+          "message": "Recupera un elenco impaginato di membri (patron) per una campagna specificata. Restituisce informazioni dettagliate sui membri inclusi importi dei contributi, stato dei pagamenti e dettagli dell'abbonamento."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.display_name": {
+          "source": "List Campaign Members",
+          "message": "Elenca membri della campagna"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of members to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "Specifica il numero massimo di membri da recuperare in una singola richiesta. Il valore predefinito è 20 se non specificato."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Conteggio"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of members to return",
+          "message": "Numero massimo di membri da restituire"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign whose members you want to retrieve. This is a required field.",
+          "message": "Seleziona la campagna di cui desideri recuperare i membri. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve members from",
+          "message": "L'ID della campagna da cui recuperare i membri"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of members. Leave empty for the first page.",
+          "message": "Usa il cursore restituito da una richiesta precedente per recuperare la pagina successiva di membri. Lascia vuoto per la prima pagina."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursore"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "Cursore di paginazione per recuperare il set successivo di risultati"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbl9tZW1iZXJz.short_desc": {
+          "source": "Retrieve members of a specific campaign",
+          "message": "Recupera i membri di una campagna specifica"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Fetches a paginated list of campaigns associated with the authenticated Patreon account. Returns comprehensive campaign information including patron counts, settings, and metadata.",
+          "message": "Recupera un elenco impaginato di campagne associate all'account Patreon autenticato. Restituisce informazioni complete sulla campagna, inclusi il numero di patron, le impostazioni e i metadati."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "Elenca campagne"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of campaigns to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "Specifica il numero massimo di campagne da recuperare in una singola richiesta. Il valore predefinito è 20 se non specificato."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Conteggio"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "Numero massimo di campagne da restituire"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of campaigns. Leave empty for the first page.",
+          "message": "Usa il cursore restituito da una richiesta precedente per recuperare la pagina successiva di campagne. Lascia vuoto per la prima pagina."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursore"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "Cursore di paginazione per recuperare il set successivo di risultati"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "Retrieve a list of campaigns for the authenticated creator",
+          "message": "Recupera un elenco di campagne per il creator autenticato"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.desc": {
+          "source": "Fetches a paginated list of posts from a specified campaign, sorted by publish date. Returns post content, metadata, and engagement information.",
+          "message": "Recupera un elenco impaginato di post da una campagna specificata, ordinati per data di pubblicazione. Restituisce il contenuto del post, i metadati e le informazioni di coinvolgimento."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.display_name": {
+          "source": "List Posts",
+          "message": "Elenca post"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.desc": {
+          "source": "Specifies the maximum number of posts to retrieve in a single request. Defaults to 20 if not specified.",
+          "message": "Specifica il numero massimo di post da recuperare in una singola richiesta. Il valore predefinito è 20 se non specificato."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Conteggio"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y291bnQ.short_desc": {
+          "source": "Maximum number of posts to return",
+          "message": "Numero massimo di post da restituire"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign whose posts you want to retrieve. This is a required field.",
+          "message": "Seleziona la campagna di cui desideri recuperare i post. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The ID of the campaign to retrieve posts from",
+          "message": "L'ID della campagna da cui recuperare i post"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.desc": {
+          "source": "Use the cursor returned from a previous request to fetch the next page of posts. Leave empty for the first page.",
+          "message": "Usa il cursore restituito da una richiesta precedente per recuperare la pagina successiva di post. Lascia vuoto per la prima pagina."
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.display_name": {
+          "source": "Cursor",
+          "message": "Cursore"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.option.Y3Vyc29y.short_desc": {
+          "source": "Pagination cursor for retrieving the next set of results",
+          "message": "Cursore di paginazione per recuperare il set successivo di risultati"
+        },
+        "app.UGF0cmVvbg.action.bGlzdF9wb3N0cw.short_desc": {
+          "source": "Retrieve posts from a specific campaign",
+          "message": "Recupera i post da una campagna specifica"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Patreon** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Patreon** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint non ancora esposti come azioni di prim'ordine su questa app."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.UGF0cmVvbg.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Patreon",
+          "message": "Esegui una chiamata API personalizzata a Patreon"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.desc": {
+          "source": "Monitors member events for a specific campaign using Patreon webhooks. This trigger fires when a member is created, their information is updated (including payment charging events), or their membership is deleted.",
+          "message": "Monitora gli eventi dei membri per una campagna specifica utilizzando i webhook di Patreon. Questo trigger si attiva quando viene creato un membro, vengono aggiornate le sue informazioni (inclusi gli eventi di addebito del pagamento) o viene eliminata la sua membership."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.display_name": {
+          "source": "Member Event",
+          "message": "Evento membro"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for member-related events. This is a required field.",
+          "message": "Seleziona la campagna che desideri monitorare per gli eventi correlati ai membri. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for member events",
+          "message": "La campagna da monitorare per gli eventi dei membri"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6Y3JlYXRl.desc": {
+          "source": "Triggered when a new member is created. Note that you may get more than one of these per patron if they delete and renew their membership. Member creation only occurs if there was no prior payment between patron and creator.",
+          "message": "Attivato quando viene creato un nuovo membro. Tieni presente che potresti riceverne più di uno per patron se elimina e rinnova la propria membership. La creazione del membro avviene solo se non ci sono stati pagamenti precedenti tra il patron e il creator."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6Y3JlYXRl.display_name": {
+          "source": "Member Created",
+          "message": "Membro creato"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6ZGVsZXRl.desc": {
+          "source": "Triggered when a membership is deleted. Note that you may get more than one of these per patron if they delete and renew their membership. Deletion only occurs if no prior payment happened, otherwise pledge deletion is an update to member status.",
+          "message": "Attivato quando una membership viene eliminata. Tieni presente che potresti riceverne più di uno per patron se elimina e rinnova la propria membership. L'eliminazione avviene solo se non ci sono stati pagamenti precedenti, altrimenti l'eliminazione del pledge è un aggiornamento dello stato del membro."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6ZGVsZXRl.display_name": {
+          "source": "Member Deleted",
+          "message": "Membro eliminato"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6dXBkYXRl.desc": {
+          "source": "Triggered when the membership information is changed. Includes updates on payment charging events.",
+          "message": "Attivato quando le informazioni sulla membership vengono modificate. Include aggiornamenti sugli eventi di addebito del pagamento."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6dXBkYXRl.display_name": {
+          "source": "Member Updated",
+          "message": "Membro aggiornato"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of member event should trigger this workflow. Member creation occurs only if there was no prior payment between patron and creator. Updates include payment charging events. Deletion only occurs if no prior payment happened.",
+          "message": "Seleziona quale tipo di evento membro deve attivare questo workflow. La creazione del membro avviene solo se non ci sono stati pagamenti precedenti tra patron e creator. Gli aggiornamenti includono eventi di addebito del pagamento. L'eliminazione avviene solo se non ci sono stati pagamenti precedenti."
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "Evento trigger"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific member event to monitor",
+          "message": "L'evento membro specifico da monitorare"
+        },
+        "app.UGF0cmVvbg.action.bWVtYmVyX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a member is created, updated, or deleted",
+          "message": "Si attiva quando un membro viene creato, aggiornato o eliminato"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.desc": {
+          "source": "Monitors post events for a specific campaign using Patreon webhooks. This trigger fires when a post is published, updated, or deleted on the campaign, allowing you to automate content distribution and notifications.",
+          "message": "Monitora gli eventi dei post per una campagna specifica utilizzando i webhook di Patreon. Questo trigger si attiva quando un post viene pubblicato, aggiornato o eliminato nella campagna, consentendoti di automatizzare la distribuzione dei contenuti e le notifiche."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.display_name": {
+          "source": "Post Event",
+          "message": "Evento post"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for post-related events. This is a required field.",
+          "message": "Seleziona la campagna che desideri monitorare per gli eventi correlati ai post. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for post events",
+          "message": "La campagna da monitorare per gli eventi dei post"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOmRlbGV0ZQ.desc": {
+          "source": "Triggered when a post is deleted on a campaign.",
+          "message": "Attivato quando un post viene eliminato in una campagna."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOmRlbGV0ZQ.display_name": {
+          "source": "Post Deleted",
+          "message": "Post eliminato"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnB1Ymxpc2g.desc": {
+          "source": "Triggered when a post is published on a campaign.",
+          "message": "Attivato quando un post viene pubblicato in una campagna."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnB1Ymxpc2g.display_name": {
+          "source": "Post Published",
+          "message": "Post pubblicato"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnVwZGF0ZQ.desc": {
+          "source": "Triggered when a post is updated on a campaign.",
+          "message": "Attivato quando un post viene aggiornato in una campagna."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOnBvc3RzOnVwZGF0ZQ.display_name": {
+          "source": "Post Updated",
+          "message": "Post aggiornato"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of post event should trigger this workflow. Choose from post publication, post updates, or post deletion events.",
+          "message": "Seleziona quale tipo di evento post deve attivare questo workflow. Scegli tra eventi di pubblicazione del post, aggiornamento del post o eliminazione del post."
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "Evento trigger"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific post event to monitor",
+          "message": "L'evento post specifico da monitorare"
+        },
+        "app.UGF0cmVvbg.action.cG9zdF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a post is published, updated, or deleted",
+          "message": "Si attiva quando un post viene pubblicato, aggiornato o eliminato"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.desc": {
+          "source": "Monitors pledge events for a specific campaign using Patreon webhooks. This trigger fires when a member creates, updates, or deletes their pledge, allowing you to automate workflows based on patron pledge activity.",
+          "message": "Monitora gli eventi dei pledge per una campagna specifica utilizzando i webhook di Patreon. Questo trigger si attiva quando un membro crea, aggiorna o elimina il proprio pledge, consentendoti di automatizzare i workflow in base all'attività di pledge dei patron."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.display_name": {
+          "source": "Pledge Event",
+          "message": "Evento pledge"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.desc": {
+          "source": "Select the campaign you want to monitor for pledge-related events. This is a required field.",
+          "message": "Seleziona la campagna che desideri monitorare per gli eventi correlati ai pledge. Questo è un campo obbligatorio."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.Y2FtcGFpZ25JZA.short_desc": {
+          "source": "The campaign to monitor for pledge events",
+          "message": "La campagna da monitorare per gli eventi dei pledge"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmNyZWF0ZQ.desc": {
+          "source": "Triggered when a new pledge is created for a member. This includes when a member is created through pledging, and when a follower becomes a patron.",
+          "message": "Attivato quando viene creato un nuovo pledge per un membro. Include i casi in cui un membro viene creato tramite un pledge e quando un follower diventa un patron."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmNyZWF0ZQ.display_name": {
+          "source": "Pledge Created",
+          "message": "Pledge creato"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmRlbGV0ZQ.desc": {
+          "source": "Triggered when a member deletes their pledge.",
+          "message": "Attivato quando un membro elimina il proprio pledge."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOmRlbGV0ZQ.display_name": {
+          "source": "Pledge Deleted",
+          "message": "Pledge eliminato"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOnVwZGF0ZQ.desc": {
+          "source": "Triggered when a member updates (upgrade, downgrade) their pledge.",
+          "message": "Attivato quando un membro aggiorna (upgrade, downgrade) il proprio pledge."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.allowed-value.c3RyaW5nOm1lbWJlcnM6cGxlZGdlOnVwZGF0ZQ.display_name": {
+          "source": "Pledge Updated",
+          "message": "Pledge aggiornato"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.desc": {
+          "source": "Select which type of pledge event should trigger this workflow. Choose from pledge creation (when a member first pledges or a follower becomes a patron), pledge updates (upgrades or downgrades), or pledge deletion.",
+          "message": "Seleziona quale tipo di evento pledge deve attivare questo workflow. Scegli tra creazione del pledge (quando un membro effettua un pledge per la prima volta o un follower diventa un patron), aggiornamenti del pledge (upgrade o downgrade) o eliminazione del pledge."
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.display_name": {
+          "source": "Trigger Event",
+          "message": "Evento trigger"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.option.dHJpZ2dlcg.short_desc": {
+          "source": "The specific pledge event to monitor",
+          "message": "L'evento pledge specifico da monitorare"
+        },
+        "app.UGF0cmVvbg.action.cGxlZGdlX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a pledge is created, updated, or deleted",
+          "message": "Si attiva quando un pledge viene creato, aggiornato o eliminato"
+        },
+        "app.UGF0cmVvbg.desc": {
+          "source": "The Patreon integration enables creators to automate their patron management workflows. Access patron data, manage memberships, track campaigns, and engage with your community through comprehensive API actions and real-time triggers for patron activities.",
+          "message": "L'integrazione con Patreon consente ai creator di automatizzare i flussi di lavoro per la gestione dei patron. Accedi ai dati dei patron, gestisci le membership, monitora le campagne e interagisci con la tua community tramite azioni API complete e trigger in tempo reale per le attività dei patron."
+        },
+        "app.UGF0cmVvbg.display_name": {
+          "source": "Patreon",
+          "message": "Patreon"
+        },
+        "app.UGF0cmVvbg.short_desc": {
+          "source": "Connect to Patreon to manage your creator content, memberships, and patron relationships.",
+          "message": "Connettiti a Patreon per gestire i contenuti per i creator, le membership e le relazioni con i patron."
+        }
+      }
+    }
+  }
+}

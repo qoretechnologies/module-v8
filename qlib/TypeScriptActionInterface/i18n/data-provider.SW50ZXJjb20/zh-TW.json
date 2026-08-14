@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.desc": {
+          "source": "You can search for multiple contacts by the value of their attributes in order to fetch exactly who you want.\n\nTo search for contacts, you need to send a `POST` request to `https:-api.intercom.io-contacts-search`.\n\nThis will accept a query object in the body which will define your filters in order to search for contacts.\n\n% admonition type=\"warning\" name=\"Optimizing search queries\" %\n  Search queries can be complex, so optimizing them can help the performance of your search.\n  Use the `AND` and `OR` operators to combine multiple filters to get the exact results you need and utilize\n  pagination to limit the number of results returned. The default is `50` results per page.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) for more details on how to use the `starting_after` param.\n% -admonition %\n### Contact Creation Delay\n\nIf a contact has recently been created, there is a possibility that it will not yet be available when searching. This means that it may not appear in the response. This delay can take a few minutes. If you need to be instantly notified it is recommended to use webhooks and iterate to see if they match your search filters.\n\n### Nesting & Limitations\n\nYou can nest these filters in order to get even more granular insights that pinpoint exactly what you need. Example: (1 OR 2) AND (3 OR 4).\nThere are some limitations to the amount of multiple's there can be:\n* There's a limit of max 2 nested filters\n* There's a limit of max 15 filters for each AND or OR group\n\n### Searching for Timestamp Fields\n\nAll timestamp fields (created_at, updated_at etc.) are indexed as Dates for Contact Search queries; Datetime queries are not currently supported. This means you can only query for timestamp fields by day - not hour, minute or second.\nFor example, if you search for all Contacts with a created_at value greater (>) than 1577869200 (the UNIX timestamp for January 1st, 2020 9:00 AM), that will be interpreted as 1577836800 (January 1st, 2020 12:00 AM). The search results will then include Contacts created from January 2nd, 2020 12:00 AM onwards.\nIf you'd like to get contacts created on January 1st, 2020 you should search with a created_at value equal (=) to 1577836800 (January 1st, 2020 12:00 AM).\nThis behaviour applies only to timestamps used in search queries. The search results will still contain the full UNIX timestamp and be sorted accordingly.\n\n### Accepted Fields\n\nMost key listed as part of the Contacts Model are searchable, whether writeable or not. The value you search for has to match the accepted type, otherwise the query will fail (ie. as `created_at` accepts a date, the `value` cannot be a string such as `\"foorbar\"`).\n\n| Field                              | Type                           |\n| - | - |\n| id                                 | String                         |\n| role                               | String<br>Accepts user or lead |\n| name                               | String                         |\n| avatar                             | String                         |\n| owner_id                           | Integer                        |\n| email                              | String                         |\n| email_domain                       | String                         |\n| phone                              | String                         |\n| external_id                        | String                         |\n| created_at                         | Date (UNIX Timestamp)          |\n| signed_up_at                       | Date (UNIX Timestamp)          |\n| updated_at                         | Date (UNIX Timestamp)          |\n| last_seen_at                       | Date (UNIX Timestamp)          |\n| last_contacted_at                  | Date (UNIX Timestamp)          |\n| last_replied_at                    | Date (UNIX Timestamp)          |\n| last_email_opened_at               | Date (UNIX Timestamp)          |\n| last_email_clicked_at              | Date (UNIX Timestamp)          |\n| language_override                  | String                         |\n| browser                            | String                         |\n| browser_language                   | String                         |\n| os                                 | String                         |\n| location.country                   | String                         |\n| location.region                    | String                         |\n| location.city                      | String                         |\n| unsubscribed_from_emails           | Boolean                        |\n| marked_email_as_spam               | Boolean                        |\n| has_hard_bounced                   | Boolean                        |\n| ios_last_seen_at                   | Date (UNIX Timestamp)          |\n| ios_app_version                    | String                         |\n| ios_device                         | String                         |\n| ios_app_device                     | String                         |\n| ios_os_version                     | String                         |\n| ios_app_name                       | String                         |\n| ios_sdk_version                    | String                         |\n| android_last_seen_at               | Date (UNIX Timestamp)          |\n| android_app_version                | String                         |\n| android_device                     | String                         |\n| android_app_name                   | String                         |\n| andoid_sdk_version                 | String                         |\n| segment_id                         | String                         |\n| tag_id                             | String                         |\n| custom_attributes.attribute_name | String                         |\n\n### Accepted Operators\n\n% admonition type=\"warning\" name=\"Searching based on `created_at`\" %\n  You cannot use the `<=` or `>=` operators to search by `created_at`.\n% -admonition %\n\nThe table below shows the operators you can use to define how you want to search for the value.  The operator should be put in as a string (`\"=\"`). The operator has to be compatible with the field's type (eg. you cannot search with `>` for a given string value as it's only compatible for integer's and dates).\n\n| Operator | Valid Types                      | Description                                                      |\n| :- | :- | :- |\n| =        | All                              | Equals                                                           |\n| !=       | All                              | Doesn't Equal                                                    |\n| IN       | All                              | In<br>Shortcut for `OR` queries<br>Values must be in Array       |\n| NIN      | All                              | Not In<br>Shortcut for `OR !` queries<br>Values must be in Array |\n| >        | Integer<br>Date (UNIX Timestamp) | Greater than                                                     |\n| <       | Integer<br>Date (UNIX Timestamp) | Lower than                                                       |\n| ~        | String                           | Contains                                                         |\n| !~       | String                           | Doesn't Contain                                                  |\n| ^        | String                           | Starts With                                                      |\n| $        | String                           | Ends With                                                        |\n",
+          "message": "您可以依聯絡人的屬性值搜尋多個聯絡人，以精確取得您想要的人員。\n\n若要搜尋聯絡人，您需要傳送 `POST` 請求至 `https:-api.intercom.io-contacts-search`。\n\n這將在請求主體中接受一個查詢物件，用以定義搜尋聯絡人的篩選條件。\n\n% admonition type=\"warning\" name=\"最佳化搜尋查詢\" %\n  搜尋查詢可能很複雜，因此最佳化查詢有助於提升搜尋效能。\n  使用 `AND` 和 `OR` 運算子組合多個篩選條件以獲得您需要的精準結果，並利用\n  分頁來限制傳回的結果數量。預設為每頁 `50` 筆結果。\n  有關如何使用 `starting_after` 參數的更多詳細資料，請參閱 [分頁章節](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request)。\n% -admonition %\n### 聯絡人建立延遲\n\n如果某個聯絡人是最近建立的，在搜尋時可能尚不可用。這表示該聯絡人可能不會出現在回應中。此延遲可能需要幾分鐘的時間。如果您需要立即收到通知，建議使用 Webhook 並反覆檢查是否符合您的搜尋篩選條件。\n\n### 巢狀結構與限制\n\n您可以將這些篩選條件進行巢狀嵌套，以獲得更詳細且精確的分析深入資訊。例如：(1 OR 2) AND (3 OR 4)。\n多重條件的數量有一些限制：\n* 最多限制 2 層巢狀篩選條件\n* 每個 AND 或 OR 群組最多限制 15 個篩選條件\n\n### 搜尋時間戳記欄位\n\n所有時間戳記欄位（created_at、updated_at 等）在聯絡人搜尋查詢中都會被建立為日期索引；目前不支援 Datetime 查詢。這表示您只能按天查詢時間戳記欄位，無法按小時、分鐘或秒查詢。\n例如，如果您搜尋 created_at 值大於 (>) 1577869200（2020 年 1 月 1 日上午 9:00 的 UNIX 時間戳記）的所有聯絡人，該值將被解讀為 1577836800（2020 年 1 月 1 日上午 12:00）。接著，搜尋結果將包含自 2020 年 1 月 2 日上午 12:00 起建立的聯絡人。\n如果您想取得 2020 年 1 月 1 日建立的聯絡人，則應使用 created_at 值等於 (=) 1577836800（2020 年 1 月 1 日上午 12:00）進行搜尋。\n此行為僅適用於搜尋查詢中使用的時間戳記。搜尋結果仍將包含完整的 UNIX 時間戳記並進行相應排序。\n\n### 接受的欄位\n\n作為聯絡人模型一部分列出的大多數金鑰均可搜尋，無論其是否可寫入。您搜尋的值必須與接受的類型相符，否則查詢將會失敗（例如：由於 `created_at` 接受日期，因此 `value` 不能是諸如 `\"foorbar\"` 的字串）。\n\n| 欄位                              | 類型                           |\n| - | - |\n| id                                 | String                         |\n| role                               | String<br>接受 user 或 lead |\n| name                               | String                         |\n| avatar                             | String                         |\n| owner_id                           | Integer                        |\n| email                              | String                         |\n| email_domain                       | String                         |\n| phone                              | String                         |\n| external_id                        | String                         |\n| created_at                         | Date (UNIX Timestamp)          |\n| signed_up_at                       | Date (UNIX Timestamp)          |\n| updated_at                         | Date (UNIX Timestamp)          |\n| last_seen_at                       | Date (UNIX Timestamp)          |\n| last_contacted_at                  | Date (UNIX Timestamp)          |\n| last_replied_at                    | Date (UNIX Timestamp)          |\n| last_email_opened_at               | Date (UNIX Timestamp)          |\n| last_email_clicked_at              | Date (UNIX Timestamp)          |\n| language_override                  | String                         |\n| browser                            | String                         |\n| browser_language                   | String                         |\n| os                                 | String                         |\n| location.country                   | String                         |\n| location.region                    | String                         |\n| location.city                      | String                         |\n| unsubscribed_from_emails           | Boolean                        |\n| marked_email_as_spam               | Boolean                        |\n| has_hard_bounced                   | Boolean                        |\n| ios_last_seen_at                   | Date (UNIX Timestamp)          |\n| ios_app_version                    | String                         |\n| ios_device                         | String                         |\n| ios_app_device                     | String                         |\n| ios_os_version                     | String                         |\n| ios_app_name                       | String                         |\n| ios_sdk_version                    | String                         |\n| android_last_seen_at               | Date (UNIX Timestamp)          |\n| android_app_version                | String                         |\n| android_device                     | String                         |\n| android_app_name                   | String                         |\n| andoid_sdk_version                 | String                         |\n| segment_id                         | String                         |\n| tag_id                             | String                         |\n| custom_attributes.attribute_name | String                         |\n\n### 接受的運算子\n\n% admonition type=\"warning\" name=\"依據 `created_at` 搜尋\" %\n  您無法使用 `<=` 或 `>=` 運算子依 `created_at` 進行搜尋。\n% -admonition %\n\n下表顯示可用於定義搜尋值方式的運算子。運算子應以字串形式輸入 (`\"=\"`)。運算子必須與欄位類型相容（例如，您無法使用 `>` 搜尋指定的字串值，因為它僅相容於整數和日期）。\n\n| 運算子 | 有效類型                      | 說明                                                      |\n| :- | :- | :- |\n| =        | 全部                              | 等於                                                           |\n| !=       | 全部                              | 不等於                                                    |\n| IN       | 全部                              | 包含於<br>`OR` 查詢的捷徑<br>值必須在陣列中       |\n| NIN      | 全部                              | 不包含於<br>`OR !` 查詢的捷徑<br>值必須在陣列中 |\n| >        | Integer<br>Date (UNIX Timestamp) | 大於                                                     |\n| <       | Integer<br>Date (UNIX Timestamp) | 小於                                                       |\n| ~        | String                           | 包含                                                         |\n| !~       | String                           | 不包含                                                  |\n| ^        | String                           | 開頭為                                                      |\n| $        | String                           | 結尾為                                                        |\n"
+        },
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.display_name": {
+          "source": "Search Contacts",
+          "message": "搜尋聯絡人"
+        },
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.short_desc": {
+          "source": "Search contacts",
+          "message": "搜尋聯絡人"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.desc": {
+          "source": "You can create a conversation that has been initiated by a contact (ie. user or lead).\nThe conversation can be an in-app message only.\n\n% admonition type=\"info\" name=\"Sending for visitors\" %\nYou can also send a message from a visitor by specifying their `user_id` or `id` value in the `from` field, along with a `type` field value of `contact`.\nThis visitor will be automatically converted to a contact with a lead role once the conversation is created.\n% -admonition %\n\nThis will return the Message model that has been created.\n\n",
+          "message": "您可以建立由聯絡人（即使用者或潛在客戶）發起的對話。\n該對話只能是應用程式內訊息。\n\n% admonition type=\"info\" name=\"為訪客傳送\" %\n您也可以透過在 `from` 欄位中指定訪客的 `user_id` 或 `id` 值，並將 `type` 欄位值設為 `contact` 來從訪客傳送訊息。\n建立對話後，該訪客將自動轉換為具有潛在客戶角色的聯絡人。\n% -admonition %\n\n這將傳回已建立的 Message 模型。\n\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.display_name": {
+          "source": "Create Conversation",
+          "message": "建立對話"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.short_desc": {
+          "source": "Creates a conversation",
+          "message": "建立對話"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.desc": {
+          "source": "You can create a new article by making a POST request to `https:-api.intercom.io-articles`.",
+          "message": "您可以透過向 `https:-api.intercom.io-articles` 發出 POST 請求來建立新文章。"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.display_name": {
+          "source": "Create an Article",
+          "message": "建立文章"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.short_desc": {
+          "source": "Create an article",
+          "message": "建立一篇文章"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.desc": {
+          "source": "\nYou will need an Access Token that has write permissions to send Events. Once you have a key you can submit events via POST to the Events resource, which is located at https:-api.intercom.io-events, or you can send events using one of the client libraries. When working with the HTTP API directly a client should send the event with a `Content-Type` of `application-json`.\n\nWhen using the JavaScript API, [adding the code to your app](http:-docs.intercom.io-configuring-Intercom-tracking-user-events-in-your-app) makes the Events API available. Once added, you can submit an event using the `trackEvent` method. This will associate the event with the Lead or currently logged-in user or logged-out visitor-lead and send it to Intercom. The final parameter is a map that can be used to send optional metadata about the event.\n\nWith the Ruby client you pass a hash describing the event to `Intercom::Event.create`, or call the `track_user` method directly on the current user object (e.g. `user.track_event`).\n\n**NB: For the JSON object types, please note that we do not currently support nested JSON structure.**\n\n| Type            | Description                                                                                                                                                                                                     | Example                                                                           |\n| :- | :- | :- |\n| String          | The value is a JSON String                                                                                                                                                                                      | `\"source\":\"desktop\"`                                                              |\n| Number          | The value is a JSON Number                                                                                                                                                                                      | `\"load\": 3.67`                                                                    |\n| Date            | The key ends with the String `_date` and the value is a [Unix timestamp](http:-en.wikipedia.org-wiki-Unix_time), assumed to be in the [UTC](http:-en.wikipedia.org-wiki-Coordinated_Universal_Time) timezone. | `\"contact_date\": 1392036272`                                                      |\n| Link            | The value is a HTTP or HTTPS URI.                                                                                                                                                                               | `\"article\": \"https:-example.org-ab1de.html\"`                                     |\n| Rich Link       | The value is a JSON object that contains `url` and `value` keys.                                                                                                                                                | `\"article\": \"url\": \"https:-example.org-ab1de.html\", \"value\":\"the dude abides\"` |\n| Monetary Amount | The value is a JSON object that contains `amount` and `currency` keys. The `amount` key is a positive integer representing the amount in cents. The price in the example to the right denotes €349.99.          | `\"price\": \"amount\": 34999, \"currency\": \"eur\"`                                   |\n\n**Lead Events**\n\nWhen submitting events for Leads, you will need to specify the Lead's `id`.\n\n**Metadata behaviour**\n\n- We currently limit the number of tracked metadata keys to 10 per event. Once the quota is reached, we ignore any further keys we receive. The first 10 metadata keys are determined by the order in which they are sent in with the event.\n- It is not possible to change the metadata keys once the event has been sent. A new event will need to be created with the new keys and you can archive the old one.\n- There might be up to 24 hrs delay when you send a new metadata for an existing event.\n\n**Event de-duplication**\n\nThe API may detect and ignore duplicate events. Each event is uniquely identified as a combination of the following data - the Workspace identifier, the Contact external identifier, the Data Event name and the Data Event created time. As a result, it is **strongly recommended** to send a second granularity Unix timestamp in the `created_at` field.\n\nDuplicated events are responded to using the normal `202 Accepted` code - an error is not thrown, however repeat requests will be counted against any rate limit that is in place.\n\n### HTTP API Responses\n\n- Successful responses to submitted events return `202 Accepted` with an empty body.\n- Unauthorised access will be rejected with a `401 Unauthorized` or `403 Forbidden` response code.\n- Events sent about users that cannot be found will return a `404 Not Found`.\n- Event lists containing duplicate events will have those duplicates ignored.\n- Server errors will return a `500` response code and may contain an error message in the body.\n\n",
+          "message": "\n您將需要具備寫入權限的存取權杖 (Access Token) 來傳送事件。取得金鑰後，您可以透過 POST 提交事件至 Events 資源（位於 https:-api.intercom.io-events），或者可以使用其中一個用戶端程式庫傳送事件。直接使用 HTTP API 時，用戶端應傳送帶有 `application-json` 之 `Content-Type` 的事件。\n\n使用 JavaScript API 時，[將程式碼新增至您的應用程式](http:-docs.intercom.io-configuring-Intercom-tracking-user-events-in-your-app) 即可啟用 Events API。新增後，您可以使用 `trackEvent` 方法提交事件。這會將事件與潛在客戶、目前已登入的使用者或已登出的訪客/潛在客戶關聯，並傳送至 Intercom。最後一個參數是一個可用於傳送有關事件之選用中繼資料的 Map。\n\n使用 Ruby 用戶端時，您可以將描述事件的 Hash 傳遞給 `Intercom::Event.create`，或者直接在目前的使用者物件上呼叫 `track_user` 方法（例如 `user.track_event`）。\n\n**注意：對於 JSON 物件類型，請注意我們目前不支援巢狀 JSON 結構。**\n\n| 類型            | 說明                                                                                                                                                                                                     | 範例                                                                           |\n| :- | :- | :- |\n| String          | 該值為 JSON 字串                                                                                                                                                                                      | `\"source\":\"desktop\"`                                                              |\n| Number          | 該值為 JSON 數字                                                                                                                                                                                      | `\"load\": 3.67`                                                                    |\n| Date            | 索引鍵以字串 `_date` 結尾，且值為 [Unix 時間戳記](http:-en.wikipedia.org-wiki-Unix_time)，假定處於 [UTC](http:-en.wikipedia.org-wiki-Coordinated_Universal_Time) 時區。 | `\"contact_date\": 1392036272`                                                      |\n| Link            | 該值為 HTTP 或 HTTPS URI。                                                                                                                                                                               | `\"article\": \"https:-example.org-ab1de.html\"`                                     |\n| Rich Link       | 該值為包含 `url` 與 `value` 索引鍵的 JSON 物件。                                                                                                                                                | `\"article\": \"url\": \"https:-example.org-ab1de.html\", \"value\":\"the dude abides\"` |\n| Monetary Amount | 該值為包含 `amount` 與 `currency` 索引鍵的 JSON 物件。`amount` 索引鍵為正整數，代表以美分為單位的金額。右側範例中的價格表示 €349.99。          | `\"price\": \"amount\": 34999, \"currency\": \"eur\"`                                   |\n\n**潛在客戶事件**\n\n為潛在客戶提交事件時，您需要指定潛在客戶的 `id`。\n\n**中繼資料行為**\n\n- 我們目前將每個事件追蹤的中繼資料索引鍵數量限制為 10 個。一旦達到配額，我們將忽略接收到的任何其他索引鍵。前 10 個中繼資料索引鍵由隨事件傳入的順序決定。\n- 事件傳送後即無法變更中繼資料索引鍵。必須使用新索引鍵建立新事件，且您可以將舊事件封存。\n- 當您為現有事件傳送新的中繼資料時，最多可能會有 24 小時的延遲。\n\n**事件重複資料刪除**\n\nAPI 可能會偵測並忽略重複的事件。每個事件都由以下資料的組合唯一識別：工作區識別碼、聯絡人外部識別碼、資料事件名稱以及資料事件建立時間。因此，**強烈建議**在 `created_at` 欄位中傳送精確到秒的 Unix 時間戳記。\n\n重複的事件將使用正常的 `202 Accepted` 代碼進行回應——不會擲出錯誤，但重複的請求將計入任何現有的速率限制中。\n\n### HTTP API 回應\n\n- 針對已提交事件的成功回應將傳回 `202 Accepted` 及空白主體。\n- 未經授權的存取將以 `401 Unauthorized` 或 `403 Forbidden` 回應代碼拒絕。\n- 傳送關於找不到的使用者的事件將傳回 `404 Not Found`。\n- 包含重複事件的事件清單將會忽略這些重複項目。\n- 伺服器錯誤將傳回 `500` 回應代碼，且主體中可能包含錯誤訊息。\n\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.display_name": {
+          "source": "Submit a Data Event",
+          "message": "提交資料事件"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.short_desc": {
+          "source": "Submit a data event",
+          "message": "提交資料事件"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.desc": {
+          "source": "You can create or update a company.\n\nCompanies will be only visible in Intercom when there is at least one associated user.\n\nCompanies are looked up via `company_id` in a `POST` request, if not found via `company_id`, the new company will be created, if found, that company will be updated.\n\n% admonition type=\"warning\" name=\"Using `company_id`\" %\n  You can set a unique `company_id` value when creating a company. However, it is not possible to update `company_id`. Be sure to set a unique value once upon creation of the company.\n% -admonition %\n",
+          "message": "您可以建立或更新公司。\n\n只有當至少有一位關聯使用者時，公司才會在 Intercom 中顯示。\n\n在 `POST` 請求中會透過 `company_id` 查詢公司；如果未透過 `company_id` 找到，將建立新公司；如果找到，該公司將會更新。\n\n% admonition type=\"warning\" name=\"使用 `company_id`\" %\n  建立公司時，您可以設定唯一的 `company_id` 值。但是，無法更新 `company_id`。請務必在建立公司時設定一次唯一值。\n% -admonition %\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.display_name": {
+          "source": "Create or Update a Company",
+          "message": "建立或更新公司"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.short_desc": {
+          "source": "Create or Update a company",
+          "message": "建立或更新公司"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.desc": {
+          "source": "You can create a message that has been initiated by an admin. The conversation can be either an in-app message or an email.\n\n> 🚧 Sending for visitors\n>\n> There can be a short delay between when a contact is created and when a contact becomes available to be messaged through the API. A 404 Not Found error will be returned in this case.\n\nThis will return the Message model that has been created.\n\n> 🚧 Retrieving Associated Conversations\n>\n> As this is a message, there will be no conversation present until the contact responds. Once they do, you will have to search for a contact's conversations with the id of the message.\n",
+          "message": "您可以建立由管理員發起的訊息。該對話可以是應用程式內訊息或電子郵件。\n\n> 🚧 為訪客傳送\n>\n> 聯絡人建立後與該聯絡人可在 API 中用於傳送訊息之間可能會有短暫的延遲。在這種情況下將傳回 404 Not Found 錯誤。\n\n這將傳回已建立的 Message 模型。\n\n> 🚧 擷取關聯對話\n>\n> 由於這是一則訊息，在聯絡人回覆之前不會存在任何對話。一旦聯絡人回覆，您必須使用訊息 ID 搜尋聯絡人的對話。\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.display_name": {
+          "source": "Create a Message",
+          "message": "建立訊息"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.short_desc": {
+          "source": "Create a message",
+          "message": "建立訊息"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.desc": {
+          "source": "You can add a note to a single contact.",
+          "message": "您可以為單一聯絡人新增備註。"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.display_name": {
+          "source": "Add Note to Contact",
+          "message": "新增備註至聯絡人"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.short_desc": {
+          "source": "Create a note",
+          "message": "建立備註"
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.desc": {
+          "source": "You can tag a specific contact. This will return a tag object for the tag that was added to the contact.",
+          "message": "您可以為特定聯絡人新增標籤。這將傳回新增至該聯絡人的標籤物件。"
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.display_name": {
+          "source": "Add Tag to a Contact",
+          "message": "為聯絡人新增標籤"
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.short_desc": {
+          "source": "Add tag to a contact",
+          "message": "為聯絡人新增標籤"
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.desc": {
+          "source": "You can remove tag from a specific contact. This will return a tag object for the tag that was removed from the contact.",
+          "message": "您可以從特定聯絡人移除標籤。這將傳回從該聯絡人移除的標籤物件。"
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.display_name": {
+          "source": "Remove Tag from a Contact",
+          "message": "從聯絡人移除標籤"
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.short_desc": {
+          "source": "Remove tag from a contact",
+          "message": "從聯絡人移除標籤"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.desc": {
+          "source": "\n> 🚧\n>\n> Please note that you can only 'list' events that are less than 90 days old. Event counts and summaries will still include your events older than 90 days but you cannot 'list' these events individually if they are older than 90 days\n\nThe events belonging to a customer can be listed by sending a GET request to `https:-api.intercom.io-events` with a user or lead identifier along with a `type` parameter. The identifier parameter can be one of `user_id`, `email` or `intercom_user_id`. The `type` parameter value must be `user`.\n\n- `https:-api.intercom.io-events?type=user&user_id=user_id`\n- `https:-api.intercom.io-events?type=user&email=email`\n- `https:-api.intercom.io-events?type=user&intercom_user_id=id` (this call can be used to list leads)\n\nThe `email` parameter value should be [url encoded](http:-en.wikipedia.org-wiki-Percent-encoding) when sending.\n\nYou can optionally define the result page size as well with the `per_page` parameter.\n",
+          "message": "\n> 🚧\n>\n> 請注意，您只能「列出」少於 90 天前的事件。事件計數和摘要仍會包含超過 90 天的事件，但如果這些事件超過 90 天，您將無法個別「列出」它們\n\n屬於某位客戶的事件可透過傳送包含使用者或潛在客戶識別碼以及 `type` 參數的 GET 請求至 `https:-api.intercom.io-events` 來列出。識別碼參數可以是 `user_id`、`email` 或 `intercom_user_id` 之一。`type` 參數值必須是 `user`。\n\n- `https:-api.intercom.io-events?type=user&user_id=user_id`\n- `https:-api.intercom.io-events?type=user&email=email`\n- `https:-api.intercom.io-events?type=user&intercom_user_id=id`（此呼叫可用於列出潛在客戶）\n\n傳送時，`email` 參數值應經過 [URL 編碼](http:-en.wikipedia.org-wiki-Percent-encoding)。\n\n您也可以選擇使用 `per_page` 參數來定義結果頁面大小。\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.display_name": {
+          "source": "List All Data Events",
+          "message": "列出所有資料事件"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.short_desc": {
+          "source": "List all data events",
+          "message": "列出所有資料事件"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.desc": {
+          "source": "You can list companies. The company list is sorted by the `last_request_at` field and by default is ordered descending, most recently requested first.\n\nNote that the API does not include companies who have no associated users in list responses.\n\nWhen using the Companies endpoint and the pages object to iterate through the returned companies, there is a limit of 10,000 Companies that can be returned. If you need to list or iterate on more than 10,000 Companies, please use the [Scroll API](https:-developers.intercom.com-reference#iterating-over-all-companies).\n% admonition type=\"warning\" name=\"Pagination\" %\n  You can use pagination to limit the number of results returned. The default is `20` results per page.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#pagination-for-list-apis) for more details on how to use the `starting_after` param.\n% -admonition %\n",
+          "message": "您可以列出公司。公司清單依 `last_request_at` 欄位排序，預設為降冪排列（最近請求的排在最前面）。\n\n請注意，API 在清單回應中不會包含沒有任何關聯使用者的公司。\n\n使用 Companies 端點和 pages 物件逐一反覆查看傳回的公司時，最多限制傳回 10,000 家公司。如果您需要列出或反覆查看超過 10,000 家公司，請使用 [Scroll API](https:-developers.intercom.com-reference#iterating-over-all-companies)。\n% admonition type=\"warning\" name=\"分頁\" %\n  您可以使用分頁來限制傳回的結果數量。預設為每頁 `20` 筆結果。\n  有關如何使用 `starting_after` 參數的更多詳細資料，請參閱 [分頁章節](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#pagination-for-list-apis)。\n% -admonition %\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.display_name": {
+          "source": "List All Companies",
+          "message": "列出所有公司"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Intercom API 版本。</br>預設情況下，等於應用程式套件中設定的版本。"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Intercom 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Intercom API 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.desc": {
+          "source": "`asc` or `desc`. Return the companies in ascending or descending order. Defaults to desc",
+          "message": "`asc` 或 `desc`。以遞增或遞減順序傳回公司。預設為 desc"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "排序"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.short_desc": {
+          "source": "'asc' or 'desc'",
+          "message": "'asc' 或 'desc'"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.desc": {
+          "source": "The page of results to fetch. Defaults to first page",
+          "message": "要擷取的結果頁面。預設為第一頁"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "頁碼"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.short_desc": {
+          "source": "The page of results to fetch",
+          "message": "要擷取的結果頁面"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.desc": {
+          "source": "How many results to return per page. Defaults to 15",
+          "message": "每頁返回的結果數。預設為 15"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Per Page",
+          "message": "每頁"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "How many results to return per page",
+          "message": "每頁返回的結果數"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.short_desc": {
+          "source": "List all companies",
+          "message": "列出所有公司"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.desc": {
+          "source": "You can fetch a list of all articles by making a GET request to `https:-api.intercom.io-articles`.\n\n> 📘 How are the articles sorted and ordered?\n>\n> Articles will be returned in descending order on the `updated_at` attribute. This means if you need to iterate through results then we'll show the most recently updated articles first.\n",
+          "message": "您可以透過向 `https:-api.intercom.io-articles` 發送 GET 請求來獲取所有文章列表。\n\n> 📘 文章如何排序？\n>\n> 文章將按照 `updated_at` 屬性降冪返回。這意味著如果您需要逐一查看結果，我們將首先顯示最近更新的文章。\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.display_name": {
+          "source": "List All Articles",
+          "message": "列出所有文章"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Intercom API 版本。</br>預設情況下，等於應用程式套件中設定的版本。"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Intercom 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Intercom API 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.short_desc": {
+          "source": "List all articles",
+          "message": "列出所有文章"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.desc": {
+          "source": "You can fetch a list of all tags for a given workspace.\n\n",
+          "message": "您可以獲取指定工作區的所有標籤列表。\n\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.display_name": {
+          "source": "List All Tags",
+          "message": "列出所有標籤"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Intercom API 版本。</br>預設情況下，等於應用程式套件中設定的版本。"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Intercom 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Intercom API 版本"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.short_desc": {
+          "source": "List all tags",
+          "message": "列出所有標籤"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Intercom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已配置連接的驗證向 **Intercom** 發送自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連接的 API 基本 URL）、可選查詢參數、標頭和請求主體。回應將以包含狀態代碼、回應標頭和回應主體的雜湊形式返回。\n\n對於此應用程式上尚未作為頭等動作公開的端點，請使用此動作。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Intercom",
+          "message": "對 Intercom 進行自訂 API 呼叫"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.desc": {
+          "source": "This trigger fires whenever a new contact is created in your Intercom account. You can filter by role (user, lead, or both).",
+          "message": "每當在您的 Intercom 帳戶中建立新聯絡人時，就會觸發此觸發器。您可以按角色（使用者、潛在客戶或兩者）進行篩選。"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "新增聯絡人"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOmNvbnRhY3Q.display_name": {
+          "source": "Contact (User or Lead)",
+          "message": "聯絡人（使用者或潛在客戶）"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "潛在客戶"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "使用者"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.desc": {
+          "source": "Filter contacts by role",
+          "message": "按角色篩選聯絡人"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.display_name": {
+          "source": "Contact Role",
+          "message": "聯絡人角色"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.short_desc": {
+          "source": "Filter contacts by role",
+          "message": "按角色篩選聯絡人"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created in Intercom",
+          "message": "在 Intercom 中建立新聯絡人時觸發"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation is created in your Intercom account. It monitors for conversation creation events and provides all conversation details.",
+          "message": "每當在您的 Intercom 帳戶中建立新對話時，就會觸發此觸發器。它會監控對話建立事件並提供所有對話詳細資料。"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "新對話"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created in Intercom",
+          "message": "在 Intercom 中建立新對話時觸發"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.desc": {
+          "source": "You can search for multiple conversations by the value of their attributes in order to fetch exactly which ones you want.\n\nTo search for conversations, you need to send a `POST` request to `https:-api.intercom.io-conversations-search`.\n\nThis will accept a query object in the body which will define your filters in order to search for conversations.\n% admonition type=\"warning\" name=\"Optimizing search queries\" %\n  Search queries can be complex, so optimizing them can help the performance of your search.\n  Use the `AND` and `OR` operators to combine multiple filters to get the exact results you need and utilize\n  pagination to limit the number of results returned. The default is `20` results per page and maximum is `150`.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) for more details on how to use the `starting_after` param.\n% -admonition %\n\n### Nesting & Limitations\n\nYou can nest these filters in order to get even more granular insights that pinpoint exactly what you need. Example: (1 OR 2) AND (3 OR 4).\nThere are some limitations to the amount of multiple's there can be:\n- There's a limit of max 2 nested filters\n- There's a limit of max 15 filters for each AND or OR group\n\n### Accepted Fields\n\nMost keys listed in the conversation model is searchable, whether writeable or not. The value you search for has to match the accepted type, otherwise the query will fail (ie. as `created_at` accepts a date, the `value` cannot be a string such as `\"foorbar\"`).\nThe `source.body` field is unique as the search will not be performed against the entire value, but instead against every element of the value separately. For example, when searching for a conversation with a `\"I need support\"` body - the query should contain a `=` operator with the value `\"support\"` for such conversation to be returned. A query with a `=` operator and a `\"need support\"` value will not yield a result.\n\n| Field                                     | Type                                                                                                                                                   |\n| :- | :- |\n| id                                        | String                                                                                                                                                 |\n| created_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| updated_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| source.type                               | String<br>Accepted fields are `conversation`, `email`, `facebook`, `instagram`, `phone_call`, `phone_switch`, `push`, `sms`, `twitter` and `whatsapp`. |\n| source.id                                 | String                                                                                                                                                 |\n| source.delivered_as                       | String                                                                                                                                                 |\n| source.subject                            | String                                                                                                                                                 |\n| source.body                               | String                                                                                                                                                 |\n| source.author.id                          | String                                                                                                                                                 |\n| source.author.type                        | String                                                                                                                                                 |\n| source.author.name                        | String                                                                                                                                                 |\n| source.author.email                       | String                                                                                                                                                 |\n| source.url                                | String                                                                                                                                                 |\n| contact_ids                               | String                                                                                                                                                 |\n| teammate_ids                              | String                                                                                                                                                 |\n| admin_assignee_id                         | String                                                                                                                                                 |\n| team_assignee_id                          | String                                                                                                                                                 |\n| channel_initiated                         | String                                                                                                                                                 |\n| open                                      | Boolean                                                                                                                                                |\n| read                                      | Boolean                                                                                                                                                |\n| state                                     | String                                                                                                                                                 |\n| waiting_since                             | Date (UNIX timestamp)                                                                                                                                  |\n| snoozed_until                             | Date (UNIX timestamp)                                                                                                                                  |\n| tag_ids                                   | String                                                                                                                                                 |\n| priority                                  | String                                                                                                                                                 |\n| statistics.time_to_assignment             | Integer                                                                                                                                                |\n| statistics.time_to_admin_reply            | Integer                                                                                                                                                |\n| statistics.time_to_first_close            | Integer                                                                                                                                                |\n| statistics.time_to_last_close             | Integer                                                                                                                                                |\n| statistics.median_time_to_reply           | Integer                                                                                                                                                |\n| statistics.first_contact_reply_at         | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_assignment_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_admin_reply_at           | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_close_at                 | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_at             | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_admin_reply_at | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_contact_reply_at          | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_admin_reply_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_close_at                  | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_closed_by_id              | String                                                                                                                                                 |\n| statistics.count_reopens                  | Integer                                                                                                                                                |\n| statistics.count_assignments              | Integer                                                                                                                                                |\n| statistics.count_conversation_parts       | Integer                                                                                                                                                |\n| conversation_rating.requested_at          | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.replied_at            | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.score                 | Integer                                                                                                                                                |\n| conversation_rating.remark                | String                                                                                                                                                 |\n| conversation_rating.contact_id            | String                                                                                                                                                 |\n| conversation_rating.admin_d               | String                                                                                                                                                 |\n| ai_agent_participated                     | Boolean                                                                                                                                                |\n| ai_agent.resolution_state                 | String                                                                                                                                                 |\n| ai_agent.last_answer_type                 | String                                                                                                                                                 |\n| ai_agent.rating                           | Integer                                                                                                                                                |\n| ai_agent.rating_remark                    | String                                                                                                                                                 |\n| ai_agent.source_type                      | String                                                                                                                                                 |\n| ai_agent.source_title                     | String                                                                                                                                                 |\n\n### Accepted Operators\n\nThe table below shows the operators you can use to define how you want to search for the value.  The operator should be put in as a string (`\"=\"`). The operator has to be compatible with the field's type  (eg. you cannot search with `>` for a given string value as it's only compatible for integer's and dates).\n\n| Operator | Valid Types                    | Description                                                  |\n| :- | :- | :- |\n| =        | All                            | Equals                                                       |\n| !=       | All                            | Doesn't Equal                                                |\n| IN       | All                            | In  Shortcut for `OR` queries  Values most be in Array       |\n| NIN      | All                            | Not In  Shortcut for `OR !` queries  Values must be in Array |\n| >        | Integer  Date (UNIX Timestamp) | Greater (or equal) than                                      |\n| <       | Integer  Date (UNIX Timestamp) | Lower (or equal) than                                        |\n| ~        | String                         | Contains                                                     |\n| !~       | String                         | Doesn't Contain                                              |\n| ^        | String                         | Starts With                                                  |\n| $        | String                         | Ends With                                                    |\n",
+          "message": "您可以依屬性值搜尋多個對話，以精準取得所需內容。\n\n若要搜尋對話，您需要向 `https:-api.intercom.io-conversations-search` 發送 `POST` 請求。\n\n這將在主體中接受一個 query 物件，用於定義搜尋對話的篩選條件。\n% admonition type=\"warning\" name=\"最佳化搜尋查詢\" %\n  搜尋查詢可能很複雜，因此對其進行最佳化有助於提高搜尋效能。\n  使用 `AND` 和 `OR` 運算子組合多個篩選條件以獲取精確結果，並利用\n  分頁限制返回的結果數。預設每頁 `20` 筆結果，上限為 `150` 筆。\n  有關如何使用 `starting_after` 參數的更多詳細資料，請參閱 [分頁章節](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request)。\n% -admonition %\n\n### 巢狀結構與限制\n\n您可以巢狀組合這些篩選條件，以獲取更精細的深入分析並精準鎖定所需內容。例如：(1 OR 2) AND (3 OR 4)。\n多重條件存在以下限制：\n- 巢狀篩選條件最多 2 層\n- 每個 AND 或 OR 群組最多 15 個篩選條件\n\n### 接受的欄位\n\n對話模型中列出的大多數鍵值均可搜尋，無論其是否可寫入。您搜尋的值必須符合接受的類型，否則查詢將失敗（例如：由於 `created_at` 接受日期，`value` 不能是諸如 `\"foorbar\"` 的字串）。\n`source.body` 欄位較為特殊，因為搜尋不會針對整個值進行，而是分別針對該值的每個元素進行。例如，搜尋正文包含 `\"I need support\"` 的對話時，查詢應包含運算子 `=` 且值為 `\"support\"`，才能返回此類對話。包含運算子 `=` 和值 `\"need support\"` 的查詢將不會產生結果。\n\n| 欄位 | 類型 |\n| :- | :- |\n| id                                        | String                                                                                                                                                 |\n| created_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| updated_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| source.type                               | String<br>接受的欄位為 `conversation`、`email`、`facebook`、`instagram`、`phone_call`、`phone_switch`、`push`、`sms`、`twitter` 與 `whatsapp`。 |\n| source.id                                 | String                                                                                                                                                 |\n| source.delivered_as                       | String                                                                                                                                                 |\n| source.subject                            | String                                                                                                                                                 |\n| source.body                               | String                                                                                                                                                 |\n| source.author.id                          | String                                                                                                                                                 |\n| source.author.type                        | String                                                                                                                                                 |\n| source.author.name                        | String                                                                                                                                                 |\n| source.author.email                       | String                                                                                                                                                 |\n| source.url                                | String                                                                                                                                                 |\n| contact_ids                               | String                                                                                                                                                 |\n| teammate_ids                              | String                                                                                                                                                 |\n| admin_assignee_id                         | String                                                                                                                                                 |\n| team_assignee_id                          | String                                                                                                                                                 |\n| channel_initiated                         | String                                                                                                                                                 |\n| open                                      | Boolean                                                                                                                                                |\n| read                                      | Boolean                                                                                                                                                |\n| state                                     | String                                                                                                                                                 |\n| waiting_since                             | Date (UNIX timestamp)                                                                                                                                  |\n| snoozed_until                             | Date (UNIX timestamp)                                                                                                                                  |\n| tag_ids                                   | String                                                                                                                                                 |\n| priority                                  | String                                                                                                                                                 |\n| statistics.time_to_assignment             | Integer                                                                                                                                                |\n| statistics.time_to_admin_reply            | Integer                                                                                                                                                |\n| statistics.time_to_first_close            | Integer                                                                                                                                                |\n| statistics.time_to_last_close             | Integer                                                                                                                                                |\n| statistics.median_time_to_reply           | Integer                                                                                                                                                |\n| statistics.first_contact_reply_at         | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_assignment_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_admin_reply_at           | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_close_at                 | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_at             | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_admin_reply_at | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_contact_reply_at          | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_admin_reply_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_close_at                  | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_closed_by_id              | String                                                                                                                                                 |\n| statistics.count_reopens                  | Integer                                                                                                                                                |\n| statistics.count_assignments              | Integer                                                                                                                                                |\n| statistics.count_conversation_parts       | Integer                                                                                                                                                |\n| conversation_rating.requested_at          | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.replied_at            | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.score                 | Integer                                                                                                                                                |\n| conversation_rating.remark                | String                                                                                                                                                 |\n| conversation_rating.contact_id            | String                                                                                                                                                 |\n| conversation_rating.admin_d               | String                                                                                                                                                 |\n| ai_agent_participated                     | Boolean                                                                                                                                                |\n| ai_agent.resolution_state                 | String                                                                                                                                                 |\n| ai_agent.last_answer_type                 | String                                                                                                                                                 |\n| ai_agent.rating                           | Integer                                                                                                                                                |\n| ai_agent.rating_remark                    | String                                                                                                                                                 |\n| ai_agent.source_type                      | String                                                                                                                                                 |\n| ai_agent.source_title                     | String                                                                                                                                                 |\n\n### 接受的運算子\n\n下表顯示可用於定義搜尋值方式的運算子。運算子應作為字串輸入 (`\"=\"`)。運算子必須與欄位類型相容（例如：您無法使用 `>` 搜尋給定的字串值，因為它僅與整數和日期相容）。\n\n| 運算子 | 有效類型 | 說明 |\n| :- | :- | :- |\n| =        | 全部                            | 等於                                                       |\n| !=       | 全部                            | 不等於                                                |\n| IN       | 全部                            | 包含於  `OR` 查詢的捷徑  值必須在陣列中       |\n| NIN      | 全部                            | 不包含於  `OR !` 查詢的捷徑  值必須在陣列中 |\n| >        | Integer  Date (UNIX Timestamp) | 大於（或等於）                                      |\n| <       | Integer  Date (UNIX Timestamp) | 小於（或等於）                                        |\n| ~        | String                         | 包含                                                     |\n| !~       | String                         | 不包含                                              |\n| ^        | String                         | 開頭為                                                  |\n| $        | String                         | 結尾為                                                    |\n"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.display_name": {
+          "source": "Search Conversations",
+          "message": "搜尋對話"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.short_desc": {
+          "source": "Search conversations",
+          "message": "搜尋對話"
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.desc": {
+          "source": "You can reply to a conversation with a message from an admin or on behalf of a contact, or with a note for admins.",
+          "message": "您可以透過管理員訊息、代表聯絡人的訊息或管理員備註來回覆對話。"
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.display_name": {
+          "source": "Reply to a Conversation",
+          "message": "回覆對話"
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.short_desc": {
+          "source": "Reply to a conversation",
+          "message": "回覆對話"
+        },
+        "app.SW50ZXJjb20.desc": {
+          "source": "Connect with Intercom to manage contacts, companies, conversations, and events. This integration allows you to both perform actions and respond to events in your Intercom workspace, enabling you to automate customer communications and data management workflows.",
+          "message": "連接 Intercom 以管理聯絡人、公司、對話和事件。此整合可讓您在 Intercom 工作區中執行動作並回應事件，進而實現客戶溝通和資料管理工作流程的自動化。"
+        },
+        "app.SW50ZXJjb20.display_name": {
+          "source": "Intercom",
+          "message": "Intercom"
+        },
+        "app.SW50ZXJjb20.short_desc": {
+          "source": "Interact with Intercom customer messaging platform",
+          "message": "與 Intercom 客戶通訊平台進行互動"
+        }
+      }
+    }
+  }
+}

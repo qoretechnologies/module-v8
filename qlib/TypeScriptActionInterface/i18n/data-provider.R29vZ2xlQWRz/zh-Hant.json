@@ -1,0 +1,3121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Creates a new ad group in a specified campaign with the given name, type, status, and CPC bid.",
+          "message": "在指定的廣告活動中，使用指定的名稱、類型、狀態與 CPC 出價建立新的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Create Ad Group",
+          "message": "建立廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the new ad group will be created.",
+          "message": "選取要在其中建立新廣告群組的廣告活動。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to create the ad group in",
+          "message": "要在其中建立廣告群組的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The maximum CPC bid amount in your account currency (e.g., 1.50 for $1.50).",
+          "message": "以您帳戶幣別計的最高 CPC 出價金額（例如 $1.50 填入 1.50）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 出價"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "Maximum cost-per-click bid amount",
+          "message": "最高每次點擊成本出價金額"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the ad group.",
+          "message": "廣告群組的描述性名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "廣告群組名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new ad group",
+          "message": "新廣告群組的名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad group without immediately serving ads.",
+          "message": "設為 PAUSED 即可建立廣告群組而不會立即投放廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "初始狀態"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad group as enabled or paused",
+          "message": "廣告群組啟動時應設為已啟用或已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOkRJU1BMQVlfU1RBTkRBUkQ.display_name": {
+          "source": "Display Standard",
+          "message": "多媒體標準"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOlNFQVJDSF9TVEFOREFSRA.display_name": {
+          "source": "Search Standard",
+          "message": "搜尋標準"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.desc": {
+          "source": "The type of ad group to create.",
+          "message": "要建立的廣告群組類型。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.display_name": {
+          "source": "Ad Group Type",
+          "message": "廣告群組類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.short_desc": {
+          "source": "Type of ad group",
+          "message": "廣告群組類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Create a new ad group within a campaign",
+          "message": "在廣告活動中建立新的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.desc": {
+          "source": "Creates a new campaign budget with a specified daily amount.",
+          "message": "使用指定的每日金額建立新的廣告活動預算。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.display_name": {
+          "source": "Create Budget",
+          "message": "建立預算"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "以您的帳戶貨幣為單位的每日預算金額（例如 50.00 代表每天 $50）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "每日金額"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "以帳戶貨幣為單位的每日預算金額"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOkFDQ0VMRVJBVEVE.display_name": {
+          "source": "Accelerated",
+          "message": "加速"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOlNUQU5EQVJE.display_name": {
+          "source": "Standard",
+          "message": "標準"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.desc": {
+          "source": "STANDARD spreads the budget evenly. ACCELERATED spends it as fast as possible (deprecated for most campaign types).",
+          "message": "STANDARD 會平均分配預算。ACCELERATED 則會儘快用完預算（已在多數廣告活動類型中淘汰）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.display_name": {
+          "source": "Delivery Method",
+          "message": "放送方式"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.short_desc": {
+          "source": "How the budget is spent throughout the day",
+          "message": "預算在一天之內的支出方式"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign budget.",
+          "message": "廣告活動預算的描述性名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "預算名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "Name for the budget",
+          "message": "預算名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.short_desc": {
+          "source": "Create a new campaign budget",
+          "message": "建立新的廣告活動預算"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Creates a new portfolio bidding strategy that can be shared across multiple campaigns.",
+          "message": "建立可在多個廣告活動之間共用的新組合出價策略。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Create Bidding Strategy",
+          "message": "建立出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the portfolio bidding strategy.",
+          "message": "組合出價策略的描述性名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "策略名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "Name for the bidding strategy",
+          "message": "出價策略名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The target CPA in your account currency. Required when strategy type is TARGET_CPA.",
+          "message": "以您的帳戶貨幣為單位的目標 CPA。策略類型為 TARGET_CPA 時為必填。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "目標 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Target cost-per-acquisition amount",
+          "message": "目標每次轉換成本金額"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The target ROAS as a ratio (e.g., 3.0 for 300% ROAS). Required when strategy type is TARGET_ROAS.",
+          "message": "以比例表示的目標 ROAS（例如 3.0 代表 300% ROAS）。策略類型為 TARGET_ROAS 時為必填。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "目標 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Target return on ad spend",
+          "message": "目標廣告投資報酬率"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "盡量爭取轉換"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "盡量提高轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9DUEE.display_name": {
+          "source": "Target CPA",
+          "message": "目標 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9ST0FT.display_name": {
+          "source": "Target ROAS",
+          "message": "目標 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.desc": {
+          "source": "The bidding optimization goal (e.g., Target CPA, Target ROAS, Maximize Conversions).",
+          "message": "出價最佳化目標（例如：目標 CPA、目標 ROAS、盡量爭取轉換）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.display_name": {
+          "source": "Strategy Type",
+          "message": "策略類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.short_desc": {
+          "source": "Type of bidding strategy",
+          "message": "出價策略類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Create a portfolio bidding strategy",
+          "message": "建立組合出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Creates a new CRM-based user list for customer match targeting.",
+          "message": "建立用於目標客戶比對的新 CRM 使用者名單。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Create Customer List",
+          "message": "建立客戶名單"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "A description of the customer list and its intended use.",
+          "message": "客戶名單的描述及其預期用途。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "描述"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the customer list",
+          "message": "客戶名單的描述"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.desc": {
+          "source": "The number of days a user remains on the list. Set to 10000 for no expiration.",
+          "message": "使用者保留在名單中的天數。設為 10000 表示永不過期。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.display_name": {
+          "source": "Membership Life Span",
+          "message": "會員有效期限"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.short_desc": {
+          "source": "Days until a member is automatically removed",
+          "message": "自動移除成員前的天數"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the customer match list.",
+          "message": "目標客戶比對名單的描述性名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "List Name",
+          "message": "清單名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Name for the customer list",
+          "message": "客戶名單名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Create a new customer match audience list",
+          "message": "建立新的目標客戶比對受眾名單"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.desc": {
+          "source": "Creates a new campaign in Google Ads with the specified channel type, budget, bidding strategy, and targeting settings. A campaign budget is created automatically.",
+          "message": "在 Google Ads 中建立具有指定頻道類型、預算、出價策略和指定目標設定的新廣告活動。系統會自動建立廣告活動預算。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Create Campaign",
+          "message": "建立廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOkRJU1BMQVk.display_name": {
+          "source": "Display",
+          "message": "多媒體"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlBFUkZPUk1BTkNFX01BWA.display_name": {
+          "source": "Performance Max",
+          "message": "最高成效"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNFQVJDSA.display_name": {
+          "source": "Search",
+          "message": "搜尋"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNIT1BQSU5H.display_name": {
+          "source": "Shopping",
+          "message": "購物"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlZJREVP.display_name": {
+          "source": "Video",
+          "message": "影片"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.desc": {
+          "source": "The type of advertising channel for this campaign (e.g., Search, Display, Shopping, Video).",
+          "message": "此廣告活動的廣告頻道類型（例如搜尋、多媒體、購物、影片）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.display_name": {
+          "source": "Channel Type",
+          "message": "頻道類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.short_desc": {
+          "source": "Advertising channel type",
+          "message": "廣告頻道類型"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BTlVBTF9DUEM.display_name": {
+          "source": "Manual CPC",
+          "message": "手動單次點擊出價"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NMSUNLUw.display_name": {
+          "source": "Maximize Clicks",
+          "message": "盡量爭取點擊次數"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "盡量爭取轉換"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "盡量提高轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOlRBUkdFVF9JTVBSRVNTSU9OX1NIQVJF.display_name": {
+          "source": "Target Impression Share",
+          "message": "目標曝光比重"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.desc": {
+          "source": "The bidding strategy to use for this campaign.",
+          "message": "用於此廣告活動的出價策略。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.short_desc": {
+          "source": "Campaign bidding strategy",
+          "message": "廣告活動出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "以您的帳戶貨幣為單位的每日預算金額（例如 50.00 代表每天 $50）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.display_name": {
+          "source": "Daily Budget",
+          "message": "每日預算"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "以帳戶貨幣為單位的每日預算金額"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign.",
+          "message": "廣告活動的描述性名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "廣告活動名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "Name for the new campaign",
+          "message": "新廣告活動的名稱"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the campaign without immediately serving ads.",
+          "message": "設定為 PAUSED 即可建立廣告活動而不立即投放廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "初始狀態"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the campaign as enabled or paused",
+          "message": "廣告活動建立時是要啟用還是暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.desc": {
+          "source": "Whether to show ads on Google Search results pages.",
+          "message": "是否在 Google 搜尋結果網頁上顯示廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.display_name": {
+          "source": "Target Google Search",
+          "message": "指定 Google 搜尋"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.short_desc": {
+          "source": "Show ads on Google Search",
+          "message": "在 Google 搜尋上顯示廣告"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.desc": {
+          "source": "Whether to show ads on Google search partner websites.",
+          "message": "是否在 Google 搜尋聯播網合作夥伴網站上顯示廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.display_name": {
+          "source": "Target Search Network",
+          "message": "指定搜尋聯播網"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.short_desc": {
+          "source": "Show ads on search partner sites",
+          "message": "在搜尋合作夥伴網站上顯示廣告"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Create a new advertising campaign",
+          "message": "建立新的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.desc": {
+          "source": "Creates a responsive search ad (RSA) in a specified ad group with multiple headlines, descriptions, and final URLs. Google Ads will automatically test combinations to find the best-performing ad.",
+          "message": "在指定的廣告群組中建立包含多個標題、說明與最終到達網址的回應式搜尋廣告 (RSA)。Google Ads 將會自動測試組合以找出成效最佳的廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.display_name": {
+          "source": "Create Responsive Search Ad",
+          "message": "建立回應式搜尋廣告"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the new ad will be created.",
+          "message": "選取要在其中建立新廣告的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to create the ad in",
+          "message": "要在其中建立廣告的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.desc": {
+          "source": "List of descriptions for the responsive search ad. Provide at least 2 and up to 4 descriptions (max 90 characters each).",
+          "message": "回應式搜尋廣告的說明清單。請提供至少 2 條且最多 4 條說明（每條最多 90 個字元）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.display_name": {
+          "source": "Descriptions",
+          "message": "說明"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.short_desc": {
+          "source": "Ad descriptions (2-4 required)",
+          "message": "廣告說明（需提供 2-4 條）"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.desc": {
+          "source": "The URLs that users will be directed to after clicking the ad.",
+          "message": "使用者點擊廣告後將導向的網址。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.display_name": {
+          "source": "Final URLs",
+          "message": "最終到達網址"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.short_desc": {
+          "source": "Landing page URLs",
+          "message": "到達網頁網址"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.desc": {
+          "source": "List of headlines for the responsive search ad. Provide at least 3 and up to 15 headlines (max 30 characters each).",
+          "message": "回應式搜尋廣告的標題清單。請提供至少 3 條且最多 15 條標題（每條最多 30 個字元）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.display_name": {
+          "source": "Headlines",
+          "message": "標題"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.short_desc": {
+          "source": "Ad headlines (3-15 required)",
+          "message": "廣告標題（需提供 3-15 條）"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad without immediately serving it.",
+          "message": "設定為 PAUSED 即可建立廣告而不立即投放。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "初始狀態"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad as enabled or paused",
+          "message": "廣告建立時是要啟用還是暫停"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.desc": {
+          "source": "The first part of the display URL path shown in the ad (max 15 characters).",
+          "message": "廣告中顯示網址路徑的第一部分（最多 15 個字元）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.display_name": {
+          "source": "Display Path 1",
+          "message": "顯示路徑 1"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.short_desc": {
+          "source": "First part of the display URL path",
+          "message": "顯示網址路徑的第一部分"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.desc": {
+          "source": "The second part of the display URL path shown in the ad (max 15 characters).",
+          "message": "廣告中顯示網址路徑的第二部分（最多 15 個字元）。"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.display_name": {
+          "source": "Display Path 2",
+          "message": "顯示路徑 2"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.short_desc": {
+          "source": "Second part of the display URL path",
+          "message": "顯示網址路徑的第二部分"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.short_desc": {
+          "source": "Create a new responsive search ad",
+          "message": "建立新的回應式搜尋廣告"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.desc": {
+          "source": "Adds campaign-level negative keywords to prevent ads from showing for certain search terms.",
+          "message": "新增廣告活動層級的排除關鍵字，以避免廣告針對特定搜尋字詞顯示。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.display_name": {
+          "source": "Add Negative Keywords",
+          "message": "新增排除關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the negative keywords will be added.",
+          "message": "選取要加入排除關鍵字的廣告活動。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to add negative keywords to",
+          "message": "要加入排除關鍵字的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of negative keyword entries to add, each with text and match type.",
+          "message": "要加入的排除關鍵字項目清單，每個項目均包含文字與比對類型。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Negative Keywords",
+          "message": "排除關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Negative keywords to add",
+          "message": "要加入的排除關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.short_desc": {
+          "source": "Add negative keywords to a campaign",
+          "message": "將排除關鍵字加入廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Adds contacts to a customer match list using hashed user data. Email addresses and phone numbers are automatically normalized and SHA-256 hashed before upload.",
+          "message": "使用雜湊後的使用者資料將聯絡人加入目標顧客比對名單。電子郵件地址和電話號碼會在上傳前自動正規化並進行 SHA-256 雜湊處理。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Add Contacts to Customer List",
+          "message": "將聯絡人新增至顧客名單"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to add to the customer list.",
+          "message": "要加入顧客名單的聯絡人清單，包含電子郵件、電話或地址資料。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to add",
+          "message": "要加入的聯絡人清單"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list where contacts will be added.",
+          "message": "選取要加入聯絡人的目標顧客比對名單。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "顧客名單"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to add contacts to",
+          "message": "要加入聯絡人的顧客名單"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Upload contacts to a customer match list",
+          "message": "將聯絡人上傳至目標顧客比對名單"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.desc": {
+          "source": "Adds one or more keywords to a specified ad group with the given match type and optional CPC bid.",
+          "message": "將一個或多個具有指定比對類型及選填 CPC 出價的關鍵字加入指定的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.display_name": {
+          "source": "Add Keywords",
+          "message": "新增關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the keywords will be added.",
+          "message": "選取要加入關鍵字的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to add keywords to",
+          "message": "要加入關鍵字的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of keyword entries to add, each with text and match type.",
+          "message": "要新增的關鍵字項目清單，每項均包含文字與比對類型。"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Keywords",
+          "message": "關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Keywords to add",
+          "message": "要新增的關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.short_desc": {
+          "source": "Add keywords to an ad group",
+          "message": "將關鍵字新增至廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.desc": {
+          "source": "Returns details about the authenticated Google Ads customer account, including accessible customer IDs.",
+          "message": "傳回已驗證的 Google Ads 客戶帳戶詳細資訊，包括可存取的客戶 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.display_name": {
+          "source": "Get Customer Info",
+          "message": "獲取客戶資訊"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.short_desc": {
+          "source": "Get information about the current Google Ads customer account",
+          "message": "獲取目前 Google Ads 客戶帳戶的資訊"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Retrieves detailed information about a specific campaign by its ID, including status, budget, bidding strategy, and performance metrics.",
+          "message": "依廣告活動 ID 擷取特定廣告活動的詳細資訊，包括狀態、預算、出價策略與成效指標。"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "取得行銷活動"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to retrieve details for.",
+          "message": "選取或輸入要擷取詳細資訊的廣告活動 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to retrieve",
+          "message": "要擷取的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Get details of a specific campaign",
+          "message": "獲取特定廣告活動的詳細資訊"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.desc": {
+          "source": "Retrieves ad groups from the Google Ads account, optionally filtered by campaign.",
+          "message": "從 Google Ads 帳戶擷取廣告群組，可選擇依廣告活動篩選。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.display_name": {
+          "source": "List Ad Groups",
+          "message": "列出廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ad groups belonging to this campaign.",
+          "message": "僅傳回屬於此廣告活動的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ad groups to return. Default is 100.",
+          "message": "傳回廣告群組的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ad groups to return",
+          "message": "傳回廣告群組的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "全部"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ad groups with the specified status.",
+          "message": "僅傳回具有指定狀態的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "狀態篩選器"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ad groups by status",
+          "message": "依狀態篩選廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.short_desc": {
+          "source": "List ad groups with performance metrics",
+          "message": "列出廣告群組及其成效指標"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.desc": {
+          "source": "Retrieves ads from the Google Ads account, optionally filtered by campaign, ad group, or status.",
+          "message": "從 Google Ads 帳戶擷取廣告，可選擇依廣告活動、廣告群組或狀態篩選。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.display_name": {
+          "source": "List Ads",
+          "message": "列出廣告"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ads belonging to this campaign.",
+          "message": "僅傳回屬於此廣告活動的廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return ads belonging to this ad group.",
+          "message": "僅傳回屬於此廣告群組的廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "依廣告群組篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ads to return. Default is 100.",
+          "message": "傳回廣告的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ads to return",
+          "message": "傳回廣告的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "全部"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ads with the specified status. If not set, all non-removed ads are returned.",
+          "message": "僅傳回具有指定狀態的廣告。若未設定，則傳回所有未移除的廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "狀態篩選器"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ads by status",
+          "message": "依狀態篩選廣告"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.short_desc": {
+          "source": "List ads with performance metrics",
+          "message": "列出廣告及其成效指標"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.desc": {
+          "source": "Retrieves all portfolio bidding strategies in the Google Ads account.",
+          "message": "擷取 Google Ads 帳戶中的所有組合出價策略。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.display_name": {
+          "source": "List Bidding Strategies",
+          "message": "列出出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of bidding strategies to return. Default is 100.",
+          "message": "傳回出價策略的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of strategies to return",
+          "message": "傳回策略的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.short_desc": {
+          "source": "List portfolio bidding strategies",
+          "message": "列出組合出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.desc": {
+          "source": "Retrieves all campaign budgets in the Google Ads account.",
+          "message": "擷取 Google Ads 帳戶中的所有廣告活動預算。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.display_name": {
+          "source": "List Budgets",
+          "message": "列出預算"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of budgets to return. Default is 100.",
+          "message": "傳回預算的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of budgets to return",
+          "message": "傳回預算的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.short_desc": {
+          "source": "List campaign budgets",
+          "message": "列出廣告活動預算"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Retrieves campaigns from the Google Ads account with optional status filtering and performance metrics for a specified date range.",
+          "message": "從 Google Ads 帳戶擷取廣告活動，可選擇狀態篩選以及指定日期範圍的成效指標。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "列出行銷活動"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "所有時間"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "過去 14 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "過去 30 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "過去 7 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "上個月"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "這個月"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics alongside campaign data.",
+          "message": "用於隨廣告活動資料一起擷取成效指標的預先定義日期範圍。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "成效指標的日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of campaigns to return. Default is 100.",
+          "message": "傳回廣告活動的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "返回的行銷活動最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "全部"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return campaigns with the specified status. If not set, all non-removed campaigns are returned.",
+          "message": "僅傳回具有指定狀態的廣告活動。若未設定，則傳回所有未移除的廣告活動。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "狀態篩選器"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter campaigns by status",
+          "message": "依狀態篩選廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "List campaigns with performance metrics",
+          "message": "列出廣告活動及其成效指標"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.desc": {
+          "source": "Retrieves all conversion actions configured in the Google Ads account.",
+          "message": "擷取 Google Ads 帳戶中設定的所有轉換動作。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.display_name": {
+          "source": "List Conversion Actions",
+          "message": "列出轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversion actions to return. Default is 100.",
+          "message": "傳回轉換動作的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversion actions to return",
+          "message": "傳回轉換動作的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.short_desc": {
+          "source": "List all conversion action definitions",
+          "message": "列出所有轉換動作定義"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.desc": {
+          "source": "Retrieves all user lists (customer match lists) in the Google Ads account.",
+          "message": "擷取 Google Ads 帳戶中的所有使用者名單（顧客比對名單）。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.display_name": {
+          "source": "List Customer Lists",
+          "message": "列出客戶名單"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer lists to return. Default is 100.",
+          "message": "傳回客戶名單的最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "返回清單的最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.short_desc": {
+          "source": "List audience/customer match lists",
+          "message": "列出受眾/顧客比對名單"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.desc": {
+          "source": "Retrieves keywords from the Google Ads account with optional filtering by campaign or ad group, including performance metrics.",
+          "message": "從 Google Ads 帳戶擷取關鍵字，可選擇依廣告活動或廣告群組篩選，包含成效指標。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.display_name": {
+          "source": "List Keywords",
+          "message": "列出關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return keywords belonging to this campaign.",
+          "message": "僅傳回屬於此廣告活動的關鍵字。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return keywords belonging to this ad group.",
+          "message": "僅傳回屬於此廣告群組的關鍵字。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "依廣告群組篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "所有時間"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "過去 14 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "過去 30 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "過去 7 天"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "這個月"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics.",
+          "message": "用於擷取成效指標的預定義日期範圍。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "成效指標的日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of keywords to return. Default is 100.",
+          "message": "要傳回的關鍵字最大數量。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of keywords to return",
+          "message": "要傳回的關鍵字最大數量"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.short_desc": {
+          "source": "List keywords with performance metrics",
+          "message": "列出包含成效指標的關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Ads** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Google Ads** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基本 URL）、選填查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊形式傳回。\n\n將此動作套用於尚未在此應用程式中作為一級動作公開的端點。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Ads",
+          "message": "向 Google Ads 發出自訂 API 呼叫"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.desc": {
+          "source": "Monitors Google Ads lead form extensions for new submissions. Polls the lead form submission data and triggers for each new lead.",
+          "message": "監控 Google Ads 潛在客戶表單素材資源的新提交內容。輪詢潛在客戶表單提交資料並在每次收到新潛在客戶時觸發。"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.display_name": {
+          "source": "New Lead Form Submission",
+          "message": "新增潛在客戶表單提交"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only trigger for lead form submissions from this campaign. Leave empty to monitor all campaigns.",
+          "message": "僅針對來自此廣告活動的潛在客戶表單提交進行觸發。保留為空可監控所有廣告活動。"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.short_desc": {
+          "source": "Triggers when a new lead is submitted through a Google Ads lead form extension",
+          "message": "透過 Google Ads 潛在客戶表單素材資源提交新潛在客戶時觸發"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.desc": {
+          "source": "Removes (soft deletes) an ad from an ad group.",
+          "message": "從廣告群組中移除（軟刪除）廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.display_name": {
+          "source": "Remove Ad",
+          "message": "移除廣告"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to remove.",
+          "message": "選取包含要移除廣告的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "包含該廣告的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to remove.",
+          "message": "要移除的廣告 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "廣告"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.short_desc": {
+          "source": "The ad to remove",
+          "message": "要移除的廣告"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.short_desc": {
+          "source": "Remove an ad",
+          "message": "移除廣告"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.desc": {
+          "source": "Removes (soft deletes) an ad group. It will be marked as REMOVED and its ads will stop serving.",
+          "message": "移除（軟刪除）廣告群組。其將標記為 REMOVED，且其廣告將停止投放。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.display_name": {
+          "source": "Remove Ad Group",
+          "message": "移除廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to remove.",
+          "message": "選取或輸入要移除的廣告群組 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to remove",
+          "message": "要移除的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.short_desc": {
+          "source": "Remove an ad group",
+          "message": "移除廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.desc": {
+          "source": "Removes (soft deletes) a campaign from the Google Ads account. The campaign will be marked as REMOVED and will no longer serve ads.",
+          "message": "從 Google Ads 帳戶中移除（軟刪除）廣告活動。該廣告活動將標記為 REMOVED 且不再投放廣告。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.display_name": {
+          "source": "Remove Campaign",
+          "message": "移除廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to remove.",
+          "message": "選取或輸入要移除的廣告活動 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to remove",
+          "message": "要移除的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.short_desc": {
+          "source": "Remove a campaign",
+          "message": "移除廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.desc": {
+          "source": "Removes contacts from a customer match list using their identifying information.",
+          "message": "使用識別資訊從目標客戶比對名單中移除聯絡人。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.display_name": {
+          "source": "Remove Contacts from Customer List",
+          "message": "從客戶名單中移除聯絡人"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to remove from the customer list.",
+          "message": "要從客戶名單中移除、包含電子郵件、電話或地址資料的聯絡人清單。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "聯絡人"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to remove",
+          "message": "要移除的聯絡人清單"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list to remove contacts from.",
+          "message": "選取要從中移除聯絡人的目標客戶比對名單。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "顧客名單"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to remove contacts from",
+          "message": "要從中移除聯絡人的客戶名單"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.short_desc": {
+          "source": "Remove contacts from a customer match list",
+          "message": "從目標客戶比對名單中移除聯絡人"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.desc": {
+          "source": "Removes a keyword from the specified ad group.",
+          "message": "從指定的廣告群組中移除關鍵字。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.display_name": {
+          "source": "Remove Keyword",
+          "message": "移除關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "廣告群組中關鍵字的條件 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "關鍵字條件 ID"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to remove",
+          "message": "要移除的關鍵字條件 ID"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to remove.",
+          "message": "選取包含要移除關鍵字的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "包含該關鍵字的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.short_desc": {
+          "source": "Remove a keyword from an ad group",
+          "message": "從廣告群組中移除關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across ad groups with configurable metrics and date range.",
+          "message": "跨廣告群組執行成效報表，並具有可設定的指標和日期範圍。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.display_name": {
+          "source": "Run Ad Group Report",
+          "message": "執行廣告群組報表"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include ad groups from this campaign.",
+          "message": "僅包含來自此廣告活動的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "自訂"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "過去 14 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "過去 30 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "過去 7 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "上個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "這個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "報表的日期範圍。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "報表的預定義日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "自訂結束日期。當「日期範圍」為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "結束日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "自訂結束日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "要傳回的最大列數。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "最大列數"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "自訂開始日期。當「日期範圍」為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "自訂開始日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.short_desc": {
+          "source": "Generate an ad group performance report",
+          "message": "產生廣告群組成效報表"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.desc": {
+          "source": "Execute a raw Google Ads Query Language (GAQL) query for advanced reporting. GAQL supports SELECT, FROM, WHERE, ORDER BY, and LIMIT clauses.",
+          "message": "執行原始 Google Ads 查詢語言 (GAQL) 查詢以進行進階報表分析。GAQL 支援 SELECT、FROM、WHERE、ORDER BY 和 LIMIT 子句。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.display_name": {
+          "source": "Run Custom Report",
+          "message": "執行自訂報表"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.desc": {
+          "source": "A Google Ads Query Language query. Example: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS",
+          "message": "Google Ads 查詢語言查詢。範例：SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.display_name": {
+          "source": "GAQL Query",
+          "message": "GAQL 查詢"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.short_desc": {
+          "source": "The GAQL query to execute",
+          "message": "要執行的 GAQL 查詢"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.short_desc": {
+          "source": "Run a custom GAQL query",
+          "message": "執行自訂 GAQL 查詢"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across campaigns with configurable metrics, date range, and filters.",
+          "message": "跨廣告活動執行包含可設定指標、日期範圍和篩選條件的成效報告。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.display_name": {
+          "source": "Run Campaign Report",
+          "message": "執行廣告活動報告"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "自訂"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "過去 14 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "過去 30 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "過去 7 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "上個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "這個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report. Use predefined ranges like LAST_7_DAYS, LAST_30_DAYS, etc.",
+          "message": "報告的日期範圍。請使用預先定義的範圍，例如 LAST_7_DAYS、LAST_30_DAYS 等。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "報表的預定義日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "自訂結束日期，格式為 YYYY-MM-DD。當日期範圍設定為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "結束日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "自訂結束日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "要傳回的最大列數。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "最大列數"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "自訂開始日期，格式為 YYYY-MM-DD。當日期範圍設定為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "自訂開始日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "全部"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only include campaigns with the specified status.",
+          "message": "僅包含具有指定狀態的廣告活動。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "狀態篩選器"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter by campaign status",
+          "message": "依廣告活動狀態篩選"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.short_desc": {
+          "source": "Generate a campaign performance report",
+          "message": "產生廣告活動成效報告"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.desc": {
+          "source": "Runs a performance report across keywords with metrics like clicks, impressions, CPC, and conversions.",
+          "message": "跨關鍵字執行成效報告，包含點擊次數、曝光次數、CPC 和轉換等指標。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.display_name": {
+          "source": "Run Keyword Report",
+          "message": "執行關鍵字報告"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include keywords from this campaign.",
+          "message": "僅包含來自此廣告活動的關鍵字。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "依廣告活動篩選"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only include keywords from this ad group.",
+          "message": "僅包含來自此廣告群組的關鍵字。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "依廣告群組篩選"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "自訂"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "過去 14 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "過去 30 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "過去 7 天"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "上個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "這個月"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "報表的日期範圍。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "報表的預定義日期範圍"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "自訂結束日期。當「日期範圍」為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "結束日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "自訂結束日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "要傳回的最大列數。預設值為 100。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "限制數量"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "最大列數"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "自訂開始日期。當「日期範圍」為 CUSTOM 時使用。"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日期"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "自訂開始日期 (YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.short_desc": {
+          "source": "Generate a keyword performance report",
+          "message": "產生關鍵字成效報告"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Updates ad group properties such as name, status, and CPC bid.",
+          "message": "更新廣告群組屬性，例如名稱、狀態和 CPC 出價。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Update Ad Group",
+          "message": "更新廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "以您帳戶貨幣表示的已更新最高 CPC 出價金額。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 出價"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "新的最高 CPC 出價金額"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to update.",
+          "message": "選取或輸入要更新的廣告群組 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to update",
+          "message": "要更新的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The updated name for the ad group. Leave empty to keep the current name.",
+          "message": "廣告群組的更新名稱。保留空白以維持目前名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "廣告群組名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "New name for the ad group",
+          "message": "廣告群組的新名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "已移除"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set the ad group status to ENABLED, PAUSED, or REMOVED.",
+          "message": "將廣告群組狀態設定為 ENABLED、PAUSED 或 REMOVED。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad group",
+          "message": "廣告群組的新狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Update an existing ad group",
+          "message": "更新現有的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.desc": {
+          "source": "Updates the status of an ad within an ad group.",
+          "message": "更新廣告群組內廣告的狀態。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.display_name": {
+          "source": "Update Ad Status",
+          "message": "更新廣告狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to update.",
+          "message": "選取包含要更新之廣告的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "包含該廣告的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to update.",
+          "message": "要更新的廣告 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "廣告"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.short_desc": {
+          "source": "The ad to update",
+          "message": "要更新的廣告"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "已移除"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.desc": {
+          "source": "Set the ad status to ENABLED, PAUSED, or REMOVED.",
+          "message": "將廣告狀態設定為 ENABLED、PAUSED 或 REMOVED。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad",
+          "message": "廣告的新狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.short_desc": {
+          "source": "Enable, pause, or remove an ad",
+          "message": "啟用、暫停或移除廣告"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.desc": {
+          "source": "Updates the daily amount or name of an existing campaign budget.",
+          "message": "更新現有廣告活動預算的每日金額或名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.display_name": {
+          "source": "Update Budget",
+          "message": "更新預算"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.desc": {
+          "source": "Select or enter the ID of the budget to update.",
+          "message": "選取或輸入要更新的預算 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.display_name": {
+          "source": "Budget",
+          "message": "預算"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.short_desc": {
+          "source": "The budget to update",
+          "message": "要更新的預算"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The updated daily budget amount in your account currency.",
+          "message": "以您帳戶貨幣表示的已更新每日預算金額。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "每日金額"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "New daily budget amount",
+          "message": "新的每日預算金額"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "The updated name for the budget. Leave empty to keep the current name.",
+          "message": "預算的更新名稱。保留空白以維持目前名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "預算名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "New name for the budget",
+          "message": "預算的新名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.short_desc": {
+          "source": "Update an existing campaign budget",
+          "message": "更新現有的廣告活動預算"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Updates an existing portfolio bidding strategy.",
+          "message": "更新現有的組合出價策略。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Update Bidding Strategy",
+          "message": "更新出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "The updated name. Leave empty to keep the current name.",
+          "message": "更新的名稱。保留空白以維持目前名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "策略名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "New name for the bidding strategy",
+          "message": "出價策略的新名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.desc": {
+          "source": "Select or enter the ID of the bidding strategy to update.",
+          "message": "選取或輸入要更新的出價策略 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.short_desc": {
+          "source": "The bidding strategy to update",
+          "message": "要更新的出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The updated target CPA in your account currency.",
+          "message": "以您帳戶貨幣表示的已更新目標 CPA。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "目標 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Updated target CPA amount",
+          "message": "已更新的目標 CPA 金額"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The updated target ROAS as a ratio.",
+          "message": "以比率表示的已更新目標 ROAS。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "目標 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Updated target ROAS",
+          "message": "已更新的目標 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Update a portfolio bidding strategy",
+          "message": "更新組合出價策略"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.desc": {
+          "source": "Updates campaign properties such as name, status (enable/pause), and bidding strategy.",
+          "message": "更新廣告活動屬性，例如名稱、狀態 (啟用/暫停) 和出價策略。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Update Campaign",
+          "message": "更新廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to update.",
+          "message": "選取或輸入要更新的廣告活動 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to update",
+          "message": "要更新的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "The updated name for the campaign. Leave empty to keep the current name.",
+          "message": "廣告活動的更新名稱。保留空白以維持目前名稱。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "廣告活動名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "New name for the campaign",
+          "message": "廣告活動的新名稱"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "已移除"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set the campaign status to ENABLED, PAUSED, or REMOVED.",
+          "message": "將廣告活動狀態設定為 ENABLED、PAUSED 或 REMOVED。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "New status for the campaign",
+          "message": "廣告活動的新狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Update an existing campaign",
+          "message": "更新現有的廣告活動"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.desc": {
+          "source": "Updates an existing keyword in an ad group, allowing you to change its status or CPC bid.",
+          "message": "更新廣告群組中的現有關鍵字，讓您可以變更其狀態或 CPC 出價。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.display_name": {
+          "source": "Update Keyword",
+          "message": "更新關鍵字"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "以您帳戶貨幣表示的已更新最高 CPC 出價金額。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 出價"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "新的最高 CPC 出價金額"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "廣告群組中關鍵字的條件 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "關鍵字條件 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to update",
+          "message": "要更新的關鍵字條件 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to update.",
+          "message": "選取包含要更新關鍵字的廣告群組。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "包含該關鍵字的廣告群組"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "已啟用"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "已暫停"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "已移除"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.desc": {
+          "source": "Set the keyword status to ENABLED, PAUSED, or REMOVED.",
+          "message": "將關鍵字狀態設為 ENABLED、PAUSED 或 REMOVED。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.short_desc": {
+          "source": "New status for the keyword",
+          "message": "關鍵字的新狀態"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.short_desc": {
+          "source": "Update a keyword status or bid",
+          "message": "更新關鍵字狀態或出價"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.desc": {
+          "source": "Uploads a conversion associated with a phone call from a Google Ads call extension.",
+          "message": "上傳與 Google Ads 來電額外資訊撥打的電話相關聯的轉換。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.display_name": {
+          "source": "Upload Call Conversion",
+          "message": "上傳來電轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "轉換的金額價值。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "轉換的金額價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "選取此轉換應歸因的轉換動作。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "要記錄的轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "轉換的日期與時間，格式為：yyyy-mm-dd HH:mm:ss+|-HH:mm。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "轉換日期/時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "轉換發生的時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time when the call started in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "通話開始的日期與時間，格式為：yyyy-mm-dd HH:mm:ss+|-HH:mm。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.display_name": {
+          "source": "Call Start Date/Time",
+          "message": "通話開始日期/時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the call started",
+          "message": "通話開始的時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.desc": {
+          "source": "The phone number of the caller in E.164 format (e.g., +18005550100).",
+          "message": "來電者的電話號碼（E.164 格式，例如：+18005550100）。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.display_name": {
+          "source": "Caller ID",
+          "message": "來電者 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.short_desc": {
+          "source": "Phone number of the caller",
+          "message": "來電者的電話號碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "轉換價值的貨幣代碼。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.short_desc": {
+          "source": "Upload an offline call conversion",
+          "message": "上傳離線來電轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads an offline conversion associated with a Google Click ID (GCLID). This closes the loop between ad clicks and offline sales/actions.",
+          "message": "上傳與 Google 點擊 ID (GCLID) 相關聯的離線轉換。這能連結廣告點擊與離線銷售/操作。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Click Conversion",
+          "message": "上傳點擊轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion in your account currency.",
+          "message": "以您的帳戶貨幣計算的轉換金額價值。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "轉換的金額價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "選取此轉換應歸因的轉換動作。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "要記錄的轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm (e.g., 2026-03-01 12:00:00+00:00).",
+          "message": "轉換的日期與時間，格式為：yyyy-mm-dd HH:mm:ss+|-HH:mm（例如：2026-03-01 12:00:00+00:00）。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "轉換日期/時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "轉換發生的時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value (e.g., USD, EUR, GBP).",
+          "message": "轉換價值的貨幣代碼（例如：USD、EUR、GBP）。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.desc": {
+          "source": "The Google Click ID (GCLID) associated with the conversion. Found in the URL after a user clicks an ad.",
+          "message": "與轉換關聯的 Google 點擊 ID (GCLID)。可在使用者點擊廣告後的網址中找到。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.short_desc": {
+          "source": "Google Click ID",
+          "message": "Google 點擊 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for the order or transaction. Used for deduplication.",
+          "message": "訂單或交易的唯一識別碼。用於重複資料刪除。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "唯一訂單/交易 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an offline click conversion",
+          "message": "上傳離線點擊轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.desc": {
+          "source": "Adjusts the value of a previously uploaded conversion or retracts it entirely.",
+          "message": "調整先前上傳轉換的價值或將其完全撤銷。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.display_name": {
+          "source": "Upload Conversion Adjustment",
+          "message": "上傳轉換調整項"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action of the conversion to adjust.",
+          "message": "選取要調整之轉換的轉換動作。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to adjust",
+          "message": "要調整的轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the adjusted value.",
+          "message": "調整後價值的貨幣代碼。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.desc": {
+          "source": "The new conversion value. Required for RESTATE adjustments.",
+          "message": "新的轉換價值。重述 (RESTATE) 調整項為必填。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.display_name": {
+          "source": "Adjusted Value",
+          "message": "調整後價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.short_desc": {
+          "source": "New conversion value",
+          "message": "新的轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFU1RBVEVNRU5U.display_name": {
+          "source": "Restatement",
+          "message": "重述"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFVFJBQ1RJT04.display_name": {
+          "source": "Retraction",
+          "message": "撤銷"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.desc": {
+          "source": "RESTATE to change the conversion value, RETRACTION to remove the conversion entirely.",
+          "message": "RESTATE 用於變更轉換價值，RETRACTION 用於完全移除轉換。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.display_name": {
+          "source": "Adjustment Type",
+          "message": "調整類型"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.short_desc": {
+          "source": "Type of adjustment",
+          "message": "調整類型"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the adjustment in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "調整的日期與時間，格式為：yyyy-mm-dd HH:mm:ss+|-HH:mm。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.display_name": {
+          "source": "Adjustment Date/Time",
+          "message": "調整日期/時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the adjustment occurred",
+          "message": "調整發生的時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.desc": {
+          "source": "The GCLID associated with the original conversion. Required if Order ID was not set.",
+          "message": "與原始轉換關聯的 GCLID。如果未設定訂單 ID，則為必填。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.short_desc": {
+          "source": "GCLID of the conversion to adjust",
+          "message": "要調整之轉換的 GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.desc": {
+          "source": "The order ID that was provided when the conversion was originally uploaded.",
+          "message": "最初上傳轉換時提供的訂單 ID。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Order ID of the conversion to adjust",
+          "message": "要調整之轉換的訂單 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.short_desc": {
+          "source": "Adjust or retract a previously uploaded conversion",
+          "message": "調整或撤銷先前上傳的轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads a conversion using hashed first-party user data (email, phone) instead of a GCLID. User data is automatically SHA-256 hashed before upload for privacy.",
+          "message": "使用經過雜湊處理的第一方使用者資料（電子郵件、電話）而非 GCLID 上傳轉換。使用者資料會在發送前自動進行 SHA-256 雜湊處理以保護隱私。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Enhanced Conversion",
+          "message": "上傳加強型轉換"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "轉換的金額價值。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "轉換價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "轉換的金額價值"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "選取此轉換應歸因的轉換動作。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "要記錄的轉換動作"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "轉換的日期與時間，格式為：yyyy-mm-dd HH:mm:ss+|-HH:mm。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "轉換日期/時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "轉換發生的時間"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "轉換價值的貨幣代碼。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 貨幣代碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "選取此動作的 Google Ads 客戶帳戶 (Customer ID)。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "要使用的 Google Ads 客戶帳戶"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.desc": {
+          "source": "The customer email address. Will be normalized and SHA-256 hashed before upload.",
+          "message": "客戶電子郵件地址。上傳前將進行正規化並使用 SHA-256 雜湊處理。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "電子郵件"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.short_desc": {
+          "source": "Customer email address",
+          "message": "客戶電子郵件地址"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for deduplication.",
+          "message": "用於重複資料刪除的唯一識別碼。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "訂單 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "唯一訂單/交易 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The customer phone number in E.164 format (e.g., +18005550100). Will be SHA-256 hashed before upload.",
+          "message": "採 E.164 格式的客戶電話號碼（例如 +18005550100）。上傳前將進行 SHA-256 雜湊處理。"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "電話號碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Customer phone number in E.164 format",
+          "message": "採 E.164 格式的客戶電話號碼"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an enhanced conversion with user data",
+          "message": "上傳包含使用者資料的加強型轉換"
+        },
+        "app.R29vZ2xlQWRz.desc": {
+          "source": "Integrate with Google Ads to manage your advertising campaigns, track conversions, sync customer lists, and automate reporting. This integration covers campaign management, ad group and ad CRUD, keyword management, budget and bidding strategies, offline conversion uploads, customer match audiences, and lead form triggers.",
+          "message": "與 Google Ads 整合以管理廣告活動、追蹤轉換、同步客戶名單並實現報表自動化。此整合涵蓋廣告活動管理、廣告群組與廣告 CRUD、關鍵字管理、預算與出價策略、離線轉換上傳、顧客比對目標對象以及待開發客戶表單觸發條件。"
+        },
+        "app.R29vZ2xlQWRz.display_name": {
+          "source": "Google Ads",
+          "message": "Google Ads"
+        },
+        "app.R29vZ2xlQWRz.short_desc": {
+          "source": "Connect with Google Ads to manage campaigns, conversions, and audiences",
+          "message": "連線至 Google Ads 以管理廣告活動、轉換與目標對象"
+        }
+      }
+    }
+  }
+}

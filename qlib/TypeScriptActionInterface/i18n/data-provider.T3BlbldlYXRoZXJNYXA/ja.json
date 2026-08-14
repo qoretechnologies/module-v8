@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.desc": {
+          "source": "Get real-time weather information including temperature, humidity, wind speed, pressure, visibility, and weather conditions for any location worldwide. Supports lookup by city name, geographic coordinates, or zip/postal code.",
+          "message": "世界中のあらゆる場所の気温、湿度、風速、気圧、視程、気象状況などのリアルタイム気象情報を取得します。都市名、地理座標、郵便番号による検索をサポートしています。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
+          "source": "Get Current Weather",
+          "message": "現在の天気を取得"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "都市名"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "座標（緯度/経度）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "郵便番号"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "場所の指定方法を選択します：都市名（例：「London,UK」）、地理座標（緯度/経度）、または郵便番号。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "場所のタイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "場所の指定方法"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.desc": {
+          "source": "Optional two-letter language code for weather condition descriptions (e.g., \"en\" for English, \"es\" for Spanish, \"fr\" for French, \"de\" for German).",
+          "message": "気象状況の説明に使用する任意の2文字の言語コード（例: 英語は「en」、スペイン語は「es」、フランス語は「fr」、ドイツ語は「de」）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.short_desc": {
+          "source": "Language for weather descriptions",
+          "message": "天気説明の言語"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "メートル法（摂氏、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "ヤード・ポンド法（華氏、mph）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "標準（ケルビン、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).",
+          "message": "測定単位系を選択します：メートル法（摂氏、メートル/秒）、ヤード・ポンド法（華氏、マイル/時）、または標準（ケルビン、メートル/秒）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "気温と風速の単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
+          "source": "Retrieve current weather data for a specific location",
+          "message": "特定の場所の現在の気象データを取得"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.desc": {
+          "source": "Get a 5-day weather forecast with data points every 3 hours for any location worldwide. Each forecast item includes temperature, humidity, wind, precipitation probability, and weather conditions. Supports lookup by city name, geographic coordinates, or zip/postal code.",
+          "message": "世界中のあらゆる場所の3時間ごとのデータポイントを含む5日間の天気予報を取得します。各予報項目には、気温、湿度、風、降水確率、気象状況が含まれます。都市名、地理座標、郵便番号による検索をサポートしています。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
+          "source": "Get Weather Forecast",
+          "message": "天気予報を取得"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.desc": {
+          "source": "Limit the number of 3-hour forecast items returned. Each day has up to 8 data points (every 3 hours). Maximum is 40 (5 days x 8 intervals).",
+          "message": "返される3時間ごとの予報項目の数を制限します。1日あたり最大8つのデータポイント（3時間ごと）があります。最大値は40（5日間×8間隔）です。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.display_name": {
+          "source": "Count",
+          "message": "カウント"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.short_desc": {
+          "source": "Number of forecast items to return",
+          "message": "取得する予報項目の数"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "都市名"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "座標（緯度/経度）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "郵便番号"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "場所の指定方法を選択します：都市名（例：「London,UK」）、地理座標（緯度/経度）、または郵便番号。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "場所のタイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "場所の指定方法"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.desc": {
+          "source": "Optional two-letter language code for weather condition descriptions (e.g., \"en\" for English, \"es\" for Spanish, \"fr\" for French, \"de\" for German).",
+          "message": "気象状況の説明に使用する任意の2文字の言語コード（例: 英語は「en」、スペイン語は「es」、フランス語は「fr」、ドイツ語は「de」）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.short_desc": {
+          "source": "Language for weather descriptions",
+          "message": "天気説明の言語"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "メートル法（摂氏、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "ヤード・ポンド法（華氏、mph）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "標準（ケルビン、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).",
+          "message": "測定単位系を選択します：メートル法（摂氏、メートル/秒）、ヤード・ポンド法（華氏、マイル/時）、または標準（ケルビン、メートル/秒）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "気温と風速の単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
+          "source": "Retrieve 5-day weather forecast with 3-hour intervals",
+          "message": "3時間間隔の5日間天気予報を取得"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **OpenWeatherMap** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**OpenWeatherMap**に対してカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、およびレスポンスボディを含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して使用します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to OpenWeatherMap",
+          "message": "OpenWeatherMapへのカスタムAPI呼び出しを作成"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.desc": {
+          "source": "Monitor the weather conditions at a specific location and trigger when conditions change (e.g., from Clear to Rain, Clouds to Snow). Optionally filter for specific condition types.",
+          "message": "特定の場所の気象状況を監視し、状況が変化したとき（例: 晴れから雨、曇りから雪）にトリガーします。必要に応じて特定の天候タイプでフィルタリングできます。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
+          "source": "Weather Condition Change",
+          "message": "気象状況の変化"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOm1pc3Q.display_name": {
+          "source": "Mist/Fog",
+          "message": "靄/霧"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any Change",
+          "message": "すべての変化"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmNsZWFy.display_name": {
+          "source": "Clear",
+          "message": "快晴/晴れ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmNsb3Vkcw.display_name": {
+          "source": "Clouds",
+          "message": "曇り"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmRyaXp6bGU.display_name": {
+          "source": "Drizzle",
+          "message": "霧雨"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnJhaW4.display_name": {
+          "source": "Rain",
+          "message": "雨"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnNub3c.display_name": {
+          "source": "Snow",
+          "message": "雪"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnRodW5kZXJzdG9ybQ.display_name": {
+          "source": "Thunderstorm",
+          "message": "雷雨"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.desc": {
+          "source": "Optionally filter to only trigger when the new condition matches a specific type. Select \"Any Change\" to trigger on all condition changes, or select a specific condition like Rain, Snow, Clear, etc.",
+          "message": "必要に応じて、新しい天候が特定のタイプに一致する場合にのみトリガーするようにフィルタリングします。「すべての変化」を選択するとすべての状況変化でトリガーされ、雨、雪、晴れなどの特定の天候を選択することもできます。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
+          "source": "Condition Filter",
+          "message": "天候フィルター"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter for specific weather conditions",
+          "message": "特定の気象状況でフィルタリング"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "都市名"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "座標（緯度/経度）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "郵便番号"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "場所の指定方法を選択します：都市名（例：「London,UK」）、地理座標（緯度/経度）、または郵便番号。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "場所のタイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "場所の指定方法"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "メートル法（摂氏、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "ヤード・ポンド法（華氏、mph）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "標準（ケルビン、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).",
+          "message": "測定単位系を選択します：メートル法（摂氏）、ヤード・ポンド法（華氏）、または標準（ケルビン）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "気温と風速の単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
+          "source": "Trigger when weather conditions change",
+          "message": "気象状況が変化したときにトリガー"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.desc": {
+          "source": "Monitor the temperature at a specific location and trigger when it crosses above or below a configured threshold value. Useful for temperature alerts, HVAC automation, and weather-dependent workflows.",
+          "message": "特定の場所の気温を監視し、設定されたしきい値を上回るか下回ったときにトリガーします。気温アラート、HVAC自動化、および天候に依存するワークフローに役立ちます。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
+          "source": "Temperature Threshold",
+          "message": "気温のしきい値"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "都市名"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "座標（緯度/経度）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "郵便番号"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "場所の指定方法を選択します：都市名（例：「London,UK」）、地理座標（緯度/経度）、または郵便番号。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "場所のタイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "場所の指定方法"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.allowed-value.c3RyaW5nOmFib3Zl.display_name": {
+          "source": "Goes Above",
+          "message": "上回る"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.allowed-value.c3RyaW5nOmJlbG93.display_name": {
+          "source": "Goes Below",
+          "message": "下回る"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.desc": {
+          "source": "Choose whether to trigger when temperature goes above or below the threshold value. \"Goes Above\" triggers when temperature rises past the threshold. \"Goes Below\" triggers when temperature drops below the threshold.",
+          "message": "気温がしきい値を上回ったとき、または下回ったときのどちらでトリガーするかを選択します。「上回る」は気温がしきい値を超えて上昇したときにトリガーします。「下回る」は気温がしきい値を下回って低下したときにトリガーします。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
+          "source": "Threshold Type",
+          "message": "しきい値タイプ"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
+          "source": "Direction of temperature crossing",
+          "message": "気温変化の方向"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.desc": {
+          "source": "Set the temperature value that will trigger the event when crossed. Use the same units as selected in the Units option (e.g., 0 for freezing point in Celsius, 32 in Fahrenheit).",
+          "message": "交差したときにイベントをトリガーする気温の値を設定します。「単位」オプションで選択したものと同じ単位を使用してください（例：摂氏での氷点は0、華氏では32）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
+          "source": "Threshold Value",
+          "message": "しきい値"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
+          "source": "Temperature threshold to monitor",
+          "message": "監視する気温のしきい値"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "メートル法（摂氏、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "ヤード・ポンド法（華氏、mph）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "標準（ケルビン、m/s）"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).",
+          "message": "測定単位系を選択します：メートル法（摂氏）、ヤード・ポンド法（華氏）、または標準（ケルビン）。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "気温と風速の単位"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
+          "source": "Trigger when temperature crosses a threshold",
+          "message": "気温がしきい値を超えたときにトリガー"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.desc": {
+          "source": "Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.",
+          "message": "OpenWeatherMapに接続して、地球上のあらゆる場所のリアルタイム気象データと5日間の予報を取得します。気温、湿度、風速、気圧、気象状況などの包括的な気象情報を取得できます。複数の場所入力方法（都市名、座標、郵便番号）とカスタマイズ可能な単位（メートル法、ヤード・ポンド法、標準）をサポートしています。Qoreワークフロー内での気象連動型アプリケーション、旅行計画、農業モニタリング、位置情報ベースのサービスに最適です。"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.display_name": {
+          "source": "OpenWeatherMap",
+          "message": "OpenWeatherMap"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.short_desc": {
+          "source": "Access current weather data and forecasts for any location worldwide",
+          "message": "世界中の任意の場所の現在の気象データおよび予報にアクセスします"
+        }
+      }
+    }
+  }
+}

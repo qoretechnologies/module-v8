@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crea record"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ZohoCRM\"",
+          "message": "Crea nuovi record nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Creates a new record in the specified Zoho CRM module with the provided field values. Returns the record ID along with timestamps for creation and modification. The Created_By and Modified_By fields contain the user information who created the record. Supports all standard and custom modules except Documents and Projects.",
+          "message": "Crea un nuovo record nel modulo Zoho CRM specificato con i valori di campo forniti. Restituisce l'ID del record insieme ai timestamp di creazione e modifica. I campi Created_By e Modified_By contengono le informazioni dell'utente che ha creato il record. Supporta tutti i moduli standard e personalizzati tranne Documents e Projects."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "Crea record"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the target Zoho CRM module (such as Leads, Contacts, Deals, Accounts, Products, Vendors, or custom modules) where you want to create the new record. Use the Modules API to get the list of available modules and their API names.",
+          "message": "Seleziona il modulo Zoho CRM di destinazione (come Leads, Contacts, Deals, Accounts, Products, Vendors o moduli personalizzati) in cui desideri creare il nuovo record. Utilizza l'API Modules per ottenere l'elenco dei moduli disponibili e i relativi nomi API."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module where the record will be created",
+          "message": "Il modulo Zoho CRM in cui verrà creato il record"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values for the new record as key-value pairs where keys are field API names. Available fields and their types are dynamically loaded based on the selected module. Required fields must be included, and field values must match their expected data types (text, number, date, picklist, lookup, etc.).",
+          "message": "Fornisci i valori dei campi per il nuovo record sotto forma di coppie chiave-valore in cui le chiavi sono i nomi API dei campi. I campi disponibili e i relativi tipi vengono caricati dinamicamente in base al modulo selezionato. I campi obbligatori devono essere inclusi e i valori dei campi devono corrispondere ai tipi di dati previsti (text, number, date, picklist, lookup, ecc.)."
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Record Properties",
+          "message": "Proprietà del record"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values for the new record",
+          "message": "Valori dei campi per il nuovo record"
+        },
+        "app.Wm9ob0NSTQ.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in a Zoho CRM module",
+          "message": "Crea un nuovo record in un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.desc": {
+          "source": "Adds one or more tags to specified records in a Zoho CRM module. Tags are labels that help categorize and organize records for easier management, filtering, and searching. You can add up to 10 tags per record and a maximum of 100 tags can exist per module. Returns the count of successfully tagged records and locked records that could not be tagged.",
+          "message": "Aggiunge uno o più tag ai record specificati in un modulo Zoho CRM. I tag sono etichette che aiutano a categorizzare e organizzare i record per semplificarne gestione, filtraggio e ricerca. È possibile aggiungere fino a 10 tag per record ed è consentito un massimo di 100 tag per modulo. Restituisce il numero di record contrassegnati con successo e i record bloccati che non è stato possibile contrassegnare."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.display_name": {
+          "source": "Add Tags to Records",
+          "message": "Aggiungi tag ai record"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.desc": {
+          "source": "When set to true, replaces all existing tags on the specified records with the new tags. When set to false (default), adds the new tags while keeping existing tags. Use this option carefully as setting it to true will remove all current tags.",
+          "message": "Se impostato su true, sostituisce tutti i tag esistenti sui record specificati con i nuovi tag. Se impostato su false (predefinito), aggiunge i nuovi tag mantenendo quelli esistenti. Utilizza questa opzione con cautela poiché impostarla su true rimuoverà tutti i tag attuali."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.display_name": {
+          "source": "Overwrite Existing Tags",
+          "message": "Sovrascrivi tag esistenti"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.b3Zlcl93cml0ZQ.short_desc": {
+          "source": "Replace all existing tags on the records",
+          "message": "Sostituisci tutti i tag esistenti sui record"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the records you want to tag. Tags are module-specific and must exist in the module before they can be added to records.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) che contiene i record a cui desideri aggiungere tag. I tag sono specifici del modulo e devono esistere nel modulo prima di poter essere aggiunti ai record."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the records",
+          "message": "Il modulo Zoho CRM contenente i record"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.desc": {
+          "source": "List of unique record IDs to which you want to add tags. You can specify a maximum of 500 record IDs per API call. Use the Get Records API or search API to retrieve valid record IDs.",
+          "message": "Elenco di ID record univoci a cui desideri aggiungere tag. È possibile specificare un massimo di 500 ID record per chiamata API. Utilizza l'API Get Records o l'API di ricerca per recuperare ID record validi."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.display_name": {
+          "source": "Record IDs",
+          "message": "ID record"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.cmVjb3Jkcw.short_desc": {
+          "source": "IDs of the records to tag",
+          "message": "ID dei record da contrassegnare con tag"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.desc": {
+          "source": "Specify the tags you want to add to the records. Each tag should include an ID and name. The tag ID takes precedence over the name if both are provided. You can optionally include a color_code (hex value). Use the List Tags action to retrieve available tags and their IDs.",
+          "message": "Specifica i tag che desideri aggiungere ai record. Ogni tag deve includere un ID e un nome. L'ID del tag ha la precedenza sul nome se vengono forniti entrambi. È possibile includere facoltativamente un color_code (valore esadecimale). Utilizza l'azione List Tags per recuperare i tag disponibili e i relativi ID."
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.display_name": {
+          "source": "Tags to Add",
+          "message": "Tag da aggiungere"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.option.dGFncw.short_desc": {
+          "source": "List of tags to add to the records",
+          "message": "Elenco di tag da aggiungere ai record"
+        },
+        "app.Wm9ob0NSTQ.action.YWRkX3RhZ3NfdG9fcmVjb3Jkcw.short_desc": {
+          "source": "Add tags to one or more records in a module",
+          "message": "Aggiungi tag a uno o più record in un modulo"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Fetches detailed information about a specific record from the specified Zoho CRM module using its unique record ID. Returns all field values for the record including standard fields (Created_Time, Modified_Time, Created_By, Modified_By) and custom fields. Subform data, multi-select lookup fields, and multi-user lookup fields are also included in the response.",
+          "message": "Recupera informazioni dettagliate su un record specifico dal modulo Zoho CRM specificato utilizzando il suo ID record univoco. Restituisce tutti i valori dei campi per il record inclusi i campi standard (Created_Time, Modified_Time, Created_By, Modified_By) e i campi personalizzati. Nella risposta sono inclusi anche i dati delle sottoschede, i campi di ricerca a selezione multipla e i campi di ricerca multiutente."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "Ottieni record"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to retrieve. The module must support API operations and the user must have read permissions.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) che contiene il record che desideri recuperare. Il modulo deve supportare le operazioni API e l'utente deve disporre dei permessi di lettura."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Il modulo Zoho CRM contenente il record"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to fetch. Record IDs can be obtained from the Get Records API, search results, or webhook notifications. The record must exist in the specified module.",
+          "message": "Inserisci o seleziona l'ID record univoco del record che desideri recuperare. Gli ID record possono essere ottenuti dall'API Get Records, dai risultati di ricerca o dalle notifiche webhook. Il record deve esistere nel modulo specificato."
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID record"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to retrieve",
+          "message": "L'identificatore univoco del record da recuperare"
+        },
+        "app.Wm9ob0NSTQ.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a single record from a Zoho CRM module",
+          "message": "Recupera un singolo record da un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Elimina record dalla tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Elimina record"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ZohoCRM\"",
+          "message": "Elimina record dalla tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently deletes a specific record from the specified Zoho CRM module using its unique record ID. If the module has the Recycle Bin feature enabled, the deleted record will be moved to the Recycle Bin and can be restored. Otherwise, the deletion is permanent. The user must have delete permissions for the module.",
+          "message": "Elimina definitivamente un record specifico dal modulo Zoho CRM specificato utilizzando il suo ID record univoco. Se per il modulo è abilitata la funzione Cestino, il record eliminato verrà spostato nel Cestino e potrà essere ripristinato. In caso contrario, l'eliminazione è definitiva. L'utente deve disporre dei permessi di eliminazione per il modulo."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "Elimina record"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to delete. The module must support API operations and the user must have delete permissions.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) che contiene il record che desideri eliminare. Il modulo deve supportare le operazioni API e l'utente deve disporre dei permessi di eliminazione."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Il modulo Zoho CRM contenente il record"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to delete. Record IDs can be retrieved using the Get Records API. Deleting a record that has already been deleted will result in an error.",
+          "message": "Inserisci o seleziona l'ID record univoco del record che desideri eliminare. Gli ID record possono essere recuperati utilizzando l'API Get Records. L'eliminazione di un record già eliminato genererà un errore."
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID record"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to delete",
+          "message": "L'identificatore univoco del record da eliminare"
+        },
+        "app.Wm9ob0NSTQ.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from a Zoho CRM module",
+          "message": "Elimina un record da un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.desc": {
+          "source": "Fetches all tags that have been created for a specific Zoho CRM module. Tags are labels used to categorize and organize records within a module for easier searching and filtering. Each tag includes its name, ID, color code, and metadata about when it was created and modified. You can add a maximum of 100 tags per module and 10 tags per record.",
+          "message": "Recupera tutti i tag creati per uno specifico modulo Zoho CRM. I tag sono etichette utilizzate per categorizzare e organizzare i record all'interno di un modulo per facilitare la ricerca e l'applicazione di filtri. Ogni tag include il relativo nome, ID, codice colore e metadati relativi a quando è stato creato e modificato. È possibile aggiungere un massimo di 100 tag per modulo e 10 tag per record."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "Elenca tag"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, or custom modules) whose tags you want to retrieve. Each module maintains its own set of tags.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals o moduli personalizzati) di cui desideri recuperare i tag. Ogni modulo gestisce il proprio set di tag."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve tags from",
+          "message": "Il modulo Zoho CRM da cui recuperare i tag"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.desc": {
+          "source": "When set to true, only tags created by the current user will be returned. When set to false or not specified, all tags in the module will be returned regardless of who created them.",
+          "message": "Se impostato su true, verranno restituiti solo i tag creati dall'utente corrente. Se impostato su false o non specificato, verranno restituiti tutti i tag nel modulo, indipendentemente da chi li ha creati."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.display_name": {
+          "source": "My Tags Only",
+          "message": "Solo i miei tag"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.option.bXlfdGFncw.short_desc": {
+          "source": "Retrieve only tags created by you",
+          "message": "Recupera solo i tag creati da te"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve tags available in a Zoho CRM module",
+          "message": "Recupera i tag disponibili in un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.desc": {
+          "source": "Fetches a list of users in your Zoho CRM organization with support for pagination and filtering by user type. Returns comprehensive user information including name, email, role, profile, timezone, locale settings, customization preferences, and account status. Use the type parameter to filter users based on their profile and status.",
+          "message": "Recupera un elenco di utenti nella tua organizzazione Zoho CRM con supporto per la paginazione e il filtraggio per tipo di utente. Restituisce informazioni complete sull'utente tra cui nome, email, ruolo, profilo, fuso orario, impostazioni internazionali, preferenze di personalizzazione e stato dell'account. Utilizza il parametro type per filtrare gli utenti in base al loro profilo e stato."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Elenca utenti"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.desc": {
+          "source": "Specify which page of results to retrieve, starting from 1 for the first page. Use this parameter along with per_page to navigate through multiple pages of user data.",
+          "message": "Specifica quale pagina di risultati recuperare, a partire da 1 per la prima pagina. Utilizza questo parametro insieme a per_page per navigare tra più pagine di dati utente."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "Numero di pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGFnZQ.short_desc": {
+          "source": "The page number for pagination",
+          "message": "Il numero di pagina per la paginazione"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many users to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with the page parameter for pagination through large result sets.",
+          "message": "Specifica quanti utenti restituire in una singola richiesta API. I valori validi sono compresi tra 1 e 200. Il valore predefinito è 20. Utilizza questo parametro insieme al parametro page per la paginazione attraverso set di risultati di grandi dimensioni."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Users Per Page",
+          "message": "Utenti per pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of users to return per page",
+          "message": "Numero di utenti da restituire per pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Not Confirmed Users",
+          "message": "Utenti non confermati"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOk5vdENvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have not confirmed their accounts.",
+          "message": "Recupera gli utenti che non hanno confermato il proprio account."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.display_name": {
+          "source": "Active Confirmed Admins",
+          "message": "Amministratori confermati attivi"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZEFkbWlucw.short_desc": {
+          "source": "Retrieves active and confirmed administrators.",
+          "message": "Recupera gli amministratori attivi e confermati."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Active Confirmed Users",
+          "message": "Utenti confermati attivi"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZUNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who are both active and confirmed.",
+          "message": "Recupera gli utenti che sono sia attivi sia confermati."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.display_name": {
+          "source": "Active Users",
+          "message": "Utenti attivi"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFjdGl2ZVVzZXJz.short_desc": {
+          "source": "Retrieves only active users.",
+          "message": "Recupera solo gli utenti attivi."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.display_name": {
+          "source": "Admin Users",
+          "message": "Utenti amministratori"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFkbWluVXNlcnM.short_desc": {
+          "source": "Retrieves users with Administrator privileges.",
+          "message": "Recupera gli utenti con privilegi di amministratore."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.display_name": {
+          "source": "All Users",
+          "message": "Tutti gli utenti"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkFsbFVzZXJz.short_desc": {
+          "source": "Retrieves all users (both active and inactive).",
+          "message": "Recupera tutti gli utenti (sia attivi che inattivi)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.display_name": {
+          "source": "Current User",
+          "message": "Utente corrente"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkN1cnJlbnRVc2Vy.short_desc": {
+          "source": "Retrieves the currently logged-in CRM user.",
+          "message": "Recupera l'utente CRM attualmente connesso."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.display_name": {
+          "source": "Confirmed Users",
+          "message": "Utenti confermati"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkNvbmZpcm1lZFVzZXJz.short_desc": {
+          "source": "Retrieves users who have confirmed their accounts.",
+          "message": "Recupera gli utenti che hanno confermato il proprio account."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.display_name": {
+          "source": "Deactive Users",
+          "message": "Utenti disattivati"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlYWN0aXZlVXNlcnM.short_desc": {
+          "source": "Retrieves users who have been deactivated.",
+          "message": "Recupera gli utenti che sono stati disattivati."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.display_name": {
+          "source": "Deleted Users",
+          "message": "Utenti eliminati"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.allowed-value.c3RyaW5nOkRlbGV0ZWRVc2Vycw.short_desc": {
+          "source": "Retrieves users who have been deleted.",
+          "message": "Recupera gli utenti che sono stati eliminati."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.desc": {
+          "source": "Optional filter to retrieve specific categories of users. Options include: AllUsers (both active and inactive), ActiveUsers (only active users), DeactiveUsers (deactivated users), ConfirmedUsers (users who confirmed their accounts), NotConfirmedUsers (unconfirmed users), DeletedUsers (deleted users), ActiveConfirmedUsers (active and confirmed), AdminUsers (users with Administrator privileges), ActiveConfirmedAdmins (active confirmed administrators), and CurrentUser (the currently authenticated CRM user).",
+          "message": "Filtro opzionale per recuperare specifiche categorie di utenti. Le opzioni includono: AllUsers (sia attivi che inattivi), ActiveUsers (solo utenti attivi), DeactiveUsers (utenti disattivati), ConfirmedUsers (utenti che hanno confermato il proprio account), NotConfirmedUsers (utenti non confermati), DeletedUsers (utenti eliminati), ActiveConfirmedUsers (attivi e confermati), AdminUsers (utenti con privilegi di amministratore), ActiveConfirmedAdmins (amministratori confermati attivi) e CurrentUser (l'utente CRM attualmente autenticato)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.display_name": {
+          "source": "User Type Filter",
+          "message": "Filtro tipo utente"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.option.dHlwZQ.short_desc": {
+          "source": "Filter users by type or status",
+          "message": "Filtra gli utenti per tipo o stato"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve users from your Zoho CRM organization",
+          "message": "Recupera gli utenti dalla tua organizzazione Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.desc": {
+          "source": "Fetches comprehensive metadata about all fields in a specific Zoho CRM module including field types, labels, API names, data types, validation rules, picklist values, lookup configurations, and permissions. This information is essential for understanding module structure, building dynamic forms, or validating data before creating or updating records.",
+          "message": "Recupera metadati completi su tutti i campi in uno specifico modulo Zoho CRM inclusi tipi di campo, etichette, nomi API, tipi di dati, regole di convalida, valori delle picklist, configurazioni di ricerca e autorizzazioni. Queste informazioni sono essenziali per comprendere la struttura del modulo, creare moduli dinamici o convalidare i dati prima di creare o aggiornare i record."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.display_name": {
+          "source": "List Module Fields",
+          "message": "Elenca campi modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module whose field metadata you want to retrieve. The API returns detailed information about all fields including standard fields (system-defined) and custom fields (user-defined) in the module.",
+          "message": "Seleziona il modulo Zoho CRM di cui desideri recuperare i metadati dei campi. L'API restituisce informazioni dettagliate su tutti i campi, inclusi i campi standard (definiti dal sistema) e i campi personalizzati (definiti dall'utente) nel modulo."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve fields from",
+          "message": "Il modulo Zoho CRM da cui recuperare i campi"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9maWVsZHM.short_desc": {
+          "source": "Retrieve field metadata for a Zoho CRM module",
+          "message": "Recupera i metadati dei campi per un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.desc": {
+          "source": "Fetches metadata for all modules in your Zoho CRM organization, including both standard modules (Leads, Contacts, Deals, Accounts, etc.) and custom modules. Returns comprehensive details including module permissions, API names, display labels, and capabilities like whether the module is creatable, editable, deletable, or supports features like global search and quick create.",
+          "message": "Recupera i metadati per tutti i moduli nella tua organizzazione Zoho CRM, inclusi sia i moduli standard (Leads, Contacts, Deals, Accounts, ecc.) sia i moduli personalizzati. Restituisce dettagli completi tra cui autorizzazioni del modulo, nomi API, etichette di visualizzazione e funzionalità come se il modulo è creabile, modificabile, eliminabile o supporta funzionalità come la ricerca globale e la creazione rapida."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.display_name": {
+          "source": "List Modules",
+          "message": "Elenca moduli"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN5c3RlbV9oaWRkZW4.display_name": {
+          "source": "System Hidden",
+          "message": "Nascosto dal sistema"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9mb3JfZGVsZXRpb24.display_name": {
+          "source": "Scheduled for Deletion",
+          "message": "Pianificato per l'eliminazione"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnVzZXJfaGlkZGVu.display_name": {
+          "source": "User Hidden",
+          "message": "Nascosto dall'utente"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "Visibile"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.desc": {
+          "source": "Optional filter to retrieve only modules with specific statuses. Options include: visible (active modules shown in the UI), user_hidden (modules hidden by users), system_hidden (modules hidden by the system), and scheduled_for_deletion (modules marked for deletion). When not specified, all modules are returned.",
+          "message": "Filtro opzionale per recuperare solo i moduli con stati specifici. Le opzioni includono: visible (moduli attivi mostrati nell'interfaccia utente), user_hidden (moduli nascosti dagli utenti), system_hidden (moduli nascosti dal sistema) e scheduled_for_deletion (moduli contrassegnati per l'eliminazione). Se non specificato, vengono restituiti tutti i moduli."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.display_name": {
+          "source": "Module Status Filter",
+          "message": "Filtro stato modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.option.c3RhdHVz.short_desc": {
+          "source": "Filter modules by their status",
+          "message": "Filtra i moduli in base al loro stato"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9tb2R1bGVz.short_desc": {
+          "source": "Retrieve all available modules in Zoho CRM",
+          "message": "Recupera tutti i moduli disponibili in Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Fetches a list of records from the specified Zoho CRM module with support for field selection, pagination, sorting, and filtering. You can specify which fields to return (maximum 50 field API names), sort records by a field in ascending or descending order, and navigate through pages using tokens. Returns both the records data and pagination tokens for retrieving subsequent pages.",
+          "message": "Recupera un elenco di record dal modulo Zoho CRM specificato con supporto per la selezione dei campi, la paginazione, l'ordinamento e il filtraggio. È possibile specificare quali campi restituire (massimo 50 nomi API di campo), ordinare i record in base a un campo in ordine crescente o decrescente e navigare tra le pagine utilizzando i token. Restituisce sia i dati dei record sia i token di paginazione per recuperare le pagine successive."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "Elenca record"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select the field API names you want to retrieve for each record. You can include a maximum of 50 field API names. Use the Fields Metadata API to get the list of available fields. By default, only the ID field is returned. Add fields like Last_Name, Email, Created_Time, or custom field names as needed.",
+          "message": "Seleziona i nomi API dei campi che desideri recuperare per ciascun record. È possibile includere un massimo di 50 nomi API di campo. Utilizza l'API Fields Metadata per ottenere l'elenco dei campi disponibili. Per impostazione predefinita, viene restituito solo il campo ID. Aggiungi campi come Last_Name, Email, Created_Time o nomi di campi personalizzati in base alle esigenze."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields to Return",
+          "message": "Campi da restituire"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specify which fields to include in the response",
+          "message": "Specifica quali campi includere nella risposta"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.desc": {
+          "source": "Optional list of specific record IDs to retrieve. When provided, only records with these IDs will be returned. This is useful for fetching a specific set of records rather than paginating through all records.",
+          "message": "Elenco opzionale di ID record specifici da recuperare. Se fornito, verranno restituiti solo i record con questi ID. Ciò è utile per recuperare uno specifico set di record invece di scorrere tutti i record tramite paginazione."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.display_name": {
+          "source": "Record IDs",
+          "message": "ID record"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.aWRz.short_desc": {
+          "source": "Filter by specific record IDs",
+          "message": "Filtra per ID record specifici"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) from which you want to retrieve records. The module must support API operations and the user must have read permissions.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) da cui desideri recuperare i record. Il modulo deve supportare le operazioni API e l'utente deve disporre delle autorizzazioni di lettura."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to retrieve records from",
+          "message": "Il modulo Zoho CRM da cui recuperare i record"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Specify how records should be sorted in the response. You can sort by fields like id, Created_Time, or Modified_Time in either ascending (oldest first) or descending (newest first) order.",
+          "message": "Specifica come devono essere ordinati i record nella risposta. È possibile ordinare in base a campi come id, Created_Time o Modified_Time in ordine crescente (dal meno recente al più recente) o decrescente (dal più recente al meno recente)."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort Configuration",
+          "message": "Configurazione di ordinamento"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "Configura la modalità di ordinamento dei record restituiti"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.desc": {
+          "source": "Use the next_page_token value from a previous response to retrieve the next page of records. Leave this empty for the first page. The page_token is bound to the parameters used in the request, so do not change other parameters when using a token.",
+          "message": "Utilizza il valore next_page_token di una risposta precedente per recuperare la pagina successiva di record. Lascia vuoto questo campo per la prima pagina. Il page_token è associato ai parametri utilizzati nella richiesta, pertanto non modificare altri parametri quando si utilizza un token."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.display_name": {
+          "source": "Page Token",
+          "message": "Token di pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGFnZV90b2tlbg.short_desc": {
+          "source": "Token for retrieving the next page of results",
+          "message": "Token per recuperare la pagina di risultati successiva"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.desc": {
+          "source": "Specify how many records to return in a single API request. Valid values are 1 to 200. The default value is 20. Use this parameter along with page_token for pagination through large result sets.",
+          "message": "Specifica quanti record restituire in una singola richiesta API. I valori validi vanno da 1 a 200. Il valore predefinito è 20. Usa questo parametro insieme a page_token per l'impaginazione di set di risultati di grandi dimensioni."
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.display_name": {
+          "source": "Records Per Page",
+          "message": "Record per pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of records to return per page",
+          "message": "Numero di record da restituire per pagina"
+        },
+        "app.Wm9ob0NSTQ.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve multiple records from a Zoho CRM module",
+          "message": "Recupera più record da un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoho CRM** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Zoho CRM** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint non ancora esposti come azioni native in questa applicazione."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.Wm9ob0NSTQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoho CRM",
+          "message": "Esegui una chiamata API personalizzata a Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitors a specified Zoho CRM module for newly created records and fires when a new record is detected. The trigger polls for records sorted by Created Time in descending order. You can optionally filter records by phone, email, keywords, or specific field values to only trigger for records matching your criteria.",
+          "message": "Monitora un modulo Zoho CRM specificato per rilevare record appena creati e si attiva quando viene rilevato un nuovo record. Il trigger esegue il polling dei record ordinati per Created Time in ordine decrescente. Puoi facoltativamente filtrare i record per telefono, email, parole chiave o valori di campi specifici per attivarlo solo per i record che corrispondono ai tuoi criteri."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nuovo record"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.desc": {
+          "source": "Optional email address to search for in records. When specified, only records containing this email address will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Indirizzo email opzionale da cercare nei record. Se specificato, solo i record contenenti questo indirizzo email attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per trovare i record corrispondenti."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.display_name": {
+          "source": "Email Filter",
+          "message": "Filtro email"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZW1haWw.short_desc": {
+          "source": "Filter records by email address",
+          "message": "Filtra i record per indirizzo email"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.desc": {
+          "source": "Optional list of field-value pairs to create search criteria. When specified, only records where ALL specified fields match their corresponding values will trigger the event. Uses the \"equals\" operator for each field comparison.",
+          "message": "Elenco opzionale di coppie campo-valore per creare criteri di ricerca. Se specificato, solo i record in cui TUTTI i campi specificati corrispondono ai rispettivi valori attiveranno l'evento. Utilizza l'operatore \"equals\" per ciascun confronto di campo."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.display_name": {
+          "source": "Field Filters",
+          "message": "Filtri di campo"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.ZmllbGRfZmlsdGVy.short_desc": {
+          "source": "Filter records by specific field values",
+          "message": "Filtra i record in base a valori di campo specifici"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) where you want to monitor for newly created records. Use the module API name as returned by the Modules Metadata API.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) in cui monitorare i record appena creati. Usa il nome API del modulo restituito dall'API Modules Metadata."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module to monitor for new records",
+          "message": "Il modulo Zoho CRM da monitorare per nuovi record"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.desc": {
+          "source": "Optional phone number to search for in records. When specified, only records containing this phone number will trigger the event. This uses the Zoho CRM search API to find matching records.",
+          "message": "Numero di telefono opzionale da cercare nei record. Se specificato, solo i record contenenti questo numero di telefono attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per trovare i record corrispondenti."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.display_name": {
+          "source": "Phone Filter",
+          "message": "Filtro telefono"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.cGhvbmU.short_desc": {
+          "source": "Filter records by phone number",
+          "message": "Filtra i record per numero di telefono"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.desc": {
+          "source": "Optional keyword to search for across all searchable fields in records. When specified, only records containing this keyword will trigger the event. This uses the Zoho CRM search API to perform a comprehensive text search.",
+          "message": "Parola chiave opzionale da cercare in tutti i campi ricercabili dei record. Se specificata, solo i record contenenti questa parola chiave attiveranno l'evento. Utilizza l'API di ricerca di Zoho CRM per eseguire una ricerca testuale completa."
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.display_name": {
+          "source": "Keyword Search",
+          "message": "Ricerca per parola chiave"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.option.d29yZA.short_desc": {
+          "source": "Filter records by keyword",
+          "message": "Filtra i record per parola chiave"
+        },
+        "app.Wm9ob0NSTQ.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in a Zoho CRM module",
+          "message": "Si attiva quando viene creato un nuovo record in un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Cerca record"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ZohoCRM\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trova un singolo record"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ZohoCRM\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aggiorna record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ZohoCRM\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.desc": {
+          "source": "Updates an existing record in the specified Zoho CRM module with the provided field values. Returns the record ID along with updated timestamps for modification. Only the fields you specify will be updated; other fields will remain unchanged. The record must exist and the user must have update permissions for the module.",
+          "message": "Aggiorna un record esistente nel modulo Zoho CRM specificato con i valori di campo forniti. Restituisce l'ID del record insieme ai timestamp aggiornati per la modifica. Verranno aggiornati solo i campi specificati; gli altri campi rimarranno invariati. Il record deve esistere e l'utente deve disporre dei permessi di aggiornamento per il modulo."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.display_name": {
+          "source": "Update Record",
+          "message": "Aggiorna record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.desc": {
+          "source": "Select the Zoho CRM module (such as Leads, Contacts, Deals, Accounts, or custom modules) that contains the record you want to update. The module must support API operations and the user must have appropriate permissions.",
+          "message": "Seleziona il modulo Zoho CRM (come Leads, Contacts, Deals, Accounts o moduli personalizzati) contenente il record che desideri aggiornare. Il modulo deve supportare le operazioni API e l'utente deve disporre delle autorizzazioni appropriate."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.display_name": {
+          "source": "Module",
+          "message": "Modulo"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.bW9kdWxl.short_desc": {
+          "source": "The Zoho CRM module containing the record",
+          "message": "Il modulo Zoho CRM contenente il record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.desc": {
+          "source": "Provide the field values you want to update as key-value pairs where keys are field API names. Only include the fields you want to change; unspecified fields will retain their current values. Field values must match their expected data types and validation rules.",
+          "message": "Fornisci i valori dei campi da aggiornare come coppie chiave-valore dove le chiavi sono i nomi API dei campi. Includi solo i campi che desideri modificare; i campi non specificati manterranno i loro valori correnti. I valori dei campi devono corrispondere ai tipi di dati previsti e alle regole di convalida."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.display_name": {
+          "source": "Updated Properties",
+          "message": "Proprietà aggiornate"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Field values to update on the record",
+          "message": "Valori dei campi da aggiornare sul record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Enter or select the unique record ID of the record you want to update. Record IDs can be retrieved using the Get Records API or from webhook notifications. The record must exist in the specified module.",
+          "message": "Inserisci o seleziona l'ID record univoco del record da aggiornare. Gli ID record possono essere recuperati utilizzando l'API Get Records o dalle notifiche webhook. Il record deve esistere nel modulo specificato."
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "ID record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The unique identifier of the record to update",
+          "message": "L'identificatore univoco del record da aggiornare"
+        },
+        "app.Wm9ob0NSTQ.action.dXBkYXRlX3JlY29yZA.short_desc": {
+          "source": "Update an existing record in a Zoho CRM module",
+          "message": "Aggiorna un record esistente in un modulo Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Esegui l'upsert dei record nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Upsert record"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.Wm9ob0NSTQ.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"ZohoCRM\"",
+          "message": "Esegui l'upsert dei record nella tabella specificata nell'app \"ZohoCRM\""
+        },
+        "app.Wm9ob0NSTQ.desc": {
+          "source": "The Zoho CRM integration provides comprehensive actions and triggers to interact with the Zoho CRM API across all seven global data centers (US, AU, EU, IN, CN, JP, CA). Manage modules, records, users, and roles efficiently while automating your CRM workflows with support for custom modules, bulk operations, and real-time triggers.",
+          "message": "L'integrazione Zoho CRM fornisce azioni e trigger completi per interagire con l'API Zoho CRM in tutti e sette i data center globali (US, AU, EU, IN, CN, JP, CA). Gestisci moduli, record, utenti e ruoli in modo efficiente automatizzando al contempo i flussi di lavoro CRM con supporto per moduli personalizzati, operazioni in blocco e trigger in tempo reale."
+        },
+        "app.Wm9ob0NSTQ.display_name": {
+          "source": "Zoho CRM",
+          "message": "Zoho CRM"
+        },
+        "app.Wm9ob0NSTQ.short_desc": {
+          "source": "Connect to Zoho CRM to automate customer relationship management across all global data centers.",
+          "message": "Connettiti a Zoho CRM per automatizzare la gestione delle relazioni con i clienti in tutti i data center globali."
+        }
+      }
+    }
+  }
+}

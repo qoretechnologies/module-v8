@@ -1,0 +1,2121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Create and send a new SMS or MMS message using Twilio. You can send text messages, include media attachments, schedule messages, and configure delivery options. This action supports both standard messaging and messaging services.",
+          "message": "Twilioを使用して新しいSMSまたはMMSメッセージを作成および送信します。テキストメッセージの送信、メディア添付ファイルの追加、メッセージのスケジュール設定、配信オプションの設定が可能です。このアクションは標準メッセージングとメッセージングサービスの両方をサポートしています。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create a Message",
+          "message": "メッセージを作成"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.desc": {
+          "source": "The text of the message you want to send, limited to 1600 characters. For SMS messages longer than 160 characters, the message will be sent as multiple segments.",
+          "message": "送信するメッセージの本文（最大1600文字）。160文字を超えるSMSメッセージの場合、メッセージは複数のセグメントとして送信されます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.Ym9keQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "メッセージのテキスト内容"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "A Twilio phone number in E.164 format, a Messaging Service SID, or a short code. This number must be enabled for the type of message you wish to send.",
+          "message": "E.164形式のTwilio電話番号、Messaging Service SID、またはショートコード。この番号は、送信するメッセージタイプに対応している必要があります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "The sender phone number or messaging service SID",
+          "message": "送信者の電話番号またはMessaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.desc": {
+          "source": "The maximum total price in USD acceptable for the message to be sent. If the cost exceeds this value, the message will fail.",
+          "message": "メッセージの送信に許容される米ドル（USD）での最大合計価格。費用がこの値を超える場合、メッセージの送信は失敗します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.display_name": {
+          "source": "Max Price",
+          "message": "上限価格"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWF4UHJpY2U.short_desc": {
+          "source": "Maximum acceptable price for the message",
+          "message": "メッセージの許容上限価格"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.desc": {
+          "source": "A list of publicly accessible URLs of media files to send with the message. Supported for MMS messages. You can include up to 10 media files.",
+          "message": "メッセージとともに送信するメディアファイルの一般アクセス可能なURLのリスト。MMSメッセージでサポートされています。最大10個のメディアファイルを含めることができます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.display_name": {
+          "source": "Media URLs",
+          "message": "メディアURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVkaWFVcmw.short_desc": {
+          "source": "URLs of media to include in the message",
+          "message": "メッセージに含めるメディアのURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.desc": {
+          "source": "The SID of the Messaging Service to use for the message. When set, the from parameter can be omitted, and Twilio will select an appropriate phone number from the Messaging Service pool.",
+          "message": "メッセージに使用するMessaging ServiceのSID。設定すると、fromパラメータを省略でき、TwilioはMessaging Serviceプールから適切な電話番号を選択します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.display_name": {
+          "source": "Messaging Service SID",
+          "message": "Messaging Service SID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnaW5nU2VydmljZVNpZA.short_desc": {
+          "source": "The SID of the Messaging Service to use",
+          "message": "使用するMessaging ServiceのSID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.allowed-value.c3RyaW5nOmZpeGVk.display_name": {
+          "source": "Fixed",
+          "message": "固定"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.desc": {
+          "source": "Set to \"fixed\" to schedule the message to be sent at a specific time. Requires the Send At parameter to be set.",
+          "message": "特定の日時にメッセージを送信するようにスケジュールするには「fixed」に設定します。Send Atパラメータの設定が必要です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.display_name": {
+          "source": "Schedule Type",
+          "message": "スケジュールタイプ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2NoZWR1bGVUeXBl.short_desc": {
+          "source": "The type of message scheduling",
+          "message": "メッセージのスケジューリングタイプ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.desc": {
+          "source": "The time when the scheduled message should be sent, in ISO 8601 format. This parameter is required when Schedule Type is set to \"fixed\".",
+          "message": "スケジュールされたメッセージを送信する日時（ISO 8601形式）。Schedule Typeが「fixed」に設定されている場合、このパラメータは必須です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.display_name": {
+          "source": "Send At",
+          "message": "送信日時"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c2VuZEF0.short_desc": {
+          "source": "When to send the scheduled message",
+          "message": "スケジュールされたメッセージを送信する日時"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to each time the status of the message changes. This allows you to track the delivery status of your messages.",
+          "message": "メッセージのステータスが変更されるたびにTwilioがPOSTリクエストを送信するURL。これによりメッセージの配信ステータスを追跡できます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "ステータスコールバックURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive message status updates",
+          "message": "メッセージステータスの更新を受信するURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.desc": {
+          "source": "The phone number to send the message to in E.164 format (e.g., +15551234567). For WhatsApp messages, use the format whatsapp:+15551234567.",
+          "message": "E.164形式（例: +15551234567）のメッセージ送信先電話番号。WhatsAppメッセージの場合は、whatsapp:+15551234567 の形式を使用します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "The destination phone number",
+          "message": "送信先の電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.desc": {
+          "source": "The number of seconds that the message can remain in the queue. After this time, if the message has not been delivered, it will fail. Maximum is 14400 seconds (4 hours).",
+          "message": "メッセージがキューに残ることができる秒数。この時間を過ぎても配信されなかった場合、メッセージは失敗します。最大値は14400秒（4時間）です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.display_name": {
+          "source": "Validity Period",
+          "message": "有効期間"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.option.dmFsaWRpdHlQZXJpb2Q.short_desc": {
+          "source": "How long the message is valid for delivery",
+          "message": "メッセージ配信が有効な期間"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a new SMS or MMS message",
+          "message": "新しいSMSまたはMMSメッセージを送信"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.desc": {
+          "source": "Initiate an outbound phone call using Twilio. You can provide TwiML instructions via URL or directly, configure call recording, answering machine detection, and set up status callbacks to track call progress.",
+          "message": "Twilioを使用して発信通話を開始します。URLまたは直接TwiML命令を指定し、通話録音や留守番電話検出を設定したり、通話の進行状況を追跡するステータスコールバックを設定したりできます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.display_name": {
+          "source": "Create a Call",
+          "message": "通話の作成"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number or client identifier to use as the caller ID. If calling a phone number, this must also be a phone number.",
+          "message": "発信者番号として使用するTwilio電話番号またはクライアント識別子。電話番号に発信する場合、これも電話番号である必要があります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.ZnJvbQ.short_desc": {
+          "source": "The caller ID to display",
+          "message": "表示する発信者ID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "メッセージ終了の検出"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "有効化"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection. \"Enable\" returns AnsweredBy immediately, \"DetectMessageEnd\" waits for the beep to leave a message.",
+          "message": "留守番電話検出を有効にします。「Enable」は即座にAnsweredByを返し、「DetectMessageEnd」はメッセージを残すためのビープ音を待機します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "留守番電話検出"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "留守番電話検出を有効化"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.desc": {
+          "source": "The number of seconds to attempt answering machine detection before timing out. Default is 30 seconds.",
+          "message": "タイムアウトするまでに留守番電話検出を試行する秒数。デフォルトは30秒です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.display_name": {
+          "source": "Machine Detection Timeout",
+          "message": "留守番電話検出タイムアウト"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWFjaGluZURldGVjdGlvblRpbWVvdXQ.short_desc": {
+          "source": "Seconds to wait for detection",
+          "message": "検出を待機する秒数"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use when requesting the URL. Can be GET or POST. Defaults to POST.",
+          "message": "URLをリクエストする際に使用するHTTPメソッド。GETまたはPOSTを指定できます。デフォルトはPOSTです。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.bWV0aG9k.short_desc": {
+          "source": "HTTP method for fetching TwiML",
+          "message": "TwiML取得用HTTPメソッド"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after connecting. Valid characters: 0-9, A-D, #, *, w (0.5s pause), W (1s pause). For example: \"W1234#\".",
+          "message": "接続後にダイヤルするキーの文字列。有効な文字: 0〜9、A〜D、#、*、w（0.5秒の一時停止）、W（1秒の一時停止）。例: \"W1234#\"。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "送出ダイヤル番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "接続後に送信するDTMFトーン"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. You can specify which events trigger callbacks using Status Callback Events.",
+          "message": "通話ステータスが変更されたときにTwilioがPOSTリクエストを送信するURL。「ステータスコールバックイベント」を使用してコールバックをトリガーするイベントを指定できます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "ステータスコールバックURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "通話ステータスの更新を受信するURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmFuc3dlcmVk.display_name": {
+          "source": "Answered",
+          "message": "応答済み"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOmluaXRpYXRlZA.display_name": {
+          "source": "Initiated",
+          "message": "開始済み"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "呼び出し中"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.desc": {
+          "source": "The call progress events that will trigger a POST to the Status Callback URL. Options include: initiated, ringing, answered, and completed.",
+          "message": "ステータスコールバックURLへのPOSTをトリガーする通話進行状況イベント。選択肢: initiated、ringing、answered、completed。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.display_name": {
+          "source": "Status Callback Events",
+          "message": "ステータスコールバックイベント"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tFdmVudA.short_desc": {
+          "source": "Events that trigger status callbacks",
+          "message": "ステータスコールバックをトリガーするイベント"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.desc": {
+          "source": "The HTTP method to use when POSTing to the Status Callback URL. Can be GET or POST. Defaults to POST.",
+          "message": "ステータスコールバックURLにPOSTする際に使用するHTTPメソッド。GETまたはPOSTを指定できます。デフォルトはPOSTです。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.display_name": {
+          "source": "Status Callback Method",
+          "message": "ステータスコールバックメソッド"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.c3RhdHVzQ2FsbGJhY2tNZXRob2Q.short_desc": {
+          "source": "HTTP method for status callbacks",
+          "message": "ステータスコールバック用HTTPメソッド"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes.",
+          "message": "通話全体を録音するにはtrueに設定します。録音は通話完了後に利用可能になります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.display_name": {
+          "source": "Record",
+          "message": "録音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "通話を録音するかどうか"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOm1vbm8.display_name": {
+          "source": "Mono",
+          "message": "モノラル"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.allowed-value.c3RyaW5nOmR1YWw.display_name": {
+          "source": "Dual",
+          "message": "デュアル"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.desc": {
+          "source": "The number of channels in the final recording. \"mono\" records both legs in a single channel, \"dual\" records each leg separately.",
+          "message": "最終録音のチャンネル数。「mono」は両方のレグを単一チャンネルで録音し、「dual」は各レグを個別に録音します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.display_name": {
+          "source": "Recording Channels",
+          "message": "録音チャンネル"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nQ2hhbm5lbHM.short_desc": {
+          "source": "Number of channels in the recording",
+          "message": "録音のチャンネル数"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the recording is available. This allows you to process or store recordings immediately.",
+          "message": "録音が利用可能になったときにTwilioがPOSTリクエストを送信するURL。これにより、録音を即座に処理または保存できます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Recording Status Callback",
+          "message": "録音ステータスコールバック"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.cmVjb3JkaW5nU3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to notify when recording is available",
+          "message": "録音が利用可能になったときに通知するURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.desc": {
+          "source": "The phone number, SIP address, or client identifier to call. Phone numbers must be in E.164 format (e.g., +15551234567).",
+          "message": "発信先の電話番号、SIPアドレス、またはクライアント識別子。電話番号はE.164形式（例: +15551234567）である必要があります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "発信先電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.desc": {
+          "source": "The maximum duration of the call in seconds. The call will be automatically ended after this time.",
+          "message": "通話の最大継続時間（秒）。この時間を過ぎると通話は自動的に終了します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.display_name": {
+          "source": "Time Limit",
+          "message": "制限時間"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZUxpbWl0.short_desc": {
+          "source": "Maximum call duration in seconds",
+          "message": "最大通話時間（秒）"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "タイムアウトするまでに通話が応答されるのを待機する秒数。デフォルトは60秒、最大値は600秒です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "タイムアウト"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "応答を待機する秒数"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.desc": {
+          "source": "TwiML instructions to execute when the call connects. If both TwiML and URL are provided, TwiML takes precedence. Maximum 4000 characters.",
+          "message": "通話接続時に実行するTwiML命令。TwiMLとURLの両方が指定された場合はTwiMLが優先されます。最大4000文字です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.display_name": {
+          "source": "TwiML",
+          "message": "TwiML"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dHdpbWw.short_desc": {
+          "source": "TwiML instructions for the call",
+          "message": "通話用TwiML命令"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.desc": {
+          "source": "The URL that Twilio will fetch TwiML instructions from when the call connects. This URL should return valid TwiML to control the call flow.",
+          "message": "通話接続時にTwilioがTwiML命令を取得するURL。このURLは通話フローを制御する有効なTwiMLを返す必要があります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.display_name": {
+          "source": "TwiML URL",
+          "message": "TwiML URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.option.dXJs.short_desc": {
+          "source": "URL that returns TwiML instructions",
+          "message": "TwiML命令を返すURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGw.short_desc": {
+          "source": "Initiate an outbound phone call",
+          "message": "発信通話を開始"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.desc": {
+          "source": "Initiate an outbound phone call with an automated text-to-speech message. This simplified action automatically generates TwiML based on your inputs, allowing you to quickly create calls with voice messages without writing TwiML code manually. You can customize the voice, language, record the call, and optionally transcribe recordings.",
+          "message": "自動テキスト読み上げメッセージを含む発信電話を開始します。この簡素化されたアクションは、入力に基づいて TwiML を自動生成するため、TwiML コードを手動で記述することなく、音声メッセージ付きの通話を素早く作成できます。音声や言語のカスタマイズ、通話の録音、オプションでの録音の文字起こしが可能です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.display_name": {
+          "source": "Create Call with Text-to-Speech",
+          "message": "テキスト読み上げ付き通話の作成"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to use as the caller ID. This must be a phone number you own in your Twilio account.",
+          "message": "発信者番号として使用する Twilio 電話番号。これはお使いの Twilio アカウントで所有している電話番号である必要があります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.ZnJvbQ.short_desc": {
+          "source": "Your Twilio phone number",
+          "message": "Twilio 電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5iLU5P.display_name": {
+          "source": "Norwegian (Norway)",
+          "message": "ノルウェー語 (ノルウェー)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOm5sLU5M.display_name": {
+          "source": "Dutch (Netherlands)",
+          "message": "オランダ語 (オランダ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmFyYg.display_name": {
+          "source": "Arabic (Gulf)",
+          "message": "アラビア語 (湾岸)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmNtbi1DTg.display_name": {
+          "source": "Chinese (Mandarin)",
+          "message": "中国語 (標準中国語)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRhLURL.display_name": {
+          "source": "Danish (Denmark)",
+          "message": "デンマーク語 (デンマーク)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmRlLURF.display_name": {
+          "source": "German (Germany)",
+          "message": "ドイツ語 (ドイツ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUFV.display_name": {
+          "source": "English (Australia)",
+          "message": "英語 (オーストラリア)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUNB.display_name": {
+          "source": "English (Canada)",
+          "message": "英語 (カナダ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUdC.display_name": {
+          "source": "English (United Kingdom)",
+          "message": "英語 (イギリス)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLUlO.display_name": {
+          "source": "English (India)",
+          "message": "英語 (インド)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVuLVVT.display_name": {
+          "source": "English (United States)",
+          "message": "英語 (米国)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLU1Y.display_name": {
+          "source": "Spanish (Mexico)",
+          "message": "スペイン語 (メキシコ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLUVT.display_name": {
+          "source": "Spanish (Spain)",
+          "message": "スペイン語 (スペイン)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmVzLVVT.display_name": {
+          "source": "Spanish (United States)",
+          "message": "スペイン語 (米国)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUNB.display_name": {
+          "source": "French (Canada)",
+          "message": "フランス語 (カナダ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmZyLUZS.display_name": {
+          "source": "French (France)",
+          "message": "フランス語 (フランス)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmhpLUlO.display_name": {
+          "source": "Hindi (India)",
+          "message": "ヒンディー語 (インド)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOml0LUlU.display_name": {
+          "source": "Italian (Italy)",
+          "message": "イタリア語 (イタリア)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmphLUpQ.display_name": {
+          "source": "Japanese (Japan)",
+          "message": "日本語 (日本)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOmtvLUtS.display_name": {
+          "source": "Korean (South Korea)",
+          "message": "韓国語 (韓国)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LUJS.display_name": {
+          "source": "Portuguese (Brazil)",
+          "message": "ポルトガル語 (ブラジル)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnB0LVBU.display_name": {
+          "source": "Portuguese (Portugal)",
+          "message": "ポルトガル語 (ポルトガル)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnBsLVBM.display_name": {
+          "source": "Polish (Poland)",
+          "message": "ポーランド語 (ポーランド)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnN2LVNF.display_name": {
+          "source": "Swedish (Sweden)",
+          "message": "スウェーデン語 (スウェーデン)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.allowed-value.c3RyaW5nOnRyLVRS.display_name": {
+          "source": "Turkish (Turkey)",
+          "message": "トルコ語 (トルコ)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language and locale for text-to-speech. This should match the language of your message text. If not specified, defaults to en-US (English, United States).",
+          "message": "テキスト読み上げの言語とロケール。これはメッセージテキストの言語と一致する必要があります。指定しない場合のデフォルトは en-US (英語、米国) です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language for text-to-speech",
+          "message": "テキスト読み上げの言語"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkRldGVjdE1lc3NhZ2VFbmQ.display_name": {
+          "source": "Detect Message End",
+          "message": "メッセージ終了の検出"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.allowed-value.c3RyaW5nOkVuYWJsZQ.display_name": {
+          "source": "Enable",
+          "message": "有効化"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.desc": {
+          "source": "Enable answering machine detection to determine if a human or machine answered the call. \"Enable\" returns the result immediately, \"DetectMessageEnd\" waits for the voicemail beep before playing your message.",
+          "message": "留守番電話検出を有効にして、応答者が人間か機械かを判別します。\"Enable\" は結果を即座に返し、\"DetectMessageEnd\" はメッセージを再生する前に留守番電話のビープ音を待ちます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.display_name": {
+          "source": "Machine Detection",
+          "message": "留守番電話検出"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWFjaGluZURldGVjdGlvbg.short_desc": {
+          "source": "Enable answering machine detection",
+          "message": "留守番電話検出を有効化"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.desc": {
+          "source": "The text message that will be spoken when the call is answered. This will be converted to speech using Twilio's text-to-speech engine.",
+          "message": "通話応答時に読み上げられるテキストメッセージ。これは Twilio のテキスト読み上げエンジンを使用して音声に変換されます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text message to speak",
+          "message": "読み上げるテキストメッセージ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.desc": {
+          "source": "A string of keys to dial after the call connects. Useful for navigating phone menus automatically. Valid characters: 0-9, #, *, w (wait 0.5 seconds). For example: \"w123#\" waits 0.5 seconds then dials 123#.",
+          "message": "通話接続後にダイヤルするキーの文字列。電話メニューを自動的に操作するのに便利です。有効な文字: 0-9、#、*、w (0.5秒待機)。例: \"w123#\" は0.5秒待機してから 123# をダイヤルします。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.display_name": {
+          "source": "Send Digits",
+          "message": "送出ダイヤル番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c2VuZERpZ2l0cw.short_desc": {
+          "source": "DTMF tones to send after connection",
+          "message": "接続後に送信するDTMFトーン"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.desc": {
+          "source": "The URL Twilio will POST to when the call status changes. Use this to track call progress and completion.",
+          "message": "通話ステータスが変更されたときに Twilio が POST する URL。これを使用して通話の進行状況と完了を追跡します。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.display_name": {
+          "source": "Status Callback URL",
+          "message": "ステータスコールバックURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.c3RhdHVzQ2FsbGJhY2s.short_desc": {
+          "source": "URL to receive call status updates",
+          "message": "通話ステータスの更新を受信するURL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.desc": {
+          "source": "Set to true to record the entire call. The recording will be available after the call completes and can be retrieved using the List Recordings action.",
+          "message": "通話全体を録音するには true に設定します。録音は通話完了後に利用可能となり、録音一覧アクションを使用して取得できます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.display_name": {
+          "source": "Record Call",
+          "message": "通話を録音"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.cmVjb3Jk.short_desc": {
+          "source": "Whether to record the call",
+          "message": "通話を録音するかどうか"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.desc": {
+          "source": "The phone number to call in E.164 format (e.g., +15551234567). You can also call SIP addresses or Twilio client identifiers.",
+          "message": "E.164 形式で発信する電話番号 (例: +15551234567)。SIP アドレスまたは Twilio クライアント識別子に発信することもできます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dG8.short_desc": {
+          "source": "The phone number to call",
+          "message": "発信先電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.desc": {
+          "source": "The number of seconds to wait for the call to be answered before timing out. Default is 60 seconds, maximum is 600 seconds.",
+          "message": "タイムアウトするまでに通話が応答されるのを待機する秒数。デフォルトは60秒、最大値は600秒です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.display_name": {
+          "source": "Timeout",
+          "message": "タイムアウト"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dGltZW91dA.short_desc": {
+          "source": "Seconds to wait for answer",
+          "message": "応答を待機する秒数"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.desc": {
+          "source": "Set to true to automatically transcribe the call recording. This requires the Record Call option to be enabled. The transcription will be available after processing.",
+          "message": "通話録音を自動的に文字起こしするには true に設定します。これには「通話を録音」オプションが有効になっている必要があります。文字起こしは処理完了後に利用可能になります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.display_name": {
+          "source": "Transcribe Recording",
+          "message": "録音を文字起こし"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmliZQ.short_desc": {
+          "source": "Whether to transcribe the recording",
+          "message": "録音を文字起こしするかどうか"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.desc": {
+          "source": "The URL Twilio will POST to when the transcription is complete. This allows you to process or store transcriptions immediately after they are available.",
+          "message": "文字起こしが完了したときに Twilio が POST する URL。これにより、文字起こしが利用可能になった直後に処理または保存できます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.display_name": {
+          "source": "Transcription Callback URL",
+          "message": "文字起こしコールバック URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dHJhbnNjcmlwdGlvbkNhbGxiYWNr.short_desc": {
+          "source": "URL to receive transcription results",
+          "message": "文字起こし結果を受信する URL"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5jbW4tQ04tU3RhbmRhcmQtQQ.display_name": {
+          "source": "Chinese (Mandarin) - Google Standard (Female)",
+          "message": "中国語 (標準中国語) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5kZS1ERS1TdGFuZGFyZC1B.display_name": {
+          "source": "German - Google Standard (Female)",
+          "message": "ドイツ語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1B.display_name": {
+          "source": "English (UK) - Google Standard (Female)",
+          "message": "英語 (英国) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1HQi1TdGFuZGFyZC1C.display_name": {
+          "source": "English (UK) - Google Standard (Male)",
+          "message": "英語 (英国) - Google Standard (男性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUE.display_name": {
+          "source": "English (US) - Google Neural (Female)",
+          "message": "英語 (米国) - Google Neural (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1OZXVyYWwyLUQ.display_name": {
+          "source": "English (US) - Google Neural (Male)",
+          "message": "英語 (米国) - Google Neural (男性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1B.display_name": {
+          "source": "English (US) - Google Standard (Female)",
+          "message": "英語 (米国) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lbi1VUy1TdGFuZGFyZC1C.display_name": {
+          "source": "English (US) - Google Standard (Male)",
+          "message": "英語 (米国) - Google Standard (男性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5lcy1FUy1TdGFuZGFyZC1B.display_name": {
+          "source": "Spanish (Spain) - Google Standard (Female)",
+          "message": "スペイン語 (スペイン) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1DQS1TdGFuZGFyZC1B.display_name": {
+          "source": "French (Canada) - Google Standard (Female)",
+          "message": "フランス語 (カナダ) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5mci1GUi1TdGFuZGFyZC1B.display_name": {
+          "source": "French (France) - Google Standard (Female)",
+          "message": "フランス語 (フランス) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5oaS1JTi1TdGFuZGFyZC1B.display_name": {
+          "source": "Hindi - Google Standard (Female)",
+          "message": "ヒンディー語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5pdC1JVC1TdGFuZGFyZC1B.display_name": {
+          "source": "Italian - Google Standard (Female)",
+          "message": "イタリア語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5qYS1KUC1TdGFuZGFyZC1B.display_name": {
+          "source": "Japanese - Google Standard (Female)",
+          "message": "日本語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5rby1LUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Korean - Google Standard (Female)",
+          "message": "韓国語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5ubC1OTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Dutch - Google Standard (Female)",
+          "message": "オランダ語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wbC1QTC1TdGFuZGFyZC1B.display_name": {
+          "source": "Polish - Google Standard (Female)",
+          "message": "ポーランド語 - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOkdvb2dsZS5wdC1CUi1TdGFuZGFyZC1B.display_name": {
+          "source": "Portuguese (Brazil) - Google Standard (Female)",
+          "message": "ポルトガル語 (ブラジル) - Google Standard (女性)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdGhpZXUtTmV1cmFs.display_name": {
+          "source": "French (France) - Polly Mathieu (Male, Neural)",
+          "message": "フランス語 (フランス) - Polly Mathieu (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk1hdHRoZXctTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Matthew (Male, Neural)",
+          "message": "英語 (米国) - Polly Matthew (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lk9sYS1OZXVyYWw.display_name": {
+          "source": "Polish - Polly Ola (Female, Neural)",
+          "message": "ポーランド語 - Polly Ola (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFkcmlhbm8tTmV1cmFs.display_name": {
+          "source": "Italian - Polly Adriano (Male, Neural)",
+          "message": "イタリア語 - Polly Adriano (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkFteS1OZXVyYWw.display_name": {
+          "source": "English (UK) - Polly Amy (Female, Neural)",
+          "message": "英語 (英国) - Polly Amy (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJpYW5jYS1OZXVyYWw.display_name": {
+          "source": "Italian - Polly Bianca (Female, Neural)",
+          "message": "イタリア語 - Polly Bianca (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkJyaWFuLU5ldXJhbA.display_name": {
+          "source": "English (UK) - Polly Brian (Male, Neural)",
+          "message": "英語 (英国) - Polly Brian (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNhbWlsYS1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Camila (Female, Neural)",
+          "message": "ポルトガル語 (ブラジル) - Polly Camila (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkNlbGluZS1OZXVyYWw.display_name": {
+          "source": "French (France) - Polly Celine (Female, Neural)",
+          "message": "フランス語 (フランス) - Polly Celine (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkRhbmllbC1OZXVyYWw.display_name": {
+          "source": "German - Polly Daniel (Male, Neural)",
+          "message": "ドイツ語 - Polly Daniel (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkhhbGEtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Hala (Female, Neural)",
+          "message": "アラビア語 - Polly Hala (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvYW5uYS1OZXVyYWw.display_name": {
+          "source": "English (US) - Polly Joanna (Female, Neural)",
+          "message": "英語 (米国) - Polly Joanna (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkpvZXktTmV1cmFs.display_name": {
+          "source": "English (US) - Polly Joey (Male, Neural)",
+          "message": "英語 (米国) - Polly Joey (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthamFsLU5ldXJhbA.display_name": {
+          "source": "Hindi - Polly Kajal (Female, Neural)",
+          "message": "ヒンディー語 - Polly Kajal (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkthenVoYS1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Kazuha (Female, Neural)",
+          "message": "日本語 - Polly Kazuha (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1Y2lhLU5ldXJhbA.display_name": {
+          "source": "Spanish (Spain) - Polly Lucia (Female, Neural)",
+          "message": "スペイン語 (スペイン) - Polly Lucia (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5Lkx1cGUtTmV1cmFs.display_name": {
+          "source": "Spanish (US) - Polly Lupe (Female, Neural)",
+          "message": "スペイン語 (米国) - Polly Lupe (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LkxhdXJhLU5ldXJhbA.display_name": {
+          "source": "Dutch - Polly Laura (Female, Neural)",
+          "message": "オランダ語 - Polly Laura (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlBlZHJvLU5ldXJhbA.display_name": {
+          "source": "Spanish (US) - Polly Pedro (Male, Neural)",
+          "message": "スペイン語 (米国) - Polly Pedro (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlNlb3llb24tTmV1cmFs.display_name": {
+          "source": "Korean - Polly Seoyeon (Female, Neural)",
+          "message": "韓国語 - Polly Seoyeon (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRoaWFnby1OZXVyYWw.display_name": {
+          "source": "Portuguese (Brazil) - Polly Thiago (Male, Neural)",
+          "message": "ポルトガル語 (ブラジル) - Polly Thiago (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlRvbW9rby1OZXVyYWw.display_name": {
+          "source": "Japanese - Polly Tomoko (Female, Neural)",
+          "message": "日本語 - Polly Tomoko (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlZpY2tpLU5ldXJhbA.display_name": {
+          "source": "German - Polly Vicki (Female, Neural)",
+          "message": "ドイツ語 - Polly Vicki (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpheWQtTmV1cmFs.display_name": {
+          "source": "Arabic - Polly Zayd (Male, Neural)",
+          "message": "アラビア語 - Polly Zayd (男性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.allowed-value.c3RyaW5nOlBvbGx5LlpoaXl1LU5ldXJhbA.display_name": {
+          "source": "Chinese (Mandarin) - Polly Zhiyu (Female, Neural)",
+          "message": "中国語 (標準中国語) - Polly Zhiyu (女性、Neural)"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.desc": {
+          "source": "The voice to use for text-to-speech. Choose from various voices with different languages, genders, and quality levels (Standard, Neural, Generative). If not specified, uses your account's default voice.",
+          "message": "テキスト読み上げに使用する音声。さまざまな言語、性別、品質レベル（Standard、Neural、Generative）の音声から選択します。指定しない場合は、アカウントのデフォルトの音声が使用されます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.display_name": {
+          "source": "Voice",
+          "message": "音声"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.option.dm9pY2U.short_desc": {
+          "source": "The voice to use for text-to-speech",
+          "message": "テキスト読み上げに使用する音声"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2NhbGxfd2l0aF90dHM.short_desc": {
+          "source": "Make a call with automated voice message",
+          "message": "自動音声メッセージで通話を発信"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Create and start a new execution of a Studio Flow. This triggers the flow to run with the specified contact information and optional parameters that can be accessed within the flow.",
+          "message": "Studio Flowの新しい実行を作成して開始します。これにより、指定された連絡先情報と、フロー内でアクセス可能なオプションのパラメータを使用してフローの実行がトリガーされます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Create an Execution",
+          "message": "実行を作成"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow to execute. Flow SIDs start with \"FW\".",
+          "message": "実行するStudio FlowのSID。フローSIDは「FW」で始まります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "フローSID"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flowの一意の識別子"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.desc": {
+          "source": "The Twilio phone number to send messages or make calls from during the execution. Available as flow.channel.address. Can also be a Messaging Service SID.",
+          "message": "実行中にメッセージの送信や通話の発信に使用するTwilio電話番号。flow.channel.addressとして利用可能です。Messaging Service SIDを指定することもできます。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.ZnJvbQ.short_desc": {
+          "source": "The Twilio phone number",
+          "message": "Twilio電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.desc": {
+          "source": "JSON data that will be added to the flow's context and accessible as variables. For example: a JSON object with name property becomes available as flow.data.name in the flow.",
+          "message": "フローのコンテキストに追加され、変数としてアクセス可能になるJSONデータ。例えば、nameプロパティを持つJSONオブジェクトは、フロー内でflow.data.nameとして利用可能になります。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.display_name": {
+          "source": "Parameters",
+          "message": "パラメータ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.cGFyYW1ldGVycw.short_desc": {
+          "source": "JSON data for the flow context",
+          "message": "フローコンテキスト用のJSONデータ"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.desc": {
+          "source": "The contact phone number to start the Flow execution with. Available in the flow as contact.channel.address.",
+          "message": "Flowの実行を開始する連絡先の電話番号。フロー内でcontact.channel.addressとして利用可能です。"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.option.dG8.short_desc": {
+          "source": "The contact phone number",
+          "message": "連絡先の電話番号"
+        },
+        "app.VHdpbGlv.action.Y3JlYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Start a Studio Flow execution",
+          "message": "Studio Flowの実行を開始"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.desc": {
+          "source": "Fetch detailed information about a specific message using its unique SID (String Identifier). This returns all available information about the message including status, content, pricing, and timestamps.",
+          "message": "一意のSID（文字列識別子）を使用して、特定のメッセージに関する詳細情報を取得します。これにより、ステータス、コンテンツ、料金、タイムスタンプなど、メッセージに関する利用可能なすべての情報が返されます。"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.display_name": {
+          "source": "Get a Message",
+          "message": "メッセージを取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "取得するメッセージの一意の文字列識別子（SID）。メッセージSIDは「SM」または「MM」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "メッセージSID"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "メッセージの一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X21lc3NhZ2U.short_desc": {
+          "source": "Retrieve details of a specific message",
+          "message": "特定のメッセージの詳細を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.desc": {
+          "source": "Fetch detailed information about a specific call using its unique SID. This returns all available information about the call including status, duration, pricing, and timestamps.",
+          "message": "一意のSIDを使用して、特定の通話に関する詳細情報を取得します。これにより、ステータス、通話時間、料金、タイムスタンプなど、通話に関する利用可能なすべての情報が返されます。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.display_name": {
+          "source": "Get a Call",
+          "message": "通話を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to retrieve. Call SIDs start with \"CA\".",
+          "message": "取得する通話の一意の文字列識別子（SID）。通話SIDは「CA」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call",
+          "message": "通話の一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X2NhbGw.short_desc": {
+          "source": "Retrieve details of a specific call",
+          "message": "特定の通話の詳細を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.desc": {
+          "source": "Fetch detailed information about a specific Studio Flow execution including its current state, context data, and status.",
+          "message": "現在の状態、コンテキストデータ、ステータスを含む、特定のStudio Flow実行に関する詳細情報を取得します。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.display_name": {
+          "source": "Get an Execution",
+          "message": "実行を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to retrieve. Execution SIDs start with \"FN\".",
+          "message": "取得する実行の一意の文字列識別子（SID）。実行SIDは「FN」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "実行SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "実行の一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "実行を含むStudio FlowのSID。フローSIDは「FW」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "フローSID"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flowの一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X2V4ZWN1dGlvbg.short_desc": {
+          "source": "Retrieve details of a specific execution",
+          "message": "特定の実行の詳細を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.desc": {
+          "source": "Fetch detailed information about a specific call recording including duration, status, pricing, media URL, and encryption details.",
+          "message": "通話時間、ステータス、料金、メディアURL、暗号化の詳細を含む、特定の通話録音に関する詳細情報を取得します。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.display_name": {
+          "source": "Get a Recording",
+          "message": "録音を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The unique string identifier (SID) of the recording to retrieve. Recording SIDs start with \"RE\".",
+          "message": "取得する録音の一意の文字列識別子（SID）。録音SIDは「RE」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "録音SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "録音の一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X3JlY29yZGluZw.short_desc": {
+          "source": "Retrieve details of a specific recording",
+          "message": "特定の録音の詳細を取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Fetch detailed information about a specific transcription including the full transcribed text from the recording. This returns the transcriptionText field containing the actual transcription content.",
+          "message": "録音からの完全な文字起こしテキストを含む、特定の文字起こしに関する詳細情報を取得します。実際の文字起こしコンテンツを含むtranscriptionTextフィールドが返されます。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "Get a Transcription",
+          "message": "文字起こしを取得"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording that contains the transcription. Recording SIDs start with \"RE\".",
+          "message": "文字起こしを含む録音のSID。録音SIDは「RE」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "録音SID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "録音の一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.desc": {
+          "source": "The unique string identifier (SID) of the transcription to retrieve. Transcription SIDs start with \"TR\".",
+          "message": "取得する文字起こしの一意の文字列識別子（SID）。文字起こしSIDは「TR」で始まります。"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.display_name": {
+          "source": "Transcription SID",
+          "message": "文字起こしSID"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.option.dHJhbnNjcmlwdGlvblNpZA.short_desc": {
+          "source": "The unique identifier of the transcription",
+          "message": "文字起こしの一意の識別子"
+        },
+        "app.VHdpbGlv.action.Z2V0X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Retrieve a specific transcription with text",
+          "message": "テキストを含む特定の文字起こしを取得"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Permanently delete a message record from your Twilio account. This action cannot be undone. Note that deleting a message record does not redact the message content from Twilio logs.",
+          "message": "Twilioアカウントからメッセージレコードを完全に削除します。この操作は元に戻せません。メッセージレコードを削除しても、Twilioのログからメッセージ内容は編集・削除されないことにご注意ください。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete a Message",
+          "message": "メッセージを削除"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message to delete. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "削除するメッセージの一意の文字列識別子（SID）。メッセージSIDは「SM」または「MM」で始まります。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "メッセージSID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message to delete",
+          "message": "削除するメッセージの一意の識別子"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from your account",
+          "message": "アカウントからメッセージを削除"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.desc": {
+          "source": "Permanently delete a call record from your Twilio account. This action cannot be undone. Note that deleting a call record does not redact the call data from Twilio logs.",
+          "message": "Twilioアカウントから通話レコードを完全に削除します。この操作は元に戻せません。通話レコードを削除しても、Twilioのログから通話データは編集・削除されないことにご注意ください。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.display_name": {
+          "source": "Delete a Call",
+          "message": "通話を削除"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.desc": {
+          "source": "The unique string identifier (SID) of the call to delete. Call SIDs start with \"CA\".",
+          "message": "削除する通話の一意の文字列識別子（SID）。通話SIDは「CA」で始まります。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.option.Y2FsbFNpZA.short_desc": {
+          "source": "The unique identifier of the call to delete",
+          "message": "削除する通話の一意の識別子"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2NhbGw.short_desc": {
+          "source": "Delete a call record from your account",
+          "message": "アカウントから通話レコードを削除"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Permanently delete an execution record from your Twilio account. This action cannot be undone.",
+          "message": "Twilioアカウントから実行レコードを完全に削除します。この操作は元に戻せません。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Delete an Execution",
+          "message": "実行を削除"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to delete. Execution SIDs start with \"FN\".",
+          "message": "削除する実行の一意の文字列識別子（SID）。実行SIDは「FN」で始まります。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "実行SID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution to delete",
+          "message": "削除する実行の一意の識別子"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "実行を含むStudio FlowのSID。フローSIDは「FW」で始まります。"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "フローSID"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flowの一意の識別子"
+        },
+        "app.VHdpbGlv.action.ZGVsZXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Delete an execution record",
+          "message": "実行レコードを削除"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.desc": {
+          "source": "Retrieve a list of transcriptions for a specific call recording. Transcriptions convert the audio from recordings into text.",
+          "message": "特定の通話録音の文字起こし一覧を取得します。文字起こしは録音の音声をテキストに変換します。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.display_name": {
+          "source": "List Transcriptions",
+          "message": "文字起こしを一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.desc": {
+          "source": "The maximum number of transcription records to return. The default is 50 and the maximum is 1000.",
+          "message": "返される文字起こしレコードの最大数。デフォルトは50で、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of transcriptions to return",
+          "message": "返される文字起こしの最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.desc": {
+          "source": "The number of transcription records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返される文字起こしレコード数。デフォルトは50で、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of transcriptions per page",
+          "message": "ページあたりの文字起こし数"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.desc": {
+          "source": "The SID of the recording whose transcriptions you want to list. Recording SIDs start with \"RE\".",
+          "message": "文字起こしを一覧表示する録音のSID。録音SIDは「RE」で始まります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.display_name": {
+          "source": "Recording SID",
+          "message": "録音SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.option.cmVjb3JkaW5nU2lk.short_desc": {
+          "source": "The unique identifier of the recording",
+          "message": "録音の一意の識別子"
+        },
+        "app.VHdpbGlv.action.bGlzdF90cmFuc2NyaXB0aW9ucw.short_desc": {
+          "source": "Retrieve transcriptions for a recording",
+          "message": "録音の文字起こしを取得"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.desc": {
+          "source": "Retrieve a list of calls from your Twilio account. You can filter calls by participant phone numbers, status, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Twilioアカウントから通話の一覧を取得します。参加者の電話番号、ステータス、日付範囲、その他の条件で通話を絞り込むことができます。結果は新しい順に返されます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.display_name": {
+          "source": "List Calls",
+          "message": "通話を一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.desc": {
+          "source": "Only return calls that ended on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "この日時以降に終了した通話のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.display_name": {
+          "source": "End Time After",
+          "message": "終了日時（以降）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUFmdGVy.short_desc": {
+          "source": "Filter by minimum end time",
+          "message": "最小終了日時で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.desc": {
+          "source": "Only return calls that ended on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "この日時以前に終了した通話のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.display_name": {
+          "source": "End Time Before",
+          "message": "終了日時（以前）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZW5kVGltZUJlZm9yZQ.short_desc": {
+          "source": "Filter by maximum end time",
+          "message": "最大終了日時で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.desc": {
+          "source": "Only return calls from this phone number, SIP address, or client identifier.",
+          "message": "この電話番号、SIPアドレス、またはクライアント識別子からの通話のみを返します。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by caller phone number",
+          "message": "発信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of call records to return. The default is 50 and the maximum is 1000.",
+          "message": "返される通話レコードの最大数。デフォルトは50で、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of calls to return",
+          "message": "返される通話の最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.desc": {
+          "source": "Only return calls that started on or after this date and time. Provide the date in ISO 8601 format.",
+          "message": "この日時以降に開始した通話のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.display_name": {
+          "source": "Start Time After",
+          "message": "開始日時（以降）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQWZ0ZXI.short_desc": {
+          "source": "Filter by minimum start time",
+          "message": "最小開始日時で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.desc": {
+          "source": "Only return calls that started on or before this date and time. Provide the date in ISO 8601 format.",
+          "message": "この日時以前に開始した通話のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.display_name": {
+          "source": "Start Time Before",
+          "message": "開始日時（以前）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhcnRUaW1lQmVmb3Jl.short_desc": {
+          "source": "Filter by maximum start time",
+          "message": "最大開始日時で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOm5vLWFuc3dlcg.display_name": {
+          "source": "No Answer",
+          "message": "応答なし"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmJ1c3k.display_name": {
+          "source": "Busy",
+          "message": "通話中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "キャンセル済み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "完了"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmZhaWxlZA.display_name": {
+          "source": "Failed",
+          "message": "失敗"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOmluLXByb2dyZXNz.display_name": {
+          "source": "In Progress",
+          "message": "進行中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnF1ZXVlZA.display_name": {
+          "source": "Queued",
+          "message": "待機中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.allowed-value.c3RyaW5nOnJpbmdpbmc.display_name": {
+          "source": "Ringing",
+          "message": "呼び出し中"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.desc": {
+          "source": "Only return calls with this status. Options include: queued, ringing, in-progress, canceled, completed, failed, busy, or no-answer.",
+          "message": "このステータスの通話のみを返します。選択肢: queued、ringing、in-progress、canceled、completed、failed、busy、no-answer。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.c3RhdHVz.short_desc": {
+          "source": "Filter by call status",
+          "message": "通話ステータスで絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.desc": {
+          "source": "The number of call records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返される通話レコード数。デフォルトは50で、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of calls per page",
+          "message": "ページあたりの通話数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.desc": {
+          "source": "Only return calls made to this phone number, SIP address, or client identifier.",
+          "message": "この電話番号、SIPアドレス、またはクライアント識別子宛ての通話のみを返します。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "着信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9jYWxscw.short_desc": {
+          "source": "Retrieve a list of calls",
+          "message": "通話の一覧を取得"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.desc": {
+          "source": "Retrieve a list of executions for a specific Studio Flow. You can filter executions by date range to find specific execution instances.",
+          "message": "特定のStudio Flowの実行一覧を取得します。日付範囲で実行を絞り込み、特定の実行インスタンスを見つけることができます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.display_name": {
+          "source": "List Executions",
+          "message": "実行を一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.desc": {
+          "source": "Only return executions created on or after this date and time, in ISO 8601 format.",
+          "message": "この日時以降に作成された実行のみを返します（ISO 8601形式）。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.display_name": {
+          "source": "Date Created From",
+          "message": "作成日時（開始）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRGcm9t.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "最小作成日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.desc": {
+          "source": "Only return executions created before this date and time, in ISO 8601 format.",
+          "message": "この日時より前に作成された実行のみを返します（ISO 8601形式）。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.display_name": {
+          "source": "Date Created To",
+          "message": "作成日時（終了）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.ZGF0ZUNyZWF0ZWRUbw.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "最大作成日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow whose executions you want to list. Flow SIDs start with \"FW\".",
+          "message": "実行を一覧表示するStudio FlowのSID。Flow SIDは「FW」で始まります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "フローSID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flowの一意の識別子"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.desc": {
+          "source": "The maximum number of execution records to return. The default is 50 and the maximum is 1000.",
+          "message": "返される実行レコードの最大数。デフォルトは50で、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of executions to return",
+          "message": "返される実行の最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.desc": {
+          "source": "The number of execution records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返す実行レコードの数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of executions per page",
+          "message": "1ページあたりの実行数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9leGVjdXRpb25z.short_desc": {
+          "source": "Retrieve executions for a Studio Flow",
+          "message": "Studio Flowの実行を取得"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.desc": {
+          "source": "Retrieve a list of all media files attached to a specific message. This is useful for accessing MMS attachments or media sent via WhatsApp or other channels.",
+          "message": "特定のメッセージに添付されたすべてのメディアファイルのリストを取得します。これはMMS添付ファイルやWhatsAppなどのチャネル経由で送信されたメディアへのアクセスに役立ちます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.display_name": {
+          "source": "List Message Media",
+          "message": "メッセージメディアの一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.desc": {
+          "source": "The maximum number of media records to return. The default is 50 and the maximum is 1000.",
+          "message": "返されるメディアレコードの最大数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of media items to return",
+          "message": "返すメディア項目の最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.desc": {
+          "source": "The unique string identifier (SID) of the message whose media you want to retrieve. Message SIDs start with \"SM\" or \"MM\".",
+          "message": "メディアを取得するメッセージの一意の文字列識別子（SID）。メッセージSIDは「SM」または「MM」で始まります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.display_name": {
+          "source": "Message SID",
+          "message": "メッセージSID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.bWVzc2FnZVNpZA.short_desc": {
+          "source": "The unique identifier of the message",
+          "message": "メッセージの一意の識別子"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.desc": {
+          "source": "The number of media records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返すメディアレコードの数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of media items per page",
+          "message": "1ページあたりのメディア項目数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlX21lZGlh.short_desc": {
+          "source": "Retrieve media attached to a message",
+          "message": "メッセージに添付されたメディアを取得"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve a list of messages from your Twilio account. You can filter messages by recipient, sender, date range, and other criteria. Results are returned in reverse chronological order.",
+          "message": "Twilioアカウントからメッセージのリストを取得します。受信者、送信者、日付範囲、その他の条件でメッセージを絞り込むことができます。結果は新しい順に返されます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "メッセージを一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.desc": {
+          "source": "Only return messages sent on or after this date. Provide the date in ISO 8601 format.",
+          "message": "この日付以降に送信されたメッセージのみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.display_name": {
+          "source": "Date Sent After",
+          "message": "送信日時の開始（Date Sent After）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRBZnRlcg.short_desc": {
+          "source": "Filter by minimum send date",
+          "message": "最小送信日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.desc": {
+          "source": "Only return messages sent on or before this date. Provide the date in ISO 8601 format.",
+          "message": "この日付以前に送信されたメッセージのみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.display_name": {
+          "source": "Date Sent Before",
+          "message": "送信日時の終了（Date Sent Before）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZGF0ZVNlbnRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum send date",
+          "message": "最大送信日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.desc": {
+          "source": "Only return messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format.",
+          "message": "この電話番号または英数字の送信者IDから送信されたメッセージのみを返します。電話番号はE.164形式である必要があります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "送信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of message records to return. The default is 50 and the maximum is 1000.",
+          "message": "返されるメッセージレコードの最大数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of messages to return",
+          "message": "取得するメッセージの最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.desc": {
+          "source": "The number of message records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返すメッセージレコードの数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of messages per page",
+          "message": "1ページあたりのメッセージ数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.desc": {
+          "source": "Only return messages sent to this phone number. The phone number should be in E.164 format.",
+          "message": "この電話番号に送信されたメッセージのみを返します。電話番号はE.164形式である必要があります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "着信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Retrieve a list of messages",
+          "message": "メッセージのリストを取得"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.desc": {
+          "source": "Retrieve a list of call recordings from your Twilio account. You can filter recordings by call SID, conference SID, date range, and include soft-deleted recordings.",
+          "message": "Twilioアカウントから通話録音のリストを取得します。通話SID、カンファレンスSID、日付範囲で録音を絞り込んだり、論理削除された録音を含めたりすることができます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.display_name": {
+          "source": "List Recordings",
+          "message": "録音の一覧表示"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only return recordings associated with this specific conference. The Conference SID should start with \"CF\".",
+          "message": "この特定のカンファレンスに関連付けられた録音のみを返します。カンファレンスSIDは「CF」で始まる必要があります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "カンファレンスSID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "カンファレンスSIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.desc": {
+          "source": "Only return recordings associated with this specific call. The Call SID should start with \"CA\".",
+          "message": "この特定の通話に関連付けられた録音のみを返します。通話SIDは「CA」で始まる必要があります。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話SID"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "通話SIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.desc": {
+          "source": "Only return recordings created on or after this date. Provide the date in ISO 8601 format.",
+          "message": "この日付以降に作成された録音のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.display_name": {
+          "source": "Date Created After",
+          "message": "作成日時の開始（Date Created After）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRBZnRlcg.short_desc": {
+          "source": "Filter by minimum creation date",
+          "message": "最小作成日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.desc": {
+          "source": "Only return recordings created on or before this date. Provide the date in ISO 8601 format.",
+          "message": "この日付以前に作成された録音のみを返します。日付はISO 8601形式で指定してください。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.display_name": {
+          "source": "Date Created Before",
+          "message": "作成日時の終了（Date Created Before）"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.ZGF0ZUNyZWF0ZWRCZWZvcmU.short_desc": {
+          "source": "Filter by maximum creation date",
+          "message": "最大作成日で絞り込み"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.desc": {
+          "source": "Whether to include soft-deleted recordings. Recording metadata is retained for 40 days after deletion.",
+          "message": "論理削除された録音を含めるかどうか。録音のメタデータは削除後40日間保持されます。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.display_name": {
+          "source": "Include Soft Deleted",
+          "message": "論理削除済みを含める"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.aW5jbHVkZVNvZnREZWxldGVk.short_desc": {
+          "source": "Include soft-deleted recordings",
+          "message": "論理削除された録音を含める"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of recording records to return. The default is 50 and the maximum is 1000.",
+          "message": "返される録音レコードの最大数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of recordings to return",
+          "message": "返す録音の最大数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.desc": {
+          "source": "The number of recording records to return per page. The default is 50 and the maximum is 1000.",
+          "message": "1ページあたりに返す録音レコードの数。デフォルトは50、最大値は1000です。"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.option.cGFnZVNpemU.short_desc": {
+          "source": "Number of recordings per page",
+          "message": "1ページあたりの録音数"
+        },
+        "app.VHdpbGlv.action.bGlzdF9yZWNvcmRpbmdz.short_desc": {
+          "source": "Retrieve a list of call recordings",
+          "message": "通話録音のリストを取得"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Twilio** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Twilio** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。応答は、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.VHdpbGlv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Twilio",
+          "message": "TwilioへのカスタムAPI呼び出しを実行"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors your Twilio account for new incoming or outgoing messages. You can filter messages by recipient or sender phone number. The trigger fires whenever a new message is detected that matches your filters.",
+          "message": "Twilioアカウントの新しい送受信メッセージを監視します。受信者または送信者の電話番号でメッセージを絞り込むことができます。フィルターに一致する新しいメッセージが検出されるたびにトリガーが起動します。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "新しいメッセージ"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.desc": {
+          "source": "Only trigger for messages sent from this phone number or alphanumeric sender ID. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all senders.",
+          "message": "この電話番号または英数字の送信者IDから送信されたメッセージについてのみトリガーします。電話番号はE.164形式（例: +15551234567）である必要があります。すべての送信者を対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.display_name": {
+          "source": "From",
+          "message": "送信元"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.ZnJvbQ.short_desc": {
+          "source": "Filter by sender phone number",
+          "message": "送信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.desc": {
+          "source": "Only trigger for messages sent to this phone number. The phone number should be in E.164 format (e.g., +15551234567). Leave empty to trigger for all recipients.",
+          "message": "この電話番号に送信されたメッセージについてのみトリガーします。電話番号はE.164形式（例: +15551234567）である必要があります。すべての受信者を対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.display_name": {
+          "source": "To",
+          "message": "宛先"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.option.dG8.short_desc": {
+          "source": "Filter by recipient phone number",
+          "message": "着信者の電話番号で絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new SMS or MMS message is received",
+          "message": "新しいSMSまたはMMSメッセージを受信したときにトリガー"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.desc": {
+          "source": "Monitors your Twilio account for new call recordings. You can filter recordings by specific call SID or conference SID. The trigger fires whenever a new recording is detected that matches your filters.",
+          "message": "Twilioアカウントの新しい通話録音を監視します。特定の通話SIDまたはカンファレンスSIDで録音を絞り込むことができます。フィルターに一致する新しい録音が検出されるたびにトリガーが起動します。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.display_name": {
+          "source": "New Recording",
+          "message": "新しい録音"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "この特定のカンファレンスに関連付けられた録音についてのみトリガーします。カンファレンスSIDは「CF」で始まる必要があります。すべてのカンファレンスを対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "カンファレンスSID"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "カンファレンスSIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "この特定の通話に関連付けられた録音についてのみトリガーします。通話SIDは「CA」で始まる必要があります。すべての通話を対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "通話SIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X3JlY29yZGluZw.short_desc": {
+          "source": "Triggers when a new call recording is created",
+          "message": "新しい通話録音が作成されたときにトリガー"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.desc": {
+          "source": "Monitors your Twilio account for new transcriptions by checking the latest recordings. You can filter by specific call SID or conference SID. The trigger fires whenever a new transcription is detected for recordings that match your filters.",
+          "message": "最新の録音を確認して、Twilioアカウントの新しい文字起こしを監視します。特定の通話SIDまたはカンファレンスSIDで絞り込むことができます。フィルターに一致する録音の新しい文字起こしが検出されるたびにトリガーが起動します。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.display_name": {
+          "source": "New Transcription",
+          "message": "新しい文字起こし"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific conference. The Conference SID should start with \"CF\". Leave empty to trigger for all conferences.",
+          "message": "この特定のカンファレンスに関連付けられた録音からの文字起こしについてのみトリガーします。カンファレンスSIDは「CF」で始まる必要があります。すべてのカンファレンスを対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.display_name": {
+          "source": "Conference SID",
+          "message": "カンファレンスSID"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y29uZmVyZW5jZVNpZA.short_desc": {
+          "source": "Filter by conference SID",
+          "message": "カンファレンスSIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.desc": {
+          "source": "Only trigger for transcriptions from recordings associated with this specific call. The Call SID should start with \"CA\". Leave empty to trigger for all calls.",
+          "message": "この特定の通話に関連付けられた録音からの文字起こしについてのみトリガーします。通話SIDは「CA」で始まる必要があります。すべての通話を対象とする場合は空のままにしてください。"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.display_name": {
+          "source": "Call SID",
+          "message": "通話SID"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.option.Y2FsbFNpZA.short_desc": {
+          "source": "Filter by call SID",
+          "message": "通話SIDで絞り込み"
+        },
+        "app.VHdpbGlv.action.bmV3X3RyYW5zY3JpcHRpb24.short_desc": {
+          "source": "Triggers when a new recording transcription is created",
+          "message": "新しい録音文字起こしが作成されたときにトリガー"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.desc": {
+          "source": "Update the status of a Studio Flow execution. This is typically used to end an active execution early.",
+          "message": "Studio Flow実行のステータスを更新します。これは通常、アクティブな実行を途中で終了するために使用されます。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.display_name": {
+          "source": "Update an Execution",
+          "message": "実行を更新"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.desc": {
+          "source": "The unique string identifier (SID) of the execution to update. Execution SIDs start with \"FN\".",
+          "message": "更新する実行の一意の文字列識別子（SID）。実行SIDは「FN」で始まります。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.display_name": {
+          "source": "Execution SID",
+          "message": "実行SID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.ZXhlY3V0aW9uU2lk.short_desc": {
+          "source": "The unique identifier of the execution",
+          "message": "実行の一意の識別子"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.desc": {
+          "source": "The SID of the Studio Flow that contains the execution. Flow SIDs start with \"FW\".",
+          "message": "実行を含むStudio FlowのSID。フローSIDは「FW」で始まります。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.display_name": {
+          "source": "Flow SID",
+          "message": "フローSID"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.Zmxvd1NpZA.short_desc": {
+          "source": "The unique identifier of the Studio Flow",
+          "message": "Studio Flowの一意の識別子"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmFjdGl2ZQ.display_name": {
+          "source": "Active",
+          "message": "アクティブ"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.allowed-value.c3RyaW5nOmVuZGVk.display_name": {
+          "source": "Ended",
+          "message": "終了済み"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.desc": {
+          "source": "The status to set for the execution. Set to \"ended\" to terminate an active execution.",
+          "message": "実行に設定するステータス。アクティブな実行を終了するには「ended」に設定します。"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.option.c3RhdHVz.short_desc": {
+          "source": "The new status for the execution",
+          "message": "実行の新しいステータス"
+        },
+        "app.VHdpbGlv.action.dXBkYXRlX2V4ZWN1dGlvbg.short_desc": {
+          "source": "Update the status of an execution",
+          "message": "実行のステータスを更新"
+        },
+        "app.VHdpbGlv.desc": {
+          "source": "Integrate with Twilio to send SMS messages, make voice calls, and manage your communications infrastructure. This integration allows you to automate messaging workflows, handle incoming calls and messages, and build powerful communication features into your applications.",
+          "message": "Twilioと統合して、SMSメッセージの送信、音声通話の発信、通信インフラの管理を行います。この統合により、メッセージングワークフローの自動化、着信通話やメッセージの処理、強力な通信機能をアプリケーションに構築できます。"
+        },
+        "app.VHdpbGlv.display_name": {
+          "source": "Twilio",
+          "message": "Twilio"
+        },
+        "app.VHdpbGlv.short_desc": {
+          "source": "Connect with Twilio to send SMS, make calls, and manage communications",
+          "message": "Twilioと連携してSMS送信、通話発信、通信管理を実行"
+        }
+      }
+    }
+  }
+}

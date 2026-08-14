@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.Tm90aW9u.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Notion\"",
+          "message": "アプリ「Notion」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Notion\"",
+          "message": "アプリ「Notion」の指定されたテーブルに新しいレコードを作成"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "Create a new page (item) in a Notion database with specified property values and optional content.",
+          "message": "指定されたプロパティ値と任意のコンテンツを使用して、Notion データベースに新しいページ (アイテム) を作成します。"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "Create Database Item",
+          "message": "データベースアイテムを作成"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.desc": {
+          "source": "Add content to the database item page. This will be added as a paragraph block in the page.",
+          "message": "データベースアイテムページにコンテンツを追加します。これはページ内に段落ブロックとして追加されます。"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.display_name": {
+          "source": "Page Content",
+          "message": "ページコンテンツ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.Y29udGVudA.short_desc": {
+          "source": "Optional content for the database item page",
+          "message": "データベースアイテムページの任意のコンテンツ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database where you want to create a new item",
+          "message": "新しいアイテムを作成する Notion データベースを選択します"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to create item in",
+          "message": "アイテムを作成する Notion データベース"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.desc": {
+          "source": "Set the property values for the new database item. Available properties depend on the selected database schema.",
+          "message": "新しいデータベースアイテムのプロパティ値を設定します。利用可能なプロパティは、選択したデータベースのスキーマによって異なります。"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "プロパティ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Property values for the new database item",
+          "message": "新しいデータベースアイテムのプロパティ値"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Create a new item in a Notion database",
+          "message": "Notion データベースに新しいアイテムを作成します"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.desc": {
+          "source": "Create a new page as a child of an existing page in Notion with a title and content.",
+          "message": "タイトルとコンテンツを指定して、Notion の既存のページの子として新しいページを作成します。"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.display_name": {
+          "source": "Create Page",
+          "message": "ページを作成"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.desc": {
+          "source": "Enter the initial content for the new page. This will be added as paragraph blocks.",
+          "message": "新しいページの初期コンテンツを入力します。これは段落ブロックとして追加されます。"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.display_name": {
+          "source": "Page Content",
+          "message": "ページコンテンツ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.Y29udGVudA.short_desc": {
+          "source": "The initial content of the new page",
+          "message": "新しいページの初期コンテンツ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.desc": {
+          "source": "Select the parent page under which the new page will be created",
+          "message": "新しいページを作成する親ページを選択します"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.display_name": {
+          "source": "Parent Page",
+          "message": "親ページ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.cGFnZQ.short_desc": {
+          "source": "The parent page where the new page will be created",
+          "message": "新しいページが作成される親ページ"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.desc": {
+          "source": "Enter the title for the new page",
+          "message": "新しいページのタイトルを入力します"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.display_name": {
+          "source": "Page Title",
+          "message": "ページタイトル"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.option.dGl0bGU.short_desc": {
+          "source": "The title of the new page",
+          "message": "新しいページのタイトル"
+        },
+        "app.Tm90aW9u.action.Y3JlYXRlX3BhZ2U.short_desc": {
+          "source": "Create a new page in Notion",
+          "message": "Notion に新しいページを作成します"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.desc": {
+          "source": "Reply to an existing discussion thread on a Notion page or block. This creates a new comment within the selected discussion.",
+          "message": "Notion ページまたはブロック上の既存のディスカッションスレッドに返信します。これにより、選択したディスカッション内に新しいコメントが作成されます。"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.display_name": {
+          "source": "Add Comment to Discussion",
+          "message": "ディスカッションにコメントを追加"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.desc": {
+          "source": "Select the discussion thread where you want to add your comment",
+          "message": "コメントを追加するディスカッションスレッドを選択します"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.display_name": {
+          "source": "Discussion",
+          "message": "ディスカッション"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.ZGlzY3Vzc2lvbl9pZA.short_desc": {
+          "source": "The discussion thread to reply to",
+          "message": "返信先のディスカッションスレッド"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.desc": {
+          "source": "Enter the text content for your comment. This will be added as a plain text comment to the discussion.",
+          "message": "コメントのテキストコンテンツを入力します。これはプレーンテキストのコメントとしてディスカッションに追加されます。"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.display_name": {
+          "source": "Comment Text",
+          "message": "コメントテキスト"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.option.dGV4dA.short_desc": {
+          "source": "The text content of your comment",
+          "message": "コメントのテキストコンテンツ"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fZGlzY3Vzc2lvbg.short_desc": {
+          "source": "Add a reply to an existing discussion thread in Notion",
+          "message": "Notion の既存のディスカッションスレッドに返信を追加します"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.desc": {
+          "source": "Create a new comment on a Notion page. This starts a new discussion thread on the selected page.",
+          "message": "Notion ページに新しいコメントを作成します。これにより、選択したページで新しいディスカッションスレッドが開始されます。"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.display_name": {
+          "source": "Add Comment to Page",
+          "message": "ページにコメントを追加"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page where you want to add a comment",
+          "message": "コメントを追加する Notion ページを選択します"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to comment on",
+          "message": "コメント対象の Notion ページ"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.desc": {
+          "source": "Enter the text content for your comment. This will create a new discussion on the page.",
+          "message": "コメントのテキストコンテンツを入力します。これにより、ページ上に新しいディスカッションが作成されます。"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.display_name": {
+          "source": "Comment Text",
+          "message": "コメントテキスト"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.option.dGV4dA.short_desc": {
+          "source": "The text content of your comment",
+          "message": "コメントのテキストコンテンツ"
+        },
+        "app.Tm90aW9u.action.YWRkX2NvbW1lbnRfdG9fcGFnZQ.short_desc": {
+          "source": "Add a new comment to a Notion page",
+          "message": "Notion ページに新しいコメントを追加します"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.desc": {
+          "source": "Append new content blocks to the end of an existing Notion page. The content will be added as new blocks at the bottom of the page.",
+          "message": "既存の Notion ページの末尾に新しいコンテンツブロックを追加します。コンテンツはページの下部に新しいブロックとして追加されます。"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.display_name": {
+          "source": "Append to Page",
+          "message": "ページに追加"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.desc": {
+          "source": "Enter the content you want to add to the page. Supports markdown formatting which will be converted to Notion blocks.",
+          "message": "ページに追加するコンテンツを入力します。Markdown 形式をサポートしており、Notion ブロックに変換されます。"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.display_name": {
+          "source": "Content",
+          "message": "コンテンツ"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.Y29udGVudA.short_desc": {
+          "source": "The content to append to the page",
+          "message": "ページに追加するコンテンツ"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page where you want to add content",
+          "message": "コンテンツを追加する Notion ページを選択します"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to append to",
+          "message": "追加先の Notion ページ"
+        },
+        "app.Tm90aW9u.action.YXBwZW5kX3RvX3BhZ2U.short_desc": {
+          "source": "Add content to the end of a Notion page",
+          "message": "Notion ページの末尾にコンテンツを追加します"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.desc": {
+          "source": "Get detailed information about a specific Notion database including its properties, title, description, and metadata.",
+          "message": "プロパティ、タイトル、説明、メタデータなど、特定の Notion データベースに関する詳細情報を取得します。"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.display_name": {
+          "source": "Get Database",
+          "message": "データベースを取得"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database you want to get information about",
+          "message": "情報を取得する Notion データベースを選択します"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to retrieve",
+          "message": "取得する Notion データベース"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFfc291cmNl.short_desc": {
+          "source": "Retrieve information about a Notion database",
+          "message": "Notion データベースに関する情報を取得します"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.desc": {
+          "source": "Get detailed information about a Notion database by providing its ID directly.",
+          "message": "ID を直接指定して Notion データベースの詳細情報を取得します。"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.display_name": {
+          "source": "Get Database Info",
+          "message": "データベース情報を取得"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.desc": {
+          "source": "Enter the ID of the Notion database you want to retrieve information about",
+          "message": "情報を取得する Notion データベースの ID を入力します"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.display_name": {
+          "source": "Database ID",
+          "message": "データベース ID"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.option.ZGF0YWJhc2VfaWQ.short_desc": {
+          "source": "The ID of the Notion database",
+          "message": "Notion データベースの ID"
+        },
+        "app.Tm90aW9u.action.Z2V0X2RhdGFiYXNl.short_desc": {
+          "source": "Retrieve database information by ID",
+          "message": "ID でデータベース情報を取得します"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.desc": {
+          "source": "Get detailed information about a specific Notion page including its properties, title, and metadata.",
+          "message": "プロパティ、タイトル、メタデータなど、特定の Notion ページに関する詳細情報を取得します。"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.display_name": {
+          "source": "Get Page",
+          "message": "ページを取得"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "Select the Notion page you want to get information about",
+          "message": "情報を取得する Notion ページを選択します"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Notion page to retrieve",
+          "message": "取得する Notion ページ"
+        },
+        "app.Tm90aW9u.action.Z2V0X3BhZ2U.short_desc": {
+          "source": "Retrieve information about a Notion page",
+          "message": "Notion ページに関する情報を取得します"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.desc": {
+          "source": "Get detailed information about a specific Notion user including their name, type, and contact information.",
+          "message": "名前、タイプ、連絡先情報など、特定の Notion ユーザーに関する詳細情報を取得します。"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "ユーザーの取得"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.desc": {
+          "source": "Select the Notion user you want to get information about",
+          "message": "情報を取得する Notion ユーザーを選択します"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.display_name": {
+          "source": "User",
+          "message": "ユーザー"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.option.dXNlcl9pZA.short_desc": {
+          "source": "The Notion user to retrieve",
+          "message": "取得する Notion ユーザー"
+        },
+        "app.Tm90aW9u.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve information about a Notion user",
+          "message": "Notion ユーザーに関する情報を取得します"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブルからレコードを削除します"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブルからレコードを削除します"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of all users in the Notion workspace including people and bots.",
+          "message": "ユーザーやボットを含む、Notion ワークスペース内のすべてのユーザーのリストを取得します。"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "ユーザー一覧"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of users in a paginated response",
+          "message": "ページネーションされたレスポンスでユーザーの次のページを取得するには、このカーソルを使用します"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "次のカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "次のページを取得するためのページネーションカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of users to retrieve in a single request",
+          "message": "1 回のリクエストで取得するユーザー数を設定します"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of users to retrieve per page",
+          "message": "1 ページあたりに取得するユーザー数"
+        },
+        "app.Tm90aW9u.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "List users in the Notion workspace",
+          "message": "Notion ワークスペース内のユーザーを一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.desc": {
+          "source": "Retrieve a list of comments on a specific Notion page or block. Returns all unresolved comments with pagination support.",
+          "message": "特定の Notion ページまたはブロックのコメント一覧を取得します。未解決のすべてのコメントをページネーション対応で返します。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.display_name": {
+          "source": "List Comments",
+          "message": "コメント一覧を取得"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.desc": {
+          "source": "Select the Notion page or block you want to retrieve comments from",
+          "message": "コメントを取得する Notion ページまたはブロックを選択してください"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.display_name": {
+          "source": "Page or Block",
+          "message": "ページまたはブロック"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.YmxvY2tfaWQ.short_desc": {
+          "source": "The page or block to list comments for",
+          "message": "コメントを一覧表示するページまたはブロック"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of comments in a paginated response",
+          "message": "ページネーションされたレスポンスで次のページのコメントを取得するには、このカーソルを使用します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "次のカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "次のページを取得するためのページネーションカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of comments to retrieve in a single request (maximum 100)",
+          "message": "1 回のリクエストで取得するコメント数を設定します (最大 100)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of comments to retrieve per page",
+          "message": "1 ページあたりに取得するコメント数"
+        },
+        "app.Tm90aW9u.action.bGlzdF9jb21tZW50cw.short_desc": {
+          "source": "List comments on a Notion page or block",
+          "message": "Notion ページまたはブロックのコメントを一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.desc": {
+          "source": "Retrieve a list of items (pages) from a Notion database with filtering and sorting options.",
+          "message": "フィルタリングおよびソートオプションを使用して Notion データベースからアイテム (ページ) の一覧を取得します。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.display_name": {
+          "source": "List Database Items",
+          "message": "データベースアイテムの一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database you want to retrieve items from",
+          "message": "アイテムを取得する Notion データベースを選択してください"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to list items from",
+          "message": "アイテムを一覧表示する Notion データベース"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only return items that match specific criteria",
+          "message": "特定の条件に一致するアイテムのみを返すようにプロパティフィルターを設定します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "フィルタープロパティ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Property filters to apply to the results",
+          "message": "結果に適用するプロパティフィルター"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of items in a paginated response",
+          "message": "ページネーションされたレスポンスで次のページのアイテムを取得するには、このカーソルを使用します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "次のカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "次のページを取得するためのページネーションカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.desc": {
+          "source": "Configure how the database items should be sorted in the response",
+          "message": "レスポンスでデータベースアイテムをソートする方法を設定します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.display_name": {
+          "source": "Sort Options",
+          "message": "並び替えオプション"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.c29ydHM.short_desc": {
+          "source": "How to sort the returned items",
+          "message": "返されたアイテムのソート方法"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of database items to retrieve in a single request",
+          "message": "1 回のリクエストで取得するデータベースアイテム数を設定します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of items to retrieve per page",
+          "message": "1 ページあたりに取得するアイテム数"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlX2l0ZW1z.short_desc": {
+          "source": "List items from a Notion database",
+          "message": "Notion データベースからアイテムを一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.desc": {
+          "source": "Retrieve a list of all accessible Notion databases in your workspace with optional search filtering.",
+          "message": "ワークスペース内でアクセス可能なすべての Notion データベースの一覧を取得します (オプションで検索フィルター付き)。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.display_name": {
+          "source": "List Databases",
+          "message": "データベースの一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmFzY2VuZGluZw.display_name": {
+          "source": "Last edited (oldest first)",
+          "message": "最終編集日時 (古い順)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmRlc2NlbmRpbmc.display_name": {
+          "source": "Last edited (newest first)",
+          "message": "最終編集日時 (新しい順)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.desc": {
+          "source": "Choose whether to sort databases by last edited time in ascending or descending order",
+          "message": "データベースを最終編集日時の昇順または降順でソートするかどうかを選択します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.display_name": {
+          "source": "Sort by Last Edited",
+          "message": "最終編集日時でソート"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.bGFzdF9lZGl0ZWQ.short_desc": {
+          "source": "How to sort databases by last edited time",
+          "message": "最終編集日時によるデータベースのソート方法"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.desc": {
+          "source": "Enter text to search for in database titles. Leave empty to retrieve all accessible databases.",
+          "message": "データベースタイトル内で検索するテキストを入力してください。アクセス可能なすべてのデータベースを取得するには空のままにしてください。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "検索クエリ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.option.cXVlcnk.short_desc": {
+          "source": "Text to search for in database titles",
+          "message": "データベースタイトル内で検索するテキスト"
+        },
+        "app.Tm90aW9u.action.bGlzdF9kYXRhc291cmNlcw.short_desc": {
+          "source": "List all Notion databases",
+          "message": "すべての Notion データベースを一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.desc": {
+          "source": "Search for and retrieve a list of Notion pages with optional query filtering and sorting.",
+          "message": "オプションのクエリフィルターとソートを使用して、Notion ページを検索および一覧取得します。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.display_name": {
+          "source": "List Pages",
+          "message": "ページの一覧表示"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmFzY2VuZGluZw.display_name": {
+          "source": "Last edited (oldest first)",
+          "message": "最終編集日時 (古い順)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.allowed-value.c3RyaW5nOmRlc2NlbmRpbmc.display_name": {
+          "source": "Last edited (newest first)",
+          "message": "最終編集日時 (新しい順)"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.desc": {
+          "source": "Choose whether to sort pages by last edited time in ascending or descending order",
+          "message": "ページを最終編集日時の昇順または降順でソートするかどうかを選択します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.display_name": {
+          "source": "Sort by Last Edited",
+          "message": "最終編集日時でソート"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bGFzdF9lZGl0ZWQ.short_desc": {
+          "source": "How to sort pages by last edited time",
+          "message": "最終編集日時によるページのソート方法"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.desc": {
+          "source": "Use this cursor to retrieve the next page of results in a paginated response",
+          "message": "ページネーションされたレスポンスで次のページの結果を取得するには、このカーソルを使用します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.display_name": {
+          "source": "Next Cursor",
+          "message": "次のカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.bmV4dF9jdXJzb3I.short_desc": {
+          "source": "Pagination cursor for retrieving next page",
+          "message": "次のページを取得するためのページネーションカーソル"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "Set the number of pages to retrieve in a single request",
+          "message": "1 回のリクエストで取得するページ数を設定します"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of pages to retrieve per request",
+          "message": "1 回のリクエストあたりに取得するページ数"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.desc": {
+          "source": "Enter text to search for in page titles and content. Leave empty to retrieve all accessible pages.",
+          "message": "ページタイトルおよびコンテンツ内で検索するテキストを入力してください。アクセス可能なすべてのページを取得するには空のままにしてください。"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "検索クエリ"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.option.cXVlcnk.short_desc": {
+          "source": "Text to search for in page titles and content",
+          "message": "ページタイトルおよびコンテンツ内で検索するテキスト"
+        },
+        "app.Tm90aW9u.action.bGlzdF9wYWdlcw.short_desc": {
+          "source": "Search and list Notion pages",
+          "message": "Notion ページの検索と一覧表示"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Notion** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Notion** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (接続の API ベース URL に対する相対パス)、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントには、このアクションを使用してください。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.Tm90aW9u.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Notion",
+          "message": "Notion へのカスタム API 呼び出しを実行"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "This trigger monitors a specific Notion database and fires when a new item (page) is added to it. You can filter items based on property values.",
+          "message": "このトリガーは特定の Notion データベースを監視し、新しいアイテム (ページ) が追加されたときに起動します。プロパティ値に基づいてアイテムをフィルタリングできます。"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "New Database Item",
+          "message": "新しいデータベースアイテム"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that you want to monitor for new items",
+          "message": "新しいアイテムを監視する Notion データベースを選択してください"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to monitor",
+          "message": "監視する Notion データベース"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only trigger for items that match specific criteria",
+          "message": "特定の条件に一致するアイテムのみをトリガーするようにプロパティフィルターを設定します"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "フィルタープロパティ"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Optional filters to apply to database items",
+          "message": "データベースアイテムに適用するオプションのフィルター"
+        },
+        "app.Tm90aW9u.action.bmV3X2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Triggers when a new item is created in a Notion database",
+          "message": "Notion データベースに新しいアイテムが作成されたときにトリガー"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内で一致するレコードを検索します"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内で一致するレコードを検索します"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内で一致する単一のレコードを検索します"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内で一致する単一のレコードを検索します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内の既存のレコードを更新します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.Tm90aW9u.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Notion\"",
+          "message": "アプリ \"Notion\" の指定されたテーブル内の既存のレコードを更新します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.desc": {
+          "source": "Update the property values of an existing item (page) in a Notion database.",
+          "message": "Notion データベース内の既存のアイテム (ページ) のプロパティ値を更新します。"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.display_name": {
+          "source": "Update Database Item",
+          "message": "データベースアイテムの更新"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that contains the item you want to update",
+          "message": "更新するアイテムを含む Notion データベースを選択してください"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database containing the item",
+          "message": "アイテムを含む Notion データベース"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.desc": {
+          "source": "Select the specific database item (page) you want to update",
+          "message": "更新する特定のデータベースアイテム (ページ) を選択してください"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.display_name": {
+          "source": "Database Item",
+          "message": "データベースアイテム"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.aXRlbV9pZA.short_desc": {
+          "source": "The database item to update",
+          "message": "更新するデータベースアイテム"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.desc": {
+          "source": "Set the new property values for the database item. Only specified properties will be updated.",
+          "message": "データベースアイテムの新しいプロパティ値を設定します。指定したプロパティのみが更新されます。"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.display_name": {
+          "source": "Properties",
+          "message": "プロパティ"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.option.cHJvcGVydGllcw.short_desc": {
+          "source": "Property values to update",
+          "message": "更新するプロパティ値"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlX2RhdGFiYXNlX2l0ZW0.short_desc": {
+          "source": "Update an existing item in a Notion database",
+          "message": "Notionデータベース内の既存のアイテムを更新します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.desc": {
+          "source": "This trigger monitors a specific Notion database and fires when an existing item (page) is modified. You can filter items based on property values.",
+          "message": "このトリガーは特定のNotionデータベースを監視し、既存のアイテム（ページ）が変更されたときにトリガーされます。プロパティ値に基づいてアイテムをフィルタリングできます。"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.display_name": {
+          "source": "Updated Database Item",
+          "message": "更新されたデータベースアイテム"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.desc": {
+          "source": "Select the Notion database that you want to monitor for updated items",
+          "message": "更新されたアイテムを監視するNotionデータベースを選択します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.display_name": {
+          "source": "Database",
+          "message": "データベース"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZGF0YV9zb3VyY2VfaWQ.short_desc": {
+          "source": "The Notion database to monitor",
+          "message": "監視する Notion データベース"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.desc": {
+          "source": "Set property filters to only trigger for items that match specific criteria",
+          "message": "特定の条件に一致するアイテムのみをトリガーするようにプロパティフィルターを設定します"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.display_name": {
+          "source": "Filter Properties",
+          "message": "フィルタープロパティ"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.option.ZmlsdGVyX3Byb3BlcnRpZXM.short_desc": {
+          "source": "Optional filters to apply to database items",
+          "message": "データベースアイテムに適用するオプションのフィルター"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9kYXRhYmFzZV9pdGVt.short_desc": {
+          "source": "Triggers when a database item is updated in Notion",
+          "message": "Notionでデータベースアイテムが更新されたときにトリガーされます"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.desc": {
+          "source": "This trigger monitors a specific Notion page and fires when the page is modified. It tracks changes to the page content, properties, or metadata.",
+          "message": "このトリガーは特定のNotionページを監視し、ページが変更されたときにトリガーされます。ページのコンテンツ、プロパティ、またはメタデータの変更を追跡します。"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.display_name": {
+          "source": "Updated Page",
+          "message": "更新されたページ"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.desc": {
+          "source": "Select the specific Notion page you want to monitor for changes. The trigger will fire whenever this page is edited or updated.",
+          "message": "変更を監視する特定のNotionページを選択します。このページが編集または更新されるたびにトリガーが実行されます。"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.option.cGFnZQ.short_desc": {
+          "source": "The Notion page to monitor for updates",
+          "message": "更新を監視するNotionページ"
+        },
+        "app.Tm90aW9u.action.dXBkYXRlZF9wYWdl.short_desc": {
+          "source": "Triggers when a specific Notion page is updated",
+          "message": "特定のNotionページが更新されたときにトリガーされます"
+        },
+        "app.Tm90aW9u.desc": {
+          "source": "The Notion integration provides comprehensive actions and triggers to interact with the Notion API. Manage pages, databases, comments, discussions, and users. Create, read, update, and monitor changes to your Notion workspace content.",
+          "message": "Notion連携は、Notion APIとやり取りするための包括的なアクションとトリガーを提供します。ページ、データベース、コメント、ディスカッション、ユーザーを管理します。Notionワークスペースのコンテンツの作成、読み取り、更新、および変更の監視を行います。"
+        },
+        "app.Tm90aW9u.display_name": {
+          "source": "Notion",
+          "message": "Notion"
+        },
+        "app.Tm90aW9u.short_desc": {
+          "source": "Connect to Notion API to manage pages, databases, comments, and discussions.",
+          "message": "Notion APIに接続して、ページ、データベース、コメント、ディスカッションを管理します。"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.",
+          "message": "Pubblica un messaggio di testo in un argomento Amazon SNS, che verrà recapitato a tutti gli iscritti all'argomento."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "Crea messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent to all topic subscribers.",
+          "message": "Il contenuto di testo del messaggio da inviare a tutti gli iscritti all'argomento."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content to send",
+          "message": "Contenuto del messaggio da inviare"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "Un hash di attributi aggiuntivi da includere con il messaggio a scopo di filtraggio e instradamento."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Attributi del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "Metadati aggiuntivi del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "Un identificatore univoco per la deduplicazione dei messaggi negli argomenti FIFO. Obbligatorio per gli argomenti FIFO senza deduplicazione basata sul contenuto."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplicazione messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "ID deduplicazione per argomenti FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "Un tag che specifica che i messaggi appartengono a un gruppo di messaggi specifico per gli argomenti FIFO. Obbligatorio per gli argomenti FIFO."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID gruppo messaggi"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "ID gruppo per argomenti FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "Riga dell'oggetto opzionale per il messaggio, utilizzata principalmente per le notifiche via e-mail."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Oggetto"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "Riga dell'oggetto del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "La regione AWS in cui si trova l'argomento di destinazione."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Regione AWS dell'argomento"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the message will be published.",
+          "message": "L'Amazon Resource Name (ARN) dell'argomento SNS in cui verrà pubblicato il messaggio."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN argomento"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ARN dell'argomento di destinazione"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a message to an SNS topic",
+          "message": "Invia un messaggio a un argomento SNS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.",
+          "message": "Pubblica un messaggio strutturato in JSON in un argomento Amazon SNS, consentendo la consegna di contenuti avanzati e dati strutturati agli iscritti."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "Crea messaggio JSON"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.desc": {
+          "source": "The JSON object containing the structured data to be sent to all topic subscribers.",
+          "message": "L'oggetto JSON contenente i dati strutturati da inviare a tutti gli iscritti al topic."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
+          "source": "JSON Message",
+          "message": "Messaggio JSON"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
+          "source": "JSON object to send",
+          "message": "Oggetto JSON da inviare"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "Un hash di attributi aggiuntivi da includere con il messaggio a scopo di filtraggio e instradamento."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Attributi del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "Metadati aggiuntivi del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "Un identificatore univoco per la deduplicazione dei messaggi negli argomenti FIFO. Obbligatorio per gli argomenti FIFO senza deduplicazione basata sul contenuto."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplicazione messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "ID deduplicazione per argomenti FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "Un tag che specifica che i messaggi appartengono a un gruppo di messaggi specifico per gli argomenti FIFO. Obbligatorio per gli argomenti FIFO."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID gruppo messaggi"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "ID gruppo per argomenti FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "Riga dell'oggetto opzionale per il messaggio, utilizzata principalmente per le notifiche via e-mail."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Oggetto"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "Riga dell'oggetto del messaggio"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "La regione AWS in cui si trova l'argomento di destinazione."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Regione AWS dell'argomento"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.",
+          "message": "L'Amazon Resource Name (ARN) del topic SNS in cui verrà pubblicato il messaggio JSON."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN argomento"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ARN dell'argomento di destinazione"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a structured JSON message to an SNS topic",
+          "message": "Invia un messaggio JSON strutturato a un topic SNS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.desc": {
+          "source": "Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.",
+          "message": "Crea un nuovo topic Amazon SNS con configurazione opzionale per topic FIFO, crittografia e criteri di consegna."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
+          "source": "Create Topic",
+          "message": "Crea topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.",
+          "message": "Indica se abilitare la deduplicazione basata sul contenuto per i topic FIFO, che impedisce i messaggi duplicati in base al contenuto del messaggio."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "Deduplicazione basata sul contenuto"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable content-based deduplication",
+          "message": "Abilita la deduplicazione basata sul contenuto"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.desc": {
+          "source": "A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.",
+          "message": "Una stringa JSON che definisce il criterio di consegna per il topic, controllando il comportamento di riprova e le impostazioni di consegna."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
+          "source": "Delivery Policy",
+          "message": "Criterio di consegna"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
+          "source": "JSON delivery policy for the topic",
+          "message": "Criterio di consegna JSON per il topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "A human-readable name for the topic that appears in email notifications and other contexts.",
+          "message": "Un nome leggibile per il topic che appare nelle notifiche via e-mail e in altri contesti."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "Nome visualizzato"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "Human-readable name for the topic",
+          "message": "Nome leggibile per il topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.desc": {
+          "source": "Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.",
+          "message": "Indica se creare un topic FIFO (First-In-First-Out) che preserva l'ordine dei messaggi e impedisce i duplicati."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
+          "source": "FIFO Topic",
+          "message": "Topic FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
+          "source": "Create as FIFO topic",
+          "message": "Crea come topic FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key to use for encrypting messages published to this topic.",
+          "message": "L'ID di una chiave AWS KMS da utilizzare per crittografare i messaggi pubblicati in questo topic."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "ID chiave master KMS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for topic encryption",
+          "message": "Chiave KMS per la crittografia del topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.desc": {
+          "source": "A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.",
+          "message": "Una stringa JSON che definisce la policy di accesso per il topic, controllando chi può pubblicare nel topic o iscriversi ad esso."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.display_name": {
+          "source": "Policy",
+          "message": "Policy"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.short_desc": {
+          "source": "Access policy for the topic",
+          "message": "Policy di accesso per il topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic will be created. Defaults to us-east-1 if not specified.",
+          "message": "La regione AWS in cui verrà creato il topic. Il valore predefinito è us-east-1 se non specificato."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region for the topic",
+          "message": "Regione AWS per il topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.desc": {
+          "source": "The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.",
+          "message": "Il nome per il topic SNS. Per i topic FIFO, il nome deve terminare con il suffisso .fifo."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
+          "source": "Topic Name",
+          "message": "Nome del topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
+          "source": "Name for the new topic",
+          "message": "Nome per il nuovo topic"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
+          "source": "Create a new SNS topic",
+          "message": "Crea un nuovo topic SNS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.desc": {
+          "source": "Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.",
+          "message": "Crea una nuova iscrizione a un topic Amazon SNS, consentendo all'endpoint specificato di ricevere i messaggi pubblicati nel topic."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
+          "source": "Add Subscriber",
+          "message": "Aggiungi iscritto"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.desc": {
+          "source": "The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).",
+          "message": "L'endpoint che riceverà i messaggi. Il formato dipende dal protocollo (URL per HTTP/HTTPS, indirizzo e-mail per e-mail, numero di telefono per SMS, ecc.)."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.display_name": {
+          "source": "Endpoint",
+          "message": "Endpoint"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.short_desc": {
+          "source": "Subscriber endpoint",
+          "message": "Endpoint dell'iscritto"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "Application",
+          "message": "Applicazione"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWlsLWpzb24.display_name": {
+          "source": "Email-JSON",
+          "message": "Email-JSON"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHA.display_name": {
+          "source": "HTTP",
+          "message": "HTTP"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHBz.display_name": {
+          "source": "HTTPS",
+          "message": "HTTPS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmxhbWJkYQ.display_name": {
+          "source": "Lambda",
+          "message": "Lambda"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNtcw.display_name": {
+          "source": "SMS",
+          "message": "SMS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNxcw.display_name": {
+          "source": "SQS",
+          "message": "SQS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.desc": {
+          "source": "The protocol to use for delivering messages to the subscriber (HTTP, HTTPS, Email, SMS, SQS, Lambda, or Application).",
+          "message": "Il protocollo da utilizzare per la consegna dei messaggi all'iscritto (HTTP, HTTPS, Email, SMS, SQS, Lambda o Application)."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.display_name": {
+          "source": "Protocol",
+          "message": "Protocollo"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.short_desc": {
+          "source": "Subscription protocol type",
+          "message": "Tipo di protocollo di iscrizione"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "La regione AWS in cui si trova l'argomento di destinazione."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Regione AWS dell'argomento"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to create a subscription for.",
+          "message": "L'Amazon Resource Name (ARN) del topic SNS per cui creare un'iscrizione."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN argomento"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to subscribe to",
+          "message": "ARN del topic a cui iscriversi"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
+          "source": "Add a subscriber to an SNS topic",
+          "message": "Aggiungi un iscritto a un topic SNS"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.desc": {
+          "source": "Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.",
+          "message": "Recupera informazioni dettagliate su uno specifico topic Amazon SNS, inclusi attributi, statistiche di iscrizione e dettagli di configurazione."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
+          "source": "Get Topic",
+          "message": "Ottieni topic"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic is located.",
+          "message": "La regione AWS in cui si trova il topic."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Regione AWS dell'argomento"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to get details for.",
+          "message": "L'Amazon Resource Name (ARN) del topic SNS di cui ottenere i dettagli."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN argomento"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to retrieve",
+          "message": "ARN del topic da recuperare"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
+          "source": "Get details of a specific SNS topic",
+          "message": "Ottieni i dettagli di uno specifico topic SNS"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.desc": {
+          "source": "Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.",
+          "message": "Recupera un elenco di tutti i topic Amazon SNS nella regione specificata, includendo facoltativamente attributi dettagliati per ciascun topic."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
+          "source": "List Topics",
+          "message": "Elenca topic"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed attributes for each topic, such as subscription counts and policies.",
+          "message": "Indica se includere attributi dettagliati per ciascun topic, come il numero di iscrizioni e le policy."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "Includi attributi"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed topic attributes",
+          "message": "Includi attributi dettagliati del topic"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.desc": {
+          "source": "A token for paginating through large lists of topics. Use the token returned from a previous call.",
+          "message": "Un token per impaginare elenchi di topic di grandi dimensioni. Utilizza il token restituito da una chiamata precedente."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
+          "source": "Next Token",
+          "message": "Token successivo"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
+          "source": "Pagination token",
+          "message": "Token di impaginazione"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.desc": {
+          "source": "The AWS region from which to retrieve the list of SNS topics.",
+          "message": "La regione AWS da cui recuperare l'elenco dei topic SNS."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to list topics from",
+          "message": "Regione AWS da cui elencare i topic"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
+          "source": "List all SNS topics",
+          "message": "Elenca tutti i topic SNS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SNS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata ad **Amazon SNS** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni della risposta e il corpo della risposta.\n\nUtilizza questa azione per gli endpoint che non sono ancora esposti come azioni principali in questa app."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SNS",
+          "message": "Esegui una chiamata API personalizzata ad Amazon SNS"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.",
+          "message": "Questo trigger effettua la sottoscrizione a un topic Amazon SNS e si attiva quando viene pubblicato un nuovo messaggio. Gestisce automaticamente la sottoscrizione e fornisce il payload completo del messaggio."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nuovo messaggio"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.",
+          "message": "Specifica la regione AWS in cui è ospitato il tuo topic SNS. Se non specificata, il valore predefinito è us-east-1."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SNS topic is located.",
+          "message": "La regione AWS in cui si trova il topic SNS."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The full ARN of the SNS topic you want to monitor for new messages. The format should be: arn:aws:sns:region:account-id:topic-name.",
+          "message": "L'ARN completo del topic SNS che desideri monitorare per i nuovi messaggi. Il formato deve essere: arn:aws:sns:region:account-id:topic-name."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN argomento"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to subscribe to.",
+          "message": "L'Amazon Resource Name (ARN) del topic SNS a cui sottoscriversi."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is published to an SNS topic.",
+          "message": "Si attiva quando viene pubblicato un nuovo messaggio su un topic SNS."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.desc": {
+          "source": "Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.",
+          "message": "Monitora il tuo servizio Amazon SNS alla ricerca di nuovi topic creati e si attiva quando viene rilevato un nuovo topic nella regione specificata."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
+          "source": "New Topic",
+          "message": "Nuovo topic"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for new SNS topics. If not specified, defaults to us-east-1.",
+          "message": "La regione AWS in cui desideri monitorare i nuovi topic SNS. Se non specificata, il valore predefinito è us-east-1."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Regione"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new topics",
+          "message": "Regione AWS da monitorare per nuovi topic"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
+          "source": "Triggers when a new SNS topic is created",
+          "message": "Si attiva quando viene creato un nuovo topic SNS"
+        },
+        "app.QW1hem9uU05T.desc": {
+          "source": "The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.",
+          "message": "L'integrazione con Amazon SNS ti consente di creare topic, inviare messaggi, gestire gli iscritti e monitorare le notifiche tramite Amazon Simple Notification Service. Perfetta per creare sistemi di messaggistica scalabili, inviare avvisi e coordinare applicazioni distribuite con un recapito affidabile dei messaggi."
+        },
+        "app.QW1hem9uU05T.display_name": {
+          "source": "Amazon SNS",
+          "message": "Amazon SNS"
+        },
+        "app.QW1hem9uU05T.short_desc": {
+          "source": "Send notifications and messages through Amazon Simple Notification Service.",
+          "message": "Invia notifiche e messaggi tramite Amazon Simple Notification Service."
+        }
+      }
+    }
+  }
+}

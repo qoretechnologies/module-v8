@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.desc": {
+          "source": "Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.",
+          "message": "設定、コードの詳細、タグ、並列処理設定を含む、Lambda関数に関する包括的な情報を返します。関数のプロパティや現在の状態を検査するのに役立ちます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
+          "source": "Get Function",
+          "message": "関数の取得"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to retrieve information for.",
+          "message": "情報を取得するLambda関数の名前、ARN、または部分的なARN。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "関数名"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function",
+          "message": "Lambda関数の名前またはARN"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to get information for a specific version of the function.",
+          "message": "関数の特定バージョンに関する情報を取得するには、バージョン番号、エイリアス名、または $LATEST を指定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "修飾子"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias",
+          "message": "関数のバージョンまたはエイリアス"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Lambda 関数が存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "関数が存在する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
+          "source": "Retrieve detailed information about a specific Lambda function.",
+          "message": "特定の Lambda 関数に関する詳細情報を取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.",
+          "message": "コンテンツの詳細、互換性のあるランタイム、メタデータなど、Lambda レイヤーの特定バージョンに関する詳細な情報を返します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "Get Layer Version",
+          "message": "レイヤーバージョンの取得"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to retrieve version information for.",
+          "message": "バージョン情報を取得する Lambda レイヤーの名前または ARN。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "レイヤー名"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Lambda レイヤーの名前または ARN"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Lambda レイヤーが存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "レイヤーが存在する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.desc": {
+          "source": "The version number of the layer to retrieve detailed information for.",
+          "message": "詳細情報を取得するレイヤーのバージョン番号。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
+          "source": "Version Number",
+          "message": "バージョン番号"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
+          "source": "Specific version number of the layer",
+          "message": "レイヤーの特定のバージョン番号"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Retrieve detailed information about a specific layer version.",
+          "message": "特定のレイヤーバージョンに関する詳細情報を取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.desc": {
+          "source": "Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.",
+          "message": "カスタム JSON ペイロードを使用して Lambda 関数を同期または非同期で呼び出します。呼び出しタイプ、ログ設定、および関数のバージョンを指定できます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
+          "source": "Invoke Function",
+          "message": "関数の呼び出し"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to invoke.",
+          "message": "呼び出す Lambda 関数の名前、ARN、または部分 ARN。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "関数名"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function to invoke",
+          "message": "呼び出す Lambda 関数の名前または ARN"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkRyeVJ1bg.display_name": {
+          "source": "Dry Run (Validate only)",
+          "message": "ドライラン (検証のみ)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkV2ZW50.display_name": {
+          "source": "Asynchronous (Event)",
+          "message": "非同期 (イベント)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOlJlcXVlc3RSZXNwb25zZQ.display_name": {
+          "source": "Synchronous (RequestResponse)",
+          "message": "同期 (リクエスト/レスポンス)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.desc": {
+          "source": "RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.",
+          "message": "同期実行には RequestResponse、非同期実行には Event、呼び出しを行わずにパラメーターを検証するには DryRun を指定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
+          "source": "Invocation Type",
+          "message": "呼び出しタイプ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
+          "source": "How to invoke the function",
+          "message": "関数を呼び出す方法"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOk5vbmU.display_name": {
+          "source": "None",
+          "message": "なし"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOlRhaWw.display_name": {
+          "source": "Tail (Last 4KB)",
+          "message": "Tail (最後の 4KB)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.desc": {
+          "source": "Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.",
+          "message": "レスポンスに実行ログの最後の 4KB を含める場合は Tail を設定し、ログを除外する場合は None を設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
+          "source": "Log Type",
+          "message": "ログタイプ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
+          "source": "Include execution logs in response",
+          "message": "レスポンスに実行ログを含める"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.desc": {
+          "source": "JSON string containing the data to pass to your Lambda function. Must be valid JSON format.",
+          "message": "Lambda 関数に渡すデータを含む JSON 文字列。有効な JSON 形式である必要があります。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "ペイロード"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.short_desc": {
+          "source": "JSON payload to send to the function",
+          "message": "関数に送信する JSON ペイロード"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to invoke a specific version of the function.",
+          "message": "関数の特定バージョンを呼び出すには、バージョン番号、エイリアス名、または $LATEST を指定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "修飾子"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias to invoke",
+          "message": "呼び出す関数のバージョンまたはエイリアス"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Lambda 関数が存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "関数が存在する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
+          "source": "Execute a Lambda function with custom payload.",
+          "message": "カスタムペイロードを使用して Lambda 関数を実行します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.desc": {
+          "source": "Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.",
+          "message": "指定したリージョン内の Lambda 関数のページ分割されたリストを返します。必要に応じて、関数のバージョンやマスターリージョンでフィルター処理し、最大アイテム数とマーカーでページ分割を制御できます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
+          "source": "List Functions",
+          "message": "関数一覧"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All Versions",
+          "message": "すべてのバージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.desc": {
+          "source": "Set to ALL to include all published versions of each function, or leave empty for latest versions only.",
+          "message": "各関数の公開されているすべてのバージョンを含める場合は ALL に設定し、最新バージョンのみに絞る場合は空のままにします。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
+          "source": "Function Version",
+          "message": "関数のバージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
+          "source": "Version of functions to retrieve",
+          "message": "取得する関数のバージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of functions returned in a single request.",
+          "message": "単一のリクエストで返される関数の数を制限します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "最大アイテム数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of functions to return",
+          "message": "返される関数の最大数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.desc": {
+          "source": "For Lambda@Edge functions, specify the master region to filter results.",
+          "message": "Lambda@Edge 関数の場合は、結果を絞り込むためのマスターリージョンを指定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
+          "source": "Master Region",
+          "message": "マスターリージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
+          "source": "Filter functions by master region for Lambda@Edge",
+          "message": "Lambda@Edge のマスターリージョンで関数を絞り込む"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "次のマーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "追加の結果を取得するためのページ分割マーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.",
+          "message": "Lambda 関数の一覧を取得する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda functions are located",
+          "message": "Lambda 関数が存在する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
+          "source": "Retrieve a list of Lambda functions in your AWS account.",
+          "message": "AWS アカウント内の Lambda 関数のリストを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.desc": {
+          "source": "Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.",
+          "message": "特定の Lambda レイヤーのバージョンのページ分割されたリストを返します。互換性のあるランタイムでフィルター処理し、ページ分割を制御できます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
+          "source": "List Layer Versions",
+          "message": "レイヤーバージョン一覧"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Amazon Linux 2 のカスタムランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Amazon Linux 2023 のカスタムランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layer versions that are compatible with the specified runtime environment.",
+          "message": "指定されたランタイム環境と互換性のあるレイヤーバージョンのみを返します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "互換性のあるランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter versions by compatible runtime",
+          "message": "互換性のあるランタイムでバージョンをフィルタリング"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to list versions for.",
+          "message": "バージョンを一覧表示する Lambda レイヤーの名前または ARN。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "レイヤー名"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Lambda レイヤーの名前または ARN"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layer versions returned in a single request.",
+          "message": "単一のリクエストで返されるレイヤーバージョンの数を制限します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "最大アイテム数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of versions to return",
+          "message": "返されるバージョンの最大数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "次のマーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "追加の結果を取得するためのページ分割マーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Lambda レイヤーが存在する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "レイヤーが存在する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
+          "source": "Retrieve versions of a specific Lambda layer.",
+          "message": "特定の Lambda レイヤーのバージョンを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.desc": {
+          "source": "Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.",
+          "message": "指定されたリージョン内の Lambda レイヤーのページ分割されたリストを返します。互換性のあるランタイムでフィルタリングし、最大項目数とマーカーでページ分けを制御できます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
+          "source": "List Layers",
+          "message": "レイヤーを一覧表示"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Amazon Linux 2 のカスタムランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Amazon Linux 2023 のカスタムランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layers that are compatible with the specified runtime environment.",
+          "message": "指定されたランタイム環境と互換性のあるレイヤーのみを返します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "互換性のあるランタイム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter layers by compatible runtime",
+          "message": "互換性のあるランタイムでレイヤーをフィルタリング"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layers returned in a single request.",
+          "message": "単一のリクエストで返されるレイヤーの数を制限します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "最大アイテム数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of layers to return",
+          "message": "返されるレイヤーの最大数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "前のレスポンスからのマーカーを使用して、次の結果ページを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "次のマーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "追加の結果を取得するためのページ分割マーカー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.",
+          "message": "Lambda レイヤーを一覧表示する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda layers are located",
+          "message": "Lambda レイヤーが配置されている AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
+          "source": "Retrieve a list of Lambda layers in your AWS account.",
+          "message": "AWS アカウント内の Lambda レイヤーのリストを取得します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **AWS Lambda** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証を使用して、**AWS Lambda** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (コネクションの API ベース URL 相対)、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対して、このアクションを使用します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to AWS Lambda",
+          "message": "AWS Lambda へのカスタム API 呼び出しを行う"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.desc": {
+          "source": "Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.",
+          "message": "指定されたリージョンで新規作成された Lambda 関数がないか AWS アカウントを監視します。このトリガーは新しい関数が検出されたときに起動し、包括的な関数の詳細を提供します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
+          "source": "New Function",
+          "message": "新しい関数"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.",
+          "message": "新しい Lambda 関数の作成を監視する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new functions",
+          "message": "新しい関数を監視する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
+          "source": "Triggers when a new Lambda function is created.",
+          "message": "新しい Lambda 関数が作成されたときに起動します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.",
+          "message": "指定されたリージョンで新規公開された Lambda レイヤーバージョンがないか AWS アカウントを監視します。このトリガーは新しいレイヤーバージョンが検出されたときに起動し、レイヤーバージョンの詳細を提供します。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "New Layer Version",
+          "message": "新しいレイヤーバージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.",
+          "message": "新しい Lambda レイヤーバージョンの作成を監視する AWS リージョンを指定します。指定しない場合のデフォルトは us-east-1 です。"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new layer versions",
+          "message": "新しいレイヤーバージョンを監視する AWS リージョン"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Triggers when a new Lambda layer version is published.",
+          "message": "新しい Lambda レイヤーバージョンが公開されたときに起動します。"
+        },
+        "app.QW1hem9uTGFtYmRh.desc": {
+          "source": "Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.",
+          "message": "Amazon Lambda は、サーバーのプロビジョニングや管理を行うことなくコードを実行できるサーバーレスコンピューティングサービスです。この統合では、Lambda 関数、レイヤー、および呼び出しを管理するための包括的なアクションとトリガーを提供します。関数のリスト表示、呼び出し、レイヤーの管理、新しい関数やレイヤーバージョンの作成の監視が可能です。"
+        },
+        "app.QW1hem9uTGFtYmRh.display_name": {
+          "source": "AWS Lambda",
+          "message": "AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.short_desc": {
+          "source": "Serverless compute service that runs code without provisioning or managing servers.",
+          "message": "サーバーのプロビジョニングや管理を行わずにコードを実行するサーバーレスコンピューティングサービス。"
+        }
+      }
+    }
+  }
+}

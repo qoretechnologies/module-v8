@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "de": {
+      "messages": {
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters.",
+          "message": "Senden Sie eine Textnachricht an eine Amazon SQS-Warteschlange mit optionalen Nachrichtenattributen, Verzögerungseinstellungen und FIFO-Warteschlangenparametern."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "Nachricht erstellen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Die Zeitspanne (0–900 Sekunden), um die die Zustellung der Nachricht verzögert werden soll."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Verzögerung (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Anzahl der Sekunden, um die die Nachrichtenzustellung verzögert werden soll"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Benutzerdefinierte Attribute, die der Nachricht zum Filtern und Verarbeiten beigefügt werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Nachrichtenattribute"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Zusätzliche Metadaten für die Nachricht"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.desc": {
+          "source": "The message content to send. Can be plain text or any string format up to 256 KB.",
+          "message": "Der zu sendende Nachrichteninhalt. Kann Klartext oder ein beliebiges Zeichenfolgenformat bis zu 256 KB sein."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
+          "source": "Message Body",
+          "message": "Nachrichtentext"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
+          "source": "The text content of the message",
+          "message": "Der Textinhalt der Nachricht"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Das Token, das zur Deduplizierung gesendeter Nachrichten verwendet wird (nur FIFO-Warteschlangen)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "Nachrichtendeduplizierungs-ID"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "Deduplizierungs-ID für FIFO-Warteschlangen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Das Tag, das angibt, dass eine Nachricht zu einer bestimmten Nachrichtengruppe gehört (nur FIFO-Warteschlangen)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "Nachrichtengruppen-ID"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "Gruppen-ID für FIFO-Warteschlangen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the message will be sent.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, an die die Nachricht gesendet wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "Die URL der Ziel-SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre Ziel-SQS-Warteschlange gehostet wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a text message to an SQS queue",
+          "message": "Senden Sie eine Textnachricht an eine SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body.",
+          "message": "Senden Sie strukturierte JSON-Daten an eine Amazon SQS-Warteschlange. Das JSON-Objekt wird automatisch in den Nachrichtentext serialisiert."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "JSON-Nachricht erstellen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Die Zeitspanne (0–900 Sekunden), um die die Zustellung der Nachricht verzögert werden soll."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Verzögerung (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Anzahl der Sekunden, um die die Nachrichtenzustellung verzögert werden soll"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Benutzerdefinierte Attribute, die der Nachricht zum Filtern und Verarbeiten beigefügt werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Nachrichtenattribute"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Zusätzliche Metadaten für die Nachricht"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.desc": {
+          "source": "The structured data object that will be serialized to JSON and sent as the message body.",
+          "message": "Das strukturierte Datenobjekt, das in JSON serialisiert und als Nachrichtentext gesendet wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
+          "source": "Message Data",
+          "message": "Nachrichtendaten"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
+          "source": "The JSON object to send",
+          "message": "Das zu sendende JSON-Objekt"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Das Token, das zur Deduplizierung gesendeter Nachrichten verwendet wird (nur FIFO-Warteschlangen)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "Nachrichtendeduplizierungs-ID"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "Deduplizierungs-ID für FIFO-Warteschlangen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Das Tag, das angibt, dass eine Nachricht zu einer bestimmten Nachrichtengruppe gehört (nur FIFO-Warteschlangen)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "Nachrichtengruppen-ID"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "Gruppen-ID für FIFO-Warteschlangen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the JSON message will be sent.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, an die die JSON-Nachricht gesendet wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "Die URL der Ziel-SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre Ziel-SQS-Warteschlange gehostet wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a JSON message to an SQS queue",
+          "message": "Senden Sie eine JSON-Nachricht an eine SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.desc": {
+          "source": "Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options.",
+          "message": "Erstellen Sie eine neue Amazon SQS-Warteschlange mit konfigurierbaren Einstellungen, einschließlich FIFO-Funktionen, Dead-Letter-Warteschlangen und Verschlüsselungsoptionen."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
+          "source": "Create Queue",
+          "message": "Warteschlange erstellen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "For FIFO queues, enables deduplication using a SHA-256 hash of the message body.",
+          "message": "Aktiviert für FIFO-Warteschlangen die Deduplizierung mithilfe eines SHA-256-Hashes des Nachrichtentextes."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "Inhaltsbasierte Duplikatentfernung"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable automatic deduplication based on message content",
+          "message": "Automatische Deduplizierung basierend auf dem Nachrichteninhalt aktivieren"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.desc": {
+          "source": "The URL of the queue to use as a dead letter queue for failed message processing.",
+          "message": "Die URL der Warteschlange, die als Dead-Letter-Warteschlange für fehlgeschlagene Nachrichtenverarbeitung verwendet werden soll."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
+          "source": "Dead Letter Queue URL",
+          "message": "Dead-Letter-Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
+          "source": "URL of the dead letter queue",
+          "message": "URL der Dead-Letter-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The default delay (0-900 seconds) for messages added to this queue.",
+          "message": "Die Standardverzögerung (0–900 Sekunden) für Nachrichten, die dieser Warteschlange hinzugefügt werden."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Verzögerung (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Default delay for new messages",
+          "message": "Standardverzögerung für neue Nachrichten"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.desc": {
+          "source": "Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent.",
+          "message": "Gibt an, ob eine FIFO-Warteschlange erstellt werden soll, die sicherstellt, dass Nachrichten genau einmal in der genauen Reihenfolge verarbeitet werden, in der sie gesendet wurden."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
+          "source": "FIFO Queue",
+          "message": "FIFO-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
+          "source": "Create as a FIFO (First-In-First-Out) queue",
+          "message": "Als FIFO-Warteschlange (First-In-First-Out) erstellen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key for server-side encryption of queue messages.",
+          "message": "Die ID eines AWS KMS-Schlüssels für die serverseitige Verschlüsselung von Warteschlangennachrichten."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "KMS Master Key ID"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for server-side encryption",
+          "message": "KMS-Schlüssel für serverseitige Verschlüsselung"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.desc": {
+          "source": "The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key.",
+          "message": "Die Zeitspanne (60–86.400 Sekunden), für die Amazon SQS einen Datenschlüssel wiederverwenden kann."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
+          "source": "KMS Data Key Reuse Period (Seconds)",
+          "message": "KMS-Datenschlüssel-Wiederverwendungszeitraum (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
+          "source": "How long to reuse KMS data keys",
+          "message": "Wie lange KMS-Datenschlüssel wiederverwendet werden sollen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.desc": {
+          "source": "The number of times a message can be received before being moved to the dead letter queue.",
+          "message": "Die Anzahl der Male, die eine Nachricht empfangen werden kann, bevor sie in die Dead-Letter-Warteschlange verschoben wird."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
+          "source": "Max Receive Count",
+          "message": "Maximale Empfangsanzahl"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
+          "source": "Maximum receives before moving to dead letter queue",
+          "message": "Maximale Empfänge vor dem Verschieben in die Dead-Letter-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.desc": {
+          "source": "The length of time (60-1209600 seconds) that messages are retained in the queue.",
+          "message": "Die Zeitspanne (60–1.209.600 Sekunden), für die Nachrichten in der Warteschlange aufbewahrt werden."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
+          "source": "Message Retention Period (Seconds)",
+          "message": "Nachrichtenaufbewahrungsdauer (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
+          "source": "How long messages are retained in the queue",
+          "message": "Wie lange Nachrichten in der Warteschlange aufbewahrt werden"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.desc": {
+          "source": "The name for the queue. FIFO queue names must end with .fifo suffix.",
+          "message": "Der Name für die Warteschlange. FIFO-Warteschlangen-Namen müssen mit dem Suffix .fifo enden."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
+          "source": "Queue Name",
+          "message": "Warteschlangenname"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
+          "source": "The name of the new queue",
+          "message": "Der Name der neuen Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.desc": {
+          "source": "The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive.",
+          "message": "Die Zeit (0–20 Sekunden), die ReceiveMessage-Aufrufe auf das Eintreffen von Nachrichten warten."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
+          "source": "Receive Wait Time (Seconds)",
+          "message": "Empfangs-Wartezeit (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
+          "source": "Long polling wait time for receive operations",
+          "message": "Long-Polling-Wartezeit für Empfangsoperationen"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to create the new SQS queue.",
+          "message": "Wählen Sie die AWS-Region aus, in der Sie die neue SQS-Warteschlange erstellen möchten."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the queue will be created",
+          "message": "Die AWS-Region, in der die Warteschlange erstellt wird"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The length of time (0-43200 seconds) that a message is invisible to other consumers after being received.",
+          "message": "Die Dauer (0–43200 Sekunden), für die eine Nachricht nach dem Empfang für andere Consumer unsichtbar ist."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Visibility Timeout (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Time a message is invisible after being received",
+          "message": "Zeit, die eine Nachricht nach dem Empfang unsichtbar ist"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
+          "source": "Create a new SQS queue",
+          "message": "Neue SQS-Warteschlange erstellen"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.desc": {
+          "source": "Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps.",
+          "message": "Detaillierte Informationen und Attribute für eine bestimmte Amazon SQS-Warteschlange abrufen, einschließlich Konfiguration, Nachrichtenzahlen und Zeitstempeln."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
+          "source": "Get Queue",
+          "message": "Warteschlange abrufen"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of queue attributes to return. Use \"All\" to return all available attributes.",
+          "message": "Die Namen der abzurufenden Warteschlangenattribute. Verwenden Sie „All“, um alle verfügbaren Attribute zurückzugeben."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Attributnamen"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of queue attributes to retrieve",
+          "message": "Liste der abzurufenden Warteschlangenattribute"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue to retrieve information about.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, über die Informationen abgerufen werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to inspect",
+          "message": "Die URL der zu überprüfenden SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre SQS-Warteschlange gehostet wird."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
+          "source": "Get details about a specific SQS queue",
+          "message": "Details zu einer bestimmten SQS-Warteschlange abrufen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval.",
+          "message": "Nachrichten aus einer Amazon SQS-Warteschlange mit konfigurierbaren Polling-Optionen und Nachrichtenattribut-Abruf abrufen."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "Nachrichten auflisten"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of system attributes to return with each message. Use \"All\" to return all attributes.",
+          "message": "Die Namen der Systemattribute, die mit jeder Nachricht zurückgegeben werden sollen. Verwenden Sie „All“, um alle Attribute zurückzugeben."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Attributnamen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of message system attribute names to retrieve",
+          "message": "Liste der abzurufenden Nachrichtensystem-Attributnamen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.desc": {
+          "source": "The maximum number of messages to return in a single request (1-10).",
+          "message": "Die maximale Anzahl von Nachrichten, die in einer einzelnen Anfrage zurückgegeben werden sollen (1–10)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
+          "source": "Max Number of Messages",
+          "message": "Maximale Anzahl an Nachrichten"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
+          "source": "Maximum messages to receive (1-10)",
+          "message": "Maximale Anzahl zu empfangender Nachrichten (1–10)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.desc": {
+          "source": "The names of message attributes to return. Use \"All\" to return all attributes.",
+          "message": "Die Namen der Nachrichtenattribute, die zurückgegeben werden sollen. Verwenden Sie „All“, um alle Attribute zurückzugeben."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
+          "source": "Message Attribute Names",
+          "message": "Nachrichtenattributnamen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
+          "source": "List of message attribute names to retrieve",
+          "message": "Liste der abzurufenden Nachrichtenattributnamen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, aus der Nachrichten empfangen werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to read from",
+          "message": "Die URL der SQS-Warteschlange, aus der gelesen werden soll"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre SQS-Warteschlange gehostet wird."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for messages to arrive.",
+          "message": "Die Dauer (0–20 Sekunden), die der Aufruf auf das Eintreffen von Nachrichten wartet."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Wartezeit (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time",
+          "message": "Long-Polling-Wartezeit"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The duration for which received messages are hidden from subsequent retrieve requests.",
+          "message": "Die Dauer, für die empfangene Nachrichten vor nachfolgenden Abrufanfragen verborgen werden."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Visibility Timeout (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Override the queue default visibility timeout",
+          "message": "Standard-Visibility-Timeout der Warteschlange überschreiben"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Receive messages from an SQS queue",
+          "message": "Nachrichten aus einer SQS-Warteschlange empfangen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.desc": {
+          "source": "Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes.",
+          "message": "Eine Liste aller Amazon SQS-Warteschlangen in der angegebenen Region mit optionaler Filterung und detaillierten Warteschlangenattributen abrufen."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
+          "source": "List Queues",
+          "message": "Warteschlangen auflisten"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed queue attributes like message counts, timestamps, and configuration settings.",
+          "message": "Gibt an, ob detaillierte Warteschlangenattribute wie Nachrichtenzahlen, Zeitstempel und Konfigurationseinstellungen enthalten sein sollen."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "Attribute einschließen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed queue attributes in the response",
+          "message": "Detaillierte Warteschlangenattribute in die Antwort aufnehmen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "The maximum number of queue results to return (1-1000).",
+          "message": "Die maximale Anzahl zurückzugebender Warteschlangen-Ergebnisse (1–1000)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Max. Ergebnisse"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of queues to return",
+          "message": "Maximale Anzahl zurückzugebender Warteschlangen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.desc": {
+          "source": "Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned.",
+          "message": "Optionales Präfix zum Filtern von Warteschlangennamen. Es werden nur Warteschlangen zurückgegeben, deren Namen mit diesem Präfix beginnen."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
+          "source": "Queue Name Prefix",
+          "message": "Warteschlangen-Namenspräfix"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
+          "source": "Filter queues by name prefix",
+          "message": "Warteschlangen nach Namenspräfix filtern"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region from which to retrieve the list of SQS queues.",
+          "message": "Wählen Sie die AWS-Region aus, aus der die Liste der SQS-Warteschlangen abgerufen werden soll."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to list queues from",
+          "message": "Die AWS-Region, aus der Warteschlangen aufgelistet werden sollen"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
+          "source": "List all SQS queues in a region",
+          "message": "Alle SQS-Warteschlangen in einer Region auflisten"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SQS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Führen Sie einen benutzerdefinierten HTTP- / REST-API-Aufruf an **Amazon SQS** unter Verwendung der Authentifizierung der konfigurierten Verbindung aus.\n\nGeben Sie die HTTP-Methode, den URI-Pfad (relativ zur API-Basis-URL der Verbindung), optionale Abfrageparameter, Header und den Request-Body an. Die Antwort wird als Hash zurückgegeben, der den Statuscode, die Antwort-Header und den Antwort-Body enthält.\n\nVerwenden Sie diese Aktion für Endpunkte, die auf dieser App noch nicht als erstklassige Aktionen bereitgestellt werden."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API-Aufruf ausführen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Der Anfragen-Body. Der effektive Typ hängt von `body_type` ab: JSON/form/YAML erwarten einen Hash, XML/Text erwarten einen String, Multipart erwartet eine Dateistruktur, Binary erwartet Rohbytes."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Body"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Der Anfragen-Body"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Laden Sie eine Datei mit `multipart/form-data` hoch. Der Body muss eine @ref DataProvider::FileDataType \"FileDataType\"-Struktur sein (filename + content + mime_type). Das Framework erstellt die Multipart-Hülle und setzt den Boundary-Header."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart-Formular"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Eine Datei mit multipart/form-data hochladen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Übergeben Sie den Body unverändert an den REST-Client; der Client entscheidet über die Serialisierung basierend auf seiner konfigurierten `data`-Option und dem Werttyp"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Durchreichen; Verbindungsserialisierung verwenden und den REST-Client entscheiden lassen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Senden Sie den Body als Rohbytes. Der Body muss ein Binärwert sein. Setzt `Content-Type: application/octet-stream`, sofern nicht durch `hdr` überschrieben."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Rohbinärdaten"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Body als Rohbytes senden"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serialisieren Sie einen Hash von Formularfeldern als `application/x-www-form-urlencoded`. Der Body muss ein Hash sein, dessen Werte Skalare sind (Strings/Zahlen/Booleans)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formular (URL-kodiert)"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Body als application/x-www-form-urlencoded-Formularfelder serialisieren"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serialisieren Sie den Body als JSON; setzt `Content-Type: application/json`. Der Body sollte ein Hash, eine Liste oder ein Skalarwert sein."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Body als JSON serialisieren"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Senden Sie den Body als Klartext. Der Body muss ein String sein. Setzt `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Klartext"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Body als text/plain senden"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Senden Sie den Body als XML. Wenn der Body ein Hash ist, wird er zu XML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Body als XML senden"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Senden Sie den Body als YAML. Wenn der Body ein Hash ist, wird er zu YAML serialisiert; wenn er ein String ist, wird er wörtlich gesendet. Setzt `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Body als YAML senden"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wählt den Body-Serialisierungsmodus und den entsprechenden Header `Content-Type` aus. Das Ändern dieses Feldes passt den Editor `body` an – die Auswahl von JSON zeigt einen JSON-Editor an, die Auswahl von Multipart Form zeigt eine Dateiauswahl an usw."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Body-Typ"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Wie der Body serialisiert wird und welcher Content-Type gesendet wird"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Wenn `True`, werden Nicht-2xx-HTTP-Antworten als normaler Antwort-Hash (mit dem tatsächlichen Statuscode) zurückgegeben, anstatt `REST-RESPONSE-ERROR` auszulösen. Nützlich für die Behandlung von 4xx/5xx als Daten – z. B. zum Überprüfen, ob eine Ressource existiert. Überschreibt die Einstellung `error_passthru` der Verbindung nur für diesen Aufruf."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Fehler als Daten zurückgeben"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Nicht-2xx-Antworten normal zurückgeben, anstatt eine Exception auszulösen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Optionale Liste von HTTP-Statuscodes, die als Erfolg behandelt werden. Wenn festgelegt und der Antwortstatus nicht in dieser Liste enthalten ist, löst die Aktion `REST-STATUS-ERROR` aus. Wenn nicht festgelegt, gilt das Standardverhalten des REST-Clients (typischerweise: 2xx ist Erfolg, Nicht-2xx löst eine Exception aus)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Erwartete Statuscodes"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Antwort-Statuscodes, die als Erfolg behandelt werden"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash benutzerdefinierter Header, die der Anfrage hinzugefügt werden. Diese überschreiben alle von `body_type` festgelegten Standard-Header (z. B. überschreibt die Angabe von `Content-Type` hier den Standard für den Body-Typ)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Benutzerdefinierte Header"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Zusätzliche Anfrage-Header"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Wenn `True`, enthält der Antwort-Hash einen Sub-Hash `debug`, der die Anfragemethode/URL/Header (mit unkenntlich gemachten sensiblen Werten), Anfrage- und Antwortgrößen sowie die Verarbeitungsdauer enthält. Nützlich bei der Untersuchung langsamer oder fehlschlagender Aufrufe. Standardmäßig deaktiviert, um Antworten schlank zu halten."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Debug-Informationen einschließen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Debug-Informationen zu Anfrage/Laufzeit/Größe in die Antwort einschließen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP-Methode"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Die für die Anfrage zu verwendende HTTP-Methode"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann `{name}`-Platzhalter enthalten, die aus `path_vars` ersetzt werden. Beispiel: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI-Pfad"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Der URI-Pfad relativ zur API-Basis-URL der Verbindung. Kann '{name}'-Platzhalter enthalten, die aus 'path_vars' ersetzt werden. Beispiel: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash von Werten, die in `{name}`-Platzhalter im URI-Pfad eingesetzt werden. Beispiel: Bei `path = /users/{id}` und `path_vars = {id: 123}` sendet das Framework `/users/123`. Werte werden URL-codiert."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Pfadvariablen"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Werte für {name}-Platzhalter im Pfad"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash von Abfragezeichenfolgen-Parametern, die an den URI-Pfad angehängt werden sollen. Werte werden URL-codiert; Listenwerte werden mit `,` zusammengefügt."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Abfrageargumente"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Abfragezeichenfolgen-Parameter"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SQS",
+          "message": "Einen benutzerdefinierten API-Aufruf an Amazon SQS durchführen"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval.",
+          "message": "Überwacht eine Amazon SQS-Warteschlange auf neue Nachrichten und wird ausgelöst, wenn Nachrichten verfügbar sind. Unterstützt Long Polling und das Abrufen von Nachrichtenattributen."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Neue Nachricht"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Die maximale Anzahl an Nachrichten, die zurückgegeben werden sollen (1–10). Beachten Sie, dass möglicherweise weniger Nachrichten zurückgegeben werden."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Maximale Nachrichtenanzahl"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Maximale Anzahl an Nachrichten, die pro Poll empfangen werden sollen"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, aus der Nachrichten empfangen werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "Die URL der zu überwachenden SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre SQS-Warteschlange gehostet wird. Dies bestimmt den für API-Aufrufe verwendeten Endpunkt."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "Die Dauer (0–20 Sekunden), die der Aufruf auf das Eintreffen einer Nachricht in der Warteschlange wartet, bevor er zurückkehrt."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Wartezeit (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Long-Polling-Wartezeit in Sekunden"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in an SQS queue",
+          "message": "Wird ausgelöst, wenn eine neue Nachricht in einer SQS-Warteschlange empfangen wird"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content.",
+          "message": "Überwacht eine Amazon SQS-Warteschlange auf neue Nachrichten, die gültige JSON-Daten enthalten. Wird nur bei Nachrichten mit analysierbarem JSON-Inhalt ausgelöst."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "New JSON Message",
+          "message": "Neue JSON-Nachricht"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Die maximale Anzahl an Nachrichten, die zurückgegeben werden sollen (1–10). Beachten Sie, dass möglicherweise weniger Nachrichten zurückgegeben werden."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Maximale Nachrichtenanzahl"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Maximale Anzahl an Nachrichten, die pro Poll empfangen werden sollen"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive JSON messages.",
+          "message": "Die vollständige URL der Amazon SQS-Warteschlange, aus der JSON-Nachrichten empfangen werden sollen."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "Warteschlangen-URL"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "Die URL der zu überwachenden SQS-Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Wählen Sie die AWS-Region aus, in der Ihre SQS-Warteschlange gehostet wird. Dies bestimmt den für API-Aufrufe verwendeten Endpunkt."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "Die AWS-Region, in der sich die SQS-Warteschlange befindet"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "Die Dauer (0–20 Sekunden), die der Aufruf auf das Eintreffen einer Nachricht in der Warteschlange wartet, bevor er zurückkehrt."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Wartezeit (Sekunden)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Long-Polling-Wartezeit in Sekunden"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Triggers when a new JSON message is received in an SQS queue",
+          "message": "Wird ausgelöst, wenn eine neue JSON-Nachricht in einer SQS-Warteschlange empfangen wird"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.desc": {
+          "source": "Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected.",
+          "message": "Überwacht neu erstellte Amazon SQS-Warteschlangen in der angegebenen Region und wird ausgelöst, wenn neue Warteschlangen erkannt werden."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
+          "source": "New Queue",
+          "message": "Neue Warteschlange"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to monitor for newly created SQS queues.",
+          "message": "Wählen Sie die AWS-Region aus, in der Sie nach neu erstellten SQS-Warteschlangen suchen möchten."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS-Region"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to monitor for new queues",
+          "message": "Die AWS-Region, die auf neue Warteschlangen überwacht werden soll"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
+          "source": "Triggers when a new SQS queue is created",
+          "message": "Wird ausgelöst, wenn eine neue SQS-Warteschlange erstellt wird"
+        },
+        "app.QW1hem9uU1FT.desc": {
+          "source": "The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.",
+          "message": "Die Amazon SQS-Integration bietet umfassende Warteschlangenverwaltungs- und Nachrichtenverarbeitungsfunktionen für den Amazon Simple Queue Service. Erstellen und verwalten Sie Warteschlangen, senden Sie Nachrichten (einschließlich JSON), empfangen Sie Nachrichten mit Polling-Triggern und automatisieren Sie Ihre nachrichtengesteuerten Architekturen mit zuverlässigen, skalierbaren Warteschlangenoperationen."
+        },
+        "app.QW1hem9uU1FT.display_name": {
+          "source": "Amazon SQS",
+          "message": "Amazon SQS"
+        },
+        "app.QW1hem9uU1FT.short_desc": {
+          "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
+          "message": "Stellen Sie eine Verbindung mit dem Amazon Simple Queue Service her, um Nachrichtenwarteschlangen zu verwalten und Nachrichtenverarbeitungs-Workflows zu automatisieren."
+        }
+      }
+    }
+  }
+}

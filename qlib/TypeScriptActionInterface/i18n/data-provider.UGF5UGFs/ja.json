@@ -1,0 +1,3441 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.desc": {
+          "source": "Captures payment for an order that has been approved by the customer. This completes the payment process and transfers funds from the customer to your account. Should be called after receiving order approval or for immediate capture orders.",
+          "message": "顧客によって承認された注文の支払いをキャプチャします。これにより支払いプロセスが完了し、顧客からお客様のアカウントへ資金が移動します。注文の承認を受け取った後、または即時キャプチャ注文に対して呼び出す必要があります。"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.display_name": {
+          "source": "Capture Order",
+          "message": "注文をキャプチャ"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.desc": {
+          "source": "Whether this is the final capture for the order",
+          "message": "これが注文に対する最終キャプチャであるかどうか"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.display_name": {
+          "source": "Final Capture",
+          "message": "最終売上請求"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.ZmluYWxfY2FwdHVyZQ.short_desc": {
+          "source": "Whether this is the final capture for the order",
+          "message": "これが注文に対する最終キャプチャであるかどうか"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.desc": {
+          "source": "The ID of the approved order to capture",
+          "message": "キャプチャする承認済み注文のID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "注文 ID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.b3JkZXJfaWQ.short_desc": {
+          "source": "ID of the approved order to capture",
+          "message": "キャプチャする承認済み注文のID"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.desc": {
+          "source": "Special instructions for processing this payment, such as disbursement timing or platform fee collection.",
+          "message": "支払期日やプラットフォーム手数料の回収など、この支払いを処理するための特別な指示。"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.display_name": {
+          "source": "Payment Instructions",
+          "message": "支払い指示"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.option.cGF5bWVudF9pbnN0cnVjdGlvbg.short_desc": {
+          "source": "Additional payment processing instructions",
+          "message": "追加の支払い処理指示"
+        },
+        "app.UGF5UGFs.action.Y2FwdHVyZV9vcmRlcg.short_desc": {
+          "source": "Capture payment for an approved order",
+          "message": "承認された注文の支払いをキャプチャ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.desc": {
+          "source": "Creates a new PayPal order with specified payment amount, items, shipping details, and payment preferences. Orders represent a payment between two or more parties and can be authorized immediately or captured later. Supports various payment sources including PayPal, cards, and alternative payment methods.",
+          "message": "指定された支払金額、商品、配送詳細、および支払い設定を使用して新しいPayPal注文を作成します。注文は2者間以上の支払いを表し、即時に承認（オーソリ）するか後でキャプチャすることができます。PayPal、カード、および代替決済手段を含むさまざまな支払いソースをサポートします。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.display_name": {
+          "source": "Create Order",
+          "message": "注文を作成"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.desc": {
+          "source": "The URL where customers will be redirected if they cancel the payment process. Should provide information about the cancelled transaction and next steps.",
+          "message": "顧客が支払いプロセスをキャンセルした場合にリダイレクトされるURL。キャンセルされた取引および次のステップに関する情報を提供する必要があります。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.display_name": {
+          "source": "Cancel URL",
+          "message": "キャンセルURL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y2FuY2VsX3VybA.short_desc": {
+          "source": "URL to redirect if payment is cancelled",
+          "message": "支払いがキャンセルされた場合にリダイレクトするURL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "メキシコ・ペソ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "メキシコ・ペソ (MXN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "マレーシア・リンギット - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "マレーシア・リンギット (MYR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "ノルウェー・クローネ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "ノルウェー・クローネ (NOK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "ニュージーランド・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "ニュージーランド・ドル (NZD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "オーストラリア・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "オーストラリア・ドル (AUD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "ブラジル・レアル - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "ブラジル・レアル (BRL)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "カナダ・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "カナダ・ドル (CAD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "スイス・フラン"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "スイス・フラン (CHF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "中国人民元 - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "中国人民元 (CNY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "チェコ・コルナ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "チェコ・コルナ (CZK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "デンマーク・クローネ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "デンマーク・クローネ (DKK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "ユーロ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "ユーロ (EUR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英ポンド"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英ポンド (GBP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "香港ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "香港ドル (HKD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "ハンガリー・フォリント - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "ハンガリー・フォリント (HUF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "イスラエル・新シェケル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "イスラエル・新シェケル (ILS)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日本円 - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日本円 (JPY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "フィリピン・ペソ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "フィリピン・ペソ (PHP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "ポーランド・ズウォティ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "ポーランド・ズウォティ (PLN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "ロシア・ルーブル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "ロシア・ルーブル (RUB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "スウェーデン・クローナ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "スウェーデン・クローナ (SEK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "シンガポール・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "シンガポール・ドル (SGD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "タイ・バーツ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "タイ・バーツ (THB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台湾ドル - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台湾ドル (TWD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "米ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "米ドル (USD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The three-character ISO-4217 currency code that identifies the currency for this transaction. Must be supported by PayPal and match your business account settings.",
+          "message": "この取引の通貨を識別する3文字のISO-4217通貨コード。PayPalによってサポートされており、ビジネスアカウントの設定と一致している必要があります。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "通貨コード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "Three-letter ISO currency code for the transaction",
+          "message": "取引の3文字のISO通貨コード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.desc": {
+          "source": "A custom identifier that you can use to track this order in your own systems. This will be returned in webhooks and API responses.",
+          "message": "自社システム内でこの注文を追跡するために使用できるカスタム識別子。これはWebhookやAPIレスポンスで返されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.display_name": {
+          "source": "Custom ID",
+          "message": "カスタム ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.Y3VzdG9tX2lk.short_desc": {
+          "source": "Your custom identifier for this order",
+          "message": "この注文用のカスタム識別子"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "A brief description of the order that will be visible to the customer during checkout and in their transaction history.",
+          "message": "チェックアウト時および取引履歴で顧客に表示される注文の簡単な説明。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Order Description",
+          "message": "注文の説明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the order or purchase",
+          "message": "注文または購入の説明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.desc": {
+          "source": "The total discount amount applied to this order, including coupon codes, promotions, or bulk discounts. This reduces the overall order total.",
+          "message": "クーポンコード、プロモーション、一括割引など、この注文に適用される割引の合計金額。これにより注文合計金額が減額されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.display_name": {
+          "source": "Discount Amount",
+          "message": "割引額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzY291bnRfYW1vdW50.short_desc": {
+          "source": "Total discount applied to the order",
+          "message": "注文に適用される合計割引額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.allowed-value.c3RyaW5nOkRFTEFZRUQ.display_name": {
+          "source": "Delayed",
+          "message": "遅延"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.allowed-value.c3RyaW5nOklOU1RBTlQ.display_name": {
+          "source": "Instant",
+          "message": "即時"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.desc": {
+          "source": "Controls when captured funds are released to the seller. INSTANT releases funds immediately, while DELAYED allows you to hold funds for verification before release.",
+          "message": "売上確定された資金がいつ売り手に引き渡されるかを制御します。INSTANTは資金を即時に引き渡し、DELAYEDは引き渡し前の確認のために資金を保留できるようにします。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.display_name": {
+          "source": "Disbursement Mode",
+          "message": "支払モード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.ZGlzYnVyc2VtZW50X21vZGU.short_desc": {
+          "source": "When to release funds to the seller",
+          "message": "売り手に資金を引き渡すタイミング"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.desc": {
+          "source": "Additional handling fee charged for processing this order. This covers costs like packaging and order processing.",
+          "message": "この注文の処理に対して請求される追加の手数料。梱包や注文処理などのコストをカバーします。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.display_name": {
+          "source": "Handling Amount",
+          "message": "手数料額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aGFuZGxpbmdfYW1vdW50.short_desc": {
+          "source": "Handling fee for processing this order",
+          "message": "この注文を処理するための手数料"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkFVVEhPUklaRQ.desc": {
+          "source": "The merchant intends to authorize a payment and place funds on hold after the customer makes a payment. Authorized payments are best captured within three days but are available to capture for up to 29 days.",
+          "message": "加盟店は顧客の支払い後に決済を仮売上（オーソリ）し、資金を保留することを意図しています。オーソリされた支払いは3日以内の売上確定が推奨されますが、最大29日間売上確定が可能です。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkFVVEhPUklaRQ.display_name": {
+          "source": "Authorize",
+          "message": "オーソリ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkNBUFRVUkU.desc": {
+          "source": "The merchant intends to capture payment immediately after the customer makes a payment.",
+          "message": "加盟店は顧客の支払い直後に決済を即時売上確定することを意図しています。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.allowed-value.c3RyaW5nOkNBUFRVUkU.display_name": {
+          "source": "Capture",
+          "message": "売上請求"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.desc": {
+          "source": "Determines when the payment will be processed. CAPTURE processes payment immediately after approval, while AUTHORIZE places a hold on funds for up to 29 days, allowing you to capture payment when ready to fulfill the order.",
+          "message": "支払いがいつ処理されるかを決定します。CAPTUREは承認後すぐに支払いを処理し、AUTHORIZEは資金を最大29日間保留して注文の履行準備が整った時点で売上確定できるようにします。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.display_name": {
+          "source": "Payment Intent",
+          "message": "支払いインテント"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW50ZW50.short_desc": {
+          "source": "Whether to capture payment immediately or authorize for later capture",
+          "message": "支払いを即座に売上確定するか、後で売上確定するためにオーソリするか"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.desc": {
+          "source": "The invoice number for this order. Helps match orders with your accounting system and prevents duplicate payments.",
+          "message": "この注文の請求書番号。会計システムとの注文照合に役立ち、二重払いを防ぎます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "請求書ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Invoice number for this order",
+          "message": "この注文の請求書番号"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.desc": {
+          "source": "Optional insurance amount to protect the shipment. This covers the value of items in case of loss or damage during shipping.",
+          "message": "配送を保護するためのオプションの保険金額。配送中の紛失や破損の際に商品の金額を補償します。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.display_name": {
+          "source": "Insurance Amount",
+          "message": "保険金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aW5zdXJhbmNlX2Ftb3VudA.short_desc": {
+          "source": "Insurance cost for this shipment",
+          "message": "この配送の保険費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.desc": {
+          "source": "The total cost of all items in the order before applying taxes, shipping, handling, insurance, or discounts. Should equal the sum of (quantity × unit_amount) for all items.",
+          "message": "税金、送料、手数料、保険、割引を適用する前の、注文内の全商品の合計費用。すべての商品の (quantity × unit_amount) の合計と一致する必要があります。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.display_name": {
+          "source": "Item Total",
+          "message": "商品小計"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbV90b3RhbA.short_desc": {
+          "source": "Total cost of all items before taxes and fees",
+          "message": "税金および手数料適用前の全商品の合計費用"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.desc": {
+          "source": "Array of items included in this order. Each item should specify name, quantity, unit price, and optionally description, SKU, category, and tax amount.",
+          "message": "この注文に含まれる商品の配列。各商品には名前、数量、単価、および必要に応じて説明、SKU、カテゴリ、税額を指定する必要があります。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.display_name": {
+          "source": "Order Items",
+          "message": "注文商品"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.aXRlbXM.short_desc": {
+          "source": "List of items being purchased",
+          "message": "購入される商品のリスト"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.desc": {
+          "source": "The text that appears on the customer's credit card or bank statement. Keep it short and recognizable to avoid chargebacks.",
+          "message": "顧客のクレジットカードまたは銀行の明細書に表示されるテキスト。チャージバックを防ぐために、短く識別しやすい内容にしてください。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.display_name": {
+          "source": "Soft Descriptor",
+          "message": "ソフトディスクリプタ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c29mdF9kZXNjcmlwdG9y.short_desc": {
+          "source": "Text that appears on customer's credit card statement",
+          "message": "顧客のクレジットカード明細書に表示されるテキスト"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.desc": {
+          "source": "The two-character ISO 3166-1 country code for the shipping address.",
+          "message": "配送先住所の2文字のISO 3166-1国コード。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.display_name": {
+          "source": "Shipping Country Code",
+          "message": "配送先国コード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY291bnRyeV9jb2Rl.short_desc": {
+          "source": "Two-letter country code for shipping",
+          "message": "配送用の2文字の国コード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.desc": {
+          "source": "The city where the items will be delivered.",
+          "message": "商品のお届け先市区町村。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.display_name": {
+          "source": "Shipping City",
+          "message": "配送先市区町村"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfY2l0eQ.short_desc": {
+          "source": "City for shipping address",
+          "message": "配送先住所の市区町村"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.desc": {
+          "source": "The shipping cost for delivering the items in this order. This amount is added to the total order amount.",
+          "message": "この注文の商品を配送するための送料。この金額は注文合計金額に追加されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.display_name": {
+          "source": "Shipping Amount",
+          "message": "送料"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYW1vdW50.short_desc": {
+          "source": "Cost of shipping for this order",
+          "message": "この注文の送料"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.desc": {
+          "source": "The first line of the shipping address, typically containing street number and name.",
+          "message": "配送先住所の1行目（通常は番地や通り名など）。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.display_name": {
+          "source": "Shipping Address Line 1",
+          "message": "配送先住所1"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzE.short_desc": {
+          "source": "Primary shipping address",
+          "message": "主要な配送先住所"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.desc": {
+          "source": "Optional second line of the shipping address for apartment numbers, suite numbers, or additional location details.",
+          "message": "アパート・マンション名、部屋番号、またはその他の追加詳細用の配送先住所の2行目（任意）。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.display_name": {
+          "source": "Shipping Address Line 2",
+          "message": "配送先住所2"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfYWRkcmVzc19saW5lXzI.short_desc": {
+          "source": "Secondary shipping address line",
+          "message": "配送先住所2行目"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.desc": {
+          "source": "Any discount applied specifically to shipping costs, such as free shipping promotions or reduced shipping fees for bulk orders.",
+          "message": "送料無料プロモーションやまとめ買いによる送料割引など、送料に特化して適用される割引。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.display_name": {
+          "source": "Shipping Discount",
+          "message": "送料割引"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfZGlzY291bnQ.short_desc": {
+          "source": "Discount applied to shipping costs",
+          "message": "送料に適用される割引"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.desc": {
+          "source": "The complete name of the person who will receive the shipment at the delivery address.",
+          "message": "配送先住所で荷物を受け取る受取人の氏名。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.display_name": {
+          "source": "Shipping Name",
+          "message": "配送先氏名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfbmFtZQ.short_desc": {
+          "source": "Full name for shipping address",
+          "message": "配送先住所の氏名（フルネーム）"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.desc": {
+          "source": "The state, province, or region for the shipping address. Use appropriate codes for the country.",
+          "message": "配送先住所の都道府県、州、または地域。国に適したコードを使用してください。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.display_name": {
+          "source": "Shipping State",
+          "message": "配送先都道府県/州"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfc3RhdGU.short_desc": {
+          "source": "State or province for shipping",
+          "message": "配送先の都道府県または州"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.desc": {
+          "source": "The ZIP code, postal code, or equivalent for the shipping address.",
+          "message": "配送先住所の郵便番号またはそれに相当するもの。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.display_name": {
+          "source": "Shipping Postal Code",
+          "message": "配送先郵便番号"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfcG9zdGFsX2NvZGU.short_desc": {
+          "source": "ZIP or postal code for shipping",
+          "message": "配送用の郵便番号"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.allowed-value.c3RyaW5nOlBJQ0tVUF9JTl9QRVJTT04.display_name": {
+          "source": "Pickup in Person",
+          "message": "直接受け取り"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.allowed-value.c3RyaW5nOlNISVBQSU5H.display_name": {
+          "source": "Shipping",
+          "message": "配送"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.desc": {
+          "source": "Specifies how the items will be delivered to the customer. Affects shipping costs and delivery timeline.",
+          "message": "顧客へ商品がどのように配送されるかを指定します。配送料および配達日程に影響します。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.display_name": {
+          "source": "Shipping Type",
+          "message": "配送タイプ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.c2hpcHBpbmdfdHlwZQ.short_desc": {
+          "source": "Method of delivery for this order",
+          "message": "この注文の配送方法"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.desc": {
+          "source": "The email address of the merchant or seller who will receive the payment. Required for marketplace transactions or when specifying a different recipient.",
+          "message": "支払いを受け取る加盟店または販売者のメールアドレス。マーケットプレイス取引や別の受取人を指定する場合に必要です。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.display_name": {
+          "source": "Payee Email",
+          "message": "受取人のメールアドレス"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfZW1haWw.short_desc": {
+          "source": "Email address of the payment recipient",
+          "message": "支払い受取人のメールアドレス"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.desc": {
+          "source": "The PayPal merchant ID of the account that will receive the payment. Used for marketplace transactions or when routing payments to specific merchants.",
+          "message": "支払いを受け取るアカウントのPayPal加盟店ID。マーケットプレイス取引や特定の加盟店に支払いをルーティングする場合に使用されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.display_name": {
+          "source": "Payee Merchant ID",
+          "message": "受取人の加盟店ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGF5ZWVfbWVyY2hhbnRfaWQ.short_desc": {
+          "source": "PayPal merchant ID of the payment recipient",
+          "message": "支払い受取人のPayPal加盟店ID"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.desc": {
+          "source": "Array of platform fees to be collected on this transaction. Used by marketplaces to collect fees from transactions processed on their platform.",
+          "message": "この取引で徴収されるプラットフォーム手数料の配列。マーケットプレイスがプラットフォーム上で処理された取引から手数料を徴収するために使用されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.display_name": {
+          "source": "Platform Fees",
+          "message": "プラットフォーム手数料"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cGxhdGZvcm1fZmVlcw.short_desc": {
+          "source": "Fees collected by the platform",
+          "message": "プラットフォームによって徴収される手数料"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.desc": {
+          "source": "The URL where customers will be redirected after successfully completing their payment. Should be a page confirming the successful transaction.",
+          "message": "支払いが正常に完了した後に顧客がリダイレクトされるURL。取引の成功を確認するページにする必要があります。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.display_name": {
+          "source": "Return URL",
+          "message": "リターンURL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.cmV0dXJuX3VybA.short_desc": {
+          "source": "URL to redirect after successful payment",
+          "message": "支払い成功後にリダイレクトするURL"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.desc": {
+          "source": "The total amount for this order. Must be a positive number and match the sum of all breakdown components if provided. Format as a string with appropriate decimal precision for the currency.",
+          "message": "この注文の合計金額。正の数である必要があり、内訳コンポーネントが指定されている場合はその合計と一致する必要があります。通貨に応じた適切な小数点精度の文字列としてフォーマットします。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.display_name": {
+          "source": "Total Amount",
+          "message": "合計金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dG90YWxfYW1vdW50.short_desc": {
+          "source": "Total payment amount as a string",
+          "message": "文字列としての支払い合計金額"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.desc": {
+          "source": "The total tax amount for all items in this order. This includes sales tax, VAT, or other applicable taxes based on the shipping address and local regulations.",
+          "message": "この注文内の全商品の税額合計。これには、配送先住所および現地規制に基づく消費税、VAT、またはその他の適用される税金が含まれます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.display_name": {
+          "source": "Tax Total",
+          "message": "税額合計"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.option.dGF4X3RvdGFs.short_desc": {
+          "source": "Total tax amount for this order",
+          "message": "この注文の税額合計"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX29yZGVy.short_desc": {
+          "source": "Create a new payment order with purchase details",
+          "message": "購入詳細を含む新しい支払い注文を作成します"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.desc": {
+          "source": "Creates a new invoice that can be sent to customers for payment. Includes item details, pricing, tax information, and payment terms. Invoices can be automatically sent to recipients or manually shared.",
+          "message": "支払いのために顧客に送信できる新しい請求書を作成します。品目詳細、価格、税金情報、支払い条件が含まれます。請求書は受取人に自動送信することも、手動で共有することもできます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.display_name": {
+          "source": "Create Invoice",
+          "message": "請求書を作成"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "メキシコ・ペソ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "メキシコ・ペソ (MXN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "マレーシア・リンギット - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "マレーシア・リンギット (MYR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "ノルウェー・クローネ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "ノルウェー・クローネ (NOK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "ニュージーランド・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "ニュージーランド・ドル (NZD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "オーストラリア・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "オーストラリア・ドル (AUD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "ブラジル・レアル - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "ブラジル・レアル (BRL)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "カナダ・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "カナダ・ドル (CAD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "スイス・フラン"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "スイス・フラン (CHF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "中国人民元 - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "中国人民元 (CNY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "チェコ・コルナ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "チェコ・コルナ (CZK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "デンマーク・クローネ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "デンマーク・クローネ (DKK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "ユーロ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "ユーロ (EUR)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英ポンド"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英ポンド (GBP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "香港ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "香港ドル (HKD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "ハンガリー・フォリント - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "ハンガリー・フォリント (HUF)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "イスラエル・新シェケル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "イスラエル・新シェケル (ILS)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日本円 - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日本円 (JPY)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "フィリピン・ペソ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "フィリピン・ペソ (PHP)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "ポーランド・ズウォティ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "ポーランド・ズウォティ (PLN)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "ロシア・ルーブル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "ロシア・ルーブル (RUB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "スウェーデン・クローナ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "スウェーデン・クローナ (SEK)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "シンガポール・ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "シンガポール・ドル (SGD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "タイ・バーツ"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "タイ・バーツ (THB)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台湾ドル - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台湾ドル (TWD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "米ドル"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "米ドル (USD)"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The three-character ISO currency code for this invoice.",
+          "message": "この請求書の3文字のISO通貨コード。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "通貨コード"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "Currency for the invoice amount",
+          "message": "請求金額の通貨"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.desc": {
+          "source": "A unique identifier for this invoice. If not provided, PayPal will generate one automatically.",
+          "message": "この請求書の一意の識別子。指定しない場合、PayPalによって自動生成されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.display_name": {
+          "source": "Invoice Number",
+          "message": "請求書番号"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aW52b2ljZV9udW1iZXI.short_desc": {
+          "source": "Unique invoice number for tracking",
+          "message": "追跡用の一意の請求書番号"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.desc": {
+          "source": "The cost per individual unit of the item or service.",
+          "message": "商品またはサービスの単位あたりの価格。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.display_name": {
+          "source": "Unit Price",
+          "message": "単価"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV91bml0X3ByaWNl.short_desc": {
+          "source": "Price per unit of the item",
+          "message": "商品の単位あたりの価格"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.desc": {
+          "source": "Optional detailed description providing more information about the product or service.",
+          "message": "製品またはサービスに関する詳細情報を提供する任意の詳細説明。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.display_name": {
+          "source": "Item Description",
+          "message": "品目の説明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9kZXNjcmlwdGlvbg.short_desc": {
+          "source": "Detailed description of the item",
+          "message": "品目の詳細な説明"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.desc": {
+          "source": "A descriptive name for the product or service being invoiced.",
+          "message": "請求対象の製品またはサービスの内容を表す名前。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.display_name": {
+          "source": "Item Name",
+          "message": "品目名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9uYW1l.short_desc": {
+          "source": "Name of the item or service",
+          "message": "品目またはサービスの名前"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.desc": {
+          "source": "The quantity of the item being invoiced. Defaults to 1 if not specified.",
+          "message": "請求対象となる品目の数量。指定しない場合のデフォルトは1です。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.display_name": {
+          "source": "Item Quantity",
+          "message": "品目数量"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.aXRlbV9xdWFudGl0eQ.short_desc": {
+          "source": "Number of items or units",
+          "message": "品目数またはユニット数"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.desc": {
+          "source": "Optional note or memo to include with the invoice. Visible to the recipient.",
+          "message": "請求書に含める任意のメモまたは注記。受取人に表示されます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "ノート"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.bm90ZQ.short_desc": {
+          "source": "Note or memo for the invoice",
+          "message": "請求書のメモまたは注記"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.desc": {
+          "source": "If true, the invoice will be automatically sent to the recipient's email address. If false, you can send it manually later.",
+          "message": "trueの場合、請求書は受取人のメールアドレスに自動送信されます。falseの場合、後で手動で送信できます。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.display_name": {
+          "source": "Send to Recipient",
+          "message": "受取人に送信"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.c2VuZF90b19yZWNpcGllbnQ.short_desc": {
+          "source": "Automatically send the invoice via email",
+          "message": "請求書をメールで自動送信"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF80NQ.display_name": {
+          "source": "Net 45 Days",
+          "message": "45日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF82MA.display_name": {
+          "source": "Net 60 Days",
+          "message": "60日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF85MA.display_name": {
+          "source": "Net 90 Days",
+          "message": "90日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8xMA.display_name": {
+          "source": "Net 10 Days",
+          "message": "10日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8xNQ.display_name": {
+          "source": "Net 15 Days",
+          "message": "15日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOk5FVF8zMA.display_name": {
+          "source": "Net 30 Days",
+          "message": "30日以内"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.allowed-value.c3RyaW5nOkRVRV9PTl9SRUNFSVBU.display_name": {
+          "source": "Due on Receipt",
+          "message": "受領時に支払い"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.desc": {
+          "source": "Specifies when payment is due for this invoice, such as immediately upon receipt or within a specific number of days.",
+          "message": "受領時即時または特定の日数以内など、この請求書の支払期日を指定します。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.display_name": {
+          "source": "Payment Terms",
+          "message": "支払条件"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cGF5bWVudF90ZXJt.short_desc": {
+          "source": "When payment is due",
+          "message": "支払期日"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.desc": {
+          "source": "The email address where the invoice will be sent. This is the primary recipient who will receive payment requests.",
+          "message": "請求書が送信されるメールアドレス。支払いリクエストを受け取るメインの受取人です。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.display_name": {
+          "source": "Recipient Email",
+          "message": "受取人のメールアドレス"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2VtYWls.short_desc": {
+          "source": "Email address of the invoice recipient",
+          "message": "請求書受取人のメールアドレス"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.desc": {
+          "source": "The first name of the person or business contact receiving the invoice.",
+          "message": "請求書を受け取る個人またはビジネス担当者の名。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.display_name": {
+          "source": "Recipient First Name",
+          "message": "受取人の名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2ZpcnN0X25hbWU.short_desc": {
+          "source": "First name of the invoice recipient",
+          "message": "請求書受取人の名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.desc": {
+          "source": "The last name of the person receiving the invoice.",
+          "message": "請求書を受け取る個人の姓。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.display_name": {
+          "source": "Recipient Last Name",
+          "message": "受取人の姓"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.cmVjaXBpZW50X2xhc3RfbmFtZQ.short_desc": {
+          "source": "Last name of the invoice recipient",
+          "message": "請求書受取人の姓"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.desc": {
+          "source": "A descriptive name for the tax being applied, such as \"Sales Tax\", \"VAT\", or \"GST\".",
+          "message": "「売上税」、「VAT」、「GST」など、適用される税の説明的な名称。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.display_name": {
+          "source": "Tax Name",
+          "message": "税名"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X25hbWU.short_desc": {
+          "source": "Name for the tax (e.g., \"Sales Tax\")",
+          "message": "税の名称（例：「売上税」）"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.desc": {
+          "source": "The tax rate as a percentage to be applied to the item amount.",
+          "message": "品目金額に適用されるパーセンテージ表記の税率。"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.display_name": {
+          "source": "Tax Percentage",
+          "message": "税率（パーセンテージ）"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.option.dGF4X3BlcmNlbnQ.short_desc": {
+          "source": "Tax rate to apply to the item",
+          "message": "品目に適用する税率"
+        },
+        "app.UGF5UGFs.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
+          "source": "Create a new invoice for payment",
+          "message": "支払用の新規請求書を作成"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.desc": {
+          "source": "Authorizes payment for an order that has been approved by the customer. This places a hold on the funds without capturing them, allowing you to capture the payment later when ready to fulfill the order. Authorization is valid for up to 29 days.",
+          "message": "顧客によって承認された注文の支払いを承認（オーソリ）します。これにより資金を売上確定せずに確保し、注文を処理する準備ができた後で支払いをキャプチャ（売上確定）できます。承認は最大29日間有効です。"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.display_name": {
+          "source": "Authorize Order",
+          "message": "注文の承認（オーソリ）"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.desc": {
+          "source": "The ID of the approved order to capture",
+          "message": "キャプチャする承認済み注文のID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "注文 ID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.option.b3JkZXJfaWQ.short_desc": {
+          "source": "ID of the approved order to authorize",
+          "message": "オーソリ対象の承認済み注文のID"
+        },
+        "app.UGF5UGFs.action.YXV0aG9yaXplX29yZGVy.short_desc": {
+          "source": "Authorize payment for an approved order",
+          "message": "承認済み注文の支払いをオーソリ"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.desc": {
+          "source": "Retrieves complete details for an order by its ID, including current status, payment information, customer details, and transaction history. Use this to check order status or retrieve information for order management.",
+          "message": "IDによって注文の完全な詳細（現在のステータス、支払い情報、顧客の詳細、取引履歴など）を取得します。注文ステータスの確認や注文管理のための情報取得に使用します。"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.display_name": {
+          "source": "Get Order",
+          "message": "注文を取得"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.desc": {
+          "source": "The unique identifier of the order you want to retrieve details for.",
+          "message": "詳細を取得する注文の一意の識別子。"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "注文 ID"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique identifier of the order to retrieve",
+          "message": "取得する注文の一意の識別子"
+        },
+        "app.UGF5UGFs.action.Z2V0X29yZGVy.short_desc": {
+          "source": "Retrieve order details by ID",
+          "message": "IDで注文の詳細を取得"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.desc": {
+          "source": "Retrieves complete details for an invoice by its ID, including payment status, recipient information, line items, and payment history.",
+          "message": "IDによって請求書の完全な詳細（支払いステータス、受取人情報、明細行、支払い履歴など）を取得します。"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.display_name": {
+          "source": "Get Invoice",
+          "message": "請求書を取得"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.desc": {
+          "source": "The unique identifier of the invoice you want to retrieve details for.",
+          "message": "詳細を取得する請求書の一意の識別子。"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "請求書ID"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Unique identifier of the invoice to retrieve",
+          "message": "取得する請求書の一意の識別子"
+        },
+        "app.UGF5UGFs.action.Z2V0X2ludm9pY2U.short_desc": {
+          "source": "Retrieve invoice details by ID",
+          "message": "IDで請求書の詳細を取得"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.desc": {
+          "source": "Triggers when customer dispute events occur, such as when a new dispute is created, updated, or resolved. Essential for managing customer service workflows and responding to payment disputes promptly.",
+          "message": "新しい異議申し立ての作成、更新、解決など、顧客の異議申し立てイベントが発生したときにトリガーされます。カスタマーサービスワークフローの管理や支払いの異議申し立てへの迅速な対応に不可欠です。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.display_name": {
+          "source": "Dispute Events",
+          "message": "異議申し立てイベント"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuQ1JFQVRFRA.desc": {
+          "source": "A dispute is created.",
+          "message": "異議申し立てが作成されました。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuQ1JFQVRFRA.display_name": {
+          "source": "Dispute Created",
+          "message": "異議申し立て作成"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuUkVTT0xWRUQ.desc": {
+          "source": "A dispute is resolved.",
+          "message": "異議申し立てが解決されました。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuUkVTT0xWRUQ.display_name": {
+          "source": "Dispute Resolved",
+          "message": "異議申し立て解決"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuVVBEQVRFRA.desc": {
+          "source": "A dispute is updated.",
+          "message": "異議申し立てが更新されました。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNVU1RPTUVSLkRJU1BVVEUuVVBEQVRFRA.display_name": {
+          "source": "Dispute Updated",
+          "message": "異議申し立て更新"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which dispute event should trigger this webhook. Each event represents a different stage in the dispute resolution process.",
+          "message": "このWebhookをトリガーする異議申し立てイベントを選択します。各イベントは、異議解決プロセスの異なる段階を表します。"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Dispute Event Type",
+          "message": "異議申し立てイベントタイプ"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific dispute event to listen for",
+          "message": "リッスンする特定の異議申し立てイベント"
+        },
+        "app.UGF5UGFs.action.ZGlzcHV0ZV90cmlnZ2Vy.short_desc": {
+          "source": "Receive notifications when dispute events occur",
+          "message": "異議申し立てイベント発生時に通知を受信"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.desc": {
+          "source": "Triggers when invoice-related events happen, such as when an invoice is created, paid, cancelled, refunded, or updated. Essential for managing billing workflows and keeping invoice status synchronized with your systems.",
+          "message": "請求書の作成、支払い、キャンセル、返金、更新など、請求書関連のイベントが発生したときにトリガーされます。請求ワークフローの管理や、請求書ステータスとシステムの同期維持に不可欠です。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
+          "source": "Invoice Events",
+          "message": "請求書イベント"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNBTkNFTExFRA.desc": {
+          "source": "A merchant or customer cancels an invoice.",
+          "message": "加盟店または顧客が請求書をキャンセルしました。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNBTkNFTExFRA.display_name": {
+          "source": "Invoice Cancelled",
+          "message": "請求書キャンセル"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNSRUFURUQ.desc": {
+          "source": "An invoice is created.",
+          "message": "請求書が作成されました。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLkNSRUFURUQ.display_name": {
+          "source": "Invoice Created",
+          "message": "請求書作成"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlBBSUQ.desc": {
+          "source": "An invoice is paid, partially paid, or payment is made and is pending.",
+          "message": "請求書が支払われたか、一部支払われたか、支払いが実行され保留中になっています。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlBBSUQ.display_name": {
+          "source": "Invoice Paid",
+          "message": "請求書支払い完了"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlJFRlVOREVE.desc": {
+          "source": "An invoice is refunded or partially refunded.",
+          "message": "請求書が返金または一部返金されました。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlJFRlVOREVE.display_name": {
+          "source": "Invoice Refunded",
+          "message": "請求書返金"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlNDSEVEVUxFRA.desc": {
+          "source": "An invoice is scheduled.",
+          "message": "請求書がスケジュール設定されました。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlNDSEVEVUxFRA.display_name": {
+          "source": "Invoice Scheduled",
+          "message": "請求書スケジュール設定"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlVQREFURUQ.desc": {
+          "source": "An invoice is updated.",
+          "message": "請求書が更新されました。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOklOVk9JQ0lORy5JTlZPSUNFLlVQREFURUQ.display_name": {
+          "source": "Invoice Updated",
+          "message": "請求書更新"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which invoice event should trigger this webhook. Each event represents a different stage in the invoice lifecycle.",
+          "message": "このWebhookをトリガーする請求書イベントを選択します。各イベントは、請求書ライフサイクルの異なる段階を表します。"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Invoice Event Type",
+          "message": "請求書イベントタイプ"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific invoice event to listen for",
+          "message": "リッスンする特定の請求書イベント"
+        },
+        "app.UGF5UGFs.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
+          "source": "Receive notifications when invoice events occur",
+          "message": "請求書イベント発生時に通知を受信"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.desc": {
+          "source": "Triggers when specific order-related events happen, such as when an order is approved by the customer, completed, or when payment approval is reversed. Use this to automate order processing workflows and handle order status changes.",
+          "message": "顧客による注文の承認、完了、支払い承認の取り消しなど、特定の注文関連イベントが発生したときにトリガーされます。注文処理ワークフローの自動化や注文ステータスの変更処理に使用します。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.display_name": {
+          "source": "Order Events",
+          "message": "注文イベント"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkFQUFJPVkVE.desc": {
+          "source": "A buyer approved a checkout order.",
+          "message": "購入者がチェックアウト注文を承認しました。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkFQUFJPVkVE.display_name": {
+          "source": "Order Approved",
+          "message": "注文承認"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkNPTVBMRVRFRA.desc": {
+          "source": "A checkout order is processed.",
+          "message": "チェックアウト注文が処理されました。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULk9SREVSLkNPTVBMRVRFRA.display_name": {
+          "source": "Order Completed",
+          "message": "注文完了"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULlBBWU1FTlQtQVBQUk9WQUwuUkVWRVJTRUQ.desc": {
+          "source": "A problem occurred after the buyer approved the order but before you captured the payment.",
+          "message": "購入者が注文を承認した後、支払いをキャプチャする前に問題が発生しました。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkNIRUNLT1VULlBBWU1FTlQtQVBQUk9WQUwuUkVWRVJTRUQ.display_name": {
+          "source": "Payment Approval Reversed",
+          "message": "支払い承認の取り消し"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which order event should trigger this webhook. Each event represents a different stage in the order lifecycle.",
+          "message": "このWebhookをトリガーする注文イベントを選択します。各イベントは、注文ライフサイクルの異なる段階を表します。"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Order Event Type",
+          "message": "注文イベントタイプ"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific order event to listen for",
+          "message": "リッスンする特定の注文イベント"
+        },
+        "app.UGF5UGFs.action.b3JkZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Receive notifications when order events occur",
+          "message": "注文イベント発生時に通知を受信"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.desc": {
+          "source": "Retrieves a list of transactions for your PayPal account within a specified date range. Supports filtering by transaction type, status, amount range, currency, and payment method to help you find specific transactions or generate reports.",
+          "message": "指定された日付範囲内のPayPalアカウントの取引一覧を取得します。取引タイプ、ステータス、金額範囲、通貨、支払い方法によるフィルタリングに対応しており、特定の取引の検索やレポート作成に役立ちます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.display_name": {
+          "source": "List Transactions",
+          "message": "取引一覧"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.desc": {
+          "source": "The latest date to include in the transaction search. Transactions on or before this date will be included in the results.",
+          "message": "取引検索に含める最新の日付です。この日付以前の取引が結果に含まれます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "終了日"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Ending date for transaction search",
+          "message": "取引検索の終了日"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "The earliest date to include in the transaction search. Transactions on or after this date will be included in the results.",
+          "message": "取引検索に含める最も古い日付です。この日付以降の取引が結果に含まれます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "開始日"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Beginning date for transaction search",
+          "message": "取引検索の開始日"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.allowed-value.c3RyaW5nOkNSRURJVENBUkQ.display_name": {
+          "source": "Credit Card",
+          "message": "クレジットカード"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.allowed-value.c3RyaW5nOkRFQklUQ0FSRA.display_name": {
+          "source": "Debit Card",
+          "message": "デビットカード"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.desc": {
+          "source": "Filter transactions by the type of payment method used, such as credit card, debit card, or bank account.",
+          "message": "クレジットカード、デビットカード、銀行口座など、使用された支払い方法のタイプで取引を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.display_name": {
+          "source": "Payment Method Type",
+          "message": "支払い方法タイプ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGF5bWVudF9pbnN0cnVtZW50X3R5cGU.short_desc": {
+          "source": "Filter by payment method used",
+          "message": "使用された支払い方法で絞り込み"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve when paginating through large result sets.",
+          "message": "大規模な結果セットをページ分割して取得する際のページ番号です。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "ページ番号"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of transactions to return in a single response. Use for pagination of large result sets.",
+          "message": "1回のレスポンスで返す取引の最大数です。大規模な結果セットのページネーションに使用します。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of transactions per page",
+          "message": "1ページあたりの取引数"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1YTg.desc": {
+          "source": "Mexican peso",
+          "message": "メキシコ・ペソ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1YTg.display_name": {
+          "source": "Mexican Peso (MXN)",
+          "message": "メキシコ・ペソ (MXN)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1ZUg.desc": {
+          "source": "Malaysian ringgit - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "マレーシア・リンギット - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk1ZUg.display_name": {
+          "source": "Malaysian Ringgit (MYR)",
+          "message": "マレーシア・リンギット (MYR)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5PSw.desc": {
+          "source": "Norwegian krone",
+          "message": "ノルウェー・クローネ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5PSw.display_name": {
+          "source": "Norwegian Krone (NOK)",
+          "message": "ノルウェー・クローネ (NOK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5aRA.desc": {
+          "source": "New Zealand dollar",
+          "message": "ニュージーランド・ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOk5aRA.display_name": {
+          "source": "New Zealand Dollar (NZD)",
+          "message": "ニュージーランド・ドル (NZD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkFVRA.desc": {
+          "source": "Australian dollar",
+          "message": "オーストラリア・ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkFVRA.display_name": {
+          "source": "Australian Dollar (AUD)",
+          "message": "オーストラリア・ドル (AUD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkJSTA.desc": {
+          "source": "Brazilian real - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "ブラジル・レアル - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkJSTA.display_name": {
+          "source": "Brazilian Real (BRL)",
+          "message": "ブラジル・レアル (BRL)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNBRA.desc": {
+          "source": "Canadian dollar",
+          "message": "カナダ・ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNBRA.display_name": {
+          "source": "Canadian Dollar (CAD)",
+          "message": "カナダ・ドル (CAD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNIRg.desc": {
+          "source": "Swiss franc",
+          "message": "スイス・フラン"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNIRg.display_name": {
+          "source": "Swiss Franc (CHF)",
+          "message": "スイス・フラン (CHF)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNOWQ.desc": {
+          "source": "Chinese Renminbi - supported as payment currency and currency balance for in-country PayPal accounts only",
+          "message": "中国人民元 - 国内PayPalアカウントの支払い通貨および通貨残高としてのみサポートされています"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNOWQ.display_name": {
+          "source": "Chinese Renminbi (CNY)",
+          "message": "中国人民元 (CNY)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNaSw.desc": {
+          "source": "Czech koruna",
+          "message": "チェコ・コルナ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkNaSw.display_name": {
+          "source": "Czech Koruna (CZK)",
+          "message": "チェコ・コルナ (CZK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkRLSw.desc": {
+          "source": "Danish krone",
+          "message": "デンマーク・クローネ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkRLSw.display_name": {
+          "source": "Danish Krone (DKK)",
+          "message": "デンマーク・クローネ (DKK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkVVUg.desc": {
+          "source": "Euro",
+          "message": "ユーロ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkVVUg.display_name": {
+          "source": "Euro (EUR)",
+          "message": "ユーロ (EUR)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkdCUA.desc": {
+          "source": "Pound sterling",
+          "message": "英ポンド"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkdCUA.display_name": {
+          "source": "Pound Sterling (GBP)",
+          "message": "英ポンド (GBP)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhLRA.desc": {
+          "source": "Hong Kong dollar",
+          "message": "香港ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhLRA.display_name": {
+          "source": "Hong Kong Dollar (HKD)",
+          "message": "香港ドル (HKD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhVRg.desc": {
+          "source": "Hungarian forint - does not support decimals",
+          "message": "ハンガリー・フォリント - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkhVRg.display_name": {
+          "source": "Hungarian Forint (HUF)",
+          "message": "ハンガリー・フォリント (HUF)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOklMUw.desc": {
+          "source": "Israeli new shekel",
+          "message": "イスラエル・新シェケル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOklMUw.display_name": {
+          "source": "Israeli New Shekel (ILS)",
+          "message": "イスラエル・新シェケル (ILS)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkpQWQ.desc": {
+          "source": "Japanese yen - does not support decimals",
+          "message": "日本円 - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOkpQWQ.display_name": {
+          "source": "Japanese Yen (JPY)",
+          "message": "日本円 (JPY)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBIUA.desc": {
+          "source": "Philippine peso",
+          "message": "フィリピン・ペソ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBIUA.display_name": {
+          "source": "Philippine Peso (PHP)",
+          "message": "フィリピン・ペソ (PHP)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBMTg.desc": {
+          "source": "Polish złoty",
+          "message": "ポーランド・ズウォティ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlBMTg.display_name": {
+          "source": "Polish Złoty (PLN)",
+          "message": "ポーランド・ズウォティ (PLN)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlJVQg.desc": {
+          "source": "Russian ruble",
+          "message": "ロシア・ルーブル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlJVQg.display_name": {
+          "source": "Russian Ruble (RUB)",
+          "message": "ロシア・ルーブル (RUB)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNFSw.desc": {
+          "source": "Swedish krona",
+          "message": "スウェーデン・クローナ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNFSw.display_name": {
+          "source": "Swedish Krona (SEK)",
+          "message": "スウェーデン・クローナ (SEK)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNHRA.desc": {
+          "source": "Singapore dollar",
+          "message": "シンガポール・ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlNHRA.display_name": {
+          "source": "Singapore Dollar (SGD)",
+          "message": "シンガポール・ドル (SGD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRIQg.desc": {
+          "source": "Thai baht",
+          "message": "タイ・バーツ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRIQg.display_name": {
+          "source": "Thai Baht (THB)",
+          "message": "タイ・バーツ (THB)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRXRA.desc": {
+          "source": "New Taiwan dollar - does not support decimals",
+          "message": "新台湾ドル - 小数点以下はサポートされていません"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlRXRA.display_name": {
+          "source": "New Taiwan Dollar (TWD)",
+          "message": "新台湾ドル (TWD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlVTRA.desc": {
+          "source": "United States dollar",
+          "message": "米ドル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.allowed-value.c3RyaW5nOlVTRA.display_name": {
+          "source": "United States Dollar (USD)",
+          "message": "米ドル (USD)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.desc": {
+          "source": "Filter transactions by currency code to see only transactions in specific currencies.",
+          "message": "特定の通貨の取引のみを表示するために、通貨コードで取引を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.display_name": {
+          "source": "Transaction Currency",
+          "message": "取引通貨"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fY3VycmVuY3k.short_desc": {
+          "source": "Filter by currency code",
+          "message": "通貨コードで絞り込み"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.desc": {
+          "source": "Specify a range of transaction amounts to filter results. Useful for finding transactions within specific value ranges.",
+          "message": "結果を絞り込むための取引金額の範囲を指定します。特定の金額範囲内の取引を見つけるのに役立ちます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.display_name": {
+          "source": "Transaction Amount Range",
+          "message": "取引金額の範囲"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fYW1vdW50.short_desc": {
+          "source": "Filter by transaction amount range",
+          "message": "取引金額の範囲で絞り込み"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOkQ.display_name": {
+          "source": "Denied",
+          "message": "却下済み"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlA.display_name": {
+          "source": "Pending",
+          "message": "保留中"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlM.desc": {
+          "source": "The transaction successfully completed without a denial and after any pending statuses.",
+          "message": "取引は拒否されることなく、保留状態を経て正常に完了しました。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlM.display_name": {
+          "source": "Success",
+          "message": "成功"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlY.desc": {
+          "source": "A successful transaction was reversed and funds were refunded to the original sender.",
+          "message": "成功した取引が取り消され、資金が元の送信者に返金されました。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.allowed-value.c3RyaW5nOlY.display_name": {
+          "source": "Refunded",
+          "message": "返金済み"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.desc": {
+          "source": "Filter transactions by their processing status such as Success, Pending, Denied, or Refunded.",
+          "message": "成功、保留中、拒否、返金済みなどの処理ステータスで取引を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.display_name": {
+          "source": "Transaction Status",
+          "message": "取引ステータス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fc3RhdHVz.short_desc": {
+          "source": "Status of transactions to include",
+          "message": "含める取引のステータス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAw.desc": {
+          "source": "Deferred disbursement. Funds collected for disbursement.",
+          "message": "繰延支払い。支払いのために回収された資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAw.display_name": {
+          "source": "Deferred Disbursement",
+          "message": "繰延支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAx.desc": {
+          "source": "Delayed disbursement. Funds disbursed.",
+          "message": "遅延支払い。支払われた資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ1MDAx.display_name": {
+          "source": "Delayed Disbursement",
+          "message": "遅延支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAw.desc": {
+          "source": "Account receivable for shipping.",
+          "message": "配送の売掛金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAw.display_name": {
+          "source": "Account Receivable for Shipping",
+          "message": "配送の売掛金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAx.desc": {
+          "source": "Funds payable. PayPal-provided funds that must be paid back.",
+          "message": "買掛金。返済が必要なPayPal提供の資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAx.display_name": {
+          "source": "Funds Payable",
+          "message": "買掛金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAy.desc": {
+          "source": "Funds receivable. PayPal-provided funds that are being paid back.",
+          "message": "売掛金。返済中のPayPal提供の資金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5NzAy.display_name": {
+          "source": "Funds Receivable",
+          "message": "売掛金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5ODAw.desc": {
+          "source": "Display only transaction.",
+          "message": "表示専用の取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5ODAw.display_name": {
+          "source": "Display Only Transaction",
+          "message": "表示専用取引"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5OTAw.desc": {
+          "source": "Other.",
+          "message": "その他。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQ5OTAw.display_name": {
+          "source": "Other",
+          "message": "その他"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA0.desc": {
+          "source": "eBay auction payment.",
+          "message": "eBayオークションの支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA0.display_name": {
+          "source": "eBay Auction Payment",
+          "message": "eBayオークション支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA1.desc": {
+          "source": "Direct payment API.",
+          "message": "ダイレクトペイメントAPI。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA1.display_name": {
+          "source": "Direct Payment API",
+          "message": "ダイレクトペイメントAPI"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA2.desc": {
+          "source": "PayPal Checkout APIs.",
+          "message": "PayPal Checkout API。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA2.display_name": {
+          "source": "PayPal Checkout APIs",
+          "message": "PayPal Checkout API"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA3.desc": {
+          "source": "Website payments standard payment.",
+          "message": "ウェブペイメントスタンダードの支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA3.display_name": {
+          "source": "Website Payments Standard",
+          "message": "ウェブペイメントスタンダード"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA4.desc": {
+          "source": "Postage payment to carrier.",
+          "message": "配送業者への送料支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA4.display_name": {
+          "source": "Postage Payment",
+          "message": "送料支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA5.desc": {
+          "source": "Gift certificate payment. Purchase of gift certificate.",
+          "message": "ギフト券の支払い。ギフト券の購入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDA5.display_name": {
+          "source": "Gift Certificate Payment",
+          "message": "ギフト券支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAw.desc": {
+          "source": "General: received payment of a type not belonging to the other T00nn categories.",
+          "message": "一般：他のT00nnカテゴリに属さないタイプの受取支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAw.display_name": {
+          "source": "General Payment",
+          "message": "一般支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAx.desc": {
+          "source": "MassPay payment.",
+          "message": "MassPayの支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAx.display_name": {
+          "source": "MassPay Payment",
+          "message": "MassPay支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAy.desc": {
+          "source": "Subscription payment. Either payment sent or payment received.",
+          "message": "定期支払いの支払い。支払いの送信または受取。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAy.display_name": {
+          "source": "Subscription Payment",
+          "message": "定期支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAz.desc": {
+          "source": "Pre-approved payment (BillUser API). Either sent or received.",
+          "message": "事前承認済み支払い（BillUser API）。送信または受取。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDAz.display_name": {
+          "source": "Pre-approved Payment",
+          "message": "事前承認済み支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE0.desc": {
+          "source": "Rebate payments.",
+          "message": "リベート支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE0.display_name": {
+          "source": "Rebate Payments",
+          "message": "リベート支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE1.desc": {
+          "source": "Third-party payout.",
+          "message": "サードパーティへの支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE1.display_name": {
+          "source": "Third-party Payout",
+          "message": "サードパーティ支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE2.desc": {
+          "source": "Third-party recoupment.",
+          "message": "サードパーティ回収。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE2.display_name": {
+          "source": "Third-party Recoupment",
+          "message": "サードパーティ回収"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE3.desc": {
+          "source": "Store-to-store transfers.",
+          "message": "店舗間送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE3.display_name": {
+          "source": "Store-to-store Transfers",
+          "message": "店舗間送金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE4.desc": {
+          "source": "PayPal Here payment.",
+          "message": "PayPal Here決済。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE4.display_name": {
+          "source": "PayPal Here Payment",
+          "message": "PayPal Here決済"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE5.desc": {
+          "source": "Generic instrument-funded payment.",
+          "message": "汎用支払い手段による支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDE5.display_name": {
+          "source": "Generic Instrument-funded Payment",
+          "message": "汎用支払い手段による支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEw.desc": {
+          "source": "Third-party auction payment.",
+          "message": "サードパーティオークション決済。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEw.display_name": {
+          "source": "Third-party Auction Payment",
+          "message": "サードパーティオークション決済"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEx.desc": {
+          "source": "Mobile payment, made through a mobile phone.",
+          "message": "携帯電話で行われたモバイル決済。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEx.display_name": {
+          "source": "Mobile Payment",
+          "message": "モバイル決済"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEy.desc": {
+          "source": "Virtual terminal payment.",
+          "message": "バーチャルターミナル決済。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEy.display_name": {
+          "source": "Virtual Terminal Payment",
+          "message": "バーチャルターミナル決済"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEz.desc": {
+          "source": "Donation payment.",
+          "message": "寄付金の支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDEz.display_name": {
+          "source": "Donation Payment",
+          "message": "寄付金の支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDIx.desc": {
+          "source": "Cryptocurrency payment.",
+          "message": "暗号資産による支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMDIx.display_name": {
+          "source": "Cryptocurrency Payment",
+          "message": "暗号資産による支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA0.desc": {
+          "source": "Mass payment batch fee.",
+          "message": "一括支払いバッチ手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA0.display_name": {
+          "source": "Mass Payment Batch Fee",
+          "message": "一括支払いバッチ手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA1.desc": {
+          "source": "Check withdrawal.",
+          "message": "小切手による引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA1.display_name": {
+          "source": "Check Withdrawal",
+          "message": "小切手による引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA2.desc": {
+          "source": "Chargeback processing fee.",
+          "message": "チャージバック処理手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA2.display_name": {
+          "source": "Chargeback Processing Fee",
+          "message": "チャージバック処理手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA3.desc": {
+          "source": "Payment fee.",
+          "message": "決済手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA3.display_name": {
+          "source": "Payment Fee",
+          "message": "決済手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA4.desc": {
+          "source": "ATM withdrawal.",
+          "message": "ATM引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA4.display_name": {
+          "source": "ATM Withdrawal",
+          "message": "ATM引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA5.desc": {
+          "source": "Auto-sweep from account.",
+          "message": "アカウントからの自動スイープ。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTA5.display_name": {
+          "source": "Auto-sweep from Account",
+          "message": "アカウントからの自動スイープ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAw.desc": {
+          "source": "General non-payment fee of a type not belonging to the other T01nn categories.",
+          "message": "他のT01nnカテゴリに属さない一般的な非支払い手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAw.display_name": {
+          "source": "General Non-payment Fee",
+          "message": "一般的な非支払い手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAx.desc": {
+          "source": "Website payments. Pro account monthly fee.",
+          "message": "ウェブサイト決済。Proアカウント月額手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAx.display_name": {
+          "source": "Website Payments Pro Fee",
+          "message": "ウェブサイト決済Pro手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAy.desc": {
+          "source": "Foreign bank withdrawal fee.",
+          "message": "外国銀行への引き出し手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAy.display_name": {
+          "source": "Foreign Bank Withdrawal Fee",
+          "message": "外国銀行への引き出し手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAz.desc": {
+          "source": "WorldLink check withdrawal fee.",
+          "message": "WorldLink小切手引き出し手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTAz.display_name": {
+          "source": "WorldLink Check Withdrawal Fee",
+          "message": "WorldLink小切手引き出し手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTE0.desc": {
+          "source": "Dispute fee.",
+          "message": "異議申し立て手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTE0.display_name": {
+          "source": "Dispute Fee",
+          "message": "異議申し立て手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEw.desc": {
+          "source": "International credit card withdrawal.",
+          "message": "国際クレジットカードへの引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEw.display_name": {
+          "source": "International Credit Card Withdrawal",
+          "message": "国際クレジットカードへの引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEx.desc": {
+          "source": "Warranty fee for warranty purchase.",
+          "message": "保証購入に対する保証料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEx.display_name": {
+          "source": "Warranty Fee",
+          "message": "保証料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEy.desc": {
+          "source": "Gift certificate expiration fee.",
+          "message": "ギフト券期限切れ手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEy.display_name": {
+          "source": "Gift Certificate Expiration Fee",
+          "message": "ギフト券期限切れ手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEz.desc": {
+          "source": "Partner fee.",
+          "message": "パートナー手数料。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMTEz.display_name": {
+          "source": "Partner Fee",
+          "message": "パートナー手数料"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAw.desc": {
+          "source": "General currency conversion.",
+          "message": "一般的な通貨換算。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAw.display_name": {
+          "source": "General Currency Conversion",
+          "message": "一般的な通貨換算"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAx.desc": {
+          "source": "User-initiated currency conversion.",
+          "message": "ユーザー主導の通貨換算。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAx.display_name": {
+          "source": "User-initiated Currency Conversion",
+          "message": "ユーザー主導の通貨換算"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAy.desc": {
+          "source": "Currency conversion required to cover negative balance. PayPal-system generated.",
+          "message": "マイナス残高を補填するために必要な通貨換算。PayPalシステムにより生成。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMjAy.display_name": {
+          "source": "System Currency Conversion",
+          "message": "システムによる通貨換算"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAw.desc": {
+          "source": "General funding of PayPal account. Deposit to PayPal balance from a bank account.",
+          "message": "PayPalアカウントへの一般的な資金追加。銀行口座からPayPal残高への入金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAw.display_name": {
+          "source": "General Bank Deposit",
+          "message": "一般的な銀行入金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAx.desc": {
+          "source": "PayPal balance manager funding of PayPal account. PayPal-system generated.",
+          "message": "PayPal残高マネージャーによるPayPalアカウントへの資金追加。PayPalシステムにより生成。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAx.display_name": {
+          "source": "Balance Manager Funding",
+          "message": "残高マネージャーによる資金追加"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAy.desc": {
+          "source": "ACH funding for funds recovery from account balance.",
+          "message": "アカウント残高からの資金回収のためのACH資金調達。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAy.display_name": {
+          "source": "ACH Funding Recovery",
+          "message": "ACH資金回収"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAz.desc": {
+          "source": "Electronic funds transfer (EFT) (German banking).",
+          "message": "電子資金振替(EFT) (ドイツの銀行取引)。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwMzAz.display_name": {
+          "source": "Electronic Funds Transfer",
+          "message": "電子資金振替"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAw.desc": {
+          "source": "General withdrawal from PayPal account. Settlement withdrawal or user-initiated.",
+          "message": "PayPalアカウントからの一般的な引き出し。決済引き出しまたはユーザー主導。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAw.display_name": {
+          "source": "General Bank Withdrawal",
+          "message": "一般的な銀行引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAx.desc": {
+          "source": "AutoSweep.",
+          "message": "AutoSweep。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAx.display_name": {
+          "source": "AutoSweep",
+          "message": "AutoSweep"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAz.desc": {
+          "source": "You initiated a transfer from your PayPal balance to your bank account.",
+          "message": "PayPal残高から銀行口座への送金を開始しました。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNDAz.display_name": {
+          "source": "Bank Transfer",
+          "message": "銀行送金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA0.desc": {
+          "source": "PayPal debit card cash advance.",
+          "message": "PayPalデビットカードのキャッシング。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA0.display_name": {
+          "source": "Debit Card Cash Advance",
+          "message": "デビットカードのキャッシング"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA1.desc": {
+          "source": "PayPal debit authorization.",
+          "message": "PayPalデビットの承認。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTA1.display_name": {
+          "source": "Debit Authorization",
+          "message": "デビット承認"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAw.desc": {
+          "source": "General PayPal debit card transaction.",
+          "message": "一般的なPayPalデビットカード取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAw.display_name": {
+          "source": "General Debit Card Transaction",
+          "message": "一般的なデビットカード取引"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAx.desc": {
+          "source": "Virtual PayPal debit card transaction.",
+          "message": "バーチャルPayPalデビットカード取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAx.display_name": {
+          "source": "Virtual Debit Card Transaction",
+          "message": "バーチャルデビットカード取引"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAy.desc": {
+          "source": "PayPal debit card withdrawal to ATM.",
+          "message": "PayPalデビットカードによるATM引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAy.display_name": {
+          "source": "Debit Card ATM Withdrawal",
+          "message": "デビットカードATM引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAz.desc": {
+          "source": "Hidden virtual PayPal debit card transaction.",
+          "message": "非表示のバーチャルPayPalデビットカード取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNTAz.display_name": {
+          "source": "Hidden Virtual Debit Card",
+          "message": "非表示のバーチャルデビットカード"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNjAw.desc": {
+          "source": "General credit card withdrawal. Reversal of purchase with a credit card.",
+          "message": "一般的なクレジットカードの引き出し。クレジットカードによる購入の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNjAw.display_name": {
+          "source": "General Credit Card Withdrawal",
+          "message": "一般的なクレジットカード引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAw.desc": {
+          "source": "General credit card deposit. Purchase with a credit card.",
+          "message": "一般的なクレジットカード入金。クレジットカードによる購入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAw.display_name": {
+          "source": "General Credit Card Deposit",
+          "message": "一般的なクレジットカード入金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAx.desc": {
+          "source": "Credit card deposit for negative PayPal account balance.",
+          "message": "PayPalアカウントのマイナス残高に対するクレジットカード入金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwNzAx.display_name": {
+          "source": "Credit Card Negative Balance",
+          "message": "クレジットカードによるマイナス残高入金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA0.desc": {
+          "source": "PayPal buyer warranty bonus.",
+          "message": "PayPalバイヤーワランティボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA0.display_name": {
+          "source": "Buyer Warranty Bonus",
+          "message": "バイヤーワランティボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA1.desc": {
+          "source": "PayPal protection bonus, payout for PayPal buyer protection.",
+          "message": "PayPalプロテクションボーナス（PayPal買い手保護制度による支払い）。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA1.display_name": {
+          "source": "Protection Bonus",
+          "message": "プロテクションボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA2.desc": {
+          "source": "Bonus for first ACH use.",
+          "message": "ACH初回利用ボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA2.display_name": {
+          "source": "First ACH Bonus",
+          "message": "初回ACHボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA3.desc": {
+          "source": "Credit card security charge refund.",
+          "message": "クレジットカードのセキュリティチャージ返金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA3.display_name": {
+          "source": "Security Charge Refund",
+          "message": "セキュリティチャージ返金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA4.desc": {
+          "source": "Credit card cash back bonus.",
+          "message": "クレジットカードのキャッシュバックボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODA4.display_name": {
+          "source": "Credit Card Cash Back Bonus",
+          "message": "クレジットカードキャッシュバックボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAw.desc": {
+          "source": "General bonus of a type not belonging to the other T08nn categories.",
+          "message": "他のT08nnカテゴリに属さない一般的なボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAw.display_name": {
+          "source": "General Bonus",
+          "message": "一般ボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAx.desc": {
+          "source": "Debit card cash back bonus.",
+          "message": "デビットカードのキャッシュバックボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAx.display_name": {
+          "source": "Debit Card Cash Back Bonus",
+          "message": "デビットカードキャッシュバックボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAy.desc": {
+          "source": "Merchant referral account bonus.",
+          "message": "加盟店紹介アカウントボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAy.display_name": {
+          "source": "Merchant Referral Bonus",
+          "message": "加盟店紹介ボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAz.desc": {
+          "source": "Balance manager account bonus.",
+          "message": "残高管理者アカウントボーナス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwODAz.display_name": {
+          "source": "Balance Manager Bonus",
+          "message": "残高管理者ボーナス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA0.desc": {
+          "source": "eBay loyalty incentive.",
+          "message": "eBayロイヤルティインセンティブ。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA0.display_name": {
+          "source": "eBay Loyalty Incentive",
+          "message": "eBayロイヤルティインセンティブ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA1.desc": {
+          "source": "Offers used as funding source.",
+          "message": "支払い元として使用されたオファー。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTA1.display_name": {
+          "source": "Offers Funding",
+          "message": "オファーによる支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAw.desc": {
+          "source": "General incentive or certificate redemption.",
+          "message": "一般的なインセンティブまたは商品券の利用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAw.display_name": {
+          "source": "General Incentive",
+          "message": "一般インセンティブ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAx.desc": {
+          "source": "Gift certificate redemption.",
+          "message": "ギフト券の利用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAx.display_name": {
+          "source": "Gift Certificate Redemption",
+          "message": "ギフト券利用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAy.desc": {
+          "source": "Points incentive redemption.",
+          "message": "ポイントインセンティブの利用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAy.display_name": {
+          "source": "Points Redemption",
+          "message": "ポイント利用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAz.desc": {
+          "source": "Coupon redemption.",
+          "message": "クーポンの利用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQwOTAz.display_name": {
+          "source": "Coupon Redemption",
+          "message": "クーポン利用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMDAw.desc": {
+          "source": "Bill pay transaction.",
+          "message": "請求書支払い取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMDAw.display_name": {
+          "source": "Bill Pay Transaction",
+          "message": "請求書支払い取引"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA0.desc": {
+          "source": "Reversal of ACH deposit.",
+          "message": "ACH入金の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA0.display_name": {
+          "source": "ACH Deposit Reversal",
+          "message": "ACH入金取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA1.desc": {
+          "source": "Reversal of general account hold.",
+          "message": "一般的なアカウント保留の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA1.display_name": {
+          "source": "Account Hold Reversal",
+          "message": "アカウント保留解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA2.desc": {
+          "source": "Payment reversal, initiated by PayPal.",
+          "message": "PayPalによって開始された支払いの取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA2.display_name": {
+          "source": "Payment Reversal",
+          "message": "支払い取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA3.desc": {
+          "source": "Payment refund, initiated by merchant.",
+          "message": "加盟店によって開始された支払いの返金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA3.display_name": {
+          "source": "Payment Refund",
+          "message": "支払い返金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA4.desc": {
+          "source": "Fee reversal.",
+          "message": "手数料の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA4.display_name": {
+          "source": "Fee Reversal",
+          "message": "手数料取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA5.desc": {
+          "source": "Fee refund.",
+          "message": "手数料の返金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTA5.display_name": {
+          "source": "Fee Refund",
+          "message": "手数料返金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAw.desc": {
+          "source": "General reversal of a type not belonging to the other T11nn categories.",
+          "message": "他のT11nnカテゴリに属さない一般的な取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAw.display_name": {
+          "source": "General Reversal",
+          "message": "一般的な取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAx.desc": {
+          "source": "Reversal of ACH withdrawal transaction.",
+          "message": "ACH出金取引の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAx.display_name": {
+          "source": "ACH Withdrawal Reversal",
+          "message": "ACH出金の取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAy.desc": {
+          "source": "Reversal of debit card transaction.",
+          "message": "デビットカード取引の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAy.display_name": {
+          "source": "Debit Card Reversal",
+          "message": "デビットカードの取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAz.desc": {
+          "source": "Reversal of points usage.",
+          "message": "ポイント利用の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTAz.display_name": {
+          "source": "Points Usage Reversal",
+          "message": "ポイント利用の取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE0.desc": {
+          "source": "MassPay reversal transaction.",
+          "message": "MassPay取り消し取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE0.display_name": {
+          "source": "MassPay Reversal",
+          "message": "MassPay取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE1.desc": {
+          "source": "MassPay refund transaction.",
+          "message": "MassPay返金取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE1.display_name": {
+          "source": "MassPay Refund",
+          "message": "MassPay返金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE2.desc": {
+          "source": "Instant payment review (IPR) reversal.",
+          "message": "即時支払い審査(IPR)の取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE2.display_name": {
+          "source": "IPR Reversal",
+          "message": "IPR取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE3.desc": {
+          "source": "Rebate or cash back reversal.",
+          "message": "リベートまたはキャッシュバックの取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE3.display_name": {
+          "source": "Rebate Reversal",
+          "message": "リベートの取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE4.desc": {
+          "source": "Generic instrument/Open Wallet reversals (seller side).",
+          "message": "汎用決済手段/Open Walletの取り消し(売り手側)。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE4.display_name": {
+          "source": "Generic Instrument Reversal (Seller)",
+          "message": "汎用決済手段の取り消し(売り手)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE5.desc": {
+          "source": "Generic instrument/Open Wallet reversals (buyer side).",
+          "message": "汎用決済手段/Open Walletの取り消し(買い手側)。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTE5.display_name": {
+          "source": "Generic Instrument Reversal (Buyer)",
+          "message": "汎用決済手段の取り消し(買い手)"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEw.desc": {
+          "source": "Hold for dispute investigation.",
+          "message": "異議申し立て調査のための保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEw.display_name": {
+          "source": "Hold for Dispute",
+          "message": "異議申し立てによる保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEx.desc": {
+          "source": "Cancellation of hold for dispute resolution.",
+          "message": "異議申し立て解決のための保留の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEx.display_name": {
+          "source": "Cancel Hold",
+          "message": "保留の解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEy.desc": {
+          "source": "MAM reversal.",
+          "message": "MAM取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEy.display_name": {
+          "source": "MAM Reversal",
+          "message": "MAM取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEz.desc": {
+          "source": "Non-reference credit payment.",
+          "message": "参照なしクレジット支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMTEz.display_name": {
+          "source": "Non-reference Credit",
+          "message": "参照なしクレジット"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA0.desc": {
+          "source": "Incentive adjustment.",
+          "message": "インセンティブ調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA0.display_name": {
+          "source": "Incentive Adjustment",
+          "message": "インセンティブ調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA1.desc": {
+          "source": "Reimbursement of chargeback.",
+          "message": "チャージバックの払い戻し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA1.display_name": {
+          "source": "Chargeback Reimbursement",
+          "message": "チャージバックの払い戻し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA3.desc": {
+          "source": "Chargeback re-presentment rejection.",
+          "message": "チャージバックの再提示の却下。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA3.display_name": {
+          "source": "Chargeback Re-presentment Rejection",
+          "message": "チャージバック再提示の却下"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA4.desc": {
+          "source": "Chargeback cancellation.",
+          "message": "チャージバックのキャンセル。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjA4.display_name": {
+          "source": "Chargeback Cancellation",
+          "message": "チャージバックのキャンセル"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAw.desc": {
+          "source": "General account adjustment.",
+          "message": "一般的なアカウント調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAw.display_name": {
+          "source": "General Account Adjustment",
+          "message": "一般的なアカウント調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAx.desc": {
+          "source": "Chargeback.",
+          "message": "チャージバック。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAx.display_name": {
+          "source": "Chargeback",
+          "message": "チャージバック"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAy.desc": {
+          "source": "Chargeback reversal.",
+          "message": "チャージバックの取り消し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAy.display_name": {
+          "source": "Chargeback Reversal",
+          "message": "チャージバックの取り消し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAz.desc": {
+          "source": "Charge-off adjustment.",
+          "message": "貸倒償却調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMjAz.display_name": {
+          "source": "Charge-off Adjustment",
+          "message": "貸倒償却調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAw.desc": {
+          "source": "General authorization.",
+          "message": "一般的な承認。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAw.display_name": {
+          "source": "General Authorization",
+          "message": "一般的な承認"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAx.desc": {
+          "source": "Reauthorization.",
+          "message": "再承認。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAx.display_name": {
+          "source": "Reauthorization",
+          "message": "再承認"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAy.desc": {
+          "source": "Void of authorization.",
+          "message": "承認の無効化。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxMzAy.display_name": {
+          "source": "Void Authorization",
+          "message": "承認の無効化"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNDAw.desc": {
+          "source": "General dividend.",
+          "message": "一般的な配当金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNDAw.display_name": {
+          "source": "General Dividend",
+          "message": "一般的な配当金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAw.desc": {
+          "source": "General temporary hold of a type not belonging to the other T15nn categories.",
+          "message": "他のT15nnカテゴリに属さない一般的な一時保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAw.display_name": {
+          "source": "General Hold",
+          "message": "一般的な保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAx.desc": {
+          "source": "Account hold for open authorization.",
+          "message": "未確定の承認に対するアカウントの保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAx.display_name": {
+          "source": "Authorization Hold",
+          "message": "承認の保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAy.desc": {
+          "source": "Account hold for ACH deposit.",
+          "message": "ACH入金に対するアカウントの保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAy.display_name": {
+          "source": "ACH Deposit Hold",
+          "message": "ACH入金の保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAz.desc": {
+          "source": "Temporary hold on available balance.",
+          "message": "利用可能残高の一時保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNTAz.display_name": {
+          "source": "Balance Hold",
+          "message": "残高の保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAw.desc": {
+          "source": "PayPal buyer credit payment funding.",
+          "message": "PayPal買い手クレジット支払いの資金調達。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAw.display_name": {
+          "source": "Buyer Credit Funding",
+          "message": "バイヤークレジット資金調達"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAx.desc": {
+          "source": "BML credit. Transfer from BML.",
+          "message": "BMLクレジット。BMLからの送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAx.display_name": {
+          "source": "BML Credit",
+          "message": "BMLクレジット"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAy.desc": {
+          "source": "Buyer credit payment.",
+          "message": "購入者クレジット支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAy.display_name": {
+          "source": "Buyer Credit Payment",
+          "message": "購入者クレジット支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAz.desc": {
+          "source": "Buyer credit payment withdrawal. Transfer to BML.",
+          "message": "購入者クレジット支払いの引き出し。BMLへの送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNjAz.display_name": {
+          "source": "Buyer Credit Withdrawal",
+          "message": "購入者クレジット引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAw.desc": {
+          "source": "General withdrawal to non-bank institution.",
+          "message": "ノンバンク機関への一般的な引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAw.display_name": {
+          "source": "General Non-bank Withdrawal",
+          "message": "一般的なノンバンク引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAx.desc": {
+          "source": "WorldLink withdrawal.",
+          "message": "WorldLink引き出し。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxNzAx.display_name": {
+          "source": "WorldLink Withdrawal",
+          "message": "WorldLink引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAw.desc": {
+          "source": "General buyer credit payment.",
+          "message": "一般的な購入者クレジット支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAw.display_name": {
+          "source": "General Buyer Credit Payment",
+          "message": "一般的な購入者クレジット支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAx.desc": {
+          "source": "BML withdrawal. Transfer to BML.",
+          "message": "BML引き出し。BMLへの送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxODAx.display_name": {
+          "source": "BML Withdrawal",
+          "message": "BML引き出し"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxOTAw.desc": {
+          "source": "General adjustment without business-related event.",
+          "message": "ビジネス関連イベントを伴わない一般的な調整。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQxOTAw.display_name": {
+          "source": "General Account Correction",
+          "message": "一般的なアカウント調整"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDA0.desc": {
+          "source": "Receivables financing.",
+          "message": "売掛債権ファイナンス。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDA0.display_name": {
+          "source": "Receivables Financing",
+          "message": "売掛債権ファイナンス"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAw.desc": {
+          "source": "General intra-account transfer.",
+          "message": "一般的なアカウント内送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAw.display_name": {
+          "source": "General Intra-account Transfer",
+          "message": "一般的なアカウント内送金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAx.desc": {
+          "source": "Settlement consolidation.",
+          "message": "決済統合。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAx.display_name": {
+          "source": "Settlement Consolidation",
+          "message": "決済統合"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAy.desc": {
+          "source": "Transfer of funds from payable.",
+          "message": "買掛金からの資金移動。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAy.display_name": {
+          "source": "Funds Transfer from Payable",
+          "message": "買掛金からの資金移動"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAz.desc": {
+          "source": "Transfer to external GL entity.",
+          "message": "外部GLエンティティへの送金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMDAz.display_name": {
+          "source": "External GL Transfer",
+          "message": "外部GL送金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA0.desc": {
+          "source": "Reserve release.",
+          "message": "留保金の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA0.display_name": {
+          "source": "Reserve Release",
+          "message": "留保金解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA1.desc": {
+          "source": "Payment review hold.",
+          "message": "支払い審査による保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA1.display_name": {
+          "source": "Payment Review Hold",
+          "message": "支払い審査保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA2.desc": {
+          "source": "Payment review release.",
+          "message": "支払い審査による保留の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA2.display_name": {
+          "source": "Payment Review Release",
+          "message": "支払い審査保留解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA3.desc": {
+          "source": "Payment hold.",
+          "message": "支払いの保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA3.display_name": {
+          "source": "Payment Hold",
+          "message": "支払い保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA4.desc": {
+          "source": "Payment hold release.",
+          "message": "支払い保留の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA4.display_name": {
+          "source": "Payment Hold Release",
+          "message": "支払い保留解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA5.desc": {
+          "source": "Gift certificate purchase.",
+          "message": "ギフト券の購入。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTA5.display_name": {
+          "source": "Gift Certificate Purchase",
+          "message": "ギフト券購入"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAx.desc": {
+          "source": "General hold.",
+          "message": "一般的な保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAx.display_name": {
+          "source": "General Hold",
+          "message": "一般的な保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAy.desc": {
+          "source": "General hold release.",
+          "message": "一般的な保留の解除。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAy.display_name": {
+          "source": "General Hold Release",
+          "message": "一般的な保留解除"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAz.desc": {
+          "source": "Reserve hold.",
+          "message": "留保金保留。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTAz.display_name": {
+          "source": "Reserve Hold",
+          "message": "留保金保留"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEw.desc": {
+          "source": "Gift certificate redemption.",
+          "message": "ギフト券の利用。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEw.display_name": {
+          "source": "Gift Certificate Redemption",
+          "message": "ギフト券利用"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEx.desc": {
+          "source": "Funds not yet available.",
+          "message": "資金がまだ利用可能ではありません。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEx.display_name": {
+          "source": "Funds Not Yet Available",
+          "message": "未利用可能資金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEy.desc": {
+          "source": "Funds available.",
+          "message": "資金が利用可能です。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEy.display_name": {
+          "source": "Funds Available",
+          "message": "利用可能資金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEz.desc": {
+          "source": "Blocked payments.",
+          "message": "ブロックされた支払い。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMTEz.display_name": {
+          "source": "Blocked Payments",
+          "message": "ブロックされた支払い"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMjAx.desc": {
+          "source": "Transfer to and from a credit-card-funded restricted balance.",
+          "message": "クレジットカードによって調達された制限付き残高への入出金。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQyMjAx.display_name": {
+          "source": "Credit Card Restricted Balance Transfer",
+          "message": "クレジットカード制限付き残高送金"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQzMDAw.desc": {
+          "source": "Generic instrument/Open Wallet transaction.",
+          "message": "汎用手段/Open Wallet取引。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlQzMDAw.display_name": {
+          "source": "Generic Instrument Transaction",
+          "message": "汎用手段取引"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.desc": {
+          "source": "Filter results by specific transaction types such as payments, refunds, fees, or other transaction categories.",
+          "message": "支払い、返金、手数料、その他の取引カテゴリーなど、特定の取引タイプ別に結果を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
+          "source": "Transaction Type",
+          "message": "取引タイプ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
+          "source": "Type of transactions to retrieve",
+          "message": "取得する取引のタイプ"
+        },
+        "app.UGF5UGFs.action.bGlzdF90cmFuc2FjdGlvbnM.short_desc": {
+          "source": "Get transaction history for your account",
+          "message": "アカウントの取引履歴を取得します"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.desc": {
+          "source": "Retrieves a list of customer disputes for your account. Disputes occur when customers challenge transactions, and this API helps you manage and respond to them effectively.",
+          "message": "アカウントのカスタマー異議申し立てのリストを取得します。異議申し立ては顧客が取引に対して異議を唱えた場合に発生し、このAPIを使用するとそれらを効果的に管理および対応できます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.display_name": {
+          "source": "List Disputes",
+          "message": "異議申し立ての一覧表示"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOk9QRU5fSU5RVUlSSUVT.desc": {
+          "source": "The dispute is in the inquiry phase where the customer and merchant can communicate to resolve the issue.",
+          "message": "異議申し立ては、顧客と売り手が問題を解決するために連絡を取り合う問い合わせフェーズにあります。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOk9QRU5fSU5RVUlSSUVT.display_name": {
+          "source": "Open Inquiries",
+          "message": "オープンな問い合わせ"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOkFQUEVBTEFCTEU.desc": {
+          "source": "The dispute decision can be appealed by either party.",
+          "message": "異議申し立ての決定に対して、どちらの当事者も不服申し立てを行うことができます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOkFQUEVBTEFCTEU.display_name": {
+          "source": "Appealable",
+          "message": "不服申し立て可能"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFU09MVkVE.desc": {
+          "source": "The dispute has been resolved and closed.",
+          "message": "異議申し立ては解決され、クローズされました。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFU09MVkVE.display_name": {
+          "source": "Resolved",
+          "message": "解決済み"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX09USEVSX1BBUlRZX0FDVElPTg.desc": {
+          "source": "Action is required from the other party (customer) to proceed with the dispute.",
+          "message": "異議申し立てを進めるには相手方（顧客）のアクションが必要です。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX09USEVSX1BBUlRZX0FDVElPTg.display_name": {
+          "source": "Required Other Party Action",
+          "message": "相手方のアクションが必要"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX0FDVElPTg.desc": {
+          "source": "Action is required from the merchant to respond to or resolve the dispute.",
+          "message": "異議への対応または解決のために、マーチャントによる対応が必要です。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlJFUVVJUkVEX0FDVElPTg.display_name": {
+          "source": "Required Action",
+          "message": "要対応"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlVOREVSX1BBWVBBTF9SRVZJRVc.desc": {
+          "source": "The dispute is being reviewed by PayPal for a decision.",
+          "message": "異議は決定のためにPayPalによって審査中です。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.allowed-value.c3RyaW5nOlVOREVSX1BBWVBBTF9SRVZJRVc.display_name": {
+          "source": "Under PayPal Review",
+          "message": "PayPal審査中"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.desc": {
+          "source": "Filter disputes by their current states, such as open, under review, or resolved.",
+          "message": "未解決、審査中、解決済みなどの現在のステータスで異議を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.display_name": {
+          "source": "Dispute States",
+          "message": "異議のステータス"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZV9zdGF0ZXM.short_desc": {
+          "source": "Filter by dispute states",
+          "message": "異議のステータスで絞り込み"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.desc": {
+          "source": "Show only disputes related to a specific transaction ID.",
+          "message": "特定の取引IDに関連する異議のみを表示します。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.display_name": {
+          "source": "Disputed Transaction ID",
+          "message": "異議の対象となる取引ID"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.ZGlzcHV0ZWRfdHJhbnNhY3Rpb25faWQ.short_desc": {
+          "source": "Filter by specific transaction ID",
+          "message": "特定の取引IDで絞り込み"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.desc": {
+          "source": "Token for pagination to retrieve the next page of disputes.",
+          "message": "異議の次のページを取得するためのページネーショントークン。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.display_name": {
+          "source": "Next Page Token",
+          "message": "次ページトークン"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.bmV4dF9wYWdlX3Rva2Vu.short_desc": {
+          "source": "Token for retrieving the next page",
+          "message": "次のページを取得するためのトークン"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.desc": {
+          "source": "Filter disputes created on or after this date and time.",
+          "message": "この日時以降に作成された異議を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "開始時刻"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.c3RhcnRfdGltZQ.short_desc": {
+          "source": "Earliest dispute creation time to include",
+          "message": "含める異議作成日時の下限"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of disputes to return in a single response.",
+          "message": "1回のレスポンスで返す異議の最大数。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of disputes per page",
+          "message": "1ページあたりの異議数"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.desc": {
+          "source": "Filter disputes that were last updated after this date and time.",
+          "message": "この日時より後に最終更新された異議を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.display_name": {
+          "source": "Updated After",
+          "message": "指定日時以降に更新"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYWZ0ZXI.short_desc": {
+          "source": "Include disputes updated after this date",
+          "message": "この日付以降に更新された異議を含める"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.desc": {
+          "source": "Filter disputes that were last updated before this date and time.",
+          "message": "この日時より前に最終更新された異議を絞り込みます。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.display_name": {
+          "source": "Updated Before",
+          "message": "指定日時以前に更新"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.option.dXBkYXRlX3RpbWVfYmVmb3Jl.short_desc": {
+          "source": "Include disputes updated before this date",
+          "message": "この日付以前に更新された異議を含める"
+        },
+        "app.UGF5UGFs.action.bGlzdF9kaXNwdXRlcw.short_desc": {
+          "source": "Get a list of customer disputes",
+          "message": "顧客の異議一覧を取得"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.desc": {
+          "source": "Retrieves a paginated list of invoices in your account. Use pagination parameters to navigate through large numbers of invoices.",
+          "message": "アカウント内の請求書のページ分割された一覧を取得します。大量の請求書をナビゲートするには、ページネーションパラメータを使用します。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.display_name": {
+          "source": "List Invoices",
+          "message": "請求書の一覧取得"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.desc": {
+          "source": "The page number to retrieve when paginating through invoices.",
+          "message": "請求書をページネーションする際に取得するページ番号。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.display_name": {
+          "source": "Page Number",
+          "message": "ページ番号"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZQ.short_desc": {
+          "source": "Page number for pagination",
+          "message": "ページネーションのページ番号"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of invoices to return in a single response.",
+          "message": "1回のレスポンスで返す請求書の最大数。"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of invoices per page",
+          "message": "1ページあたりの請求書数"
+        },
+        "app.UGF5UGFs.action.bGlzdF9pbnZvaWNlcw.short_desc": {
+          "source": "Get a list of your invoices",
+          "message": "請求書の一覧を取得"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **PayPal** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**PayPal** へのカスタムHTTP / REST APIコールを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.UGF5UGFs.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to PayPal",
+          "message": "PayPalへのカスタムAPIコールを実行"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.desc": {
+          "source": "Triggers when subscription-related events happen, including subscription creation, activation, updates, cancellation, expiration, or suspension. Critical for managing recurring billing and subscription lifecycle automation.",
+          "message": "サブスクリプションの作成、有効化、更新、キャンセル、有効期限切れ、一時停止など、サブスクリプション関連のイベントが発生したときにトリガーされます。定期請求の管理やサブスクリプションライフサイクルの自動化に不可欠です。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.display_name": {
+          "source": "Subscription Events",
+          "message": "サブスクリプションイベント"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkFDVElWQVRFRA.desc": {
+          "source": "A subscription is activated.",
+          "message": "サブスクリプションが有効化されました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkFDVElWQVRFRA.display_name": {
+          "source": "Subscription Activated",
+          "message": "サブスクリプション有効化"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNBTkNFTExFRA.desc": {
+          "source": "A subscription is cancelled.",
+          "message": "サブスクリプションがキャンセルされました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNBTkNFTExFRA.display_name": {
+          "source": "Subscription Cancelled",
+          "message": "サブスクリプションキャンセル"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNSRUFURUQ.desc": {
+          "source": "A subscription is created.",
+          "message": "サブスクリプションが作成されました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkNSRUFURUQ.display_name": {
+          "source": "Subscription Created",
+          "message": "サブスクリプション作成"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkVYUElSRUQ.desc": {
+          "source": "A subscription is expired.",
+          "message": "サブスクリプションの有効期限が切れました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLkVYUElSRUQ.display_name": {
+          "source": "Subscription Expired",
+          "message": "サブスクリプション期限切れ"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlNVU1BFTkRFRA.desc": {
+          "source": "A subscription is suspended.",
+          "message": "サブスクリプションが一時停止されました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlNVU1BFTkRFRA.display_name": {
+          "source": "Subscription Suspended",
+          "message": "サブスクリプション一時停止"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlVQREFURUQ.desc": {
+          "source": "A subscription is updated.",
+          "message": "サブスクリプションが更新されました。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.allowed-value.c3RyaW5nOkJJTExJTkcuU1VCU0NSSVBUSU9OLlVQREFURUQ.display_name": {
+          "source": "Subscription Updated",
+          "message": "サブスクリプション更新"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.desc": {
+          "source": "Select which subscription event should trigger this webhook. Each event represents a different stage in the subscription lifecycle.",
+          "message": "このWebhookをトリガーするサブスクリプションイベントを選択します。各イベントはサブスクリプションライフサイクルの異なる段階を表します。"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.display_name": {
+          "source": "Subscription Event Type",
+          "message": "サブスクリプションイベントタイプ"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.option.ZXZlbnRfbmFtZQ.short_desc": {
+          "source": "The specific subscription event to listen for",
+          "message": "リッスンする特定のサブスクリプションイベント"
+        },
+        "app.UGF5UGFs.action.c3Vic2NyaXB0aW9uX3RyaWdnZXI.short_desc": {
+          "source": "Receive notifications when subscription events occur",
+          "message": "サブスクリプションイベントが発生したときに通知を受信"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.desc": {
+          "source": "Issues a refund for a previously captured payment. Can process full or partial refunds. The refunded amount will be returned to the customer's original payment method and deducted from your account balance.",
+          "message": "以前にキャプチャされた決済の返金を発行します。全額返金または一部返金を処理できます。返金額は顧客の元の支払い方法に返金され、アカウント残高から差し引かれます。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.display_name": {
+          "source": "Refund Payment",
+          "message": "決済を返金"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.desc": {
+          "source": "The unique identifier of the captured payment that you want to refund. This can be found in the capture response or order details.",
+          "message": "返金するキャプチャ済み決済の一意の識別子。これはキャプチャレスポンスまたは注文詳細で確認できます。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.display_name": {
+          "source": "Capture ID",
+          "message": "キャプチャID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.Y2FwdHVyZV9pZA.short_desc": {
+          "source": "ID of the captured payment to refund",
+          "message": "返金するキャプチャ済み決済のID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.desc": {
+          "source": "The amount to refund. If not specified, the full captured amount will be refunded. For partial refunds, specify the currency and amount.",
+          "message": "返金する金額。指定しない場合、キャプチャされた全額が返金されます。一部返金の場合は、通貨と金額を指定してください。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.display_name": {
+          "source": "Refund Amount",
+          "message": "返金額"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.YW1vdW50.short_desc": {
+          "source": "Amount to refund (optional for full refund)",
+          "message": "返金する金額（全額返金の場合は省略可能）"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.desc": {
+          "source": "Optional invoice ID to associate with this refund for accounting and tracking purposes.",
+          "message": "会計および追跡のためにこの返金に関連付けるオプションの請求書ID。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "請求書ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "Invoice ID for the refund",
+          "message": "返金用の請求書ID"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.desc": {
+          "source": "An optional note that will be sent to the customer explaining the reason for the refund.",
+          "message": "返金の理由を説明するために顧客に送信されるオプションのメモ。"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.display_name": {
+          "source": "Note to Payer",
+          "message": "支払人へのメモ"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.option.bm90ZV90b19wYXllcg.short_desc": {
+          "source": "Optional note explaining the refund",
+          "message": "返金を説明する任意のメモ"
+        },
+        "app.UGF5UGFs.action.cmVmdW5kX3BheW1lbnQ.short_desc": {
+          "source": "Process a refund for a captured payment",
+          "message": "キャプチャ済み決済の返金を処理"
+        },
+        "app.UGF5UGFs.desc": {
+          "source": "The PayPal integration provides complete access to PayPal's REST APIs for managing e-commerce transactions. Create and capture orders, process payments and refunds, manage invoices and billing, handle customer disputes, set up recurring subscriptions, and receive real-time webhook notifications. Perfect for businesses of all sizes looking to accept payments securely and efficiently.",
+          "message": "PayPal連携により、eコマース取引を管理するためのPayPal REST APIへの完全なアクセスが提供されます。注文の作成およびキャプチャ、決済および返金の処理、請求書と請求の管理、顧客の異議への対応、定期的なサブスクリプションの設定、リアルタイムのWebhook通知の受信が可能です。安全かつ効率的に決済を受け付けたいあらゆる規模のビジネスに最適です。"
+        },
+        "app.UGF5UGFs.display_name": {
+          "source": "PayPal",
+          "message": "PayPal"
+        },
+        "app.UGF5UGFs.short_desc": {
+          "source": "Integrate with PayPal to manage payments, orders, invoices, disputes, and subscriptions through comprehensive APIs.",
+          "message": "PayPalと連携して、包括的なAPIを通じて決済、注文、請求書、異議、およびサブスクリプションを管理します。"
+        }
+      }
+    }
+  }
+}

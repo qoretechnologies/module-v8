@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.desc": {
+          "source": "Permanently removes a product from the catalog by ID or SKU. This operation cannot be undone and may affect existing orders and carts that reference the deleted product.",
+          "message": "Natrvalo odstráni produkt z katalógu podľa ID alebo SKU. Túto operáciu nemožno vrátiť späť a môže ovplyvniť existujúce objednávky a košíky, ktoré odkazujú na odstránený produkt."
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.display_name": {
+          "source": "Delete Product",
+          "message": "Odstrániť produkt"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFEZWxldGVCeUlkRGVsZXRl.short_desc": {
+          "source": "Remove a product from the catalog",
+          "message": "Odstrániť produkt z katalógu"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.desc": {
+          "source": "Retrieves comprehensive information about a specific product by SKU or ID. The response includes all product attributes, images, pricing information, inventory status, and category assignments. Additional parameters can control which data is included.",
+          "message": "Získa komplexné informácie o konkrétnom produkte podľa SKU alebo ID. Odpoveď zahŕňa všetky atribúty produktu, obrázky, informácie o cenách, stav zásob a priradenia do kategórií. Dodatočné parametre môžu určiť, ktoré údaje budú zahrnuté."
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.display_name": {
+          "source": "Get Product Details",
+          "message": "Získať podrobnosti o produkte"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRHZXQ.short_desc": {
+          "source": "Retrieve detailed information about a specific product",
+          "message": "Získať podrobné informácie o konkrétnom produkte"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.desc": {
+          "source": "Returns a collection of products that match the specified search criteria. Results can be filtered by attributes like name, SKU, price, and status. Supports pagination, sorting, and inclusion of custom attributes in the response.",
+          "message": "Vráti kolekciu produktov, ktoré zodpovedajú zadaným vyhľadávacím kritériám. Výsledky možno filtrovať podľa atribútov ako názov, SKU, cena a stav. Podporuje stránkovanie, triedenie a zahrnutie vlastných atribútov v odpovedi."
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.display_name": {
+          "source": "List Products",
+          "message": "Zoznam produktov"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFHZXRMaXN0R2V0.short_desc": {
+          "source": "Retrieve a list of products from the catalog",
+          "message": "Získať zoznam produktov z katalógu"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.desc": {
+          "source": "Creates a new product in the catalog with specified attributes, pricing, and inventory information. Products can be simple, configurable, bundled, grouped, virtual, or downloadable. Media gallery entries, tier prices, and custom options can also be defined.",
+          "message": "Vytvorí v katalógu nový produkt so zadanými atribútmi, cenami a informáciami o zásobách. Produkty môžu byť jednoduché, konfigurovateľné, balíkové (bundle), zoskupené, virtuálne alebo stiahnuteľné. Možno definovať aj položky galérie médií, stupňovité ceny a vlastné možnosti."
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.display_name": {
+          "source": "Create Product",
+          "message": "Vytvoriť produkt"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUG9zdA.short_desc": {
+          "source": "Add a new product to the catalog",
+          "message": "Pridať nový produkt do katalógu"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.desc": {
+          "source": "Updates an existing product in the catalog. Can modify any product attribute including name, price, description, images, inventory, and category assignments. The product SKU or ID must be specified in the request.",
+          "message": "Aktualizuje existujúci produkt v katalógu. Dokáže upraviť akýkoľvek atribút produktu vrátane názvu, ceny, popisu, obrázkov, zásob a priradení do kategórií. V požiadavke musí byť zadané SKU alebo ID produktu."
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.display_name": {
+          "source": "Update Product",
+          "message": "Aktualizovať produkt"
+        },
+        "app.TWFnZW50bw.action.Y2F0YWxvZ1Byb2R1Y3RSZXBvc2l0b3J5VjFTYXZlUHV0.short_desc": {
+          "source": "Modify an existing product",
+          "message": "Upraviť existujúci produkt"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.desc": {
+          "source": "This trigger activates when a new customer is created in your Magento store or when an existing customer's information is updated.",
+          "message": "Tento spúšťač sa aktivuje pri vytvorení nového zákazníka vo vašom obchode Magento alebo pri aktualizácii údajov existujúceho zákazníka."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.display_name": {
+          "source": "Customer Created or Updated",
+          "message": "Zákazník vytvorený alebo aktualizovaný"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Created",
+          "message": "Vytvorené"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Updated",
+          "message": "Aktualizované"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select whether this trigger should activate on customer creation or on customer updates.",
+          "message": "Vyberte, či sa má tento spúšťač aktivovať pri vytvorení zákazníka alebo pri aktualizácii zákazníka."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "Kritériá aktivácie"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Specify when this trigger should activate",
+          "message": "Určite, kedy sa má tento spúšťač aktivovať"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXItY3JlYXRlZC1vci11cGRhdGVk.short_desc": {
+          "source": "Triggers when a customer is created or updated in Magento",
+          "message": "Spustí sa pri vytvorení alebo aktualizácii zákazníka v platforme Magento"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.desc": {
+          "source": "Creates a new customer account with the provided information. Required fields include email, password, and first/last name. Optional details include addresses, date of birth, and custom attributes. Returns the newly created customer ID upon success.",
+          "message": "Vytvorí nový zákaznícky účet so zadanými informáciami. Medzi povinné polia patria e-mail, heslo a meno/priezvisko. Medzi voliteľné podrobnosti patria adresy, dátum narodenia a vlastné atribúty. Po úspešnom vytvorení vráti ID novovytvoreného zákazníka."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.display_name": {
+          "source": "Create Customer Account",
+          "message": "Vytvoriť zákaznícky účet"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJBY2NvdW50TWFuYWdlbWVudFYxQ3JlYXRlQWNjb3VudFBvc3Q.short_desc": {
+          "source": "Register a new customer account",
+          "message": "Zaregistrovať nový zákaznícky účet"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.desc": {
+          "source": "Permanently deletes a customer account from the system. This operation cannot be undone and will remove all customer data associated with the specified ID, including addresses and order history references.",
+          "message": "Natrvalo vymaže zákaznícky účet zo systému. Túto operáciu nemožno vrátiť späť a odstráni všetky údaje zákazníka spojené so zadaným ID vrátane adries a odkazov na históriu objednávok."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.display_name": {
+          "source": "Delete Customer",
+          "message": "Odstrániť zákazníka"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMURlbGV0ZUJ5SWREZWxldGU.short_desc": {
+          "source": "Remove a customer account by ID",
+          "message": "Odstrániť zákaznícky účet podľa ID"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldEJ5SWRHZXQ.desc": {
+          "source": "Retrieves detailed information about a customer account using the customer ID. Returns all customer attributes including address information, account status, and custom attributes.",
+          "message": "Získa podrobné informácie o zákazníckom účte pomocou ID zákazníka. Vráti všetky atribúty zákazníka vrátane informácií o adrese, stavu účtu a vlastných atribútov."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldEJ5SWRHZXQ.display_name": {
+          "source": "Get Customer by Id",
+          "message": "Získať zákazníka podľa ID"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldEJ5SWRHZXQ.short_desc": {
+          "source": "Retrieve a specific customer account by ID",
+          "message": "Získať konkrétny zákaznícky účet podľa ID"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.desc": {
+          "source": "Returns a list of customer accounts that match specified search criteria. Results can be filtered, sorted, and paginated. Use search criteria parameters to narrow results by email, name, creation date, or other customer attributes.",
+          "message": "Vráti zoznam zákazníckych účtov, ktoré zodpovedajú zadaným vyhľadávacím kritériám. Výsledky možno filtrovať, triediť a stránkovať. Použite parametre vyhľadávacích kritérií na zúženie výsledkov podľa e-mailu, mena, dátumu vytvorenia alebo iných atribútov zákazníka."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
+          "source": "List Customers",
+          "message": "Zoznam zákazníkov"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
+          "source": "Retrieve a list of customer accounts",
+          "message": "Získať zoznam zákazníckych účtov"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.desc": {
+          "source": "Updates customer information for an existing account. This endpoint allows modification of personal information, addresses, custom attributes, and other account details. The customer ID must be included in the request.",
+          "message": "Aktualizuje informácie o zákazníkovi pre existujúci účet. Tento koncový bod umožňuje úpravu osobných údajov, adries, vlastných atribútov a ďalších podrobností účtu. V požiadavke musí byť zahrnuté ID zákazníka."
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
+          "source": "Update Customer",
+          "message": "Aktualizovať zákazníka"
+        },
+        "app.TWFnZW50bw.action.Y3VzdG9tZXJDdXN0b21lclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
+          "source": "Update an existing customer account",
+          "message": "Aktualizovať existujúci zákaznícky účet"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.desc": {
+          "source": "This trigger activates when a new invoice is generated in your Magento store or when an existing invoice is modified.",
+          "message": "Tento spúšťač sa aktivuje pri vygenerovaní novej faktúry vo vašom obchode Magento alebo pri úprave existujúcej faktúry."
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
+          "source": "Invoice Created or Updated",
+          "message": "Faktúra vytvorená alebo aktualizovaná"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Created",
+          "message": "Vytvorené"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Updated",
+          "message": "Aktualizované"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select whether this trigger should activate on invoice creation or on invoice updates.",
+          "message": "Vyberte, či sa má tento spúšťač aktivovať pri vytvorení faktúry alebo pri aktualizácii faktúry."
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "Kritériá aktivácie"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Specify when this trigger should activate",
+          "message": "Určite, kedy sa má tento spúšťač aktivovať"
+        },
+        "app.TWFnZW50bw.action.aW52b2ljZS1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
+          "source": "Triggers when an invoice is created or updated in Magento",
+          "message": "Spustí sa pri vytvorení alebo aktualizácii faktúry v platforme Magento"
+        },
+        "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.desc": {
+          "source": "This trigger activates when a customer completes the checkout process and places a new order in your Magento store.",
+          "message": "Tento spúšťač sa aktivuje, keď zákazník dokončí proces platby a vytvorí novú objednávku vo vašom obchode Magento."
+        },
+        "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.display_name": {
+          "source": "Order Created",
+          "message": "Objednávka vytvorená"
+        },
+        "app.TWFnZW50bw.action.b3JkZXItY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new order is placed in Magento",
+          "message": "Spustí sa pri vytvorení novej objednávky v platforme Magento"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Magento** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Magento** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.TWFnZW50bw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Magento",
+          "message": "Vykonať vlastné volanie API do Magento"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.desc": {
+          "source": "Returns a list of invoices based on specified search criteria. Results can be filtered by order ID, customer, date, and amount. Each invoice includes line items, payment information, and related order details. Supports pagination and sorting.",
+          "message": "Vráti zoznam faktúr na základe zadaných vyhľadávacích kritérií. Výsledky možno filtrovať podľa ID objednávky, zákazníka, dátumu a sumy. Každá faktúra obsahuje položky, platobné informácie a podrobnosti o súvisiacej objednávke. Podporuje stránkovanie a triedenie."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
+          "source": "List Invoices",
+          "message": "Zoznam faktúr"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
+          "source": "Retrieve a collection of invoices",
+          "message": "Získať kolekciu faktúr"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.desc": {
+          "source": "Creates a new invoice record for an existing order, documenting the financial transaction and payment request. Allows for specifying line items to be invoiced, payment details, and comments that will appear on the customer's invoice.",
+          "message": "Vytvorí nový záznam faktúry pre existujúcu objednávku, pričom dokumentuje finančnú transakciu a žiadosť o platbu. Umožňuje špecifikovať položky na fakturáciu, platobné údaje a komentáre, ktoré sa zobrazia na faktúre zákazníka."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.display_name": {
+          "source": "Create Invoice",
+          "message": "Vytvoriť faktúru"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNJbnZvaWNlUmVwb3NpdG9yeVYxU2F2ZVBvc3Q.short_desc": {
+          "source": "Creates a new invoice for an order",
+          "message": "Vytvorí novú faktúru pre objednávku"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.desc": {
+          "source": "Adds a comment to the order history. Comments can be internal (visible only to administrators) or customer-visible. Each comment is timestamped and attributed to the author. Useful for documenting order processing steps and customer communications.",
+          "message": "Pridá komentár do histórie objednávky. Komentáre môžu byť interné (viditeľné iba pre administrátorov) alebo viditeľné pre zákazníka. Každý komentár má časovú pečiatku a priradeného autora. Užitočné na dokumentovanie krokov spracovania objednávky a komunikácie so zákazníkom."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.display_name": {
+          "source": "Add Order Comment",
+          "message": "Pridať komentár k objednávke"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUFkZENvbW1lbnRQb3N0.short_desc": {
+          "source": "Append a comment to an existing order",
+          "message": "Pripojiť komentár k existujúcej objednávke"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.desc": {
+          "source": "Returns the complete comment history for a specific order. Results include comment text, timestamp, author information, and visibility status (customer-visible or admin-only). Comments are returned in chronological order.",
+          "message": "Vráti kompletnú históriu komentárov pre konkrétnu objednávku. Výsledky zahŕňajú text komentára, časovú pečiatku, informácie o autorovi a stav viditeľnosti (viditeľné pre zákazníka alebo iba pre administrátora). Komentáre sa vracajú v chronologickom poradí."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.display_name": {
+          "source": "Get Order Comments",
+          "message": "Získať komentáre k objednávke"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlck1hbmFnZW1lbnRWMUdldENvbW1lbnRzTGlzdEdldA.short_desc": {
+          "source": "Retrieve the comment history for an order",
+          "message": "Získať históriu komentárov pre objednávku"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.desc": {
+          "source": "Retrieves comprehensive information about a specific order by ID. Includes order items, billing and shipping addresses, payment information, applied discounts, and order status history. Useful for order processing and customer service inquiries.",
+          "message": "Získa komplexné informácie o konkrétnej objednávke podľa ID. Zahŕňa položky objednávky, fakturačné a dodacie adresy, informácie o platbe, uplatnené zľavy a históriu stavu objednávky. Užitočné pri spracovaní objednávok a otázkach zákazníckej podpory."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.display_name": {
+          "source": "Get Order Details",
+          "message": "Získať podrobnosti objednávky"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldEdldA.short_desc": {
+          "source": "Retrieve detailed information about a specific order",
+          "message": "Získať podrobné informácie o konkrétnej objednávke"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.desc": {
+          "source": "Returns a collection of orders that match the specified search criteria. Results can be filtered by customer, status, date range, and total amount. Supports pagination and sorting to efficiently browse large order volumes.",
+          "message": "Vráti kolekciu objednávok, ktoré zodpovedajú zadaným vyhľadávacím kritériám. Výsledky je možné filtrovať podľa zákazníka, stavu, časového rozsahu a celkovej sumy. Podporuje stránkovanie a zoradenie na efektívne prechádzanie veľkých objemov objednávok."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
+          "source": "List Orders",
+          "message": "Zoznam objednávok"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
+          "source": "Retrieve a list of orders based on search criteria",
+          "message": "Získať zoznam objednávok na základe vyhľadávacích kritérií"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.desc": {
+          "source": "Performs persist operations for a specified order. Saves the order data to the database, including customer information, line items, payment details, shipping information, and other relevant order metadata.",
+          "message": "Vykonáva operácie uloženia (persist) pre zadanú objednávku. Uloží údaje objednávky do databázy vrátane informácií o zákazníkovi, položiek, platobných údajov, informácií o doprave a ďalších relevantných metadát objednávky."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.display_name": {
+          "source": "Create Order",
+          "message": "Vytvoriť objednávku"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNPcmRlclJlcG9zaXRvcnlWMVNhdmVQdXQ.short_desc": {
+          "source": "Persists order information to the system",
+          "message": "Uloží informácie o objednávke do systému"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.desc": {
+          "source": "Returns a list of shipments based on specified search criteria. Results can be filtered by order ID, customer, creation date, and tracking information. Each shipment includes items shipped, quantities, tracking numbers, and carrier information.",
+          "message": "Vráti zoznam zásielok na základe zadaných vyhľadávacích kritérií. Výsledky je možné filtrovať podľa ID objednávky, zákazníka, dátumu vytvorenia a informácií o sledovaní. Každá zásielka obsahuje odoslané položky, množstvá, sledovacie čísla a informácie o prepravcovi."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
+          "source": "List Shipments",
+          "message": "Zoznam zásielok"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
+          "source": "Retrieve a collection of order shipments",
+          "message": "Získať kolekciu zásielok objednávok"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.desc": {
+          "source": "Creates a new shipment record for an existing order, allowing you to document and track the physical sending of order items to the customer. Includes options for specifying tracking numbers, shipping carriers, and shipped items with their quantities.",
+          "message": "Vytvorí nový záznam o zásielke pre existujúcu objednávku, čo vám umožní zdokumentovať a sledovať fyzické odoslanie položiek objednávky zákazníkovi. Zahŕňa možnosti na zadanie sledovacích čísel, prepravcov a odoslaných položiek s ich množstvami."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.display_name": {
+          "source": "Create Shipment",
+          "message": "Vytvoriť zásielku"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNTaGlwbWVudFJlcG9zaXRvcnlWMVNhdmVQb3N0.short_desc": {
+          "source": "Creates a new shipment for an order",
+          "message": "Vytvorí novú zásielku pre objednávku"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.desc": {
+          "source": "Returns a list of payment transactions based on specified search criteria. Results can be filtered by order ID, payment method, transaction type, and status. Each transaction includes amount, status, and related payment gateway information.",
+          "message": "Vráti zoznam platobných transakcií na základe zadaných vyhľadávacích kritérií. Výsledky je možné filtrovať podľa ID objednávky, spôsobu platby, typu transakcie a stavu. Každá transakcia obsahuje sumu, stav a súvisiace informácie o platobnej bráne."
+        },
+        "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.display_name": {
+          "source": "List Payment Transactions",
+          "message": "Zoznam platobných transakcií"
+        },
+        "app.TWFnZW50bw.action.c2FsZXNUcmFuc2FjdGlvblJlcG9zaXRvcnlWMUdldExpc3RHZXQ.short_desc": {
+          "source": "Retrieve a collection of payment transactions",
+          "message": "Získať kolekciu platobných transakcií"
+        },
+        "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.desc": {
+          "source": "This trigger activates when a new shipment is created for an order in your Magento store, indicating that products have been shipped to the customer.",
+          "message": "Tento spúšťač sa aktivuje, keď sa v obchode Magento vytvorí nová zásielka k objednávke, čo znamená, že produkty boli odoslané zákazníkovi."
+        },
+        "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.display_name": {
+          "source": "Shipment Created",
+          "message": "Zásielka vytvorená"
+        },
+        "app.TWFnZW50bw.action.c2hpcG1lbnQtY3JlYXRlZA.short_desc": {
+          "source": "Triggers when a new shipment is created in Magento",
+          "message": "Spustí sa pri vytvorení novej zásielky v službe Magento"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.desc": {
+          "source": "This trigger activates when a new product is added to your Magento catalog or when an existing product's information is modified.",
+          "message": "Tento spúšťač sa aktivuje pri pridaní nového produktu do katalógu Magento alebo pri úprave informácií o existujúcom produkte."
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.display_name": {
+          "source": "Product Created or Updated",
+          "message": "Produkt vytvorený alebo aktualizovaný"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOmNyZWF0ZWQ.desc": {
+          "source": "Created",
+          "message": "Vytvorené"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.allowed-value.c3RyaW5nOnVwZGF0ZWQ.desc": {
+          "source": "Updated",
+          "message": "Aktualizované"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.desc": {
+          "source": "Select whether this trigger should activate on product creation or on product updates.",
+          "message": "Vyberte, či sa má tento spúšťač aktivovať pri vytvorení produktu alebo pri aktualizácii produktu."
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.display_name": {
+          "source": "Activation Criteria",
+          "message": "Kritériá aktivácie"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.option.YWN0aXZhdGlvbkNyaXRlcmlh.short_desc": {
+          "source": "Specify when this trigger should activate",
+          "message": "Určite, kedy sa má tento spúšťač aktivovať"
+        },
+        "app.TWFnZW50bw.action.cHJvZHVjdC1jcmVhdGVkLW9yLXVwZGF0ZWQ.short_desc": {
+          "source": "Triggers when a product is created or updated in Magento",
+          "message": "Spustí sa pri vytvorení alebo aktualizácii produktu v službe Magento"
+        },
+        "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.desc": {
+          "source": "Returns a collection of active shopping carts that match the specified search criteria. Results can be filtered by customer ID, creation date, and cart status. Each cart includes items, applied coupons, and shipping/billing information if available.",
+          "message": "Vráti kolekciu aktívnych nákupných košíkov, ktoré zodpovedajú zadaným vyhľadávacím kritériám. Výsledky je možné filtrovať podľa ID zákazníka, dátumu vytvorenia a stavu košíka. Každý košík obsahuje položky, uplatnené kupóny a prípadné informácie o doprave/fakturácii."
+        },
+        "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.display_name": {
+          "source": "List Shopping Carts",
+          "message": "Zoznam nákupných košíkov"
+        },
+        "app.TWFnZW50bw.action.cXVvdGVDYXJ0UmVwb3NpdG9yeVYxR2V0TGlzdEdldA.short_desc": {
+          "source": "Retrieve a list of active shopping carts",
+          "message": "Získať zoznam aktívnych nákupných košíkov"
+        },
+        "app.TWFnZW50bw.desc": {
+          "source": "Magento is a flexible e-commerce platform that provides businesses with a complete solution for building and managing online stores. This integration allows you to automate workflows when customer, product, order, invoice, or shipment events occur in your Magento store.",
+          "message": "Magento je flexibilná platforma elektronického obchodu, ktorá firmám poskytuje kompletné riešenie na vytváranie a správu internetových obchodov. Táto integrácia vám umožňuje automatizovať pracovné postupy, keď v obchode Magento nastanú udalosti týkajúce sa zákazníkov, produktov, objednávok, faktúr alebo zásielok."
+        },
+        "app.TWFnZW50bw.display_name": {
+          "source": "Magento",
+          "message": "Magento"
+        },
+        "app.TWFnZW50bw.short_desc": {
+          "source": "E-commerce platform for building online stores and managing customers, products, and orders",
+          "message": "Platforma elektronického obchodu na vytváranie internetových obchodov a správu zákazníkov, produktov a objednávok"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку «Supabase»"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Створити записи"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "Створити нові записи у вказаній таблиці в застосунку «Supabase»"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.desc": {
+          "source": "Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types.",
+          "message": "Створює новий бакет сховища в Supabase Storage для впорядкування та зберігання файлів. Налаштовуйте дозволи на доступ, обмеження розміру файлів і дозволені MIME-типи."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
+          "source": "Create Storage Bucket",
+          "message": "Створити бакет сховища"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.desc": {
+          "source": "Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types.",
+          "message": "Укажіть типи файлів, які можна завантажувати до цього бакета, надавши список MIME-типів (наприклад, image/png, application/pdf). Залиште порожнім, щоб дозволити всі типи файлів."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
+          "source": "Allowed MIME Types",
+          "message": "Дозволені MIME-типи"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
+          "source": "List of allowed file MIME types",
+          "message": "Список дозволених MIME-типів файлів"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.desc": {
+          "source": "Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit.",
+          "message": "Встановіть максимальний розмір файлу для завантаження до цього бакета в байтах. Залиште порожнім, щоб не встановлювати обмеження."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
+          "source": "File Size Limit",
+          "message": "Обмеження розміру файлу"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
+          "source": "Maximum file size in bytes",
+          "message": "Максимальний розмір файлу в байтах"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.desc": {
+          "source": "Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project.",
+          "message": "Укажіть унікальну назву для бакета сховища. Назва має бути безпечною для URL-адрес і унікальною в межах вашого проєкту Supabase."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
+          "source": "Bucket Name",
+          "message": "Ім'я бакета"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
+          "source": "The name for the new bucket",
+          "message": "Назва для нового бакета"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.desc": {
+          "source": "When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access.",
+          "message": "Якщо ввімкнено, доступ до файлів у цьому бакеті буде загальнодоступним без автентифікації. Якщо вимкнено (за замовчуванням), для доступу до файлів потрібна автентифікація."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
+          "source": "Public Access",
+          "message": "Публічний доступ"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
+          "source": "Allow public access to bucket contents",
+          "message": "Дозволити публічний доступ до вмісту бакета"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
+          "source": "Create a new storage bucket in Supabase",
+          "message": "Створити новий бакет сховища в Supabase"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data.",
+          "message": "Створює новий запис у вказаній таблиці Supabase. Дія динамічно відображає схему таблиці, дозволяючи вказати значення для кожного стовпця. Повертає щойно створений рядок з усіма його даними."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "Створити рядок"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "Виберіть цільову таблицю Supabase для вставки нового рядка. Доступні поля будуть динамічно завантажені на основі схеми вибраної таблиці."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "Таблиця, куди буде вставлено рядок"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "Укажіть значення для стовпців таблиці. Структура динамічно генерується на основі вибраної схеми таблиці, відображаючи всі доступні стовпці з їхніми типами даних і обмеженнями."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "Значення рядка"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "Дані для вставки в новий рядок"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Supabase table",
+          "message": "Вставити новий рядок у таблицю Supabase"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.desc": {
+          "source": "Fetches detailed information about a specific Supabase storage bucket including its configuration, creation date, access permissions, and file restrictions.",
+          "message": "Отримує детальну інформацію про конкретний бакет сховища Supabase, включно з його конфігурацією, датою створення, дозволами на доступ та обмеженнями для файлів."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
+          "source": "Get Storage Bucket",
+          "message": "Отримати бакет сховища"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.desc": {
+          "source": "Select the storage bucket whose details you want to fetch from your Supabase project.",
+          "message": "Виберіть бакет сховища вашого проєкту Supabase, деталі якого ви хочете отримати."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.display_name": {
+          "source": "Bucket ID",
+          "message": "Ідентифікатор бакета"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.short_desc": {
+          "source": "The ID of the bucket to retrieve",
+          "message": "Ідентифікатор бакета для отримання"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
+          "source": "Retrieve details of a specific storage bucket",
+          "message": "Отримати деталі конкретного бакета сховища"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.desc": {
+          "source": "Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables.",
+          "message": "Отримує вичерпні метадані для конкретної таблиці, зокрема визначення стовпців, типи даних, обов'язкові поля та описи. Ця дія допомагає зрозуміти структуру таблиць бази даних."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
+          "source": "Get Table",
+          "message": "Отримати таблицю"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project.",
+          "message": "Виберіть таблицю Supabase, інформацію про схему якої ви хочете отримати. Таблиця має існувати у вашому проєкті Supabase."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
+          "source": "The name of the table to retrieve",
+          "message": "Назва таблиці для отримання"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
+          "source": "Retrieve detailed schema information about a specific Supabase table",
+          "message": "Отримати детальну інформацію про схему конкретної таблиці Supabase"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "Видалити записи з указаної таблиці в застосунку «Supabase»"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Видалити записи"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "Видалити записи з указаної таблиці в застосунку «Supabase»"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.desc": {
+          "source": "Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible.",
+          "message": "Видаляє рядки з таблиці Supabase, які відповідають указаним критеріям фільтра. Повертає кількість видалених рядків та їхні дані. Використовуйте з обережністю, оскільки ця операція є незворотною."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
+          "source": "Delete Rows",
+          "message": "Видалити рядки"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.desc": {
+          "source": "Define the filter criteria to identify which rows should be deleted. Only rows matching this condition will be removed from the table.",
+          "message": "Визначте критерії фільтра, щоб указати, які рядки слід видалити. З таблиці буде вилучено лише ті рядки, що відповідають цій умові."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Фільтр"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.short_desc": {
+          "source": "Condition to identify rows to delete",
+          "message": "Умова для визначення рядків для видалення"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to delete rows. Ensure you have proper permissions for delete operations on this table.",
+          "message": "Виберіть таблицю Supabase, з якої потрібно видалити рядки. Переконайтеся, що у вас є належні дозволи на операції видалення для цієї таблиці."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to delete rows from",
+          "message": "Таблиця, з якої потрібно видалити рядки"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
+          "source": "Delete rows from a Supabase table based on a filter",
+          "message": "Видалити рядки з таблиці Supabase на основі фільтра"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results.",
+          "message": "Отримує всі таблиці з вашої бази даних Supabase разом з їхніми основними метаданими, включно з інформацією про стовпці та описами. За потреби включає системні таблиці в результати."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "Список таблиць"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.desc": {
+          "source": "When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries.",
+          "message": "Якщо ввімкнено, відповідь міститиме системні таблиці (ті, назви яких починаються з підкреслення). Системні таблиці містять внутрішні дані Supabase і зазвичай приховані від звичайних запитів."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
+          "source": "Include System Tables",
+          "message": "Включити системні таблиці"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
+          "source": "Include internal Supabase system tables in the results",
+          "message": "Включити внутрішні системні таблиці Supabase до результатів"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get a list of all tables in your Supabase database",
+          "message": "Отримати список усіх таблиць у вашій базі даних Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.",
+          "message": "Отримує список усіх бакетів сховища у вашому проєкті Supabase разом з їхніми конфігураціями, включно з правами доступу, обмеженнями розміру файлів і дозволеними типами MIME."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Storage Buckets",
+          "message": "Список бакетів сховища"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "Get all storage buckets in your Supabase project",
+          "message": "Отримати всі бакети сховища у вашому проєкті Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information.",
+          "message": "Отримує рядки з таблиці Supabase із підтримкою фільтрації, сортування, пагінації та впорядкування. Повертає список записів, що відповідають критеріям вашого запиту, разом із загальною кількістю."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "Отримати список рядків"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter condition to retrieve only rows that match specific criteria. Supports various comparison operators for flexible querying.",
+          "message": "Застосуйте умову фільтра, щоб отримати лише ті рядки, які відповідають певним критеріям. Підтримує різні оператори порівняння для гнучких запитів."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Фільтр"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on a condition",
+          "message": "Фільтрувати рядки на основі умови"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets.",
+          "message": "Пропустити вказану кількість рядків перед поверненням результатів. Використовується в поєднанні з limit для пагінації великих наборів даних."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Зсув"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of rows to skip",
+          "message": "Кількість рядків для пропуску"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a column and sort direction (ascending or descending).",
+          "message": "Визначте спосіб сортування отриманих рядків, указавши стовпець і напрямок сортування (за зростанням або за спаданням)."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Сортувати за"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
+          "source": "Sort the results by a specific column",
+          "message": "Сортувати результати за вказаним стовпцем"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve in a single query. Useful for pagination and performance optimization. Defaults to 20 if not specified.",
+          "message": "Укажіть максимальну кількість рядків для отримання в одному запиті. Корисно для пагінації та оптимізації продуктивності. За замовчуванням: 20, якщо не вказано."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Максимальна кількість рядків для повернення"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "Виберіть таблицю Supabase, з якої потрібно отримати рядки. Доступні для фільтрації та сортування стовпці будуть завантажені на основі цього вибору."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to query",
+          "message": "Таблиця для запиту"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Supabase table",
+          "message": "Зробити запит та отримати рядки з таблиці Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Supabase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробіть довільний виклик HTTP / REST API до **Supabase**, використовуючи автентифікацію налаштованого підключення.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API підключення), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не реалізовано як окремі дії в цій програмі."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Supabase",
+          "message": "Зробити довільний виклик API до Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.desc": {
+          "source": "Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria.",
+          "message": "Відстежує таблицю Supabase на наявність нових рядків і спрацьовує при додаванні нових записів. Підтримує додаткову фільтрацію для спрацьовування лише на рядки, що відповідають певним критеріям."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
+          "source": "New Table Row",
+          "message": "Новий рядок у таблиці"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "Застосуйте фільтр, щоб тригер спрацьовував лише на нові рядки, які відповідають певним критеріям. Залиште порожнім, щоб спрацьовувати для всіх нових рядків."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Фільтр"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.short_desc": {
+          "source": "Optional condition to filter new rows",
+          "message": "Необов'язкова умова для фільтрації нових рядків"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "Виберіть таблицю Supabase, яку потрібно відстежувати. Тригер спрацьовуватиме щоразу, коли в цю таблицю додаватимуться нові рядки."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "Таблиця для відстеження нових рядків"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Supabase table",
+          "message": "Спрацьовує, коли новий рядок додається до таблиці Supabase"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "Пошук відповідних записів у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Пошук записів"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "Пошук відповідних записів у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "Пошук одного відповідного запису у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Знайти один запис"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "Пошук одного відповідного запису у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Оновити записи"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "Оновити наявні записи у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "Вставити або оновити записи у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Оновити або додати записи"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Таблиця"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "Вставити або оновити записи у вказаній таблиці в застосунку \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.desc": {
+          "source": "Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted.",
+          "message": "Виконує операцію upsert (вставка або оновлення) у таблиці Supabase. Якщо рядок із зазначеним унікальним обмеженням існує, його буде оновлено; інакше вставляється новий рядок."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
+          "source": "Upsert Row",
+          "message": "Оновити або вставити рядок"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.desc": {
+          "source": "When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values.",
+          "message": "Якщо ввімкнено і конфліктний рядок існує, операція непомітно ігнорується. Якщо вимкнено (за замовчуванням), конфліктні рядки оновлюються новими значеннями."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
+          "source": "Ignore Duplicates",
+          "message": "Ігнорувати дублікати"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
+          "source": "Skip the operation if a duplicate exists",
+          "message": "Пропустити операцію, якщо дублікат існує"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.desc": {
+          "source": "Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key.",
+          "message": "Укажіть стовпець або розділений комами список стовпців, які слід використовувати для виявлення конфліктів. Якщо не вказано, використовується первинний ключ таблиці."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
+          "source": "On Conflict",
+          "message": "У разі конфлікту"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
+          "source": "The column(s) used to detect conflicts",
+          "message": "Стовпець (або стовпці), що використовується для виявлення конфліктів"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table. The available fields will be dynamically loaded based on the table schema.",
+          "message": "Виберіть цільову таблицю Supabase. Доступні поля будуть динамічно завантажені на основі схеми таблиці."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Назва таблиці"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table for the upsert operation",
+          "message": "Таблиця для операції оновлення/вставки"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created.",
+          "message": "Укажіть значення для стовпців таблиці. Якщо рядок із відповідними унікальними обмеженнями існує, ці значення оновлять його; інакше буде створено новий рядок."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "Значення рядка"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to upsert",
+          "message": "Дані для вставки або оновлення"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
+          "source": "Insert a new row or update an existing one",
+          "message": "Вставити новий рядок або оновити наявний"
+        },
+        "app.U3VwYWJhc2U.desc": {
+          "source": "The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.",
+          "message": "Інтеграція із Supabase забезпечує повний доступ до ваших бекенд-сервісів Supabase. Керуйте таблицями бази даних за допомогою повного набору операцій CRUD, відстежуйте зміни в реальному часі за допомогою тригерів і керуйте збереженням файлів через бакети. Незалежно від того, чи потрібно вам робити запити до даних, додавати записи, фільтрувати результати або відстежувати нові записи, ця інтеграція оптимізує автоматизацію ваших робочих процесів і керування бекендом у Supabase."
+        },
+        "app.U3VwYWJhc2U.display_name": {
+          "source": "Supabase",
+          "message": "Supabase"
+        },
+        "app.U3VwYWJhc2U.short_desc": {
+          "source": "Connect to Supabase to manage your database tables, storage buckets, and real-time data",
+          "message": "Підключіться до Supabase для керування таблицями бази даних, бакетами сховища та даними в реальному часі"
+        }
+      }
+    }
+  }
+}

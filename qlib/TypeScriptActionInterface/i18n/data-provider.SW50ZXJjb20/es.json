@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.desc": {
+          "source": "You can search for multiple contacts by the value of their attributes in order to fetch exactly who you want.\n\nTo search for contacts, you need to send a `POST` request to `https:-api.intercom.io-contacts-search`.\n\nThis will accept a query object in the body which will define your filters in order to search for contacts.\n\n% admonition type=\"warning\" name=\"Optimizing search queries\" %\n  Search queries can be complex, so optimizing them can help the performance of your search.\n  Use the `AND` and `OR` operators to combine multiple filters to get the exact results you need and utilize\n  pagination to limit the number of results returned. The default is `50` results per page.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) for more details on how to use the `starting_after` param.\n% -admonition %\n### Contact Creation Delay\n\nIf a contact has recently been created, there is a possibility that it will not yet be available when searching. This means that it may not appear in the response. This delay can take a few minutes. If you need to be instantly notified it is recommended to use webhooks and iterate to see if they match your search filters.\n\n### Nesting & Limitations\n\nYou can nest these filters in order to get even more granular insights that pinpoint exactly what you need. Example: (1 OR 2) AND (3 OR 4).\nThere are some limitations to the amount of multiple's there can be:\n* There's a limit of max 2 nested filters\n* There's a limit of max 15 filters for each AND or OR group\n\n### Searching for Timestamp Fields\n\nAll timestamp fields (created_at, updated_at etc.) are indexed as Dates for Contact Search queries; Datetime queries are not currently supported. This means you can only query for timestamp fields by day - not hour, minute or second.\nFor example, if you search for all Contacts with a created_at value greater (>) than 1577869200 (the UNIX timestamp for January 1st, 2020 9:00 AM), that will be interpreted as 1577836800 (January 1st, 2020 12:00 AM). The search results will then include Contacts created from January 2nd, 2020 12:00 AM onwards.\nIf you'd like to get contacts created on January 1st, 2020 you should search with a created_at value equal (=) to 1577836800 (January 1st, 2020 12:00 AM).\nThis behaviour applies only to timestamps used in search queries. The search results will still contain the full UNIX timestamp and be sorted accordingly.\n\n### Accepted Fields\n\nMost key listed as part of the Contacts Model are searchable, whether writeable or not. The value you search for has to match the accepted type, otherwise the query will fail (ie. as `created_at` accepts a date, the `value` cannot be a string such as `\"foorbar\"`).\n\n| Field                              | Type                           |\n| - | - |\n| id                                 | String                         |\n| role                               | String<br>Accepts user or lead |\n| name                               | String                         |\n| avatar                             | String                         |\n| owner_id                           | Integer                        |\n| email                              | String                         |\n| email_domain                       | String                         |\n| phone                              | String                         |\n| external_id                        | String                         |\n| created_at                         | Date (UNIX Timestamp)          |\n| signed_up_at                       | Date (UNIX Timestamp)          |\n| updated_at                         | Date (UNIX Timestamp)          |\n| last_seen_at                       | Date (UNIX Timestamp)          |\n| last_contacted_at                  | Date (UNIX Timestamp)          |\n| last_replied_at                    | Date (UNIX Timestamp)          |\n| last_email_opened_at               | Date (UNIX Timestamp)          |\n| last_email_clicked_at              | Date (UNIX Timestamp)          |\n| language_override                  | String                         |\n| browser                            | String                         |\n| browser_language                   | String                         |\n| os                                 | String                         |\n| location.country                   | String                         |\n| location.region                    | String                         |\n| location.city                      | String                         |\n| unsubscribed_from_emails           | Boolean                        |\n| marked_email_as_spam               | Boolean                        |\n| has_hard_bounced                   | Boolean                        |\n| ios_last_seen_at                   | Date (UNIX Timestamp)          |\n| ios_app_version                    | String                         |\n| ios_device                         | String                         |\n| ios_app_device                     | String                         |\n| ios_os_version                     | String                         |\n| ios_app_name                       | String                         |\n| ios_sdk_version                    | String                         |\n| android_last_seen_at               | Date (UNIX Timestamp)          |\n| android_app_version                | String                         |\n| android_device                     | String                         |\n| android_app_name                   | String                         |\n| andoid_sdk_version                 | String                         |\n| segment_id                         | String                         |\n| tag_id                             | String                         |\n| custom_attributes.attribute_name | String                         |\n\n### Accepted Operators\n\n% admonition type=\"warning\" name=\"Searching based on `created_at`\" %\n  You cannot use the `<=` or `>=` operators to search by `created_at`.\n% -admonition %\n\nThe table below shows the operators you can use to define how you want to search for the value.  The operator should be put in as a string (`\"=\"`). The operator has to be compatible with the field's type (eg. you cannot search with `>` for a given string value as it's only compatible for integer's and dates).\n\n| Operator | Valid Types                      | Description                                                      |\n| :- | :- | :- |\n| =        | All                              | Equals                                                           |\n| !=       | All                              | Doesn't Equal                                                    |\n| IN       | All                              | In<br>Shortcut for `OR` queries<br>Values must be in Array       |\n| NIN      | All                              | Not In<br>Shortcut for `OR !` queries<br>Values must be in Array |\n| >        | Integer<br>Date (UNIX Timestamp) | Greater than                                                     |\n| <       | Integer<br>Date (UNIX Timestamp) | Lower than                                                       |\n| ~        | String                           | Contains                                                         |\n| !~       | String                           | Doesn't Contain                                                  |\n| ^        | String                           | Starts With                                                      |\n| $        | String                           | Ends With                                                        |\n",
+          "message": "Puede buscar varios contactos por el valor de sus atributos para obtener exactamente a quién desea.\n\nPara buscar contactos, debe enviar una solicitud `POST` a `https:-api.intercom.io-contacts-search`.\n\nEsto aceptará un objeto de consulta en el cuerpo que definirá sus filtros para buscar contactos.\n\n% admonition type=\"warning\" name=\"Optimización de consultas de búsqueda\" %\n  Las consultas de búsqueda pueden ser complejas, por lo que optimizarlas puede ayudar al rendimiento de su búsqueda.\n  Utilice los operadores `AND` y `OR` para combinar varios filtros para obtener los resultados exactos que necesita y utilice\n  la paginación para limitar la cantidad de resultados devueltos. El valor predeterminado es de `50` resultados por página.\n  Consulte la [sección de paginación](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) para obtener más detalles sobre cómo utilizar el parámetro `starting_after`.\n% -admonition %\n### Retraso en la creación de contactos\n\nSi se ha creado un contacto recientemente, existe la posibilidad de que aún no esté disponible al buscar. Esto significa que es posible que no aparezca en la respuesta. Este retraso puede tardar unos minutos. Si necesita recibir una notificación instantánea, se recomienda utilizar webhooks e iterar para ver si coinciden con sus filtros de búsqueda.\n\n### Anidamiento y limitaciones\n\nPuede anidar estos filtros para obtener información aún más detallada que identifique exactamente lo que necesita. Ejemplo: (1 O 2) Y (3 O 4).\nExisten algunas limitaciones en cuanto a la cantidad de múltiples que puede haber:\n* Hay un límite de un máximo de 2 filtros anidados\n* Hay un límite de un máximo de 15 filtros para cada grupo AND u OR\n\n### Búsqueda de campos de marca de tiempo\n\nTodos los campos de marca de tiempo (created_at, updated_at, etc.) se indexan como fechas para las consultas de búsqueda de contactos; actualmente no se admiten consultas de fecha y hora. Esto significa que solo puede consultar campos de marca de tiempo por día, no por hora, minuto o segundo.\nPor ejemplo, si busca todos los contactos con un valor created_at mayor (>) que 1577869200 (la marca de tiempo UNIX para el 1 de enero de 2020 a las 9:00 a. m.), eso se interpretará como 1577836800 (1 de enero de 2020 a las 12:00 a. m.). Los resultados de la búsqueda incluirán los contactos creados a partir del 2 de enero de 2020 a las 12:00 a. m. en adelante.\nSi desea obtener los contactos creados el 1 de enero de 2020, debe buscar con un valor created_at igual (=) a 1577836800 (1 de enero de 2020 a las 12:00 a. m.).\nEste comportamiento se aplica solo a las marcas de tiempo utilizadas en las consultas de búsqueda. Los resultados de la búsqueda seguirán conteniendo la marca de tiempo UNIX completa y se ordenarán en consecuencia.\n\n### Campos aceptados\n\nLa mayoría de las claves enumeradas como parte del modelo de contactos se pueden buscar, ya sean de escritura o no. El valor que busque debe coincidir con el tipo aceptado; de lo contrario, la consulta fallará (es decir, como `created_at` acepta una fecha, el `value` no puede ser una cadena como `\"foorbar\"`).\n\n| Campo                              | Tipo                           |\n| - | - |\n| id                                 | Cadena                         |\n| role                               | Cadena<br>Acepta user o lead |\n| name                               | Cadena                         |\n| avatar                             | Cadena                         |\n| owner_id                           | Entero                        |\n| email                              | Cadena                         |\n| email_domain                       | Cadena                         |\n| phone                              | Cadena                         |\n| external_id                        | Cadena                         |\n| created_at                         | Fecha (marca de tiempo UNIX)   |\n| signed_up_at                       | Fecha (marca de tiempo UNIX)   |\n| updated_at                         | Fecha (marca de tiempo UNIX)   |\n| last_seen_at                       | Fecha (marca de tiempo UNIX)   |\n| last_contacted_at                  | Fecha (marca de tiempo UNIX)   |\n| last_replied_at                    | Fecha (marca de tiempo UNIX)   |\n| last_email_opened_at               | Fecha (marca de tiempo UNIX)   |\n| last_email_clicked_at              | Fecha (marca de tiempo UNIX)   |\n| language_override                  | Cadena                         |\n| browser                            | Cadena                         |\n| browser_language                   | Cadena                         |\n| os                                 | Cadena                         |\n| location.country                   | Cadena                         |\n| location.region                    | Cadena                         |\n| location.city                      | Cadena                         |\n| unsubscribed_from_emails           | Booleano                       |\n| marked_email_as_spam               | Booleano                       |\n| has_hard_bounced                   | Booleano                       |\n| ios_last_seen_at                   | Fecha (marca de tiempo UNIX)   |\n| ios_app_version                    | Cadena                         |\n| ios_device                         | Cadena                         |\n| ios_app_device                     | Cadena                         |\n| ios_os_version                     | Cadena                         |\n| ios_app_name                       | Cadena                         |\n| ios_sdk_version                    | Cadena                         |\n| android_last_seen_at               | Fecha (marca de tiempo UNIX)   |\n| android_app_version                | Cadena                         |\n| android_device                     | Cadena                         |\n| android_app_name                   | Cadena                         |\n| andoid_sdk_version                 | Cadena                         |\n| segment_id                         | Cadena                         |\n| tag_id                             | Cadena                         |\n| custom_attributes.attribute_name | Cadena                         |\n\n### Operadores aceptados\n\n% admonition type=\"warning\" name=\"Búsqueda basada en `created_at`\" %\n  No puede utilizar los operadores `<=` o `>=` para buscar por `created_at`.\n% -admonition %\n\nLa siguiente tabla muestra los operadores que puede utilizar para definir cómo desea buscar el valor. El operador debe introducirse como una cadena (`\"=\"`). El operador debe ser compatible con el tipo de campo (p. ej., no puede buscar con `>` para un valor de cadena determinado, ya que solo es compatible con enteros y fechas).\n\n| Operador | Tipos válidos                    | Descripción                                                      |\n| :- | :- | :- |\n| =        | Todos                            | Igual a                                                          |\n| !=       | Todos                            | No es igual a                                                    |\n| IN       | Todos                            | En<br>Acceso directo para consultas `OR`<br>Los valores deben estar en una matriz       |\n| NIN      | Todos                            | No en<br>Acceso directo para consultas `OR !`<br>Los valores deben estar en una matriz |\n| >        | Entero<br>Fecha (marca de tiempo UNIX) | Mayor que                                                        |\n| <       | Entero<br>Fecha (marca de tiempo UNIX) | Menor que                                                        |\n| ~        | Cadena                           | Contiene                                                         |\n| !~       | Cadena                           | No contiene                                                      |\n| ^        | Cadena                           | Empieza con                                                      |\n| $        | Cadena                           | Termina con                                                      |\n"
+        },
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.display_name": {
+          "source": "Search Contacts",
+          "message": "Buscar contactos"
+        },
+        "app.SW50ZXJjb20.action.U2VhcmNoQ29udGFjdHM.short_desc": {
+          "source": "Search contacts",
+          "message": "Buscar contactos"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.desc": {
+          "source": "You can create a conversation that has been initiated by a contact (ie. user or lead).\nThe conversation can be an in-app message only.\n\n% admonition type=\"info\" name=\"Sending for visitors\" %\nYou can also send a message from a visitor by specifying their `user_id` or `id` value in the `from` field, along with a `type` field value of `contact`.\nThis visitor will be automatically converted to a contact with a lead role once the conversation is created.\n% -admonition %\n\nThis will return the Message model that has been created.\n\n",
+          "message": "Puede crear una conversación iniciada por un contacto (es decir, usuario o cliente potencial).\nLa conversación solo puede ser un mensaje dentro de la aplicación.\n\n% admonition type=\"info\" name=\"Envío para visitantes\" %\nPuede enviar un mensaje de un visitante especificando su valor `user_id` o `id` en el campo `from`, junto con un valor de campo `type` de `contact`.\nEste visitante se convertirá automáticamente en un contacto con un rol de cliente potencial una vez que se cree la conversación.\n% -admonition %\n\nEsto devolverá el modelo de mensaje que se ha creado.\n\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.display_name": {
+          "source": "Create Conversation",
+          "message": "Crear conversación"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQ29udmVyc2F0aW9u.short_desc": {
+          "source": "Creates a conversation",
+          "message": "Crea una conversación"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.desc": {
+          "source": "You can create a new article by making a POST request to `https:-api.intercom.io-articles`.",
+          "message": "Puede crear un nuevo artículo realizando una solicitud POST a `https:-api.intercom.io-articles`."
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.display_name": {
+          "source": "Create an Article",
+          "message": "Crear un artículo"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlQXJ0aWNsZQ.short_desc": {
+          "source": "Create an article",
+          "message": "Crear un artículo"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.desc": {
+          "source": "\nYou will need an Access Token that has write permissions to send Events. Once you have a key you can submit events via POST to the Events resource, which is located at https:-api.intercom.io-events, or you can send events using one of the client libraries. When working with the HTTP API directly a client should send the event with a `Content-Type` of `application-json`.\n\nWhen using the JavaScript API, [adding the code to your app](http:-docs.intercom.io-configuring-Intercom-tracking-user-events-in-your-app) makes the Events API available. Once added, you can submit an event using the `trackEvent` method. This will associate the event with the Lead or currently logged-in user or logged-out visitor-lead and send it to Intercom. The final parameter is a map that can be used to send optional metadata about the event.\n\nWith the Ruby client you pass a hash describing the event to `Intercom::Event.create`, or call the `track_user` method directly on the current user object (e.g. `user.track_event`).\n\n**NB: For the JSON object types, please note that we do not currently support nested JSON structure.**\n\n| Type            | Description                                                                                                                                                                                                     | Example                                                                           |\n| :- | :- | :- |\n| String          | The value is a JSON String                                                                                                                                                                                      | `\"source\":\"desktop\"`                                                              |\n| Number          | The value is a JSON Number                                                                                                                                                                                      | `\"load\": 3.67`                                                                    |\n| Date            | The key ends with the String `_date` and the value is a [Unix timestamp](http:-en.wikipedia.org-wiki-Unix_time), assumed to be in the [UTC](http:-en.wikipedia.org-wiki-Coordinated_Universal_Time) timezone. | `\"contact_date\": 1392036272`                                                      |\n| Link            | The value is a HTTP or HTTPS URI.                                                                                                                                                                               | `\"article\": \"https:-example.org-ab1de.html\"`                                     |\n| Rich Link       | The value is a JSON object that contains `url` and `value` keys.                                                                                                                                                | `\"article\": \"url\": \"https:-example.org-ab1de.html\", \"value\":\"the dude abides\"` |\n| Monetary Amount | The value is a JSON object that contains `amount` and `currency` keys. The `amount` key is a positive integer representing the amount in cents. The price in the example to the right denotes €349.99.          | `\"price\": \"amount\": 34999, \"currency\": \"eur\"`                                   |\n\n**Lead Events**\n\nWhen submitting events for Leads, you will need to specify the Lead's `id`.\n\n**Metadata behaviour**\n\n- We currently limit the number of tracked metadata keys to 10 per event. Once the quota is reached, we ignore any further keys we receive. The first 10 metadata keys are determined by the order in which they are sent in with the event.\n- It is not possible to change the metadata keys once the event has been sent. A new event will need to be created with the new keys and you can archive the old one.\n- There might be up to 24 hrs delay when you send a new metadata for an existing event.\n\n**Event de-duplication**\n\nThe API may detect and ignore duplicate events. Each event is uniquely identified as a combination of the following data - the Workspace identifier, the Contact external identifier, the Data Event name and the Data Event created time. As a result, it is **strongly recommended** to send a second granularity Unix timestamp in the `created_at` field.\n\nDuplicated events are responded to using the normal `202 Accepted` code - an error is not thrown, however repeat requests will be counted against any rate limit that is in place.\n\n### HTTP API Responses\n\n- Successful responses to submitted events return `202 Accepted` with an empty body.\n- Unauthorised access will be rejected with a `401 Unauthorized` or `403 Forbidden` response code.\n- Events sent about users that cannot be found will return a `404 Not Found`.\n- Event lists containing duplicate events will have those duplicates ignored.\n- Server errors will return a `500` response code and may contain an error message in the body.\n\n",
+          "message": "\nNecesitará un token de acceso que tenga permisos de escritura para enviar eventos. Una vez que tenga una clave, puede enviar eventos a través de POST al recurso Events, que se encuentra en https:-api.intercom.io-events, o puede enviar eventos utilizando una de las bibliotecas de cliente. Al trabajar directamente con la API HTTP, un cliente debe enviar el evento con un `Content-Type` de `application-json`.\n\nAl utilizar la API de JavaScript, [agregar el código a su aplicación](http:-docs.intercom.io-configuring-Intercom-tracking-user-events-in-your-app) pone a disposición la API de eventos. Una vez agregado, puede enviar un evento utilizando el método `trackEvent`. Esto asociará el evento con el cliente potencial o el usuario con sesión iniciada o el visitante-cliente potencial sin sesión iniciada y lo enviará a Intercom. El parámetro final es un mapa que se puede utilizar para enviar metadatos opcionales sobre el evento.\n\nCon el cliente Ruby pasa un hash que describe el evento a `Intercom::Event.create`, o llama al método `track_user` directamente en el objeto de usuario actual (p. ej., `user.track_event`).\n\n**Nota: Para los tipos de objetos JSON, tenga en cuenta que actualmente no admitimos estructuras JSON anidadas.**\n\n| Tipo            | Descripción                                                                                                                                                                                                     | Ejemplo                                                                           |\n| :- | :- | :- |\n| Cadena          | El valor es una cadena JSON                                                                                                                                                                                      | `\"source\":\"desktop\"`                                                              |\n| Número          | El valor es un número JSON                                                                                                                                                                                      | `\"load\": 3.67`                                                                    |\n| Fecha            | La clave termina con la cadena `_date` y el valor es una [marca de tiempo Unix](http:-en.wikipedia.org-wiki-Unix_time), que se asume en la zona horaria [UTC](http:-en.wikipedia.org-wiki-Coordinated_Universal_Time). | `\"contact_date\": 1392036272`                                                      |\n| Enlace            | El valor es un URI HTTP o HTTPS.                                                                                                                                                                               | `\"article\": \"https:-example.org-ab1de.html\"`                                     |\n| Enlace enriquecido       | El valor es un objeto JSON que contiene las claves `url` y `value`.                                                                                                                                                | `\"article\": \"url\": \"https:-example.org-ab1de.html\", \"value\":\"the dude abides\"` |\n| Importe monetario | El valor es un objeto JSON que contiene las claves `amount` y `currency`. La clave `amount` es un entero positivo que representa el importe en centavos. El precio en el ejemplo de la derecha denota €349.99.          | `\"price\": \"amount\": 34999, \"currency\": \"eur\"`                                   |\n\n**Eventos de cliente potencial**\n\nAl enviar eventos para clientes potenciales, deberá especificar el `id` del cliente potencial.\n\n**Comportamiento de metadatos**\n\n- Actualmente limitamos el número de claves de metadatos rastreadas a 10 por evento. Una vez alcanzada la cuota, ignoramos cualquier clave adicional que recibamos. Las primeras 10 claves de metadatos se determinan por el orden en que se envían con el evento.\n- No es posible cambiar las claves de metadatos una vez enviado el evento. Se deberá crear un nuevo evento con las nuevas claves y podrá archivar el antiguo.\n- Puede haber un retraso de hasta 24 horas al enviar nuevos metadatos para un evento existente.\n\n**Deduplicación de eventos**\n\nLa API puede detectar e ignorar eventos duplicados. Cada evento se identifica de forma única como una combinación de los siguientes datos: el identificador del espacio de trabajo, el identificador externo del contacto, el nombre del evento de datos y la hora de creación del evento de datos. Como resultado, se **recomienda encarecidamente** enviar una marca de tiempo Unix con granularidad de segundos en el campo `created_at`.\n\nLos eventos duplicados se responden utilizando el código normal `202 Accepted`; no se genera un error, sin embargo, las solicitudes repetidas se contarán para cualquier límite de tarifa vigente.\n\n### Respuestas de la API HTTP\n\n- Las respuestas correctas a los eventos enviados devuelven `202 Accepted` con un cuerpo vacío.\n- El acceso no autorizado se rechazará con un código de respuesta `401 Unauthorized` o `403 Forbidden`.\n- Los eventos enviados sobre usuarios que no se pueden encontrar devolverán un `404 Not Found`.\n- Las listas de eventos que contengan eventos duplicados verán ignorados dichos duplicados.\n- Los errores del servidor devolverán un código de respuesta `500` y pueden contener un mensaje de error en el cuerpo.\n\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.display_name": {
+          "source": "Submit a Data Event",
+          "message": "Enviar un evento de datos"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlRGF0YUV2ZW50.short_desc": {
+          "source": "Submit a data event",
+          "message": "Enviar un evento de datos"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.desc": {
+          "source": "You can create or update a company.\n\nCompanies will be only visible in Intercom when there is at least one associated user.\n\nCompanies are looked up via `company_id` in a `POST` request, if not found via `company_id`, the new company will be created, if found, that company will be updated.\n\n% admonition type=\"warning\" name=\"Using `company_id`\" %\n  You can set a unique `company_id` value when creating a company. However, it is not possible to update `company_id`. Be sure to set a unique value once upon creation of the company.\n% -admonition %\n",
+          "message": "Puede crear o actualizar una empresa.\n\nLas empresas solo serán visibles en Intercom cuando haya al menos un usuario asociado.\n\nLas empresas se buscan a través de `company_id` en una solicitud `POST`; si no se encuentran a través de `company_id`, se creará la nueva empresa; si se encuentran, esa empresa se actualizará.\n\n% admonition type=\"warning\" name=\"Uso de `company_id`\" %\n  Puede establecer un valor de `company_id` único al crear una empresa. Sin embargo, no es posible actualizar `company_id`. Asegúrese de establecer un valor único al crear la empresa.\n% -admonition %\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.display_name": {
+          "source": "Create or Update a Company",
+          "message": "Crear o actualizar una empresa"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlT3JVcGRhdGVDb21wYW55.short_desc": {
+          "source": "Create or Update a company",
+          "message": "Crear o actualizar una empresa"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.desc": {
+          "source": "You can create a message that has been initiated by an admin. The conversation can be either an in-app message or an email.\n\n> 🚧 Sending for visitors\n>\n> There can be a short delay between when a contact is created and when a contact becomes available to be messaged through the API. A 404 Not Found error will be returned in this case.\n\nThis will return the Message model that has been created.\n\n> 🚧 Retrieving Associated Conversations\n>\n> As this is a message, there will be no conversation present until the contact responds. Once they do, you will have to search for a contact's conversations with the id of the message.\n",
+          "message": "Puede crear un mensaje iniciado por un administrador. La conversación puede ser un mensaje en la aplicación o un correo electrónico.\n\n> 🚧 Envío para visitantes\n>\n> Puede haber un breve retraso entre el momento en que se crea un contacto y el momento en que este queda disponible para recibir mensajes a través de la API. En este caso se devolverá un error 404 Not Found.\n\nEsto devolverá el modelo de mensaje que se ha creado.\n\n> 🚧 Recuperación de conversaciones asociadas\n>\n> Dado que se trata de un mensaje, no habrá ninguna conversación presente hasta que el contacto responda. Una vez que lo haga, tendrá que buscar las conversaciones de un contacto con el id del mensaje.\n"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.display_name": {
+          "source": "Create a Message",
+          "message": "Crear un mensaje"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTWVzc2FnZQ.short_desc": {
+          "source": "Create a message",
+          "message": "Crear un mensaje"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.desc": {
+          "source": "You can add a note to a single contact.",
+          "message": "Puede agregar una nota a un solo contacto."
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.display_name": {
+          "source": "Add Note to Contact",
+          "message": "Añadir nota al contacto"
+        },
+        "app.SW50ZXJjb20.action.Y3JlYXRlTm90ZQ.short_desc": {
+          "source": "Create a note",
+          "message": "Crear una nota"
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.desc": {
+          "source": "You can tag a specific contact. This will return a tag object for the tag that was added to the contact.",
+          "message": "Puede etiquetar un contacto específico. Esto devolverá un objeto de etiqueta para la etiqueta que se agregó al contacto."
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.display_name": {
+          "source": "Add Tag to a Contact",
+          "message": "Agregar etiqueta a un contacto"
+        },
+        "app.SW50ZXJjb20.action.YXR0YWNoVGFnVG9Db250YWN0.short_desc": {
+          "source": "Add tag to a contact",
+          "message": "Agregar etiqueta a un contacto"
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.desc": {
+          "source": "You can remove tag from a specific contact. This will return a tag object for the tag that was removed from the contact.",
+          "message": "Puede eliminar la etiqueta de un contacto específico. Esto devolverá un objeto de etiqueta para la etiqueta que se eliminó del contacto."
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.display_name": {
+          "source": "Remove Tag from a Contact",
+          "message": "Eliminar etiqueta de un contacto"
+        },
+        "app.SW50ZXJjb20.action.ZGV0YWNoVGFnRnJvbUNvbnRhY3Q.short_desc": {
+          "source": "Remove tag from a contact",
+          "message": "Eliminar etiqueta de un contacto"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.desc": {
+          "source": "\n> 🚧\n>\n> Please note that you can only 'list' events that are less than 90 days old. Event counts and summaries will still include your events older than 90 days but you cannot 'list' these events individually if they are older than 90 days\n\nThe events belonging to a customer can be listed by sending a GET request to `https:-api.intercom.io-events` with a user or lead identifier along with a `type` parameter. The identifier parameter can be one of `user_id`, `email` or `intercom_user_id`. The `type` parameter value must be `user`.\n\n- `https:-api.intercom.io-events?type=user&user_id=user_id`\n- `https:-api.intercom.io-events?type=user&email=email`\n- `https:-api.intercom.io-events?type=user&intercom_user_id=id` (this call can be used to list leads)\n\nThe `email` parameter value should be [url encoded](http:-en.wikipedia.org-wiki-Percent-encoding) when sending.\n\nYou can optionally define the result page size as well with the `per_page` parameter.\n",
+          "message": "\n> 🚧\n>\n> Tenga en cuenta que solo puede 'listar' eventos de menos de 90 días. Los recuentos y resúmenes de eventos seguirán incluyendo sus eventos de más de 90 días, pero no puede 'listar' estos eventos de forma individual si tienen más de 90 días\n\nLos eventos pertenecientes a un cliente se pueden listar enviando una solicitud GET a `https:-api.intercom.io-events` con un identificador de usuario o cliente potencial junto con un parámetro `type`. El parámetro identificador puede ser uno de `user_id`, `email` o `intercom_user_id`. El valor del parámetro `type` debe ser `user`.\n\n- `https:-api.intercom.io-events?type=user&user_id=user_id`\n- `https:-api.intercom.io-events?type=user&email=email`\n- `https:-api.intercom.io-events?type=user&intercom_user_id=id` (esta llamada se puede utilizar para listar clientes potenciales)\n\nEl valor del parámetro `email` debe estar [codificado en URL](http:-en.wikipedia.org-wiki-Percent-encoding) al enviarlo.\n\nOpcionalmente, también puede definir el tamaño de la página de resultados con el parámetro `per_page`.\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.display_name": {
+          "source": "List All Data Events",
+          "message": "Listar todos los eventos de datos"
+        },
+        "app.SW50ZXJjb20.action.bGlzRGF0YUV2ZW50cw.short_desc": {
+          "source": "List all data events",
+          "message": "Listar todos los eventos de datos"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.desc": {
+          "source": "You can list companies. The company list is sorted by the `last_request_at` field and by default is ordered descending, most recently requested first.\n\nNote that the API does not include companies who have no associated users in list responses.\n\nWhen using the Companies endpoint and the pages object to iterate through the returned companies, there is a limit of 10,000 Companies that can be returned. If you need to list or iterate on more than 10,000 Companies, please use the [Scroll API](https:-developers.intercom.com-reference#iterating-over-all-companies).\n% admonition type=\"warning\" name=\"Pagination\" %\n  You can use pagination to limit the number of results returned. The default is `20` results per page.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#pagination-for-list-apis) for more details on how to use the `starting_after` param.\n% -admonition %\n",
+          "message": "Puede listar empresas. La lista de empresas se ordena por el campo `last_request_at` y, de forma predeterminada, se ordena descendentemente, mostrando primero los solicitados más recientemente.\n\nTenga en cuenta que la API no incluye empresas que no tengan usuarios asociados en las respuestas de la lista.\n\nAl utilizar el extremo de Empresas y el objeto de páginas para iterar a través de las empresas devueltas, existe un límite de 10 000 empresas que se pueden devolver. Si necesita listar o iterar sobre más de 10 000 empresas, utilice la [API Scroll](https:-developers.intercom.com-reference#iterating-over-all-companies).\n% admonition type=\"warning\" name=\"Paginación\" %\n  Puede utilizar la paginación para limitar el número de resultados devueltos. El valor predeterminado es de `20` resultados por página.\n  Consulte la [sección de paginación](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#pagination-for-list-apis) para obtener más detalles sobre cómo utilizar el parámetro `starting_after`.\n% -admonition %\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.display_name": {
+          "source": "List All Companies",
+          "message": "Listar todas las compañías"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Versión de la API de Intercom.</br>De forma predeterminada, es igual a la versión establecida en el paquete de la aplicación."
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Versión de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Versión de la API de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.desc": {
+          "source": "`asc` or `desc`. Return the companies in ascending or descending order. Defaults to desc",
+          "message": "`asc` o `desc`. Devuelve las empresas en orden ascendente o descendente. El valor predeterminado es desc"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "Orden"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.b3JkZXI.short_desc": {
+          "source": "'asc' or 'desc'",
+          "message": "'asc' o 'desc'"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.desc": {
+          "source": "The page of results to fetch. Defaults to first page",
+          "message": "La página de resultados a obtener. Por defecto es la primera página"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "Página"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGFnZQ.short_desc": {
+          "source": "The page of results to fetch",
+          "message": "La página de resultados a obtener"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.desc": {
+          "source": "How many results to return per page. Defaults to 15",
+          "message": "Cuántos resultados devolver por página. Por defecto es 15"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Per Page",
+          "message": "Por página"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "How many results to return per page",
+          "message": "Cuántos resultados devolver por página"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFsbENvbXBhbmllcw.short_desc": {
+          "source": "List all companies",
+          "message": "Listar todas las empresas"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.desc": {
+          "source": "You can fetch a list of all articles by making a GET request to `https:-api.intercom.io-articles`.\n\n> 📘 How are the articles sorted and ordered?\n>\n> Articles will be returned in descending order on the `updated_at` attribute. This means if you need to iterate through results then we'll show the most recently updated articles first.\n",
+          "message": "Puedes obtener una lista de todos los artículos haciendo una solicitud GET a `https:-api.intercom.io-articles`.\n\n> 📘 ¿Cómo se clasifican y ordenan los artículos?\n>\n> Los artículos se devolverán en orden descendente según el atributo `updated_at`. Esto significa que si necesitas iterar a través de los resultados, mostraremos primero los artículos actualizados más recientemente.\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.display_name": {
+          "source": "List All Articles",
+          "message": "Listar todos los artículos"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Versión de la API de Intercom.</br>De forma predeterminada, es igual a la versión establecida en el paquete de la aplicación."
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Versión de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Versión de la API de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdEFydGljbGVz.short_desc": {
+          "source": "List all articles",
+          "message": "Listar todos los artículos"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.desc": {
+          "source": "You can fetch a list of all tags for a given workspace.\n\n",
+          "message": "Puedes obtener una lista de todas las etiquetas de un espacio de trabajo determinado.\n\n"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.display_name": {
+          "source": "List All Tags",
+          "message": "Listar todas las etiquetas"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.desc": {
+          "source": "Intercom API version.</br>By default, it's equal to the version set in the app package.",
+          "message": "Versión de la API de Intercom.</br>De forma predeterminada, es igual a la versión establecida en el paquete de la aplicación."
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.display_name": {
+          "source": "Intercom Version",
+          "message": "Versión de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.option.SW50ZXJjb20tVmVyc2lvbg.short_desc": {
+          "source": "Intercom API version",
+          "message": "Versión de la API de Intercom"
+        },
+        "app.SW50ZXJjb20.action.bGlzdFRhZ3M.short_desc": {
+          "source": "List all tags",
+          "message": "Listar todas las etiquetas"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Intercom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realiza una llamada personalizada a la API HTTP / REST a **Intercom** utilizando la autenticación de la conexión configurada.\n\nEspecifica el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtiliza esta acción para extremos que aún no están expuestos como acciones de primer nivel en esta aplicación."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.SW50ZXJjb20.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Intercom",
+          "message": "Realizar una llamada API personalizada a Intercom"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.desc": {
+          "source": "This trigger fires whenever a new contact is created in your Intercom account. You can filter by role (user, lead, or both).",
+          "message": "Este activador se dispara cada vez que se crea un nuevo contacto en tu cuenta de Intercom. Puedes filtrar por rol (usuario, cliente potencial o ambos)."
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Nuevo contacto"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOmNvbnRhY3Q.display_name": {
+          "source": "Contact (User or Lead)",
+          "message": "Contacto (usuario o cliente potencial)"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOmxlYWQ.display_name": {
+          "source": "Lead",
+          "message": "Cliente potencial"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "Usuario"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.desc": {
+          "source": "Filter contacts by role",
+          "message": "Filtrar contactos por rol"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.display_name": {
+          "source": "Contact Role",
+          "message": "Rol del contacto"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.option.cm9sZQ.short_desc": {
+          "source": "Filter contacts by role",
+          "message": "Filtrar contactos por rol"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created in Intercom",
+          "message": "Se activa cuando se crea un nuevo contacto en Intercom"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.desc": {
+          "source": "This trigger fires whenever a new conversation is created in your Intercom account. It monitors for conversation creation events and provides all conversation details.",
+          "message": "Este activador se dispara cada vez que se crea una nueva conversación en tu cuenta de Intercom. Monitorea los eventos de creación de conversaciones y proporciona todos los detalles de la conversación."
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.display_name": {
+          "source": "New Conversation",
+          "message": "Nueva conversación"
+        },
+        "app.SW50ZXJjb20.action.bmV3LWNvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Triggers when a new conversation is created in Intercom",
+          "message": "Se activa cuando se crea una nueva conversación en Intercom"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.desc": {
+          "source": "You can search for multiple conversations by the value of their attributes in order to fetch exactly which ones you want.\n\nTo search for conversations, you need to send a `POST` request to `https:-api.intercom.io-conversations-search`.\n\nThis will accept a query object in the body which will define your filters in order to search for conversations.\n% admonition type=\"warning\" name=\"Optimizing search queries\" %\n  Search queries can be complex, so optimizing them can help the performance of your search.\n  Use the `AND` and `OR` operators to combine multiple filters to get the exact results you need and utilize\n  pagination to limit the number of results returned. The default is `20` results per page and maximum is `150`.\n  See the [pagination section](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) for more details on how to use the `starting_after` param.\n% -admonition %\n\n### Nesting & Limitations\n\nYou can nest these filters in order to get even more granular insights that pinpoint exactly what you need. Example: (1 OR 2) AND (3 OR 4).\nThere are some limitations to the amount of multiple's there can be:\n- There's a limit of max 2 nested filters\n- There's a limit of max 15 filters for each AND or OR group\n\n### Accepted Fields\n\nMost keys listed in the conversation model is searchable, whether writeable or not. The value you search for has to match the accepted type, otherwise the query will fail (ie. as `created_at` accepts a date, the `value` cannot be a string such as `\"foorbar\"`).\nThe `source.body` field is unique as the search will not be performed against the entire value, but instead against every element of the value separately. For example, when searching for a conversation with a `\"I need support\"` body - the query should contain a `=` operator with the value `\"support\"` for such conversation to be returned. A query with a `=` operator and a `\"need support\"` value will not yield a result.\n\n| Field                                     | Type                                                                                                                                                   |\n| :- | :- |\n| id                                        | String                                                                                                                                                 |\n| created_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| updated_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| source.type                               | String<br>Accepted fields are `conversation`, `email`, `facebook`, `instagram`, `phone_call`, `phone_switch`, `push`, `sms`, `twitter` and `whatsapp`. |\n| source.id                                 | String                                                                                                                                                 |\n| source.delivered_as                       | String                                                                                                                                                 |\n| source.subject                            | String                                                                                                                                                 |\n| source.body                               | String                                                                                                                                                 |\n| source.author.id                          | String                                                                                                                                                 |\n| source.author.type                        | String                                                                                                                                                 |\n| source.author.name                        | String                                                                                                                                                 |\n| source.author.email                       | String                                                                                                                                                 |\n| source.url                                | String                                                                                                                                                 |\n| contact_ids                               | String                                                                                                                                                 |\n| teammate_ids                              | String                                                                                                                                                 |\n| admin_assignee_id                         | String                                                                                                                                                 |\n| team_assignee_id                          | String                                                                                                                                                 |\n| channel_initiated                         | String                                                                                                                                                 |\n| open                                      | Boolean                                                                                                                                                |\n| read                                      | Boolean                                                                                                                                                |\n| state                                     | String                                                                                                                                                 |\n| waiting_since                             | Date (UNIX timestamp)                                                                                                                                  |\n| snoozed_until                             | Date (UNIX timestamp)                                                                                                                                  |\n| tag_ids                                   | String                                                                                                                                                 |\n| priority                                  | String                                                                                                                                                 |\n| statistics.time_to_assignment             | Integer                                                                                                                                                |\n| statistics.time_to_admin_reply            | Integer                                                                                                                                                |\n| statistics.time_to_first_close            | Integer                                                                                                                                                |\n| statistics.time_to_last_close             | Integer                                                                                                                                                |\n| statistics.median_time_to_reply           | Integer                                                                                                                                                |\n| statistics.first_contact_reply_at         | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_assignment_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_admin_reply_at           | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_close_at                 | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_at             | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_admin_reply_at | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_contact_reply_at          | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_admin_reply_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_close_at                  | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_closed_by_id              | String                                                                                                                                                 |\n| statistics.count_reopens                  | Integer                                                                                                                                                |\n| statistics.count_assignments              | Integer                                                                                                                                                |\n| statistics.count_conversation_parts       | Integer                                                                                                                                                |\n| conversation_rating.requested_at          | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.replied_at            | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.score                 | Integer                                                                                                                                                |\n| conversation_rating.remark                | String                                                                                                                                                 |\n| conversation_rating.contact_id            | String                                                                                                                                                 |\n| conversation_rating.admin_d               | String                                                                                                                                                 |\n| ai_agent_participated                     | Boolean                                                                                                                                                |\n| ai_agent.resolution_state                 | String                                                                                                                                                 |\n| ai_agent.last_answer_type                 | String                                                                                                                                                 |\n| ai_agent.rating                           | Integer                                                                                                                                                |\n| ai_agent.rating_remark                    | String                                                                                                                                                 |\n| ai_agent.source_type                      | String                                                                                                                                                 |\n| ai_agent.source_title                     | String                                                                                                                                                 |\n\n### Accepted Operators\n\nThe table below shows the operators you can use to define how you want to search for the value.  The operator should be put in as a string (`\"=\"`). The operator has to be compatible with the field's type  (eg. you cannot search with `>` for a given string value as it's only compatible for integer's and dates).\n\n| Operator | Valid Types                    | Description                                                  |\n| :- | :- | :- |\n| =        | All                            | Equals                                                       |\n| !=       | All                            | Doesn't Equal                                                |\n| IN       | All                            | In  Shortcut for `OR` queries  Values most be in Array       |\n| NIN      | All                            | Not In  Shortcut for `OR !` queries  Values must be in Array |\n| >        | Integer  Date (UNIX Timestamp) | Greater (or equal) than                                      |\n| <       | Integer  Date (UNIX Timestamp) | Lower (or equal) than                                        |\n| ~        | String                         | Contains                                                     |\n| !~       | String                         | Doesn't Contain                                              |\n| ^        | String                         | Starts With                                                  |\n| $        | String                         | Ends With                                                    |\n",
+          "message": "Puedes buscar varias conversaciones por el valor de sus atributos para obtener exactamente las que deseas.\n\nPara buscar conversaciones, debes enviar una solicitud `POST` a `https:-api.intercom.io-conversations-search`.\n\nEsto aceptará un objeto de consulta en el cuerpo que definirá tus filtros para buscar conversaciones.\n% admonition type=\"warning\" name=\"Optimizar consultas de búsqueda\" %\n  Las consultas de búsqueda pueden ser complejas, por lo que optimizarlas puede ayudar al rendimiento de tu búsqueda.\n  Utiliza los operadores `AND` y `OR` para combinar varios filtros y obtener los resultados exactos que necesitas, y utiliza\n  la paginación para limitar el número de resultados devueltos. El valor predeterminado es `20` resultados por página y el máximo es `150`.\n  Consulta la [sección de paginación](https:-developers.intercom.com-docs-build-an-integration-learn-more-rest-apis-pagination-#example-search-conversations-request) para obtener más detalles sobre cómo usar el parámetro `starting_after`.\n% -admonition %\n\n### Anidamiento y limitaciones\n\nPuedes anidar estos filtros para obtener información aún más detallada que identifique exactamente lo que necesitas. Ejemplo: (1 OR 2) AND (3 OR 4).\nExisten algunas limitaciones en cuanto a la cantidad de múltiples que puede haber:\n- Hay un límite de máximo 2 filtros anidados\n- Hay un límite de máximo 15 filtros para cada grupo AND u OR\n\n### Campos aceptados\n\nLa mayoría de las claves enumeradas en el modelo de conversación se pueden buscar, ya sean de escritura o no. El valor que busques debe coincidir con el tipo aceptado; de lo contrario, la consulta fallará (p. ej., dado que `created_at` acepta una fecha, `value` no puede ser una cadena como `\"foorbar\"`).\nEl campo `source.body` es único ya que la búsqueda no se realizará sobre el valor completo, sino sobre cada elemento del valor por separado. Por ejemplo, al buscar una conversación con un cuerpo `\"I need support\"`, la consulta debe contener un operador `=` con el valor `\"support\"` para que se devuelva dicha conversación. Una consulta con un operador `=` y un valor `\"need support\"` no dará ningún resultado.\n\n| Field                                     | Type                                                                                                                                                   |\n| :- | :- |\n| id                                        | String                                                                                                                                                 |\n| created_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| updated_at                                | Date (UNIX timestamp)                                                                                                                                  |\n| source.type                               | String<br>Los campos aceptados son `conversation`, `email`, `facebook`, `instagram`, `phone_call`, `phone_switch`, `push`, `sms`, `twitter` y `whatsapp`. |\n| source.id                                 | String                                                                                                                                                 |\n| source.delivered_as                       | String                                                                                                                                                 |\n| source.subject                            | String                                                                                                                                                 |\n| source.body                               | String                                                                                                                                                 |\n| source.author.id                          | String                                                                                                                                                 |\n| source.author.type                        | String                                                                                                                                                 |\n| source.author.name                        | String                                                                                                                                                 |\n| source.author.email                       | String                                                                                                                                                 |\n| source.url                                | String                                                                                                                                                 |\n| contact_ids                               | String                                                                                                                                                 |\n| teammate_ids                              | String                                                                                                                                                 |\n| admin_assignee_id                         | String                                                                                                                                                 |\n| team_assignee_id                          | String                                                                                                                                                 |\n| channel_initiated                         | String                                                                                                                                                 |\n| open                                      | Boolean                                                                                                                                                |\n| read                                      | Boolean                                                                                                                                                |\n| state                                     | String                                                                                                                                                 |\n| waiting_since                             | Date (UNIX timestamp)                                                                                                                                  |\n| snoozed_until                             | Date (UNIX timestamp)                                                                                                                                  |\n| tag_ids                                   | String                                                                                                                                                 |\n| priority                                  | String                                                                                                                                                 |\n| statistics.time_to_assignment             | Integer                                                                                                                                                |\n| statistics.time_to_admin_reply            | Integer                                                                                                                                                |\n| statistics.time_to_first_close            | Integer                                                                                                                                                |\n| statistics.time_to_last_close             | Integer                                                                                                                                                |\n| statistics.median_time_to_reply           | Integer                                                                                                                                                |\n| statistics.first_contact_reply_at         | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_assignment_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_admin_reply_at           | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.first_close_at                 | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_at             | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_assignment_admin_reply_at | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_contact_reply_at          | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_admin_reply_at            | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_close_at                  | Date (UNIX timestamp)                                                                                                                                  |\n| statistics.last_closed_by_id              | String                                                                                                                                                 |\n| statistics.count_reopens                  | Integer                                                                                                                                                |\n| statistics.count_assignments              | Integer                                                                                                                                                |\n| statistics.count_conversation_parts       | Integer                                                                                                                                                |\n| conversation_rating.requested_at          | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.replied_at            | Date (UNIX timestamp)                                                                                                                                  |\n| conversation_rating.score                 | Integer                                                                                                                                                |\n| conversation_rating.remark                | String                                                                                                                                                 |\n| conversation_rating.contact_id            | String                                                                                                                                                 |\n| conversation_rating.admin_d               | String                                                                                                                                                 |\n| ai_agent_participated                     | Boolean                                                                                                                                                |\n| ai_agent.resolution_state                 | String                                                                                                                                                 |\n| ai_agent.last_answer_type                 | String                                                                                                                                                 |\n| ai_agent.rating                           | Integer                                                                                                                                                |\n| ai_agent.rating_remark                    | String                                                                                                                                                 |\n| ai_agent.source_type                      | String                                                                                                                                                 |\n| ai_agent.source_title                     | String                                                                                                                                                 |\n\n### Operadores aceptados\n\nLa siguiente tabla muestra los operadores que puedes utilizar para definir cómo deseas buscar el valor. El operador se debe introducir como una cadena (`\"=\"`). El operador debe ser compatible con el tipo del campo (p. ej., no se puede buscar con `>` para un valor de cadena determinado, ya que solo es compatible con enteros y fechas).\n\n| Operator | Valid Types                    | Description                                                  |\n| :- | :- | :- |\n| =        | All                            | Igual                                                        |\n| !=       | All                            | No es igual                                                  |\n| IN       | All                            | En  Acceso directo para consultas `OR`  Los valores deben estar en un array |\n| NIN      | All                            | No en  Acceso directo para consultas `OR !`  Los valores deben estar en un array |\n| >        | Integer  Date (UNIX Timestamp) | Mayor (o igual) que                                          |\n| <       | Integer  Date (UNIX Timestamp) | Menor (o igual) que                                          |\n| ~        | String                         | Contiene                                                     |\n| !~       | String                         | No contiene                                                  |\n| ^        | String                         | Empieza con                                                  |\n| $        | String                         | Termina con                                                  |\n"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.display_name": {
+          "source": "Search Conversations",
+          "message": "Buscar conversaciones"
+        },
+        "app.SW50ZXJjb20.action.c2VhcmNoQ29udmVyc2F0aW9ucw.short_desc": {
+          "source": "Search conversations",
+          "message": "Buscar conversaciones"
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.desc": {
+          "source": "You can reply to a conversation with a message from an admin or on behalf of a contact, or with a note for admins.",
+          "message": "Puedes responder a una conversación con un mensaje de un administrador o en nombre de un contacto, o con una nota para los administradores."
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.display_name": {
+          "source": "Reply to a Conversation",
+          "message": "Responder a una conversación"
+        },
+        "app.SW50ZXJjb20.action.cmVwbHlDb252ZXJzYXRpb24.short_desc": {
+          "source": "Reply to a conversation",
+          "message": "Responder a una conversación"
+        },
+        "app.SW50ZXJjb20.desc": {
+          "source": "Connect with Intercom to manage contacts, companies, conversations, and events. This integration allows you to both perform actions and respond to events in your Intercom workspace, enabling you to automate customer communications and data management workflows.",
+          "message": "Conéctate con Intercom para gestionar contactos, empresas, conversaciones y eventos. Esta integración te permite tanto realizar acciones como responder a eventos en tu espacio de trabajo de Intercom, lo que te permite automatizar las comunicaciones con los clientes y los flujos de trabajo de gestión de datos."
+        },
+        "app.SW50ZXJjb20.display_name": {
+          "source": "Intercom",
+          "message": "Intercom"
+        },
+        "app.SW50ZXJjb20.short_desc": {
+          "source": "Interact with Intercom customer messaging platform",
+          "message": "Interactúa con la plataforma de mensajería para clientes de Intercom"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.desc": {
+          "source": "Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.",
+          "message": "Vráti komplexné informácie o funkcii Lambda vrátane konfigurácie, podrobností kódu, značiek a nastavení súbežnosti. Užitočné na kontrolu vlastností a aktuálneho stavu funkcie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
+          "source": "Get Function",
+          "message": "Získať funkciu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to retrieve information for.",
+          "message": "Názov, ARN alebo čiastočné ARN funkcie Lambda, pre ktorú sa majú získať informácie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Názov funkcie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function",
+          "message": "Názov alebo ARN funkcie Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to get information for a specific version of the function.",
+          "message": "Uveďte číslo verzie, názov aliasu alebo $LATEST na získanie informácií o konkrétnej verzii funkcie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Kvalifikátor"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias",
+          "message": "Verzia funkcie alebo alias"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Uveďte región AWS, v ktorom sa funkcia Lambda nachádza. Ak nie je uvedené, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Región AWS, v ktorom sa funkcia nachádza"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
+          "source": "Retrieve detailed information about a specific Lambda function.",
+          "message": "Získať podrobné informácie o konkrétnej funkcii Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.",
+          "message": "Vráti komplexné informácie o konkrétnej verzii vrstvy Lambda vrátane podrobností o obsahu, kompatibilných spúšťacích prostrediach a metadát."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "Get Layer Version",
+          "message": "Získať verziu vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to retrieve version information for.",
+          "message": "Názov alebo ARN vrstvy Lambda, pre ktorú sa majú získať informácie o verzii."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Názov vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Názov alebo ARN vrstvy Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Uveďte región AWS, v ktorom sa vrstva Lambda nachádza. Ak nie je uvedené, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Región AWS, v ktorom sa vrstva nachádza"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.desc": {
+          "source": "The version number of the layer to retrieve detailed information for.",
+          "message": "Číslo verzie vrstvy, pre ktorú sa majú získať podrobné informácie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
+          "source": "Version Number",
+          "message": "Číslo verzie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
+          "source": "Specific version number of the layer",
+          "message": "Konkrétne číslo verzie vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Retrieve detailed information about a specific layer version.",
+          "message": "Získať podrobné informácie o konkrétnej verzii vrstvy."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.desc": {
+          "source": "Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.",
+          "message": "Vyvolá funkciu Lambda synchrónne alebo asynchrónne s vlastným užitočným zaťažením JSON. Môžete zadať typ vyvolania, preferencie protokolovania a verziu funkcie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
+          "source": "Invoke Function",
+          "message": "Vyvolať funkciu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to invoke.",
+          "message": "Názov, ARN alebo čiastočné ARN funkcie Lambda, ktorá sa má vyvolať."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Názov funkcie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function to invoke",
+          "message": "Názov alebo ARN funkcie Lambda, ktorá sa má vyvolať"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkRyeVJ1bg.display_name": {
+          "source": "Dry Run (Validate only)",
+          "message": "Dry Run (Iba validácia)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkV2ZW50.display_name": {
+          "source": "Asynchronous (Event)",
+          "message": "Asynchrónne (Event)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOlJlcXVlc3RSZXNwb25zZQ.display_name": {
+          "source": "Synchronous (RequestResponse)",
+          "message": "Synchrónne (RequestResponse)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.desc": {
+          "source": "RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.",
+          "message": "RequestResponse pre synchrónne vykonanie, Event pre asynchrónne vykonanie alebo DryRun na validáciu parametrov bez vyvolania."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
+          "source": "Invocation Type",
+          "message": "Typ vyvolania"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
+          "source": "How to invoke the function",
+          "message": "Ako vyvolať funkciu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOk5vbmU.display_name": {
+          "source": "None",
+          "message": "Žiadne"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOlRhaWw.display_name": {
+          "source": "Tail (Last 4KB)",
+          "message": "Tail (Posledné 4 KB)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.desc": {
+          "source": "Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.",
+          "message": "Nastavte na Tail, ak chcete do odpovede zahrnúť posledné 4 KB protokolov o vykonaní, alebo None na vynechanie protokolov."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
+          "source": "Log Type",
+          "message": "Typ protokolu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
+          "source": "Include execution logs in response",
+          "message": "Zahrnúť protokoly o vykonaní do odpovede"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.desc": {
+          "source": "JSON string containing the data to pass to your Lambda function. Must be valid JSON format.",
+          "message": "Reťazec JSON obsahujúci dáta, ktoré sa majú odovzdať funkcii Lambda. Musí byť vo platnom formáte JSON."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Payload"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.short_desc": {
+          "source": "JSON payload to send to the function",
+          "message": "Užitočné zaťaženie JSON na odoslanie do funkcie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to invoke a specific version of the function.",
+          "message": "Uveďte číslo verzie, názov aliasu alebo $LATEST na vyvolanie konkrétnej verzie funkcie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Kvalifikátor"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias to invoke",
+          "message": "Verzia funkcie alebo alias na vyvolanie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Uveďte región AWS, v ktorom sa funkcia Lambda nachádza. Ak nie je uvedené, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Región AWS, v ktorom sa funkcia nachádza"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
+          "source": "Execute a Lambda function with custom payload.",
+          "message": "Vykonať funkciu Lambda s vlastným užitočným zaťažením."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.desc": {
+          "source": "Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.",
+          "message": "Vráti stránkovaný zoznam funkcií Lambda v zadanom regióne. Voliteľne môžete filtrovať podľa verzie funkcie, hlavného regiónu a riadiť stránkovanie pomocou maximálneho počtu položiek a značiek."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
+          "source": "List Functions",
+          "message": "Zoznam funkcií"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All Versions",
+          "message": "Všetky verzie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.desc": {
+          "source": "Set to ALL to include all published versions of each function, or leave empty for latest versions only.",
+          "message": "Nastavte na ALL, ak chcete zahrnúť všetky publikované verzie každej funkcie, alebo nechajte prázdne iba pre najnovšie verzie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
+          "source": "Function Version",
+          "message": "Verzia funkcie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
+          "source": "Version of functions to retrieve",
+          "message": "Verzia funkcií, ktoré sa majú získať"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of functions returned in a single request.",
+          "message": "Obmedziť počet funkcií vrátených v jednej požiadavke."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Maximálny počet položiek"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of functions to return",
+          "message": "Maximálny počet funkcií, ktoré sa majú vrátiť"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.desc": {
+          "source": "For Lambda@Edge functions, specify the master region to filter results.",
+          "message": "Pre funkcie Lambda@Edge uveďte hlavný región na filtrovanie výsledkov."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
+          "source": "Master Region",
+          "message": "Hlavný región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
+          "source": "Filter functions by master region for Lambda@Edge",
+          "message": "Filtrovať funkcie podľa hlavného regiónu pre Lambda@Edge"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Použite značku z predchádzajúcej odpovede na získanie nasledujúcej stránky výsledkov."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Nasledujúca značka"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Značka stránkovania na získanie ďalších výsledkov"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.",
+          "message": "Uveďte región AWS, z ktorého sa majú zobraziť funkcie Lambda. Ak nie je uvedené, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda functions are located",
+          "message": "Región AWS, v ktorom sa funkcie Lambda nachádzajú"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
+          "source": "Retrieve a list of Lambda functions in your AWS account.",
+          "message": "Získať zoznam funkcií Lambda vo vašom účte AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.desc": {
+          "source": "Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.",
+          "message": "Vráti stránkovaný zoznam verzií pre konkrétnu vrstvu Lambda. Môžete filtrovať podľa kompatibilného spúšťacieho prostredia a riadiť stránkovanie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
+          "source": "List Layer Versions",
+          "message": "Zoznam verzií vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Vlastné spúšťacie prostredie na Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Vlastné spúšťacie prostredie na Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layer versions that are compatible with the specified runtime environment.",
+          "message": "Vráti iba verzie vrstvy, ktoré sú kompatibilné so špecifikovaným spúšťacím prostredím."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Kompatibilné spúšťacie prostredie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter versions by compatible runtime",
+          "message": "Filtrovať verzie podľa kompatibilného spúšťacieho prostredia"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to list versions for.",
+          "message": "Názov alebo ARN vrstvy Lambda, pre ktorú sa majú zobraziť verzie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Názov vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Názov alebo ARN vrstvy Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layer versions returned in a single request.",
+          "message": "Obmedziť počet verzií vrstvy vrátených v jednej požiadavke."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Maximálny počet položiek"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of versions to return",
+          "message": "Maximálny počet verzií na vrátenie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Použite značku z predchádzajúcej odpovede na získanie nasledujúcej stránky výsledkov."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Nasledujúca značka"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Značka stránkovania na získanie ďalších výsledkov"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Uveďte región AWS, v ktorom sa vrstva Lambda nachádza. Ak nie je uvedené, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Región AWS, v ktorom sa vrstva nachádza"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
+          "source": "Retrieve versions of a specific Lambda layer.",
+          "message": "Získať verzie konkrétnej vrstvy Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.desc": {
+          "source": "Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.",
+          "message": "Vráti stránkovaný zoznam vrstiev Lambda v špecifikovanom regióne. Môžete filtrovať podľa kompatibilného spúšťacieho prostredia a riadiť stránkovanie pomocou maximálneho počtu položiek a značiek."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
+          "source": "List Layers",
+          "message": "Zoznam vrstiev"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Vlastné spúšťacie prostredie na Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Vlastné spúšťacie prostredie na Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layers that are compatible with the specified runtime environment.",
+          "message": "Vráti iba vrstvy, ktoré sú kompatibilné so špecifikovaným spúšťacím prostredím."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Kompatibilné spúšťacie prostredie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter layers by compatible runtime",
+          "message": "Filtrovať vrstvy podľa kompatibilného spúšťacieho prostredia"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layers returned in a single request.",
+          "message": "Obmedziť počet vrstiev vrátených v jednej požiadavke."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Maximálny počet položiek"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of layers to return",
+          "message": "Maximálny počet vrstiev na vrátenie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Použite značku z predchádzajúcej odpovede na získanie nasledujúcej stránky výsledkov."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Nasledujúca značka"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Značka stránkovania na získanie ďalších výsledkov"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.",
+          "message": "Špecifikujte región AWS, z ktorého sa majú zobraziť vrstvy Lambda. Ak nie je špecifikované, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda layers are located",
+          "message": "Región AWS, v ktorom sa nachádzajú vrstvy Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
+          "source": "Retrieve a list of Lambda layers in your AWS account.",
+          "message": "Získať zoznam vrstiev Lambda vo vašom účte AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **AWS Lambda** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API pre **AWS Lambda** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nŠpecifikujte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to AWS Lambda",
+          "message": "Vykonať vlastné volanie API pre AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.desc": {
+          "source": "Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.",
+          "message": "Monitoruje váš účet AWS na prítomnosť novo vytvorených funkcií Lambda v špecifikovanom regióne. Tento spúšťač sa aktivuje pri zistení novej funkcie a poskytuje podrobné informácie o funkcii."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
+          "source": "New Function",
+          "message": "Nová funkcia"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.",
+          "message": "Špecifikujte región AWS, ktorý sa má monitorovať na vytvorenie nových funkcií Lambda. Ak nie je špecifikované, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new functions",
+          "message": "Región AWS na monitorovanie nových funkcií"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
+          "source": "Triggers when a new Lambda function is created.",
+          "message": "Spustí sa pri vytvorení novej funkcie Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.",
+          "message": "Monitoruje váš účet AWS na prítomnosť novo publikovaných verzií vrstvy Lambda v špecifikovanom regióne. Tento spúšťač sa aktivuje pri zistení novej verzie vrstvy a poskytuje informácie o verzii vrstvy."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "New Layer Version",
+          "message": "Nová verzia vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.",
+          "message": "Špecifikujte región AWS, ktorý sa má monitorovať na vytvorenie nových verzií vrstvy Lambda. Ak nie je špecifikované, predvolene sa použije us-east-1."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Región"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new layer versions",
+          "message": "Región AWS na monitorovanie nových verzií vrstvy"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Triggers when a new Lambda layer version is published.",
+          "message": "Spustí sa pri publikovaní novej verzie vrstvy Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.desc": {
+          "source": "Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.",
+          "message": "Amazon Lambda je bezserverová výpočtová služba, ktorá vám umožňuje spúšťať kód bez zriaďovania alebo správy serverov. Táto integrácia poskytuje ucelené akcie a spúšťače na správu funkcií Lambda, vrstiev a volaní. Môžete zobrazovať zoznam funkcií, vyvolávať ich, spravovať vrstvy a monitorovať vytváranie nových funkcií a verzií vrstiev."
+        },
+        "app.QW1hem9uTGFtYmRh.display_name": {
+          "source": "AWS Lambda",
+          "message": "AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.short_desc": {
+          "source": "Serverless compute service that runs code without provisioning or managing servers.",
+          "message": "Bezserverová výpočtová služba, ktorá spúšťa kód bez zriaďovania alebo správy serverov."
+        }
+      }
+    }
+  }
+}

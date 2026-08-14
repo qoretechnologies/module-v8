@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.desc": {
+          "source": "Creates a conversation with the given agent code. This is required before executing an agent.",
+          "message": "指定されたエージェントコードで会話を作成します。これはエージェントを実行する前に必要です。"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.display_name": {
+          "source": "Create Conversation",
+          "message": "会話を作成"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.desc": {
+          "source": "The code of the agent to create a conversation with",
+          "message": "会話を作成するエージェントのコード"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "エージェントコード"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The code of the agent to create a conversation with",
+          "message": "会話を作成するエージェントのコード"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.desc": {
+          "source": "An array of key-value pairs for additional context.",
+          "message": "追加コンテキスト用のキーと値のペアの配列。"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.display_name": {
+          "source": "Input Parameters",
+          "message": "入力パラメータ"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.short_desc": {
+          "source": "An array of key-value pairs for additional context.",
+          "message": "追加コンテキスト用のキーと値のペアの配列。"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.desc": {
+          "source": "It helps maintain context across interactions. For example, you might use `\"userIdentifier\": \"landing-page-user\"` to track a specific user session.",
+          "message": "インタラクション間でコンテキストを維持するのに役立ちます。たとえば、`\"userIdentifier\": \"landing-page-user\"` を使用して特定のユーザーセッションを追跡できます。"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.display_name": {
+          "source": "User Identifier",
+          "message": "ユーザー識別子"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.short_desc": {
+          "source": "Used to uniquely identify a user in a conversation. ",
+          "message": "会話内でユーザーを一意に識別するために使用されます。"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Create a conversation with a conversation agent",
+          "message": "会話エージェントとの会話を作成"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.desc": {
+          "source": "Executes an agent with the given code.",
+          "message": "指定されたコードでエージェントを実行します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.display_name": {
+          "source": "Execute Agent",
+          "message": "エージェントの実行"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVu.display_name": {
+          "source": "EN",
+          "message": "EN"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVz.display_name": {
+          "source": "ES",
+          "message": "ES"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "レスポンスのカルチャーをオーバーライドするには、このパラメータを使用します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.display_name": {
+          "source": "Culture",
+          "message": "カルチャー"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.short_desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "レスポンスのカルチャーをオーバーライドするには、このパラメータを使用します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.desc": {
+          "source": "Used to identify and execute a specific agent within the Serenity* AI Hub",
+          "message": "Serenity* AI Hub 内の特定のエージェントを識別して実行するために使用されます"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "エージェントコード"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "Used to identify and execute a specific agent within the Serenity* AI Hub",
+          "message": "Serenity* AI Hub 内の特定のエージェントを識別して実行するために使用されます"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.desc": {
+          "source": "An array of key-value pairs for execution context.",
+          "message": "実行コンテキスト用のキーと値のペアの配列。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.display_name": {
+          "source": "Params",
+          "message": "パラメータ"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.short_desc": {
+          "source": "An array of key-value pairs for execution context.",
+          "message": "実行コンテキスト用のキーと値のペアの配列。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.desc": {
+          "source": "Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub",
+          "message": "Serenity* AI Hub 内の特定の揮発性ナレッジを取得するために使用される一意識別子 (UUID)"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.display_name": {
+          "source": "Volatile Knowledge IDs",
+          "message": "揮発性ナレッジ ID"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.short_desc": {
+          "source": "Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub",
+          "message": "Serenity* AI Hub 内の特定の揮発性ナレッジを取得するために使用される一意識別子 (UUID)"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.short_desc": {
+          "source": "Executes an agent with the given code.",
+          "message": "指定されたコードでエージェントを実行します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.desc": {
+          "source": "Send a message to a chat with agent",
+          "message": "エージェントとのチャットにメッセージを送信します"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.display_name": {
+          "source": "Execute Conversation",
+          "message": "会話を実行"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "The conversation to send the message to",
+          "message": "メッセージの送信先となる会話"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation ID",
+          "message": "会話 ID"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to send the message to",
+          "message": "メッセージの送信先となる会話"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVu.display_name": {
+          "source": "EN",
+          "message": "EN"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVz.display_name": {
+          "source": "ES",
+          "message": "ES"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.desc": {
+          "source": "Use this param to override the culture of the response. ",
+          "message": "レスポンスのカルチャーをオーバーライドするには、このパラメータを使用します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.display_name": {
+          "source": "Culture",
+          "message": "カルチャー"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.short_desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "レスポンスのカルチャーをオーバーライドするには、このパラメータを使用します。"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.desc": {
+          "source": "The agent to check for conversations with",
+          "message": "会話の有無を確認するエージェント"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "エージェントコード"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The agent to check for conversations with",
+          "message": "会話の有無を確認するエージェント"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "Message to send to the agent",
+          "message": "エージェントに送信するメッセージ"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message to send to the agent",
+          "message": "エージェントに送信するメッセージ"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.desc": {
+          "source": "The preferred language of the response",
+          "message": "レスポンスの優先言語"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.display_name": {
+          "source": "User Language",
+          "message": "ユーザー言語"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.short_desc": {
+          "source": "The preferred language of the response",
+          "message": "レスポンスの優先言語"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.short_desc": {
+          "source": "Send a message to a chat with agent",
+          "message": "エージェントとのチャットにメッセージを送信します"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Serenity** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して、**Serenity** へのカスタム HTTP / REST API 呼び出しを実行します。\n\nHTTP メソッド、URI パス (接続の API ベース URL に対する相対パス)、任意のクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、およびレスポンス本文を含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに使用します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Serenity",
+          "message": "Serenity へのカスタム API 呼び出しを実行"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.desc": {
+          "source": "This trigger activates when a new message is posted in a conversation.",
+          "message": "このトリガーは、会話に新しいメッセージが投稿されたときに起動します。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.display_name": {
+          "source": "New Conversation Message",
+          "message": "新規会話メッセージ"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Enter the Conversation ID to specify the conversation where you want to monitor new messages.",
+          "message": "新しいメッセージを監視する会話を指定するには、会話 ID を入力します。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation ID",
+          "message": "会話 ID"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The unique identifier for the conversation.",
+          "message": "会話の一意識別子。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.desc": {
+          "source": "Agent ID to check for available conversations from",
+          "message": "利用可能な会話を確認するエージェント ID"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent ID",
+          "message": "エージェント ID"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The unique identifier for the agent.",
+          "message": "エージェントの一意識別子。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "すべて"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOmJvdA.display_name": {
+          "source": "Bot",
+          "message": "Bot"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "ユーザー"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.desc": {
+          "source": "Choose the sender the messages should be filtered by.",
+          "message": "メッセージのフィルタリング基準となる送信者を選択します。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.display_name": {
+          "source": "Sender",
+          "message": "送信者"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.short_desc": {
+          "source": "Filter the messages by the sender.",
+          "message": "送信者によってメッセージをフィルタリングします。"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.short_desc": {
+          "source": "Triggered when a new message is posted in a conversation.",
+          "message": "会話に新しいメッセージが投稿されたときにトリガーされます。"
+        },
+        "app.U2VyZW5pdHk.desc": {
+          "source": "Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.",
+          "message": "企業向け AI エコシステム。企業が AI エージェントを簡単に作成、管理、スケールできるようにし、さまざまなプロセスにわたって生産性とイノベーションを向上させます。"
+        },
+        "app.U2VyZW5pdHk.display_name": {
+          "source": "Serenity",
+          "message": "Serenity"
+        },
+        "app.U2VyZW5pdHk.short_desc": {
+          "source": "Create conversations, execute agents and manage interactions with Serenity AI Hub.",
+          "message": "Serenity AI Hub での会話の作成、エージェントの実行、インタラクションの管理を行います。"
+        }
+      }
+    }
+  }
+}

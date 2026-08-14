@@ -1,0 +1,1433 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.desc": {
+          "source": "Create a copy of a worksheet from a source spreadsheet to a destination spreadsheet with optional customization",
+          "message": "コピー元のスプレッドシートからコピー先のスプレッドシートにワークシートのコピーを作成します（オプションのカスタマイズ機能付き）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.display_name": {
+          "source": "Copy Worksheet",
+          "message": "ワークシートをコピー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be copied to",
+          "message": "ワークシートのコピー先となる Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Destination Spreadsheet",
+          "message": "コピー先スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.ZGVzdGluYXRpb25fc3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the destination Google Sheets spreadsheet",
+          "message": "コピー先の Google スプレッドシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The zero-based index where the new worksheet should be inserted. If not specified, the worksheet is added to the end of the spreadsheet",
+          "message": "新しいワークシートを挿入する 0 から始まるインデックス。指定しない場合、ワークシートはスプレッドシートの末尾に追加されます"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Insert Position",
+          "message": "挿入位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Optional position to insert the new worksheet",
+          "message": "新しいワークシートを挿入するオプションの位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.desc": {
+          "source": "Specify a custom name for the copied worksheet. If not provided, the original name will be used with \"Copy of\" prefix",
+          "message": "コピーしたワークシートのカスタム名を指定します。指定しない場合、元の名前に \"Copy of\" プレフィックスが付けられます"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.display_name": {
+          "source": "New Worksheet Name",
+          "message": "新しいワークシート名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.bmV3X3NoZWV0X25hbWU.short_desc": {
+          "source": "Optional new name for the copied worksheet",
+          "message": "コピーしたワークシートの新しい名前（オプション）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.desc": {
+          "source": "The specific worksheet within the source spreadsheet that will be copied",
+          "message": "コピーされるコピー元スプレッドシート内の特定のワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.display_name": {
+          "source": "Source Worksheet",
+          "message": "コピー元ワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NoZWV0X2lk.short_desc": {
+          "source": "Select the worksheet to copy",
+          "message": "コピーするワークシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "The Google Sheets spreadsheet containing the worksheet you want to copy",
+          "message": "コピーするワークシートが含まれている Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "コピー元スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "Select the source Google Sheets spreadsheet",
+          "message": "コピー元の Google スプレッドシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y29weV93b3Jrc2hlZXQ.short_desc": {
+          "source": "Copy a worksheet from one Google Sheets spreadsheet to another",
+          "message": "ある Google スプレッドシートから別のスプレッドシートへワークシートをコピーします"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.desc": {
+          "source": "Remove all data from selected rows in a Google Sheets spreadsheet while preserving formatting",
+          "message": "Google スプレッドシートの選択した行から書式を保持したまますべてのデータを削除します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.display_name": {
+          "source": "Clear Spreadsheet Row(s)",
+          "message": "スプレッドシートの行をクリア"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific sheet within the spreadsheet where rows will be cleared",
+          "message": "行がクリアされるスプレッドシート内の特定のシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "シート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the sheet within the spreadsheet",
+          "message": "スプレッドシート内のシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet containing the rows to be cleared",
+          "message": "クリアする行が含まれている Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Google スプレッドシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.desc": {
+          "source": "List of row indices to clear (1-based, as seen in the spreadsheet)",
+          "message": "クリアする行インデックスのリスト（スプレッドシートに表示される通りの 1 から始まる番号）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.display_name": {
+          "source": "Rows to Clear",
+          "message": "クリアする行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.option.cm93cw.short_desc": {
+          "source": "The row numbers to clear (1-based)",
+          "message": "クリアする行番号（1 から始まる番号）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y2xlYXJfc3ByZWFkc2hlZXRfcm93cw.short_desc": {
+          "source": "Clear content from specific rows in a Google Sheets spreadsheet",
+          "message": "Google スプレッドシートの特定の行からコンテンツをクリアします"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ \"GoogleSheets\" の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ \"GoogleSheets\" の指定されたテーブルに新しいレコードを作成します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.desc": {
+          "source": "Creates a new Google Sheets spreadsheet. You can either create it from scratch with custom headers or copy an existing spreadsheet. When headers are provided, they are formatted as bold with borders and the header row is frozen.",
+          "message": "新しい Google スプレッドシートを作成します。カスタムヘッダーを使用してゼロから作成するか、既存のスプレッドシートをコピーできます。ヘッダーを指定すると、太字で枠線付きにフォーマットされ、ヘッダー行が固定されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.display_name": {
+          "source": "Create Spreadsheet",
+          "message": "スプレッドシートを作成"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.desc": {
+          "source": "Optional. A list of column headers to add to the first row of the new spreadsheet. Headers will be formatted as bold with borders and the header row will be frozen. This option is ignored if a source spreadsheet is provided.",
+          "message": "オプション。新しいスプレッドシートの 1 行目に追加する列ヘッダーのリスト。ヘッダーは太字で枠線付きにフォーマットされ、ヘッダー行が固定されます。コピー元スプレッドシートが指定されている場合、このオプションは無視されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "ヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers for the new spreadsheet",
+          "message": "新しいスプレッドシートの列ヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.desc": {
+          "source": "Optional. If provided, the new spreadsheet will be created as a copy of this existing spreadsheet. Headers option will be ignored if this is provided.",
+          "message": "オプション。指定した場合、新しいスプレッドシートはこの既存スプレッドシートのコピーとして作成されます。これが指定された場合、ヘッダーオプションは無視されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.display_name": {
+          "source": "Source Spreadsheet",
+          "message": "コピー元スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.c291cmNlX3NwcmVhZHNoZWV0X2lk.short_desc": {
+          "source": "ID of an existing spreadsheet to copy",
+          "message": "コピーする既存スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.desc": {
+          "source": "The name that will be given to the newly created Google Sheets spreadsheet.",
+          "message": "新規作成される Google スプレッドシートに付与される名前。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.display_name": {
+          "source": "Spreadsheet Title",
+          "message": "スプレッドシートのタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.option.dGl0bGU.short_desc": {
+          "source": "The title for the new spreadsheet",
+          "message": "新しいスプレッドシートのタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Create a new Google Sheets spreadsheet with optional headers or by copying an existing one.",
+          "message": "オプションのヘッダーを指定するか、既存のスプレッドシートをコピーして、新しい Google スプレッドシートを作成します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.desc": {
+          "source": "Inserts a new column at the specified position in a Google Sheets spreadsheet and adds a formatted header at the top of the column.",
+          "message": "Google スプレッドシートの指定した位置に新しい列を挿入し、列の先頭にフォーマットされたヘッダーを追加します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.display_name": {
+          "source": "Create Spreadsheet Column",
+          "message": "スプレッドシートの列を作成"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.desc": {
+          "source": "Zero-based index of the position where the new column should be inserted. For example, 0 means the column will be inserted at the beginning of the sheet, 1 means after the first column, etc.",
+          "message": "新しい列を挿入する位置の 0 から始まるインデックス。例えば、0 はシートの先頭に列が挿入されることを意味し、1 は 1 列目の後に挿入されることを意味します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.display_name": {
+          "source": "Column Index",
+          "message": "列インデックス"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX2luZGV4.short_desc": {
+          "source": "The position where the column will be inserted",
+          "message": "列が挿入される位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.desc": {
+          "source": "The header text that will appear at the top of the new column.",
+          "message": "新しい列の先頭に表示されるヘッダーテキスト。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.display_name": {
+          "source": "Column Title",
+          "message": "列タイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.Y29sdW1uX3RpdGxl.short_desc": {
+          "source": "The title for the new column",
+          "message": "新しい列のタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet within the spreadsheet where the column will be added.",
+          "message": "列が追加されるスプレッドシート内の特定のシートの ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet",
+          "message": "シート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The sheet within the spreadsheet",
+          "message": "スプレッドシート内のシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet where the column will be created.",
+          "message": "列が作成される Google スプレッドシートの ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet",
+          "message": "Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3NwcmVhZHNoZWV0X2NvbHVtbg.short_desc": {
+          "source": "Insert a new column into a Google Sheets spreadsheet.",
+          "message": "Google スプレッドシートに新しい列を挿入します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.desc": {
+          "source": "Creates a new worksheet (tab) in a specified Google Sheets spreadsheet with custom title and optional column headers. Can optionally overwrite an existing worksheet with the same name.",
+          "message": "指定した Google スプレッドシートに、カスタムタイトルとオプションの列ヘッダーを使用して新しいワークシート（タブ）を作成します。オプションで同じ名前の既存のワークシートを上書きすることもできます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.display_name": {
+          "source": "Create Worksheet",
+          "message": "ワークシートを作成"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.desc": {
+          "source": "A list of column headers that will be added to the first row of the new worksheet and formatted in bold.",
+          "message": "新しいワークシートの 1 行目に追加され、太字にフォーマットされる列ヘッダーのリスト。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.display_name": {
+          "source": "Headers",
+          "message": "ヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aGVhZGVycw.short_desc": {
+          "source": "Column headers to add to the first row",
+          "message": "1 行目に追加する列ヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.desc": {
+          "source": "The position (zero-based index) where the new worksheet should be inserted in the spreadsheet. If not specified, the worksheet will be added at the end.",
+          "message": "スプレッドシート内で新しいワークシートを挿入する位置（0 から始まるインデックス）。指定しない場合、ワークシートは末尾に追加されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.display_name": {
+          "source": "Sheet Position",
+          "message": "シートの位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.aW5zZXJ0X3NoZWV0X2luZGV4.short_desc": {
+          "source": "Position where the new worksheet should be placed",
+          "message": "新しいワークシートを配置する位置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.desc": {
+          "source": "If true and a worksheet with the same title already exists, the existing worksheet will be deleted and replaced. If false and a duplicate exists, the action will fail.",
+          "message": "true の場合、同じタイトルのワークシートがすでに存在していれば既存のワークシートが削除されて置き換えられます。false の場合、重複が存在するとアクションは失敗します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.display_name": {
+          "source": "Overwrite Existing",
+          "message": "既存のものを上書き"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.b3ZlcndyaXRlX2V4aXN0aW5n.short_desc": {
+          "source": "Whether to replace an existing worksheet with the same title",
+          "message": "同じタイトルの既存ワークシートを置き換えるかどうか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet in which to create the new worksheet.",
+          "message": "新しいワークシートを作成する Google スプレッドシートの ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet where the worksheet will be created",
+          "message": "ワークシートが作成される Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.desc": {
+          "source": "The name that will appear on the tab of the new worksheet.",
+          "message": "新しいワークシートのタブに表示される名前。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.display_name": {
+          "source": "Worksheet Title",
+          "message": "ワークシートのタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.option.dGl0bGU.short_desc": {
+          "source": "Title for the new worksheet",
+          "message": "新しいワークシートのタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Y3JlYXRlX3dvcmtzaGVldA.short_desc": {
+          "source": "Create a new worksheet in a Google Sheets spreadsheet with optional headers.",
+          "message": "Google スプレッドシートにオプションのヘッダーを使用して新しいワークシートを作成します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Append new rows to an existing Google Sheets table with data mapped to the table headers",
+          "message": "テーブルヘッダーにマッピングされたデータを使用して、既存の Google スプレッドシートテーブルに新しい行を追加します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Add Rows to Spreadsheet",
+          "message": "スプレッドシートに行を追加"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.desc": {
+          "source": "If selected, new rows will be inserted at the start of the table. If not selected, rows will be appended to the end of the table.",
+          "message": "選択した場合、新しい行はテーブルの先頭に挿入されます。選択しない場合、行はテーブルの末尾に追加されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.display_name": {
+          "source": "Insert at Start",
+          "message": "先頭に挿入"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.aW5zZXJ0X2F0X3N0YXJ0.short_desc": {
+          "source": "Insert rows at the start of the table",
+          "message": "テーブルの先頭に行を挿入"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The specific worksheet within the spreadsheet where the rows will be added",
+          "message": "行が追加されるスプレッドシート内の特定のワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "ワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "Select the worksheet within the spreadsheet",
+          "message": "スプレッドシート内のワークシートを選択します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The Google Sheets spreadsheet where you want to add rows",
+          "message": "行を追加する Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "Select the Google Sheets spreadsheet",
+          "message": "Google スプレッドシートを選択してください"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.YWRkX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Add one or more rows to the end of a Google Sheets table",
+          "message": "Google スプレッドシートテーブルの末尾に 1 行以上を追加します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルからレコードを削除します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルからレコードを削除します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.desc": {
+          "source": "Completely removes a row from a specified Google Sheets worksheet without leaving an empty space behind. The row indexing starts from 1, matching what you see in the spreadsheet UI.",
+          "message": "空白を残さずに、指定した Google スプレッドシートのワークシートから行を完全に削除します。行のインデックス作成は、スプレッドシート UI で表示される内容に合わせて 1 から始まります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.display_name": {
+          "source": "Delete Row",
+          "message": "行を削除"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the worksheet (tab) within the spreadsheet that contains the row to delete.",
+          "message": "削除する行が含まれるスプレッドシート内のワークシート (タブ) の ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "ワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The worksheet containing the row to delete",
+          "message": "削除する行が含まれるワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet that contains the worksheet with the row to delete.",
+          "message": "削除する行を含むワークシートが存在する Google スプレッドシートの ID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The Google Sheets spreadsheet containing the row to delete",
+          "message": "削除する行が含まれる Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.desc": {
+          "source": "The position of the row to delete, starting from 1 (not 0). This matches the row numbers you see in the Google Sheets UI. For example, to delete the very first row, use 1.",
+          "message": "削除する行の位置（0 ではなく 1 から始まります）。これは Google スプレッドシート UI に表示される行番号と一致します。たとえば、最初の行を削除するには 1 を使用します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.display_name": {
+          "source": "Row Index",
+          "message": "行インデックス"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.option.cm93X2luZGV4.short_desc": {
+          "source": "The index of the row to delete (starting from 1)",
+          "message": "削除する行のインデックス (1 から始まります)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZGVsZXRlX3Jvdw.short_desc": {
+          "source": "Delete a specific row from a Google Sheets worksheet.",
+          "message": "Google スプレッドシートのワークシートから特定の行を削除します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Apply various formatting options such as colors, text styles, and alignment to specified rows in a Google Sheets spreadsheet. Format multiple rows at once with consistent styling.",
+          "message": "色、テキスト スタイル、配置などのさまざまな書式設定オプションを、Google スプレッドシートの指定した行に適用します。統一されたスタイルで複数の行を一度に書式設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Format Spreadsheet Rows",
+          "message": "スプレッドシートの行を書式設定"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.desc": {
+          "source": "Whether to make the text in the specified rows bold.",
+          "message": "指定した行のテキストを太字にするかどうか。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.display_name": {
+          "source": "Bold",
+          "message": "太字"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Ym9sZA.short_desc": {
+          "source": "Make text bold",
+          "message": "テキストを太字にする"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.desc": {
+          "source": "The background color to apply to the cells in the specified rows. Uses RGB color format.",
+          "message": "指定した行のセルに適用する背景色。RGB カラー形式を使用します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.display_name": {
+          "source": "Background Color",
+          "message": "背景色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.YmFja2dyb3VuZF9jb2xvcg.short_desc": {
+          "source": "Background color for the cells",
+          "message": "セルの背景色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.desc": {
+          "source": "Font size in points",
+          "message": "フォントサイズ（ポイント単位）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.display_name": {
+          "source": "Font Size",
+          "message": "フォントサイズ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.Zm9udF9zaXpl.short_desc": {
+          "source": "Text font size in points",
+          "message": "テキストのフォントサイズ (ポイント)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkNFTlRFUg.display_name": {
+          "source": "Center",
+          "message": "中央"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOkxFRlQ.display_name": {
+          "source": "Left",
+          "message": "左"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.allowed-value.c3RyaW5nOlJJR0hU.display_name": {
+          "source": "Right",
+          "message": "右"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.desc": {
+          "source": "The horizontal alignment to apply to the content in the specified rows (Left, Center, or Right).",
+          "message": "指定した行のコンテンツに適用する水平方向の配置 (Left、Center、または Right)。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.display_name": {
+          "source": "Horizontal Alignment",
+          "message": "水平方向の配置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aG9yaXpvbnRhbF9hbGlnbm1lbnQ.short_desc": {
+          "source": "Horizontal alignment of content",
+          "message": "コンテンツの水平方向の配置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.desc": {
+          "source": "Whether to make the text in the specified rows italic.",
+          "message": "指定した行のテキストを斜体にするかどうか。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.display_name": {
+          "source": "Italic",
+          "message": "イタリック"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.aXRhbGlj.short_desc": {
+          "source": "Make text italic",
+          "message": "テキストを斜体にする"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific worksheet (tab) containing the rows to format. Each worksheet has a unique ID within a spreadsheet.",
+          "message": "書式設定する行が含まれる特定のワークシート (タブ) の ID。スプレッドシート内の各ワークシートには一意の ID があります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Worksheet",
+          "message": "ワークシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific worksheet within the spreadsheet",
+          "message": "スプレッドシート内の特定のワークシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The ID of the Google Sheets spreadsheet containing the rows to format. This can be found in the spreadsheet URL.",
+          "message": "書式設定する行が含まれる Google スプレッドシートの ID。これはスプレッドシートの URL で確認できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet",
+          "message": "スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet to format",
+          "message": "書式設定する Google スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.desc": {
+          "source": "Whether to apply strikethrough formatting to the text in the specified rows.",
+          "message": "指定した行のテキストに取り消し線の書式設定を適用するかどうか。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.display_name": {
+          "source": "Strikethrough",
+          "message": "取り消し線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.c3RyaWtldGhyb3VnaA.short_desc": {
+          "source": "Apply strikethrough to text",
+          "message": "テキストに取り消し線を適用"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.desc": {
+          "source": "List of row numbers to format (1-based indexing). For example, [1, 2, 5] will format the first, second, and fifth rows.",
+          "message": "書式設定する行番号のリスト (1 開始のインデックス)。たとえば、[1, 2, 5] は 1 行目、2 行目、および 5 行目を書式設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.display_name": {
+          "source": "Rows",
+          "message": "行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.cm93cw.short_desc": {
+          "source": "List of row numbers to format",
+          "message": "書式設定する行番号のリスト"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "セル内でテキストを折り返すかどうか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.display_name": {
+          "source": "Wrap Text",
+          "message": "テキストを折り返す"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.d3JhcF90ZXh0.short_desc": {
+          "source": "Whether to wrap text in cells",
+          "message": "セル内でテキストを折り返すかどうか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.desc": {
+          "source": "The color to apply to the text in the cells of the specified rows. Uses RGB color format.",
+          "message": "指定した行のセルのテキストに適用する色。RGB カラー形式を使用します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.display_name": {
+          "source": "Text Color",
+          "message": "テキストの色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dGV4dF9jb2xvcg.short_desc": {
+          "source": "Color for the text in the cells",
+          "message": "セルのテキストの色"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.desc": {
+          "source": "Whether to underline the text in the specified rows.",
+          "message": "指定した行のテキストに下線を引くかどうか。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.display_name": {
+          "source": "Underline",
+          "message": "下線"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dW5kZXJsaW5l.short_desc": {
+          "source": "Underline the text",
+          "message": "テキストに下線を引く"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOk1JRERMRQ.display_name": {
+          "source": "Middle",
+          "message": "中央"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOkJPVFRPTQ.display_name": {
+          "source": "Bottom",
+          "message": "下"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.allowed-value.c3RyaW5nOlRPUA.display_name": {
+          "source": "Top",
+          "message": "上"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.desc": {
+          "source": "The vertical alignment to apply to the content in the specified rows (Top, Middle, or Bottom).",
+          "message": "指定した行のコンテンツに適用する垂直方向の配置 (Top、Middle、または Bottom)。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.display_name": {
+          "source": "Vertical Alignment",
+          "message": "垂直方向の配置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.option.dmVydGljYWxfYWxpZ25tZW50.short_desc": {
+          "source": "Vertical alignment of content",
+          "message": "コンテンツの垂直方向の配置"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.Zm9ybWF0X3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Apply formatting to specific rows in a Google Sheets spreadsheet.",
+          "message": "Google スプレッドシートの特定の行に書式設定を適用します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.desc": {
+          "source": "Searches for rows in a Google Sheet that match a specific value in a designated column. Supports searching by column header or letter, pagination, and different response formats.",
+          "message": "指定された列の特定の値に一致する Google スプレッドシートの行を検索します。列ヘッダーまたは列文字による検索、ページネーション、さまざまなレスポンス形式に対応しています。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.display_name": {
+          "source": "Find Spreadsheet Rows",
+          "message": "スプレッドシートの行を検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "The number of matching rows to skip before returning results. Used for pagination. Default is 0.",
+          "message": "結果を返す前にスキップする一致行の数。ページネーションに使用されます。デフォルトは 0 です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "オフセット"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of matching rows to skip",
+          "message": "スキップする一致行の数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.desc": {
+          "source": "The maximum number of matching rows to include in the results. Default is 10.",
+          "message": "結果に含める一致行の最大数。デフォルトは 10 です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of matching rows to return",
+          "message": "返される一致する行の最大数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.desc": {
+          "source": "Limits the total number of rows to search to control performance with large sheets. Default is 5000.",
+          "message": "大規模なシートでのパフォーマンスを制御するため、検索する総行数を制限します。デフォルトは 5000 です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.display_name": {
+          "source": "Maximum Rows to Search",
+          "message": "検索する最大行数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.bWF4X3Jvd3NfdG9fc2VhcmNo.short_desc": {
+          "source": "Maximum number of rows to search through",
+          "message": "検索対象とする最大行数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.desc": {
+          "source": "Defines the search criteria to use when looking for matching rows.",
+          "message": "一致する行を検索する際に使用する検索条件を定義します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.display_name": {
+          "source": "Search Criteria",
+          "message": "検索条件"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNo.short_desc": {
+          "source": "Criteria for finding matching rows",
+          "message": "一致する行を検索するための条件"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.desc": {
+          "source": "When enabled, searches from the bottom of the sheet upward instead of from the top down. Useful for finding the most recent entries in sheets where new data is appended at the bottom.",
+          "message": "有効にすると、シートの上から下ではなく下から上に向かって検索します。新しいデータが最下部に追加されるシートで、最新のエントリを検索する際に便利です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.display_name": {
+          "source": "Search From Last Row",
+          "message": "最後の行から検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2VhcmNoX2Zyb21fbGFzdF9yb3c.short_desc": {
+          "source": "Start searching from the bottom of the sheet",
+          "message": "シートの最下部から検索を開始"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.desc": {
+          "source": "The ID of the specific sheet to search within the spreadsheet. Each sheet has a unique ID that can be selected from the available sheets.",
+          "message": "スプレッドシート内で検索する特定シートの ID。各シートには固有の ID があり、利用可能なシートから選択できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "シート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c2hlZXRfaWQ.short_desc": {
+          "source": "ID of the specific sheet within the spreadsheet",
+          "message": "スプレッドシート内の特定シートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet to search in. This can be found in the URL of the spreadsheet.",
+          "message": "検索対象の Google Sheets スプレッドシートの一意の識別子。これはスプレッドシートの URL で確認できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "スプレッドシート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "ID of the Google Sheets spreadsheet",
+          "message": "Google Sheets スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.desc": {
+          "source": "Return values mapped to column letters (A, B, C, etc.)",
+          "message": "列文字（A、B、C など）にマッピングされた値を返す"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1jb2x1bW5z.display_name": {
+          "source": "Column letter mapped values",
+          "message": "列文字マッピング値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.desc": {
+          "source": "Return values mapped to column headers",
+          "message": "列ヘッダーにマッピングされた値を返す"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOm1hcHBlZC1oZWFkZXJz.display_name": {
+          "source": "Header mapped values",
+          "message": "ヘッダーマッピング値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.desc": {
+          "source": "Return only raw row values as arrays (most efficient)",
+          "message": "生の行値のみを配列として返す（最も効率的）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.allowed-value.c3RyaW5nOnJhdw.display_name": {
+          "source": "Raw values only",
+          "message": "生のデータのみ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.desc": {
+          "source": "Determines how the matched rows are formatted in the response. Options include raw values, values mapped to column headers, or values mapped to column letters.",
+          "message": "レスポンスで一致した行をどのようにフォーマットするかを決定します。オプションには、生のデータ、列ヘッダーにマッピングされた値、または列文字にマッピングされた値があります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.display_name": {
+          "source": "Response Format",
+          "message": "レスポンス形式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.option.cmVzcG9uc2VfdHlwZQ.short_desc": {
+          "source": "Format of the returned rows",
+          "message": "返される行の形式"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.ZmluZF9zcHJlYWRzaGVldF9yb3dz.short_desc": {
+          "source": "Search for rows in a Google Sheets spreadsheet that match specific criteria.",
+          "message": "特定の条件に一致する Google Sheets スプレッドシート内の行を検索します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Sheets** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証を使用して、**Google Sheets** へのカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス（コネクションの API ベース URL 相対）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Sheets",
+          "message": "Google Sheets へのカスタム API 呼び出しを実行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.desc": {
+          "source": "Monitors Google Drive for newly created Google Spreadsheets. The trigger provides metadata about the newly created spreadsheet including its ID, name, URL, creation time, and owner information.",
+          "message": "新規作成された Google スプレッドシートについて Google Drive を監視します。このトリガーは、ID、名前、URL、作成日時、所有者情報など、新規作成されたスプレッドシートに関するメタデータを提供します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.display_name": {
+          "source": "New Spreadsheet",
+          "message": "新しいスプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0.short_desc": {
+          "source": "Triggers when a new Google Spreadsheet is created.",
+          "message": "新しい Google スプレッドシートが作成されたときにトリガーされます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.desc": {
+          "source": "Monitors a specific sheet in a Google Spreadsheet and triggers when new rows are added. The trigger provides the row data with column headers as field names.",
+          "message": "Google スプレッドシート内の特定のシートを監視し、新しい行が追加されたときにトリガーされます。このトリガーは、フィールド名として列ヘッダーを持つ行データを提供します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.display_name": {
+          "source": "New Spreadsheet Row",
+          "message": "新しいスプレッドシートの行"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet that you want to monitor for new rows. The sheet ID can be found in the spreadsheet URL.",
+          "message": "新しい行を監視するスプレッドシート内の特定シートの一意の識別子。シート ID はスプレッドシートの URL で確認できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "シート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the specific sheet to monitor",
+          "message": "監視する特定シートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that contains the sheet you want to monitor for new rows.",
+          "message": "新しい行を監視したいシートが含まれる Google スプレッドシートの一意の識別子。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "スプレッドシート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "監視する Google スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Google Sheet.",
+          "message": "Google シートに新しい行が追加されたときにトリガーされます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.desc": {
+          "source": "Monitors a Google Spreadsheet and triggers when new sheets are added. The trigger provides metadata about the newly created sheet including its ID, title, index position, and dimensions.",
+          "message": "Google スプレッドシートを監視し、新しいシートが追加されたときにトリガーされます。このトリガーは、ID、タイトル、インデックス位置、寸法など、新規作成されたシートに関するメタデータを提供します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.display_name": {
+          "source": "New Spreadsheet Sheet",
+          "message": "新しいスプレッドシートのシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet that you want to monitor for new sheets. The spreadsheet ID can be found in the spreadsheet URL.",
+          "message": "新しいシートを監視したい Google スプレッドシートの一意の識別子。スプレッドシート ID はスプレッドシートの URL で確認できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "スプレッドシート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to monitor",
+          "message": "監視する Google スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.bmV3X3NwcmVhZHNoZWV0X3NoZWV0.short_desc": {
+          "source": "Triggers when a new sheet is added to a Google Spreadsheet.",
+          "message": "Google スプレッドシートに新しいシートが追加されたときにトリガーされます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルで一致するレコードを検索します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブルで一致する単一のレコードを検索します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.desc": {
+          "source": "Search for Google Sheets spreadsheets in Google Drive using various criteria including filename, folder location, and custom queries. Supports sorting by different fields and directions with pagination.",
+          "message": "ファイル名、フォルダの場所、カスタムクエリなど、多様な条件を使用して Google Drive 内の Google Sheets スプレッドシートを検索します。ページネーションを使用したさまざまなフィールドや昇順・降順での並べ替えをサポートします。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.display_name": {
+          "source": "Search Spreadsheets",
+          "message": "スプレッドシートの検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.desc": {
+          "source": "Custom Google Drive search query to add additional filtering criteria beyond the basic options.",
+          "message": "基本オプション以外の追加のフィルター基準を追加するためのカスタム Google ドライブ検索クエリ。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.display_name": {
+          "source": "Custom Query",
+          "message": "カスタム クエリ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Y3VzdG9tX3F1ZXJ5.short_desc": {
+          "source": "Additional search criteria",
+          "message": "追加の検索基準"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.desc": {
+          "source": "The Google Drive folder ID to limit the search to. If not specified, searches all accessible folders.",
+          "message": "検索を限定する Google ドライブのフォルダ ID。指定しない場合は、アクセス可能なすべてのフォルダを検索します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.display_name": {
+          "source": "Folder",
+          "message": "フォルダ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.Zm9sZGVy.short_desc": {
+          "source": "Folder to search within",
+          "message": "検索対象のフォルダ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.desc": {
+          "source": "The name or partial name of the Google Sheets spreadsheet to search for.",
+          "message": "検索する Google Sheets スプレッドシートの名前または部分名。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "ファイル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name of the spreadsheet to search for",
+          "message": "検索するスプレッドシートの名前"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.desc": {
+          "source": "List of sorting criteria to apply to the search results. Each item specifies a field and direction.",
+          "message": "検索結果に適用する並べ替え基準のリスト。各項目でフィールドと方向を指定します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.display_name": {
+          "source": "Order By",
+          "message": "並べ替え"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.b3JkZXJfYnk.short_desc": {
+          "source": "Sorting criteria for results",
+          "message": "結果の並べ替え基準"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "次を含む"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "完全一致"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "How to match the filename - either contains the text or exact match. Default is contains.",
+          "message": "ファイル名の照合方法（テキストを含む、または完全一致）。デフォルトは「含む」です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "検索タイプ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of filename matching",
+          "message": "ファイル名照合の種類"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.desc": {
+          "source": "The maximum number of spreadsheets to return in a single request. Default is 100.",
+          "message": "単一のリクエストで返すスプレッドシートの最大数。デフォルトは 100 です。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "ページサイズ"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Maximum number of results to return",
+          "message": "返す結果の最大数"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3NwcmVhZHNoZWV0cw.short_desc": {
+          "source": "Search for Google Sheets spreadsheets with advanced filtering and sorting options.",
+          "message": "高度なフィルタリングと並べ替えオプションを使用して Google Sheets スプレッドシートを検索します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.desc": {
+          "source": "Searches for worksheets (tabs) within a Google Spreadsheet by their titles. Returns detailed information about matching worksheets including dimensions, position, and visibility. Can be used to find specific worksheets or list all worksheets in a spreadsheet.",
+          "message": "タイトルで Google スプレッドシート内のワークシート（タブ）を検索します。寸法、位置、表示状態など、一致するワークシートに関する詳細情報を返します。特定のワークシートを検索したり、スプレッドシート内のすべてのワークシートを一覧表示したりするために使用できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.display_name": {
+          "source": "Search Worksheets",
+          "message": "ワークシートの検索"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.desc": {
+          "source": "If enabled, only worksheets with exactly matching titles will be returned. If disabled (default), worksheets with titles containing the search text will be included in the results.",
+          "message": "有効にすると、タイトルが完全一致するワークシートのみが返されます。無効（デフォルト）の場合、検索テキストを含むタイトルのワークシートが結果に含まれます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.display_name": {
+          "source": "Exact Match",
+          "message": "完全一致"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.ZXhhY3RfbWF0Y2g.short_desc": {
+          "source": "Whether to match the title exactly",
+          "message": "タイトルを完全一致させるかどうか"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Spreadsheet you want to search for worksheets in. This can be found in the spreadsheet URL.",
+          "message": "ワークシートを検索したい Google スプレッドシートの一意の識別子。これはスプレッドシートの URL で確認できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "スプレッドシート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Spreadsheet to search within",
+          "message": "検索対象の Google スプレッドシートの ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.desc": {
+          "source": "Search for worksheets with titles containing this text. Leave empty to list all worksheets in the spreadsheet. The search is case-insensitive by default.",
+          "message": "このテキストを含むタイトルのワークシートを検索します。スプレッドシート内のすべてのワークシートを一覧表示するには空のままにしてください。検索はデフォルトで大文字と小文字を区別しません。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.display_name": {
+          "source": "Sheet Title",
+          "message": "シートのタイトル"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.option.dGl0bGU.short_desc": {
+          "source": "Title text to search for (case-insensitive)",
+          "message": "検索するタイトルテキスト（大文字・小文字を区別しない）"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.c2VhcmNoX3dvcmtzaGVldHM.short_desc": {
+          "source": "Find worksheets within a Google Spreadsheet by title.",
+          "message": "タイトルで Google スプレッドシート内のワークシートを検索します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"GoogleSheets\"",
+          "message": "アプリ「GoogleSheets」の指定されたテーブル内の既存レコードを更新します"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.desc": {
+          "source": "Updates specific rows in a Google Sheets spreadsheet by their row indices. This action allows you to modify multiple rows in a single operation while preserving the spreadsheet structure.",
+          "message": "行インデックスによって Google Sheets スプレッドシート内の特定行を更新します。このアクションを使用すると、スプレッドシートの構造を維持しながら、単一の操作で複数の行を変更できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.display_name": {
+          "source": "Update Spreadsheet Rows",
+          "message": "スプレッドシートの行を更新"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the specific sheet within the spreadsheet where rows will be updated.",
+          "message": "行が更新されるスプレッドシート内の特定シートの一意の識別子。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.display_name": {
+          "source": "Sheet ID",
+          "message": "シート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the sheet within the spreadsheet.",
+          "message": "スプレッドシート内のシートのID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.desc": {
+          "source": "The unique identifier of the Google Sheets spreadsheet you want to update rows in. This can be found in the spreadsheet URL.",
+          "message": "行を更新するGoogle スプレッドシートの固有識別子。これはスプレッドシートのURL内にあります。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.display_name": {
+          "source": "Spreadsheet ID",
+          "message": "スプレッドシート ID"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.option.c3ByZWFkc2hlZXRfaWQ.short_desc": {
+          "source": "The ID of the Google Sheets spreadsheet.",
+          "message": "Google スプレッドシートのID。"
+        },
+        "app.R29vZ2xlU2hlZXRz.action.dXBkYXRlX3NwcmVhZHNoZWV0X3Jvd3M.short_desc": {
+          "source": "Update existing rows in a Google Sheets spreadsheet.",
+          "message": "Google スプレッドシート内の既存の行を更新します。"
+        },
+        "app.R29vZ2xlU2hlZXRz.desc": {
+          "source": "Integrate with Google Sheets to create, update, and manage your spreadsheets. This integration allows you to perform actions and respond to events in your Google Sheets account, enabling you to automate data management and reporting workflows.",
+          "message": "Google スプレッドシートと連携して、スプレッドシートの作成、更新、管理を行います。この連携により、Google スプレッドシートアカウントでのアクション実行やイベントへの応答が可能になり、データ管理やレポート作成のワークフローを自動化できます。"
+        },
+        "app.R29vZ2xlU2hlZXRz.display_name": {
+          "source": "Google Sheets",
+          "message": "Google スプレッドシート"
+        },
+        "app.R29vZ2xlU2hlZXRz.short_desc": {
+          "source": "Connect with Google Sheets to manage your spreadsheets",
+          "message": "Google スプレッドシートと連携してスプレッドシートを管理します"
+        }
+      }
+    }
+  }
+}

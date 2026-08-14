@@ -1,0 +1,913 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "es": {
+      "messages": {
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Creates a new contact in Google Contacts with comprehensive information including names, contact details, addresses, organizations, relationships, and custom fields. Returns the created contact's basic information.",
+          "message": "Crea un nuevo contacto en Google Contacts con información completa, incluidos nombres, datos de contacto, direcciones, organizaciones, relaciones y campos personalizados. Devuelve la información básica del contacto creado."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Crear contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.desc": {
+          "source": "The name of the company or organization where the contact works. This field is optional.",
+          "message": "El nombre de la empresa u organización donde trabaja el contacto. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.display_name": {
+          "source": "Company",
+          "message": "Empresa"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y29tcGFueQ.short_desc": {
+          "source": "Contact's company or organization",
+          "message": "Empresa u organización del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.desc": {
+          "source": "A hash of custom key-value pairs for storing additional contact information.",
+          "message": "Un hash de pares clave-valor personalizados para almacenar información adicional del contacto."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.display_name": {
+          "source": "Custom Fields",
+          "message": "Campos personalizados"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Y3VzdG9tX2ZpZWxkcw.short_desc": {
+          "source": "Custom user-defined fields",
+          "message": "Campos personalizados definidos por el usuario"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.desc": {
+          "source": "A list of additional phone numbers with their respective types. Each entry contains a number and type.",
+          "message": "Una lista de números de teléfono adicionales con sus tipos respectivos. Cada entrada contiene un número y un tipo."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.display_name": {
+          "source": "Additional Phone Numbers",
+          "message": "Números de teléfono adicionales"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkaXRpb25hbF9waG9uZV9udW1iZXJz.short_desc": {
+          "source": "Additional phone numbers for the contact",
+          "message": "Números de teléfono adicionales para el contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.desc": {
+          "source": "Complete address information for the contact including street, city, state, and country.",
+          "message": "Información completa de la dirección del contacto, incluyendo calle, ciudad, estado y país."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "Dirección"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YWRkcmVzcw.short_desc": {
+          "source": "Contact's address information",
+          "message": "Información de la dirección del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.desc": {
+          "source": "The contact's date of birth. Provide as a date value.",
+          "message": "La fecha de nacimiento del contacto. Proporciónela como un valor de fecha."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.display_name": {
+          "source": "Birthday",
+          "message": "Cumpleaños"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.YmlydGhkYXk.short_desc": {
+          "source": "Contact's birthday",
+          "message": "Cumpleaños del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The contact's primary email address. This field is optional but commonly used.",
+          "message": "La dirección de correo electrónico principal del contacto. Este campo es opcional pero de uso común."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Dirección de correo electrónico"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "Primary email address",
+          "message": "Dirección de correo electrónico principal"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Otro"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Particular"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Trabajo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.desc": {
+          "source": "The type of email address: \"home\", \"work\", or \"other\". Default is \"other\".",
+          "message": "El tipo de dirección de correo electrónico: \"home\", \"work\" u \"other\". El valor predeterminado es \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.display_name": {
+          "source": "Email Type",
+          "message": "Tipo de correo electrónico"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWxfdHlwZQ.short_desc": {
+          "source": "Type of email address",
+          "message": "Tipo de dirección de correo electrónico"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The given name (first name) of the contact. This field is required.",
+          "message": "El nombre de pila (nombre) del contacto. Este campo es obligatorio."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "Nombre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "Contact's first name",
+          "message": "Nombre del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.desc": {
+          "source": "The contact's job title or position. This field is optional.",
+          "message": "El título profesional o cargo del contacto. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.display_name": {
+          "source": "Job Title",
+          "message": "Cargo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.am9iX3RpdGxl.short_desc": {
+          "source": "Contact's job title",
+          "message": "Cargo del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The family name (last name) of the contact. This field is required.",
+          "message": "El apellido de familia (apellido) del contacto. Este campo es obligatorio."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "Apellido"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "Contact's last name",
+          "message": "Apellido del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The middle name of the contact. This field is optional.",
+          "message": "El segundo nombre del contacto. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "Segundo nombre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "Contact's middle name",
+          "message": "Segundo nombre del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.desc": {
+          "source": "Free-form text notes or biography information about the contact.",
+          "message": "Notas de texto libre o información biográfica sobre el contacto."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Notas"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bm90ZXM.short_desc": {
+          "source": "Additional notes about the contact",
+          "message": "Notas adicionales sobre el contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.desc": {
+          "source": "Honorific prefix such as \"Mr.\", \"Ms.\", \"Dr.\", etc. This field is optional.",
+          "message": "Prefijo honorífico como \"Sr.\", \"Sra.\", \"Dr.\", etc. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.display_name": {
+          "source": "Name Prefix",
+          "message": "Prefijo del nombre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9wcmVmaXg.short_desc": {
+          "source": "Honorific prefix (e.g., Mr., Dr.)",
+          "message": "Prefijo honorífico (p. ej., Sr., Dr.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.desc": {
+          "source": "Honorific suffix such as \"Jr.\", \"Sr.\", \"III\", etc. This field is optional.",
+          "message": "Sufijo honorífico como \"Jr.\", \"Sr.\", \"III\", etc. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.display_name": {
+          "source": "Name Suffix",
+          "message": "Sufijo de nombre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.bmFtZV9zdWZmaXg.short_desc": {
+          "source": "Honorific suffix (e.g., Jr., Sr.)",
+          "message": "Sufijo honorífico (p. ej., Jr., Sr.)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The contact's primary phone number. This field is optional.",
+          "message": "El número de teléfono principal del contacto. Este campo es opcional."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "Número de teléfono"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Primary phone number",
+          "message": "Número de teléfono principal"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1haW4.display_name": {
+          "source": "Main",
+          "message": "Principal"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm1vYmlsZQ.display_name": {
+          "source": "Mobile",
+          "message": "Móvil"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Otro"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWU.display_name": {
+          "source": "Home",
+          "message": "Particular"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOmhvbWVGYXg.display_name": {
+          "source": "Home Fax",
+          "message": "Fax particular"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOnBhZ2Vy.display_name": {
+          "source": "Pager",
+          "message": "Buscador"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcms.display_name": {
+          "source": "Work",
+          "message": "Trabajo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.allowed-value.c3RyaW5nOndvcmtGYXg.display_name": {
+          "source": "Work Fax",
+          "message": "Fax del trabajo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.desc": {
+          "source": "The type of phone number: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\", or \"other\". Default is \"other\".",
+          "message": "El tipo de número de teléfono: \"home\", \"work\", \"mobile\", \"main\", \"homeFax\", \"workFax\", \"pager\" u \"other\". El valor predeterminado es \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.display_name": {
+          "source": "Phone Type",
+          "message": "Tipo de teléfono"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfdHlwZQ.short_desc": {
+          "source": "Type of phone number",
+          "message": "Tipo de número de teléfono"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.desc": {
+          "source": "The name of a person related to this contact (e.g., spouse, manager, etc.).",
+          "message": "El nombre de una persona relacionada con este contacto (p. ej., cónyuge, gerente, etc.)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.display_name": {
+          "source": "Related Person",
+          "message": "Persona relacionada"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRlZF9wZXJzb24.short_desc": {
+          "source": "Name of a related person",
+          "message": "Nombre de una persona relacionada"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1hbmFnZXI.display_name": {
+          "source": "Manager",
+          "message": "Gerente"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm1vdGhlcg.display_name": {
+          "source": "Mother",
+          "message": "Madre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOm90aGVy.display_name": {
+          "source": "Other",
+          "message": "Otro"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmFzc2lzdGFudA.display_name": {
+          "source": "Assistant",
+          "message": "Asistente"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmJyb3RoZXI.display_name": {
+          "source": "Brother",
+          "message": "Hermano"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmNoaWxk.display_name": {
+          "source": "Child",
+          "message": "Hijo/a"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmRvbWVzdGljUGFydG5lcg.display_name": {
+          "source": "Domestic Partner",
+          "message": "Pareja de hecho"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZhdGhlcg.display_name": {
+          "source": "Father",
+          "message": "Padre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOmZyaWVuZA.display_name": {
+          "source": "Friend",
+          "message": "Amigo/a"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "Parent",
+          "message": "Padre/Madre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnBhcnRuZXI.display_name": {
+          "source": "Partner",
+          "message": "Socio/a"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlZmVycmVkQnk.display_name": {
+          "source": "Referred By",
+          "message": "Recomendado por"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnJlbGF0aXZl.display_name": {
+          "source": "Relative",
+          "message": "Familiar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNpc3Rlcg.display_name": {
+          "source": "Sister",
+          "message": "Hermana"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.allowed-value.c3RyaW5nOnNwb3VzZQ.display_name": {
+          "source": "Spouse",
+          "message": "Cónyuge"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.desc": {
+          "source": "The type of relationship: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\", or \"other\". Default is \"other\".",
+          "message": "El tipo de relación: \"spouse\", \"child\", \"mother\", \"father\", \"parent\", \"brother\", \"sister\", \"friend\", \"relative\", \"domesticPartner\", \"manager\", \"assistant\", \"referredBy\", \"partner\" u \"other\". El valor predeterminado es \"other\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.display_name": {
+          "source": "Relationship Type",
+          "message": "Tipo de relación"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.cmVsYXRpb25zaGlwX3R5cGU.short_desc": {
+          "source": "Type of relationship",
+          "message": "Tipo de relación"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.desc": {
+          "source": "A website URL associated with the contact.",
+          "message": "Una URL de sitio web asociada con el contacto."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.display_name": {
+          "source": "Website URL",
+          "message": "URL del sitio web"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.option.dXJs.short_desc": {
+          "source": "Contact's website or URL",
+          "message": "Sitio web o URL del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact in Google Contacts.",
+          "message": "Crea un nuevo contacto en Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.desc": {
+          "source": "Creates a new user-defined contact group in Google Contacts. The group can then be used to organize contacts. Returns the created group's information including its resource name.",
+          "message": "Crea un nuevo grupo de contactos definido por el usuario en Google Contacts. El grupo se puede utilizar para organizar contactos. Devuelve la información del grupo creado, incluido su nombre de recurso."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.display_name": {
+          "source": "Create Contact Group",
+          "message": "Crear grupo de contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The display name for the new contact group. This name will be visible in Google Contacts and must be provided.",
+          "message": "El nombre para mostrar del nuevo grupo de contactos. Este nombre será visible en Google Contacts y debe proporcionarse."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Group Name",
+          "message": "Nombre del grupo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new contact group",
+          "message": "Nombre para el nuevo grupo de contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Y3JlYXRlX2dyb3Vw.short_desc": {
+          "source": "Create a new contact group in Google Contacts.",
+          "message": "Crea un nuevo grupo de contactos en Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.desc": {
+          "source": "Adds a contact to an existing contact group in Google Contacts. Both the contact and group must already exist. Returns confirmation with details about both the contact and group.",
+          "message": "Añade un contacto a un grupo de contactos existente en Google Contacts. Tanto el contacto como el grupo deben existir previamente. Devuelve una confirmación con detalles sobre el contacto y el grupo."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.display_name": {
+          "source": "Add Contact to Group",
+          "message": "Añadir contacto al grupo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.desc": {
+          "source": "The resource name of the contact to add to the group (e.g., \"people/12345\").",
+          "message": "El nombre de recurso del contacto que se añadirá al grupo (p. ej., \"people/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Nombre de recurso del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Y29udGFjdF9yZXNvdXJjZV9uYW1l.short_desc": {
+          "source": "The contact to add to the group",
+          "message": "El contacto que se añadirá al grupo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact group where the contact will be added (e.g., \"contactGroups/12345\").",
+          "message": "El nombre de recurso del grupo de contactos donde se añadirá el contacto (p. ej., \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Group Resource Name",
+          "message": "Nombre de recurso del grupo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.option.Z3JvdXBfcmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The contact group to add to",
+          "message": "El grupo de contactos al que se añadirá"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.YWRkX2NvbnRhY3RfdG9fZ3JvdXA.short_desc": {
+          "source": "Add an existing contact to a contact group.",
+          "message": "Añade un contacto existente a un grupo de contactos."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Fetches comprehensive contact information from Google Contacts including names, email addresses, phone numbers, organizations, addresses, birthdays, and other personal details. Returns all available fields for the specified contact.",
+          "message": "Obtiene información detallada del contacto desde Google Contacts, incluyendo nombres, direcciones de correo electrónico, números de teléfono, organizaciones, direcciones, cumpleaños y otros datos personales. Devuelve todos los campos disponibles para el contacto especificado."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Obtener contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.desc": {
+          "source": "The resource name of the contact to retrieve (e.g., \"people/12345\"). This uniquely identifies the contact in Google Contacts.",
+          "message": "El nombre de recurso del contacto que se va a recuperar (p. ej., \"people/12345\"). Esto identifica de forma única al contacto en Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.display_name": {
+          "source": "Contact Resource Name",
+          "message": "Nombre de recurso del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.option.cmVzb3VyY2VfbmFtZQ.short_desc": {
+          "source": "The unique identifier for the contact",
+          "message": "El identificador único del contacto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve detailed information about a specific Google contact.",
+          "message": "Recupera información detallada sobre un contacto específico de Google."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.desc": {
+          "source": "Fetches all contact groups from Google Contacts with support for filtering by group type, searching by name, and selecting specific fields. Returns both system and user-created groups with metadata including member counts.",
+          "message": "Obtiene todos los grupos de contactos de Google Contacts con compatibilidad para filtrar por tipo de grupo, buscar por nombre y seleccionar campos específicos. Devuelve tanto los grupos del sistema como los creados por los usuarios con metadatos que incluyen el recuento de miembros."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.display_name": {
+          "source": "List Contact Groups",
+          "message": "Listar grupos de contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All Groups",
+          "message": "Todos los grupos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnN5c3RlbQ.display_name": {
+          "source": "System Groups Only",
+          "message": "Solo grupos del sistema"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User Created Groups Only",
+          "message": "Solo grupos creados por el usuario"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.desc": {
+          "source": "Filter groups by type: \"all\" for both system and user groups, \"user\" for user-created groups only, or \"system\" for system groups only. Default is \"all\".",
+          "message": "Filtra grupos por tipo: \"all\" para grupos tanto del sistema como de usuario, \"user\" solo para grupos creados por el usuario o \"system\" solo para grupos del sistema. El valor predeterminado es \"all\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.display_name": {
+          "source": "Group Type",
+          "message": "Tipo de grupo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.Z3JvdXBfdHlwZQ.short_desc": {
+          "source": "Type of groups to retrieve",
+          "message": "Tipo de grupos a recuperar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.desc": {
+          "source": "Optional search term to filter groups by name. The search is case-insensitive and matches partial names.",
+          "message": "Término de búsqueda opcional para filtrar grupos por nombre. La búsqueda no distingue entre mayúsculas y minúsculas y coincide con nombres parciales."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.display_name": {
+          "source": "Search Name",
+          "message": "Nombre de búsqueda"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.option.c2VhcmNoX25hbWU.short_desc": {
+          "source": "Filter groups by name",
+          "message": "Filtrar grupos por nombre"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bGlzdF9ncm91cHM.short_desc": {
+          "source": "Retrieve a list of contact groups from Google Contacts.",
+          "message": "Obtener una lista de grupos de contactos desde Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Contacts** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Realice una llamada HTTP / REST API personalizada a **Google Contacts** utilizando la autenticación de la conexión configurada.\n\nEspecifique el método HTTP, la ruta URI (relativa a la URL base de la API de la conexión), parámetros de consulta opcionales, encabezados y el cuerpo de la solicitud. La respuesta se devuelve como un hash que contiene el código de estado, los encabezados de respuesta y el cuerpo de la respuesta.\n\nUtilice esta acción para puntos de enlace que aún no estén expuestos como acciones de primer nivel en esta aplicación."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Realizar una llamada a la API"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "El cuerpo de la solicitud. El tipo efectivo depende de `body_type`: JSON/formulario/YAML esperan un hash, XML/texto esperan una cadena, multipart espera una estructura de archivo y binario espera bytes sin procesar."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Cuerpo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "El cuerpo de la solicitud"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Cargue un archivo usando `multipart/form-data`. El cuerpo debe ser una estructura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). El marco construye el sobre multipart y establece el encabezado boundary."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulario multipart"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Cargar un archivo usando multipart/form-data"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Pasa el cuerpo al cliente REST sin cambios; el cliente decide la serialización según su opción `data` configurada y el tipo de valor"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Paso directo; utiliza la serialización de la conexión y deja que el cliente REST decida"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envía el cuerpo como bytes sin procesar. El cuerpo debe ser un valor binario. Establece `Content-Type: application/octet-stream` a menos que `hdr` lo anule."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario sin procesar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Enviar el cuerpo como bytes sin procesar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializa un hash de campos de formulario como `application/x-www-form-urlencoded`. El cuerpo debe ser un hash cuyos valores sean escalares (cadenas/números/booleanos)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulario (codificado en URL)"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializar el cuerpo como campos de formulario application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializa el cuerpo como JSON; establece `Content-Type: application/json`. El cuerpo debe ser un hash, lista o valor escalar."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializar el cuerpo como JSON"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envía el cuerpo como texto plano. El cuerpo debe ser una cadena. Establece `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texto plano"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Enviar el cuerpo como text/plain"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envía el cuerpo como XML. Si el cuerpo es un hash, se serializa a XML; si es una cadena, se envía textualmente. Establece `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Enviar el cuerpo como XML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envía el cuerpo como YAML. Si el cuerpo es un hash, se serializa a YAML; si es una cadena, se envía textualmente. Establece `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Enviar el cuerpo como YAML"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Selecciona el modo de serialización del cuerpo y el encabezado `Content-Type` correspondiente. Cambiar este campo modifica la forma del editor `body`: seleccionar JSON expone un editor JSON, seleccionar Formulario multipart expone un selector de archivos, y así sucesivamente."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo de cuerpo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Cómo se serializa el cuerpo y qué Content-Type se envía"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si es `True`, las respuestas HTTP que no sean 2xx se devuelven como el hash de respuesta normal (con el código de estado real) en lugar de generar `REST-RESPONSE-ERROR`. Útil para manejar 4xx/5xx como datos, por ejemplo, para comprobar si un recurso existe. Anula la configuración `error_passthru` de la conexión solo para esta llamada."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Devolver errores como datos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Devolver respuestas que no sean 2xx normalmente en lugar de lanzar una excepción"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Lista opcional de códigos de estado HTTP tratados como éxito. Si se establece y el estado de la respuesta no está en esta lista, la acción lanza `REST-STATUS-ERROR`. Cuando no se establece, se aplica el comportamiento predeterminado del cliente REST (típicamente: 2xx es éxito, no 2xx lanza una excepción)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Códigos de estado esperados"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Códigos de estado de respuesta tratados como éxito"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash de encabezados personalizados agregados a la solicitud. Estos anulan cualquier encabezado predeterminado establecido por `body_type` (por ejemplo, proporcionar `Content-Type` aquí prevalece sobre el valor predeterminado según el tipo de cuerpo)."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Encabezados personalizados"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Encabezados de solicitud adicionales"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si es `True`, el hash de respuesta incluye un sub-hash `debug` que contiene el método/URL/encabezados de la solicitud (con valores confidenciales redactados), tamaños de solicitud y respuesta, y la duración del viaje de ida y vuelta. Útil para investigar llamadas lentas o con fallos. Desactivado de forma predeterminada para mantener las respuestas ligeras."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Incluir información de depuración"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Incluir información de depuración de solicitud/tiempo/tamaño en la respuesta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Método HTTP"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "El método HTTP que se utilizará para la solicitud"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición `{name}` que se reemplazan desde `path_vars`. Ejemplo: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ruta URI"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "La ruta URI relativa a la URL base de la API de la conexión. Puede contener marcadores de posición '{name}' que se reemplazan desde 'path_vars'. Ejemplo: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash de valores sustituidos en los marcadores de posición `{name}` en la ruta URI. Ejemplo: con `path = /users/{id}` y `path_vars = {id: 123}`, el framework envía `/users/123`. Los valores están codificados en URL."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de ruta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valores para los marcadores de posición {name} en la ruta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash de parámetros de cadena de consulta para adjuntar a la ruta URI. Los valores están codificados en URL; los valores de lista se unen con `,`."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumentos de consulta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parámetros de cadena de consulta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Contacts",
+          "message": "Realizar una llamada API personalizada a Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger activates whenever a new contact is added to Google Contacts. It provides detailed information about the newly created contact including names, email addresses, phone numbers, and more.",
+          "message": "Este activador se activa cada vez que se añade un nuevo contacto a Google Contacts. Proporciona información detallada sobre el contacto recién creado, incluyendo nombres, direcciones de correo electrónico, números de teléfono y más."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact Created",
+          "message": "Nuevo contacto creado"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Trigger when a new contact is created in Google Contacts.",
+          "message": "Activar cuando se crea un nuevo contacto en Google Contacts."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.desc": {
+          "source": "Search through Google Contacts using email addresses, full names, or phone numbers. Supports both exact matching and partial matching (contains) search types. Returns basic contact information for matching contacts.",
+          "message": "Busque en Google Contacts utilizando direcciones de correo electrónico, nombres completos o números de teléfono. Admite tipos de búsqueda de coincidencia exacta y coincidencia parcial (contiene). Devuelve información básica de contacto para los contactos que coincidan."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.display_name": {
+          "source": "Search Contacts",
+          "message": "Buscar contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.desc": {
+          "source": "Optional contact group to filter results. Only contacts in this group will be returned. Provide the group resource name (e.g., \"contactGroups/12345\").",
+          "message": "Grupo de contactos opcional para filtrar resultados. Solo se devolverán los contactos de este grupo. Proporcione el nombre del recurso del grupo (por ejemplo, \"contactGroups/12345\")."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.display_name": {
+          "source": "Contact Group",
+          "message": "Grupo de contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.Z3JvdXA.short_desc": {
+          "source": "Filter by contact group",
+          "message": "Filtrar por grupo de contactos"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email Address",
+          "message": "Dirección de correo electrónico"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOmZ1bGxfbmFtZQ.display_name": {
+          "source": "Full Name",
+          "message": "Nombre completo"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.allowed-value.c3RyaW5nOnBob25lX251bWJlcg.display_name": {
+          "source": "Phone Number",
+          "message": "Número de teléfono"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.desc": {
+          "source": "The contact field to search in: \"email\" for email addresses, \"full_name\" for names, or \"phone_number\" for phone numbers.",
+          "message": "El campo de contacto en el que buscar: \"email\" para direcciones de correo electrónico, \"full_name\" para nombres o \"phone_number\" para números de teléfono."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.display_name": {
+          "source": "Search Field",
+          "message": "Campo de búsqueda"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX2ZpZWxk.short_desc": {
+          "source": "Field to search in",
+          "message": "Campo en el que buscar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmNvbnRhaW5z.display_name": {
+          "source": "Contains",
+          "message": "Contiene"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.allowed-value.c3RyaW5nOmV4YWN0.display_name": {
+          "source": "Exact Match",
+          "message": "Coincidencia exacta"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.desc": {
+          "source": "Search matching type: \"contains\" for partial matches or \"exact\" for exact matches. Default is \"contains\".",
+          "message": "Tipo de coincidencia de búsqueda: \"contains\" para coincidencias parciales o \"exact\" para coincidencias exactas. El valor predeterminado es \"contains\"."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.display_name": {
+          "source": "Search Type",
+          "message": "Tipo de búsqueda"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3R5cGU.short_desc": {
+          "source": "Type of search to perform",
+          "message": "Tipo de búsqueda a realizar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.desc": {
+          "source": "The search term or value to look for in the specified field. Search is case-insensitive.",
+          "message": "El término o valor de búsqueda que buscar en el campo especificado. La búsqueda no distingue entre mayúsculas y minúsculas."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.display_name": {
+          "source": "Search Value",
+          "message": "Valor de búsqueda"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.option.c2VhcmNoX3ZhbHVl.short_desc": {
+          "source": "Value to search for",
+          "message": "Valor a buscar"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.action.c2VhcmNoX2NvbnRhY3Rz.short_desc": {
+          "source": "Search for contacts in Google Contacts by various criteria.",
+          "message": "Buscar contactos en Google Contacts según diversos criterios."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.desc": {
+          "source": "Connect to Google Contacts to manage your contacts directly from your application. Create, update, and delete contacts seamlessly.",
+          "message": "Conéctese a Google Contacts para gestionar sus contactos directamente desde su aplicación. Cree, actualice y elimine contactos sin problemas."
+        },
+        "app.R29vZ2xlQ29udGFjdHM.display_name": {
+          "source": "Google Contacts",
+          "message": "Google Contacts"
+        },
+        "app.R29vZ2xlQ29udGFjdHM.short_desc": {
+          "source": "Manage your Google Contacts",
+          "message": "Gestione sus contactos de Google Contacts"
+        }
+      }
+    }
+  }
+}

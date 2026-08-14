@@ -1,0 +1,873 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "Utwórz nowe rekordy w podanej tabeli w aplikacji \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Utwórz rekordy"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Supabase\"",
+          "message": "Utwórz nowe rekordy w podanej tabeli w aplikacji \"Supabase\""
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.desc": {
+          "source": "Creates a new storage bucket in Supabase Storage for organizing and storing files. Configure access permissions, file size limits, and allowed MIME types.",
+          "message": "Tworzy nowy zasobnik pamięci masowej w Supabase Storage do organizowania i przechowywania plików. Skonfiguruj uprawnienia dostępu, limity rozmiaru plików i dozwolone typy MIME."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.display_name": {
+          "source": "Create Storage Bucket",
+          "message": "Utwórz zasobnik pamięci masowej"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.desc": {
+          "source": "Specify which file types can be uploaded to this bucket by providing a list of MIME types (e.g., image/png, application/pdf). Leave empty to allow all file types.",
+          "message": "Określ, które typy plików mogą być przesyłane do tego zasobnika, podając listę typów MIME (np. image/png, application/pdf). Pozostaw puste, aby zezwolić na wszystkie typy plików."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.display_name": {
+          "source": "Allowed MIME Types",
+          "message": "Dozwolone typy MIME"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.YWxsb3dlZF9taW1lX3R5cGVz.short_desc": {
+          "source": "List of allowed file MIME types",
+          "message": "Lista dozwolonych typów MIME plików"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.desc": {
+          "source": "Set the maximum file size that can be uploaded to this bucket, specified in bytes. Leave empty for no limit.",
+          "message": "Ustaw maksymalny rozmiar pliku, który można przesłać do tego zasobnika, podany w bajtach. Pozostaw puste, aby nie stosować limitu."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.display_name": {
+          "source": "File Size Limit",
+          "message": "Limit rozmiaru pliku"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.ZmlsZV9zaXplX2xpbWl0.short_desc": {
+          "source": "Maximum file size in bytes",
+          "message": "Maksymalny rozmiar pliku w bajtach"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.desc": {
+          "source": "Specify a unique name for the storage bucket. The name must be URL-safe and unique within your Supabase project.",
+          "message": "Określ unikalną nazwę zasobnika pamięci masowej. Nazwa musi być bezpieczna dla adresów URL i unikalna w obrębie projektu Supabase."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.display_name": {
+          "source": "Bucket Name",
+          "message": "Nazwa zasobnika"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.bmFtZQ.short_desc": {
+          "source": "The name for the new bucket",
+          "message": "Nazwa nowego zasobnika"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.desc": {
+          "source": "When enabled, files in this bucket can be accessed publicly without authentication. When disabled (default), files require authentication to access.",
+          "message": "Gdy ta opcja jest włączona, dostęp do plików w tym zasobniku jest publiczny bez uwierzytelniania. Gdy jest wyłączona (domyślnie), dostęp do plików wymaga uwierzytelnienia."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.display_name": {
+          "source": "Public Access",
+          "message": "Dostęp publiczny"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.option.cHVibGljX2FjY2Vzcw.short_desc": {
+          "source": "Allow public access to bucket contents",
+          "message": "Zezwalaj na publiczny dostęp do zawartości zasobnika"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX2J1Y2tldA.short_desc": {
+          "source": "Create a new storage bucket in Supabase",
+          "message": "Utwórz nowy zasobnik pamięci masowej w Supabase"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.desc": {
+          "source": "Creates a new record in the specified Supabase table. The action dynamically presents the table schema, allowing you to provide values for each column. Returns the newly created row with all its data.",
+          "message": "Tworzy nowy rekord w określonej tabeli Supabase. Akcja dynamicznie prezentuje schemat tabeli, umożliwiając podanie wartości dla każdej kolumny. Zwraca nowo utworzony wiersz ze wszystkimi danymi."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.display_name": {
+          "source": "Create Row",
+          "message": "Utwórz wiersz"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table for inserting the new row. The available fields will be dynamically loaded based on the selected table schema.",
+          "message": "Wybierz docelową tabelę Supabase do wstawienia nowego wiersza. Dostępne pola zostaną załadowane dynamicznie na podstawie schematu wybranej tabeli."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table where the row will be inserted",
+          "message": "Tabela, w której zostanie wstawiony wiersz"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. The structure is dynamically generated based on the selected table schema, showing all available columns with their data types and constraints.",
+          "message": "Podaj wartości dla kolumn tabeli. Struktura jest generowana dynamicznie na podstawie wybranego schematu tabeli, pokazując wszystkie dostępne kolumny wraz z ich typami danych i ograniczeniami."
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "Wartości wiersza"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to insert into the new row",
+          "message": "Dane do wstawienia do nowego wiersza"
+        },
+        "app.U3VwYWJhc2U.action.Y3JlYXRlX3Jvdw.short_desc": {
+          "source": "Insert a new row into a Supabase table",
+          "message": "Wstaw nowy wiersz do tabeli Supabase"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.desc": {
+          "source": "Fetches detailed information about a specific Supabase storage bucket including its configuration, creation date, access permissions, and file restrictions.",
+          "message": "Pobiera szczegółowe informacje o określonym zasobniku pamięci masowej Supabase, w tym jego konfigurację, datę utworzenia, uprawnienia dostępu i ograniczenia dotyczące plików."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.display_name": {
+          "source": "Get Storage Bucket",
+          "message": "Pobierz zasobnik pamięci masowej"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.desc": {
+          "source": "Select the storage bucket whose details you want to fetch from your Supabase project.",
+          "message": "Wybierz zasobnik pamięci masowej z projektu Supabase, którego szczegóły chcesz pobrać."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.display_name": {
+          "source": "Bucket ID",
+          "message": "Identyfikator zasobnika"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.option.YnVja2V0X2lk.short_desc": {
+          "source": "The ID of the bucket to retrieve",
+          "message": "Identyfikator zasobnika do pobrania"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X2J1Y2tldA.short_desc": {
+          "source": "Retrieve details of a specific storage bucket",
+          "message": "Pobierz szczegóły określonego zasobnika pamięci masowej"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.desc": {
+          "source": "Fetches comprehensive metadata for a specific table including column definitions, data types, required fields, and descriptions. This action helps you understand the structure of your database tables.",
+          "message": "Pobiera kompleksowe metadane dla określonej tabeli, w tym definicje kolumn, typy danych, wymagane pola i opisy. Ta akcja ułatwia zrozumienie struktury tabel w bazie danych."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.display_name": {
+          "source": "Get Table",
+          "message": "Pobierz tabelę"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table whose schema information you want to fetch. The table must exist in your Supabase project.",
+          "message": "Wybierz tabelę Supabase, której informacje o schemacie chcesz pobrać. Tabela musi istnieć w Twoim projekcie Supabase."
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.option.dGFibGVOYW1l.short_desc": {
+          "source": "The name of the table to retrieve",
+          "message": "Nazwa tabeli do pobrania"
+        },
+        "app.U3VwYWJhc2U.action.Z2V0X3RhYmxl.short_desc": {
+          "source": "Retrieve detailed schema information about a specific Supabase table",
+          "message": "Pobierz szczegółowe informacje o schemacie określonej tabeli Supabase"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "Usuń rekordy z podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Usuń rekordy"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Supabase\"",
+          "message": "Usuń rekordy z podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.desc": {
+          "source": "Removes rows from a Supabase table that match the specified filter criteria. Returns the count of deleted rows and their data. Use with caution as this operation is irreversible.",
+          "message": "Usuwa wiersze z tabeli Supabase, które spełniają określone kryteria filtrowania. Zwraca liczbę usuniętych wierszy oraz ich dane. Używaj ostrożnie, ponieważ ta operacja jest nieodwracalna."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.display_name": {
+          "source": "Delete Rows",
+          "message": "Usuń wiersze"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.desc": {
+          "source": "Define the filter criteria to identify which rows should be deleted. Only rows matching this condition will be removed from the table.",
+          "message": "Zdefiniuj kryteria filtrowania, aby określić, które wiersze powinny zostać usunięte. Tylko wiersze spełniające ten warunek zostaną usunięte z tabeli."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.ZmlsdGVy.short_desc": {
+          "source": "Condition to identify rows to delete",
+          "message": "Warunek identyfikujący wiersze do usunięcia"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to delete rows. Ensure you have proper permissions for delete operations on this table.",
+          "message": "Wybierz tabelę Supabase, z której chcesz usunąć wiersze. Upewnij się, że posiadasz odpowiednie uprawnienia do operacji usuwania w tej tabeli."
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to delete rows from",
+          "message": "Tabela, z której mają zostać usunięte wiersze"
+        },
+        "app.U3VwYWJhc2U.action.ZGVsZXRlX3Jvd3M.short_desc": {
+          "source": "Delete rows from a Supabase table based on a filter",
+          "message": "Usuń wiersze z tabeli Supabase na podstawie filtra"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieves all tables from your Supabase database with their basic metadata including column information and descriptions. Optionally include system tables in the results.",
+          "message": "Pobiera wszystkie tabele z bazy danych Supabase wraz z ich podstawowymi metadanymi, w tym informacjami o kolumnach i opisami. Opcjonalnie uwzględnia tabele systemowe w wynikach."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "Lista tabel"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.desc": {
+          "source": "When enabled, the response will include system tables (those starting with underscore). System tables contain Supabase internal data and are typically hidden from regular queries.",
+          "message": "Gdy włączone, odpowiedź będzie zawierać tabele systemowe (rozpoczynające się od znaku podkreślenia). Tabele systemowe zawierają wewnętrzne dane Supabase i są zazwyczaj ukryte przed zwykłymi zapytaniami."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.display_name": {
+          "source": "Include System Tables",
+          "message": "Uwzględnij tabele systemowe"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.option.aW5jbHVkZV9zeXN0ZW1fdGFibGVz.short_desc": {
+          "source": "Include internal Supabase system tables in the results",
+          "message": "Uwzględnij wewnętrzne tabele systemowe Supabase w wynikach"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "Get a list of all tables in your Supabase database",
+          "message": "Pobierz listę wszystkich tabel w bazie danych Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.desc": {
+          "source": "Retrieves a list of all storage buckets in your Supabase project with their configurations including access permissions, file size limits, and allowed MIME types.",
+          "message": "Pobiera listę wszystkich zasobników pamięci masowej (storage buckets) w projekcie Supabase wraz z ich konfiguracjami, w tym uprawnieniami dostępu, limitami rozmiaru plików i dozwolonymi typami MIME."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.display_name": {
+          "source": "List Storage Buckets",
+          "message": "Wyświetl zasobniki pamięci masowej"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9idWNrZXRz.short_desc": {
+          "source": "Get all storage buckets in your Supabase project",
+          "message": "Pobierz wszystkie zasobniki pamięci masowej w projekcie Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.desc": {
+          "source": "Fetches rows from a Supabase table with support for filtering, sorting, pagination, and ordering. Returns a list of records matching your query criteria along with total count information.",
+          "message": "Pobiera wiersze z tabeli Supabase z obsługą filtrowania, sortowania, stronicowania i porządkowania. Zwraca listę rekordów spełniających kryteria zapytania wraz z informacją o łącznej liczbie."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.display_name": {
+          "source": "List Rows",
+          "message": "Wyświetl listę wierszy"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter condition to retrieve only rows that match specific criteria. Supports various comparison operators for flexible querying.",
+          "message": "Zastosuj warunek filtrowania, aby pobrać tylko wiersze spełniające określone kryteria. Obsługuje różne operatory porównania dla elastycznego tworzenia zapytań."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter rows based on a condition",
+          "message": "Filtruj wiersze na podstawie warunku"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.desc": {
+          "source": "Skip this many rows before starting to return results. Used in combination with limit for pagination through large datasets.",
+          "message": "Pomiń określoną liczbę wierszy przed rozpoczęciem zwracania wyników. Używane w połączeniu z limitem do stronicowania dużych zbiorów danych."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Przesunięcie"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of rows to skip",
+          "message": "Liczba wierszy do pominięcia"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.desc": {
+          "source": "Define how to sort the retrieved rows by specifying a column and sort direction (ascending or descending).",
+          "message": "Zdefiniuj sposób sortowania pobranych wierszy, określając kolumnę oraz kierunek sortowania (rosnąco lub malejąco)."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.display_name": {
+          "source": "Order By",
+          "message": "Sortuj według"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.b3JkZXJCeQ.short_desc": {
+          "source": "Sort the results by a specific column",
+          "message": "Sortuj wyniki według określonej kolumny"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.desc": {
+          "source": "Specify the maximum number of rows to retrieve in a single query. Useful for pagination and performance optimization. Defaults to 20 if not specified.",
+          "message": "Określ maksymalną liczbę wierszy do pobrania w jednym zapytaniu. Przydatne do stronicowania i optymalizacji wydajności. Wartość domyślna to 20, jeśli nie określono inaczej."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Maksymalna liczba wierszy do zwrócenia"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table from which you want to retrieve rows. The available columns for filtering and ordering will be loaded based on this selection.",
+          "message": "Wybierz tabelę Supabase, z której chcesz pobrać wiersze. Dostępne kolumny do filtrowania i sortowania zostaną załadowane na podstawie tego wyboru."
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to query",
+          "message": "Tabela do odpytania"
+        },
+        "app.U3VwYWJhc2U.action.bGlzdF9yb3dz.short_desc": {
+          "source": "Query and retrieve rows from a Supabase table",
+          "message": "Odpytuj i pobieraj wiersze z tabeli Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Supabase** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Supabase** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki oraz treść żądania. Odpowiedź jest zwracana jako asocjacja zawierająca kod stanu, nagłówki odpowiedzi oraz treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako natywne akcje w tej aplikacji."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.U3VwYWJhc2U.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Supabase",
+          "message": "Wykonaj niestandardowe wywołanie API do Supabase"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.desc": {
+          "source": "Monitors a Supabase table for new rows and triggers when new records are inserted. Supports optional filtering to trigger only for rows matching specific criteria.",
+          "message": "Monitoruje tabelę Supabase pod kątem nowych wierszy i uruchamia wyzwalacz po wstawieniu nowych rekordów. Obsługuje opcjonalne filtrowanie, aby wyzwalać tylko dla wierszy spełniających określone kryteria."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.display_name": {
+          "source": "New Table Row",
+          "message": "Nowy wiersz tabeli"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.desc": {
+          "source": "Apply a filter to trigger only for new rows matching specific criteria. Leave empty to trigger for all new rows.",
+          "message": "Zastosuj filtr, aby wyzwalać tylko dla nowych wierszy spełniających określone kryteria. Pozostaw puste, aby wyzwalać dla wszystkich nowych wierszy."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "Filtr"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.ZmlsdGVy.short_desc": {
+          "source": "Optional condition to filter new rows",
+          "message": "Opcjonalny warunek filtrowania nowych wierszy"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the Supabase table you want to monitor. The trigger will fire whenever new rows are inserted into this table.",
+          "message": "Wybierz tabelę Supabase, którą chcesz monitorować. Wyzwalacz zostanie uruchomiony za każdym razem, gdy do tej tabeli zostaną wstawione nowe wiersze."
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table to monitor for new rows",
+          "message": "Tabela do monitorowania pod kątem nowych wierszy"
+        },
+        "app.U3VwYWJhc2U.action.bmV3X3RhYmxlX3Jvdw.short_desc": {
+          "source": "Triggers when a new row is added to a Supabase table",
+          "message": "Uruchamia wyzwalacz po dodaniu nowego wiersza do tabeli Supabase"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "Wyszukaj pasujące rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Wyszukaj rekordy"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Supabase\"",
+          "message": "Wyszukaj pasujące rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "Wyszukaj pojedynczy pasujący rekord w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Znajdź pojedynczy rekord"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Supabase\"",
+          "message": "Wyszukaj pojedynczy pasujący rekord w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "Zaktualizuj istniejące rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Zaktualizuj rekordy"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Supabase\"",
+          "message": "Zaktualizuj istniejące rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "Wstaw lub zaktualizuj (upsert) rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.display_name": {
+          "source": "Upsert Records",
+          "message": "Wstaw lub zaktualizuj rekordy"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabela"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0.short_desc": {
+          "source": "Upsert records in the given table in app \"Supabase\"",
+          "message": "Wstaw lub zaktualizuj (upsert) rekordy w podanej tabeli w aplikacji „Supabase”"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.desc": {
+          "source": "Performs an upsert operation (insert or update) on a Supabase table. If a row with the specified unique constraint exists, it will be updated; otherwise, a new row is inserted.",
+          "message": "Wykonuje operację upsert (wstawienie lub aktualizacja) w tabeli Supabase. Jeśli wiersz o określonym ograniczeniu unikalności istnieje, zostanie zaktualizowany; w przeciwnym razie zostanie wstawiony nowy wiersz."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.display_name": {
+          "source": "Upsert Row",
+          "message": "Wstaw lub zaktualizuj wiersz"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.desc": {
+          "source": "When enabled, if a conflicting row exists, the operation is silently ignored. When disabled (default), conflicting rows are updated with the new values.",
+          "message": "Gdy włączone, w przypadku wystąpienia konfliktu wiersza operacja jest po cichu ignorowana. Gdy wyłączone (domyślnie), wiersze wchodzące w konflikt są aktualizowane o nowe wartości."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.display_name": {
+          "source": "Ignore Duplicates",
+          "message": "Ignoruj duplikaty"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.aWdub3JlRHVwbGljYXRlcw.short_desc": {
+          "source": "Skip the operation if a duplicate exists",
+          "message": "Pomiń operację, jeśli istnieje duplikat"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.desc": {
+          "source": "Specify the column or comma-separated list of columns that should be used to detect conflicts. If not specified, uses the table's primary key.",
+          "message": "Określ kolumnę lub listę kolumn rozdzielonych przecinkami, które mają być używane do wykrywania konfliktów. Jeśli nie określono, używany jest klucz główny tabeli."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.display_name": {
+          "source": "On Conflict",
+          "message": "W przypadku konfliktu (On Conflict)"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.b25Db25mbGljdA.short_desc": {
+          "source": "The column(s) used to detect conflicts",
+          "message": "Kolumny używane do wykrywania konfliktów"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.desc": {
+          "source": "Select the target Supabase table. The available fields will be dynamically loaded based on the table schema.",
+          "message": "Wybierz docelową tabelę Supabase. Dostępne pola zostaną załadowane dynamicznie na podstawie schematu tabeli."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.display_name": {
+          "source": "Table Name",
+          "message": "Nazwa tabeli"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dGFibGVOYW1l.short_desc": {
+          "source": "The table for the upsert operation",
+          "message": "Tabela dla operacji upsert"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.desc": {
+          "source": "Provide values for the table columns. If a row with matching unique constraints exists, these values will update it; otherwise, a new row is created.",
+          "message": "Podaj wartości dla kolumn tabeli. Jeśli istnieje wiersz spełniający ograniczenia unikalności, te wartości go zaktualizują; w przeciwnym razie zostanie utworzony nowy wiersz."
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.display_name": {
+          "source": "Row Values",
+          "message": "Wartości wiersza"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.option.dmFsdWVz.short_desc": {
+          "source": "The data to upsert",
+          "message": "Dane do wstawienia lub aktualizacji"
+        },
+        "app.U3VwYWJhc2U.action.dXBzZXJ0X3Jvdw.short_desc": {
+          "source": "Insert a new row or update an existing one",
+          "message": "Wstaw nowy wiersz lub zaktualizuj istniejący"
+        },
+        "app.U3VwYWJhc2U.desc": {
+          "source": "The Supabase integration provides comprehensive access to your Supabase backend services. Manage database tables with full CRUD operations, monitor real-time changes with triggers, and handle file storage through buckets. Whether you need to query data, insert records, filter results, or track new entries, this integration streamlines your Supabase workflow automation and backend management.",
+          "message": "Integracja z Supabase zapewnia kompleksowy dostęp do usług backendowych Supabase. Zarządzaj tabelami bazy danych za pomocą pełnych operacji CRUD, monitoruj zmiany w czasie rzeczywistym za pomocą wyzwalaczy i obsługuj przechowywanie plików za pośrednictwem zasobników. Niezależnie od tego, czy chcesz odpytywać dane, wstawiać rekordy, filtrować wyniki czy śledzić nowe wpisy, ta integracja usprawnia automatyzację procesów i zarządzanie backendem w Supabase."
+        },
+        "app.U3VwYWJhc2U.display_name": {
+          "source": "Supabase",
+          "message": "Supabase"
+        },
+        "app.U3VwYWJhc2U.short_desc": {
+          "source": "Connect to Supabase to manage your database tables, storage buckets, and real-time data",
+          "message": "Połącz się z Supabase, aby zarządzać tabelami bazy danych, zasobnikami pamięci masowej i danymi w czasie rzeczywistym"
+        }
+      }
+    }
+  }
+}

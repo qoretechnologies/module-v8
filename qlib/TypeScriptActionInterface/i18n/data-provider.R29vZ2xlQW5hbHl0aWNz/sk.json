@@ -1,0 +1,725 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.desc": {
+          "source": "Check if specified dimensions and metrics are compatible before running a report. This helps avoid errors caused by incompatible combinations. Reports will fail if incompatible dimensions or metrics are requested together.",
+          "message": "Pred spustením prehľadu skontrolujte, či sú zadané dimenzie a metriky kompatibilné. Pomáha to predchádzať chybám spôsobeným nekompatibilnými kombináciami. Prehľady zlyhajú, ak sa súčasne požadujú nekompatibilné dimenzie alebo metriky."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.display_name": {
+          "source": "Check Compatibility",
+          "message": "Skontrolovať kompatibilitu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.allowed-value.c3RyaW5nOkNPTVBBVElCTEU.display_name": {
+          "source": "Compatible Only",
+          "message": "Iba kompatibilné"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.allowed-value.c3RyaW5nOklOQ09NUEFUSUJMRQ.display_name": {
+          "source": "Incompatible Only",
+          "message": "Iba nekompatibilné"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.desc": {
+          "source": "Optionally filter the results to show only compatible or only incompatible dimensions and metrics.",
+          "message": "Voliteľne filtrujte výsledky tak, aby sa zobrazovali iba kompatibilné alebo iba nekompatibilné dimenzie a metriky."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.display_name": {
+          "source": "Compatibility Filter",
+          "message": "Filter kompatibility"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.Y29tcGF0aWJpbGl0eV9maWx0ZXI.short_desc": {
+          "source": "Filter results by compatibility status",
+          "message": "Filtrovať výsledky podľa stavu kompatibility"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.desc": {
+          "source": "The dimensions you want to verify can be used together.",
+          "message": "Dimenzie, pri ktorých chcete overiť, či sa dajú použiť spoločne."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimenzie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The dimensions to check",
+          "message": "Dimenzie na kontrolu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.desc": {
+          "source": "The metrics you want to verify can be used together.",
+          "message": "Metriky, pri ktorých chcete overiť, či sa dajú použiť spoločne."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Metriky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.bWV0cmljcw.short_desc": {
+          "source": "The metrics to check",
+          "message": "Metriky na kontrolu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property to check compatibility for.",
+          "message": "Vyberte vlastníctvo v GA4, pre ktoré chcete skontrolovať kompatibilitu."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property",
+          "message": "Vlastníctvo v Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Y2hlY2tfY29tcGF0aWJpbGl0eQ.short_desc": {
+          "source": "Validate dimension and metric combinations",
+          "message": "Overiť kombinácie dimenzií a metrík"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.desc": {
+          "source": "Execute multiple report requests efficiently in one API call. This is ideal for dashboards or scenarios where you need several different reports. You can include up to 5 individual report requests per batch.",
+          "message": "Efektívne vykonajte viaceré požiadavky na prehľady v jednom volaní API. Toto je ideálne pre riadiace panely alebo scenáre, v ktorých potrebujete niekoľko rôznych prehľadov. Do jednej dávky môžete zahrnúť až 5 jednotlivých požiadaviek na prehľady."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.display_name": {
+          "source": "Batch Run Reports",
+          "message": "Dávkové spustenie prehľadov"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve analytics data for all reports.",
+          "message": "Vyberte vlastníctvo v GA4, z ktorého sa majú získať analytické údaje pre všetky prehľady."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "Vlastníctvo v Google Analytics 4 na dopytovanie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.desc": {
+          "source": "An array of report request configurations. Each request can have its own date ranges, metrics, dimensions, and limits. Maximum 5 requests per batch.",
+          "message": "Pole konfigurácií požiadaviek na prehľady. Každá požiadavka môže mať vlastné rozsahy dátumov, metriky, dimenzie a limity. Maximálne 5 požiadaviek na dávku."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.display_name": {
+          "source": "Report Requests",
+          "message": "Požiadavky na prehľady"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.option.cmVxdWVzdHM.short_desc": {
+          "source": "The individual report configurations",
+          "message": "Konfigurácie jednotlivých prehľadov"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.YmF0Y2hfcnVuX3JlcG9ydHM.short_desc": {
+          "source": "Run multiple reports in a single API call",
+          "message": "Spustenie viacerých prehľadov v jednom volaní API"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.desc": {
+          "source": "Retrieve the list of dimensions and metrics available for a Google Analytics property, including custom definitions. Use this to explore what data is available before building reports.",
+          "message": "Získajte zoznam dimenzií a metrík dostupných pre vlastníctvo v službe Google Analytics, vrátane vlastných definícií. Použite to na preskúmanie dostupných údajov pred vytváraním prehľadov."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.display_name": {
+          "source": "Get Metadata",
+          "message": "Získať metadáta"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property to retrieve metadata for. The response will include both standard and custom dimensions/metrics.",
+          "message": "Vyberte vlastníctvo GA4, pre ktoré sa majú získať metadáta. Odpoveď bude obsahovať štandardné aj vlastné dimenzie/metriky."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property",
+          "message": "Vlastníctvo v Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.Z2V0X21ldGFkYXRh.short_desc": {
+          "source": "Discover available dimensions and metrics for a property",
+          "message": "Objavte dostupné dimenzie a metriky pre vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Analytics** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Urobte vlastné volanie HTTP / REST API do **Google Analytics** s použitím autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Analytics",
+          "message": "Vytvoriť vlastné volanie API do Google Analytics"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.desc": {
+          "source": "Retrieve real-time analytics data showing current activity on your property. Events appear within seconds of being sent to Google Analytics. Data is available for the last 30 minutes (or 60 minutes for Google Analytics 360 properties).",
+          "message": "Získajte analytické údaje v reálnom čase zobrazujúce aktuálnu aktivitu vo vašom vlastníctve. Udalosti sa zobrazia v priebehu niekoľkých sekúnd od odoslania do Google Analytics. Údaje sú dostupné za posledných 30 minút (alebo 60 minút v prípade vlastníctiev Google Analytics 360)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.display_name": {
+          "source": "Run Real-time Report",
+          "message": "Spustiť prehľad v reálnom čase"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter real-time data based on dimension values.",
+          "message": "Pokročilý výraz filtra na filtrovanie údajov v reálnom čase na základe hodnôt dimenzií."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
+          "source": "Dimension Filter",
+          "message": "Filter dimenzií"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for dimensions",
+          "message": "Výraz filtra pre dimenzie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.desc": {
+          "source": "Select the real-time dimensions to segment your data by (e.g., country, city, deviceCategory, unifiedScreenName).",
+          "message": "Vyberte dimenzie v reálnom čase, podľa ktorých sa majú údaje segmentovať (napr. country, city, deviceCategory, unifiedScreenName)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimenzie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The real-time dimensions to segment by",
+          "message": "Dimenzie v reálnom čase na segmentáciu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.desc": {
+          "source": "Specify how to sort the real-time report results.",
+          "message": "Uveďte, ako zoradiť výsledky prehľadu v reálnom čase."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
+          "source": "Sorting specification for the report",
+          "message": "Špecifikácia zoradenia pre prehľad"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 10,000.",
+          "message": "Maximálny počet riadkov na vrátenie. Predvolená hodnota je 10 000."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Maximálny počet riadkov na vrátenie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter real-time data based on metric values.",
+          "message": "Pokročilý výraz filtra na filtrovanie údajov v reálnom čase na základe hodnôt metrík."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
+          "source": "Metric Filter",
+          "message": "Filter metrík"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for metrics",
+          "message": "Výraz filtra pre metriky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.desc": {
+          "source": "Select the real-time metrics to include in the report (e.g., activeUsers, screenPageViews, eventCount).",
+          "message": "Vyberte metriky v reálnom čase, ktoré sa majú zahrnúť do prehľadu (napr. activeUsers, screenPageViews, eventCount)."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Metriky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWV0cmljcw.short_desc": {
+          "source": "The real-time metrics to include",
+          "message": "Metriky v reálnom čase, ktoré sa majú zahrnúť"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.desc": {
+          "source": "Specify custom time ranges for the real-time data. By default, data from the last 30 minutes is returned.",
+          "message": "Zadajte vlastné časové rozsahy pre údaje v reálnom čase. Predvolene sa vracajú údaje za posledných 30 minút."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.display_name": {
+          "source": "Minute Ranges",
+          "message": "Rozsahy v minútach"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.bWludXRlX3Jhbmdlcw.short_desc": {
+          "source": "Custom time ranges within the last 30 minutes",
+          "message": "Vlastné časové rozsahy v rámci posledných 30 minút"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve real-time analytics data.",
+          "message": "Vyberte vlastníctvo GA4, z ktorého sa majú získať analytické údaje v reálnom čase."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "Vlastníctvo v Google Analytics 4 na dopytovanie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlYWx0aW1lX3JlcG9ydA.short_desc": {
+          "source": "Get live analytics data from the last 30 minutes",
+          "message": "Získať živé analytické údaje za posledných 30 minút"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.desc": {
+          "source": "Run a customized analytics report with specified metrics, dimensions, date ranges, and filters. Supports pagination for large result sets and various sorting options.",
+          "message": "Spustite prispôsobený analytický prehľad so špecifikovanými metrikami, dimenziami, dátumovými rozsahmi a filtrami. Podporuje stránkovanie pre veľké množstvá výsledkov a rôzne možnosti zoradenia."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.display_name": {
+          "source": "Run Report",
+          "message": "Spustiť prehľad"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.desc": {
+          "source": "Specify one or more date ranges for the report. Dates can be in YYYY-MM-DD format or relative values like \"7daysAgo\", \"yesterday\", \"today\".",
+          "message": "Zadajte jeden alebo viacero dátumových rozsahov pre prehľad. Dátumy môžu byť vo formáte RRRR-MM-DD alebo relatívne hodnoty ako \"7daysAgo\", \"yesterday\", \"today\"."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.display_name": {
+          "source": "Date Ranges",
+          "message": "Dátumové rozsahy"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGF0ZV9yYW5nZXM.short_desc": {
+          "source": "The date ranges for the report",
+          "message": "Dátumové rozsahy pre prehľad"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter report data based on dimension values. Use the GA4 filter expression syntax.",
+          "message": "Pokročilý výraz filtra na filtrovanie údajov prehľadu na základe hodnôt dimenzií. Použite syntax výrazu filtra GA4."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.display_name": {
+          "source": "Dimension Filter",
+          "message": "Filter dimenzií"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for dimensions",
+          "message": "Výraz filtra pre dimenzie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.desc": {
+          "source": "Select the attributes to segment your data by (e.g., country, browser, pagePath). Dimensions are optional and allow you to break down metrics by specific categories.",
+          "message": "Vyberte atribúty, podľa ktorých sa majú údaje segmentovať (napr. country, browser, pagePath). Dimenzie sú voliteľné a umožňujú rozčleniť metriky podľa špecifických kategórií."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.display_name": {
+          "source": "Dimensions",
+          "message": "Dimenzie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.ZGltZW5zaW9ucw.short_desc": {
+          "source": "The dimensions to segment the report by",
+          "message": "Dimenzie na segmentáciu prehľadu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.desc": {
+          "source": "If true, includes rows where all metrics have zero values. If false (default), such rows are excluded.",
+          "message": "Ak má hodnotu true, zahrnie riadky, v ktorých majú všetky metriky nulové hodnoty. Ak má hodnotu false (predvolené), také riadky sa vynechajú."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.display_name": {
+          "source": "Keep Empty Rows",
+          "message": "Ponechať prázdne riadky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.a2VlcF9lbXB0eV9yb3dz.short_desc": {
+          "source": "Include rows with all zero metric values",
+          "message": "Zahrnúť riadky so všetkými nulovými hodnotami metrík"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.desc": {
+          "source": "The number of rows to skip before returning results. Used for pagination.",
+          "message": "Počet riadkov, ktoré sa majú preskočiť pred vrátením výsledkov. Používa sa na stránkovanie."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b2Zmc2V0.short_desc": {
+          "source": "Number of rows to skip",
+          "message": "Počet riadkov na preskočenie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.desc": {
+          "source": "Specify how to sort the report results by dimension or metric values.",
+          "message": "Uveďte, ako zoradiť výsledky prehľadu podľa hodnôt dimenzií alebo metrík."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.display_name": {
+          "source": "Order By",
+          "message": "Zoradiť podľa"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.b3JkZXJfYnlz.short_desc": {
+          "source": "Sorting specification for the report",
+          "message": "Špecifikácia zoradenia pre prehľad"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return in the report. Default is 10,000, maximum is 100,000.",
+          "message": "Maximálny počet riadkov na vrátenie v prehľade. Predvolená hodnota je 10 000, maximum je 100 000."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows to return",
+          "message": "Maximálny počet riadkov na vrátenie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.desc": {
+          "source": "An advanced filter expression to filter report data based on metric values. Use the GA4 filter expression syntax.",
+          "message": "Pokročilý výraz filtra na filtrovanie údajov prehľadu na základe hodnôt metrík. Použite syntax výrazu filtra GA4."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.display_name": {
+          "source": "Metric Filter",
+          "message": "Filter metrík"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljX2ZpbHRlcg.short_desc": {
+          "source": "Filter expression for metrics",
+          "message": "Výraz filtra pre metriky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.desc": {
+          "source": "Select the quantitative measurements to include (e.g., activeUsers, sessions, pageViews). You can include up to 10 metrics per report.",
+          "message": "Vyberte kvantitatívne merania, ktoré sa majú zahrnúť (napr. activeUsers, sessions, pageViews). Do jedného prehľadu môžete zahrnúť až 10 metrík."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "Metriky"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.bWV0cmljcw.short_desc": {
+          "source": "The metrics to include in the report",
+          "message": "Metriky, ktoré sa majú zahrnúť do prehľadu"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.desc": {
+          "source": "Select the GA4 property from which to retrieve analytics data.",
+          "message": "Vyberte vlastníctvo GA4, z ktorého sa majú získať analytické údaje."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.display_name": {
+          "source": "Property",
+          "message": "Vlastníctvo"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cHJvcGVydHlfaWQ.short_desc": {
+          "source": "The Google Analytics 4 property to query",
+          "message": "Vlastníctvo v Google Analytics 4 na dopytovanie"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.desc": {
+          "source": "If true, returns information about API quota usage for this property in the response.",
+          "message": "Ak má hodnotu true, vráti v odpovedi informácie o využití kvóty API pre toto vlastníctvo."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.display_name": {
+          "source": "Return Property Quota",
+          "message": "Vrátiť kvótu vlastníctva"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.option.cmV0dXJuX3Byb3BlcnR5X3F1b3Rh.short_desc": {
+          "source": "Include API quota information in response",
+          "message": "Zahrnúť informácie o kvóte API do odpovede"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.action.cnVuX3JlcG9ydA.short_desc": {
+          "source": "Execute a standard Google Analytics 4 report",
+          "message": "Spustiť štandardný prehľad Google Analytics 4"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.desc": {
+          "source": "Integrate with Google Analytics 4 (GA4) to run reports, access real-time data, and analyze metrics and dimensions. This integration supports standard reports, real-time analytics, metadata discovery, batch reporting, and compatibility checks for your analytics properties.",
+          "message": "Integrujte so službou Google Analytics 4 (GA4) a spúšťajte prehľady, pristupujte k údajom v reálnom čase a analyzujte metriky a dimenzie. Táto integrácia podporuje štandardné prehľady, analytiku v reálnom čase, objavovanie metadát, hromadné vytváranie prehľadov a kontroly kompatibility pre vaše analytické vlastníctva."
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.display_name": {
+          "source": "Google Analytics",
+          "message": "Google Analytics"
+        },
+        "app.R29vZ2xlQW5hbHl0aWNz.short_desc": {
+          "source": "Connect with Google Analytics 4 to access your website and app analytics data",
+          "message": "Pripojte sa k službe Google Analytics 4 a získajte prístup k analytickým údajom svojich webových stránok a aplikácií"
+        }
+      }
+    }
+  }
+}

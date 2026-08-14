@@ -1,0 +1,1133 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"BambooHR\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"BambooHR\""
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"BambooHR\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"BambooHR\""
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.desc": {
+          "source": "Creates a new employee record in BambooHR. At minimum, firstName and lastName are required. The action dynamically presents all available fields based on your BambooHR configuration, including custom fields.",
+          "message": "Vytvorí nový záznam zamestnanca v BambooHR. Minimálne sú vyžadované polia firstName a lastName. Akcia dynamicky zobrazuje všetky dostupné polia na základe vašej konfigurácie BambooHR, vrátane vlastných polí."
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
+          "source": "Create Employee",
+          "message": "Vytvoriť zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.desc": {
+          "source": "Provide values for the employee fields. The available fields are dynamically loaded from your BambooHR account and include both standard and custom fields. firstName and lastName are required.",
+          "message": "Zadajte hodnoty pre polia zamestnanca. Dostupné polia sa dynamicky načítavajú z vášho účtu BambooHR a zahŕňajú štandardné aj vlastné polia. Polia firstName a lastName sú povinné."
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
+          "source": "Employee Data",
+          "message": "Údaje o zamestnancovi"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
+          "source": "The data for the new employee",
+          "message": "Údaje pre nového zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
+          "source": "Create a new employee in BambooHR",
+          "message": "Vytvoriť nového zamestnanca v BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.desc": {
+          "source": "Retrieves all company files organized by category. Returns file metadata including name, size, upload date, and sharing status.",
+          "message": "Získa všetky firemné súbory usporiadané podľa kategórií. Vráti metadáta súborov vrátane názvu, veľkosti, dátumu odovzdania a stavu zdieľania."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
+          "source": "Get All Company Files",
+          "message": "Získať všetky firemné súbory"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
+          "source": "List all company files",
+          "message": "Zobraziť zoznam všetkých firemných súborov"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.desc": {
+          "source": "Retrieves all files associated with a specific employee, organized by category. Returns file metadata including name, size, upload date, and sharing status.",
+          "message": "Získa všetky súbory spojené s konkrétnym zamestnancom, usporiadané podľa kategórií. Vráti metadáta súborov vrátane názvu, veľkosti, dátumu odovzdania a stavu zdieľania."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
+          "source": "Get All Employee Files",
+          "message": "Získať všetky súbory zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose files you want to retrieve.",
+          "message": "ID zamestnanca, ktorého súbory chcete získať."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee to get files for",
+          "message": "Zamestnanec, pre ktorého sa majú získať súbory"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
+          "source": "List all files for an employee",
+          "message": "Zobraziť zoznam všetkých súborov pre zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.desc": {
+          "source": "Fetches detailed data for a single employee in BambooHR by their ID. Returns all requested fields with dynamically loaded field types. You can specify which fields to retrieve or fetch all available fields.",
+          "message": "Načíta podrobné údaje pre jedného zamestnanca v BambooHR podľa jeho ID. Vráti všetky požadované polia s dynamicky načítanými typmi polí. Môžete zadať, ktoré polia chcete získať, alebo načítať všetky dostupné polia."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
+          "source": "Get Employee",
+          "message": "Získať zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Enter the unique identifier of the employee you want to fetch. Use 0 to retrieve the employee associated with your API key.",
+          "message": "Zadajte unikátny identifikátor zamestnanca, ktorého chcete načítať. Použite 0 na získanie zamestnanca priradeného k vášmu kľúču API."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The ID of the employee to retrieve",
+          "message": "ID zamestnanca na získanie"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.desc": {
+          "source": "Select which fields to retrieve for the employee. Leave empty to retrieve all available fields (up to 400 fields).",
+          "message": "Vyberte, ktoré polia chcete pre zamestnanca získať. Ponechajte prázdne na získanie všetkých dostupných polí (až 400 polí)."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Polia"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve",
+          "message": "Konkrétne polia na získanie"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
+          "source": "Retrieve a single employee by ID",
+          "message": "Získať jedného zamestnanca podľa ID"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.desc": {
+          "source": "Retrieves a list of employees who are out (vacation, sick leave, etc.) and company holidays for a given date range. If no dates are specified, returns the current day plus the next 14 days.",
+          "message": "Získa zoznam zamestnancov, ktorí sú neprítomní (dovolenka, práceneschopnosť atď.), a firemných sviatkov pre daný rozsah dátumov. Ak nie sú zadané žiadne dátumy, vráti aktuálny deň plus nasledujúcich 14 dní."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.display_name": {
+          "source": "Get Who's Out",
+          "message": "Získať prehľad neprítomností"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.desc": {
+          "source": "The end date for the query. Defaults to 14 days from the start date if not specified.",
+          "message": "Koncový dátum pre dotaz. Ak nie je zadaný, vývolne sa nastaví na 14 dní od dátumu začiatku."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Koncový dátum"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
+          "source": "End of the date range",
+          "message": "Koniec rozsahu dátumov"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "The start date for the query. Defaults to today if not specified.",
+          "message": "Začiatočný dátum pre dotaz. Ak nie je zadaný, vývolne sa nastaví na dnešok."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Dátum začiatku"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Start of the date range",
+          "message": "Začiatok rozsahu dátumov"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.short_desc": {
+          "source": "Get a summary of employees who are out",
+          "message": "Získať súhrn neprítomných zamestnancov"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.desc": {
+          "source": "Downloads a specific company file. Returns the file content as base64-encoded binary along with the MIME type.",
+          "message": "Stiahne konkrétny firemný súbor. Vráti obsah súboru ako binárne dáta kódované v base64 spolu s typom MIME."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
+          "source": "Download Company File",
+          "message": "Stiahnuť súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to download.",
+          "message": "ID súboru spoločnosti na stiahnutie."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to download",
+          "message": "Súbor na stiahnutie"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
+          "source": "Download a company file",
+          "message": "Stiahnuť súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.desc": {
+          "source": "Downloads a specific file from an employee record. Returns the file content as base64-encoded binary along with the MIME type.",
+          "message": "Stiahne konkrétny súbor zo záznamu zamestnanca. Vracia obsah súboru ako binárne dáta kódované v base64 spolu s typom MIME."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
+          "source": "Download Employee File",
+          "message": "Stiahnuť súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to download.",
+          "message": "ID zamestnanca, ktorého súbor chcete stiahnuť."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "Zamestnanec, ktorému súbor patrí"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to download.",
+          "message": "ID súboru na stiahnutie."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to download",
+          "message": "Súbor na stiahnutie"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
+          "source": "Download an employee file",
+          "message": "Stiahnuť súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Permanently deletes a company file. This action cannot be undone.",
+          "message": "Trvalo vymaže súbor spoločnosti. Túto akciu nie je možné vrátiť späť."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Delete Company File",
+          "message": "Vymazať súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to delete.",
+          "message": "ID súboru spoločnosti na vymazanie."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to delete",
+          "message": "Súbor na vymazanie"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Delete a company file",
+          "message": "Vymazať súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Permanently deletes a file from an employee record. This action cannot be undone.",
+          "message": "Trvalo vymaže súbor zo záznamu zamestnanca. Túto akciu nie je možné vrátiť späť."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Delete Employee File",
+          "message": "Vymazať súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to delete.",
+          "message": "ID zamestnanca, ktorého súbor chcete vymazať."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "Zamestnanec, ktorému súbor patrí"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to delete.",
+          "message": "ID súboru na vymazanie."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to delete",
+          "message": "Súbor na vymazanie"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Delete an employee file",
+          "message": "Vymazať súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.desc": {
+          "source": "Fetches a list of all employees from BambooHR. You can specify which fields to retrieve for each employee. Uses the custom report endpoint for efficient bulk retrieval.",
+          "message": "Získa zoznam všetkých zamestnancov z BambooHR. Môžete zadať, ktoré polia sa majú načítať pre každého zamestnanca. Na efektívne hromadné získavanie používa koncový bod vlastných prehľadov."
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
+          "source": "List Employees",
+          "message": "Zoznam zamestnancov"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.desc": {
+          "source": "Select which fields to retrieve for each employee. Leave empty to retrieve a default set of common fields (id, name, email, department, job title).",
+          "message": "Vyberte, ktoré polia sa majú získať pre každého zamestnanca. Ponechajte prázdne na získanie predvolenej množiny bežných polí (id, name, email, department, job title)."
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Polia"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve for each employee",
+          "message": "Konkrétne polia na získanie pre každého zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
+          "source": "Retrieve a list of all employees",
+          "message": "Získať zoznam všetkých zamestnancov"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **BambooHR** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonať vlastné volanie HTTP / REST API do aplikácie **BambooHR** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako primárne akcie v tejto aplikácii."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to BambooHR",
+          "message": "Vykonať vlastné volanie API do BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.desc": {
+          "source": "Fires when a new active employee is added to BambooHR. Returns basic employee information including name, email, department, and job title.",
+          "message": "Spustí sa pri pridaní nového aktívneho zamestnanca do BambooHR. Vracia základné informácie o zamestnancovi vrátane mena, e-mailu, oddelenia a pracovnej pozície."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
+          "source": "New Employee",
+          "message": "Nový zamestnanec"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {
+          "source": "Triggers when a new employee is created",
+          "message": "Spustí sa pri vytvorení nového zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.desc": {
+          "source": "Fires when a new approved time off entry appears in the Who's Out list. This includes both employee time off and company holidays.",
+          "message": "Spustí sa, keď sa v zozname Kto chýba objeví nový schválený záznam o voľne. Zahŕňa to pracovné voľno zamestnancov aj firemné sviatky."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
+          "source": "New Time Off",
+          "message": "Nové pracovné voľno"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
+          "source": "Triggers when new approved time off appears",
+          "message": "Spustí sa pri zobrazení nového schváleného pracovného voľna"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.desc": {
+          "source": "Fires when a new time off request is created in BambooHR with status \"requested\". Useful for building approval workflows or notifications.",
+          "message": "Spustí sa pri vytvorení novej žiadosti o pracovné voľno v BambooHR so stavom \"requested\". Užitočné na vytváranie schvaľovacích postupov alebo oznámení."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
+          "source": "New Time Off Request",
+          "message": "Nová žiadosť o pracovné voľno"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Only trigger for time off requests from a specific employee.",
+          "message": "Spustiť iba pre žiadosti o pracovné voľno od konkrétneho zamestnanca."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "Filter by employee",
+          "message": "Filtrovať podľa zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
+          "source": "Triggers when a new time off request is submitted",
+          "message": "Spustí sa pri odoslaní novej žiadosti o pracovné voľno"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"BambooHR\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"BambooHR\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"BambooHR\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"BambooHR\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.desc": {
+          "source": "Searches time off requests in BambooHR with various filters. Returns requests matching the specified criteria including date range, employee, status, and time off type.",
+          "message": "Vyhľadáva žiadosti o pracovné voľno v BambooHR s rôznymi filtrami. Vracia žiadosti zodpovedajúce zadaným kritériám vrátane časového rozsahu, zamestnanca, stavu a typu voľna."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
+          "source": "Search Time Off Requests",
+          "message": "Vyhľadať žiadosti o pracovné voľno"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Limit results to a specific employee by their ID.",
+          "message": "Obmedziť výsledky na konkrétneho zamestnanca podľa jeho ID."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "Filter by employee",
+          "message": "Filtrovať podľa zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.desc": {
+          "source": "Only show time off requests on or before this date.",
+          "message": "Zobraziť iba žiadosti o pracovné voľno v tento dátum alebo pred ním."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Koncový dátum"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Filter by end date",
+          "message": "Filtrovať podľa dátumu ukončenia"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Only show time off requests on or after this date.",
+          "message": "Zobraziť iba žiadosti o pracovné voľno v tento dátum alebo po ňom."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Dátum začiatku"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Filter by start date",
+          "message": "Filtrovať podľa dátumu začiatku"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmFwcHJvdmVk.display_name": {
+          "source": "Approved",
+          "message": "Schválené"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Zrušené"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbmllZA.display_name": {
+          "source": "Denied",
+          "message": "Zamietnuté"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlcXVlc3RlZA.display_name": {
+          "source": "Requested",
+          "message": "Vyžiadané"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN1cGVyY2VkZWQ.display_name": {
+          "source": "Superceded",
+          "message": "Nahradené"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.desc": {
+          "source": "Filter by one or more statuses: approved, denied, requested, canceled, superceded.",
+          "message": "Filtrovať podľa jedného alebo viacerých stavov: approved, denied, requested, canceled, superceded."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.short_desc": {
+          "source": "Filter by request status",
+          "message": "Filtrovať podľa stavu žiadosti"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.desc": {
+          "source": "Filter by one or more time off types configured in your BambooHR account.",
+          "message": "Filtrovať podľa jedného alebo viacerých typov pracovného voľna nakonfigurovaných vo vašom účte BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
+          "source": "Time Off Type",
+          "message": "Typ pracovného voľna"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
+          "source": "Filter by time off type",
+          "message": "Filtrovať podľa typu pracovného voľna"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
+          "source": "Search and filter time off requests",
+          "message": "Vyhľadávať a filtrovať žiadosti o pracovné voľno"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"BambooHR\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"BambooHR\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „BambooHR“"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Updates the metadata for an existing company file, such as name, category, or sharing settings.",
+          "message": "Aktualizuje metadáta pre existujúci súbor spoločnosti, ako je názov, kategória alebo nastavenia zdieľania."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Update Company File",
+          "message": "Aktualizovať súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.desc": {
+          "source": "Move the file to a different category.",
+          "message": "Presunúť súbor do inej kategórie."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "New category",
+          "message": "Nová kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to update.",
+          "message": "ID súboru spoločnosti, ktorý sa má aktualizovať."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to update",
+          "message": "Súbor na aktualizáciu"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.desc": {
+          "source": "The new name for the file.",
+          "message": "Nový názov súboru."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Názov"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.short_desc": {
+          "source": "New file name",
+          "message": "Nový názov súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.desc": {
+          "source": "Whether to make this file visible to all employees.",
+          "message": "Či má byť tento súbor viditeľný pre všetkých zamestnancov."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
+          "source": "Share with Employees",
+          "message": "Zdieľať so zamestnancami"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
+          "source": "Update sharing setting",
+          "message": "Aktualizovať nastavenie zdieľania"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Update company file metadata",
+          "message": "Aktualizovať metadáta súboru spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.desc": {
+          "source": "Updates an existing employee record in BambooHR. The action dynamically presents all available fields based on your BambooHR configuration. Only provide the fields you want to update.",
+          "message": "Aktualizuje existujúci záznam zamestnanca v službe BambooHR. Akcia dynamicky zobrazuje všetky dostupné polia na základe vašej konfigurácie BambooHR. Zadajte iba polia, ktoré chcete aktualizovať."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
+          "source": "Update Employee",
+          "message": "Aktualizovať zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.desc": {
+          "source": "Provide new values for the employee fields you want to update. The available fields are dynamically loaded from your BambooHR account.",
+          "message": "Zadajte nové hodnoty pre polia zamestnanca, ktoré chcete aktualizovať. Dostupné polia sa dynamicky načítavajú z vášho účtu BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
+          "source": "Employee Data",
+          "message": "Údaje o zamestnancovi"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
+          "source": "The data to update",
+          "message": "Údaje na aktualizáciu"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Enter the unique identifier of the employee you want to update.",
+          "message": "Zadajte jedinečný identifikátor zamestnanca, ktorého chcete aktualizovať."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The ID of the employee to update",
+          "message": "ID zamestnanca, ktorý sa má aktualizovať"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
+          "source": "Update an existing employee in BambooHR",
+          "message": "Aktualizovať existujúceho zamestnanca v službe BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Updates the metadata for an existing employee file, such as name, category, or sharing settings.",
+          "message": "Aktualizuje metadáta pre existujúci súbor zamestnanca, ako je názov, kategória alebo nastavenia zdieľania."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Update Employee File",
+          "message": "Aktualizovať súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.desc": {
+          "source": "Move the file to a different category.",
+          "message": "Presunúť súbor do inej kategórie."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "New category",
+          "message": "Nová kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to update.",
+          "message": "ID zamestnanca, ktorého súbor chcete aktualizovať."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "Zamestnanec, ktorému súbor patrí"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to update.",
+          "message": "ID súboru, ktorý sa má aktualizovať."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to update",
+          "message": "Súbor na aktualizáciu"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.desc": {
+          "source": "The new name for the file.",
+          "message": "Nový názov súboru."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Názov"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.short_desc": {
+          "source": "New file name",
+          "message": "Nový názov súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.desc": {
+          "source": "Whether to make this file visible to the employee.",
+          "message": "Či má byť tento súbor viditeľný pre zamestnanca."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
+          "source": "Share with Employee",
+          "message": "Zdieľať so zamestnancom"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
+          "source": "Update sharing setting",
+          "message": "Aktualizovať nastavenie zdieľania"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Update employee file metadata",
+          "message": "Aktualizovať metadáta súboru zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Uploads a new file to the company files in BambooHR. The file will be placed in the specified category.",
+          "message": "Nahrá nový súbor do súborov spoločnosti v službe BambooHR. Súbor bude umiestnený do určenej kategórie."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Upload Company File",
+          "message": "Nahrať súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.desc": {
+          "source": "The category to place the file in. Categories are configured in BambooHR.",
+          "message": "Kategória, do ktorej sa má súbor umiestniť. Kategórie sa konfigurujú v službe BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "File category",
+          "message": "Kategória súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.desc": {
+          "source": "The file to upload. Must include name, MIME type, and base64-encoded content.",
+          "message": "Súbor na nahranie. Musí obsahovať názov, typ MIME a obsah kódovaný v base64."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Súbor"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Súbor na nahranie"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.desc": {
+          "source": "Whether to make this file visible to all employees.",
+          "message": "Či má byť tento súbor viditeľný pre všetkých zamestnancov."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
+          "source": "Share with Employees",
+          "message": "Zdieľať so zamestnancami"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
+          "source": "Make file visible to employees",
+          "message": "Sprístupniť súbor zamestnancom"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Upload a company file",
+          "message": "Nahrať súbor spoločnosti"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Uploads a new file to an employee record in BambooHR. The file will be placed in the specified category.",
+          "message": "Nahrá nový súbor do záznamu zamestnanca v službe BambooHR. Súbor bude umiestnený do určenej kategórie."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Upload Employee File",
+          "message": "Nahrať súbor zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.desc": {
+          "source": "The category to place the file in. Categories are configured in BambooHR.",
+          "message": "Kategória, do ktorej sa má súbor umiestniť. Kategórie sa konfigurujú v službe BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Kategória"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "File category",
+          "message": "Kategória súboru"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee to associate the file with.",
+          "message": "ID zamestnanca, ku ktorému sa má súbor priradiť."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID zamestnanca"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee to upload the file to",
+          "message": "Zamestnanec, ktorému sa má súbor nahrať"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "The file to upload. Must include name, MIME type, and base64-encoded content.",
+          "message": "Súbor na nahranie. Musí obsahovať názov, typ MIME a obsah kódovaný v base64."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Súbor"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Súbor na nahranie"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.desc": {
+          "source": "Whether to make this file visible to the employee in their self-service portal.",
+          "message": "Či má byť tento súbor viditeľný pre zamestnanca v jeho samoobslužnom portáli."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
+          "source": "Share with Employee",
+          "message": "Zdieľať so zamestnancom"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
+          "source": "Make file visible to employee",
+          "message": "Sprístupniť súbor zamestnancovi"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Upload a file to an employee",
+          "message": "Nahrať súbor zamestnancovi"
+        },
+        "app.QmFtYm9vSFI.desc": {
+          "source": "The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.",
+          "message": "Integrácia s BambooHR poskytuje komplexný prístup k vašim operáciám HR. Vytvárajte, čítajte, aktualizujte a vypisujte zamestnancov s podporou dynamických polí. Integrácia automaticky vyhľadáva dostupné polia vo vašom účte BambooHR vrátane vlastných polí a poskytuje inteligentné spracovanie typov pre dátumy, zoznamy a iné typy polí."
+        },
+        "app.QmFtYm9vSFI.display_name": {
+          "source": "BambooHR",
+          "message": "BambooHR"
+        },
+        "app.QmFtYm9vSFI.short_desc": {
+          "source": "Connect to BambooHR to manage employee data with powerful automation",
+          "message": "Pripojte sa k službe BambooHR a spravujte údaje o zamestnancoch s výkonnou automatizáciou"
+        }
+      }
+    }
+  }
+}

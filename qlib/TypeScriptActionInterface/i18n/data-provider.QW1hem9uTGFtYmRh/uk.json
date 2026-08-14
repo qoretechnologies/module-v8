@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.desc": {
+          "source": "Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.",
+          "message": "Повертає вичерпну інформацію про функцію Lambda, включаючи конфігурацію, деталі коду, теги та налаштування паралелізму. Корисно для перевірки властивостей функції та її поточного стану."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
+          "source": "Get Function",
+          "message": "Отримати функцію"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to retrieve information for.",
+          "message": "Назва, ARN або частковий ARN функції Lambda, інформацію про яку потрібно отримати."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Назва функції"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function",
+          "message": "Назва або ARN функції Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to get information for a specific version of the function.",
+          "message": "Укажіть номер версії, назву псевдоніма або $LATEST, щоб отримати інформацію про конкретну версію функції."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Кваліфікатор"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias",
+          "message": "Версія функції або псевдонім"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS, у якому розташована функція Lambda. За замовчуванням використовується us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Регіон AWS, у якому розташована функція"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
+          "source": "Retrieve detailed information about a specific Lambda function.",
+          "message": "Отримати детальну інформацію про конкретну функцію Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.",
+          "message": "Повертає вичерпну інформацію про конкретну версію шару Lambda, включаючи деталі вмісту, сумісні середовища виконання та метадані."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "Get Layer Version",
+          "message": "Отримати версію шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to retrieve version information for.",
+          "message": "Назва або ARN шару Lambda, для якого потрібно отримати інформацію про версію."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Назва шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Назва або ARN шару Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS, у якому розташований шар Lambda. За замовчуванням використовується us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Регіон AWS, у якому розташований шар"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.desc": {
+          "source": "The version number of the layer to retrieve detailed information for.",
+          "message": "Номер версії шару, для якого потрібно отримати детальну інформацію."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
+          "source": "Version Number",
+          "message": "Номер версії"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
+          "source": "Specific version number of the layer",
+          "message": "Конкретний номер версії шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Retrieve detailed information about a specific layer version.",
+          "message": "Отримати детальну інформацію про конкретну версію шару."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.desc": {
+          "source": "Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.",
+          "message": "Викликає функцію Lambda синхронно або асинхронно з настроюваним корисним навантаженням JSON. Ви можете вказати тип виклику, налаштування ведення журналу та версію функції."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
+          "source": "Invoke Function",
+          "message": "Викликати функцію"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to invoke.",
+          "message": "Назва, ARN або частковий ARN функції Lambda для виклику."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Назва функції"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function to invoke",
+          "message": "Назва або ARN функції Lambda для виклику"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkRyeVJ1bg.display_name": {
+          "source": "Dry Run (Validate only)",
+          "message": "Пробний запуск (лише перевірка)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkV2ZW50.display_name": {
+          "source": "Asynchronous (Event)",
+          "message": "Асинхронний (Event)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOlJlcXVlc3RSZXNwb25zZQ.display_name": {
+          "source": "Synchronous (RequestResponse)",
+          "message": "Синхронний (RequestResponse)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.desc": {
+          "source": "RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.",
+          "message": "RequestResponse для синхронного виконання, Event для асинхронного виконання або DryRun для перевірки параметрів без виклику."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
+          "source": "Invocation Type",
+          "message": "Тип виклику"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
+          "source": "How to invoke the function",
+          "message": "Як викликати функцію"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOk5vbmU.display_name": {
+          "source": "None",
+          "message": "Немає"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOlRhaWw.display_name": {
+          "source": "Tail (Last 4KB)",
+          "message": "Tail (останні 4 КБ)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.desc": {
+          "source": "Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.",
+          "message": "Установіть значення Tail, щоб включити останні 4 КБ журналів виконання у відповідь, або None, щоб виключити журнали."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
+          "source": "Log Type",
+          "message": "Тип журналу"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
+          "source": "Include execution logs in response",
+          "message": "Включити журнали виконання у відповідь"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.desc": {
+          "source": "JSON string containing the data to pass to your Lambda function. Must be valid JSON format.",
+          "message": "Рядок JSON, що містить дані для передачі у вашу функцію Lambda. Повинен бути у дійсному форматі JSON."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Корисні дані"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.short_desc": {
+          "source": "JSON payload to send to the function",
+          "message": "Корисне навантаження JSON для відправки функції"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to invoke a specific version of the function.",
+          "message": "Укажіть номер версії, назву псевдоніма або $LATEST, щоб викликати конкретну версію функції."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Кваліфікатор"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias to invoke",
+          "message": "Версія функції або псевдонім для виклику"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS, у якому розташована функція Lambda. За замовчуванням використовується us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Регіон AWS, у якому розташована функція"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
+          "source": "Execute a Lambda function with custom payload.",
+          "message": "Виконати функцію Lambda з настроюваним корисним навантаженням."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.desc": {
+          "source": "Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.",
+          "message": "Повертає розбитий на сторінки список функцій Lambda у вказаному регіоні. Ви можете додатково фільтрувати за версією функції, головним регіоном і керувати розбиттям на сторінки за допомогою максимальної кількості елементів та маркерів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
+          "source": "List Functions",
+          "message": "Список функцій"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All Versions",
+          "message": "Усі версії"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.desc": {
+          "source": "Set to ALL to include all published versions of each function, or leave empty for latest versions only.",
+          "message": "Установіть значення ALL, щоб включити всі опубліковані версії кожної функції, або залиште порожнім лише для останніх версій."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
+          "source": "Function Version",
+          "message": "Версія функції"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
+          "source": "Version of functions to retrieve",
+          "message": "Версія функцій для отримання"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of functions returned in a single request.",
+          "message": "Обмежити кількість функцій, що повертаються в одному запиті."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Максимальна кількість елементів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of functions to return",
+          "message": "Максимальна кількість функцій для повернення"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.desc": {
+          "source": "For Lambda@Edge functions, specify the master region to filter results.",
+          "message": "Для функцій Lambda@Edge укажіть головний регіон для фільтрації результатів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
+          "source": "Master Region",
+          "message": "Головний регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
+          "source": "Filter functions by master region for Lambda@Edge",
+          "message": "Фільтрувати функції за головним регіоном для Lambda@Edge"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Використовуйте маркер із попередньої відповіді, щоб отримати наступну сторінку результатів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Наступний маркер"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Маркер пагінації для отримання додаткових результатів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS для отримання списку функцій Lambda. За замовчуванням використовується us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda functions are located",
+          "message": "Регіон AWS, у якому розташовані функції Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
+          "source": "Retrieve a list of Lambda functions in your AWS account.",
+          "message": "Отримати список функцій Lambda у вашому обліковому записі AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.desc": {
+          "source": "Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.",
+          "message": "Повертає розбитий на сторінки список версій для конкретного шару Lambda. Ви можете фільтрувати за сумісним середовищем виконання та керувати розбиттям на сторінки."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
+          "source": "List Layer Versions",
+          "message": "Список версій шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Користувацьке середовище виконання на Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Користувацьке середовище виконання на Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layer versions that are compatible with the specified runtime environment.",
+          "message": "Повертати лише версії шарів, які сумісні з вказаним середовищем виконання."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Сумісне середовище виконання"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter versions by compatible runtime",
+          "message": "Фільтрувати версії за сумісним середовищем виконання"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to list versions for.",
+          "message": "Назва або ARN шару Lambda, для якого потрібно отримати список версій."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Назва шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Назва або ARN шару Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layer versions returned in a single request.",
+          "message": "Обмежити кількість версій шару, що повертаються в одному запиті."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Максимальна кількість елементів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of versions to return",
+          "message": "Максимальна кількість версій для повернення"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Використовуйте маркер із попередньої відповіді, щоб отримати наступну сторінку результатів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Наступний маркер"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Маркер пагінації для отримання додаткових результатів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS, у якому розташований шар Lambda. За замовчуванням використовується us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Регіон AWS, у якому розташований шар"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
+          "source": "Retrieve versions of a specific Lambda layer.",
+          "message": "Отримати версії конкретного шару Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.desc": {
+          "source": "Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.",
+          "message": "Повертає розбитий на сторінки список шарів Lambda у вказаному регіоні. Ви можете фільтрувати за сумісним середовищем виконання та керувати розбиттям на сторінки за допомогою максимальної кількості елементів і маркерів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
+          "source": "List Layers",
+          "message": "Список шарів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Користувацьке середовище виконання на Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Користувацьке середовище виконання на Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layers that are compatible with the specified runtime environment.",
+          "message": "Повертати лише шари, сумісні з вказаним середовищем виконання."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Сумісне середовище виконання"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter layers by compatible runtime",
+          "message": "Фільтрувати шари за сумісним середовищем виконання"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layers returned in a single request.",
+          "message": "Обмежити кількість шарів, що повертаються в одному запиті."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Максимальна кількість елементів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of layers to return",
+          "message": "Максимальна кількість шарів для повернення"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Використовуйте маркер із попередньої відповіді, щоб отримати наступну сторінку результатів."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Наступний маркер"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Маркер пагінації для отримання додаткових результатів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS для отримання списку шарів Lambda. За замовчуванням — us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda layers are located",
+          "message": "Регіон AWS, де розташовані шари Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
+          "source": "Retrieve a list of Lambda layers in your AWS account.",
+          "message": "Отримати список шарів Lambda у вашому обліковому записі AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **AWS Lambda** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробити власний виклик HTTP / REST API до **AWS Lambda**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базового URL API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цій програмі."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to AWS Lambda",
+          "message": "Зробити власний виклик API до AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.desc": {
+          "source": "Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.",
+          "message": "Відстежує ваш обліковий запис AWS на наявність новостворених функцій Lambda у вказаному регіоні. Цей тригер спрацьовує при виявленні нової функції, надаючи детальну інформацію про неї."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
+          "source": "New Function",
+          "message": "Нова функція"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS для відстеження створення нових функцій Lambda. За замовчуванням — us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new functions",
+          "message": "Регіон AWS для відстеження нових функцій"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
+          "source": "Triggers when a new Lambda function is created.",
+          "message": "Спрацьовує під час створення нової функції Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.",
+          "message": "Відстежує ваш обліковий запис AWS на наявність новоопублікованих версій шарів Lambda у вказаному регіоні. Цей тригер спрацьовує при виявленні нової версії шару, надаючи детальну інформацію про версію шару."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "New Layer Version",
+          "message": "Нова версія шару"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.",
+          "message": "Укажіть регіон AWS для відстеження створення нових версій шарів Lambda. За замовчуванням — us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new layer versions",
+          "message": "Регіон AWS для відстеження нових версій шарів"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Triggers when a new Lambda layer version is published.",
+          "message": "Спрацьовує під час публікації нової версії шару Lambda."
+        },
+        "app.QW1hem9uTGFtYmRh.desc": {
+          "source": "Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.",
+          "message": "Amazon Lambda — це безсерверна обчислювальна служба, яка дозволяє виконувати код без підготовки серверів або керування ними. Ця інтеграція надає повний набір дій і тригерів для керування функціями Lambda, шарами та викликами. Ви можете отримувати список функцій, викликати їх, керувати шарами й відстежувати створення нових функцій і версій шарів."
+        },
+        "app.QW1hem9uTGFtYmRh.display_name": {
+          "source": "AWS Lambda",
+          "message": "AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.short_desc": {
+          "source": "Serverless compute service that runs code without provisioning or managing servers.",
+          "message": "Безсерверна обчислювальна служба, яка виконує код без підготовки серверів або керування ними."
+        }
+      }
+    }
+  }
+}

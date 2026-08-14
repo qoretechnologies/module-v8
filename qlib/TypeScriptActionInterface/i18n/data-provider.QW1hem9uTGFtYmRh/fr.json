@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.desc": {
+          "source": "Returns comprehensive information about a Lambda function including configuration, code details, tags, and concurrency settings. Useful for inspecting function properties and current state.",
+          "message": "Renvoie des informations complètes sur une fonction Lambda, notamment la configuration, les détails du code, les étiquettes et les paramètres de concurrence. Utile pour inspecter les propriétés et l'état actuel de la fonction."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.display_name": {
+          "source": "Get Function",
+          "message": "Obtenir la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to retrieve information for.",
+          "message": "Le nom, l'ARN ou l'ARN partiel de la fonction Lambda dont vous souhaitez récupérer les informations."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Nom de la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function",
+          "message": "Nom ou ARN de la fonction Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to get information for a specific version of the function.",
+          "message": "Spécifiez un numéro de version, un nom d'alias ou $LATEST pour obtenir des informations sur une version spécifique de la fonction."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Qualificateur"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias",
+          "message": "Version de la fonction ou alias"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS où réside la fonction Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Région AWS où se trouve la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2Z1bmN0aW9u.short_desc": {
+          "source": "Retrieve detailed information about a specific Lambda function.",
+          "message": "Récupérer des informations détaillées sur une fonction Lambda spécifique."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Returns comprehensive information about a specific version of a Lambda layer including content details, compatible runtimes, and metadata.",
+          "message": "Renvoie des informations complètes sur une version spécifique d'une couche Lambda, y compris les détails du contenu, les runtimes compatibles et les métadonnées."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "Get Layer Version",
+          "message": "Obtenir la version de la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to retrieve version information for.",
+          "message": "Le nom ou l'ARN de la couche Lambda pour laquelle récupérer les informations de version."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Nom de la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Nom ou ARN de la couche Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS où réside la couche Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Région AWS où se trouve la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.desc": {
+          "source": "The version number of the layer to retrieve detailed information for.",
+          "message": "Le numéro de version de la couche pour laquelle récupérer des informations détaillées."
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.display_name": {
+          "source": "Version Number",
+          "message": "Numéro de version"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.option.dmVyc2lvbl9udW1iZXI.short_desc": {
+          "source": "Specific version number of the layer",
+          "message": "Numéro de version spécifique de la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.Z2V0X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Retrieve detailed information about a specific layer version.",
+          "message": "Récupérer des informations détaillées sur une version de couche spécifique."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.desc": {
+          "source": "Invokes a Lambda function synchronously or asynchronously with a custom JSON payload. You can specify invocation type, logging preferences, and function version.",
+          "message": "Invoque une fonction Lambda de manière synchrone ou asynchrone avec une charge utile JSON personnalisée. Vous pouvez spécifier le type d'invocation, les préférences de journalisation et la version de la fonction."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.display_name": {
+          "source": "Invoke Function",
+          "message": "Invoquer la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.desc": {
+          "source": "The name, ARN, or partial ARN of the Lambda function to invoke.",
+          "message": "Le nom, l'ARN ou l'ARN partiel de la fonction Lambda à invoquer."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.display_name": {
+          "source": "Function Name",
+          "message": "Nom de la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.ZnVuY3Rpb25fbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda function to invoke",
+          "message": "Nom ou ARN de la fonction Lambda à invoquer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkRyeVJ1bg.display_name": {
+          "source": "Dry Run (Validate only)",
+          "message": "Dry Run (Validation uniquement)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOkV2ZW50.display_name": {
+          "source": "Asynchronous (Event)",
+          "message": "Asynchrone (Event)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.allowed-value.c3RyaW5nOlJlcXVlc3RSZXNwb25zZQ.display_name": {
+          "source": "Synchronous (RequestResponse)",
+          "message": "Synchrone (RequestResponse)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.desc": {
+          "source": "RequestResponse for synchronous execution, Event for asynchronous execution, or DryRun to validate parameters without invoking.",
+          "message": "RequestResponse pour une exécution synchrone, Event pour une exécution asynchrone, ou DryRun pour valider les paramètres sans invoquer."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.display_name": {
+          "source": "Invocation Type",
+          "message": "Type d'invocation"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.aW52b2NhdGlvbl90eXBl.short_desc": {
+          "source": "How to invoke the function",
+          "message": "Comment invoquer la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOk5vbmU.display_name": {
+          "source": "None",
+          "message": "Aucun"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.allowed-value.c3RyaW5nOlRhaWw.display_name": {
+          "source": "Tail (Last 4KB)",
+          "message": "Tail (Derniers 4 Ko)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.desc": {
+          "source": "Set to Tail to include the last 4KB of execution logs in the response, or None to exclude logs.",
+          "message": "Définissez sur Tail pour inclure les 4 derniers Ko de journaux d'exécution dans la réponse, ou None pour exclure les journaux."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.display_name": {
+          "source": "Log Type",
+          "message": "Type de journal"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.bG9nX3R5cGU.short_desc": {
+          "source": "Include execution logs in response",
+          "message": "Inclure les journaux d'exécution dans la réponse"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.desc": {
+          "source": "JSON string containing the data to pass to your Lambda function. Must be valid JSON format.",
+          "message": "Chaîne JSON contenant les données à transmettre à votre fonction Lambda. Doit être au format JSON valide."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.display_name": {
+          "source": "Payload",
+          "message": "Charge utile"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cGF5bG9hZA.short_desc": {
+          "source": "JSON payload to send to the function",
+          "message": "Charge utile JSON à envoyer à la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.desc": {
+          "source": "Specify a version number, alias name, or $LATEST to invoke a specific version of the function.",
+          "message": "Spécifiez un numéro de version, un nom d'alias ou $LATEST pour invoquer une version spécifique de la fonction."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.display_name": {
+          "source": "Qualifier",
+          "message": "Qualificateur"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cXVhbGlmaWVy.short_desc": {
+          "source": "Function version or alias to invoke",
+          "message": "Version de la fonction ou alias à invoquer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda function resides. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS où réside la fonction Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the function is located",
+          "message": "Région AWS où se trouve la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.aW52b2tlX2Z1bmN0aW9u.short_desc": {
+          "source": "Execute a Lambda function with custom payload.",
+          "message": "Exécuter une fonction Lambda avec une charge utile personnalisée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.desc": {
+          "source": "Returns a paginated list of Lambda functions in a specified region. You can optionally filter by function version, master region, and control pagination with max items and markers.",
+          "message": "Renvoie une liste paginée de fonctions Lambda dans une région spécifiée. Vous pouvez éventuellement filtrer par version de fonction, région principale et contrôler la pagination avec le nombre maximal d'éléments et les marqueurs."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.display_name": {
+          "source": "List Functions",
+          "message": "Lister les fonctions"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All Versions",
+          "message": "Toutes les versions"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.desc": {
+          "source": "Set to ALL to include all published versions of each function, or leave empty for latest versions only.",
+          "message": "Définissez sur ALL pour inclure toutes les versions publiées de chaque fonction, ou laissez vide pour obtenir uniquement les dernières versions."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.display_name": {
+          "source": "Function Version",
+          "message": "Version de la fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.ZnVuY3Rpb25fdmVyc2lvbg.short_desc": {
+          "source": "Version of functions to retrieve",
+          "message": "Version des fonctions à récupérer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of functions returned in a single request.",
+          "message": "Limiter le nombre de fonctions renvoyées dans une seule requête."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Éléments maximums"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of functions to return",
+          "message": "Nombre maximum de fonctions à renvoyer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.desc": {
+          "source": "For Lambda@Edge functions, specify the master region to filter results.",
+          "message": "Pour les fonctions Lambda@Edge, spécifiez la région principale pour filtrer les résultats."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.display_name": {
+          "source": "Master Region",
+          "message": "Région principale"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bWFzdGVyX3JlZ2lvbg.short_desc": {
+          "source": "Filter functions by master region for Lambda@Edge",
+          "message": "Filtrer les fonctions par région principale pour Lambda@Edge"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Marqueur suivant"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Marqueur de pagination pour récupérer des résultats supplémentaires"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda functions from. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS à partir de laquelle lister les fonctions Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda functions are located",
+          "message": "Région AWS où se trouvent les fonctions Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9mdW5jdGlvbnM.short_desc": {
+          "source": "Retrieve a list of Lambda functions in your AWS account.",
+          "message": "Récupérer une liste de fonctions Lambda dans votre compte AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.desc": {
+          "source": "Returns a paginated list of versions for a specific Lambda layer. You can filter by compatible runtime and control pagination.",
+          "message": "Renvoie une liste paginée de versions pour une couche Lambda spécifique. Vous pouvez filtrer par runtime compatible et contrôler la pagination."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.display_name": {
+          "source": "List Layer Versions",
+          "message": "Lister les versions de couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Environnement d'exécution personnalisé sur Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Environnement d'exécution personnalisé sur Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layer versions that are compatible with the specified runtime environment.",
+          "message": "Renvoie uniquement les versions de couche compatibles avec l'environnement d'exécution spécifié."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Environnement d'exécution compatible"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter versions by compatible runtime",
+          "message": "Filtrer les versions par environnement d'exécution compatible"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.desc": {
+          "source": "The name or ARN of the Lambda layer to list versions for.",
+          "message": "Le nom ou l'ARN de la couche Lambda dont il faut lister les versions."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.display_name": {
+          "source": "Layer Name",
+          "message": "Nom de la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bGF5ZXJfbmFtZQ.short_desc": {
+          "source": "Name or ARN of the Lambda layer",
+          "message": "Nom ou ARN de la couche Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layer versions returned in a single request.",
+          "message": "Limiter le nombre de versions de couche renvoyées dans une seule requête."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Éléments maximums"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of versions to return",
+          "message": "Nombre maximal de versions à renvoyer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Marqueur suivant"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Marqueur de pagination pour récupérer des résultats supplémentaires"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where the Lambda layer resides. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS où réside la couche Lambda. La valeur par défaut est us-east-1 si elle n'est pas spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where the layer is located",
+          "message": "Région AWS où se trouve la couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcl92ZXJzaW9ucw.short_desc": {
+          "source": "Retrieve versions of a specific Lambda layer.",
+          "message": "Récupérer les versions d'une couche Lambda spécifique."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.desc": {
+          "source": "Returns a paginated list of Lambda layers in a specified region. You can filter by compatible runtime and control pagination with max items and markers.",
+          "message": "Renvoie une liste paginée de couches Lambda dans une région spécifiée. Vous pouvez filtrer par environnement d'exécution compatible et contrôler la pagination avec le nombre maximal d'éléments et des marqueurs."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.display_name": {
+          "source": "List Layers",
+          "message": "Lister les couches"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE2Lng.display_name": {
+          "source": "Node.js 16.x",
+          "message": "Node.js 16.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczE4Lng.display_name": {
+          "source": "Node.js 18.x",
+          "message": "Node.js 18.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOm5vZGVqczIwLng.display_name": {
+          "source": "Node.js 20.x",
+          "message": "Node.js 20.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDY.display_name": {
+          "source": ".NET 6",
+          "message": ".NET 6"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmRvdG5ldDg.display_name": {
+          "source": ".NET 8",
+          "message": ".NET 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmdvMS54.display_name": {
+          "source": "Go 1.x",
+          "message": "Go 1.x"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmE4.display_name": {
+          "source": "Java 8",
+          "message": "Java 8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExMQ.display_name": {
+          "source": "Java 11",
+          "message": "Java 11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmExNw.display_name": {
+          "source": "Java 17",
+          "message": "Java 17"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOmphdmEyMQ.display_name": {
+          "source": "Java 21",
+          "message": "Java 21"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTA.display_name": {
+          "source": "Python 3.10",
+          "message": "Python 3.10"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTE.display_name": {
+          "source": "Python 3.11",
+          "message": "Python 3.11"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuMTI.display_name": {
+          "source": "Python 3.12",
+          "message": "Python 3.12"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOA.display_name": {
+          "source": "Python 3.8",
+          "message": "Python 3.8"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnB5dGhvbjMuOQ.display_name": {
+          "source": "Python 3.9",
+          "message": "Python 3.9"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMg.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2",
+          "message": "Environnement d'exécution personnalisé sur Amazon Linux 2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnByb3ZpZGVkLmFsMjAyMw.display_name": {
+          "source": "Custom Runtime on Amazon Linux 2023",
+          "message": "Environnement d'exécution personnalisé sur Amazon Linux 2023"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjE.display_name": {
+          "source": "Ruby 3.1",
+          "message": "Ruby 3.1"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.allowed-value.c3RyaW5nOnJ1YnkzLjI.display_name": {
+          "source": "Ruby 3.2",
+          "message": "Ruby 3.2"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.desc": {
+          "source": "Return only layers that are compatible with the specified runtime environment.",
+          "message": "Renvoie uniquement les couches compatibles avec l'environnement d'exécution spécifié."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.display_name": {
+          "source": "Compatible Runtime",
+          "message": "Environnement d'exécution compatible"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.Y29tcGF0aWJsZV9ydW50aW1l.short_desc": {
+          "source": "Filter layers by compatible runtime",
+          "message": "Filtrer les couches par environnement d'exécution compatible"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.desc": {
+          "source": "Limit the number of layers returned in a single request.",
+          "message": "Limiter le nombre de couches renvoyées dans une seule requête."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.display_name": {
+          "source": "Maximum Items",
+          "message": "Éléments maximums"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bWF4X2l0ZW1z.short_desc": {
+          "source": "Maximum number of layers to return",
+          "message": "Nombre maximal de couches à renvoyer"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.desc": {
+          "source": "Use the marker from a previous response to retrieve the next page of results.",
+          "message": "Utilisez le marqueur d'une réponse précédente pour récupérer la page de résultats suivante."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.display_name": {
+          "source": "Next Marker",
+          "message": "Marqueur suivant"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.bmV4dF9tYXJrZXI.short_desc": {
+          "source": "Pagination marker for retrieving additional results",
+          "message": "Marqueur de pagination pour récupérer des résultats supplémentaires"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to list Lambda layers from. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS depuis laquelle lister les couches Lambda. Par défaut us-east-1 si non spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.option.cmVnaW9u.short_desc": {
+          "source": "AWS region where Lambda layers are located",
+          "message": "Région AWS où se trouvent les couches Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bGlzdF9sYXllcnM.short_desc": {
+          "source": "Retrieve a list of Lambda layers in your AWS account.",
+          "message": "Récupérer une liste de couches Lambda dans votre compte AWS."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **AWS Lambda** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel API HTTP / REST personnalisé à **AWS Lambda** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'accès URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hash contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to AWS Lambda",
+          "message": "Effectuer un appel API personnalisé vers AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.desc": {
+          "source": "Monitors your AWS account for newly created Lambda functions in a specified region. This trigger fires when a new function is detected, providing comprehensive function details.",
+          "message": "Surveille votre compte AWS pour détecter les nouvelles fonctions Lambda créées dans une région spécifiée. Ce déclencheur se déclenche lorsqu'une nouvelle fonction est détectée, fournissant des détails complets sur la fonction."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.display_name": {
+          "source": "New Function",
+          "message": "Nouvelle fonction"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda function creation. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS à surveiller pour la création de nouvelles fonctions Lambda. Par défaut us-east-1 si non spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new functions",
+          "message": "Région AWS à surveiller pour les nouvelles fonctions"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2Z1bmN0aW9u.short_desc": {
+          "source": "Triggers when a new Lambda function is created.",
+          "message": "Se déclenche lorsqu'une nouvelle fonction Lambda est créée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.desc": {
+          "source": "Monitors your AWS account for newly published Lambda layer versions in a specified region. This trigger fires when a new layer version is detected, providing layer version details.",
+          "message": "Surveille votre compte AWS pour détecter les nouvelles versions de couche Lambda publiées dans une région spécifiée. Ce déclencheur se déclenche lorsqu'une nouvelle version de couche est détectée, fournissant des détails sur la version de couche."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.display_name": {
+          "source": "New Layer Version",
+          "message": "Nouvelle version de couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region to monitor for new Lambda layer version creation. Defaults to us-east-1 if not specified.",
+          "message": "Spécifiez la région AWS à surveiller pour la création de nouvelles versions de couche Lambda. Par défaut us-east-1 si non spécifiée."
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Région"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new layer versions",
+          "message": "Région AWS à surveiller pour les nouvelles versions de couche"
+        },
+        "app.QW1hem9uTGFtYmRh.action.bmV3X2xheWVyX3ZlcnNpb24.short_desc": {
+          "source": "Triggers when a new Lambda layer version is published.",
+          "message": "Se déclenche lorsqu'une nouvelle version de couche Lambda est publiée."
+        },
+        "app.QW1hem9uTGFtYmRh.desc": {
+          "source": "Amazon Lambda is a serverless compute service that lets you run code without provisioning or managing servers. This integration provides comprehensive actions and triggers to manage Lambda functions, layers, and invocations. You can list functions, invoke them, manage layers, and monitor new function and layer version creation.",
+          "message": "Amazon Lambda est un service de calcul sans serveur qui vous permet d'exécuter du code sans provisionner ni gérer de serveurs. Cette intégration fournit des actions et des déclencheurs complets pour gérer les fonctions, couches et invocations Lambda. Vous pouvez lister des fonctions, les invoquer, gérer des couches et surveiller la création de nouvelles fonctions et versions de couche."
+        },
+        "app.QW1hem9uTGFtYmRh.display_name": {
+          "source": "AWS Lambda",
+          "message": "AWS Lambda"
+        },
+        "app.QW1hem9uTGFtYmRh.short_desc": {
+          "source": "Serverless compute service that runs code without provisioning or managing servers.",
+          "message": "Service de calcul sans serveur qui exécute du code sans provisionner ni gérer de serveurs."
+        }
+      }
+    }
+  }
+}

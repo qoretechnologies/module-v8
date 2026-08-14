@@ -1,0 +1,989 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.desc": {
+          "source": "Removes all completed tasks from the specified task list, helping to keep your lists clean and organized.",
+          "message": "Odstráni všetky dokončené úlohy zo zadaného zoznamu úloh, čo pomáha udržiavať vaše zoznamy prehľadné a usporiadané."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.display_name": {
+          "source": "Clear Completed Tasks",
+          "message": "Vymazať dokončené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to remove all completed tasks.",
+          "message": "Vyberte zoznam úloh, z ktorého chcete odstrániť všetky dokončené úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to clear completed tasks from",
+          "message": "Zoznam úloh, z ktorého sa majú vymazať dokončené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y2xlYXJfY29tcGxldGVkX3Rhc2tz.short_desc": {
+          "source": "Clear all completed tasks from a task list",
+          "message": "Vymazať všetky dokončené úlohy zo zoznamu úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.desc": {
+          "source": "Creates a new task in the specified task list with optional details like notes, due date, and hierarchical positioning.",
+          "message": "Vytvorí novú úlohu v zadanom zozname úloh s voliteľnými podrobnosťami, ako sú poznámky, termín dokončenia a hierarchické umiestnenie."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.display_name": {
+          "source": "Create Task",
+          "message": "Vytvoriť úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set a due date for when this task should be completed.",
+          "message": "Nastavte termín, do kedy má byť táto úloha dokončená."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Termín dokončenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "Termín dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Add any additional notes, details, or description for the task.",
+          "message": "Pridajte ďalšie poznámky, podrobnosti alebo popis úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Poznámky"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Ďalšie poznámky alebo popis úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to create this task as a subtask under another task.",
+          "message": "Vyberte nadradenú úlohu, ak chcete túto úlohu vytvoriť ako podúlohu pod inou úlohou."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Nadradená úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to create a subtask)",
+          "message": "Nadradená úloha (na vytvorenie podúlohy)"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this new task should be positioned in the list.",
+          "message": "Vyberte úlohu, za ktorú sa má táto nová úloha v zozname umiestniť."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Predchádzajúca úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "Úloha, za ktorú sa má táto úloha umiestniť"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list where you want to create the new task.",
+          "message": "Vyberte zoznam úloh, v ktorom chcete vytvoriť novú úlohu."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to add the task to",
+          "message": "Zoznam úloh, do ktorého sa má úloha pridať"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the title or main description for the new task.",
+          "message": "Zadajte názov alebo hlavný popis novej úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The title of the task",
+          "message": "Názov úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2s.short_desc": {
+          "source": "Create a new task in Google Tasks",
+          "message": "Vytvoriť novú úlohu v Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Creates a new task list in your Google Tasks account with the specified title.",
+          "message": "Vytvorí nový zoznam úloh vo vašom účte Google Tasks so zadaným názvom."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Create Task List",
+          "message": "Vytvoriť zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the name/title for the new task list that will be created in Google Tasks.",
+          "message": "Zadajte názov nového zoznamu úloh, ktorý sa vytvorí v Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The title of the new task list",
+          "message": "Názov nového zoznamu úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Y3JlYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Create a new task list in Google Tasks",
+          "message": "Vytvoriť nový zoznam úloh v Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieves detailed information about a specific task from the selected task list.",
+          "message": "Získa podrobné informácie o konkrétnej úlohe z vybraného zoznamu úloh."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Získať úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to retrieve.",
+          "message": "Vyberte zoznam úloh, ktorý obsahuje úlohu, ktorú chcete získať."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Zoznam úloh obsahujúci úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task whose details you want to retrieve.",
+          "message": "Vyberte konkrétnu úlohu, ktorej podrobnosti chcete získať."
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to retrieve",
+          "message": "Úloha na získanie"
+        },
+        "app.R29vZ2xlVGFza3M.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve details of a specific task",
+          "message": "Získať podrobnosti o konkrétnej úlohe"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.desc": {
+          "source": "Permanently deletes the specified task from the selected task list.",
+          "message": "Natrvalo odstráni zadanú úlohu z vybraného zoznamu úloh."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.display_name": {
+          "source": "Delete Task",
+          "message": "Vymazať úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to delete.",
+          "message": "Vyberte zoznam úloh, ktorý obsahuje úlohu, ktorú chcete vymazať."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Zoznam úloh obsahujúci úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to permanently delete.",
+          "message": "Vyberte konkrétnu úlohu, ktorú chcete natrvalo vymazať."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to delete",
+          "message": "Úloha na vymazanie"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2s.short_desc": {
+          "source": "Delete a task from Google Tasks",
+          "message": "Vymazať úlohu z Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Permanently deletes the specified task list and all tasks within it from your Google Tasks account.",
+          "message": "Natrvalo vymaže zadaný zoznam úloh a všetky úlohy v ňom z vášho účtu Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Delete Task List",
+          "message": "Vymazať zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to permanently delete from Google Tasks.",
+          "message": "Vyberte zoznam úloh, ktorý chcete natrvalo vymazať z Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to delete",
+          "message": "Zoznam úloh na vymazanie"
+        },
+        "app.R29vZ2xlVGFza3M.action.ZGVsZXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Delete a task list from Google Tasks",
+          "message": "Vymazať zoznam úloh z Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.desc": {
+          "source": "Retrieves a list of all task lists in your Google Tasks account with optional pagination.",
+          "message": "Získa zoznam všetkých zoznamov úloh vo vašom účte Google Tasks s voliteľným stránkovaním."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.display_name": {
+          "source": "List Task Lists",
+          "message": "Zobraziť zoznamy úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of task lists to return in the response. Default is 10.",
+          "message": "Zadajte maximálny počet zoznamov úloh, ktoré sa majú vrátiť v odpovedi. Predvolená hodnota je 10."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of task lists to return",
+          "message": "Maximálny počet zoznamov úloh na vrátenie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "Provide the next page token from a previous request to get the next page of results.",
+          "message": "Zadajte token nasledujúcej stránky z predchádzajúcej požiadavky na získanie ďalšej stránky výsledkov."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Token nasledujúcej stránky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrc19saXN0cw.short_desc": {
+          "source": "Get all task lists from Google Tasks",
+          "message": "Získať všetky zoznamy úloh z Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieves a list of tasks from the specified task list with various filtering options like due dates, completion status, and more.",
+          "message": "Získa zoznam úloh zo zadaného zoznamu úloh s rôznymi možnosťami filtrovania, ako sú termíny dokončenia, stav dokončenia a ďalšie."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.desc": {
+          "source": "Only return tasks completed before this date.",
+          "message": "Vrátiť iba úlohy dokončené pred týmto dátumom."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.display_name": {
+          "source": "Completed Max Date",
+          "message": "Maximálny dátum dokončenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWF4.short_desc": {
+          "source": "Upper bound for a task completion date",
+          "message": "Horná hranica dátumu dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.desc": {
+          "source": "Only return tasks completed after this date.",
+          "message": "Vrátiť iba úlohy dokončené po tomto dátume."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.display_name": {
+          "source": "Completed Min Date",
+          "message": "Minimálny dátum dokončenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.Y29tcGxldGVkTWlu.short_desc": {
+          "source": "Lower bound for a task completion date",
+          "message": "Dolná hranica dátumu dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.desc": {
+          "source": "Only return tasks with due dates before this date.",
+          "message": "Vrátiť iba úlohy s termínom dokončenia pred týmto dátumom."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.display_name": {
+          "source": "Due Max Date",
+          "message": "Maximálny termín dokončenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWF4.short_desc": {
+          "source": "Upper bound for a task due date",
+          "message": "Horná hranica termínu dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.desc": {
+          "source": "Only return tasks with due dates after this date.",
+          "message": "Vrátiť iba úlohy s termínom splnenia po tomto dátume."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.display_name": {
+          "source": "Due Min Date",
+          "message": "Minimálny dátum splnenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.ZHVlTWlu.short_desc": {
+          "source": "Lower bound for a task due date",
+          "message": "Dolná hranica pre termín splnenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.desc": {
+          "source": "Specify the maximum number of tasks to return in the response.",
+          "message": "Zadajte maximálny počet úloh, ktoré sa majú vrátiť v odpovedi."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.display_name": {
+          "source": "Max Results",
+          "message": "Maximálny počet výsledkov"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.bWF4UmVzdWx0cw.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Maximálny počet úloh na vrátenie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people.",
+          "message": "Povoľte túto možnosť, ak chcete zahrnúť úlohy priradené iným osobám."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.display_name": {
+          "source": "Show Assigned",
+          "message": "Zobraziť priradené"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0Fzc2lnbmVk.short_desc": {
+          "source": "Whether to include assigned tasks",
+          "message": "Či zahrnúť priradené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.desc": {
+          "source": "Enable this option to include completed tasks in the results.",
+          "message": "Povoľte túto možnosť, ak chcete do výsledkov zahrnúť dokončené úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.display_name": {
+          "source": "Show Completed",
+          "message": "Zobraziť dokončené"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0NvbXBsZXRlZA.short_desc": {
+          "source": "Whether to include completed tasks",
+          "message": "Či zahrnúť dokončené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.desc": {
+          "source": "Enable this option to include deleted tasks in the results.",
+          "message": "Povoľte túto možnosť, ak chcete do výsledkov zahrnúť vymazané úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.display_name": {
+          "source": "Show Deleted",
+          "message": "Zobraziť odstránené"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0RlbGV0ZWQ.short_desc": {
+          "source": "Whether to include deleted tasks",
+          "message": "Či zahrnúť vymazané úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.desc": {
+          "source": "Enable this option to include hidden tasks in the results.",
+          "message": "Povoľte túto možnosť, ak chcete do výsledkov zahrnúť skryté úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.display_name": {
+          "source": "Show Hidden",
+          "message": "Zobraziť skryté"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.c2hvd0hpZGRlbg.short_desc": {
+          "source": "Whether to include hidden tasks",
+          "message": "Či zahrnúť skryté úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.desc": {
+          "source": "Provide the page token from a previous request to get the next page of results.",
+          "message": "Zadajte token stránky z predchádzajúcej požiadavky na získanie ďalšej stránky výsledkov."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.display_name": {
+          "source": "Page Token",
+          "message": "Token stránky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.cGFnZVRva2Vu.short_desc": {
+          "source": "Token for pagination",
+          "message": "Token na stránkovanie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list from which you want to retrieve tasks.",
+          "message": "Vyberte zoznam úloh, z ktorého chcete získať úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to get tasks from",
+          "message": "Zoznam úloh, z ktorého sa majú získať úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.desc": {
+          "source": "Only return tasks that have been updated after this date.",
+          "message": "Vrátiť iba úlohy, ktoré boli aktualizované po tomto dátume."
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.display_name": {
+          "source": "Updated Min Date",
+          "message": "Minimálny dátum aktualizácie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.option.dXBkYXRlTWlu.short_desc": {
+          "source": "Lower bound for a task last modification time",
+          "message": "Dolná hranica času poslednej úpravy úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Get all tasks from a task list",
+          "message": "Získať všetky úlohy zo zoznamu úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Tasks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Google Tasks** pomocou overenia nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API daného pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vracia ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako vstavané akcie v tejto aplikácii."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.R29vZ2xlVGFza3M.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Tasks",
+          "message": "Vykonať vlastné volanie API do Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when any task in the specified list is marked as completed.",
+          "message": "Monitoruje vaše zoznamy v Google Tasks a spúšťa sa, keď je ľubovoľná úloha v zadanom zozname označená ako dokončená."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.display_name": {
+          "source": "New Completed Task",
+          "message": "Nová dokončená úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Povoľte túto možnosť, ak chcete do výsledkov spúšťača zahrnúť úlohy priradené iným osobám."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Zahrnúť priradené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Či zahrnúť úlohy priradené iným"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly completed tasks.",
+          "message": "Vyberte zoznam Google Tasks, ktorý chcete monitorovať na novo dokončené úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for completed tasks",
+          "message": "Zoznam úloh na monitorovanie dokončených úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X2NvbXBsZXRlZF90YXNr.short_desc": {
+          "source": "Triggers when a task is marked as completed",
+          "message": "Spustí sa po označení úlohy ako dokončenej"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.desc": {
+          "source": "Monitors your Google Tasks lists and triggers when a new task is added to the specified task list.",
+          "message": "Monitoruje vaše zoznamy v Google Tasks a spúšťa sa pri pridaní novej úlohy do zadaného zoznamu úloh."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.display_name": {
+          "source": "New Task",
+          "message": "Nová úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.desc": {
+          "source": "Enable this option to include tasks that have been assigned to other people in the trigger results.",
+          "message": "Povoľte túto možnosť, ak chcete do výsledkov spúšťača zahrnúť úlohy priradené iným osobám."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.display_name": {
+          "source": "Include Assigned Tasks",
+          "message": "Zahrnúť priradené úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.aW5jbHVkZUFzc2lnbmVk.short_desc": {
+          "source": "Whether to include tasks assigned to others",
+          "message": "Či zahrnúť úlohy priradené iným"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the Google Tasks list that you want to monitor for newly created tasks.",
+          "message": "Vyberte zoznam Google Tasks, ktorý chcete monitorovať na novo vytvorené úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list to monitor for new tasks",
+          "message": "Zoznam úloh na monitorovanie nových úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.bmV3X3Rhc2s.short_desc": {
+          "source": "Triggers when a new task is created in Google Tasks",
+          "message": "Spustí sa pri vytvorení novej úlohy v Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.desc": {
+          "source": "Updates the details of an existing task including its title, notes, due date, completion status, and hierarchical positioning.",
+          "message": "Aktualizuje podrobnosti existujúcej úlohy vrátane jej názvu, poznámok, termínu splnenia, stavu dokončenia a hierarchického umiestnenia."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.display_name": {
+          "source": "Update Task",
+          "message": "Aktualizovať úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.desc": {
+          "source": "Set or update the due date for when this task should be completed.",
+          "message": "Nastavte alebo aktualizujte termín splnenia tejto úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.display_name": {
+          "source": "Due Date",
+          "message": "Termín dokončenia"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.ZHVl.short_desc": {
+          "source": "The due date for the task",
+          "message": "Termín dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.desc": {
+          "source": "Update any additional notes, details, or description for the task.",
+          "message": "Aktualizujte ďalšie poznámky, podrobnosti alebo popis úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.display_name": {
+          "source": "Notes",
+          "message": "Poznámky"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.bm90ZXM.short_desc": {
+          "source": "Additional notes or description for the task",
+          "message": "Ďalšie poznámky alebo popis úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOm5lZWRzQWN0aW9u.display_name": {
+          "source": "Incomplete",
+          "message": "Nedokončené"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.allowed-value.c3RyaW5nOmNvbXBsZXRlZA.display_name": {
+          "source": "Completed",
+          "message": "Dokončené"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.desc": {
+          "source": "Set whether the task is incomplete (needs action) or completed.",
+          "message": "Nastavte, či je úloha nedokončená (vyžaduje akciu) alebo dokončená."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stav"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.c3RhdHVz.short_desc": {
+          "source": "The completion status of the task",
+          "message": "Stav dokončenia úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.desc": {
+          "source": "Select a parent task if you want to make this task a subtask under another task.",
+          "message": "Vyberte nadradenú úlohu, ak chcete túto úlohu nastaviť ako podúlohu pod inou úlohou."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.display_name": {
+          "source": "Parent Task",
+          "message": "Nadradená úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cGFyZW50.short_desc": {
+          "source": "The parent task (to make this a subtask)",
+          "message": "Nadradená úloha (na vytvorenie podúlohy)"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.desc": {
+          "source": "Select the task after which this task should be positioned in the list.",
+          "message": "Vyberte úlohu, za ktorú sa má táto úloha v zozname umiestniť."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.display_name": {
+          "source": "Previous Task",
+          "message": "Predchádzajúca úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.cHJldmlvdXM.short_desc": {
+          "source": "The task after which this task should be positioned",
+          "message": "Úloha, za ktorú sa má táto úloha umiestniť"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.desc": {
+          "source": "Select the task list that contains the task you want to update.",
+          "message": "Vyberte zoznam úloh, ktorý obsahuje úlohu, ktorú chcete aktualizovať."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFza0xpc3Q.short_desc": {
+          "source": "The task list containing the task",
+          "message": "Zoznam úloh obsahujúci úlohu"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.desc": {
+          "source": "Select the specific task that you want to update.",
+          "message": "Vyberte konkrétnu úlohu, ktorú chcete aktualizovať."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.display_name": {
+          "source": "Task",
+          "message": "Úloha"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGFzaw.short_desc": {
+          "source": "The task to update",
+          "message": "Úloha na aktualizáciu"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.desc": {
+          "source": "Enter the new title or main description for the task.",
+          "message": "Zadajte nový názov alebo hlavný popis úlohy."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.option.dGl0bGU.short_desc": {
+          "source": "The new title of the task",
+          "message": "Nový názov úlohy"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2s.short_desc": {
+          "source": "Update an existing task in Google Tasks",
+          "message": "Aktualizovať existujúcu úlohu v Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.desc": {
+          "source": "Updates the title of an existing task list in your Google Tasks account.",
+          "message": "Aktualizuje názov existujúceho zoznamu úloh vo vašom účte Google Tasks."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.display_name": {
+          "source": "Update Task List",
+          "message": "Aktualizovať zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.desc": {
+          "source": "Select the task list that you want to update in Google Tasks.",
+          "message": "Vyberte zoznam úloh v Google Tasks, ktorý chcete aktualizovať."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.display_name": {
+          "source": "Task List",
+          "message": "Zoznam úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.aWQ.short_desc": {
+          "source": "The task list to update",
+          "message": "Zoznam úloh na aktualizáciu"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.desc": {
+          "source": "Enter the new title/name for the selected task list.",
+          "message": "Zadajte nový názov/meno pre vybratý zoznam úloh."
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.option.dGl0bGU.short_desc": {
+          "source": "The new title for the task list",
+          "message": "Nový názov zoznamu úloh"
+        },
+        "app.R29vZ2xlVGFza3M.action.dXBkYXRlX3Rhc2tfbGlzdA.short_desc": {
+          "source": "Update an existing task list in Google Tasks",
+          "message": "Aktualizovať existujúci zoznam úloh v Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.desc": {
+          "source": "The Google Tasks integration provides comprehensive actions and triggers to interact with the Google Tasks API. Manage task lists, create and update tasks, set due dates, and organize your productivity workflow with seamless automation capabilities.",
+          "message": "Integrácia Google Tasks poskytuje komplexné akcie a spúšťače na prácu s rozhraním Google Tasks API. Spravujte zoznamy úloh, vytvárajte a aktualizujte úlohy, nastavujte termíny splnenia a organizujte svoje pracovné postupy pomocou bezproblémovej automatizácie."
+        },
+        "app.R29vZ2xlVGFza3M.display_name": {
+          "source": "Google Tasks",
+          "message": "Google Tasks"
+        },
+        "app.R29vZ2xlVGFza3M.short_desc": {
+          "source": "Connect to Google Tasks API to manage your task lists and tasks efficiently.",
+          "message": "Pripojte sa k rozhraniu Google Tasks API a spravujte svoje zoznamy úloh a úlohy efektívne."
+        }
+      }
+    }
+  }
+}

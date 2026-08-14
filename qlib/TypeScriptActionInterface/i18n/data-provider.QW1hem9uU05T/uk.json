@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.",
+          "message": "Публікує текстове повідомлення у тему Amazon SNS, яке буде доставлено всім передплатникам цієї теми."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "Створити повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent to all topic subscribers.",
+          "message": "Текстовий вміст повідомлення, яке буде відправлено всім передплатникам теми."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content to send",
+          "message": "Вміст повідомлення для відправки"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "Хеш додаткових атрибутів, які включаються до повідомлення з метою фільтрації та маршрутизації."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Атрибути повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "Додаткові метадані повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "Унікальний ідентифікатор для дедуплікації повідомлень у темах FIFO. Обов'язковий для тем FIFO без дедуплікації на основі вмісту."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID дедуплікації повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "ID дедуплікації для тем FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "Тег, який вказує, що повідомлення належать до певної групи повідомлень для тем FIFO. Обов'язковий для тем FIFO."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID групи повідомлень"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "ID групи для тем FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "Необов'язкова тема повідомлення, яка використовується насамперед для сповіщень електронною поштою."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Тема"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "Тема повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "Регіон AWS, де розташована цільова тема."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Регіон AWS теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the message will be published.",
+          "message": "Amazon Resource Name (ARN) теми SNS, де буде опубліковано повідомлення."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ARN цільової теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a message to an SNS topic",
+          "message": "Надіслати повідомлення у тему SNS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.",
+          "message": "Публікує повідомлення у форматі JSON у тему Amazon SNS, що дозволяє доставляти передплатникам розширений вміст і структуровані дані."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "Створити повідомлення JSON"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.desc": {
+          "source": "The JSON object containing the structured data to be sent to all topic subscribers.",
+          "message": "Об'єкт JSON, що містить структуровані дані, які будуть надіслані всім передплатникам теми."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
+          "source": "JSON Message",
+          "message": "Повідомлення JSON"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
+          "source": "JSON object to send",
+          "message": "Об'єкт JSON для надсилання"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "Хеш додаткових атрибутів, які включаються до повідомлення з метою фільтрації та маршрутизації."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Атрибути повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "Додаткові метадані повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "Унікальний ідентифікатор для дедуплікації повідомлень у темах FIFO. Обов'язковий для тем FIFO без дедуплікації на основі вмісту."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID дедуплікації повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "ID дедуплікації для тем FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "Тег, який вказує, що повідомлення належать до певної групи повідомлень для тем FIFO. Обов'язковий для тем FIFO."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID групи повідомлень"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "ID групи для тем FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "Необов'язкова тема повідомлення, яка використовується насамперед для сповіщень електронною поштою."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "Тема"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "Тема повідомлення"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "Регіон AWS, де розташована цільова тема."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Регіон AWS теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.",
+          "message": "Amazon Resource Name (ARN) теми SNS, у якій буде опубліковано повідомлення JSON."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ARN цільової теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a structured JSON message to an SNS topic",
+          "message": "Надіслати структуроване повідомлення JSON у тему SNS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.desc": {
+          "source": "Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.",
+          "message": "Створює нову тему Amazon SNS з додатковою конфігурацією для тем FIFO, шифрування та політик доставки."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
+          "source": "Create Topic",
+          "message": "Створити тему"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.",
+          "message": "Чи вмикати дедуплікацію на основі вмісту для тем FIFO, яка запобігає дублюванню повідомлень на основі їхнього вмісту."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "Дедуплікація на основі вмісту"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable content-based deduplication",
+          "message": "Увімкнути дедуплікацію на основі вмісту"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.desc": {
+          "source": "A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.",
+          "message": "Рядок JSON, який визначає політику доставки для теми, керуючи поведінкою повторних спроб та налаштуваннями доставки."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
+          "source": "Delivery Policy",
+          "message": "Політика доставки"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
+          "source": "JSON delivery policy for the topic",
+          "message": "Політика доставки JSON для теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "A human-readable name for the topic that appears in email notifications and other contexts.",
+          "message": "Зрозуміла для людини назва теми, яка відображається в електронних сповіщеннях та інших контекстах."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "Відображуване ім'я"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "Human-readable name for the topic",
+          "message": "Зрозуміла для людини назва теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.desc": {
+          "source": "Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.",
+          "message": "Чи створювати тему FIFO (First-In-First-Out), яка зберігає порядок повідомлень та запобігає дублюванню."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
+          "source": "FIFO Topic",
+          "message": "Тема FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
+          "source": "Create as FIFO topic",
+          "message": "Створити як тему FIFO"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key to use for encrypting messages published to this topic.",
+          "message": "Ідентифікатор ключа AWS KMS для шифрування повідомлень, опублікованих у цій темі."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "ID основного ключа KMS"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for topic encryption",
+          "message": "Ключ KMS для шифрування теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.desc": {
+          "source": "A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.",
+          "message": "Рядок JSON, який визначає політику доступу для теми, керуючи тим, хто може публікувати в тему або підписуватися на неї."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.display_name": {
+          "source": "Policy",
+          "message": "Політика"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.short_desc": {
+          "source": "Access policy for the topic",
+          "message": "Політика доступу для теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic will be created. Defaults to us-east-1 if not specified.",
+          "message": "Регіон AWS, де буде створено тему. За замовчуванням us-east-1, якщо не вказано."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region for the topic",
+          "message": "Регіон AWS для теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.desc": {
+          "source": "The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.",
+          "message": "Назва теми SNS. Для тем FIFO назва повинна закінчуватися суфіксом .fifo."
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
+          "source": "Topic Name",
+          "message": "Назва теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
+          "source": "Name for the new topic",
+          "message": "Назва нової теми"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
+          "source": "Create a new SNS topic",
+          "message": "Створити нову тему SNS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.desc": {
+          "source": "Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.",
+          "message": "Створює нову підписку на тему Amazon SNS, дозволяючи вказаній кінцевій точці отримувати повідомлення, опубліковані в темі."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
+          "source": "Add Subscriber",
+          "message": "Додати передплатника"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.desc": {
+          "source": "The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).",
+          "message": "Кінцева точка, яка отримуватиме повідомлення. Формат залежить від протоколу (URL для HTTP/HTTPS, адреса електронної пошти для email, номер телефону для SMS тощо)."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.display_name": {
+          "source": "Endpoint",
+          "message": "Кінцева точка"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.short_desc": {
+          "source": "Subscriber endpoint",
+          "message": "Кінцева точка передплатника"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "Application",
+          "message": "Application"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "Електронна пошта"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWlsLWpzb24.display_name": {
+          "source": "Email-JSON",
+          "message": "Email-JSON"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHA.display_name": {
+          "source": "HTTP",
+          "message": "HTTP"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHBz.display_name": {
+          "source": "HTTPS",
+          "message": "HTTPS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmxhbWJkYQ.display_name": {
+          "source": "Lambda",
+          "message": "Lambda"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNtcw.display_name": {
+          "source": "SMS",
+          "message": "SMS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNxcw.display_name": {
+          "source": "SQS",
+          "message": "SQS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.desc": {
+          "source": "The protocol to use for delivering messages to the subscriber (HTTP, HTTPS, Email, SMS, SQS, Lambda, or Application).",
+          "message": "Протокол, який використовується для доставки повідомлень передплатнику (HTTP, HTTPS, Email, SMS, SQS, Lambda або Application)."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.display_name": {
+          "source": "Protocol",
+          "message": "Протокол"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.short_desc": {
+          "source": "Subscription protocol type",
+          "message": "Тип протоколу підписки"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "Регіон AWS, де розташована цільова тема."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Регіон AWS теми"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to create a subscription for.",
+          "message": "Amazon Resource Name (ARN) теми SNS, для якої створюється підписка."
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN теми"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to subscribe to",
+          "message": "ARN теми для підписки"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
+          "source": "Add a subscriber to an SNS topic",
+          "message": "Додати передплатника до теми SNS"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.desc": {
+          "source": "Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.",
+          "message": "Отримує детальну інформацію про конкретну тему Amazon SNS, включаючи атрибути, статистику підписок та деталі конфігурації."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
+          "source": "Get Topic",
+          "message": "Отримати тему"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic is located.",
+          "message": "Регіон AWS, де розташована тема."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "Регіон AWS теми"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to get details for.",
+          "message": "Amazon Resource Name (ARN) теми SNS, для якої потрібно отримати деталі."
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN теми"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to retrieve",
+          "message": "ARN теми для отримання"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
+          "source": "Get details of a specific SNS topic",
+          "message": "Отримати деталі конкретної теми SNS"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.desc": {
+          "source": "Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.",
+          "message": "Отримує список усіх тем Amazon SNS у вказаному регіоні з можливістю включення детальних атрибутів для кожної теми."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
+          "source": "List Topics",
+          "message": "Список тем"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed attributes for each topic, such as subscription counts and policies.",
+          "message": "Чи включати детальні атрибути для кожної теми, такі як кількість підписок та політики."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "Включити атрибути"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed topic attributes",
+          "message": "Включити детальні атрибути теми"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.desc": {
+          "source": "A token for paginating through large lists of topics. Use the token returned from a previous call.",
+          "message": "Токен для розбиття на сторінки великих списків тем. Використовуйте токен, повернутий з попереднього виклику."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
+          "source": "Next Token",
+          "message": "Наступний токен"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
+          "source": "Pagination token",
+          "message": "Токен розбиття на сторінки"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.desc": {
+          "source": "The AWS region from which to retrieve the list of SNS topics.",
+          "message": "Регіон AWS, з якого потрібно отримати список тем SNS."
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to list topics from",
+          "message": "Регіон AWS для отримання списку тем"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
+          "source": "List all SNS topics",
+          "message": "Перелічити всі теми SNS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SNS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробити власний виклик HTTP / REST API до **Amazon SNS**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базового URL API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SNS",
+          "message": "Зробити власний виклик API до Amazon SNS"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.",
+          "message": "Цей тригер підписується на тему Amazon SNS і спрацьовує під час публікації нового повідомлення. Він автоматично керує підпискою та надає повне корисне навантаження повідомлення."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Нове повідомлення"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.",
+          "message": "Укажіть регіон AWS, де розміщено вашу тему SNS. Якщо не вказано, за замовчуванням використовується us-east-1."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Регіон AWS"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SNS topic is located.",
+          "message": "Регіон AWS, у якому розташована тема SNS."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The full ARN of the SNS topic you want to monitor for new messages. The format should be: arn:aws:sns:region:account-id:topic-name.",
+          "message": "Повний ARN теми SNS, яку ви бажаєте відстежувати на наявність нових повідомлень. Формат має бути: arn:aws:sns:region:account-id:topic-name."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "ARN теми"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to subscribe to.",
+          "message": "Amazon Resource Name (ARN) теми SNS, на яку потрібно підписатися."
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is published to an SNS topic.",
+          "message": "Спрацьовує під час публікації нового повідомлення в темі SNS."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.desc": {
+          "source": "Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.",
+          "message": "Відстежує ваш сервіс Amazon SNS на наявність новостворених тем і спрацьовує при виявленні нової теми в указаному регіоні."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
+          "source": "New Topic",
+          "message": "Нова тема"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for new SNS topics. If not specified, defaults to us-east-1.",
+          "message": "Регіон AWS, де ви бажаєте відстежувати нові теми SNS. Якщо не вказано, за замовчуванням використовується us-east-1."
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "Регіон"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new topics",
+          "message": "Регіон AWS для відстеження нових тем"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
+          "source": "Triggers when a new SNS topic is created",
+          "message": "Спрацьовує під час створення нової теми SNS"
+        },
+        "app.QW1hem9uU05T.desc": {
+          "source": "The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.",
+          "message": "Інтеграція з Amazon SNS дозволяє створювати теми, надсилати повідомлення, керувати підписниками та відстежувати сповіщення через Amazon Simple Notification Service. Ідеально підходить для побудови масштабованих систем обміну повідомленнями, надсилання сповіщень і координації розподілених додатків із надійною доставкою повідомлень."
+        },
+        "app.QW1hem9uU05T.display_name": {
+          "source": "Amazon SNS",
+          "message": "Amazon SNS"
+        },
+        "app.QW1hem9uU05T.short_desc": {
+          "source": "Send notifications and messages through Amazon Simple Notification Service.",
+          "message": "Надсилайте сповіщення та повідомлення через Amazon Simple Notification Service."
+        }
+      }
+    }
+  }
+}

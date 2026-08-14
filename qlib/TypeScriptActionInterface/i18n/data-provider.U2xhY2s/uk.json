@@ -1,0 +1,1401 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new public or private channel is created in the workspace.",
+          "message": "Цей тригер спрацьовує щоразу, коли в робочому просторі створюється новий публічний або приватний канал."
+        },
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.display_name": {
+          "source": "Channel Created",
+          "message": "Канал створено"
+        },
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new channel is created",
+          "message": "Спрацьовує, коли створюється новий канал"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.desc": {
+          "source": "Create a new public or private channel in your Slack workspace.",
+          "message": "Створити новий публічний або приватний канал у вашому робочому просторі Slack."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.display_name": {
+          "source": "Create Channel",
+          "message": "Створити канал"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.desc": {
+          "source": "The name for the new channel. Must be unique and follow Slack naming rules (lowercase, no spaces).",
+          "message": "Назва для нового каналу. Повинна бути унікальною та відповідати правилам найменування Slack (нижній регістр, без пробілів)."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Назва каналу"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.short_desc": {
+          "source": "Name for the new channel",
+          "message": "Назва для нового каналу"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.desc": {
+          "source": "If enabled, create a private channel instead of a public one.",
+          "message": "Якщо увімкнено, буде створено приватний канал замість публічного."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.display_name": {
+          "source": "Private Channel",
+          "message": "Приватний канал"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.short_desc": {
+          "source": "Make the channel private",
+          "message": "Зробити канал приватним"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.short_desc": {
+          "source": "Create a new Slack channel",
+          "message": "Створити новий канал Slack"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.desc": {
+          "source": "Add an emoji reaction to a specific message in a channel.",
+          "message": "Додати реакцію емодзі до конкретного повідомлення в каналі."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.display_name": {
+          "source": "Add Reaction",
+          "message": "Додати реакцію"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message is located.",
+          "message": "Виберіть канал, у якому розташоване повідомлення."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Канал, що містить повідомлення"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.desc": {
+          "source": "The emoji name without colons (e.g., \"thumbsup\", \"fire\", \"smile\").",
+          "message": "Назва емодзі без двокрапок (наприклад, \"thumbsup\", \"fire\", \"smile\")."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.display_name": {
+          "source": "Reaction",
+          "message": "Реакція"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.short_desc": {
+          "source": "Emoji name to add",
+          "message": "Назва емодзі для додавання"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message to react to. You can also paste a Slack message link.",
+          "message": "Мітка часу (ts) повідомлення, на яке потрібно відреагувати. Ви також можете вставити посилання на повідомлення Slack."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.short_desc": {
+          "source": "Add an emoji reaction to a message",
+          "message": "Додати реакцію емодзі до повідомлення"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.desc": {
+          "source": "This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.",
+          "message": "Цей тригер спрацьовує щоразу, коли хтось згадує бота у повідомленні в вказаному каналі. Використовуйте це для відповіді на прямі запити."
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.display_name": {
+          "source": "App Mention",
+          "message": "Згадка додатка"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to monitor for bot mentions. Make sure the bot is a member of the channel.",
+          "message": "Виберіть канал для відстеження згадок бота. Переконайтеся, що бот є учасником каналу."
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to monitor for mentions",
+          "message": "Канал для відстеження згадок"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.short_desc": {
+          "source": "Triggers when the bot is mentioned in a channel",
+          "message": "Спрацьовує, коли бота згадують у каналі"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.desc": {
+          "source": "Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.",
+          "message": "Архівувати канал у вашому робочому просторі Slack. Заархівовані канали доступні лише для читання та за замовчуванням приховані зі списку каналів."
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.display_name": {
+          "source": "Archive Channel",
+          "message": "Архівувати канал"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel you want to archive.",
+          "message": "Виберіть канал, який потрібно заархівувати."
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to archive",
+          "message": "Канал для архівування"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.short_desc": {
+          "source": "Archive a Slack channel",
+          "message": "Архівувати канал Slack"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.desc": {
+          "source": "Fetch the message history of a channel. You can filter by time range and control the number of messages returned.",
+          "message": "Отримати історію повідомлень каналу. Ви можете фільтрувати за часовим діапазоном і контролювати кількість повернених повідомлень."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.display_name": {
+          "source": "Get Channel History",
+          "message": "Отримати історію каналу"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to retrieve messages from.",
+          "message": "Виберіть канал, з якого потрібно отримати повідомлення."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to get history from",
+          "message": "Канал для отримання історії"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.desc": {
+          "source": "Return all metadata associated with each message.",
+          "message": "Повертати всі метадані, пов'язані з кожним повідомленням."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.display_name": {
+          "source": "Include All Metadata",
+          "message": "Включити всі метадані"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.short_desc": {
+          "source": "Return full message metadata",
+          "message": "Повертати повні метадані повідомлення"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.desc": {
+          "source": "Include messages with oldest or latest timestamps in results.",
+          "message": "Включати повідомлення з найстарішими або найновішими мітками часу в результати."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.display_name": {
+          "source": "Inclusive",
+          "message": "Включно"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.short_desc": {
+          "source": "Include boundary timestamps",
+          "message": "Включати граничні мітки часу"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.desc": {
+          "source": "Unix timestamp. Only messages after this time will be included.",
+          "message": "Мітка часу Unix. Буде включено лише повідомлення після цього часу."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.display_name": {
+          "source": "Oldest Timestamp",
+          "message": "Найстаріша мітка часу"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.short_desc": {
+          "source": "Only messages after this time",
+          "message": "Лише повідомлення після цього часу"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.desc": {
+          "source": "Unix timestamp. Only messages before this time will be included. Default is current time.",
+          "message": "Часова позначка Unix. Будуть включені лише повідомлення до цього часу. За замовчуванням — поточний час."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.display_name": {
+          "source": "Latest Timestamp",
+          "message": "Остання часова позначка"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.short_desc": {
+          "source": "Only messages before this time",
+          "message": "Лише повідомлення до цього часу"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.desc": {
+          "source": "The maximum number of messages to retrieve. Default is 200.",
+          "message": "Максимальна кількість повідомлень для отримання. За замовчуванням — 200."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.short_desc": {
+          "source": "Maximum messages to return",
+          "message": "Максимальна кількість повідомлень для повернення"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.short_desc": {
+          "source": "Retrieve messages from a channel",
+          "message": "Отримати повідомлення з каналу"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.desc": {
+          "source": "Retrieve detailed profile and account information for a specific Slack user by their user ID.",
+          "message": "Отримати детальну інформацію про профіль та обліковий запис для конкретного користувача Slack за його ID користувача."
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.display_name": {
+          "source": "Get User Info",
+          "message": "Отримати інформацію про користувача"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.desc": {
+          "source": "Select the user whose information you want to retrieve.",
+          "message": "Виберіть користувача, інформацію про якого ви хочете отримати."
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Користувач"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.short_desc": {
+          "source": "The user to get information for",
+          "message": "Користувач, інформацію про якого потрібно отримати"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.short_desc": {
+          "source": "Get detailed information about a user",
+          "message": "Отримати детальну інформацію про користувача"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.",
+          "message": "Видалити конкретне повідомлення з каналу Slack. Щоб визначити, яке повідомлення видалити, вам потрібна часова мітка повідомлення."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "Видалити повідомлення"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message was posted.",
+          "message": "Виберіть канал, у якому було опубліковано повідомлення."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Канал, що містить повідомлення"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.",
+          "message": "Часова позначка (ts) повідомлення, яке ви хочете видалити. Ви також можете вставити посилання на повідомлення Slack."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to delete",
+          "message": "Часова позначка повідомлення для видалення"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from a channel",
+          "message": "Видалити повідомлення з каналу"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.desc": {
+          "source": "Look up a Slack user using their email address. Returns the user profile if found.",
+          "message": "Знайти користувача Slack за його електронною адресою. Повертає профіль користувача, якщо його знайдено."
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.display_name": {
+          "source": "Find User by Email",
+          "message": "Знайти користувача за електронною адресою"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.desc": {
+          "source": "The email address of the user you want to find.",
+          "message": "Адреса електронної пошти користувача, якого ви хочете знайти."
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Електронна пошта"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.short_desc": {
+          "source": "Email address to search for",
+          "message": "Адреса електронної пошти для пошуку"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.short_desc": {
+          "source": "Find a Slack user by their email address",
+          "message": "Знайти користувача Slack за його електронною адресою"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of users in your Slack workspace including their profile information.",
+          "message": "Отримати список користувачів у вашому робочому просторі Slack, включаючи інформацію з їхніх профілів."
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Список користувачів"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to retrieve. Default is 200.",
+          "message": "Максимальна кількість користувачів для отримання. За замовчуванням — 200."
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum users to return",
+          "message": "Максимальна кількість користувачів для повернення"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "List users in the workspace",
+          "message": "Отримати список користувачів у робочому просторі"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.desc": {
+          "source": "Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.",
+          "message": "Отримати список каналів у вашому робочому просторі Slack. Ви можете фільтрувати за типом каналу та обирати, чи включати архівовані канали."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.display_name": {
+          "source": "List Channels",
+          "message": "Отримати список каналів"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.desc": {
+          "source": "If enabled, archived channels are excluded from the results. Default is true.",
+          "message": "Якщо увімкнено, заархівовані канали виключаються з результатів. За замовчуванням — true."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.display_name": {
+          "source": "Exclude Archived",
+          "message": "Виключити заархівовані"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.short_desc": {
+          "source": "Exclude archived channels",
+          "message": "Виключити заархівовані канали"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of channels to retrieve. Default is 200.",
+          "message": "Максимальна кількість каналів для отримання. За замовчуванням — 200."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum channels to return",
+          "message": "Максимальна кількість каналів для повернення"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.desc": {
+          "source": "Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.",
+          "message": "Розділений комами список типів каналів. Варіанти: public_channel, private_channel, mpim, im. За замовчуванням — public_channel,private_channel."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.display_name": {
+          "source": "Channel Types",
+          "message": "Типи каналів"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.short_desc": {
+          "source": "Types of channels to include",
+          "message": "Типи каналів для включення"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.short_desc": {
+          "source": "List channels in the workspace",
+          "message": "Отримати список каналів у робочому просторі"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Slack** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Зробити власний виклик HTTP / REST API до **Slack**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як першокласні дії в цьому додатку."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Slack",
+          "message": "Зробити власний виклик API до Slack"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "This trigger fires whenever a new message is posted to the specified channel. Use this to react to incoming messages.",
+          "message": "Цей тригер спрацьовує щоразу, коли в зазначеному каналі публікується нове повідомлення. Використовуйте це для реакції на вхідні повідомлення."
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Нове повідомлення"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to monitor for new messages. Make sure the bot is a member of the channel.",
+          "message": "Виберіть канал для моніторингу нових повідомлень. Переконайтеся, що бот є учасником каналу."
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to monitor",
+          "message": "Канал для моніторингу"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is posted to a channel",
+          "message": "Спрацьовує, коли нове повідомлення публікується в каналі"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.desc": {
+          "source": "This trigger fires whenever a reaction is added to any message. You can filter by specific emojis or channels.",
+          "message": "Цей тригер спрацьовує щоразу, коли до будь-якого повідомлення додається реакція. Ви можете фільтрувати за конкретними емодзі чи каналами."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.display_name": {
+          "source": "New Reaction",
+          "message": "Нова реакція"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.desc": {
+          "source": "Optionally select a specific channel to monitor. Leave empty to monitor all channels.",
+          "message": "За бажанням виберіть конкретний канал для моніторингу. Залиште порожнім, щоб моніторити всі канали."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.short_desc": {
+          "source": "Filter by channel",
+          "message": "Фільтрувати за каналом"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.desc": {
+          "source": "Optionally specify emoji names to trigger on (e.g., \"fire\", \"thumbsup\"). Leave empty for all reactions.",
+          "message": "За бажанням вкажіть назви емодзі для спрацьовування (наприклад, \"fire\", \"thumbsup\"). Залиште порожнім для всіх реакцій."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.display_name": {
+          "source": "Emojis",
+          "message": "Емодзі"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.short_desc": {
+          "source": "Filter by specific emojis",
+          "message": "Фільтрувати за конкретними емодзі"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.short_desc": {
+          "source": "Triggers when a reaction is added to a message",
+          "message": "Спрацьовує, коли до повідомлення додається реакція"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.desc": {
+          "source": "Search for messages matching a query across your Slack workspace. Requires user token authentication.",
+          "message": "Пошук повідомлень, що відповідають запиту, у вашому робочому просторі Slack. Потребує автентифікації за токеном користувача."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.display_name": {
+          "source": "Search Messages",
+          "message": "Пошук повідомлень"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.desc": {
+          "source": "Number of results to return per page. Default is 100.",
+          "message": "Кількість результатів, що повертаються на сторінку. За замовчуванням — 100."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Кількість"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.short_desc": {
+          "source": "Results per page",
+          "message": "Результатів на сторінку"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.desc": {
+          "source": "Enter your search query. Supports Slack search operators like \"from:\", \"in:\", etc.",
+          "message": "Введіть ваш пошуковий запит. Підтримує оператори пошуку Slack, такі як \"from:\", \"in:\" тощо."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Пошуковий запит"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.short_desc": {
+          "source": "The search query",
+          "message": "Пошуковий запит"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.short_desc": {
+          "source": "Search for messages in the workspace",
+          "message": "Пошук повідомлень у робочому просторі"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.desc": {
+          "source": "Send a private message directly to a user in your Slack workspace.",
+          "message": "Надіслати приватне повідомлення безпосередньо користувачеві у вашому робочому просторі Slack."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.display_name": {
+          "source": "Send Direct Message",
+          "message": "Надіслати особисте повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.desc": {
+          "source": "Add Block Kit blocks for rich, interactive content.",
+          "message": "Додайте блоки Block Kit для інтерактивного вмісту з розширеним форматуванням."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Блоки"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.short_desc": {
+          "source": "Block Kit blocks for rich content",
+          "message": "Блоки Block Kit для форматованого вмісту"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon with a custom image URL.",
+          "message": "Замінити стандартну піктограму бота на власну за URL-адресою зображення."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL-адреса піктограми"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.short_desc": {
+          "source": "Custom icon URL for the bot",
+          "message": "Спеціальна URL-адреса піктограми для бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.desc": {
+          "source": "The main text content of your direct message.",
+          "message": "Основний текстовий вміст вашого прямого повідомлення."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Текст повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.short_desc": {
+          "source": "The text content of the message",
+          "message": "Текстовий вміст повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.desc": {
+          "source": "Select the user who should receive the direct message.",
+          "message": "Виберіть користувача, який має отримати пряме повідомлення."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Користувач"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.short_desc": {
+          "source": "The user to send the message to",
+          "message": "Користувач, якому потрібно надіслати повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username for this message.",
+          "message": "Перевизначити ім'я користувача бота за замовчуванням для цього повідомлення."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Ім'я користувача бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom username for the bot",
+          "message": "Спеціальне ім'я користувача для бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.short_desc": {
+          "source": "Send a direct message to a user",
+          "message": "Надіслати особисте повідомлення користувачеві"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Post a message to a specific channel in your Slack workspace. Supports text, attachments, and Block Kit blocks for rich formatting.",
+          "message": "Опублікувати повідомлення в конкретному каналі у вашому робочому просторі Slack. Підтримує текст, вкладення та блоки Block Kit для розширеного форматування."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message to Channel",
+          "message": "Надіслати повідомлення в канал"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where you want to post the message. Make sure the bot is a member of the channel.",
+          "message": "Виберіть канал, у якому ви хочете опублікувати повідомлення. Переконайтеся, що бот є учасником каналу."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to send the message to",
+          "message": "Канал, у який потрібно надіслати повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.desc": {
+          "source": "Add Block Kit blocks for rich, interactive content. See https://api.slack.com/block-kit for specs.",
+          "message": "Додайте блоки Block Kit для інтерактивного та насиченого вмісту. Специфікації див. за посиланням https://api.slack.com/block-kit."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Блоки"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.short_desc": {
+          "source": "Block Kit blocks for rich content",
+          "message": "Блоки Block Kit для форматованого вмісту"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon with a custom image URL.",
+          "message": "Замінити стандартну піктограму бота на власну за URL-адресою зображення."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL-адреса піктограми"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.short_desc": {
+          "source": "Custom icon URL for the bot",
+          "message": "Спеціальна URL-адреса піктограми для бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The main text content of your message. Supports Slack markdown formatting.",
+          "message": "Основний текстовий вміст вашого повідомлення. Підтримує форматування markdown Slack."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Текст повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The text content of the message",
+          "message": "Текстовий вміст повідомлення"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.desc": {
+          "source": "Provide the timestamp of a parent message to post this message as a reply in a thread.",
+          "message": "Укажіть часову позначку батьківського повідомлення, щоб опублікувати це повідомлення як відповідь у гілці."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.display_name": {
+          "source": "Thread Timestamp",
+          "message": "Часова позначка гілки"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.short_desc": {
+          "source": "Reply to a thread",
+          "message": "Відповісти в гілці"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username for this message.",
+          "message": "Перевизначити ім'я користувача бота за замовчуванням для цього повідомлення."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Ім'я користувача бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom username for the bot",
+          "message": "Спеціальне ім'я користувача для бота"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a message to a Slack channel",
+          "message": "Надіслати повідомлення в канал Slack"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.desc": {
+          "source": "Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.",
+          "message": "Закріпити конкретне повідомлення в каналі, щоб воно відображалося в деталях каналу. Закріплені повідомлення легкодоступні для всіх учасників каналу."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.display_name": {
+          "source": "Pin Message",
+          "message": "Закріпити повідомлення"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message is located.",
+          "message": "Виберіть канал, у якому розташоване повідомлення."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Канал, що містить повідомлення"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.",
+          "message": "Часова позначка (ts) повідомлення, яке ви хочете закріпити. Ви також можете вставити посилання на повідомлення Slack."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to pin",
+          "message": "Часова мітка повідомлення, яке потрібно закріпити"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.short_desc": {
+          "source": "Pin a message to a channel",
+          "message": "Закріпити повідомлення в каналі"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.desc": {
+          "source": "Send a direct message to a user with interactive action buttons that link to URLs.",
+          "message": "Надіслати особисте повідомлення користувачеві з інтерактивними кнопками дій, які посилаються на URL-адреси."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.display_name": {
+          "source": "Send Action Message to User",
+          "message": "Надіслати повідомлення з дією користувачеві"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.desc": {
+          "source": "Define the action buttons with titles and URLs.",
+          "message": "Визначте кнопки дій із заголовками та URL-адресами."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.display_name": {
+          "source": "Action Buttons",
+          "message": "Кнопки дій"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.short_desc": {
+          "source": "Buttons to display",
+          "message": "Кнопки для відображення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon.",
+          "message": "Перевизначити піктограму бота за замовчуванням."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL-адреса піктограми"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.short_desc": {
+          "source": "Custom bot icon",
+          "message": "Власна піктограма бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.desc": {
+          "source": "The text content displayed above the action buttons.",
+          "message": "Текстовий вміст, який відображається над кнопками дій."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Текст повідомлення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.short_desc": {
+          "source": "The message content",
+          "message": "Вміст повідомлення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.desc": {
+          "source": "Select the user to receive the action message.",
+          "message": "Виберіть користувача, який має отримати повідомлення з дією."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Користувач"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.short_desc": {
+          "source": "The user to message",
+          "message": "Користувач для надсилання повідомлення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username.",
+          "message": "Перевизначити ім'я користувача бота за замовчуванням."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Ім'я користувача бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom bot name",
+          "message": "Власне ім'я бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.short_desc": {
+          "source": "Send a direct message with action buttons",
+          "message": "Надіслати особисте повідомлення з кнопками дій"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.desc": {
+          "source": "Send a message to a channel with interactive action buttons that link to URLs.",
+          "message": "Надіслати повідомлення в канал з інтерактивними кнопками дій, які посилаються на URL-адреси."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.display_name": {
+          "source": "Send Action Message to Channel",
+          "message": "Надіслати повідомлення з дією в канал"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the action message should be posted.",
+          "message": "Виберіть канал, у якому слід опублікувати повідомлення з дією."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to send to",
+          "message": "Канал для надсилання"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.desc": {
+          "source": "Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.",
+          "message": "Визначте кнопки дій із заголовками та URL-адресами. Кожна кнопка посилається на певну URL-адресу при натисканні."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.display_name": {
+          "source": "Action Buttons",
+          "message": "Кнопки дій"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.short_desc": {
+          "source": "Buttons to display",
+          "message": "Кнопки для відображення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon.",
+          "message": "Перевизначити піктограму бота за замовчуванням."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL-адреса піктограми"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.short_desc": {
+          "source": "Custom bot icon",
+          "message": "Власна піктограма бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.desc": {
+          "source": "The text content displayed above the action buttons.",
+          "message": "Текстовий вміст, який відображається над кнопками дій."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Текст повідомлення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.short_desc": {
+          "source": "The message content",
+          "message": "Вміст повідомлення"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username.",
+          "message": "Перевизначити ім'я користувача бота за замовчуванням."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Ім'я користувача бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom bot name",
+          "message": "Власне ім'я бота"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a message with action buttons",
+          "message": "Надіслати повідомлення з кнопками дій"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.desc": {
+          "source": "Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.",
+          "message": "Відновити заархівований канал, щоб він знову став активним. Учасники зможуть публікувати повідомлення після розархівації каналу."
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.display_name": {
+          "source": "Unarchive Channel",
+          "message": "Розархівувати канал"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.desc": {
+          "source": "Select the archived channel you want to unarchive.",
+          "message": "Виберіть архівний канал, який ви хочете розархівувати."
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.short_desc": {
+          "source": "The archived channel to restore",
+          "message": "Архівний канал для відновлення"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.short_desc": {
+          "source": "Unarchive a Slack channel",
+          "message": "Розархівувати канал Slack"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.desc": {
+          "source": "Remove a pin from a specific message in a channel. The message itself is not deleted.",
+          "message": "Відкріпити конкретне повідомлення в каналі. Саме повідомлення не видаляється."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.display_name": {
+          "source": "Unpin Message",
+          "message": "Відкріпити повідомлення"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the pinned message is located.",
+          "message": "Виберіть канал, у якому розташоване закріплене повідомлення."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Канал, що містить повідомлення"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.",
+          "message": "Часова мітка (ts) повідомлення, яке ви хочете відкріпити. Ви також можете вставити посилання на повідомлення Slack."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to unpin",
+          "message": "Часова мітка повідомлення для відкріплення"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.short_desc": {
+          "source": "Unpin a message from a channel",
+          "message": "Відкріпити повідомлення з каналу"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.desc": {
+          "source": "Update the content of an existing message in a channel. You need the message timestamp to identify which message to update.",
+          "message": "Оновити вміст існуючого повідомлення в каналі. Вам потрібна часова мітка повідомлення, щоб ідентифікувати, яке повідомлення оновити."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.display_name": {
+          "source": "Update Message",
+          "message": "Оновити повідомлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message was posted.",
+          "message": "Виберіть канал, у якому було опубліковано повідомлення."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Канал, що містить повідомлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.desc": {
+          "source": "New Block Kit blocks for the message.",
+          "message": "Нові блоки Block Kit для повідомлення."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Блоки"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.short_desc": {
+          "source": "Updated Block Kit blocks",
+          "message": "Оновлені блоки Block Kit"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.desc": {
+          "source": "The new text content for the message.",
+          "message": "Новий текстовий вміст для повідомлення."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "Новий текст"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.short_desc": {
+          "source": "The updated message text",
+          "message": "Оновлений текст повідомлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to update. You can also paste a Slack message link.",
+          "message": "Часова мітка (ts) повідомлення, яке ви хочете оновити. Ви також можете вставити посилання на повідомлення Slack."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Мітка часу повідомлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to update",
+          "message": "Часова мітка повідомлення для оновлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Update an existing message",
+          "message": "Оновити існуюче повідомлення"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.desc": {
+          "source": "Update basic profile fields such as name or title. Requires user token authentication.",
+          "message": "Оновити базові поля профілю, такі як ім'я або посада. Потребує автентифікації за токеном користувача."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.display_name": {
+          "source": "Update Profile",
+          "message": "Оновити профіль"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.desc": {
+          "source": "The email address to set. Changing email will send notifications to both old and new addresses.",
+          "message": "Адреса електронної пошти для встановлення. Зміна електронної пошти надішле сповіщення як на стару, так і на нову адресу."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "Електронна пошта"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.short_desc": {
+          "source": "User email address",
+          "message": "Адреса електронної пошти користувача"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name to set in the profile.",
+          "message": "Ім'я для встановлення у профілі."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Ім'я"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "User first name",
+          "message": "Ім'я користувача"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.desc": {
+          "source": "The last name to set in the profile.",
+          "message": "Прізвище для встановлення у профілі."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Прізвище"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.short_desc": {
+          "source": "User last name",
+          "message": "Прізвище користувача"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.desc": {
+          "source": "ID of user to update. Only admins on paid teams can update other users.",
+          "message": "ID користувача для оновлення. Лише адміністратори платних команд можуть оновлювати інших користувачів."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.display_name": {
+          "source": "User ID",
+          "message": "ID користувача"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.short_desc": {
+          "source": "Target user (admin only)",
+          "message": "Цільовий користувач (лише для адміністраторів)"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.short_desc": {
+          "source": "Update user profile information",
+          "message": "Оновити інформацію профілю користувача"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Upload a file to a Slack channel. Supports various file types and optional initial comment.",
+          "message": "Завантажити файл у канал Slack. Підтримує різні типи файлів та необов'язковий початковий коментар."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Завантажити файл"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.desc": {
+          "source": "An optional comment to include when sharing the file.",
+          "message": "Необов'язковий коментар при поширенні файлу."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.display_name": {
+          "source": "Initial Comment",
+          "message": "Початковий коментар"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.short_desc": {
+          "source": "Comment with the file",
+          "message": "Коментар до файлу"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the file should be uploaded.",
+          "message": "Оберіть канал, куди слід завантажити файл."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Канал"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.short_desc": {
+          "source": "Channel to upload to",
+          "message": "Канал для завантаження"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "The file to upload to the Slack channel.",
+          "message": "Файл для завантаження в канал Slack."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Файл"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Файл для завантаження"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.desc": {
+          "source": "The filename to use when uploading.",
+          "message": "Назва файлу для використання під час завантаження."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Назва файлу"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name for the file",
+          "message": "Ім'я для файлу"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Slack",
+          "message": "Завантажити файл у Slack"
+        },
+        "app.U2xhY2s.desc": {
+          "source": "Integrate with Slack to automate team communication and collaboration. Slack is a channel-based messaging platform that brings teams together. This integration enables you to send messages to channels and users, create channels, manage reactions, upload files, search messages, and monitor for new messages and events.",
+          "message": "Інтегруйтеся з Slack, щоб автоматизувати командну комунікацію та співпрацю. Slack — це платформа обміну повідомленнями на основі каналів, яка об'єднує команди. Ця інтеграція дозволяє надсилати повідомлення в канали та користувачам, створювати канали, керувати реакціями, завантажувати файли, шукати повідомлення та відстежувати нові повідомлення й події."
+        },
+        "app.U2xhY2s.display_name": {
+          "source": "Slack",
+          "message": "Slack"
+        },
+        "app.U2xhY2s.short_desc": {
+          "source": "Connect with Slack to send messages, manage channels, and automate team communication",
+          "message": "Підключіться до Slack, щоб надсилати повідомлення, керувати каналами та автоматизувати командну комунікацію"
+        }
+      }
+    }
+  }
+}

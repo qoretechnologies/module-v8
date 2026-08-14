@@ -1,0 +1,2265 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.desc": {
+          "source": "This trigger fires when a contact subscribes or is added to a specific list in ActiveCampaign",
+          "message": "Questo trigger si attiva quando un contatto si iscrive o viene aggiunto a un elenco specifico in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.display_name": {
+          "source": "Contact Added to List",
+          "message": "Contatto aggiunto all'elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.desc": {
+          "source": "Select the specific list that you want to monitor for new contact additions",
+          "message": "Seleziona l'elenco specifico che desideri monitorare per le nuove aggiunte di contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new contacts",
+          "message": "L'elenco da monitorare per i nuovi contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y29udGFjdF9hZGRlZF90b19saXN0.short_desc": {
+          "source": "Triggers when a contact is added to a list",
+          "message": "Si attiva quando un contatto viene aggiunto a un elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"ActiveCampaign\"",
+          "message": "Crea nuovi record nella tabella data nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Crea record"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"ActiveCampaign\"",
+          "message": "Crea nuovi record nella tabella data nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.desc": {
+          "source": "Create a new account (company/organization) in ActiveCampaign",
+          "message": "Crea un nuovo account (azienda/organizzazione) in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.display_name": {
+          "source": "Create Account",
+          "message": "Crea account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.desc": {
+          "source": "Optional website URL or domain for the account",
+          "message": "URL del sito web o dominio opzionale per l'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.display_name": {
+          "source": "Account URL",
+          "message": "URL account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.short_desc": {
+          "source": "The website URL of the account",
+          "message": "L'URL del sito web dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.desc": {
+          "source": "Set values for any custom fields configured for accounts",
+          "message": "Imposta i valori per eventuali campi personalizzati configurati per gli account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
+          "source": "Custom Fields",
+          "message": "Campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
+          "source": "Custom field values for the account",
+          "message": "Valori dei campi personalizzati per l'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this account",
+          "message": "Seleziona l'utente che sarà responsabile della gestione di questo account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
+          "source": "Account Owner",
+          "message": "Proprietario dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
+          "source": "The user who will own this account",
+          "message": "L'utente che possiederà questo account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The name of the company or organization account",
+          "message": "Il nome dell'account aziendale o dell'organizzazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Account Name",
+          "message": "Nome account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The name of the account",
+          "message": "Il nome dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2FjY291bnQ.short_desc": {
+          "source": "Create a new account",
+          "message": "Crea un nuovo account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in ActiveCampaign with basic information and custom field values",
+          "message": "Crea un nuovo contatto in ActiveCampaign con informazioni di base e valori di campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "Crea contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The primary email address for the contact (required)",
+          "message": "L'indirizzo email principale del contatto (obbligatorio)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Indirizzo email"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "L'indirizzo email del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.desc": {
+          "source": "Set values for any custom fields configured for contacts",
+          "message": "Imposta i valori per eventuali campi personalizzati configurati per i contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
+          "source": "Custom Field Values",
+          "message": "Valori dei campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
+          "source": "Values for custom fields",
+          "message": "Valori per i campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name of the contact",
+          "message": "Il nome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Nome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The contact's first name",
+          "message": "Il nome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.desc": {
+          "source": "The last name of the contact",
+          "message": "Il cognome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Cognome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
+          "source": "The contact's last name",
+          "message": "Il cognome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The phone number for the contact",
+          "message": "Il numero di telefono del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "Numero di telefono"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The contact's phone number",
+          "message": "Il numero di telefono del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "Crea un nuovo contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.desc": {
+          "source": "Create a new sales deal in ActiveCampaign with all relevant details",
+          "message": "Crea una nuova trattativa di vendita in ActiveCampaign con tutti i dettagli rilevanti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.display_name": {
+          "source": "Create Deal",
+          "message": "Crea trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.desc": {
+          "source": "Select the main contact person for this deal",
+          "message": "Seleziona la persona di contatto principale per questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y29udGFjdA.short_desc": {
+          "source": "The primary contact for this deal",
+          "message": "Il contatto principale per questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmF1ZA.display_name": {
+          "source": "AUD",
+          "message": "AUD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNhZA.display_name": {
+          "source": "CAD",
+          "message": "CAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNueQ.display_name": {
+          "source": "CNY",
+          "message": "CNY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmV1cg.display_name": {
+          "source": "EUR",
+          "message": "EUR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmdicA.display_name": {
+          "source": "GBP",
+          "message": "GBP"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmlucg.display_name": {
+          "source": "INR",
+          "message": "INR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmpweQ.display_name": {
+          "source": "JPY",
+          "message": "JPY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOnVzZA.display_name": {
+          "source": "USD",
+          "message": "USD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.desc": {
+          "source": "Select the currency that the deal value is denominated in",
+          "message": "Seleziona la valuta in cui è espresso il valore della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "Valuta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Y3VycmVuY3k.short_desc": {
+          "source": "The currency for the deal value",
+          "message": "La valuta per il valore della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.desc": {
+          "source": "Select the account/company that this deal is associated with",
+          "message": "Seleziona l'account/azienda a cui è associata questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "Account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.YWNjb3VudA.short_desc": {
+          "source": "The account associated with this deal",
+          "message": "L'account associato a questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.desc": {
+          "source": "Select the pipeline group that this deal belongs to",
+          "message": "Seleziona il gruppo di pipeline a cui appartiene questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.display_name": {
+          "source": "Pipeline Group",
+          "message": "Gruppo pipeline"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
+          "source": "The pipeline group for the deal",
+          "message": "Il gruppo di pipeline per la trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "Optional description or additional details about the deal",
+          "message": "Descrizione opzionale o dettagli aggiuntivi sulla trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Deal Description",
+          "message": "Descrizione trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Additional description or notes",
+          "message": "Descrizione aggiuntiva o note"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this deal",
+          "message": "Seleziona l'utente che sarà responsabile della gestione di questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.display_name": {
+          "source": "Deal Owner",
+          "message": "Proprietario trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.b3duZXI.short_desc": {
+          "source": "The user responsible for this deal",
+          "message": "L'utente responsabile di questa trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.desc": {
+          "source": "Select the pipeline stage that represents the current status of the deal",
+          "message": "Seleziona la fase della pipeline che rappresenta lo stato attuale della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.display_name": {
+          "source": "Deal Stage",
+          "message": "Fase trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
+          "source": "The current stage of the deal",
+          "message": "La fase attuale della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Open",
+          "message": "Aperto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Won",
+          "message": "Vinto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Lost",
+          "message": "Perso"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.desc": {
+          "source": "Select whether the deal is open, won, or lost",
+          "message": "Seleziona se la trattativa è aperta, vinta o persa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.display_name": {
+          "source": "Deal Status",
+          "message": "Stato trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
+          "source": "The current status of the deal",
+          "message": "Lo stato attuale della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.desc": {
+          "source": "A percentage value representing how close the deal is to completion",
+          "message": "Un valore percentuale che rappresenta quanto la trattativa sia vicina al completamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
+          "source": "Completion Percentage",
+          "message": "Percentuale di completamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
+          "source": "The percentage completion of the deal",
+          "message": "La percentuale di completamento della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the deal",
+          "message": "Un titolo descrittivo per la trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.display_name": {
+          "source": "Deal Title",
+          "message": "Titolo trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dGl0bGU.short_desc": {
+          "source": "The title of the deal",
+          "message": "Il titolo della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.desc": {
+          "source": "The total value or amount of the deal",
+          "message": "Il valore totale o importo della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.display_name": {
+          "source": "Deal Value",
+          "message": "Valore trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.option.dmFsdWU.short_desc": {
+          "source": "The monetary value of the deal",
+          "message": "Il valore monetario della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Y3JlYXRlX2RlYWw.short_desc": {
+          "source": "Create a new deal",
+          "message": "Crea una nuova trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "Add a new note to a specific contact in ActiveCampaign",
+          "message": "Aggiungi una nuova nota a un contatto specifico in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "Add Contact Note",
+          "message": "Aggiungi nota contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add the note to",
+          "message": "Seleziona il contatto a cui desideri aggiungere la nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add the note to",
+          "message": "Il contatto a cui aggiungere la nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.desc": {
+          "source": "The text content of the note that will be added to the contact",
+          "message": "Il contenuto del testo della nota che verrà aggiunta al contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.option.bm90ZQ.short_desc": {
+          "source": "The note content to add",
+          "message": "Il contenuto della nota da aggiungere"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Add a note to a contact",
+          "message": "Aggiungi una nota a un contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.desc": {
+          "source": "Create an association between a contact and an account in ActiveCampaign",
+          "message": "Crea un'associazione tra un contatto e un account in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.display_name": {
+          "source": "Add Contact to Account",
+          "message": "Aggiungi contatto ad account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to associate with the account",
+          "message": "Seleziona il contatto che desideri associare all'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to associate with the account",
+          "message": "Il contatto da associare all'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.desc": {
+          "source": "Select the account that you want to associate the contact with",
+          "message": "Seleziona l'account a cui desideri associare il contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "Account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.YWNjb3VudA.short_desc": {
+          "source": "The account to associate the contact with",
+          "message": "L'account a cui associare il contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.desc": {
+          "source": "Optional job title or role of the contact within the account",
+          "message": "Qualifica professionale o ruolo opzionale del contatto all'interno dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.display_name": {
+          "source": "Job Title",
+          "message": "Qualifica professionale"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.option.am9iVGl0bGU.short_desc": {
+          "source": "The contact's job title at this account",
+          "message": "La qualifica professionale del contatto presso questo account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2NvbnRhY3RfdG9fYWNjb3VudA.short_desc": {
+          "source": "Associate a contact with an account",
+          "message": "Associa un contatto a un account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.desc": {
+          "source": "Add a new note to a specific deal in ActiveCampaign",
+          "message": "Aggiungi una nuova nota a una trattativa specifica in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.display_name": {
+          "source": "Add Deal Note",
+          "message": "Aggiungi nota trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.desc": {
+          "source": "Select the deal that you want to add the note to",
+          "message": "Seleziona la trattativa a cui desideri aggiungere la nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.display_name": {
+          "source": "Deal",
+          "message": "Trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.ZGVhbA.short_desc": {
+          "source": "The deal to add the note to",
+          "message": "La trattativa a cui aggiungere la nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.desc": {
+          "source": "The text content of the note that will be added to the deal",
+          "message": "Il contenuto del testo della nota che verrà aggiunta alla trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.display_name": {
+          "source": "Note",
+          "message": "Nota"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.option.bm90ZQ.short_desc": {
+          "source": "The note content to add",
+          "message": "Il contenuto della nota da aggiungere"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX2RlYWxfbm90ZQ.short_desc": {
+          "source": "Add a note to a deal",
+          "message": "Aggiungi una nota a una trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.desc": {
+          "source": "Apply a tag to a specific contact in ActiveCampaign for organization and segmentation",
+          "message": "Applica un tag a un contatto specifico in ActiveCampaign per organizzazione e segmentazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.display_name": {
+          "source": "Add Tag to Contact",
+          "message": "Aggiungi tag al contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to add the tag to",
+          "message": "Seleziona il contatto a cui desideri aggiungere il tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to add the tag to",
+          "message": "Il contatto a cui aggiungere il tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.desc": {
+          "source": "Select the tag that you want to apply to the contact",
+          "message": "Seleziona il tag che desideri applicare al contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "Tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.option.dGFn.short_desc": {
+          "source": "The tag to add to the contact",
+          "message": "Il tag da aggiungere al contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.YWRkX3RhZ190b19jb250YWN0.short_desc": {
+          "source": "Add a tag to a contact",
+          "message": "Aggiungi un tag a un contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Retrieve detailed information about a specific account in ActiveCampaign",
+          "message": "Recupera informazioni dettagliate su un account specifico in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "Ottieni account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.desc": {
+          "source": "Select the account that you want to get detailed information for",
+          "message": "Seleziona l'account per cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.display_name": {
+          "source": "Account ID",
+          "message": "ID account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.option.aWQ.short_desc": {
+          "source": "The ID of the account to retrieve",
+          "message": "L'ID dell'account da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve account details",
+          "message": "Recupera dettagli account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Retrieve detailed information about a specific campaign in ActiveCampaign",
+          "message": "Recupera informazioni dettagliate su una campagna specifica in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "Ottieni campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.desc": {
+          "source": "Select the campaign that you want to get detailed information for",
+          "message": "Seleziona la campagna di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.display_name": {
+          "source": "Campaign ID",
+          "message": "ID campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.option.aWQ.short_desc": {
+          "source": "The ID of the campaign to retrieve",
+          "message": "L'ID della campagna da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Retrieve campaign details",
+          "message": "Recupera i dettagli della campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.desc": {
+          "source": "Retrieve detailed information about a specific contact in ActiveCampaign including custom fields, automations, and related data",
+          "message": "Recupera informazioni dettagliate su un contatto specifico in ActiveCampaign, inclusi campi personalizzati, automazioni e dati correlati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.display_name": {
+          "source": "Get Contact",
+          "message": "Ottieni contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.desc": {
+          "source": "Select the contact that you want to get detailed information for",
+          "message": "Seleziona il contatto di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.display_name": {
+          "source": "Contact ID",
+          "message": "ID contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.option.aWQ.short_desc": {
+          "source": "The ID of the contact to retrieve",
+          "message": "L'ID del contatto da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2NvbnRhY3Q.short_desc": {
+          "source": "Retrieve contact details",
+          "message": "Recupera i dettagli del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.desc": {
+          "source": "Retrieve detailed information about a specific deal in ActiveCampaign",
+          "message": "Recupera informazioni dettagliate su una trattativa specifica in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.display_name": {
+          "source": "Get Deal",
+          "message": "Ottieni trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.desc": {
+          "source": "Select the deal that you want to get detailed information for",
+          "message": "Seleziona la trattativa di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.display_name": {
+          "source": "Deal ID",
+          "message": "ID trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.option.aWQ.short_desc": {
+          "source": "The ID of the deal to retrieve",
+          "message": "L'ID della trattativa da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2RlYWw.short_desc": {
+          "source": "Retrieve deal details",
+          "message": "Recupera i dettagli della trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.desc": {
+          "source": "Retrieve detailed information about a specific form in ActiveCampaign including styling and field configuration",
+          "message": "Recupera informazioni dettagliate su un modulo specifico in ActiveCampaign, inclusi stile e configurazione dei campi"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.display_name": {
+          "source": "Get Form",
+          "message": "Ottieni modulo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.desc": {
+          "source": "Select the form that you want to get detailed information for",
+          "message": "Seleziona il modulo di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.display_name": {
+          "source": "Form ID",
+          "message": "ID modulo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.option.aWQ.short_desc": {
+          "source": "The ID of the form to retrieve",
+          "message": "L'ID del modulo da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2Zvcm0.short_desc": {
+          "source": "Retrieve form details",
+          "message": "Recupera i dettagli del modulo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.desc": {
+          "source": "Retrieve detailed information about a specific list in ActiveCampaign including settings and configuration",
+          "message": "Recupera informazioni dettagliate su un elenco specifico in ActiveCampaign, incluse impostazioni e configurazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.display_name": {
+          "source": "Get List",
+          "message": "Ottieni elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.desc": {
+          "source": "Select the list that you want to get detailed information for",
+          "message": "Seleziona l'elenco di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.display_name": {
+          "source": "List ID",
+          "message": "ID elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.option.aWQ.short_desc": {
+          "source": "The ID of the list to retrieve",
+          "message": "L'ID dell'elenco da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X2xpc3Q.short_desc": {
+          "source": "Retrieve list details",
+          "message": "Recupera i dettagli dell'elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.desc": {
+          "source": "Retrieve detailed information about a specific deal task in ActiveCampaign",
+          "message": "Recupera informazioni dettagliate su un'attività della trattativa specifica in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.display_name": {
+          "source": "Get Task",
+          "message": "Ottieni attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.desc": {
+          "source": "Select the task that you want to get detailed information for",
+          "message": "Seleziona l'attività di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.display_name": {
+          "source": "Task ID",
+          "message": "ID attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.option.aWQ.short_desc": {
+          "source": "The ID of the task to retrieve",
+          "message": "L'ID dell'attività da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3Rhc2s.short_desc": {
+          "source": "Retrieve task details",
+          "message": "Recupera i dettagli dell'attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.desc": {
+          "source": "Retrieve detailed information about a specific user in ActiveCampaign",
+          "message": "Recupera informazioni dettagliate su un utente specifico in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.display_name": {
+          "source": "Get User",
+          "message": "Ottieni utente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.desc": {
+          "source": "Select the user that you want to get detailed information for",
+          "message": "Seleziona l'utente di cui desideri ottenere informazioni dettagliate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.display_name": {
+          "source": "User ID",
+          "message": "ID utente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.option.aWQ.short_desc": {
+          "source": "The ID of the user to retrieve",
+          "message": "L'ID dell'utente da recuperare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.Z2V0X3VzZXI.short_desc": {
+          "source": "Retrieve user details",
+          "message": "Recupera i dettagli dell'utente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.desc": {
+          "source": "This trigger fires when a note is added to a deal for contacts in a specific list",
+          "message": "Questo trigger si attiva quando viene aggiunta una nota a una trattativa per i contatti in un elenco specifico"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.display_name": {
+          "source": "Deal Note Added",
+          "message": "Nota trattativa aggiunta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when notes are added to deals",
+          "message": "Seleziona l'elenco specifico da monitorare per l'aggiunta di note alle trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for deal note additions",
+          "message": "L'elenco da monitorare per l'aggiunta di note alle trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVhbF9ub3RlX2FkZGVk.short_desc": {
+          "source": "Triggers when a note is added to a deal",
+          "message": "Si attiva quando viene aggiunta una nota a una trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"ActiveCampaign\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Elimina record"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"ActiveCampaign\"",
+          "message": "Elimina i record dalla tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.desc": {
+          "source": "Retrieve a paginated list of tags in ActiveCampaign with optional search functionality",
+          "message": "Recupera un elenco impaginato di tag in ActiveCampaign con funzionalità di ricerca opzionale"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.display_name": {
+          "source": "List Tags",
+          "message": "Elenca tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.desc": {
+          "source": "The number of tags to skip for pagination",
+          "message": "Il numero di tag da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tags to skip",
+          "message": "Numero di tag da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.desc": {
+          "source": "The maximum number of tags to return per page (default: 20)",
+          "message": "Il numero massimo di tag da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tags to return",
+          "message": "Numero massimo di tag da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.desc": {
+          "source": "Search for tags by name or description",
+          "message": "Cerca i tag per nome o descrizione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Cerca"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter tags",
+          "message": "Termine di ricerca per filtrare i tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YWdz.short_desc": {
+          "source": "Retrieve a list of tags",
+          "message": "Recupera un elenco di tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.desc": {
+          "source": "Retrieve a paginated list of deal tasks in ActiveCampaign with filtering options",
+          "message": "Recupera un elenco impaginato di attività della trattativa in ActiveCampaign con opzioni di filtraggio"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.display_name": {
+          "source": "List Tasks",
+          "message": "Elenca attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.desc": {
+          "source": "Filter tasks by the user they are assigned to",
+          "message": "Filtra le attività in base all'utente a cui sono assegnate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "Assegnatario"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.YXNzaWduZWU.short_desc": {
+          "source": "Filter by task assignee",
+          "message": "Filtra per assegnatario dell'attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.desc": {
+          "source": "The number of tasks to skip for pagination",
+          "message": "Il numero di attività da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of tasks to skip",
+          "message": "Numero di attività da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of tasks to return per page (default: 20)",
+          "message": "Il numero massimo di attività da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of tasks to return",
+          "message": "Numero massimo di attività da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.desc": {
+          "source": "Filter tasks by their title",
+          "message": "Filtra le attività in base al titolo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dGl0bGU.short_desc": {
+          "source": "Filter by task title",
+          "message": "Filtra per titolo dell'attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.desc": {
+          "source": "Filter tasks by the user who created them",
+          "message": "Filtra le attività in base all'utente che le ha create"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.display_name": {
+          "source": "User ID",
+          "message": "ID utente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.option.dXNlcmlk.short_desc": {
+          "source": "Filter by task creator",
+          "message": "Filtra per creatore dell'attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF90YXNrcw.short_desc": {
+          "source": "Retrieve a list of tasks",
+          "message": "Recupera un elenco di attività"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a paginated list of users in ActiveCampaign",
+          "message": "Recupera un elenco impaginato di utenti in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Elenca utenti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.desc": {
+          "source": "The number of users to skip for pagination",
+          "message": "Il numero di utenti da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of users to skip",
+          "message": "Numero di utenti da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to return per page (default: 20)",
+          "message": "Il numero massimo di utenti da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of users to return",
+          "message": "Numero massimo di utenti da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "Retrieve a list of users",
+          "message": "Recupera un elenco di utenti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Retrieve a paginated list of accounts in ActiveCampaign with optional search and filtering",
+          "message": "Recupera un elenco impaginato di account in ActiveCampaign con ricerca e filtraggio opzionali"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "Elenca account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.desc": {
+          "source": "Whether to include the number of deals associated with each account in the response",
+          "message": "Indica se includere nella risposta il numero di trattative associate a ciascun account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.display_name": {
+          "source": "Count Deals",
+          "message": "Conta trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.Y291bnRfZGVhbHM.short_desc": {
+          "source": "Include deal count for each account",
+          "message": "Include il conteggio delle trattative per ciascun account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.desc": {
+          "source": "The number of accounts to skip for pagination",
+          "message": "Il numero di account da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of accounts to skip",
+          "message": "Numero di account da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of accounts to return per page (default: 20)",
+          "message": "Il numero massimo di account da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to return",
+          "message": "Numero massimo di account da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.desc": {
+          "source": "Search for accounts by name or other searchable fields",
+          "message": "Cerca account per nome o altri campi cercabili"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Cerca"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.option.c2VhcmNo.short_desc": {
+          "source": "Search term to filter accounts",
+          "message": "Termine di ricerca per filtrare gli account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts",
+          "message": "Recupera un elenco di account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Retrieve a paginated list of campaigns in ActiveCampaign",
+          "message": "Recupera un elenco impaginato di campagne in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "Elenca campagne"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.desc": {
+          "source": "The number of campaigns to skip for pagination",
+          "message": "Il numero di campagne da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of campaigns to skip",
+          "message": "Numero di campagne da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of campaigns to return per page (default: 20)",
+          "message": "Il numero massimo di campagne da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "Numero massimo di campagne da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "Retrieve a list of campaigns",
+          "message": "Recupera un elenco di campagne"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a paginated list of contacts in ActiveCampaign with extensive filtering and sorting options",
+          "message": "Recupera un elenco impaginato di contatti in ActiveCampaign con ampie opzioni di filtraggio e ordinamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "Elenca contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.desc": {
+          "source": "Filter contacts by exact email address match",
+          "message": "Filtra i contatti per corrispondenza esatta dell'indirizzo e-mail"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWw.short_desc": {
+          "source": "Exact email address to search for",
+          "message": "Indirizzo e-mail esatto da cercare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.desc": {
+          "source": "Filter contacts by partial email address match",
+          "message": "Filtra i contatti per corrispondenza parziale dell'indirizzo e-mail"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.display_name": {
+          "source": "Email Like",
+          "message": "E-mail simile"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.ZW1haWxfbGlrZQ.short_desc": {
+          "source": "Partial email address to search for",
+          "message": "Indirizzo e-mail parziale da cercare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.desc": {
+          "source": "Filter contacts who subscribed through a specific form",
+          "message": "Filtra i contatti che si sono iscritti tramite un modulo specifico"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.display_name": {
+          "source": "Form ID",
+          "message": "ID modulo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.Zm9ybWlk.short_desc": {
+          "source": "Filter by form subscription",
+          "message": "Filtra per iscrizione tramite modulo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of contacts to skip for pagination",
+          "message": "Il numero di contatti da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of contacts to skip",
+          "message": "Numero di contatti da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of contacts to return per page (default: 20)",
+          "message": "Il numero massimo di contatti da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "Numero massimo di contatti da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.desc": {
+          "source": "Filter contacts who are members of a specific list",
+          "message": "Filtra i contatti che appartengono a un elenco specifico"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.display_name": {
+          "source": "List ID",
+          "message": "ID elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.bGlzdGlk.short_desc": {
+          "source": "Filter by list membership",
+          "message": "Filtra per appartenenza all'elenco"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.desc": {
+          "source": "Configure how to sort the contact results",
+          "message": "Configura le modalità di ordinamento dei risultati dei contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.display_name": {
+          "source": "Sort Options",
+          "message": "Opzioni di ordinamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c29ydA.short_desc": {
+          "source": "Sorting configuration",
+          "message": "Configurazione ordinamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.desc": {
+          "source": "Search for contacts by name, email, or other searchable fields",
+          "message": "Cerca contatti per nome, e-mail o altri campi cercabili"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Cerca"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c2VhcmNo.short_desc": {
+          "source": "General search term",
+          "message": "Termine di ricerca generale"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50Oi0x.display_name": {
+          "source": "Any",
+          "message": "Qualsiasi"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Unconfirmed",
+          "message": "Non confermato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Active",
+          "message": "Attivo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Unsubscribed",
+          "message": "Disiscritto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.allowed-value.aW50OjM.display_name": {
+          "source": "Bounced",
+          "message": "Rimbalzato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.desc": {
+          "source": "Filter contacts by their subscription status",
+          "message": "Filtra i contatti in base al loro stato di iscrizione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Stato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.c3RhdHVz.short_desc": {
+          "source": "Contact status filter",
+          "message": "Filtro stato contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.desc": {
+          "source": "Filter contacts by phone number",
+          "message": "Filtra i contatti per numero di telefono"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.display_name": {
+          "source": "Phone",
+          "message": "Telefono"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.option.cGhvbmU.short_desc": {
+          "source": "Phone number to search for",
+          "message": "Numero di telefono da cercare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "Recupera un elenco di contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.desc": {
+          "source": "Retrieve a paginated list of deal stages (pipeline stages) in ActiveCampaign",
+          "message": "Recupera un elenco impaginato di fasi delle trattative (fasi della pipeline) in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.display_name": {
+          "source": "List Deal Stages",
+          "message": "Elenca fasi delle trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.desc": {
+          "source": "The number of deal stages to skip for pagination",
+          "message": "Il numero di fasi delle trattative da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of stages to skip",
+          "message": "Numero di fasi da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of deal stages to return per page (default: 20)",
+          "message": "Il numero massimo di fasi delle trattative da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of stages to return",
+          "message": "Numero massimo di fasi da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.desc": {
+          "source": "Filter deal stages by their title",
+          "message": "Filtra le fasi delle trattative in base al titolo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Titolo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.option.dGl0bGU.short_desc": {
+          "source": "Filter by stage title",
+          "message": "Filtra per titolo della fase"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFsX3N0YWdlcw.short_desc": {
+          "source": "Retrieve a list of deal stages",
+          "message": "Recupera un elenco di fasi delle trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.desc": {
+          "source": "Retrieve a paginated list of deals in ActiveCampaign with optional search functionality",
+          "message": "Recupera un elenco impaginato di trattative in ActiveCampaign con funzionalità di ricerca opzionale"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.display_name": {
+          "source": "List Deals",
+          "message": "Elenca trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.desc": {
+          "source": "The number of deals to skip for pagination",
+          "message": "Il numero di trattative da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deals to skip",
+          "message": "Numero di trattative da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of deals to return per page (default: 20)",
+          "message": "Il numero massimo di trattative da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deals to return",
+          "message": "Numero massimo di trattative da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.desc": {
+          "source": "Configure how to search for deals by different fields",
+          "message": "Configura come cercare le trattative in base a campi diversi"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.display_name": {
+          "source": "Search Options",
+          "message": "Opzioni di ricerca"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.option.c2VhcmNo.short_desc": {
+          "source": "Search configuration for deals",
+          "message": "Configurazione della ricerca per le trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9kZWFscw.short_desc": {
+          "source": "Retrieve a list of deals",
+          "message": "Recupera un elenco di trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.desc": {
+          "source": "Retrieve a paginated list of forms in ActiveCampaign",
+          "message": "Recupera un elenco impaginato di moduli in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.display_name": {
+          "source": "List Forms",
+          "message": "Elenca moduli"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.desc": {
+          "source": "The number of forms to skip for pagination",
+          "message": "Il numero di moduli da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of forms to skip",
+          "message": "Numero di moduli da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of forms to return per page (default: 20)",
+          "message": "Il numero massimo di moduli da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of forms to return",
+          "message": "Numero massimo di moduli da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9mb3Jtcw.short_desc": {
+          "source": "Retrieve a list of forms",
+          "message": "Recupera un elenco di moduli"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.desc": {
+          "source": "Retrieve a paginated list of contact lists in ActiveCampaign with optional name filtering",
+          "message": "Recupera un elenco impaginato di liste di contatti in ActiveCampaign con filtraggio opzionale per nome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.display_name": {
+          "source": "List Lists",
+          "message": "Elenca liste"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of lists to skip for pagination",
+          "message": "Il numero di liste da ignorare per la paginazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Offset"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of lists to skip",
+          "message": "Numero di liste da ignorare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of lists to return per page (default: 20)",
+          "message": "Il numero massimo di liste da restituire per pagina (predefinito: 20)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "Numero massimo di liste da restituire"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.desc": {
+          "source": "Filter lists by their name",
+          "message": "Filtra le liste in base al nome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.option.bmFtZQ.short_desc": {
+          "source": "Filter by list name",
+          "message": "Filtra per nome della lista"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bGlzdF9saXN0cw.short_desc": {
+          "source": "Retrieve a list of lists",
+          "message": "Recupera un elenco di liste"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **ActiveCampaign** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata ad **ActiveCampaign** usando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), parametri di query opzionali, intestazioni e corpo della richiesta. La risposta viene restituita sotto forma di hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di primo livello in questa app."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to ActiveCampaign",
+          "message": "Esegui una chiamata API personalizzata ad ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.desc": {
+          "source": "This trigger fires when an email from a campaign bounces, indicating delivery failure",
+          "message": "Questo trigger si attiva quando un'email di una campagna rimbalza, indicando un errore di recapito"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.display_name": {
+          "source": "New Campaign Bounce",
+          "message": "Nuovo rimbalzo campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2JvdW5jZQ.short_desc": {
+          "source": "Triggers when a campaign email bounces",
+          "message": "Si attiva quando un'email di una campagna rimbalza"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.desc": {
+          "source": "This trigger fires when a recipient clicks on a link within a campaign email",
+          "message": "Questo trigger si attiva quando un destinatario fa clic su un link all'interno di un'email di una campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.display_name": {
+          "source": "New Campaign Link Click",
+          "message": "Nuovo clic su link della campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX2xpbmtfY2xpY2s.short_desc": {
+          "source": "Triggers when a link in a campaign is clicked",
+          "message": "Si attiva quando viene fatto clic su un link in una campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.desc": {
+          "source": "This trigger fires when a recipient replies to a campaign email",
+          "message": "Questo trigger si attiva quando un destinatario risponde a un'email di una campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.display_name": {
+          "source": "New Campaign Reply",
+          "message": "Nuova risposta alla campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NhbXBhaWduX3JlcGx5.short_desc": {
+          "source": "Triggers when someone replies to a campaign",
+          "message": "Si attiva quando qualcuno risponde a una campagna"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.desc": {
+          "source": "This trigger fires when a new contact subscribes or is created in ActiveCampaign",
+          "message": "Questo trigger si attiva quando un nuovo contatto si iscrive o viene creato in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.display_name": {
+          "source": "New Contact",
+          "message": "Nuovo contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Q.short_desc": {
+          "source": "Triggers when a new contact is created",
+          "message": "Si attiva quando viene creato un nuovo contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.desc": {
+          "source": "This trigger fires when a note is added to a contact in a specific list",
+          "message": "Questo trigger si attiva quando viene aggiunta una nota a un contatto in una lista specifica"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.display_name": {
+          "source": "New Contact Note",
+          "message": "Nuova nota contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when notes are added to contacts",
+          "message": "Seleziona la lista specifica da monitorare per quando vengono aggiunte note ai contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new contact notes",
+          "message": "La lista da monitorare per nuove note del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2NvbnRhY3Rfbm90ZQ.short_desc": {
+          "source": "Triggers when a note is added to a contact",
+          "message": "Si attiva quando viene aggiunta una nota a un contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.desc": {
+          "source": "This trigger fires when a new deal is created for contacts in a specific list",
+          "message": "Questo trigger si attiva quando viene creata una nuova trattativa per i contatti in una lista specifica"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.display_name": {
+          "source": "New Deal",
+          "message": "Nuova trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.desc": {
+          "source": "Select the specific list to monitor for when new deals are created",
+          "message": "Seleziona la lista specifica da monitorare per quando vengono create nuove trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.display_name": {
+          "source": "List",
+          "message": "Lista"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.option.bGlzdA.short_desc": {
+          "source": "The list to monitor for new deals",
+          "message": "La lista da monitorare per nuove trattative"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.bmV3X2RlYWw.short_desc": {
+          "source": "Triggers when a new deal is created",
+          "message": "Si attiva quando viene creata una nuova trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Cerca record"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"ActiveCampaign\"",
+          "message": "Cerca i record corrispondenti nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trova un singolo record"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"ActiveCampaign\"",
+          "message": "Cerca un singolo record corrispondente nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.desc": {
+          "source": "Remove a specific tag from a contact in ActiveCampaign",
+          "message": "Rimuovi un tag specifico da un contatto in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.display_name": {
+          "source": "Remove Tag from Contact",
+          "message": "Rimuovi tag dal contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.desc": {
+          "source": "Select the contact that you want to remove the tag from",
+          "message": "Seleziona il contatto da cui desideri rimuovere il tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.Y29udGFjdA.short_desc": {
+          "source": "The contact to remove the tag from",
+          "message": "Il contatto da cui rimuovere il tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.desc": {
+          "source": "Select the tag that you want to remove from the contact",
+          "message": "Seleziona il tag che desideri rimuovere dal contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.display_name": {
+          "source": "Tag",
+          "message": "Tag"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.option.dGFn.short_desc": {
+          "source": "The tag to remove from the contact",
+          "message": "Il tag da rimuovere dal contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.cmVtb3ZlX3RhZ19mcm9tX2NvbnRhY3Q.short_desc": {
+          "source": "Remove a tag from a contact",
+          "message": "Rimuovi un tag da un contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"ActiveCampaign\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aggiorna record"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Il nome della tabella"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"ActiveCampaign\"",
+          "message": "Aggiorna i record esistenti nella tabella specificata nell'app \"ActiveCampaign\""
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.desc": {
+          "source": "Update the information of an existing account in ActiveCampaign",
+          "message": "Aggiorna le informazioni di un account esistente in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.display_name": {
+          "source": "Update Account",
+          "message": "Aggiorna account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.desc": {
+          "source": "The new website URL or domain for the account",
+          "message": "Il nuovo URL del sito web o dominio per l'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.display_name": {
+          "source": "Account URL",
+          "message": "URL account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.YWNjb3VudFVybA.short_desc": {
+          "source": "The updated website URL of the account",
+          "message": "L'URL del sito web aggiornato dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.desc": {
+          "source": "Update values for any custom fields configured for accounts",
+          "message": "Aggiorna i valori per tutti i campi personalizzati configurati per gli account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.display_name": {
+          "source": "Custom Fields",
+          "message": "Campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.ZmllbGRPcHRpb25z.short_desc": {
+          "source": "Updated custom field values for the account",
+          "message": "Valori dei campi personalizzati aggiornati per l'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.desc": {
+          "source": "Select the account that you want to update",
+          "message": "Seleziona l'account che desideri aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.display_name": {
+          "source": "Account ID",
+          "message": "ID account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.aWQ.short_desc": {
+          "source": "The ID of the account to update",
+          "message": "L'ID dell'account da aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.desc": {
+          "source": "Select the user who will be responsible for managing this account",
+          "message": "Seleziona l'utente che sarà responsabile della gestione di questo account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.display_name": {
+          "source": "Account Owner",
+          "message": "Proprietario dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.b3duZXI.short_desc": {
+          "source": "The updated owner of the account",
+          "message": "Il proprietario aggiornato dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.desc": {
+          "source": "The new name for the company or organization account",
+          "message": "Il nuovo nome per l'azienda o l'account dell'organizzazione"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.display_name": {
+          "source": "Account Name",
+          "message": "Nome account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.option.bmFtZQ.short_desc": {
+          "source": "The updated name of the account",
+          "message": "Il nome aggiornato dell'account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2FjY291bnQ.short_desc": {
+          "source": "Update an existing account",
+          "message": "Aggiorna un account esistente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Update the information of an existing contact in ActiveCampaign including basic information and custom field values",
+          "message": "Aggiorna le informazioni di un contatto esistente in ActiveCampaign, comprese le informazioni di base e i valori dei campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "Aggiorna contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "Il nuovo indirizzo email per il contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "Indirizzo email"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The updated email address",
+          "message": "L'indirizzo e-mail aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.desc": {
+          "source": "Update values for any custom fields configured for contacts",
+          "message": "Aggiorna i valori per tutti i campi personalizzati configurati per i contatti"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.display_name": {
+          "source": "Custom Field Values",
+          "message": "Valori dei campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.ZmllbGRWYWx1ZXM.short_desc": {
+          "source": "Updated values for custom fields",
+          "message": "Valori aggiornati per i campi personalizzati"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.desc": {
+          "source": "The new first name of the contact",
+          "message": "Il nuovo nome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Nome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "The updated first name",
+          "message": "Il nome aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.desc": {
+          "source": "Select the contact that you want to update",
+          "message": "Seleziona il contatto che desideri aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.display_name": {
+          "source": "Contact ID",
+          "message": "ID contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.aWQ.short_desc": {
+          "source": "The ID of the contact to update",
+          "message": "L'ID del contatto da aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.desc": {
+          "source": "The new last name of the contact",
+          "message": "Il nuovo cognome del contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Cognome"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdE5hbWU.short_desc": {
+          "source": "The updated last name",
+          "message": "Il cognome aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.desc": {
+          "source": "The new phone number for the contact",
+          "message": "Il nuovo numero di telefono per il contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "Numero di telefono"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmU.short_desc": {
+          "source": "The updated phone number",
+          "message": "Il numero di telefono aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "Aggiorna un contatto esistente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.desc": {
+          "source": "Update the information of an existing sales deal in ActiveCampaign",
+          "message": "Aggiorna le informazioni di un'opportunità di vendita esistente in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.display_name": {
+          "source": "Update Deal",
+          "message": "Aggiorna opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.desc": {
+          "source": "Select the new main contact person for this deal",
+          "message": "Seleziona la nuova persona di contatto principale per questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.display_name": {
+          "source": "Contact",
+          "message": "Contatto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y29udGFjdA.short_desc": {
+          "source": "The updated primary contact for this deal",
+          "message": "Il contatto primario aggiornato per questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmF1ZA.display_name": {
+          "source": "AUD",
+          "message": "AUD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNhZA.display_name": {
+          "source": "CAD",
+          "message": "CAD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmNueQ.display_name": {
+          "source": "CNY",
+          "message": "CNY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmV1cg.display_name": {
+          "source": "EUR",
+          "message": "EUR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmdicA.display_name": {
+          "source": "GBP",
+          "message": "GBP"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmlucg.display_name": {
+          "source": "INR",
+          "message": "INR"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOmpweQ.display_name": {
+          "source": "JPY",
+          "message": "JPY"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.allowed-value.c3RyaW5nOnVzZA.display_name": {
+          "source": "USD",
+          "message": "USD"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.desc": {
+          "source": "Select the new currency that the deal value is denominated in",
+          "message": "Seleziona la nuova valuta in cui è denominato il valore dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "Valuta"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Y3VycmVuY3k.short_desc": {
+          "source": "The updated currency for the deal value",
+          "message": "La valuta aggiornata per il valore dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.desc": {
+          "source": "Select the new account/company that this deal is associated with",
+          "message": "Seleziona il nuovo account/azienda a cui è associata questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.display_name": {
+          "source": "Account",
+          "message": "Account"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.YWNjb3VudA.short_desc": {
+          "source": "The updated account associated with this deal",
+          "message": "L'account aggiornato associato a questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.desc": {
+          "source": "Select the new pipeline group that this deal belongs to",
+          "message": "Seleziona il nuovo gruppo di pipeline a cui appartiene questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.display_name": {
+          "source": "Pipeline Group",
+          "message": "Gruppo pipeline"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.Z3JvdXA.short_desc": {
+          "source": "The updated pipeline group for the deal",
+          "message": "Il gruppo di pipeline aggiornato per l'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "New description or additional details about the deal",
+          "message": "Nuova descrizione o dettagli aggiuntivi sull'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Deal Description",
+          "message": "Descrizione trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Updated description or notes",
+          "message": "Descrizione o note aggiornate"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.desc": {
+          "source": "Select the deal that you want to update",
+          "message": "Seleziona l'opportunità che desideri aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.display_name": {
+          "source": "Deal ID",
+          "message": "ID trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.aWQ.short_desc": {
+          "source": "The ID of the deal to update",
+          "message": "L'ID dell'opportunità da aggiornare"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.desc": {
+          "source": "Select the new user who will be responsible for managing this deal",
+          "message": "Seleziona il nuovo utente che sarà responsabile della gestione di questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.display_name": {
+          "source": "Deal Owner",
+          "message": "Proprietario trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.b3duZXI.short_desc": {
+          "source": "The updated user responsible for this deal",
+          "message": "L'utente aggiornato responsabile di questa opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.desc": {
+          "source": "Select the new pipeline stage that represents the current status of the deal",
+          "message": "Seleziona la nuova fase della pipeline che rappresenta lo stato attuale dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.display_name": {
+          "source": "Deal Stage",
+          "message": "Fase trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhZ2U.short_desc": {
+          "source": "The updated stage of the deal",
+          "message": "La fase aggiornata dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjA.display_name": {
+          "source": "Open",
+          "message": "Aperto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjE.display_name": {
+          "source": "Won",
+          "message": "Vinto"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.allowed-value.aW50OjI.display_name": {
+          "source": "Lost",
+          "message": "Perso"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.desc": {
+          "source": "Select whether the deal is open, won, or lost",
+          "message": "Seleziona se la trattativa è aperta, vinta o persa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.display_name": {
+          "source": "Deal Status",
+          "message": "Stato trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.c3RhdHVz.short_desc": {
+          "source": "The updated status of the deal",
+          "message": "Lo stato aggiornato dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.desc": {
+          "source": "The new percentage value representing how close the deal is to completion",
+          "message": "Il nuovo valore percentuale che rappresenta quanto l'opportunità è vicina al completamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.display_name": {
+          "source": "Completion Percentage",
+          "message": "Percentuale di completamento"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.cGVyY2VudA.short_desc": {
+          "source": "The updated percentage completion of the deal",
+          "message": "La percentuale di completamento aggiornata dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.desc": {
+          "source": "The new descriptive title for the deal",
+          "message": "Il nuovo titolo descrittivo per l'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.display_name": {
+          "source": "Deal Title",
+          "message": "Titolo trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dGl0bGU.short_desc": {
+          "source": "The updated title of the deal",
+          "message": "Il titolo aggiornato dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.desc": {
+          "source": "The new total value or amount of the deal",
+          "message": "Il nuovo valore totale o importo dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.display_name": {
+          "source": "Deal Value",
+          "message": "Valore trattativa"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.option.dmFsdWU.short_desc": {
+          "source": "The updated monetary value of the deal",
+          "message": "Il valore monetario aggiornato dell'opportunità"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlX2RlYWw.short_desc": {
+          "source": "Update an existing deal",
+          "message": "Aggiorna un'opportunità esistente"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.desc": {
+          "source": "This trigger fires when any contact information is updated in ActiveCampaign",
+          "message": "Questo trigger si attiva quando una qualsiasi informazione del contatto viene aggiornata in ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.display_name": {
+          "source": "Contact Updated",
+          "message": "Contatto aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.action.dXBkYXRlZF9jb250YWN0.short_desc": {
+          "source": "Triggers when a contact is updated",
+          "message": "Si attiva quando un contatto viene aggiornato"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.desc": {
+          "source": "Connect your ActiveCampaign account to automate email marketing campaigns, manage contacts, and track customer interactions. Create and send targeted email campaigns, manage contact lists, set up automation workflows, and analyze campaign performance all from within Qore.",
+          "message": "Collega il tuo account ActiveCampaign per automatizzare le campagne di email marketing, gestire i contatti e monitorare le interazioni con i clienti. Crea e invia campagne email mirate, gestisci elenchi di contatti, imposta workflow di automazione e analizza le prestazioni delle campagne, tutto all'interno di Qore."
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.display_name": {
+          "source": "ActiveCampaign",
+          "message": "ActiveCampaign"
+        },
+        "app.QWN0aXZlQ2FtcGFpZ24.short_desc": {
+          "source": "Email marketing automation and CRM platform",
+          "message": "Piattaforma di automazione dell'email marketing e CRM"
+        }
+      }
+    }
+  }
+}

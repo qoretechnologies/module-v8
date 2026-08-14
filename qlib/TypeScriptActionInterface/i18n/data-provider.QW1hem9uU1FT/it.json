@@ -1,0 +1,1041 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Send a text message to an Amazon SQS queue with optional message attributes, delay settings, and FIFO queue parameters.",
+          "message": "Invia un messaggio di testo a una coda Amazon SQS con attributi di messaggio opzionali, impostazioni di ritardo e parametri per code FIFO."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "Crea messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Il periodo di tempo (0-900 secondi) per cui ritardare la consegna del messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Ritardo (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Numero di secondi per ritardare la consegna del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Attributi personalizzati da includere nel messaggio per il filtraggio e l'elaborazione."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Attributi del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Metadati aggiuntivi per il messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.desc": {
+          "source": "The message content to send. Can be plain text or any string format up to 256 KB.",
+          "message": "Il contenuto del messaggio da inviare. Può essere testo normale o qualsiasi formato stringa fino a 256 KB."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.display_name": {
+          "source": "Message Body",
+          "message": "Corpo del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ib2R5.short_desc": {
+          "source": "The text content of the message",
+          "message": "Il contenuto testuale del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Il token utilizzato per la deduplicazione dei messaggi inviati (solo per code FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplicazione messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "ID di deduplicazione per code FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Il tag che specifica che un messaggio appartiene a un gruppo di messaggi specifico (solo per code FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID gruppo messaggi"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "ID gruppo per code FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the message will be sent.",
+          "message": "L'URL completo della coda Amazon SQS a cui verrà inviato il messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "L'URL della coda SQS di destinazione"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Seleziona la regione AWS in cui è ospitata la coda SQS di destinazione."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a text message to an SQS queue",
+          "message": "Invia un messaggio di testo a una coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Send structured JSON data to an Amazon SQS queue. The JSON object will be automatically serialized into the message body.",
+          "message": "Invia dati JSON strutturati a una coda Amazon SQS. L'oggetto JSON verrà serializzato automaticamente nel corpo del messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "Crea messaggio JSON"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The length of time (0-900 seconds) for which to delay delivery of the message.",
+          "message": "Il periodo di tempo (0-900 secondi) per cui ritardare la consegna del messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Ritardo (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Number of seconds to delay message delivery",
+          "message": "Numero di secondi per ritardare la consegna del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Custom attributes to include with the message for filtering and processing.",
+          "message": "Attributi personalizzati da includere nel messaggio per il filtraggio e l'elaborazione."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "Attributi del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional metadata for the message",
+          "message": "Metadati aggiuntivi per il messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.desc": {
+          "source": "The structured data object that will be serialized to JSON and sent as the message body.",
+          "message": "L'oggetto dati strutturato che verrà serializzato in JSON e inviato come corpo del messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.display_name": {
+          "source": "Message Data",
+          "message": "Dati messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kYXRh.short_desc": {
+          "source": "The JSON object to send",
+          "message": "L'oggetto JSON da inviare"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "The token used for deduplication of sent messages (FIFO queues only).",
+          "message": "Il token utilizzato per la deduplicazione dei messaggi inviati (solo per code FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "ID deduplicazione messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO queues",
+          "message": "ID di deduplicazione per code FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "The tag that specifies that a message belongs to a specific message group (FIFO queues only).",
+          "message": "Il tag che specifica che un messaggio appartiene a un gruppo di messaggi specifico (solo per code FIFO)."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "ID gruppo messaggi"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO queues",
+          "message": "ID gruppo per code FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue where the JSON message will be sent.",
+          "message": "L'URL completo della coda Amazon SQS a cui verrà inviato il messaggio JSON."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the target SQS queue",
+          "message": "L'URL della coda SQS di destinazione"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your target SQS queue is hosted.",
+          "message": "Seleziona la regione AWS in cui è ospitata la coda SQS di destinazione."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a JSON message to an SQS queue",
+          "message": "Invia un messaggio JSON a una coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.desc": {
+          "source": "Create a new Amazon SQS queue with configurable settings including FIFO capabilities, dead letter queues, and encryption options.",
+          "message": "Crea una nuova coda Amazon SQS con impostazioni configurabili, incluse funzionalità FIFO, code di messaggi non recapitate e opzioni di crittografia."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.display_name": {
+          "source": "Create Queue",
+          "message": "Crea coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "For FIFO queues, enables deduplication using a SHA-256 hash of the message body.",
+          "message": "Per le code FIFO, abilita la deduplicazione utilizzando un hash SHA-256 del corpo del messaggio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "Deduplicazione basata sul contenuto"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable automatic deduplication based on message content",
+          "message": "Abilita la deduplicazione automatica basata sul contenuto del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.desc": {
+          "source": "The URL of the queue to use as a dead letter queue for failed message processing.",
+          "message": "L'URL della coda da utilizzare come coda di messaggi non recapitati per l'elaborazione dei messaggi non riusciti."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.display_name": {
+          "source": "Dead Letter Queue URL",
+          "message": "URL coda di messaggi non recapitati"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVhZF9sZXR0ZXJfcXVldWVfdXJs.short_desc": {
+          "source": "URL of the dead letter queue",
+          "message": "URL della coda di messaggi non recapitati"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.desc": {
+          "source": "The default delay (0-900 seconds) for messages added to this queue.",
+          "message": "Il ritardo predefinito (0-900 secondi) per i messaggi aggiunti a questa coda."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.display_name": {
+          "source": "Delay (Seconds)",
+          "message": "Ritardo (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.ZGVsYXlfc2Vjb25kcw.short_desc": {
+          "source": "Default delay for new messages",
+          "message": "Ritardo predefinito per i nuovi messaggi"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.desc": {
+          "source": "Whether to create a FIFO queue that ensures messages are processed exactly once in the exact order sent.",
+          "message": "Indica se creare una coda FIFO che garantisce che i messaggi vengano elaborati esattamente una volta nello stesso ordine di invio."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.display_name": {
+          "source": "FIFO Queue",
+          "message": "Coda FIFO"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.Zmlmb19xdWV1ZQ.short_desc": {
+          "source": "Create as a FIFO (First-In-First-Out) queue",
+          "message": "Crea come coda FIFO (First-In-First-Out)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key for server-side encryption of queue messages.",
+          "message": "L'ID di una chiave AWS KMS per la crittografia lato server dei messaggi della coda."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "ID chiave master KMS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for server-side encryption",
+          "message": "Chiave KMS per la crittografia lato server"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.desc": {
+          "source": "The length of time (60-86400 seconds) for which Amazon SQS can reuse a data key.",
+          "message": "Il periodo di tempo (60-86400 secondi) per cui Amazon SQS può riutilizzare una chiave dati."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.display_name": {
+          "source": "KMS Data Key Reuse Period (Seconds)",
+          "message": "Periodo di riutilizzo della chiave dati KMS (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.a21zX2RhdGFfa2V5X3JldXNlX3BlcmlvZF9zZWNvbmRz.short_desc": {
+          "source": "How long to reuse KMS data keys",
+          "message": "Per quanto tempo riutilizzare le chiavi dati KMS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.desc": {
+          "source": "The number of times a message can be received before being moved to the dead letter queue.",
+          "message": "Il numero di volte in cui un messaggio può essere ricevuto prima di essere spostato nella coda di messaggi non recapitati."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.display_name": {
+          "source": "Max Receive Count",
+          "message": "Conteggio massimo di ricezioni"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWF4X3JlY2VpdmVfY291bnQ.short_desc": {
+          "source": "Maximum receives before moving to dead letter queue",
+          "message": "Numero massimo di ricezioni prima dello spostamento nella coda di messaggi non recapitati"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.desc": {
+          "source": "The length of time (60-1209600 seconds) that messages are retained in the queue.",
+          "message": "Il periodo di tempo (60-1209600 secondi) per cui i messaggi vengono conservati nella coda."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.display_name": {
+          "source": "Message Retention Period (Seconds)",
+          "message": "Periodo di conservazione del messaggio (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.bWVzc2FnZV9yZXRlbnRpb25fcGVyaW9k.short_desc": {
+          "source": "How long messages are retained in the queue",
+          "message": "Per quanto tempo i messaggi vengono conservati nella coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.desc": {
+          "source": "The name for the queue. FIFO queue names must end with .fifo suffix.",
+          "message": "Il nome della coda. I nomi delle code FIFO devono terminare con il suffisso .fifo."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.display_name": {
+          "source": "Queue Name",
+          "message": "Nome della coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cXVldWVfbmFtZQ.short_desc": {
+          "source": "The name of the new queue",
+          "message": "Il nome della nuova coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.desc": {
+          "source": "The time (0-20 seconds) for which ReceiveMessage calls wait for messages to arrive.",
+          "message": "Il tempo (0-20 secondi) durante il quale le chiamate ReceiveMessage attendono l'arrivo dei messaggi."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.display_name": {
+          "source": "Receive Wait Time (Seconds)",
+          "message": "Tempo di attesa ricezione (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVjZWl2ZV9tZXNzYWdlX3dhaXRfdGltZV9zZWNvbmRz.short_desc": {
+          "source": "Long polling wait time for receive operations",
+          "message": "Tempo di attesa di long polling per le operazioni di ricezione"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to create the new SQS queue.",
+          "message": "Seleziona la regione AWS in cui desideri creare la nuova coda SQS."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the queue will be created",
+          "message": "La regione AWS in cui verrà creata la coda"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The length of time (0-43200 seconds) that a message is invisible to other consumers after being received.",
+          "message": "La durata di tempo (0-43200 secondi) durante la quale un messaggio è invisibile agli altri consumatori dopo essere stato ricevuto."
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Timeout di visibilità (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Time a message is invisible after being received",
+          "message": "Tempo durante il quale un messaggio è invisibile dopo essere stato ricevuto"
+        },
+        "app.QW1hem9uU1FT.action.Y3JlYXRlX3F1ZXVl.short_desc": {
+          "source": "Create a new SQS queue",
+          "message": "Crea una nuova coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.desc": {
+          "source": "Retrieve detailed information and attributes for a specific Amazon SQS queue including configuration, message counts, and timestamps.",
+          "message": "Recupera informazioni dettagliate e attributi per una specifica coda Amazon SQS, comprese configurazione, conteggio dei messaggi e timestamp."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.display_name": {
+          "source": "Get Queue",
+          "message": "Ottieni coda"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of queue attributes to return. Use \"All\" to return all available attributes.",
+          "message": "I nomi degli attributi della coda da restituire. Usa \"All\" per restituire tutti gli attributi disponibili."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Nomi degli attributi"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of queue attributes to retrieve",
+          "message": "Elenco degli attributi della coda da recuperare"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue to retrieve information about.",
+          "message": "L'URL completo della coda Amazon SQS di cui recuperare le informazioni."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to inspect",
+          "message": "L'URL della coda SQS da ispezionare"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Seleziona la regione AWS in cui è ospitata la tua coda SQS."
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.Z2V0X3F1ZXVl.short_desc": {
+          "source": "Get details about a specific SQS queue",
+          "message": "Ottieni dettagli su una specifica coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.desc": {
+          "source": "Retrieve messages from an Amazon SQS queue with configurable polling options and message attribute retrieval.",
+          "message": "Recupera messaggi da una coda Amazon SQS con opzioni di polling configurabili e recupero degli attributi dei messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.display_name": {
+          "source": "List Messages",
+          "message": "Elenca messaggi"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.desc": {
+          "source": "The names of system attributes to return with each message. Use \"All\" to return all attributes.",
+          "message": "I nomi degli attributi di sistema da restituire con ciascun messaggio. Usa \"All\" per restituire tutti gli attributi."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.display_name": {
+          "source": "Attribute Names",
+          "message": "Nomi degli attributi"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.YXR0cmlidXRlX25hbWVz.short_desc": {
+          "source": "List of message system attribute names to retrieve",
+          "message": "Elenco dei nomi degli attributi di sistema dei messaggi da recuperare"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.desc": {
+          "source": "The maximum number of messages to return in a single request (1-10).",
+          "message": "Il numero massimo di messaggi da restituire in una singola richiesta (1-10)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.display_name": {
+          "source": "Max Number of Messages",
+          "message": "Numero massimo di messaggi"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWF4X251bWJlcl9vZl9tZXNzYWdlcw.short_desc": {
+          "source": "Maximum messages to receive (1-10)",
+          "message": "Numero massimo di messaggi da ricevere (1-10)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.desc": {
+          "source": "The names of message attributes to return. Use \"All\" to return all attributes.",
+          "message": "I nomi degli attributi del messaggio da restituire. Usa \"All\" per restituire tutti gli attributi."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.display_name": {
+          "source": "Message Attribute Names",
+          "message": "Nomi degli attributi del messaggio"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.bWVzc2FnZV9hdHRyaWJ1dGVfbmFtZXM.short_desc": {
+          "source": "List of message attribute names to retrieve",
+          "message": "Elenco dei nomi degli attributi del messaggio da recuperare"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "L'URL completo della coda Amazon SQS da cui ricevere i messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to read from",
+          "message": "L'URL della coda SQS da cui leggere"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted.",
+          "message": "Seleziona la regione AWS in cui è ospitata la tua coda SQS."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for messages to arrive.",
+          "message": "La durata (0-20 secondi) durante la quale la chiamata attende l'arrivo dei messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Tempo di attesa (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time",
+          "message": "Tempo di attesa di long polling"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.desc": {
+          "source": "The duration for which received messages are hidden from subsequent retrieve requests.",
+          "message": "La durata durante la quale i messaggi ricevuti sono nascosti alle successive richieste di recupero."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.display_name": {
+          "source": "Visibility Timeout (Seconds)",
+          "message": "Timeout di visibilità (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.option.dmlzaWJpbGl0eV90aW1lb3V0.short_desc": {
+          "source": "Override the queue default visibility timeout",
+          "message": "Sostituisci il timeout di visibilità predefinito della coda"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9tZXNzYWdlcw.short_desc": {
+          "source": "Receive messages from an SQS queue",
+          "message": "Ricevi messaggi da una coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.desc": {
+          "source": "Retrieve a list of all Amazon SQS queues in the specified region with optional filtering and detailed queue attributes.",
+          "message": "Recupera un elenco di tutte le code Amazon SQS nella regione specificata con filtraggio opzionale e attributi dettagliati della coda."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.display_name": {
+          "source": "List Queues",
+          "message": "Elenca code"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed queue attributes like message counts, timestamps, and configuration settings.",
+          "message": "Indica se includere attributi dettagliati della coda come conteggio dei messaggi, timestamp e impostazioni di configurazione."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "Includi attributi"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed queue attributes in the response",
+          "message": "Includi attributi dettagliati della coda nella risposta"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.desc": {
+          "source": "The maximum number of queue results to return (1-1000).",
+          "message": "Il numero massimo di risultati di coda da restituire (1-1000)."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.display_name": {
+          "source": "Max Results",
+          "message": "Risultati massimi"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.bWF4X3Jlc3VsdHM.short_desc": {
+          "source": "Maximum number of queues to return",
+          "message": "Numero massimo di code da restituire"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.desc": {
+          "source": "Optional prefix to filter queue names. Only queues with names starting with this prefix will be returned.",
+          "message": "Prefisso opzionale per filtrare i nomi delle code. Verranno restituite solo le code con nomi che iniziano con questo prefisso."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.display_name": {
+          "source": "Queue Name Prefix",
+          "message": "Prefisso del nome della coda"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cXVldWVfbmFtZV9wcmVmaXg.short_desc": {
+          "source": "Filter queues by name prefix",
+          "message": "Filtra le code per prefisso del nome"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region from which to retrieve the list of SQS queues.",
+          "message": "Seleziona la regione AWS da cui recuperare l'elenco delle code SQS."
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to list queues from",
+          "message": "La regione AWS da cui elencare le code"
+        },
+        "app.QW1hem9uU1FT.action.bGlzdF9xdWV1ZXM.short_desc": {
+          "source": "List all SQS queues in a region",
+          "message": "Elenca tutte le code SQS in una regione"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SQS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata ad **Amazon SQS** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, le intestazioni e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, le intestazioni di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni principali in questa app."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.QW1hem9uU1FT.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SQS",
+          "message": "Esegui una chiamata API personalizzata ad Amazon SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages and triggers when messages are available. Supports long polling and message attributes retrieval.",
+          "message": "Monitora una coda Amazon SQS alla ricerca di nuovi messaggi e si attiva quando vi sono messaggi disponibili. Supporta il long polling e il recupero degli attributi dei messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nuovo messaggio"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Il numero massimo di messaggi da restituire (1-10). Nota che potrebbero essere restituiti meno messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Messaggi massimi"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Numero massimo di messaggi da ricevere per ogni poll"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive messages.",
+          "message": "L'URL completo della coda Amazon SQS da cui ricevere i messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "L'URL della coda SQS da monitorare"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Seleziona la regione AWS in cui è ospitata la tua coda SQS. Questo determina l'endpoint utilizzato per le chiamate API."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "La durata (0-20 secondi) durante la quale la chiamata attende che un messaggio arrivi nella coda prima di ritornare."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Tempo di attesa (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Tempo di attesa di long polling in secondi"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in an SQS queue",
+          "message": "Si attiva quando viene ricevuto un nuovo messaggio in una coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Monitors an Amazon SQS queue for new messages containing valid JSON data. Only triggers for messages with parseable JSON content.",
+          "message": "Monitora una coda Amazon SQS alla ricerca di nuovi messaggi contenenti dati JSON validi. Si attiva solo per messaggi con contenuto JSON analizzabile."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "New JSON Message",
+          "message": "Nuovo messaggio JSON"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.desc": {
+          "source": "The maximum number of messages to return (1-10). Note that fewer messages might be returned.",
+          "message": "Il numero massimo di messaggi da restituire (1-10). Nota che potrebbero essere restituiti meno messaggi."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.display_name": {
+          "source": "Max Messages",
+          "message": "Messaggi massimi"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.bWF4X21lc3NhZ2Vz.short_desc": {
+          "source": "Maximum number of messages to receive per poll",
+          "message": "Numero massimo di messaggi da ricevere per ogni poll"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.desc": {
+          "source": "The complete URL of the Amazon SQS queue from which to receive JSON messages.",
+          "message": "L'URL completo della coda Amazon SQS da cui ricevere i messaggi JSON."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.display_name": {
+          "source": "Queue URL",
+          "message": "URL della coda"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cXVldWVfdXJs.short_desc": {
+          "source": "The URL of the SQS queue to monitor",
+          "message": "L'URL della coda SQS da monitorare"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where your SQS queue is hosted. This determines the endpoint used for API calls.",
+          "message": "Seleziona la regione AWS in cui è ospitata la tua coda SQS. Questo determina l'endpoint utilizzato per le chiamate API."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SQS queue is located",
+          "message": "La regione AWS in cui si trova la coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.desc": {
+          "source": "The duration (0-20 seconds) for which the call waits for a message to arrive in the queue before returning.",
+          "message": "La durata (0-20 secondi) durante la quale la chiamata attende che un messaggio arrivi nella coda prima di ritornare."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.display_name": {
+          "source": "Wait Time (Seconds)",
+          "message": "Tempo di attesa (secondi)"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.option.d2FpdF90aW1lX3NlY29uZHM.short_desc": {
+          "source": "Long polling wait time in seconds",
+          "message": "Tempo di attesa di long polling in secondi"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Triggers when a new JSON message is received in an SQS queue",
+          "message": "Si attiva quando viene ricevuto un nuovo messaggio JSON in una coda SQS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.desc": {
+          "source": "Monitors for newly created Amazon SQS queues in the specified region and triggers when new queues are detected.",
+          "message": "Monitora le code Amazon SQS appena create nella regione specificata e si attiva quando vengono rilevate nuove code."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.display_name": {
+          "source": "New Queue",
+          "message": "Nuova coda"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.desc": {
+          "source": "Select the AWS region where you want to monitor for newly created SQS queues.",
+          "message": "Seleziona la regione AWS in cui desideri monitorare le code SQS appena create."
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "Regione AWS"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region to monitor for new queues",
+          "message": "La regione AWS da monitorare per le nuove code"
+        },
+        "app.QW1hem9uU1FT.action.bmV3X3F1ZXVl.short_desc": {
+          "source": "Triggers when a new SQS queue is created",
+          "message": "Si attiva quando viene creata una nuova coda SQS"
+        },
+        "app.QW1hem9uU1FT.desc": {
+          "source": "The Amazon SQS integration provides comprehensive queue management and message handling capabilities for Amazon Simple Queue Service. Create and manage queues, send messages (including JSON), receive messages with polling triggers, and automate your message-driven architectures with reliable, scalable queue operations.",
+          "message": "L'integrazione Amazon SQS offre funzionalità complete di gestione delle code e di gestione dei messaggi per Amazon Simple Queue Service. Crea e gestisci code, invia messaggi (incluso JSON), ricevi messaggi con trigger di polling e automatizza le tue architetture basate su messaggi con operazioni di coda affidabili e scalabili."
+        },
+        "app.QW1hem9uU1FT.display_name": {
+          "source": "Amazon SQS",
+          "message": "Amazon SQS"
+        },
+        "app.QW1hem9uU1FT.short_desc": {
+          "source": "Connect to Amazon Simple Queue Service to manage message queues and automate message processing workflows.",
+          "message": "Connettiti ad Amazon Simple Queue Service per gestire le code di messaggi e automatizzare i flussi di lavoro di elaborazione dei messaggi."
+        }
+      }
+    }
+  }
+}

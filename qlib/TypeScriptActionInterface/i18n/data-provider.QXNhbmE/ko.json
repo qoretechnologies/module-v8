@@ -1,0 +1,2217 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.QXNhbmE.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 새 레코드 생성"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "레코드 생성"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 새 레코드 생성"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.desc": {
+          "source": "Creates a new goal in a workspace or team.\n\nReturns the full record of the newly created goal.",
+          "message": "워크스페이스 또는 팀에 새 목표를 생성합니다.\n\n새로 생성된 목표의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.display_name": {
+          "source": "Create a Goal",
+          "message": "목표 생성"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlR29hbA.short_desc": {
+          "source": "Create a goal",
+          "message": "목표 생성"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.desc": {
+          "source": "Creates a new section in a project.\nReturns the full record of the newly created section.",
+          "message": "프로젝트에 새 섹션을 생성합니다.\n새로 생성된 섹션의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.display_name": {
+          "source": "Create a Section in a Project",
+          "message": "프로젝트에 섹션 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU2VjdGlvbkZvclByb2plY3Q.short_desc": {
+          "source": "Create a section in a project",
+          "message": "프로젝트에 섹션 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.desc": {
+          "source": "Adds a story to a task. This endpoint currently only allows for comment\nstories to be created. The comment will be authored by the currently\nauthenticated user, and timestamped when the server receives the request.\n\nReturns the full record for the new story added to the task.",
+          "message": "작업에 스토리를 추가합니다. 현재 이 엔드포인트는 댓글 스토리 생성만 허용합니다. 댓글은 현재 인증된 사용자가 작성한 것으로 처리되며, 서버가 요청을 수신할 때 타임스탬프가 지정됩니다.\n\n작업에 추가된 새 스토리의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.display_name": {
+          "source": "Create a Story on a Task",
+          "message": "작업에 스토리 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3RvcnlGb3JUYXNr.short_desc": {
+          "source": "Create a story on a task",
+          "message": "작업에 스토리 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.desc": {
+          "source": "Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.",
+          "message": "새 하위 작업을 생성하고 상위 작업에 추가합니다. 새로 생성된 하위 작업의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.display_name": {
+          "source": "Create a Subtask",
+          "message": "하위 작업 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlU3VidGFza0ZvclRhc2s.short_desc": {
+          "source": "Create a subtask",
+          "message": "하위 작업 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.desc": {
+          "source": "Create a new project in a workspace or team.\n\nEvery project is required to be created in a specific workspace or\norganization, and this cannot be changed once set. Note that you can use\nthe `workspace` parameter regardless of whether or not it is an\norganization.\n\nIf the workspace for your project is an organization, you must also\nsupply a `team` to share the project with.\n\nReturns the full record of the newly created project.",
+          "message": "워크스페이스 또는 팀에 새 프로젝트를 만듭니다.\n\n모든 프로젝트는 특정 워크스페이스 또는 조직에 생성되어야 하며, 설정 후에는 변경할 수 없습니다. 조직인지 여부에 관계없이 `workspace` 매개변수를 사용할 수 있습니다.\n\n프로젝트의 워크스페이스가 조직인 경우 프로젝트를 공유할 `team`도 함께 제공해야 합니다.\n\n새로 생성된 프로젝트의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.display_name": {
+          "source": "Create a Project",
+          "message": "프로젝트 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdA.short_desc": {
+          "source": "Create a project",
+          "message": "프로젝트 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.desc": {
+          "source": "Creates a project shared with the given team.\n\nReturns the full record of the newly created project.",
+          "message": "지정된 팀과 공유되는 프로젝트를 만듭니다.\n\n새로 생성된 프로젝트의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.display_name": {
+          "source": "Create a Project in a Team",
+          "message": "팀에 프로젝트 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlUHJvamVjdEZvclRlYW0.short_desc": {
+          "source": "Create a project in a team",
+          "message": "팀에 프로젝트 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.desc": {
+          "source": "Creates a new tag in a workspace or organization.\n\nEvery tag is required to be created in a specific workspace or\norganization, and this cannot be changed once set. Note that you can use\nthe workspace parameter regardless of whether or not it is an\norganization.\n\nReturns the full record of the newly created tag.",
+          "message": "워크스페이스 또는 조직에 새 태그를 만듭니다.\n\n모든 태그는 특정 워크스페이스 또는 조직에 생성되어야 하며, 설정 후에는 변경할 수 없습니다. 조직인지 여부에 관계없이 workspace 매개변수를 사용할 수 있습니다.\n\n새로 생성된 태그의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.display_name": {
+          "source": "Create a Tag",
+          "message": "태그 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFn.short_desc": {
+          "source": "Create a tag",
+          "message": "태그 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.desc": {
+          "source": "Creating a new task is as easy as POSTing to the `-tasks` endpoint with a\ndata block containing the fields you’d like to set on the task. Any\nunspecified fields will take on default values.\n\nEvery task is required to be created in a specific workspace, and this\nworkspace cannot be changed once set. The workspace need not be set\nexplicitly if you specify `projects` or a `parent` task instead.",
+          "message": "새 작업을 생성하는 것은 작업에 설정하려는 필드가 포함된 데이터 블록과 함께 `-tasks` 엔드포인트에 POST 요청을 보내는 것만큼 간단합니다. 지정되지 않은 필드는 기본값을 갖습니다.\n\n모든 작업은 특정 워크스페이스에 생성되어야 하며, 설정 후에는 이 워크스페이스를 변경할 수 없습니다. 대신 `projects` 또는 `parent` 작업을 지정하는 경우 워크스페이스를 명시적으로 설정할 필요가 없습니다."
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.display_name": {
+          "source": "Create a Task",
+          "message": "작업 만들기"
+        },
+        "app.QXNhbmE.action.Y3JlYXRlVGFzaw.short_desc": {
+          "source": "Create a task",
+          "message": "작업 만들기"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a file is attached to any task within the specified project. Optionally filter by a specific task. Use this to process or track files as they are added to tasks.",
+          "message": "지정된 프로젝트 내의 작업에 파일이 첨부되면 워크플로를 시작합니다. 선택적으로 특정 작업별로 필터링할 수 있습니다. 작업에 파일이 추가될 때 이를 처리하거나 추적하는 데 사용합니다."
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.display_name": {
+          "source": "Attachment Added",
+          "message": "첨부 파일 추가됨"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where attachment activities will be monitored",
+          "message": "첨부 파일 활동을 모니터링할 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the tasks with attachments",
+          "message": "첨부 파일이 있는 작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.desc": {
+          "source": "The unique identifier of a specific task to monitor. If not provided, attachments from all tasks in the project will trigger the workflow",
+          "message": "모니터링할 특정 작업의 고유 식별자입니다. 제공하지 않으면 프로젝트의 모든 작업에 대한 첨부 파일이 워크플로를 트리거합니다."
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.display_name": {
+          "source": "Task ID (Optional)",
+          "message": "Task ID(선택 사항)"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.option.dGFzaw.short_desc": {
+          "source": "Specific task to monitor for attachments",
+          "message": "첨부 파일을 모니터링할 특정 작업"
+        },
+        "app.QXNhbmE.action.YXR0YWNobWVudF9hZGRlZA.short_desc": {
+          "source": "Triggers when an attachment is uploaded to a task",
+          "message": "작업에 첨부 파일이 업로드될 때 트리거됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.desc": {
+          "source": "Returns the complete goal record for a single goal.",
+          "message": "단일 목표의 전체 목표 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.display_name": {
+          "source": "Get a Goal",
+          "message": "목표 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "URI 경로 변수 \"goal_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.display_name": {
+          "source": "Goal Gid",
+          "message": "Goal Gid"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.Z29hbF9naWQ.short_desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "URI 경로 변수 \"goal_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbA.short_desc": {
+          "source": "Get a goal",
+          "message": "목표 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.desc": {
+          "source": "Returns compact goal records.",
+          "message": "축약된 목표 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.display_name": {
+          "source": "Get Goals",
+          "message": "목표 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0R29hbHM.short_desc": {
+          "source": "Get goals",
+          "message": "목표 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.desc": {
+          "source": "Returns the compact representations of all of the dependents of a task.",
+          "message": "작업의 모든 종속 작업(dependents)에 대한 축약된 표현을 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.display_name": {
+          "source": "Get Dependents from a Task",
+          "message": "작업에서 종속 작업 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW50c0ZvclRhc2s.short_desc": {
+          "source": "Get dependents from a task",
+          "message": "작업에서 종속 작업 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.desc": {
+          "source": "Returns the compact representations of all of the dependencies of a task.",
+          "message": "작업의 모든 선행 작업(dependencies)에 대한 축약된 표현을 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.display_name": {
+          "source": "Get Dependencies from a Task",
+          "message": "작업에서 선행 작업 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0RGVwZW5kZW5jaWVzRm9yVGFzaw.short_desc": {
+          "source": "Get dependencies from a task",
+          "message": "작업에서 선행 작업 목록 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.desc": {
+          "source": "Returns the full record for all events that have occurred since the sync\ntoken was created.\n\nA `GET` request to the endpoint `-[path_to_resource]-events` can be made in\nlieu of including the resource ID in the data for the request.\n\nAsana limits a single sync token to 100 events. If more than 100 events exist\nfor a given resource, `has_more: true` will be returned in the response, indicating\nthat there are more events to pull.\n\n*Note: The resource returned will be the resource that triggered the\nevent. This may be different from the one that the events were requested\nfor. For example, a subscription to a project will contain events for\ntasks contained within the project.*",
+          "message": "동기화 토큰이 생성된 이후 발생한 모든 이벤트의 전체 레코드를 반환합니다.\n\n요청 데이터에 리소스 ID를 포함하는 대신 `-[path_to_resource]-events` 엔드포인트로 `GET` 요청을 보낼 수 있습니다.\n\nAsana는 단일 동기화 토큰을 100개 이벤트로 제한합니다. 지정된 리소스에 대해 100개 이상의 이벤트가 있는 경우 응답에 `has_more: true`가 반환되어 가져올 이벤트가 더 있음을 나타냅니다.\n\n*참고: 반환되는 리소스는 이벤트를 트리거한 리소스입니다. 이는 이벤트를 요청한 리소스와 다를 수 있습니다. 예를 들어 프로젝트에 대한 구독에는 프로젝트 내에 포함된 작업에 대한 이벤트가 포함됩니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.display_name": {
+          "source": "Get Events on a Resource",
+          "message": "리소스의 이벤트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0RXZlbnRz.short_desc": {
+          "source": "Get events on a resource",
+          "message": "리소스의 이벤트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.desc": {
+          "source": "Returns the complete record for a single section.",
+          "message": "단일 섹션의 전체 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.display_name": {
+          "source": "Get a Section",
+          "message": "섹션 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "Section Gid"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbg.short_desc": {
+          "source": "Get a section",
+          "message": "섹션 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.desc": {
+          "source": "Returns the compact records for all sections in the specified project.",
+          "message": "지정된 프로젝트의 모든 섹션에 대한 축약된 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.display_name": {
+          "source": "Get Sections in a Project",
+          "message": "프로젝트의 섹션 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U2VjdGlvbnNGb3JQcm9qZWN0.short_desc": {
+          "source": "Get sections in a project",
+          "message": "프로젝트의 섹션 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.desc": {
+          "source": "Returns the compact records for all stories on the task.",
+          "message": "작업의 모든 스토리에 대한 축약된 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.display_name": {
+          "source": "Get Stories from a Task",
+          "message": "작업에서 스토리 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3Rvcmllc0ZvclRhc2s.short_desc": {
+          "source": "Get stories from a task",
+          "message": "작업에서 스토리 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.desc": {
+          "source": "Returns a compact representation of all of the subtasks of a task.",
+          "message": "작업의 모든 하위 작업에 대한 축약된 표현을 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.display_name": {
+          "source": "Get Subtasks from a Task",
+          "message": "작업에서 하위 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0U3VidGFza3NGb3JUYXNr.short_desc": {
+          "source": "Get subtasks from a task",
+          "message": "작업에서 하위 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.desc": {
+          "source": "Returns the complete project record for a single project.",
+          "message": "단일 프로젝트에 대한 전체 프로젝트 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.display_name": {
+          "source": "Get a Project",
+          "message": "프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdA.short_desc": {
+          "source": "Get a project",
+          "message": "프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.desc": {
+          "source": "Returns the compact project records for some filtered set of projects. Use one or more of the parameters provided to filter the projects returned.\n*Note: This endpoint may timeout for large domains. Try filtering by team!*",
+          "message": "필터링된 프로젝트 집합에 대한 축약된 프로젝트 레코드를 반환합니다. 제공된 매개변수 중 하나 이상을 사용하여 반환되는 프로젝트를 필터링하세요.\n*참고: 이 엔드포인트는 규모가 큰 도메인의 경우 타임아웃이 발생할 수 있습니다. 팀별로 필터링해 보세요!*"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.display_name": {
+          "source": "Get Multiple Projects",
+          "message": "여러 프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHM.short_desc": {
+          "source": "Get multiple projects",
+          "message": "여러 프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.desc": {
+          "source": "Returns the compact project records for all projects in the team.",
+          "message": "팀 내 모든 프로젝트에 대한 축약된 프로젝트 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.display_name": {
+          "source": "Get a Team's Projects",
+          "message": "팀의 프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.desc": {
+          "source": "Only return projects whose `archived` field takes on the value of this parameter.",
+          "message": "`archived` 필드가 이 매개변수의 값을 갖는 프로젝트만 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.display_name": {
+          "source": "Archived",
+          "message": "보관됨"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.YXJjaGl2ZWQ.short_desc": {
+          "source": "Only return projects whose 'archived' field takes on the value of this parameter",
+          "message": "'archived' 필드가 이 매개변수의 값을 갖는 프로젝트만 반환합니다"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.desc": {
+          "source": "URI path variable \"team_gid\"",
+          "message": "URI 경로 변수 \"team_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.display_name": {
+          "source": "Team Gid",
+          "message": "팀 Gid"
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.option.dGVhbV9naWQ.short_desc": {
+          "source": "URI path variable \"team_gid\"",
+          "message": "URI 경로 변수 \"team_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0UHJvamVjdHNGb3JUZWFt.short_desc": {
+          "source": "Get a team's projects",
+          "message": "팀의 프로젝트 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.desc": {
+          "source": "Returns the full workspace record for a single workspace.",
+          "message": "단일 워크스페이스에 대한 전체 워크스페이스 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.display_name": {
+          "source": "Get a Workspace",
+          "message": "워크스페이스 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNl.short_desc": {
+          "source": "Get a workspace",
+          "message": "워크스페이스 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.desc": {
+          "source": "Returns the compact records for all workspaces visible to the authorized user.",
+          "message": "인증된 사용자에게 보이는 모든 워크스페이스에 대한 축약된 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.display_name": {
+          "source": "Get Multiple Workspaces",
+          "message": "여러 워크스페이스 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0V29ya3NwYWNlcw.short_desc": {
+          "source": "Get multiple workspaces",
+          "message": "여러 워크스페이스 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.desc": {
+          "source": "Returns the complete tag record for a single tag.",
+          "message": "단일 태그에 대한 전체 태그 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.display_name": {
+          "source": "Get a Tag",
+          "message": "태그 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFn.short_desc": {
+          "source": "Get a tag",
+          "message": "태그 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.desc": {
+          "source": "Returns the compact tag records for some filtered set of tags. Use one or more of the parameters provided to filter the tags returned.",
+          "message": "필터링된 태그 집합에 대한 축약된 태그 레코드를 반환합니다. 제공된 매개변수 중 하나 이상을 사용하여 반환되는 태그를 필터링하세요."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.display_name": {
+          "source": "Get Multiple Tags",
+          "message": "여러 태그 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.desc": {
+          "source": "The workspace to filter tags on.",
+          "message": "태그를 필터링할 워크스페이스입니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "워크스페이스"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to filter tags on",
+          "message": "태그를 필터링할 워크스페이스"
+        },
+        "app.QXNhbmE.action.Z2V0VGFncw.short_desc": {
+          "source": "Get multiple tags",
+          "message": "여러 태그 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.desc": {
+          "source": "Returns the compact task records for some filtered set of tasks. Use one or more of the parameters provided to filter the tasks returned. You must specify a `project` or `tag` if you do not specify `assignee` and `workspace`.\n\nFor more complex task retrieval, use [workspaces-workspace_gid-tasks-search](-reference-searchtasksforworkspace).",
+          "message": "필터링된 작업 집합에 대한 축약된 작업 레코드를 반환합니다. 제공된 매개변수 중 하나 이상을 사용하여 반환되는 작업을 필터링하세요. `assignee` 및 `workspace`을 지정하지 않는 경우 `project` 또는 `tag`을 지정해야 합니다.\n\n더 복잡한 작업 조회의 경우 [workspaces-workspace_gid-tasks-search](-reference-searchtasksforworkspace)를 사용하세요."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.display_name": {
+          "source": "Get Multiple Tasks",
+          "message": "여러 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3M.short_desc": {
+          "source": "Get multiple tasks",
+          "message": "여러 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.desc": {
+          "source": "Returns the compact task records for all tasks within the given project, ordered by their priority within the project. Tasks can exist in more than one project at a time.",
+          "message": "지정된 프로젝트 내의 모든 작업에 대한 축약된 작업 레코드를 프로젝트 내 우선순위에 따라 정렬하여 반환합니다. 작업은 동시에 여러 프로젝트에 존재할 수 있습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.display_name": {
+          "source": "Get Tasks from a Project",
+          "message": "프로젝트에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JQcm9qZWN0.short_desc": {
+          "source": "Get tasks from a project",
+          "message": "프로젝트에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.desc": {
+          "source": "*Board view only*: Returns the compact section records for all tasks within the given section.",
+          "message": "*보드 보기 전용*: 지정된 섹션 내의 모든 작업에 대한 축약된 섹션 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.display_name": {
+          "source": "Get Tasks from a Section",
+          "message": "섹션에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.desc": {
+          "source": "Only return tasks that are either incomplete or that have been completed since this time. Accepts a date-time string or the keyword *now*.\n",
+          "message": "미완료된 작업이거나 이 시점 이후에 완료된 작업만 반환합니다. 날짜-시간 문자열 또는 키워드 *now*를 사용할 수 있습니다.\n"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.display_name": {
+          "source": "Completed Since",
+          "message": "이 시점 이후 완료됨"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.Y29tcGxldGVkX3NpbmNl.short_desc": {
+          "source": "Only return tasks that are either incomplete or that have been completed since this time",
+          "message": "미완료된 작업이거나 이 시점 이후에 완료된 작업만 반환"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "Section Gid"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JTZWN0aW9u.short_desc": {
+          "source": "Get tasks from a section",
+          "message": "섹션에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.desc": {
+          "source": "Returns the compact task records for all tasks with the given tag. Tasks can have more than one tag at a time.",
+          "message": "지정된 태그가 있는 모든 작업에 대한 축약된 작업 레코드를 반환합니다. 작업은 동시에 여러 태그를 가질 수 있습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.display_name": {
+          "source": "Get Tasks from a Tag",
+          "message": "태그에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFza3NGb3JUYWc.short_desc": {
+          "source": "Get tasks from a tag",
+          "message": "태그에서 작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.desc": {
+          "source": "Returns the complete task record for a single task.",
+          "message": "단일 작업에 대한 전체 작업 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.display_name": {
+          "source": "Get a Task",
+          "message": "작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.Z2V0VGFzaw.short_desc": {
+          "source": "Get a task",
+          "message": "작업 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.desc": {
+          "source": "Returns compact time period records.",
+          "message": "축약된 기간 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.display_name": {
+          "source": "Get Time Periods",
+          "message": "기간 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VGltZVBlcmlvZHM.short_desc": {
+          "source": "Get time periods",
+          "message": "기간 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.desc": {
+          "source": "Returns the full user record for the single user with the provided ID.",
+          "message": "제공된 ID를 가진 단일 사용자에 대한 전체 사용자 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.display_name": {
+          "source": "Get a User",
+          "message": "사용자 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcg.short_desc": {
+          "source": "Get a user",
+          "message": "사용자 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.desc": {
+          "source": "Returns the user records for all users in all workspaces and organizations accessible to the authenticated user. Accepts an optional workspace ID parameter.\nResults are sorted by user ID.",
+          "message": "인증된 사용자가 접근할 수 있는 모든 워크스페이스 및 조직의 모든 사용자에 대한 사용자 레코드를 반환합니다. 선택적 워크스페이스 ID 매개변수를 허용합니다.\n결과는 사용자 ID별로 정렬됩니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.display_name": {
+          "source": "Get Multiple Users",
+          "message": "여러 사용자 가져오기"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.desc": {
+          "source": "Offset token.\nAn offset to the next page returned by the API. A pagination request will return an offset token, which can be used as an input parameter to the next request. If an offset is not passed in, the API will return the first page of results.\n*Note: You can only pass in an offset that was returned to you via a previously paginated request.*",
+          "message": "오프셋 토큰입니다.\nAPI가 반환한 다음 페이지에 대한 오프셋입니다. 페이지네이션 요청은 오프셋 토큰을 반환하며, 이는 다음 요청의 입력 매개변수로 사용할 수 있습니다. 오프셋을 전달하지 않으면 API는 결과의 첫 번째 페이지를 반환합니다.\n*참고: 이전에 페이지네이션된 요청을 통해 반환된 오프셋만 전달할 수 있습니다.*"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Offset token",
+          "message": "오프셋 토큰"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default. To include those optional properties, set this query parameter to a comma-separated list of the properties you wish to include.",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다. 해당 옵션 속성을 포함하려면 이 쿼리 매개변수를 포함하려는 속성의 쉼표로 구분된 목록으로 설정하십시오."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.display_name": {
+          "source": "Opt Fields",
+          "message": "Opt Fields"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X2ZpZWxkcw.short_desc": {
+          "source": "This endpoint returns a compact resource, which excludes some properties by default",
+          "message": "이 엔드포인트는 축약된 리소스를 반환하며, 기본적으로 일부 속성이 제외됩니다"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.desc": {
+          "source": "Results per page.\nThe number of objects to return per page. The value must be between 1 and 100.",
+          "message": "페이지당 결과 수입니다.\n페이지당 반환할 개체의 수입니다. 값은 1에서 100 사이여야 합니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.bGltaXQ.short_desc": {
+          "source": "Results per page",
+          "message": "페이지당 결과 수"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.desc": {
+          "source": "The workspace or organization ID to filter users on.",
+          "message": "사용자를 필터링할 워크스페이스 또는 조직 ID입니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace",
+          "message": "워크스페이스"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace or organization ID to filter users on",
+          "message": "사용자를 필터링할 워크스페이스 또는 조직 ID"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.desc": {
+          "source": "The team ID to filter users on.",
+          "message": "사용자를 필터링할 팀 ID입니다."
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "팀"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.option.dGVhbQ.short_desc": {
+          "source": "The team ID to filter users on",
+          "message": "사용자를 필터링할 팀 ID"
+        },
+        "app.QXNhbmE.action.Z2V0VXNlcnM.short_desc": {
+          "source": "Get multiple users",
+          "message": "여러 사용자 가져오기"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "레코드 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.desc": {
+          "source": "A specific, existing goal can be deleted by making a DELETE request on the URL for that goal.\n\nReturns an empty data record.",
+          "message": "해당 목표의 URL에 DELETE 요청을 전송하여 존재하는 특정 목표를 삭제할 수 있습니다.\n\n빈 데이터 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.display_name": {
+          "source": "Delete a Goal",
+          "message": "목표 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "URI 경로 변수 \"goal_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.display_name": {
+          "source": "Goal Gid",
+          "message": "Goal Gid"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.Z29hbF9naWQ.short_desc": {
+          "source": "URI path variable \"goal_gid\"",
+          "message": "URI 경로 변수 \"goal_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlR29hbA.short_desc": {
+          "source": "Delete a goal",
+          "message": "목표 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.desc": {
+          "source": "A specific, existing section can be deleted by making a DELETE request on\nthe URL for that section.\n\nNote that sections must be empty to be deleted.\n\nThe last remaining section cannot be deleted.\n\nReturns an empty data block.",
+          "message": "해당 섹션의 URL에 DELETE 요청을 전송하여\n존재하는 특정 섹션을 삭제할 수 있습니다.\n\n삭제하려면 섹션이 비어 있어야 합니다.\n\n마지막으로 남은 섹션은 삭제할 수 없습니다.\n\n빈 데이터 블록을 반환합니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.display_name": {
+          "source": "Delete a Section",
+          "message": "섹션 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.display_name": {
+          "source": "Section Gid",
+          "message": "Section Gid"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.option.c2VjdGlvbl9naWQ.short_desc": {
+          "source": "URI path variable \"section_gid\"",
+          "message": "URI 경로 변수 \"section_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlU2VjdGlvbg.short_desc": {
+          "source": "Delete a section",
+          "message": "섹션 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.desc": {
+          "source": "A specific, existing project can be deleted by making a DELETE request on\nthe URL for that project.\n\nReturns an empty data record.",
+          "message": "해당 프로젝트의 URL에 DELETE 요청을 전송하여\n존재하는 특정 프로젝트를 삭제할 수 있습니다.\n\n빈 데이터 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.display_name": {
+          "source": "Delete a Project",
+          "message": "프로젝트 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlUHJvamVjdA.short_desc": {
+          "source": "Delete a project",
+          "message": "프로젝트 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.desc": {
+          "source": "A specific, existing tag can be deleted by making a DELETE request on\nthe URL for that tag.\n\nReturns an empty data record.",
+          "message": "해당 태그의 URL에 DELETE 요청을 전송하여\n존재하는 특정 태그를 삭제할 수 있습니다.\n\n빈 데이터 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.display_name": {
+          "source": "Delete a Tag",
+          "message": "태그 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFn.short_desc": {
+          "source": "Delete a tag",
+          "message": "태그 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.desc": {
+          "source": "A specific, existing task can be deleted by making a DELETE request on\nthe URL for that task. Deleted tasks go into the “trash” of the user\nmaking the delete request. Tasks can be recovered from the trash within a\nperiod of 30 days; afterward they are completely removed from the system.\n\nReturns an empty data record.",
+          "message": "해당 작업의 URL에 DELETE 요청을 전송하여\n존재하는 특정 작업을 삭제할 수 있습니다. 삭제된 작업은 삭제를 요청한 사용자의 “휴지통”으로 이동합니다. 작업은 30일 이내에 휴지통에서 복구할 수 있으며, 그 이후에는 시스템에서 완전히 제거됩니다.\n\n빈 데이터 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.display_name": {
+          "source": "Delete a Task",
+          "message": "작업 삭제"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.desc": {
+          "source": "Provides “pretty” output.\nProvides the response in a “pretty” format. In the case of JSON this means doing proper line breaking and indentation to make it readable. This will take extra time and increase the response size so it is advisable only to use this during debugging.",
+          "message": "“pretty” 출력을 제공합니다.\n응답을 “pretty” 형식으로 제공합니다. JSON의 경우 가독성을 높이기 위해 적절한 줄 바꿈과 들여쓰기를 적용하는 것을 의미합니다. 이 작업에는 추가 시간이 소요되고 응답 크기가 늘어나므로 디버깅 중에만 사용하는 것이 좋습니다."
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.display_name": {
+          "source": "Opt Pretty",
+          "message": "Opt Pretty"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.b3B0X3ByZXR0eQ.short_desc": {
+          "source": "Provides “pretty” output",
+          "message": "“pretty” 출력을 제공합니다"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.display_name": {
+          "source": "Task Gid",
+          "message": "Task Gid"
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.option.dGFza19naWQ.short_desc": {
+          "source": "URI path variable \"task_gid\"",
+          "message": "URI 경로 변수 \"task_gid\""
+        },
+        "app.QXNhbmE.action.ZGVsZXRlVGFzaw.short_desc": {
+          "source": "Delete a task",
+          "message": "작업 삭제"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Asana** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "설정된 연결의 인증을 사용하여 **Asana**에 사용자 지정 HTTP / REST API 호출을 전송합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 기본 작업으로 아직 노출되지 않은 엔드포인트에 이 작업을 사용하세요."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.QXNhbmE.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Asana",
+          "message": "Asana에 사용자 지정 API 호출하기"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "레코드 검색"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "단일 레코드 찾기"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.desc": {
+          "source": "Initiates a workflow when a subtask within a specific parent task is marked as completed. Use this to track progress on multi-stage tasks or to trigger the next steps in a workflow.",
+          "message": "특정 상위 작업 내의 하위 작업이 완료됨으로 표시될 때 워크플로를 시작합니다. 이를 사용하여 여러 단계로 구성된 작업의 진행 상황을 추적하거나 워크플로의 다음 단계를 실행하세요."
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.display_name": {
+          "source": "Subtask Completed",
+          "message": "하위 작업 완료됨"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the parent task exists",
+          "message": "상위 작업이 존재하는 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the parent task",
+          "message": "상위 작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.desc": {
+          "source": "The unique identifier of the parent task whose subtasks will be monitored for completion",
+          "message": "완료 여부를 모니터링할 하위 작업이 속한 상위 작업의 고유 식별자"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.display_name": {
+          "source": "Parent Task ID",
+          "message": "상위 작업 ID"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.option.dGFzaw.short_desc": {
+          "source": "The parent task containing the subtasks",
+          "message": "하위 작업이 포함된 상위 작업"
+        },
+        "app.QXNhbmE.action.c3VidGFza19jb21wbGV0ZWQ.short_desc": {
+          "source": "Triggers when a subtask is marked complete",
+          "message": "하위 작업이 완료로 표시될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.desc": {
+          "source": "Initiates a workflow whenever a new task is added to the specified project. Use this to automatically process, categorize, or assign new tasks as they are created.",
+          "message": "지정된 프로젝트에 새 작업이 추가될 때마다 워크플로를 시작합니다. 이를 사용하여 새 작업이 생성될 때 자동으로 처리, 분류 또는 할당하세요."
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.display_name": {
+          "source": "Project Task Added",
+          "message": "프로젝트 작업 추가됨"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where new task creation will be monitored",
+          "message": "새 작업 생성을 모니터링할 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project to monitor for new tasks",
+          "message": "새 작업을 모니터링할 프로젝트"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF90YXNrX2FkZGVk.short_desc": {
+          "source": "Triggers when a new task is created in a project",
+          "message": "프로젝트에 새 작업이 생성될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.desc": {
+          "source": "Initiates a workflow whenever a new project is created within the specified workspace. Use this to automate project setup, create standard templates, or notify team members about new initiatives.",
+          "message": "지정된 워크스페이스 내에 새 프로젝트가 생성될 때마다 워크플로를 시작합니다. 이를 사용하여 프로젝트 설정을 자동화하거나, 표준 템플릿을 생성하거나, 새 이니셔티브에 대해 팀원에게 알리세요."
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.display_name": {
+          "source": "Project Added",
+          "message": "프로젝트 추가됨"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new project creation will be monitored",
+          "message": "새 프로젝트 생성을 모니터링할 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new projects",
+          "message": "새 프로젝트를 모니터링할 워크스페이스"
+        },
+        "app.QXNhbmE.action.cHJvamVjdF9hZGRlZA.short_desc": {
+          "source": "Triggers when a new project is created in a workspace",
+          "message": "워크스페이스에 새 프로젝트가 생성될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.desc": {
+          "source": "Initiates a workflow when a new tag is created within the specified workspace. Use this to monitor taxonomy changes or to standardize tag usage across projects.",
+          "message": "지정된 워크스페이스 내에 새 태그가 생성될 때 워크플로를 시작합니다. 이를 사용하여 분류 체계 변경 사항을 모니터링하거나 여러 프로젝트에서 태그 사용을 표준화하세요."
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.display_name": {
+          "source": "Tag Created",
+          "message": "태그 생성됨"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new tag creation will be monitored",
+          "message": "새 태그 생성을 모니터링할 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new tags",
+          "message": "새 태그를 모니터링할 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFnX2NyZWF0ZWQ.short_desc": {
+          "source": "Triggers when a new tag is created in a workspace",
+          "message": "워크스페이스에 새 태그가 생성될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.desc": {
+          "source": "Initiates a workflow when a tag is added to the specified task. Use this to automate actions based on task categorization or to monitor how tasks are being classified.",
+          "message": "지정된 작업에 태그가 추가될 때 워크플로를 시작합니다. 이를 사용하여 작업 분류를 기반으로 작업을 자동화하거나 작업이 어떻게 분류되고 있는지 모니터링하세요."
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.display_name": {
+          "source": "Task Tag Added",
+          "message": "작업 태그 추가됨"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "작업이 존재하는 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where tag additions will be monitored",
+          "message": "태그 추가를 모니터링할 작업의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for tag additions",
+          "message": "태그 추가를 모니터링할 특정 작업"
+        },
+        "app.QXNhbmE.action.dGFza190YWdfYWRkZWQ.short_desc": {
+          "source": "Triggers when a tag is applied to a task",
+          "message": "작업에 태그가 적용될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.desc": {
+          "source": "Initiates a workflow when a new comment is posted on the specified task. Use this to monitor discussions, notify stakeholders, or track communication around critical tasks.",
+          "message": "지정된 작업에 새 댓글이 게시될 때 워크플로를 시작합니다. 이를 사용하여 토론을 모니터링하거나, 이해관계자에게 알리거나, 주요 작업에 대한 커뮤니케이션을 추적하세요."
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.display_name": {
+          "source": "Task Comment Added",
+          "message": "작업 댓글 추가됨"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "작업이 존재하는 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where comments will be monitored",
+          "message": "댓글을 모니터링할 작업의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for comments",
+          "message": "댓글을 모니터링할 특정 작업"
+        },
+        "app.QXNhbmE.action.dGFza19jb21tZW50X2FkZGVk.short_desc": {
+          "source": "Triggers when a comment is added to a specific task",
+          "message": "특정 작업에 댓글이 추가될 때 트리거됨"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.desc": {
+          "source": "Initiates a workflow when any task within the specified project is marked as completed. Use this to automate follow-up actions or notifications upon task completion.",
+          "message": "지정된 프로젝트 내의 작업이 완료됨으로 표시될 때 워크플로를 시작합니다. 이를 사용하여 작업 완료 시 후속 작업이나 알림을 자동화하세요."
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.display_name": {
+          "source": "Task Completed",
+          "message": "작업 완료됨"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where task completions will be monitored",
+          "message": "작업 완료를 모니터링할 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the completed tasks",
+          "message": "완료된 작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza19jb21wbGV0ZWQ.short_desc": {
+          "source": "Triggers when a task is marked complete in a specific project",
+          "message": "특정 프로젝트에서 작업이 완료됨으로 표시될 때 실행됩니다."
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.desc": {
+          "source": "Initiates a workflow when a task is moved between sections in the specified project. Use this to track task progress through different stages or to automate actions based on task status changes.",
+          "message": "지정된 프로젝트에서 작업이 섹션 간에 이동될 때 워크플로를 시작합니다. 이를 사용하여 여러 단계를 거치는 작업 진행 상황을 추적하거나 작업 상태 변경에 따른 작업을 자동화할 수 있습니다."
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.display_name": {
+          "source": "Task Moved to Section",
+          "message": "섹션으로 이동된 작업"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where task movements between sections will be monitored",
+          "message": "섹션 간 작업 이동을 모니터링할 프로젝트의 고유 식별자입니다."
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the sections and tasks",
+          "message": "섹션 및 작업이 포함된 프로젝트입니다."
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza19tb3ZlZF90b19zZWN0aW9u.short_desc": {
+          "source": "Triggers when a task is moved to a different section",
+          "message": "작업이 다른 섹션으로 이동될 때 실행됩니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.desc": {
+          "source": "Initiates a workflow when any story (comment, status update, field change) is added to a task. This captures all activity including automated system updates. Use this for comprehensive task activity monitoring.",
+          "message": "작업에 스토리(댓글, 상태 업데이트, 필드 변경)가 추가될 때 워크플로를 시작합니다. 이를 통해 자동화된 시스템 업데이트를 포함한 모든 활동을 수집합니다. 포괄적인 작업 활동 모니터링을 위해 이것을 사용하십시오."
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.display_name": {
+          "source": "Task Story Added",
+          "message": "작업 스토리가 추가됨"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the task exists",
+          "message": "작업이 존재하는 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the task",
+          "message": "작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.desc": {
+          "source": "The unique identifier of the task where all activity will be monitored",
+          "message": "모든 활동을 모니터링할 작업의 고유 식별자입니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.display_name": {
+          "source": "Task ID",
+          "message": "작업 ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.option.dGFzaw.short_desc": {
+          "source": "The specific task to monitor for activity",
+          "message": "활동을 모니터링할 특정 작업입니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdG9yeV9hZGRlZA.short_desc": {
+          "source": "Triggers when any activity occurs on a task",
+          "message": "작업에서 활동이 발생할 때 실행됩니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.desc": {
+          "source": "Initiates a workflow when a new subtask is added to the specified parent task. Use this to track task breakdown or to automate subtask assignments and deadlines.",
+          "message": "지정된 상위 작업에 새 하위 작업이 추가될 때 워크플로를 시작합니다. 이를 사용하여 작업 분할을 추적하거나 하위 작업 할당 및 마감일을 자동화할 수 있습니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.display_name": {
+          "source": "Task Subtask Added",
+          "message": "작업 하위 작업이 추가됨"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.desc": {
+          "source": "The unique identifier of the project where the parent task exists",
+          "message": "상위 작업이 존재하는 프로젝트의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "Project ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the parent task",
+          "message": "상위 작업이 포함된 프로젝트"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where the project exists",
+          "message": "프로젝트가 존재하는 워크스페이스의 고유 식별자"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace containing the project",
+          "message": "프로젝트가 포함된 워크스페이스"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.desc": {
+          "source": "The unique identifier of the parent task where subtask creation will be monitored",
+          "message": "하위 작업 생성을 모니터링할 상위 작업의 고유 식별자입니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.display_name": {
+          "source": "Parent Task ID",
+          "message": "상위 작업 ID"
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.option.dGFzaw.short_desc": {
+          "source": "The parent task to monitor for new subtasks",
+          "message": "새 하위 작업을 모니터링할 상위 작업입니다."
+        },
+        "app.QXNhbmE.action.dGFza19zdWJ0YXNrX2FkZGVk.short_desc": {
+          "source": "Triggers when a subtask is created under a parent task",
+          "message": "상위 작업 아래에 하위 작업이 생성될 때 실행됩니다."
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a new team is formed within the specified workspace. Use this to automate team onboarding processes or to set up default team resources.",
+          "message": "지정된 워크스페이스 내에 새 팀이 생성될 때 워크플로를 시작합니다. 이를 사용하여 팀 온보딩 프로세스를 자동화하거나 기본 팀 리소스를 설정하십시오."
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.display_name": {
+          "source": "Team Added",
+          "message": "팀이 추가됨"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new team creation will be monitored",
+          "message": "새 팀 생성을 모니터링할 워크스페이스의 고유 식별자입니다."
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new teams",
+          "message": "새 팀을 모니터링할 워크스페이스입니다."
+        },
+        "app.QXNhbmE.action.dGVhbV9hZGRlZA.short_desc": {
+          "source": "Triggers when a new team is created in a workspace",
+          "message": "워크스페이스에 새 팀이 생성될 때 실행됩니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 기존 레코드를 업데이트합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "레코드 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.QXNhbmE.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Asana\"",
+          "message": "\"Asana\" 앱의 지정된 테이블에서 기존 레코드를 업데이트합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.desc": {
+          "source": "An existing goal can be updated by making a PUT request on the URL for\nthat goal. Only the fields provided in the `data` block will be updated;\nany unspecified fields will remain unchanged.\n\nReturns the complete updated goal record.",
+          "message": "해당 목표의 URL로 PUT 요청을 보내 기존 목표를\n업데이트할 수 있습니다. `data` 블록에 제공된 필드만 업데이트되며\n지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다.\n\n업데이트된 전체 목표 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.display_name": {
+          "source": "Update a Goal",
+          "message": "목표 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlR29hbA.short_desc": {
+          "source": "Update a goal",
+          "message": "목표 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.desc": {
+          "source": "A specific, existing section can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the `data` block\nwill be updated; any unspecified fields will remain unchanged. (note that\nat this time, the only field that can be updated is the `name` field.)\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated section record.",
+          "message": "해당 프로젝트의 URL로 PUT 요청을 보내 특정 기존 섹션을\n업데이트할 수 있습니다. `data` 블록에 제공된 필드만\n업데이트되며 지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다. (현재\n업데이트할 수 있는 필드는 `name` 필드뿐입니다.)\n\n이 방법을 사용할 때는 변경하려는 필드만 지정하는 것이 좋으며,\n그렇지 않으면 마지막으로 작업을 조회한 이후 다른 사용자가 변경한\n내용을 덮어쓸 수 있습니다.\n\n업데이트된 전체 섹션 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.display_name": {
+          "source": "Update a Section",
+          "message": "섹션 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlU2VjdGlvbg.short_desc": {
+          "source": "Update a section",
+          "message": "섹션 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.desc": {
+          "source": "A specific, existing project can be updated by making a PUT request on\nthe URL for that project. Only the fields provided in the `data` block\nwill be updated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated project record.",
+          "message": "해당 프로젝트의 URL로 PUT 요청을 보내 특정 기존 프로젝트를\n업데이트할 수 있습니다. `data` 블록에 제공된 필드만\n업데이트되며 지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다.\n\n이 방법을 사용할 때는 변경하려는 필드만 지정하는 것이 좋으며,\n그렇지 않으면 마지막으로 작업을 조회한 이후 다른 사용자가 변경한\n내용을 덮어쓸 수 있습니다.\n\n업데이트된 전체 프로젝트 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.display_name": {
+          "source": "Update a Project",
+          "message": "프로젝트 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlUHJvamVjdA.short_desc": {
+          "source": "Update a project",
+          "message": "프로젝트 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.desc": {
+          "source": "A specific, existing workspace can be updated by making a PUT request on the URL for that workspace. Only the fields provided in the data block will be updated; any unspecified fields will remain unchanged.\nCurrently the only field that can be modified for a workspace is its name.\nReturns the complete, updated workspace record.",
+          "message": "해당 워크스페이스의 URL로 PUT 요청을 보내 특정 기존 워크스페이스를 업데이트할 수 있습니다. 데이터 블록에 제공된 필드만 업데이트되며, 지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다.\n현재 워크스페이스에서 수정할 수 있는 필드는 이름뿐입니다.\n업데이트된 전체 워크스페이스 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.display_name": {
+          "source": "Update a Workspace",
+          "message": "워크스페이스 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlV29ya3NwYWNl.short_desc": {
+          "source": "Update a workspace",
+          "message": "워크스페이스 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.desc": {
+          "source": "Updates the properties of a tag. Only the fields provided in the `data`\nblock will be updated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the tag.\n\nReturns the complete updated tag record.",
+          "message": "태그의 속성을 업데이트합니다. `data` 블록에 제공된 필드만\n업데이트되며 지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다.\n\n이 방법을 사용할 때는 변경하려는 필드만 지정하는 것이 좋으며,\n그렇지 않으면 마지막으로 태그를 조회한 이후 다른 사용자가 변경한\n내용을 덮어쓸 수 있습니다.\n\n업데이트된 전체 태그 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.display_name": {
+          "source": "Update a Tag",
+          "message": "태그 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFn.short_desc": {
+          "source": "Update a tag",
+          "message": "태그 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.desc": {
+          "source": "A specific, existing task can be updated by making a PUT request on the\nURL for that task. Only the fields provided in the `data` block will be\nupdated; any unspecified fields will remain unchanged.\n\nWhen using this method, it is best to specify only those fields you wish\nto change, or else you may overwrite changes made by another user since\nyou last retrieved the task.\n\nReturns the complete updated task record.",
+          "message": "해당 작업의 URL로 PUT 요청을 보내 특정 기존 작업을\n업데이트할 수 있습니다. `data` 블록에 제공된 필드만\n업데이트되며 지정되지 않은 필드는 변경되지 않은 상태로 유지됩니다.\n\n이 방법을 사용할 때는 변경하려는 필드만 지정하는 것이 좋으며,\n그렇지 않으면 마지막으로 작업을 조회한 이후 다른 사용자가 변경한\n내용을 덮어쓸 수 있습니다.\n\n업데이트된 전체 작업 레코드를 반환합니다."
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.display_name": {
+          "source": "Update a Task",
+          "message": "작업 업데이트"
+        },
+        "app.QXNhbmE.action.dXBkYXRlVGFzaw.short_desc": {
+          "source": "Update a task",
+          "message": "작업 업데이트"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.desc": {
+          "source": "Initiates a workflow when a new user is added to the specified workspace. Use this to automate user onboarding, permission assignments, or welcome notifications.",
+          "message": "지정된 워크스페이스에 새 사용자가 추가될 때 워크플로를 시작합니다. 이를 사용하여 사용자 온보딩, 권한 할당 또는 환영 알림을 자동화하십시오."
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.display_name": {
+          "source": "User Added",
+          "message": "사용자가 추가됨"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.desc": {
+          "source": "The unique identifier of the workspace where new user additions will be monitored",
+          "message": "새 사용자 추가를 모니터링할 워크스페이스의 고유 식별자입니다."
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.display_name": {
+          "source": "Workspace ID",
+          "message": "Workspace ID"
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.option.d29ya3NwYWNl.short_desc": {
+          "source": "The workspace to monitor for new users",
+          "message": "새 사용자를 모니터링할 워크스페이스입니다."
+        },
+        "app.QXNhbmE.action.dXNlcl9hZGRlZA.short_desc": {
+          "source": "Triggers when a user joins a workspace",
+          "message": "사용자가 워크스페이스에 참여할 때 실행됩니다."
+        },
+        "app.QXNhbmE.desc": {
+          "source": "Connect to Asana to automate task management, project monitoring, and team collaboration workflows. Use these triggers to respond to changes in tasks, projects, and workspaces.",
+          "message": "Asana에 연결하여 작업 관리, 프로젝트 모니터링 및 팀 협업 워크플로를 자동화하십시오. 이 트리거를 사용하여 작업, 프로젝트 및 워크스페이스의 변경 사항에 대응하십시오."
+        },
+        "app.QXNhbmE.display_name": {
+          "source": "Asana",
+          "message": "Asana"
+        },
+        "app.QXNhbmE.short_desc": {
+          "source": "Automate workflows by integrating with the Asana project management platform",
+          "message": "Asana 프로젝트 관리 플랫폼과 통합하여 워크플로를 자동화하십시오."
+        }
+      }
+    }
+  }
+}

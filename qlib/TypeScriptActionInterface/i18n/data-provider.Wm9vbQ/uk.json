@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.desc": {
+          "source": "Display information about a meeting summary.\n\n**Prerequisites**\n* Host user type must have a Pro or higher plan.\n* Enable the **Meeting Summary with AI Companion** feature in the host's account.\n* E2ee meetings do not have summary feature enabled.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Відобразити інформацію про підсумок зустрічі.\n\n**Попередні вимоги**\n* Тип користувача організатора повинен мати план Pro або вище.\n* Увімкніть функцію **Meeting Summary with AI Companion** в обліковому записі організатора.\n* Для E2ee-зустрічей функція підсумків не підтримується.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting_summary:read`,`meeting_summary:read:admin`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:summary`,`meeting:read:summary:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.display_name": {
+          "source": "Get a Meeting Summary",
+          "message": "Отримати підсумок зустрічі"
+        },
+        "app.Wm9vbQ.action.R2V0YW1lZXRpbmdzdW1tYXJ5.short_desc": {
+          "source": "Get a meeting summary",
+          "message": "Отримати підсумок зустрічі"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve a list of all the participants who attended a webinar hosted in the past. \n\n**Prerequisites:** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Отримати список усіх учасників, які відвідали вебінар, проведений у минулому.\n\n**Попередні вимоги:**\n* План Pro або вище з додатком для вебінарів.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_past_participants:admin`,`webinar:read:list_past_participants`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.display_name": {
+          "source": "List Webinar Participants",
+          "message": "Отримати список учасників вебінару"
+        },
+        "app.Wm9vbQ.action.bGlzdFdlYmluYXJQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "List webinar participants",
+          "message": "Отримати список учасників вебінару"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Zoom** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати спеціальний виклик HTTP / REST API до **Zoom**, використовуючи автентифікацію налаштованого з'єднання.\n\nУкажіть метод HTTP, шлях URI (відносно базової URL-адреси API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для кінцевих точок, які ще не представлені як окремі дії в цьому додатку."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.Wm9vbQ.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Zoom",
+          "message": "Зробити спеціальний виклик API до Zoom"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.desc": {
+          "source": "[Create a meeting](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) for a user. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* A meeting's `start_url` value is the URL a host or an alternative host can use to start a meeting. The `start_url` value's expiration time is **two hours** for all regular users.\n* For `custCreate` meeting hosts - users created with the `custCreate` parameter via the [**Create users**](-docs-api-users-#tag-users-POST-users) API - the expiration time of the `start_url` parameter is **90 days** from the generation of the `start_url`.\n* For security reasons, the recommended way to programmatically get the updated `start_url` value after expiry is to call the [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId) API. Refer to the `start_url` value in the response.\n* **100 requests per day**. The rate limit is applied against the `userId` of the **meeting host** used to make the request.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "[Створити зустріч](https:-support.zoom.us-hc-en-us-articles-201362413-Scheduling-meetings) для користувача. Для додатків на рівні користувача передайте [значення `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) замість параметра `userId`.\n\n**Попередні вимоги:**\n* Значення `start_url` зустрічі — це URL-адреса, яку організатор або альтернативний організатор може використовувати для початку зустрічі. Термін дії значення `start_url` становить **дві години** для всіх звичайних користувачів.\n* Для організаторів зустрічей `custCreate` — користувачів, створених із параметром `custCreate` через API [**Create users**](-docs-api-users-#tag-users-POST-users) — термін дії параметра `start_url` становить **90 днів** із моменту генерації `start_url`.\n* З міркувань безпеки рекомендований спосіб програмного отримання оновленого значення `start_url` після закінчення терміну дії — це виклик API [**Get a meeting**](-docs-api-meetings-#tag-meetings-GET-meetings-meetingId). Зверніться до значення `start_url` у відповіді.\n* **100 запитів на день**. Ліміт запитів застосовується до `userId` **організатора зустрічі**, використаного для виконання запиту.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:meeting`,`meeting:write:meeting:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.display_name": {
+          "source": "Create a Meeting",
+          "message": "Створити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0NyZWF0ZQ.short_desc": {
+          "source": "Create a meeting",
+          "message": "Створити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.desc": {
+          "source": "Delete a meeting.\n\n**Prerequisites**:\n* For recurring meetings, the `occurrence_id` is required to delete a specific occurrence. If not provided, the entire recurring series will be deleted.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Видалити зустріч.\n\n**Попередні вимоги**:\n* Для повторюваних зустрічей для видалення конкретного входження обов'язковим є `occurrence_id`. Якщо не вказано, буде видалено всю повторювану серію.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:delete:meeting`,`meeting:delete:meeting:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.display_name": {
+          "source": "Delete a Meeting",
+          "message": "Видалити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ0RlbGV0ZQ.short_desc": {
+          "source": "Delete a meeting",
+          "message": "Видалити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration to a meeting. See [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) for details on how to set the requirements for these fields. Note that there is a maximum limit of 4,999 registrants per meeting and users will see an error if the meeting's capacity is reached. \n\n **Prerequisites:** \n* The host must be a **Licensed** user type.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Створити та надіслати реєстрацію користувача на зустріч. Дивіться [Customizing webinar registration](https:-support.zoom.us-hc-en-us-articles-202835649-Customizing-webinar-registration) для отримання детальної інформації про те, як налаштувати вимоги для цих полів. Зверніть увагу, що існує максимальний ліміт у 4999 зареєстрованих осіб на зустріч, і користувачі побачать помилку, якщо ліміт зустрічі буде вичерпано.\n\n **Попередні вимоги:** \n* Організатор повинен мати тип користувача **Licensed**.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:admin`,`meeting:write`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write:registrant`,`meeting:write:registrant:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Meeting Registrant",
+          "message": "Додати зареєстрованого учасника зустрічі"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a meeting registrant",
+          "message": "Додати зареєстрованого учасника зустрічі"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.desc": {
+          "source": "List users that have registered for a meeting. A host or a user with admin permission can require [registration for a Zoom meeting](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Prerequisites**:\n* Host user type must be **Pro** or higher plan.\n* Registration must be enabled for the meeting.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Отримати список користувачів, які зареєструвалися на зустріч. Організатор або користувач з правами адміністратора може вимагати [реєстрацію на зустріч Zoom](https:-support.zoom.us-hc-en-us-articles-211579443-Registration-for-Meetings).\n\n**Попередні вимоги**:\n* Тип користувача організатора повинен мати план **Pro** або вище.\n* Для зустрічі має бути ввімкнено реєстрацію.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_registrants`,`meeting:read:list_registrants:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.display_name": {
+          "source": "List Meeting Registrants",
+          "message": "Отримати список зареєстрованих учасників зустрічі"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1JlZ2lzdHJhbnRz.short_desc": {
+          "source": "List meeting registrants",
+          "message": "Отримати список зареєстрованих учасників зустрічі"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.desc": {
+          "source": "Update meeting details.\n\n**Prerequisites**\n* The `start_time` value must be a future date. If the value is omitted or a date is in the past, the API ignores this value and does not update any recurring meetings.\n* The `recurrence` object is required only when updating the entire series of a recurring meeting with `type=8`.\n* This API has a rate limit of **100 requests per day**. You can update a meeting for a maximum of 100 times within a 24-hour period.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Оновити відомості про зустріч.\n\n**Попередні вимоги**\n* Значення `start_time` має бути майбутньою датою. Якщо значення пропущено або вказано дату в минулому, API ігнорує це значення і не оновлює жодних повторюваних зустрічей.\n* Об'єкт `recurrence` потрібен лише під час оновлення всієї серії повторюваної зустрічі з `type=8`.\n* Цей API має ліміт частоти запитів у **100 запитів на день**. Ви можете оновлювати зустріч щонайбільше 100 разів протягом 24-годинного періоду.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:write`,`meeting:write:admin`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:update:meeting:admin`,`meeting:update:meeting`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.display_name": {
+          "source": "Update a Meeting",
+          "message": "Оновити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ1VwZGF0ZQ.short_desc": {
+          "source": "Update a meeting",
+          "message": "Оновити зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.desc": {
+          "source": "List a meeting host user's scheduled meetings. For user-level apps, pass [the `me` value](-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.\n\n**Prerequisites:**\n* This API **only** supports scheduled meetings. This API does not return information about instant meetings.\n* This API only returns a user's [unexpired meetings](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844).\n* When `type` is set to `upcoming`, `upcoming_meetings`, or `previous_meetings`, only a maximum of 6 months of meeting data will be returned. \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Отримати список запланованих зустрічей організатора. Для додатків на рівні користувача передайте [значення `me`](-docs-api-rest-using-zoom-apis-#the-me-keyword) замість параметра `userId`.\n\n**Попередні вимоги:**\n* Цей API підтримує **лише** заплановані зустрічі. Цей API не повертає інформацію про миттєві зустрічі.\n* Цей API повертає лише [непрострочені зустрічі](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844) користувача.\n* Якщо для `type` встановлено `upcoming`, `upcoming_meetings` або `previous_meetings`, буде повернуто дані зустрічей щонайбільше за 6 місяців.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_meetings`,`meeting:read:list_meetings:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.display_name": {
+          "source": "List Meetings",
+          "message": "Отримати список зустрічей"
+        },
+        "app.Wm9vbQ.action.bWVldGluZ3M.short_desc": {
+          "source": "List meetings",
+          "message": "Отримати список зустрічей"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.desc": {
+          "source": "Retrieve the given meeting's details.\n\n**Prerequisites**:\n* Host user must have a Zoom Meetings Basic license or higher.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Отримати відомості про вказану зустріч.\n\n**Попередні вимоги**:\n* Користувач-організатор повинен мати ліцензію Zoom Meetings Basic або вище.\n\n**[Області дії (Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read`,`meeting:read:admin`\n\n**[Детальні області дії (Granular Scopes)](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:meeting`,`meeting:read:meeting:admin`\n\n**[Позначка ліміту запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.display_name": {
+          "source": "Get a Meeting",
+          "message": "Отримати зустріч"
+        },
+        "app.Wm9vbQ.action.bWVldGluZw.short_desc": {
+          "source": "Get a meeting",
+          "message": "Отримати зустріч"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.desc": {
+          "source": "Monitors Zoom meetings and triggers when meetings are created, started (live), or ended (previous meetings) based on the selected event type. Returns meeting details including topic, duration, join URL, and meeting type.",
+          "message": "Відстежує зустрічі Zoom і спрацьовує, коли зустрічі створюються, розпочинаються (live) або завершуються (previous meetings) на основі вибраного типу події. Повертає відомості про зустріч, включно з темою, тривалістю, URL-адресою приєднання та типом зустрічі."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.display_name": {
+          "source": "New Meeting",
+          "message": "Нова зустріч"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOmxpdmU.display_name": {
+          "source": "Triggers when a meeting is started",
+          "message": "Спрацьовує, коли зустріч розпочинається"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnByZXZpb3VzX21lZXRpbmdz.display_name": {
+          "source": "Triggers when a meeting is ended",
+          "message": "Спрацьовує, коли зустріч завершується"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.allowed-value.c3RyaW5nOnVwY29taW5n.display_name": {
+          "source": "Triggers when a meeting is created",
+          "message": "Спрацьовує, коли зустріч створюється"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.desc": {
+          "source": "Specifies which type of meeting event should trigger this action. Choose \"any\" to trigger on all meeting creations, \"live\" for when meetings start, or \"previous_meetings\" for when meetings end.",
+          "message": "Визначає, який тип події зустрічі має запускати цю дію. Виберіть \"any\", щоб запускати при всіх створеннях зустрічей, \"live\", коли зустрічі розпочинаються, або \"previous_meetings\", коли зустрічі завершуються."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.display_name": {
+          "source": "Meeting Event Type",
+          "message": "Тип події зустрічі"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.option.bWVldGluZ19ldmVudF90eXBl.short_desc": {
+          "source": "Type of meeting event to monitor",
+          "message": "Тип події зустрічі для відстеження"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmc.short_desc": {
+          "source": "Triggers when a Zoom meeting is created, started, or ended.",
+          "message": "Спрацьовує, коли зустріч Zoom створюється, розпочинається або завершується."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.desc": {
+          "source": "Monitors Zoom meeting summaries and triggers when new summaries are generated after meetings end. Returns summary details including meeting information, host details, and summary timestamps.",
+          "message": "Відстежує підсумки зустрічей Zoom і спрацьовує, коли створюються нові підсумки після завершення зустрічей. Повертає відомості про підсумок, зокрема інформацію про зустріч, дані організатора та мітки часу підсумку."
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.display_name": {
+          "source": "New Meeting Summary",
+          "message": "Новий підсумок зустрічі"
+        },
+        "app.Wm9vbQ.action.bmV3X21lZXRpbmdfc3VtbWFyeQ.short_desc": {
+          "source": "Triggers when a new Zoom meeting summary is created.",
+          "message": "Спрацьовує, коли створюється новий підсумок зустрічі Zoom."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.desc": {
+          "source": "Monitors Zoom webinars and triggers when new webinars are created. Returns webinar details including topic, duration, join URL, registration URL, and webinar type.",
+          "message": "Відстежує вебінари Zoom і спрацьовує, коли створюються нові вебінари. Повертає відомості про вебінар, включно з темою, тривалістю, URL-адресою приєднання, URL-адресою реєстрації та типом вебінару."
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.display_name": {
+          "source": "New Webinar",
+          "message": "Новий вебінар"
+        },
+        "app.Wm9vbQ.action.bmV3X3dlYmluYXI.short_desc": {
+          "source": "Triggers when a new Zoom webinar is created.",
+          "message": "Спрацьовує, коли створюється новий вебінар Zoom."
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.desc": {
+          "source": "Retrieve information on participants from a past meeting. Note the API doesn't return results if there's only one participant in a meeting.  \n   \n \n**Prerequisites:**  \n \n* Paid account on a Pro or higher plan.\n\n  \n    \n   **Note**: Please double encode your UUID when using this API if the UUID begins with a '-'or contains '-' in it.\n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Отримати інформацію про учасників минулої зустрічі. Зверніть увагу, що API не повертає результатів, якщо в зустрічі є лише один учасник.  \n   \n \n**Передумови:**  \n \n* Платний обліковий запис із планом Pro або вищим.\n\n  \n    \n   **Примітка**: двічі закодуйте свій UUID під час використання цього API, якщо UUID починається з '-' або містить '-' всередині.\n\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:admin`,`meeting:read`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `meeting:read:list_past_participants`,`meeting:read:list_past_participants:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.display_name": {
+          "source": "Get Past Meeting Participants",
+          "message": "Отримати учасників минулої зустрічі"
+        },
+        "app.Wm9vbQ.action.cGFzdE1lZXRpbmdQYXJ0aWNpcGFudHM.short_desc": {
+          "source": "Get past meeting participants",
+          "message": "Отримати учасників минулої зустрічі"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.desc": {
+          "source": "Returns all of a meeting's [recordings](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4). Use the `download_url` property listed in the response to download the recording files.  To access a password-protected cloud recording, send the `download_access_token` or the user's [OAuth access token](-docs-integrations-oauth-) as a Bearer token in the Authorization header. For example: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Повертає всі [записи](https:-support.zoom.com-hc-en-article?id=zm_kb&sysparm_article=KB0062627#h_7420acb5-1897-4061-87b4-5b76e99c03b4) зустрічі. Використовуйте властивість `download_url`, указану у відповіді, для завантаження файлів запису. Щоб отримати доступ до захищеного паролем хмарного запису, надішліть `download_access_token` або [токен доступу OAuth](-docs-integrations-oauth-) користувача як Bearer-токен у заголовку Authorization. Наприклад: \n\n `curl -H 'Authorization: Bearer <ACCESS_TOKEN>' https:-base-domain-rec-archive-download-xyz` \n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read`,`phone_recording:read:admin`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_recording_files:admin`,`cloud_recording:read:list_recording_files`,`cloud_recording:read:list_recording_files:master`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.display_name": {
+          "source": "Get Meeting Recordings",
+          "message": "Отримати записи зустрічі"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nR2V0.short_desc": {
+          "source": "Get meeting recordings",
+          "message": "Отримати записи зустрічі"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.desc": {
+          "source": "Delete all of a meeting's or webinar's recording files.  \n\n**Prerequisites**:\n* Cloud Recording should be enabled on the user's account.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Видалити всі файли записів зустрічі або вебінару.  \n\n**Передумови**:\n* Хмарний запис має бути ввімкнено в обліковому записі користувача.  \n \n\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:write:admin`,`recording:write`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:delete:meeting_recording`,`cloud_recording:delete:meeting_recording:admin`,`cloud_recording:delete:meeting_recording:master`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.display_name": {
+          "source": "Delete Meeting or Webinar Recordings",
+          "message": "Видалити записи зустрічі або вебінару"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nRGVsZXRl.short_desc": {
+          "source": "Delete meeting or webinar recordings",
+          "message": "Видалити записи зустрічі або вебінару"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.desc": {
+          "source": "Lists all [cloud recordings](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) for a user.  \n\nFor user-level apps, pass the [`me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter.  To access a user's passcode protected cloud recording, send the user's [OAuth access token](https:-developers.zoom.us-docs-integrations-oauth-) as a bearer token in the authorization header.  \n\nExample:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Prerequisites:**  \n* Must have a Pro or a higher plan.  \n* Must enable Cloud Recording on the user's account.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Повертає список усіх [хмарних записів](https:-support.zoom.us-hc-en-us-articles-203741855-Cloud-Recording) для користувача.  \n\nДля програм рівня користувача передайте [значення `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) замість параметра `userId`.  Щоб отримати доступ до захищеного паролем хмарного запису користувача, надішліть [токен доступу OAuth](https:-developers.zoom.us-docs-integrations-oauth-) користувача як bearer-токен у заголовку авторизації.  \n\nПриклад:  `curl -H \"Authorization: Bearer <ACCESS_TOKEN>\" https:-base-domain-rec-archive-download-xyz`  \n\n**Передумови:**  \n* Потрібен план Pro або вищий.  \n* Необхідно ввімкнути Cloud Recording в обліковому записі користувача.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `recording:read:admin`,`recording:read`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `cloud_recording:read:list_user_recordings`,`cloud_recording:read:list_user_recordings:master`,`cloud_recording:read:list_user_recordings:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.display_name": {
+          "source": "List All Recordings",
+          "message": "Список усіх записів"
+        },
+        "app.Wm9vbQ.action.cmVjb3JkaW5nc0xpc3Q.short_desc": {
+          "source": "List all recordings",
+          "message": "Список усіх записів"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.desc": {
+          "source": "Get details for a scheduled Zoom webinar.\n  \n   \n \n**Prerequisites:**\n* Pro or higher plan with a Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Отримати відомості про запланований вебінар Zoom.\n  \n   \n \n**Передумови:**\n* План Pro або вищий із доповненням Webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:webinar`,`webinar:read:webinar:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.display_name": {
+          "source": "Get a Webinar",
+          "message": "Отримати вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcg.short_desc": {
+          "source": "Get a webinar",
+          "message": "Отримати вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.desc": {
+          "source": "Schedule a webinar for a user who is a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Webinars allow a host to broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Rate limit:**\nUp to a maximum of **100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites:** \n* A Pro or higher plan with a [Webinar plan](https:-zoom.us-webinar) add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Запланувати вебінар для користувача, який є організатором вебінару. Для програм рівня користувача передайте [значення `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) замість параметра `userId`. \n\n Вебінари дозволяють організатору транслювати зустріч Zoom для щонайбільше 10 000 учасників. \n\n**Ліміт частоти запитів:**\nМаксимум до **100 запитів на день**. Ліміт застосовується до `userId` **організатора вебінару**, який використовується для здійснення запиту. \n\n**Передумови:** \n* План Pro або вищий із доповненням [Webinar plan](https:-zoom.us-webinar).\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:webinar`,`webinar:write:webinar:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.display_name": {
+          "source": "Create a Webinar",
+          "message": "Створити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckNyZWF0ZQ.short_desc": {
+          "source": "Create a webinar",
+          "message": "Створити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.desc": {
+          "source": "Delete a webinar. \n\n\n**Prerequisites:**  \n \n* Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Видалити вебінар. \n\n\n**Передумови:**  \n \n* План Pro або вищий із доповненням webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:delete:webinar`,`webinar:delete:webinar:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.display_name": {
+          "source": "Delete a Webinar",
+          "message": "Видалити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hckRlbGV0ZQ.short_desc": {
+          "source": "Delete a webinar",
+          "message": "Видалити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.desc": {
+          "source": "Create and submit a user's registration for a webinar. Zoom users with a [Webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars allow hosts to broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar. \n\n**Prerequisites:** \n* A Pro or higher plan with the Webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Створити та надіслати реєстрацію користувача на вебінар. Користувачі Zoom із [планом Webinar](https:-zoom.us-webinar) мають доступ до створення вебінарів та керування ними. Вебінари дозволяють організаторам транслювати зустріч Zoom для щонайбільше 10 000 учасників. Планування [вебінару з реєстрацією](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) вимагає від ваших реєстрантів заповнення короткої форми перед отриманням посилання для приєднання до вебінару. \n\n**Передумови:** \n* План Pro або вищий із доповненням Webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:admin`,`webinar:write`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write:registrant`,`webinar:write:registrant:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.display_name": {
+          "source": "Add a Webinar Registrant",
+          "message": "Додати зареєстрованого учасника вебінару"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRDcmVhdGU.short_desc": {
+          "source": "Add a webinar registrant",
+          "message": "Додати зареєстрованого учасника вебінару"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.desc": {
+          "source": "List all users that have registered for a given webinar. Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. The webinar functionality lets a host broadcast a Zoom meeting to up to 10,000 attendees. Scheduling a [webinar with registration](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) requires your registrants to complete a brief form before receiving the link to join the webinar.  \n\n\n**Prerequisites**\n* Pro or higher plan with a Webinar add-on.  \n \n\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Повернути список усіх користувачів, зареєстрованих на певний вебінар. Користувачі Zoom із [планом webinar](https:-zoom.us-webinar) мають доступ до створення вебінарів та керування ними. Функціонал вебінарів дозволяє організатору транслювати зустріч Zoom для щонайбільше 10 000 учасників. Планування [вебінару з реєстрацією](https:-support.zoom.us-hc-en-us-articles-204619915-Scheduling-a-Webinar-with-Registration) вимагає від ваших реєстрантів заповнення короткої форми перед отриманням посилання для приєднання до вебінару.  \n\n\n**Передумови**\n* План Pro або вищий із доповненням Webinar.  \n \n\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_registrants`,`webinar:read:list_registrants:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.display_name": {
+          "source": "List Webinar Registrants",
+          "message": "Список зареєстрованих учасників вебінару"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclJlZ2lzdHJhbnRz.short_desc": {
+          "source": "List webinar registrants",
+          "message": "Список зареєстрованих учасників вебінару"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.desc": {
+          "source": "Make updates to a scheduled webinar. \n\n**100 requests per day**. The rate limit is applied to the `userId` of the **webinar host** used to make the request. \n\n**Prerequisites** \n* A Pro or higher plan with a webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`",
+          "message": "Внести зміни до запланованого вебінару. \n\n**100 запитів на день**. Ліміт частоти запитів застосовується до `userId` **організатора вебінару**, який використовується для здійснення запиту. \n\n**Передумови** \n* План Pro або вищий із доповненням webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:write`,`webinar:write:admin`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:update:webinar`,`webinar:update:webinar:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `LIGHT`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.display_name": {
+          "source": "Update a Webinar",
+          "message": "Оновити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hclVwZGF0ZQ.short_desc": {
+          "source": "Update a webinar",
+          "message": "Оновити вебінар"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.desc": {
+          "source": "List all the webinars scheduled by or on behalf a webinar host. For user-level apps, pass [the `me` value](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) instead of the `userId` parameter. \n\n Zoom users with a [webinar plan](https:-zoom.us-webinar) have access to creating and managing webinars. Webinars let a host broadcast a Zoom meeting to up to 10,000 attendees. \n\n**Note** This API only returns a user's [unexpired webinars](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844). \n\n **Prerequisites** \n* A Pro or higher plan with the webinar add-on.\n\n**[Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Granular Scopes](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Rate Limit Label](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`",
+          "message": "Повернути список усіх вебінарів, запланованих організатором або від імені організатора вебінару. Для програм рівня користувача передайте [значення `me`](https:-developers.zoom.us-docs-api-rest-using-zoom-apis-#the-me-keyword) замість параметра `userId`. \n\n Користувачі Zoom із [планом webinar](https:-zoom.us-webinar) мають доступ до створення вебінарів та керування ними. Вебінари дозволяють організатору транслювати зустріч Zoom для щонайбільше 10 000 учасників. \n\n**Примітка** Цей API повертає лише [непрострочені вебінари](https:-support.zoom.us-hc-en-us-articles-201362373-Meeting-ID#h_c73f9b08-c1c0-4a1a-b538-e01ebb98e844) користувача. \n\n **Передумови** \n* План Pro або вищий із доповненням webinar.\n\n**[Області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:admin`,`webinar:read`\n\n**[Деталізовані області дії](https:-developers.zoom.us-docs-integrations-oauth-scopes-overview-):** `webinar:read:list_webinars`,`webinar:read:list_webinars:admin`\n\n**[Мітка ліміту частоти запитів](https:-marketplace.zoom.us-docs-api-reference-rate-limits#rate-limits):** `MEDIUM`"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.display_name": {
+          "source": "List Webinars",
+          "message": "Список вебінарів"
+        },
+        "app.Wm9vbQ.action.d2ViaW5hcnM.short_desc": {
+          "source": "List webinars",
+          "message": "Список вебінарів"
+        },
+        "app.Wm9vbQ.desc": {
+          "source": "Zoom is a video conferencing and online meeting platform that allows users to host and join virtual meetings, webinars, and video conferences. It offers features such as screen sharing, recording, and chat functionalities to enhance collaboration and communication among participants.",
+          "message": "Zoom — це платформа для відеоконференцій та онлайн-зустрічей, яка дозволяє користувачам проводити віртуальні зустрічі, вебінари та відеоконференції, а також приєднуватися до них. Вона пропонує такі можливості, як показ екрана, запис та чат для покращення співпраці та взаємодії між учасниками."
+        },
+        "app.Wm9vbQ.display_name": {
+          "source": "Zoom",
+          "message": "Zoom"
+        },
+        "app.Wm9vbQ.short_desc": {
+          "source": "Video conferencing and online meeting platform",
+          "message": "Платформа для відеоконференцій та онлайн-зустрічей"
+        }
+      }
+    }
+  }
+}

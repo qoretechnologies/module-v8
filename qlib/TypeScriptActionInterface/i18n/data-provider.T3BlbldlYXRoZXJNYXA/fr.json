@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.desc": {
+          "source": "Get real-time weather information including temperature, humidity, wind speed, pressure, visibility, and weather conditions for any location worldwide. Supports lookup by city name, geographic coordinates, or zip/postal code.",
+          "message": "Obtenez des informations météorologiques en temps réel, notamment la température, l'humidité, la vitesse du vent, la pression, la visibilité et les conditions météorologiques pour n'importe quel lieu dans le monde. Prend en charge la recherche par nom de ville, coordonnées géographiques ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.display_name": {
+          "source": "Get Current Weather",
+          "message": "Obtenir la météo actuelle"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "Nom de la ville"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "Coordonnées (Lat/Lon)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "Code postal"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "Choisissez la manière dont vous souhaitez spécifier le lieu : par nom de ville (par ex., « London,UK »), coordonnées géographiques (latitude/longitude) ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "Type de lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "Comment spécifier le lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.desc": {
+          "source": "Optional two-letter language code for weather condition descriptions (e.g., \"en\" for English, \"es\" for Spanish, \"fr\" for French, \"de\" for German).",
+          "message": "Code langue facultatif à deux lettres pour les descriptions des conditions météorologiques (par ex. « en » pour l'anglais, « es » pour l'espagnol, « fr » pour le français, « de » pour l'allemand)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "Langue"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.bGFuZw.short_desc": {
+          "source": "Language for weather descriptions",
+          "message": "Langue pour les descriptions météorologiques"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "Métrique (Celsius, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "Impérial (Fahrenheit, mph)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "Standard (Kelvin, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).",
+          "message": "Choisissez le système de mesure : Métrique (Celsius, mètres/seconde), Impérial (Fahrenheit, miles/heure) ou Standard (Kelvin, mètres/seconde)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "Unités"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "Unités de température et de vitesse"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2N1cnJlbnRfd2VhdGhlcg.short_desc": {
+          "source": "Retrieve current weather data for a specific location",
+          "message": "Récupérer les données météorologiques actuelles pour un lieu spécifique"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.desc": {
+          "source": "Get a 5-day weather forecast with data points every 3 hours for any location worldwide. Each forecast item includes temperature, humidity, wind, precipitation probability, and weather conditions. Supports lookup by city name, geographic coordinates, or zip/postal code.",
+          "message": "Obtenez des prévisions météorologiques sur 5 jours avec des points de données toutes les 3 heures pour n'importe quel lieu dans le monde. Chaque élément de prévision comprend la température, l'humidité, le vent, la probabilité de précipitation et les conditions météorologiques. Prend en charge la recherche par nom de ville, coordonnées géographiques ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.display_name": {
+          "source": "Get Weather Forecast",
+          "message": "Obtenir les prévisions météorologiques"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.desc": {
+          "source": "Limit the number of 3-hour forecast items returned. Each day has up to 8 data points (every 3 hours). Maximum is 40 (5 days x 8 intervals).",
+          "message": "Limitez le nombre d'éléments de prévision de 3 heures renvoyés. Chaque jour comporte jusqu'à 8 points de données (toutes les 3 heures). Le maximum est de 40 (5 jours x 8 intervalles)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.Y250.short_desc": {
+          "source": "Number of forecast items to return",
+          "message": "Nombre d'éléments de prévision à renvoyer"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "Nom de la ville"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "Coordonnées (Lat/Lon)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "Code postal"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "Choisissez la manière dont vous souhaitez spécifier le lieu : par nom de ville (par ex., « London,UK »), coordonnées géographiques (latitude/longitude) ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "Type de lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "Comment spécifier le lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.desc": {
+          "source": "Optional two-letter language code for weather condition descriptions (e.g., \"en\" for English, \"es\" for Spanish, \"fr\" for French, \"de\" for German).",
+          "message": "Code langue facultatif à deux lettres pour les descriptions des conditions météorologiques (par ex. « en » pour l'anglais, « es » pour l'espagnol, « fr » pour le français, « de » pour l'allemand)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.display_name": {
+          "source": "Language",
+          "message": "Langue"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.bGFuZw.short_desc": {
+          "source": "Language for weather descriptions",
+          "message": "Langue pour les descriptions météorologiques"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "Métrique (Celsius, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "Impérial (Fahrenheit, mph)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "Standard (Kelvin, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius, meters/second), Imperial (Fahrenheit, miles/hour), or Standard (Kelvin, meters/second).",
+          "message": "Choisissez le système de mesure : Métrique (Celsius, mètres/seconde), Impérial (Fahrenheit, miles/heure) ou Standard (Kelvin, mètres/seconde)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "Unités"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "Unités de température et de vitesse"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.Z2V0X2ZvcmVjYXN0.short_desc": {
+          "source": "Retrieve 5-day weather forecast with 3-hour intervals",
+          "message": "Récupérer les prévisions météorologiques sur 5 jours par intervalles de 3 heures"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **OpenWeatherMap** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Passez un appel d'API HTTP / REST personnalisé à **OpenWeatherMap** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous la forme d'un hash contenant le code d'état, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to OpenWeatherMap",
+          "message": "Effectuer un appel d'API personnalisé vers OpenWeatherMap"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.desc": {
+          "source": "Monitor the weather conditions at a specific location and trigger when conditions change (e.g., from Clear to Rain, Clouds to Snow). Optionally filter for specific condition types.",
+          "message": "Surveillez les conditions météorologiques à un lieu spécifique et déclenchez lorsque les conditions changent (par ex., de Dégagé à Pluie, de Nuageux à Neige). Filtrez facultativement par types de conditions spécifiques."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.display_name": {
+          "source": "Weather Condition Change",
+          "message": "Changement de condition météorologique"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOm1pc3Q.display_name": {
+          "source": "Mist/Fog",
+          "message": "Brume/Brouillard"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any Change",
+          "message": "Tout changement"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmNsZWFy.display_name": {
+          "source": "Clear",
+          "message": "Dégagé"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmNsb3Vkcw.display_name": {
+          "source": "Clouds",
+          "message": "Nuages"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOmRyaXp6bGU.display_name": {
+          "source": "Drizzle",
+          "message": "Bruine"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnJhaW4.display_name": {
+          "source": "Rain",
+          "message": "Pluie"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnNub3c.display_name": {
+          "source": "Snow",
+          "message": "Neige"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.allowed-value.c3RyaW5nOnRodW5kZXJzdG9ybQ.display_name": {
+          "source": "Thunderstorm",
+          "message": "Orage"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.desc": {
+          "source": "Optionally filter to only trigger when the new condition matches a specific type. Select \"Any Change\" to trigger on all condition changes, or select a specific condition like Rain, Snow, Clear, etc.",
+          "message": "Filtrez éventuellement pour ne déclencher que lorsque la nouvelle condition correspond à un type spécifique. Sélectionnez « Tout changement » pour déclencher sur tous les changements de condition, ou sélectionnez une condition spécifique comme Pluie, Neige, Dégagé, etc."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.display_name": {
+          "source": "Condition Filter",
+          "message": "Filtre de condition"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.Y29uZGl0aW9uX2ZpbHRlcg.short_desc": {
+          "source": "Filter for specific weather conditions",
+          "message": "Filtrer selon des conditions météorologiques spécifiques"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "Nom de la ville"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "Coordonnées (Lat/Lon)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "Code postal"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "Choisissez la manière dont vous souhaitez spécifier le lieu : par nom de ville (par ex., « London,UK »), coordonnées géographiques (latitude/longitude) ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "Type de lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "Comment spécifier le lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "Métrique (Celsius, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "Impérial (Fahrenheit, mph)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "Standard (Kelvin, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).",
+          "message": "Choisissez le système de mesure : Métrique (Celsius), Impérial (Fahrenheit) ou Standard (Kelvin)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "Unités"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "Unités de température et de vitesse"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.d2VhdGhlcl9jb25kaXRpb25fY2hhbmdl.short_desc": {
+          "source": "Trigger when weather conditions change",
+          "message": "Déclencher lorsque les conditions météorologiques changent"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.desc": {
+          "source": "Monitor the temperature at a specific location and trigger when it crosses above or below a configured threshold value. Useful for temperature alerts, HVAC automation, and weather-dependent workflows.",
+          "message": "Surveillez la température à un lieu spécifique et déclenchez lorsqu'elle passe au-dessus ou en dessous d'une valeur de seuil configurée. Utile pour les alertes de température, l'automatisation CVC et les flux de travail dépendant de la météo."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.display_name": {
+          "source": "Temperature Threshold",
+          "message": "Seuil de température"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNpdHlfbmFtZQ.display_name": {
+          "source": "City Name",
+          "message": "Nom de la ville"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "Coordinates (Lat/Lon)",
+          "message": "Coordonnées (Lat/Lon)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.allowed-value.c3RyaW5nOnppcF9jb2Rl.display_name": {
+          "source": "Zip/Postal Code",
+          "message": "Code postal"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.desc": {
+          "source": "Choose how you want to specify the location: by city name (e.g., \"London,UK\"), geographic coordinates (latitude/longitude), or zip/postal code.",
+          "message": "Choisissez la manière dont vous souhaitez spécifier le lieu : par nom de ville (par ex., « London,UK »), coordonnées géographiques (latitude/longitude) ou code postal."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.display_name": {
+          "source": "Location Type",
+          "message": "Type de lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.bG9jYXRpb25fdHlwZQ.short_desc": {
+          "source": "How to specify the location",
+          "message": "Comment spécifier le lieu"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.allowed-value.c3RyaW5nOmFib3Zl.display_name": {
+          "source": "Goes Above",
+          "message": "Passe au-dessus"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.allowed-value.c3RyaW5nOmJlbG93.display_name": {
+          "source": "Goes Below",
+          "message": "Passe en dessous"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.desc": {
+          "source": "Choose whether to trigger when temperature goes above or below the threshold value. \"Goes Above\" triggers when temperature rises past the threshold. \"Goes Below\" triggers when temperature drops below the threshold.",
+          "message": "Choisissez de déclencher lorsque la température passe au-dessus ou en dessous de la valeur seuil. « Passe au-dessus » se déclenche lorsque la température dépasse le seuil à la hausse. « Passe en dessous » se déclenche lorsque la température descend en dessous du seuil."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.display_name": {
+          "source": "Threshold Type",
+          "message": "Type de seuil"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3R5cGU.short_desc": {
+          "source": "Direction of temperature crossing",
+          "message": "Direction du franchissement de température"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.desc": {
+          "source": "Set the temperature value that will trigger the event when crossed. Use the same units as selected in the Units option (e.g., 0 for freezing point in Celsius, 32 in Fahrenheit).",
+          "message": "Définissez la valeur de température qui déclenchera l'événement lorsqu'elle est franchie. Utilisez les mêmes unités que celles sélectionnées dans l'option Unités (par ex., 0 pour le point de congélation en Celsius, 32 en Fahrenheit)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.display_name": {
+          "source": "Threshold Value",
+          "message": "Valeur de seuil"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dGhyZXNob2xkX3ZhbHVl.short_desc": {
+          "source": "Temperature threshold to monitor",
+          "message": "Seuil de température à surveiller"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOm1ldHJpYw.display_name": {
+          "source": "Metric (Celsius, m/s)",
+          "message": "Métrique (Celsius, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOmltcGVyaWFs.display_name": {
+          "source": "Imperial (Fahrenheit, mph)",
+          "message": "Impérial (Fahrenheit, mph)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.allowed-value.c3RyaW5nOnN0YW5kYXJk.display_name": {
+          "source": "Standard (Kelvin, m/s)",
+          "message": "Standard (Kelvin, m/s)"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.desc": {
+          "source": "Choose the measurement system: Metric (Celsius), Imperial (Fahrenheit), or Standard (Kelvin).",
+          "message": "Choisissez le système de mesure : Métrique (Celsius), Impérial (Fahrenheit) ou Standard (Kelvin)."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.display_name": {
+          "source": "Units",
+          "message": "Unités"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.option.dW5pdHM.short_desc": {
+          "source": "Temperature and speed units",
+          "message": "Unités de température et de vitesse"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.action.dGVtcGVyYXR1cmVfdGhyZXNob2xk.short_desc": {
+          "source": "Trigger when temperature crosses a threshold",
+          "message": "Déclencher lorsque la température franchit un seuil"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.desc": {
+          "source": "Connect to OpenWeatherMap to retrieve real-time weather data and 5-day forecasts for any location on Earth. Get comprehensive weather information including temperature, humidity, wind speed, pressure, and weather conditions. Support for multiple location input methods (city name, coordinates, or zip code) and customizable units (metric, imperial, or standard). Ideal for weather-aware applications, travel planning, agricultural monitoring, and location-based services within your Qore workflows.",
+          "message": "Connectez-vous à OpenWeatherMap pour récupérer des données météorologiques en temps réel et des prévisions sur 5 jours pour n'importe quel lieu sur Terre. Obtenez des informations météorologiques complètes, notamment la température, l'humidité, la vitesse du vent, la pression et les conditions météorologiques. Prise en charge de plusieurs méthodes de saisie du lieu (nom de ville, coordonnées ou code postal) et d'unités personnalisables (métrique, impérial ou standard). Idéal pour les applications météo, la planification de voyages, la surveillance agricole et les services géolocalisés au sein de vos flux de travail Qore."
+        },
+        "app.T3BlbldlYXRoZXJNYXA.display_name": {
+          "source": "OpenWeatherMap",
+          "message": "OpenWeatherMap"
+        },
+        "app.T3BlbldlYXRoZXJNYXA.short_desc": {
+          "source": "Access current weather data and forecasts for any location worldwide",
+          "message": "Accédez aux données météo actuelles et aux prévisions pour n'importe quel lieu dans le monde"
+        }
+      }
+    }
+  }
+}

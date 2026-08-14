@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pushover** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Pushover** へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、およびリクエスト本文を指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pushover",
+          "message": "PushoverへのカスタムAPI呼び出しを実行"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.desc": {
+          "source": "Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.",
+          "message": "確認が必要な緊急通知を送信します。通知は確認されるか有効期限が切れるまで指定された間隔で繰り返されます。追跡用のレシートIDを返します。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.display_name": {
+          "source": "Push Emergency Notification",
+          "message": "緊急通知をプッシュ送信"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.desc": {
+          "source": "Pushover will POST to this URL when the notification is acknowledged by the user.",
+          "message": "ユーザーが通知を確認したときに、PushoverがこのURLにPOSTリクエストを送信します。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.display_name": {
+          "source": "Callback URL",
+          "message": "コールバックURL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.short_desc": {
+          "source": "URL to call when acknowledged",
+          "message": "確認時に呼び出すURL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices.",
+          "message": "特定のデバイス名を指定して送信します。すべてのデバイスに送信する場合は空白のままにします。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "デバイス"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "特定のデバイスを対象にする"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.desc": {
+          "source": "How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).",
+          "message": "通知の再試行を継続する時間（秒単位）。最大10800秒（3時間）。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.display_name": {
+          "source": "Expiration Time",
+          "message": "有効期限"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.short_desc": {
+          "source": "Seconds until notification stops retrying (maximum 10800)",
+          "message": "通知の再試行を停止するまでの秒数（最大10800）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "等幅フォント"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.desc": {
+          "source": "Plain text, HTML, or Monospace formatting.",
+          "message": "プレーンテキスト、HTML、または等幅フォント形式。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "メッセージ形式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "テキストの書式設定スタイル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the emergency notification. Maximum 1024 characters.",
+          "message": "緊急通知の本文。最大1024文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.short_desc": {
+          "source": "The emergency notification message",
+          "message": "緊急通知メッセージ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "マジック"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "メカニカル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "なし（サイレント）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "エイリアンアラーム（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "ビューグル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "バイク"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "レジスター"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "クラシカル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "クライム（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "コズミック"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushoverエコー（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "フォーリング"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "ガムラン"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "インカミング"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "インターミッション"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover（デフォルト）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "パーシステント（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "ピアノバー"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "サイレン"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "スペースアラーム"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "タグボート"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "アップダウン（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "バイブレーションのみ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.desc": {
+          "source": "The sound to play. Long sounds like \"persistent\" or \"siren\" work well for emergencies.",
+          "message": "再生するサウンド。「persistent」や「siren」などの長いサウンドは緊急時に適しています。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "サウンド"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "通知音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.desc": {
+          "source": "How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.",
+          "message": "確認されるまでPushoverが通知を再送信する頻度（秒単位）。最小30秒。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.display_name": {
+          "source": "Retry Interval",
+          "message": "再試行間隔"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.short_desc": {
+          "source": "Seconds between retries (minimum 30)",
+          "message": "再試行の間隔（秒単位、最小30秒）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.desc": {
+          "source": "Comma-separated tags that can be used to cancel multiple emergency notifications at once.",
+          "message": "複数の緊急通知を一度にキャンセルするために使用できるカンマ区切りのタグ。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.short_desc": {
+          "source": "Tags for bulk cancellation",
+          "message": "一括キャンセル用のタグ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters.",
+          "message": "メッセージの上に表示されるタイトル。最大250文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "通知のオプションのタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.desc": {
+          "source": "A URL to include with the notification.",
+          "message": "通知に含めるURL。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "補足URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link.",
+          "message": "URLリンクの表示テキスト。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "URLタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "URLのタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.short_desc": {
+          "source": "Send a high-priority emergency notification with acknowledgment tracking",
+          "message": "確認追跡機能付きの高優先度緊急通知を送信"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.desc": {
+          "source": "Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).",
+          "message": "カスタマイズ可能な優先度、サウンド、書式設定でプッシュ通知を送信します。最低（アラートなし）から高（サイレント時間をバイパス）までの優先度をサポートします。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.display_name": {
+          "source": "Push Notification",
+          "message": "プッシュ通知"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices. Multiple devices can be separated by commas.",
+          "message": "特定のデバイス名に送信します。すべてのデバイスに送信する場合は空白のままにします。複数のデバイスはカンマで区切ることができます。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "デバイス"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "特定のデバイスを対象にする"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "等幅フォント"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.desc": {
+          "source": "Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.",
+          "message": "プレーンテキスト（デフォルト）、基本的な書式設定用のHTML（<b>、<i>、<u>、<a>）、またはコードスタイルのテキスト用の等幅フォント。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "メッセージ形式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "テキストの書式設定スタイル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the notification. Maximum 1024 characters.",
+          "message": "通知の本文。最大1024文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "The notification message content",
+          "message": "通知メッセージの内容"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "マジック"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "メカニカル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "なし（サイレント）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "エイリアンアラーム（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "ビューグル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "バイク"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "レジスター"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "クラシカル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "クライム（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "コズミック"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushoverエコー（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "フォーリング"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "ガムラン"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "インカミング"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "インターミッション"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover（デフォルト）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "パーシステント（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "ピアノバー"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "サイレン"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "スペースアラーム"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "タグボート"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "アップダウン（ロング）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "バイブレーションのみ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.desc": {
+          "source": "The sound to play when the notification arrives. Choose from predefined Pushover sounds.",
+          "message": "通知受信時に再生するサウンド。事前定義されたPushoverサウンドから選択します。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "サウンド"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "通知音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0x.display_name": {
+          "source": "Low (Quiet, no sound/vibration)",
+          "message": "低（サイレント、音/バイブレーションなし）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0y.display_name": {
+          "source": "Lowest (No notification/alert)",
+          "message": "最低（通知/アラートなし）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjA.display_name": {
+          "source": "Normal",
+          "message": "標準"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjE.display_name": {
+          "source": "High (Bypass quiet hours)",
+          "message": "高（サイレント時間をバイパス）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.desc": {
+          "source": "Controls how the notification is delivered. Lowest shows no alert, Low is quiet, Normal is default, High bypasses quiet hours.",
+          "message": "通知の配信方法を制御します。「最低」はアラートなし、「低」はサイレント、「通常」はデフォルト、「高」はサイレント時間をバイパスします。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "優先度"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification priority level",
+          "message": "通知優先度レベル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters. Defaults to your application name if not specified.",
+          "message": "メッセージの上に表示されるタイトル。最大250文字。指定しない場合はアプリケーション名がデフォルトになります。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "通知のオプションのタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.desc": {
+          "source": "Unix timestamp to display as the message time, useful for delayed or batched notifications.",
+          "message": "メッセージ時刻として表示するUnixタイムスタンプ。遅延通知やバッチ通知に便利です。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.display_name": {
+          "source": "Timestamp",
+          "message": "タイムスタンプ"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.short_desc": {
+          "source": "Override message timestamp",
+          "message": "メッセージのタイムスタンプを上書き"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.desc": {
+          "source": "Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.",
+          "message": "デバイスからメッセージが自動的に削除されるまでの秒数。時間に敏感な通知に便利です。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.display_name": {
+          "source": "Time to Live",
+          "message": "有効期間（TTL）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.short_desc": {
+          "source": "Message expiration time in seconds",
+          "message": "メッセージの有効期限（秒単位）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.desc": {
+          "source": "A URL to include with the notification. Maximum 512 characters.",
+          "message": "通知に含めるURL。最大512文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "補足URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link. Maximum 100 characters.",
+          "message": "URLリンクの表示テキスト。最大100文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "URLタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "URLのタイトル"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send a push notification to a user or group",
+          "message": "ユーザーまたはグループにプッシュ通知を送信"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.desc": {
+          "source": "Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.",
+          "message": "ユーザーまたはグループキーが有効であることを確認し、登録済みデバイスのリストを取得します。通知を送信する前に認証情報を確認するのに役立ちます。"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.display_name": {
+          "source": "Validate User",
+          "message": "ユーザーの検証"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.desc": {
+          "source": "Optionally specify a device name to validate that it exists for this user.",
+          "message": "必要に応じてデバイス名を指定し、このユーザーに存在するか検証します。"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "デバイス"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.short_desc": {
+          "source": "Validate a specific device",
+          "message": "特定のデバイスを検証"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.short_desc": {
+          "source": "Validate a user or group key and list devices",
+          "message": "ユーザーまたはグループキーを検証し、デバイスを一覧表示"
+        },
+        "app.UHVzaG92ZXI.desc": {
+          "source": "Pushover makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop. Send notifications for urgent alerts, system monitoring, or any automated messaging needs.",
+          "message": "Pushoverを使用すると、Android、iPhone、iPad、デスクトップでリアルタイム通知を簡単に受け取ることができます。緊急アラート、システム監視、または自動メッセージングのニーズに合わせて通知を送信できます。"
+        },
+        "app.UHVzaG92ZXI.display_name": {
+          "source": "Pushover",
+          "message": "Pushover"
+        },
+        "app.UHVzaG92ZXI.short_desc": {
+          "source": "Send push notifications to mobile devices and desktops",
+          "message": "モバイルデバイスやデスクトップにプッシュ通知を送信"
+        }
+      }
+    }
+  }
+}

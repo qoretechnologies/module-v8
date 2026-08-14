@@ -1,0 +1,1425 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.desc": {
+          "source": "This trigger fires when a collector (distribution method) for a survey is modified, such as status changes or configuration updates.",
+          "message": "このトリガーは、ステータスの変更や設定の更新など、アンケートのコレクター（配信方法）が変更されたときに起動します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.display_name": {
+          "source": "Collector Updated",
+          "message": "コレクターが更新されたとき"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for collector changes",
+          "message": "コレクターの変更を監視する特定のアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for collector updates",
+          "message": "コレクターの更新を監視するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29sbGVjdG9yX3VwZGF0ZWQ.short_desc": {
+          "source": "Triggers when a collector is updated",
+          "message": "コレクターが更新されたときにトリガーします"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.desc": {
+          "source": "Clone an existing survey to create a new survey with the same structure and questions",
+          "message": "既存のアンケートを複製して、同じ構造と質問を持つ新しいアンケートを作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.display_name": {
+          "source": "Copy Survey",
+          "message": "アンケートをコピー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to create a copy of",
+          "message": "コピーを作成するアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to copy",
+          "message": "コピーするアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the copied survey",
+          "message": "コピーされたアンケートに表示されるタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.option.dGl0bGU.short_desc": {
+          "source": "The title for the new survey",
+          "message": "新しいアンケートのタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y29weV9zdXJ2ZXk.short_desc": {
+          "source": "Create a copy of an existing survey",
+          "message": "既存のアンケートのコピーを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Create a new collector (distribution method) for a survey in SurveyMonkey",
+          "message": "SurveyMonkey でアンケートの新しいコレクター（配信方法）を作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Create Collector",
+          "message": "コレクターを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the collector",
+          "message": "コレクターのわかりやすい名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Collector Name",
+          "message": "コレクター名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "The name of the collector",
+          "message": "コレクターの名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that you want to create a collector for",
+          "message": "コレクターを作成するアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to create a collector for",
+          "message": "コレクターを作成するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmVtYmVk.display_name": {
+          "source": "Embedded Survey",
+          "message": "埋め込みアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOmZhY2Vib29r.display_name": {
+          "source": "Facebook",
+          "message": "Facebook"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.allowed-value.c3RyaW5nOndlYmxpbms.display_name": {
+          "source": "Web Link",
+          "message": "Web リンク"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.desc": {
+          "source": "Select the type of collector (email, weblink, facebook, or embed)",
+          "message": "コレクターの種類（email、weblink、facebook、または embed）を選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.display_name": {
+          "source": "Collector Type",
+          "message": "コレクターの種類"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.option.dHlwZQ.short_desc": {
+          "source": "The type of collector",
+          "message": "コレクターの種類"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Create a collector for a survey",
+          "message": "アンケートのコレクターを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.desc": {
+          "source": "Create a new contact in SurveyMonkey with first name, last name, email, or phone number",
+          "message": "SurveyMonkey で名、姓、メールアドレス、または電話番号を持つ新しい連絡先を作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Create Contact",
+          "message": "コンタクトを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The email address for the contact (either email or phone number is required)",
+          "message": "連絡先のメールアドレス（メールアドレスまたは電話番号のいずれかが必須）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "コンタクトのメールアドレス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The first name of the contact",
+          "message": "コンタクトの名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "コンタクトの名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The last name of the contact",
+          "message": "コンタクトの姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "コンタクトの姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The phone number for the contact (either email or phone number is required)",
+          "message": "連絡先の電話番号（メールアドレスまたは電話番号のいずれかが必須）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "コンタクトの電話番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Create a new contact",
+          "message": "新しいコンタクトを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.desc": {
+          "source": "Create a new contact list for organizing contacts in SurveyMonkey",
+          "message": "SurveyMonkey で連絡先を整理するための新しい連絡先リストを作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.display_name": {
+          "source": "Create Contact List",
+          "message": "連絡先リストを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the new contact list",
+          "message": "新しい連絡先リストのわかりやすい名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.option.bmFtZQ.short_desc": {
+          "source": "The name of the contact list",
+          "message": "連絡先リストの名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX2NvbnRhY3RfbGlzdA.short_desc": {
+          "source": "Create a new contact list",
+          "message": "新しい連絡先リストを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.desc": {
+          "source": "Create a new survey in SurveyMonkey from scratch or from a template",
+          "message": "SurveyMonkey で新規またはテンプレートから新しいアンケートを作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.display_name": {
+          "source": "Create Survey",
+          "message": "アンケートを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.desc": {
+          "source": "The ID of the folder where the survey should be created",
+          "message": "アンケートを作成するフォルダーの ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.display_name": {
+          "source": "Folder ID",
+          "message": "フォルダID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.Zm9sZGVyX2lk.short_desc": {
+          "source": "The folder to create the survey in",
+          "message": "アンケートを作成するフォルダー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.desc": {
+          "source": "The ID of a template to use as the basis for the new survey",
+          "message": "新しいアンケートのベースとして使用するテンプレートの ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.display_name": {
+          "source": "Template ID",
+          "message": "テンプレートID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.ZnJvbV90ZW1wbGF0ZV9pZA.short_desc": {
+          "source": "Template to create survey from",
+          "message": "アンケート作成元のテンプレート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.desc": {
+          "source": "The language code for the survey (e.g., en, es, fr). Defaults to en.",
+          "message": "アンケートの言語コード（例: en、es、fr）。デフォルトは en です。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.display_name": {
+          "source": "Language",
+          "message": "言語"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bGFuZ3VhZ2U.short_desc": {
+          "source": "The language of the survey",
+          "message": "アンケートの言語"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.desc": {
+          "source": "An optional internal nickname to help identify the survey",
+          "message": "アンケートの識別に役立つ任意の内部ニックネーム"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.display_name": {
+          "source": "Nickname",
+          "message": "ニックネーム"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.bmlja25hbWU.short_desc": {
+          "source": "Internal nickname for the survey",
+          "message": "アンケートの内部ニックネーム"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.desc": {
+          "source": "The title that will be displayed for the survey",
+          "message": "アンケートに表示されるタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.option.dGl0bGU.short_desc": {
+          "source": "The title of the survey",
+          "message": "アンケートのタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleQ.short_desc": {
+          "source": "Create a new survey",
+          "message": "新しいアンケートを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.desc": {
+          "source": "Create a new folder to organize your surveys in SurveyMonkey",
+          "message": "SurveyMonkey でアンケートを整理するための新しいフォルダーを作成します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.display_name": {
+          "source": "Create Survey Folder",
+          "message": "アンケートフォルダーを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.desc": {
+          "source": "A descriptive title for the new survey folder",
+          "message": "新しいアンケートフォルダーのわかりやすいタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "タイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.option.dGl0bGU.short_desc": {
+          "source": "The title of the folder",
+          "message": "フォルダーのタイトル"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Y3JlYXRlX3N1cnZleV9mb2xkZXI.short_desc": {
+          "source": "Create a new survey folder",
+          "message": "新しいアンケートフォルダーを作成"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.desc": {
+          "source": "Add one or more existing contacts to a contact list in bulk",
+          "message": "既存の 1 つ以上の連絡先を一括で連絡先リストに追加します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.display_name": {
+          "source": "Add Contacts to List",
+          "message": "リストに連絡先を追加"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.desc": {
+          "source": "A list of contact IDs to add to the contact list",
+          "message": "連絡先リストに追加する連絡先 ID のリスト"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.display_name": {
+          "source": "Contact IDs",
+          "message": "連絡先ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9pZHM.short_desc": {
+          "source": "The contacts to add",
+          "message": "追加する連絡先"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.desc": {
+          "source": "The ID of the contact list where contacts will be added",
+          "message": "連絡先が追加される連絡先リストの ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.display_name": {
+          "source": "Contact List ID",
+          "message": "連絡先リスト ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.option.Y29udGFjdF9saXN0X2lk.short_desc": {
+          "source": "The contact list to add contacts to",
+          "message": "連絡先を追加する連絡先リスト"
+        },
+        "app.U3VydmV5TW9ua2V5.action.YWRkX2NvbnRhY3RzX3RvX2xpc3Q.short_desc": {
+          "source": "Add contacts to a contact list",
+          "message": "連絡先リストに連絡先を追加"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.desc": {
+          "source": "Retrieve detailed information about a specific collector",
+          "message": "特定のコレクターに関する詳細情報を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.display_name": {
+          "source": "Get Collector",
+          "message": "コレクターを取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to get detailed information for",
+          "message": "詳細情報を取得するコレクターを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "コレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to retrieve",
+          "message": "取得するコレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "コレクターが含まれているアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "コレクターを含むアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X2NvbGxlY3Rvcg.short_desc": {
+          "source": "Retrieve collector details",
+          "message": "コレクターの詳細を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.desc": {
+          "source": "Retrieve detailed information about a specific survey response, optionally including full answer details",
+          "message": "特定のアンケート回答に関する詳細情報を取得します（オプションで完全な回答詳細を含む）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.display_name": {
+          "source": "Get Response",
+          "message": "回答を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.desc": {
+          "source": "When enabled, retrieves the full response details including all question answers",
+          "message": "有効にすると、すべての質問の回答を含む完全な回答詳細を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.display_name": {
+          "source": "Include Answers",
+          "message": "回答を含める"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.aW5jbHVkZV9hbnN3ZXJz.short_desc": {
+          "source": "Include detailed answer data",
+          "message": "詳細な回答データを含める"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the response",
+          "message": "回答が含まれているアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the response",
+          "message": "回答を含むアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.desc": {
+          "source": "The unique identifier of the response you want to retrieve",
+          "message": "取得する回答の一意の識別子"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.display_name": {
+          "source": "Response ID",
+          "message": "回答 ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.option.cmVzcG9uc2VfaWQ.short_desc": {
+          "source": "The ID of the response to retrieve",
+          "message": "取得する回答の ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNl.short_desc": {
+          "source": "Retrieve a specific survey response",
+          "message": "特定のアンケート回答を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.desc": {
+          "source": "Quickly retrieve the total number of responses for a survey without fetching all response data",
+          "message": "すべての回答データを取得することなく、アンケートの合計回答数をすばやく取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.display_name": {
+          "source": "Get Response Counts",
+          "message": "回答数の取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get response counts for",
+          "message": "回答数を取得するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get counts for",
+          "message": "カウントを取得するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3Jlc3BvbnNlX2NvdW50cw.short_desc": {
+          "source": "Get total response count for a survey",
+          "message": "アンケートの合計回答数を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.desc": {
+          "source": "Retrieve detailed information about a specific survey including pages and questions",
+          "message": "ページや質問を含む特定のアンケートの詳細情報を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.display_name": {
+          "source": "Get Survey",
+          "message": "アンケートの取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get detailed information for",
+          "message": "詳細情報を取得するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to retrieve",
+          "message": "取得するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleQ.short_desc": {
+          "source": "Retrieve survey details",
+          "message": "アンケートの詳細を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.desc": {
+          "source": "Retrieve aggregated response statistics for a survey including question-level summaries",
+          "message": "質問レベルのサマリーを含む、アンケートの集計回答統計を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.display_name": {
+          "source": "Get Survey Rollup",
+          "message": "アンケートロールアップの取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to get aggregated statistics for",
+          "message": "集計統計を取得するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to get statistics for",
+          "message": "統計を取得するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3N1cnZleV9yb2xsdXA.short_desc": {
+          "source": "Get aggregated survey statistics",
+          "message": "集計されたアンケート統計を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.desc": {
+          "source": "Retrieve details about the authenticated SurveyMonkey user including account type and permissions",
+          "message": "アカウントの種類や権限を含む、認証済みSurveyMonkeyユーザーの詳細を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.display_name": {
+          "source": "Get User Details",
+          "message": "ユーザー詳細の取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.Z2V0X3VzZXJfZGV0YWlscw.short_desc": {
+          "source": "Get authenticated user information",
+          "message": "認証済みユーザー情報の取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Permanently remove a collector from a survey. This action cannot be undone.",
+          "message": "コレクターをアンケートから完全に削除します。この操作は元に戻せません。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Delete Collector",
+          "message": "コレクターの削除"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to permanently delete",
+          "message": "完全に削除するコレクターを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "コレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to delete",
+          "message": "削除するコレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "コレクターが含まれているアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "コレクターを含むアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Delete a collector from a survey",
+          "message": "アンケートからコレクターを削除"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.desc": {
+          "source": "Permanently remove a contact from SurveyMonkey. This action cannot be undone.",
+          "message": "SurveyMonkeyから連絡先を完全に削除します。この操作は元に戻せません。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.display_name": {
+          "source": "Delete Contact",
+          "message": "連絡先を削除"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to delete",
+          "message": "削除する連絡先の一意の識別子"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "連絡先ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to delete",
+          "message": "削除する連絡先のID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.ZGVsZXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Delete a contact",
+          "message": "連絡先の削除"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.desc": {
+          "source": "Retrieve a list of all contact lists in your SurveyMonkey account",
+          "message": "SurveyMonkeyアカウント内のすべての連絡先リストの一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.display_name": {
+          "source": "List Contact Lists",
+          "message": "連絡先リストの一覧"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contact lists to retrieve (default: 500)",
+          "message": "取得する連絡先リストの最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "返されるリストの最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0X2xpc3Rz.short_desc": {
+          "source": "Retrieve all contact lists",
+          "message": "すべての連絡先リストを取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.desc": {
+          "source": "Retrieve a paginated list of contacts from SurveyMonkey",
+          "message": "SurveyMonkeyからページ分割された連絡先の一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.display_name": {
+          "source": "List Contacts",
+          "message": "連絡先一覧"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of contacts to retrieve across all pages (default: 500)",
+          "message": "すべてのページにわたって取得する連絡先の最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of contacts to return",
+          "message": "返す連絡先の最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.desc": {
+          "source": "The page number for pagination (starts at 1)",
+          "message": "ページネーションのページ番号（1から開始）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.display_name": {
+          "source": "Page",
+          "message": "ページ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGFnZQ.short_desc": {
+          "source": "Page number to retrieve",
+          "message": "取得するページ番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.desc": {
+          "source": "The number of contacts to return per page (default: 100)",
+          "message": "1ページあたりに返す連絡先数（デフォルト: 100）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.display_name": {
+          "source": "Per Page",
+          "message": "ページあたり"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.option.cGVyX3BhZ2U.short_desc": {
+          "source": "Number of contacts per page",
+          "message": "1ページあたりの連絡先数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb250YWN0cw.short_desc": {
+          "source": "Retrieve a list of contacts",
+          "message": "連絡先の一覧を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.desc": {
+          "source": "Retrieve a paginated list of collectors for a specific survey",
+          "message": "特定のアンケートのコレクターのページ分割された一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.display_name": {
+          "source": "List Collectors",
+          "message": "コレクターの一覧表示"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of collectors to retrieve (default: 500)",
+          "message": "取得するコレクターの最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of collectors to return",
+          "message": "返すコレクターの最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve collectors from",
+          "message": "コレクターを取得するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list collectors for",
+          "message": "コレクターを一覧表示するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9jb2xsZWN0b3Jz.short_desc": {
+          "source": "Retrieve collectors for a survey",
+          "message": "アンケートのコレクターを取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.desc": {
+          "source": "Retrieve a paginated list of responses for a specific survey",
+          "message": "特定のアンケートの回答のページ分割された一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.display_name": {
+          "source": "List Responses",
+          "message": "回答の一覧表示"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.desc": {
+          "source": "The maximum total number of responses to retrieve (default: 500)",
+          "message": "取得する回答の最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of responses to return",
+          "message": "返す回答の最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey to retrieve responses from",
+          "message": "回答を取得するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to list responses for",
+          "message": "回答を一覧表示するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9yZXNwb25zZXM.short_desc": {
+          "source": "Retrieve survey responses",
+          "message": "アンケート回答を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.desc": {
+          "source": "Retrieve a list of all survey folders in your SurveyMonkey account",
+          "message": "SurveyMonkeyアカウント内のすべてのアンケートフォルダーの一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.display_name": {
+          "source": "List Survey Folders",
+          "message": "アンケートフォルダーの一覧表示"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.desc": {
+          "source": "The maximum total number of survey folders to retrieve (default: 500)",
+          "message": "取得するアンケートフォルダーの最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of folders to return",
+          "message": "返すフォルダーの最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlfZm9sZGVycw.short_desc": {
+          "source": "Retrieve all survey folders",
+          "message": "すべてのアンケートフォルダーを取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.desc": {
+          "source": "Retrieve a paginated list of all surveys in your SurveyMonkey account",
+          "message": "SurveyMonkeyアカウント内のすべてのアンケートのページ分割された一覧を取得します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.display_name": {
+          "source": "List Surveys",
+          "message": "アンケートの一覧表示"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.desc": {
+          "source": "The maximum total number of surveys to retrieve (default: 500)",
+          "message": "取得するアンケートの最大総数（デフォルト: 500）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of surveys to return",
+          "message": "返すアンケートの最大数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bGlzdF9zdXJ2ZXlz.short_desc": {
+          "source": "Retrieve a list of surveys",
+          "message": "アンケートの一覧を取得"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **SurveyMonkey** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定されたコネクションの認証を使用して、**SurveyMonkey** へのカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（コネクションのAPIベースURLに対する相対パス）、オプションのクエリパラメーター、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアクションは、このアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに使用します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to SurveyMonkey",
+          "message": "SurveyMonkeyへのカスタムAPI呼び出しを実行"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.desc": {
+          "source": "This trigger fires when a respondent completes a survey. The webhook payload includes basic response information. Use the \"Get Response\" action to fetch detailed response data including answers.",
+          "message": "このトリガーは、回答者がアンケートを完了したときに発火します。Webhookペイロードには基本的な回答情報が含まれます。回答を含む詳細な回答データを取得するには、「回答の取得」アクションを使用してください。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.display_name": {
+          "source": "New Response",
+          "message": "新しい回答"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for completed responses",
+          "message": "完了した回答を監視する特定のアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for new responses",
+          "message": "新しい回答を監視するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.bmV3X3Jlc3BvbnNl.short_desc": {
+          "source": "Triggers when a new survey response is completed",
+          "message": "新しいアンケート回答が完了したときにトリガー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.desc": {
+          "source": "Send a survey invitation to recipients via an email collector",
+          "message": "メールコレクター経由で受信者にアンケートの招待を送信します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.display_name": {
+          "source": "Send Survey",
+          "message": "アンケートを送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the email collector to send the survey through",
+          "message": "アンケートの送信に使用するメールコレクターを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "コレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The email collector to use",
+          "message": "使用するメールコレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.desc": {
+          "source": "The message body that will appear in the invitation email",
+          "message": "招待メールに表示されるメッセージ本文"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.display_name": {
+          "source": "Email Body",
+          "message": "メール本文"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.Ym9keV90ZXh0.short_desc": {
+          "source": "The body text for the invitation email",
+          "message": "招待メールの本文テキスト"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.desc": {
+          "source": "The subject line that will appear in the invitation email",
+          "message": "招待メールに表示される件名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.display_name": {
+          "source": "Email Subject",
+          "message": "メールの件名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3ViamVjdA.short_desc": {
+          "source": "The subject line for the invitation email",
+          "message": "招待メールの件名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey you want to send",
+          "message": "送信するアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to send",
+          "message": "送信するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.desc": {
+          "source": "A list of email addresses to send the survey invitation to",
+          "message": "アンケートの招待を送信するメールアドレスのリスト"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.display_name": {
+          "source": "Recipient Emails",
+          "message": "受信者のメールアドレス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.option.cmVjaXBpZW50X2VtYWlscw.short_desc": {
+          "source": "List of recipient email addresses",
+          "message": "受信者のメールアドレス一覧"
+        },
+        "app.U3VydmV5TW9ua2V5.action.c2VuZF9zdXJ2ZXk.short_desc": {
+          "source": "Send survey invitation via collector",
+          "message": "コレクター経由でアンケートの招待を送信"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.desc": {
+          "source": "This trigger fires when a respondent is screened out or disqualified from a survey based on their answers to qualifying questions.",
+          "message": "このトリガーは、回答者が適格性確認の質問に対する回答に基づいてアンケートから除外または不適格と判定されたときに発火します。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.display_name": {
+          "source": "Response Disqualified",
+          "message": "回答が不適格"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for disqualified responses",
+          "message": "不適格な回答を監視する特定のアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for disqualified responses",
+          "message": "不適格な回答を監視するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfZGlzcXVhbGlmaWVk.short_desc": {
+          "source": "Triggers when a respondent is disqualified from a survey",
+          "message": "回答者がアンケートで不適格と判定されたときにトリガー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.desc": {
+          "source": "This trigger fires when an existing survey response is modified or updated. Useful for tracking partial responses or response edits.",
+          "message": "このトリガーは、既存のアンケート回答が変更または更新されたときに発火します。部分的な回答や回答の編集を追跡するのに役立ちます。"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.display_name": {
+          "source": "Response Updated",
+          "message": "回答が更新されました"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.desc": {
+          "source": "Select the specific survey that you want to monitor for updated responses",
+          "message": "更新された回答を監視する特定のアンケートを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey to monitor for updated responses",
+          "message": "更新された回答を監視するアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.cmVzcG9uc2VfdXBkYXRlZA.short_desc": {
+          "source": "Triggers when a survey response is updated",
+          "message": "アンケートの回答が更新されたときにトリガー"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.desc": {
+          "source": "Modify the settings of an existing collector such as status, close date, or redirect URL",
+          "message": "ステータス、終了日、リダイレクトURLなど、既存のコレクターの設定を変更します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.display_name": {
+          "source": "Update Collector",
+          "message": "コレクターを更新"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.desc": {
+          "source": "Select the collector you want to modify",
+          "message": "変更するコレクターを選択してください"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.display_name": {
+          "source": "Collector",
+          "message": "コレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y29sbGVjdG9yX2lk.short_desc": {
+          "source": "The collector to update",
+          "message": "更新するコレクター"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "The date and time when the collector should automatically close (ISO 8601 format)",
+          "message": "コレクターが自動的に終了する日時（ISO 8601形式）"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "クローズ日"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "When to automatically close the collector",
+          "message": "コレクターを自動的に終了する日時"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.desc": {
+          "source": "A new descriptive name for the collector",
+          "message": "コレクターの新しいわかりやすい名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.bmFtZQ.short_desc": {
+          "source": "New name for the collector",
+          "message": "コレクターの新しい名前"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOm9wZW4.display_name": {
+          "source": "Open",
+          "message": "オープン"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.allowed-value.c3RyaW5nOmNsb3NlZA.display_name": {
+          "source": "Closed",
+          "message": "クローズ済み"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.desc": {
+          "source": "Set the collector to open or closed",
+          "message": "コレクターを開いた状態または閉じた状態に設定します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "ステータス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3RhdHVz.short_desc": {
+          "source": "The collector status",
+          "message": "コレクターのステータス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.desc": {
+          "source": "Select the survey that contains the collector",
+          "message": "コレクターが含まれているアンケートを選択します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.display_name": {
+          "source": "Survey",
+          "message": "アンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.c3VydmV5X2lk.short_desc": {
+          "source": "The survey containing the collector",
+          "message": "コレクターを含むアンケート"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.desc": {
+          "source": "The URL where respondents will be redirected after completing the survey",
+          "message": "アンケート完了後に回答者がリダイレクトされるURL"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.display_name": {
+          "source": "Redirect URL",
+          "message": "リダイレクトURL"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVkaXJlY3RfdXJs.short_desc": {
+          "source": "URL to redirect respondents after completion",
+          "message": "完了後に回答者をリダイレクトするURL"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.desc": {
+          "source": "The maximum number of responses to accept before closing the collector",
+          "message": "コレクターを終了するまでに受け付ける最大回答数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.display_name": {
+          "source": "Response Limit",
+          "message": "回答制限数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.option.cmVzcG9uc2VfbGltaXQ.short_desc": {
+          "source": "Maximum number of responses",
+          "message": "最大回答数"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbGxlY3Rvcg.short_desc": {
+          "source": "Update collector settings",
+          "message": "コレクター設定を更新"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.desc": {
+          "source": "Modify the details of an existing contact in SurveyMonkey",
+          "message": "SurveyMonkey内の既存の連絡先の詳細を変更します"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.display_name": {
+          "source": "Update Contact",
+          "message": "連絡先を更新"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.desc": {
+          "source": "The unique identifier of the contact you want to update",
+          "message": "更新する連絡先の一意の識別子"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.display_name": {
+          "source": "Contact ID",
+          "message": "連絡先ID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Y29udGFjdF9pZA.short_desc": {
+          "source": "The ID of the contact to update",
+          "message": "更新する連絡先のID"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.desc": {
+          "source": "The new email address for the contact",
+          "message": "連絡先の新しいメールアドレス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.ZW1haWw.short_desc": {
+          "source": "The contact's email address",
+          "message": "コンタクトのメールアドレス"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.desc": {
+          "source": "The new first name for the contact",
+          "message": "連絡先の新しい名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.display_name": {
+          "source": "First Name",
+          "message": "名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.Zmlyc3RfbmFtZQ.short_desc": {
+          "source": "The contact's first name",
+          "message": "コンタクトの名"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.desc": {
+          "source": "The new last name for the contact",
+          "message": "連絡先の新しい姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.display_name": {
+          "source": "Last Name",
+          "message": "姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.bGFzdF9uYW1l.short_desc": {
+          "source": "The contact's last name",
+          "message": "コンタクトの姓"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The new phone number for the contact",
+          "message": "連絡先の新しい電話番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "電話番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "The contact's phone number",
+          "message": "コンタクトの電話番号"
+        },
+        "app.U3VydmV5TW9ua2V5.action.dXBkYXRlX2NvbnRhY3Q.short_desc": {
+          "source": "Update an existing contact",
+          "message": "既存の連絡先を更新"
+        },
+        "app.U3VydmV5TW9ua2V5.desc": {
+          "source": "Connect your SurveyMonkey account to automate survey management, collect responses, and manage contacts. Create collectors, send surveys, retrieve responses, and set up webhooks for real-time response notifications all from within Qore.",
+          "message": "SurveyMonkeyアカウントを接続して、アンケート管理の自動化、回答の収集、連絡先の管理を行います。コレクターの作成、アンケートの送信、回答の取得、リアルタイムの回答通知のためのWebhookの設定をすべてQore内から実行できます。"
+        },
+        "app.U3VydmV5TW9ua2V5.display_name": {
+          "source": "SurveyMonkey",
+          "message": "SurveyMonkey"
+        },
+        "app.U3VydmV5TW9ua2V5.short_desc": {
+          "source": "Online survey platform for collecting feedback and responses",
+          "message": "フィードバックや回答を収集するためのオンラインアンケートプラットフォーム"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pushover** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **Pushover** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese API URL pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako vstavané akcie v tejto aplikácii."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pushover",
+          "message": "Vykonať vlastné volanie API do Pushover"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.desc": {
+          "source": "Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.",
+          "message": "Odošlite núdzové oznámenie, ktoré vyžaduje potvrdenie. Oznámenie sa bude opakovať v zadaných intervaloch, kým nebude potvrdené alebo kým nevyprší jeho platnosť. Vráti ID potvrdenia (receipt ID) na sledovanie."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.display_name": {
+          "source": "Push Emergency Notification",
+          "message": "Odoslať núdzové oznámenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.desc": {
+          "source": "Pushover will POST to this URL when the notification is acknowledged by the user.",
+          "message": "Pushover odošle požiadavku POST na túto adresu URL, keď používateľ potvrdí oznámenie."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.display_name": {
+          "source": "Callback URL",
+          "message": "Callback URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.short_desc": {
+          "source": "URL to call when acknowledged",
+          "message": "URL na volanie po potvrdení"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices.",
+          "message": "Odošlite na konkrétny názov zariadenia alebo nechajte prázdne pre odoslanie do všetkých zariadení."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Zariadenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "Cieliť na konkrétne zariadenie(-a)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.desc": {
+          "source": "How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).",
+          "message": "Ako dlho (v sekundách) sa bude oznámenie naďalej pokúšať o opätovné odoslanie. Maximálne 10800 sekúnd (3 hodiny)."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.display_name": {
+          "source": "Expiration Time",
+          "message": "Čas vypršania platnosti"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.short_desc": {
+          "source": "Seconds until notification stops retrying (maximum 10800)",
+          "message": "Počet sekúnd, kým sa oznámenie prestane pokúšať o opätovné odoslanie (maximálne 10800)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "Neproporcionálne (Monospace)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.desc": {
+          "source": "Plain text, HTML, or Monospace formatting.",
+          "message": "Formátovanie prostého textu, HTML alebo Monospace."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "Formát správy"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "Štýl formátovania textu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the emergency notification. Maximum 1024 characters.",
+          "message": "Hlavný text núdzového oznámenia. Maximálne 1024 znakov."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Správa"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.short_desc": {
+          "source": "The emergency notification message",
+          "message": "Správa núdzového oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "Magic"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "Mechanical"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "Žiadny (tichý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "Alien Alarm (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "Bugle"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "Bike"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "Cash Register"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "Classical"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "Climb (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "Cosmic"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushover Echo (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "Falling"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "Gamelan"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "Incoming"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "Intermission"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover (predvolený)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "Persistent (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "Piano Bar"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "Siren"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "Space Alarm"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "Tugboat"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "Up Down (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "Iba vibrácie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.desc": {
+          "source": "The sound to play. Long sounds like \"persistent\" or \"siren\" work well for emergencies.",
+          "message": "Zvuk, ktorý sa má prehrať. Dlhé zvuky ako „persistent“ alebo „siren“ fungujú dobre v núdzových situáciách."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "Zvuk"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "Zvuk oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.desc": {
+          "source": "How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.",
+          "message": "Ako často (v sekundách) bude Pushover znova odosielať oznámenie, kým nebude potvrdené. Minimálne 30 sekúnd."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.display_name": {
+          "source": "Retry Interval",
+          "message": "Interval opakovaného pokusu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.short_desc": {
+          "source": "Seconds between retries (minimum 30)",
+          "message": "Sekundy medzi opakovaniami (minimálne 30)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.desc": {
+          "source": "Comma-separated tags that can be used to cancel multiple emergency notifications at once.",
+          "message": "Čiarkou oddelené značky, ktoré je možné použiť na zrušenie viacerých núdzových oznámení naraz."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Značky"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.short_desc": {
+          "source": "Tags for bulk cancellation",
+          "message": "Značky pre hromadné zrušenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters.",
+          "message": "Názov zobrazený nad správou. Maximálne 250 znakov."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "Voliteľný názov oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.desc": {
+          "source": "A URL to include with the notification.",
+          "message": "Adresa URL, ktorá sa má zahrnúť do oznámenia."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "Doplnková URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link.",
+          "message": "Zobrazovaný text pre odkaz URL."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "Názov URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "Názov pre URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.short_desc": {
+          "source": "Send a high-priority emergency notification with acknowledgment tracking",
+          "message": "Odoslať núdzové oznámenie s vysokou prioritou a sledovaním potvrdenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.desc": {
+          "source": "Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).",
+          "message": "Odoslať push oznámenie s prispôsobiteľnou prioritou, zvukom a formátovaním. Podporuje priority od najnižšej (žiadne upozornenie) po vysokú (obchádza tichý režim)."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.display_name": {
+          "source": "Push Notification",
+          "message": "Push oznámenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices. Multiple devices can be separated by commas.",
+          "message": "Odoslať na konkrétny názov zariadenia alebo ponechať prázdne pre odoslanie na všetky zariadenia. Viaceré zariadenia je možné oddeliť čiarkami."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Zariadenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "Cieliť na konkrétne zariadenie(-a)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "Neproporcionálne (Monospace)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.desc": {
+          "source": "Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.",
+          "message": "Obyčajný text (predvolené), HTML pre základné formátovanie (<b>, <i>, <u>, <a>) alebo Monospace pre text v štýle kódu."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "Formát správy"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "Štýl formátovania textu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the notification. Maximum 1024 characters.",
+          "message": "Hlavný text oznámenia. Maximálne 1024 znakov."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Správa"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "The notification message content",
+          "message": "Obsah správy oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "Magic"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "Mechanical"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "Žiadny (tichý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "Alien Alarm (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "Bugle"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "Bike"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "Cash Register"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "Classical"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "Climb (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "Cosmic"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushover Echo (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "Falling"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "Gamelan"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "Incoming"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "Intermission"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover (predvolený)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "Persistent (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "Piano Bar"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "Siren"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "Space Alarm"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "Tugboat"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "Up Down (dlhý)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "Iba vibrácie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.desc": {
+          "source": "The sound to play when the notification arrives. Choose from predefined Pushover sounds.",
+          "message": "Zvuk, ktorý sa má prehrať pri doručení oznámenia. Vyberte si z preddefinovaných zvukov Pushover."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "Zvuk"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "Zvuk oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0x.display_name": {
+          "source": "Low (Quiet, no sound/vibration)",
+          "message": "Nízka (tiché, bez zvuku/vibrácií)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0y.display_name": {
+          "source": "Lowest (No notification/alert)",
+          "message": "Najnižšia (žiadne oznámenie/upozornenie)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjA.display_name": {
+          "source": "Normal",
+          "message": "Normálne"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjE.display_name": {
+          "source": "High (Bypass quiet hours)",
+          "message": "Vysoká (obísť tichý režim)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.desc": {
+          "source": "Controls how the notification is delivered. Lowest shows no alert, Low is quiet, Normal is default, High bypasses quiet hours.",
+          "message": "Riadi spôsob doručenia oznámenia. Najnižšia nezobrazuje žiadne upozornenie, Nízka je tichá, Normálna je predvolená, Vysoká obchádza tichý režim."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priorita"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification priority level",
+          "message": "Úroveň priority oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters. Defaults to your application name if not specified.",
+          "message": "Názov zobrazený nad správou. Maximálne 250 znakov. Ak nie je zadaný, použije sa názov vašej aplikácie."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Názov"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "Voliteľný názov oznámenia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.desc": {
+          "source": "Unix timestamp to display as the message time, useful for delayed or batched notifications.",
+          "message": "Unixová časová pečiatka, ktorá sa zobrazí ako čas správy; užitočné pre oneskorené alebo dávkové oznámenia."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.display_name": {
+          "source": "Timestamp",
+          "message": "Časová pečiatka"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.short_desc": {
+          "source": "Override message timestamp",
+          "message": "Prepísať časovú pečiatku správy"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.desc": {
+          "source": "Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.",
+          "message": "Počet sekúnd, po ktorých sa správa automaticky odstráni zo zariadení. Užitočné pre časovo citlivé oznámenia."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.display_name": {
+          "source": "Time to Live",
+          "message": "Čas životnosti"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.short_desc": {
+          "source": "Message expiration time in seconds",
+          "message": "Čas vypršania platnosti správy v sekundách"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.desc": {
+          "source": "A URL to include with the notification. Maximum 512 characters.",
+          "message": "Adresa URL, ktorá sa má zahrnúť do oznámenia. Maximálne 512 znakov."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "Doplnková URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link. Maximum 100 characters.",
+          "message": "Zobrazovaný text pre odkaz URL. Maximálne 100 znakov."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "Názov URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "Názov pre URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send a push notification to a user or group",
+          "message": "Odoslať push oznámenie používateľovi alebo skupine"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.desc": {
+          "source": "Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.",
+          "message": "Overiť platnosť kľúča používateľa alebo skupiny a načítať zoznam registrovaných zariadení. Užitočné na potvrdenie prihlasovacích údajov pred odoslaním oznámení."
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.display_name": {
+          "source": "Validate User",
+          "message": "Overiť používateľa"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.desc": {
+          "source": "Optionally specify a device name to validate that it exists for this user.",
+          "message": "Voliteľne zadajte názov zariadenia, aby ste overili, že pre tohto používateľa existuje."
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Zariadenie"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.short_desc": {
+          "source": "Validate a specific device",
+          "message": "Overiť konkrétne zariadenie"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.short_desc": {
+          "source": "Validate a user or group key and list devices",
+          "message": "Overiť kľúč používateľa alebo skupiny a zobraziť zoznam zariadení"
+        },
+        "app.UHVzaG92ZXI.desc": {
+          "source": "Pushover makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop. Send notifications for urgent alerts, system monitoring, or any automated messaging needs.",
+          "message": "Pushover uľahčuje prijímanie oznámení v reálnom čase na zariadeniach Android, iPhone, iPad a na počítači. Posielajte oznámenia pre naliehavé upozornenia, monitorovanie systému alebo akékoľvek automatizované správy."
+        },
+        "app.UHVzaG92ZXI.display_name": {
+          "source": "Pushover",
+          "message": "Pushover"
+        },
+        "app.UHVzaG92ZXI.short_desc": {
+          "source": "Send push notifications to mobile devices and desktops",
+          "message": "Odosielať push oznámenia na mobilné zariadenia a počítače"
+        }
+      }
+    }
+  }
+}

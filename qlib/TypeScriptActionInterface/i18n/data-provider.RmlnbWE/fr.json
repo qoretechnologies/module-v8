@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.desc": {
+          "source": "Post a new comment or reply to an existing comment on a specific Figma design file",
+          "message": "Publier un nouveau commentaire ou répondre à un commentaire existant sur un fichier de conception Figma spécifique"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.display_name": {
+          "source": "Create Comment",
+          "message": "Créer un commentaire"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.desc": {
+          "source": "Optional ID of an existing comment to reply to, leave empty to create a new top-level comment",
+          "message": "ID facultatif d'un commentaire existant auquel répondre ; laisser vide pour créer un nouveau commentaire de premier niveau"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.display_name": {
+          "source": "Parent Comment ID",
+          "message": "ID du commentaire parent"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.Y29tbWVudF9pZA.short_desc": {
+          "source": "ID of comment to reply to (optional)",
+          "message": "ID du commentaire auquel répondre (facultatif)"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.desc": {
+          "source": "Select the specific Figma design file where you want to add a comment",
+          "message": "Sélectionnez le fichier de conception Figma spécifique où vous souhaitez ajouter un commentaire"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.display_name": {
+          "source": "File Key",
+          "message": "Clé du fichier"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.a2V5.short_desc": {
+          "source": "The file to comment on",
+          "message": "Le fichier à commenter"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.bWVzc2FnZQ.desc": {
+          "source": "Enter the text content of the comment you want to post on the Figma file",
+          "message": "Saisissez le contenu texte du commentaire que vous souhaitez publier sur le fichier Figma"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Message"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.bWVzc2FnZQ.short_desc": {
+          "source": "The comment message content",
+          "message": "Le contenu du message de commentaire"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific project within the team that contains the file",
+          "message": "Choisissez le projet spécifique au sein de l'équipe qui contient le fichier"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projet"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the file",
+          "message": "Le projet contenant le fichier"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project and file",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet et le fichier"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.option.dGVhbQ.short_desc": {
+          "source": "The Figma team containing the file",
+          "message": "L'équipe Figma contenant le fichier"
+        },
+        "app.RmlnbWE.action.Y3JlYXRlX2NvbW1lbnQ.short_desc": {
+          "source": "Add a new comment to a Figma file",
+          "message": "Ajouter un nouveau commentaire à un fichier Figma"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.desc": {
+          "source": "Retrieve all comments and discussions on a specific Figma design file, including user information and timestamps",
+          "message": "Récupérer tous les commentaires et discussions sur un fichier de conception Figma spécifique, y compris les informations sur les utilisateurs et les horodatages"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.display_name": {
+          "source": "List Comments",
+          "message": "Lister les commentaires"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.desc": {
+          "source": "Select the specific Figma design file whose comments you want to retrieve",
+          "message": "Sélectionnez le fichier de conception Figma spécifique dont vous souhaitez récupérer les commentaires"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.display_name": {
+          "source": "File Key",
+          "message": "Clé du fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.a2V5.short_desc": {
+          "source": "The file to list comments from",
+          "message": "Le fichier dont les commentaires doivent être listés"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific project within the team that contains the file",
+          "message": "Choisissez le projet spécifique au sein de l'équipe qui contient le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projet"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the file",
+          "message": "Le projet contenant le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project and file",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet et le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.option.dGVhbQ.short_desc": {
+          "source": "The Figma team containing the file",
+          "message": "L'équipe Figma contenant le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9jb21tZW50cw.short_desc": {
+          "source": "List all comments on a Figma file",
+          "message": "Lister tous les commentaires sur un fichier Figma"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.desc": {
+          "source": "Retrieve the complete version history of a specific Figma design file, including timestamps, labels, and user information",
+          "message": "Récupérer l'historique complet des versions d'un fichier de conception Figma spécifique, y compris les horodatages, les libellés et les informations sur les utilisateurs"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.display_name": {
+          "source": "List File Version History",
+          "message": "Lister l'historique des versions du fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.desc": {
+          "source": "Select the specific Figma design file whose version history you want to retrieve",
+          "message": "Sélectionnez le fichier de conception Figma spécifique dont vous souhaitez récupérer l'historique des versions"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.display_name": {
+          "source": "File Key",
+          "message": "Clé du fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.a2V5.short_desc": {
+          "source": "The file to get version history for",
+          "message": "Le fichier dont l'historique des versions doit être récupéré"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.desc": {
+          "source": "Optional URL to retrieve the next page of version history results for large files with many versions",
+          "message": "URL facultative pour récupérer la page suivante des résultats de l'historique des versions pour les fichiers volumineux comportant de nombreuses versions"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.display_name": {
+          "source": "Next Page URL",
+          "message": "URL de la page suivante"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.bmV4dF9wYWdlX3VybA.short_desc": {
+          "source": "URL for pagination to get next page of results",
+          "message": "URL de pagination pour obtenir la page de résultats suivante"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific project within the team that contains the file",
+          "message": "Choisissez le projet spécifique au sein de l'équipe qui contient le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projet"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the file",
+          "message": "Le projet contenant le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project and file",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet et le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.option.dGVhbQ.short_desc": {
+          "source": "The Figma team containing the file",
+          "message": "L'équipe Figma contenant le fichier"
+        },
+        "app.RmlnbWE.action.bGlzdF9maWxlX3ZlcnNpb25faGlzdG9yeQ.short_desc": {
+          "source": "Get version history for a Figma file",
+          "message": "Obtenir l'historique des versions d'un fichier Figma"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.desc": {
+          "source": "Retrieve a list of all design files within a specified Figma project, including file keys, names, and metadata",
+          "message": "Récupérer une liste de tous les fichiers de conception au sein d'un projet Figma spécifié, y compris les clés de fichiers, les noms et les métadonnées"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.display_name": {
+          "source": "List Project Files",
+          "message": "Lister les fichiers du projet"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific Figma project whose files you want to retrieve",
+          "message": "Choisissez le projet Figma spécifique dont vous souhaitez récupérer les fichiers"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.cHJvamVjdA.display_name": {
+          "source": "Project ID",
+          "message": "ID du projet"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.cHJvamVjdA.short_desc": {
+          "source": "The project to list files from",
+          "message": "Le projet dont les fichiers doivent être listés"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project whose files you want to list",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet dont vous souhaitez lister les fichiers"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.option.dGVhbQ.short_desc": {
+          "source": "The Figma team containing the project",
+          "message": "L'équipe Figma contenant le projet"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0X2ZpbGVz.short_desc": {
+          "source": "List all files in a Figma project",
+          "message": "Lister tous les fichiers d'un projet Figma"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.desc": {
+          "source": "Retrieve a list of all projects within a specified Figma team, including project names and IDs",
+          "message": "Récupérer une liste de tous les projets au sein d'une équipe Figma spécifiée, y compris les noms et les identifiants de projets"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.display_name": {
+          "source": "List Projects",
+          "message": "Lister les projets"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.option.dGVhbQ.desc": {
+          "source": "Enter the ID of the Figma team whose projects you want to retrieve",
+          "message": "Saisissez l'ID de l'équipe Figma dont vous souhaitez récupérer les projets"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.option.dGVhbQ.display_name": {
+          "source": "Team ID",
+          "message": "ID de l'équipe"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.option.dGVhbQ.short_desc": {
+          "source": "The Figma team to list projects from",
+          "message": "L'équipe Figma dont les projets doivent être listés"
+        },
+        "app.RmlnbWE.action.bGlzdF9wcm9qZWN0cw.short_desc": {
+          "source": "List all projects in a Figma team",
+          "message": "Lister tous les projets d'une équipe Figma"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Figma** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel d'API HTTP / REST personnalisé vers **Figma** à l'aide de l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de requête. La réponse est renvoyée sous la forme d'un hash contenant le code de statut, les en-têtes de réponse et le corps de réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.RmlnbWE.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Figma",
+          "message": "Effectuer un appel d'API personnalisé vers Figma"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.desc": {
+          "source": "Monitors a specific Figma design file for new comments and triggers when team members add feedback or discussions",
+          "message": "Surveille un fichier de conception Figma spécifique pour détecter les nouveaux commentaires et se déclenche lorsque des membres de l'équipe ajoutent des commentaires ou des discussions"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.display_name": {
+          "source": "New File Comment",
+          "message": "Nouveau commentaire de fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.desc": {
+          "source": "Select the Figma design file that you want to monitor for new comment activity",
+          "message": "Sélectionnez le fichier de conception Figma dont vous souhaitez surveiller l'activité des nouveaux commentaires"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.display_name": {
+          "source": "File Key",
+          "message": "Clé du fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.a2V5.short_desc": {
+          "source": "The specific file to monitor for comments",
+          "message": "Le fichier spécifique à surveiller pour les commentaires"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific project within the team that contains the file to monitor",
+          "message": "Choisissez le projet spécifique au sein de l'équipe qui contient le fichier à surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projet"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the file",
+          "message": "Le projet contenant le fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project and file you want to monitor",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet et le fichier que vous souhaitez surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.option.dGVhbQ.short_desc": {
+          "source": "The Figma team to monitor",
+          "message": "L'équipe Figma à surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfY29tbWVudA.short_desc": {
+          "source": "Triggers when a new comment is added to a file",
+          "message": "Se déclenche lorsqu'un nouveau commentaire est ajouté à un fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.desc": {
+          "source": "Monitors a specific Figma design file for version updates and triggers when new versions are saved",
+          "message": "Surveille un fichier de conception Figma spécifique pour détecter les mises à jour de version et se déclenche lorsque de nouvelles versions sont enregistrées"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.display_name": {
+          "source": "New File Version",
+          "message": "Nouvelle version de fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.desc": {
+          "source": "Select the Figma design file that you want to monitor for new version activity",
+          "message": "Sélectionnez le fichier de conception Figma dont vous souhaitez surveiller l'activité des nouvelles versions"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.display_name": {
+          "source": "File Key",
+          "message": "Clé du fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.a2V5.short_desc": {
+          "source": "The specific file to monitor for versions",
+          "message": "Le fichier spécifique à surveiller pour les versions"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.cHJvamVjdA.desc": {
+          "source": "Choose the specific project within the team that contains the file to monitor",
+          "message": "Choisissez le projet spécifique au sein de l'équipe qui contient le fichier à surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.cHJvamVjdA.display_name": {
+          "source": "Project",
+          "message": "Projet"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.cHJvamVjdA.short_desc": {
+          "source": "The project containing the file",
+          "message": "Le projet contenant le fichier"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.dGVhbQ.desc": {
+          "source": "Select the Figma team that contains the project and file you want to monitor",
+          "message": "Sélectionnez l'équipe Figma qui contient le projet et le fichier que vous souhaitez surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.dGVhbQ.display_name": {
+          "source": "Team",
+          "message": "Équipe"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.option.dGVhbQ.short_desc": {
+          "source": "The Figma team to monitor",
+          "message": "L'équipe Figma à surveiller"
+        },
+        "app.RmlnbWE.action.bmV3X2ZpbGVfdmVyc2lvbg.short_desc": {
+          "source": "Triggers when a new version of a file is created",
+          "message": "Se déclenche lorsqu'une nouvelle version d'un fichier est créée"
+        },
+        "app.RmlnbWE.desc": {
+          "source": "Figma is a collaborative interface design tool that allows teams to create, prototype, and collaborate on digital designs in real-time. Connect to access files, comments, projects, and team data.",
+          "message": "Figma est un outil collaboratif de conception d'interfaces qui permet aux équipes de créer, prototyper et collaborer sur des conceptions numériques en temps réel. Connectez-vous pour accéder aux fichiers, commentaires, projets et données d'équipe."
+        },
+        "app.RmlnbWE.display_name": {
+          "source": "Figma",
+          "message": "Figma"
+        },
+        "app.RmlnbWE.short_desc": {
+          "source": "Design and prototyping platform for teams",
+          "message": "Plateforme de conception et de prototypage pour les équipes"
+        }
+      }
+    }
+  }
+}

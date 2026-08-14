@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "it": {
+      "messages": {
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Remove a message from the chat. The bot can delete its own messages and messages from other users if it has admin privileges.",
+          "message": "Rimuove un messaggio dalla chat. Il bot può eliminare i propri messaggi e i messaggi di altri utenti se dispone dei privilegi di amministratore."
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "Elimina messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be deleted is located",
+          "message": "Seleziona la chat in cui si trova il messaggio da eliminare"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be deleted",
+          "message": "La chat in cui deve essere eliminato il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be deleted from the chat",
+          "message": "L'identificatore univoco del messaggio che deve essere eliminato dalla chat"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to delete",
+          "message": "L'ID del messaggio da eliminare"
+        },
+        "app.VGVsZWdyYW0.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a specific message from a chat",
+          "message": "Elimina un messaggio specifico da una chat"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.desc": {
+          "source": "Modify the text content of a message that was previously sent by the bot. Only works with text messages sent by the bot.",
+          "message": "Modifica il contenuto testuale di un messaggio inviato in precedenza dal bot. Funziona solo con i messaggi di testo inviati dal bot."
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.display_name": {
+          "source": "Edit Message",
+          "message": "Modifica messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat where the message to be edited is located",
+          "message": "Seleziona la chat in cui si trova il messaggio da modificare"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat containing the message to edit",
+          "message": "La chat contenente il messaggio da modificare"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "Se abilitato, i link nel messaggio non mostreranno anteprime automatiche"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.display_name": {
+          "source": "Disable Web Page Preview",
+          "message": "Disabilita anteprima pagina web"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.ZGlzYWJsZV93ZWJfcGFnZV9wcmV2aWV3.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "Disabilita anteprime automatiche dei link"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be edited",
+          "message": "L'identificatore univoco del messaggio che deve essere modificato"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to edit",
+          "message": "L'ID del messaggio da modificare"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the text (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "Scegli la modalità di formattazione del testo (testo normale, Markdown, Markdown V2 o HTML)"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.display_name": {
+          "source": "Text Format",
+          "message": "Formato testo"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.cGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the new message text",
+          "message": "Come formattare il testo del nuovo messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The updated text that will replace the current message content",
+          "message": "Il testo aggiornato che sostituirà il contenuto attuale del messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "Nuovo testo"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The new text content for the message",
+          "message": "Il nuovo contenuto di testo per il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.ZWRpdF9tZXNzYWdl.short_desc": {
+          "source": "Edit the text of a previously sent message",
+          "message": "Modifica il testo di un messaggio inviato in precedenza"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.desc": {
+          "source": "Retrieve a list of chats, groups, and channels where the bot has recently received messages or interactions",
+          "message": "Recupera un elenco di chat, gruppi e canali in cui il bot ha ricevuto di recente messaggi o interazioni"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.display_name": {
+          "source": "List Recent Chats",
+          "message": "Elenca chat recenti"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of recent chats to retrieve (default: 10)",
+          "message": "Il numero massimo di chat recenti da recuperare (predefinito: 10)"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of chats to return",
+          "message": "Numero massimo di chat da restituire"
+        },
+        "app.VGVsZWdyYW0.action.bGlzdF9jaGF0cw.short_desc": {
+          "source": "Get a list of recent chats the bot has interacted with",
+          "message": "Ottieni un elenco delle chat recenti con cui il bot ha interagito"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Telegram** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Esegui una chiamata API HTTP / REST personalizzata a **Telegram** utilizzando l'autenticazione della connessione configurata.\n\nSpecifica il metodo HTTP, il percorso URI (relativo all'URL di base dell'API della connessione), i parametri di query opzionali, gli header e il corpo della richiesta. La risposta viene restituita come hash contenente il codice di stato, gli header di risposta e il corpo della risposta.\n\nUsa questa azione per gli endpoint che non sono ancora esposti come azioni di prim'ordine in questa app."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Esegui una chiamata API"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Il corpo della richiesta. Il tipo effettivo dipende da `body_type`: JSON/form/YAML richiedono un hash, XML/testo richiedono una stringa, multipart richiede una struttura di file, binario richiede byte grezzi."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corpo"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Il corpo della richiesta"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Carica un file utilizzando `multipart/form-data`. Il corpo deve essere una struttura @ref DataProvider::FileDataType \"FileDataType\" (nome file + contenuto + mime_type). Il framework costruisce l'inviluppo multipart e imposta l'intestazione del boundary."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Modulo Multipart"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Carica un file utilizzando multipart/form-data"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Passa il corpo al client REST inalterato; il client decide la serializzazione in base alla sua opzione `data` configurata e al tipo di valore"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Pass-through; usa la serializzazione della connessione e lascia decidere al client REST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Invia il corpo come byte grezzi. Il corpo deve essere un valore binario. Imposta `Content-Type: application/octet-stream` a meno che non sia sovrascritto da `hdr`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binario grezzo"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Invia il corpo come byte grezzi"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializza un hash di campi modulo come `application/x-www-form-urlencoded`. Il corpo deve essere un hash i cui valori sono scalari (stringhe/numeri/booleani)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Form (URL-encoded)"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializza il corpo come campi del modulo application/x-www-form-urlencoded"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializza il corpo come JSON; imposta `Content-Type: application/json`. Il corpo deve essere un hash, un elenco o un valore scalare."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializza il corpo come JSON"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Invia il corpo come testo semplice. Il corpo deve essere una stringa. Imposta `Content-Type: text/plain`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Invia il corpo come text/plain"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Invia il corpo come XML. Se il corpo è un hash viene serializzato in XML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/xml`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Invia il corpo come XML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Invia il corpo come YAML. Se il corpo è un hash viene serializzato in YAML; se è una stringa viene inviato testualmente. Imposta `Content-Type: application/x-yaml`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Invia il corpo come YAML"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Seleziona la modalità di serializzazione del corpo e la corrispondente intestazione `Content-Type`. La modifica di questo campo riorganizza l'editor `body`: selezionando JSON viene mostrato un editor JSON, selezionando Modulo Multipart viene mostrato un selettore di file e così via."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Tipo di corpo"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Come viene serializzato il corpo e quale Content-Type viene inviato"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Se `True`, le risposte HTTP diverse da 2xx ritornano come normale hash di risposta (con il codice di stato effettivo) invece di sollevare `REST-RESPONSE-ERROR`. Utile per gestire 4xx/5xx come dati, ad es. per verificare se una risorsa esiste. Sovrascrive l'impostazione `error_passthru` della connessione solo per questa chiamata."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Restituisci errori come dati"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Restituisci normalmente le risposte non 2xx invece di generare un'eccezione"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Elenco opzionale di codici di stato HTTP trattati come successo. Se impostato e lo stato della risposta non è in questo elenco, l'azione genera `REST-STATUS-ERROR`. Quando non è impostato, si applica il comportamento predefinito del client REST (in genere: 2xx è successo, non-2xx genera un'eccezione)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codici di stato previsti"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codici di stato della risposta trattati come successo"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash di intestazioni personalizzate aggiunte alla richiesta. Queste sovrascrivono qualsiasi intestazione predefinita impostata da `body_type` (ad es. fornire `Content-Type` qui ha la precedenza sul valore predefinito del tipo di corpo)."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Intestazioni personalizzate"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Intestazioni della richiesta aggiuntive"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Se `True`, l'hash della risposta include un sotto-hash `debug` contenente il metodo/URL/intestazioni della richiesta (con i valori sensibili oscurati), le dimensioni della richiesta e della risposta e la durata di andata e ritorno. Utile quando si indagano chiamate lente o con errori. Disattivato per impostazione predefinita per mantenere le risposte snelle."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Includi informazioni di debug"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Includi le informazioni di debug relative a richiesta/tempi/dimensioni nella risposta"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metodo HTTP"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Il metodo HTTP da utilizzare per la richiesta"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto `{name}` che vengono sostituiti da `path_vars`. Esempio: `/users/{id}/comments`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Percorso URI"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Il percorso URI relativo all'URL di base dell'API della connessione. Può contenere segnaposto '{name}' che vengono sostituiti da 'path_vars'. Esempio: '/users/{id}/comments'"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash dei valori sostituiti nei segnaposto `{name}` nel percorso URI. Esempio: con `path = /users/{id}` e `path_vars = {id: 123}` il framework invia `/users/123`. I valori sono codificati in URL."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variabili del percorso"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valori per i segnaposto {name} nel percorso"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash dei parametri della stringa di query da aggiungere al percorso URI. I valori sono codificati in URL; i valori dell'elenco sono uniti con `,`."
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argomenti della query"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametri della stringa di query"
+        },
+        "app.VGVsZWdyYW0.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Telegram",
+          "message": "Esegui una chiamata API personalizzata a Telegram"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "Monitors a chat for new incoming messages and triggers automation workflows when messages are received from users or other bots",
+          "message": "Monitora una chat per nuovi messaggi in arrivo e attiva flussi di lavoro di automazione quando vengono ricevuti messaggi da utenti o altri bot"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nuovo messaggio"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.desc": {
+          "source": "Select the specific chat, group, or channel where you want to detect new incoming messages",
+          "message": "Seleziona la chat, il gruppo o il canale specifico in cui desideri rilevare nuovi messaggi in arrivo"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.display_name": {
+          "source": "Chat to Monitor",
+          "message": "Chat da monitorare"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.option.Y2hhdA.short_desc": {
+          "source": "The chat to monitor for new messages",
+          "message": "La chat da monitorare per nuovi messaggi"
+        },
+        "app.VGVsZWdyYW0.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is received in a specific chat",
+          "message": "Si attiva quando viene ricevuto un nuovo messaggio in una chat specifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Send a text message with optional formatting to any chat, group, or channel accessible by your bot",
+          "message": "Invia un messaggio di testo con formattazione facoltativa a qualsiasi chat, gruppo o canale accessibile dal tuo bot"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message",
+          "message": "Invia messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the message",
+          "message": "Seleziona la chat, il gruppo o il canale a cui desideri inviare il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the message to",
+          "message": "La chat a cui inviare il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.desc": {
+          "source": "If enabled, links in the message will not show automatic previews",
+          "message": "Se abilitato, i link nel messaggio non mostreranno anteprime automatiche"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.display_name": {
+          "source": "Disable Link Preview",
+          "message": "Disabilita anteprima link"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9saW5rX3ByZXZpZXc.short_desc": {
+          "source": "Disable automatic link previews",
+          "message": "Disabilita anteprime automatiche dei link"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the message without notification sound",
+          "message": "Se abilitato, gli utenti riceveranno il messaggio senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Invia silenziosamente"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the message without notification sound",
+          "message": "Invia il messaggio senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.desc": {
+          "source": "Choose the formatting mode for the message (plain text, Markdown, Markdown V2, or HTML)",
+          "message": "Scegli la modalità di formattazione del messaggio (testo normale, Markdown, Markdown V2 o HTML)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.display_name": {
+          "source": "Text Format",
+          "message": "Formato testo"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.Zm9ybWF0.short_desc": {
+          "source": "How to format the message text",
+          "message": "Come formattare il testo del messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.desc": {
+          "source": "The message content to send. Can include formatting depending on the selected format mode",
+          "message": "Il contenuto del messaggio da inviare. Può includere la formattazione a seconda della modalità di formato selezionata"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.display_name": {
+          "source": "Message Text",
+          "message": "Testo del messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the message",
+          "message": "Il contenuto testuale del messaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a text message to a chat",
+          "message": "Invia un messaggio di testo a una chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.desc": {
+          "source": "Upload and send an image file to any chat, group, or channel with optional caption and formatting",
+          "message": "Carica e invia un file immagine a qualsiasi chat, gruppo o canale con didascalia e formattazione facoltative"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.display_name": {
+          "source": "Send Photo",
+          "message": "Invia foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.desc": {
+          "source": "Text description or caption to accompany the photo",
+          "message": "Descrizione testuale o didascalia che accompagna la foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.display_name": {
+          "source": "Photo Caption",
+          "message": "Didascalia foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbg.short_desc": {
+          "source": "Optional caption for the photo",
+          "message": "Didascalia facoltativa per la foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.desc": {
+          "source": "Choose the formatting mode for the photo caption",
+          "message": "Scegli la modalità di formattazione per la didascalia della foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.display_name": {
+          "source": "Caption Format",
+          "message": "Formato didascalia"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2FwdGlvbl9mb3JtYXQ.short_desc": {
+          "source": "How to format the caption text",
+          "message": "Come formattare il testo della didascalia"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the photo",
+          "message": "Seleziona la chat, il gruppo o il canale a cui desideri inviare la foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the photo to",
+          "message": "La chat a cui inviare la foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the photo without notification sound",
+          "message": "Se abilitato, gli utenti riceveranno la foto senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Invia silenziosamente"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the photo without notification sound",
+          "message": "Invia la foto senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.desc": {
+          "source": "Upload the image file (JPG, PNG, GIF, etc.) to send to the chat",
+          "message": "Carica il file immagine (JPG, PNG, GIF, ecc.) da inviare alla chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.display_name": {
+          "source": "Photo File",
+          "message": "File foto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cGhvdG8.short_desc": {
+          "source": "The image file to send",
+          "message": "Il file immagine da inviare"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the photo cannot be forwarded or saved by users",
+          "message": "Se abilitato, la foto non potrà essere inoltrata o salvata dagli utenti"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Proteggi contenuto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Proteggi il contenuto dall'inoltro e dal salvataggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9waG90bw.short_desc": {
+          "source": "Send a photo with optional caption to a chat",
+          "message": "Invia una foto con didascalia facoltativa a una chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.desc": {
+          "source": "Create interactive polls or quizzes with multiple answer options, perfect for gathering feedback or testing knowledge",
+          "message": "Crea sondaggi o quiz interattivi con più opzioni di risposta, ideali per raccogliere feedback o verificare le conoscenze"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.display_name": {
+          "source": "Send Poll",
+          "message": "Invia sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.desc": {
+          "source": "Select which answer option is correct (zero-based index, only for quiz polls)",
+          "message": "Seleziona quale opzione di risposta è corretta (indice a base zero, solo per i sondaggi di tipo quiz)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.display_name": {
+          "source": "Correct Answer",
+          "message": "Risposta corretta"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y29ycmVjdF9vcHRpb25faWQ.short_desc": {
+          "source": "The correct answer for quiz polls",
+          "message": "La risposta corretta per i sondaggi di tipo quiz"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.desc": {
+          "source": "Select the chat, group, or channel where you want to send the poll",
+          "message": "Seleziona la chat, il gruppo o il canale a cui desideri inviare il sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2hhdA.short_desc": {
+          "source": "The chat to send the poll to",
+          "message": "La chat a cui inviare il sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.desc": {
+          "source": "Unix timestamp for when the poll should automatically close",
+          "message": "Timestamp Unix per la chiusura automatica del sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.display_name": {
+          "source": "Close Date",
+          "message": "Data di chiusura"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.Y2xvc2VfZGF0ZQ.short_desc": {
+          "source": "Specific date/time to close the poll",
+          "message": "Data/ora specifica per chiudere il sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.desc": {
+          "source": "The answer choices that users can select from. Must have between 2 and 10 options",
+          "message": "Le opzioni di risposta che gli utenti possono selezionare. Deve contenere tra 2 e 10 opzioni"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.display_name": {
+          "source": "Answer Options",
+          "message": "Opzioni di risposta"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YW5zd2Vycw.short_desc": {
+          "source": "List of possible answers (2-10 options)",
+          "message": "Elenco delle possibili risposte (2-10 opzioni)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.desc": {
+          "source": "If enabled, users can select more than one answer option (only for regular polls)",
+          "message": "Se abilitato, gli utenti possono selezionare più di un'opzione di risposta (solo per i sondaggi standard)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.display_name": {
+          "source": "Multiple Answers",
+          "message": "Risposte multiple"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.YWxsb3dzX211bHRpcGxlX2Fuc3dlcnM.short_desc": {
+          "source": "Allow users to select multiple options",
+          "message": "Consenti agli utenti di selezionare più opzioni"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, users will receive the poll without notification sound",
+          "message": "Se abilitato, gli utenti riceveranno il sondaggio senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Send Silently",
+          "message": "Invia silenziosamente"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send the poll without notification sound",
+          "message": "Invia il sondaggio senza suono di notifica"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.desc": {
+          "source": "Optional explanation that appears when users answer the quiz",
+          "message": "Spiegazione facoltativa che appare quando gli utenti rispondono al quiz"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.display_name": {
+          "source": "Explanation",
+          "message": "Spiegazione"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb24.short_desc": {
+          "source": "Explanation text for the correct answer",
+          "message": "Testo esplicativo per la risposta corretta"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3du.display_name": {
+          "source": "Markdown",
+          "message": "Markdown"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOk1hcmtkb3duVjI.display_name": {
+          "source": "Markdown V2",
+          "message": "Markdown V2"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOkhUTUw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Testo normale"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.desc": {
+          "source": "Choose the formatting mode for the explanation text",
+          "message": "Scegli la modalità di formattazione per il testo della spiegazione"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.display_name": {
+          "source": "Explanation Format",
+          "message": "Formato spiegazione"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.ZXhwbGFuYXRpb25fcGFyc2VfbW9kZQ.short_desc": {
+          "source": "How to format the explanation text",
+          "message": "Come formattare il testo della spiegazione"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.desc": {
+          "source": "If enabled, the poll will be sent already closed (for demonstration purposes)",
+          "message": "Se abilitato, il sondaggio verrà inviato già chiuso (a scopo dimostrativo)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.display_name": {
+          "source": "Send Closed Poll",
+          "message": "Invia sondaggio chiuso"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfY2xvc2Vk.short_desc": {
+          "source": "Send the poll in a closed state",
+          "message": "Invia il sondaggio chiuso"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.desc": {
+          "source": "If enabled, user votes will be anonymous. If disabled, votes will be visible to other users",
+          "message": "Se abilitato, i voti degli utenti saranno anonimi. Se disabilitato, i voti saranno visibili agli altri utenti"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.display_name": {
+          "source": "Anonymous Poll",
+          "message": "Sondaggio anonimo"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.aXNfYW5vbnltb3Vz.short_desc": {
+          "source": "Should the poll be anonymous?",
+          "message": "Il sondaggio deve essere anonimo?"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.desc": {
+          "source": "Duration in seconds that the poll will accept votes (5-600 seconds)",
+          "message": "Durata in secondi in cui il sondaggio accetterà voti (5-600 secondi)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.display_name": {
+          "source": "Open Period",
+          "message": "Periodo di apertura"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.b3Blbl9wZXJpb2Q.short_desc": {
+          "source": "How long the poll stays open (in seconds)",
+          "message": "Durata di apertura del sondaggio (in secondi)"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnF1aXo.display_name": {
+          "source": "Quiz",
+          "message": "Quiz"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.allowed-value.c3RyaW5nOnJlZ3VsYXI.display_name": {
+          "source": "Regular Poll",
+          "message": "Sondaggio standard"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.desc": {
+          "source": "Choose between a regular poll or a quiz where you can specify correct answers",
+          "message": "Scegli tra un sondaggio standard o un quiz in cui puoi specificare le risposte corrette"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.display_name": {
+          "source": "Poll Type",
+          "message": "Tipo di sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cG9sbF90eXBl.short_desc": {
+          "source": "Regular poll or quiz with correct answers",
+          "message": "Sondaggio standard o quiz con risposte corrette"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.desc": {
+          "source": "If enabled, the poll cannot be forwarded by users",
+          "message": "Se abilitato, il sondaggio non può essere inoltrato dagli utenti"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.display_name": {
+          "source": "Protect Content",
+          "message": "Proteggi contenuto"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cHJvdGVjdF9jb250ZW50.short_desc": {
+          "source": "Protect content from forwarding and saving",
+          "message": "Proteggi il contenuto dall'inoltro e dal salvataggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.desc": {
+          "source": "The question that users will answer in the poll",
+          "message": "La domanda a cui gli utenti risponderanno nel sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.display_name": {
+          "source": "Poll Question",
+          "message": "Domanda del sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.option.cXVlc3Rpb24.short_desc": {
+          "source": "The main question for the poll",
+          "message": "La domanda principale per il sondaggio"
+        },
+        "app.VGVsZWdyYW0.action.c2VuZF9wb2xs.short_desc": {
+          "source": "Create and send a poll or quiz to a chat",
+          "message": "Crea e invia un sondaggio o un quiz a una chat"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.desc": {
+          "source": "Pin an important message to the top of a group or channel chat for all members to see",
+          "message": "Fissa un messaggio importante in cima a una chat di gruppo o canale affinché tutti i membri possano vederlo"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.display_name": {
+          "source": "Pin Message",
+          "message": "Fissa messaggio"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to pin the message",
+          "message": "Seleziona il gruppo o il canale in cui desideri fissare il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be pinned",
+          "message": "La chat in cui deve essere fissato il messaggio"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.desc": {
+          "source": "If enabled, the message will be pinned without sending a notification to group members",
+          "message": "Se abilitato, il messaggio verrà fissato senza inviare una notifica ai membri del gruppo"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.display_name": {
+          "source": "Pin Silently",
+          "message": "Fissa silenziosamente"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.ZGlzYWJsZV9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Pin the message without notification",
+          "message": "Fissa il messaggio senza notifica"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the message that should be pinned",
+          "message": "L'identificatore univoco del messaggio da fissare"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID messaggio"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to pin",
+          "message": "L'ID del messaggio da fissare"
+        },
+        "app.VGVsZWdyYW0.action.cGluX2NoYXRfbWVzc2FnZQ.short_desc": {
+          "source": "Pin a message in a group or channel",
+          "message": "Fissa un messaggio in un gruppo o canale"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.desc": {
+          "source": "Remove a pinned message from a group or channel, or unpin all currently pinned messages",
+          "message": "Rimuovi un messaggio fissato da un gruppo o canale, oppure rimuovi tutti i messaggi attualmente fissati"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.display_name": {
+          "source": "Unpin Message",
+          "message": "Rimuovi il pin dal messaggio"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.desc": {
+          "source": "Select the group or channel where you want to unpin messages",
+          "message": "Seleziona il gruppo o il canale da cui desideri rimuovere i messaggi fissati"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.display_name": {
+          "source": "Chat",
+          "message": "Chat"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.Y2hhdA.short_desc": {
+          "source": "The chat where the message should be unpinned",
+          "message": "La chat da cui deve essere rimosso il messaggio fissato"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.desc": {
+          "source": "The unique identifier of the specific message to unpin. Leave empty to unpin all pinned messages",
+          "message": "L'identificatore univoco dello specifico messaggio da rimuovere dai fissati. Lascia vuoto per rimuovere tutti i messaggi fissati"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.display_name": {
+          "source": "Message ID",
+          "message": "ID messaggio"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.option.bWVzc2FnZV9pZA.short_desc": {
+          "source": "The ID of the message to unpin (leave empty to unpin all)",
+          "message": "L'ID del messaggio da rimuovere dai fissati (lascia vuoto per rimuoverli tutti)"
+        },
+        "app.VGVsZWdyYW0.action.dW5waW5fY2hhdF9tZXNzYWdl.short_desc": {
+          "source": "Unpin a specific message or all pinned messages",
+          "message": "Rimuovi un messaggio specifico o tutti i messaggi fissati"
+        },
+        "app.VGVsZWdyYW0.desc": {
+          "source": "Connect a Telegram Bot using its Bot Token to send messages and handle incoming updates. Authentication is done solely with the Bot Token issued by @BotFather; no user login is required.",
+          "message": "Connetti un bot Telegram utilizzando il relativo token bot per inviare messaggi e gestire gli aggiornamenti in arrivo. L'autenticazione viene eseguita esclusivamente con il token bot rilasciato da @BotFather; non è richiesto alcun accesso utente."
+        },
+        "app.VGVsZWdyYW0.display_name": {
+          "source": "Telegram",
+          "message": "Telegram"
+        },
+        "app.VGVsZWdyYW0.short_desc": {
+          "source": "Connect and interact with Telegram via a bot",
+          "message": "Connettiti e interagisci con Telegram tramite un bot"
+        }
+      }
+    }
+  }
+}

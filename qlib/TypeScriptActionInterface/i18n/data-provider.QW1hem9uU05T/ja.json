@@ -1,0 +1,881 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.desc": {
+          "source": "Publishes a text message to an Amazon SNS topic, which will be delivered to all subscribers of the topic.",
+          "message": "テキストメッセージを Amazon SNS トピックに発行します。メッセージはトピックのすべてのサブスクライバーに配信されます。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.display_name": {
+          "source": "Create Message",
+          "message": "メッセージを作成"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the message to be sent to all topic subscribers.",
+          "message": "すべてのトピックサブスクライバーに送信されるメッセージのテキストコンテンツ。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message content to send",
+          "message": "送信するメッセージコンテンツ"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "フィルタリングおよびルーティングの目的でメッセージに含まれる追加属性のハッシュ。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "メッセージ属性"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "追加のメッセージメタデータ"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "FIFO トピックでのメッセージ重複排除のための固有の識別子。コンテンツに基づく重複排除を行わない FIFO トピックで必須です。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "メッセージ重複排除 ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "FIFO トピックの重複排除 ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "メッセージが FIFO トピックの特定のメッセージグループに属していることを指定するタグ。FIFO トピックで必須です。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "メッセージグループ ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "FIFO トピックのグループ ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "メッセージのオプションの件名行。主に電子メール通知に使用されます。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "サブジェクト"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "メッセージの件名"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "ターゲットのトピックが配置されている AWS リージョン。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "トピックの AWS リージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the message will be published.",
+          "message": "メッセージが発行される SNS トピックの Amazon Resource Name (ARN)。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "トピック ARN"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ターゲットトピックの ARN"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Send a message to an SNS topic",
+          "message": "SNS トピックにメッセージを送信"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.desc": {
+          "source": "Publishes a JSON-structured message to an Amazon SNS topic, allowing for rich content and structured data delivery to subscribers.",
+          "message": "JSON 構造化メッセージを Amazon SNS トピックに発行し、リッチコンテンツと構造化データをサブスクライバーに配信できるようにします。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.display_name": {
+          "source": "Create JSON Message",
+          "message": "JSONメッセージを作成"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.desc": {
+          "source": "The JSON object containing the structured data to be sent to all topic subscribers.",
+          "message": "すべてのトピックサブスクライバーに送信される構造化データを含むJSONオブジェクト。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.display_name": {
+          "source": "JSON Message",
+          "message": "JSONメッセージ"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.anNvbl9tZXNzYWdl.short_desc": {
+          "source": "JSON object to send",
+          "message": "送信するJSONオブジェクト"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.desc": {
+          "source": "A hash of additional attributes to include with the message for filtering and routing purposes.",
+          "message": "フィルタリングおよびルーティングの目的でメッセージに含まれる追加属性のハッシュ。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Message Attributes",
+          "message": "メッセージ属性"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Additional message metadata",
+          "message": "追加のメッセージメタデータ"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.desc": {
+          "source": "A unique identifier for message deduplication in FIFO topics. Required for FIFO topics without content-based deduplication.",
+          "message": "FIFO トピックでのメッセージ重複排除のための固有の識別子。コンテンツに基づく重複排除を行わない FIFO トピックで必須です。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.display_name": {
+          "source": "Message Deduplication ID",
+          "message": "メッセージ重複排除 ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9kZWR1cGxpY2F0aW9uX2lk.short_desc": {
+          "source": "Deduplication ID for FIFO topics",
+          "message": "FIFO トピックの重複排除 ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.desc": {
+          "source": "A tag that specifies that messages belong to a specific message group for FIFO topics. Required for FIFO topics.",
+          "message": "メッセージが FIFO トピックの特定のメッセージグループに属していることを指定するタグ。FIFO トピックで必須です。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.display_name": {
+          "source": "Message Group ID",
+          "message": "メッセージグループ ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.bWVzc2FnZV9ncm91cF9pZA.short_desc": {
+          "source": "Group ID for FIFO topics",
+          "message": "FIFO トピックのグループ ID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.desc": {
+          "source": "An optional subject line for the message, used primarily for email notifications.",
+          "message": "メッセージのオプションの件名行。主に電子メール通知に使用されます。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.display_name": {
+          "source": "Subject",
+          "message": "サブジェクト"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.c3ViamVjdA.short_desc": {
+          "source": "Message subject line",
+          "message": "メッセージの件名"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "ターゲットのトピックが配置されている AWS リージョン。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "トピックの AWS リージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic where the JSON message will be published.",
+          "message": "JSONメッセージが配信されるSNSトピックのAmazon Resource Name (ARN)。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "トピック ARN"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the target topic",
+          "message": "ターゲットトピックの ARN"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX2pzb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a structured JSON message to an SNS topic",
+          "message": "SNSトピックに構造化JSONメッセージを送信"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.desc": {
+          "source": "Creates a new Amazon SNS topic with optional configuration for FIFO topics, encryption, and delivery policies.",
+          "message": "FIFOトピック、暗号化、配信ポリシーのオプション設定を使用して、新しいAmazon SNSトピックを作成します。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.display_name": {
+          "source": "Create Topic",
+          "message": "トピックを作成"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.desc": {
+          "source": "Whether to enable content-based deduplication for FIFO topics, which prevents duplicate messages based on message content.",
+          "message": "メッセージ内容に基づいて重複メッセージを防ぐ、FIFOトピックのコンテンツに基づく重複排除を有効にするかどうか。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.display_name": {
+          "source": "Content-Based Deduplication",
+          "message": "コンテンツに基づく重複排除"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Y29udGVudF9iYXNlZF9kZWR1cGxpY2F0aW9u.short_desc": {
+          "source": "Enable content-based deduplication",
+          "message": "コンテンツに基づく重複排除を有効化"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.desc": {
+          "source": "A JSON string that defines the delivery policy for the topic, controlling retry behavior and delivery settings.",
+          "message": "トピックの配信ポリシーを定義し、再試行動作と配信設定を制御するJSON文字列。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.display_name": {
+          "source": "Delivery Policy",
+          "message": "配信ポリシー"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGVsaXZlcnlfcG9saWN5.short_desc": {
+          "source": "JSON delivery policy for the topic",
+          "message": "トピックのJSON配信ポリシー"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "A human-readable name for the topic that appears in email notifications and other contexts.",
+          "message": "メール通知やその他の文脈で表示されるトピックの表示名。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "表示名"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "Human-readable name for the topic",
+          "message": "トピックの表示名"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.desc": {
+          "source": "Whether to create a FIFO (First-In-First-Out) topic that preserves message ordering and prevents duplicates.",
+          "message": "メッセージの順序を保持し、重複を防ぐFIFO（先入れ先出し）トピックを作成するかどうか。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.display_name": {
+          "source": "FIFO Topic",
+          "message": "FIFOトピック"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.Zmlmb190b3BpYw.short_desc": {
+          "source": "Create as FIFO topic",
+          "message": "FIFOトピックとして作成"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.desc": {
+          "source": "The ID of an AWS KMS key to use for encrypting messages published to this topic.",
+          "message": "このトピックに配信されたメッセージの暗号化に使用するAWS KMSキーのID。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.display_name": {
+          "source": "KMS Master Key ID",
+          "message": "KMSマスターキーID"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.a21zX21hc3Rlcl9rZXlfaWQ.short_desc": {
+          "source": "KMS key for topic encryption",
+          "message": "トピック暗号化用のKMSキー"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.desc": {
+          "source": "A JSON string that defines the access policy for the topic, controlling who can publish to or subscribe to the topic.",
+          "message": "トピックへのアクセス権限（配信およびサブスクライブの権限）を定義するJSON文字列。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.display_name": {
+          "source": "Policy",
+          "message": "ポリシー"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cG9saWN5.short_desc": {
+          "source": "Access policy for the topic",
+          "message": "トピックのアクセスポリシー"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic will be created. Defaults to us-east-1 if not specified.",
+          "message": "トピックが作成されるAWSリージョン。指定しない場合は us-east-1 がデフォルトになります。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region for the topic",
+          "message": "トピックのAWSリージョン"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.desc": {
+          "source": "The name for the SNS topic. For FIFO topics, the name must end with .fifo suffix.",
+          "message": "SNSトピックの名前。FIFOトピックの場合、名前の末尾は .fifo サフィックスである必要があります。"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.display_name": {
+          "source": "Topic Name",
+          "message": "トピック名"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.option.dG9waWNfbmFtZQ.short_desc": {
+          "source": "Name for the new topic",
+          "message": "新しいトピックの名前"
+        },
+        "app.QW1hem9uU05T.action.Y3JlYXRlX3RvcGlj.short_desc": {
+          "source": "Create a new SNS topic",
+          "message": "新しいSNSトピックを作成"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.desc": {
+          "source": "Creates a new subscription to an Amazon SNS topic, allowing the specified endpoint to receive messages published to the topic.",
+          "message": "Amazon SNSトピックへの新しいサブスクリプションを作成し、指定したエンドポイントがトピックに配信されたメッセージを受信できるようにします。"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.display_name": {
+          "source": "Add Subscriber",
+          "message": "サブスクライバーを追加"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.desc": {
+          "source": "The endpoint that will receive the messages. Format depends on the protocol (URL for HTTP/HTTPS, email address for email, phone number for SMS, etc.).",
+          "message": "メッセージを受信するエンドポイント。形式はプロトコルによって異なります（HTTP/HTTPSの場合はURL、メールの場合はメールアドレス、SMSの場合は電話番号など）。"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.display_name": {
+          "source": "Endpoint",
+          "message": "エンドポイント"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.ZW5kcG9pbnQ.short_desc": {
+          "source": "Subscriber endpoint",
+          "message": "サブスクライバーエンドポイント"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "Application",
+          "message": "Application"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWls.display_name": {
+          "source": "Email",
+          "message": "メール"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmVtYWlsLWpzb24.display_name": {
+          "source": "Email-JSON",
+          "message": "Email-JSON"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHA.display_name": {
+          "source": "HTTP",
+          "message": "HTTP"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmh0dHBz.display_name": {
+          "source": "HTTPS",
+          "message": "HTTPS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOmxhbWJkYQ.display_name": {
+          "source": "Lambda",
+          "message": "Lambda"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNtcw.display_name": {
+          "source": "SMS",
+          "message": "SMS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.allowed-value.c3RyaW5nOnNxcw.display_name": {
+          "source": "SQS",
+          "message": "SQS"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.desc": {
+          "source": "The protocol to use for delivering messages to the subscriber (HTTP, HTTPS, Email, SMS, SQS, Lambda, or Application).",
+          "message": "サブスクライバーへのメッセージ配信に使用するプロトコル（HTTP、HTTPS、Email、SMS、SQS、Lambda、またはApplication）。"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.display_name": {
+          "source": "Protocol",
+          "message": "プロトコル"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cHJvdG9jb2w.short_desc": {
+          "source": "Subscription protocol type",
+          "message": "サブスクリプションプロトコルタイプ"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the target topic is located.",
+          "message": "ターゲットのトピックが配置されている AWS リージョン。"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "トピックの AWS リージョン"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to create a subscription for.",
+          "message": "サブスクリプションを作成するSNSトピックのAmazon Resource Name (ARN)。"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "トピック ARN"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to subscribe to",
+          "message": "サブスクライブするトピックのARN"
+        },
+        "app.QW1hem9uU05T.action.YWRkX3N1YnNjcmliZXI.short_desc": {
+          "source": "Add a subscriber to an SNS topic",
+          "message": "SNSトピックにサブスクライバーを追加"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.desc": {
+          "source": "Retrieves detailed information about a specific Amazon SNS topic, including attributes, subscription statistics, and configuration details.",
+          "message": "属性、サブスクリプション統計、設定の詳細を含む、特定のAmazon SNSトピックの詳細情報を取得します。"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.display_name": {
+          "source": "Get Topic",
+          "message": "トピックを取得"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where the topic is located.",
+          "message": "トピックが存在するAWSリージョン。"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region of the topic",
+          "message": "トピックの AWS リージョン"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to get details for.",
+          "message": "詳細を取得するSNSトピックのAmazon Resource Name (ARN)。"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "トピック ARN"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.option.dG9waWNfYXJu.short_desc": {
+          "source": "ARN of the topic to retrieve",
+          "message": "取得するトピックのARN"
+        },
+        "app.QW1hem9uU05T.action.Z2V0X3RvcGlj.short_desc": {
+          "source": "Get details of a specific SNS topic",
+          "message": "特定のSNSトピックの詳細を取得"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.desc": {
+          "source": "Retrieves a list of all Amazon SNS topics in the specified region, optionally including detailed attributes for each topic.",
+          "message": "指定したリージョン内のすべてのAmazon SNSトピックのリストを取得します。オプションで各トピックの詳細属性を含めることができます。"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.display_name": {
+          "source": "List Topics",
+          "message": "トピックを一覧表示"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.desc": {
+          "source": "Whether to include detailed attributes for each topic, such as subscription counts and policies.",
+          "message": "サブスクリプション数やポリシーなど、各トピックの詳細属性を含めるかどうか。"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.display_name": {
+          "source": "Include Attributes",
+          "message": "属性を含める"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.aW5jbHVkZV9hdHRyaWJ1dGVz.short_desc": {
+          "source": "Include detailed topic attributes",
+          "message": "詳細なトピック属性を含める"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.desc": {
+          "source": "A token for paginating through large lists of topics. Use the token returned from a previous call.",
+          "message": "トピックの大きなリストをページ分割するためのトークン。前回の呼び出しから返されたトークンを使用します。"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.display_name": {
+          "source": "Next Token",
+          "message": "次のトークン"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.bmV4dF90b2tlbg.short_desc": {
+          "source": "Pagination token",
+          "message": "ページネーショントークン"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.desc": {
+          "source": "The AWS region from which to retrieve the list of SNS topics.",
+          "message": "SNSトピックのリストを取得するAWSリージョン。"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to list topics from",
+          "message": "トピック一覧を取得するAWSリージョン"
+        },
+        "app.QW1hem9uU05T.action.bGlzdF90b3BpY3M.short_desc": {
+          "source": "List all SNS topics",
+          "message": "すべてのSNSトピックを一覧表示"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Amazon SNS** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証を使用して **Amazon SNS** にカスタムHTTP / REST API呼び出しを行います。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、オプションのクエリパラメータ、ヘッダー、およびリクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.QW1hem9uU05T.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Amazon SNS",
+          "message": "Amazon SNSへのカスタムAPI呼び出しを実行"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "This trigger subscribes to an Amazon SNS topic and fires when a new message is published. It automatically handles subscription management and provides the complete message payload.",
+          "message": "このトリガーはAmazon SNSトピックをサブスクライブし、新しいメッセージが公開されたときに実行されます。サブスクリプションの管理を自動的に行い、完全なメッセージペイロードを提供します。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "新しいメッセージ"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.desc": {
+          "source": "Specify the AWS region where your SNS topic is hosted. If not provided, defaults to us-east-1.",
+          "message": "SNSトピックがホストされているAWSリージョンを指定します。指定しない場合のデフォルトはus-east-1です。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.display_name": {
+          "source": "AWS Region",
+          "message": "AWS リージョン"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.cmVnaW9u.short_desc": {
+          "source": "The AWS region where the SNS topic is located.",
+          "message": "SNSトピックが配置されているAWSリージョン。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.desc": {
+          "source": "The full ARN of the SNS topic you want to monitor for new messages. The format should be: arn:aws:sns:region:account-id:topic-name.",
+          "message": "新しいメッセージを監視するSNSトピックの完全なARN。形式: arn:aws:sns:region:account-id:topic-name。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.display_name": {
+          "source": "Topic ARN",
+          "message": "トピック ARN"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.option.dG9waWNfYXJu.short_desc": {
+          "source": "The Amazon Resource Name (ARN) of the SNS topic to subscribe to.",
+          "message": "サブスクライブするSNSトピックのAmazon Resource Name (ARN)。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is published to an SNS topic.",
+          "message": "SNSトピックに新しいメッセージが公開されたときにトリガーします。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.desc": {
+          "source": "Monitors your Amazon SNS service for newly created topics and triggers when a new topic is detected in your specified region.",
+          "message": "Amazon SNSサービスで新規作成されたトピックを監視し、指定されたリージョンで新しいトピックが検出されたときにトリガーします。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.display_name": {
+          "source": "New Topic",
+          "message": "新しいトピック"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.desc": {
+          "source": "The AWS region where you want to monitor for new SNS topics. If not specified, defaults to us-east-1.",
+          "message": "新しいSNSトピックを監視するAWSリージョン。指定しない場合のデフォルトはus-east-1です。"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.display_name": {
+          "source": "Region",
+          "message": "リージョン"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.option.cmVnaW9u.short_desc": {
+          "source": "AWS region to monitor for new topics",
+          "message": "新しいトピックを監視するAWSリージョン"
+        },
+        "app.QW1hem9uU05T.action.bmV3X3RvcGlj.short_desc": {
+          "source": "Triggers when a new SNS topic is created",
+          "message": "新しいSNSトピックが作成されたときにトリガーします"
+        },
+        "app.QW1hem9uU05T.desc": {
+          "source": "The Amazon SNS integration enables you to create topics, send messages, manage subscribers, and monitor notifications through Amazon Simple Notification Service. Perfect for building scalable messaging systems, sending alerts, and coordinating distributed applications with reliable message delivery.",
+          "message": "Amazon SNS連携により、Amazon Simple Notification Serviceを介してトピックの作成、メッセージの送信、サブスクライバーの管理、通知の監視を行うことができます。拡張可能なメッセージングシステムの構築、アラートの送信、信頼性の高いメッセージ配信による分散アプリケーションの連携に最適です。"
+        },
+        "app.QW1hem9uU05T.display_name": {
+          "source": "Amazon SNS",
+          "message": "Amazon SNS"
+        },
+        "app.QW1hem9uU05T.short_desc": {
+          "source": "Send notifications and messages through Amazon Simple Notification Service.",
+          "message": "Amazon Simple Notification Serviceを介して通知やメッセージを送信します。"
+        }
+      }
+    }
+  }
+}

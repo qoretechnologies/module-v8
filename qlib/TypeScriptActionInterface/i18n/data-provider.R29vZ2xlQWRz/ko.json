@@ -1,0 +1,3121 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Creates a new ad group in a specified campaign with the given name, type, status, and CPC bid.",
+          "message": "지정된 캠페인에 지정된 이름, 유형, 상태 및 CPC 입찰가를 사용하여 새 광고그룹을 생성합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Create Ad Group",
+          "message": "광고그룹 생성"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the new ad group will be created.",
+          "message": "새 광고그룹이 생성될 캠페인을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to create the ad group in",
+          "message": "광고그룹을 생성할 캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The maximum CPC bid amount in your account currency (e.g., 1.50 for $1.50).",
+          "message": "계정 통화 기준 최대 CPC 입찰가 금액입니다(예: $1.50인 경우 1.50)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 입찰가"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "Maximum cost-per-click bid amount",
+          "message": "최대 클릭당비용 입찰가 금액"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the ad group.",
+          "message": "광고그룹을 설명하는 이름입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "광고그룹 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "Name for the new ad group",
+          "message": "새 광고그룹 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad group without immediately serving ads.",
+          "message": "광고를 즉시 게재하지 않고 광고그룹을 생성하려면 PAUSED로 설정하세요."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "초기 상태"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad group as enabled or paused",
+          "message": "광고그룹을 사용 또는 일시중지 상태로 시작할지 여부"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOkRJU1BMQVlfU1RBTkRBUkQ.display_name": {
+          "source": "Display Standard",
+          "message": "디스플레이 표준"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.allowed-value.c3RyaW5nOlNFQVJDSF9TVEFOREFSRA.display_name": {
+          "source": "Search Standard",
+          "message": "검색 표준"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.desc": {
+          "source": "The type of ad group to create.",
+          "message": "생성할 광고그룹의 유형입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.display_name": {
+          "source": "Ad Group Type",
+          "message": "광고그룹 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.option.dHlwZQ.short_desc": {
+          "source": "Type of ad group",
+          "message": "광고그룹 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Create a new ad group within a campaign",
+          "message": "캠페인 내에 새 광고그룹 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.desc": {
+          "source": "Creates a new campaign budget with a specified daily amount.",
+          "message": "지정된 일일 금액으로 새 캠페인 예산을 생성합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.display_name": {
+          "source": "Create Budget",
+          "message": "예산 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "계정 통화 기준의 일일 예산 금액입니다(예: 일일 $50의 경우 50.00)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "일일 금액"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "계정 통화 기준 일일 예산 금액"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOkFDQ0VMRVJBVEVE.display_name": {
+          "source": "Accelerated",
+          "message": "빠른 게재"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.allowed-value.c3RyaW5nOlNUQU5EQVJE.display_name": {
+          "source": "Standard",
+          "message": "표준"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.desc": {
+          "source": "STANDARD spreads the budget evenly. ACCELERATED spends it as fast as possible (deprecated for most campaign types).",
+          "message": "STANDARD는 예산을 고르게 분산합니다. ACCELERATED는 가능한 한 빠르게 지출합니다(대부분의 캠페인 유형에서 지원 중단됨)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.display_name": {
+          "source": "Delivery Method",
+          "message": "게재 방법"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.ZGVsaXZlcnlfbWV0aG9k.short_desc": {
+          "source": "How the budget is spent throughout the day",
+          "message": "하루 동안 예산이 지출되는 방식"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign budget.",
+          "message": "캠페인 예산을 설명하는 이름입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "예산 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "Name for the budget",
+          "message": "예산 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2J1ZGdldA.short_desc": {
+          "source": "Create a new campaign budget",
+          "message": "새 캠페인 예산 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Creates a new portfolio bidding strategy that can be shared across multiple campaigns.",
+          "message": "여러 캠페인에서 공유할 수 있는 새 포트폴리오 입찰 전략을 생성합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Create Bidding Strategy",
+          "message": "입찰 전략 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the portfolio bidding strategy.",
+          "message": "포트폴리오 입찰 전략을 설명하는 이름입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "전략 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "Name for the bidding strategy",
+          "message": "입찰 전략 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The target CPA in your account currency. Required when strategy type is TARGET_CPA.",
+          "message": "계정 통화 기준의 타겟 CPA입니다. 전략 유형이 TARGET_CPA인 경우 필수입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "타겟 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Target cost-per-acquisition amount",
+          "message": "타겟 전환당비용 금액"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The target ROAS as a ratio (e.g., 3.0 for 300% ROAS). Required when strategy type is TARGET_ROAS.",
+          "message": "비율 기준의 타겟 ROAS입니다(예: 300% ROAS의 경우 3.0). 전략 유형이 TARGET_ROAS인 경우 필수입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "타겟 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Target return on ad spend",
+          "message": "타겟 광고 투자수익"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "전환수 최대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "전환 가치 극대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9DUEE.display_name": {
+          "source": "Target CPA",
+          "message": "타겟 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.allowed-value.c3RyaW5nOlRBUkdFVF9ST0FT.display_name": {
+          "source": "Target ROAS",
+          "message": "타겟 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.desc": {
+          "source": "The bidding optimization goal (e.g., Target CPA, Target ROAS, Maximize Conversions).",
+          "message": "입찰 최적화 목표입니다(예: 타겟 CPA, 타겟 ROAS, 전환수 최대화)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.display_name": {
+          "source": "Strategy Type",
+          "message": "전략 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dHlwZQ.short_desc": {
+          "source": "Type of bidding strategy",
+          "message": "입찰 전략 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Create a portfolio bidding strategy",
+          "message": "포트폴리오 입찰 전략 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Creates a new CRM-based user list for customer match targeting.",
+          "message": "고객 일치 타겟팅을 위한 새 CRM 기반 사용자 목록을 생성합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Create Customer List",
+          "message": "고객 목록 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.desc": {
+          "source": "A description of the customer list and its intended use.",
+          "message": "고객 목록 및 용도에 대한 설명입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.display_name": {
+          "source": "Description",
+          "message": "설명"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.ZGVzY3JpcHRpb24.short_desc": {
+          "source": "Description of the customer list",
+          "message": "고객 목록 설명"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.desc": {
+          "source": "The number of days a user remains on the list. Set to 10000 for no expiration.",
+          "message": "사용자가 목록에 유지되는 일수입니다. 만료되지 않도록 하려면 10000으로 설정하세요."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.display_name": {
+          "source": "Membership Life Span",
+          "message": "회원 자격 유지 기간"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bWVtYmVyc2hpcF9saWZlX3NwYW4.short_desc": {
+          "source": "Days until a member is automatically removed",
+          "message": "회원이 자동으로 제거될 때까지의 일수"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the customer match list.",
+          "message": "고객 일치 목록을 설명하는 이름입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.display_name": {
+          "source": "List Name",
+          "message": "리스트 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.option.bmFtZQ.short_desc": {
+          "source": "Name for the customer list",
+          "message": "고객 목록 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Create a new customer match audience list",
+          "message": "새 고객 일치 타겟 잠재고객 목록 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.desc": {
+          "source": "Creates a new campaign in Google Ads with the specified channel type, budget, bidding strategy, and targeting settings. A campaign budget is created automatically.",
+          "message": "지정된 채널 유형, 예산, 입찰 전략 및 타겟팅 설정으로 Google Ads에 새 캠페인을 생성합니다. 캠페인 예산이 자동으로 생성됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Create Campaign",
+          "message": "캠페인 만들기"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOkRJU1BMQVk.display_name": {
+          "source": "Display",
+          "message": "디스플레이"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlBFUkZPUk1BTkNFX01BWA.display_name": {
+          "source": "Performance Max",
+          "message": "실적 최대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNFQVJDSA.display_name": {
+          "source": "Search",
+          "message": "검색"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlNIT1BQSU5H.display_name": {
+          "source": "Shopping",
+          "message": "쇼핑"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.allowed-value.c3RyaW5nOlZJREVP.display_name": {
+          "source": "Video",
+          "message": "비디오"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.desc": {
+          "source": "The type of advertising channel for this campaign (e.g., Search, Display, Shopping, Video).",
+          "message": "이 캠페인의 광고 채널 유형입니다(예: 검색, 디스플레이, 쇼핑, 동영상)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.display_name": {
+          "source": "Channel Type",
+          "message": "채널 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y2hhbm5lbF90eXBl.short_desc": {
+          "source": "Advertising channel type",
+          "message": "광고 채널 유형"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BTlVBTF9DUEM.display_name": {
+          "source": "Manual CPC",
+          "message": "수동 CPC"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NMSUNLUw.display_name": {
+          "source": "Maximize Clicks",
+          "message": "클릭수 최대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05T.display_name": {
+          "source": "Maximize Conversions",
+          "message": "전환수 최대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOk1BWElNSVpFX0NPTlZFUlNJT05fVkFMVUU.display_name": {
+          "source": "Maximize Conversion Value",
+          "message": "전환 가치 극대화"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.allowed-value.c3RyaW5nOlRBUkdFVF9JTVBSRVNTSU9OX1NIQVJF.display_name": {
+          "source": "Target Impression Share",
+          "message": "타겟 노출 점유율"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.desc": {
+          "source": "The bidding strategy to use for this campaign.",
+          "message": "이 캠페인에 사용할 입찰 전략입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "입찰 전략"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.YmlkZGluZ19zdHJhdGVneQ.short_desc": {
+          "source": "Campaign bidding strategy",
+          "message": "캠페인 입찰 전략"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.desc": {
+          "source": "The daily budget amount in your account currency (e.g., 50.00 for $50/day).",
+          "message": "계정 통화 기준의 일일 예산 금액입니다(예: 일일 $50의 경우 50.00)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.display_name": {
+          "source": "Daily Budget",
+          "message": "일일 예산"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.ZGFpbHlfYnVkZ2V0.short_desc": {
+          "source": "Daily budget amount in account currency",
+          "message": "계정 통화 기준 일일 예산 금액"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "A descriptive name for the campaign.",
+          "message": "캠페인을 설명하는 이름입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "캠페인 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "Name for the new campaign",
+          "message": "새 캠페인의 이름"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the campaign without immediately serving ads.",
+          "message": "광고를 즉시 게재하지 않고 캠페인을 생성하려면 PAUSED로 설정하세요."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "초기 상태"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the campaign as enabled or paused",
+          "message": "캠페인을 활성화 상태로 시작할지 또는 일시중지 상태로 시작할지 여부"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.desc": {
+          "source": "Whether to show ads on Google Search results pages.",
+          "message": "Google 검색결과 페이지에 광고를 게재할지 여부입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.display_name": {
+          "source": "Target Google Search",
+          "message": "Google 검색 타겟팅"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X2dvb2dsZV9zZWFyY2g.short_desc": {
+          "source": "Show ads on Google Search",
+          "message": "Google 검색에 광고 게재"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.desc": {
+          "source": "Whether to show ads on Google search partner websites.",
+          "message": "Google 검색 파트너 웹사이트에 광고를 게재할지 여부입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.display_name": {
+          "source": "Target Search Network",
+          "message": "검색 네트워크 타겟팅"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.option.dGFyZ2V0X3NlYXJjaF9uZXR3b3Jr.short_desc": {
+          "source": "Show ads on search partner sites",
+          "message": "검색 파트너 사이트에 광고 게재"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Create a new advertising campaign",
+          "message": "새 광고 캠페인 생성"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.desc": {
+          "source": "Creates a responsive search ad (RSA) in a specified ad group with multiple headlines, descriptions, and final URLs. Google Ads will automatically test combinations to find the best-performing ad.",
+          "message": "지정된 광고그룹에 여러 개의 제목, 설명 및 최종 도착 URL을 사용하여 반응형 검색 광고(RSA)를 생성합니다. Google Ads에서 최적의 실적을 내는 광고를 찾기 위해 조합을 자동으로 테스트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.display_name": {
+          "source": "Create Responsive Search Ad",
+          "message": "반응형 검색 광고 생성"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the new ad will be created.",
+          "message": "새 광고가 생성될 광고그룹을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to create the ad in",
+          "message": "광고를 생성할 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.desc": {
+          "source": "List of descriptions for the responsive search ad. Provide at least 2 and up to 4 descriptions (max 90 characters each).",
+          "message": "반응형 검색 광고의 설명 목록입니다. 최소 2개에서 최대 4개의 설명을 입력하세요(각각 최대 90자)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.display_name": {
+          "source": "Descriptions",
+          "message": "설명"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZGVzY3JpcHRpb25z.short_desc": {
+          "source": "Ad descriptions (2-4 required)",
+          "message": "광고 설명(2~4개 필수)"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.desc": {
+          "source": "The URLs that users will be directed to after clicking the ad.",
+          "message": "사용자가 광고를 클릭한 후 이동할 URL입니다."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.display_name": {
+          "source": "Final URLs",
+          "message": "최종 도착 URL"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.ZmluYWxfdXJscw.short_desc": {
+          "source": "Landing page URLs",
+          "message": "방문 페이지 URL"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.desc": {
+          "source": "List of headlines for the responsive search ad. Provide at least 3 and up to 15 headlines (max 30 characters each).",
+          "message": "반응형 검색 광고의 제목 목록입니다. 최소 3개에서 최대 15개의 제목을 입력하세요(각각 최대 30자)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.display_name": {
+          "source": "Headlines",
+          "message": "제목"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.aGVhZGxpbmVz.short_desc": {
+          "source": "Ad headlines (3-15 required)",
+          "message": "광고 제목(3~15개 필수)"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.desc": {
+          "source": "Set to PAUSED to create the ad without immediately serving it.",
+          "message": "광고를 즉시 게재하지 않고 생성하려면 PAUSED로 설정하세요."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.display_name": {
+          "source": "Initial Status",
+          "message": "초기 상태"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.c3RhdHVz.short_desc": {
+          "source": "Whether to start the ad as enabled or paused",
+          "message": "광고를 활성화 상태로 시작할지 또는 일시중지 상태로 시작할지 여부"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.desc": {
+          "source": "The first part of the display URL path shown in the ad (max 15 characters).",
+          "message": "광고에 표시되는 표시 URL 경로의 첫 번째 부분입니다(최대 15자)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.display_name": {
+          "source": "Display Path 1",
+          "message": "표시 경로 1"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDE.short_desc": {
+          "source": "First part of the display URL path",
+          "message": "표시 URL 경로의 첫 번째 부분"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.desc": {
+          "source": "The second part of the display URL path shown in the ad (max 15 characters).",
+          "message": "광고에 표시되는 표시 URL 경로의 두 번째 부분입니다(최대 15자)."
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.display_name": {
+          "source": "Display Path 2",
+          "message": "표시 경로 2"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.option.cGF0aDI.short_desc": {
+          "source": "Second part of the display URL path",
+          "message": "표시 URL 경로의 두 번째 부분"
+        },
+        "app.R29vZ2xlQWRz.action.Y3JlYXRlX3Jlc3BvbnNpdmVfc2VhcmNoX2Fk.short_desc": {
+          "source": "Create a new responsive search ad",
+          "message": "새 반응형 검색 광고 생성"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.desc": {
+          "source": "Adds campaign-level negative keywords to prevent ads from showing for certain search terms.",
+          "message": "특정 검색어에 광고가 게재되지 않도록 캠페인 수준의 제외 키워드를 추가합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.display_name": {
+          "source": "Add Negative Keywords",
+          "message": "제외 키워드 추가"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select the campaign where the negative keywords will be added.",
+          "message": "제외 키워드를 추가할 캠페인을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to add negative keywords to",
+          "message": "제외 키워드를 추가할 캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of negative keyword entries to add, each with text and match type.",
+          "message": "추가할 제외 키워드 항목 목록으로, 각각 텍스트와 검색 유형을 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Negative Keywords",
+          "message": "제외 키워드"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Negative keywords to add",
+          "message": "추가할 제외 키워드"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX25lZ2F0aXZlX2tleXdvcmRz.short_desc": {
+          "source": "Add negative keywords to a campaign",
+          "message": "캠페인에 제외 키워드 추가"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.desc": {
+          "source": "Adds contacts to a customer match list using hashed user data. Email addresses and phone numbers are automatically normalized and SHA-256 hashed before upload.",
+          "message": "해시된 사용자 데이터를 사용하여 고객 일치 타겟팅 목록에 연락처를 추가합니다. 이메일 주소와 전화번호는 업로드 전에 자동으로 정규화되고 SHA-256으로 해시됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.display_name": {
+          "source": "Add Contacts to Customer List",
+          "message": "고객 목록에 연락처 추가"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to add to the customer list.",
+          "message": "고객 목록에 추가할 이메일, 전화번호 또는 주소 데이터가 포함된 연락처 목록입니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "연락처"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to add",
+          "message": "추가할 연락처 목록"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list where contacts will be added.",
+          "message": "연락처를 추가할 고객 일치 타겟팅 목록을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "고객 목록"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to add contacts to",
+          "message": "연락처를 추가할 고객 목록"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2NvbnRhY3RzX3RvX2N1c3RvbWVyX2xpc3Q.short_desc": {
+          "source": "Upload contacts to a customer match list",
+          "message": "고객 일치 타겟팅 목록에 연락처 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.desc": {
+          "source": "Adds one or more keywords to a specified ad group with the given match type and optional CPC bid.",
+          "message": "지정된 검색 유형 및 선택적 CPC 입찰가와 함께 지정된 광고그룹에 하나 이상의 키워드를 추가합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.display_name": {
+          "source": "Add Keywords",
+          "message": "키워드 추가"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group where the keywords will be added.",
+          "message": "키워드를 추가할 광고그룹을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to add keywords to",
+          "message": "키워드를 추가할 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.desc": {
+          "source": "List of keyword entries to add, each with text and match type.",
+          "message": "추가할 키워드 항목 목록으로, 각각 텍스트와 검색 유형을 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.display_name": {
+          "source": "Keywords",
+          "message": "키워드"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.option.a2V5d29yZHM.short_desc": {
+          "source": "Keywords to add",
+          "message": "추가할 키워드"
+        },
+        "app.R29vZ2xlQWRz.action.YWRkX2tleXdvcmRz.short_desc": {
+          "source": "Add keywords to an ad group",
+          "message": "광고그룹에 키워드 추가"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.desc": {
+          "source": "Returns details about the authenticated Google Ads customer account, including accessible customer IDs.",
+          "message": "액세스 가능한 고객 ID를 포함하여 인증된 Google Ads 고객 계정에 대한 세부정보를 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.display_name": {
+          "source": "Get Customer Info",
+          "message": "고객 정보 가져오기"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2N1c3RvbWVyX2luZm8.short_desc": {
+          "source": "Get information about the current Google Ads customer account",
+          "message": "현재 Google Ads 고객 계정에 대한 정보 가져오기"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.desc": {
+          "source": "Retrieves detailed information about a specific campaign by its ID, including status, budget, bidding strategy, and performance metrics.",
+          "message": "상태, 예산, 입찰 전략 및 실적 통계를 포함하여 ID별 특정 캠페인에 대한 상세 정보를 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.display_name": {
+          "source": "Get Campaign",
+          "message": "캠페인 가져오기"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to retrieve details for.",
+          "message": "세부정보를 검색할 캠페인의 ID를 선택하거나 입력합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to retrieve",
+          "message": "검색할 캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.Z2V0X2NhbXBhaWdu.short_desc": {
+          "source": "Get details of a specific campaign",
+          "message": "특정 캠페인의 세부정보 가져오기"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.desc": {
+          "source": "Retrieves ad groups from the Google Ads account, optionally filtered by campaign.",
+          "message": "Google Ads 계정에서 광고그룹을 검색하며, 선택적으로 캠페인별로 필터링할 수 있습니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.display_name": {
+          "source": "List Ad Groups",
+          "message": "광고그룹 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ad groups belonging to this campaign.",
+          "message": "이 캠페인에 속한 광고그룹만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ad groups to return. Default is 100.",
+          "message": "반환할 최대 광고그룹 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ad groups to return",
+          "message": "반환할 최대 광고그룹 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "모두"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ad groups with the specified status.",
+          "message": "지정된 상태의 광고그룹만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "상태 필터"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ad groups by status",
+          "message": "상태별 광고그룹 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZF9ncm91cHM.short_desc": {
+          "source": "List ad groups with performance metrics",
+          "message": "실적 통계와 함께 광고그룹 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.desc": {
+          "source": "Retrieves ads from the Google Ads account, optionally filtered by campaign, ad group, or status.",
+          "message": "Google Ads 계정에서 광고를 검색하며, 선택적으로 캠페인, 광고그룹 또는 상태별로 필터링할 수 있습니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.display_name": {
+          "source": "List Ads",
+          "message": "광고 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return ads belonging to this campaign.",
+          "message": "이 캠페인에 속한 광고만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return ads belonging to this ad group.",
+          "message": "이 광고그룹에 속한 광고만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "광고그룹별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of ads to return. Default is 100.",
+          "message": "반환할 최대 광고 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of ads to return",
+          "message": "반환할 최대 광고 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "모두"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return ads with the specified status. If not set, all non-removed ads are returned.",
+          "message": "지정된 상태의 광고만 반환합니다. 설정하지 않으면 삭제되지 않은 모든 광고가 반환됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "상태 필터"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter ads by status",
+          "message": "상태별 광고 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9hZHM.short_desc": {
+          "source": "List ads with performance metrics",
+          "message": "실적 통계와 함께 광고 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.desc": {
+          "source": "Retrieves all portfolio bidding strategies in the Google Ads account.",
+          "message": "Google Ads 계정의 모든 포트폴리오 입찰 전략을 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.display_name": {
+          "source": "List Bidding Strategies",
+          "message": "입찰 전략 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of bidding strategies to return. Default is 100.",
+          "message": "반환할 최대 입찰 전략 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of strategies to return",
+          "message": "반환할 최대 전략 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9iaWRkaW5nX3N0cmF0ZWdpZXM.short_desc": {
+          "source": "List portfolio bidding strategies",
+          "message": "포트폴리오 입찰 전략 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.desc": {
+          "source": "Retrieves all campaign budgets in the Google Ads account.",
+          "message": "Google Ads 계정의 모든 캠페인 예산을 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.display_name": {
+          "source": "List Budgets",
+          "message": "예산 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.desc": {
+          "source": "The maximum number of budgets to return. Default is 100.",
+          "message": "반환할 최대 예산 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of budgets to return",
+          "message": "반환할 최대 예산 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9idWRnZXRz.short_desc": {
+          "source": "List campaign budgets",
+          "message": "캠페인 예산 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.desc": {
+          "source": "Retrieves campaigns from the Google Ads account with optional status filtering and performance metrics for a specified date range.",
+          "message": "선택적 상태 필터링 및 지정된 기간의 실적 통계와 함께 Google Ads 계정에서 캠페인을 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.display_name": {
+          "source": "List Campaigns",
+          "message": "캠페인 목록"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "전체 기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "지난 14일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "지난 30일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "지난 7일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "지난달"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "이번 달"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics alongside campaign data.",
+          "message": "캠페인 데이터와 함께 실적 통계를 검색하기 위한 사전 정의된 기간입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "실적 통계 기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of campaigns to return. Default is 100.",
+          "message": "반환할 최대 캠페인 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of campaigns to return",
+          "message": "반환할 최대 캠페인 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "모두"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only return campaigns with the specified status. If not set, all non-removed campaigns are returned.",
+          "message": "지정된 상태의 캠페인만 반환합니다. 설정하지 않으면 삭제되지 않은 모든 캠페인이 반환됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "상태 필터"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter campaigns by status",
+          "message": "상태별 캠페인 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jYW1wYWlnbnM.short_desc": {
+          "source": "List campaigns with performance metrics",
+          "message": "실적 통계와 함께 캠페인 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.desc": {
+          "source": "Retrieves all conversion actions configured in the Google Ads account.",
+          "message": "Google Ads 계정에 구성된 모든 전환 액션을 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.display_name": {
+          "source": "List Conversion Actions",
+          "message": "전환 액션 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of conversion actions to return. Default is 100.",
+          "message": "반환할 최대 전환 액션 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conversion actions to return",
+          "message": "반환할 최대 전환 액션 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jb252ZXJzaW9uX2FjdGlvbnM.short_desc": {
+          "source": "List all conversion action definitions",
+          "message": "모든 전환 액션 정의 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.desc": {
+          "source": "Retrieves all user lists (customer match lists) in the Google Ads account.",
+          "message": "Google Ads 계정의 모든 사용자 목록(고객 일치 목록)을 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.display_name": {
+          "source": "List Customer Lists",
+          "message": "고객 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of customer lists to return. Default is 100.",
+          "message": "반환할 최대 고객 목록 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of lists to return",
+          "message": "반환할 최대 목록 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9jdXN0b21lcl9saXN0cw.short_desc": {
+          "source": "List audience/customer match lists",
+          "message": "잠재고객/고객 일치 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.desc": {
+          "source": "Retrieves keywords from the Google Ads account with optional filtering by campaign or ad group, including performance metrics.",
+          "message": "실적 통계를 포함하여 캠페인 또는 광고그룹별 선택적 필터링을 통해 Google Ads 계정에서 키워드를 검색합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.display_name": {
+          "source": "List Keywords",
+          "message": "키워드 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only return keywords belonging to this campaign.",
+          "message": "이 캠페인에 속한 키워드만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only return keywords belonging to this ad group.",
+          "message": "이 광고그룹에 속한 키워드만 반환합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "광고그룹별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkFMTF9USU1F.display_name": {
+          "source": "All Time",
+          "message": "전체 기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "지난 14일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "지난 30일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "지난 7일"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "이번 달"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The predefined date range for retrieving performance metrics.",
+          "message": "성과 지표를 조회하기 위한 사전 정의된 기간입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Date range for performance metrics",
+          "message": "실적 통계 기간"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of keywords to return. Default is 100.",
+          "message": "반환할 최대 키워드 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of keywords to return",
+          "message": "반환할 최대 키워드 수"
+        },
+        "app.R29vZ2xlQWRz.action.bGlzdF9rZXl3b3Jkcw.short_desc": {
+          "source": "List keywords with performance metrics",
+          "message": "성과 지표와 함께 키워드 목록 조회"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Ads** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **Google Ads**에 맞춤 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문을 포함하는 해시로 반환됩니다.\n\n이 앱에서 아직 최고 수준 작업으로 노출되지 않은 엔드포인트에 이 작업을 사용하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.R29vZ2xlQWRz.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Ads",
+          "message": "Google Ads에 맞춤 API 호출 수행"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.desc": {
+          "source": "Monitors Google Ads lead form extensions for new submissions. Polls the lead form submission data and triggers for each new lead.",
+          "message": "Google Ads 리드 양식 확장 프로그램에서 새 제출을 모니터링합니다. 리드 양식 제출 데이터를 폴링하고 새 리드마다 트리거합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.display_name": {
+          "source": "New Lead Form Submission",
+          "message": "새 리드 양식 제출"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only trigger for lead form submissions from this campaign. Leave empty to monitor all campaigns.",
+          "message": "이 캠페인의 리드 양식 제출에 대해서만 트리거합니다. 모든 캠페인을 모니터링하려면 비워 두십시오."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.bmV3X2xlYWRfZm9ybV9zdWJtaXNzaW9u.short_desc": {
+          "source": "Triggers when a new lead is submitted through a Google Ads lead form extension",
+          "message": "Google Ads 리드 양식 확장 프로그램을 통해 새 리드가 제출될 때 트리거됩니다"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.desc": {
+          "source": "Removes (soft deletes) an ad from an ad group.",
+          "message": "광고그룹에서 광고를 제거(소프트 삭제)합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.display_name": {
+          "source": "Remove Ad",
+          "message": "광고 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to remove.",
+          "message": "제거할 광고가 포함된 광고그룹을 선택하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "광고가 포함된 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to remove.",
+          "message": "제거할 광고의 ID입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "광고"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.option.YWRfaWQ.short_desc": {
+          "source": "The ad to remove",
+          "message": "제거할 광고"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2Fk.short_desc": {
+          "source": "Remove an ad",
+          "message": "광고 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.desc": {
+          "source": "Removes (soft deletes) an ad group. It will be marked as REMOVED and its ads will stop serving.",
+          "message": "광고그룹을 제거(소프트 삭제)합니다. REMOVED로 표시되며 해당 광고 게재가 중단됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.display_name": {
+          "source": "Remove Ad Group",
+          "message": "광고그룹 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to remove.",
+          "message": "제거할 광고그룹의 ID를 선택하거나 입력하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to remove",
+          "message": "제거할 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2FkX2dyb3Vw.short_desc": {
+          "source": "Remove an ad group",
+          "message": "광고그룹 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.desc": {
+          "source": "Removes (soft deletes) a campaign from the Google Ads account. The campaign will be marked as REMOVED and will no longer serve ads.",
+          "message": "Google Ads 계정에서 캠페인을 제거(소프트 삭제)합니다. 캠페인이 REMOVED로 표시되며 더 이상 광고가 게재되지 않습니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.display_name": {
+          "source": "Remove Campaign",
+          "message": "캠페인 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to remove.",
+          "message": "제거할 캠페인의 ID를 선택하거나 입력하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to remove",
+          "message": "제거할 캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NhbXBhaWdu.short_desc": {
+          "source": "Remove a campaign",
+          "message": "캠페인 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.desc": {
+          "source": "Removes contacts from a customer match list using their identifying information.",
+          "message": "식별 정보를 사용하여 고객 일치 타겟팅 목록에서 연락처를 제거합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.display_name": {
+          "source": "Remove Contacts from Customer List",
+          "message": "고객 목록에서 연락처 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.desc": {
+          "source": "A list of contacts with email, phone, or address data to remove from the customer list.",
+          "message": "고객 목록에서 제거할 이메일, 전화번호 또는 주소 데이터가 포함된 연락처 목록입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.display_name": {
+          "source": "Contacts",
+          "message": "연락처"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y29udGFjdHM.short_desc": {
+          "source": "List of contacts to remove",
+          "message": "제거할 연락처 목록"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.desc": {
+          "source": "Select the customer match list to remove contacts from.",
+          "message": "연락처를 제거할 고객 일치 타겟팅 목록을 선택하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.display_name": {
+          "source": "Customer List",
+          "message": "고객 목록"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.option.dXNlcl9saXN0X2lk.short_desc": {
+          "source": "The customer list to remove contacts from",
+          "message": "연락처를 제거할 고객 목록"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2NvbnRhY3RzX2Zyb21fY3VzdG9tZXJfbGlzdA.short_desc": {
+          "source": "Remove contacts from a customer match list",
+          "message": "고객 일치 타겟팅 목록에서 연락처 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.desc": {
+          "source": "Removes a keyword from the specified ad group.",
+          "message": "지정된 광고그룹에서 키워드를 제거합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.display_name": {
+          "source": "Remove Keyword",
+          "message": "키워드 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "광고그룹 내 키워드의 기준 ID입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "키워드 기준 ID"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to remove",
+          "message": "제거할 키워드의 기준 ID"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to remove.",
+          "message": "제거할 키워드가 포함된 광고그룹을 선택하십시오."
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "키워드가 포함된 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cmVtb3ZlX2tleXdvcmQ.short_desc": {
+          "source": "Remove a keyword from an ad group",
+          "message": "광고그룹에서 키워드 제거"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across ad groups with configurable metrics and date range.",
+          "message": "구성 가능한 지표 및 기간으로 광고그룹 전반의 성과 보고서를 실행합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.display_name": {
+          "source": "Run Ad Group Report",
+          "message": "광고그룹 보고서 실행"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include ad groups from this campaign.",
+          "message": "이 캠페인의 광고그룹만 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "사용자 지정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "지난 14일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "지난 30일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "지난 7일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "지난달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "이번 달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "보고서 기간입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "보고서의 사전 정의된 기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "맞춤 종료일입니다. 기간이 CUSTOM인 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "종료 날짜"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "맞춤 종료일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "반환할 최대 행 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "최대 행 수"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "맞춤 시작일입니다. 기간이 CUSTOM인 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "시작일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "맞춤 시작일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2FkX2dyb3VwX3JlcG9ydA.short_desc": {
+          "source": "Generate an ad group performance report",
+          "message": "광고그룹 성과 보고서 생성"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.desc": {
+          "source": "Execute a raw Google Ads Query Language (GAQL) query for advanced reporting. GAQL supports SELECT, FROM, WHERE, ORDER BY, and LIMIT clauses.",
+          "message": "고급 보고를 위해 원시 Google Ads Query Language(GAQL) 쿼리를 실행합니다. GAQL은 SELECT, FROM, WHERE, ORDER BY 및 LIMIT 절을 지원합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.display_name": {
+          "source": "Run Custom Report",
+          "message": "맞춤 보고서 실행"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.desc": {
+          "source": "A Google Ads Query Language query. Example: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS",
+          "message": "Google Ads Query Language 쿼리입니다. 예: SELECT campaign.name, metrics.clicks FROM campaign WHERE campaign.status = 'ENABLED' AND segments.date DURING LAST_30_DAYS"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.display_name": {
+          "source": "GAQL Query",
+          "message": "GAQL 쿼리"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.option.cXVlcnk.short_desc": {
+          "source": "The GAQL query to execute",
+          "message": "실행할 GAQL 쿼리"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2N1c3RvbV9yZXBvcnQ.short_desc": {
+          "source": "Run a custom GAQL query",
+          "message": "맞춤 GAQL 쿼리 실행"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.desc": {
+          "source": "Runs a performance report across campaigns with configurable metrics, date range, and filters.",
+          "message": "구성 가능한 지표, 기간 및 필터로 캠페인 전반의 성과 보고서를 실행합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.display_name": {
+          "source": "Run Campaign Report",
+          "message": "캠페인 보고서 실행"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "사용자 지정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "지난 14일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "지난 30일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "지난 7일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "지난달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "이번 달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report. Use predefined ranges like LAST_7_DAYS, LAST_30_DAYS, etc.",
+          "message": "보고서의 기간입니다. LAST_7_DAYS, LAST_30_DAYS 등과 같은 사전 정의된 기간을 사용하세요."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "보고서의 사전 정의된 기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "YYYY-MM-DD 형식의 맞춤 종료일입니다. 기간이 CUSTOM으로 설정된 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "종료 날짜"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "맞춤 종료일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "반환할 최대 행 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "최대 행 수"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date in YYYY-MM-DD format. Used when Date Range is set to CUSTOM.",
+          "message": "YYYY-MM-DD 형식의 맞춤 시작일입니다. 기간이 CUSTOM으로 설정된 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "시작일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "맞춤 시작일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkFMTA.display_name": {
+          "source": "All",
+          "message": "모두"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.desc": {
+          "source": "Only include campaigns with the specified status.",
+          "message": "지정된 상태의 캠페인만 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.display_name": {
+          "source": "Status Filter",
+          "message": "상태 필터"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.option.c3RhdHVzX2ZpbHRlcg.short_desc": {
+          "source": "Filter by campaign status",
+          "message": "캠페인 상태로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2NhbXBhaWduX3JlcG9ydA.short_desc": {
+          "source": "Generate a campaign performance report",
+          "message": "캠페인 실적 보고서 생성"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.desc": {
+          "source": "Runs a performance report across keywords with metrics like clicks, impressions, CPC, and conversions.",
+          "message": "클릭수, 노출수, CPC, 전환수 등의 측정항목이 포함된 키워드 전체 실적 보고서를 실행합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.display_name": {
+          "source": "Run Keyword Report",
+          "message": "키워드 보고서 실행"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Only include keywords from this campaign.",
+          "message": "이 캠페인의 키워드만 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "Filter by campaign",
+          "message": "캠페인별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Only include keywords from this ad group.",
+          "message": "이 광고그룹의 키워드만 포함합니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "Filter by ad group",
+          "message": "광고그룹별로 필터링"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkNVU1RPTQ.display_name": {
+          "source": "Custom",
+          "message": "사용자 지정"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMTRfREFZUw.display_name": {
+          "source": "Last 14 Days",
+          "message": "지난 14일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfMzBfREFZUw.display_name": {
+          "source": "Last 30 Days",
+          "message": "지난 30일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfN19EQVlT.display_name": {
+          "source": "Last 7 Days",
+          "message": "지난 7일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOkxBU1RfTU9OVEg.display_name": {
+          "source": "Last Month",
+          "message": "지난달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.allowed-value.c3RyaW5nOlRISVNfTU9OVEg.display_name": {
+          "source": "This Month",
+          "message": "이번 달"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.desc": {
+          "source": "The date range for the report.",
+          "message": "보고서 기간입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.display_name": {
+          "source": "Date Range",
+          "message": "기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZGF0ZV9yYW5nZQ.short_desc": {
+          "source": "Predefined date range for the report",
+          "message": "보고서의 사전 정의된 기간"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.desc": {
+          "source": "Custom end date. Used when Date Range is CUSTOM.",
+          "message": "맞춤 종료일입니다. 기간이 CUSTOM인 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "종료 날짜"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Custom end date (YYYY-MM-DD)",
+          "message": "맞춤 종료일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.desc": {
+          "source": "The maximum number of rows to return. Default is 100.",
+          "message": "반환할 최대 행 수입니다. 기본값은 100입니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of rows",
+          "message": "최대 행 수"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Custom start date. Used when Date Range is CUSTOM.",
+          "message": "맞춤 시작일입니다. 기간이 CUSTOM인 경우 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "시작일"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Custom start date (YYYY-MM-DD)",
+          "message": "맞춤 시작일(YYYY-MM-DD)"
+        },
+        "app.R29vZ2xlQWRz.action.cnVuX2tleXdvcmRfcmVwb3J0.short_desc": {
+          "source": "Generate a keyword performance report",
+          "message": "키워드 실적 보고서 생성"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.desc": {
+          "source": "Updates ad group properties such as name, status, and CPC bid.",
+          "message": "이름, 상태, CPC 입찰가 등의 광고그룹 속성을 업데이트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.display_name": {
+          "source": "Update Ad Group",
+          "message": "광고그룹 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "계정 통화로 업데이트된 최대 CPC 입찰 금액입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 입찰가"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "새 최대 CPC 입찰 금액"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select or enter the ID of the ad group to update.",
+          "message": "업데이트할 광고그룹의 ID를 선택하거나 입력하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group to update",
+          "message": "업데이트할 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.desc": {
+          "source": "The updated name for the ad group. Leave empty to keep the current name.",
+          "message": "업데이트할 광고그룹 이름입니다. 현재 이름을 유지하려면 비워 두세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.display_name": {
+          "source": "Ad Group Name",
+          "message": "광고그룹 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.bmFtZQ.short_desc": {
+          "source": "New name for the ad group",
+          "message": "광고그룹의 새 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "제거됨"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.desc": {
+          "source": "Set the ad group status to ENABLED, PAUSED, or REMOVED.",
+          "message": "광고그룹 상태를 ENABLED, PAUSED 또는 REMOVED로 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad group",
+          "message": "광고그룹의 새 상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX2dyb3Vw.short_desc": {
+          "source": "Update an existing ad group",
+          "message": "기존 광고그룹 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.desc": {
+          "source": "Updates the status of an ad within an ad group.",
+          "message": "광고그룹 내 광고의 상태를 업데이트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.display_name": {
+          "source": "Update Ad Status",
+          "message": "광고 상태 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the ad to update.",
+          "message": "업데이트할 광고가 포함된 광고그룹을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the ad",
+          "message": "광고가 포함된 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.desc": {
+          "source": "The ID of the ad to update.",
+          "message": "업데이트할 광고의 ID입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.display_name": {
+          "source": "Ad",
+          "message": "광고"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.YWRfaWQ.short_desc": {
+          "source": "The ad to update",
+          "message": "업데이트할 광고"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "제거됨"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.desc": {
+          "source": "Set the ad status to ENABLED, PAUSED, or REMOVED.",
+          "message": "광고 상태를 ENABLED, PAUSED 또는 REMOVED로 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.option.c3RhdHVz.short_desc": {
+          "source": "New status for the ad",
+          "message": "광고의 새 상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2FkX3N0YXR1cw.short_desc": {
+          "source": "Enable, pause, or remove an ad",
+          "message": "광고 사용 설정, 일시중지 또는 삭제"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.desc": {
+          "source": "Updates the daily amount or name of an existing campaign budget.",
+          "message": "기존 캠페인 예산의 일일 금액 또는 이름을 업데이트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.display_name": {
+          "source": "Update Budget",
+          "message": "예산 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.desc": {
+          "source": "Select or enter the ID of the budget to update.",
+          "message": "업데이트할 예산의 ID를 선택하거나 입력하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.display_name": {
+          "source": "Budget",
+          "message": "예산"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.YnVkZ2V0X2lk.short_desc": {
+          "source": "The budget to update",
+          "message": "업데이트할 예산"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.desc": {
+          "source": "The updated daily budget amount in your account currency.",
+          "message": "계정 통화로 업데이트된 일일 예산 금액입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.display_name": {
+          "source": "Daily Amount",
+          "message": "일일 금액"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.ZGFpbHlfYW1vdW50.short_desc": {
+          "source": "New daily budget amount",
+          "message": "새 일일 예산 금액"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.desc": {
+          "source": "The updated name for the budget. Leave empty to keep the current name.",
+          "message": "업데이트할 예산 이름입니다. 현재 이름을 유지하려면 비워 두세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.display_name": {
+          "source": "Budget Name",
+          "message": "예산 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.option.bmFtZQ.short_desc": {
+          "source": "New name for the budget",
+          "message": "예산의 새 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2J1ZGdldA.short_desc": {
+          "source": "Update an existing campaign budget",
+          "message": "기존 캠페인 예산 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.desc": {
+          "source": "Updates an existing portfolio bidding strategy.",
+          "message": "기존 포트폴리오 입찰 전략을 업데이트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.display_name": {
+          "source": "Update Bidding Strategy",
+          "message": "입찰 전략 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.desc": {
+          "source": "The updated name. Leave empty to keep the current name.",
+          "message": "업데이트할 이름입니다. 현재 이름을 유지하려면 비워 두세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.display_name": {
+          "source": "Strategy Name",
+          "message": "전략 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.bmFtZQ.short_desc": {
+          "source": "New name for the bidding strategy",
+          "message": "입찰 전략의 새 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.desc": {
+          "source": "Select or enter the ID of the bidding strategy to update.",
+          "message": "업데이트할 입찰 전략의 ID를 선택하거나 입력하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.display_name": {
+          "source": "Bidding Strategy",
+          "message": "입찰 전략"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.c3RyYXRlZ3lfaWQ.short_desc": {
+          "source": "The bidding strategy to update",
+          "message": "업데이트할 입찰 전략"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.desc": {
+          "source": "The updated target CPA in your account currency.",
+          "message": "계정 통화로 업데이트된 타겟 CPA입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.display_name": {
+          "source": "Target CPA",
+          "message": "타겟 CPA"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X2NwYQ.short_desc": {
+          "source": "Updated target CPA amount",
+          "message": "업데이트된 타겟 CPA 금액"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.desc": {
+          "source": "The updated target ROAS as a ratio.",
+          "message": "비율로 업데이트된 타겟 ROAS입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.display_name": {
+          "source": "Target ROAS",
+          "message": "타겟 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.option.dGFyZ2V0X3JvYXM.short_desc": {
+          "source": "Updated target ROAS",
+          "message": "업데이트된 타겟 ROAS"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2JpZGRpbmdfc3RyYXRlZ3k.short_desc": {
+          "source": "Update a portfolio bidding strategy",
+          "message": "포트폴리오 입찰 전략 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.desc": {
+          "source": "Updates campaign properties such as name, status (enable/pause), and bidding strategy.",
+          "message": "이름, 상태(사용 설정/일시중지), 입찰 전략 등의 캠페인 속성을 업데이트합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.display_name": {
+          "source": "Update Campaign",
+          "message": "캠페인 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.desc": {
+          "source": "Select or enter the ID of the campaign to update.",
+          "message": "업데이트할 캠페인의 ID를 선택하거나 입력하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.display_name": {
+          "source": "Campaign",
+          "message": "캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y2FtcGFpZ25faWQ.short_desc": {
+          "source": "The campaign to update",
+          "message": "업데이트할 캠페인"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.desc": {
+          "source": "The updated name for the campaign. Leave empty to keep the current name.",
+          "message": "업데이트할 캠페인 이름입니다. 현재 이름을 유지하려면 비워 두세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.display_name": {
+          "source": "Campaign Name",
+          "message": "캠페인 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.bmFtZQ.short_desc": {
+          "source": "New name for the campaign",
+          "message": "캠페인의 새 이름"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "제거됨"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.desc": {
+          "source": "Set the campaign status to ENABLED, PAUSED, or REMOVED.",
+          "message": "캠페인 상태를 ENABLED, PAUSED 또는 REMOVED로 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.option.c3RhdHVz.short_desc": {
+          "source": "New status for the campaign",
+          "message": "캠페인의 새 상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2NhbXBhaWdu.short_desc": {
+          "source": "Update an existing campaign",
+          "message": "기존 캠페인 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.desc": {
+          "source": "Updates an existing keyword in an ad group, allowing you to change its status or CPC bid.",
+          "message": "광고그룹 내 기존 키워드를 업데이트하여 상태 또는 CPC 입찰가를 변경할 수 있습니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.display_name": {
+          "source": "Update Keyword",
+          "message": "키워드 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.desc": {
+          "source": "The updated maximum CPC bid amount in your account currency.",
+          "message": "계정 통화로 업데이트된 최대 CPC 입찰 금액입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.display_name": {
+          "source": "CPC Bid",
+          "message": "CPC 입찰가"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3BjX2JpZA.short_desc": {
+          "source": "New maximum CPC bid amount",
+          "message": "새 최대 CPC 입찰 금액"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.desc": {
+          "source": "The criterion ID of the keyword within the ad group.",
+          "message": "광고그룹 내 키워드의 기준 ID입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.display_name": {
+          "source": "Keyword Criterion ID",
+          "message": "키워드 기준 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3JpdGVyaW9uX2lk.short_desc": {
+          "source": "The criterion ID of the keyword to update",
+          "message": "업데이트할 키워드의 기준 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.desc": {
+          "source": "Select the ad group that contains the keyword to update.",
+          "message": "업데이트할 키워드가 포함된 광고그룹을 선택하세요."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.display_name": {
+          "source": "Ad Group",
+          "message": "광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.YWRfZ3JvdXBfaWQ.short_desc": {
+          "source": "The ad group containing the keyword",
+          "message": "키워드가 포함된 광고그룹"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOkVOQUJMRUQ.display_name": {
+          "source": "Enabled",
+          "message": "사용"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlBBVVNFRA.display_name": {
+          "source": "Paused",
+          "message": "일시중지"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.allowed-value.c3RyaW5nOlJFTU9WRUQ.display_name": {
+          "source": "Removed",
+          "message": "제거됨"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.desc": {
+          "source": "Set the keyword status to ENABLED, PAUSED, or REMOVED.",
+          "message": "키워드 상태를 ENABLED, PAUSED 또는 REMOVED로 설정합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.option.c3RhdHVz.short_desc": {
+          "source": "New status for the keyword",
+          "message": "키워드의 새 상태"
+        },
+        "app.R29vZ2xlQWRz.action.dXBkYXRlX2tleXdvcmQ.short_desc": {
+          "source": "Update a keyword status or bid",
+          "message": "키워드 상태 또는 입찰가 업데이트"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.desc": {
+          "source": "Uploads a conversion associated with a phone call from a Google Ads call extension.",
+          "message": "Google Ads 통화 확장 프로그램의 전화 통화와 연결된 전환을 업로드합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.display_name": {
+          "source": "Upload Call Conversion",
+          "message": "통화 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "전환의 금전적 가치입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "전환 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "전환의 금전적 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "이 전환이 기여되어야 하는 전환 액션을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "기록할 전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "전환 날짜 및 시간(형식: yyyy-mm-dd HH:mm:ss+|-HH:mm)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "전환 일시"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "전환이 발생한 시간"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time when the call started in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "통화가 시작된 날짜 및 시간(형식: yyyy-mm-dd HH:mm:ss+|-HH:mm)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.display_name": {
+          "source": "Call Start Date/Time",
+          "message": "통화 시작 일시"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbF9zdGFydF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the call started",
+          "message": "통화가 시작된 시간"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.desc": {
+          "source": "The phone number of the caller in E.164 format (e.g., +18005550100).",
+          "message": "E.164 형식(예: +18005550100)의 발신자 전화번호입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.display_name": {
+          "source": "Caller ID",
+          "message": "발신자 번호"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y2FsbGVyX2lk.short_desc": {
+          "source": "Phone number of the caller",
+          "message": "발신자 전화번호"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "전환 가치의 통화 코드입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NhbGxfY29udmVyc2lvbg.short_desc": {
+          "source": "Upload an offline call conversion",
+          "message": "오프라인 통화 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads an offline conversion associated with a Google Click ID (GCLID). This closes the loop between ad clicks and offline sales/actions.",
+          "message": "Google 클릭 ID(GCLID)와 연결된 오프라인 전환을 업로드합니다. 이를 통해 광고 클릭과 오프라인 매출/액션 간의 연결고리를 완성합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Click Conversion",
+          "message": "클릭 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion in your account currency.",
+          "message": "계정 통화 기준의 전환 금전적 가치입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "전환 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "전환의 금전적 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "이 전환이 기여되어야 하는 전환 액션을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "기록할 전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm (e.g., 2026-03-01 12:00:00+00:00).",
+          "message": "전환 날짜 및 시간(형식: yyyy-mm-dd HH:mm:ss+|-HH:mm, 예: 2026-03-01 12:00:00+00:00)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "전환 일시"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "전환이 발생한 시간"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value (e.g., USD, EUR, GBP).",
+          "message": "전환 가치의 통화 코드(예: USD, EUR, GBP)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.desc": {
+          "source": "The Google Click ID (GCLID) associated with the conversion. Found in the URL after a user clicks an ad.",
+          "message": "전환과 연결된 Google 클릭 ID(GCLID)입니다. 사용자가 광고를 클릭한 후의 URL에서 확인할 수 있습니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.Z2NsaWQ.short_desc": {
+          "source": "Google Click ID",
+          "message": "Google 클릭 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for the order or transaction. Used for deduplication.",
+          "message": "주문 또는 거래의 고유 식별자입니다. 중복 제거에 사용됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "주문 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "고유 주문/거래 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NsaWNrX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an offline click conversion",
+          "message": "오프라인 클릭 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.desc": {
+          "source": "Adjusts the value of a previously uploaded conversion or retracts it entirely.",
+          "message": "이전에 업로드된 전환의 가치를 조정하거나 완전히 취소합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.display_name": {
+          "source": "Upload Conversion Adjustment",
+          "message": "전환 조정 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action of the conversion to adjust.",
+          "message": "조정할 전환의 전환 액션을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to adjust",
+          "message": "조정할 전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the adjusted value.",
+          "message": "조정된 가치의 통화 코드입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.desc": {
+          "source": "The new conversion value. Required for RESTATE adjustments.",
+          "message": "새 전환 가치입니다. RESTATE 조정 시 필수입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.display_name": {
+          "source": "Adjusted Value",
+          "message": "조정된 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0ZWRfdmFsdWU.short_desc": {
+          "source": "New conversion value",
+          "message": "새 전환 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFU1RBVEVNRU5U.display_name": {
+          "source": "Restatement",
+          "message": "재지정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.allowed-value.c3RyaW5nOlJFVFJBQ1RJT04.display_name": {
+          "source": "Retraction",
+          "message": "취소"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.desc": {
+          "source": "RESTATE to change the conversion value, RETRACTION to remove the conversion entirely.",
+          "message": "전환 가치를 변경하려면 RESTATE, 전환을 완전히 삭제하려면 RETRACTION을 사용합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.display_name": {
+          "source": "Adjustment Type",
+          "message": "조정 유형"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF90eXBl.short_desc": {
+          "source": "Type of adjustment",
+          "message": "조정 유형"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the adjustment in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "조정 날짜 및 시간(형식: yyyy-mm-dd HH:mm:ss+|-HH:mm)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.display_name": {
+          "source": "Adjustment Date/Time",
+          "message": "조정 일시"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.YWRqdXN0bWVudF9kYXRlX3RpbWU.short_desc": {
+          "source": "When the adjustment occurred",
+          "message": "조정이 발생한 시간"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.desc": {
+          "source": "The GCLID associated with the original conversion. Required if Order ID was not set.",
+          "message": "원래 전환과 연결된 GCLID입니다. 주문 ID가 설정되지 않은 경우 필수입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.display_name": {
+          "source": "GCLID",
+          "message": "GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.Z2NsaWQ.short_desc": {
+          "source": "GCLID of the conversion to adjust",
+          "message": "조정할 전환의 GCLID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.desc": {
+          "source": "The order ID that was provided when the conversion was originally uploaded.",
+          "message": "전환이 처음 업로드되었을 때 제공된 주문 ID입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "주문 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Order ID of the conversion to adjust",
+          "message": "조정할 전환의 주문 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2NvbnZlcnNpb25fYWRqdXN0bWVudA.short_desc": {
+          "source": "Adjust or retract a previously uploaded conversion",
+          "message": "이전에 업로드된 전환 조정 또는 취소"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.desc": {
+          "source": "Uploads a conversion using hashed first-party user data (email, phone) instead of a GCLID. User data is automatically SHA-256 hashed before upload for privacy.",
+          "message": "GCLID 대신 해시 처리된 퍼스트 파티 사용자 데이터(이메일, 전화번호)를 사용하여 전환을 업로드합니다. 사용자 데이터는 개인정보 보호를 위해 업로드 전에 SHA-256으로 자동 해시 처리됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.display_name": {
+          "source": "Upload Enhanced Conversion",
+          "message": "향상된 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.desc": {
+          "source": "The monetary value of the conversion.",
+          "message": "전환의 금전적 가치입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.display_name": {
+          "source": "Conversion Value",
+          "message": "전환 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl92YWx1ZQ.short_desc": {
+          "source": "Monetary value of the conversion",
+          "message": "전환의 금전적 가치"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.desc": {
+          "source": "Select the conversion action that this conversion should be attributed to.",
+          "message": "이 전환이 기여되어야 하는 전환 액션을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.display_name": {
+          "source": "Conversion Action",
+          "message": "전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9hY3Rpb25faWQ.short_desc": {
+          "source": "The conversion action to record",
+          "message": "기록할 전환 액션"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.desc": {
+          "source": "The date and time of the conversion in format: yyyy-mm-dd HH:mm:ss+|-HH:mm.",
+          "message": "전환 날짜 및 시간(형식: yyyy-mm-dd HH:mm:ss+|-HH:mm)입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.display_name": {
+          "source": "Conversion Date/Time",
+          "message": "전환 일시"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y29udmVyc2lvbl9kYXRlX3RpbWU.short_desc": {
+          "source": "When the conversion occurred",
+          "message": "전환이 발생한 시간"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.desc": {
+          "source": "The currency code for the conversion value.",
+          "message": "전환 가치의 통화 코드입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.display_name": {
+          "source": "Currency Code",
+          "message": "통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VycmVuY3lfY29kZQ.short_desc": {
+          "source": "ISO 4217 currency code",
+          "message": "ISO 4217 통화 코드"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "Select the Google Ads customer account (Customer ID) for this action.",
+          "message": "이 작업에 사용할 Google Ads 고객 계정(고객 ID)을 선택합니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer Account",
+          "message": "고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "Google Ads customer account to use",
+          "message": "사용할 Google Ads 고객 계정"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.desc": {
+          "source": "The customer email address. Will be normalized and SHA-256 hashed before upload.",
+          "message": "고객 이메일 주소입니다. 업로드 전에 정규화되고 SHA-256으로 해시 처리됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "이메일"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.ZW1haWw.short_desc": {
+          "source": "Customer email address",
+          "message": "고객 이메일 주소"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.desc": {
+          "source": "A unique identifier for deduplication.",
+          "message": "중복 제거를 위한 고유 식별자입니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.display_name": {
+          "source": "Order ID",
+          "message": "주문 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.b3JkZXJfaWQ.short_desc": {
+          "source": "Unique order/transaction ID",
+          "message": "고유 주문/거래 ID"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.desc": {
+          "source": "The customer phone number in E.164 format (e.g., +18005550100). Will be SHA-256 hashed before upload.",
+          "message": "E.164 형식(예: +18005550100)의 고객 전화번호입니다. 업로드 전에 SHA-256으로 해시 처리됩니다."
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.display_name": {
+          "source": "Phone Number",
+          "message": "전화번호"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.option.cGhvbmVfbnVtYmVy.short_desc": {
+          "source": "Customer phone number in E.164 format",
+          "message": "E.164 형식의 고객 전화번호"
+        },
+        "app.R29vZ2xlQWRz.action.dXBsb2FkX2VuaGFuY2VkX2NvbnZlcnNpb24.short_desc": {
+          "source": "Upload an enhanced conversion with user data",
+          "message": "사용자 데이터가 포함된 향상된 전환 업로드"
+        },
+        "app.R29vZ2xlQWRz.desc": {
+          "source": "Integrate with Google Ads to manage your advertising campaigns, track conversions, sync customer lists, and automate reporting. This integration covers campaign management, ad group and ad CRUD, keyword management, budget and bidding strategies, offline conversion uploads, customer match audiences, and lead form triggers.",
+          "message": "Google Ads와 연동하여 광고 캠페인을 관리하고, 전환을 추적하며, 고객 목록을 동기화하고, 보고를 자동화합니다. 이 연동은 캠페인 관리, 광고그룹 및 광고 CRUD, 키워드 관리, 예산 및 입찰 전략, 오프라인 전환 업로드, 고객 일치 타겟 및 리드 양식 트리거를 지원합니다."
+        },
+        "app.R29vZ2xlQWRz.display_name": {
+          "source": "Google Ads",
+          "message": "Google Ads"
+        },
+        "app.R29vZ2xlQWRz.short_desc": {
+          "source": "Connect with Google Ads to manage campaigns, conversions, and audiences",
+          "message": "Google Ads에 연결하여 캠페인, 전환 및 잠재고객을 관리합니다"
+        }
+      }
+    }
+  }
+}

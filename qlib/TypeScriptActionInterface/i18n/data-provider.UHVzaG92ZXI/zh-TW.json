@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-TW": {
+      "messages": {
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pushover** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Pushover** 發出自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊 (hash) 形式傳回。\n\n對於此應用程式中尚未公開為一級動作的端點，請使用此動作。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "進行 API 呼叫"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/表單/YAML 預期為雜湊，XML/文字預期為字串，multipart 預期為檔案結構，二進位預期為原始位元組。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構 (filename + content + mime_type)。框架會建立 multipart 信封並設定 boundary 標頭。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "將主體原封不動地傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項與數值類型來決定序列化方式"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆寫，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量 (字串/數字/布林值) 的雜湊。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式與相應的 `Content-Type` 標頭。變更此欄位會重塑 `body` 編輯器 - 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart Form 會顯示檔案選擇器，依此類推。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx 的 HTTP 回應將作為正常的回應雜湊 (包含實際狀態碼) 返回，而不是引發 `REST-RESPONSE-ERROR`。適用於將 4xx/5xx 作為資料處理 - 例如檢查資源是否存在。僅針對本次呼叫覆寫連線的 `error_passthru` 設定。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料返回"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常返回非 2xx 回應，而不是拋出例外"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的選擇性 HTTP 狀態碼清單。若已設定且回應狀態不在此清單中，該動作將拋出 `REST-STATUS-ERROR`。未設定時，套用 REST 用戶端的預設行為 (通常：2xx 代表成功，非 2xx 拋出例外)。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些會覆寫由 `body_type` 設定的任何預設標頭 (例如：在此處提供 `Content-Type` 會優先於主體類型的預設值)。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含一個 `debug` 子雜湊，其中包含請求方法/URL/標頭 (敏感值已遮蔽)、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設關閉以維持回應精簡。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/時序/大小除錯資訊"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基本 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 基底 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "替換至 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}` 時，框架會傳送 `/users/123`。數值均經過 URL 編碼。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。數值均經過 URL 編碼；清單值會使用 `,` 連接。"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pushover",
+          "message": "向 Pushover 發出自訂 API 呼叫"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.desc": {
+          "source": "Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.",
+          "message": "傳送需要確認的緊急通知。通知將按指定間隔重複傳送，直到確認或過期為止。傳回用於追蹤的收據 ID。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.display_name": {
+          "source": "Push Emergency Notification",
+          "message": "推送緊急通知"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.desc": {
+          "source": "Pushover will POST to this URL when the notification is acknowledged by the user.",
+          "message": "當使用者確認通知時，Pushover 將向此 URL 發送 POST 請求。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.display_name": {
+          "source": "Callback URL",
+          "message": "回呼 URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.short_desc": {
+          "source": "URL to call when acknowledged",
+          "message": "確認時呼叫的 URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices.",
+          "message": "傳送至特定裝置名稱，或保留空白以傳送至所有裝置。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "裝置"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "指定特定裝置"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.desc": {
+          "source": "How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).",
+          "message": "通知將繼續重試的時長（秒）。上限為 10800 秒（3 小時）。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.display_name": {
+          "source": "Expiration Time",
+          "message": "過期時間"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.short_desc": {
+          "source": "Seconds until notification stops retrying (maximum 10800)",
+          "message": "通知停止重試前的秒數（上限 10800）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "等寬字型"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.desc": {
+          "source": "Plain text, HTML, or Monospace formatting.",
+          "message": "純文字、HTML 或等寬字型格式。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "訊息格式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "文字格式樣式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the emergency notification. Maximum 1024 characters.",
+          "message": "緊急通知的正文文字。上限 1024 個字元。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "訊息"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.short_desc": {
+          "source": "The emergency notification message",
+          "message": "緊急通知訊息"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "魔法"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "機械"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "無（靜音）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "外星警報（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "軍號"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "自行車鈴"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "收銀機"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "古典"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "攀升（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "宇宙"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushover 迴音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "下墜"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "甘美朗"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "來訊"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "幕間休息"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover（預設）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "持續音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "鋼琴酒吧"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "警報"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "太空警報"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "拖船"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "升降音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "僅震動"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.desc": {
+          "source": "The sound to play. Long sounds like \"persistent\" or \"siren\" work well for emergencies.",
+          "message": "要播放的提示音。像 \"persistent\" 或 \"siren\" 這類長提示音非常適合緊急情況。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "提示音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "通知提示音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.desc": {
+          "source": "How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.",
+          "message": "Pushover 在收到確認前重新傳送通知的頻率（秒）。下限為 30 秒。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.display_name": {
+          "source": "Retry Interval",
+          "message": "重試間隔"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.short_desc": {
+          "source": "Seconds between retries (minimum 30)",
+          "message": "重試間隔秒數（最少 30 秒）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.desc": {
+          "source": "Comma-separated tags that can be used to cancel multiple emergency notifications at once.",
+          "message": "以半形逗號分隔的標籤，可用於一次取消多個緊急通知。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "標籤"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.short_desc": {
+          "source": "Tags for bulk cancellation",
+          "message": "批次取消標籤"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters.",
+          "message": "顯示在訊息上方的標題。最多 250 個字元。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "通知的可選標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.desc": {
+          "source": "A URL to include with the notification.",
+          "message": "隨通知附帶的 URL。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "補充 URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link.",
+          "message": "URL 連結的顯示文字。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "URL 標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "URL 的標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.short_desc": {
+          "source": "Send a high-priority emergency notification with acknowledgment tracking",
+          "message": "發送附帶確認追蹤的高優先級緊急通知"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.desc": {
+          "source": "Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).",
+          "message": "發送具有可自訂優先級、音效與格式的推播通知。支援從最低（無警示）到高（繞過勿擾時段）的優先級。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.display_name": {
+          "source": "Push Notification",
+          "message": "推播通知"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices. Multiple devices can be separated by commas.",
+          "message": "傳送至特定的裝置名稱，或保留空白以傳送至所有裝置。多個裝置可用半形逗號分隔。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "裝置"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "指定特定裝置"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "等寬字型"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.desc": {
+          "source": "Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.",
+          "message": "純文字（預設）、用於基本格式的 HTML（<b>、<i>、<u>、<a>），或用於程式碼風格文字的等寬字型。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "訊息格式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "文字格式樣式"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the notification. Maximum 1024 characters.",
+          "message": "通知的主體文字。最多 1024 個字元。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "訊息"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "The notification message content",
+          "message": "通知訊息內容"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "魔法"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "機械"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "無（靜音）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "外星警報（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "軍號"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "自行車鈴"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "收銀機"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "古典"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "攀升（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "宇宙"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Pushover 迴音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "下墜"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "甘美朗"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "來訊"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "幕間休息"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover（預設）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "持續音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "鋼琴酒吧"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "警報"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "太空警報"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "拖船"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "升降音（長）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "僅震動"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.desc": {
+          "source": "The sound to play when the notification arrives. Choose from predefined Pushover sounds.",
+          "message": "通知送達時播放的音效。從預設的 Pushover 音效中選擇。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "提示音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "通知提示音"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0x.display_name": {
+          "source": "Low (Quiet, no sound/vibration)",
+          "message": "低（靜音，無聲音/震動）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0y.display_name": {
+          "source": "Lowest (No notification/alert)",
+          "message": "最低（無通知/警示）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjA.display_name": {
+          "source": "Normal",
+          "message": "標準"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjE.display_name": {
+          "source": "High (Bypass quiet hours)",
+          "message": "高（繞過勿擾時段）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.desc": {
+          "source": "Controls how the notification is delivered. Lowest shows no alert, Low is quiet, Normal is default, High bypasses quiet hours.",
+          "message": "控制通知的傳送方式。最低不顯示警示、低為靜音、一般為預設值、高則繞過勿擾時段。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "優先順序"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification priority level",
+          "message": "通知優先等級"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters. Defaults to your application name if not specified.",
+          "message": "顯示在訊息上方的標題。最多 250 個字元。若未指定，預設為您的應用程式名稱。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "通知的可選標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.desc": {
+          "source": "Unix timestamp to display as the message time, useful for delayed or batched notifications.",
+          "message": "顯示為訊息時間的 Unix 時間戳記，適用於延遲或批次通知。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.display_name": {
+          "source": "Timestamp",
+          "message": "時間戳記"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.short_desc": {
+          "source": "Override message timestamp",
+          "message": "覆寫訊息時間戳記"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.desc": {
+          "source": "Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.",
+          "message": "訊息在裝置上自動刪除前的秒數。適用於具時效性的通知。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.display_name": {
+          "source": "Time to Live",
+          "message": "存活時間"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.short_desc": {
+          "source": "Message expiration time in seconds",
+          "message": "訊息到期時間（秒）"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.desc": {
+          "source": "A URL to include with the notification. Maximum 512 characters.",
+          "message": "隨通知附帶的 URL。最多 512 個字元。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "補充 URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link. Maximum 100 characters.",
+          "message": "URL 連結的顯示文字。最多 100 個字元。"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "URL 標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "URL 的標題"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send a push notification to a user or group",
+          "message": "傳送推播通知給使用者或群組"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.desc": {
+          "source": "Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.",
+          "message": "驗證使用者或群組金鑰是否有效，並擷取已註冊裝置的清單。適用於在傳送通知前確認認證資訊。"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.display_name": {
+          "source": "Validate User",
+          "message": "驗證使用者"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.desc": {
+          "source": "Optionally specify a device name to validate that it exists for this user.",
+          "message": "（選用）指定裝置名稱以驗證該裝置是否存在於此使用者。"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "裝置"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.short_desc": {
+          "source": "Validate a specific device",
+          "message": "驗證特定裝置"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.short_desc": {
+          "source": "Validate a user or group key and list devices",
+          "message": "驗證使用者或群組金鑰並列出裝置"
+        },
+        "app.UHVzaG92ZXI.desc": {
+          "source": "Pushover makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop. Send notifications for urgent alerts, system monitoring, or any automated messaging needs.",
+          "message": "Pushover 讓您能輕鬆在 Android、iPhone、iPad 和桌上型電腦上接收即時通知。可用於傳送緊急警示、系統監控或任何自動化訊息需求。"
+        },
+        "app.UHVzaG92ZXI.display_name": {
+          "source": "Pushover",
+          "message": "Pushover"
+        },
+        "app.UHVzaG92ZXI.short_desc": {
+          "source": "Send push notifications to mobile devices and desktops",
+          "message": "傳送推播通知至行動裝置與電腦"
+        }
+      }
+    }
+  }
+}

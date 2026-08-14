@@ -1,0 +1,621 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "uk": {
+      "messages": {
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.desc": {
+          "source": "Monitors Google Meet conferences and triggers when a conference has ended. Returns details about the completed conference including name, start time, end time, expiration time, and space information.",
+          "message": "Відстежує конференції Google Meet і спрацьовує після завершення конференції. Повертає відомості про завершену конференцію, зокрема назву, час початку, час завершення, час закінчення терміну дії та інформацію про простір."
+        },
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.display_name": {
+          "source": "Conference Ended",
+          "message": "Конференцію завершено"
+        },
+        "app.R29vZ2xlTWVldA.action.Y29uZmVyZW5jZV9lbmRlZA.short_desc": {
+          "source": "Triggers when a Google Meet conference has ended.",
+          "message": "Спрацьовує, коли конференція Google Meet завершилася."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.desc": {
+          "source": "Fetches comprehensive details about a specific Google Meet conference including basic information, recordings, participants, and transcripts. Returns all related data in a single response.",
+          "message": "Отримує вичерпні відомості про певну конференцію Google Meet, включно з базовою інформацією, записами, учасниками та розшифровками. Повертає всі пов'язані дані в одній відповіді."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.display_name": {
+          "source": "Get Conference",
+          "message": "Отримати конференцію"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The conference ID or meeting code of the Google Meet conference to retrieve detailed information for.",
+          "message": "Ідентифікатор конференції або код зустрічі Google Meet, для якої потрібно отримати детальну інформацію."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The conference to retrieve",
+          "message": "Конференція для отримання"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2U.short_desc": {
+          "source": "Retrieve detailed information about a Google Meet conference.",
+          "message": "Отримати детальну інформацію про конференцію Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.desc": {
+          "source": "Retrieves detailed information about participants who attended a specific Google Meet conference. Can filter participants by search term and include time spent metrics.",
+          "message": "Отримує детальну інформацію про учасників, які відвідали певну конференцію Google Meet. Дозволяє фільтрувати учасників за пошуковим запитом та включати метрики проведеного часу."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.display_name": {
+          "source": "Get Conference Participants",
+          "message": "Отримати учасників конференції"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to retrieve participant information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "Ідентифікатор або код зустрічі Google Meet, для якої потрібно отримати інформацію про учасників. Може бути ідентифікатором конференції або кодом зустрічі у форматі XXX-XXXX-XXX."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to retrieve participants from",
+          "message": "Конференція Google Meet, з якої потрібно отримати учасників"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.desc": {
+          "source": "When enabled, includes information about how long each participant spent in the conference. Default is true.",
+          "message": "Якщо ввімкнено, містить інформацію про те, скільки часу кожен учасник провів у конференції. За замовчуванням — true."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.display_name": {
+          "source": "Include Time Spent",
+          "message": "Включити проведений час"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.aW5jbHVkZV90aW1lX3NwZW50.short_desc": {
+          "source": "Include participant time metrics",
+          "message": "Включити метрики часу учасників"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.desc": {
+          "source": "Optional search term to filter participants by name or other attributes. Only participants matching the search term will be returned.",
+          "message": "Необов'язковий пошуковий запит для фільтрації учасників за іменем або іншими атрибутами. Буде повернено лише учасників, які відповідають запиту."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.display_name": {
+          "source": "Search",
+          "message": "Пошук"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.option.c2VhcmNo.short_desc": {
+          "source": "Filter participants by search term",
+          "message": "Фільтрувати учасників за пошуковим запитом"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcGFydGljaXBhbnRz.short_desc": {
+          "source": "Retrieves participant information for a specific Google Meet conference.",
+          "message": "Отримує інформацію про учасників певної конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.desc": {
+          "source": "Retrieves all available recordings associated with a specific Google Meet conference. Returns details about each recording including state, timing information, and storage location.",
+          "message": "Отримує всі доступні записи, пов'язані з певною конференцією Google Meet. Повертає деталі про кожен запис, включно зі станом, часовими даними та місцем зберігання."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.display_name": {
+          "source": "Get Conference Recordings",
+          "message": "Отримати записи конференції"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to retrieve recording information for. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "Ідентифікатор або код зустрічі Google Meet, для якої потрібно отримати інформацію про записи. Може бути ідентифікатором конференції або кодом зустрічі у форматі XXX-XXXX-XXX."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to retrieve recordings from",
+          "message": "Конференція Google Meet, з якої потрібно отримати записи"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfcmVjb3JkaW5ncw.short_desc": {
+          "source": "Retrieves recordings for a specific Google Meet conference.",
+          "message": "Отримує записи певної конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.desc": {
+          "source": "Retrieves the detailed content of a specific transcript created for a Google Meet conference. Requires either a conference ID and transcript ID or just a transcript ID if it is already known.",
+          "message": "Отримує детальний вміст конкретної розшифровки, створеної для конференції Google Meet. Потрібен ідентифікатор конференції та ідентифікатор розшифровки або лише ідентифікатор розшифровки, якщо він уже відомий."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.display_name": {
+          "source": "Get Conference Transcript",
+          "message": "Отримати розшифровку конференції"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference that contains the transcript. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX. Optional if the transcript ID is already known.",
+          "message": "Ідентифікатор або код зустрічі Google Meet, яка містить розшифровку. Може бути ідентифікатором конференції або кодом зустрічі у форматі XXX-XXXX-XXX. Необов'язково, якщо ідентифікатор розшифровки вже відомий."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference containing the transcript",
+          "message": "Конференція Google Meet, яка містить розшифровку"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.desc": {
+          "source": "The identifier of the specific transcript to retrieve from the Google Meet conference.",
+          "message": "Ідентифікатор конкретної розшифровки, яку потрібно отримати з конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.display_name": {
+          "source": "Transcript",
+          "message": "Розшифровка"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.option.dHJhbnNjcmlwdA.short_desc": {
+          "source": "The transcript to retrieve",
+          "message": "Розшифровка для отримання"
+        },
+        "app.R29vZ2xlTWVldA.action.Z2V0X2NvbmZlcmVuY2VfdHJhbnNjcmlwdA.short_desc": {
+          "source": "Retrieves a specific transcript from a Google Meet conference.",
+          "message": "Отримує конкретну розшифровку з конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.desc": {
+          "source": "Retrieves a paginated list of Google Meet conferences with support for filtering by meeting code, time range, and space name. Returns conference details including ID, start time, end time, expiration time, and space information.",
+          "message": "Отримує список конференцій Google Meet із розбиттям на сторінки та підтримкою фільтрації за кодом зустрічі, діапазоном часу та назвою простору. Повертає деталі конференції, включно з ID, часом початку, часом завершення, часом закінчення терміну дії та інформацією про простір."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.display_name": {
+          "source": "List Conferences",
+          "message": "Список конференцій"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.desc": {
+          "source": "Filter results to only include conferences that ended on or before the specified date and time.",
+          "message": "Фільтрувати результати, щоб включити лише конференції, які завершилися в зазначену дату й час або раніше."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.display_name": {
+          "source": "End Time",
+          "message": "Час завершення"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.ZW5kX3RpbWU.short_desc": {
+          "source": "Filter by end time",
+          "message": "Фільтрувати за часом завершення"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of conference records to return in a single response. Default is 100.",
+          "message": "Максимальна кількість записів конференцій у одній відповіді. За замовчуванням — 100."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Ліміт"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of conferences to return",
+          "message": "Максимальна кількість конференцій для повернення"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.desc": {
+          "source": "Filter results to only include conferences with the specified meeting code.",
+          "message": "Фільтрувати результати, щоб включити лише конференції із зазначеним кодом зустрічі."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.display_name": {
+          "source": "Meeting Code",
+          "message": "Код зустрічі"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bWVldGluZ19jb2Rl.short_desc": {
+          "source": "Filter by meeting code",
+          "message": "Фільтрувати за кодом зустрічі"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.desc": {
+          "source": "A token from a previous response that allows retrieving the next page of results. Leave empty for the first request.",
+          "message": "Токен із попередньої відповіді, який дозволяє отримати наступну сторінку результатів. Залиште порожнім для першого запиту."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.display_name": {
+          "source": "Next Page Token",
+          "message": "Токен наступної сторінки"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.bmV4dFBhZ2VUb2tlbg.short_desc": {
+          "source": "Token for pagination",
+          "message": "Токен для пагінації"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.desc": {
+          "source": "Filter results to only include conferences associated with the specified space name.",
+          "message": "Фільтрувати результати, щоб включити лише конференції, пов'язані із зазначеною назвою простору."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.display_name": {
+          "source": "Space Name",
+          "message": "Назва простору"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3BhY2VfbmFtZQ.short_desc": {
+          "source": "Filter by space name",
+          "message": "Фільтрувати за назвою простору"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.desc": {
+          "source": "Filter results to only include conferences that started on or after the specified date and time.",
+          "message": "Фільтрувати результати, щоб включити лише конференції, які розпочалися в зазначену дату й час або пізніше."
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.display_name": {
+          "source": "Start Time",
+          "message": "Час початку"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.option.c3RhcnRfdGltZQ.short_desc": {
+          "source": "Filter by start time",
+          "message": "Фільтрувати за часом початку"
+        },
+        "app.R29vZ2xlTWVldA.action.bGlzdF9jb25mZXJlbmNlcw.short_desc": {
+          "source": "Retrieves a list of Google Meet conferences with filtering options.",
+          "message": "Отримує список конференцій Google Meet із параметрами фільтрації."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Google Meet** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Виконати довільний виклик HTTP / REST API до **Google Meet**, використовуючи автентифікацію налаштованого з'єднання.\n\nВкажіть HTTP-метод, шлях URI (відносно базового URL API з'єднання), необов'язкові параметри запиту, заголовки та тіло запиту. Відповідь повертається у вигляді хешу, що містить код стану, заголовки відповіді та тіло відповіді.\n\nВикористовуйте цю дію для ендпоінтів, які ще не представлені як повноцінні дії в цьому додатку."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Зробити виклик API"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Тіло запиту. Ефективний тип залежить від `body_type`: JSON/form/YAML очікують хеш, XML/text очікують рядок, multipart очікує структуру файлу, binary очікує необроблені байти."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Тіло"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Тіло запиту"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Завантажити файл за допомогою `multipart/form-data`. Тіло має бути структурою @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Фреймворк створює конверт multipart і встановлює заголовок boundary."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Форма Multipart"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Завантажити файл за допомогою multipart/form-data"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Передати тіло REST-клієнту без змін; клієнт визначає серіалізацію на основі налаштованого параметра `data` та типу значення"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Авто"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Пряма передача; використовувати серіалізацію з'єднання та дозволити REST-клієнту приймати рішення"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Надіслати тіло як необроблені байти. Тіло має бути бінарним значенням. Установлює `Content-Type: application/octet-stream`, якщо не перевизначено через `hdr`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Необроблені бінарні дані"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Надіслати тіло як необроблені байти"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Серіалізувати хеш полів форми як `application/x-www-form-urlencoded`. Тіло має бути хешем, значеннями якого є скаляри (рядки/числа/булеві значення)."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Форма (URL-encoded)"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Серіалізувати тіло як поля форми application/x-www-form-urlencoded"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Серіалізувати тіло як JSON; встановлює `Content-Type: application/json`. Тіло має бути хешем, списком або скалярним значенням."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Серіалізувати тіло як JSON"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Надіслати тіло як простий текст. Тіло має бути рядком. Установлює `Content-Type: text/plain`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Простий текст"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Надіслати тіло як text/plain"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Надіслати тіло як XML. Якщо тіло є хешем, воно серіалізується в XML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/xml`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Надіслати тіло як XML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Надіслати тіло як YAML. Якщо тіло є хешем, воно серіалізується в YAML; якщо це рядок, воно надсилається без змін. Установлює `Content-Type: application/x-yaml`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Надіслати тіло як YAML"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Вибирає режим серіалізації тіла та відповідний заголовок `Content-Type`. Зміна цього поля змінює вигляд редактора `body` — вибір JSON відкриває редактор JSON, вибір Multipart Form відкриває вибір файлу тощо."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Тип тіла"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Як серіалізується тіло та який Content-Type надсилається"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Якщо `True`, HTTP-відповіді з кодом, відмінним від 2xx, повертаються як звичайний хеш відповіді (з фактичним кодом стану) замість генерації `REST-RESPONSE-ERROR`. Корисно для обробки 4xx/5xx як даних — наприклад, перевірки існування ресурсу. Перевизначає налаштування `error_passthru` з'єднання лише для цього виклику."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Повертати помилки як дані"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Повертати відповіді з кодом, відмінним від 2xx, у звичайному режимі замість генерації помилки"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Необов'язковий список кодів стану HTTP, які вважаються успішними. Якщо задано і код стану відповіді відсутній у цьому списку, дія генерує `REST-STATUS-ERROR`. Якщо не задано, застосовується поведінка REST-клієнта за замовчуванням (зазвичай: 2xx — успіх, не-2xx генерує помилку)."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Очікувані коди стану"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Коди стану відповіді, які вважаються успішними"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Хеш користувацьких заголовків, доданих до запиту. Вони перевизначають будь-які заголовки за замовчуванням, встановлені `body_type` (наприклад, передання `Content-Type` тут має перевагу над замовчуваним значенням для типу тіла)."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Користувацькі заголовки"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Додаткові заголовки запиту"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Якщо `True`, хеш відповіді містить підхеш `debug`, що містить метод/URL/заголовки запиту (з відредагованими конфіденційними значеннями), розміри запиту та відповіді, а також тривалість виконання. Корисно під час дослідження повільних або невдалих викликів. Вимкнено за замовчуванням для зменшення обсягу відповідей."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Включати зневаджувальну інформацію"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Включати зневаджувальну інформацію про запит/час/розмір у відповідь"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Метод HTTP"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Метод HTTP для використання в запиті"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Шлях URI відносно базового URL API з'єднання. Може містити заповнювачі `{name}`, які замінюються з `path_vars`. Приклад: `/users/{id}/comments`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Шлях URI"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Шлях URI відносно базового URL API підключення. Може містити заповнювачі '{name}', які замінюються з 'path_vars'. Приклад: '/users/{id}/comments'"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Хеш значень, що підставляються замість заповнювачів `{name}` у шляху URI. Приклад: із `path = /users/{id}` та `path_vars = {id: 123}` фреймворк надсилає `/users/123`. Значення кодуються у форматі URL."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Змінні шляху"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Значення для заповнювачів {name} у шляху"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Хеш параметрів рядка запиту для додавання до шляху URI. Значення кодуються у форматі URL; значення списку об'єднуються за допомогою `,`."
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Аргументи запиту"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Параметри рядка запиту"
+        },
+        "app.R29vZ2xlTWVldA.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Google Meet",
+          "message": "Виконати довільний виклик API до Google Meet"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.desc": {
+          "source": "Monitors a specific Google Meet conference and triggers when a new recording has been generated. Returns details about the recording including its name, state, timing information, and Drive destination details.",
+          "message": "Відстежує певну конференцію Google Meet і спрацьовує, коли створюється новий запис. Повертає деталі про запис, включно з його назвою, станом, часовими даними та відомостями про місце призначення на Drive."
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.display_name": {
+          "source": "Recording Created",
+          "message": "Запис створено"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to monitor for new recordings. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "Ідентифікатор або код зустрічі Google Meet, яку потрібно відстежувати на появу нових записів. Може бути ідентифікатором конференції або кодом зустрічі у форматі XXX-XXXX-XXX."
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to monitor",
+          "message": "Конференція Google Meet для відстеження"
+        },
+        "app.R29vZ2xlTWVldA.action.cmVjb3JkaW5nX2NyZWF0ZWQ.short_desc": {
+          "source": "Triggers when a new recording is created for a Google Meet conference.",
+          "message": "Спрацьовує, коли створюється новий запис для конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.desc": {
+          "source": "Monitors a specific Google Meet conference and triggers when a new transcript has been generated. Returns details about the transcript including its name, state, timing information, and Google Docs destination details.",
+          "message": "Відстежує певну конференцію Google Meet і спрацьовує, коли створюється нова розшифровка. Повертає деталі про розшифровку, включно з її назвою, станом, часовими даними та відомостями про місце призначення в Google Docs."
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.display_name": {
+          "source": "Transcript Created",
+          "message": "Розшифровку створено"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.desc": {
+          "source": "The identifier or meeting code of the Google Meet conference to monitor for new transcripts. Can be either a conference ID or a meeting code in the format XXX-XXXX-XXX.",
+          "message": "Ідентифікатор або код зустрічі Google Meet, яку потрібно відстежувати на появу нових розшифровок. Може бути ідентифікатором конференції або кодом зустрічі у форматі XXX-XXXX-XXX."
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.display_name": {
+          "source": "Conference",
+          "message": "Конференція"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.option.Y29uZmVyZW5jZQ.short_desc": {
+          "source": "The Google Meet conference to monitor",
+          "message": "Конференція Google Meet для відстеження"
+        },
+        "app.R29vZ2xlTWVldA.action.dHJhbnNjcmlwdF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new transcript is created for a Google Meet conference.",
+          "message": "Спрацьовує, коли створюється нова розшифровка для конференції Google Meet."
+        },
+        "app.R29vZ2xlTWVldA.desc": {
+          "source": "Integrate with Google Meet to manage your meetings and events. This integration allows you to perform actions and respond to events in your Google Meet account, enabling you to automate meeting management and scheduling workflows.",
+          "message": "Інтегруйтеся з Google Meet для керування вашими зустрічами та подіями. Ця інтеграція дозволяє виконувати дії та реагувати на події у вашому обліковому записі Google Meet, даючи змогу автоматизувати керування зустрічами та процеси планування."
+        },
+        "app.R29vZ2xlTWVldA.display_name": {
+          "source": "Google Meet",
+          "message": "Google Meet"
+        },
+        "app.R29vZ2xlTWVldA.short_desc": {
+          "source": "Connect with Google Meet to manage your meetings and events",
+          "message": "Підключіться до Google Meet для керування вашими зустрічами та подіями"
+        }
+      }
+    }
+  }
+}

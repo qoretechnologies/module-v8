@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.desc": {
+          "source": "Add a reply to an existing comment thread on a Canva design",
+          "message": "Canva デザインの既存のコメントスレッドに返信を追加"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.display_name": {
+          "source": "Create Reply",
+          "message": "返信の作成"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread",
+          "message": "コメントスレッドが含まれる Canva デザインを選択"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "デザイン"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.ZGVzaWdu.short_desc": {
+          "source": "The design containing the thread",
+          "message": "スレッドが含まれるデザイン"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.desc": {
+          "source": "Enter the text content of your reply",
+          "message": "返信のテキスト内容を入力"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.bWVzc2FnZQ.short_desc": {
+          "source": "The reply message",
+          "message": "返信メッセージ"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread you want to reply to",
+          "message": "返信先のコメントスレッドの一意の識別子"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "スレッド ID"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to reply to",
+          "message": "返信先のコメントスレッド"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3JlcGx5.short_desc": {
+          "source": "Reply to an existing comment thread",
+          "message": "既存のコメントスレッドに返信"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.desc": {
+          "source": "Start a new comment thread on a Canva design to collaborate with team members",
+          "message": "Canva デザイン上で新しいコメントスレッドを開始してチームメンバーとコラボレーション"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.display_name": {
+          "source": "Create Comment Thread",
+          "message": "コメントスレッドの作成"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.desc": {
+          "source": "Assign this comment to a specific team member for action",
+          "message": "対応のためにこのコメントを特定のチームメンバーに割り当て"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.display_name": {
+          "source": "Assignee",
+          "message": "担当者"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.YXNzaWduZWU.short_desc": {
+          "source": "Optional person to assign the comment to",
+          "message": "コメントの割り当て先（オプション）"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design where you want to create the comment thread",
+          "message": "コメントスレッドを作成する Canva デザインを選択"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "デザイン"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.ZGVzaWdu.short_desc": {
+          "source": "The design to comment on",
+          "message": "コメント対象のデザイン"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.desc": {
+          "source": "Enter the text content of your comment",
+          "message": "コメントのテキスト内容を入力"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The comment message",
+          "message": "コメントメッセージ"
+        },
+        "app.Q2FudmE.action.Y3JlYXRlX3RocmVhZA.short_desc": {
+          "source": "Create a new comment thread on a design",
+          "message": "デザイン上に新しいコメントスレッドを作成"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.desc": {
+          "source": "Get detailed information about a specific image asset in your Canva account",
+          "message": "Canva アカウント内の特定の画像アセットの詳細情報を取得"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.display_name": {
+          "source": "Get Image",
+          "message": "画像の取得"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to retrieve",
+          "message": "取得する画像の Canva アセット ID"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "画像 ID"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image",
+          "message": "画像の一意の識別子"
+        },
+        "app.Q2FudmE.action.Z2V0X2ltYWdl.short_desc": {
+          "source": "Retrieve image details from Canva",
+          "message": "Canva から画像の詳細を取得"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.desc": {
+          "source": "Permanently delete an image asset from your Canva account",
+          "message": "Canva アカウントから画像アセットを永久に削除"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.display_name": {
+          "source": "Delete Image",
+          "message": "画像の削除"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to delete",
+          "message": "削除する画像の Canva アセット ID"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "画像 ID"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image to delete",
+          "message": "削除する画像の一意の識別子"
+        },
+        "app.Q2FudmE.action.ZGVsZXRlX2ltYWdl.short_desc": {
+          "source": "Delete an image from Canva",
+          "message": "Canva から画像を削除"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.desc": {
+          "source": "Retrieve a list of your Canva designs with optional filtering and sorting",
+          "message": "オプションのフィルタリングと並べ替えを使用して、Canva デザインの一覧を取得"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.display_name": {
+          "source": "List Designs",
+          "message": "デザインの一覧表示"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.desc": {
+          "source": "Use this token to continue from where the previous request left off",
+          "message": "前回のリクエストの続きから再開するには、このトークンを使用します"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.display_name": {
+          "source": "Continuation Token",
+          "message": "継続トークン"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.Y29udGludWF0aW9u.short_desc": {
+          "source": "Token for pagination",
+          "message": "ページネーション用トークン"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOm93bmVk.display_name": {
+          "source": "Owned",
+          "message": "所有"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "共有"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.desc": {
+          "source": "Choose whether to show all designs, only owned designs, or only shared designs",
+          "message": "すべてのデザイン、所有するデザインのみ、または共有デザインのみを表示するかを選択します"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.display_name": {
+          "source": "Ownership Filter",
+          "message": "所有権フィルター"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.b3duZXJzaGlw.short_desc": {
+          "source": "Filter by ownership type",
+          "message": "所有権タイプでフィルタリング"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOm1vZGlmaWVkX2FzY2VuZGluZw.display_name": {
+          "source": "Modified Ascending",
+          "message": "更新日時の昇順"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOm1vZGlmaWVkX2Rlc2NlbmRpbmc.display_name": {
+          "source": "Modified Descending",
+          "message": "更新日時の降順"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnJlbGV2YW5jZQ.display_name": {
+          "source": "Relevance",
+          "message": "関連度"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnRpdGxlX2FzY2VuZGluZw.display_name": {
+          "source": "Title Ascending",
+          "message": "タイトルの昇順"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.allowed-value.c3RyaW5nOnRpdGxlX2Rlc2NlbmRpbmc.display_name": {
+          "source": "Title Descending",
+          "message": "タイトルの降順"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.desc": {
+          "source": "Choose how to sort the returned designs list",
+          "message": "返されるデザイン一覧の並び替え方法を選択します"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.display_name": {
+          "source": "Sort By",
+          "message": "並べ替え順"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.c29ydF9ieQ.short_desc": {
+          "source": "How to sort the results",
+          "message": "結果の並び替え方法"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.desc": {
+          "source": "Enter a search term to find specific designs by title or content",
+          "message": "タイトルまたはコンテンツで特定のデザインを検索するための検索ワードを入力します"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "検索クエリ"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.option.cXVlcnk.short_desc": {
+          "source": "Search term to filter designs",
+          "message": "デザインを絞り込むための検索ワード"
+        },
+        "app.Q2FudmE.action.bGlzdF9kZXNpZ25z.short_desc": {
+          "source": "List your Canva designs",
+          "message": "Canva デザインを一覧表示します"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.desc": {
+          "source": "Retrieve all replies from a specific comment thread on a Canva design",
+          "message": "Canva デザイン上の特定のコメントスレッドからすべての返信を取得します"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.display_name": {
+          "source": "List Thread Replies",
+          "message": "スレッドの返信一覧"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.desc": {
+          "source": "Use this token to continue from where the previous request left off",
+          "message": "前回のリクエストの続きから再開するには、このトークンを使用します"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.display_name": {
+          "source": "Continuation Token",
+          "message": "継続トークン"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.Y29udGludWF0aW9u.short_desc": {
+          "source": "Token for pagination",
+          "message": "ページネーション用トークン"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread",
+          "message": "コメントスレッドが含まれる Canva デザインを選択"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "デザイン"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.ZGVzaWdu.short_desc": {
+          "source": "The design containing the thread",
+          "message": "スレッドが含まれるデザイン"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.desc": {
+          "source": "Set the maximum number of replies to retrieve (default: 50)",
+          "message": "取得する返信の最大数を設定します (デフォルト: 50)"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of replies to return",
+          "message": "返される返信の最大数"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread whose replies you want to list",
+          "message": "返信を一覧表示したいコメントスレッドの一意識別子"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "スレッド ID"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to get replies from",
+          "message": "返信を取得するコメントスレッド"
+        },
+        "app.Q2FudmE.action.bGlzdF9yZXBsaWVz.short_desc": {
+          "source": "List replies in a comment thread",
+          "message": "コメントスレッド内の返信を一覧表示します"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Canva** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "**Canva** に対し、設定されたコネクションの認証を使用してカスタム HTTP / REST API 呼び出しを行います。\n\nHTTP メソッド、URI パス (コネクションの API ベース URL 相対)、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。レスポンスはステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.Q2FudmE.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Canva",
+          "message": "Canva へのカスタム API 呼び出しを実行します"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.desc": {
+          "source": "This trigger fires when a new design is created in your Canva account, with optional filtering by ownership and search query",
+          "message": "Canva アカウントで新しいデザインが作成されたときに起動するトリガーです。所有権や検索クエリによるオプションのフィルタリングが可能です"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.display_name": {
+          "source": "New Design",
+          "message": "新しいデザイン"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOm93bmVk.display_name": {
+          "source": "Owned",
+          "message": "所有"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "すべて"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.allowed-value.c3RyaW5nOnNoYXJlZA.display_name": {
+          "source": "Shared",
+          "message": "共有"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.desc": {
+          "source": "Choose whether to monitor all designs, only your owned designs, or only shared designs",
+          "message": "すべてのデザイン、所有するデザインのみ、または共有されたデザインのみを監視するかを選択します"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.display_name": {
+          "source": "Ownership Filter",
+          "message": "所有権フィルター"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.b3duZXJzaGlw.short_desc": {
+          "source": "Filter by ownership type",
+          "message": "所有権タイプでフィルタリング"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.desc": {
+          "source": "Optional search term to filter which designs trigger the event. Only designs matching this query will trigger the event",
+          "message": "イベントを発生させるデザインを絞り込むためのオプションの検索ワード。このクエリに一致するデザインのみがイベントを起動します"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "検索クエリ"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.option.cXVlcnk.short_desc": {
+          "source": "Filter designs by search term",
+          "message": "検索ワードでデザインを絞り込む"
+        },
+        "app.Q2FudmE.action.bmV3X2Rlc2lnbg.short_desc": {
+          "source": "Triggers when a new design is created",
+          "message": "新しいデザインが作成されたときにトリガー"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.desc": {
+          "source": "This trigger fires when someone adds a new reply to a specific comment thread on a Canva design",
+          "message": "Canva デザイン上の特定のコメントスレッドに新しい返信が追加されたときに起動するトリガーです"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.display_name": {
+          "source": "New Thread Reply",
+          "message": "新しいスレッド返信"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.desc": {
+          "source": "Select the Canva design that contains the comment thread you want to monitor for new replies",
+          "message": "新しい返信を監視したいコメントスレッドが含まれる Canva デザインを選択します"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.display_name": {
+          "source": "Design",
+          "message": "デザイン"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.ZGVzaWdu.short_desc": {
+          "source": "The design to monitor for new replies",
+          "message": "新しい返信を監視するデザイン"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.desc": {
+          "source": "The unique identifier of the comment thread you want to monitor for new replies",
+          "message": "新しい返信を監視したいコメントスレッドの一意識別子"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.display_name": {
+          "source": "Thread ID",
+          "message": "スレッド ID"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.option.dGhyZWFk.short_desc": {
+          "source": "The comment thread to monitor",
+          "message": "監視するコメントスレッド"
+        },
+        "app.Q2FudmE.action.bmV3X3RocmVhZF9yZXBseQ.short_desc": {
+          "source": "Triggers when a new reply is added to a comment thread",
+          "message": "コメントスレッドに新しい返信が追加されたときにトリガー"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.desc": {
+          "source": "Update the name and tags of an existing image in your Canva account",
+          "message": "Canva アカウント内の既存の画像の名前とタグを更新します"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.display_name": {
+          "source": "Update Image",
+          "message": "画像を更新"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.desc": {
+          "source": "The Canva asset ID of the image you want to update",
+          "message": "更新したい画像の Canva アセット ID"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.display_name": {
+          "source": "Image ID",
+          "message": "画像 ID"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the image",
+          "message": "画像の一意の識別子"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.desc": {
+          "source": "Update the name of the image asset",
+          "message": "画像アセットの名前を更新します"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.bmFtZQ.short_desc": {
+          "source": "New name for the image",
+          "message": "画像の新しい名前"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.desc": {
+          "source": "Update the tags associated with the image for better organization",
+          "message": "整理しやすくするために画像に関連付けられたタグを更新します"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.option.dGFncw.short_desc": {
+          "source": "New tags for the image",
+          "message": "画像の新しいタグ"
+        },
+        "app.Q2FudmE.action.dXBkYXRlX2ltYWdl.short_desc": {
+          "source": "Update image name and tags",
+          "message": "画像の名前とタグを更新"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.desc": {
+          "source": "Upload an image file to your Canva account and optionally set a name and tags",
+          "message": "Canva アカウントに画像ファイルをアップロードし、オプションで名前とタグを設定します"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.display_name": {
+          "source": "Upload Image",
+          "message": "画像をアップロード"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.desc": {
+          "source": "Select an image file from your device to upload to Canva",
+          "message": "Canva にアップロードする画像ファイルをデバイスから選択します"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.display_name": {
+          "source": "Image File",
+          "message": "画像ファイル"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.aW1hZ2U.short_desc": {
+          "source": "The image file to upload",
+          "message": "アップロードする画像ファイル"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.desc": {
+          "source": "Set a custom name for the uploaded image. If not provided, the original filename will be used",
+          "message": "アップロードする画像のカスタム名を設定します。指定しない場合は元のファイル名が使用されます"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.bmFtZQ.short_desc": {
+          "source": "Optional name for the image",
+          "message": "画像のオプション名"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.desc": {
+          "source": "Add tags to help organize and find your image later",
+          "message": "後で画像を整理して見つけやすくするためのタグを追加します"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.option.dGFncw.short_desc": {
+          "source": "Optional tags for the image",
+          "message": "画像のオプションタグ"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdl.short_desc": {
+          "source": "Upload an image file to Canva",
+          "message": "Canva に画像ファイルをアップロードします"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.desc": {
+          "source": "Upload an image to your Canva account by providing a URL to the image",
+          "message": "画像の URL を指定して Canva アカウントに画像をアップロードします"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.display_name": {
+          "source": "Upload Image by URL",
+          "message": "URL から画像をアップロード"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.desc": {
+          "source": "Set a custom name for the uploaded image. If not provided, the filename from the URL will be used",
+          "message": "アップロードする画像のカスタム名を設定します。指定しない場合は URL のファイル名が使用されます"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.bmFtZQ.short_desc": {
+          "source": "Optional name for the image",
+          "message": "画像のオプション名"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.desc": {
+          "source": "Add tags to help organize and find your image later",
+          "message": "後で画像を整理して見つけやすくするためのタグを追加します"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "タグ"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dGFncw.short_desc": {
+          "source": "Optional tags for the image",
+          "message": "画像のオプションタグ"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.desc": {
+          "source": "Provide a direct URL to the image file you want to upload to Canva",
+          "message": "Canva にアップロードしたい画像ファイルへの直接 URL を指定します"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.display_name": {
+          "source": "Image URL",
+          "message": "画像 URL"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.option.dXJs.short_desc": {
+          "source": "The URL of the image to upload",
+          "message": "アップロードする画像の URL"
+        },
+        "app.Q2FudmE.action.dXBsb2FkX2ltYWdlX2J5X3VybA.short_desc": {
+          "source": "Upload an image from a URL to Canva",
+          "message": "URL から Canva に画像をアップロードします"
+        },
+        "app.Q2FudmE.desc": {
+          "source": "Canva is a graphic design platform that allows users to create social media graphics, presentations, posters, documents and other visual content. It provides a drag-and-drop interface and access to millions of photographs, graphics and fonts.",
+          "message": "Canva は、ソーシャルメディア用グラフィック、プレゼンテーション、ポスター、ドキュメントなどのビジュアルコンテンツを作成できるグラフィックデザインプラットフォームです。ドラッグ＆ドロップインターフェースと、数百万点もの写真、グラフィック、フォントへのアクセスを提供します。"
+        },
+        "app.Q2FudmE.display_name": {
+          "source": "Canva",
+          "message": "Canva"
+        },
+        "app.Q2FudmE.short_desc": {
+          "source": "Design platform for creating graphics, presentations, and visual content",
+          "message": "グラフィック、プレゼンテーション、ビジュアルコンテンツを作成するためのデザインプラットフォーム"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1117 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.desc": {
+          "source": "This trigger fires when a card has passed its due date and has not been marked as complete.",
+          "message": "このトリガーは、カードが期日を過ぎ、完了としてマークされていない場合に起動します。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.display_name": {
+          "source": "Card Due",
+          "message": "カード期日超過"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board that contains the cards you want to monitor for due dates.",
+          "message": "期日を監視するカードが含まれている Trello ボードを選択します。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board containing the cards to monitor.",
+          "message": "監視するカードが含まれているボード。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.desc": {
+          "source": "When enabled, the trigger will include overdue cards that have been marked as complete. By default, only incomplete overdue cards are included.",
+          "message": "有効にすると、完了としてマークされている期限切れカードもトリガーの対象に含まれます。デフォルトでは、未完了の期限切れカードのみが含まれます。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.display_name": {
+          "source": "Include Completed Cards",
+          "message": "完了したカードを含める"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.aW5jbHVkZUR1ZUNvbXBsZXRl.short_desc": {
+          "source": "Include cards marked as complete.",
+          "message": "完了としてマークされたカードを含めます。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for overdue cards. Only required if Source is set to \"list\".",
+          "message": "期限切れカードを監視する特定のリストを選択します。Source が「list」に設定されている場合のみ必要です。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.bGlzdElk.short_desc": {
+          "source": "The specific list containing the cards to monitor.",
+          "message": "監視するカードが含まれている特定のリスト。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "リスト"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "ボード上のすべてのリストを監視するには「board」を、特定のリストのみを監視するには「list」を選択します。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "ソース"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "ボード全体を監視するか、特定のリストを監視するかを選択します。"
+        },
+        "app.VHJlbGxv.action.Y2FyZC1kdWU.short_desc": {
+          "source": "Triggers when a card becomes overdue.",
+          "message": "カードが期限切れになったときにトリガーされます。"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブルに新規レコードを作成します"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "レコードを作成"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブルに新規レコードを作成します"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Get a member",
+          "message": "メンバーを取得します"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Get a Member",
+          "message": "メンバーの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Get a Member",
+          "message": "メンバーの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Get-organizations-id",
+          "message": "Get-organizations-id"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Get an Organization",
+          "message": "組織の取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Get an Organization",
+          "message": "組織の取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.desc": {
+          "source": "List the boards in a Workspace",
+          "message": "ワークスペース内のボードを一覧表示します"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.display_name": {
+          "source": "Get Boards in an Organization",
+          "message": "組織内のボードの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtYm9hcmRz.short_desc": {
+          "source": "Get Boards in an Organization",
+          "message": "組織内のボードの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "List the members in a Workspace",
+          "message": "ワークスペース内のメンバーを一覧表示します"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Get the Members of an Organization",
+          "message": "組織のメンバーの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Get the Members of an Organization",
+          "message": "組織のメンバーの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.desc": {
+          "source": "Request a single board.",
+          "message": "単一のボードをリクエストします。"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.display_name": {
+          "source": "Get a Board",
+          "message": "ボードの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Get a Board",
+          "message": "ボードの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.desc": {
+          "source": "Get-checklists-id-checkitems",
+          "message": "Get-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.display_name": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "チェックリストのチェックアイテムの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWNoZWNrbGlzdHMtaWQtY2hlY2tpdGVtcw.short_desc": {
+          "source": "Get Checkitems on a Checklist",
+          "message": "チェックリストのチェックアイテムの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.desc": {
+          "source": "Get information about a single Label.",
+          "message": "単一のラベルに関する情報を取得します。"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.display_name": {
+          "source": "Get a Label",
+          "message": "ラベルの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxhYmVscy1pZA.short_desc": {
+          "source": "Get a Label",
+          "message": "ラベルの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.desc": {
+          "source": "Get information about a List",
+          "message": "リストに関する情報を取得します"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.display_name": {
+          "source": "Get a List",
+          "message": "リストの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LWxpc3RzLWlk.short_desc": {
+          "source": "Get a List",
+          "message": "リストの取得"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.desc": {
+          "source": "Search for Trello members.",
+          "message": "Trello メンバーを検索します。"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.display_name": {
+          "source": "Search for Members",
+          "message": "メンバーの検索"
+        },
+        "app.VHJlbGxv.action.Z2V0LXNlYXJjaC1tZW1iZXJz.short_desc": {
+          "source": "Search for Members",
+          "message": "メンバーの検索"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブルからレコードを削除します"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "レコードを削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブルからレコードを削除します"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Delete an Organization",
+          "message": "組織を削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Delete an Organization",
+          "message": "組織を削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Delete an Organization",
+          "message": "組織を削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Remove a member from a Workspace",
+          "message": "ワークスペースからメンバーを削除します"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Remove a Member from an Organization",
+          "message": "組織からメンバーを削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Remove a Member from an Organization",
+          "message": "組織からメンバーを削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.desc": {
+          "source": "Delete a board.",
+          "message": "ボードを削除します。"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.display_name": {
+          "source": "Delete a Board",
+          "message": "ボードの削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWJvYXJkcy1pZA.short_desc": {
+          "source": "Delete a Board",
+          "message": "ボードの削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.desc": {
+          "source": "Delete a label by ID.",
+          "message": "ID でラベルを削除します。"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.display_name": {
+          "source": "Delete a Label",
+          "message": "ラベルの削除"
+        },
+        "app.VHJlbGxv.action.ZGVsZXRlLWxhYmVscy1pZA.short_desc": {
+          "source": "Delete a Label",
+          "message": "ラベルの削除"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Trello** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Trello** へのカスタム HTTP / REST API 呼び出しを実行します。\n\nHTTP メソッド、URI パス (接続の API ベース URL からの相対パス)、オプションのクエリパラメータ、ヘッダー、リクエストボディを指定します。応答はステータスコード、レスポンスヘッダー、レスポンスボディを含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.VHJlbGxv.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Trello",
+          "message": "Trello へのカスタム API 呼び出しの実行"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.desc": {
+          "source": "This trigger fires when a new member is added to a specified Trello board.",
+          "message": "このトリガーは、指定された Trello ボードに新しいメンバーが追加されたときに起動します。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.display_name": {
+          "source": "New Member",
+          "message": "新規メンバー"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new members being added.",
+          "message": "メンバーの追加を監視する Trello ボードを選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new members.",
+          "message": "新規メンバーを監視するボード。"
+        },
+        "app.VHJlbGxv.action.bmV3LW1lbWJlcg.short_desc": {
+          "source": "Triggers when a new member is added to a board.",
+          "message": "ボードに新しいメンバーが追加されたときにトリガーします。"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.desc": {
+          "source": "This trigger fires when a new Trello board is created or shared with the authenticated user.",
+          "message": "このトリガーは、新しい Trello ボードが作成されたか、認証されたユーザーと共有されたときに起動します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.display_name": {
+          "source": "New Board",
+          "message": "新規ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LWJvYXJk.short_desc": {
+          "source": "Triggers when a new board is created.",
+          "message": "新しいボードが作成されたときにトリガーします。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.desc": {
+          "source": "This trigger fires when a new card is added to a specified board or list in Trello.",
+          "message": "このトリガーは、Trello の指定されたボードまたはリストに新しいカードが追加されたときに起動します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.display_name": {
+          "source": "New Card",
+          "message": "新規カード"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new cards being created.",
+          "message": "新しいカードの作成を監視する Trello ボードを選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new cards.",
+          "message": "新しいカードを監視するボード。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.desc": {
+          "source": "Select a specific list to monitor for new cards. Only required if Source is set to \"list\".",
+          "message": "新しいカードを監視する特定のリストを選択します。Source が「list」に設定されている場合のみ必須です。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.display_name": {
+          "source": "List",
+          "message": "リスト"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.bGlzdElk.short_desc": {
+          "source": "The specific list to monitor for new cards.",
+          "message": "新しいカードを監視する特定のリスト。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmJvYXJk.display_name": {
+          "source": "board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.allowed-value.c3RyaW5nOmxpc3Q.display_name": {
+          "source": "list",
+          "message": "リスト"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.desc": {
+          "source": "Select \"board\" to monitor all lists on a board, or \"list\" to monitor a specific list only.",
+          "message": "ボード上のすべてのリストを監視するには「board」を、特定のリストのみを監視するには「list」を選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.display_name": {
+          "source": "Source",
+          "message": "ソース"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.option.c291cmNl.short_desc": {
+          "source": "Choose whether to monitor an entire board or a specific list.",
+          "message": "ボード全体を監視するか、特定のリストを監視するかを選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWNhcmQ.short_desc": {
+          "source": "Triggers when a new card is created.",
+          "message": "新しいカードが作成されたときにトリガーします。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.desc": {
+          "source": "This trigger fires when a new label is created on a specified Trello board.",
+          "message": "このトリガーは、指定された Trello ボードに新しいラベルが作成されたときに起動します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.display_name": {
+          "source": "New Label",
+          "message": "新規ラベル"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new labels being created.",
+          "message": "新しいラベルの作成を監視する Trello ボードを選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new labels.",
+          "message": "新しいラベルを監視するボード。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxhYmVs.short_desc": {
+          "source": "Triggers when a new label is created.",
+          "message": "新しいラベルが作成されたときにトリガーします。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.desc": {
+          "source": "This trigger fires when a new list is added to a specified Trello board.",
+          "message": "このトリガーは、指定された Trello ボードに新しいリストが追加されたときに起動します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.display_name": {
+          "source": "New List",
+          "message": "新しいリスト"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.desc": {
+          "source": "Select the Trello board where you want to monitor for new lists being created.",
+          "message": "新しいリストの作成を監視する Trello ボードを選択します。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.display_name": {
+          "source": "Board",
+          "message": "ボード"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.Ym9hcmRJZA.short_desc": {
+          "source": "The board to monitor for new lists.",
+          "message": "新しいリストを監視するボード。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.desc": {
+          "source": "When enabled, the trigger will include new lists that are archived. By default, only open lists are included.",
+          "message": "有効にすると、トリガーはアーカイブされた新しいリストも含めます。デフォルトでは、オープンなリストのみが含まれます。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.display_name": {
+          "source": "Include Archived Lists",
+          "message": "アーカイブされたリストを含める"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.option.aW5jbHVkZUFyY2hpdmVkTGlzdHM.short_desc": {
+          "source": "Include lists that are archived.",
+          "message": "アーカイブされたリストを含めます。"
+        },
+        "app.VHJlbGxv.action.bmV3LWxpc3Q.short_desc": {
+          "source": "Triggers when a new list is created.",
+          "message": "新しいリストが作成されたときにトリガーします。"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内で一致するレコードを検索します"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "レコードの検索"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内で一致するレコードを検索します"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内で一致する単一レコードを検索します"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "単一レコードの検索"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内で一致する単一レコードを検索します"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.desc": {
+          "source": "Create a new board.",
+          "message": "新しいボードを作成します。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.display_name": {
+          "source": "Create a Board",
+          "message": "ボードの作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1ib2FyZHM.short_desc": {
+          "source": "Create a Board",
+          "message": "ボードの作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.desc": {
+          "source": "Create a new card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "新しいカードを作成します。クエリパラメータを JSON リクエストボディに置き換えることもできます。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.display_name": {
+          "source": "Create a New Card",
+          "message": "新しいカードの作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcw.short_desc": {
+          "source": "Create a new Card",
+          "message": "新しいカードを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.desc": {
+          "source": "Add a new comment to a card",
+          "message": "カードに新しいコメントを追加します"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.display_name": {
+          "source": "Add a New Comment to a Card",
+          "message": "カードへの新しいコメントの追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1hY3Rpb25zLWNvbW1lbnRz.short_desc": {
+          "source": "Add a new comment to a Card",
+          "message": "カードに新しいコメントを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.desc": {
+          "source": "Add a member to a card",
+          "message": "カードにメンバーを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.display_name": {
+          "source": "Add a Member to a Card",
+          "message": "カードにメンバーを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZG1lbWJlcnM.short_desc": {
+          "source": "Add a Member to a Card",
+          "message": "カードにメンバーを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.desc": {
+          "source": "Add a label to a card",
+          "message": "カードにラベルを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.display_name": {
+          "source": "Add a Label to a Card",
+          "message": "カードにラベルを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jYXJkcy1pZC1pZGxhYmVscw.short_desc": {
+          "source": "Add a Label to a Card",
+          "message": "カードにラベルを追加"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.desc": {
+          "source": "Post-checklists-id-checkitems",
+          "message": "Post-checklists-id-checkitems"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.display_name": {
+          "source": "Create Checkitem on Checklist",
+          "message": "チェックリストにチェックアイテムを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1jaGVja2xpc3RzLWlkLWNoZWNraXRlbXM.short_desc": {
+          "source": "Create Checkitem on Checklist",
+          "message": "チェックリストにチェックアイテムを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.desc": {
+          "source": "Create a new Label on a Board.",
+          "message": "ボードに新しいラベルを作成します。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.display_name": {
+          "source": "Create a Label",
+          "message": "ラベルを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1sYWJlbHM.short_desc": {
+          "source": "Create a Label",
+          "message": "ラベルを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.desc": {
+          "source": "Create a new List on a Board",
+          "message": "ボードに新しいリストを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.display_name": {
+          "source": "Create a New List",
+          "message": "新しいリストを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1saXN0cw.short_desc": {
+          "source": "Create a new List",
+          "message": "新しいリストを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.desc": {
+          "source": "Create a new Workspace",
+          "message": "新しいワークスペースを作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.display_name": {
+          "source": "Create a New Organization",
+          "message": "新しい組織を作成"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.desc": {
+          "source": "The description for the organizations",
+          "message": "組織の説明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.display_name": {
+          "source": "Desc",
+          "message": "説明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGVzYw.short_desc": {
+          "source": "The description for the organizations",
+          "message": "組織の説明"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.desc": {
+          "source": "The name to display for the Organization",
+          "message": "組織の表示名"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.display_name": {
+          "source": "Display Name",
+          "message": "表示名"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.ZGlzcGxheU5hbWU.short_desc": {
+          "source": "The name to display for the Organization",
+          "message": "組織の表示名"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.desc": {
+          "source": "A string with a length of at least 3. Only lowercase letters, underscores, and numbers are allowed. If the name contains invalid characters, they will be removed. If the name conflicts with an existing name, a new name will be substituted.",
+          "message": "3文字以上の文字列。半角小文字、アンダースコア、数字のみ使用できます。無効な文字が含まれている場合は削除されます。既存の名前と競合する場合は、新しい名前に置き換えられます。"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "名前"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.bmFtZQ.short_desc": {
+          "source": "A string with a length of at least 3",
+          "message": "3文字以上の文字列"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.desc": {
+          "source": "A URL starting with `http://` or `https://`",
+          "message": "`http://`または`https://`で始まるURL"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "ウェブサイト"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.option.d2Vic2l0ZQ.short_desc": {
+          "source": "A URL starting with 'http://' or 'https://'",
+          "message": "「http://」または「https://」で始まるURL"
+        },
+        "app.VHJlbGxv.action.cG9zdC1vcmdhbml6YXRpb25z.short_desc": {
+          "source": "Create a new Organization",
+          "message": "新しい組織を作成"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.desc": {
+          "source": "Update a Member",
+          "message": "メンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.display_name": {
+          "source": "Update a Member",
+          "message": "メンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW1lbWJlcnMtaWQ.short_desc": {
+          "source": "Update a Member",
+          "message": "メンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.desc": {
+          "source": "Update an organization",
+          "message": "組織を更新します"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.display_name": {
+          "source": "Update an Organization",
+          "message": "組織を更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQ.short_desc": {
+          "source": "Update an Organization",
+          "message": "組織を更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.desc": {
+          "source": "Put-organizations-id-members",
+          "message": "Put-organizations-id-members"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.display_name": {
+          "source": "Update an Organization's Members",
+          "message": "組織のメンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycw.short_desc": {
+          "source": "Update an Organization's Members",
+          "message": "組織のメンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.desc": {
+          "source": "Add a member to a Workspace or update their member type.",
+          "message": "ワークスペースにメンバーを追加するか、メンバータイプを更新します。"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.display_name": {
+          "source": "Update a Member of an Organization",
+          "message": "組織のメンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LW9yZ2FuaXphdGlvbnMtaWQtbWVtYmVycy1pZG1lbWJlcg.short_desc": {
+          "source": "Update a Member of an Organization",
+          "message": "組織のメンバーを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.desc": {
+          "source": "Update an existing board by id",
+          "message": "IDで既存のボードを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.display_name": {
+          "source": "Update a Board",
+          "message": "ボードを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZA.short_desc": {
+          "source": "Update a Board",
+          "message": "ボードを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.desc": {
+          "source": "Add a member to the board.",
+          "message": "ボードにメンバーを追加します。"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.display_name": {
+          "source": "Add a Member to a Board",
+          "message": "ボードにメンバーを追加"
+        },
+        "app.VHJlbGxv.action.cHV0LWJvYXJkcy1pZC1tZW1iZXJzLWlkbWVtYmVy.short_desc": {
+          "source": "Add a Member to a Board",
+          "message": "ボードにメンバーを追加"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.desc": {
+          "source": "Update a card. Query parameters may also be replaced with a JSON request body instead.",
+          "message": "カードを更新します。クエリパラメータの代わりにJSONリクエストボディを使用することもできます。"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.display_name": {
+          "source": "Update a Card",
+          "message": "カードを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlk.short_desc": {
+          "source": "Update a Card",
+          "message": "カードを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.desc": {
+          "source": "Update an item in a checklist on a card.",
+          "message": "カードのチェックリスト内のアイテムを更新します。"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.display_name": {
+          "source": "Update a Checkitem on a Card",
+          "message": "カードのチェックアイテムを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWNhcmRzLWlkLWNoZWNraXRlbS1pZGNoZWNraXRlbQ.short_desc": {
+          "source": "Update a checkItem on a Card",
+          "message": "カードのチェックアイテムを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.desc": {
+          "source": "Update a label by ID.",
+          "message": "IDでラベルを更新します。"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.display_name": {
+          "source": "Update a Label",
+          "message": "ラベルを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWxhYmVscy1pZA.short_desc": {
+          "source": "Update a Label",
+          "message": "ラベルを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.desc": {
+          "source": "Update the properties of a List",
+          "message": "リストのプロパティを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.display_name": {
+          "source": "Update a List",
+          "message": "リストを更新"
+        },
+        "app.VHJlbGxv.action.cHV0LWxpc3RzLWlk.short_desc": {
+          "source": "Update a List",
+          "message": "リストを更新"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "レコードを更新"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "テーブル名"
+        },
+        "app.VHJlbGxv.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Trello\"",
+          "message": "アプリ「Trello」の指定されたテーブル内の既存レコードを更新"
+        },
+        "app.VHJlbGxv.desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards. It is a web-based Kanban-style list-making application and is a subsidiary of Atlassian.",
+          "message": "Trelloは、プロジェクトをボードに整理するコラボレーションツールです。Webベースのカンバンスタイルのリスト作成アプリケーションであり、Atlassianの子会社です。"
+        },
+        "app.VHJlbGxv.display_name": {
+          "source": "Trello",
+          "message": "Trello"
+        },
+        "app.VHJlbGxv.short_desc": {
+          "source": "Trello is a collaboration tool that organizes your projects into boards.",
+          "message": "Trelloは、プロジェクトをボードに整理するコラボレーションツールです。"
+        }
+      }
+    }
+  }
+}

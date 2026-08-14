@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "pl": {
+      "messages": {
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Pushover** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Wykonaj niestandardowe wywołanie HTTP / REST API do **Pushover** przy użyciu uwierzytelniania skonfigurowanego połączenia.\n\nOkreśl metodę HTTP, ścieżkę URI (względem bazowego adresu URL API połączenia), opcjonalne parametry zapytania, nagłówki i treść żądania. Odpowiedź jest zwracana jako hash zawierający kod statusu, nagłówki odpowiedzi i treść odpowiedzi.\n\nUżyj tej akcji dla punktów końcowych, które nie są jeszcze udostępnione jako bezpośrednie akcje w tej aplikacji."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Wykonaj wywołanie API"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Ciało żądania. Rzeczywisty typ zależy od `body_type`: JSON/form/YAML oczekują hasza, XML/text oczekują ciągu znaków, multipart oczekuje struktury pliku, binary oczekuje surowych bajtów."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Treść"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Ciało żądania"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Przesyłanie pliku za pomocą `multipart/form-data`. Ciało żądania musi być strukturą @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Szablon buduje kopertę multipart i ustawia nagłówek boundary."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formularz Multipart"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Przesyłanie pliku za pomocą multipart/form-data"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Przekaż ciało żądania do klienta REST bez zmian; klient decyduje o serializacji na podstawie skonfigurowanej opcji `data` i typu wartości"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Przekazywanie bez zmian; użyj serializacji połączenia i pozwól klientowi REST zadecydować"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Wyślij ciało jako surowe bajty. Ciało musi być wartością binarną. Ustawia `Content-Type: application/octet-stream`, chyba że zostanie nadpisane przez `hdr`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surowe dane binarne"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Wyślij ciało jako surowe bajty"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializuj hasz pól formularza jako `application/x-www-form-urlencoded`. Ciało musi być haszem, którego wartości są skalarami (ciągi znaków/liczby/wartości logiczne)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formularz (zakodowany w URL)"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializuj ciało jako pola formularza application/x-www-form-urlencoded"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializuj ciało jako JSON; ustawia `Content-Type: application/json`. Ciało powinno być haszem, listą lub wartością skalarną."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializuj ciało jako JSON"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Wyślij ciało jako zwykły tekst. Ciało musi być ciągiem znaków. Ustawia `Content-Type: text/plain`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Wyślij ciało jako text/plain"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Wyślij ciało jako XML. Jeśli ciało jest haszem, jest serializowane do XML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/xml`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Wyślij ciało jako XML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Wyślij ciało jako YAML. Jeśli ciało jest haszem, jest serializowane do YAML; jeśli jest ciągiem znaków, jest wysyłane bez zmian. Ustawia `Content-Type: application/x-yaml`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Wyślij ciało jako YAML"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Wybiera tryb serializacji ciała i odpowiadający mu nagłówek `Content-Type`. Zmiana tego pola zmienia edytor `body` - wybór JSON udostępnia edytor JSON, wybór Multipart Form udostępnia okno wyboru pliku i tak dalej."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ ciała"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Sposób serializacji ciała i wysyłany Content-Type"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Jeśli `True`, odpowiedzi HTTP inne niż 2xx są zwracane jako zwykły hasz odpowiedzi (z rzeczywistym kodem stanu) zamiast zgłaszania `REST-RESPONSE-ERROR`. Przydatne do obsługi 4xx/5xx jako danych - np. do sprawdzania, czy zasób istnieje. Nadpisuje ustawienie połączenia `error_passthru` tylko dla tego wywołania."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Zwracaj błędy jako dane"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Zwracaj odpowiedzi inne niż 2xx normalnie zamiast zgłaszać błąd"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Opcjonalna lista kodów stanu HTTP traktowanych jako sukces. Jeśli ustawiono, a kod stanu odpowiedzi nie znajduje się na tej liście, akcja zgłasza `REST-STATUS-ERROR`. Gdy pole nie jest ustawione, stosowane jest domyślne zachowanie klienta REST (zwykle: 2xx to sukces, inne niż 2xx zgłaszają błąd)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Oczekiwane kody stanu"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Kody stanu odpowiedzi traktowane jako sukces"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hasz niestandardowych nagłówków dodawanych do żądania. Nadpisują one wszelkie domyślne nagłówki ustawione przez `body_type` (np. podanie tutaj `Content-Type` zastępuje domyślną wartość dla typu ciała)."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Niestandardowe nagłówki"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatkowe nagłówki żądania"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Jeśli `True`, hasz odpowiedzi zawiera pod-hasz `debug` zawierający metodę/URL/nagłówki żądania (z zredagowanymi poufnymi wartościami), rozmiary żądania i odpowiedzi oraz czas trwania w obie strony. Przydatne podczas badania wolnych lub nieudanych wywołań. Domyślnie wyłączone, aby odpowiedzi były lekkie."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Dołącz informacje diagnostyczne"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Dołącz informacje diagnostyczne dotyczące żądania/czasu/rozmiaru w odpowiedzi"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP do użycia w żądaniu"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Ścieżka URI względna wobec bazowego URL API połączenia. Może zawierać symbole zastępcze `{name}`, które zostaną zastąpione z `path_vars`. Przykład: `/users/{id}/comments`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Ścieżka URI"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Ścieżka URI względna wobec bazowego adresu URL API połączenia. Może zawierać symbole zastępcze '{name}', które są zastępowane z 'path_vars'. Przykład: '/users/{id}/comments'"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash wartości podstawianych w miejsce symboli zastępczych `{name}` w ścieżce URI. Przykład: dla `path = /users/{id}` i `path_vars = {id: 123}` framework wysyła `/users/123`. Wartości są kodowane w formacie URL."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Zmienne ścieżki"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Wartości dla symboli zastępczych {name} w ścieżce"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrów zapytania do dołączenia do ścieżki URI. Wartości są kodowane w formacie URL; wartości list są łączone za pomocą `,`."
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty zapytania"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry zapytania"
+        },
+        "app.UHVzaG92ZXI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Pushover",
+          "message": "Wykonaj niestandardowe wywołanie API do Pushover"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.desc": {
+          "source": "Send an emergency notification that requires acknowledgment. The notification will repeat at specified intervals until acknowledged or expired. Returns a receipt ID for tracking.",
+          "message": "Wyślij powiadomienie awaryjne wymagające potwierdzenia. Powiadomienie będzie powtarzane w określonych odstępach czasu do momentu potwierdzenia lub wygaśnięcia. Zwraca identyfikator potwierdzenia do śledzenia."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.display_name": {
+          "source": "Push Emergency Notification",
+          "message": "Wyślij powiadomienie awaryjne"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.desc": {
+          "source": "Pushover will POST to this URL when the notification is acknowledged by the user.",
+          "message": "Pushover wyśle żądanie POST pod ten adres URL, gdy powiadomienie zostanie potwierdzone przez użytkownika."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.display_name": {
+          "source": "Callback URL",
+          "message": "Adres URL wywołania zwrotnego"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Y2FsbGJhY2s.short_desc": {
+          "source": "URL to call when acknowledged",
+          "message": "Adres URL do wywołania po potwierdzeniu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices.",
+          "message": "Wyślij do urządzenia o określonej nazwie lub pozostaw puste, aby wysłać do wszystkich urządzeń."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Urządzenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "Skieruj do określonych urządzeń"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.desc": {
+          "source": "How long (in seconds) the notification will continue retrying. Maximum 10800 seconds (3 hours).",
+          "message": "Jak długo (w sekundach) powiadomienie będzie ponawiane. Maksymalnie 10800 sekund (3 godziny)."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.display_name": {
+          "source": "Expiration Time",
+          "message": "Czas wygaśnięcia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.ZXhwaXJl.short_desc": {
+          "source": "Seconds until notification stops retrying (maximum 10800)",
+          "message": "Liczba sekund do zakończenia ponawiania powiadomienia (maksymalnie 10800)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "Monospace"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.desc": {
+          "source": "Plain text, HTML, or Monospace formatting.",
+          "message": "Formatowanie: zwykły tekst, HTML lub Monospace."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "Format wiadomości"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "Styl formatowania tekstu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the emergency notification. Maximum 1024 characters.",
+          "message": "Główna treść powiadomienia awaryjnego. Maksymalnie 1024 znaki."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Wiadomość"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.bWVzc2FnZQ.short_desc": {
+          "source": "The emergency notification message",
+          "message": "Treść powiadomienia awaryjnego"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "Magia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "Mechaniczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "Brak (wyciszony)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "Alarm obcych (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "Sygnałówka"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "Rower"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "Kasa sklepowa"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "Klasyczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "Wspinaczka (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "Kosmiczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Echo Pushover (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "Spadanie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "Gamelan"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "Przychodzące"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "Antrakt"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover (domyślny)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "Uporczywy (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "Piano Bar"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "Syrena"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "Alarm kosmiczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "Holownik"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "W górę i w dół (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "Tylko wibracje"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.desc": {
+          "source": "The sound to play. Long sounds like \"persistent\" or \"siren\" work well for emergencies.",
+          "message": "Dźwięk do odtworzenia. Długie dźwięki, takie jak „persistent” lub „siren”, dobrze sprawdzają się w sytuacjach awaryjnych."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "Dźwięk"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "Dźwięk powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.desc": {
+          "source": "How often (in seconds) Pushover will resend the notification until acknowledged. Minimum 30 seconds.",
+          "message": "Jak często (w sekundach) Pushover będzie ponownie wysyłać powiadomienie do momentu jego potwierdzenia. Minimum 30 sekund."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.display_name": {
+          "source": "Retry Interval",
+          "message": "Interwał ponawiania"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.cmV0cnk.short_desc": {
+          "source": "Seconds between retries (minimum 30)",
+          "message": "Liczba sekund między ponowieniami (minimum 30)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.desc": {
+          "source": "Comma-separated tags that can be used to cancel multiple emergency notifications at once.",
+          "message": "Rozdzielana przecinkami lista tagów, których można użyć do jednoczesnego anulowania wielu powiadomień awaryjnych."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.display_name": {
+          "source": "Tags",
+          "message": "Tagi"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGFncw.short_desc": {
+          "source": "Tags for bulk cancellation",
+          "message": "Tagi do masowego anulowania"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters.",
+          "message": "Tytuł wyświetlany nad wiadomością. Maksymalnie 250 znaków."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "Opcjonalny tytuł powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.desc": {
+          "source": "A URL to include with the notification.",
+          "message": "Adres URL do dołączenia do powiadomienia."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "Dodatkowy adres URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link.",
+          "message": "Wyświetlany tekst łącza URL."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "Tytuł adresu URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "Tytuł dla adresu URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9lbWVyZ2VuY3lfbm90aWZpY2F0aW9u.short_desc": {
+          "source": "Send a high-priority emergency notification with acknowledgment tracking",
+          "message": "Wyślij powiadomienie awaryjne o wysokim priorytecie ze śledzeniem potwierdzeń"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.desc": {
+          "source": "Send a push notification with customizable priority, sound, and formatting. Supports priorities from lowest (no alert) to high (bypasses quiet hours).",
+          "message": "Wyślij powiadomienie push z konfigurowalnym priorytetem, dźwiękiem i formatowaniem. Obsługuje priorytety od najniższego (brak alertu) do wysokiego (pomija godziny ciszy)."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.display_name": {
+          "source": "Push Notification",
+          "message": "Powiadomienie push"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.desc": {
+          "source": "Send to a specific device name, or leave blank to send to all devices. Multiple devices can be separated by commas.",
+          "message": "Wyślij do określonej nazwy urządzenia lub pozostaw puste, aby wysłać do wszystkich urządzeń. Wiele urządzeń można rozdzielić przecinkami."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Urządzenie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.ZGV2aWNl.short_desc": {
+          "source": "Target specific device(s)",
+          "message": "Skieruj do określonych urządzeń"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOm1vbm9zcGFjZQ.display_name": {
+          "source": "Monospace",
+          "message": "Monospace"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOmh0bWw.display_name": {
+          "source": "HTML",
+          "message": "HTML"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.allowed-value.c3RyaW5nOnBsYWlu.display_name": {
+          "source": "Plain Text",
+          "message": "Czysty tekst"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.desc": {
+          "source": "Plain text (default), HTML for basic formatting (<b>, <i>, <u>, <a>), or Monospace for code-style text.",
+          "message": "Zwykły tekst (domyślnie), HTML do podstawowego formatowania (<b>, <i>, <u>, <a>) lub czcionka o stałej szerokości znaków (Monospace) dla tekstu w stylu kodu."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.display_name": {
+          "source": "Message Format",
+          "message": "Format wiadomości"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.Zm9ybWF0.short_desc": {
+          "source": "Text formatting style",
+          "message": "Styl formatowania tekstu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "The main text of the notification. Maximum 1024 characters.",
+          "message": "Główna treść powiadomienia. Maksymalnie 1024 znaki."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Wiadomość"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "The notification message content",
+          "message": "Treść wiadomości powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1hZ2lj.display_name": {
+          "source": "Magic",
+          "message": "Magia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm1lY2hhbmljYWw.display_name": {
+          "source": "Mechanical",
+          "message": "Mechaniczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOm5vbmU.display_name": {
+          "source": "None (Silent)",
+          "message": "Brak (wyciszony)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmFsaWVu.display_name": {
+          "source": "Alien Alarm (Long)",
+          "message": "Alarm obcych (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJ1Z2xl.display_name": {
+          "source": "Bugle",
+          "message": "Sygnałówka"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmJpa2U.display_name": {
+          "source": "Bike",
+          "message": "Rower"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNhc2hyZWdpc3Rlcg.display_name": {
+          "source": "Cash Register",
+          "message": "Kasa sklepowa"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsYXNzaWNhbA.display_name": {
+          "source": "Classical",
+          "message": "Klasyczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNsaW1i.display_name": {
+          "source": "Climb (Long)",
+          "message": "Wspinaczka (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmNvc21pYw.display_name": {
+          "source": "Cosmic",
+          "message": "Kosmiczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmVjaG8.display_name": {
+          "source": "Pushover Echo (Long)",
+          "message": "Echo Pushover (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmZhbGxpbmc.display_name": {
+          "source": "Falling",
+          "message": "Spadanie"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmdhbWVsYW4.display_name": {
+          "source": "Gamelan",
+          "message": "Gamelan"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmluY29taW5n.display_name": {
+          "source": "Incoming",
+          "message": "Przychodzące"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOmludGVybWlzc2lvbg.display_name": {
+          "source": "Intermission",
+          "message": "Antrakt"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnB1c2hvdmVy.display_name": {
+          "source": "Pushover (Default)",
+          "message": "Pushover (domyślny)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBlcnNpc3RlbnQ.display_name": {
+          "source": "Persistent (Long)",
+          "message": "Uporczywy (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnBpYW5vYmFy.display_name": {
+          "source": "Piano Bar",
+          "message": "Piano Bar"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNpcmVu.display_name": {
+          "source": "Siren",
+          "message": "Syrena"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnNwYWNlYWxhcm0.display_name": {
+          "source": "Space Alarm",
+          "message": "Alarm kosmiczny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnR1Z2JvYXQ.display_name": {
+          "source": "Tugboat",
+          "message": "Holownik"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnVwZG93bg.display_name": {
+          "source": "Up Down (Long)",
+          "message": "W górę i w dół (długi)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.allowed-value.c3RyaW5nOnZpYnJhdGU.display_name": {
+          "source": "Vibrate Only",
+          "message": "Tylko wibracje"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.desc": {
+          "source": "The sound to play when the notification arrives. Choose from predefined Pushover sounds.",
+          "message": "Dźwięk odtwarzany po nadejściu powiadomienia. Wybierz spośród wstępnie zdefiniowanych dźwięków Pushover."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.display_name": {
+          "source": "Sound",
+          "message": "Dźwięk"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.c291bmQ.short_desc": {
+          "source": "Notification sound",
+          "message": "Dźwięk powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0x.display_name": {
+          "source": "Low (Quiet, no sound/vibration)",
+          "message": "Niski (cichy, bez dźwięku/wibracji)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50Oi0y.display_name": {
+          "source": "Lowest (No notification/alert)",
+          "message": "Najniższy (brak powiadomienia/alertu)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjA.display_name": {
+          "source": "Normal",
+          "message": "Normalny"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.allowed-value.aW50OjE.display_name": {
+          "source": "High (Bypass quiet hours)",
+          "message": "Wysoki (pomija godziny ciszy)"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.desc": {
+          "source": "Controls how the notification is delivered. Lowest shows no alert, Low is quiet, Normal is default, High bypasses quiet hours.",
+          "message": "Określa sposób dostarczania powiadomienia. Najniższy nie wyświetla alertu, Niski jest cichy, Normalny jest domyślny, Wysoki pomija godziny ciszy."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.display_name": {
+          "source": "Priority",
+          "message": "Priorytet"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.cHJpb3JpdHk.short_desc": {
+          "source": "Notification priority level",
+          "message": "Poziom priorytetu powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.desc": {
+          "source": "The title displayed above the message. Maximum 250 characters. Defaults to your application name if not specified.",
+          "message": "Tytuł wyświetlany nad wiadomością. Maksymalnie 250 znaków. Jeśli nie zostanie podany, domyślnie przyjmuje nazwę aplikacji."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "Tytuł"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGl0bGU.short_desc": {
+          "source": "Optional title for the notification",
+          "message": "Opcjonalny tytuł powiadomienia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.desc": {
+          "source": "Unix timestamp to display as the message time, useful for delayed or batched notifications.",
+          "message": "Znacznik czasu Unix wyświetlany jako czas wiadomości, przydatny w przypadku powiadomień opóźnionych lub zbiorczych."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.display_name": {
+          "source": "Timestamp",
+          "message": "Znacznik czasu"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dGltZXN0YW1w.short_desc": {
+          "source": "Override message timestamp",
+          "message": "Zastąp znacznik czasu wiadomości"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.desc": {
+          "source": "Number of seconds before the message is automatically deleted from devices. Useful for time-sensitive notifications.",
+          "message": "Liczba sekund przed automatycznym usunięciem wiadomości z urządzeń. Przydatne w przypadku powiadomień zależnych od czasu."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.display_name": {
+          "source": "Time to Live",
+          "message": "Czas życia"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dHRs.short_desc": {
+          "source": "Message expiration time in seconds",
+          "message": "Czas wygaśnięcia wiadomości w sekundach"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.desc": {
+          "source": "A URL to include with the notification. Maximum 512 characters.",
+          "message": "Adres URL do dołączenia do powiadomienia. Maksymalnie 512 znaków."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.display_name": {
+          "source": "URL",
+          "message": "URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJs.short_desc": {
+          "source": "Supplementary URL",
+          "message": "Dodatkowy adres URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.desc": {
+          "source": "Display text for the URL link. Maximum 100 characters.",
+          "message": "Wyświetlany tekst łącza URL. Maksymalnie 100 znaków."
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.display_name": {
+          "source": "URL Title",
+          "message": "Tytuł adresu URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.option.dXJsX3RpdGxl.short_desc": {
+          "source": "Title for the URL",
+          "message": "Tytuł dla adresu URL"
+        },
+        "app.UHVzaG92ZXI.action.cHVzaF9ub3RpZmljYXRpb24.short_desc": {
+          "source": "Send a push notification to a user or group",
+          "message": "Wyślij powiadomienie push do użytkownika lub grupy"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.desc": {
+          "source": "Verify that a user or group key is valid and retrieve the list of registered devices. Useful for confirming credentials before sending notifications.",
+          "message": "Sprawdź, czy klucz użytkownika lub grupy jest prawidłowy, i pobierz listę zarejestrowanych urządzeń. Przydatne do potwierdzania danych uwierzytelniających przed wysłaniem powiadomień."
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.display_name": {
+          "source": "Validate User",
+          "message": "Zweryfikuj użytkownika"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.desc": {
+          "source": "Optionally specify a device name to validate that it exists for this user.",
+          "message": "Opcjonalnie podaj nazwę urządzenia, aby zweryfikować, czy istnieje ono dla tego użytkownika."
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.display_name": {
+          "source": "Device",
+          "message": "Urządzenie"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.option.ZGV2aWNl.short_desc": {
+          "source": "Validate a specific device",
+          "message": "Zweryfikuj określone urządzenie"
+        },
+        "app.UHVzaG92ZXI.action.dmFsaWRhdGVfdXNlcg.short_desc": {
+          "source": "Validate a user or group key and list devices",
+          "message": "Zweryfikuj klucz użytkownika lub grupy i wylistuj urządzenia"
+        },
+        "app.UHVzaG92ZXI.desc": {
+          "source": "Pushover makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop. Send notifications for urgent alerts, system monitoring, or any automated messaging needs.",
+          "message": "Pushover ułatwia otrzymywanie powiadomień w czasie rzeczywistym na urządzeniach z systemem Android, iPhone, iPad oraz na komputerze. Wysyłaj powiadomienia dotyczące pilnych alertów, monitorowania systemu lub wszelkich zautomatyzowanych wiadomości."
+        },
+        "app.UHVzaG92ZXI.display_name": {
+          "source": "Pushover",
+          "message": "Pushover"
+        },
+        "app.UHVzaG92ZXI.short_desc": {
+          "source": "Send push notifications to mobile devices and desktops",
+          "message": "Wysyłaj powiadomienia push na urządzenia mobilne i komputery"
+        }
+      }
+    }
+  }
+}

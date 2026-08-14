@@ -1,0 +1,1133 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"BambooHR\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"BambooHR\""
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Créer des enregistrements"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"BambooHR\"",
+          "message": "Créer de nouveaux enregistrements dans la table donnée dans l'application \"BambooHR\""
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.desc": {
+          "source": "Creates a new employee record in BambooHR. At minimum, firstName and lastName are required. The action dynamically presents all available fields based on your BambooHR configuration, including custom fields.",
+          "message": "Crée un nouvel enregistrement d'employé dans BambooHR. Au minimum, firstName et lastName sont requis. L'action présente dynamiquement tous les champs disponibles en fonction de votre configuration BambooHR, y compris les champs personnalisés."
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.display_name": {
+          "source": "Create Employee",
+          "message": "Créer un employé"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.desc": {
+          "source": "Provide values for the employee fields. The available fields are dynamically loaded from your BambooHR account and include both standard and custom fields. firstName and lastName are required.",
+          "message": "Fournir des valeurs pour les champs de l'employé. Les champs disponibles sont chargés dynamiquement depuis votre compte BambooHR et incluent à la fois des champs standard et personnalisés. firstName et lastName sont requis."
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
+          "source": "Employee Data",
+          "message": "Données de l'employé"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
+          "source": "The data for the new employee",
+          "message": "Les données du nouvel employé"
+        },
+        "app.QmFtYm9vSFI.action.Y3JlYXRlX2VtcGxveWVl.short_desc": {
+          "source": "Create a new employee in BambooHR",
+          "message": "Créer un nouvel employé dans BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.desc": {
+          "source": "Retrieves all company files organized by category. Returns file metadata including name, size, upload date, and sharing status.",
+          "message": "Récupère tous les fichiers d'entreprise organisés par catégorie. Renvoie les métadonnées des fichiers, y compris le nom, la taille, la date de téléchargement et le statut de partage."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.display_name": {
+          "source": "Get All Company Files",
+          "message": "Obtenir tous les fichiers d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9jb21wYW55X2ZpbGVz.short_desc": {
+          "source": "List all company files",
+          "message": "Lister tous les fichiers d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.desc": {
+          "source": "Retrieves all files associated with a specific employee, organized by category. Returns file metadata including name, size, upload date, and sharing status.",
+          "message": "Récupère tous les fichiers associés à un employé spécifique, organisés par catégorie. Renvoie les métadonnées des fichiers, y compris le nom, la taille, la date de téléchargement et le statut de partage."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.display_name": {
+          "source": "Get All Employee Files",
+          "message": "Obtenir tous les fichiers de l'employé"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose files you want to retrieve.",
+          "message": "L'ID de l'employé dont vous souhaitez récupérer les fichiers."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee to get files for",
+          "message": "L'employé pour lequel obtenir des fichiers"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2FsbF9lbXBsb3llZV9maWxlcw.short_desc": {
+          "source": "List all files for an employee",
+          "message": "Lister tous les fichiers d'un employé"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.desc": {
+          "source": "Fetches detailed data for a single employee in BambooHR by their ID. Returns all requested fields with dynamically loaded field types. You can specify which fields to retrieve or fetch all available fields.",
+          "message": "Récupère des données détaillées pour un employé unique dans BambooHR à l'aide de son ID. Renvoie tous les champs demandés avec des types de champs chargés dynamiquement. Vous pouvez spécifier les champs à récupérer ou récupérer tous les champs disponibles."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.display_name": {
+          "source": "Get Employee",
+          "message": "Obtenir un employé"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Enter the unique identifier of the employee you want to fetch. Use 0 to retrieve the employee associated with your API key.",
+          "message": "Saisir l'identifiant unique de l'employé que vous souhaitez récupérer. Utilisez 0 pour récupérer l'employé associé à votre clé API."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The ID of the employee to retrieve",
+          "message": "L'ID de l'employé à récupérer"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.desc": {
+          "source": "Select which fields to retrieve for the employee. Leave empty to retrieve all available fields (up to 400 fields).",
+          "message": "Sélectionner les champs à récupérer pour l'employé. Laissez vide pour récupérer tous les champs disponibles (jusqu'à 400 champs)."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve",
+          "message": "Champs spécifiques à récupérer"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X2VtcGxveWVl.short_desc": {
+          "source": "Retrieve a single employee by ID",
+          "message": "Récupérer un employé unique par son ID"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.desc": {
+          "source": "Retrieves a list of employees who are out (vacation, sick leave, etc.) and company holidays for a given date range. If no dates are specified, returns the current day plus the next 14 days.",
+          "message": "Récupère une liste d'employés absents (congés, congé maladie, etc.) et les jours fériés de l'entreprise pour une plage de dates donnée. Si aucune date n'est spécifiée, renvoie le jour actuel ainsi que les 14 jours suivants."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.display_name": {
+          "source": "Get Who's Out",
+          "message": "Obtenir les absences"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.desc": {
+          "source": "The end date for the query. Defaults to 14 days from the start date if not specified.",
+          "message": "La date de fin pour la requête. Par défaut 14 jours après la date de début si elle n'est pas spécifiée."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Date de fin"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.ZW5kX2RhdGU.short_desc": {
+          "source": "End of the date range",
+          "message": "Fin de la plage de dates"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "The start date for the query. Defaults to today if not specified.",
+          "message": "La date de début pour la requête. Par défaut aujourd'hui si elle n'est pas spécifiée."
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Date de début"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Start of the date range",
+          "message": "Début de la plage de dates"
+        },
+        "app.QmFtYm9vSFI.action.Z2V0X3dob3Nfb3V0.short_desc": {
+          "source": "Get a summary of employees who are out",
+          "message": "Obtenir un résumé des employés absents"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.desc": {
+          "source": "Downloads a specific company file. Returns the file content as base64-encoded binary along with the MIME type.",
+          "message": "Télécharge un fichier d'entreprise spécifique. Renvoie le contenu du fichier sous forme de binaire codé en base64 ainsi que le type MIME."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.display_name": {
+          "source": "Download Company File",
+          "message": "Télécharger le fichier de l'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to download.",
+          "message": "L'ID du fichier d'entreprise à télécharger."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to download",
+          "message": "Le fichier à télécharger"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfY29tcGFueV9maWxl.short_desc": {
+          "source": "Download a company file",
+          "message": "Télécharger un fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.desc": {
+          "source": "Downloads a specific file from an employee record. Returns the file content as base64-encoded binary along with the MIME type.",
+          "message": "Télécharge un fichier spécifique à partir d'un dossier d'employé. Renvoie le contenu du fichier sous forme de binaire encodé en base64 ainsi que le type MIME."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.display_name": {
+          "source": "Download Employee File",
+          "message": "Télécharger le fichier de l'employé"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to download.",
+          "message": "L'ID de l'employé dont vous souhaitez télécharger le fichier."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "L'employé qui possède le fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to download.",
+          "message": "L'ID du fichier à télécharger."
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to download",
+          "message": "Le fichier à télécharger"
+        },
+        "app.QmFtYm9vSFI.action.ZG93bmxvYWRfZW1wbG95ZWVfZmlsZQ.short_desc": {
+          "source": "Download an employee file",
+          "message": "Télécharger un fichier d'employé"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Permanently deletes a company file. This action cannot be undone.",
+          "message": "Supprime définitivement un fichier d'entreprise. Cette action ne peut pas être annulée."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Delete Company File",
+          "message": "Supprimer le fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to delete.",
+          "message": "L'ID du fichier d'entreprise à supprimer."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to delete",
+          "message": "Le fichier à supprimer"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Delete a company file",
+          "message": "Supprimer un fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Permanently deletes a file from an employee record. This action cannot be undone.",
+          "message": "Supprime définitivement un fichier d'un dossier d'employé. Cette action ne peut pas être annulée."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Delete Employee File",
+          "message": "Supprimer le fichier de l'employé"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to delete.",
+          "message": "L'ID de l'employé dont vous souhaitez supprimer le fichier."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "L'employé qui possède le fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to delete.",
+          "message": "L'ID du fichier à supprimer."
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to delete",
+          "message": "Le fichier à supprimer"
+        },
+        "app.QmFtYm9vSFI.action.ZGVsZXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Delete an employee file",
+          "message": "Supprimer un fichier d'employé"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.desc": {
+          "source": "Fetches a list of all employees from BambooHR. You can specify which fields to retrieve for each employee. Uses the custom report endpoint for efficient bulk retrieval.",
+          "message": "Récupère une liste de tous les employés depuis BambooHR. Vous pouvez spécifier les champs à récupérer pour chaque employé. Utilise le point de terminaison de rapport personnalisé pour une récupération groupée efficace."
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.display_name": {
+          "source": "List Employees",
+          "message": "Lister les employés"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.desc": {
+          "source": "Select which fields to retrieve for each employee. Leave empty to retrieve a default set of common fields (id, name, email, department, job title).",
+          "message": "Sélectionnez les champs à récupérer pour chaque employé. Laissez vide pour récupérer un ensemble par défaut de champs courants (id, name, email, department, job title)."
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Champs"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve for each employee",
+          "message": "Champs spécifiques à récupérer pour chaque employé"
+        },
+        "app.QmFtYm9vSFI.action.bGlzdF9lbXBsb3llZXM.short_desc": {
+          "source": "Retrieve a list of all employees",
+          "message": "Récupérer une liste de tous les employés"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **BambooHR** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuez un appel API HTTP / REST personnalisé à **BambooHR** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin d'accès URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête facultatifs, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier niveau sur cette application."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.QmFtYm9vSFI.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to BambooHR",
+          "message": "Effectuer un appel API personnalisé à BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.desc": {
+          "source": "Fires when a new active employee is added to BambooHR. Returns basic employee information including name, email, department, and job title.",
+          "message": "S'exécute lorsqu'un nouvel employé actif est ajouté à BambooHR. Renvoie les informations de base sur l'employé, notamment le nom, l'adresse e-mail, le service et le titre du poste."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.display_name": {
+          "source": "New Employee",
+          "message": "Nouvel employé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X2VtcGxveWVl.short_desc": {
+          "source": "Triggers when a new employee is created",
+          "message": "S'enclenche lorsqu'un nouvel employé est créé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.desc": {
+          "source": "Fires when a new approved time off entry appears in the Who's Out list. This includes both employee time off and company holidays.",
+          "message": "S'exécute lorsqu'une nouvelle entrée de congé approuvée apparaît dans la liste Qui est absent. Cela inclut à la fois les congés des employés et les jours fériés de l'entreprise."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.display_name": {
+          "source": "New Time Off",
+          "message": "Nouveau congé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2Zm.short_desc": {
+          "source": "Triggers when new approved time off appears",
+          "message": "S'enclenche lorsqu'un nouveau congé approuvé apparaît"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.desc": {
+          "source": "Fires when a new time off request is created in BambooHR with status \"requested\". Useful for building approval workflows or notifications.",
+          "message": "S'exécute lorsqu'une nouvelle demande de congé est créée dans BambooHR avec le statut « requested ». Utile pour créer des flux de travail d'approbation ou des notifications."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.display_name": {
+          "source": "New Time Off Request",
+          "message": "Nouvelle demande de congé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Only trigger for time off requests from a specific employee.",
+          "message": "Déclencher uniquement pour les demandes de congé d'un employé spécifique."
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "Filter by employee",
+          "message": "Filtrer par employé"
+        },
+        "app.QmFtYm9vSFI.action.bmV3X3RpbWVfb2ZmX3JlcXVlc3Q.short_desc": {
+          "source": "Triggers when a new time off request is submitted",
+          "message": "S'enclenche lorsqu'une nouvelle demande de congé est soumise"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"BambooHR\"",
+          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Rechercher des enregistrements"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"BambooHR\"",
+          "message": "Rechercher des enregistrements correspondants dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"BambooHR\"",
+          "message": "Rechercher un seul enregistrement correspondant dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Trouver un seul enregistrement"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"BambooHR\"",
+          "message": "Rechercher un seul enregistrement correspondant dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.desc": {
+          "source": "Searches time off requests in BambooHR with various filters. Returns requests matching the specified criteria including date range, employee, status, and time off type.",
+          "message": "Recherche des demandes de congé dans BambooHR avec différents filtres. Renvoie les demandes correspondant aux critères spécifiés, notamment la plage de dates, l'employé, le statut et le type de congé."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.display_name": {
+          "source": "Search Time Off Requests",
+          "message": "Rechercher des demandes de congé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Limit results to a specific employee by their ID.",
+          "message": "Limiter les résultats à un employé spécifique via son ID."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "Filter by employee",
+          "message": "Filtrer par employé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.desc": {
+          "source": "Only show time off requests on or before this date.",
+          "message": "Afficher uniquement les demandes de congé effectuées à cette date ou avant."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.display_name": {
+          "source": "End Date",
+          "message": "Date de fin"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.ZW5kX2RhdGU.short_desc": {
+          "source": "Filter by end date",
+          "message": "Filtrer par date de fin"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.desc": {
+          "source": "Only show time off requests on or after this date.",
+          "message": "Afficher uniquement les demandes de congé effectuées à cette date ou après."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.display_name": {
+          "source": "Start Date",
+          "message": "Date de début"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhcnRfZGF0ZQ.short_desc": {
+          "source": "Filter by start date",
+          "message": "Filtrer par date de début"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmFwcHJvdmVk.display_name": {
+          "source": "Approved",
+          "message": "Approuvé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmNhbmNlbGVk.display_name": {
+          "source": "Canceled",
+          "message": "Annulé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOmRlbmllZA.display_name": {
+          "source": "Denied",
+          "message": "Refusé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOnJlcXVlc3RlZA.display_name": {
+          "source": "Requested",
+          "message": "Demandé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.allowed-value.c3RyaW5nOnN1cGVyY2VkZWQ.display_name": {
+          "source": "Superceded",
+          "message": "Remplacé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.desc": {
+          "source": "Filter by one or more statuses: approved, denied, requested, canceled, superceded.",
+          "message": "Filtrer par un ou plusieurs statuts : approved, denied, requested, canceled, superceded."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.display_name": {
+          "source": "Status",
+          "message": "Statut"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.c3RhdHVz.short_desc": {
+          "source": "Filter by request status",
+          "message": "Filtrer par statut de demande"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.desc": {
+          "source": "Filter by one or more time off types configured in your BambooHR account.",
+          "message": "Filtrer par un ou plusieurs types de congés configurés dans votre compte BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.display_name": {
+          "source": "Time Off Type",
+          "message": "Type de congé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.option.dHlwZQ.short_desc": {
+          "source": "Filter by time off type",
+          "message": "Filtrer par type de congé"
+        },
+        "app.QmFtYm9vSFI.action.c2VhcmNoX3RpbWVfb2ZmX3JlcXVlc3Rz.short_desc": {
+          "source": "Search and filter time off requests",
+          "message": "Rechercher et filtrer les demandes de congé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"BambooHR\"",
+          "message": "Mettre à jour les enregistrements existants dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Mettre à jour des enregistrements"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tableau"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Le nom de la table"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"BambooHR\"",
+          "message": "Mettre à jour les enregistrements existants dans la table donnée dans l'application « BambooHR »"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Updates the metadata for an existing company file, such as name, category, or sharing settings.",
+          "message": "Met à jour les métadonnées d'un fichier d'entreprise existant, telles que le nom, la catégorie ou les paramètres de partage."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Update Company File",
+          "message": "Mettre à jour le fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.desc": {
+          "source": "Move the file to a different category.",
+          "message": "Déplacer le fichier vers une autre catégorie."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "New category",
+          "message": "Nouvelle catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the company file to update.",
+          "message": "L'identifiant du fichier d'entreprise à mettre à jour."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to update",
+          "message": "Le fichier à mettre à jour"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.desc": {
+          "source": "The new name for the file.",
+          "message": "Le nouveau nom du fichier."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.bmFtZQ.short_desc": {
+          "source": "New file name",
+          "message": "Nouveau nom de fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.desc": {
+          "source": "Whether to make this file visible to all employees.",
+          "message": "Indique s'il faut rendre ce fichier visible pour tous les employés."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
+          "source": "Share with Employees",
+          "message": "Partager avec les employés"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
+          "source": "Update sharing setting",
+          "message": "Mettre à jour le paramètre de partage"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Update company file metadata",
+          "message": "Mettre à jour les métadonnées du fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.desc": {
+          "source": "Updates an existing employee record in BambooHR. The action dynamically presents all available fields based on your BambooHR configuration. Only provide the fields you want to update.",
+          "message": "Met à jour un enregistrement d'employé existant dans BambooHR. L'action présente de façon dynamique tous les champs disponibles en fonction de votre configuration BambooHR. Renseignez uniquement les champs que vous souhaitez mettre à jour."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.display_name": {
+          "source": "Update Employee",
+          "message": "Mettre à jour l'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.desc": {
+          "source": "Provide new values for the employee fields you want to update. The available fields are dynamically loaded from your BambooHR account.",
+          "message": "Fournissez de nouvelles valeurs pour les champs d'employé que vous souhaitez mettre à jour. Les champs disponibles sont chargés dynamiquement depuis votre compte BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.display_name": {
+          "source": "Employee Data",
+          "message": "Données de l'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfZGF0YQ.short_desc": {
+          "source": "The data to update",
+          "message": "Les données à mettre à jour"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "Enter the unique identifier of the employee you want to update.",
+          "message": "Saisissez l'identifiant unique de l'employé que vous souhaitez mettre à jour."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The ID of the employee to update",
+          "message": "L'identifiant de l'employé à mettre à jour"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVl.short_desc": {
+          "source": "Update an existing employee in BambooHR",
+          "message": "Mettre à jour un employé existant dans BambooHR"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Updates the metadata for an existing employee file, such as name, category, or sharing settings.",
+          "message": "Met à jour les métadonnées d'un fichier d'employé existant, telles que le nom, la catégorie ou les paramètres de partage."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Update Employee File",
+          "message": "Mettre à jour le fichier d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.desc": {
+          "source": "Move the file to a different category.",
+          "message": "Déplacer le fichier vers une autre catégorie."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "New category",
+          "message": "Nouvelle catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee whose file you want to update.",
+          "message": "L'identifiant de l'employé dont vous souhaitez mettre à jour le fichier."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee who owns the file",
+          "message": "L'employé qui possède le fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.desc": {
+          "source": "The ID of the file to update.",
+          "message": "L'identifiant du fichier à mettre à jour."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.display_name": {
+          "source": "File ID",
+          "message": "ID du fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.ZmlsZV9pZA.short_desc": {
+          "source": "The file to update",
+          "message": "Le fichier à mettre à jour"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.desc": {
+          "source": "The new name for the file.",
+          "message": "Le nouveau nom du fichier."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.display_name": {
+          "source": "Name",
+          "message": "Nom"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.bmFtZQ.short_desc": {
+          "source": "New file name",
+          "message": "Nouveau nom de fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.desc": {
+          "source": "Whether to make this file visible to the employee.",
+          "message": "Indique s'il faut rendre ce fichier visible pour l'employé."
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
+          "source": "Share with Employee",
+          "message": "Partager avec l'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
+          "source": "Update sharing setting",
+          "message": "Mettre à jour le paramètre de partage"
+        },
+        "app.QmFtYm9vSFI.action.dXBkYXRlX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Update employee file metadata",
+          "message": "Mettre à jour les métadonnées du fichier d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.desc": {
+          "source": "Uploads a new file to the company files in BambooHR. The file will be placed in the specified category.",
+          "message": "Téléverse un nouveau fichier dans les fichiers d'entreprise dans BambooHR. Le fichier sera placé dans la catégorie spécifiée."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.display_name": {
+          "source": "Upload Company File",
+          "message": "Téléverser un fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.desc": {
+          "source": "The category to place the file in. Categories are configured in BambooHR.",
+          "message": "La catégorie dans laquelle placer le fichier. Les catégories sont configurées dans BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "File category",
+          "message": "Catégorie de fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.desc": {
+          "source": "The file to upload. Must include name, MIME type, and base64-encoded content.",
+          "message": "Le fichier à téléverser. Doit inclure le nom, le type MIME et le contenu encodé en base64."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Le fichier à téléverser"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.desc": {
+          "source": "Whether to make this file visible to all employees.",
+          "message": "Indique s'il faut rendre ce fichier visible pour tous les employés."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.display_name": {
+          "source": "Share with Employees",
+          "message": "Partager avec les employés"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.option.c2hhcmVfd2l0aF9lbXBsb3llZXM.short_desc": {
+          "source": "Make file visible to employees",
+          "message": "Rendre le fichier visible pour les employés"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2NvbXBhbnlfZmlsZQ.short_desc": {
+          "source": "Upload a company file",
+          "message": "Téléverser un fichier d'entreprise"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.desc": {
+          "source": "Uploads a new file to an employee record in BambooHR. The file will be placed in the specified category.",
+          "message": "Téléverse un nouveau fichier dans l'enregistrement d'un employé dans BambooHR. Le fichier sera placé dans la catégorie spécifiée."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.display_name": {
+          "source": "Upload Employee File",
+          "message": "Téléverser un fichier d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.desc": {
+          "source": "The category to place the file in. Categories are configured in BambooHR.",
+          "message": "La catégorie dans laquelle placer le fichier. Les catégories sont configurées dans BambooHR."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.display_name": {
+          "source": "Category",
+          "message": "Catégorie"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.Y2F0ZWdvcnk.short_desc": {
+          "source": "File category",
+          "message": "Catégorie de fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.desc": {
+          "source": "The ID of the employee to associate the file with.",
+          "message": "L'identifiant de l'employé auquel associer le fichier."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.display_name": {
+          "source": "Employee ID",
+          "message": "ID d'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZW1wbG95ZWVfaWQ.short_desc": {
+          "source": "The employee to upload the file to",
+          "message": "L'employé auquel téléverser le fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "The file to upload. Must include name, MIME type, and base64-encoded content.",
+          "message": "Le fichier à téléverser. Doit inclure le nom, le type MIME et le contenu encodé en base64."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Fichier"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Le fichier à téléverser"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.desc": {
+          "source": "Whether to make this file visible to the employee in their self-service portal.",
+          "message": "Indique s'il faut rendre ce fichier visible pour l'employé dans son portail libre-service."
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.display_name": {
+          "source": "Share with Employee",
+          "message": "Partager avec l'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.option.c2hhcmVfd2l0aF9lbXBsb3llZQ.short_desc": {
+          "source": "Make file visible to employee",
+          "message": "Rendre le fichier visible pour l'employé"
+        },
+        "app.QmFtYm9vSFI.action.dXBsb2FkX2VtcGxveWVlX2ZpbGU.short_desc": {
+          "source": "Upload a file to an employee",
+          "message": "Téléverser un fichier pour un employé"
+        },
+        "app.QmFtYm9vSFI.desc": {
+          "source": "The BambooHR integration provides comprehensive access to your HR operations. Create, read, update, and list employees with dynamic field support. The integration automatically discovers available fields in your BambooHR account, including custom fields, and provides intelligent type handling for dates, lists, and other field types.",
+          "message": "L'intégration BambooHR offre un accès complet à vos opérations RH. Créez, lisez, mettez à jour et listez les employés avec la prise en charge dynamique des champs. L'intégration découvre automatiquement les champs disponibles dans votre compte BambooHR, y compris les champs personnalisés, et propose une gestion intelligente des types pour les dates, listes et autres types de champs."
+        },
+        "app.QmFtYm9vSFI.display_name": {
+          "source": "BambooHR",
+          "message": "BambooHR"
+        },
+        "app.QmFtYm9vSFI.short_desc": {
+          "source": "Connect to BambooHR to manage employee data with powerful automation",
+          "message": "Connectez-vous à BambooHR pour gérer les données des employés avec une automatisation puissante"
+        }
+      }
+    }
+  }
+}

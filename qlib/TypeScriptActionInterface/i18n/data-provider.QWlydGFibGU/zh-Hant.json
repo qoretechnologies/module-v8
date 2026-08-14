@@ -1,0 +1,2633 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "zh-Hant": {
+      "messages": {
+        "app.QWlydGFibGU.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中建立新記錄"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "建立記錄"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中建立新記錄"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.desc": {
+          "source": "Create a new record in a specified Airtable table with the provided field values",
+          "message": "使用提供的欄位值在指定的 Airtable 資料表中建立新記錄"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.display_name": {
+          "source": "Create Record",
+          "message": "建立記錄"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base where you want to create the new record",
+          "message": "選擇要建立新記錄的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable Base 的 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base where the record will be created",
+          "message": "選擇 Base 內要建立記錄的特定資料表"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "資料表的 ID"
+        },
+        "app.QWlydGFibGU.action.Y3JlYXRlX3JlY29yZA.short_desc": {
+          "source": "Create a new record in Airtable",
+          "message": "在 Airtable 中建立新記錄"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.desc": {
+          "source": "Get a single record by its ID from a specified Airtable table",
+          "message": "依 ID 從指定的 Airtable 資料表中取得單一記錄"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.display_name": {
+          "source": "Get Record",
+          "message": "取得記錄"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table with the record you want to retrieve",
+          "message": "選擇包含您要檢索之記錄資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable Base 的 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Select or enter the ID of the specific record you want to retrieve",
+          "message": "選擇或輸入您要擷取的特定記錄 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to retrieve",
+          "message": "要擷取的記錄 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base that contains the record",
+          "message": "選擇 Base 中包含該記錄的特定資料表"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "資料表的 ID"
+        },
+        "app.QWlydGFibGU.action.Z2V0X3JlY29yZA.short_desc": {
+          "source": "Retrieve a specific record from Airtable",
+          "message": "從 Airtable 擷取特定記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Airtable\"",
+          "message": "刪除應用程式「Airtable」中指定資料表的記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "刪除記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Airtable\"",
+          "message": "刪除應用程式「Airtable」中指定資料表的記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.desc": {
+          "source": "Permanently delete a specific record from an Airtable table",
+          "message": "從 Airtable 資料表中永久刪除特定記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.display_name": {
+          "source": "Delete Record",
+          "message": "刪除記錄"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table with the record to delete",
+          "message": "選擇包含要刪除記錄之資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable Base 的 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.desc": {
+          "source": "Select or enter the ID of the specific record you want to delete",
+          "message": "選擇或輸入您要刪除的特定記錄 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.display_name": {
+          "source": "Record ID",
+          "message": "記錄 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.cmVjb3JkX2lk.short_desc": {
+          "source": "The ID of the record to delete",
+          "message": "要刪除的記錄 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base that contains the record to delete",
+          "message": "選擇 Base 中包含要刪除記錄的特定資料表"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table",
+          "message": "資料表的 ID"
+        },
+        "app.QWlydGFibGU.action.ZGVsZXRlX3JlY29yZA.short_desc": {
+          "source": "Delete a record from Airtable",
+          "message": "從 Airtable 刪除記錄"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.desc": {
+          "source": "Retrieve a list of all tables within a specified Airtable base",
+          "message": "擷取指定 Airtable Base 中所有資料表的清單"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.display_name": {
+          "source": "List Tables",
+          "message": "列出資料表"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base for which you want to list all available tables",
+          "message": "選擇您想要列出所有可用資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable Base 的 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF90YWJsZXM.short_desc": {
+          "source": "List tables in an Airtable base",
+          "message": "列出 Airtable Base 中的資料表"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.desc": {
+          "source": "Retrieve a list of all Airtable bases that are accessible with the current authentication",
+          "message": "擷取使用目前驗證可存取的所有 Airtable Base 清單"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.display_name": {
+          "source": "List Bases",
+          "message": "列出 Base"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.desc": {
+          "source": "Use the offset from a previous response to retrieve the next page of bases",
+          "message": "使用上次回應的偏移量來擷取下一頁的 Base"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Pagination offset",
+          "message": "分頁偏移量"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9iYXNlcw.short_desc": {
+          "source": "List all accessible Airtable bases",
+          "message": "列出所有可存取的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "List and filter records from a specified Airtable table with support for sorting, filtering, pagination, and field selection",
+          "message": "列出並篩選指定 Airtable 資料表中的記錄，支援排序、篩選、分頁與欄位選擇"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "列出記錄"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.allowed-value.c3RyaW5nOnN0cmluZw.display_name": {
+          "source": "String",
+          "message": "String"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.desc": {
+          "source": "Choose how cell values should be formatted in the response",
+          "message": "選擇回應中儲存格值的格式化方式"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.display_name": {
+          "source": "Cell Format",
+          "message": "儲存格格式"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.Y2VsbF9mb3JtYXQ.short_desc": {
+          "source": "Format for cell values",
+          "message": "儲存格值的格式"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to query",
+          "message": "選擇包含您要查詢資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base",
+          "message": "Airtable Base 的 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "Select which fields to include in the response. If not specified, all fields will be returned",
+          "message": "選擇回應中要包含的欄位。若未指定，將傳回所有欄位"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "欄位"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specific fields to retrieve",
+          "message": "要擷取的特定欄位"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.desc": {
+          "source": "Configure filtering criteria to limit which records are returned",
+          "message": "設定篩選條件以限制傳回的記錄"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "濾鏡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter configuration",
+          "message": "篩選設定"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.desc": {
+          "source": "Use the offset from a previous response to retrieve the next page of records",
+          "message": "使用先前回應中的偏移量來擷取下一頁記錄"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "偏移量"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.short_desc": {
+          "source": "Record offset for pagination",
+          "message": "分頁記錄偏移量"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.desc": {
+          "source": "Configure how to sort the returned records",
+          "message": "設定傳回記錄的排序方式"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "排序"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.c29ydA.short_desc": {
+          "source": "Sort configuration",
+          "message": "排序設定"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.desc": {
+          "source": "Specify how many records to retrieve per page (maximum 100)",
+          "message": "指定每頁擷取的記錄數量（最多 100 筆）"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.display_name": {
+          "source": "Page Size",
+          "message": "頁面大小"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cGFnZV9zaXpl.short_desc": {
+          "source": "Number of records per page",
+          "message": "每頁記錄數"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.desc": {
+          "source": "When enabled, field data will be returned using field IDs instead of field names",
+          "message": "啟用時，欄位資料將使用欄位 ID 而非欄位名稱傳回"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.display_name": {
+          "source": "Return Fields by Field ID",
+          "message": "按欄位 ID 傳回欄位"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.cmV0dXJuX2ZpZWxkc19ieV9maWVsZF9pZA.short_desc": {
+          "source": "Return field IDs instead of names",
+          "message": "傳回欄位 ID 而非名稱"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base from which to retrieve records",
+          "message": "選擇 Base 中要擷取記錄的特定資料表"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to query",
+          "message": "要查詢的資料表 ID"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL01hZGVpcmE.display_name": {
+          "source": "Atlantic/Madeira",
+          "message": "大西洋/馬德拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0F6b3Jlcw.display_name": {
+          "source": "Atlantic/Azores",
+          "message": "大西洋/亞速爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0Jlcm11ZGE.display_name": {
+          "source": "Atlantic/Bermuda",
+          "message": "大西洋/百慕達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0NhbmFyeQ.display_name": {
+          "source": "Atlantic/Canary",
+          "message": "大西洋/加那利"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0NhcGVfVmVyZGU.display_name": {
+          "source": "Atlantic/Cape Verde",
+          "message": "大西洋/維德角"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL0Zhcm9l.display_name": {
+          "source": "Atlantic/Faroe",
+          "message": "大西洋/法羅"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1JleWtqYXZpaw.display_name": {
+          "source": "Atlantic/Reykjavik",
+          "message": "大西洋/雷克雅維克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1N0X0hlbGVuYQ.display_name": {
+          "source": "Atlantic/St Helena",
+          "message": "大西洋/聖赫勒拿"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1N0YW5sZXk.display_name": {
+          "source": "Atlantic/Stanley",
+          "message": "大西洋/史丹利"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF0bGFudGljL1NvdXRoX0dlb3JnaWE.display_name": {
+          "source": "Atlantic/South Georgia",
+          "message": "大西洋/南喬治亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9BZGVsYWlkZQ.display_name": {
+          "source": "Australia/Adelaide",
+          "message": "澳洲/阿德萊德"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Ccm9rZW5fSGlsbA.display_name": {
+          "source": "Australia/Broken Hill",
+          "message": "澳洲/布羅肯希爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9CcmlzYmFuZQ.display_name": {
+          "source": "Australia/Brisbane",
+          "message": "澳洲/布里斯本"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9DdXJyaWU.display_name": {
+          "source": "Australia/Currie",
+          "message": "澳洲/居里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9EYXJ3aW4.display_name": {
+          "source": "Australia/Darwin",
+          "message": "澳洲/達爾文"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9FdWNsYQ.display_name": {
+          "source": "Australia/Eucla",
+          "message": "澳洲/尤克拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Ib2JhcnQ.display_name": {
+          "source": "Australia/Hobart",
+          "message": "澳洲/霍巴特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9MaW5kZW1hbg.display_name": {
+          "source": "Australia/Lindeman",
+          "message": "澳洲/林德曼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9Mb3JkX0hvd2U.display_name": {
+          "source": "Australia/Lord Howe",
+          "message": "澳洲/豪勳爵島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9NZWxib3VybmU.display_name": {
+          "source": "Australia/Melbourne",
+          "message": "澳洲/墨爾本"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9QZXJ0aA.display_name": {
+          "source": "Australia/Perth",
+          "message": "澳洲/伯斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkF1c3RyYWxpYS9TeWRuZXk.display_name": {
+          "source": "Australia/Sydney",
+          "message": "澳洲/雪梨"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BY2NyYQ.display_name": {
+          "source": "Africa/Accra",
+          "message": "非洲/阿克拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BYmlkamFu.display_name": {
+          "source": "Africa/Abidjan",
+          "message": "非洲/阿比尚"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BZGRpc19BYmFiYQ.display_name": {
+          "source": "Africa/Addis Ababa",
+          "message": "非洲/亞的斯亞貝巴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9BbGdpZXJz.display_name": {
+          "source": "Africa/Algiers",
+          "message": "非洲/阿爾及爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Bc21hcmE.display_name": {
+          "source": "Africa/Asmara",
+          "message": "非洲/阿斯馬拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW1ha28.display_name": {
+          "source": "Africa/Bamako",
+          "message": "非洲/巴馬科"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW5ndWk.display_name": {
+          "source": "Africa/Bangui",
+          "message": "非洲/班基"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CYW5qdWw.display_name": {
+          "source": "Africa/Banjul",
+          "message": "非洲/班珠爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CaXNzYXU.display_name": {
+          "source": "Africa/Bissau",
+          "message": "非洲/比紹"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CbGFudHlyZQ.display_name": {
+          "source": "Africa/Blantyre",
+          "message": "非洲/布蘭泰爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CcmF6emF2aWxsZQ.display_name": {
+          "source": "Africa/Brazzaville",
+          "message": "非洲/布拉柴維爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9CdWp1bWJ1cmE.display_name": {
+          "source": "Africa/Bujumbura",
+          "message": "非洲/布瓊布拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DYWlybw.display_name": {
+          "source": "Africa/Cairo",
+          "message": "非洲/開羅"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DYXNhYmxhbmNh.display_name": {
+          "source": "Africa/Casablanca",
+          "message": "非洲/卡薩布蘭卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9DZXV0YQ.display_name": {
+          "source": "Africa/Ceuta",
+          "message": "非洲/休達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Db25ha3J5.display_name": {
+          "source": "Africa/Conakry",
+          "message": "非洲/柯納克里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9EYWthcg.display_name": {
+          "source": "Africa/Dakar",
+          "message": "非洲/達卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9EYXJfZXNfU2FsYWFt.display_name": {
+          "source": "Africa/Dar es Salaam",
+          "message": "非洲/達累斯薩拉姆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Eamlib3V0aQ.display_name": {
+          "source": "Africa/Djibouti",
+          "message": "非洲/吉布地"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Eb3VhbGE.display_name": {
+          "source": "Africa/Douala",
+          "message": "非洲/杜阿拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9FbF9BYWl1bg.display_name": {
+          "source": "Africa/El Aaiun",
+          "message": "非洲/阿尤恩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9GcmVldG93bg.display_name": {
+          "source": "Africa/Freetown",
+          "message": "非洲/自由城"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9HYWJvcm9uZQ.display_name": {
+          "source": "Africa/Gaborone",
+          "message": "非洲/嘉伯隆里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9IYXJhcmU.display_name": {
+          "source": "Africa/Harare",
+          "message": "非洲/哈拉雷"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Kb2hhbm5lc2J1cmc.display_name": {
+          "source": "Africa/Johannesburg",
+          "message": "非洲/約翰尼斯堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9KdWJh.display_name": {
+          "source": "Africa/Juba",
+          "message": "非洲/朱巴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LYW1wYWxh.display_name": {
+          "source": "Africa/Kampala",
+          "message": "非洲/坎帕拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaGFydG91bQ.display_name": {
+          "source": "Africa/Khartoum",
+          "message": "非洲/喀土穆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaW5zaGFzYQ.display_name": {
+          "source": "Africa/Kinshasa",
+          "message": "非洲/金沙薩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9LaWdhbGk.display_name": {
+          "source": "Africa/Kigali",
+          "message": "非洲/基加利"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MYWdvcw.display_name": {
+          "source": "Africa/Lagos",
+          "message": "非洲/拉哥斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MaWJyZXZpbGxl.display_name": {
+          "source": "Africa/Libreville",
+          "message": "非洲/利伯維爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Mb21l.display_name": {
+          "source": "Africa/Lome",
+          "message": "非洲/洛美"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdWFuZGE.display_name": {
+          "source": "Africa/Luanda",
+          "message": "非洲/羅安達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdWJ1bWJhc2hp.display_name": {
+          "source": "Africa/Lubumbashi",
+          "message": "非洲/盧班巴希"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9MdXNha2E.display_name": {
+          "source": "Africa/Lusaka",
+          "message": "非洲/盧薩卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYWxhYm8.display_name": {
+          "source": "Africa/Malabo",
+          "message": "非洲/馬拉博"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYXB1dG8.display_name": {
+          "source": "Africa/Maputo",
+          "message": "非洲/馬普托"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYXNlcnU.display_name": {
+          "source": "Africa/Maseru",
+          "message": "非洲/馬塞盧"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9NYmFiYW5l.display_name": {
+          "source": "Africa/Mbabane",
+          "message": "非洲/姆巴巴內"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Nb25yb3ZpYQ.display_name": {
+          "source": "Africa/Monrovia",
+          "message": "非洲/蒙羅維亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Nb2dhZGlzaHU.display_name": {
+          "source": "Africa/Mogadishu",
+          "message": "非洲/摩加迪沙"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OYWlyb2Jp.display_name": {
+          "source": "Africa/Nairobi",
+          "message": "非洲/奈洛比"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OZGphbWVuYQ.display_name": {
+          "source": "Africa/Ndjamena",
+          "message": "非洲/恩將納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9OaWFtZXk.display_name": {
+          "source": "Africa/Niamey",
+          "message": "非洲/尼阿美"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Ob3Vha2Nob3R0.display_name": {
+          "source": "Africa/Nouakchott",
+          "message": "非洲/努瓦克肖特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9PdWFnYWRvdWdvdQ.display_name": {
+          "source": "Africa/Ouagadougou",
+          "message": "非洲/瓦加杜古"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Qb3J0by1Ob3Zv.display_name": {
+          "source": "Africa/Porto-Novo",
+          "message": "非洲/波多諾伏"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9TYW9fVG9tZQ.display_name": {
+          "source": "Africa/Sao Tome",
+          "message": "非洲/聖多美"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9Ucmlwb2xp.display_name": {
+          "source": "Africa/Tripoli",
+          "message": "非洲/的黎波里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9UdW5pcw.display_name": {
+          "source": "Africa/Tunis",
+          "message": "非洲/突尼斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFmcmljYS9XaW5kaG9law.display_name": {
+          "source": "Africa/Windhoek",
+          "message": "非洲/溫荷克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ29zdGFfUmljYQ.display_name": {
+          "source": "America/Costa Rica",
+          "message": "美洲/哥斯大黎加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2F5ZW5uZQ.display_name": {
+          "source": "America/Cayenne",
+          "message": "美洲/凱宴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2F5bWFu.display_name": {
+          "source": "America/Cayman",
+          "message": "美洲/開曼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FtYnJpZGdlX0JheQ.display_name": {
+          "source": "America/Cambridge Bay",
+          "message": "美洲/劍橋灣"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FtcG9fR3JhbmRl.display_name": {
+          "source": "America/Campo Grande",
+          "message": "美洲/大坎普"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FuY3Vu.display_name": {
+          "source": "America/Cancun",
+          "message": "美洲/坎昆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2FyYWNhcw.display_name": {
+          "source": "America/Caracas",
+          "message": "美洲/卡拉卡斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2hpY2Fnbw.display_name": {
+          "source": "America/Chicago",
+          "message": "美洲/芝加哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ2hpaHVhaHVh.display_name": {
+          "source": "America/Chihuahua",
+          "message": "美洲/奇瓦瓦"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3Jlc3Rvbg.display_name": {
+          "source": "America/Creston",
+          "message": "美洲/克雷斯頓"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3VpYWJh.display_name": {
+          "source": "America/Cuiaba",
+          "message": "美洲/庫亞巴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQ3VyYWNhbw.display_name": {
+          "source": "America/Curacao",
+          "message": "美洲/庫拉索"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW50aWd1YQ.display_name": {
+          "source": "America/Antigua",
+          "message": "美洲/安地卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW5jaG9yYWdl.display_name": {
+          "source": "America/Anchorage",
+          "message": "美洲/安克拉治"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQW5ndWlsbGE.display_name": {
+          "source": "America/Anguilla",
+          "message": "美洲/安圭拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQWRhaw.display_name": {
+          "source": "America/Adak",
+          "message": "美洲/埃達克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJ1YmE.display_name": {
+          "source": "America/Aruba",
+          "message": "美洲/阿魯巴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJhZ3VhaW5h.display_name": {
+          "source": "America/Araguaina",
+          "message": "美洲/阿拉瓜伊納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL01lbmRvemE.display_name": {
+          "source": "America/Argentina/Mendoza",
+          "message": "美洲/阿根廷/門多薩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0J1ZW5vc19BaXJlcw.display_name": {
+          "source": "America/Argentina/Buenos Aires",
+          "message": "美洲/阿根廷/布宜諾斯艾利斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0NhdGFtYXJjYQ.display_name": {
+          "source": "America/Argentina/Catamarca",
+          "message": "美洲/阿根廷/卡塔馬卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0NvcmRvYmE.display_name": {
+          "source": "America/Argentina/Cordoba",
+          "message": "美洲/阿根廷/哥多華"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0p1anV5.display_name": {
+          "source": "America/Argentina/Jujuy",
+          "message": "美洲/阿根廷/胡胡伊"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL0xhX1Jpb2ph.display_name": {
+          "source": "America/Argentina/La Rioja",
+          "message": "美洲/阿根廷/拉里奧哈"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Jpb19HYWxsZWdvcw.display_name": {
+          "source": "America/Argentina/Rio Gallegos",
+          "message": "美洲/阿根廷/里奧加耶哥斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1NhbHRh.display_name": {
+          "source": "America/Argentina/Salta",
+          "message": "美洲/阿根廷/薩爾塔"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Nhbl9KdWFu.display_name": {
+          "source": "America/Argentina/San Juan",
+          "message": "美洲/阿根廷/聖胡安"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1Nhbl9MdWlz.display_name": {
+          "source": "America/Argentina/San Luis",
+          "message": "美洲/阿根廷/聖路易斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1R1Y3VtYW4.display_name": {
+          "source": "America/Argentina/Tucuman",
+          "message": "美洲/阿根廷/圖庫曼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXJnZW50aW5hL1VzaHVhaWE.display_name": {
+          "source": "America/Argentina/Ushuaia",
+          "message": "美洲/阿根廷/烏斯懷亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXN1bmNpb24.display_name": {
+          "source": "America/Asuncion",
+          "message": "美洲/亞松森"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQXRpa29rYW4.display_name": {
+          "source": "America/Atikokan",
+          "message": "美洲/阿蒂科肯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9hX1Zpc3Rh.display_name": {
+          "source": "America/Boa Vista",
+          "message": "美洲/博阿維斯塔"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9nb3Rh.display_name": {
+          "source": "America/Bogota",
+          "message": "美洲/波哥大"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQm9pc2U.display_name": {
+          "source": "America/Boise",
+          "message": "美洲/波夕"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFoaWE.display_name": {
+          "source": "America/Bahia",
+          "message": "美洲/巴伊亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFoaWFfQmFuZGVyYXM.display_name": {
+          "source": "America/Bahia Banderas",
+          "message": "美洲/巴伊亞班德拉斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmFyYmFkb3M.display_name": {
+          "source": "America/Barbados",
+          "message": "美洲/巴貝多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmVsZW0.display_name": {
+          "source": "America/Belem",
+          "message": "美洲/貝倫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmVsaXpl.display_name": {
+          "source": "America/Belize",
+          "message": "美洲/貝里斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvQmxhbmMtU2FibG9u.display_name": {
+          "source": "America/Blanc-Sablon",
+          "message": "美洲/布朗薩布隆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR29kdGhhYg.display_name": {
+          "source": "America/Godthab",
+          "message": "美洲/戈德霍貝"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR29vc2VfQmF5.display_name": {
+          "source": "America/Goose Bay",
+          "message": "美洲/鵝灣"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR2xhY2VfQmF5.display_name": {
+          "source": "America/Glace Bay",
+          "message": "美洲/格雷斯貝"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3JhbmRfVHVyaw.display_name": {
+          "source": "America/Grand Turk",
+          "message": "美洲/大特克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3JlbmFkYQ.display_name": {
+          "source": "America/Grenada",
+          "message": "美洲/格瑞那達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3V5YW5h.display_name": {
+          "source": "America/Guyana",
+          "message": "美洲/蓋亞那"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VhZGVsb3VwZQ.display_name": {
+          "source": "America/Guadeloupe",
+          "message": "美洲/瓜德羅普"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VhdGVtYWxh.display_name": {
+          "source": "America/Guatemala",
+          "message": "美洲/瓜地馬拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvR3VheWFxdWls.display_name": {
+          "source": "America/Guayaquil",
+          "message": "美洲/瓜亞基爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRG9taW5pY2E.display_name": {
+          "source": "America/Dominica",
+          "message": "美洲/多明尼加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGF3c29u.display_name": {
+          "source": "America/Dawson",
+          "message": "美洲/道森"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGF3c29uX0NyZWVr.display_name": {
+          "source": "America/Dawson Creek",
+          "message": "美洲/道森克里克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGFubWFya3NoYXZu.display_name": {
+          "source": "America/Danmarkshavn",
+          "message": "美洲/丹麥港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGV0cm9pdA.display_name": {
+          "source": "America/Detroit",
+          "message": "美洲/底特律"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRGVudmVy.display_name": {
+          "source": "America/Denver",
+          "message": "美洲/丹佛"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWRtb250b24.display_name": {
+          "source": "America/Edmonton",
+          "message": "美洲/艾德蒙吞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWlydW5lcGU.display_name": {
+          "source": "America/Eirunepe",
+          "message": "美洲/埃魯內佩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRWxfU2FsdmFkb3I.display_name": {
+          "source": "America/El Salvador",
+          "message": "美洲/薩爾瓦多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRm9ydF9OZWxzb24.display_name": {
+          "source": "America/Fort Nelson",
+          "message": "美洲/納爾遜堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvRm9ydGFsZXph.display_name": {
+          "source": "America/Fortaleza",
+          "message": "美洲/福塔雷薩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS2VudHVja3kvTG91aXN2aWxsZQ.display_name": {
+          "source": "America/Kentucky/Louisville",
+          "message": "美洲/肯塔基州/路易維爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS2VudHVja3kvTW9udGljZWxsbw.display_name": {
+          "source": "America/Kentucky/Monticello",
+          "message": "美洲/肯塔基州/蒙蒂塞洛"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvS3JhbGVuZGlqaw.display_name": {
+          "source": "America/Kralendijk",
+          "message": "美洲/克拉倫代克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGF2YW5h.display_name": {
+          "source": "America/Havana",
+          "message": "美洲/哈瓦那"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGFsaWZheA.display_name": {
+          "source": "America/Halifax",
+          "message": "美洲/哈利法克斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSGVybW9zaWxsbw.display_name": {
+          "source": "America/Hermosillo",
+          "message": "美洲/埃莫西約"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW51dmlr.display_name": {
+          "source": "America/Inuvik",
+          "message": "美洲/伊努維克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9JbmRpYW5hcG9saXM.display_name": {
+          "source": "America/Indiana/Indianapolis",
+          "message": "美洲/印第安納州/印第安納波利斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9Lbm94.display_name": {
+          "source": "America/Indiana/Knox",
+          "message": "美洲/印第安納州/諾克斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9NYXJlbmdv.display_name": {
+          "source": "America/Indiana/Marengo",
+          "message": "美洲/印第安納州/馬倫哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9QZXRlcnNidXJn.display_name": {
+          "source": "America/Indiana/Petersburg",
+          "message": "美洲/印第安納州/彼得斯堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9UZWxsX0NpdHk.display_name": {
+          "source": "America/Indiana/Tell City",
+          "message": "美洲/印第安納州/泰爾城"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9WZXZheQ.display_name": {
+          "source": "America/Indiana/Vevay",
+          "message": "美洲/印第安納州/維維"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9WaW5jZW5uZXM.display_name": {
+          "source": "America/Indiana/Vincennes",
+          "message": "美洲/印第安納州/文森斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSW5kaWFuYS9XaW5hbWFj.display_name": {
+          "source": "America/Indiana/Winamac",
+          "message": "美洲/印第安納/威納馬克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSXFhbHVpdA.display_name": {
+          "source": "America/Iqaluit",
+          "message": "美洲/伊卡盧伊特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSmFtYWljYQ.display_name": {
+          "source": "America/Jamaica",
+          "message": "美洲/牙買加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvSnVuZWF1.display_name": {
+          "source": "America/Juneau",
+          "message": "美洲/朱諾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvT2ppbmFnYQ.display_name": {
+          "source": "America/Ojinaga",
+          "message": "美洲/奧希納加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTG93ZXJfUHJpbmNlcw.display_name": {
+          "source": "America/Lower Princes",
+          "message": "美洲/下普林斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTG9zX0FuZ2VsZXM.display_name": {
+          "source": "America/Los Angeles",
+          "message": "美洲/洛杉磯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTGFfUGF6.display_name": {
+          "source": "America/La Paz",
+          "message": "美洲/拉巴斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTGltYQ.display_name": {
+          "source": "America/Lima",
+          "message": "美洲/利馬"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9uY3Rvbg.display_name": {
+          "source": "America/Moncton",
+          "message": "美洲/蒙克頓"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udGV2aWRlbw.display_name": {
+          "source": "America/Montevideo",
+          "message": "美洲/蒙特維多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udGVycmV5.display_name": {
+          "source": "America/Monterrey",
+          "message": "美洲/蒙特雷"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTW9udHNlcnJhdA.display_name": {
+          "source": "America/Montserrat",
+          "message": "美洲/蒙特塞拉特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWF0YW1vcm9z.display_name": {
+          "source": "America/Matamoros",
+          "message": "美洲/馬塔摩洛斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWF6YXRsYW4.display_name": {
+          "source": "America/Mazatlan",
+          "message": "美洲/馬薩特蘭"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFjZWlv.display_name": {
+          "source": "America/Maceio",
+          "message": "美洲/馬塞約"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFuYWd1YQ.display_name": {
+          "source": "America/Managua",
+          "message": "美洲/馬那瓜"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFuYXVz.display_name": {
+          "source": "America/Manaus",
+          "message": "美洲/瑪瑙斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFyaWdvdA.display_name": {
+          "source": "America/Marigot",
+          "message": "美洲/馬里戈特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWFydGluaXF1ZQ.display_name": {
+          "source": "America/Martinique",
+          "message": "美洲/馬提尼克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWV0bGFrYXRsYQ.display_name": {
+          "source": "America/Metlakatla",
+          "message": "美洲/梅拉克特拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWV4aWNvX0NpdHk.display_name": {
+          "source": "America/Mexico City",
+          "message": "美洲/墨西哥城"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWVub21pbmVl.display_name": {
+          "source": "America/Menominee",
+          "message": "美洲/梅諾米尼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWVyaWRh.display_name": {
+          "source": "America/Merida",
+          "message": "美洲/梅里達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTWlxdWVsb24.display_name": {
+          "source": "America/Miquelon",
+          "message": "美洲/密克隆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9tZQ.display_name": {
+          "source": "America/Nome",
+          "message": "美洲/諾姆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9yb25oYQ.display_name": {
+          "source": "America/Noronha",
+          "message": "美洲/諾羅尼亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL05ld19TYWxlbQ.display_name": {
+          "source": "America/North Dakota/New Salem",
+          "message": "美洲/北達科他/新塞勒姆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL0JldWxhaA.display_name": {
+          "source": "America/North Dakota/Beulah",
+          "message": "美洲/北達科他/比尤拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTm9ydGhfRGFrb3RhL0NlbnRlcg.display_name": {
+          "source": "America/North Dakota/Center",
+          "message": "美洲/北達科他/森特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmFzc2F1.display_name": {
+          "source": "America/Nassau",
+          "message": "美洲/拿騷"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmV3X1lvcms.display_name": {
+          "source": "America/New York",
+          "message": "美洲/紐約"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTmlwaWdvbg.display_name": {
+          "source": "America/Nipigon",
+          "message": "美洲/尼皮貢"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvTnV1aw.display_name": {
+          "source": "America/Nuuk",
+          "message": "美洲/努克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudG9fRG9taW5nbw.display_name": {
+          "source": "America/Santo Domingo",
+          "message": "美洲/聖多明哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudGFyZW0.display_name": {
+          "source": "America/Santarem",
+          "message": "美洲/桑塔倫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FudGlhZ28.display_name": {
+          "source": "America/Santiago",
+          "message": "美洲/聖地亞哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2FvX1BhdWxv.display_name": {
+          "source": "America/Sao Paulo",
+          "message": "美洲/聖保羅"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2NvcmVzYnlzdW5k.display_name": {
+          "source": "America/Scoresbysund",
+          "message": "美洲/斯科斯比松"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU2l0a2E.display_name": {
+          "source": "America/Sitka",
+          "message": "美洲/錫特卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfQmFydGhlbGVteQ.display_name": {
+          "source": "America/St Barthelemy",
+          "message": "美洲/聖巴泰勒米"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfS2l0dHM.display_name": {
+          "source": "America/St Kitts",
+          "message": "美洲/聖基茨"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfSm9obnM.display_name": {
+          "source": "America/St Johns",
+          "message": "美洲/聖約翰斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfTHVjaWE.display_name": {
+          "source": "America/St Lucia",
+          "message": "美洲/聖露西亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfVGhvbWFz.display_name": {
+          "source": "America/St Thomas",
+          "message": "美洲/聖托馬斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3RfVmluY2VudA.display_name": {
+          "source": "America/St Vincent",
+          "message": "美洲/聖文森"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvU3dpZnRfQ3VycmVudA.display_name": {
+          "source": "America/Swift Current",
+          "message": "美洲/斯威夫特卡倫特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydC1hdS1QcmluY2U.display_name": {
+          "source": "America/Port-au-Prince",
+          "message": "美洲/太子港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydF9vZl9TcGFpbg.display_name": {
+          "source": "America/Port of Spain",
+          "message": "美洲/西班牙港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUG9ydG9fVmVsaG8.display_name": {
+          "source": "America/Porto Velho",
+          "message": "美洲/韋柳港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFuYW1h.display_name": {
+          "source": "America/Panama",
+          "message": "美洲/巴拿馬"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFuZ25pcnR1bmc.display_name": {
+          "source": "America/Pangnirtung",
+          "message": "美洲/龐尼唐"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGFyYW1hcmlibw.display_name": {
+          "source": "America/Paramaribo",
+          "message": "美洲/帕拉馬里波"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUGhvZW5peA.display_name": {
+          "source": "America/Phoenix",
+          "message": "美洲/鳳凰城"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUHVlcnRvX1JpY28.display_name": {
+          "source": "America/Puerto Rico",
+          "message": "美洲/波多黎各"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUHVudGFfQXJlbmFz.display_name": {
+          "source": "America/Punta Arenas",
+          "message": "美洲/蓬塔阿雷納斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmFpbnlfUml2ZXI.display_name": {
+          "source": "America/Rainy River",
+          "message": "美洲/雨河"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmFua2luX0lubGV0.display_name": {
+          "source": "America/Rankin Inlet",
+          "message": "美洲/蘭金因萊特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVjaWZl.display_name": {
+          "source": "America/Recife",
+          "message": "美洲/累西腓"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVnaW5h.display_name": {
+          "source": "America/Regina",
+          "message": "美洲/裡賈納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmVzb2x1dGU.display_name": {
+          "source": "America/Resolute",
+          "message": "美洲/銳索魯特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvUmlvX0JyYW5jbw.display_name": {
+          "source": "America/Rio Branco",
+          "message": "美洲/里約布蘭科"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvV2hpdGVob3JzZQ.display_name": {
+          "source": "America/Whitehorse",
+          "message": "美洲/白馬市"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvV2lubmlwZWc.display_name": {
+          "source": "America/Winnipeg",
+          "message": "美洲/溫尼伯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVG9yb250bw.display_name": {
+          "source": "America/Toronto",
+          "message": "美洲/多倫多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVG9ydG9sYQ.display_name": {
+          "source": "America/Tortola",
+          "message": "美洲/托托拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGVndWNpZ2FscGE.display_name": {
+          "source": "America/Tegucigalpa",
+          "message": "美洲/特古西加爾巴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGh1bGU.display_name": {
+          "source": "America/Thule",
+          "message": "美洲/圖勒"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGh1bmRlcl9CYXk.display_name": {
+          "source": "America/Thunder Bay",
+          "message": "美洲/桑德貝"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVGlqdWFuYQ.display_name": {
+          "source": "America/Tijuana",
+          "message": "美洲/蒂華納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvVmFuY291dmVy.display_name": {
+          "source": "America/Vancouver",
+          "message": "美洲/溫哥華"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvWWFrdXRhdA.display_name": {
+          "source": "America/Yakutat",
+          "message": "美洲/雅庫塔特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFtZXJpY2EvWWVsbG93a25pZmU.display_name": {
+          "source": "America/Yellowknife",
+          "message": "美洲/黃刀鎮"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvQ2FzZXk.display_name": {
+          "source": "Antarctica/Casey",
+          "message": "南極洲/凱西"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvRGF2aXM.display_name": {
+          "source": "Antarctica/Davis",
+          "message": "南極洲/戴維斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvRHVtb250RFVydmlsbGU.display_name": {
+          "source": "Antarctica/DumontDUrville",
+          "message": "南極洲/迪蒙迪維爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWF3c29u.display_name": {
+          "source": "Antarctica/Mawson",
+          "message": "南極洲/莫森"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWFjcXVhcmll.display_name": {
+          "source": "Antarctica/Macquarie",
+          "message": "南極洲/麥覺理"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvTWNNdXJkbw.display_name": {
+          "source": "Antarctica/McMurdo",
+          "message": "南極洲/麥克默多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvU3lvd2E.display_name": {
+          "source": "Antarctica/Syowa",
+          "message": "南極洲/昭和"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvUGFsbWVy.display_name": {
+          "source": "Antarctica/Palmer",
+          "message": "南極洲/帕爾默"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvUm90aGVyYQ.display_name": {
+          "source": "Antarctica/Rothera",
+          "message": "南極洲/羅瑟拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvVHJvbGw.display_name": {
+          "source": "Antarctica/Troll",
+          "message": "南極洲/特羅爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFudGFyY3RpY2EvVm9zdG9r.display_name": {
+          "source": "Antarctica/Vostok",
+          "message": "南極洲/沃斯托克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFyY3RpYy9Mb25neWVhcmJ5ZW4.display_name": {
+          "source": "Arctic/Longyearbyen",
+          "message": "北極/朗伊爾城"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ29sb21ibw.display_name": {
+          "source": "Asia/Colombo",
+          "message": "亞洲/科倫坡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ2hpdGE.display_name": {
+          "source": "Asia/Chita",
+          "message": "亞洲/赤塔"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQ2hvaWJhbHNhbg.display_name": {
+          "source": "Asia/Choibalsan",
+          "message": "亞洲/喬巴山"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQW1tYW4.display_name": {
+          "source": "Asia/Amman",
+          "message": "亞洲/安曼"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQW5hZHly.display_name": {
+          "source": "Asia/Anadyr",
+          "message": "亞洲/阿納德爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQWRlbg.display_name": {
+          "source": "Asia/Aden",
+          "message": "亞洲/亞丁"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQWxtYXR5.display_name": {
+          "source": "Asia/Almaty",
+          "message": "亞洲/阿拉木圖"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXF0YXU.display_name": {
+          "source": "Asia/Aqtau",
+          "message": "亞洲/阿克套"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXF0b2Jl.display_name": {
+          "source": "Asia/Aqtobe",
+          "message": "亞洲/阿克托貝"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXNoZ2FiYXQ.display_name": {
+          "source": "Asia/Ashgabat",
+          "message": "亞洲/阿什哈巴德"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQXR5cmF1.display_name": {
+          "source": "Asia/Atyrau",
+          "message": "亞洲/阿特勞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFnaGRhZA.display_name": {
+          "source": "Asia/Baghdad",
+          "message": "亞洲/巴格達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFocmFpbg.display_name": {
+          "source": "Asia/Bahrain",
+          "message": "亞洲/巴林"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFrdQ.display_name": {
+          "source": "Asia/Baku",
+          "message": "亞洲/巴庫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFuZ2tvaw.display_name": {
+          "source": "Asia/Bangkok",
+          "message": "亞洲/曼谷"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmFybmF1bA.display_name": {
+          "source": "Asia/Barnaul",
+          "message": "亞洲/巴爾瑙爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmVpcnV0.display_name": {
+          "source": "Asia/Beirut",
+          "message": "亞洲/貝魯特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQmlzaGtlaw.display_name": {
+          "source": "Asia/Bishkek",
+          "message": "亞洲/比什凱克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvQnJ1bmVp.display_name": {
+          "source": "Asia/Brunei",
+          "message": "亞洲/汶萊"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvR2F6YQ.display_name": {
+          "source": "Asia/Gaza",
+          "message": "亞洲/加薩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGFtYXNjdXM.display_name": {
+          "source": "Asia/Damascus",
+          "message": "亞洲/大馬士革"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGhha2E.display_name": {
+          "source": "Asia/Dhaka",
+          "message": "亞洲/達卡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRGlsaQ.display_name": {
+          "source": "Asia/Dili",
+          "message": "亞洲/帝力"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRHViYWk.display_name": {
+          "source": "Asia/Dubai",
+          "message": "亞洲/杜拜"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRHVzaGFuYmU.display_name": {
+          "source": "Asia/Dushanbe",
+          "message": "亞洲/杜尚別"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvRmFtYWd1c3Rh.display_name": {
+          "source": "Asia/Famagusta",
+          "message": "亞洲/法馬古斯塔"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS29sa2F0YQ.display_name": {
+          "source": "Asia/Kolkata",
+          "message": "亞洲/加爾各答"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2F0aG1hbmR1.display_name": {
+          "source": "Asia/Kathmandu",
+          "message": "亞洲/加德滿得"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FidWw.display_name": {
+          "source": "Asia/Kabul",
+          "message": "亞洲/喀布爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FtY2hhdGth.display_name": {
+          "source": "Asia/Kamchatka",
+          "message": "亞洲/堪察加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2FyYWNoaQ.display_name": {
+          "source": "Asia/Karachi",
+          "message": "亞洲/喀拉蚩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS2hhbmR5Z2E.display_name": {
+          "source": "Asia/Khandyga",
+          "message": "亞洲/漢德加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3Jhc25veWFyc2s.display_name": {
+          "source": "Asia/Krasnoyarsk",
+          "message": "亞洲/克拉斯諾亞爾斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3V3YWl0.display_name": {
+          "source": "Asia/Kuwait",
+          "message": "亞洲/科威特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3VhbGFfTHVtcHVy.display_name": {
+          "source": "Asia/Kuala Lumpur",
+          "message": "亞洲/吉隆坡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvS3VjaGluZw.display_name": {
+          "source": "Asia/Kuching",
+          "message": "亞洲/古晉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG92ZA.display_name": {
+          "source": "Asia/Hovd",
+          "message": "亞洲/科布多"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG9fQ2hpX01pbmg.display_name": {
+          "source": "Asia/Ho Chi Minh",
+          "message": "亞洲/胡志明市"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSG9uZ19Lb25n.display_name": {
+          "source": "Asia/Hong Kong",
+          "message": "亞洲/香港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSGVicm9u.display_name": {
+          "source": "Asia/Hebron",
+          "message": "亞洲/希伯倫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSXJrdXRzaw.display_name": {
+          "source": "Asia/Irkutsk",
+          "message": "亞洲/伊爾庫茨克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSXN0YW5idWw.display_name": {
+          "source": "Asia/Istanbul",
+          "message": "亞洲/伊斯坦堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmF5YXB1cmE.display_name": {
+          "source": "Asia/Jayapura",
+          "message": "亞洲/查亞普拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmFrYXJ0YQ.display_name": {
+          "source": "Asia/Jakarta",
+          "message": "亞洲/雅加達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvSmVydXNhbGVt.display_name": {
+          "source": "Asia/Jerusalem",
+          "message": "亞洲/耶路撒冷"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvT21zaw.display_name": {
+          "source": "Asia/Omsk",
+          "message": "亞洲/鄂木斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvT3JhbA.display_name": {
+          "source": "Asia/Oral",
+          "message": "亞洲/奧爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFjYXU.display_name": {
+          "source": "Asia/Macau",
+          "message": "亞洲/澳門"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFnYWRhbg.display_name": {
+          "source": "Asia/Magadan",
+          "message": "亞洲/馬加丹"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFrYXNzYXI.display_name": {
+          "source": "Asia/Makassar",
+          "message": "亞洲/望加錫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTWFuaWxh.display_name": {
+          "source": "Asia/Manila",
+          "message": "亞洲/馬尼拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTXVzY2F0.display_name": {
+          "source": "Asia/Muscat",
+          "message": "亞洲/馬斯喀特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTm92b2t1em5ldHNr.display_name": {
+          "source": "Asia/Novokuznetsk",
+          "message": "亞洲/新庫茲涅茨克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTm92b3NpYmlyc2s.display_name": {
+          "source": "Asia/Novosibirsk",
+          "message": "亞洲/新西伯利亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvTmljb3NpYQ.display_name": {
+          "source": "Asia/Nicosia",
+          "message": "亞洲/尼科西亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2FraGFsaW4.display_name": {
+          "source": "Asia/Sakhalin",
+          "message": "亞洲/庫頁島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2FtYXJrYW5k.display_name": {
+          "source": "Asia/Samarkand",
+          "message": "亞洲/撒馬爾罕"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2VvdWw.display_name": {
+          "source": "Asia/Seoul",
+          "message": "亞洲/首爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2hhbmdoYWk.display_name": {
+          "source": "Asia/Shanghai",
+          "message": "亞洲/上海"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU2luZ2Fwb3Jl.display_name": {
+          "source": "Asia/Singapore",
+          "message": "亞洲/新加坡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvU3JlZG5la29seW1zaw.display_name": {
+          "source": "Asia/Srednekolymsk",
+          "message": "亞洲/斯列德涅科雷姆斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUG9udGlhbmFr.display_name": {
+          "source": "Asia/Pontianak",
+          "message": "亞洲/坤甸"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUGhub21fUGVuaA.display_name": {
+          "source": "Asia/Phnom Penh",
+          "message": "亞洲/金邊"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUHlvbmd5YW5n.display_name": {
+          "source": "Asia/Pyongyang",
+          "message": "亞洲/平壤"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUW9zdGFuYXk.display_name": {
+          "source": "Asia/Qostanay",
+          "message": "亞洲/科斯塔奈"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUWF0YXI.display_name": {
+          "source": "Asia/Qatar",
+          "message": "亞洲/卡達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUXl6eWxvcmRh.display_name": {
+          "source": "Asia/Qyzylorda",
+          "message": "亞洲/克孜勒奧爾達"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUmFuZ29vbg.display_name": {
+          "source": "Asia/Rangoon",
+          "message": "亞洲/仰光"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvUml5YWRo.display_name": {
+          "source": "Asia/Riyadh",
+          "message": "亞洲/利雅德"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVG9reW8.display_name": {
+          "source": "Asia/Tokyo",
+          "message": "亞洲/東京"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVG9tc2s.display_name": {
+          "source": "Asia/Tomsk",
+          "message": "亞洲/托木斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGFpcGVp.display_name": {
+          "source": "Asia/Taipei",
+          "message": "亞洲/台北"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGFzaGtlbnQ.display_name": {
+          "source": "Asia/Tashkent",
+          "message": "亞洲/塔什干"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGJpbGlzaQ.display_name": {
+          "source": "Asia/Tbilisi",
+          "message": "亞洲/提比里斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGVocmFu.display_name": {
+          "source": "Asia/Tehran",
+          "message": "亞洲/德黑蘭"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVGhpbXBodQ.display_name": {
+          "source": "Asia/Thimphu",
+          "message": "亞洲/廷布"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVWxhYW5iYWF0YXI.display_name": {
+          "source": "Asia/Ulaanbaatar",
+          "message": "亞洲/烏蘭巴托"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVXJ1bXFp.display_name": {
+          "source": "Asia/Urumqi",
+          "message": "亞洲/烏魯木齊"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVXN0LU5lcmE.display_name": {
+          "source": "Asia/Ust-Nera",
+          "message": "亞洲/烏斯季內拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVmllbnRpYW5l.display_name": {
+          "source": "Asia/Vientiane",
+          "message": "亞洲/永珍"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvVmxhZGl2b3N0b2s.display_name": {
+          "source": "Asia/Vladivostok",
+          "message": "亞洲/海參崴"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWFrdXRzaw.display_name": {
+          "source": "Asia/Yakutsk",
+          "message": "亞洲/雅庫茨克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWFuZ29u.display_name": {
+          "source": "Asia/Yangon",
+          "message": "亞洲/仰光"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWVrYXRlcmluYnVyZw.display_name": {
+          "source": "Asia/Yekaterinburg",
+          "message": "亞洲/葉卡捷琳堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkFzaWEvWWVyZXZhbg.display_name": {
+          "source": "Asia/Yerevan",
+          "message": "亞洲/葉里溫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BbXN0ZXJkYW0.display_name": {
+          "source": "Europe/Amsterdam",
+          "message": "歐洲/阿姆斯特丹"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BbmRvcnJh.display_name": {
+          "source": "Europe/Andorra",
+          "message": "歐洲/安道爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Bc3RyYWtoYW4.display_name": {
+          "source": "Europe/Astrakhan",
+          "message": "歐洲/阿斯特拉罕"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9BdGhlbnM.display_name": {
+          "source": "Europe/Athens",
+          "message": "歐洲/雅典"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CZWxncmFkZQ.display_name": {
+          "source": "Europe/Belgrade",
+          "message": "歐洲/貝爾格勒"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CZXJsaW4.display_name": {
+          "source": "Europe/Berlin",
+          "message": "歐洲/柏林"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CcmF0aXNsYXZh.display_name": {
+          "source": "Europe/Bratislava",
+          "message": "歐洲/布拉提斯瓦"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CcnVzc2Vscw.display_name": {
+          "source": "Europe/Brussels",
+          "message": "歐洲/布魯塞爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdWNoYXJlc3Q.display_name": {
+          "source": "Europe/Bucharest",
+          "message": "歐洲/布加勒斯特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdWRhcGVzdA.display_name": {
+          "source": "Europe/Budapest",
+          "message": "歐洲/布達佩斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9CdXNpbmdlbg.display_name": {
+          "source": "Europe/Busingen",
+          "message": "歐洲/布辛根"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9DaGlzaW5hdQ.display_name": {
+          "source": "Europe/Chisinau",
+          "message": "歐洲/基希涅夫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Db3BlbmhhZ2Vu.display_name": {
+          "source": "Europe/Copenhagen",
+          "message": "歐洲/哥本哈根"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9EdWJsaW4.display_name": {
+          "source": "Europe/Dublin",
+          "message": "歐洲/都柏林"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9HaWJyYWx0YXI.display_name": {
+          "source": "Europe/Gibraltar",
+          "message": "歐洲/直布羅陀"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9HdWVybnNleQ.display_name": {
+          "source": "Europe/Guernsey",
+          "message": "歐洲/根西"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9IZWxzaW5raQ.display_name": {
+          "source": "Europe/Helsinki",
+          "message": "歐洲/赫爾辛基"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Jc2xlX29mX01hbg.display_name": {
+          "source": "Europe/Isle of Man",
+          "message": "歐洲/曼島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Jc3RhbmJ1bA.display_name": {
+          "source": "Europe/Istanbul",
+          "message": "歐洲/伊斯坦堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9KZXJzZXk.display_name": {
+          "source": "Europe/Jersey",
+          "message": "歐洲/澤西"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LYWxpbmluZ3JhZA.display_name": {
+          "source": "Europe/Kaliningrad",
+          "message": "歐洲/加里寧格勒"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LaWV2.display_name": {
+          "source": "Europe/Kiev",
+          "message": "歐洲/基輔"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9LaXJvdg.display_name": {
+          "source": "Europe/Kirov",
+          "message": "歐洲/基洛夫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9MaXNib24.display_name": {
+          "source": "Europe/Lisbon",
+          "message": "歐洲/里斯本"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9ManVibGphbmE.display_name": {
+          "source": "Europe/Ljubljana",
+          "message": "歐洲/盧比安納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Mb25kb24.display_name": {
+          "source": "Europe/London",
+          "message": "歐洲/倫敦"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9MdXhlbWJvdXJn.display_name": {
+          "source": "Europe/Luxembourg",
+          "message": "歐洲/盧森堡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYWRyaWQ.display_name": {
+          "source": "Europe/Madrid",
+          "message": "歐洲/馬德里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYWx0YQ.display_name": {
+          "source": "Europe/Malta",
+          "message": "歐洲/馬爾他"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NYXJpZWhhbW4.display_name": {
+          "source": "Europe/Mariehamn",
+          "message": "歐洲/瑪麗港"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9NaW5zaw.display_name": {
+          "source": "Europe/Minsk",
+          "message": "歐洲/明斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Nb25hY28.display_name": {
+          "source": "Europe/Monaco",
+          "message": "歐洲/摩納哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Nb3Njb3c.display_name": {
+          "source": "Europe/Moscow",
+          "message": "歐洲/莫斯科"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9OaWNvc2lh.display_name": {
+          "source": "Europe/Nicosia",
+          "message": "歐洲/尼科西亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Pc2xv.display_name": {
+          "source": "Europe/Oslo",
+          "message": "歐洲/奧斯陸"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9QYXJpcw.display_name": {
+          "source": "Europe/Paris",
+          "message": "歐洲/巴黎"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Qb2Rnb3JpY2E.display_name": {
+          "source": "Europe/Podgorica",
+          "message": "歐洲/波德里查"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9QcmFndWU.display_name": {
+          "source": "Europe/Prague",
+          "message": "歐洲/布拉格"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9SaWdh.display_name": {
+          "source": "Europe/Riga",
+          "message": "歐洲/里加"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Sb21l.display_name": {
+          "source": "Europe/Rome",
+          "message": "歐洲/羅馬"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYW1hcmE.display_name": {
+          "source": "Europe/Samara",
+          "message": "歐洲/薩馬拉"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYW5fTWFyaW5v.display_name": {
+          "source": "Europe/San Marino",
+          "message": "歐洲/聖馬利諾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYXJhamV2bw.display_name": {
+          "source": "Europe/Sarajevo",
+          "message": "歐洲/塞拉耶佛"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TYXJhdG92.display_name": {
+          "source": "Europe/Saratov",
+          "message": "歐洲/薩拉托夫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Ta29wamU.display_name": {
+          "source": "Europe/Skopje",
+          "message": "歐洲/斯科普里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TaW1mZXJvcG9s.display_name": {
+          "source": "Europe/Simferopol",
+          "message": "歐洲/辛菲羅波爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Tb2ZpYQ.display_name": {
+          "source": "Europe/Sofia",
+          "message": "歐洲/索菲亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9TdG9ja2hvbG0.display_name": {
+          "source": "Europe/Stockholm",
+          "message": "歐洲/斯德哥爾摩"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9UYWxsaW5u.display_name": {
+          "source": "Europe/Tallinn",
+          "message": "歐洲/塔林"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9UaXJhbmU.display_name": {
+          "source": "Europe/Tirane",
+          "message": "歐洲/地拉那"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9VbHlhbm92c2s.display_name": {
+          "source": "Europe/Ulyanovsk",
+          "message": "歐洲/烏里揚諾夫斯克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Vemhnb3JvZA.display_name": {
+          "source": "Europe/Uzhgorod",
+          "message": "歐洲/烏日霍羅德"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WYWR1eg.display_name": {
+          "source": "Europe/Vaduz",
+          "message": "歐洲/瓦杜茲"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WYXRpY2Fu.display_name": {
+          "source": "Europe/Vatican",
+          "message": "歐洲/梵蒂岡"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WaWVubmE.display_name": {
+          "source": "Europe/Vienna",
+          "message": "歐洲/維也納"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9WaWxuaXVz.display_name": {
+          "source": "Europe/Vilnius",
+          "message": "歐洲/維爾紐斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9Wb2xnb2dyYWQ.display_name": {
+          "source": "Europe/Volgograd",
+          "message": "歐洲/伏爾加格勒"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9XYXJzYXc.display_name": {
+          "source": "Europe/Warsaw",
+          "message": "歐洲/華沙"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9aYWdyZWI.display_name": {
+          "source": "Europe/Zagreb",
+          "message": "歐洲/札格瑞布"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9aYXBvcm96aHll.display_name": {
+          "source": "Europe/Zaporozhye",
+          "message": "歐洲/札波羅熱"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkV1cm9wZS9adXJpY2g.display_name": {
+          "source": "Europe/Zurich",
+          "message": "歐洲/蘇黎世"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9BbnRhbmFuYXJpdm8.display_name": {
+          "source": "Indian/Antananarivo",
+          "message": "印度洋/安塔那那利佛"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9DaGFnb3M.display_name": {
+          "source": "Indian/Chagos",
+          "message": "印度洋/查哥斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9DaHJpc3RtYXM.display_name": {
+          "source": "Indian/Christmas",
+          "message": "印度洋/聖誕島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9Db21vcm8.display_name": {
+          "source": "Indian/Comoro",
+          "message": "印度洋/科摩洛"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9Db2Nvcw.display_name": {
+          "source": "Indian/Cocos",
+          "message": "印度洋/科科斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9LZXJndWVsZW4.display_name": {
+          "source": "Indian/Kerguelen",
+          "message": "印度洋/凱爾蓋朗"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYWhl.display_name": {
+          "source": "Indian/Mahe",
+          "message": "印度洋/馬埃"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYWxkaXZlcw.display_name": {
+          "source": "Indian/Maldives",
+          "message": "印度洋/馬爾地夫"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYXVyaXRpdXM.display_name": {
+          "source": "Indian/Mauritius",
+          "message": "印度洋/模里西斯"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9NYXlvdHRl.display_name": {
+          "source": "Indian/Mayotte",
+          "message": "印度洋/馬約特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOkluZGlhbi9SZXVuaW9u.display_name": {
+          "source": "Indian/Reunion",
+          "message": "印度洋/留尼旺"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQ2h1dWs.display_name": {
+          "source": "Pacific/Chuuk",
+          "message": "太平洋/楚克"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQ2hhdGhhbQ.display_name": {
+          "source": "Pacific/Chatham",
+          "message": "太平洋/查塔姆"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQXBpYQ.display_name": {
+          "source": "Pacific/Apia",
+          "message": "太平洋/阿庇亞"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQXVja2xhbmQ.display_name": {
+          "source": "Pacific/Auckland",
+          "message": "太平洋/奧克蘭"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvQm91Z2FpbnZpbGxl.display_name": {
+          "source": "Pacific/Bougainville",
+          "message": "太平洋/布干維爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR2FsYXBhZ29z.display_name": {
+          "source": "Pacific/Galapagos",
+          "message": "太平洋/加拉巴哥"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR2FtYmllcg.display_name": {
+          "source": "Pacific/Gambier",
+          "message": "太平洋/甘比爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR3VhZGFsY2FuYWw.display_name": {
+          "source": "Pacific/Guadalcanal",
+          "message": "太平洋/瓜達康納爾"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvR3VhbQ.display_name": {
+          "source": "Pacific/Guam",
+          "message": "太平洋/關島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRW5kZXJidXJ5.display_name": {
+          "source": "Pacific/Enderbury",
+          "message": "太平洋/恩德伯里"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRWFzdGVy.display_name": {
+          "source": "Pacific/Easter",
+          "message": "太平洋/復活節島"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRWZhdGU.display_name": {
+          "source": "Pacific/Efate",
+          "message": "太平洋/埃法特"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRmFrYW9mbw.display_name": {
+          "source": "Pacific/Fakaofo",
+          "message": "太平洋/法考福"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRmlqaQ.display_name": {
+          "source": "Pacific/Fiji",
+          "message": "太平洋/斐濟"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvRnVuYWZ1dGk.display_name": {
+          "source": "Pacific/Funafuti",
+          "message": "Pacific/Funafuti"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS29zcmFl.display_name": {
+          "source": "Pacific/Kosrae",
+          "message": "Pacific/Kosrae"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS2FudG9u.display_name": {
+          "source": "Pacific/Kanton",
+          "message": "Pacific/Kanton"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS2lyaXRpbWF0aQ.display_name": {
+          "source": "Pacific/Kiritimati",
+          "message": "Pacific/Kiritimati"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvS3dhamFsZWlu.display_name": {
+          "source": "Pacific/Kwajalein",
+          "message": "Pacific/Kwajalein"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvSG9ub2x1bHU.display_name": {
+          "source": "Pacific/Honolulu",
+          "message": "Pacific/Honolulu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWFqdXJv.display_name": {
+          "source": "Pacific/Majuro",
+          "message": "Pacific/Majuro"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWFycXVlc2Fz.display_name": {
+          "source": "Pacific/Marquesas",
+          "message": "Pacific/Marquesas"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTWlkd2F5.display_name": {
+          "source": "Pacific/Midway",
+          "message": "Pacific/Midway"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTm91bWVh.display_name": {
+          "source": "Pacific/Noumea",
+          "message": "Pacific/Noumea"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTm9yZm9saw.display_name": {
+          "source": "Pacific/Norfolk",
+          "message": "Pacific/Norfolk"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTmF1cnU.display_name": {
+          "source": "Pacific/Nauru",
+          "message": "Pacific/Nauru"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvTml1ZQ.display_name": {
+          "source": "Pacific/Niue",
+          "message": "Pacific/Niue"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvU2FpcGFu.display_name": {
+          "source": "Pacific/Saipan",
+          "message": "Pacific/Saipan"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUG9obnBlaQ.display_name": {
+          "source": "Pacific/Pohnpei",
+          "message": "Pacific/Pohnpei"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUG9ydF9Nb3Jlc2J5.display_name": {
+          "source": "Pacific/Port Moresby",
+          "message": "Pacific/Port Moresby"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGFnb19QYWdv.display_name": {
+          "source": "Pacific/Pago Pago",
+          "message": "Pacific/Pago Pago"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGFsYXU.display_name": {
+          "source": "Pacific/Palau",
+          "message": "Pacific/Palau"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUGl0Y2Fpcm4.display_name": {
+          "source": "Pacific/Pitcairn",
+          "message": "Pacific/Pitcairn"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvUmFyb3Rvbmdh.display_name": {
+          "source": "Pacific/Rarotonga",
+          "message": "Pacific/Rarotonga"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvV2FrZQ.display_name": {
+          "source": "Pacific/Wake",
+          "message": "Pacific/Wake"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvV2FsbGlz.display_name": {
+          "source": "Pacific/Wallis",
+          "message": "Pacific/Wallis"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVG9uZ2F0YXB1.display_name": {
+          "source": "Pacific/Tongatapu",
+          "message": "Pacific/Tongatapu"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVGFoaXRp.display_name": {
+          "source": "Pacific/Tahiti",
+          "message": "Pacific/Tahiti"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOlBhY2lmaWMvVGFyYXdh.display_name": {
+          "source": "Pacific/Tarawa",
+          "message": "Pacific/Tarawa"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOmNsaWVudA.display_name": {
+          "source": "Client",
+          "message": "用戶端"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.allowed-value.c3RyaW5nOnV0Yw.display_name": {
+          "source": "UTC",
+          "message": "UTC"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.desc": {
+          "source": "The timezone to use when formatting date and time fields in the response",
+          "message": "格式化回應中的日期與時間欄位時所使用的時區"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.display_name": {
+          "source": "Timezone",
+          "message": "時區"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dGltZXpvbmU.short_desc": {
+          "source": "Timezone for date formatting",
+          "message": "用於日期格式化的時區"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.desc": {
+          "source": "The locale to use for formatting numbers, dates, and other locale-specific data",
+          "message": "用於格式化數字、日期和其他特定地區資料的地區設定"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.display_name": {
+          "source": "User Locale",
+          "message": "使用者地區設定"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dXNlcl9sb2NhbGU.short_desc": {
+          "source": "Locale for formatting",
+          "message": "用於格式化的地區設定"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to apply its filtering and sorting",
+          "message": "從資料表中選取特定檢視以套用其篩選與排序"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "檢視"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.option.dmlldw.short_desc": {
+          "source": "Table view to use",
+          "message": "要使用的資料表檢視"
+        },
+        "app.QWlydGFibGU.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve records from an Airtable table",
+          "message": "從 Airtable 資料表中檢索記錄"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Airtable** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "使用已設定連線的驗證向 **Airtable** 發起自訂 HTTP / REST API 呼叫。\n\n指定 HTTP 方法、URI 路徑（相對於連線的 API 基礎 URL）、選用的查詢參數、標頭和請求主體。回應將以包含狀態碼、回應標頭和回應主體的雜湊傳回。\n\n對尚未在此應用程式中公開為一等動作的端點使用此動作。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "發出 API 呼叫"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "請求主體。有效類型取決於 `body_type`：JSON/form/YAML 期望雜湊，XML/text 期望字串，multipart 期望檔案結構，binary 期望原始位元組。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "內文"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "請求主體"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "使用 `multipart/form-data` 上傳檔案。主體必須是 @ref DataProvider::FileDataType \"FileDataType\" 結構（filename + content + mime_type）。架構會建立 multipart 封套並設定 boundary 標頭。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart 表單"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "使用 multipart/form-data 上傳檔案"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "原封不動地將主體傳遞給 REST 用戶端；用戶端會根據其設定的 `data` 選項和值類型來決定序列化方式"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "透傳；使用連線序列化並由 REST 用戶端決定"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "將主體作為原始位元組傳送。主體必須是二進位值。除非被 `hdr` 覆蓋，否則會設定 `Content-Type: application/octet-stream`。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "原始二進位"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "將主體作為原始位元組傳送"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "將表單欄位的雜湊序列化為 `application/x-www-form-urlencoded`。主體必須是值為純量（字串/數字/布林值）的雜湊。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "表單 (URL 編碼)"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "將主體序列化為 application/x-www-form-urlencoded 表單欄位"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "將主體序列化為 JSON；設定 `Content-Type: application/json`。主體應為雜湊、清單或純量值。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "將主體序列化為 JSON"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "將主體作為純文字傳送。主體必須是字串。設定 `Content-Type: text/plain`。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "純文字"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "將主體作為 text/plain 傳送"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "將主體作為 XML 傳送。若主體為雜湊，則會序列化為 XML；若為字串，則原樣傳送。設定 `Content-Type: application/xml`。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "將主體作為 XML 傳送"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "將主體作為 YAML 傳送。若主體為雜湊，則會序列化為 YAML；若為字串，則原樣傳送。設定 `Content-Type: application/x-yaml`。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "將主體作為 YAML 傳送"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "選擇主體序列化模式及對應的 `Content-Type` 標頭。變更此欄位會重新配置 `body` 編輯器 — 選擇 JSON 會顯示 JSON 編輯器，選擇 Multipart 表單會顯示檔案選擇器，依此類推。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "主體類型"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "主體如何序列化以及傳送何種 Content-Type"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "若為 `True`，非 2xx HTTP 回應會作為正常的相應雜湊傳回（帶有實際狀態碼），而非引發 `REST-RESPONSE-ERROR`。有助於將 4xx/5xx 作為資料處理 — 例如檢查資源是否存在。僅針對本次呼叫覆蓋連線的 `error_passthru` 設定。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "將錯誤作為資料傳回"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "正常傳回非 2xx 回應而非拋出例外"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "視為成功的 HTTP 狀態碼選擇性清單。若有設定且回應狀態不在此清單中，該動作會拋出 `REST-STATUS-ERROR`。若未設定，則套用 REST 用戶端的預設行為（通常：2xx 為成功，非 2xx 則拋出例外）。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "預期的狀態碼"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "視為成功的回應狀態碼"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "新增至請求的自訂標頭雜湊。這些標頭會覆蓋由 `body_type` 設定的任何預設標頭（例如，在此處提供 `Content-Type` 會優先於主體類型的預設值）。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "自訂標頭"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "額外的請求標頭"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "若為 `True`，回應雜湊包含 `debug` 子雜湊，其中含有請求方法/URL/標頭（敏感值已被隱藏）、請求與回應大小以及來回時間。在調查過慢或失敗的呼叫時很有用。預設為關閉以保持回應精簡。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "包含除錯資訊"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "在回應中包含請求/計時/大小等除錯資訊"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 方法"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "用於請求的 HTTP 方法"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "相於連線 API 基底 URL 的 URI 路徑。可能包含從 `path_vars` 替換的 `{name}` 預留位置。範例：`/users/{id}/comments`。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 路徑"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "相對於連線 API 根 URL 的 URI 路徑。可能包含從 'path_vars' 替換的 '{name}' 預留位置。範例：'/users/{id}/comments'"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "代入 URI 路徑中 `{name}` 預留位置的值 Hash。範例：使用 `path = /users/{id}` 與 `path_vars = {id: 123}`，框架會傳送 `/users/123`。值均經過 URL 編碼。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "路徑變數"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "路徑中 {name} 預留位置的值"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "要附加至 URI 路徑的查詢字串參數 Hash。值均經過 URL 編碼；清單值會以 `,` 連接。"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "查詢引數"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "查詢字串參數"
+        },
+        "app.QWlydGFibGU.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Airtable",
+          "message": "向 Airtable 發起自訂 API 呼叫"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.desc": {
+          "source": "Monitor an Airtable table for newly created records and trigger automation when new records are added",
+          "message": "監視 Airtable 資料表中的新建立記錄，並在新增記錄時觸發自動化"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "新增記錄"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to monitor for new records",
+          "message": "選取包含您想要監視新增記錄之資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base to monitor",
+          "message": "要監視的 Airtable Base ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base to monitor for new record creation",
+          "message": "選取 Base 內要監視新增記錄建立的特定資料表"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to monitor",
+          "message": "要監視的資料表 ID"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria",
+          "message": "從資料表中選取特定檢視，僅監視符合該檢視之篩選與排序基準的記錄"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "檢視"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.option.dmlldw.short_desc": {
+          "source": "Optional table view to filter records",
+          "message": "用於篩選記錄的選用資料表檢視"
+        },
+        "app.QWlydGFibGU.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created in Airtable",
+          "message": "在 Airtable 中建立新記錄時觸發"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中搜尋符合的記錄"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "搜尋記錄"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中搜尋符合的記錄"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中搜尋單筆符合的記錄"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "尋找單筆記錄"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中搜尋單筆符合的記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中更新既存記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "更新記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "表格"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "表格名稱"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Airtable\"",
+          "message": "在應用程式「Airtable」的指定資料表中更新既存記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.desc": {
+          "source": "Monitor an Airtable table for record modifications and trigger automation when existing records are updated",
+          "message": "監視 Airtable 資料表中的記錄修改，並在既存記錄更新時觸發自動化"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.display_name": {
+          "source": "Updated Record",
+          "message": "已更新記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.desc": {
+          "source": "Select the Airtable base that contains the table you want to monitor for record updates",
+          "message": "選取包含您想要監視記錄更新之資料表的 Airtable Base"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.display_name": {
+          "source": "Base ID",
+          "message": "Base ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.YmFzZV9pZA.short_desc": {
+          "source": "The ID of the Airtable base to monitor",
+          "message": "要監視的 Airtable Base ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.desc": {
+          "source": "Select the specific table within the base to monitor for record modifications",
+          "message": "選取 Base 內要監視記錄修改的特定資料表"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.display_name": {
+          "source": "Table ID",
+          "message": "Table ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dGFibGVfaWQ.short_desc": {
+          "source": "The ID of the table to monitor",
+          "message": "要監視的資料表 ID"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.desc": {
+          "source": "Select a specific view from the table to monitor only records that match the view's filtering and sorting criteria",
+          "message": "從資料表中選取特定檢視，僅監視符合該檢視之篩選與排序基準的記錄"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.display_name": {
+          "source": "View",
+          "message": "檢視"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.option.dmlldw.short_desc": {
+          "source": "Optional table view to filter records",
+          "message": "用於篩選記錄的選用資料表檢視"
+        },
+        "app.QWlydGFibGU.action.dXBkYXRlZF9yZWNvcmQ.short_desc": {
+          "source": "Triggers when a record is updated in Airtable",
+          "message": "在 Airtable 中更新記錄時觸發"
+        },
+        "app.QWlydGFibGU.desc": {
+          "source": "Airtable combines the simplicity of a spreadsheet with the power of a database. Create and manage bases, tables, and records with ease. Perfect for project management, CRM, content planning, and team collaboration.",
+          "message": "Airtable 結合了試算表的簡易性與資料庫的強大功能。輕鬆建立並管理 Base、資料表和記錄。非常適合專案管理、CRM、內容規劃與團隊協作。"
+        },
+        "app.QWlydGFibGU.display_name": {
+          "source": "Airtable",
+          "message": "Airtable"
+        },
+        "app.QWlydGFibGU.short_desc": {
+          "source": "Cloud-based database and collaboration platform",
+          "message": "雲端資料庫與協作平台"
+        }
+      }
+    }
+  }
+}

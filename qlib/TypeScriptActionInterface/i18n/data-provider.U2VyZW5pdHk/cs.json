@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "cs": {
+      "messages": {
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.desc": {
+          "source": "Creates a conversation with the given agent code. This is required before executing an agent.",
+          "message": "Vytvoří konverzaci se zadaným kódem agenta. Toto je vyžadováno před spuštěním agenta."
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.display_name": {
+          "source": "Create Conversation",
+          "message": "Vytvořit konverzaci"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.desc": {
+          "source": "The code of the agent to create a conversation with",
+          "message": "Kód agenta, se kterým se má vytvořit konverzace"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "Kód agenta"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The code of the agent to create a conversation with",
+          "message": "Kód agenta, se kterým se má vytvořit konverzace"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.desc": {
+          "source": "An array of key-value pairs for additional context.",
+          "message": "Pole dvojic klíč-hodnota pro dodatečný kontext."
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.display_name": {
+          "source": "Input Parameters",
+          "message": "Vstupní parametry"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.aW5wdXRQYXJhbWV0ZXJz.short_desc": {
+          "source": "An array of key-value pairs for additional context.",
+          "message": "Pole dvojic klíč-hodnota pro dodatečný kontext."
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.desc": {
+          "source": "It helps maintain context across interactions. For example, you might use `\"userIdentifier\": \"landing-page-user\"` to track a specific user session.",
+          "message": "Pomáhá udržovat kontext napříč interakcemi. Můžete například použít `\"userIdentifier\": \"landing-page-user\"` ke sledování konkrétní uživatelské relace."
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.display_name": {
+          "source": "User Identifier",
+          "message": "Identifikátor uživatele"
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.option.dXNlcklkZW50aWZpZXI.short_desc": {
+          "source": "Used to uniquely identify a user in a conversation. ",
+          "message": "Používá se k jednoznačné identifikaci uživatele v konverzaci. "
+        },
+        "app.U2VyZW5pdHk.action.Y3JlYXRlLWNvbnZlcnNhdGlvbg.short_desc": {
+          "source": "Create a conversation with a conversation agent",
+          "message": "Vytvořit konverzaci s konverzačním agentem"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.desc": {
+          "source": "Executes an agent with the given code.",
+          "message": "Spustí agenta se zadaným kódem."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.display_name": {
+          "source": "Execute Agent",
+          "message": "Spustit agenta"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVu.display_name": {
+          "source": "EN",
+          "message": "EN"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVz.display_name": {
+          "source": "ES",
+          "message": "ES"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "Tento parametr použijte k přepsání jazykového prostředí odpovědi."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.display_name": {
+          "source": "Culture",
+          "message": "Jazykové prostředí"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.Y3VsdHVyZQ.short_desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "Tento parametr použijte k přepsání jazykového prostředí odpovědi."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.desc": {
+          "source": "Used to identify and execute a specific agent within the Serenity* AI Hub",
+          "message": "Používá se k identifikaci a spuštění konkrétního agenta v rámci Serenity* AI Hub"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "Kód agenta"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "Used to identify and execute a specific agent within the Serenity* AI Hub",
+          "message": "Používá se k identifikaci a spuštění konkrétního agenta v rámci Serenity* AI Hub"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.desc": {
+          "source": "An array of key-value pairs for execution context.",
+          "message": "Pole dvojic klíč-hodnota pro kontext provádění."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.display_name": {
+          "source": "Params",
+          "message": "Parametry"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.cGFyYW1z.short_desc": {
+          "source": "An array of key-value pairs for execution context.",
+          "message": "Pole dvojic klíč-hodnota pro kontext provádění."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.desc": {
+          "source": "Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub",
+          "message": "Jedinečné identifikátory (UUID) používané k načtení konkrétních částí nestálých znalostí v Serenity* AI Hub"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.display_name": {
+          "source": "Volatile Knowledge IDs",
+          "message": "ID nestálých znalostí"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.option.dm9sYXRpbGVLbm93bGVkZ2VJZHM.short_desc": {
+          "source": "Unique identifiers (UUIDs) used to retrieve specific pieces of volatile knowledge in the Serenity* AI Hub",
+          "message": "Jedinečné identifikátory (UUID) používané k načtení konkrétních částí nestálých znalostí v Serenity* AI Hub"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1hZ2VudA.short_desc": {
+          "source": "Executes an agent with the given code.",
+          "message": "Spustí agenta se zadaným kódem."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.desc": {
+          "source": "Send a message to a chat with agent",
+          "message": "Odeslat zprávu do chatu s agentem"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.display_name": {
+          "source": "Execute Conversation",
+          "message": "Spustit konverzaci"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "The conversation to send the message to",
+          "message": "Konverzace, do které se má zpráva odeslat"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation ID",
+          "message": "ID konverzace"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The conversation to send the message to",
+          "message": "Konverzace, do které se má zpráva odeslat"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVu.display_name": {
+          "source": "EN",
+          "message": "EN"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.allowed-value.c3RyaW5nOmVz.display_name": {
+          "source": "ES",
+          "message": "ES"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.desc": {
+          "source": "Use this param to override the culture of the response. ",
+          "message": "Tento parametr použijte k přepsání jazykového prostředí odpovědi. "
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.display_name": {
+          "source": "Culture",
+          "message": "Jazykové prostředí"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.Y3VsdHVyZQ.short_desc": {
+          "source": "Use this param to override the culture of the response.",
+          "message": "Tento parametr použijte k přepsání jazykového prostředí odpovědi."
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.desc": {
+          "source": "The agent to check for conversations with",
+          "message": "Agent, u kterého se mají kontrolovat konverzace"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent Code",
+          "message": "Kód agenta"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The agent to check for conversations with",
+          "message": "Agent, u kterého se mají kontrolovat konverzace"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.desc": {
+          "source": "Message to send to the agent",
+          "message": "Zpráva k odeslání agentovi"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "Zpráva"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.bWVzc2FnZQ.short_desc": {
+          "source": "Message to send to the agent",
+          "message": "Zpráva k odeslání agentovi"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.desc": {
+          "source": "The preferred language of the response",
+          "message": "Preferovaný jazyk odpovědi"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.display_name": {
+          "source": "User Language",
+          "message": "Jazyk uživatele"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.option.dXNlckxhbmd1YWdl.short_desc": {
+          "source": "The preferred language of the response",
+          "message": "Preferovaný jazyk odpovědi"
+        },
+        "app.U2VyZW5pdHk.action.ZXhlY3V0ZS1jb252ZXJzYXRpb24.short_desc": {
+          "source": "Send a message to a chat with agent",
+          "message": "Odeslat zprávu do chatu s agentem"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Serenity** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Proveďte vlastní volání HTTP / REST API do **Serenity** pomocí ověření nakonfigurovaného připojení.\n\nZadejte metodu HTTP, cestu URI (relativní k základní adrese URL API připojení), volitelné parametry dotazu, záhlaví a tělo požadavku. Odpověď se vrátí jako hash obsahující stavový kód, záhlaví odpovědi a tělo odpovědi.\n\nTuto akci použijte pro koncové body, které v této aplikaci zatím nejsou k dispozici jako samostatné akce."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Provést volání API"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Tělo požadavku. Efektivní typ závisí na `body_type`: JSON/form/YAML očekávají hash, XML/text očekávají řetězec, multipart očekává strukturu souboru, binary očekává surové bajty."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Tělo"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Tělo požadavku"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Nahrát soubor pomocí `multipart/form-data`. Tělo musí být struktura @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Framework vytvoří obálku multipart a nastaví záhlaví boundary."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart Form"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Nahrát soubor pomocí multipart/form-data"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Předat tělo klientovi REST beze změny; klient rozhodne o serializaci na základě své nakonfigurované možnosti `data` a typu hodnoty"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Automaticky"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Předání bez změn; použít serializaci připojení a nechat rozhodnutí na klientovi REST"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odeslat tělo jako surové bajty. Tělo musí být binární hodnota. Nastavuje `Content-Type: application/octet-stream`, pokud není přepsáno `hdr`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surová binární data"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odeslat tělo jako surové bajty"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovat hash formulářových polí jako `application/x-www-form-urlencoded`. Tělo musí být hash, jehož hodnotami jsou skaláry (řetězce/čísla/booleovské hodnoty)."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulář (URL-encoded)"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovat tělo jako formulářová pole application/x-www-form-urlencoded"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovat tělo jako JSON; nastavuje `Content-Type: application/json`. Tělo by mělo být hash, seznam nebo skalární hodnota."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovat tělo jako JSON"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odeslat tělo jako prostý text. Tělo musí být řetězec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odeslat tělo jako text/plain"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odeslat tělo jako XML. Pokud je tělo hash, serializuje se do XML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odeslat tělo jako XML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odeslat tělo jako YAML. Pokud je tělo hash, serializuje se do YAML; pokud je to řetězec, odešle se doslovně. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odeslat tělo jako YAML"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vybírá režim serializace těla a odpovídající záhlaví `Content-Type`. Změna tohoto pole upraví editor `body` – výběrem JSON se zobrazí editor JSON, výběrem Multipart Form se zobrazí výběr souboru a podobně."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ těla"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Jak je tělo serializováno a jaký Content-Type je odeslán"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Pokud je `True`, odpovědi HTTP jiné než 2xx se vrátí jako běžný hash odpovědi (s reálným stavovým kódem) namísto vyvolání `REST-RESPONSE-ERROR`. Užitečné pro zpracování 4xx/5xx jako dat – např. kontrola, zda prostředek existuje. Přepisuje nastavení `error_passthru` připojení pouze pro toto volání."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vracet chyby jako data"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vracet odpovědi jiné než 2xx normálně namísto vyvolání výjimky"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Volitelný seznam stavových kódů HTTP považovaných za úspěch. Je-li nastaven a stav odpovědi není v tomto seznamu, akce vyvolá `REST-STATUS-ERROR`. Pokud není nastaven, uplatní se výchozí chování klienta REST (obvykle: 2xx je úspěch, jiné než 2xx vyvolá výjimku)."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očekávané stavové kódy"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovědi považované za úspěch"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastních záhlaví přidaných k požadavku. Tyto přepisují jakákoli výchozí záhlaví nastavená `body_type` (např. zadání `Content-Type` zde má přednost před výchozím nastavením typu těla)."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastní záhlaví"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatečná záhlaví požadavku"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Pokud je `True`, hash odpovědi obsahuje pod-hash `debug` obsahující metodu/URL/záhlaví požadavku (s cenzurovanými citlivými hodnotami), velikosti požadavku a odpovědi a dobu trvání. Užitečné při zkoumání pomalých nebo selhávajících volání. Ve výchozím nastavení vypnuto pro zachování kompaktních odpovědí."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnout ladicí informace"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnout do odpovědi ladicí informace o požadavku/časování/velikosti"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metoda HTTP"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metoda HTTP, která se má použít pro požadavek"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relativní k základní adrese URL API připojení. Může obsahovat zástupné symboly `{name}`, které jsou nahrazeny z `path_vars`. Příklad: `/users/{id}/comments`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relativní vůči základní URL API připojení. Může obsahovat zástupné symboly '{name}', které jsou nahrazeny z 'path_vars'. Příklad: '/users/{id}/comments'"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Haš hodnot nahrazených za zástupné symboly `{name}` v cestě URI. Příklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhraní odesílá `/users/123`. Hodnoty jsou kódovány v URL."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Proměnné cesty"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pro zástupné symboly {name} v cestě"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Haš parametrů dotazovacího řetězce, které se připojí k cestě URI. Hodnoty jsou kódovány v URL; hodnoty seznamu jsou spojeny pomocí `,`."
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dotazu"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametry dotazovacího řetězce"
+        },
+        "app.U2VyZW5pdHk.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Serenity",
+          "message": "Provést vlastní volání API do Serenity"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.desc": {
+          "source": "This trigger activates when a new message is posted in a conversation.",
+          "message": "Tento trigger se aktivuje, když je v konverzaci publikována nová zpráva."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.display_name": {
+          "source": "New Conversation Message",
+          "message": "Nová zpráva v konverzaci"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.desc": {
+          "source": "Enter the Conversation ID to specify the conversation where you want to monitor new messages.",
+          "message": "Zadejte ID konverzace a určete tak konverzaci, ve které chcete sledovat nové zprávy."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.display_name": {
+          "source": "Conversation ID",
+          "message": "ID konverzace"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.Y29udmVyc2F0aW9uSWQ.short_desc": {
+          "source": "The unique identifier for the conversation.",
+          "message": "Jedinečný identifikátor konverzace."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.desc": {
+          "source": "Agent ID to check for available conversations from",
+          "message": "ID agenta, u kterého se mají kontrolovat dostupné konverzace"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.display_name": {
+          "source": "Agent ID",
+          "message": "ID agenta"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.YWdlbnRDb2Rl.short_desc": {
+          "source": "The unique identifier for the agent.",
+          "message": "Jedinečný identifikátor agenta."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "Vše"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOmJvdA.display_name": {
+          "source": "Bot",
+          "message": "Bot"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.allowed-value.c3RyaW5nOnVzZXI.display_name": {
+          "source": "User",
+          "message": "Uživatel"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.desc": {
+          "source": "Choose the sender the messages should be filtered by.",
+          "message": "Vyberte odesílatele, podle kterého se mají zprávy filtrovat."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.display_name": {
+          "source": "Sender",
+          "message": "Odesílatel"
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.option.c2VuZGVy.short_desc": {
+          "source": "Filter the messages by the sender.",
+          "message": "Filtrovat zprávy podle odesílatele."
+        },
+        "app.U2VyZW5pdHk.action.bmV3LWNvbnZlcnNhdGlvbi1tZXNzYWdl.short_desc": {
+          "source": "Triggered when a new message is posted in a conversation.",
+          "message": "Spustí se, když je v konverzaci publikována nová zpráva."
+        },
+        "app.U2VyZW5pdHk.desc": {
+          "source": "Enterprise AI ecosystem that enables businesses to create, manage, and scale AI agents effortlessly, enhancing productivity and innovation across various processes.",
+          "message": "Podnikový ekosystém AI, který firmám umožňuje snadno vytvářet, spravovat a škálovat AI agenty a zvyšovat produktivitu a inovace napříč různými procesy."
+        },
+        "app.U2VyZW5pdHk.display_name": {
+          "source": "Serenity",
+          "message": "Serenity"
+        },
+        "app.U2VyZW5pdHk.short_desc": {
+          "source": "Create conversations, execute agents and manage interactions with Serenity AI Hub.",
+          "message": "Vytvářejte konverzace, spouštějte agenty a spravujte interakce pomocí Serenity AI Hub."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,2809 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ja": {
+      "messages": {
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.desc": {
+          "source": "Creates a new post on a Facebook page with support for text, links, photos, scheduling, and visibility settings. Can create both immediate and scheduled posts.",
+          "message": "テキスト、リンク、写真、スケジュール設定、公開範囲設定をサポートして、Facebook ページに新しい投稿を作成します。即時投稿と予約投稿の両方を作成できます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.display_name": {
+          "source": "Create Page Post",
+          "message": "ページ投稿を作成"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOmhpZGRlbg.desc": {
+          "source": "Post will be hidden from news feed",
+          "message": "投稿はニュースフィードから非表示になります"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOmhpZGRlbg.display_name": {
+          "source": "Hidden",
+          "message": "非表示"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOnZpc2libGU.desc": {
+          "source": "Post will be visible in news feed",
+          "message": "投稿はニュースフィードに表示されます"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.allowed-value.c3RyaW5nOnZpc2libGU.display_name": {
+          "source": "Visible",
+          "message": "表示"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.desc": {
+          "source": "Controls whether the post appears in the news feed.",
+          "message": "投稿をニュースフィードに表示するかどうかを制御します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.display_name": {
+          "source": "Feed Story Visibility",
+          "message": "フィードストーリーの公開範囲"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.ZmVlZF9zdG9yeV92aXNpYmlsaXR5.short_desc": {
+          "source": "Visibility in news feed",
+          "message": "ニュースフィードでの公開範囲"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.desc": {
+          "source": "A URL to be shared in the post. Facebook will automatically generate a preview.",
+          "message": "投稿で共有する URL。Facebook がプレビューを自動生成します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.display_name": {
+          "source": "Link",
+          "message": "リンク"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bGluaw.short_desc": {
+          "source": "URL to share in the post",
+          "message": "投稿で共有する URL"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.desc": {
+          "source": "The main text content for the post. Optional if link or photos are provided.",
+          "message": "投稿のメインテキストコンテンツ。リンクまたは写真が提供されている場合はオプションです。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The text content of the post",
+          "message": "投稿のテキストコンテンツ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.desc": {
+          "source": "ISO timestamp for when the post should be published. Requires published to be false.",
+          "message": "投稿を公開する日時の ISO タイムスタンプ。published が false である必要があります。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.display_name": {
+          "source": "Scheduled Publish Time",
+          "message": "予約公開日時"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.c2NoZWR1bGVkX3B1Ymxpc2hfdGltZQ.short_desc": {
+          "source": "When to publish the post",
+          "message": "投稿を公開するタイミング"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page where the post will be created.",
+          "message": "投稿を作成する Facebook ページの固有識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to post to",
+          "message": "投稿先の Facebook ページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.desc": {
+          "source": "A list of image URLs to be attached to the post. Images will be uploaded to Facebook.",
+          "message": "投稿に添付する画像 URL のリスト。画像は Facebook にアップロードされます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.display_name": {
+          "source": "Photo URLs",
+          "message": "写真の URL"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cGhvdG9fdXJscw.short_desc": {
+          "source": "List of photo URLs to attach",
+          "message": "添付する写真 URL のリスト"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.desc": {
+          "source": "If true, the post will be published immediately. If false, it will be saved as a draft or scheduled.",
+          "message": "true の場合、投稿はすぐに公開されます。false の場合、下書きとして保存されるか予約されます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.display_name": {
+          "source": "Published",
+          "message": "公開済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.cHVibGlzaGVk.short_desc": {
+          "source": "Whether to publish the post immediately",
+          "message": "投稿をすぐに公開するかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOm5vcm1hbA.desc": {
+          "source": "Post will appear normally on timeline",
+          "message": "投稿はタイムラインに通常どおり表示されます"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOm5vcm1hbA.display_name": {
+          "source": "Normal",
+          "message": "標準"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOmhpZGRlbg.desc": {
+          "source": "Post will be hidden from timeline",
+          "message": "投稿はタイムラインから非表示になります"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.allowed-value.c3RyaW5nOmhpZGRlbg.display_name": {
+          "source": "Hidden",
+          "message": "非表示"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.desc": {
+          "source": "Controls whether the post appears on the page timeline.",
+          "message": "投稿をページのタイムラインに表示するかどうかを制御します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.display_name": {
+          "source": "Timeline Visibility",
+          "message": "タイムラインの表示設定"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.option.dGltZWxpbmVfdmlzaWJpbGl0eQ.short_desc": {
+          "source": "Visibility on timeline",
+          "message": "タイムラインでの表示設定"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Y3JlYXRlX3BhZ2VfcG9zdA.short_desc": {
+          "source": "Create a new post on a Facebook page",
+          "message": "Facebookページに新しい投稿を作成"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.desc": {
+          "source": "Retrieves detailed information about a Facebook page, including basic information, contact details, location, statistics, and other page properties.",
+          "message": "基本情報、連絡先情報、位置情報、統計、その他のページプロパティを含む、Facebookページの詳細情報を取得します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.display_name": {
+          "source": "Get Page",
+          "message": "ページを取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lbWJlcnM.display_name": {
+          "source": "members",
+          "message": "members"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2luZ19mZWF0dXJlX3N0YXR1cw.display_name": {
+          "source": "messaging_feature_status",
+          "message": "messaging_feature_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfZGVmYXVsdF9pY2VicmVha2Vycw.display_name": {
+          "source": "messenger_ads_default_icebreakers",
+          "message": "messenger_ads_default_icebreakers"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfZGVmYXVsdF9xdWlja19yZXBsaWVz.display_name": {
+          "source": "messenger_ads_default_quick_replies",
+          "message": "messenger_ads_default_quick_replies"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3Nlbmdlcl9hZHNfcXVpY2tfcmVwbGllc190eXBl.display_name": {
+          "source": "messenger_ads_quick_replies_type",
+          "message": "messenger_ads_quick_replies_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lcmNoYW50X2lk.display_name": {
+          "source": "merchant_id",
+          "message": "merchant_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lcmNoYW50X3Jldmlld19zdGF0dXM.display_name": {
+          "source": "merchant_review_status",
+          "message": "merchant_review_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1pbmlfc2hvcF9zdG9yZWZyb250.display_name": {
+          "source": "mini_shop_storefront",
+          "message": "mini_shop_storefront"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1pc3Npb24.display_name": {
+          "source": "mission",
+          "message": "mission"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm1wZw.display_name": {
+          "source": "mpg",
+          "message": "mpg"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWVfd2l0aF9sb2NhdGlvbl9kZXNjcmlwdG9y.display_name": {
+          "source": "name_with_location_descriptor",
+          "message": "name_with_location_descriptor"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5ld19saWtlX2NvdW50.display_name": {
+          "source": "new_like_count",
+          "message": "new_like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm5ldHdvcms.display_name": {
+          "source": "network",
+          "message": "network"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm92ZXJhbGxfc3Rhcl9yYXRpbmc.display_name": {
+          "source": "overall_star_rating",
+          "message": "overall_star_rating"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm93bmVyX2J1c2luZXNz.display_name": {
+          "source": "owner_business",
+          "message": "owner_business"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOm9mZmVyX2VsaWdpYmxl.display_name": {
+          "source": "offer_eligible",
+          "message": "offer_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGlyZQ.display_name": {
+          "source": "attire",
+          "message": "attire"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF2YWlsYWJsZV9wcm9tb19vZmZlcl9pZHM.display_name": {
+          "source": "available_promo_offer_ids",
+          "message": "available_promo_offer_ids"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmF3YXJkcw.display_name": {
+          "source": "awards",
+          "message": "awards"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFib3V0.display_name": {
+          "source": "about",
+          "message": "about"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjY2Vzc190b2tlbg.display_name": {
+          "source": "access_token",
+          "message": "access_token"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkX2NhbXBhaWdu.display_name": {
+          "source": "ad_campaign",
+          "message": "ad_campaign"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFmZmlsaWF0aW9u.display_name": {
+          "source": "affiliation",
+          "message": "affiliation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcF9pZA.display_name": {
+          "source": "app_id",
+          "message": "app_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmFydGlzdHNfd2VfbGlrZQ.display_name": {
+          "source": "artists_we_like",
+          "message": "artists_we_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJ1aWx0.display_name": {
+          "source": "built",
+          "message": "built"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJ1c2luZXNz.display_name": {
+          "source": "business",
+          "message": "business"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhbmRfaW50ZXJlc3Rz.display_name": {
+          "source": "band_interests",
+          "message": "band_interests"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhbmRfbWVtYmVycw.display_name": {
+          "source": "band_members",
+          "message": "band_members"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJlc3RfcGFnZQ.display_name": {
+          "source": "best_page",
+          "message": "best_page"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJpbw.display_name": {
+          "source": "bio",
+          "message": "bio"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJpcnRoZGF5.display_name": {
+          "source": "birthday",
+          "message": "birthday"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJvb2tpbmdfYWdlbnQ.display_name": {
+          "source": "booking_agent",
+          "message": "booking_agent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmJyZWFraW5nX25ld3NfdXNhZ2U.display_name": {
+          "source": "breaking_news_usage",
+          "message": "breaking_news_usage"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmN1bGluYXJ5X3RlYW0.display_name": {
+          "source": "culinary_team",
+          "message": "culinary_team"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmN1cnJlbnRfbG9jYXRpb24.display_name": {
+          "source": "current_location",
+          "message": "current_location"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jaGVja2lu.display_name": {
+          "source": "can_checkin",
+          "message": "can_checkin"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9wb3N0.display_name": {
+          "source": "can_post",
+          "message": "can_post"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhdGVnb3J5.display_name": {
+          "source": "category",
+          "message": "category"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhdGVnb3J5X2xpc3Q.display_name": {
+          "source": "category_list",
+          "message": "category_list"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoZWNraW5z.display_name": {
+          "source": "checkins",
+          "message": "checkins"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbXBhbnlfb3ZlcnZpZXc.display_name": {
+          "source": "company_overview",
+          "message": "company_overview"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbm5lY3RlZF9pbnN0YWdyYW1fYWNjb3VudA.display_name": {
+          "source": "connected_instagram_account",
+          "message": "connected_instagram_account"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbm5lY3RlZF9wYWdlX2JhY2tlZF9pbnN0YWdyYW1fYWNjb3VudA.display_name": {
+          "source": "connected_page_backed_instagram_account",
+          "message": "connected_page_backed_instagram_account"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbnRhY3RfYWRkcmVzcw.display_name": {
+          "source": "contact_address",
+          "message": "contact_address"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvcHlyaWdodF93aGl0ZWxpc3RlZF9pZ19wYXJ0bmVycw.display_name": {
+          "source": "copyright_whitelisted_ig_partners",
+          "message": "copyright_whitelisted_ig_partners"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvcHlyaWdodF9hdHRyaWJ1dGlvbl9pbnNpZ2h0cw.display_name": {
+          "source": "copyright_attribution_insights",
+          "message": "copyright_attribution_insights"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvdW50cnlfcGFnZV9saWtlcw.display_name": {
+          "source": "country_page_likes",
+          "message": "country_page_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvdmVy.display_name": {
+          "source": "cover",
+          "message": "cover"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlbGl2ZXJ5X2FuZF9waWNrdXBfb3B0aW9uX2luZm8.display_name": {
+          "source": "delivery_and_pickup_option_info",
+          "message": "delivery_and_pickup_option_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9uX2h0bWw.display_name": {
+          "source": "description_html",
+          "message": "description_html"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpZmZlcmVudGx5X29wZW5fb2ZmZXJpbmdz.display_name": {
+          "source": "differently_open_offerings",
+          "message": "differently_open_offerings"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpc3BsYXlfc3VidGV4dA.display_name": {
+          "source": "display_subtext",
+          "message": "display_subtext"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpc3BsYXllZF9tZXNzYWdlX3Jlc3BvbnNlX3RpbWU.display_name": {
+          "source": "displayed_message_response_time",
+          "message": "表示されるメッセージの応答時間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRpcmVjdGVkX2J5.display_name": {
+          "source": "directed_by",
+          "message": "監督"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmRvZXNfdmlld2VyX2hhdmVfcGFnZV9wZXJtaXNzaW9uX2xpbmtfaWc.display_name": {
+          "source": "does_viewer_have_page_permission_link_ig",
+          "message": "閲覧者にIGリンクのページ権限があるか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmVtYWlscw.display_name": {
+          "source": "emails",
+          "message": "メールアドレス"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmVuZ2FnZW1lbnQ.display_name": {
+          "source": "engagement",
+          "message": "エンゲージメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZhbl9jb3VudA.display_name": {
+          "source": "fan_count",
+          "message": "ファン数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlYXR1cmVkX3ZpZGVv.display_name": {
+          "source": "featured_video",
+          "message": "注目の動画"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlYXR1cmVz.display_name": {
+          "source": "features",
+          "message": "特徴"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvb2Rfc3R5bGVz.display_name": {
+          "source": "food_styles",
+          "message": "料理スタイル"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvbGxvd2Vyc19jb3VudA.display_name": {
+          "source": "followers_count",
+          "message": "フォロワー数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmZvdW5kZWQ.display_name": {
+          "source": "founded",
+          "message": "設立"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbmVyYWxfaW5mbw.display_name": {
+          "source": "general_info",
+          "message": "基本情報"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbmVyYWxfbWFuYWdlcg.display_name": {
+          "source": "general_manager",
+          "message": "ゼネラルマネージャー"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdlbnJl.display_name": {
+          "source": "genre",
+          "message": "ジャンル"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdsb2JhbF9icmFuZF9wYWdlX25hbWU.display_name": {
+          "source": "global_brand_page_name",
+          "message": "グローバルブランドページ名"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmdsb2JhbF9icmFuZF9yb290X2lk.display_name": {
+          "source": "global_brand_root_id",
+          "message": "グローバルブランドルートID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc190cmFuc2l0aW9uZWRfdG9fbmV3X3BhZ2VfZXhwZXJpZW5jZQ.display_name": {
+          "source": "has_transitioned_to_new_page_experience",
+          "message": "新しいページエクスペリエンスに移行済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc193aGF0c2FwcF9idXNpbmVzc19udW1iZXI.display_name": {
+          "source": "has_whatsapp_business_number",
+          "message": "WhatsAppビジネス番号あり"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc193aGF0c2FwcF9udW1iZXI.display_name": {
+          "source": "has_whatsapp_number",
+          "message": "WhatsApp番号あり"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc19hZGRlZF9hcHA.display_name": {
+          "source": "has_added_app",
+          "message": "アプリ追加済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhhc19sZWFkX2FjY2Vzcw.display_name": {
+          "source": "has_lead_access",
+          "message": "リードアクセス権あり"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhvbWV0b3du.display_name": {
+          "source": "hometown",
+          "message": "出身地"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmhvdXJz.display_name": {
+          "source": "hours",
+          "message": "営業時間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmltcHJlc3N1bQ.display_name": {
+          "source": "impressum",
+          "message": "インプレッサム"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmluZmx1ZW5jZXM.display_name": {
+          "source": "influences",
+          "message": "影響を受けたもの"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9idXNpbmVzc19hY2NvdW50.display_name": {
+          "source": "instagram_business_account",
+          "message": "Instagramビジネスアカウント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX21lc3Nlbmdlcl9ib3RfZ2V0X3N0YXJ0ZWRfZW5hYmxlZA.display_name": {
+          "source": "is_messenger_bot_get_started_enabled",
+          "message": "Messengerボットの「スタート」ボタン有効"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX21lc3Nlbmdlcl9wbGF0Zm9ybV9ib3Q.display_name": {
+          "source": "is_messenger_platform_bot",
+          "message": "Messengerプラットフォームボットである"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX293bmVk.display_name": {
+          "source": "is_owned",
+          "message": "所有中"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2Fsd2F5c19vcGVu.display_name": {
+          "source": "is_always_open",
+          "message": "常に営業中"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NhbGxpbmdfZWxpZ2libGU.display_name": {
+          "source": "is_calling_eligible",
+          "message": "通話利用可能"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NoYWlu.display_name": {
+          "source": "is_chain",
+          "message": "チェーン店である"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2NvbW11bml0eV9wYWdl.display_name": {
+          "source": "is_community_page",
+          "message": "コミュニティページである"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9icmFuZGVkX2NvbnRlbnQ.display_name": {
+          "source": "is_eligible_for_branded_content",
+          "message": "ブランドコンテンツ利用可能"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9kaXNhYmxlX2Nvbm5lY3RfaWdfYnRuX2Zvcl9ub25fcGFnZV9hZG1pbl9hbV93ZWI.display_name": {
+          "source": "is_eligible_for_disable_connect_ig_btn_for_non_page_admin_am_web",
+          "message": "非管理者向けIG連携ボタン無効化の対象"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "公開済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3Blcm1hbmVudGx5X2Nsb3NlZA.display_name": {
+          "source": "is_permanently_closed",
+          "message": "閉業済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3VuY2xhaW1lZA.display_name": {
+          "source": "is_unclaimed",
+          "message": "未申請"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ZlcmlmaWVk.display_name": {
+          "source": "is_verified",
+          "message": "認証済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3dlYmhvb2tzX3N1YnNjcmliZWQ.display_name": {
+          "source": "is_webhooks_subscribed",
+          "message": "Webhook登録済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmtleXdvcmRz.display_name": {
+          "source": "keywords",
+          "message": "キーワード"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGFuY2VfdGltZQ.display_name": {
+          "source": "leadgen_tos_acceptance_time",
+          "message": "リード獲得規約同意日時"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGVk.display_name": {
+          "source": "leadgen_tos_accepted",
+          "message": "リード獲得規約同意済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxlYWRnZW5fdG9zX2FjY2VwdGluZ191c2Vy.display_name": {
+          "source": "leadgen_tos_accepting_user",
+          "message": "リード獲得規約同意ユーザー"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "リンク"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOmxvY2F0aW9u.display_name": {
+          "source": "location",
+          "message": "場所"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnB1YmxpY190cmFuc2l0.display_name": {
+          "source": "public_transit",
+          "message": "公共交通機関"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhZ2VfdG9rZW4.display_name": {
+          "source": "page_token",
+          "message": "ページトークン"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9wYWdl.display_name": {
+          "source": "parent_page",
+          "message": "親ページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmtpbmc.display_name": {
+          "source": "parking",
+          "message": "駐車場"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBheW1lbnRfb3B0aW9ucw.display_name": {
+          "source": "payment_options",
+          "message": "支払い方法"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcnNvbmFsX2luZm8.display_name": {
+          "source": "personal_info",
+          "message": "個人情報"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcnNvbmFsX2ludGVyZXN0cw.display_name": {
+          "source": "personal_interests",
+          "message": "興味・関心"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBoYXJtYV9zYWZldHlfaW5mbw.display_name": {
+          "source": "pharma_safety_info",
+          "message": "医薬品安全性情報"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBob25l.display_name": {
+          "source": "phone",
+          "message": "電話番号"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY2t1cF9vcHRpb25z.display_name": {
+          "source": "pickup_options",
+          "message": "受取オプション"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNlX3R5cGU.display_name": {
+          "source": "place_type",
+          "message": "場所のタイプ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsb3Rfb3V0bGluZQ.display_name": {
+          "source": "plot_outline",
+          "message": "あらすじ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByZWZlcnJlZF9hdWRpZW5jZQ.display_name": {
+          "source": "preferred_audience",
+          "message": "優先オーディエンス"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByZXNzX2NvbnRhY3Q.display_name": {
+          "source": "press_contact",
+          "message": "広報窓口"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaWNlX3Jhbmdl.display_name": {
+          "source": "price_range",
+          "message": "価格帯"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3lfaW5mb191cmw.display_name": {
+          "source": "privacy_info_url",
+          "message": "プライバシー情報URL"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9lbGlnaWJsZQ.display_name": {
+          "source": "promotion_eligible",
+          "message": "プロモーション対象"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9pbmVsaWdpYmxlX3JlYXNvbg.display_name": {
+          "source": "promotion_ineligible_reason",
+          "message": "promotion_ineligible_reason"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb2R1Y2VkX2J5.display_name": {
+          "source": "produced_by",
+          "message": "produced_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb2R1Y3Rz.display_name": {
+          "source": "products",
+          "message": "products"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJhdGluZ19jb3VudA.display_name": {
+          "source": "rating_count",
+          "message": "rating_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlY29yZF9sYWJlbA.display_name": {
+          "source": "record_label",
+          "message": "record_label"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlY2lwaWVudA.display_name": {
+          "source": "recipient",
+          "message": "recipient"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlbGVhc2VfZGF0ZQ.display_name": {
+          "source": "release_date",
+          "message": "release_date"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlc3RhdXJhbnRfc2VydmljZXM.display_name": {
+          "source": "restaurant_services",
+          "message": "restaurant_services"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnJlc3RhdXJhbnRfc3BlY2lhbHRpZXM.display_name": {
+          "source": "restaurant_specialties",
+          "message": "restaurant_specialties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXJ0X2luZm8.display_name": {
+          "source": "start_info",
+          "message": "start_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXJyaW5n.display_name": {
+          "source": "starring",
+          "message": "starring"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX251bWJlcg.display_name": {
+          "source": "store_number",
+          "message": "store_number"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX2NvZGU.display_name": {
+          "source": "store_code",
+          "message": "store_code"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3JlX2xvY2F0aW9uX2Rlc2NyaXB0b3I.display_name": {
+          "source": "store_location_descriptor",
+          "message": "store_location_descriptor"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0dWRpbw.display_name": {
+          "source": "studio",
+          "message": "studio"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1cHBvcnRzX2RvbmF0ZV9idXR0b25faW5fbGl2ZV92aWRlbw.display_name": {
+          "source": "supports_donate_button_in_live_video",
+          "message": "supports_donate_button_in_live_video"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxl.display_name": {
+          "source": "schedule",
+          "message": "schedule"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjcmVlbnBsYXlfYnk.display_name": {
+          "source": "screenplay_by",
+          "message": "screenplay_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNlYXNvbg.display_name": {
+          "source": "season",
+          "message": "season"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnNpbmdsZV9saW5lX2FkZHJlc3M.display_name": {
+          "source": "single_line_address",
+          "message": "single_line_address"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhbGtpbmdfYWJvdXRfY291bnQ.display_name": {
+          "source": "talking_about_count",
+          "message": "talking_about_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnRlbXBvcmFyeV9zdGF0dXM.display_name": {
+          "source": "temporary_status",
+          "message": "temporary_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVuc2Vlbl9tZXNzYWdlX2NvdW50.display_name": {
+          "source": "unseen_message_count",
+          "message": "unseen_message_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVucmVhZF9tZXNzYWdlX2NvdW50.display_name": {
+          "source": "unread_message_count",
+          "message": "unread_message_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVucmVhZF9ub3RpZl9jb3VudA.display_name": {
+          "source": "unread_notif_count",
+          "message": "unread_notif_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfYWNjZXNzX2V4cGlyZV90aW1l.display_name": {
+          "source": "user_access_expire_time",
+          "message": "user_access_expire_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJuYW1l.display_name": {
+          "source": "username",
+          "message": "username"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnZlcmlmaWNhdGlvbl9zdGF0dXM.display_name": {
+          "source": "verification_status",
+          "message": "verification_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOnZvaXBfaW5mbw.display_name": {
+          "source": "voip_info",
+          "message": "voip_info"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndlYnNpdGU.display_name": {
+          "source": "website",
+          "message": "website"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndlcmVfaGVyZV9jb3VudA.display_name": {
+          "source": "were_here_count",
+          "message": "were_here_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndoYXRzYXBwX251bWJlcg.display_name": {
+          "source": "whatsapp_number",
+          "message": "whatsapp_number"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.allowed-value.c3RyaW5nOndyaXR0ZW5fYnk.display_name": {
+          "source": "written_by",
+          "message": "written_by"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for the page, such as name, category, about section, and contact information.",
+          "message": "名前、カテゴリ、基本データセクション、連絡先情報など、ページに対して取得する特定のフィールド。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.ZmllbGRz.short_desc": {
+          "source": "Page fields to retrieve",
+          "message": "取得するページフィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page to retrieve details for.",
+          "message": "詳細を取得するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to retrieve",
+          "message": "取得するFacebookページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2U.short_desc": {
+          "source": "Get details of a Facebook page",
+          "message": "Facebookページの詳細を取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.desc": {
+          "source": "Retrieves detailed information about a specific Facebook page post, including content, metadata, engagement counts, and other post properties.",
+          "message": "コンテンツ、メタデータ、エンゲージメント数、その他の投稿プロパティを含む、特定のFacebookページ投稿に関する詳細情報を取得します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.display_name": {
+          "source": "Get Page Post",
+          "message": "ページ投稿の取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "公開済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "リンク"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for the post, such as message, created time, and engagement metrics.",
+          "message": "投稿について取得する特定のフィールド（メッセージ、作成日時、エンゲージメント指標など）。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "取得する投稿フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve details for.",
+          "message": "詳細を取得するFacebook投稿の一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to retrieve",
+          "message": "取得する投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "投稿を所有するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "FacebookページID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdA.short_desc": {
+          "source": "Get details of a Facebook page post",
+          "message": "Facebookページの投稿の詳細を取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.desc": {
+          "source": "Retrieves detailed insights and analytics data for a specific Facebook page post, including impressions, clicks, engagement metrics, and time-series data.",
+          "message": "特定のFacebookページ投稿に関する詳細なインサイトおよびアナリティクスデータ（インプレッション数、クリック数、エンゲージメント指標、時系列データなど）を取得します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.display_name": {
+          "source": "Get Page Post Insights",
+          "message": "ページ投稿のインサイトを取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9lbmdhZ2VtZW50.desc": {
+          "source": "The number of unique fans who engaged with your post",
+          "message": "投稿にエンゲージメントしたユニークファン数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9lbmdhZ2VtZW50.display_name": {
+          "source": "Fan Engagement",
+          "message": "ファンのエンゲージメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9yZWFjaA.desc": {
+          "source": "The number of unique fans who saw your post",
+          "message": "投稿を閲覧したユニークファン数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmZhbl9yZWFjaA.display_name": {
+          "source": "Fan Reach",
+          "message": "ファンのリーチ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmxpbmtfY2xpY2tz.desc": {
+          "source": "The number of clicks on links in your post",
+          "message": "投稿内のリンクのクリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOmxpbmtfY2xpY2tz.display_name": {
+          "source": "Link Clicks",
+          "message": "リンクのクリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBhZ2VfcG9zdF9lbmdhZ2VtZW50cw.desc": {
+          "source": "The number of times people engaged with your post (likes, comments, shares, etc.)",
+          "message": "ユーザーが投稿にエンゲージメントした回数（いいね！、コメント、シェアなど）"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBhZ2VfcG9zdF9lbmdhZ2VtZW50cw.display_name": {
+          "source": "Page Post Engagements",
+          "message": "ページ投稿のエンゲージメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tz.desc": {
+          "source": "The number of clicks on your post",
+          "message": "投稿のクリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tz.display_name": {
+          "source": "Post Clicks",
+          "message": "投稿のクリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX2J5X3R5cGU.desc": {
+          "source": "The number of clicks on your post, broken down by type (link, photo, video, etc.)",
+          "message": "タイプ別（リンク、写真、動画など）に分類された投稿のクリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX2J5X3R5cGU.display_name": {
+          "source": "Post Clicks by Type",
+          "message": "タイプ別の投稿クリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX3VuaXF1ZQ.desc": {
+          "source": "The number of unique people who clicked on your post",
+          "message": "投稿をクリックしたユニークユーザー数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfY2xpY2tzX3VuaXF1ZQ.display_name": {
+          "source": "Unique Post Clicks",
+          "message": "ユニーク投稿クリック数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbWVkaWFfdmlldw.desc": {
+          "source": "The number of times your post (photo, video, or other media) was displayed, including repeat views. Replacement for post_impressions. Use parameters to filter by paid, organic, or follower views.",
+          "message": "投稿（写真、動画、またはその他のメディア）が表示された回数（リピート表示を含む）。post_impressionsの後継です。パラメータを使用して有料、オーガニック、またはフォロワーによる表示で絞り込めます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbWVkaWFfdmlldw.display_name": {
+          "source": "Post Media Views",
+          "message": "投稿メディアの閲覧数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2s.desc": {
+          "source": "The number of times people hid your post or reported it as spam",
+          "message": "ユーザーが投稿を非表示にした、またはスパムとして報告した回数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2s.display_name": {
+          "source": "Post Negative Feedback",
+          "message": "投稿のネガティブフィードバック"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2tfdW5pcXVl.desc": {
+          "source": "The number of unique people who hid your post or reported it as spam",
+          "message": "投稿を非表示にした、またはスパムとして報告したユニークユーザー数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfbmVnYXRpdmVfZmVlZGJhY2tfdW5pcXVl.display_name": {
+          "source": "Unique Negative Feedback",
+          "message": "ユニークネガティブフィードバック"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfcmVhY3Rpb25zX2J5X3R5cGVfdG90YWw.desc": {
+          "source": "The number of reactions on your post, broken down by type (like, love, wow, haha, sorry, anger)",
+          "message": "タイプ別（like、love、wow、haha、sorry、anger）に分類された投稿のリアクション数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnBvc3RfcmVhY3Rpb25zX2J5X3R5cGVfdG90YWw.display_name": {
+          "source": "Post Reactions by Type",
+          "message": "タイプ別投稿リアクション"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdfdGltZQ.desc": {
+          "source": "Total time spent viewing your video post",
+          "message": "動画投稿の総再生時間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdfdGltZQ.display_name": {
+          "source": "Video View Time",
+          "message": "動画再生時間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdz.desc": {
+          "source": "The number of times your video post was viewed for 3+ seconds",
+          "message": "動画投稿が3秒以上再生された回数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdz.display_name": {
+          "source": "Video Views",
+          "message": "動画再生数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdzX3VuaXF1ZQ.desc": {
+          "source": "The number of unique people who viewed your video for 3+ seconds",
+          "message": "動画を3秒以上再生したユニークユーザー数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvX3ZpZXdzX3VuaXF1ZQ.display_name": {
+          "source": "Unique Video Views",
+          "message": "ユニーク動画再生数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvXzEwc192aWV3cw.desc": {
+          "source": "The number of times your video post was viewed for at least 10 seconds",
+          "message": "動画投稿が10秒以上再生された回数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.allowed-value.c3RyaW5nOnZpZGVvXzEwc192aWV3cw.display_name": {
+          "source": "10-Second Video Views",
+          "message": "10秒間の動画再生数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.desc": {
+          "source": "The specific insight metrics to retrieve for the post, such as impressions, clicks, and engagement.",
+          "message": "インプレッション、クリック、エンゲージメントなど、投稿に関して取得する特定のインサイト指標。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.display_name": {
+          "source": "Metrics",
+          "message": "指標"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.bWV0cmljcw.short_desc": {
+          "source": "List of metrics to retrieve",
+          "message": "取得する指標のリスト"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve insights for.",
+          "message": "インサイトを取得するFacebook投稿の一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to get insights for",
+          "message": "インサイトを取得する投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "投稿を所有するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "FacebookページID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheQ.desc": {
+          "source": "Daily breakdown of metrics",
+          "message": "日別の指標内訳"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheQ.display_name": {
+          "source": "Day",
+          "message": "日"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheXNfMjg.desc": {
+          "source": "28-day breakdown of metrics",
+          "message": "28日間の指標内訳"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmRheXNfMjg.display_name": {
+          "source": "28 Days",
+          "message": "28日間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmxpZmV0aW1l.desc": {
+          "source": "Lifetime total metrics",
+          "message": "全期間の合計指標"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOmxpZmV0aW1l.display_name": {
+          "source": "Lifetime",
+          "message": "全期間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOndlZWs.desc": {
+          "source": "Weekly breakdown of metrics",
+          "message": "週別の指標内訳"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.allowed-value.c3RyaW5nOndlZWs.display_name": {
+          "source": "Week",
+          "message": "週"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.desc": {
+          "source": "The time period for which to retrieve insights data. Lifetime returns total metrics.",
+          "message": "インサイトデータを取得する期間。全期間を指定すると合計指標が返されます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.display_name": {
+          "source": "Period",
+          "message": "期間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.option.cGVyaW9k.short_desc": {
+          "source": "Time period for insights",
+          "message": "インサイトの期間"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3BhZ2VfcG9zdF9pbnNpZ2h0cw.short_desc": {
+          "source": "Get analytics data for a Facebook page post",
+          "message": "Facebookページ投稿のアナリティクスデータを取得します"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.desc": {
+          "source": "Retrieves comments on a specific Facebook page post with support for filtering, ordering, pagination, and optional reply inclusion.",
+          "message": "フィルタリング、順序付け、ページネーション、およびオプションでの返信の含有をサポートし、特定のFacebookページ投稿のコメントを取得します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.display_name": {
+          "source": "Get Post Comments",
+          "message": "投稿のコメントを取得"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdA.display_name": {
+          "source": "object",
+          "message": "object"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGFjaG1lbnQ.display_name": {
+          "source": "attachment",
+          "message": "attachment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jb21tZW50.display_name": {
+          "source": "can_comment",
+          "message": "can_comment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9oaWRl.display_name": {
+          "source": "can_hide",
+          "message": "can_hide"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9saWtl.display_name": {
+          "source": "can_like",
+          "message": "can_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZW1vdmU.display_name": {
+          "source": "can_remove",
+          "message": "can_remove"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRfY291bnQ.display_name": {
+          "source": "comment_count",
+          "message": "comment_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ByaXZhdGU.display_name": {
+          "source": "is_private",
+          "message": "is_private"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpa2VfY291bnQ.display_name": {
+          "source": "like_count",
+          "message": "like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpdmVfYnJvYWRjYXN0X3RpbWVzdGFtcA.display_name": {
+          "source": "live_broadcast_timestamp",
+          "message": "live_broadcast_timestamp"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "parent",
+          "message": "parent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhdGVfcmVwbHlfY29udmVyc2F0aW9u.display_name": {
+          "source": "private_reply_conversation",
+          "message": "private_reply_conversation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfbGlrZXM.display_name": {
+          "source": "user_likes",
+          "message": "user_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for each comment, such as message, author, and engagement metrics.",
+          "message": "メッセージ、作成者、エンゲージメント指標など、各コメントについて取得する特定のフィールド。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmllbGRz.short_desc": {
+          "source": "Comment fields to retrieve",
+          "message": "取得するコメントフィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnN0cmVhbQ.desc": {
+          "source": "All comments including replies in chronological order",
+          "message": "返信を含むすべてのコメントを時系列順で表示"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnN0cmVhbQ.display_name": {
+          "source": "Stream",
+          "message": "ストリーム"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnRvcGxldmVs.desc": {
+          "source": "Only top-level comments (no replies)",
+          "message": "トップレベルのコメントのみ（返信なし）"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.allowed-value.c3RyaW5nOnRvcGxldmVs.display_name": {
+          "source": "Top Level",
+          "message": "トップレベル"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.desc": {
+          "source": "Whether to return only top-level comments or all comments including replies in a stream format.",
+          "message": "トップレベルのコメントのみを返すか、ストリーム形式で返信を含むすべてのコメントを返すか。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "フィルター"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.ZmlsdGVy.short_desc": {
+          "source": "Comment filter type",
+          "message": "コメントフィルタータイプ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.desc": {
+          "source": "If true, includes replies to each top-level comment in the results.",
+          "message": "trueの場合、結果に各トップレベルコメントへの返信を含めます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
+          "source": "Include Replies",
+          "message": "返信を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
+          "source": "Whether to include replies to comments",
+          "message": "コメントへの返信を含めるかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOmNocm9ub2xvZ2ljYWw.desc": {
+          "source": "Order comments by time posted (oldest first)",
+          "message": "投稿時間順（古い順）にコメントを並べ替えます"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOmNocm9ub2xvZ2ljYWw.display_name": {
+          "source": "Chronological",
+          "message": "時系列順"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOnJldmVyc2VfY2hyb25vbG9naWNhbA.desc": {
+          "source": "Order comments by time posted (newest first)",
+          "message": "投稿時間順（新しい順）にコメントを並べ替えます"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.allowed-value.c3RyaW5nOnJldmVyc2VfY2hyb25vbG9naWNhbA.display_name": {
+          "source": "Reverse Chronological",
+          "message": "逆時系列順"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.desc": {
+          "source": "The order in which to return comments - chronological (oldest first) or reverse chronological (newest first).",
+          "message": "コメントを返す順序 - 時系列順（古い順）または逆時系列順（新しい順）。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.display_name": {
+          "source": "Order",
+          "message": "順序"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.b3JkZXI.short_desc": {
+          "source": "Order of comments",
+          "message": "コメントの順序"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of comments to return. Cannot exceed 100.",
+          "message": "返すコメントの最大数。100を超えることはできません。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of comments to return",
+          "message": "返すコメントの最大数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post to retrieve comments for.",
+          "message": "コメントを取得するFacebook投稿の一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to get comments for",
+          "message": "コメントを取得する投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "投稿を所有するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "FacebookページID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.Z2V0X3Bvc3RfY29tbWVudHM.short_desc": {
+          "source": "Get comments on a Facebook page post",
+          "message": "Facebookページ投稿のコメントを取得します"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.desc": {
+          "source": "Likes or unlikes a specific comment on a Facebook page post. Can toggle the like status and returns updated engagement metrics.",
+          "message": "Facebookページ投稿の特定のコメントに「いいね！」または「いいね！」の取り消しを行います。「いいね！」の状態を切り替えることができ、更新されたエンゲージメント指標を返します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.display_name": {
+          "source": "Like Comment",
+          "message": "コメントにいいね！"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.desc": {
+          "source": "The unique identifier of the comment to like or unlike.",
+          "message": "「いいね！」または「いいね！」の取り消しを行うコメントの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.display_name": {
+          "source": "Comment ID",
+          "message": "コメントID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.Y29tbWVudF9pZA.short_desc": {
+          "source": "The comment to like/unlike",
+          "message": "いいね/いいねを取り消すコメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOmxpa2U.desc": {
+          "source": "Like the comment",
+          "message": "コメントにいいねを付ける"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOmxpa2U.display_name": {
+          "source": "Like",
+          "message": "いいね"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOnVubGlrZQ.desc": {
+          "source": "Remove like from the comment",
+          "message": "コメントのいいねを取り消す"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.allowed-value.c3RyaW5nOnVubGlrZQ.display_name": {
+          "source": "Unlike",
+          "message": "いいねを取り消す"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.desc": {
+          "source": "The action to perform - either like the comment or remove the like (unlike).",
+          "message": "実行するアクション - コメントにいいねを付けるか、いいねを取り消す（unlike）かのいずれかです。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.display_name": {
+          "source": "Action",
+          "message": "アクション"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.YWN0aW9u.short_desc": {
+          "source": "Whether to like or unlike",
+          "message": "いいねを付けるか取り消すか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post that contains the comment.",
+          "message": "コメントが含まれるFacebook投稿の一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cG9zdF9pZA.short_desc": {
+          "source": "The post containing the comment",
+          "message": "コメントを含む投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "投稿を所有するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "FacebookページID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bGlrZV9jb21tZW50.short_desc": {
+          "source": "Like or unlike a comment on a Facebook post",
+          "message": "Facebook投稿のコメントにいいねを付ける、またはいいねを取り消す"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Facebook Pages** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "設定された接続の認証情報を使用して、**Facebook Pages**へのカスタムHTTP / REST API呼び出しを実行します。\n\nHTTPメソッド、URIパス（接続のAPIベースURLに対する相対パス）、任意のクエリパラメータ、ヘッダー、リクエスト本文を指定します。レスポンスは、ステータスコード、レスポンスヘッダー、レスポンス本文を含むハッシュとして返されます。\n\nこのアプリでファーストクラスのアクションとしてまだ公開されていないエンドポイントに対してこのアクションを使用します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API コールを実行"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "リクエストボディ。有効な型は`body_type`に依存します。JSON/form/YAMLはハッシュを期待し、XML/textは文字列を期待し、multipartはファイル構造を期待し、binaryは生バイトを期待します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "ボディ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "リクエストボディ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`を使用してファイルをアップロードします。ボディは@ref DataProvider::FileDataType \"FileDataType\"構造（filename + content + mime_type）である必要があります。フレームワークがmultipartエンベロープを構築し、boundaryヘッダーを設定します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "マルチパートフォーム"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-dataを使用してファイルをアップロード"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "ボディを変更せずにRESTクライアントに渡します。クライアントは設定された`data`オプションと値の型に基づいてシリアライズを決定します"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "自動"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "パススルー。接続のシリアライズを使用し、RESTクライアントに決定させます"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "ボディを生バイトとして送信します。ボディはバイナリ値である必要があります。`hdr`によってオーバーライドされない限り、`Content-Type: application/octet-stream`を設定します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "生バイナリ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "ボディを生バイトとして送信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "フォームフィールドのハッシュを`application/x-www-form-urlencoded`としてシリアライズします。ボディは値がスカラー（文字列/数値/ブール値）のハッシュである必要があります。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "フォーム (URLエンコード)"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "ボディをapplication/x-www-form-urlencodedフォームフィールドとしてシリアライズ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "ボディをJSONとしてシリアライズします。`Content-Type: application/json`を設定します。ボディはハッシュ、リスト、またはスカラー値である必要があります。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "ボディをJSONとしてシリアライズ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "ボディをプレーンテキストとして送信します。ボディは文字列である必要があります。`Content-Type: text/plain`を設定します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "プレーンテキスト"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "ボディをtext/plainとして送信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "ボディをXMLとして送信します。ボディがハッシュの場合はXMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/xml`を設定します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "ボディをXMLとして送信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "ボディをYAMLとして送信します。ボディがハッシュの場合はYAMLにシリアライズされ、文字列の場合はそのまま送信されます。`Content-Type: application/x-yaml`を設定します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "ボディをYAMLとして送信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "ボディのシリアライズモードと対応する`Content-Type`ヘッダーを選択します。このフィールドを変更すると`body`エディターの形状が変わります。JSONを選択するとJSONエディターが表示され、マルチパートフォームを選択するとファイルピッカーが表示される、などです。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "ボディタイプ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "ボディのシリアライズ方法および送信されるContent-Type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`の場合、2xx以外のHTTPレスポンスは`REST-RESPONSE-ERROR`を発生させる代わりに（実際のステータスコードを含む）通常のレスポンスハッシュとして返されます。リソースが存在するかどうかの確認など、4xx/5xxをデータとして処理する場合に便利です。この呼び出しに限り、接続の`error_passthru`設定をオーバーライドします。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "エラーをデータとして返す"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "例外をスローする代わりに2xx以外のレスポンスを通常通り返す"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "成功として扱われるHTTPステータスコードのオプションリスト。設定されていてレスポンスステータスがこのリストに含まれない場合、アクションは`REST-STATUS-ERROR`をスローします。未設定の場合、RESTクライアントのデフォルト動作が適用されます（通常：2xxは成功、2xx以外はスロー）。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "期待されるステータスコード"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "成功として扱われるレスポンスステータスコード"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "リクエストに追加されるカスタムヘッダーのハッシュ。これらは`body_type`によって設定されたデフォルトヘッダーをオーバーライドします（例：ここで`Content-Type`を指定すると、ボディタイプのデフォルトより優先されます）。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "カスタムヘッダー"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "追加のリクエストヘッダー"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`の場合、レスポンスハッシュにはリクエストメソッド/URL/ヘッダー（機密値は伏字処理済み）、リクエストとレスポンスのサイズ、およびラウンドトリップ時間を含む`debug`サブハッシュが含まれます。遅い呼び出しや失敗した呼び出しを調査する際に便利です。レスポンスを軽量に保つため、デフォルトではオフになっています。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "デバッグ情報を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "レスポンスにリクエスト/タイミング/サイズのデバッグ情報を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTPメソッド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "リクエストに使用するHTTPメソッド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "接続のAPIベースURLに対する相対URIパス。`path_vars`から置換される`{name}`プレースホルダーを含めることができます。例: `/users/{id}/comments`。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URIパス"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "接続のAPIベースURLに対する相対URIパス。'path_vars' から置換される '{name}' プレースホルダーを含めることができます。例: '/users/{id}/comments'"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URIパス内の `{name}` プレースホルダーに置換される値のハッシュ。例: `path = /users/{id}` と `path_vars = {id: 123}` を指定すると、フレームワークは `/users/123` を送信します。値はURLエンコードされます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "パス変数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "パス内の {name} プレースホルダーの値"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URIパスに追加するクエリ文字列パラメータのハッシュ。値はURLエンコードされます。リスト値は `,` で結合されます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "クエリ引数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "クエリ文字列パラメータ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Facebook Pages",
+          "message": "Facebook PagesへのカスタムAPI呼び出しを実行"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.desc": {
+          "source": "Monitors a Facebook page for new posts and triggers when a post is created. Supports filtering by visibility and customizable fields to retrieve specific post data.",
+          "message": "Facebookページを監視して新しい投稿がないか確認し、投稿が作成されたときにトリガーします。公開設定によるフィルタリングや、特定の投稿データを取得するためのカスタマイズ可能なフィールドに対応しています。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.display_name": {
+          "source": "New Post",
+          "message": "新規投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "公開済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "リンク"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.desc": {
+          "source": "List of post fields to include in the trigger data. Default includes id, message, created_time, permalink_url, full_picture, is_published, and is_hidden.",
+          "message": "トリガーデータに含める投稿フィールドのリスト。デフォルトでは id、message、created_time、permalink_url、full_picture、is_published、is_hidden が含まれます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "取得する投稿フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "When enabled, the trigger will also fire for posts that are hidden from the page timeline. Default is false.",
+          "message": "有効にすると、ページのタイムラインで非表示になっている投稿に対してもトリガーが起動します。デフォルトは false です。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden Posts",
+          "message": "非表示の投稿を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden posts",
+          "message": "非表示の投稿を含めるかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.desc": {
+          "source": "The ID of the Facebook page to monitor for new posts.",
+          "message": "新しい投稿を監視するFacebookページのID。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to monitor",
+          "message": "監視するFacebookページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3Q.short_desc": {
+          "source": "Triggers when a new post is created on a Facebook page.",
+          "message": "Facebookページに新しい投稿が作成されたときにトリガーします。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.desc": {
+          "source": "Monitors a specific Facebook post for new comments and triggers when a comment is added. Supports filtering by visibility, including replies, and customizable fields to retrieve specific comment data.",
+          "message": "特定のFacebook投稿を監視して新しいコメントがないか確認し、コメントが追加されたときにトリガーします。公開設定によるフィルタリング、返信の含有、特定のコメントデータを取得するためのカスタマイズ可能なフィールドに対応しています。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.display_name": {
+          "source": "New Post Comment",
+          "message": "投稿への新規コメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdA.display_name": {
+          "source": "object",
+          "message": "object"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmF0dGFjaG1lbnQ.display_name": {
+          "source": "attachment",
+          "message": "attachment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9jb21tZW50.display_name": {
+          "source": "can_comment",
+          "message": "can_comment"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9oaWRl.display_name": {
+          "source": "can_hide",
+          "message": "can_hide"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9saWtl.display_name": {
+          "source": "can_like",
+          "message": "can_like"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZW1vdmU.display_name": {
+          "source": "can_remove",
+          "message": "can_remove"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRfY291bnQ.display_name": {
+          "source": "comment_count",
+          "message": "comment_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3ByaXZhdGU.display_name": {
+          "source": "is_private",
+          "message": "is_private"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpa2VfY291bnQ.display_name": {
+          "source": "like_count",
+          "message": "like_count"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpdmVfYnJvYWRjYXN0X3RpbWVzdGFtcA.display_name": {
+          "source": "live_broadcast_timestamp",
+          "message": "live_broadcast_timestamp"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudA.display_name": {
+          "source": "parent",
+          "message": "parent"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhdGVfcmVwbHlfY29udmVyc2F0aW9u.display_name": {
+          "source": "private_reply_conversation",
+          "message": "private_reply_conversation"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.allowed-value.c3RyaW5nOnVzZXJfbGlrZXM.display_name": {
+          "source": "user_likes",
+          "message": "user_likes"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.desc": {
+          "source": "List of comment fields to include in the trigger data. Default includes id, message, created_time, from, like_count, comment_count, and permalink_url.",
+          "message": "トリガーデータに含めるコメントフィールドのリスト。デフォルトでは id、message、created_time、from、like_count、comment_count、permalink_url が含まれます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.ZmllbGRz.short_desc": {
+          "source": "Comment fields to retrieve",
+          "message": "取得するコメントフィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "When enabled, the trigger will also fire for comments that are hidden. Default is false.",
+          "message": "有効にすると、非表示のコメントに対してもトリガーが起動します。デフォルトは false です。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden Comments",
+          "message": "非表示のコメントを含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden comments",
+          "message": "非表示のコメントを含めるかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.desc": {
+          "source": "When enabled, the trigger will include replies to comments in addition to top-level comments. Default is true.",
+          "message": "有効にすると、トリガーにはトップレベルのコメントに加えてコメントへの返信も含まれます。デフォルトは true です。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.display_name": {
+          "source": "Include Replies",
+          "message": "返信を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.aW5jbHVkZV9yZXBsaWVz.short_desc": {
+          "source": "Whether to include comment replies",
+          "message": "コメントへの返信を含めるかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.desc": {
+          "source": "The ID of the specific Facebook post to monitor for new comments.",
+          "message": "新しいコメントを監視する特定のFacebook投稿のID。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post to monitor for comments",
+          "message": "コメントを監視する投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.desc": {
+          "source": "The ID of the Facebook page that contains the post to monitor for comments.",
+          "message": "コメントを監視する投稿を含むFacebookページのID。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page containing the post",
+          "message": "投稿を含むFacebookページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.bmV3X3Bvc3RfY29tbWVudA.short_desc": {
+          "source": "Triggers when a new comment is added to a Facebook post.",
+          "message": "Facebook投稿に新しいコメントが追加されたときにトリガーします。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.desc": {
+          "source": "Searches for posts on a Facebook page with support for text filtering, date ranges, visibility options, and field selection. Returns a list of matching posts.",
+          "message": "テキストフィルタリング、日付範囲、公開オプション、フィールド選択をサポートし、Facebookページ上の投稿を検索します。一致する投稿のリストを返します。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.display_name": {
+          "source": "Search Page Posts",
+          "message": "ページの投稿を検索"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX29wdGltaXplZA.display_name": {
+          "source": "multi_share_optimized",
+          "message": "multi_share_optimized"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm11bHRpX3NoYXJlX2VuZF9jYXJk.display_name": {
+          "source": "multi_share_end_card",
+          "message": "multi_share_end_card"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2U.display_name": {
+          "source": "message",
+          "message": "message"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm1lc3NhZ2VfdGFncw.display_name": {
+          "source": "message_tags",
+          "message": "message_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm5hbWU.display_name": {
+          "source": "name",
+          "message": "name"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOm9iamVjdF9pZA.display_name": {
+          "source": "object_id",
+          "message": "object_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFjdGlvbnM.display_name": {
+          "source": "actions",
+          "message": "actions"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFkbWluX2NyZWF0b3I.display_name": {
+          "source": "admin_creator",
+          "message": "admin_creator"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFsbG93ZWRfYWR2ZXJ0aXNpbmdfb2JqZWN0aXZlcw.display_name": {
+          "source": "allowed_advertising_objectives",
+          "message": "allowed_advertising_objectives"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmFwcGxpY2F0aW9u.display_name": {
+          "source": "application",
+          "message": "application"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmJhY2tkYXRlZF90aW1l.display_name": {
+          "source": "backdated_time",
+          "message": "backdated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbGxfdG9fYWN0aW9u.display_name": {
+          "source": "call_to_action",
+          "message": "call_to_action"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhbl9yZXBseV9wcml2YXRlbHk.display_name": {
+          "source": "can_reply_privately",
+          "message": "can_reply_privately"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNhcHRpb24.display_name": {
+          "source": "caption",
+          "message": "caption"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNoaWxkX2F0dGFjaG1lbnRz.display_name": {
+          "source": "child_attachments",
+          "message": "child_attachments"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvb3JkaW5hdGVz.display_name": {
+          "source": "coordinates",
+          "message": "coordinates"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNvbW1lbnRzX21pcnJvcmluZ19kb21haW4.display_name": {
+          "source": "comments_mirroring_domain",
+          "message": "comments_mirroring_domain"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmNyZWF0ZWRfdGltZQ.display_name": {
+          "source": "created_time",
+          "message": "created_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmRlc2NyaXB0aW9u.display_name": {
+          "source": "description",
+          "message": "description"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV2ZW50.display_name": {
+          "source": "event",
+          "message": "event"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX2hlaWdodA.display_name": {
+          "source": "expanded_height",
+          "message": "expanded_height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmV4cGFuZGVkX3dpZHRo.display_name": {
+          "source": "expanded_width",
+          "message": "expanded_width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZ1bGxfcGljdHVyZQ.display_name": {
+          "source": "full_picture",
+          "message": "full_picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZlZWRfdGFyZ2V0aW5n.display_name": {
+          "source": "feed_targeting",
+          "message": "feed_targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmZyb20.display_name": {
+          "source": "from",
+          "message": "from"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmhlaWdodA.display_name": {
+          "source": "height",
+          "message": "height"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmljb24.display_name": {
+          "source": "icon",
+          "message": "icon"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlk.display_name": {
+          "source": "id",
+          "message": "ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmluc3RhZ3JhbV9lbGlnaWJpbGl0eQ.display_name": {
+          "source": "instagram_eligibility",
+          "message": "instagram_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2FwcF9zaGFyZQ.display_name": {
+          "source": "is_app_share",
+          "message": "is_app_share"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2V4cGlyZWQ.display_name": {
+          "source": "is_expired",
+          "message": "is_expired"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2VsaWdpYmxlX2Zvcl9wcm9tb3Rpb24.display_name": {
+          "source": "is_eligible_for_promotion",
+          "message": "is_eligible_for_promotion"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2hpZGRlbg.display_name": {
+          "source": "is_hidden",
+          "message": "is_hidden"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2lubGluZV9jcmVhdGVk.display_name": {
+          "source": "is_inline_created",
+          "message": "is_inline_created"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX2luc3RhZ3JhbV9lbGlnaWJsZQ.display_name": {
+          "source": "is_instagram_eligible",
+          "message": "is_instagram_eligible"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3B1Ymxpc2hlZA.display_name": {
+          "source": "is_published",
+          "message": "公開済み"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3BvcHVsYXI.display_name": {
+          "source": "is_popular",
+          "message": "is_popular"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmlzX3NwaGVyaWNhbA.display_name": {
+          "source": "is_spherical",
+          "message": "is_spherical"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOmxpbms.display_name": {
+          "source": "link",
+          "message": "リンク"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBhcmVudF9pZA.display_name": {
+          "source": "parent_id",
+          "message": "parent_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBlcm1hbGlua191cmw.display_name": {
+          "source": "permalink_url",
+          "message": "permalink_url"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBpY3R1cmU.display_name": {
+          "source": "picture",
+          "message": "picture"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnBsYWNl.display_name": {
+          "source": "place",
+          "message": "place"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByaXZhY3k.display_name": {
+          "source": "privacy",
+          "message": "privacy"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGFibGVfaWQ.display_name": {
+          "source": "promotable_id",
+          "message": "promotable_id"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb21vdGlvbl9zdGF0dXM.display_name": {
+          "source": "promotion_status",
+          "message": "promotion_status"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnByb3BlcnRpZXM.display_name": {
+          "source": "properties",
+          "message": "properties"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0YXR1c190eXBl.display_name": {
+          "source": "status_type",
+          "message": "status_type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5.display_name": {
+          "source": "story",
+          "message": "story"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN0b3J5X3RhZ3M.display_name": {
+          "source": "story_tags",
+          "message": "story_tags"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnN1YnNjcmliZWQ.display_name": {
+          "source": "subscribed",
+          "message": "subscribed"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNjaGVkdWxlZF9wdWJsaXNoX3RpbWU.display_name": {
+          "source": "scheduled_publish_time",
+          "message": "scheduled_publish_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNoYXJlcw.display_name": {
+          "source": "shares",
+          "message": "shares"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnNvdXJjZQ.display_name": {
+          "source": "source",
+          "message": "source"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnR5cGU.display_name": {
+          "source": "type",
+          "message": "type"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldA.display_name": {
+          "source": "target",
+          "message": "target"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRhcmdldGluZw.display_name": {
+          "source": "targeting",
+          "message": "targeting"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnRpbWVsaW5lX3Zpc2liaWxpdHk.display_name": {
+          "source": "timeline_visibility",
+          "message": "timeline_visibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnVwZGF0ZWRfdGltZQ.display_name": {
+          "source": "updated_time",
+          "message": "updated_time"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpYQ.display_name": {
+          "source": "via",
+          "message": "via"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOnZpZGVvX2J1eWluZ19lbGlnaWJpbGl0eQ.display_name": {
+          "source": "video_buying_eligibility",
+          "message": "video_buying_eligibility"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.allowed-value.c3RyaW5nOndpZHRo.display_name": {
+          "source": "width",
+          "message": "width"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.desc": {
+          "source": "The specific fields to retrieve for each post in the search results.",
+          "message": "検索結果の各投稿に対して取得する特定のフィールド。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.ZmllbGRz.short_desc": {
+          "source": "Post fields to retrieve",
+          "message": "取得する投稿フィールド"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.desc": {
+          "source": "If true, includes posts that are hidden from the timeline in the search results.",
+          "message": "true の場合、タイムラインで非表示になっている投稿を検索結果に含めます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.display_name": {
+          "source": "Include Hidden",
+          "message": "非表示を含める"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.aW5jbHVkZV9oaWRkZW4.short_desc": {
+          "source": "Whether to include hidden posts",
+          "message": "非表示の投稿を含めるかどうか"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of posts to return in the search results. Cannot exceed 100.",
+          "message": "検索結果として返す投稿の最大数。100を超えることはできません。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "上限"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of posts to return",
+          "message": "返す投稿の最大数"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.desc": {
+          "source": "Text string to search for within post messages and stories. Case-insensitive search.",
+          "message": "投稿のメッセージやストーリー内で検索するテキスト文字列。大文字と小文字は区別されません。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.display_name": {
+          "source": "Search Text",
+          "message": "検索テキスト"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2VhcmNoX3RleHQ.short_desc": {
+          "source": "Text to search for in posts",
+          "message": "投稿内で検索するテキスト"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.desc": {
+          "source": "ISO timestamp or date string for the earliest post creation date to include in results.",
+          "message": "結果に含める最も古い投稿作成日時のISOタイムスタンプまたは日付文字列。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.display_name": {
+          "source": "Since",
+          "message": "開始日時"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.c2luY2U.short_desc": {
+          "source": "Start date for search",
+          "message": "検索の開始日"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page to search for posts.",
+          "message": "投稿を検索するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page to search",
+          "message": "検索対象のFacebookページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.desc": {
+          "source": "ISO timestamp or date string for the latest post creation date to include in results.",
+          "message": "結果に含める最も新しい投稿作成日時のISOタイムスタンプまたは日付文字列。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.display_name": {
+          "source": "Until",
+          "message": "終了日時"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.option.dW50aWw.short_desc": {
+          "source": "End date for search",
+          "message": "検索の終了日"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.c2VhcmNoX3BhZ2VfcG9zdHM.short_desc": {
+          "source": "Search and filter posts on a Facebook page",
+          "message": "Facebookページ上の投稿を検索およびフィルタリング"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.desc": {
+          "source": "Creates a reply to a specific comment on a Facebook page post. Supports text replies and optional attachment URLs.",
+          "message": "Facebookページの投稿に対する特定のコメントへの返信を作成します。テキストでの返信および任意の添付URLに対応しています。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.display_name": {
+          "source": "Reply to Comment",
+          "message": "コメントに返信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.desc": {
+          "source": "The unique identifier of the comment to reply to.",
+          "message": "返信対象のコメントの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.display_name": {
+          "source": "Comment ID",
+          "message": "コメントID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.Y29tbWVudF9pZA.short_desc": {
+          "source": "The comment to reply to",
+          "message": "返信対象のコメント"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.desc": {
+          "source": "Optional URL to attach to the reply, such as an image or link.",
+          "message": "画像やリンクなど、返信に添付する任意のURL。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.display_name": {
+          "source": "Attachment URL",
+          "message": "添付ファイルURL"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.YXR0YWNobWVudF91cmw.short_desc": {
+          "source": "Optional attachment URL",
+          "message": "任意の添付ファイルURL"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.desc": {
+          "source": "The text content of the reply to the comment.",
+          "message": "コメントへの返信のテキスト内容。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.display_name": {
+          "source": "Message",
+          "message": "メッセージ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.bWVzc2FnZQ.short_desc": {
+          "source": "The reply message",
+          "message": "返信メッセージ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.desc": {
+          "source": "The unique identifier of the Facebook post that contains the comment being replied to.",
+          "message": "返信対象のコメントが含まれるFacebook投稿の一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.display_name": {
+          "source": "Post ID",
+          "message": "投稿ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cG9zdF9pZA.short_desc": {
+          "source": "The post containing the comment",
+          "message": "コメントを含む投稿"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.desc": {
+          "source": "The unique identifier of the Facebook page that owns the post.",
+          "message": "投稿を所有するFacebookページの一意の識別子。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.display_name": {
+          "source": "Page ID",
+          "message": "ページ ID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.option.cGFnZV9pZA.short_desc": {
+          "source": "The Facebook page ID",
+          "message": "FacebookページID"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.action.cmVwbHlfdG9fY29tbWVudA.short_desc": {
+          "source": "Reply to a comment on a Facebook page post",
+          "message": "Facebookページの投稿のコメントに返信"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.desc": {
+          "source": "Connect your Facebook account to manage your pages, posts, and comments directly from Qore. You can create, read, update, and delete posts on your Facebook pages, as well as manage comments and reactions.",
+          "message": "Facebookアカウントを接続して、Qoreから直接ページ、投稿、コメントを管理します。Facebookページの投稿の作成、取得、更新、削除のほか、コメントやリアクションの管理も行えます。"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.display_name": {
+          "source": "Facebook Pages",
+          "message": "Facebookページ"
+        },
+        "app.RmFjZWJvb2tQYWdlcw.short_desc": {
+          "source": "Manage your Facebook pages and posts",
+          "message": "Facebookページや投稿を管理"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.desc": {
+          "source": "Monitors your Dynamics 365 environment for contacts, allowing you to trigger workflows either when new contacts are added or when existing contact records are changed.",
+          "message": "Dynamics 365 환경에서 연락처를 모니터링하여 새 연락처가 추가되거나 기존 연락처 레코드가 변경될 때 워크플로를 트리거할 수 있도록 합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.display_name": {
+          "source": "New or Updated Contact",
+          "message": "새 연락처 또는 업데이트된 연락처"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether the trigger should fire for newly created contacts or for updates to existing contacts. Only one option can be active.",
+          "message": "새로 생성된 연락처에 대해 트리거를 실행할지 아니면 기존 연락처의 업데이트에 대해 실행할지 선택하십시오. 하나의 옵션만 활성화할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY29udGFjdA.short_desc": {
+          "source": "Triggers when a contact is created or modified",
+          "message": "연락처가 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.desc": {
+          "source": "Detects when support cases are created or updated in Dynamics 365, enabling automated responses, notifications, or case management workflows.",
+          "message": "Dynamics 365에서 지원 케이스가 생성되거나 업데이트될 때 이를 감지하여 자동 응답, 알림 또는 케이스 관리 워크플로를 지원합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.display_name": {
+          "source": "New or Updated Case",
+          "message": "새 케이스 또는 업데이트된 케이스"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on new cases (created) or when existing cases are modified (updated). You must select one option.",
+          "message": "새 케이스가 생성(created)될 때 트리거할지, 기존 케이스가 수정(updated)될 때 트리거할지 지정합니다. 옵션을 하나 선택해야 합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtY2FzZQ.short_desc": {
+          "source": "Triggers when a case is created or modified",
+          "message": "케이스가 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.desc": {
+          "source": "Monitors Dynamics 365 for accounts, allowing you to choose whether to trigger on newly created accounts or when existing accounts are modified.",
+          "message": "Dynamics 365의 계정을 모니터링하여 새로 생성된 계정 또는 기존 계정이 수정될 때 트리거할지 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.display_name": {
+          "source": "New or Updated Account",
+          "message": "새 계정 또는 업데이트된 계정"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger when accounts are created or when they are updated. Only one condition can be selected at a time.",
+          "message": "계정이 생성될 때 트리거할지 업데이트될 때 트리거할지 선택합니다. 한 번에 하나의 조건만 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtYWNjb3VudA.short_desc": {
+          "source": "Triggers when an account is created or modified",
+          "message": "계정이 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.desc": {
+          "source": "Monitors invoice-related activities in Dynamics 365, letting you choose to trigger workflows either when new invoices are created or when existing ones are updated.",
+          "message": "Dynamics 365의 청구서 관련 활동을 모니터링하여 새 청구서가 생성되거나 기존 청구서가 업데이트될 때 워크플로를 트리거하도록 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.display_name": {
+          "source": "New or Updated Invoice",
+          "message": "새 청구서 또는 업데이트된 청구서"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on newly created invoices or when existing invoices are modified. You must select one option.",
+          "message": "새로 생성된 청구서 또는 기존 청구서가 수정될 때 트리거할지 지정합니다. 옵션을 하나 선택해야 합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtaW52b2ljZQ.short_desc": {
+          "source": "Triggers when an invoice is created or modified",
+          "message": "청구서가 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.desc": {
+          "source": "Monitors your sales pipeline in Dynamics 365, giving you the option to trigger workflows either when new opportunities are created or when existing ones change.",
+          "message": "Dynamics 365의 영업 파이프라인을 모니터링하여 새 기회가 생성되거나 기존 기회가 변경될 때 워크플로를 트리거하는 옵션을 제공합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.display_name": {
+          "source": "New or Updated Opportunity",
+          "message": "새 기회 또는 업데이트된 기회"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.desc": {
+          "source": "Specify whether to trigger on new opportunities being created or on updates to existing opportunities. You must select one option.",
+          "message": "새 기회가 생성될 때 트리거할지 기존 기회가 업데이트될 때 트리거할지 지정합니다. 옵션을 하나 선택해야 합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3Bwb3J0dW5pdHk.short_desc": {
+          "source": "Triggers when an opportunity is created or modified",
+          "message": "기회가 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.desc": {
+          "source": "Tracks order-related activities in Dynamics 365, allowing you to choose whether to trigger workflows when new orders are placed or when existing orders are updated.",
+          "message": "Dynamics 365의 주문 관련 활동을 추적하여 새 주문이 접수되거나 기존 주문이 업데이트될 때 워크플로를 트리거할지 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.display_name": {
+          "source": "New or Updated Order",
+          "message": "새 주문 또는 업데이트된 주문"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger on newly created orders or when existing orders are modified. Only one condition can be active at a time.",
+          "message": "새로 생성된 주문 또는 기존 주문이 수정될 때 트리거할지 선택합니다. 한 번에 하나의 조건만 활성화할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtb3JkZXI.short_desc": {
+          "source": "Triggers when an order is created or modified",
+          "message": "주문이 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.desc": {
+          "source": "Detects when leads are added or modified in Dynamics 365, allowing you to choose whether to trigger on new leads or when existing lead records change.",
+          "message": "Dynamics 365에서 리드가 추가되거나 수정되는 시점을 감지하여 새 리드가 발생하거나 기존 리드 레코드가 변경될 때 트리거할지 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.display_name": {
+          "source": "New or Updated Lead",
+          "message": "새 리드 또는 업데이트된 리드"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.desc": {
+          "source": "Select whether to trigger when new leads are created or when existing leads are updated. Only one condition can be selected.",
+          "message": "새 리드가 생성될 때 트리거할지 기존 리드가 업데이트될 때 트리거할지 선택합니다. 하나의 조건만 선택할 수 있습니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.display_name": {
+          "source": "Trigger Condition",
+          "message": "트리거 조건"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.option.Y29uZGl0aW9u.short_desc": {
+          "source": "Choose created or updated",
+          "message": "생성됨 또는 업데이트됨 선택"
+        },
+        "app.RHluYW1pY3M.action.bmV3LW9yLXVwZGF0ZWQtbGVhZA.short_desc": {
+          "source": "Triggers when a lead is created or modified",
+          "message": "리드가 생성되거나 수정될 때 트리거됩니다"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.desc": {
+          "source": "Works with your organization's custom entities in Dynamics 365, allowing you to monitor and respond when new records are created for any custom entity type you specify.",
+          "message": "Dynamics 365에서 조직의 커스텀 엔터티와 연동하여 지정한 커스텀 엔터티 유형의 새 레코드가 생성될 때 모니터링하고 대응할 수 있도록 합니다."
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.display_name": {
+          "source": "New Custom Entity Record",
+          "message": "새 커스텀 엔터티 레코드"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.desc": {
+          "source": "The logical name of the custom entity to monitor",
+          "message": "모니터링할 커스텀 엔터티의 논리적 이름"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.display_name": {
+          "source": "Entity Logical Name",
+          "message": "엔터티 논리적 이름"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.option.ZW50aXR5TmFtZQ.short_desc": {
+          "source": "The internal name of the custom entity",
+          "message": "커스텀 엔터티의 내부 이름"
+        },
+        "app.RHluYW1pY3M.action.bmV3LWN1c3RvbS1lbnRpdHk.short_desc": {
+          "source": "Triggers when a custom entity record is created",
+          "message": "커스텀 엔터티 레코드가 생성될 때 트리거됩니다"
+        }
+      }
+    }
+  }
+}

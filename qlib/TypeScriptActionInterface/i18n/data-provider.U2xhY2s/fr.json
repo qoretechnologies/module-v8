@@ -1,0 +1,1401 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "fr": {
+      "messages": {
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.desc": {
+          "source": "This trigger fires whenever a new public or private channel is created in the workspace.",
+          "message": "Ce déclencheur s'active chaque fois qu'un nouveau canal public ou privé est créé dans l'espace de travail."
+        },
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.display_name": {
+          "source": "Channel Created",
+          "message": "Canal créé"
+        },
+        "app.U2xhY2s.action.Y2hhbm5lbF9jcmVhdGVk.short_desc": {
+          "source": "Triggers when a new channel is created",
+          "message": "S'active lorsqu'un nouveau canal est créé"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.desc": {
+          "source": "Create a new public or private channel in your Slack workspace.",
+          "message": "Créer un nouveau canal public ou privé dans votre espace de travail Slack."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.display_name": {
+          "source": "Create Channel",
+          "message": "Créer un canal"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.desc": {
+          "source": "The name for the new channel. Must be unique and follow Slack naming rules (lowercase, no spaces).",
+          "message": "Le nom du nouveau canal. Doit être unique et respecter les règles de nommage de Slack (minuscules, sans espaces)."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.display_name": {
+          "source": "Channel Name",
+          "message": "Nom du canal"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.Y2hhbm5lbE5hbWU.short_desc": {
+          "source": "Name for the new channel",
+          "message": "Nom du nouveau canal"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.desc": {
+          "source": "If enabled, create a private channel instead of a public one.",
+          "message": "Si cette option est activée, crée un canal privé au lieu d'un canal public."
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.display_name": {
+          "source": "Private Channel",
+          "message": "Canal privé"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.option.aXNQcml2YXRl.short_desc": {
+          "source": "Make the channel private",
+          "message": "Rendre le canal privé"
+        },
+        "app.U2xhY2s.action.Y3JlYXRlX2NoYW5uZWw.short_desc": {
+          "source": "Create a new Slack channel",
+          "message": "Créer un nouveau canal Slack"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.desc": {
+          "source": "Add an emoji reaction to a specific message in a channel.",
+          "message": "Ajouter une réaction emoji à un message spécifique dans un canal."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.display_name": {
+          "source": "Add Reaction",
+          "message": "Ajouter une réaction"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message is located.",
+          "message": "Sélectionnez le canal où se trouve le message."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Le canal contenant le message"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.desc": {
+          "source": "The emoji name without colons (e.g., \"thumbsup\", \"fire\", \"smile\").",
+          "message": "Le nom de l'emoji sans deux-points (par ex. \"thumbsup\", \"fire\", \"smile\")."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.display_name": {
+          "source": "Reaction",
+          "message": "Réaction"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.cmVhY3Rpb24.short_desc": {
+          "source": "Emoji name to add",
+          "message": "Nom de l'emoji à ajouter"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message to react to. You can also paste a Slack message link.",
+          "message": "L'horodatage (ts) du message auquel réagir. Vous pouvez également coller un lien de message Slack."
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.YWRkX3JlYWN0aW9u.short_desc": {
+          "source": "Add an emoji reaction to a message",
+          "message": "Ajouter une réaction emoji à un message"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.desc": {
+          "source": "This trigger fires whenever someone mentions the bot in a message in the specified channel. Use this to respond to direct requests.",
+          "message": "Ce déclencheur s'active chaque fois que quelqu'un mentionne le bot dans un message du canal spécifié. Utilisez ceci pour répondre aux demandes directes."
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.display_name": {
+          "source": "App Mention",
+          "message": "Mention de l'application"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to monitor for bot mentions. Make sure the bot is a member of the channel.",
+          "message": "Sélectionnez le canal à surveiller pour les mentions du bot. Assurez-vous que le bot est membre du canal."
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to monitor for mentions",
+          "message": "Le canal à surveiller pour les mentions"
+        },
+        "app.U2xhY2s.action.YXBwX21lbnRpb24.short_desc": {
+          "source": "Triggers when the bot is mentioned in a channel",
+          "message": "Se déclenche lorsque le bot est mentionné dans un canal"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.desc": {
+          "source": "Archive a channel in your Slack workspace. Archived channels are read-only and hidden from the channel list by default.",
+          "message": "Archiver un canal dans votre espace de travail Slack. Les canaux archivés sont en lecture seule et masqués de la liste des canaux par défaut."
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.display_name": {
+          "source": "Archive Channel",
+          "message": "Archiver le canal"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel you want to archive.",
+          "message": "Sélectionnez le canal que vous souhaitez archiver."
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to archive",
+          "message": "Le canal à archiver"
+        },
+        "app.U2xhY2s.action.YXJjaGl2ZV9jaGFubmVs.short_desc": {
+          "source": "Archive a Slack channel",
+          "message": "Archiver un canal Slack"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.desc": {
+          "source": "Fetch the message history of a channel. You can filter by time range and control the number of messages returned.",
+          "message": "Récupérer l'historique des messages d'un canal. Vous pouvez filtrer par plage horaire et contrôler le nombre de messages retournés."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.display_name": {
+          "source": "Get Channel History",
+          "message": "Obtenir l'historique du canal"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to retrieve messages from.",
+          "message": "Sélectionnez le canal à partir duquel récupérer les messages."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to get history from",
+          "message": "Le canal dont l'historique doit être récupéré"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.desc": {
+          "source": "Return all metadata associated with each message.",
+          "message": "Renvoyer toutes les métadonnées associées à chaque message."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.display_name": {
+          "source": "Include All Metadata",
+          "message": "Inclure toutes les métadonnées"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVkZUFsbE1ldGFkYXRh.short_desc": {
+          "source": "Return full message metadata",
+          "message": "Renvoyer les métadonnées complètes du message"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.desc": {
+          "source": "Include messages with oldest or latest timestamps in results.",
+          "message": "Inclure les messages ayant les horodatages les plus anciens ou les plus récents dans les résultats."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.display_name": {
+          "source": "Inclusive",
+          "message": "Inclusif"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.aW5jbHVzaXZl.short_desc": {
+          "source": "Include boundary timestamps",
+          "message": "Inclure les horodatages limites"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.desc": {
+          "source": "Unix timestamp. Only messages after this time will be included.",
+          "message": "Horodatage Unix. Seuls les messages postérieurs à cette heure seront inclus."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.display_name": {
+          "source": "Oldest Timestamp",
+          "message": "Horodatage le plus ancien"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.b2xkZXN0.short_desc": {
+          "source": "Only messages after this time",
+          "message": "Seuls les messages postérieurs à cette heure"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.desc": {
+          "source": "Unix timestamp. Only messages before this time will be included. Default is current time.",
+          "message": "Horodatage Unix. Seuls les messages antérieurs à ce moment seront inclus. La valeur par défaut est l'heure actuelle."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.display_name": {
+          "source": "Latest Timestamp",
+          "message": "Horodatage le plus récent"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGF0ZXN0.short_desc": {
+          "source": "Only messages before this time",
+          "message": "Seulement les messages antérieurs à ce moment"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.desc": {
+          "source": "The maximum number of messages to retrieve. Default is 200.",
+          "message": "Le nombre maximum de messages à récupérer. La valeur par défaut est 200."
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.option.bGltaXQ.short_desc": {
+          "source": "Maximum messages to return",
+          "message": "Nombre maximum de messages à renvoyer"
+        },
+        "app.U2xhY2s.action.Z2V0X2NoYW5uZWxfaGlzdG9yeQ.short_desc": {
+          "source": "Retrieve messages from a channel",
+          "message": "Récupérer les messages d'un canal"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.desc": {
+          "source": "Retrieve detailed profile and account information for a specific Slack user by their user ID.",
+          "message": "Récupérer les informations détaillées du profil et du compte d'un utilisateur Slack spécifique grâce à son identifiant d'utilisateur."
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.display_name": {
+          "source": "Get User Info",
+          "message": "Obtenir les informations de l'utilisateur"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.desc": {
+          "source": "Select the user whose information you want to retrieve.",
+          "message": "Sélectionnez l'utilisateur dont vous souhaitez récupérer les informations."
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.option.dXNlcklk.short_desc": {
+          "source": "The user to get information for",
+          "message": "L'utilisateur dont on souhaite obtenir les informations"
+        },
+        "app.U2xhY2s.action.Z2V0X3VzZXJfaW5mbw.short_desc": {
+          "source": "Get detailed information about a user",
+          "message": "Obtenir des informations détaillées sur un utilisateur"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.desc": {
+          "source": "Delete a specific message from a Slack channel. You need the message timestamp to identify which message to delete.",
+          "message": "Supprimer un message spécifique d'un canal Slack. Vous avez besoin de l'horodatage du message pour identifier le message à supprimer."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.display_name": {
+          "source": "Delete Message",
+          "message": "Supprimer le message"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message was posted.",
+          "message": "Sélectionnez le canal où le message a été publié."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Le canal contenant le message"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to delete. You can also paste a Slack message link.",
+          "message": "L'horodatage (ts) du message que vous souhaitez supprimer. Vous pouvez également coller un lien de message Slack."
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to delete",
+          "message": "Horodatage du message à supprimer"
+        },
+        "app.U2xhY2s.action.ZGVsZXRlX21lc3NhZ2U.short_desc": {
+          "source": "Delete a message from a channel",
+          "message": "Supprimer un message d'un canal"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.desc": {
+          "source": "Look up a Slack user using their email address. Returns the user profile if found.",
+          "message": "Rechercher un utilisateur Slack à l'aide de son adresse e-mail. Renvoie le profil utilisateur s'il est trouvé."
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.display_name": {
+          "source": "Find User by Email",
+          "message": "Trouver un utilisateur par e-mail"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.desc": {
+          "source": "The email address of the user you want to find.",
+          "message": "L'adresse e-mail de l'utilisateur que vous recherchez."
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.option.ZW1haWw.short_desc": {
+          "source": "Email address to search for",
+          "message": "Adresse e-mail à rechercher"
+        },
+        "app.U2xhY2s.action.ZmluZF91c2VyX2J5X2VtYWls.short_desc": {
+          "source": "Find a Slack user by their email address",
+          "message": "Trouver un utilisateur Slack par son adresse e-mail"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.desc": {
+          "source": "Retrieve a list of users in your Slack workspace including their profile information.",
+          "message": "Récupérer une liste d'utilisateurs dans votre espace de travail Slack, y compris les informations de leur profil."
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.display_name": {
+          "source": "List Users",
+          "message": "Lister les utilisateurs"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.desc": {
+          "source": "The maximum number of users to retrieve. Default is 200.",
+          "message": "Le nombre maximum d'utilisateurs à récupérer. La valeur par défaut est 200."
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.option.bGltaXQ.short_desc": {
+          "source": "Maximum users to return",
+          "message": "Nombre maximum d'utilisateurs à renvoyer"
+        },
+        "app.U2xhY2s.action.bGlzdF91c2Vycw.short_desc": {
+          "source": "List users in the workspace",
+          "message": "Lister les utilisateurs dans l'espace de travail"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.desc": {
+          "source": "Retrieve a list of channels in your Slack workspace. You can filter by channel type and whether to include archived channels.",
+          "message": "Récupérer une liste de canaux dans votre espace de travail Slack. Vous pouvez filtrer par type de canal et choisir d'inclure ou non les canaux archivés."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.display_name": {
+          "source": "List Channels",
+          "message": "Lister les canaux"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.desc": {
+          "source": "If enabled, archived channels are excluded from the results. Default is true.",
+          "message": "Si cette option est activée, les canaux archivés sont exclus des résultats. La valeur par défaut est true."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.display_name": {
+          "source": "Exclude Archived",
+          "message": "Exclure les canaux archivés"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.ZXhjbHVkZUFyY2hpdmVk.short_desc": {
+          "source": "Exclude archived channels",
+          "message": "Exclure les canaux archivés"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of channels to retrieve. Default is 200.",
+          "message": "Le nombre maximum de canaux à récupérer. La valeur par défaut est 200."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limite"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum channels to return",
+          "message": "Nombre maximum de canaux à renvoyer"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.desc": {
+          "source": "Comma-separated list of channel types. Options: public_channel, private_channel, mpim, im. Default is public_channel,private_channel.",
+          "message": "Liste séparée par des virgules de types de canaux. Options : public_channel, private_channel, mpim, im. La valeur par défaut est public_channel,private_channel."
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.display_name": {
+          "source": "Channel Types",
+          "message": "Types de canaux"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.option.dHlwZXM.short_desc": {
+          "source": "Types of channels to include",
+          "message": "Types de canaux à inclure"
+        },
+        "app.U2xhY2s.action.bGlzdF9jaGFubmVscw.short_desc": {
+          "source": "List channels in the workspace",
+          "message": "Lister les canaux dans l'espace de travail"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **Slack** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Effectuer un appel d'API HTTP / REST personnalisé à **Slack** en utilisant l'authentification de la connexion configurée.\n\nSpécifiez la méthode HTTP, le chemin URI (relatif à l'URL de base de l'API de la connexion), les paramètres de requête optionnels, les en-têtes et le corps de la requête. La réponse est renvoyée sous forme de hachage contenant le code de statut, les en-têtes de réponse et le corps de la réponse.\n\nUtilisez cette action pour les points de terminaison qui ne sont pas encore exposés en tant qu'actions de premier ordre sur cette application."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Effectuer un appel API"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Le corps de la requête. Le type effectif dépend de `body_type` : JSON/form/YAML attendent un hash, XML/texte attendent une chaîne, multipart attend une structure de fichier, binaire attend des octets bruts."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Corps"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Le corps de la requête"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Téléverser un fichier en utilisant `multipart/form-data`. Le corps doit être une structure @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Le framework construit l'enveloppe multipart et définit l'en-tête de limite (boundary)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Formulaire multipart"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Téléverser un fichier en utilisant multipart/form-data"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Transmettre le corps au client REST sans modification ; le client décide de la sérialisation en fonction de son option `data` configurée et du type de valeur"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Passe-plat ; utiliser la sérialisation de la connexion et laisser le client REST décider"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Envoyer le corps sous forme d'octets bruts. Le corps doit être une valeur binaire. Définit `Content-Type: application/octet-stream` sauf s'il est remplacé par `hdr`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Binaire brut"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Envoyer le corps sous forme d'octets bruts"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Sérialiser un hash de champs de formulaire sous forme de `application/x-www-form-urlencoded`. Le corps doit être un hash dont les valeurs sont des scalaires (chaînes/nombres/booléens)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulaire (encodé URL)"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Sérialiser le corps sous forme de champs de formulaire application/x-www-form-urlencoded"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Sérialiser le corps en JSON ; définit `Content-Type: application/json`. Le corps doit être un hash, une liste ou une valeur scalaire."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Sérialiser le corps en JSON"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Envoyer le corps en texte brut. Le corps doit être une chaîne. Définit `Content-Type: text/plain`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Texte brut"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Envoyer le corps en text/plain"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Envoyer le corps en XML. Si le corps est un hash, il est sérialisé en XML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/xml`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Envoyer le corps en XML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Envoyer le corps en YAML. Si le corps est un hash, il est sérialisé en YAML ; s'il s'agit d'une chaîne, il est envoyé tel quel. Définit `Content-Type: application/x-yaml`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Envoyer le corps en YAML"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Sélectionne le mode de sérialisation du corps et l'en-tête `Content-Type` correspondant. La modification de ce champ remanie l'éditeur `body` - sélectionner JSON affiche un éditeur JSON, sélectionner Formulaire multipart affiche un sélecteur de fichier, et ainsi de suite."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Type de corps"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Comment le corps est sérialisé et quel Content-Type est envoyé"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Si `True`, les réponses HTTP non-2xx sont retournées sous la forme du hash de réponse normal (avec le code d'état réel) au lieu de lever `REST-RESPONSE-ERROR`. Utile pour traiter les codes 4xx/5xx comme des données - par ex. vérifier si une ressource existe. Remplace le paramètre `error_passthru` de la connexion pour cet appel uniquement."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Retourner les erreurs sous forme de données"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Retourner les réponses non-2xx normalement au lieu de lever une exception"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Liste optionnelle de codes d'état HTTP traités comme des succès. Si elle est définie et que le statut de la réponse n'est pas dans cette liste, l'action lève `REST-STATUS-ERROR`. Lorsqu'elle n'est pas définie, le comportement par défaut du client REST s'applique (généralement : 2xx est un succès, non-2xx lève une exception)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Codes d'état attendus"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Codes d'état de réponse traités comme un succès"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash d'en-têtes personnalisés ajoutés à la requête. Ils remplacent tous les en-têtes par défaut définis par `body_type` (par ex. fournir `Content-Type` ici prévaut sur la valeur par défaut du type de corps)."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "En-têtes personnalisés"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "En-têtes de requête supplémentaires"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Si `True`, le hash de réponse inclut un sous-hash `debug` contenant la méthode/URL/en-têtes de la requête (avec les valeurs sensibles masquées), les tailles de requête et de réponse, et la durée d'aller-retour. Utile lors de l'investigation d'appels lents ou en échec. Désactivé par défaut pour conserver des réponses légères."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Inclure les informations de débogage"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Inclure les informations de débogage de requête/temps/taille dans la réponse"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Méthode HTTP"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "La méthode HTTP à utiliser pour la requête"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés `{name}` remplacés à partir de `path_vars`. Exemple : `/users/{id}/comments`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Chemin URI"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Le chemin URI relatif à l'URL de base de l'API de la connexion. Peut contenir des espaces réservés '{name}' qui sont remplacés à partir de 'path_vars'. Exemple : '/users/{id}/comments'"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hachage des valeurs substituées dans les espaces réservés `{name}` dans le chemin URI. Exemple : avec `path = /users/{id}` et `path_vars = {id: 123}`, le framework envoie `/users/123`. Les valeurs sont encodées en URL."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Variables de chemin"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Valeurs pour les espaces réservés {name} dans le chemin"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hachage des paramètres de chaîne de requête à ajouter au chemin URI. Les valeurs sont encodées en URL ; les valeurs de liste sont jointes avec `,`."
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Arguments de la requête"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Paramètres de chaîne de requête"
+        },
+        "app.U2xhY2s.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to Slack",
+          "message": "Effectuer un appel API personnalisé vers Slack"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.desc": {
+          "source": "This trigger fires whenever a new message is posted to the specified channel. Use this to react to incoming messages.",
+          "message": "Ce déclencheur se déclenche lorsqu'un nouveau message est publié dans le canal spécifié. Utilisez-le pour réagir aux messages entrants."
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.display_name": {
+          "source": "New Message",
+          "message": "Nouveau message"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel to monitor for new messages. Make sure the bot is a member of the channel.",
+          "message": "Sélectionnez le canal à surveiller pour les nouveaux messages. Assurez-vous que le bot est membre du canal."
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to monitor",
+          "message": "Le canal à surveiller"
+        },
+        "app.U2xhY2s.action.bmV3X21lc3NhZ2U.short_desc": {
+          "source": "Triggers when a new message is posted to a channel",
+          "message": "Se déclenche lorsqu'un nouveau message est publié dans un canal"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.desc": {
+          "source": "This trigger fires whenever a reaction is added to any message. You can filter by specific emojis or channels.",
+          "message": "Ce déclencheur se déclenche lorsqu'une réaction est ajoutée à n'importe quel message. Vous pouvez filtrer par émojis ou canaux spécifiques."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.display_name": {
+          "source": "New Reaction",
+          "message": "Nouvelle réaction"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.desc": {
+          "source": "Optionally select a specific channel to monitor. Leave empty to monitor all channels.",
+          "message": "Sélectionnez éventuellement un canal spécifique à surveiller. Laissez vide pour surveiller tous les canaux."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.Y2hhbm5lbA.short_desc": {
+          "source": "Filter by channel",
+          "message": "Filtrer par canal"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.desc": {
+          "source": "Optionally specify emoji names to trigger on (e.g., \"fire\", \"thumbsup\"). Leave empty for all reactions.",
+          "message": "Spécifiez éventuellement des noms d'émojis pour le déclenchement (p. ex., \"fire\", \"thumbsup\"). Laissez vide pour toutes les réactions."
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.display_name": {
+          "source": "Emojis",
+          "message": "Émojis"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.option.ZW1vamlz.short_desc": {
+          "source": "Filter by specific emojis",
+          "message": "Filtrer par émojis spécifiques"
+        },
+        "app.U2xhY2s.action.bmV3X3JlYWN0aW9u.short_desc": {
+          "source": "Triggers when a reaction is added to a message",
+          "message": "Se déclenche lorsqu'une réaction est ajoutée à un message"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.desc": {
+          "source": "Search for messages matching a query across your Slack workspace. Requires user token authentication.",
+          "message": "Rechercher des messages correspondant à une requête dans votre espace de travail Slack. Nécessite une authentification par jeton d'utilisateur."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.display_name": {
+          "source": "Search Messages",
+          "message": "Rechercher des messages"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.desc": {
+          "source": "Number of results to return per page. Default is 100.",
+          "message": "Nombre de résultats à retourner par page. La valeur par défaut est 100."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.display_name": {
+          "source": "Count",
+          "message": "Nombre"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.Y291bnQ.short_desc": {
+          "source": "Results per page",
+          "message": "Résultats par page"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.desc": {
+          "source": "Enter your search query. Supports Slack search operators like \"from:\", \"in:\", etc.",
+          "message": "Saisissez votre requête de recherche. Prend en charge les opérateurs de recherche Slack tels que \"from:\", \"in:\", etc."
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.display_name": {
+          "source": "Search Query",
+          "message": "Requête de recherche"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.option.cXVlcnk.short_desc": {
+          "source": "The search query",
+          "message": "La requête de recherche"
+        },
+        "app.U2xhY2s.action.c2VhcmNoX21lc3NhZ2Vz.short_desc": {
+          "source": "Search for messages in the workspace",
+          "message": "Rechercher des messages dans l'espace de travail"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.desc": {
+          "source": "Send a private message directly to a user in your Slack workspace.",
+          "message": "Envoyer un message privé directement à un utilisateur de votre espace de travail Slack."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.display_name": {
+          "source": "Send Direct Message",
+          "message": "Envoyer un message direct"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.desc": {
+          "source": "Add Block Kit blocks for rich, interactive content.",
+          "message": "Ajoutez des blocs Block Kit pour du contenu riche et interactif."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Blocs"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.YmxvY2tz.short_desc": {
+          "source": "Block Kit blocks for rich content",
+          "message": "Blocs Block Kit pour du contenu enrichi"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon with a custom image URL.",
+          "message": "Remplacer l'icône par défaut du bot par une URL d'image personnalisée."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL de l'icône"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.aWNvblVybA.short_desc": {
+          "source": "Custom icon URL for the bot",
+          "message": "URL d'icône personnalisée pour le bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.desc": {
+          "source": "The main text content of your direct message.",
+          "message": "Le contenu textuel principal de votre message direct."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Texte du message"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dGV4dA.short_desc": {
+          "source": "The text content of the message",
+          "message": "Le contenu textuel du message"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.desc": {
+          "source": "Select the user who should receive the direct message.",
+          "message": "Sélectionnez l'utilisateur qui doit recevoir le message direct."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcklk.short_desc": {
+          "source": "The user to send the message to",
+          "message": "L'utilisateur à qui envoyer le message"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username for this message.",
+          "message": "Remplacer le nom d'utilisateur par défaut du bot pour ce message."
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Nom d'utilisateur du bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom username for the bot",
+          "message": "Nom d'utilisateur personnalisé pour le bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9kaXJlY3RfbWVzc2FnZQ.short_desc": {
+          "source": "Send a direct message to a user",
+          "message": "Envoyer un message direct à un utilisateur"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.desc": {
+          "source": "Post a message to a specific channel in your Slack workspace. Supports text, attachments, and Block Kit blocks for rich formatting.",
+          "message": "Publier un message dans un canal spécifique de votre espace de travail Slack. Prend en charge le texte, les pièces jointes et les blocs Block Kit pour un formatage enrichi."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.display_name": {
+          "source": "Send Message to Channel",
+          "message": "Envoyer un message dans un canal"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where you want to post the message. Make sure the bot is a member of the channel.",
+          "message": "Sélectionnez le canal dans lequel vous souhaitez publier le message. Assurez-vous que le bot est membre du canal."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to send the message to",
+          "message": "Le canal auquel envoyer le message"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.desc": {
+          "source": "Add Block Kit blocks for rich, interactive content. See https://api.slack.com/block-kit for specs.",
+          "message": "Ajoutez des blocs Block Kit pour du contenu riche et interactif. Consultez https://api.slack.com/block-kit pour les spécifications."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Blocs"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.YmxvY2tz.short_desc": {
+          "source": "Block Kit blocks for rich content",
+          "message": "Blocs Block Kit pour du contenu enrichi"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon with a custom image URL.",
+          "message": "Remplacer l'icône par défaut du bot par une URL d'image personnalisée."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL de l'icône"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.aWNvblVybA.short_desc": {
+          "source": "Custom icon URL for the bot",
+          "message": "URL d'icône personnalisée pour le bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.desc": {
+          "source": "The main text content of your message. Supports Slack markdown formatting.",
+          "message": "Le contenu textuel principal de votre message. Prend en charge le formatage markdown Slack."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Texte du message"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGV4dA.short_desc": {
+          "source": "The text content of the message",
+          "message": "Le contenu textuel du message"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.desc": {
+          "source": "Provide the timestamp of a parent message to post this message as a reply in a thread.",
+          "message": "Fournissez l'horodatage d'un message parent pour publier ce message en tant que réponse dans un fil de discussion."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.display_name": {
+          "source": "Thread Timestamp",
+          "message": "Horodatage du fil"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dGhyZWFkVHM.short_desc": {
+          "source": "Reply to a thread",
+          "message": "Répondre à un fil de discussion"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username for this message.",
+          "message": "Remplacer le nom d'utilisateur par défaut du bot pour ce message."
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Nom d'utilisateur du bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom username for the bot",
+          "message": "Nom d'utilisateur personnalisé pour le bot"
+        },
+        "app.U2xhY2s.action.c2VuZF9tZXNzYWdl.short_desc": {
+          "source": "Send a message to a Slack channel",
+          "message": "Envoyer un message dans un canal Slack"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.desc": {
+          "source": "Pin a specific message to a channel so it appears in the channel details. Pinned messages are easily accessible for all channel members.",
+          "message": "Épingler un message spécifique dans un canal afin qu'il apparaisse dans les détails du canal. Les messages épinglés sont facilement accessibles à tous les membres du canal."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.display_name": {
+          "source": "Pin Message",
+          "message": "Épingler le message"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message is located.",
+          "message": "Sélectionnez le canal où se trouve le message."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Le canal contenant le message"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to pin. You can also paste a Slack message link.",
+          "message": "L'horodatage (ts) du message que vous souhaitez épingler. Vous pouvez également coller un lien de message Slack."
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to pin",
+          "message": "Horodatage du message à épingler"
+        },
+        "app.U2xhY2s.action.cGluX21lc3NhZ2U.short_desc": {
+          "source": "Pin a message to a channel",
+          "message": "Épingler un message dans un canal"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.desc": {
+          "source": "Send a direct message to a user with interactive action buttons that link to URLs.",
+          "message": "Envoyer un message direct à un utilisateur avec des boutons d'action interactifs renvoyant vers des URL."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.display_name": {
+          "source": "Send Action Message to User",
+          "message": "Envoyer un message d'action à l'utilisateur"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.desc": {
+          "source": "Define the action buttons with titles and URLs.",
+          "message": "Définissez les boutons d'action avec des titres et des URL."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.display_name": {
+          "source": "Action Buttons",
+          "message": "Boutons d'action"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.YWN0aW9ucw.short_desc": {
+          "source": "Buttons to display",
+          "message": "Boutons à afficher"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon.",
+          "message": "Remplacer l'icône de bot par défaut."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL de l'icône"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.aWNvblVybA.short_desc": {
+          "source": "Custom bot icon",
+          "message": "Icône de bot personnalisée"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.desc": {
+          "source": "The text content displayed above the action buttons.",
+          "message": "Le contenu textuel affiché au-dessus des boutons d'action."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Texte du message"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dGV4dA.short_desc": {
+          "source": "The message content",
+          "message": "Le contenu du message"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.desc": {
+          "source": "Select the user to receive the action message.",
+          "message": "Sélectionnez l'utilisateur qui recevra le message d'action."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.display_name": {
+          "source": "User",
+          "message": "Utilisateur"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcklk.short_desc": {
+          "source": "The user to message",
+          "message": "L'utilisateur à qui envoyer le message"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username.",
+          "message": "Remplacer le nom d'utilisateur de bot par défaut."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Nom d'utilisateur du bot"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom bot name",
+          "message": "Nom de bot personnalisé"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fZG0.short_desc": {
+          "source": "Send a direct message with action buttons",
+          "message": "Envoyer un message direct avec des boutons d'action"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.desc": {
+          "source": "Send a message to a channel with interactive action buttons that link to URLs.",
+          "message": "Envoyer un message dans un canal avec des boutons d'action interactifs renvoyant vers des URL."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.display_name": {
+          "source": "Send Action Message to Channel",
+          "message": "Envoyer un message d'action dans le canal"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the action message should be posted.",
+          "message": "Sélectionnez le canal dans lequel le message d'action doit être publié."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel to send to",
+          "message": "Le canal destinataire"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.desc": {
+          "source": "Define the action buttons with titles and URLs. Each button links to a specific URL when clicked.",
+          "message": "Définissez les boutons d'action avec des titres et des URL. Chaque bouton renvoie vers une URL spécifique lorsqu'il est cliqué."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.display_name": {
+          "source": "Action Buttons",
+          "message": "Boutons d'action"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.YWN0aW9ucw.short_desc": {
+          "source": "Buttons to display",
+          "message": "Boutons à afficher"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.desc": {
+          "source": "Override the default bot icon.",
+          "message": "Remplacer l'icône de bot par défaut."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.display_name": {
+          "source": "Icon URL",
+          "message": "URL de l'icône"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.aWNvblVybA.short_desc": {
+          "source": "Custom bot icon",
+          "message": "Icône de bot personnalisée"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.desc": {
+          "source": "The text content displayed above the action buttons.",
+          "message": "Le contenu textuel affiché au-dessus des boutons d'action."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.display_name": {
+          "source": "Message Text",
+          "message": "Texte du message"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dGV4dA.short_desc": {
+          "source": "The message content",
+          "message": "Le contenu du message"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.desc": {
+          "source": "Override the default bot username.",
+          "message": "Remplacer le nom d'utilisateur de bot par défaut."
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.display_name": {
+          "source": "Bot Username",
+          "message": "Nom d'utilisateur du bot"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.option.dXNlcm5hbWU.short_desc": {
+          "source": "Custom bot name",
+          "message": "Nom de bot personnalisé"
+        },
+        "app.U2xhY2s.action.cmVxdWVzdF9hY3Rpb25fbWVzc2FnZQ.short_desc": {
+          "source": "Send a message with action buttons",
+          "message": "Envoyer un message avec des boutons d'action"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.desc": {
+          "source": "Restore an archived channel so it becomes active again. Members will be able to post messages once the channel is unarchived.",
+          "message": "Restaurez un canal archivé afin qu'il redevienne actif. Les membres pourront publier des messages une fois le canal désarchivé."
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.display_name": {
+          "source": "Unarchive Channel",
+          "message": "Désarchiver le canal"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.desc": {
+          "source": "Select the archived channel you want to unarchive.",
+          "message": "Sélectionnez le canal archivé que vous souhaitez désarchiver."
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.option.Y2hhbm5lbA.short_desc": {
+          "source": "The archived channel to restore",
+          "message": "Le canal archivé à restaurer"
+        },
+        "app.U2xhY2s.action.dW5hcmNoaXZlX2NoYW5uZWw.short_desc": {
+          "source": "Unarchive a Slack channel",
+          "message": "Désarchiver un canal Slack"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.desc": {
+          "source": "Remove a pin from a specific message in a channel. The message itself is not deleted.",
+          "message": "Retirer l'épingle d'un message spécifique dans un canal. Le message lui-même n'est pas supprimé."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.display_name": {
+          "source": "Unpin Message",
+          "message": "Désépingler le message"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the pinned message is located.",
+          "message": "Sélectionnez le canal dans lequel se trouve le message épinglé."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Le canal contenant le message"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to unpin. You can also paste a Slack message link.",
+          "message": "L'horodatage (ts) du message que vous souhaitez désépingler. Vous pouvez également coller un lien de message Slack."
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to unpin",
+          "message": "Horodatage du message à désépingler"
+        },
+        "app.U2xhY2s.action.dW5waW5fbWVzc2FnZQ.short_desc": {
+          "source": "Unpin a message from a channel",
+          "message": "Désépingler un message d'un canal"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.desc": {
+          "source": "Update the content of an existing message in a channel. You need the message timestamp to identify which message to update.",
+          "message": "Mettre à jour le contenu d'un message existant dans un canal. Vous avez besoin de l'horodatage du message pour identifier le message à mettre à jour."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.display_name": {
+          "source": "Update Message",
+          "message": "Mettre à jour le message"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the message was posted.",
+          "message": "Sélectionnez le canal où le message a été publié."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.Y2hhbm5lbA.short_desc": {
+          "source": "The channel containing the message",
+          "message": "Le canal contenant le message"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.desc": {
+          "source": "New Block Kit blocks for the message.",
+          "message": "Nouveaux blocs Block Kit pour le message."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.display_name": {
+          "source": "Blocks",
+          "message": "Blocs"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.YmxvY2tz.short_desc": {
+          "source": "Updated Block Kit blocks",
+          "message": "Blocs Block Kit mis à jour"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.desc": {
+          "source": "The new text content for the message.",
+          "message": "Le nouveau contenu textuel du message."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.display_name": {
+          "source": "New Text",
+          "message": "Nouveau texte"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGV4dA.short_desc": {
+          "source": "The updated message text",
+          "message": "Le texte du message mis à jour"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.desc": {
+          "source": "The timestamp (ts) of the message you want to update. You can also paste a Slack message link.",
+          "message": "L'horodatage (ts) du message que vous souhaitez mettre à jour. Vous pouvez également coller un lien de message Slack."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.display_name": {
+          "source": "Message Timestamp",
+          "message": "Horodatage du message"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.option.dGltZXN0YW1w.short_desc": {
+          "source": "Timestamp of the message to update",
+          "message": "Horodatage du message à mettre à jour"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX21lc3NhZ2U.short_desc": {
+          "source": "Update an existing message",
+          "message": "Mettre à jour un message existant"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.desc": {
+          "source": "Update basic profile fields such as name or title. Requires user token authentication.",
+          "message": "Mettre à jour les champs de profil de base tels que le nom ou le titre. Nécessite une authentification par jeton utilisateur."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.display_name": {
+          "source": "Update Profile",
+          "message": "Mettre à jour le profil"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.desc": {
+          "source": "The email address to set. Changing email will send notifications to both old and new addresses.",
+          "message": "L'adresse e-mail à définir. Modifier l'adresse e-mail enverra des notifications aux ancienne et nouvelle adresses."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "E-mail"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.ZW1haWw.short_desc": {
+          "source": "User email address",
+          "message": "Adresse e-mail de l'utilisateur"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.desc": {
+          "source": "The first name to set in the profile.",
+          "message": "Le prénom à définir dans le profil."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.display_name": {
+          "source": "First Name",
+          "message": "Prénom"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.Zmlyc3ROYW1l.short_desc": {
+          "source": "User first name",
+          "message": "Prénom de l'utilisateur"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.desc": {
+          "source": "The last name to set in the profile.",
+          "message": "Le nom de famille à définir dans le profil."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.display_name": {
+          "source": "Last Name",
+          "message": "Nom de famille"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.bGFzdE5hbWU.short_desc": {
+          "source": "User last name",
+          "message": "Nom de famille de l'utilisateur"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.desc": {
+          "source": "ID of user to update. Only admins on paid teams can update other users.",
+          "message": "ID de l'utilisateur à mettre à jour. Seuls les administrateurs des équipes payantes peuvent mettre à jour d'autres utilisateurs."
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.display_name": {
+          "source": "User ID",
+          "message": "ID de l'utilisateur"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.option.dXNlcklk.short_desc": {
+          "source": "Target user (admin only)",
+          "message": "Utilisateur cible (admin uniquement)"
+        },
+        "app.U2xhY2s.action.dXBkYXRlX3Byb2ZpbGU.short_desc": {
+          "source": "Update user profile information",
+          "message": "Mettre à jour les informations du profil utilisateur"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.desc": {
+          "source": "Upload a file to a Slack channel. Supports various file types and optional initial comment.",
+          "message": "Téléverser un fichier dans un canal Slack. Prend en charge divers types de fichiers et un commentaire initial facultatif."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.display_name": {
+          "source": "Upload File",
+          "message": "Téléverser un fichier"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.desc": {
+          "source": "An optional comment to include when sharing the file.",
+          "message": "Un commentaire facultatif à inclure lors du partage du fichier."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.display_name": {
+          "source": "Initial Comment",
+          "message": "Commentaire initial"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y29tbWVudA.short_desc": {
+          "source": "Comment with the file",
+          "message": "Commentaire avec le fichier"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.desc": {
+          "source": "Select the channel where the file should be uploaded.",
+          "message": "Sélectionnez le canal où le fichier doit être téléversé."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.display_name": {
+          "source": "Channel",
+          "message": "Canal"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.Y2hhbm5lbA.short_desc": {
+          "source": "Channel to upload to",
+          "message": "Canal dans lequel téléverser"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.desc": {
+          "source": "The file to upload to the Slack channel.",
+          "message": "Le fichier à téléverser dans le canal Slack."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.display_name": {
+          "source": "File",
+          "message": "Fichier"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZQ.short_desc": {
+          "source": "The file to upload",
+          "message": "Le fichier à téléverser"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.desc": {
+          "source": "The filename to use when uploading.",
+          "message": "Le nom de fichier à utiliser lors du téléversement."
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.display_name": {
+          "source": "Filename",
+          "message": "Nom de fichier"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.option.ZmlsZW5hbWU.short_desc": {
+          "source": "Name for the file",
+          "message": "Nom pour le fichier"
+        },
+        "app.U2xhY2s.action.dXBsb2FkX2ZpbGU.short_desc": {
+          "source": "Upload a file to Slack",
+          "message": "Téléverser un fichier dans Slack"
+        },
+        "app.U2xhY2s.desc": {
+          "source": "Integrate with Slack to automate team communication and collaboration. Slack is a channel-based messaging platform that brings teams together. This integration enables you to send messages to channels and users, create channels, manage reactions, upload files, search messages, and monitor for new messages and events.",
+          "message": "Intégrez Slack pour automatiser la communication et la collaboration d'équipe. Slack est une plateforme de messagerie basée sur des canaux qui rassemble les équipes. Cette intégration vous permet d'envoyer des messages aux canaux et aux utilisateurs, de créer des canaux, de gérer les réactions, de téléverser des fichiers, de rechercher des messages et de surveiller les nouveaux messages et événements."
+        },
+        "app.U2xhY2s.display_name": {
+          "source": "Slack",
+          "message": "Slack"
+        },
+        "app.U2xhY2s.short_desc": {
+          "source": "Connect with Slack to send messages, manage channels, and automate team communication",
+          "message": "Connectez-vous à Slack pour envoyer des messages, gérer des canaux et automatiser la communication d'équipe"
+        }
+      }
+    }
+  }
+}

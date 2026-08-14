@@ -1,0 +1,1357 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "sk": {
+      "messages": {
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.desc": {
+          "source": "Removes a contact record from NetSuite based on its ID.",
+          "message": "Odstráni záznam kontaktu z NetSuite na základe jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Contact",
+          "message": "Vymazať kontakt"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific contact.",
+          "message": "Vymaže konkrétny kontakt."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single contact by its ID.",
+          "message": "Získa podrobné informácie o jednotlivom kontakte podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.display_name": {
+          "source": "Get Contact",
+          "message": "Získať kontakt"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific contact.",
+          "message": "Získať podrobnosti o konkrétnom kontakte."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific contact by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétneho kontaktu podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.display_name": {
+          "source": "Update Contact",
+          "message": "Aktualizovať kontakt"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing contact.",
+          "message": "Aktualizuje existujúci kontakt."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.desc": {
+          "source": "Allows the user to create a new contact record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam kontaktu v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.display_name": {
+          "source": "Create Contact",
+          "message": "Vytvoriť kontakt"
+        },
+        "app.TmV0U3VpdGU.action.Y29udGFjdF9wb3N0.short_desc": {
+          "source": "Creates a new contact.",
+          "message": "Vytvorí nový kontakt."
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "Vytvoriť záznamy"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"NetSuite\"",
+          "message": "Vytvoriť nové záznamy v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single customer by its ID.",
+          "message": "Získa podrobné informácie o jednotlivom zákazníkovi podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.display_name": {
+          "source": "Get Customer",
+          "message": "Získať zákazníka"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific customer.",
+          "message": "Získať podrobnosti o konkrétnom zákazníkovi."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.desc": {
+          "source": "Removes a customer record from NetSuite based on its ID.",
+          "message": "Odstráni záznam zákazníka z NetSuite na základe jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Customer",
+          "message": "Odstrániť zákazníka"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific customer.",
+          "message": "Vymaže konkrétneho zákazníka."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific customer by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétneho zákazníka podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.display_name": {
+          "source": "Update Customer",
+          "message": "Aktualizovať zákazníka"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing customer.",
+          "message": "Aktualizuje existujúceho zákazníka."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.desc": {
+          "source": "Allows the user to create a new customer record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam zákazníka v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.display_name": {
+          "source": "Create Customer",
+          "message": "Vytvoriť zákazníka"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdA.short_desc": {
+          "source": "Creates a new customer.",
+          "message": "Vytvorí nového zákazníka."
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.desc": {
+          "source": "Creates a new customer in NetSuite with simplified fields",
+          "message": "Vytvorí nového zákazníka v NetSuite so zjednodušenými poľami"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.display_name": {
+          "source": "Create Customer (simplified)",
+          "message": "Vytvoriť zákazníka (zjednodušené)"
+        },
+        "app.TmV0U3VpdGU.action.Y3VzdG9tZXJfcG9zdF9zaW1wbGlmaWVk.short_desc": {
+          "source": "Creates a new customer with simplified options.",
+          "message": "Vytvorí nového zákazníka so zjednodušenými možnosťami."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.desc": {
+          "source": "Removes an account record from NetSuite based on its ID.",
+          "message": "Odstráni záznam účtu z NetSuite na základe jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.display_name": {
+          "source": "Delete Account",
+          "message": "Odstrániť účet"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific account.",
+          "message": "Vymaže konkrétny účet."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single account by its ID.",
+          "message": "Získa podrobné informácie o jednotlivom účte podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.display_name": {
+          "source": "Get Account",
+          "message": "Získať účet"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific account.",
+          "message": "Získať podrobnosti o konkrétnom účte."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific account by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétneho účtu podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.display_name": {
+          "source": "Update Account",
+          "message": "Aktualizovať účet"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing account.",
+          "message": "Aktualizuje existujúci účet."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.desc": {
+          "source": "Allows the user to create a new account record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam účtu v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.display_name": {
+          "source": "Create Account",
+          "message": "Vytvoriť účet"
+        },
+        "app.TmV0U3VpdGU.action.YWNjb3VudF9wb3N0.short_desc": {
+          "source": "Creates a new account.",
+          "message": "Vytvorí nový účet."
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "Vymazať záznamy z danej tabuľky v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "Odstrániť záznamy"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"NetSuite\"",
+          "message": "Vymazať záznamy z danej tabuľky v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.desc": {
+          "source": "Removes an invoice record from NetSuite based on its ID.",
+          "message": "Odstráni záznam faktúry z NetSuite na základe jej ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.display_name": {
+          "source": "Delete Invoice",
+          "message": "Vymazať faktúru"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific invoice.",
+          "message": "Vymaže konkrétnu faktúru."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single invoice by its ID.",
+          "message": "Získa podrobné informácie o jednotlivej faktúre podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.display_name": {
+          "source": "Get Invoice",
+          "message": "Získať faktúru"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific invoice.",
+          "message": "Získať podrobnosti o konkrétnej faktúre."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific invoice by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétnej faktúry podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.display_name": {
+          "source": "Update Invoice",
+          "message": "Aktualizovať faktúru"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing invoice.",
+          "message": "Aktualizuje existujúcu faktúru."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.desc": {
+          "source": "Allows the user to create a new invoice record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam faktúry v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.display_name": {
+          "source": "Create Invoice",
+          "message": "Vytvoriť faktúru"
+        },
+        "app.TmV0U3VpdGU.action.aW52b2ljZV9wb3N0.short_desc": {
+          "source": "Creates a new invoice.",
+          "message": "Vytvorí novú faktúru."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a journal entry record from NetSuite based on its ID.",
+          "message": "Odstráni záznam účtovného zápisu z NetSuite na základe jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Journal Entry",
+          "message": "Odstrániť účtovný zápis"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific journal entry.",
+          "message": "Odstráni konkrétny účtovný zápis."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single journal entry by its ID.",
+          "message": "Získa podrobné informácie o konkrétnom účtovnom zápise podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.display_name": {
+          "source": "Get Journal Entry",
+          "message": "Získať účtovný zápis"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific journal entry.",
+          "message": "Získať podrobnosti o konkrétnom účtovnom zápise."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.desc": {
+          "source": "Journal entry id patch",
+          "message": "Úprava účtovného zápisu podľa ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.display_name": {
+          "source": "Update Record.",
+          "message": "Aktualizovať záznam."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X2lkX3BhdGNo.short_desc": {
+          "source": "Update record.",
+          "message": "Aktualizovať záznam."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.desc": {
+          "source": "Allows the user to create a new journal entry record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam účtovného zápisu v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.display_name": {
+          "source": "Create Journal Entry",
+          "message": "Vytvoriť účtovný zápis"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.desc": {
+          "source": "The server behavior requested by the client. Use 'respond-async' to execute the request asynchronously. If the request is executed asynchronously, 'Preference-applied: respond-async' is returned in the response.",
+          "message": "Správanie servera požadované klientom. Použite 'respond-async' na asynchrónne vykonanie požiadavky. Ak sa požiadavka vykoná asynchrónne, v odpovedi sa vráti 'Preference-applied: respond-async'."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.display_name": {
+          "source": "Prefer",
+          "message": "Prefer"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.UHJlZmVy.short_desc": {
+          "source": "The server behavior requested by the client",
+          "message": "Správanie servera požadované klientom"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once. Only one request can be executed with every unique idempotency key. Use UUID in string format as defined by RFC 4122. If the request is executed synchronously, this value is ignored.",
+          "message": "Používateľom definovaný jedinečný kľúč idempotencie, ktorý sa aplikuje na každú asynchrónnu požiadavku, aby sa zabezpečilo, že sa vykoná iba raz. S každým jedinečným kľúčom idempotencie je možné vykonať iba jednu požiadavku. Použite UUID v reťazcovom formáte podľa definície RFC 4122. Ak sa požiadavka vykoná synchrónne, táto hodnota sa ignoruje."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.display_name": {
+          "source": "X Net Suite Idempotency Key",
+          "message": "X Net Suite Idempotency Key"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1JZGVtcG90ZW5jeS1LZXk.short_desc": {
+          "source": "A user-defined unique idempotency key that is applied to every asynchronous requests to ensure that the request is executed only once",
+          "message": "Používateľom definovaný jedinečný kľúč idempotencie, ktorý sa aplikuje na každú asynchrónnu požiadavku, aby sa zabezpečilo, že sa vykoná iba raz"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.desc": {
+          "source": "Sets the strictness of property name validation.",
+          "message": "Nastavuje prísnosť overovania názvov vlastností."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.display_name": {
+          "source": "X Net Suite Property Name Validation",
+          "message": "X Net Suite Property Name Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eU5hbWVWYWxpZGF0aW9u.short_desc": {
+          "source": "Sets the strictness of property name validation",
+          "message": "Nastavuje prísnosť overovania názvov vlastností"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.desc": {
+          "source": "Sets the strictness of property value validation.",
+          "message": "Nastavuje prísnosť overovania hodnôt vlastností."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.display_name": {
+          "source": "X Net Suite Property Value Validation",
+          "message": "X Net Suite Property Value Validation"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.WC1OZXRTdWl0ZS1Qcm9wZXJ0eVZhbHVlVmFsaWRhdGlvbg.short_desc": {
+          "source": "Sets the strictness of property value validation",
+          "message": "Nastavuje prísnosť overovania hodnôt vlastností"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y2xhc3M.display_name": {
+          "source": "Class",
+          "message": "Trieda"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZERhdGU.display_name": {
+          "source": "Created Date",
+          "message": "Dátum vytvorenia"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3JlYXRlZEZyb20.display_name": {
+          "source": "Created From",
+          "message": "Vytvorené z"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VycmVuY3k.display_name": {
+          "source": "Currency",
+          "message": "Mena"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.Y3VzdG9tRm9ybQ.display_name": {
+          "source": "Custom Form",
+          "message": "Vlastný formulár"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2s.display_name": {
+          "source": "Accounting Book",
+          "message": "Účtovná kniha"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YWNjb3VudGluZ0Jvb2tEZXRhaWw.display_name": {
+          "source": "Accounting Book Detail",
+          "message": "Podrobnosti účtovnej knihy"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwbGllZFJ1bGVz.display_name": {
+          "source": "Applied Rules",
+          "message": "Aplikované pravidlá"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.desc": {
+          "source": "Check this box to indicate that this journal entry is approved. If you check this box, this journal entry will post immediately. If you do not check this box, this journal entry must be approved before it posts.",
+          "message": "Začiarknutím tohto políčka označíte, že tento účtovný zápis je schválený. Ak začiarknete toto políčko, účtovný zápis sa zaúčtuje okamžite. Ak toto políčko nezačiarknete, účtovný zápis musí byť pred zaúčtovaním schválený."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.display_name": {
+          "source": "Approved",
+          "message": "Schválené"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.YXBwcm92ZWQ.short_desc": {
+          "source": "Check this box to indicate that this journal entry is approved",
+          "message": "Začiarknutím tohto políčka označíte, že tento účtovný zápis je schválený"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZGVwYXJ0bWVudA.display_name": {
+          "source": "Department",
+          "message": "Oddelenie"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXh0ZXJuYWxJZA.display_name": {
+          "source": "External Id",
+          "message": "Externé ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency. You can edit the exchange rate for this transaction only, or you can update the currency exchange rates list.",
+          "message": "Toto pole zobrazuje predvolený výmenný kurz meny cieľovej dcérskej spoločnosti voči mene dcérskej spoločnosti. Výmenný kurz môžete upraviť len pre túto transakciu alebo môžete aktualizovať zoznam menových kurzov."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.display_name": {
+          "source": "Exchange Rate",
+          "message": "Výmenný kurz"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjaGFuZ2VSYXRl.short_desc": {
+          "source": "This field displays the default exchange rate of the To Subsidiary's currency to the Subsidiary's currency",
+          "message": "Toto pole zobrazuje predvolený výmenný kurz meny cieľovej dcérskej spoločnosti voči mene dcérskej spoločnosti"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.ZXhjbHVkZUZyb21HTE51bWJlcmluZw.display_name": {
+          "source": "Exclude From GL Numbering",
+          "message": "Vylúčiť z číslovania hlavnej knihy"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aWQ.display_name": {
+          "source": "Id",
+          "message": "ID"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.aXNSZXZlcnNhbA.display_name": {
+          "source": "Is Reversal",
+          "message": "Je storno"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bG9jYXRpb24.display_name": {
+          "source": "Location",
+          "message": "Lokalita"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGFzdE1vZGlmaWVkRGF0ZQ.display_name": {
+          "source": "Last Modified Date",
+          "message": "Dátum poslednej úpravy"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGluZQ.display_name": {
+          "source": "Line",
+          "message": "Riadok"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bGlua3M.display_name": {
+          "source": "Links",
+          "message": "Odkazy"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.desc": {
+          "source": "If you wish, enter a memo to describe this journal entry. It will appear on this transaction detail as well as reports such as a 2-line account register.",
+          "message": "Ak chcete, zadajte poznámku popisujúcu tento účtovný zápis. Zobrazí sa v detaile tejto transakcie, ako aj v prehľadoch, ako je 2-riadkový denník účtov."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.display_name": {
+          "source": "Memo",
+          "message": "Poznámka"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.bWVtbw.short_desc": {
+          "source": "If you wish, enter a memo to describe this journal entry",
+          "message": "Ak chcete, zadajte poznámku popisujúcu tento účtovný zápis"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.c3Vic2lkaWFyeQ.display_name": {
+          "source": "Subsidiary",
+          "message": "Dcérska spoločnosť"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cG9zdGluZ1BlcmlvZA.display_name": {
+          "source": "Posting Period",
+          "message": "Obdobie účtovania"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cGFyZW50RXhwZW5zZUFsbG9j.display_name": {
+          "source": "Parent Expense Alloc",
+          "message": "Nadradená alokácia nákladov"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted. If Defer Entry is checked, this field is mandatory.",
+          "message": "Ak má byť tento účtovný zápis stornovaný, zadajte dátum zaúčtovania stornovacieho zápisu. Ak je začiarknuté Odložiť zápis, toto pole je povinné."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.display_name": {
+          "source": "Reversal Date",
+          "message": "Dátum storna"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEYXRl.short_desc": {
+          "source": "If this journal entry is intended to be reversed, enter the date for the reversing entry to be posted",
+          "message": "Ak má byť tento účtovný zápis stornovaný, zadajte dátum zaúčtovania stornovacieho zápisu"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field. Clear this box to make the reversal an immediately entered transaction with the date in the Reversal Date field.",
+          "message": "Začiarknutím tohto políčka zmeníte storno na zapamätanú transakciu, ktorá sa automaticky uskutoční v dátume zadanom v povinnom poli Dátum storna. Zrušením začiarknutia tohto políčka vytvoríte storno ako okamžite zadanú transakciu s dátumom v poli Dátum storna."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.display_name": {
+          "source": "Reversal Defer",
+          "message": "Odklad storna"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmV2ZXJzYWxEZWZlcg.short_desc": {
+          "source": "Check this box to make the reversal a memorized transaction that automatically occurs on the date entered in the required Reversal Date field",
+          "message": "Začiarknutím tohto políčka zmeníte storno na zapamätanú transakciu, ktorá sa automaticky uskutoční v dátume zadanom v povinnom poli Dátum storna"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVmTmFtZQ.display_name": {
+          "source": "Ref Name",
+          "message": "Referenčný názov"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.desc": {
+          "source": "The names of sublists on this record. All sublist lines will be replaced with lines specified in the request. The names are delimited by comma.",
+          "message": "Názvy podzoznamov v tomto zázname. Všetky riadky podzoznamu budú nahradené riadkami špecifikovanými v požiadavke. Názvy sú oddelené čiarkou."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.display_name": {
+          "source": "Replace",
+          "message": "Nahradiť"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.cmVwbGFjZQ.short_desc": {
+          "source": "The names of sublists on this record",
+          "message": "Názvy podzoznamov v tomto zázname"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dG9TdWJzaWRpYXJ5.display_name": {
+          "source": "To Subsidiary",
+          "message": "Do dcérskej spoločnosti"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry. You can enter or select another date.",
+          "message": "NetSuite vloží dnešný dátum ako dátum tohto účtovného zápisu. Môžete zadať alebo vybrať iný dátum."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.display_name": {
+          "source": "Tran Date",
+          "message": "Dátum transakcie"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbkRhdGU.short_desc": {
+          "source": "NetSuite inserts today's date as the date of this journal entry",
+          "message": "NetSuite vloží dnešný dátum ako dátum tohto účtovného zápisu"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.desc": {
+          "source": "NetSuite increases the largest journal entry number by one. If you wish, you can type another number. The next journal entry number will revert to the standard pattern. You can enter a maximum of 45 characters in this field.",
+          "message": "NetSuite zvýši najvyššie číslo položky účtovného denníka o jeden. Ak chcete, môžete zadať iné číslo. Nasledujúce číslo položky účtovného denníka sa vráti k štandardnému vzoru. Do tohto poľa môžete zadať maximálne 45 znakov."
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.display_name": {
+          "source": "Tran Id",
+          "message": "ID transakcie"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dHJhbklk.short_desc": {
+          "source": "NetSuite increases the largest journal entry number by one",
+          "message": "NetSuite zvýši najvyššie číslo položky účtovného denníka o jeden"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.option.dm9pZA.display_name": {
+          "source": "Void",
+          "message": "Anulovať"
+        },
+        "app.TmV0U3VpdGU.action.am91cm5hbEVudHJ5X3Bvc3Q.short_desc": {
+          "source": "Creates a new journal entry.",
+          "message": "Vytvorí novú položku účtovného denníka."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.desc": {
+          "source": "Fetches detailed information of a single opportunity by its ID.",
+          "message": "Získa podrobné informácie o jednej obchodnej príležitosti podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.display_name": {
+          "source": "Get Opportunity",
+          "message": "Získať príležitosť"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZ2V0.short_desc": {
+          "source": "Retrieve details of a specific opportunity.",
+          "message": "Získať podrobnosti o konkrétnej obchodnej príležitosti."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.desc": {
+          "source": "Removes an opportunity record from NetSuite based on its ID.",
+          "message": "Odstráni záznam obchodnej príležitosti zo systému NetSuite na základe jej ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.display_name": {
+          "source": "Delete Opportunity",
+          "message": "Odstrániť príležitosť"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfZGVsZXRl.short_desc": {
+          "source": "Deletes a specific opportunity.",
+          "message": "Odstráni konkrétnu obchodnú príležitosť."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.desc": {
+          "source": "Allows the user to update details of a specific opportunity by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétnej obchodnej príležitosti podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.display_name": {
+          "source": "Update Opportunity",
+          "message": "Aktualizovať príležitosť"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfaWRfcGF0Y2g.short_desc": {
+          "source": "Updates an existing opportunity.",
+          "message": "Aktualizuje existujúcu obchodnú príležitosť."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.desc": {
+          "source": "Allows the user to create a new opportunity record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam obchodnej príležitosti v systéme NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.display_name": {
+          "source": "Create Opportunity",
+          "message": "Vytvoriť príležitosť"
+        },
+        "app.TmV0U3VpdGU.action.b3Bwb3J0dW5pdHlfcG9zdA.short_desc": {
+          "source": "Creates a new opportunity.",
+          "message": "Vytvorí novú obchodnú príležitosť."
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.desc": {
+          "source": "Query NetSuite records by type with optional filtering, field selection, and pagination",
+          "message": "Dopytovať záznamy NetSuite podľa typu s voliteľným filtrovaním, výberom polí a stránkovaním"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.display_name": {
+          "source": "List Records",
+          "message": "Zoznam záznamov"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.desc": {
+          "source": "List of field names to include in results (returns all fields if omitted)",
+          "message": "Zoznam názvov polí, ktoré sa majú zahrnúť do výsledkov (ak sa vynechá, vrátia sa všetky polia)"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.display_name": {
+          "source": "Fields",
+          "message": "Polia"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.ZmllbGRz.short_desc": {
+          "source": "Specific record fields to return",
+          "message": "Konkrétne polia záznamu, ktoré sa majú vrátiť"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.desc": {
+          "source": "Used for pagination to skip a specified number of records in the result set",
+          "message": "Používa sa pri stránkovaní na preskočenie zadaného počtu záznamov v množine výsledkov"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of records to skip",
+          "message": "Počet záznamov na preskočenie"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.desc": {
+          "source": "Caps the number of results returned in a single query",
+          "message": "Obmedzuje počet výsledkov vrátených v jednom dopyte"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of records to return",
+          "message": "Maximálny počet záznamov na vrátenie"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.desc": {
+          "source": "If multiple query fields are provided, the record must match all of them",
+          "message": "Ak je zadaných viacero polí dopytu, záznam musí vyhovovať všetkým"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFsbA.display_name": {
+          "source": "All",
+          "message": "Všetky"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.desc": {
+          "source": "If multiple query fields are provided, the record must match at least one of them",
+          "message": "Ak je zadaných viacero polí dopytu, záznam musí vyhovovať aspoň jednému z nich"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.allowed-value.c3RyaW5nOmFueQ.display_name": {
+          "source": "Any",
+          "message": "Akékoľvek"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.desc": {
+          "source": "Determines if records must match all criteria (All) or any criteria (Any) when multiple query fields are provided",
+          "message": "Určuje, či záznamy musia spĺňať všetky kritériá (All) alebo ľubovoľné kritérium (Any), ak je zadaných viacero polí dopytu"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.display_name": {
+          "source": "Search Mode",
+          "message": "Režim vyhľadávania"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.c2VhcmNoTW9kZQ.short_desc": {
+          "source": "How multiple search criteria are combined",
+          "message": "Spôsob kombinovania viacerých vyhľadávacích kritérií"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.desc": {
+          "source": "Key-value pairs defining search criteria",
+          "message": "Dvojice kľúč-hodnota definujúce vyhľadávacie kritériá"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.display_name": {
+          "source": "Query Criteria",
+          "message": "Kritériá dopytu"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cXVlcnk.short_desc": {
+          "source": "Search conditions for filtering records",
+          "message": "Vyhľadávacie podmienky na filtrovanie záznamov"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "Specifies which NetSuite record type to query (customer, invoice, transaction, etc.)",
+          "message": "Určuje, na ktorý typ záznamu NetSuite sa dopytovať (customer, invoice, transaction atď.)"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "Typ záznamu"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "Type of NetSuite record to retrieve",
+          "message": "Typ záznamu NetSuite, ktorý sa má načítať"
+        },
+        "app.TmV0U3VpdGU.action.bGlzdF9yZWNvcmRz.short_desc": {
+          "source": "Retrieve NetSuite records based on search criteria",
+          "message": "Načítať záznamy NetSuite na základe vyhľadávacích kritérií"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **NetSuite** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "Vykonajte vlastné volanie HTTP / REST API do **NetSuite** pomocou autentifikácie nakonfigurovaného pripojenia.\n\nZadajte metódu HTTP, cestu URI (relatívnu k základnej adrese URL rozhrania API pripojenia), voliteľné parametre dopytu, hlavičky a telo požiadavky. Odpoveď sa vráti ako hash obsahujúci stavový kód, hlavičky odpovede a telo odpovede.\n\nTúto akciu použite pre koncové body, ktoré ešte nie sú sprístupnené ako prvotriedne akcie v tejto aplikácii."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "Urobiť volanie API"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "Telo požiadavky. Efektívny typ závisí od `body_type`: JSON/formulár/YAML očakávajú hash, XML/text očakávajú reťazec, multipart očakáva štruktúru súboru, binárny typ očakáva neopracované bajty."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "Telo"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "Telo požiadavky"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "Odoslať súbor pomocou `multipart/form-data`. Telo musí byť štruktúra @ref DataProvider::FileDataType \"FileDataType\" (filename + content + mime_type). Rámec vytvorí obálku multipart a nastaví hlavičku boundary."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "Multipart formulár"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "Odoslať súbor pomocou multipart/form-data"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "Odovzdať telo klientovi REST bez zmeny; klient rozhodne o serializácii na základe svojej konfigurovanej možnosti `data` a typu hodnoty"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "Auto"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "Priamy prechod; použiť serializáciu spojenia a nechať rozhodnúť klienta REST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "Odoslať telo ako neopracované bajty. Telo musí byť binárna hodnota. Nastavuje `Content-Type: application/octet-stream`, pokiaľ nie je prepísané pomocou `hdr`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "Surové binárne dáta"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "Odoslať telo ako neopracované bajty"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "Serializovať hash polí formulára ako `application/x-www-form-urlencoded`. Telo musí byť hash, ktorého hodnoty sú skaláre (reťazce/čísla/booleovské hodnoty)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "Formulár (kódovaný v URL)"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "Serializovať telo ako polia formulára application/x-www-form-urlencoded"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "Serializovať telo ako JSON; nastavuje `Content-Type: application/json`. Telo by malo byť hash, zoznam alebo skalárna hodnota."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "Serializovať telo ako JSON"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "Odoslať telo ako čistý text. Telo musí byť reťazec. Nastavuje `Content-Type: text/plain`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "Čistý text"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "Odoslať telo ako text/plain"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "Odoslať telo ako XML. Ak je telo hash, serializuje sa do XML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/xml`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "Odoslať telo ako XML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "Odoslať telo ako YAML. Ak je telo hash, serializuje sa do YAML; ak je to reťazec, odosiela sa doslovne. Nastavuje `Content-Type: application/x-yaml`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "Odoslať telo ako YAML"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "Vyberie režim serializácie tela a zodpovedajúcu hlavičku `Content-Type`. Zmena tohto poľa zmení editor `body` - výber JSON zobrazí editor JSON, výber Multipart Form zobrazí výber súborov a podobne."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "Typ tela"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "Ako sa telo serializuje a aký Content-Type sa odosiela"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "Ak je `True`, odpovede HTTP iné ako 2xx sa vrátia ako normálny hash odpovede (s reálnym stavovým kódom) namiesto vyvolania `REST-RESPONSE-ERROR`. Užitočné na spracovanie 4xx/5xx ako dát – napr. kontrola, či zdroj existuje. Prepíše nastavenie `error_passthru` spojenia len pre toto volanie."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "Vrátiť chyby ako dáta"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "Vrátiť odpovede iné ako 2xx normálne namiesto vyvolania výnimky"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "Voliteľný zoznam stavových kódov HTTP považovaných za úspech. Ak je nastavený a stav odpovede nie je v tomto zozname, akcia vyvolá `REST-STATUS-ERROR`. Ak nie je nastavený, uplatní sa predvolené správanie klienta REST (zvyčajne: 2xx je úspech, iné ako 2xx vyvolá výnimku)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "Očakávané stavové kódy"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "Stavové kódy odpovede považované za úspech"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "Hash vlastných hlavičiek pridaných k požiadavke. Tie prepíšu akékoľvek predvolené hlavičky nastavené pomocou `body_type` (napr. zadanie `Content-Type` na tomto mieste má prednosť pred predvolenou hodnotou typu tela)."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "Vlastné hlavičky"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "Dodatočné hlavičky požiadavky"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "Ak je `True`, hash odpovede obsahuje pod-hash `debug` obsahujúci metódu/URL/hlavičky požiadavky (so skrytými citlivými hodnotami), veľkosti požiadavky a odpovede a trvanie celého cyklu. Užitočné pri vyšetrovaní pomalých alebo zlyhávajúcich volaní. Predvolene vypnuté, aby odpovede zostali stručné."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "Zahrnúť ladiace informácie"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "Zahrnúť ladiace informácie o požiadavke/časovaní/veľkosti do odpovede"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "Metóda HTTP"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "Metóda HTTP, ktorá sa má použiť pre požiadavku"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "Cesta URI relatívna k základnej adrese URL API spojenia. Môže obsahovať žolíky `{name}`, ktoré sú nahradené z `path_vars`. Príklad: `/users/{id}/comments`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "Cesta URI"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "Cesta URI relatívna k základnej URL adrese API pripojenia. Môže obsahovať zastupiteľné objekty '{name}', ktoré sa nahradia z 'path_vars'. Príklad: '/users/{id}/comments'"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "Hash hodnôt nahradených do zastupiteľných objektov `{name}` v ceste URI. Príklad: s `path = /users/{id}` a `path_vars = {id: 123}` rozhranie odosiela `/users/123`. Hodnoty sú zakódované v URL."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "Premenné cesty"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "Hodnoty pre zastupiteľné objekty {name} v ceste"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "Hash parametrov reťazca dopytu na pripojenie k ceste URI. Hodnoty sú zakódované v URL; hodnoty zoznamu sú spojené pomocou `,`."
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "Argumenty dopytu"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "Parametre reťazca dopytu"
+        },
+        "app.TmV0U3VpdGU.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to NetSuite",
+          "message": "Vykonať vlastné volanie API do NetSuite"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.desc": {
+          "source": "Triggers when a new record is created",
+          "message": "Spustí sa pri vytvorení nového záznamu"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.display_name": {
+          "source": "New Record",
+          "message": "Nový záznam"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.desc": {
+          "source": "The type of record to monitor",
+          "message": "Typ záznamu, ktorý sa má monitorovať"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.display_name": {
+          "source": "Record Type",
+          "message": "Typ záznamu"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.option.cmVjb3JkVHlwZQ.short_desc": {
+          "source": "The type of record to monitor",
+          "message": "Typ záznamu, ktorý sa má monitorovať"
+        },
+        "app.TmV0U3VpdGU.action.bmV3X3JlY29yZA.short_desc": {
+          "source": "Triggers when a new record is created",
+          "message": "Spustí sa pri vytvorení nového záznamu"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a sales order record from NetSuite based on its ID.",
+          "message": "Odstráni záznam predajnej objednávky zo systému NetSuite na základe jej ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Sales Order",
+          "message": "Odstrániť predajnú objednávku"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific sales order.",
+          "message": "Odstráni konkrétnu predajnú objednávku."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single sales order by its ID.",
+          "message": "Získa podrobné informácie o jednej predajnej objednávke podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Sales Order",
+          "message": "Získať predajnú objednávku"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific sales order.",
+          "message": "Získať podrobnosti o konkrétnej predajnej objednávke."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific sales order by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétnej predajnej objednávky podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Sales Order",
+          "message": "Aktualizovať predajnú objednávku"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing sales order.",
+          "message": "Aktualizuje existujúcu predajnú objednávku."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new sales order record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam predajnej objednávky v systéme NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.display_name": {
+          "source": "Create Sales Order",
+          "message": "Vytvoriť predajnú objednávku"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new sales order.",
+          "message": "Vytvorí novú predajnú objednávku."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.desc": {
+          "source": "Creates a new customer sales order in NetSuite with only the most commonly used fields, making order creation faster and more straightforward.",
+          "message": "Vytvorí novú predajnú objednávku odberateľa v systéme NetSuite iba s najčastejšie používanými poľami, vďaka čomu je vytváranie objednávok rýchlejšie a jednoduchšie."
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.display_name": {
+          "source": "Create Sales Order (simplified)",
+          "message": "Vytvoriť predajnú objednávku (zjednodušené)"
+        },
+        "app.TmV0U3VpdGU.action.c2FsZXNPcmRlcl9wb3N0X3NpbXBsaWZpZWQ.short_desc": {
+          "source": "Creates a new sales order with simplified options.",
+          "message": "Vytvorí novú predajnú objednávku so zjednodušenými možnosťami."
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "Vyhľadať záznamy"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"NetSuite\"",
+          "message": "Vyhľadať zodpovedajúce záznamy v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "Nájsť jeden záznam"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"NetSuite\"",
+          "message": "Vyhľadať jeden zodpovedajúci záznam v danej tabuľke v aplikácii \"NetSuite\""
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.desc": {
+          "source": "Run a SuiteQL query",
+          "message": "Spustiť dopyt SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.display_name": {
+          "source": "SuiteQL",
+          "message": "SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.desc": {
+          "source": "The number of records to skip",
+          "message": "Počet záznamov, ktoré sa majú preskočiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "Posun"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.b2Zmc2V0.short_desc": {
+          "source": "The number of records to skip",
+          "message": "Počet záznamov, ktoré sa majú preskočiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.desc": {
+          "source": "The maximum number of records to return",
+          "message": "Maximálny počet záznamov, ktoré sa majú vrátiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "Limit"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.bGltaXQ.short_desc": {
+          "source": "The maximum number of records to return",
+          "message": "Maximálny počet záznamov, ktoré sa majú vrátiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gY3VzdG9tZXI.display_name": {
+          "source": "Get all customers",
+          "message": "Získať všetkých zákazníkov"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gYWNjb3VudA.display_name": {
+          "source": "Get all accounts",
+          "message": "Získať všetky účty"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gIFdIRVJFIHR5cGUgPSAnU2FsZXNPcmQn.display_name": {
+          "source": "Get all sales orders",
+          "message": "Získať všetky predajné objednávky"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdDdXN0SW52Yyc.display_name": {
+          "source": "Get all invoices",
+          "message": "Získať všetky faktúry"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdKb3VybmFsJw.display_name": {
+          "source": "Get all journal entries",
+          "message": "Získať všetky položky účtovného denníka"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdHJhbnNhY3Rpb24gV0hFUkUgdHlwZSA9ICdQdXJjaE9yZCc.display_name": {
+          "source": "Get all purchase orders",
+          "message": "Získať všetky nákupné objednávky"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.allowed-value.c3RyaW5nOlNFTEVDVCAqIEZST00gdmVuZG9y.display_name": {
+          "source": "Get all vendors",
+          "message": "Získať všetkých dodávateľov"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.desc": {
+          "source": "The SuiteQL query to run",
+          "message": "Dopyt SuiteQL, ktorý sa má spustiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.display_name": {
+          "source": "Query",
+          "message": "Dopyt"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.option.cXVlcnk.short_desc": {
+          "source": "The SuiteQL query to run",
+          "message": "Dopyt SuiteQL, ktorý sa má spustiť"
+        },
+        "app.TmV0U3VpdGU.action.c3VpdGVfcWw.short_desc": {
+          "source": "Run a SuiteQL query",
+          "message": "Spustiť dopyt SuiteQL"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.desc": {
+          "source": "Removes a purchase order record from NetSuite based on its ID.",
+          "message": "Odstráni záznam nákupnej objednávky zo systému NetSuite na základe jej ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.display_name": {
+          "source": "Delete Purchase Order",
+          "message": "Odstrániť objednávku"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9kZWxldGU.short_desc": {
+          "source": "Deletes a specific purchase order.",
+          "message": "Odstráni konkrétnu objednávku."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.desc": {
+          "source": "Fetches detailed information of a single purchase order by its ID.",
+          "message": "Získa podrobné informácie o jednej objednávke podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.display_name": {
+          "source": "Get Purchase Order",
+          "message": "Získať objednávku"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9nZXQ.short_desc": {
+          "source": "Retrieve details of a specific purchase order.",
+          "message": "Získať podrobnosti o konkrétnej objednávke."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.desc": {
+          "source": "Allows the user to update details of a specific purchase order by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétnej objednávky podľa jej ID."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.display_name": {
+          "source": "Update Purchase Order",
+          "message": "Aktualizovať objednávku"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9pZF9wYXRjaA.short_desc": {
+          "source": "Updates an existing purchase order.",
+          "message": "Aktualizuje existujúcu objednávku."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.desc": {
+          "source": "Allows the user to create a new purchase order record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam objednávky v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.display_name": {
+          "source": "Create Purchase Order",
+          "message": "Vytvoriť objednávku"
+        },
+        "app.TmV0U3VpdGU.action.cHVyY2hhc2VPcmRlcl9wb3N0.short_desc": {
+          "source": "Creates a new purchase order.",
+          "message": "Vytvorí novú objednávku."
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „NetSuite“"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "Aktualizovať záznamy"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "Tabuľka"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "Názov tabuľky"
+        },
+        "app.TmV0U3VpdGU.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"NetSuite\"",
+          "message": "Aktualizovať existujúce záznamy v danej tabuľke v aplikácii „NetSuite“"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.desc": {
+          "source": "Removes a vendor record from NetSuite based on its ID.",
+          "message": "Odstráni záznam dodávateľa z NetSuite na základe jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.display_name": {
+          "source": "Delete Vendor",
+          "message": "Odstrániť dodávateľa"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2RlbGV0ZQ.short_desc": {
+          "source": "Deletes a specific vendor.",
+          "message": "Odstráni konkrétneho dodávateľa."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.desc": {
+          "source": "Fetches detailed information of a single vendor by its ID.",
+          "message": "Získa podrobné informácie o jednom dodávateľovi podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.display_name": {
+          "source": "Get Vendor",
+          "message": "Získať dodávateľa"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX2dldA.short_desc": {
+          "source": "Retrieve details of a specific vendor.",
+          "message": "Získať podrobnosti o konkrétnom dodávateľovi."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.desc": {
+          "source": "Allows the user to update details of a specific vendor by its ID.",
+          "message": "Umožňuje používateľovi aktualizovať podrobnosti konkrétneho dodávateľa podľa jeho ID."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.display_name": {
+          "source": "Update Vendor",
+          "message": "Aktualizovať dodávateľa"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX2lkX3BhdGNo.short_desc": {
+          "source": "Updates an existing vendor.",
+          "message": "Aktualizuje existujúceho dodávateľa."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.desc": {
+          "source": "Allows the user to create a new vendor record in NetSuite.",
+          "message": "Umožňuje používateľovi vytvoriť nový záznam dodávateľa v NetSuite."
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.display_name": {
+          "source": "Create Vendor",
+          "message": "Vytvoriť dodávateľa"
+        },
+        "app.TmV0U3VpdGU.action.dmVuZG9yX3Bvc3Q.short_desc": {
+          "source": "Creates a new vendor.",
+          "message": "Vytvorí nového dodávateľa."
+        },
+        "app.TmV0U3VpdGU.desc": {
+          "source": "NetSuite offers a unified platform for ERP, CRM, e-commerce, and more, enabling businesses to manage all key operations in a single system.",
+          "message": "NetSuite ponúka zjednotenú platformu pre ERP, CRM, e-commerce a ďalšie, vďaka čomu umožňuje firmám spravovať všetky kľúčové operácie v jedinom systéme."
+        },
+        "app.TmV0U3VpdGU.display_name": {
+          "source": "NetSuite",
+          "message": "NetSuite"
+        },
+        "app.TmV0U3VpdGU.short_desc": {
+          "source": "A comprehensive suite of cloud-based business management solutions.",
+          "message": "Komplexný balík cloudových riešení pre riadenie podniku."
+        }
+      }
+    }
+  }
+}

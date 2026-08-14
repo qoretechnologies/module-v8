@@ -1,0 +1,3349 @@
+{
+  "schema_version": 1,
+  "locales": {
+    "ko": {
+      "messages": {
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.desc": {
+          "source": "Create new records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.display_name": {
+          "source": "Create Records",
+          "message": "레코드 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRl.short_desc": {
+          "source": "Create new records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에 새 레코드 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.desc": {
+          "source": "Create a new bill with vendor information, line items, and other necessary details",
+          "message": "공급업체 정보, 라인 항목 및 기타 필요한 세부 정보로 새 청구서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.display_name": {
+          "source": "Create Bill",
+          "message": "청구서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.allowed-value.c3RyaW5nOkFjY291bnRCYXNlZEV4cGVuc2VMaW5lRGV0YWls.display_name": {
+          "source": "Account Based Expense Line Detail",
+          "message": "계정 기반 비용 라인 세부 정보"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.allowed-value.c3RyaW5nOkl0ZW1CYXNlZEV4cGVuc2VMaW5lRGV0YWls.display_name": {
+          "source": "Item Based Expense Line Detail",
+          "message": "항목 기반 비용 라인 세부 정보"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.desc": {
+          "source": "Choose between account-based or item-based expense line details for the bill",
+          "message": "청구서에 대해 계정 기반 또는 항목 기반 비용 라인 세부 정보 중에서 선택"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.display_name": {
+          "source": "Line Item Type",
+          "message": "라인 항목 유형"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.short_desc": {
+          "source": "The type of line items for the bill",
+          "message": "청구서의 라인 항목 유형"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.dmVuZG9yX2lk.desc": {
+          "source": "The unique identifier of the vendor who is issuing this bill",
+          "message": "이 청구서를 발행하는 공급업체의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.dmVuZG9yX2lk.display_name": {
+          "source": "Vendor ID",
+          "message": "공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.option.dmVuZG9yX2lk.short_desc": {
+          "source": "The vendor issuing the bill",
+          "message": "청구서를 발행하는 공급업체"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2JpbGw.short_desc": {
+          "source": "Create a new bill in QuickBooks",
+          "message": "QuickBooks에서 새 청구서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.desc": {
+          "source": "Create a new customer record with personal information, contact details, and addresses",
+          "message": "개인 정보, 연락처 세부 정보 및 주소로 새 고객 레코드 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Create Customer",
+          "message": "고객 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.desc": {
+          "source": "The name of the company the customer represents",
+          "message": "고객이 대표하는 회사의 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.display_name": {
+          "source": "Company Name",
+          "message": "회사 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.short_desc": {
+          "source": "The company name of the customer",
+          "message": "고객의 회사 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.desc": {
+          "source": "The address where bills should be sent for this customer",
+          "message": "이 고객에게 청구서를 보낼 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.display_name": {
+          "source": "Billing Address",
+          "message": "청구지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.short_desc": {
+          "source": "The billing address of the customer",
+          "message": "고객의 청구 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.desc": {
+          "source": "The customer's first name or given name",
+          "message": "고객의 이름(이름/First Name)"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.display_name": {
+          "source": "Given Name",
+          "message": "이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.short_desc": {
+          "source": "The first name of the customer",
+          "message": "고객의 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "The name that will be displayed for this customer in QuickBooks",
+          "message": "QuickBooks에서 이 고객에 대해 표시될 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "The display name for the customer",
+          "message": "고객의 표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.desc": {
+          "source": "The primary email address for the customer",
+          "message": "고객의 기본 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "이메일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZW1haWw.short_desc": {
+          "source": "The email address of the customer",
+          "message": "고객의 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.desc": {
+          "source": "The customer's last name or family name",
+          "message": "고객의 성(성/Family Name)"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.display_name": {
+          "source": "Family Name",
+          "message": "성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.short_desc": {
+          "source": "The last name of the customer",
+          "message": "고객의 성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The customer's middle name or middle initial",
+          "message": "고객의 중간 이름 또는 중간 이니셜"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "중간 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "The middle name of the customer",
+          "message": "고객의 중간 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.desc": {
+          "source": "The address where products should be shipped for this customer",
+          "message": "이 고객에게 제품을 배송할 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.display_name": {
+          "source": "Shipping Address",
+          "message": "배송 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.short_desc": {
+          "source": "The shipping address of the customer",
+          "message": "고객의 배송지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c3VmZml4.desc": {
+          "source": "The customer's suffix (e.g., Jr., Sr., III, etc.)",
+          "message": "고객의 접미사(예: Jr., Sr., III 등)"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c3VmZml4.display_name": {
+          "source": "Suffix",
+          "message": "접미사"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.c3VmZml4.short_desc": {
+          "source": "The suffix of the customer",
+          "message": "고객의 접미사"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.dGl0bGU.desc": {
+          "source": "The customer's title (e.g., Mr., Mrs., Dr., etc.)",
+          "message": "고객의 호칭(예: Mr., Mrs., Dr. 등)"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "제목"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.option.dGl0bGU.short_desc": {
+          "source": "The title of the customer",
+          "message": "고객의 호칭"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Create a new customer in QuickBooks",
+          "message": "QuickBooks에서 새 고객 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.desc": {
+          "source": "Create a new estimate for a customer with line items, quantities, and pricing information",
+          "message": "품목, 수량 및 가격 정보가 포함된 고객용 새 견적서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.display_name": {
+          "source": "Create Estimate",
+          "message": "견적서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "The unique identifier of the customer who will receive this estimate",
+          "message": "이 견적서를 받을 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer ID",
+          "message": "고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "The customer for this estimate",
+          "message": "이 견적서의 고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.desc": {
+          "source": "The detailed list of items or services included in the estimate",
+          "message": "견적서에 포함된 품목 또는 서비스의 상세 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.display_name": {
+          "source": "Line Items",
+          "message": "품목"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.option.bGluZXM.short_desc": {
+          "source": "List of line items for the estimate",
+          "message": "견적서 품목 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2VzdGltYXRl.short_desc": {
+          "source": "Create a new estimate in QuickBooks",
+          "message": "QuickBooks에서 새 견적서 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.desc": {
+          "source": "Create a new item for products or services that can be used on invoices, estimates, and other transactions",
+          "message": "송장, 견적서 및 기타 거래에 사용할 수 있는 제품 또는 서비스의 새 항목 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.display_name": {
+          "source": "Create Item",
+          "message": "항목 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.ZXhwZW5zZV9hY2NvdW50X2lk.desc": {
+          "source": "The unique identifier of the account that will be debited when this item is purchased",
+          "message": "이 항목을 구매할 때 차변에 기입될 계정의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.ZXhwZW5zZV9hY2NvdW50X2lk.display_name": {
+          "source": "Expense Account ID",
+          "message": "비용 계정 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.ZXhwZW5zZV9hY2NvdW50X2lk.short_desc": {
+          "source": "The expense account for this item",
+          "message": "이 항목의 비용 계정"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.aW5jb21lX2FjY291bnRfaWQ.desc": {
+          "source": "The unique identifier of the account that will be credited when this item is sold",
+          "message": "이 항목을 판매할 때 대변에 기입될 계정의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.aW5jb21lX2FjY291bnRfaWQ.display_name": {
+          "source": "Income Account ID",
+          "message": "수익 계정 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.aW5jb21lX2FjY291bnRfaWQ.short_desc": {
+          "source": "The income account for this item",
+          "message": "이 항목의 수익 계정"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.bmFtZQ.desc": {
+          "source": "The display name for this item as it will appear on transactions",
+          "message": "거래에 표시될 이 항목의 표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.bmFtZQ.display_name": {
+          "source": "Item Name",
+          "message": "품목 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.bmFtZQ.short_desc": {
+          "source": "The name of the item",
+          "message": "항목 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.allowed-value.c3RyaW5nOk5vbkludmVudG9yeQ.display_name": {
+          "source": "NonInventory",
+          "message": "비재고"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.allowed-value.c3RyaW5nOkludmVudG9yeQ.display_name": {
+          "source": "Inventory",
+          "message": "재고"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.allowed-value.c3RyaW5nOlNlcnZpY2U.display_name": {
+          "source": "Service",
+          "message": "서비스"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.desc": {
+          "source": "Choose the type of item: Service (for services), NonInventory (for non-tracked products), or Inventory (for tracked products)",
+          "message": "항목 유형 선택: Service(서비스용), NonInventory(비추적 제품용) 또는 Inventory(추적 제품용)"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.display_name": {
+          "source": "Item Type",
+          "message": "항목 유형"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.option.dHlwZQ.short_desc": {
+          "source": "The type of item being created",
+          "message": "생성할 항목의 유형"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2l0ZW0.short_desc": {
+          "source": "Create a new item in QuickBooks",
+          "message": "QuickBooks에서 새 항목 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.desc": {
+          "source": "Create a new invoice for a customer with line items, quantities, and pricing information",
+          "message": "품목, 수량 및 가격 정보가 포함된 고객용 새 송장 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.display_name": {
+          "source": "Create Invoice",
+          "message": "인보이스 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.desc": {
+          "source": "The unique identifier of the customer who will receive this invoice",
+          "message": "이 송장을 받을 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.display_name": {
+          "source": "Customer",
+          "message": "고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.short_desc": {
+          "source": "The customer for this invoice",
+          "message": "이 송장의 고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.desc": {
+          "source": "The detailed list of items or services included in the invoice",
+          "message": "송장에 포함된 품목 또는 서비스의 상세 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.display_name": {
+          "source": "Line Items",
+          "message": "품목"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.option.bGluZXM.short_desc": {
+          "source": "List of line items for the invoice",
+          "message": "송장 품목 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2U.short_desc": {
+          "source": "Create a new invoice in QuickBooks",
+          "message": "QuickBooks에서 새 송장 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.desc": {
+          "source": "Create a new invoice by converting an existing estimate, copying all line items and linking the invoice back to the original estimate",
+          "message": "기존 견적서를 변환하여 모든 품목을 복사하고 송장을 원본 견적서에 연결하여 새 송장 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.display_name": {
+          "source": "Create Invoice from Estimate",
+          "message": "견적서에서 송장 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.option.ZXN0aW1hdGVfaWQ.desc": {
+          "source": "The unique identifier of the estimate to convert into an invoice. Only Pending and Accepted estimates can be converted",
+          "message": "송장으로 변환할 견적서의 고유 식별자입니다. Pending(대기 중) 및 Accepted(수락됨) 견적서만 변환할 수 있습니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.option.ZXN0aW1hdGVfaWQ.display_name": {
+          "source": "Estimate ID",
+          "message": "견적서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.option.ZXN0aW1hdGVfaWQ.short_desc": {
+          "source": "The estimate to convert",
+          "message": "변환할 견적서"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX2ludm9pY2VfZnJvbV9lc3RpbWF0ZQ.short_desc": {
+          "source": "Convert an estimate into an invoice in QuickBooks",
+          "message": "QuickBooks에서 견적서를 송장으로 변환"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.desc": {
+          "source": "Create a new payment record for a customer, optionally linked to one or more invoices for invoicing workflows",
+          "message": "송장 워크플로를 위해 하나 이상의 송장에 선택적으로 연결된 고객용 새 결제 기록 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.display_name": {
+          "source": "Create Payment",
+          "message": "결제 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.Y3VzdG9tZXI.desc": {
+          "source": "The unique identifier of the customer who is making this payment",
+          "message": "이 결제를 진행하는 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.Y3VzdG9tZXI.display_name": {
+          "source": "Customer",
+          "message": "고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.Y3VzdG9tZXI.short_desc": {
+          "source": "The customer making the payment",
+          "message": "결제하는 고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.aW52b2ljZV9pZHM.desc": {
+          "source": "A list of invoice IDs to link this payment to. The payment amount will be distributed evenly across the specified invoices",
+          "message": "이 결제에 연결할 송장 ID 목록입니다. 결제 금액은 지정된 송장에 균등하게 분배됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.aW52b2ljZV9pZHM.display_name": {
+          "source": "Invoice IDs",
+          "message": "송장 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.aW52b2ljZV9pZHM.short_desc": {
+          "source": "Invoices to apply payment to",
+          "message": "결제를 적용할 송장"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.bWVtbw.desc": {
+          "source": "An internal memo or note about this payment that is not visible to the customer",
+          "message": "고객에게 표시되지 않는 이 결제에 대한 내부 메모 또는 참고 사항"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.bWVtbw.display_name": {
+          "source": "Memo",
+          "message": "메모"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.bWVtbw.short_desc": {
+          "source": "A private note for this payment",
+          "message": "이 결제에 대한 비공개 메모"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.cGF5bWVudF9kYXRl.desc": {
+          "source": "The transaction date for this payment. Defaults to the current date if not specified",
+          "message": "이 결제의 거래 날짜입니다. 지정하지 않으면 현재 날짜가 기본값으로 설정됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.cGF5bWVudF9kYXRl.display_name": {
+          "source": "Payment Date",
+          "message": "결제일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.cGF5bWVudF9kYXRl.short_desc": {
+          "source": "The date the payment was received",
+          "message": "결제 수령일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.dG90YWxfYW1vdW50.desc": {
+          "source": "The total monetary amount of the payment being received",
+          "message": "수령하는 결제의 총 금액"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.dG90YWxfYW1vdW50.display_name": {
+          "source": "Total Amount",
+          "message": "총 금액"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.option.dG90YWxfYW1vdW50.short_desc": {
+          "source": "The total payment amount",
+          "message": "총 결제 금액"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3BheW1lbnQ.short_desc": {
+          "source": "Create a new payment in QuickBooks",
+          "message": "QuickBooks에서 새 결제 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.desc": {
+          "source": "Create a new refund receipt to document a return of funds to a customer via check, credit card, or bank transfer",
+          "message": "수표, 신용카드 또는 계좌 이체를 통한 고객 환불을 기록하는 새 환불 영수증 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.display_name": {
+          "source": "Create Refund Receipt",
+          "message": "환불 영수증 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "The unique identifier of the customer who will receive this refund",
+          "message": "이 환불을 받을 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer ID",
+          "message": "고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "The customer receiving the refund",
+          "message": "환불을 받는 고객"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.desc": {
+          "source": "The detailed list of items or services being refunded",
+          "message": "환불할 품목 또는 서비스의 상세 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.display_name": {
+          "source": "Line Items",
+          "message": "품목"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bGluZXM.short_desc": {
+          "source": "List of line items for the refund",
+          "message": "환불 품목 목록"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bWVtbw.desc": {
+          "source": "An internal memo or note about this refund receipt",
+          "message": "이 환불 영수증에 대한 내부 메모 또는 참고 사항"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bWVtbw.display_name": {
+          "source": "Memo",
+          "message": "메모"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.option.bWVtbw.short_desc": {
+          "source": "A private note for this refund receipt",
+          "message": "이 환불 영수증에 대한 비공개 메모"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3JlZnVuZF9yZWNlaXB0.short_desc": {
+          "source": "Create a new refund receipt in QuickBooks",
+          "message": "QuickBooks에서 새 환불 영수증을 생성합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.desc": {
+          "source": "Create a new vendor record with contact information, address, and other business details",
+          "message": "연락처 정보, 주소 및 기타 비즈니스 세부 정보가 포함된 새 공급업체 레코드를 생성합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.display_name": {
+          "source": "Create Vendor",
+          "message": "공급업체 생성"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.desc": {
+          "source": "The address where bills should be sent for this vendor",
+          "message": "이 공급업체의 청구서를 보낼 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.YWRkcmVzcw.short_desc": {
+          "source": "The billing address of the vendor",
+          "message": "공급업체의 청구지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "The name that will be displayed for this vendor in QuickBooks",
+          "message": "QuickBooks에서 이 공급업체에 대해 표시될 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "The display name for the vendor",
+          "message": "공급업체의 표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZW1haWw.desc": {
+          "source": "The primary email address for contacting the vendor",
+          "message": "공급업체에 연락하기 위한 기본 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.ZW1haWw.short_desc": {
+          "source": "The email address of the vendor",
+          "message": "공급업체의 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.cGhvbmU.desc": {
+          "source": "The main contact phone number for the vendor",
+          "message": "공급업체의 기본 연락처 전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.cGhvbmU.short_desc": {
+          "source": "The primary phone number of the vendor",
+          "message": "공급업체의 기본 전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.desc": {
+          "source": "The web address of the vendor's website",
+          "message": "공급업체 웹사이트의 웹 주소"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "웹사이트"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The vendor's website URL",
+          "message": "공급업체의 웹사이트 URL"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlYXRlX3ZlbmRvcg.short_desc": {
+          "source": "Create a new vendor in QuickBooks",
+          "message": "QuickBooks에서 새 공급업체를 생성합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new credit memos or updates to existing credit memos. This trigger allows you to respond to credit memo events in real-time.",
+          "message": "QuickBooks에서 새 크레딧 메모 또는 기존 크레딧 메모의 업데이트를 모니터링합니다. 이 트리거를 사용하면 크레딧 메모 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.display_name": {
+          "source": "Credit Memo Trigger",
+          "message": "크레딧 메모 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new credit memos are added to QuickBooks, or \"Updated\" to trigger when existing credit memos are modified.",
+          "message": "QuickBooks에 새 크레딧 메모가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 크레딧 메모가 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated credit memos",
+          "message": "크레딧 메모 생성 시 트리거할지 또는 업데이트 시 트리거할지 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3JlZGl0X21lbW9fdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a credit memo is created or updated in QuickBooks",
+          "message": "QuickBooks에서 크레딧 메모가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new customers or updates to existing customers. This trigger allows you to respond to customer events in real-time.",
+          "message": "QuickBooks에서 새 고객 또는 기존 고객의 업데이트를 모니터링합니다. 이 트리거를 사용하면 고객 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.display_name": {
+          "source": "Customer Trigger",
+          "message": "고객 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new customers are added to QuickBooks, or \"Updated\" to trigger when existing customers are modified.",
+          "message": "QuickBooks에 새 고객이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 고객이 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated customers",
+          "message": "고객 생성 시 트리거할지 또는 업데이트 시 트리거할지 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Y3VzdG9tZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a customer is created or updated in QuickBooks",
+          "message": "QuickBooks에서 고객이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.desc": {
+          "source": "Fetch detailed information about a specific account using its ID",
+          "message": "ID를 사용하여 특정 계정에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.display_name": {
+          "source": "Get Account",
+          "message": "계정 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.option.aWQ.desc": {
+          "source": "The QuickBooks account ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 계정 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.option.aWQ.display_name": {
+          "source": "Account ID",
+          "message": "계정 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the account",
+          "message": "계정의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2FjY291bnQ.short_desc": {
+          "source": "Retrieve a specific account from QuickBooks",
+          "message": "QuickBooks에서 특정 계정을 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.desc": {
+          "source": "Fetch detailed information about a specific bill using its ID",
+          "message": "ID를 사용하여 특정 청구서에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.display_name": {
+          "source": "Get Bill",
+          "message": "청구서 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.option.aWQ.desc": {
+          "source": "The QuickBooks bill ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.option.aWQ.display_name": {
+          "source": "Bill ID",
+          "message": "청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.option.aWQ.short_desc": {
+          "source": "The unique identifier of the bill",
+          "message": "청구서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2JpbGw.short_desc": {
+          "source": "Retrieve a specific bill from QuickBooks",
+          "message": "QuickBooks에서 특정 청구서를 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.desc": {
+          "source": "Fetch detailed information about a specific customer using their ID",
+          "message": "ID를 사용하여 특정 고객에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.display_name": {
+          "source": "Get Customer",
+          "message": "고객 조회"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.option.aWQ.desc": {
+          "source": "The QuickBooks customer ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.option.aWQ.display_name": {
+          "source": "Customer ID",
+          "message": "고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.option.aWQ.short_desc": {
+          "source": "The unique identifier of the customer",
+          "message": "고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2N1c3RvbWVy.short_desc": {
+          "source": "Retrieve a specific customer from QuickBooks",
+          "message": "QuickBooks에서 특정 고객을 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NvbXBhbnlfaW5mbw.desc": {
+          "source": "Get company info",
+          "message": "회사 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NvbXBhbnlfaW5mbw.display_name": {
+          "source": "Get Company Info",
+          "message": "회사 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NvbXBhbnlfaW5mbw.short_desc": {
+          "source": "Get company info",
+          "message": "회사 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.desc": {
+          "source": "Fetch detailed information about a specific credit memo using its ID",
+          "message": "ID를 사용하여 특정 크레딧 메모에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.display_name": {
+          "source": "Get Credit Memo",
+          "message": "크레딧 메모 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.option.aWQ.desc": {
+          "source": "The QuickBooks credit memo ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 크레딧 메모 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.option.aWQ.display_name": {
+          "source": "Credit Memo ID",
+          "message": "크레딧 메모 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.option.aWQ.short_desc": {
+          "source": "The unique identifier of the credit memo",
+          "message": "크레딧 메모의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2NyZWRpdF9tZW1v.short_desc": {
+          "source": "Retrieve a specific credit memo from QuickBooks",
+          "message": "QuickBooks에서 특정 크레딧 메모를 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.desc": {
+          "source": "Fetch detailed information about a specific deposit using its ID",
+          "message": "ID를 사용하여 특정 입금에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.display_name": {
+          "source": "Get Deposit",
+          "message": "입금 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.option.aWQ.desc": {
+          "source": "The QuickBooks deposit ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 입금 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.option.aWQ.display_name": {
+          "source": "Deposit ID",
+          "message": "입금 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the deposit",
+          "message": "입금의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2RlcG9zaXQ.short_desc": {
+          "source": "Retrieve a specific deposit from QuickBooks",
+          "message": "QuickBooks에서 특정 입금을 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.desc": {
+          "source": "Fetch detailed information about a specific estimate using its ID",
+          "message": "ID를 사용하여 특정 견적서에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.display_name": {
+          "source": "Get Estimate",
+          "message": "견적서 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.option.aWQ.desc": {
+          "source": "The QuickBooks estimate ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 견적서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.option.aWQ.display_name": {
+          "source": "Estimate ID",
+          "message": "견적서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the estimate",
+          "message": "견적서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2VzdGltYXRl.short_desc": {
+          "source": "Retrieve a specific estimate from QuickBooks",
+          "message": "QuickBooks에서 특정 견적서를 검색합니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.desc": {
+          "source": "Fetch detailed information about a specific item using its ID",
+          "message": "ID를 사용하여 특정 품목에 대한 세부 정보를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.display_name": {
+          "source": "Get Item",
+          "message": "품목 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.option.aWQ.desc": {
+          "source": "The QuickBooks item ID to retrieve detailed information for",
+          "message": "세부 정보를 검색할 QuickBooks 품목 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.option.aWQ.display_name": {
+          "source": "Item ID",
+          "message": "품목 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.option.aWQ.short_desc": {
+          "source": "The unique identifier of the item",
+          "message": "품목의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2l0ZW0.short_desc": {
+          "source": "Retrieve a specific item from QuickBooks",
+          "message": "QuickBooks에서 특정 품목 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.desc": {
+          "source": "Fetch detailed information about a specific invoice using its ID",
+          "message": "ID를 사용하여 특정 인보이스에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.display_name": {
+          "source": "Get Invoice",
+          "message": "인보이스 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.option.aWQ.desc": {
+          "source": "The QuickBooks invoice ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.option.aWQ.display_name": {
+          "source": "Invoice ID",
+          "message": "인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.option.aWQ.short_desc": {
+          "source": "The unique identifier of the invoice",
+          "message": "인보이스의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2ludm9pY2U.short_desc": {
+          "source": "Retrieve a specific invoice from QuickBooks",
+          "message": "QuickBooks에서 특정 인보이스 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.desc": {
+          "source": "Fetch detailed information about a specific journal entry using its ID",
+          "message": "ID를 사용하여 특정 분개장에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.display_name": {
+          "source": "Get Journal Entry",
+          "message": "분개 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.option.aWQ.desc": {
+          "source": "The QuickBooks journal entry ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 분개장 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.option.aWQ.display_name": {
+          "source": "Journal Entry ID",
+          "message": "분개장 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.option.aWQ.short_desc": {
+          "source": "The unique identifier of the journal entry",
+          "message": "분개장의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X2pvdXJuYWxfZW50cnk.short_desc": {
+          "source": "Retrieve a specific journal entry from QuickBooks",
+          "message": "QuickBooks에서 특정 분개장 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.desc": {
+          "source": "Fetch detailed information about a specific purchase transaction using its ID",
+          "message": "ID를 사용하여 특정 구매 거래에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.display_name": {
+          "source": "Get Purchase",
+          "message": "구매 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.option.aWQ.desc": {
+          "source": "The QuickBooks purchase ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 구매 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.option.aWQ.display_name": {
+          "source": "Purchase ID",
+          "message": "구매 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the purchase",
+          "message": "구매의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNl.short_desc": {
+          "source": "Retrieve a specific purchase from QuickBooks",
+          "message": "QuickBooks에서 특정 구매 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.desc": {
+          "source": "Fetch detailed information about a specific purchase order using its ID",
+          "message": "ID를 사용하여 특정 구매 주문서에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.display_name": {
+          "source": "Get Purchase Order",
+          "message": "구매 주문 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.option.aWQ.desc": {
+          "source": "The QuickBooks purchase order ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 구매 주문서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.option.aWQ.display_name": {
+          "source": "Purchase Order ID",
+          "message": "구매 주문서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.option.aWQ.short_desc": {
+          "source": "The unique identifier of the purchase order",
+          "message": "구매 주문서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3B1cmNoYXNlX29yZGVy.short_desc": {
+          "source": "Retrieve a specific purchase order from QuickBooks",
+          "message": "QuickBooks에서 특정 구매 주문서 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.desc": {
+          "source": "Fetch detailed information about a specific payment using its ID",
+          "message": "ID를 사용하여 특정 결제에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.display_name": {
+          "source": "Get Payment",
+          "message": "결제 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.option.aWQ.desc": {
+          "source": "The QuickBooks payment ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 결제 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.option.aWQ.display_name": {
+          "source": "Payment ID",
+          "message": "결제 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the payment",
+          "message": "결제의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3BheW1lbnQ.short_desc": {
+          "source": "Retrieve a specific payment from QuickBooks",
+          "message": "QuickBooks에서 특정 결제 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.desc": {
+          "source": "Fetch detailed information about a specific refund receipt using its ID",
+          "message": "ID를 사용하여 특정 환불 영수증에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.display_name": {
+          "source": "Get Refund Receipt",
+          "message": "환불 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.option.aWQ.desc": {
+          "source": "The QuickBooks refund receipt ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 환불 영수증 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.option.aWQ.display_name": {
+          "source": "Refund Receipt ID",
+          "message": "환불 영수증 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.option.aWQ.short_desc": {
+          "source": "The unique identifier of the refund receipt",
+          "message": "환불 영수증의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3JlZnVuZF9yZWNlaXB0.short_desc": {
+          "source": "Retrieve a specific refund receipt from QuickBooks",
+          "message": "QuickBooks에서 특정 환불 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.desc": {
+          "source": "Fetch detailed information about a specific sales receipt using its ID",
+          "message": "ID를 사용하여 특정 매출 영수증에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.display_name": {
+          "source": "Get Sales Receipt",
+          "message": "매출 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.option.aWQ.desc": {
+          "source": "The QuickBooks sales receipt ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 매출 영수증 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.option.aWQ.display_name": {
+          "source": "Sales Receipt ID",
+          "message": "매출 영수증 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the sales receipt",
+          "message": "매출 영수증의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3NhbGVzX3JlY2VpcHQ.short_desc": {
+          "source": "Retrieve a specific sales receipt from QuickBooks",
+          "message": "QuickBooks에서 특정 매출 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.desc": {
+          "source": "Fetch detailed information about a specific vendor using their ID",
+          "message": "ID를 사용하여 특정 공급업체에 대한 세부 정보 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.display_name": {
+          "source": "Get Vendor",
+          "message": "공급업체 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.option.aWQ.desc": {
+          "source": "The QuickBooks vendor ID to retrieve detailed information for",
+          "message": "세부 정보를 가져올 QuickBooks 공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.option.aWQ.display_name": {
+          "source": "Vendor ID",
+          "message": "공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.option.aWQ.short_desc": {
+          "source": "The unique identifier of the vendor",
+          "message": "공급업체의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.Z2V0X3ZlbmRvcg.short_desc": {
+          "source": "Retrieve a specific vendor from QuickBooks",
+          "message": "QuickBooks에서 특정 공급업체 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.desc": {
+          "source": "Delete records from the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.display_name": {
+          "source": "Delete Records",
+          "message": "레코드 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRl.short_desc": {
+          "source": "Delete records from the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 레코드 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.desc": {
+          "source": "Permanently remove a bill from QuickBooks using its unique identifier",
+          "message": "고유 식별자를 사용하여 QuickBooks에서 청구서를 영구적으로 제거합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.display_name": {
+          "source": "Delete Bill",
+          "message": "청구서 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.option.aWQ.desc": {
+          "source": "The QuickBooks bill ID that you want to permanently remove",
+          "message": "영구적으로 제거할 QuickBooks 청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.option.aWQ.display_name": {
+          "source": "Bill ID",
+          "message": "청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.option.aWQ.short_desc": {
+          "source": "The unique identifier of the bill to delete",
+          "message": "삭제할 청구서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2JpbGw.short_desc": {
+          "source": "Delete a bill from QuickBooks",
+          "message": "QuickBooks에서 청구서 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.desc": {
+          "source": "Permanently remove an estimate from QuickBooks using its unique identifier",
+          "message": "고유 식별자를 사용하여 QuickBooks에서 견적서를 영구적으로 제거합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.display_name": {
+          "source": "Delete Estimate",
+          "message": "견적서 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.option.aWQ.desc": {
+          "source": "The QuickBooks estimate ID that you want to permanently remove",
+          "message": "영구적으로 제거할 QuickBooks 견적서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.option.aWQ.display_name": {
+          "source": "Estimate ID",
+          "message": "견적서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.option.aWQ.short_desc": {
+          "source": "The unique identifier of the estimate to delete",
+          "message": "삭제할 견적서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2VzdGltYXRl.short_desc": {
+          "source": "Delete an estimate from QuickBooks",
+          "message": "QuickBooks에서 견적서 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.desc": {
+          "source": "Permanently remove an invoice from QuickBooks using its unique identifier",
+          "message": "고유 식별자를 사용하여 QuickBooks에서 인보이스를 영구적으로 제거합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.display_name": {
+          "source": "Delete Invoice",
+          "message": "인보이스 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.option.aWQ.desc": {
+          "source": "The QuickBooks invoice ID that you want to permanently remove",
+          "message": "영구적으로 제거할 QuickBooks 인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.option.aWQ.display_name": {
+          "source": "Invoice ID",
+          "message": "인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.option.aWQ.short_desc": {
+          "source": "The unique identifier of the invoice to delete",
+          "message": "삭제할 인보이스의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX2ludm9pY2U.short_desc": {
+          "source": "Delete an invoice from QuickBooks",
+          "message": "QuickBooks에서 인보이스 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.desc": {
+          "source": "Permanently remove a payment record from QuickBooks using its unique identifier",
+          "message": "고유 식별자를 사용하여 QuickBooks에서 결제 기록을 영구적으로 제거합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.display_name": {
+          "source": "Delete Payment",
+          "message": "결제 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.option.aWQ.desc": {
+          "source": "The QuickBooks payment ID that you want to permanently remove",
+          "message": "영구적으로 제거할 QuickBooks 결제 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.option.aWQ.display_name": {
+          "source": "Payment ID",
+          "message": "결제 ID"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.option.aWQ.short_desc": {
+          "source": "The unique identifier of the payment to delete",
+          "message": "삭제할 결제의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVsZXRlX3BheW1lbnQ.short_desc": {
+          "source": "Delete a payment from QuickBooks",
+          "message": "QuickBooks에서 결제 삭제"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new deposits or updates to existing deposits. This trigger allows you to respond to deposit events in real-time.",
+          "message": "새 입금 또는 기존 입금에 대한 업데이트가 있는지 QuickBooks를 모니터링합니다. 이 트리거를 사용하면 입금 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.display_name": {
+          "source": "Deposit Trigger",
+          "message": "입금 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new deposits are added to QuickBooks, or \"Updated\" to trigger when existing deposits are modified.",
+          "message": "QuickBooks에 새 입금이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 입금이 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated deposits",
+          "message": "생성된 입금 또는 업데이트된 입금 중 트리거할 대상을 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZGVwb3NpdF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a deposit is created or updated in QuickBooks",
+          "message": "QuickBooks에서 입금이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new estimates or updates to existing estimates. This trigger allows you to respond to estimate events in real-time.",
+          "message": "QuickBooks에서 새 견적서 또는 기존 견적서의 업데이트를 모니터링합니다. 이 트리거를 통해 견적서 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.display_name": {
+          "source": "Estimate Trigger",
+          "message": "견적서 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new estimates are added to QuickBooks, or \"Updated\" to trigger when existing estimates are modified.",
+          "message": "QuickBooks에 새 견적서가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 견적서가 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated estimates",
+          "message": "생성된 견적서 또는 업데이트된 견적서 중 트리거할 대상을 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.ZXN0aW1hdGVfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when an estimate is created or updated in QuickBooks",
+          "message": "QuickBooks에서 견적서가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new invoices or updates to existing invoices. This trigger allows you to respond to invoice events in real-time.",
+          "message": "QuickBooks에서 새 송장 또는 기존 송장의 업데이트를 모니터링합니다. 이 트리거를 통해 송장 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.display_name": {
+          "source": "Invoice Trigger",
+          "message": "송장 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new invoices are added to QuickBooks, or \"Updated\" to trigger when existing invoices are modified.",
+          "message": "QuickBooks에 새 송장이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 송장이 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated invoices",
+          "message": "생성된 송장 또는 업데이트된 송장 중 트리거할 대상을 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.aW52b2ljZV90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an invoice is created or updated in QuickBooks",
+          "message": "QuickBooks에서 송장이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new items or updates to existing items. This trigger allows you to respond to item events in real-time.",
+          "message": "QuickBooks에서 새 품목 또는 기존 품목의 업데이트를 모니터링합니다. 이 트리거를 통해 품목 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.display_name": {
+          "source": "Item Trigger",
+          "message": "품목 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new items are added to QuickBooks, or \"Updated\" to trigger when existing items are modified.",
+          "message": "QuickBooks에 새 품목이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 품목이 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated items",
+          "message": "생성된 품목 또는 업데이트된 품목 중 트리거할 대상을 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.aXRlbV90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when an item is created or updated in QuickBooks",
+          "message": "QuickBooks에서 품목이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new journal entries or updates to existing journal entries. This trigger allows you to respond to journal entry events in real-time.",
+          "message": "QuickBooks에서 새 분개 또는 기존 분개의 업데이트를 모니터링합니다. 이 트리거를 통해 분개 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.display_name": {
+          "source": "Journal Entry Trigger",
+          "message": "분개 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new journal entries are added to QuickBooks, or \"Updated\" to trigger when existing journal entries are modified.",
+          "message": "QuickBooks에 새 분개가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 분개가 수정될 때 트리거하려면 \"Updated\"를 선택하세요."
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated journal entries",
+          "message": "생성된 분개 또는 업데이트된 분개 중 트리거할 대상을 선택합니다"
+        },
+        "app.UXVpY2tib29rcw.action.am91cm5hbF9lbnRyeV90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a journal entry is created or updated in QuickBooks",
+          "message": "QuickBooks에서 분개가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.desc": {
+          "source": "Fetch multiple vendors from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 공급업체를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.display_name": {
+          "source": "List Vendors",
+          "message": "공급업체 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all vendors ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 공급업체를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all vendors without pagination",
+          "message": "페이지 매김 없이 모든 공급업체 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of vendors based on specific field values",
+          "message": "특정 필드 값을 기반으로 공급업체 목록을 좁히기 위해 필터링을 적용합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for vendors",
+          "message": "공급업체 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.b2Zmc2V0.desc": {
+          "source": "The number of vendors to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 공급업체 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.b2Zmc2V0.short_desc": {
+          "source": "Number of vendors to skip",
+          "message": "건너뛸 공급업체 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.bGltaXQ.desc": {
+          "source": "The maximum number of vendors to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 공급업체 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of vendors to retrieve",
+          "message": "가져올 최대 공급업체 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned vendors list",
+          "message": "반환된 공급업체 목록을 정렬하는 방법을 지정합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.option.c29ydA.short_desc": {
+          "source": "Sort criteria for vendors",
+          "message": "공급업체 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF92ZW5kb3Jz.short_desc": {
+          "source": "Retrieve a list of vendors from QuickBooks",
+          "message": "QuickBooks에서 공급업체 목록을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.desc": {
+          "source": "Fetch multiple accounts from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 계정을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.display_name": {
+          "source": "List Accounts",
+          "message": "계정 목록"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all accounts ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 계정을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all accounts without pagination",
+          "message": "페이지 매김 없이 모든 계정 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of accounts based on specific field values",
+          "message": "특정 필드 값을 기반으로 계정 목록을 좁히기 위해 필터링을 적용합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for accounts",
+          "message": "계정 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.desc": {
+          "source": "The number of accounts to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 계정 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of accounts to skip",
+          "message": "건너뛸 계정 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of accounts to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 계정 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of accounts to retrieve",
+          "message": "가져올 최대 계정 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned accounts list",
+          "message": "반환된 계정 목록을 정렬하는 방법을 지정합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for accounts",
+          "message": "계정 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9hY2NvdW50cw.short_desc": {
+          "source": "Retrieve a list of accounts from QuickBooks",
+          "message": "QuickBooks에서 계정 목록을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.desc": {
+          "source": "Fetch multiple bills from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 청구서를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.display_name": {
+          "source": "List Bills",
+          "message": "청구서 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all bills ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 청구서를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all bills without pagination",
+          "message": "페이지 매김 없이 모든 청구서 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of bills based on specific field values",
+          "message": "특정 필드 값을 기반으로 청구서 목록을 좁히기 위해 필터링을 적용합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for bills",
+          "message": "청구서 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.b2Zmc2V0.desc": {
+          "source": "The number of bills to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 청구서 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of bills to skip",
+          "message": "건너뛸 청구서 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.bGltaXQ.desc": {
+          "source": "The maximum number of bills to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 청구서 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of bills to retrieve",
+          "message": "가져올 최대 청구서 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned bills list",
+          "message": "반환된 청구서 목록을 정렬하는 방법을 지정합니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for bills",
+          "message": "청구서 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9iaWxscw.short_desc": {
+          "source": "Retrieve a list of bills from QuickBooks",
+          "message": "QuickBooks에서 청구서 목록을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.desc": {
+          "source": "Fetch multiple credit memos from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 크레딧 메모를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.display_name": {
+          "source": "List Credit Memos",
+          "message": "크레딧 메모 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all credit memos ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 크레딧 메모를 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all credit memos without pagination",
+          "message": "페이지네이션 없이 모든 크레딧 메모 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of credit memos based on specific field values",
+          "message": "특정 필드 값을 기반으로 크레딧 메모 목록을 좁히기 위해 필터링을 적용합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for credit memos",
+          "message": "크레딧 메모 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.b2Zmc2V0.desc": {
+          "source": "The number of credit memos to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 크레딧 메모 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.b2Zmc2V0.short_desc": {
+          "source": "Number of credit memos to skip",
+          "message": "건너뛸 크레딧 메모 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.bGltaXQ.desc": {
+          "source": "The maximum number of credit memos to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 크레딧 메모의 최대 개수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of credit memos to retrieve",
+          "message": "조회할 크레딧 메모의 최대 개수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned credit memos list",
+          "message": "반환된 크레딧 메모 목록을 정렬하는 방법을 지정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.option.c29ydA.short_desc": {
+          "source": "Sort criteria for credit memos",
+          "message": "크레딧 메모 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jcmVkaXRfbWVtb3M.short_desc": {
+          "source": "Retrieve a list of credit memos from QuickBooks",
+          "message": "QuickBooks에서 크레딧 메모 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.desc": {
+          "source": "Fetch multiple customers from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지네이션 기능을 사용하여 QuickBooks에서 여러 고객을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.display_name": {
+          "source": "List Customers",
+          "message": "고객 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all customers ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 고객을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all customers without pagination",
+          "message": "페이지네이션 없이 모든 고객 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of customers based on specific field values",
+          "message": "특정 필드 값을 기반으로 고객 목록을 좁히기 위해 필터링을 적용합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for customers",
+          "message": "고객 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.b2Zmc2V0.desc": {
+          "source": "The number of customers to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 고객 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of customers to skip",
+          "message": "건너뛸 고객 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of customers to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 고객의 최대 개수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of customers to retrieve",
+          "message": "조회할 고객의 최대 개수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned customers list",
+          "message": "반환된 고객 목록을 정렬하는 방법을 지정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for customers",
+          "message": "고객 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9jdXN0b21lcnM.short_desc": {
+          "source": "Retrieve a list of customers from QuickBooks",
+          "message": "QuickBooks에서 고객 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.desc": {
+          "source": "Fetch multiple deposits from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지네이션 기능을 사용하여 QuickBooks에서 여러 예치금을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.display_name": {
+          "source": "List Deposits",
+          "message": "예치금 목록"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all deposits ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 예치금을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all deposits without pagination",
+          "message": "페이지네이션 없이 모든 예치금 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of deposits based on specific field values",
+          "message": "특정 필드 값을 기반으로 예치금 목록을 좁히기 위해 필터링을 적용합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for deposits",
+          "message": "예치금 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of deposits to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 예치금 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of deposits to skip",
+          "message": "건너뛸 예치금 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of deposits to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 예치금의 최대 개수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of deposits to retrieve",
+          "message": "조회할 예치금의 최대 개수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned deposits list",
+          "message": "반환된 예치금 목록을 정렬하는 방법을 지정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for deposits",
+          "message": "예치금 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9kZXBvc2l0cw.short_desc": {
+          "source": "Retrieve a list of deposits from QuickBooks",
+          "message": "QuickBooks에서 예치금 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.desc": {
+          "source": "Fetch multiple estimates from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지네이션 기능을 사용하여 QuickBooks에서 여러 견적을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.display_name": {
+          "source": "List Estimates",
+          "message": "견적 목록"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all estimates ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 견적을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all estimates without pagination",
+          "message": "페이지네이션 없이 모든 견적 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of estimates based on specific field values",
+          "message": "특정 필드 값을 기반으로 견적 목록을 좁히기 위해 필터링을 적용합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for estimates",
+          "message": "견적 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of estimates to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 견적 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of estimates to skip",
+          "message": "건너뛸 견적 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of estimates to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 견적의 최대 개수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of estimates to retrieve",
+          "message": "조회할 견적의 최대 개수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned estimates list",
+          "message": "반환된 견적 목록을 정렬하는 방법을 지정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for estimates",
+          "message": "견적 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9lc3RpbWF0ZXM.short_desc": {
+          "source": "Retrieve a list of estimates from QuickBooks",
+          "message": "QuickBooks에서 견적 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.desc": {
+          "source": "Fetch multiple invoices from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지네이션 기능을 사용하여 QuickBooks에서 여러 송장을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.display_name": {
+          "source": "List Invoices",
+          "message": "청구서 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all invoices ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 송장을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all invoices without pagination",
+          "message": "페이지네이션 없이 모든 송장 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of invoices based on specific field values",
+          "message": "특정 필드 값을 기반으로 송장 목록을 좁히기 위해 필터링을 적용합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for invoices",
+          "message": "송장 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.b2Zmc2V0.desc": {
+          "source": "The number of invoices to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 송장 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of invoices to skip",
+          "message": "건너뛸 송장 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of invoices to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 송장의 최대 개수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of invoices to retrieve",
+          "message": "조회할 송장의 최대 개수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned invoices list",
+          "message": "반환된 송장 목록을 정렬하는 방법을 지정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for invoices",
+          "message": "송장 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pbnZvaWNlcw.short_desc": {
+          "source": "Retrieve a list of invoices from QuickBooks",
+          "message": "QuickBooks에서 송장 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.desc": {
+          "source": "Fetch multiple items from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지네이션 기능을 사용하여 QuickBooks에서 여러 품목을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.display_name": {
+          "source": "List Items",
+          "message": "품목 목록"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all items ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 품목을 가져옵니다."
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all items without pagination",
+          "message": "페이지 매김 없이 모든 품목 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of items based on specific field values",
+          "message": "특정 필드 값을 기준으로 품목 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for items",
+          "message": "품목에 대한 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.desc": {
+          "source": "The number of items to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 품목 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of items to skip",
+          "message": "건너뛸 품목 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.bGltaXQ.desc": {
+          "source": "The maximum number of items to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 품목 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of items to retrieve",
+          "message": "조회할 최대 품목 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned items list",
+          "message": "반환된 품목 목록을 정렬하는 방법 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for items",
+          "message": "품목에 대한 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9pdGVtcw.short_desc": {
+          "source": "Retrieve a list of items from QuickBooks",
+          "message": "QuickBooks에서 품목 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.desc": {
+          "source": "Fetch multiple journal entries from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 분개 항목 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.display_name": {
+          "source": "List Journal Entries",
+          "message": "분개 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all journal entries ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 분개 항목을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all journal entries without pagination",
+          "message": "페이지 매김 없이 모든 분개 항목 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of journal entries based on specific field values",
+          "message": "특정 필드 값을 기준으로 분개 항목 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for journal entries",
+          "message": "분개 항목에 대한 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of journal entries to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 분개 항목 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of journal entries to skip",
+          "message": "건너뛸 분개 항목 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of journal entries to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 분개 항목 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of journal entries to retrieve",
+          "message": "조회할 최대 분개 항목 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned journal entries list",
+          "message": "반환된 분개 항목 목록을 정렬하는 방법 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for journal entries",
+          "message": "분개 항목에 대한 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9qb3VybmFsX2VudHJpZXM.short_desc": {
+          "source": "Retrieve a list of journal entries from QuickBooks",
+          "message": "QuickBooks에서 분개 항목 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.desc": {
+          "source": "Fetch multiple payments from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 결제 내역 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.display_name": {
+          "source": "List Payments",
+          "message": "결제 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all payments ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 결제 내역을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all payments without pagination",
+          "message": "페이지 매김 없이 모든 결제 내역 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of payments based on specific field values",
+          "message": "특정 필드 값을 기준으로 결제 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for payments",
+          "message": "결제에 대한 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.b2Zmc2V0.desc": {
+          "source": "The number of payments to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 결제 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of payments to skip",
+          "message": "건너뛸 결제 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of payments to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 결제 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of payments to retrieve",
+          "message": "조회할 최대 결제 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned payments list",
+          "message": "반환된 결제 목록을 정렬하는 방법 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for payments",
+          "message": "결제에 대한 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wYXltZW50cw.short_desc": {
+          "source": "Retrieve a list of payments from QuickBooks",
+          "message": "QuickBooks에서 결제 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.desc": {
+          "source": "Fetch multiple purchase orders from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 구매 발주서 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.display_name": {
+          "source": "List Purchase Orders",
+          "message": "구매 발주서 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all purchase orders ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 구매 발주서를 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all purchase orders without pagination",
+          "message": "페이지 매김 없이 모든 구매 발주서 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of purchase orders based on specific field values",
+          "message": "특정 필드 값을 기준으로 구매 발주서 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for purchase orders",
+          "message": "구매 발주서에 대한 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.b2Zmc2V0.desc": {
+          "source": "The number of purchase orders to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 구매 발주서 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of purchase orders to skip",
+          "message": "건너뛸 구매 발주서 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.bGltaXQ.desc": {
+          "source": "The maximum number of purchase orders to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 구매 발주서 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of purchase orders to retrieve",
+          "message": "조회할 최대 구매 발주서 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned purchase orders list",
+          "message": "반환된 구매 발주서 목록을 정렬하는 방법 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for purchase orders",
+          "message": "구매 발주서에 대한 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZV9vcmRlcnM.short_desc": {
+          "source": "Retrieve a list of purchase orders from QuickBooks",
+          "message": "QuickBooks에서 구매 발주서 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.desc": {
+          "source": "Fetch multiple purchases from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 구매 내역 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.display_name": {
+          "source": "List Purchases",
+          "message": "구매 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all purchases ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 구매 내역을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all purchases without pagination",
+          "message": "페이지 매김 없이 모든 구매 내역 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of purchases based on specific field values",
+          "message": "특정 필드 값을 기준으로 구매 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for purchases",
+          "message": "구매에 대한 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.b2Zmc2V0.desc": {
+          "source": "The number of purchases to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 구매 수(기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of purchases to skip",
+          "message": "건너뛸 구매 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.bGltaXQ.desc": {
+          "source": "The maximum number of purchases to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 구매 수(기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of purchases to retrieve",
+          "message": "조회할 최대 구매 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned purchases list",
+          "message": "반환된 구매 목록을 정렬하는 방법 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for purchases",
+          "message": "구매에 대한 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9wdXJjaGFzZXM.short_desc": {
+          "source": "Retrieve a list of purchases from QuickBooks",
+          "message": "QuickBooks에서 구매 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.desc": {
+          "source": "Fetch multiple refund receipts from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 환불 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.display_name": {
+          "source": "List Refund Receipts",
+          "message": "환불 영수증 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all refund receipts ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 환불 영수증을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all refund receipts without pagination",
+          "message": "페이지 매김 없이 모든 환불 영수증 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of refund receipts based on specific field values",
+          "message": "특정 필드 값을 기반으로 환불 영수증 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for refund receipts",
+          "message": "환불 영수증 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.b2Zmc2V0.desc": {
+          "source": "The number of refund receipts to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 환불 영수증 수 (기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.b2Zmc2V0.short_desc": {
+          "source": "Number of refund receipts to skip",
+          "message": "건너뛸 환불 영수증 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.bGltaXQ.desc": {
+          "source": "The maximum number of refund receipts to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 환불 영수증 수 (기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of refund receipts to retrieve",
+          "message": "조회할 최대 환불 영수증 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned refund receipts list",
+          "message": "반환된 환불 영수증 목록 정렬 방식 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.option.c29ydA.short_desc": {
+          "source": "Sort criteria for refund receipts",
+          "message": "환불 영수증 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9yZWZ1bmRfcmVjZWlwdHM.short_desc": {
+          "source": "Retrieve a list of refund receipts from QuickBooks",
+          "message": "QuickBooks에서 환불 영수증 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.desc": {
+          "source": "Fetch multiple sales receipts from QuickBooks with optional filtering, sorting, and pagination capabilities",
+          "message": "선택적 필터링, 정렬 및 페이지 매김 기능을 사용하여 QuickBooks에서 여러 판매 영수증 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.display_name": {
+          "source": "List Sales Receipts",
+          "message": "판매 영수증 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmV0Y2hBbGw.desc": {
+          "source": "When enabled, fetches all sales receipts ignoring limit and offset parameters",
+          "message": "활성화하면 limit 및 offset 매개변수를 무시하고 모든 판매 영수증을 가져옵니다"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmV0Y2hBbGw.display_name": {
+          "source": "Fetch All",
+          "message": "모두 가져오기"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmV0Y2hBbGw.short_desc": {
+          "source": "Retrieve all sales receipts without pagination",
+          "message": "페이지 매김 없이 모든 판매 영수증 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmlsdGVy.desc": {
+          "source": "Apply filtering to narrow down the list of sales receipts based on specific field values",
+          "message": "특정 필드 값을 기반으로 판매 영수증 목록을 좁히기 위해 필터링 적용"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmlsdGVy.display_name": {
+          "source": "Filter",
+          "message": "필터"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.ZmlsdGVy.short_desc": {
+          "source": "Filter criteria for sales receipts",
+          "message": "판매 영수증 필터 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.b2Zmc2V0.desc": {
+          "source": "The number of sales receipts to skip before starting to return results (default: 0)",
+          "message": "결과 반환을 시작하기 전에 건너뛸 판매 영수증 수 (기본값: 0)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.b2Zmc2V0.display_name": {
+          "source": "Offset",
+          "message": "오프셋"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.b2Zmc2V0.short_desc": {
+          "source": "Number of sales receipts to skip",
+          "message": "건너뛸 판매 영수증 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.bGltaXQ.desc": {
+          "source": "The maximum number of sales receipts to return in a single request (default: 50)",
+          "message": "단일 요청에서 반환할 최대 판매 영수증 수 (기본값: 50)"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.bGltaXQ.display_name": {
+          "source": "Limit",
+          "message": "제한"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.bGltaXQ.short_desc": {
+          "source": "Maximum number of sales receipts to retrieve",
+          "message": "조회할 최대 판매 영수증 수"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.desc": {
+          "source": "Specify how to sort the returned sales receipts list",
+          "message": "반환된 판매 영수증 목록 정렬 방식 지정"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.display_name": {
+          "source": "Sort",
+          "message": "정렬"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.option.c29ydA.short_desc": {
+          "source": "Sort criteria for sales receipts",
+          "message": "판매 영수증 정렬 기준"
+        },
+        "app.UXVpY2tib29rcw.action.bGlzdF9zYWxlc19yZWNlaXB0cw.short_desc": {
+          "source": "Retrieve a list of sales receipts from QuickBooks",
+          "message": "QuickBooks에서 판매 영수증 목록 조회"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.desc": {
+          "source": "Make a custom HTTP / REST API call to **QuickBooks** using the configured connection's authentication.\n\nSpecify the HTTP method, the URI path (relative to the connection's API base URL), optional query parameters, headers, and request body. The response is returned as a hash containing the status code, response headers, and response body.\n\nUse this action for endpoints that are not yet exposed as first-class actions on this app.",
+          "message": "구성된 연결의 인증을 사용하여 **QuickBooks**에 사용자 지정 HTTP / REST API 호출을 수행합니다.\n\nHTTP 메서드, URI 경로(연결의 API 기본 URL 기준 상대 경로), 선택적 쿼리 매개변수, 헤더 및 요청 본문을 지정합니다. 응답은 상태 코드, 응답 헤더 및 응답 본문이 포함된 해시로 반환됩니다.\n\n이 앱에서 아직 기본 액션으로 제공되지 않는 엔드포인트에 이 액션을 사용하세요."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.display_name": {
+          "source": "Make an API call",
+          "message": "API 호출 실행"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.desc": {
+          "source": "The request body. The effective type depends on `body_type`: JSON/form/YAML expect a hash, XML/text expect a string, multipart expects a file structure, binary expects raw bytes.",
+          "message": "요청 본문입니다. 유효한 유형은 `body_type`에 따라 달라집니다. JSON/form/YAML은 해시를, XML/text는 문자열을, multipart는 파일 구조를, binary는 원시 바이트를 요구합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.display_name": {
+          "source": "Body",
+          "message": "본문"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keQ.short_desc": {
+          "source": "The request body",
+          "message": "요청 본문"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.desc": {
+          "source": "Upload a file using `multipart/form-data`. The body must be a @ref DataProvider::FileDataType \"FileDataType\" structure (filename + content + mime_type). The framework builds the multipart envelope and sets the boundary header.",
+          "message": "`multipart/form-data`을(를) 사용하여 파일을 업로드합니다. 본문은 @ref DataProvider::FileDataType \"FileDataType\" 구조(filename + content + mime_type)여야 합니다. 프레임워크가 multipart 봉투를 작성하고 boundary 헤더를 설정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.display_name": {
+          "source": "Multipart Form",
+          "message": "멀티파트 폼"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOm11bHRpcGFydA.short_desc": {
+          "source": "Upload a file using multipart/form-data",
+          "message": "multipart/form-data를 사용하여 파일 업로드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.desc": {
+          "source": "Pass the body to the REST client unchanged; the client decides serialization based on its configured `data` option and the value type",
+          "message": "본문을 변경하지 않고 REST 클라이언트에 전달합니다. 클라이언트는 구성된 `data` 옵션과 값 유형을 기반으로 직렬화를 결정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.display_name": {
+          "source": "Auto",
+          "message": "자동"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmF1dG8.short_desc": {
+          "source": "Pass-through; use connection serialization and let the REST client decide",
+          "message": "패스스루: 연결 직렬화를 사용하고 REST 클라이언트가 결정하도록 합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.desc": {
+          "source": "Send the body as raw bytes. The body must be a binary value. Sets `Content-Type: application/octet-stream` unless overridden by `hdr`.",
+          "message": "본문을 원시 바이트로 전송합니다. 본문은 바이너리 값이어야 합니다. `hdr`에 의해 재정의되지 않는 한 `Content-Type: application/octet-stream`을(를) 설정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.display_name": {
+          "source": "Raw Binary",
+          "message": "원시 바이너리"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmJpbmFyeQ.short_desc": {
+          "source": "Send body as raw bytes",
+          "message": "본문을 원시 바이트로 전송"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.desc": {
+          "source": "Serialize a hash of form fields as `application/x-www-form-urlencoded`. The body must be a hash whose values are scalars (strings/numbers/booleans).",
+          "message": "폼 필드의 해시를 `application/x-www-form-urlencoded`(으)로 직렬화합니다. 본문은 값이 스칼라(문자열/숫자/불리언)인 해시여야 합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.display_name": {
+          "source": "Form (URL-encoded)",
+          "message": "폼 (URL 인코딩)"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmZvcm0.short_desc": {
+          "source": "Serialize body as application/x-www-form-urlencoded form fields",
+          "message": "본문을 application/x-www-form-urlencoded 폼 필드로 직렬화"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.desc": {
+          "source": "Serialize the body as JSON; sets `Content-Type: application/json`. The body should be a hash, list, or scalar value.",
+          "message": "본문을 JSON으로 직렬화하며, `Content-Type: application/json`을(를) 설정합니다. 본문은 해시, 리스트 또는 스칼라 값이어야 합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.display_name": {
+          "source": "JSON",
+          "message": "JSON"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOmpzb24.short_desc": {
+          "source": "Serialize body as JSON",
+          "message": "본문을 JSON으로 직렬화"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.desc": {
+          "source": "Send the body as plain text. The body must be a string. Sets `Content-Type: text/plain`.",
+          "message": "본문을 일반 텍스트로 전송합니다. 본문은 문자열이어야 합니다. `Content-Type: text/plain`을(를) 설정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.display_name": {
+          "source": "Plain Text",
+          "message": "일반 텍스트"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnRleHQ.short_desc": {
+          "source": "Send body as text/plain",
+          "message": "본문을 text/plain으로 전송"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.desc": {
+          "source": "Send the body as XML. If the body is a hash it is serialized to XML; if it is a string it is sent verbatim. Sets `Content-Type: application/xml`.",
+          "message": "본문을 XML로 전송합니다. 본문이 해시인 경우 XML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/xml`을(를) 설정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.display_name": {
+          "source": "XML",
+          "message": "XML"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnhtbA.short_desc": {
+          "source": "Send body as XML",
+          "message": "본문을 XML로 전송"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.desc": {
+          "source": "Send the body as YAML. If the body is a hash it is serialized to YAML; if it is a string it is sent verbatim. Sets `Content-Type: application/x-yaml`.",
+          "message": "본문을 YAML로 전송합니다. 본문이 해시인 경우 YAML로 직렬화되고, 문자열인 경우 그대로 전송됩니다. `Content-Type: application/x-yaml`을(를) 설정합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.display_name": {
+          "source": "YAML",
+          "message": "YAML"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.allowed-value.c3RyaW5nOnlhbWw.short_desc": {
+          "source": "Send body as YAML",
+          "message": "본문을 YAML로 전송"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.desc": {
+          "source": "Selects the body serialization mode and the corresponding `Content-Type` header. Changing this field reshapes the `body` editor - selecting JSON exposes a JSON editor, selecting Multipart Form exposes a file picker, and so on.",
+          "message": "본문 직렬화 모드 및 해당되는 `Content-Type` 헤더를 선택합니다. 이 필드를 변경하면 `body` 에디터의 형태가 변경됩니다. JSON을 선택하면 JSON 에디터가 표시되고, 멀티파트 폼을 선택하면 파일 선택기가 표시되는 방식입니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.display_name": {
+          "source": "Body Type",
+          "message": "본문 유형"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.Ym9keV90eXBl.short_desc": {
+          "source": "How the body is serialized and what Content-Type is sent",
+          "message": "본문이 직렬화되는 방식 및 전송되는 Content-Type"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.desc": {
+          "source": "If `True`, non-2xx HTTP responses return as the normal response hash (with the actual status code) instead of raising `REST-RESPONSE-ERROR`. Useful for handling 4xx/5xx as data - e.g. checking whether a resource exists. Overrides the connection's `error_passthru` setting for this call only.",
+          "message": "`True`인 경우, 2xx가 아닌 HTTP 응답은 `REST-RESPONSE-ERROR`을(를) 발생시키는 대신 (실제 상태 코드와 함께) 일반 응답 해시로 반환됩니다. 리소스 존재 여부 확인 등 4xx/5xx를 데이터로 처리할 때 유용합니다. 이 호출에 대해서만 연결의 `error_passthru` 설정을 재정의합니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.display_name": {
+          "source": "Return Errors as Data",
+          "message": "오류를 데이터로 반환"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXJyb3JfcGFzc3RocnU.short_desc": {
+          "source": "Return non-2xx responses normally instead of throwing",
+          "message": "예외를 발생시키는 대신 2xx가 아닌 응답을 정상적으로 반환"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.desc": {
+          "source": "Optional list of HTTP status codes treated as success. If set and the response status is not in this list, the action throws `REST-STATUS-ERROR`. When unset, the REST client's default behavior applies (typically: 2xx is success, non-2xx throws).",
+          "message": "성공으로 처리되는 HTTP 상태 코드의 선택적 목록입니다. 설정되어 있고 응답 상태가 이 목록에 없는 경우 작업이 `REST-STATUS-ERROR` 예외를 발생시킵니다. 설정되지 않은 경우 REST 클라이언트의 기본 동작이 적용됩니다(일반적으로 2xx는 성공, 2xx 이외는 예외 발생)."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.display_name": {
+          "source": "Expected Status Codes",
+          "message": "예상되는 상태 코드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.ZXhwZWN0ZWRfc3RhdHVz.short_desc": {
+          "source": "Response status codes treated as success",
+          "message": "성공으로 처리되는 응답 상태 코드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.desc": {
+          "source": "Hash of custom headers added to the request. These override any default headers set by `body_type` (e.g. supplying `Content-Type` here wins over the body-type default).",
+          "message": "요청에 추가되는 사용자 지정 헤더의 해시입니다. 이는 `body_type`에 의해 설정된 기본 헤더보다 우선합니다(예: 여기에 `Content-Type`을(를) 제공하면 본문 유형 기본값보다 우선 적용됨)."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.display_name": {
+          "source": "Custom Headers",
+          "message": "사용자 지정 헤더"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aGRy.short_desc": {
+          "source": "Extra request headers",
+          "message": "추가 요청 헤더"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.desc": {
+          "source": "If `True`, the response hash includes a `debug` sub-hash containing the request method/URL/headers (with sensitive values redacted), request and response sizes, and round-trip duration. Useful when investigating slow or failing calls. Off by default to keep responses lean.",
+          "message": "`True`인 경우 응답 해시에 요청 메서드/URL/헤더(민감한 값은 가려짐), 요청 및 응답 크기, 왕복 시간이 포함된 `debug` 하위 해시가 포함됩니다. 느리거나 실패한 호출을 조사할 때 유용합니다. 응답을 가볍게 유지하기 위해 기본적으로 비활성화되어 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.display_name": {
+          "source": "Include Debug Info",
+          "message": "디버그 정보 포함"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.aW5jbHVkZV9kZWJ1Zw.short_desc": {
+          "source": "Include request/timing/size debug info in the response",
+          "message": "응답에 요청/타이밍/크기 디버그 정보 포함"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.desc": {
+          "source": "HTTP `OPTIONS`",
+          "message": "HTTP `OPTIONS`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.display_name": {
+          "source": "OPTIONS",
+          "message": "OPTIONS"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOk9QVElPTlM.short_desc": {
+          "source": "HTTP OPTIONS",
+          "message": "HTTP OPTIONS"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.desc": {
+          "source": "HTTP `DELETE`",
+          "message": "HTTP `DELETE`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.display_name": {
+          "source": "DELETE",
+          "message": "DELETE"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkRFTEVURQ.short_desc": {
+          "source": "HTTP DELETE",
+          "message": "HTTP DELETE"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.desc": {
+          "source": "HTTP `GET`",
+          "message": "HTTP `GET`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.display_name": {
+          "source": "GET",
+          "message": "GET"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkdFVA.short_desc": {
+          "source": "HTTP GET",
+          "message": "HTTP GET"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.desc": {
+          "source": "HTTP `HEAD`",
+          "message": "HTTP `HEAD`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.display_name": {
+          "source": "HEAD",
+          "message": "HEAD"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOkhFQUQ.short_desc": {
+          "source": "HTTP HEAD",
+          "message": "HTTP HEAD"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.desc": {
+          "source": "HTTP `PATCH`",
+          "message": "HTTP `PATCH`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.display_name": {
+          "source": "PATCH",
+          "message": "PATCH"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBBVENI.short_desc": {
+          "source": "HTTP PATCH",
+          "message": "HTTP PATCH"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.desc": {
+          "source": "HTTP `POST`",
+          "message": "HTTP `POST`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.display_name": {
+          "source": "POST",
+          "message": "POST"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBPU1Q.short_desc": {
+          "source": "HTTP POST",
+          "message": "HTTP POST"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.desc": {
+          "source": "HTTP `PUT`",
+          "message": "HTTP `PUT`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.display_name": {
+          "source": "PUT",
+          "message": "PUT"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlBVVA.short_desc": {
+          "source": "HTTP PUT",
+          "message": "HTTP PUT"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.desc": {
+          "source": "HTTP `TRACE`",
+          "message": "HTTP `TRACE`"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.display_name": {
+          "source": "TRACE",
+          "message": "TRACE"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.allowed-value.c3RyaW5nOlRSQUNF.short_desc": {
+          "source": "HTTP TRACE",
+          "message": "HTTP TRACE"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.display_name": {
+          "source": "HTTP Method",
+          "message": "HTTP 메서드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.bWV0aG9k.short_desc": {
+          "source": "The HTTP method to use for the request",
+          "message": "요청에 사용할 HTTP 메서드"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain `{name}` placeholders that are replaced from `path_vars`. Example: `/users/{id}/comments`.",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. `path_vars`에서 대체되는 `{name}` 자리 표시자가 포함될 수 있습니다. 예: `/users/{id}/comments`."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.display_name": {
+          "source": "URI Path",
+          "message": "URI 경로"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aA.short_desc": {
+          "source": "The URI path relative to the connection's API base URL. May contain '{name}' placeholders that are replaced from 'path_vars'. Example: '/users/{id}/comments'",
+          "message": "연결의 API 기본 URL에 대한 상대 URI 경로입니다. 'path_vars'에서 대체되는 '{name}' 자리 표시자를 포함할 수 있습니다. 예: '/users/{id}/comments'"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.desc": {
+          "source": "Hash of values substituted into `{name}` placeholders in the URI path. Example: with `path = /users/{id}` and `path_vars = {id: 123}` the framework sends `/users/123`. Values are URL-encoded.",
+          "message": "URI 경로의 `{name}` 자리 표시자에 대체되는 값의 해시입니다. 예: `path = /users/{id}` 및 `path_vars = {id: 123}`이 있으면 프레임워크가 `/users/123`을(를) 전송합니다. 값은 URL 인코딩됩니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.display_name": {
+          "source": "Path Variables",
+          "message": "경로 변수"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cGF0aF92YXJz.short_desc": {
+          "source": "Values for {name} placeholders in path",
+          "message": "경로 내 {name} 자리 표시자의 값"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.desc": {
+          "source": "Hash of query string parameters to append to the URI path. Values are URL-encoded; list values are joined with `,`.",
+          "message": "URI 경로에 추가할 쿼리 문자열 매개변수 해시입니다. 값은 URL 인코딩되며, 목록 값은 `,`(으)로 연결됩니다."
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.display_name": {
+          "source": "Query Arguments",
+          "message": "쿼리 인수"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.option.cXVlcnlfYXJncw.short_desc": {
+          "source": "Query string parameters",
+          "message": "쿼리 문자열 매개변수"
+        },
+        "app.UXVpY2tib29rcw.action.bWFrZS1hcGktY2FsbA.short_desc": {
+          "source": "Make a custom API call to QuickBooks",
+          "message": "QuickBooks에 사용자 지정 API 호출 수행"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new sales receipts or updates to existing sales receipts. This trigger allows you to respond to sales receipt events in real-time.",
+          "message": "QuickBooks에서 새 판매 영수증 또는 기존 판매 영수증 업데이트를 모니터링합니다. 이 트리거를 사용하면 판매 영수증 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.display_name": {
+          "source": "Sales Receipt Trigger",
+          "message": "판매 영수증 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new sales receipts are added to QuickBooks, or \"Updated\" to trigger when existing sales receipts are modified.",
+          "message": "QuickBooks에 새 판매 영수증이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 판매 영수증이 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated sales receipts",
+          "message": "생성되었거나 업데이트된 판매 영수증에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.c2FsZXNfcmVjZWlwdF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a sales receipt is created or updated in QuickBooks",
+          "message": "QuickBooks에서 판매 영수증이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.desc": {
+          "source": "Search for matching records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.display_name": {
+          "source": "Search Records",
+          "message": "레코드 검색"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNo.short_desc": {
+          "source": "Search for matching records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 일치하는 레코드 검색"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.desc": {
+          "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.display_name": {
+          "source": "Find a Single Record",
+          "message": "단일 레코드 찾기"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.c2VhcmNoLXNpbmdsZQ.short_desc": {
+          "source": "Search for a single matching record in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 일치하는 단일 레코드 검색"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.desc": {
+          "source": "Monitor QuickBooks for new payments or updates to existing payments. This trigger allows you to respond to payment events in real-time.",
+          "message": "QuickBooks에서 새 결제 또는 기존 결제 업데이트를 모니터링합니다. 이 트리거를 사용하면 결제 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.display_name": {
+          "source": "Payment Trigger",
+          "message": "결제 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new payments are added to QuickBooks, or \"Updated\" to trigger when existing payments are modified.",
+          "message": "QuickBooks에 새 결제가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 결제가 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated payments",
+          "message": "생성되었거나 업데이트된 결제에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.cGF5bWVudF90cmlnZ2Vy.short_desc": {
+          "source": "Triggers when a payment is created or updated in QuickBooks",
+          "message": "QuickBooks에서 결제가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new purchase orders or updates to existing purchase orders. This trigger allows you to respond to purchase order events in real-time.",
+          "message": "QuickBooks에서 새 구매 주문서 또는 기존 구매 주문서 업데이트를 모니터링합니다. 이 트리거를 사용하면 구매 주문서 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.display_name": {
+          "source": "Purchase Order Trigger",
+          "message": "구매 주문서 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new purchase orders are added to QuickBooks, or \"Updated\" to trigger when existing purchase orders are modified.",
+          "message": "QuickBooks에 새 구매 주문서가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 구매 주문서가 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated purchase orders",
+          "message": "생성되었거나 업데이트된 구매 주문서에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2Vfb3JkZXJfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a purchase order is created or updated in QuickBooks",
+          "message": "QuickBooks에서 구매 주문서가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new purchases or updates to existing purchases. This trigger allows you to respond to purchase events in real-time.",
+          "message": "QuickBooks에서 새 구매 또는 기존 구매 업데이트를 모니터링합니다. 이 트리거를 사용하면 구매 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.display_name": {
+          "source": "Purchase Trigger",
+          "message": "구매 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new purchases are added to QuickBooks, or \"Updated\" to trigger when existing purchases are modified.",
+          "message": "QuickBooks에 새 구매가 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 구매가 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated purchases",
+          "message": "생성되었거나 업데이트된 구매에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.cHVyY2hhc2VfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a purchase is created or updated in QuickBooks",
+          "message": "QuickBooks에서 구매가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.desc": {
+          "source": "Monitor QuickBooks for new refund receipts or updates to existing refund receipts. This trigger allows you to respond to refund receipt events in real-time.",
+          "message": "QuickBooks에서 새 환불 영수증 또는 기존 환불 영수증 업데이트를 모니터링합니다. 이 트리거를 사용하면 환불 영수증 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.display_name": {
+          "source": "Refund Receipt Trigger",
+          "message": "환불 영수증 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new refund receipts are added to QuickBooks, or \"Updated\" to trigger when existing refund receipts are modified.",
+          "message": "QuickBooks에 새 환불 영수증이 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 환불 영수증이 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated refund receipts",
+          "message": "생성되었거나 업데이트된 환불 영수증에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.cmVmdW5kX3JlY2VpcHRfdHJpZ2dlcg.short_desc": {
+          "source": "Triggers when a refund receipt is created or updated in QuickBooks",
+          "message": "QuickBooks에서 환불 영수증이 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.desc": {
+          "source": "Update existing records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.display_name": {
+          "source": "Update Records",
+          "message": "레코드 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.option.dGFibGU.desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.option.dGFibGU.display_name": {
+          "source": "Table",
+          "message": "테이블"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.option.dGFibGU.short_desc": {
+          "source": "The table name",
+          "message": "테이블 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRl.short_desc": {
+          "source": "Update existing records in the given table in app \"Quickbooks\"",
+          "message": "\"Quickbooks\" 앱의 지정된 테이블에서 기존 레코드 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.desc": {
+          "source": "Modify an existing bill with new vendor information, line items, and other details",
+          "message": "새 공급업체 정보, 품목 및 기타 세부 정보로 기존 청구서를 수정합니다"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.display_name": {
+          "source": "Update Bill",
+          "message": "청구서 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.YmlsbF9pZA.desc": {
+          "source": "The QuickBooks bill ID that you want to update",
+          "message": "업데이트하려는 QuickBooks 청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.YmlsbF9pZA.display_name": {
+          "source": "Bill ID",
+          "message": "청구서 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.YmlsbF9pZA.short_desc": {
+          "source": "The unique identifier of the bill to update",
+          "message": "업데이트할 청구서의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.allowed-value.c3RyaW5nOkFjY291bnRCYXNlZEV4cGVuc2VMaW5lRGV0YWls.display_name": {
+          "source": "Account Based Expense Line Detail",
+          "message": "계정 기반 비용 라인 세부 정보"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.allowed-value.c3RyaW5nOkl0ZW1CYXNlZEV4cGVuc2VMaW5lRGV0YWls.display_name": {
+          "source": "Item Based Expense Line Detail",
+          "message": "항목 기반 비용 라인 세부 정보"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.desc": {
+          "source": "Choose between account-based or item-based expense line details for the bill",
+          "message": "청구서에 대해 계정 기반 또는 항목 기반 비용 라인 세부 정보 중에서 선택"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.display_name": {
+          "source": "Line Item Type",
+          "message": "라인 항목 유형"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.bGluZV9pdGVtX3R5cGU.short_desc": {
+          "source": "The type of line items for the bill",
+          "message": "청구서의 라인 항목 유형"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.dmVuZG9yX2lk.desc": {
+          "source": "The unique identifier of the vendor who issued the bill",
+          "message": "청구서를 발행한 공급업체의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.dmVuZG9yX2lk.display_name": {
+          "source": "Vendor ID",
+          "message": "공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.option.dmVuZG9yX2lk.short_desc": {
+          "source": "The vendor associated with the bill",
+          "message": "청구서와 연결된 공급업체"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2JpbGw.short_desc": {
+          "source": "Update an existing bill in QuickBooks",
+          "message": "QuickBooks에서 기존 청구서 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.desc": {
+          "source": "Modify an existing customer record with updated personal information, contact details, and addresses",
+          "message": "업데이트된 개인 정보, 연락처 세부 정보 및 주소로 기존 고객 레코드 수정"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.display_name": {
+          "source": "Update Customer",
+          "message": "고객 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.desc": {
+          "source": "The name of the company the customer represents",
+          "message": "고객이 대표하는 회사의 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.display_name": {
+          "source": "Company Name",
+          "message": "회사 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y29tcGFueV9uYW1l.short_desc": {
+          "source": "The company name of the customer",
+          "message": "고객의 회사 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJfaWQ.desc": {
+          "source": "The QuickBooks customer ID that you want to update",
+          "message": "업데이트하려는 QuickBooks 고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJfaWQ.display_name": {
+          "source": "Customer ID",
+          "message": "고객 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Y3VzdG9tZXJfaWQ.short_desc": {
+          "source": "The unique identifier of the customer to update",
+          "message": "업데이트할 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.desc": {
+          "source": "The address where bills should be sent for this customer",
+          "message": "이 고객에게 청구서를 보낼 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.display_name": {
+          "source": "Billing Address",
+          "message": "청구지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.YmlsbGluZ19hZGRyZXNz.short_desc": {
+          "source": "The billing address of the customer",
+          "message": "고객의 청구 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.desc": {
+          "source": "The customer's first name or given name",
+          "message": "고객의 이름(이름/First Name)"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.display_name": {
+          "source": "Given Name",
+          "message": "이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.Z2l2ZW5fbmFtZQ.short_desc": {
+          "source": "The first name of the customer",
+          "message": "고객의 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "The name that will be displayed for this customer in QuickBooks",
+          "message": "QuickBooks에서 이 고객에 대해 표시될 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "The display name for the customer",
+          "message": "고객의 표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZW1haWw.desc": {
+          "source": "The primary email address for the customer",
+          "message": "고객의 기본 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZW1haWw.display_name": {
+          "source": "Email",
+          "message": "이메일"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZW1haWw.short_desc": {
+          "source": "The email address of the customer",
+          "message": "고객의 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.desc": {
+          "source": "The customer's last name or family name",
+          "message": "고객의 성(성/Family Name)"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.display_name": {
+          "source": "Family Name",
+          "message": "성"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.ZmFtaWx5X25hbWU.short_desc": {
+          "source": "The last name of the customer",
+          "message": "고객의 성"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.desc": {
+          "source": "The customer's middle name or middle initial",
+          "message": "고객의 중간 이름 또는 중간 이니셜"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.display_name": {
+          "source": "Middle Name",
+          "message": "중간 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.bWlkZGxlX25hbWU.short_desc": {
+          "source": "The middle name of the customer",
+          "message": "고객의 중간 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.desc": {
+          "source": "The address where products should be shipped for this customer",
+          "message": "이 고객에게 제품을 배송할 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.display_name": {
+          "source": "Shipping Address",
+          "message": "배송 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c2hpcHBpbmdfYWRkcmVzcw.short_desc": {
+          "source": "The shipping address of the customer",
+          "message": "고객의 배송지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c3VmZml4.desc": {
+          "source": "The customer's suffix (e.g., Jr., Sr., III, etc.)",
+          "message": "고객의 접미사(예: Jr., Sr., III 등)"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c3VmZml4.display_name": {
+          "source": "Suffix",
+          "message": "접미사"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.c3VmZml4.short_desc": {
+          "source": "The suffix of the customer",
+          "message": "고객의 접미사"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.dGl0bGU.desc": {
+          "source": "The customer's title (e.g., Mr., Mrs., Dr., etc.)",
+          "message": "고객의 호칭(예: Mr., Mrs., Dr. 등)"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.dGl0bGU.display_name": {
+          "source": "Title",
+          "message": "제목"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.option.dGl0bGU.short_desc": {
+          "source": "The title of the customer",
+          "message": "고객의 호칭"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2N1c3RvbWVy.short_desc": {
+          "source": "Update an existing customer in QuickBooks",
+          "message": "QuickBooks에서 기존 고객 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.desc": {
+          "source": "Modify an existing invoice with updated customer information, line items, and other details",
+          "message": "업데이트된 고객 정보, 라인 항목 및 기타 세부 정보로 기존 인보이스 수정"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.display_name": {
+          "source": "Update Invoice",
+          "message": "인보이스 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.desc": {
+          "source": "The unique identifier of the customer who will receive this invoice",
+          "message": "이 송장을 받을 고객의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.display_name": {
+          "source": "Customer",
+          "message": "고객"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.Y3VzdG9tZXI.short_desc": {
+          "source": "The customer for this invoice",
+          "message": "이 송장의 고객"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.aW52b2ljZV9pZA.desc": {
+          "source": "The QuickBooks invoice ID that you want to update",
+          "message": "업데이트할 QuickBooks 인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.aW52b2ljZV9pZA.display_name": {
+          "source": "Invoice ID",
+          "message": "인보이스 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.aW52b2ljZV9pZA.short_desc": {
+          "source": "The unique identifier of the invoice to update",
+          "message": "업데이트할 인보이스의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.desc": {
+          "source": "The detailed list of items or services included in the invoice",
+          "message": "송장에 포함된 품목 또는 서비스의 상세 목록"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.display_name": {
+          "source": "Line Items",
+          "message": "품목"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.option.bGluZXM.short_desc": {
+          "source": "List of line items for the invoice",
+          "message": "송장 품목 목록"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX2ludm9pY2U.short_desc": {
+          "source": "Update an existing invoice in QuickBooks",
+          "message": "QuickBooks에서 기존 인보이스 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.desc": {
+          "source": "Modify an existing vendor record with updated contact information, address, and other business details",
+          "message": "업데이트된 연락처 정보, 주소 및 기타 비즈니스 세부 정보로 기존 공급업체 레코드 수정"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.display_name": {
+          "source": "Update Vendor",
+          "message": "공급업체 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.desc": {
+          "source": "The address where bills should be sent for this vendor",
+          "message": "이 공급업체의 청구서를 보낼 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.display_name": {
+          "source": "Address",
+          "message": "주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.YWRkcmVzcw.short_desc": {
+          "source": "The billing address of the vendor",
+          "message": "공급업체의 청구지 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.desc": {
+          "source": "The name that will be displayed for this vendor in QuickBooks",
+          "message": "QuickBooks에서 이 공급업체에 대해 표시될 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.display_name": {
+          "source": "Display Name",
+          "message": "표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZGlzcGxheV9uYW1l.short_desc": {
+          "source": "The display name for the vendor",
+          "message": "공급업체의 표시 이름"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZW1haWw.desc": {
+          "source": "The primary email address for contacting the vendor",
+          "message": "공급업체에 연락하기 위한 기본 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZW1haWw.display_name": {
+          "source": "Email Address",
+          "message": "이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.ZW1haWw.short_desc": {
+          "source": "The email address of the vendor",
+          "message": "공급업체의 이메일 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.aWQ.desc": {
+          "source": "The QuickBooks vendor ID that you want to update",
+          "message": "업데이트할 QuickBooks 공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.aWQ.display_name": {
+          "source": "Vendor ID",
+          "message": "공급업체 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.aWQ.short_desc": {
+          "source": "The unique identifier of the vendor to update",
+          "message": "업데이트할 공급업체의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.cGhvbmU.desc": {
+          "source": "The main contact phone number for the vendor",
+          "message": "공급업체의 기본 연락처 전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.cGhvbmU.display_name": {
+          "source": "Phone Number",
+          "message": "전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.cGhvbmU.short_desc": {
+          "source": "The primary phone number of the vendor",
+          "message": "공급업체의 기본 전화번호"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.desc": {
+          "source": "The web address of the vendor's website",
+          "message": "공급업체 웹사이트의 웹 주소"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.display_name": {
+          "source": "Website",
+          "message": "웹사이트"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.option.d2Vic2l0ZQ.short_desc": {
+          "source": "The vendor's website URL",
+          "message": "공급업체의 웹사이트 URL"
+        },
+        "app.UXVpY2tib29rcw.action.dXBkYXRlX3ZlbmRvcg.short_desc": {
+          "source": "Update an existing vendor in QuickBooks",
+          "message": "QuickBooks에서 기존 공급업체 업데이트"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.desc": {
+          "source": "Void a transaction in QuickBooks, zeroing all amounts and marking it as voided. Supports invoices, payments, sales receipts, and bill payments",
+          "message": "QuickBooks에서 트랜잭션을 무효화하여 모든 금액을 0으로 만들고 무효로 표시합니다. 인보이스, 결제, 판매 영수증 및 청구서 결제를 지원합니다."
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.display_name": {
+          "source": "Void Transaction",
+          "message": "트랜잭션 무효화"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25faWQ.desc": {
+          "source": "The QuickBooks ID of the transaction that you want to void",
+          "message": "무효화할 트랜잭션의 QuickBooks ID"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25faWQ.display_name": {
+          "source": "Transaction ID",
+          "message": "트랜잭션 ID"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25faWQ.short_desc": {
+          "source": "The unique identifier of the transaction",
+          "message": "트랜잭션의 고유 식별자"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOkJpbGxQYXltZW50.display_name": {
+          "source": "BillPayment",
+          "message": "청구서 결제"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOkludm9pY2U.display_name": {
+          "source": "Invoice",
+          "message": "인보이스"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlBheW1lbnQ.display_name": {
+          "source": "Payment",
+          "message": "결제"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.allowed-value.c3RyaW5nOlNhbGVzUmVjZWlwdA.display_name": {
+          "source": "SalesReceipt",
+          "message": "판매 영수증"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.desc": {
+          "source": "The entity type of the transaction to void. Supported types: Invoice, Payment, SalesReceipt, BillPayment",
+          "message": "무효화할 트랜잭션의 엔터티 유형입니다. 지원되는 유형: Invoice, Payment, SalesReceipt, BillPayment"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.display_name": {
+          "source": "Transaction Type",
+          "message": "거래 유형"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.option.dHJhbnNhY3Rpb25fdHlwZQ.short_desc": {
+          "source": "The type of transaction to void",
+          "message": "무효화할 트랜잭션 유형"
+        },
+        "app.UXVpY2tib29rcw.action.dm9pZF90cmFuc2FjdGlvbg.short_desc": {
+          "source": "Void a transaction in QuickBooks",
+          "message": "QuickBooks에서 트랜잭션 무효화"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.desc": {
+          "source": "Monitor QuickBooks for new vendors or updates to existing vendors. This trigger allows you to respond to vendor events in real-time.",
+          "message": "QuickBooks에서 새 공급업체 또는 기존 공급업체에 대한 업데이트를 모니터링합니다. 이 트리거를 사용하면 공급업체 이벤트에 실시간으로 대응할 수 있습니다."
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.display_name": {
+          "source": "Vendor Trigger",
+          "message": "공급업체 트리거"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOmNyZWF0ZWQ.display_name": {
+          "source": "Created",
+          "message": "생성일"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.allowed-value.c3RyaW5nOnVwZGF0ZWQ.display_name": {
+          "source": "Updated",
+          "message": "수정일"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.desc": {
+          "source": "Select \"Created\" to trigger when new vendors are added to QuickBooks, or \"Updated\" to trigger when existing vendors are modified.",
+          "message": "새 공급업체가 QuickBooks에 추가될 때 트리거하려면 \"Created\"를 선택하고, 기존 공급업체가 수정될 때 트리거하려면 \"Updated\"를 선택합니다."
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.display_name": {
+          "source": "Trigger Action",
+          "message": "트리거 작업"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.option.YWN0aW9u.short_desc": {
+          "source": "Choose whether to trigger on created or updated vendors",
+          "message": "생성되거나 업데이트된 공급업체에 대해 트리거할지 여부 선택"
+        },
+        "app.UXVpY2tib29rcw.action.dmVuZG9yX3RyaWdnZXI.short_desc": {
+          "source": "Triggers when a vendor is created or updated in QuickBooks",
+          "message": "QuickBooks에서 공급업체가 생성되거나 업데이트될 때 트리거됩니다"
+        },
+        "app.UXVpY2tib29rcw.desc": {
+          "source": "Connect to QuickBooks Online to manage customers, vendors, items, invoices, payments, and financial reports. Automate your accounting workflows and keep your financial data synchronized.",
+          "message": "QuickBooks Online에 연결하여 고객, 공급업체, 품목, 인보이스, 결제 및 재무 보고서를 관리합니다. 회계 워크플로를 자동화하고 재무 데이터를 동기화 상태로 유지하세요."
+        },
+        "app.UXVpY2tib29rcw.display_name": {
+          "source": "QuickBooks",
+          "message": "QuickBooks"
+        },
+        "app.UXVpY2tib29rcw.short_desc": {
+          "source": "Integrate with QuickBooks Online for accounting and financial management",
+          "message": "회계 및 재무 관리를 위해 QuickBooks Online과 통합"
+        }
+      }
+    }
+  }
+}
